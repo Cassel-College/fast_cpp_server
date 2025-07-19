@@ -1,0 +1,328 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: ThreadSafeBuffer类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacetools.html">tools</a></li><li class="navelem"><a class="el" href="classtools_1_1ThreadSafeBuffer.html">ThreadSafeBuffer</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a>  </div>
+  <div class="headertitle"><div class="title">ThreadSafeBuffer类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>线程安全的缓冲区 主要用于存储接收到的网络数据  
+ <a href="classtools_1_1ThreadSafeBuffer.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="ThreadSafeBuffer_8h_source.html">ThreadSafeBuffer.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a3b9fab21fae2b3a9e0265441a25f67de" id="r_a3b9fab21fae2b3a9e0265441a25f67de"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtools_1_1ThreadSafeBuffer.html#a3b9fab21fae2b3a9e0265441a25f67de">ThreadSafeBuffer</a> ()=default</td></tr>
+<tr class="separator:a3b9fab21fae2b3a9e0265441a25f67de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55aa12b545c080a86f993b06f51311df" id="r_a55aa12b545c080a86f993b06f51311df"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtools_1_1ThreadSafeBuffer.html#a55aa12b545c080a86f993b06f51311df">~ThreadSafeBuffer</a> ()=default</td></tr>
+<tr class="separator:a55aa12b545c080a86f993b06f51311df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a181d3047d3f5289c0763db150068625f" id="r_a181d3047d3f5289c0763db150068625f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtools_1_1ThreadSafeBuffer.html#a181d3047d3f5289c0763db150068625f">push</a> (const std::vector&lt; char &gt; &amp;data)</td></tr>
+<tr class="memdesc:a181d3047d3f5289c0763db150068625f"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加数据到缓冲区  <br /></td></tr>
+<tr class="separator:a181d3047d3f5289c0763db150068625f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98735ca8562303e563690cb6c6e52f2c" id="r_a98735ca8562303e563690cb6c6e52f2c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtools_1_1ThreadSafeBuffer.html#a98735ca8562303e563690cb6c6e52f2c">pop</a> (std::vector&lt; char &gt; &amp;outData)</td></tr>
+<tr class="memdesc:a98735ca8562303e563690cb6c6e52f2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">从缓冲区中取出数据  <br /></td></tr>
+<tr class="separator:a98735ca8562303e563690cb6c6e52f2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a259cb5a711406a8c3e5d937eb9350cca" id="r_a259cb5a711406a8c3e5d937eb9350cca"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtools_1_1ThreadSafeBuffer.html#a259cb5a711406a8c3e5d937eb9350cca">size</a> () const</td></tr>
+<tr class="memdesc:a259cb5a711406a8c3e5d937eb9350cca"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取缓冲区中数据包的数量  <br /></td></tr>
+<tr class="separator:a259cb5a711406a8c3e5d937eb9350cca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a281b5ec791338d4378e22ef44a51b4a1" id="r_a281b5ec791338d4378e22ef44a51b4a1"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtools_1_1ThreadSafeBuffer.html#a281b5ec791338d4378e22ef44a51b4a1">mutex_</a></td></tr>
+<tr class="separator:a281b5ec791338d4378e22ef44a51b4a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28b7d835357a513d86c8c436c24cc0e7" id="r_a28b7d835357a513d86c8c436c24cc0e7"><td class="memItemLeft" align="right" valign="top">std::queue&lt; std::vector&lt; char &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtools_1_1ThreadSafeBuffer.html#a28b7d835357a513d86c8c436c24cc0e7">buffer_</a></td></tr>
+<tr class="separator:a28b7d835357a513d86c8c436c24cc0e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>线程安全的缓冲区 主要用于存储接收到的网络数据 </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a3b9fab21fae2b3a9e0265441a25f67de" name="a3b9fab21fae2b3a9e0265441a25f67de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b9fab21fae2b3a9e0265441a25f67de">&#9670;&#160;</a></span>ThreadSafeBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classtools_1_1ThreadSafeBuffer.html">ThreadSafeBuffer</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a55aa12b545c080a86f993b06f51311df" name="a55aa12b545c080a86f993b06f51311df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55aa12b545c080a86f993b06f51311df">&#9670;&#160;</a></span>~ThreadSafeBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classtools_1_1ThreadSafeBuffer.html">ThreadSafeBuffer</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a98735ca8562303e563690cb6c6e52f2c" name="a98735ca8562303e563690cb6c6e52f2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98735ca8562303e563690cb6c6e52f2c">&#9670;&#160;</a></span>pop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool pop </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; char &gt; &amp;&#160;</td>
+          <td class="paramname"><em>outData</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>从缓冲区中取出数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">outData</td><td>用于保存取出的数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否成功取出数据 </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="classtools_1_1ThreadSafeBuffer.html#a28b7d835357a513d86c8c436c24cc0e7">ThreadSafeBuffer::buffer_</a> , 以及 <a class="el" href="classtools_1_1ThreadSafeBuffer.html#a281b5ec791338d4378e22ef44a51b4a1">ThreadSafeBuffer::mutex_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classtools_1_1SimpleTcpClient.html#a6eb9b16b75e6d7ddb37b516ea3dc14fb">SimpleTcpClient::readData()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classtools_1_1ThreadSafeBuffer_a98735ca8562303e563690cb6c6e52f2c_icgraph.png" border="0" usemap="#aclasstools_1_1ThreadSafeBuffer_a98735ca8562303e563690cb6c6e52f2c_icgraph" alt=""/></div>
+<map name="aclasstools_1_1ThreadSafeBuffer_a98735ca8562303e563690cb6c6e52f2c_icgraph" id="aclasstools_1_1ThreadSafeBuffer_a98735ca8562303e563690cb6c6e52f2c_icgraph">
+<area shape="rect" title="从缓冲区中取出数据" alt="" coords="220,13,267,38"/>
+<area shape="rect" href="classtools_1_1SimpleTcpClient.html#a6eb9b16b75e6d7ddb37b516ea3dc14fb" title="从缓冲区读取数据（主线程调用）" alt="" coords="5,5,172,45"/>
+<area shape="poly" title=" " alt="" coords="206,28,172,28,172,23,206,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a181d3047d3f5289c0763db150068625f" name="a181d3047d3f5289c0763db150068625f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a181d3047d3f5289c0763db150068625f">&#9670;&#160;</a></span>push()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void push </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; char &gt; &amp;&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>添加数据到缓冲区 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>要添加的数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">引用了 <a class="el" href="classtools_1_1ThreadSafeBuffer.html#a28b7d835357a513d86c8c436c24cc0e7">ThreadSafeBuffer::buffer_</a> , 以及 <a class="el" href="classtools_1_1ThreadSafeBuffer.html#a281b5ec791338d4378e22ef44a51b4a1">ThreadSafeBuffer::mutex_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classtools_1_1SimpleTcpClient.html#a15f044dcc8ea299eb3b9c88024e27257">SimpleTcpClient::receiveLoop()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classtools_1_1ThreadSafeBuffer_a181d3047d3f5289c0763db150068625f_icgraph.png" border="0" usemap="#aclasstools_1_1ThreadSafeBuffer_a181d3047d3f5289c0763db150068625f_icgraph" alt=""/></div>
+<map name="aclasstools_1_1ThreadSafeBuffer_a181d3047d3f5289c0763db150068625f_icgraph" id="aclasstools_1_1ThreadSafeBuffer_a181d3047d3f5289c0763db150068625f_icgraph">
+<area shape="rect" title="添加数据到缓冲区" alt="" coords="435,13,488,38"/>
+<area shape="rect" href="classtools_1_1SimpleTcpClient.html#a15f044dcc8ea299eb3b9c88024e27257" title="接收数据循环" alt="" coords="220,5,387,45"/>
+<area shape="poly" title=" " alt="" coords="421,28,387,28,387,23,421,23"/>
+<area shape="rect" href="classtools_1_1SimpleTcpClient.html#a1745a371702da3b33bfa83c4fa2d462f" title="构造函数" alt="" coords="5,5,172,45"/>
+<area shape="poly" title=" " alt="" coords="206,28,172,28,172,23,206,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a259cb5a711406a8c3e5d937eb9350cca" name="a259cb5a711406a8c3e5d937eb9350cca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a259cb5a711406a8c3e5d937eb9350cca">&#9670;&#160;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取缓冲区中数据包的数量 </p>
+
+<p class="reference">引用了 <a class="el" href="classtools_1_1ThreadSafeBuffer.html#a28b7d835357a513d86c8c436c24cc0e7">ThreadSafeBuffer::buffer_</a> , 以及 <a class="el" href="classtools_1_1ThreadSafeBuffer.html#a281b5ec791338d4378e22ef44a51b4a1">ThreadSafeBuffer::mutex_</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">结构体成员变量说明</h2>
+<a id="a28b7d835357a513d86c8c436c24cc0e7" name="a28b7d835357a513d86c8c436c24cc0e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28b7d835357a513d86c8c436c24cc0e7">&#9670;&#160;</a></span>buffer_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::queue&lt;std::vector&lt;char&gt; &gt; buffer_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classtools_1_1ThreadSafeBuffer.html#a98735ca8562303e563690cb6c6e52f2c">ThreadSafeBuffer::pop()</a>, <a class="el" href="classtools_1_1ThreadSafeBuffer.html#a181d3047d3f5289c0763db150068625f">ThreadSafeBuffer::push()</a> , 以及 <a class="el" href="classtools_1_1ThreadSafeBuffer.html#a259cb5a711406a8c3e5d937eb9350cca">ThreadSafeBuffer::size()</a>.</p>
+
+</div>
+</div>
+<a id="a281b5ec791338d4378e22ef44a51b4a1" name="a281b5ec791338d4378e22ef44a51b4a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a281b5ec791338d4378e22ef44a51b4a1">&#9670;&#160;</a></span>mutex_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex mutex_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classtools_1_1ThreadSafeBuffer.html#a98735ca8562303e563690cb6c6e52f2c">ThreadSafeBuffer::pop()</a>, <a class="el" href="classtools_1_1ThreadSafeBuffer.html#a181d3047d3f5289c0763db150068625f">ThreadSafeBuffer::push()</a> , 以及 <a class="el" href="classtools_1_1ThreadSafeBuffer.html#a259cb5a711406a8c3e5d937eb9350cca">ThreadSafeBuffer::size()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/tools/thread_safe_buffer/<a class="el" href="ThreadSafeBuffer_8h_source.html">ThreadSafeBuffer.h</a></li>
+<li>src/tools/thread_safe_buffer/<a class="el" href="ThreadSafeBuffer_8cpp.html">ThreadSafeBuffer.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

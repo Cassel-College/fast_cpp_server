@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['senddata_0',['sendData',['../classtools_1_1SimpleTcpClient.html#ace6171e2f6d3f88916da494acfe04a3d',1,'tools::SimpleTcpClient']]],
+  ['setenablesubprocesscheck_1',['setEnableSubprocessCheck',['../classSoftHealthMonitorConfig.html#ab20167ee1639ea84db88d4441eac64d9',1,'SoftHealthMonitorConfig']]],
+  ['setenablethreadtree_2',['setEnableThreadTree',['../classSoftHealthMonitorConfig.html#aa55bcd535e6e9d759168ade36bf994ba',1,'SoftHealthMonitorConfig']]],
+  ['setintervalseconds_3',['setintervalseconds',['../classSoftHealthMonitorConfig.html#aee6097b246f8f541a0b9413f4555d73f',1,'SoftHealthMonitorConfig::setIntervalSeconds()'],['../classSoftHealthMonitorManager.html#a567c0bf7ad78eed5eceb05e206b5b1ad',1,'SoftHealthMonitorManager::setIntervalSeconds()']]],
+  ['setmaxsize_4',['setMaxSize',['../classtools_1_1thread__safe__queue_1_1ThreadSafeQueue.html#ae8251cb2f2a2016a4e028f3d1456993b',1,'tools::thread_safe_queue::ThreadSafeQueue']]],
+  ['setoutputtoconsole_5',['setOutputToConsole',['../classSoftHealthMonitorConfig.html#ac6b69a28989e82df8460bc9d872d324d',1,'SoftHealthMonitorConfig']]],
+  ['setprocessinfo_6',['setProcessInfo',['../classHealthSnapshot.html#ae21c405e4c94076065eb0296fefd0ddc',1,'HealthSnapshot']]],
+  ['setthreadsnapshots_7',['setThreadSnapshots',['../classHealthSnapshot.html#a01643e4840a9e11183749dcdc6a2b6e4',1,'HealthSnapshot']]],
+  ['setuptime_8',['setUptime',['../classHealthSnapshot.html#ad0731b3e89fe4ac255af6999d4a55ddd',1,'HealthSnapshot']]],
+  ['shutdown_9',['shutdown',['../classtools_1_1thread__safe__queue_1_1ThreadSafeQueue.html#a7861ee1569802186a619778efc85af13',1,'tools::thread_safe_queue::ThreadSafeQueue::shutdown()'],['../classMySystemHealthy_1_1MySystemHealthyManager.html#ac5f038c2b480cf9ef5e19e3eba8dbaf9',1,'MySystemHealthy::MySystemHealthyManager::Shutdown()']]],
+  ['simpletcpclient_10',['SimpleTcpClient',['../classtools_1_1SimpleTcpClient.html#a1745a371702da3b33bfa83c4fa2d462f',1,'tools::SimpleTcpClient']]],
+  ['size_11',['size',['../classtools_1_1ThreadSafeBuffer.html#a259cb5a711406a8c3e5d937eb9350cca',1,'tools::ThreadSafeBuffer::size()'],['../classtools_1_1thread__safe__queue_1_1ThreadSafeQueue.html#a259cb5a711406a8c3e5d937eb9350cca',1,'tools::thread_safe_queue::ThreadSafeQueue::size()']]],
+  ['softhealthmonitorconfig_12',['SoftHealthMonitorConfig',['../classSoftHealthMonitorConfig.html#af4bc8ee367e2992aea6249b20f8ff5f3',1,'SoftHealthMonitorConfig']]],
+  ['softhealthmonitormanager_13',['SoftHealthMonitorManager',['../classSoftHealthMonitorManager.html#a587b2f9aeeec9c0559ba24ffd4568415',1,'SoftHealthMonitorManager']]],
+  ['start_14',['start',['../classDeviceOnlineMonitor.html#a60de64d75454385b23995437f1d72669',1,'DeviceOnlineMonitor::start()'],['../classSoftHealthMonitorManager.html#a60de64d75454385b23995437f1d72669',1,'SoftHealthMonitorManager::start()']]],
+  ['stop_15',['stop',['../classDeviceOnlineMonitor.html#a8c528baf37154d347366083f0f816846',1,'DeviceOnlineMonitor::stop()'],['../classSoftHealthMonitorManager.html#a8c528baf37154d347366083f0f816846',1,'SoftHealthMonitorManager::stop()']]],
+  ['subtract_16',['subtract',['../classExample.html#a470a2cec9c256d196c0e6b8fc7a6ec36',1,'Example']]]
+];

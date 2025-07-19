@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_system_healthy/MySystemHealthyManager.cpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_dc06f710464ad89b7e27a2a549ec503f.html">my_system_healthy</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">命名空间</a>  </div>
+  <div class="headertitle"><div class="title">MySystemHealthyManager.cpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;chrono&gt;</code><br />
+<code>#include &quot;<a class="el" href="MySystemHealthyManager_8h_source.html">MySystemHealthyManager.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="CPUInfoTools_8h_source.html">CPUInfoTools.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="MemInfoTools_8h_source.html">MemInfoTools.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="DiskInfoTools_8h_source.html">DiskInfoTools.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="NetInfoTools_8h_source.html">NetInfoTools.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="GPUInfoTools_8h_source.html">GPUInfoTools.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ProcessInfoTools_8h_source.html">ProcessInfoTools.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+MySystemHealthyManager.cpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="MySystemHealthyManager_8cpp__incl.png" border="0" usemap="#asrc_2util_2my__system__healthy_2MySystemHealthyManager_8cpp" alt=""/></div>
+<map name="asrc_2util_2my__system__healthy_2MySystemHealthyManager_8cpp" id="asrc_2util_2my__system__healthy_2MySystemHealthyManager_8cpp">
+<area shape="rect" title=" " alt="" coords="602,5,887,45"/>
+<area shape="rect" title=" " alt="" coords="141,93,207,119"/>
+<area shape="poly" title=" " alt="" coords="602,43,424,64,221,96,220,91,424,59,601,38"/>
+<area shape="rect" href="MySystemHealthyManager_8h.html" title=" " alt="" coords="231,93,442,119"/>
+<area shape="poly" title=" " alt="" coords="647,48,410,93,409,88,646,43"/>
+<area shape="rect" href="CPUInfoTools_8h.html" title=" " alt="" coords="465,93,584,119"/>
+<area shape="poly" title=" " alt="" coords="693,48,571,91,569,86,691,43"/>
+<area shape="rect" href="MemInfoTools_8h.html" title=" " alt="" coords="609,93,734,119"/>
+<area shape="poly" title=" " alt="" coords="729,47,694,85,690,81,725,44"/>
+<area shape="rect" href="DiskInfoTools_8h.html" title=" " alt="" coords="759,93,880,119"/>
+<area shape="poly" title=" " alt="" coords="765,44,801,81,797,85,761,47"/>
+<area shape="rect" href="NetInfoTools_8h.html" title=" " alt="" coords="905,93,1019,119"/>
+<area shape="poly" title=" " alt="" coords="798,43,918,86,916,91,796,48"/>
+<area shape="rect" href="GPUInfoTools_8h.html" title=" " alt="" coords="1043,93,1163,119"/>
+<area shape="poly" title=" " alt="" coords="831,43,1038,88,1037,93,830,48"/>
+<area shape="rect" href="ProcessInfoTools_8h.html" title=" " alt="" coords="1188,93,1331,119"/>
+<area shape="poly" title=" " alt="" coords="868,43,1175,89,1174,94,868,48"/>
+<area shape="rect" title=" " alt="" coords="173,167,237,192"/>
+<area shape="poly" title=" " alt="" coords="317,121,239,162,237,158,314,116"/>
+<area shape="rect" title=" " alt="" coords="261,167,325,192"/>
+<area shape="poly" title=" " alt="" coords="332,120,309,156,305,154,327,118"/>
+<area shape="rect" title=" " alt="" coords="349,167,415,192"/>
+<area shape="poly" title=" " alt="" coords="346,118,370,154,365,157,342,120"/>
+<area shape="rect" title=" " alt="" coords="743,167,895,192"/>
+<area shape="poly" title=" " alt="" coords="415,116,730,162,729,168,414,121"/>
+<area shape="rect" href="MyLog_8h.html" title=" " alt="" coords="439,167,517,192"/>
+<area shape="poly" title=" " alt="" coords="361,116,444,158,442,163,358,121"/>
+<area shape="rect" title=" " alt="" coords="5,247,129,273"/>
+<area shape="poly" title=" " alt="" coords="440,192,428,195,284,218,141,243,123,247,122,241,140,237,283,213,427,189,439,187"/>
+<area shape="rect" title=" " alt="" coords="153,240,312,280"/>
+<area shape="poly" title=" " alt="" coords="443,195,306,238,304,233,442,189"/>
+<area shape="rect" title=" " alt="" coords="336,247,455,273"/>
+<area shape="poly" title=" " alt="" coords="468,194,419,240,416,236,464,190"/>
+<area shape="rect" title=" " alt="" coords="479,247,645,273"/>
+<area shape="poly" title=" " alt="" coords="492,190,541,236,538,240,489,194"/>
+<area shape="rect" title=" " alt="" coords="670,247,747,273"/>
+<area shape="poly" title=" " alt="" coords="514,189,659,237,666,240,665,245,657,243,513,195"/>
+<area shape="rect" title=" " alt="" coords="771,247,830,273"/>
+<area shape="poly" title=" " alt="" coords="517,184,628,203,694,219,760,237,766,240,764,245,759,243,693,224,627,208,516,189"/>
+<area shape="poly" title=" " alt="" coords="573,116,759,161,758,166,571,121"/>
+<area shape="poly" title=" " alt="" coords="696,116,784,158,782,163,694,121"/>
+<area shape="poly" title=" " alt="" coords="822,119,822,153,817,153,817,119"/>
+<area shape="poly" title=" " alt="" coords="940,121,856,163,854,158,938,116"/>
+<area shape="poly" title=" " alt="" coords="1058,121,879,166,878,161,1057,116"/>
+<area shape="poly" title=" " alt="" coords="1189,121,904,167,903,162,1188,116"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespaceMySystemHealthy" id="r_namespaceMySystemHealthy"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMySystemHealthy.html">MySystemHealthy</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

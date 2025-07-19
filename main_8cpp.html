@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/main.cpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">main.cpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;spdlog/spdlog.h&gt;</code><br />
+<code>#include &lt;nlohmann/json.hpp&gt;</code><br />
+<code>#include &lt;cpr/cpr.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="ArgumentParser_8h_source.html">ArgumentParser.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="MyLog_8h_source.html">MyLog.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="MySystemHealthyManager_8h_source.html">MySystemHealthyManager.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="SimpleTcpClient_8h_source.html">SimpleTcpClient.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="ThreadSafeBuffer_8h_source.html">ThreadSafeBuffer.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="DeviceOnlineMonitor_8h_source.html">DeviceOnlineMonitor.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+main.cpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#asrc_2main_8cpp" alt=""/></div>
+<map name="asrc_2main_8cpp" id="asrc_2main_8cpp">
+<area shape="rect" title=" " alt="" coords="704,5,809,31"/>
+<area shape="rect" title=" " alt="" coords="13,79,93,104"/>
+<area shape="poly" title=" " alt="" coords="704,25,448,44,281,60,112,81,107,82,106,77,111,76,280,55,448,39,704,20"/>
+<area shape="rect" title=" " alt="" coords="474,233,533,258"/>
+<area shape="poly" title=" " alt="" coords="704,24,667,29,627,39,588,56,555,81,531,113,517,150,509,188,506,219,501,219,504,187,512,149,527,110,551,77,585,51,625,34,666,24,703,18"/>
+<area shape="rect" title=" " alt="" coords="175,233,237,258"/>
+<area shape="poly" title=" " alt="" coords="704,26,502,46,398,61,324,81,294,95,272,109,253,127,234,153,219,187,211,220,206,218,214,185,229,151,249,123,268,105,291,90,322,76,397,56,501,40,704,20"/>
+<area shape="rect" title=" " alt="" coords="1170,233,1247,258"/>
+<area shape="poly" title=" " alt="" coords="810,24,909,42,965,57,1019,76,1083,106,1138,150,1171,185,1196,219,1192,222,1167,188,1135,154,1080,111,1017,81,963,62,908,47,809,29"/>
+<area shape="rect" title=" " alt="" coords="1250,79,1325,104"/>
+<area shape="poly" title=" " alt="" coords="810,22,997,43,1232,76,1236,77,1235,82,1231,81,996,48,809,27"/>
+<area shape="rect" title=" " alt="" coords="1272,233,1396,258"/>
+<area shape="poly" title=" " alt="" coords="810,21,929,39,997,55,1064,76,1137,110,1206,150,1310,222,1307,226,1203,154,1135,115,1062,81,996,60,928,44,809,26"/>
+<area shape="rect" title=" " alt="" coords="1349,79,1495,104"/>
+<area shape="poly" title=" " alt="" coords="810,22,1034,43,1335,76,1335,81,1034,49,809,27"/>
+<area shape="rect" title=" " alt="" coords="1519,79,1597,104"/>
+<area shape="poly" title=" " alt="" coords="810,18,1103,34,1301,51,1506,76,1505,81,1300,56,1102,39,810,24"/>
+<area shape="rect" href="ArgumentParser_8h.html" title=" " alt="" coords="5,152,143,177"/>
+<area shape="poly" title=" " alt="" coords="704,23,579,27,422,37,270,54,208,66,163,81,142,94,123,109,92,143,88,139,119,105,139,89,161,76,207,61,269,49,421,31,579,22,704,18"/>
+<area shape="rect" href="MyLog_8h.html" title=" " alt="" coords="1047,152,1125,177"/>
+<area shape="poly" title=" " alt="" coords="810,24,893,43,939,57,983,76,1030,107,1067,140,1064,144,1027,111,981,81,937,62,892,48,809,29"/>
+<area shape="rect" href="MySystemHealthyManager_8h.html" title=" " alt="" coords="759,79,970,104"/>
+<area shape="poly" title=" " alt="" coords="775,28,837,69,834,73,773,33"/>
+<area shape="rect" href="SimpleTcpClient_8h.html" title=" " alt="" coords="351,79,490,104"/>
+<area shape="poly" title=" " alt="" coords="704,33,489,78,487,73,703,28"/>
+<area shape="rect" href="ThreadSafeBuffer_8h.html" title=" " alt="" coords="269,152,415,177"/>
+<area shape="poly" title=" " alt="" coords="704,21,611,23,501,31,449,39,402,49,365,63,341,80,334,93,332,108,336,139,331,139,326,108,329,91,337,77,363,58,401,44,448,33,501,26,610,18,704,16"/>
+<area shape="rect" href="DeviceOnlineMonitor_8h.html" title=" " alt="" coords="565,79,735,104"/>
+<area shape="poly" title=" " alt="" coords="741,33,680,73,677,69,738,28"/>
+<area shape="poly" title=" " alt="" coords="137,175,461,234,460,239,136,180"/>
+<area shape="poly" title=" " alt="" coords="95,175,176,223,174,228,92,180"/>
+<area shape="rect" title=" " alt="" coords="49,233,99,258"/>
+<area shape="poly" title=" " alt="" coords="77,178,77,219,71,219,71,178"/>
+<area shape="poly" title=" " alt="" coords="1047,178,1036,180,900,195,793,198,687,205,625,213,553,228,543,231,542,226,552,223,624,208,686,199,793,193,899,190,1035,175,1046,173"/>
+<area shape="poly" title=" " alt="" coords="1106,175,1181,223,1178,227,1103,180"/>
+<area shape="poly" title=" " alt="" coords="1123,175,1286,226,1284,231,1121,180"/>
+<area shape="rect" title=" " alt="" coords="653,225,812,265"/>
+<area shape="poly" title=" " alt="" coords="1048,177,1036,180,826,226,825,221,1035,175,1047,172"/>
+<area shape="rect" title=" " alt="" coords="836,233,955,258"/>
+<area shape="poly" title=" " alt="" coords="1059,180,937,230,935,225,1057,175"/>
+<area shape="rect" title=" " alt="" coords="979,233,1145,258"/>
+<area shape="poly" title=" " alt="" coords="1085,178,1072,220,1067,218,1080,177"/>
+<area shape="poly" title=" " alt="" coords="901,101,1038,145,1037,150,899,107"/>
+<area shape="rect" title=" " alt="" coords="733,152,797,177"/>
+<area shape="poly" title=" " alt="" coords="850,106,794,146,791,142,847,102"/>
+<area shape="rect" title=" " alt="" coords="565,233,629,258"/>
+<area shape="poly" title=" " alt="" coords="862,106,844,142,829,162,810,179,768,203,730,212,690,216,643,228,636,230,635,225,641,223,690,211,729,206,766,198,807,175,825,159,839,139,858,103"/>
+<area shape="rect" title=" " alt="" coords="642,152,709,177"/>
+<area shape="poly" title=" " alt="" coords="835,107,720,149,718,144,833,102"/>
+<area shape="rect" title=" " alt="" coords="871,152,1023,177"/>
+<area shape="poly" title=" " alt="" coords="880,102,925,141,922,145,876,106"/>
+<area shape="poly" title=" " alt="" coords="429,103,493,219,488,222,425,105"/>
+<area shape="poly" title=" " alt="" coords="359,107,307,124,281,138,258,154,233,186,216,220,212,218,228,183,255,150,279,133,305,120,358,102"/>
+<area shape="poly" title=" " alt="" coords="484,101,720,149,719,154,483,107"/>
+<area shape="poly" title=" " alt="" coords="462,101,629,148,628,153,461,107"/>
+<area shape="poly" title=" " alt="" coords="410,106,367,145,363,141,406,102"/>
+<area shape="poly" title=" " alt="" coords="323,180,239,228,237,223,321,175"/>
+<area shape="poly" title=" " alt="" coords="385,175,545,223,554,226,552,231,544,228,383,180"/>
+<area shape="rect" title=" " alt="" coords="311,233,373,258"/>
+<area shape="poly" title=" " alt="" coords="345,178,345,219,339,219,339,178"/>
+<area shape="poly" title=" " alt="" coords="641,106,526,224,522,221,637,102"/>
+<area shape="poly" title=" " alt="" coords="670,102,736,142,733,147,667,106"/>
+<area shape="poly" title=" " alt="" coords="649,105,608,220,603,219,643,103"/>
+<area shape="poly" title=" " alt="" coords="657,103,669,138,664,140,652,105"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:ab701e3ac61a85b337ec5c1abaad6742d" id="r_ab701e3ac61a85b337ec5c1abaad6742d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a> = nlohmann::json</td></tr>
+<tr class="separator:ab701e3ac61a85b337ec5c1abaad6742d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97" id="r_a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
+<tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="ab701e3ac61a85b337ec5c1abaad6742d" name="ab701e3ac61a85b337ec5c1abaad6742d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab701e3ac61a85b337ec5c1abaad6742d">&#9670;&#160;</a></span>json</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="main_8cpp.html#ab701e3ac61a85b337ec5c1abaad6742d">json</a> =  nlohmann::json</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a0ddf1224851353fc92bfbff6f499fa97" name="a0ddf1224851353fc92bfbff6f499fa97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ddf1224851353fc92bfbff6f499fa97">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>argv</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classArgumentParser.html#ae1196c0e42faa519ffc00f87c736bf3d">ArgumentParser::addOption()</a>, <a class="el" href="classMySystemHealthy_1_1MySystemHealthyManager.html#a213d85ed6c3dae2bcb67e2d082e7c753">MySystemHealthyManager::GetInstance()</a>, <a class="el" href="classDeviceOnlineMonitor.html#aff66b18abb127176950a889d0546fb3d">DeviceOnlineMonitor::init()</a>, <a class="el" href="namespaceMyLog.html#a73c0d376cd255b98e8cadb01e6cf45c7">MyLog::Init()</a>, <a class="el" href="classMySystemHealthy_1_1MySystemHealthyManager.html#a42f202086b1f8408080c9b979ccc1f14">MySystemHealthyManager::Init()</a>, <a class="el" href="classDeviceOnlineMonitor.html#a1eceab28885f971892b9d4fc76e0e542">DeviceOnlineMonitor::isOnline()</a>, <a class="el" href="MyLog_8h.html#a58669a9dee26041e1cd68f2e62214b0f">MYLOG_DEBUG</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>, <a class="el" href="classArgumentParser.html#a52ce39cf5bee3972451b42a670ca3aa3">ArgumentParser::parse()</a>, <a class="el" href="classArgumentParser.html#ac4cbe4e1edc452f402863c02e7dbe641">ArgumentParser::printHelp()</a>, <a class="el" href="classDeviceOnlineMonitor.html#a60de64d75454385b23995437f1d72669">DeviceOnlineMonitor::start()</a> , 以及 <a class="el" href="classDeviceOnlineMonitor.html#a8c528baf37154d347366083f0f816846">DeviceOnlineMonitor::stop()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.png" border="0" usemap="#amain_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph" alt=""/></div>
+<map name="amain_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph" id="amain_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph">
+<area shape="rect" title=" " alt="" coords="5,273,60,299"/>
+<area shape="rect" href="classArgumentParser.html#ae1196c0e42faa519ffc00f87c736bf3d" title=" " alt="" coords="117,5,318,31"/>
+<area shape="poly" title=" " alt="" coords="31,273,33,229,43,167,52,133,65,99,83,68,106,41,113,35,117,40,110,45,87,72,70,102,57,134,48,168,38,230,36,273"/>
+<area shape="rect" href="classMySystemHealthy_1_1MySystemHealthyManager.html#a213d85ed6c3dae2bcb67e2d082e7c753" title=" " alt="" coords="108,55,327,95"/>
+<area shape="poly" title=" " alt="" coords="33,273,39,239,52,194,73,147,88,125,106,105,112,101,115,105,110,109,92,128,78,149,57,196,44,240,38,274"/>
+<area shape="rect" href="classDeviceOnlineMonitor.html#aff66b18abb127176950a889d0546fb3d" title=" " alt="" coords="138,119,297,159"/>
+<area shape="poly" title=" " alt="" coords="37,272,61,223,81,195,106,171,124,160,127,164,110,175,85,198,66,226,41,274"/>
+<area shape="rect" href="namespaceMyLog.html#a73c0d376cd255b98e8cadb01e6cf45c7" title=" " alt="" coords="170,184,265,209"/>
+<area shape="poly" title=" " alt="" coords="43,271,70,245,107,220,155,203,157,208,109,224,74,249,47,275"/>
+<area shape="rect" href="classMySystemHealthy_1_1MySystemHealthyManager.html#a42f202086b1f8408080c9b979ccc1f14" title=" " alt="" coords="108,234,327,274"/>
+<area shape="poly" title=" " alt="" coords="60,279,94,273,95,278,61,284"/>
+<area shape="rect" href="classDeviceOnlineMonitor.html#a1eceab28885f971892b9d4fc76e0e542" title=" " alt="" coords="138,298,297,338"/>
+<area shape="poly" title=" " alt="" coords="61,288,125,299,124,305,60,293"/>
+<area shape="rect" href="classArgumentParser.html#a52ce39cf5bee3972451b42a670ca3aa3" title=" " alt="" coords="132,363,303,388"/>
+<area shape="poly" title=" " alt="" coords="47,297,74,323,109,348,129,356,126,361,107,352,70,327,43,301"/>
+<area shape="rect" href="classArgumentParser.html#ac4cbe4e1edc452f402863c02e7dbe641" title=" " alt="" coords="120,412,315,437"/>
+<area shape="poly" title=" " alt="" coords="41,298,65,348,85,375,110,399,118,404,115,408,106,403,81,379,60,350,36,300"/>
+<area shape="rect" href="classDeviceOnlineMonitor.html#a60de64d75454385b23995437f1d72669" title=" " alt="" coords="138,462,297,502"/>
+<area shape="poly" title=" " alt="" coords="39,298,46,329,59,369,80,412,110,448,127,460,124,464,106,452,75,415,54,371,40,330,33,299"/>
+<area shape="rect" href="classDeviceOnlineMonitor.html#a8c528baf37154d347366083f0f816846" title=" " alt="" coords="138,526,297,566"/>
+<area shape="poly" title=" " alt="" coords="37,299,40,340,51,397,73,459,89,487,110,512,127,525,124,529,106,516,85,490,68,461,45,399,35,341,32,299"/>
+<area shape="rect" href="classMySystemHealthy_1_1MySystemHealthyManager.html#a78e2a4289515dd73f4ef63bc0b635ff4" title=" " alt="" coords="375,234,593,274"/>
+<area shape="poly" title=" " alt="" coords="327,251,361,251,361,257,327,257"/>
+<area shape="rect" href="classMySystemHealthy_1_1CPUInfoTools.html#afc7a2398f7160e11e6d3dbb3b8f940d3" title=" " alt="" coords="644,106,845,146"/>
+<area shape="poly" title=" " alt="" coords="512,231,570,194,640,156,657,148,659,153,642,160,572,198,515,236"/>
+<area shape="rect" href="classMySystemHealthy_1_1DiskInfoTools.html#a6fb2528e70d3f4c2407e9f3f808ffd67" title=" " alt="" coords="643,170,846,210"/>
+<area shape="poly" title=" " alt="" coords="566,231,649,211,650,216,567,237"/>
+<area shape="rect" href="classMySystemHealthy_1_1GPUInfoTools.html#a33a7878e903863cbbd1a2e24ac2eeeaa" title=" " alt="" coords="643,234,846,274"/>
+<area shape="poly" title=" " alt="" coords="594,251,630,251,630,257,594,257"/>
+<area shape="rect" href="classMySystemHealthy_1_1MemInfoTools.html#a7d1efa86655aef36739a8e6c9976a16c" title=" " alt="" coords="641,298,848,338"/>
+<area shape="poly" title=" " alt="" coords="567,271,650,292,649,297,566,277"/>
+<area shape="rect" href="classMySystemHealthy_1_1NetInfoTools.html#aa39609741bef5a7e60b2acf97a68d972" title=" " alt="" coords="646,362,843,402"/>
+<area shape="poly" title=" " alt="" coords="515,272,572,310,642,348,659,355,657,360,640,352,570,314,512,277"/>
+<area shape="rect" href="classMySystemHealthy_1_1CPUInfoTools.html#ab68a6c38395cdc1056dca6ef4fb7e378" title=" " alt="" coords="896,106,1097,146"/>
+<area shape="poly" title=" " alt="" coords="846,123,882,123,882,129,846,129"/>
+<area shape="rect" href="classDeviceOnlineMonitor.html#a70a4677f113e64393ea51d131e5b4391" title=" " alt="" coords="405,462,563,502"/>
+<area shape="poly" title=" " alt="" coords="297,479,391,479,391,485,297,485"/>
+<area shape="rect" href="classDeviceOnlineMonitor.html#ad074c174ce59c112ba75f34e83f08794" title=" " alt="" coords="665,462,824,502"/>
+<area shape="poly" title=" " alt="" coords="563,479,652,479,652,485,563,485"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

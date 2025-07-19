@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_soft_healthy/SoftHealthSnapshot.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_7a625e0c3c2fe1ccfe00369b19e2a5fe.html">my_soft_healthy</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">SoftHealthSnapshot.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="SoftHealthSnapshot_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef HEALTH_SNAPSHOT_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define HEALTH_SNAPSHOT_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;chrono&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="structThreadSnapshot.html">   10</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structThreadSnapshot.html">ThreadSnapshot</a> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="structThreadSnapshot.html#a8cc3dd191f714ba4ae35b2d3ac5b557a">   11</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structThreadSnapshot.html#a8cc3dd191f714ba4ae35b2d3ac5b557a">tid</a>;                        <span class="comment">// 线程 ID</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="structThreadSnapshot.html#a9b45b3e13bd9167aab02e17e08916231">   12</a></span>    std::string <a class="code hl_variable" href="structThreadSnapshot.html#a9b45b3e13bd9167aab02e17e08916231">name</a>;              <span class="comment">// 线程名称（从 /proc/&lt;pid&gt;/task/&lt;tid&gt;/comm 获取）</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="structThreadSnapshot.html#a295e34a22c4d3d19004e4ff577ea2f5d">   13</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="structThreadSnapshot.html#a295e34a22c4d3d19004e4ff577ea2f5d">cpu_usage_percent</a>;      <span class="comment">// CPU 使用率（百分比，基于上一轮采样差值计算）</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="structThreadSnapshot.html#aba4b52f87b35490fb3c3d452ed9854c9">   14</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structThreadSnapshot.html#aba4b52f87b35490fb3c3d452ed9854c9">stack_kb</a>;               <span class="comment">// 栈空间占用（估算）</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structThreadSnapshot.html#a25fc5be704b4b3fe2494b3aa05c7ecdf">   15</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structThreadSnapshot.html#a25fc5be704b4b3fe2494b3aa05c7ecdf">parent_tid</a>;                <span class="comment">// 父线程 ID</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="structThreadSnapshot.html#a5aca92105028d05f07063b6f0b6a9710">   16</a></span>    <span class="keywordtype">long</span> <a class="code hl_variable" href="structThreadSnapshot.html#a5aca92105028d05f07063b6f0b6a9710">utime_ticks</a>;              <span class="comment">// 用户态 CPU 时间（单位：jiffies）</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="structThreadSnapshot.html#a885100b88d47e835b932d893f8c3cc73">   17</a></span>    <span class="keywordtype">long</span> <a class="code hl_variable" href="structThreadSnapshot.html#a885100b88d47e835b932d893f8c3cc73">stime_ticks</a>;              <span class="comment">// 内核态 CPU 时间（单位：jiffies）</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>};</div>
+</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="structProcessInfo.html">   21</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structProcessInfo.html">ProcessInfo</a> {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="structProcessInfo.html#af500917c052066b40cf47f96b43c607b">   22</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structProcessInfo.html#af500917c052066b40cf47f96b43c607b">pid</a>;                       <span class="comment">// 当前进程 ID（/proc/self/status 中的 Pid）</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="structProcessInfo.html#a3e6a4222de552b3170858a81898dd657">   23</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structProcessInfo.html#a3e6a4222de552b3170858a81898dd657">ppid</a>;                      <span class="comment">// 父进程 ID（/proc/self/status 中的 PPid）</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="structProcessInfo.html#a9b45b3e13bd9167aab02e17e08916231">   24</a></span>    std::string <a class="code hl_variable" href="structProcessInfo.html#a9b45b3e13bd9167aab02e17e08916231">name</a>;              <span class="comment">// 程序名称（/proc/self/comm）</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structProcessInfo.html#a1a4dfa775149aaf177ecdc921fc74fe9">   25</a></span>    std::vector&lt;int&gt; <a class="code hl_variable" href="structProcessInfo.html#a1a4dfa775149aaf177ecdc921fc74fe9">children_pids</a>;<span class="comment">// 子进程列表（可选，从 /proc 遍历）</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="comment">// 内存使用情况（单位：KB）</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structProcessInfo.html#a59a1745f8ea58d948db2a771c843a7a3">   28</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structProcessInfo.html#a59a1745f8ea58d948db2a771c843a7a3">vm_size_kb</a>;             <span class="comment">// 虚拟地址空间大小（VmSize）</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="structProcessInfo.html#acbcb871f7f919b4382cedf143a4b245b">   29</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structProcessInfo.html#acbcb871f7f919b4382cedf143a4b245b">vm_rss_kb</a>;              <span class="comment">// 常驻内存大小（VmRSS）</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>};</div>
+</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="};">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structThreadTreeNode.html">   33</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structThreadTreeNode.html">ThreadTreeNode</a> {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="structThreadTreeNode.html#ae7c6ca1974ff51ef003b3b126d405d00">   34</a></span>    <a class="code hl_struct" href="structThreadSnapshot.html">ThreadSnapshot</a> <a class="code hl_variable" href="structThreadTreeNode.html#ae7c6ca1974ff51ef003b3b126d405d00">thread</a>;               <span class="comment">// 当前线程快照</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structThreadTreeNode.html#a6a9c08669a23fb80d2f2018ca1e86f03">   35</a></span>    std::vector&lt;ThreadTreeNode&gt; <a class="code hl_variable" href="structThreadTreeNode.html#a6a9c08669a23fb80d2f2018ca1e86f03">children</a>; <span class="comment">// 子线程列表</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>};</div>
+</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="foldopen" id="foldopen00039" data-start="{" data-end="};">
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classHealthSnapshot.html">   39</a></span><span class="keyword">class </span><a class="code hl_class" href="classHealthSnapshot.html">HealthSnapshot</a> {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classHealthSnapshot.html#ad0731b3e89fe4ac255af6999d4a55ddd">setUptime</a>(std::chrono::steady_clock::time_point start_time);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classHealthSnapshot.html#a01643e4840a9e11183749dcdc6a2b6e4">setThreadSnapshots</a>(<span class="keyword">const</span> std::vector&lt;ThreadSnapshot&gt;&amp; threads);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classHealthSnapshot.html#ae21c405e4c94076065eb0296fefd0ddc">setProcessInfo</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structProcessInfo.html">ProcessInfo</a>&amp; proc_info);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classHealthSnapshot.html#a72265d535f959df02f73b10c0c67d2d6">buildThreadTree</a>();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="classHealthSnapshot.html#a64c6329415eb177b8825d547321cc60d">getUptimeSeconds</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">const</span> std::vector&lt;ThreadSnapshot&gt;&amp; <a class="code hl_function" href="classHealthSnapshot.html#a11de166ab35289fd6b8c4921a251d89f">getThreads</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">const</span> std::vector&lt;ThreadTreeNode&gt;&amp; <a class="code hl_function" href="classHealthSnapshot.html#a7c84ef3859779b0f16cfaab23d38a6aa">getThreadTree</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structProcessInfo.html">ProcessInfo</a>&amp; <a class="code hl_function" href="classHealthSnapshot.html#a25f260cd8ac8d4c6200c29215dea5801">getProcessInfo</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    std::string <a class="code hl_function" href="classHealthSnapshot.html#a2f97cb49a773afd89fc8b59216d02165">toJsonString</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="classHealthSnapshot.html#ac662d536b7c95052402ff3c5714d82d4">   69</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="classHealthSnapshot.html#ac662d536b7c95052402ff3c5714d82d4">uptime_seconds_</a> = 0.0;                         <span class="comment">// 程序运行时长（秒）</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classHealthSnapshot.html#af641a6dcc32a1ebca4f62316c7b7b0f0">   70</a></span>    std::vector&lt;ThreadSnapshot&gt; <a class="code hl_variable" href="classHealthSnapshot.html#af641a6dcc32a1ebca4f62316c7b7b0f0">threads_</a>;                 <span class="comment">// 所有线程的平铺列表</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classHealthSnapshot.html#a023f7e27b233927e97980863bd602f21">   71</a></span>    <a class="code hl_struct" href="structProcessInfo.html">ProcessInfo</a> <a class="code hl_variable" href="classHealthSnapshot.html#a023f7e27b233927e97980863bd602f21">process_info_</a>;                            <span class="comment">// 进程信息（名称、PID、内存等）</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classHealthSnapshot.html#a35e045efcc03184c5d35c917e89ad332">   72</a></span>    std::vector&lt;ThreadTreeNode&gt; <a class="code hl_variable" href="classHealthSnapshot.html#a35e045efcc03184c5d35c917e89ad332">thread_tree_</a>;             <span class="comment">// 线程父子结构树</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>};</div>
+</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">#endif </span><span class="comment">// HEALTH_SNAPSHOT_H</span></div>
+<div class="ttc" id="aclassHealthSnapshot_html"><div class="ttname"><a href="classHealthSnapshot.html">HealthSnapshot</a></div><div class="ttdoc">健康快照数据类</div><div class="ttdef"><b>Definition</b> SoftHealthSnapshot.h:39</div></div>
+<div class="ttc" id="aclassHealthSnapshot_html_a01643e4840a9e11183749dcdc6a2b6e4"><div class="ttname"><a href="classHealthSnapshot.html#a01643e4840a9e11183749dcdc6a2b6e4">HealthSnapshot::setThreadSnapshots</a></div><div class="ttdeci">void setThreadSnapshots(const std::vector&lt; ThreadSnapshot &gt; &amp;threads)</div><div class="ttdoc">设置线程快照信息</div><div class="ttdef"><b>Definition</b> SoftHealthSnapshot.cpp:11</div></div>
+<div class="ttc" id="aclassHealthSnapshot_html_a023f7e27b233927e97980863bd602f21"><div class="ttname"><a href="classHealthSnapshot.html#a023f7e27b233927e97980863bd602f21">HealthSnapshot::process_info_</a></div><div class="ttdeci">ProcessInfo process_info_</div><div class="ttdef"><b>Definition</b> SoftHealthSnapshot.h:71</div></div>
+<div class="ttc" id="aclassHealthSnapshot_html_a11de166ab35289fd6b8c4921a251d89f"><div class="ttname"><a href="classHealthSnapshot.html#a11de166ab35289fd6b8c4921a251d89f">HealthSnapshot::getThreads</a></div><div class="ttdeci">const std::vector&lt; ThreadSnapshot &gt; &amp; getThreads() const</div><div class="ttdoc">获取所有线程信息（线性）</div><div class="ttdef"><b>Definition</b> SoftHealthSnapshot.cpp:42</div></div>
+<div class="ttc" id="aclassHealthSnapshot_html_a25f260cd8ac8d4c6200c29215dea5801"><div class="ttname"><a href="classHealthSnapshot.html#a25f260cd8ac8d4c6200c29215dea5801">HealthSnapshot::getProcessInfo</a></div><div class="ttdeci">const ProcessInfo &amp; getProcessInfo() const</div><div class="ttdoc">获取当前进程信息（含内存/子进程）</div><div class="ttdef"><b>Definition</b> SoftHealthSnapshot.cpp:50</div></div>
+<div class="ttc" id="aclassHealthSnapshot_html_a2f97cb49a773afd89fc8b59216d02165"><div class="ttname"><a href="classHealthSnapshot.html#a2f97cb49a773afd89fc8b59216d02165">HealthSnapshot::toJsonString</a></div><div class="ttdeci">std::string toJsonString() const</div><div class="ttdoc">将当前快照转为 JSON 字符串（接口，稍后实现）</div><div class="ttdef"><b>Definition</b> SoftHealthSnapshot.cpp:54</div></div>
+<div class="ttc" id="aclassHealthSnapshot_html_a35e045efcc03184c5d35c917e89ad332"><div class="ttname"><a href="classHealthSnapshot.html#a35e045efcc03184c5d35c917e89ad332">HealthSnapshot::thread_tree_</a></div><div class="ttdeci">std::vector&lt; ThreadTreeNode &gt; thread_tree_</div><div class="ttdef"><b>Definition</b> SoftHealthSnapshot.h:72</div></div>
+<div class="ttc" id="aclassHealthSnapshot_html_a64c6329415eb177b8825d547321cc60d"><div class="ttname"><a href="classHealthSnapshot.html#a64c6329415eb177b8825d547321cc60d">HealthSnapshot::getUptimeSeconds</a></div><div class="ttdeci">double getUptimeSeconds() const</div><div class="ttdoc">获取当前程序已运行的时间（单位：秒）</div><div class="ttdef"><b>Definition</b> SoftHealthSnapshot.cpp:38</div></div>
+<div class="ttc" id="aclassHealthSnapshot_html_a72265d535f959df02f73b10c0c67d2d6"><div class="ttname"><a href="classHealthSnapshot.html#a72265d535f959df02f73b10c0c67d2d6">HealthSnapshot::buildThreadTree</a></div><div class="ttdeci">void buildThreadTree()</div><div class="ttdoc">构建线程父子关系树结构（可用于图形展示）</div><div class="ttdef"><b>Definition</b> SoftHealthSnapshot.cpp:19</div></div>
+<div class="ttc" id="aclassHealthSnapshot_html_a7c84ef3859779b0f16cfaab23d38a6aa"><div class="ttname"><a href="classHealthSnapshot.html#a7c84ef3859779b0f16cfaab23d38a6aa">HealthSnapshot::getThreadTree</a></div><div class="ttdeci">const std::vector&lt; ThreadTreeNode &gt; &amp; getThreadTree() const</div><div class="ttdoc">获取线程树结构（主线程及其子线程）</div><div class="ttdef"><b>Definition</b> SoftHealthSnapshot.cpp:46</div></div>
+<div class="ttc" id="aclassHealthSnapshot_html_ac662d536b7c95052402ff3c5714d82d4"><div class="ttname"><a href="classHealthSnapshot.html#ac662d536b7c95052402ff3c5714d82d4">HealthSnapshot::uptime_seconds_</a></div><div class="ttdeci">double uptime_seconds_</div><div class="ttdef"><b>Definition</b> SoftHealthSnapshot.h:69</div></div>
+<div class="ttc" id="aclassHealthSnapshot_html_ad0731b3e89fe4ac255af6999d4a55ddd"><div class="ttname"><a href="classHealthSnapshot.html#ad0731b3e89fe4ac255af6999d4a55ddd">HealthSnapshot::setUptime</a></div><div class="ttdeci">void setUptime(std::chrono::steady_clock::time_point start_time)</div><div class="ttdoc">设置程序启动时间（用于计算运行时长）</div><div class="ttdef"><b>Definition</b> SoftHealthSnapshot.cpp:6</div></div>
+<div class="ttc" id="aclassHealthSnapshot_html_ae21c405e4c94076065eb0296fefd0ddc"><div class="ttname"><a href="classHealthSnapshot.html#ae21c405e4c94076065eb0296fefd0ddc">HealthSnapshot::setProcessInfo</a></div><div class="ttdeci">void setProcessInfo(const ProcessInfo &amp;proc_info)</div><div class="ttdoc">设置进程相关信息（包括内存）</div><div class="ttdef"><b>Definition</b> SoftHealthSnapshot.cpp:15</div></div>
+<div class="ttc" id="aclassHealthSnapshot_html_af641a6dcc32a1ebca4f62316c7b7b0f0"><div class="ttname"><a href="classHealthSnapshot.html#af641a6dcc32a1ebca4f62316c7b7b0f0">HealthSnapshot::threads_</a></div><div class="ttdeci">std::vector&lt; ThreadSnapshot &gt; threads_</div><div class="ttdef"><b>Definition</b> SoftHealthSnapshot.h:70</div></div>
+<div class="ttc" id="astructProcessInfo_html"><div class="ttname"><a href="structProcessInfo.html">ProcessInfo</a></div><div class="ttdoc">描述当前进程（主程序）的快照信息</div><div class="ttdef"><b>Definition</b> SoftHealthSnapshot.h:21</div></div>
+<div class="ttc" id="astructProcessInfo_html_a1a4dfa775149aaf177ecdc921fc74fe9"><div class="ttname"><a href="structProcessInfo.html#a1a4dfa775149aaf177ecdc921fc74fe9">ProcessInfo::children_pids</a></div><div class="ttdeci">std::vector&lt; int &gt; children_pids</div><div class="ttdef"><b>Definition</b> SoftHealthSnapshot.h:25</div></div>
+<div class="ttc" id="astructProcessInfo_html_a3e6a4222de552b3170858a81898dd657"><div class="ttname"><a href="structProcessInfo.html#a3e6a4222de552b3170858a81898dd657">ProcessInfo::ppid</a></div><div class="ttdeci">int ppid</div><div class="ttdef"><b>Definition</b> SoftHealthSnapshot.h:23</div></div>
+<div class="ttc" id="astructProcessInfo_html_a59a1745f8ea58d948db2a771c843a7a3"><div class="ttname"><a href="structProcessInfo.html#a59a1745f8ea58d948db2a771c843a7a3">ProcessInfo::vm_size_kb</a></div><div class="ttdeci">size_t vm_size_kb</div><div class="ttdef"><b>Definition</b> SoftHealthSnapshot.h:28</div></div>
+<div class="ttc" id="astructProcessInfo_html_a9b45b3e13bd9167aab02e17e08916231"><div class="ttname"><a href="structProcessInfo.html#a9b45b3e13bd9167aab02e17e08916231">ProcessInfo::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition</b> SoftHealthSnapshot.h:24</div></div>
+<div class="ttc" id="astructProcessInfo_html_acbcb871f7f919b4382cedf143a4b245b"><div class="ttname"><a href="structProcessInfo.html#acbcb871f7f919b4382cedf143a4b245b">ProcessInfo::vm_rss_kb</a></div><div class="ttdeci">size_t vm_rss_kb</div><div class="ttdef"><b>Definition</b> SoftHealthSnapshot.h:29</div></div>
+<div class="ttc" id="astructProcessInfo_html_af500917c052066b40cf47f96b43c607b"><div class="ttname"><a href="structProcessInfo.html#af500917c052066b40cf47f96b43c607b">ProcessInfo::pid</a></div><div class="ttdeci">int pid</div><div class="ttdef"><b>Definition</b> SoftHealthSnapshot.h:22</div></div>
+<div class="ttc" id="astructThreadSnapshot_html"><div class="ttname"><a href="structThreadSnapshot.html">ThreadSnapshot</a></div><div class="ttdoc">描述一个线程的快照信息</div><div class="ttdef"><b>Definition</b> SoftHealthSnapshot.h:10</div></div>
+<div class="ttc" id="astructThreadSnapshot_html_a25fc5be704b4b3fe2494b3aa05c7ecdf"><div class="ttname"><a href="structThreadSnapshot.html#a25fc5be704b4b3fe2494b3aa05c7ecdf">ThreadSnapshot::parent_tid</a></div><div class="ttdeci">int parent_tid</div><div class="ttdef"><b>Definition</b> SoftHealthSnapshot.h:15</div></div>
+<div class="ttc" id="astructThreadSnapshot_html_a295e34a22c4d3d19004e4ff577ea2f5d"><div class="ttname"><a href="structThreadSnapshot.html#a295e34a22c4d3d19004e4ff577ea2f5d">ThreadSnapshot::cpu_usage_percent</a></div><div class="ttdeci">double cpu_usage_percent</div><div class="ttdef"><b>Definition</b> SoftHealthSnapshot.h:13</div></div>
+<div class="ttc" id="astructThreadSnapshot_html_a5aca92105028d05f07063b6f0b6a9710"><div class="ttname"><a href="structThreadSnapshot.html#a5aca92105028d05f07063b6f0b6a9710">ThreadSnapshot::utime_ticks</a></div><div class="ttdeci">long utime_ticks</div><div class="ttdef"><b>Definition</b> SoftHealthSnapshot.h:16</div></div>
+<div class="ttc" id="astructThreadSnapshot_html_a885100b88d47e835b932d893f8c3cc73"><div class="ttname"><a href="structThreadSnapshot.html#a885100b88d47e835b932d893f8c3cc73">ThreadSnapshot::stime_ticks</a></div><div class="ttdeci">long stime_ticks</div><div class="ttdef"><b>Definition</b> SoftHealthSnapshot.h:17</div></div>
+<div class="ttc" id="astructThreadSnapshot_html_a8cc3dd191f714ba4ae35b2d3ac5b557a"><div class="ttname"><a href="structThreadSnapshot.html#a8cc3dd191f714ba4ae35b2d3ac5b557a">ThreadSnapshot::tid</a></div><div class="ttdeci">int tid</div><div class="ttdef"><b>Definition</b> SoftHealthSnapshot.h:11</div></div>
+<div class="ttc" id="astructThreadSnapshot_html_a9b45b3e13bd9167aab02e17e08916231"><div class="ttname"><a href="structThreadSnapshot.html#a9b45b3e13bd9167aab02e17e08916231">ThreadSnapshot::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition</b> SoftHealthSnapshot.h:12</div></div>
+<div class="ttc" id="astructThreadSnapshot_html_aba4b52f87b35490fb3c3d452ed9854c9"><div class="ttname"><a href="structThreadSnapshot.html#aba4b52f87b35490fb3c3d452ed9854c9">ThreadSnapshot::stack_kb</a></div><div class="ttdeci">size_t stack_kb</div><div class="ttdef"><b>Definition</b> SoftHealthSnapshot.h:14</div></div>
+<div class="ttc" id="astructThreadTreeNode_html"><div class="ttname"><a href="structThreadTreeNode.html">ThreadTreeNode</a></div><div class="ttdoc">用于构建线程的父子结构树</div><div class="ttdef"><b>Definition</b> SoftHealthSnapshot.h:33</div></div>
+<div class="ttc" id="astructThreadTreeNode_html_a6a9c08669a23fb80d2f2018ca1e86f03"><div class="ttname"><a href="structThreadTreeNode.html#a6a9c08669a23fb80d2f2018ca1e86f03">ThreadTreeNode::children</a></div><div class="ttdeci">std::vector&lt; ThreadTreeNode &gt; children</div><div class="ttdef"><b>Definition</b> SoftHealthSnapshot.h:35</div></div>
+<div class="ttc" id="astructThreadTreeNode_html_ae7c6ca1974ff51ef003b3b126d405d00"><div class="ttname"><a href="structThreadTreeNode.html#ae7c6ca1974ff51ef003b3b126d405d00">ThreadTreeNode::thread</a></div><div class="ttdeci">ThreadSnapshot thread</div><div class="ttdef"><b>Definition</b> SoftHealthSnapshot.h:34</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

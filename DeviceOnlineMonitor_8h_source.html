@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/tools/monitor/device_online_monitor/DeviceOnlineMonitor.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_1563a38af0d3a5e4a6330d6d45e9792a.html">tools</a></li><li class="navelem"><a class="el" href="dir_2e30638dca39e34cc708f75b037f8e59.html">monitor</a></li><li class="navelem"><a class="el" href="dir_84e6677f0b3f73b3d5493fa26e9ff073.html">device_online_monitor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">DeviceOnlineMonitor.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="DeviceOnlineMonitor_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef DEVICE_ONLINE_MONITOR_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define DEVICE_ONLINE_MONITOR_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;thread&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;atomic&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classDeviceOnlineMonitor.html">    9</a></span><span class="keyword">class </span><a class="code hl_class" href="classDeviceOnlineMonitor.html">DeviceOnlineMonitor</a> {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <a class="code hl_function" href="classDeviceOnlineMonitor.html#a281b023a7f66fb37e5c6299c7b4ea9e0">DeviceOnlineMonitor</a>(); <span class="comment">// 默认构造</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <a class="code hl_function" href="classDeviceOnlineMonitor.html#a281b023a7f66fb37e5c6299c7b4ea9e0">DeviceOnlineMonitor</a>(<span class="keyword">const</span> std::string&amp; host, <span class="keywordtype">int</span> port, <span class="keywordtype">int</span> interval_seconds = 5, <span class="keywordtype">int</span> fail_threshold = 3);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_function" href="classDeviceOnlineMonitor.html#a7fb75c2e39153d907205de1730933379">~DeviceOnlineMonitor</a>();</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classDeviceOnlineMonitor.html#aff66b18abb127176950a889d0546fb3d">init</a>(<span class="keyword">const</span> std::string&amp; host, <span class="keywordtype">int</span> port, <span class="keywordtype">int</span> interval_seconds = 5, <span class="keywordtype">int</span> fail_threshold = 3);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDeviceOnlineMonitor.html#a60de64d75454385b23995437f1d72669">start</a>();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDeviceOnlineMonitor.html#a8c528baf37154d347366083f0f816846">stop</a>();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classDeviceOnlineMonitor.html#a1eceab28885f971892b9d4fc76e0e542">isOnline</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDeviceOnlineMonitor.html#a70a4677f113e64393ea51d131e5b4391">monitorLoop</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classDeviceOnlineMonitor.html#ad074c174ce59c112ba75f34e83f08794">tryConnect</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classDeviceOnlineMonitor.html#ada0f95acb51c9a574d38befa858d78fa">   26</a></span>    std::string <a class="code hl_variable" href="classDeviceOnlineMonitor.html#ada0f95acb51c9a574d38befa858d78fa">host_</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classDeviceOnlineMonitor.html#a038dad2e3eabcce46163b1cfbc810843">   27</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="classDeviceOnlineMonitor.html#a038dad2e3eabcce46163b1cfbc810843">port_</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classDeviceOnlineMonitor.html#a3e9f0d61f0e70f840ec27e7d9c7763e8">   28</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="classDeviceOnlineMonitor.html#a3e9f0d61f0e70f840ec27e7d9c7763e8">interval_seconds_</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classDeviceOnlineMonitor.html#a28450f07310db00c5371a7a5287ba5d6">   29</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="classDeviceOnlineMonitor.html#a28450f07310db00c5371a7a5287ba5d6">fail_threshold_</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classDeviceOnlineMonitor.html#aa9620a15c76ada2388bf678e373a6463">   31</a></span>    std::atomic&lt;bool&gt; <a class="code hl_variable" href="classDeviceOnlineMonitor.html#aa9620a15c76ada2388bf678e373a6463">running_</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classDeviceOnlineMonitor.html#a959f692b1e60d0ee954a65f863065469">   32</a></span>    std::thread <a class="code hl_variable" href="classDeviceOnlineMonitor.html#a959f692b1e60d0ee954a65f863065469">monitor_thread_</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classDeviceOnlineMonitor.html#a281b5ec791338d4378e22ef44a51b4a1">   34</a></span>    std::mutex <a class="code hl_variable" href="classDeviceOnlineMonitor.html#a281b5ec791338d4378e22ef44a51b4a1">mutex_</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classDeviceOnlineMonitor.html#ab2466239c16e1dfebe0e673718c9f5b8">   35</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="classDeviceOnlineMonitor.html#ab2466239c16e1dfebe0e673718c9f5b8">online_</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classDeviceOnlineMonitor.html#aef7436a220692b5b863db4e9d8b870a3">   37</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="classDeviceOnlineMonitor.html#aef7436a220692b5b863db4e9d8b870a3">initialized_</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>};</div>
+</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#endif </span><span class="comment">// DEVICE_ONLINE_MONITOR_H</span></div>
+<div class="ttc" id="aclassDeviceOnlineMonitor_html"><div class="ttname"><a href="classDeviceOnlineMonitor.html">DeviceOnlineMonitor</a></div><div class="ttdef"><b>Definition</b> DeviceOnlineMonitor.h:9</div></div>
+<div class="ttc" id="aclassDeviceOnlineMonitor_html_a038dad2e3eabcce46163b1cfbc810843"><div class="ttname"><a href="classDeviceOnlineMonitor.html#a038dad2e3eabcce46163b1cfbc810843">DeviceOnlineMonitor::port_</a></div><div class="ttdeci">int port_</div><div class="ttdef"><b>Definition</b> DeviceOnlineMonitor.h:27</div></div>
+<div class="ttc" id="aclassDeviceOnlineMonitor_html_a1eceab28885f971892b9d4fc76e0e542"><div class="ttname"><a href="classDeviceOnlineMonitor.html#a1eceab28885f971892b9d4fc76e0e542">DeviceOnlineMonitor::isOnline</a></div><div class="ttdeci">bool isOnline()</div><div class="ttdef"><b>Definition</b> DeviceOnlineMonitor.cpp:56</div></div>
+<div class="ttc" id="aclassDeviceOnlineMonitor_html_a281b023a7f66fb37e5c6299c7b4ea9e0"><div class="ttname"><a href="classDeviceOnlineMonitor.html#a281b023a7f66fb37e5c6299c7b4ea9e0">DeviceOnlineMonitor::DeviceOnlineMonitor</a></div><div class="ttdeci">DeviceOnlineMonitor()</div><div class="ttdef"><b>Definition</b> DeviceOnlineMonitor.cpp:9</div></div>
+<div class="ttc" id="aclassDeviceOnlineMonitor_html_a281b5ec791338d4378e22ef44a51b4a1"><div class="ttname"><a href="classDeviceOnlineMonitor.html#a281b5ec791338d4378e22ef44a51b4a1">DeviceOnlineMonitor::mutex_</a></div><div class="ttdeci">std::mutex mutex_</div><div class="ttdef"><b>Definition</b> DeviceOnlineMonitor.h:34</div></div>
+<div class="ttc" id="aclassDeviceOnlineMonitor_html_a28450f07310db00c5371a7a5287ba5d6"><div class="ttname"><a href="classDeviceOnlineMonitor.html#a28450f07310db00c5371a7a5287ba5d6">DeviceOnlineMonitor::fail_threshold_</a></div><div class="ttdeci">int fail_threshold_</div><div class="ttdef"><b>Definition</b> DeviceOnlineMonitor.h:29</div></div>
+<div class="ttc" id="aclassDeviceOnlineMonitor_html_a3e9f0d61f0e70f840ec27e7d9c7763e8"><div class="ttname"><a href="classDeviceOnlineMonitor.html#a3e9f0d61f0e70f840ec27e7d9c7763e8">DeviceOnlineMonitor::interval_seconds_</a></div><div class="ttdeci">int interval_seconds_</div><div class="ttdef"><b>Definition</b> DeviceOnlineMonitor.h:28</div></div>
+<div class="ttc" id="aclassDeviceOnlineMonitor_html_a60de64d75454385b23995437f1d72669"><div class="ttname"><a href="classDeviceOnlineMonitor.html#a60de64d75454385b23995437f1d72669">DeviceOnlineMonitor::start</a></div><div class="ttdeci">void start()</div><div class="ttdef"><b>Definition</b> DeviceOnlineMonitor.cpp:43</div></div>
+<div class="ttc" id="aclassDeviceOnlineMonitor_html_a70a4677f113e64393ea51d131e5b4391"><div class="ttname"><a href="classDeviceOnlineMonitor.html#a70a4677f113e64393ea51d131e5b4391">DeviceOnlineMonitor::monitorLoop</a></div><div class="ttdeci">void monitorLoop()</div><div class="ttdef"><b>Definition</b> DeviceOnlineMonitor.cpp:61</div></div>
+<div class="ttc" id="aclassDeviceOnlineMonitor_html_a7fb75c2e39153d907205de1730933379"><div class="ttname"><a href="classDeviceOnlineMonitor.html#a7fb75c2e39153d907205de1730933379">DeviceOnlineMonitor::~DeviceOnlineMonitor</a></div><div class="ttdeci">~DeviceOnlineMonitor()</div><div class="ttdef"><b>Definition</b> DeviceOnlineMonitor.cpp:39</div></div>
+<div class="ttc" id="aclassDeviceOnlineMonitor_html_a8c528baf37154d347366083f0f816846"><div class="ttname"><a href="classDeviceOnlineMonitor.html#a8c528baf37154d347366083f0f816846">DeviceOnlineMonitor::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdef"><b>Definition</b> DeviceOnlineMonitor.cpp:49</div></div>
+<div class="ttc" id="aclassDeviceOnlineMonitor_html_a959f692b1e60d0ee954a65f863065469"><div class="ttname"><a href="classDeviceOnlineMonitor.html#a959f692b1e60d0ee954a65f863065469">DeviceOnlineMonitor::monitor_thread_</a></div><div class="ttdeci">std::thread monitor_thread_</div><div class="ttdef"><b>Definition</b> DeviceOnlineMonitor.h:32</div></div>
+<div class="ttc" id="aclassDeviceOnlineMonitor_html_aa9620a15c76ada2388bf678e373a6463"><div class="ttname"><a href="classDeviceOnlineMonitor.html#aa9620a15c76ada2388bf678e373a6463">DeviceOnlineMonitor::running_</a></div><div class="ttdeci">std::atomic&lt; bool &gt; running_</div><div class="ttdef"><b>Definition</b> DeviceOnlineMonitor.h:31</div></div>
+<div class="ttc" id="aclassDeviceOnlineMonitor_html_ab2466239c16e1dfebe0e673718c9f5b8"><div class="ttname"><a href="classDeviceOnlineMonitor.html#ab2466239c16e1dfebe0e673718c9f5b8">DeviceOnlineMonitor::online_</a></div><div class="ttdeci">bool online_</div><div class="ttdef"><b>Definition</b> DeviceOnlineMonitor.h:35</div></div>
+<div class="ttc" id="aclassDeviceOnlineMonitor_html_ad074c174ce59c112ba75f34e83f08794"><div class="ttname"><a href="classDeviceOnlineMonitor.html#ad074c174ce59c112ba75f34e83f08794">DeviceOnlineMonitor::tryConnect</a></div><div class="ttdeci">bool tryConnect()</div><div class="ttdef"><b>Definition</b> DeviceOnlineMonitor.cpp:84</div></div>
+<div class="ttc" id="aclassDeviceOnlineMonitor_html_ada0f95acb51c9a574d38befa858d78fa"><div class="ttname"><a href="classDeviceOnlineMonitor.html#ada0f95acb51c9a574d38befa858d78fa">DeviceOnlineMonitor::host_</a></div><div class="ttdeci">std::string host_</div><div class="ttdef"><b>Definition</b> DeviceOnlineMonitor.h:26</div></div>
+<div class="ttc" id="aclassDeviceOnlineMonitor_html_aef7436a220692b5b863db4e9d8b870a3"><div class="ttname"><a href="classDeviceOnlineMonitor.html#aef7436a220692b5b863db4e9d8b870a3">DeviceOnlineMonitor::initialized_</a></div><div class="ttdeci">bool initialized_</div><div class="ttdef"><b>Definition</b> DeviceOnlineMonitor.h:37</div></div>
+<div class="ttc" id="aclassDeviceOnlineMonitor_html_aff66b18abb127176950a889d0546fb3d"><div class="ttname"><a href="classDeviceOnlineMonitor.html#aff66b18abb127176950a889d0546fb3d">DeviceOnlineMonitor::init</a></div><div class="ttdeci">bool init(const std::string &amp;host, int port, int interval_seconds=5, int fail_threshold=3)</div><div class="ttdef"><b>Definition</b> DeviceOnlineMonitor.cpp:27</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

@@ -1,0 +1,522 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: HealthSnapshot类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a>  </div>
+  <div class="headertitle"><div class="title">HealthSnapshot类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>健康快照数据类  
+ <a href="classHealthSnapshot.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="SoftHealthSnapshot_8h_source.html">SoftHealthSnapshot.h</a>&gt;</code></p>
+<div class="dynheader">
+HealthSnapshot 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classHealthSnapshot__coll__graph.png" border="0" usemap="#aHealthSnapshot_coll__map" alt="Collaboration graph"/></div>
+<map name="aHealthSnapshot_coll__map" id="aHealthSnapshot_coll__map">
+<area shape="rect" title="健康快照数据类" alt="" coords="5,93,131,119"/>
+<area shape="rect" href="structProcessInfo.html" title="描述当前进程（主程序）的快照信息" alt="" coords="19,5,117,31"/>
+<area shape="poly" title=" " alt="" coords="71,45,71,93,65,93,65,45"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ad0731b3e89fe4ac255af6999d4a55ddd" id="r_ad0731b3e89fe4ac255af6999d4a55ddd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHealthSnapshot.html#ad0731b3e89fe4ac255af6999d4a55ddd">setUptime</a> (std::chrono::steady_clock::time_point start_time)</td></tr>
+<tr class="memdesc:ad0731b3e89fe4ac255af6999d4a55ddd"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置程序启动时间（用于计算运行时长）  <br /></td></tr>
+<tr class="separator:ad0731b3e89fe4ac255af6999d4a55ddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01643e4840a9e11183749dcdc6a2b6e4" id="r_a01643e4840a9e11183749dcdc6a2b6e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHealthSnapshot.html#a01643e4840a9e11183749dcdc6a2b6e4">setThreadSnapshots</a> (const std::vector&lt; <a class="el" href="structThreadSnapshot.html">ThreadSnapshot</a> &gt; &amp;threads)</td></tr>
+<tr class="memdesc:a01643e4840a9e11183749dcdc6a2b6e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置线程快照信息  <br /></td></tr>
+<tr class="separator:a01643e4840a9e11183749dcdc6a2b6e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae21c405e4c94076065eb0296fefd0ddc" id="r_ae21c405e4c94076065eb0296fefd0ddc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHealthSnapshot.html#ae21c405e4c94076065eb0296fefd0ddc">setProcessInfo</a> (const <a class="el" href="structProcessInfo.html">ProcessInfo</a> &amp;proc_info)</td></tr>
+<tr class="memdesc:ae21c405e4c94076065eb0296fefd0ddc"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置进程相关信息（包括内存）  <br /></td></tr>
+<tr class="separator:ae21c405e4c94076065eb0296fefd0ddc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72265d535f959df02f73b10c0c67d2d6" id="r_a72265d535f959df02f73b10c0c67d2d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHealthSnapshot.html#a72265d535f959df02f73b10c0c67d2d6">buildThreadTree</a> ()</td></tr>
+<tr class="memdesc:a72265d535f959df02f73b10c0c67d2d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">构建线程父子关系树结构（可用于图形展示）  <br /></td></tr>
+<tr class="separator:a72265d535f959df02f73b10c0c67d2d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64c6329415eb177b8825d547321cc60d" id="r_a64c6329415eb177b8825d547321cc60d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHealthSnapshot.html#a64c6329415eb177b8825d547321cc60d">getUptimeSeconds</a> () const</td></tr>
+<tr class="memdesc:a64c6329415eb177b8825d547321cc60d"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前程序已运行的时间（单位：秒）  <br /></td></tr>
+<tr class="separator:a64c6329415eb177b8825d547321cc60d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11de166ab35289fd6b8c4921a251d89f" id="r_a11de166ab35289fd6b8c4921a251d89f"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="structThreadSnapshot.html">ThreadSnapshot</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHealthSnapshot.html#a11de166ab35289fd6b8c4921a251d89f">getThreads</a> () const</td></tr>
+<tr class="memdesc:a11de166ab35289fd6b8c4921a251d89f"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取所有线程信息（线性）  <br /></td></tr>
+<tr class="separator:a11de166ab35289fd6b8c4921a251d89f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c84ef3859779b0f16cfaab23d38a6aa" id="r_a7c84ef3859779b0f16cfaab23d38a6aa"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="structThreadTreeNode.html">ThreadTreeNode</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHealthSnapshot.html#a7c84ef3859779b0f16cfaab23d38a6aa">getThreadTree</a> () const</td></tr>
+<tr class="memdesc:a7c84ef3859779b0f16cfaab23d38a6aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取线程树结构（主线程及其子线程）  <br /></td></tr>
+<tr class="separator:a7c84ef3859779b0f16cfaab23d38a6aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25f260cd8ac8d4c6200c29215dea5801" id="r_a25f260cd8ac8d4c6200c29215dea5801"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structProcessInfo.html">ProcessInfo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHealthSnapshot.html#a25f260cd8ac8d4c6200c29215dea5801">getProcessInfo</a> () const</td></tr>
+<tr class="memdesc:a25f260cd8ac8d4c6200c29215dea5801"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前进程信息（含内存/子进程）  <br /></td></tr>
+<tr class="separator:a25f260cd8ac8d4c6200c29215dea5801"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f97cb49a773afd89fc8b59216d02165" id="r_a2f97cb49a773afd89fc8b59216d02165"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHealthSnapshot.html#a2f97cb49a773afd89fc8b59216d02165">toJsonString</a> () const</td></tr>
+<tr class="memdesc:a2f97cb49a773afd89fc8b59216d02165"><td class="mdescLeft">&#160;</td><td class="mdescRight">将当前快照转为 JSON 字符串（接口，稍后实现）  <br /></td></tr>
+<tr class="separator:a2f97cb49a773afd89fc8b59216d02165"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:ac662d536b7c95052402ff3c5714d82d4" id="r_ac662d536b7c95052402ff3c5714d82d4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHealthSnapshot.html#ac662d536b7c95052402ff3c5714d82d4">uptime_seconds_</a> = 0.0</td></tr>
+<tr class="separator:ac662d536b7c95052402ff3c5714d82d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af641a6dcc32a1ebca4f62316c7b7b0f0" id="r_af641a6dcc32a1ebca4f62316c7b7b0f0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structThreadSnapshot.html">ThreadSnapshot</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHealthSnapshot.html#af641a6dcc32a1ebca4f62316c7b7b0f0">threads_</a></td></tr>
+<tr class="separator:af641a6dcc32a1ebca4f62316c7b7b0f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a023f7e27b233927e97980863bd602f21" id="r_a023f7e27b233927e97980863bd602f21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structProcessInfo.html">ProcessInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHealthSnapshot.html#a023f7e27b233927e97980863bd602f21">process_info_</a></td></tr>
+<tr class="separator:a023f7e27b233927e97980863bd602f21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35e045efcc03184c5d35c917e89ad332" id="r_a35e045efcc03184c5d35c917e89ad332"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structThreadTreeNode.html">ThreadTreeNode</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHealthSnapshot.html#a35e045efcc03184c5d35c917e89ad332">thread_tree_</a></td></tr>
+<tr class="separator:a35e045efcc03184c5d35c917e89ad332"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>健康快照数据类 </p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a72265d535f959df02f73b10c0c67d2d6" name="a72265d535f959df02f73b10c0c67d2d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72265d535f959df02f73b10c0c67d2d6">&#9670;&#160;</a></span>buildThreadTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void buildThreadTree </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>构建线程父子关系树结构（可用于图形展示） </p>
+
+<p class="reference">引用了 <a class="el" href="structThreadTreeNode.html#a6a9c08669a23fb80d2f2018ca1e86f03">ThreadTreeNode::children</a>, <a class="el" href="classHealthSnapshot.html#a35e045efcc03184c5d35c917e89ad332">thread_tree_</a> , 以及 <a class="el" href="classHealthSnapshot.html#af641a6dcc32a1ebca4f62316c7b7b0f0">threads_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classSoftHealthMonitorManager.html#ad3c5d5ef0c2e6ca7eed38a9e2a1617f4">SoftHealthMonitorManager::collectSnapshot()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classHealthSnapshot_a72265d535f959df02f73b10c0c67d2d6_icgraph.png" border="0" usemap="#aclassHealthSnapshot_a72265d535f959df02f73b10c0c67d2d6_icgraph" alt=""/></div>
+<map name="aclassHealthSnapshot_a72265d535f959df02f73b10c0c67d2d6_icgraph" id="aclassHealthSnapshot_a72265d535f959df02f73b10c0c67d2d6_icgraph">
+<area shape="rect" title="构建线程父子关系树结构（可用于图形展示）" alt="" coords="741,13,868,38"/>
+<area shape="rect" href="classSoftHealthMonitorManager.html#ad3c5d5ef0c2e6ca7eed38a9e2a1617f4" title="单次快照采集逻辑（使用伪逻辑占位）" alt="" coords="496,5,693,45"/>
+<area shape="poly" title=" " alt="" coords="728,28,693,28,693,23,728,23"/>
+<area shape="rect" href="classSoftHealthMonitorManager.html#a70a4677f113e64393ea51d131e5b4391" title="后台线程主循环" alt="" coords="251,5,448,45"/>
+<area shape="poly" title=" " alt="" coords="482,28,448,28,448,23,482,23"/>
+<area shape="rect" href="classSoftHealthMonitorManager.html#a60de64d75454385b23995437f1d72669" title="启动、停止" alt="" coords="5,5,203,45"/>
+<area shape="poly" title=" " alt="" coords="237,37,203,37,203,32,237,32"/>
+<area shape="poly" title=" " alt="" coords="216,14,250,14,250,19,216,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a25f260cd8ac8d4c6200c29215dea5801" name="a25f260cd8ac8d4c6200c29215dea5801"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25f260cd8ac8d4c6200c29215dea5801">&#9670;&#160;</a></span>getProcessInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structProcessInfo.html">ProcessInfo</a> &amp; getProcessInfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取当前进程信息（含内存/子进程） </p>
+
+<p class="reference">引用了 <a class="el" href="classHealthSnapshot.html#a023f7e27b233927e97980863bd602f21">process_info_</a>.</p>
+
+</div>
+</div>
+<a id="a11de166ab35289fd6b8c4921a251d89f" name="a11de166ab35289fd6b8c4921a251d89f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11de166ab35289fd6b8c4921a251d89f">&#9670;&#160;</a></span>getThreads()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; <a class="el" href="structThreadSnapshot.html">ThreadSnapshot</a> &gt; &amp; getThreads </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取所有线程信息（线性） </p>
+
+<p class="reference">引用了 <a class="el" href="classHealthSnapshot.html#af641a6dcc32a1ebca4f62316c7b7b0f0">threads_</a>.</p>
+
+</div>
+</div>
+<a id="a7c84ef3859779b0f16cfaab23d38a6aa" name="a7c84ef3859779b0f16cfaab23d38a6aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c84ef3859779b0f16cfaab23d38a6aa">&#9670;&#160;</a></span>getThreadTree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; <a class="el" href="structThreadTreeNode.html">ThreadTreeNode</a> &gt; &amp; getThreadTree </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取线程树结构（主线程及其子线程） </p>
+
+<p class="reference">引用了 <a class="el" href="classHealthSnapshot.html#a35e045efcc03184c5d35c917e89ad332">thread_tree_</a>.</p>
+
+</div>
+</div>
+<a id="a64c6329415eb177b8825d547321cc60d" name="a64c6329415eb177b8825d547321cc60d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64c6329415eb177b8825d547321cc60d">&#9670;&#160;</a></span>getUptimeSeconds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double getUptimeSeconds </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取当前程序已运行的时间（单位：秒） </p>
+
+<p class="reference">引用了 <a class="el" href="classHealthSnapshot.html#ac662d536b7c95052402ff3c5714d82d4">uptime_seconds_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classSoftHealthMonitorManager.html#ad3c5d5ef0c2e6ca7eed38a9e2a1617f4">SoftHealthMonitorManager::collectSnapshot()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classHealthSnapshot_a64c6329415eb177b8825d547321cc60d_icgraph.png" border="0" usemap="#aclassHealthSnapshot_a64c6329415eb177b8825d547321cc60d_icgraph" alt=""/></div>
+<map name="aclassHealthSnapshot_a64c6329415eb177b8825d547321cc60d_icgraph" id="aclassHealthSnapshot_a64c6329415eb177b8825d547321cc60d_icgraph">
+<area shape="rect" title="获取当前程序已运行的时间（单位：秒）" alt="" coords="741,13,887,38"/>
+<area shape="rect" href="classSoftHealthMonitorManager.html#ad3c5d5ef0c2e6ca7eed38a9e2a1617f4" title="单次快照采集逻辑（使用伪逻辑占位）" alt="" coords="496,5,693,45"/>
+<area shape="poly" title=" " alt="" coords="728,28,693,28,693,23,728,23"/>
+<area shape="rect" href="classSoftHealthMonitorManager.html#a70a4677f113e64393ea51d131e5b4391" title="后台线程主循环" alt="" coords="251,5,448,45"/>
+<area shape="poly" title=" " alt="" coords="482,28,448,28,448,23,482,23"/>
+<area shape="rect" href="classSoftHealthMonitorManager.html#a60de64d75454385b23995437f1d72669" title="启动、停止" alt="" coords="5,5,203,45"/>
+<area shape="poly" title=" " alt="" coords="237,37,203,37,203,32,237,32"/>
+<area shape="poly" title=" " alt="" coords="216,14,250,14,250,19,216,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae21c405e4c94076065eb0296fefd0ddc" name="ae21c405e4c94076065eb0296fefd0ddc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae21c405e4c94076065eb0296fefd0ddc">&#9670;&#160;</a></span>setProcessInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setProcessInfo </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structProcessInfo.html">ProcessInfo</a> &amp;&#160;</td>
+          <td class="paramname"><em>proc_info</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置进程相关信息（包括内存） </p>
+
+<p class="reference">引用了 <a class="el" href="classHealthSnapshot.html#a023f7e27b233927e97980863bd602f21">process_info_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classSoftHealthMonitorManager.html#ad3c5d5ef0c2e6ca7eed38a9e2a1617f4">SoftHealthMonitorManager::collectSnapshot()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classHealthSnapshot_ae21c405e4c94076065eb0296fefd0ddc_icgraph.png" border="0" usemap="#aclassHealthSnapshot_ae21c405e4c94076065eb0296fefd0ddc_icgraph" alt=""/></div>
+<map name="aclassHealthSnapshot_ae21c405e4c94076065eb0296fefd0ddc_icgraph" id="aclassHealthSnapshot_ae21c405e4c94076065eb0296fefd0ddc_icgraph">
+<area shape="rect" title="设置进程相关信息（包括内存）" alt="" coords="741,13,859,38"/>
+<area shape="rect" href="classSoftHealthMonitorManager.html#ad3c5d5ef0c2e6ca7eed38a9e2a1617f4" title="单次快照采集逻辑（使用伪逻辑占位）" alt="" coords="496,5,693,45"/>
+<area shape="poly" title=" " alt="" coords="728,28,694,28,694,23,728,23"/>
+<area shape="rect" href="classSoftHealthMonitorManager.html#a70a4677f113e64393ea51d131e5b4391" title="后台线程主循环" alt="" coords="251,5,448,45"/>
+<area shape="poly" title=" " alt="" coords="482,28,448,28,448,23,482,23"/>
+<area shape="rect" href="classSoftHealthMonitorManager.html#a60de64d75454385b23995437f1d72669" title="启动、停止" alt="" coords="5,5,203,45"/>
+<area shape="poly" title=" " alt="" coords="237,37,203,37,203,32,237,32"/>
+<area shape="poly" title=" " alt="" coords="216,14,250,14,250,19,216,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a01643e4840a9e11183749dcdc6a2b6e4" name="a01643e4840a9e11183749dcdc6a2b6e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01643e4840a9e11183749dcdc6a2b6e4">&#9670;&#160;</a></span>setThreadSnapshots()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setThreadSnapshots </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="structThreadSnapshot.html">ThreadSnapshot</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>threads</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置线程快照信息 </p>
+
+<p class="reference">引用了 <a class="el" href="classHealthSnapshot.html#af641a6dcc32a1ebca4f62316c7b7b0f0">threads_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classSoftHealthMonitorManager.html#ad3c5d5ef0c2e6ca7eed38a9e2a1617f4">SoftHealthMonitorManager::collectSnapshot()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classHealthSnapshot_a01643e4840a9e11183749dcdc6a2b6e4_icgraph.png" border="0" usemap="#aclassHealthSnapshot_a01643e4840a9e11183749dcdc6a2b6e4_icgraph" alt=""/></div>
+<map name="aclassHealthSnapshot_a01643e4840a9e11183749dcdc6a2b6e4_icgraph" id="aclassHealthSnapshot_a01643e4840a9e11183749dcdc6a2b6e4_icgraph">
+<area shape="rect" title="设置线程快照信息" alt="" coords="741,13,896,38"/>
+<area shape="rect" href="classSoftHealthMonitorManager.html#ad3c5d5ef0c2e6ca7eed38a9e2a1617f4" title="单次快照采集逻辑（使用伪逻辑占位）" alt="" coords="496,5,693,45"/>
+<area shape="poly" title=" " alt="" coords="728,28,693,28,693,23,728,23"/>
+<area shape="rect" href="classSoftHealthMonitorManager.html#a70a4677f113e64393ea51d131e5b4391" title="后台线程主循环" alt="" coords="251,5,448,45"/>
+<area shape="poly" title=" " alt="" coords="482,28,448,28,448,23,482,23"/>
+<area shape="rect" href="classSoftHealthMonitorManager.html#a60de64d75454385b23995437f1d72669" title="启动、停止" alt="" coords="5,5,203,45"/>
+<area shape="poly" title=" " alt="" coords="237,37,203,37,203,32,237,32"/>
+<area shape="poly" title=" " alt="" coords="216,14,250,14,250,19,216,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad0731b3e89fe4ac255af6999d4a55ddd" name="ad0731b3e89fe4ac255af6999d4a55ddd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0731b3e89fe4ac255af6999d4a55ddd">&#9670;&#160;</a></span>setUptime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setUptime </td>
+          <td>(</td>
+          <td class="paramtype">std::chrono::steady_clock::time_point&#160;</td>
+          <td class="paramname"><em>start_time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置程序启动时间（用于计算运行时长） </p>
+
+<p class="reference">引用了 <a class="el" href="classHealthSnapshot.html#ac662d536b7c95052402ff3c5714d82d4">uptime_seconds_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classSoftHealthMonitorManager.html#ad3c5d5ef0c2e6ca7eed38a9e2a1617f4">SoftHealthMonitorManager::collectSnapshot()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classHealthSnapshot_ad0731b3e89fe4ac255af6999d4a55ddd_icgraph.png" border="0" usemap="#aclassHealthSnapshot_ad0731b3e89fe4ac255af6999d4a55ddd_icgraph" alt=""/></div>
+<map name="aclassHealthSnapshot_ad0731b3e89fe4ac255af6999d4a55ddd_icgraph" id="aclassHealthSnapshot_ad0731b3e89fe4ac255af6999d4a55ddd_icgraph">
+<area shape="rect" title="设置程序启动时间（用于计算运行时长）" alt="" coords="741,13,832,38"/>
+<area shape="rect" href="classSoftHealthMonitorManager.html#ad3c5d5ef0c2e6ca7eed38a9e2a1617f4" title="单次快照采集逻辑（使用伪逻辑占位）" alt="" coords="496,5,693,45"/>
+<area shape="poly" title=" " alt="" coords="727,28,694,28,694,23,727,23"/>
+<area shape="rect" href="classSoftHealthMonitorManager.html#a70a4677f113e64393ea51d131e5b4391" title="后台线程主循环" alt="" coords="251,5,448,45"/>
+<area shape="poly" title=" " alt="" coords="482,28,448,28,448,23,482,23"/>
+<area shape="rect" href="classSoftHealthMonitorManager.html#a60de64d75454385b23995437f1d72669" title="启动、停止" alt="" coords="5,5,203,45"/>
+<area shape="poly" title=" " alt="" coords="237,37,203,37,203,32,237,32"/>
+<area shape="poly" title=" " alt="" coords="216,14,250,14,250,19,216,19"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2f97cb49a773afd89fc8b59216d02165" name="a2f97cb49a773afd89fc8b59216d02165"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f97cb49a773afd89fc8b59216d02165">&#9670;&#160;</a></span>toJsonString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string toJsonString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将当前快照转为 JSON 字符串（接口，稍后实现） </p>
+
+<p class="reference">引用了 <a class="el" href="structProcessInfo.html#a1a4dfa775149aaf177ecdc921fc74fe9">ProcessInfo::children_pids</a>, <a class="el" href="structProcessInfo.html#a9b45b3e13bd9167aab02e17e08916231">ProcessInfo::name</a>, <a class="el" href="structProcessInfo.html#af500917c052066b40cf47f96b43c607b">ProcessInfo::pid</a>, <a class="el" href="structProcessInfo.html#a3e6a4222de552b3170858a81898dd657">ProcessInfo::ppid</a>, <a class="el" href="classHealthSnapshot.html#a023f7e27b233927e97980863bd602f21">process_info_</a>, <a class="el" href="classHealthSnapshot.html#af641a6dcc32a1ebca4f62316c7b7b0f0">threads_</a>, <a class="el" href="classHealthSnapshot.html#ac662d536b7c95052402ff3c5714d82d4">uptime_seconds_</a>, <a class="el" href="structProcessInfo.html#acbcb871f7f919b4382cedf143a4b245b">ProcessInfo::vm_rss_kb</a> , 以及 <a class="el" href="structProcessInfo.html#a59a1745f8ea58d948db2a771c843a7a3">ProcessInfo::vm_size_kb</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">结构体成员变量说明</h2>
+<a id="a023f7e27b233927e97980863bd602f21" name="a023f7e27b233927e97980863bd602f21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a023f7e27b233927e97980863bd602f21">&#9670;&#160;</a></span>process_info_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structProcessInfo.html">ProcessInfo</a> process_info_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classHealthSnapshot.html#a25f260cd8ac8d4c6200c29215dea5801">getProcessInfo()</a>, <a class="el" href="classHealthSnapshot.html#ae21c405e4c94076065eb0296fefd0ddc">setProcessInfo()</a> , 以及 <a class="el" href="classHealthSnapshot.html#a2f97cb49a773afd89fc8b59216d02165">toJsonString()</a>.</p>
+
+</div>
+</div>
+<a id="a35e045efcc03184c5d35c917e89ad332" name="a35e045efcc03184c5d35c917e89ad332"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35e045efcc03184c5d35c917e89ad332">&#9670;&#160;</a></span>thread_tree_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structThreadTreeNode.html">ThreadTreeNode</a>&gt; thread_tree_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classHealthSnapshot.html#a72265d535f959df02f73b10c0c67d2d6">buildThreadTree()</a> , 以及 <a class="el" href="classHealthSnapshot.html#a7c84ef3859779b0f16cfaab23d38a6aa">getThreadTree()</a>.</p>
+
+</div>
+</div>
+<a id="af641a6dcc32a1ebca4f62316c7b7b0f0" name="af641a6dcc32a1ebca4f62316c7b7b0f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af641a6dcc32a1ebca4f62316c7b7b0f0">&#9670;&#160;</a></span>threads_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structThreadSnapshot.html">ThreadSnapshot</a>&gt; threads_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classHealthSnapshot.html#a72265d535f959df02f73b10c0c67d2d6">buildThreadTree()</a>, <a class="el" href="classHealthSnapshot.html#a11de166ab35289fd6b8c4921a251d89f">getThreads()</a>, <a class="el" href="classHealthSnapshot.html#a01643e4840a9e11183749dcdc6a2b6e4">setThreadSnapshots()</a> , 以及 <a class="el" href="classHealthSnapshot.html#a2f97cb49a773afd89fc8b59216d02165">toJsonString()</a>.</p>
+
+</div>
+</div>
+<a id="ac662d536b7c95052402ff3c5714d82d4" name="ac662d536b7c95052402ff3c5714d82d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac662d536b7c95052402ff3c5714d82d4">&#9670;&#160;</a></span>uptime_seconds_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double uptime_seconds_ = 0.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classHealthSnapshot.html#a64c6329415eb177b8825d547321cc60d">getUptimeSeconds()</a>, <a class="el" href="classHealthSnapshot.html#ad0731b3e89fe4ac255af6999d4a55ddd">setUptime()</a> , 以及 <a class="el" href="classHealthSnapshot.html#a2f97cb49a773afd89fc8b59216d02165">toJsonString()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/util/my_soft_healthy/<a class="el" href="SoftHealthSnapshot_8h_source.html">SoftHealthSnapshot.h</a></li>
+<li>src/util/my_soft_healthy/<a class="el" href="SoftHealthSnapshot_8cpp.html">SoftHealthSnapshot.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

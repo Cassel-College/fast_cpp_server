@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/tools/thread_safe_queue/thread_safe_queue.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_1563a38af0d3a5e4a6330d6d45e9792a.html">tools</a></li><li class="navelem"><a class="el" href="dir_8f9bbd9ce0b25d93a0617178dc63aed1.html">thread_safe_queue</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#namespaces">命名空间</a>  </div>
+  <div class="headertitle"><div class="title">thread_safe_queue.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;deque&gt;</code><br />
+<code>#include &lt;mutex&gt;</code><br />
+<code>#include &lt;condition_variable&gt;</code><br />
+<code>#include &lt;chrono&gt;</code><br />
+<code>#include &lt;cstddef&gt;</code><br />
+<code>#include &quot;<a class="el" href="MyLog_8h_source.html">MyLog.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+thread_safe_queue.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="thread__safe__queue_8h__incl.png" border="0" usemap="#asrc_2tools_2thread__safe__queue_2thread__safe__queue_8h" alt=""/></div>
+<map name="asrc_2tools_2thread__safe__queue_2thread__safe__queue_8h" id="asrc_2tools_2thread__safe__queue_2thread__safe__queue_8h">
+<area shape="rect" title=" " alt="" coords="253,5,462,45"/>
+<area shape="rect" title=" " alt="" coords="5,93,85,119"/>
+<area shape="poly" title=" " alt="" coords="283,48,100,94,99,89,282,43"/>
+<area shape="rect" title=" " alt="" coords="110,93,173,119"/>
+<area shape="poly" title=" " alt="" coords="307,48,187,91,185,86,305,43"/>
+<area shape="rect" title=" " alt="" coords="197,93,261,119"/>
+<area shape="poly" title=" " alt="" coords="328,48,261,88,258,84,325,43"/>
+<area shape="rect" title=" " alt="" coords="286,93,429,119"/>
+<area shape="poly" title=" " alt="" coords="360,46,360,79,355,79,355,46"/>
+<area shape="rect" title=" " alt="" coords="453,93,520,119"/>
+<area shape="poly" title=" " alt="" coords="390,43,457,84,455,88,387,48"/>
+<area shape="rect" title=" " alt="" coords="545,93,615,119"/>
+<area shape="poly" title=" " alt="" coords="412,43,535,86,533,91,410,48"/>
+<area shape="rect" href="MyLog_8h.html" title=" " alt="" coords="640,93,717,119"/>
+<area shape="poly" title=" " alt="" coords="435,43,627,89,626,95,434,48"/>
+<area shape="rect" title=" " alt="" coords="205,174,329,199"/>
+<area shape="poly" title=" " alt="" coords="640,119,627,121,484,144,341,169,323,173,321,168,339,164,483,139,626,116,639,113"/>
+<area shape="rect" title=" " alt="" coords="353,167,511,207"/>
+<area shape="poly" title=" " alt="" coords="644,121,505,165,504,160,642,116"/>
+<area shape="rect" title=" " alt="" coords="535,174,654,199"/>
+<area shape="poly" title=" " alt="" coords="668,121,619,166,615,163,664,117"/>
+<area shape="rect" title=" " alt="" coords="678,174,845,199"/>
+<area shape="poly" title=" " alt="" coords="693,117,741,163,737,166,689,121"/>
+<area shape="rect" title=" " alt="" coords="869,174,947,199"/>
+<area shape="poly" title=" " alt="" coords="715,116,858,164,866,167,864,172,856,169,713,121"/>
+<area shape="rect" title=" " alt="" coords="971,174,1029,199"/>
+<area shape="poly" title=" " alt="" coords="718,110,828,130,894,145,959,164,965,166,964,171,958,169,893,150,826,135,717,115"/>
+</map>
+</div>
+</div>
+<p><a href="thread__safe__queue_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtools_1_1thread__safe__queue_1_1ThreadSafeQueue.html">ThreadSafeQueue&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">线程安全队列（支持阻塞、限长、并发安全）  <a href="classtools_1_1thread__safe__queue_1_1ThreadSafeQueue.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacetools" id="r_namespacetools"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetools.html">tools</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacetools_1_1thread__safe__queue" id="r_namespacetools_1_1thread__safe__queue"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetools_1_1thread__safe__queue.html">tools::thread_safe_queue</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

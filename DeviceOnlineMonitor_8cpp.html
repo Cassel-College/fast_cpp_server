@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/tools/monitor/device_online_monitor/DeviceOnlineMonitor.cpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_1563a38af0d3a5e4a6330d6d45e9792a.html">tools</a></li><li class="navelem"><a class="el" href="dir_2e30638dca39e34cc708f75b037f8e59.html">monitor</a></li><li class="navelem"><a class="el" href="dir_84e6677f0b3f73b3d5493fa26e9ff073.html">device_online_monitor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">DeviceOnlineMonitor.cpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="DeviceOnlineMonitor_8h_source.html">DeviceOnlineMonitor.h</a>&quot;</code><br />
+<code>#include &lt;chrono&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;netinet/in.h&gt;</code><br />
+<code>#include &lt;arpa/inet.h&gt;</code><br />
+<code>#include &lt;sys/socket.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+DeviceOnlineMonitor.cpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="DeviceOnlineMonitor_8cpp__incl.png" border="0" usemap="#asrc_2tools_2monitor_2device__online__monitor_2DeviceOnlineMonitor_8cpp" alt=""/></div>
+<map name="asrc_2tools_2monitor_2device__online__monitor_2DeviceOnlineMonitor_8cpp" id="asrc_2tools_2monitor_2device__online__monitor_2DeviceOnlineMonitor_8cpp">
+<area shape="rect" title=" " alt="" coords="345,5,639,45"/>
+<area shape="rect" href="DeviceOnlineMonitor_8h.html" title=" " alt="" coords="79,93,249,119"/>
+<area shape="poly" title=" " alt="" coords="414,48,226,93,225,88,413,43"/>
+<area shape="rect" title=" " alt="" coords="273,93,340,119"/>
+<area shape="poly" title=" " alt="" coords="449,48,347,90,345,85,447,43"/>
+<area shape="rect" title=" " alt="" coords="364,93,431,119"/>
+<area shape="poly" title=" " alt="" coords="471,48,424,86,421,82,467,43"/>
+<area shape="rect" title=" " alt="" coords="455,93,529,119"/>
+<area shape="poly" title=" " alt="" coords="495,46,495,79,489,79,489,46"/>
+<area shape="rect" title=" " alt="" coords="553,93,649,119"/>
+<area shape="poly" title=" " alt="" coords="520,43,576,83,573,87,517,48"/>
+<area shape="rect" title=" " alt="" coords="674,93,766,119"/>
+<area shape="poly" title=" " alt="" coords="547,43,674,86,673,91,546,48"/>
+<area shape="rect" title=" " alt="" coords="790,93,893,119"/>
+<area shape="poly" title=" " alt="" coords="576,43,778,88,777,93,575,48"/>
+<area shape="rect" title=" " alt="" coords="5,167,64,192"/>
+<area shape="poly" title=" " alt="" coords="144,121,69,162,67,157,142,116"/>
+<area shape="rect" title=" " alt="" coords="88,167,152,192"/>
+<area shape="poly" title=" " alt="" coords="159,120,137,156,132,154,154,118"/>
+<area shape="rect" title=" " alt="" coords="176,167,240,192"/>
+<area shape="poly" title=" " alt="" coords="174,118,196,154,191,156,169,120"/>
+<area shape="rect" title=" " alt="" coords="264,167,331,192"/>
+<area shape="poly" title=" " alt="" coords="187,116,265,158,262,162,184,121"/>
+</map>
+</div>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

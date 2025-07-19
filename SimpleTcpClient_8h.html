@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/tools/simple_tcp_client/SimpleTcpClient.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_1563a38af0d3a5e4a6330d6d45e9792a.html">tools</a></li><li class="navelem"><a class="el" href="dir_7165a412d0309b1ff645e02de0b9359e.html">simple_tcp_client</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#namespaces">命名空间</a>  </div>
+  <div class="headertitle"><div class="title">SimpleTcpClient.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
+<code>#include &lt;thread&gt;</code><br />
+<code>#include &lt;atomic&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;<a class="el" href="ThreadSafeBuffer_8h_source.html">ThreadSafeBuffer.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+SimpleTcpClient.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="SimpleTcpClient_8h__incl.png" border="0" usemap="#asrc_2tools_2simple__tcp__client_2SimpleTcpClient_8h" alt=""/></div>
+<map name="asrc_2tools_2simple__tcp__client_2SimpleTcpClient_8h" id="asrc_2tools_2simple__tcp__client_2SimpleTcpClient_8h">
+<area shape="rect" title=" " alt="" coords="117,5,302,45"/>
+<area shape="rect" title=" " alt="" coords="5,93,64,119"/>
+<area shape="poly" title=" " alt="" coords="169,48,74,90,72,85,166,43"/>
+<area shape="rect" title=" " alt="" coords="88,93,152,119"/>
+<area shape="poly" title=" " alt="" coords="189,48,145,86,142,82,186,44"/>
+<area shape="rect" title=" " alt="" coords="176,93,243,119"/>
+<area shape="poly" title=" " alt="" coords="212,46,212,79,207,79,207,46"/>
+<area shape="rect" title=" " alt="" coords="261,167,323,192"/>
+<area shape="poly" title=" " alt="" coords="226,44,257,92,285,152,280,154,252,95,221,47"/>
+<area shape="rect" href="ThreadSafeBuffer_8h.html" title=" " alt="" coords="317,93,464,119"/>
+<area shape="poly" title=" " alt="" coords="254,43,352,85,350,90,252,48"/>
+<area shape="poly" title=" " alt="" coords="376,121,321,161,318,156,373,117"/>
+<area shape="rect" title=" " alt="" coords="353,167,415,192"/>
+<area shape="poly" title=" " alt="" coords="392,119,389,153,384,153,387,119"/>
+<area shape="rect" title=" " alt="" coords="440,167,504,192"/>
+<area shape="poly" title=" " alt="" coords="405,117,450,156,447,160,402,121"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="SimpleTcpClient_8h__dep__incl.png" border="0" usemap="#asrc_2tools_2simple__tcp__client_2SimpleTcpClient_8hdep" alt=""/></div>
+<map name="asrc_2tools_2simple__tcp__client_2SimpleTcpClient_8hdep" id="asrc_2tools_2simple__tcp__client_2SimpleTcpClient_8hdep">
+<area shape="rect" title=" " alt="" coords="53,5,239,45"/>
+<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="5,101,111,126"/>
+<area shape="poly" title=" " alt="" coords="118,57,72,102,68,98,115,53"/>
+<area shape="rect" href="SimpleTcpClient_8cpp.html" title=" " alt="" coords="134,93,334,133"/>
+<area shape="poly" title=" " alt="" coords="177,53,216,91,213,95,174,57"/>
+</map>
+</div>
+</div>
+<p><a href="SimpleTcpClient_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtools_1_1SimpleTcpClient.html">SimpleTcpClient</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">TCP 连接工具类 负责自动连接、断线重连、接收数据写缓冲区  <a href="classtools_1_1SimpleTcpClient.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacetools" id="r_namespacetools"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetools.html">tools</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>
