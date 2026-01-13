@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_config/MyINIConfig.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_5ecf6d4204a4c2836aa9fbaf2c2b3bf5.html">my_config</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">MyINIConfig.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="MyINIConfig_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="foldopen" id="foldopen00006" data-start="{" data-end="};">
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="classMyINIConfig.html">    6</a></span><span class="keyword">class </span><a class="code hl_class" href="classMyINIConfig.html">MyINIConfig</a> {</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classMyINIConfig.html#ac9617456c031294a5f173450f1196945">Init</a>(<span class="keyword">const</span> std::string&amp; config_file_path);</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keyword">static</span> <a class="code hl_class" href="classMyINIConfig.html">MyINIConfig</a>&amp; <a class="code hl_function" href="classMyINIConfig.html#ae89861074a9476484e56ca4b93d2af5c">GetInstance</a>();</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classMyINIConfig.html#a1b2fd204c9cdf21af9887e93e5266be3">GetString</a>(<span class="keyword">const</span> std::string&amp; key, <span class="keyword">const</span> std::string&amp; def, std::string&amp; out) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classMyINIConfig.html#a359c2c42ef38c5c687760be379420417">GetInt</a>(<span class="keyword">const</span> std::string&amp; key, <span class="keywordtype">int</span> def, <span class="keywordtype">int</span>&amp; out) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classMyINIConfig.html#af9f5927ef0ea7c8a609f351c6e74590e">GetDouble</a>(<span class="keyword">const</span> std::string&amp; key, <span class="keywordtype">double</span> def, <span class="keywordtype">double</span>&amp; out) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classMyINIConfig.html#ad0141c490f6ee81e81d8047fa069dedd">GetBool</a>(<span class="keyword">const</span> std::string&amp; key, <span class="keywordtype">bool</span> def, <span class="keywordtype">bool</span>&amp; out) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    std::string <a class="code hl_function" href="classMyINIConfig.html#adced5d59c4ac66746d4515f312141884">ShowConfig</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classMyINIConfig.html#a32fddfe19cf7b2fe08489d3278b742af">   19</a></span>    <a class="code hl_function" href="classMyINIConfig.html#a32fddfe19cf7b2fe08489d3278b742af">MyINIConfig</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classMyINIConfig.html#a232e59acebed58c41d3f37209da2d55f">Load</a>(<span class="keyword">const</span> std::string&amp; path);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classMyINIConfig.html#a593de0fefe39dbda08f7e991fc418980">   22</a></span>    <span class="keyword">static</span> <a class="code hl_class" href="classMyINIConfig.html">MyINIConfig</a>* <a class="code hl_variable" href="classMyINIConfig.html#a593de0fefe39dbda08f7e991fc418980">instance_</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classMyINIConfig.html#a7cddf0b46bd16d6bed87e48480cb89c9">   23</a></span>    <span class="keyword">static</span> std::once_flag <a class="code hl_variable" href="classMyINIConfig.html#a7cddf0b46bd16d6bed87e48480cb89c9">init_flag_</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classMyINIConfig.html#a421e575af8a12e4b513d2c8a7a5eec59">   25</a></span>    std::map&lt;std::string, std::string&gt; <a class="code hl_variable" href="classMyINIConfig.html#a421e575af8a12e4b513d2c8a7a5eec59">kv_</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>};</div>
+</div>
+<div class="ttc" id="aclassMyINIConfig_html"><div class="ttname"><a href="classMyINIConfig.html">MyINIConfig</a></div><div class="ttdef"><b>Definition</b> MyINIConfig.h:6</div></div>
+<div class="ttc" id="aclassMyINIConfig_html_a1b2fd204c9cdf21af9887e93e5266be3"><div class="ttname"><a href="classMyINIConfig.html#a1b2fd204c9cdf21af9887e93e5266be3">MyINIConfig::GetString</a></div><div class="ttdeci">bool GetString(const std::string &amp;key, const std::string &amp;def, std::string &amp;out) const</div><div class="ttdef"><b>Definition</b> MyINIConfig.cpp:33</div></div>
+<div class="ttc" id="aclassMyINIConfig_html_a232e59acebed58c41d3f37209da2d55f"><div class="ttname"><a href="classMyINIConfig.html#a232e59acebed58c41d3f37209da2d55f">MyINIConfig::Load</a></div><div class="ttdeci">bool Load(const std::string &amp;path)</div><div class="ttdef"><b>Definition</b> MyINIConfig.cpp:19</div></div>
+<div class="ttc" id="aclassMyINIConfig_html_a32fddfe19cf7b2fe08489d3278b742af"><div class="ttname"><a href="classMyINIConfig.html#a32fddfe19cf7b2fe08489d3278b742af">MyINIConfig::MyINIConfig</a></div><div class="ttdeci">MyINIConfig()=default</div></div>
+<div class="ttc" id="aclassMyINIConfig_html_a359c2c42ef38c5c687760be379420417"><div class="ttname"><a href="classMyINIConfig.html#a359c2c42ef38c5c687760be379420417">MyINIConfig::GetInt</a></div><div class="ttdeci">bool GetInt(const std::string &amp;key, int def, int &amp;out) const</div><div class="ttdef"><b>Definition</b> MyINIConfig.cpp:39</div></div>
+<div class="ttc" id="aclassMyINIConfig_html_a421e575af8a12e4b513d2c8a7a5eec59"><div class="ttname"><a href="classMyINIConfig.html#a421e575af8a12e4b513d2c8a7a5eec59">MyINIConfig::kv_</a></div><div class="ttdeci">std::map&lt; std::string, std::string &gt; kv_</div><div class="ttdef"><b>Definition</b> MyINIConfig.h:25</div></div>
+<div class="ttc" id="aclassMyINIConfig_html_a593de0fefe39dbda08f7e991fc418980"><div class="ttname"><a href="classMyINIConfig.html#a593de0fefe39dbda08f7e991fc418980">MyINIConfig::instance_</a></div><div class="ttdeci">static MyINIConfig * instance_</div><div class="ttdef"><b>Definition</b> MyINIConfig.h:22</div></div>
+<div class="ttc" id="aclassMyINIConfig_html_a7cddf0b46bd16d6bed87e48480cb89c9"><div class="ttname"><a href="classMyINIConfig.html#a7cddf0b46bd16d6bed87e48480cb89c9">MyINIConfig::init_flag_</a></div><div class="ttdeci">static std::once_flag init_flag_</div><div class="ttdef"><b>Definition</b> MyINIConfig.h:23</div></div>
+<div class="ttc" id="aclassMyINIConfig_html_ac9617456c031294a5f173450f1196945"><div class="ttname"><a href="classMyINIConfig.html#ac9617456c031294a5f173450f1196945">MyINIConfig::Init</a></div><div class="ttdeci">static void Init(const std::string &amp;config_file_path)</div><div class="ttdef"><b>Definition</b> MyINIConfig.cpp:8</div></div>
+<div class="ttc" id="aclassMyINIConfig_html_ad0141c490f6ee81e81d8047fa069dedd"><div class="ttname"><a href="classMyINIConfig.html#ad0141c490f6ee81e81d8047fa069dedd">MyINIConfig::GetBool</a></div><div class="ttdeci">bool GetBool(const std::string &amp;key, bool def, bool &amp;out) const</div><div class="ttdef"><b>Definition</b> MyINIConfig.cpp:51</div></div>
+<div class="ttc" id="aclassMyINIConfig_html_adced5d59c4ac66746d4515f312141884"><div class="ttname"><a href="classMyINIConfig.html#adced5d59c4ac66746d4515f312141884">MyINIConfig::ShowConfig</a></div><div class="ttdeci">std::string ShowConfig() const</div><div class="ttdef"><b>Definition</b> MyINIConfig.cpp:57</div></div>
+<div class="ttc" id="aclassMyINIConfig_html_ae89861074a9476484e56ca4b93d2af5c"><div class="ttname"><a href="classMyINIConfig.html#ae89861074a9476484e56ca4b93d2af5c">MyINIConfig::GetInstance</a></div><div class="ttdeci">static MyINIConfig &amp; GetInstance()</div><div class="ttdef"><b>Definition</b> MyINIConfig.cpp:15</div></div>
+<div class="ttc" id="aclassMyINIConfig_html_af9f5927ef0ea7c8a609f351c6e74590e"><div class="ttname"><a href="classMyINIConfig.html#af9f5927ef0ea7c8a609f351c6e74590e">MyINIConfig::GetDouble</a></div><div class="ttdeci">bool GetDouble(const std::string &amp;key, double def, double &amp;out) const</div><div class="ttdef"><b>Definition</b> MyINIConfig.cpp:45</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

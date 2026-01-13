@@ -1,22 +1,7 @@
 var searchData=
 [
-  ['parent_5ftid_0',['parent_tid',['../structThreadSnapshot.html#a25fc5be704b4b3fe2494b3aa05c7ecdf',1,'ThreadSnapshot']]],
-  ['parse_1',['parse',['../classArgumentParser.html#a52ce39cf5bee3972451b42a670ca3aa3',1,'ArgumentParser']]],
-  ['pid_2',['pid',['../structProcessInfo.html#af500917c052066b40cf47f96b43c607b',1,'ProcessInfo']]],
-  ['pingbycpr_2ecpp_3',['PingByCPR.cpp',['../PingByCPR_8cpp.html',1,'']]],
-  ['pingbycpr_2eh_4',['PingByCPR.h',['../PingByCPR_8h.html',1,'']]],
-  ['pingfuncbycpr_5',['PingFuncByCPR',['../classtools_1_1PingTools_1_1PingFuncByCPR.html',1,'tools::PingTools']]],
-  ['pingurl_6',['PingURL',['../classtools_1_1PingTools_1_1PingFuncByCPR.html#aa7e803558de8f5d04e353a2cc045129a',1,'tools::PingTools::PingFuncByCPR']]],
-  ['pop_7',['pop',['../classtools_1_1ThreadSafeBuffer.html#a98735ca8562303e563690cb6c6e52f2c',1,'tools::ThreadSafeBuffer::pop()'],['../classtools_1_1thread__safe__queue_1_1ThreadSafeQueue.html#a94a5feb9a3a8c0146d1f027b9749689c',1,'tools::thread_safe_queue::ThreadSafeQueue::pop()']]],
-  ['port_5f_8',['port_',['../classtools_1_1SimpleTcpClient.html#a038dad2e3eabcce46163b1cfbc810843',1,'tools::SimpleTcpClient::port_'],['../classDeviceOnlineMonitor.html#a038dad2e3eabcce46163b1cfbc810843',1,'DeviceOnlineMonitor::port_']]],
-  ['ppid_9',['ppid',['../structProcessInfo.html#a3e6a4222de552b3170858a81898dd657',1,'ProcessInfo']]],
-  ['printhelp_10',['printHelp',['../classArgumentParser.html#ac4cbe4e1edc452f402863c02e7dbe641',1,'ArgumentParser']]],
-  ['process_5finfo_5f_11',['process_info_',['../classHealthSnapshot.html#a023f7e27b233927e97980863bd602f21',1,'HealthSnapshot']]],
-  ['processinfo_12',['ProcessInfo',['../structProcessInfo.html',1,'']]],
-  ['processinfocollector_2ecpp_13',['ProcessInfoCollector.cpp',['../ProcessInfoCollector_8cpp.html',1,'']]],
-  ['processinfocollector_2eh_14',['ProcessInfoCollector.h',['../ProcessInfoCollector_8h.html',1,'']]],
-  ['processinfotools_15',['processinfotools',['../classMySystemHealthy_1_1ProcessInfoTools.html',1,'ProcessInfoTools'],['../classMySystemHealthy_1_1ProcessInfoTools.html#a139270097a525d86285cfe636e9fc6cc',1,'MySystemHealthy::ProcessInfoTools::ProcessInfoTools()']]],
-  ['processinfotools_2ecpp_16',['ProcessInfoTools.cpp',['../ProcessInfoTools_8cpp.html',1,'']]],
-  ['processinfotools_2eh_17',['ProcessInfoTools.h',['../ProcessInfoTools_8h.html',1,'']]],
-  ['push_18',['push',['../classtools_1_1ThreadSafeBuffer.html#a181d3047d3f5289c0763db150068625f',1,'tools::ThreadSafeBuffer::push()'],['../classtools_1_1thread__safe__queue_1_1ThreadSafeQueue.html#ae38b9215a6fb23eb0c38a9201cc5e57c',1,'tools::thread_safe_queue::ThreadSafeQueue::push()']]]
+  ['online_5f_0',['online_',['../classDeviceOnlineMonitor.html#ab2466239c16e1dfebe0e673718c9f5b8',1,'DeviceOnlineMonitor']]],
+  ['option_1',['Option',['../structArgumentParser_1_1Option.html',1,'ArgumentParser']]],
+  ['options_5f_2',['options_',['../classArgumentParser.html#a40c2f75b921519c27f456fc3aace94a9',1,'ArgumentParser']]],
+  ['output_5fto_5fconsole_5f_3',['output_to_console_',['../classSoftHealthMonitorConfig.html#ad5375a2742a28bb62a5859255db671c0',1,'SoftHealthMonitorConfig']]]
 ];

@@ -81,14 +81,29 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="MyLog_8h_source.html">MyLog.h</a>&quot;</code><br />
+<code>#include &lt;filesystem&gt;</code><br />
+<code>#include &lt;chrono&gt;</code><br />
+<code>#include &lt;iomanip&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 MyLog.cpp 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="MyLog_8cpp__incl.png" border="0" usemap="#asrc_2util_2my__log_2MyLog_8cpp" alt=""/></div>
 <map name="asrc_2util_2my__log_2MyLog_8cpp" id="asrc_2util_2my__log_2MyLog_8cpp">
-<area shape="rect" title=" " alt="" coords="382,5,574,31"/>
+<area shape="rect" title=" " alt="" coords="639,5,831,31"/>
 <area shape="rect" href="MyLog_8h.html" title=" " alt="" coords="439,79,517,104"/>
-<area shape="poly" title=" " alt="" coords="481,31,481,65,475,65,475,31"/>
+<area shape="poly" title=" " alt="" coords="695,33,530,78,529,73,693,28"/>
+<area shape="rect" title=" " alt="" coords="541,79,631,104"/>
+<area shape="poly" title=" " alt="" coords="712,33,624,75,622,70,710,28"/>
+<area shape="rect" title=" " alt="" coords="655,79,722,104"/>
+<area shape="poly" title=" " alt="" coords="730,32,706,69,702,66,725,30"/>
+<area shape="rect" title=" " alt="" coords="746,79,821,104"/>
+<area shape="poly" title=" " alt="" coords="745,30,770,66,766,69,741,33"/>
+<area shape="rect" title=" " alt="" coords="845,79,919,104"/>
+<area shape="poly" title=" " alt="" coords="760,28,847,70,845,75,758,33"/>
+<area shape="rect" title=" " alt="" coords="943,79,1023,104"/>
+<area shape="poly" title=" " alt="" coords="776,28,931,72,929,77,774,33"/>
 <area shape="rect" title=" " alt="" coords="5,159,129,185"/>
 <area shape="poly" title=" " alt="" coords="439,101,307,123,141,155,123,159,122,153,140,149,306,118,438,96"/>
 <area shape="rect" title=" " alt="" coords="153,152,312,192"/>
@@ -100,7 +115,7 @@ MyLog.cpp 的引用(Include)关系图:</div>
 <area shape="rect" title=" " alt="" coords="670,159,747,185"/>
 <area shape="poly" title=" " alt="" coords="514,101,659,149,666,152,665,157,657,155,513,107"/>
 <area shape="rect" title=" " alt="" coords="771,159,830,185"/>
-<area shape="poly" title=" " alt="" coords="517,96,628,115,694,131,760,149,766,152,764,157,759,155,693,136,627,120,516,101"/>
+<area shape="poly" title=" " alt="" coords="517,99,529,101,646,122,696,131,760,149,766,152,764,157,759,155,695,137,645,127,528,107,516,104"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -111,6 +126,10 @@ MyLog.cpp 的引用(Include)关系图:</div>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
+<tr class="memitem:a686e4f865c2c588547f037e0b2cfafcb" id="r_a686e4f865c2c588547f037e0b2cfafcb"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMyLog.html#a686e4f865c2c588547f037e0b2cfafcb">CurrentTimestamp</a> ()</td></tr>
+<tr class="separator:a686e4f865c2c588547f037e0b2cfafcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85f5b34dcd4f96710243f0b060b67507" id="r_a85f5b34dcd4f96710243f0b060b67507"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMyLog.html#a85f5b34dcd4f96710243f0b060b67507">ArchiveOldLogs</a> (const std::string &amp;log_dir, const std::string &amp;archive_dir, std::vector&lt; std::string &gt; &amp;logInfos)</td></tr>
+<tr class="separator:a85f5b34dcd4f96710243f0b060b67507"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73c0d376cd255b98e8cadb01e6cf45c7" id="r_a73c0d376cd255b98e8cadb01e6cf45c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMyLog.html#a73c0d376cd255b98e8cadb01e6cf45c7">Init</a> (const std::string &amp;log_file, size_t max_file_size, size_t max_files)</td></tr>
 <tr class="separator:a73c0d376cd255b98e8cadb01e6cf45c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9cb6d48bb065acd3651c3f2a683e81e4" id="r_a9cb6d48bb065acd3651c3f2a683e81e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMyLog.html#a9cb6d48bb065acd3651c3f2a683e81e4">Info</a> (const std::string &amp;msg)</td></tr>

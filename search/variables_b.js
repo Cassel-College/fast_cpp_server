@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['parent_5ftid_0',['parent_tid',['../structThreadSnapshot.html#a25fc5be704b4b3fe2494b3aa05c7ecdf',1,'ThreadSnapshot']]],
-  ['pid_1',['pid',['../structProcessInfo.html#af500917c052066b40cf47f96b43c607b',1,'ProcessInfo']]],
-  ['port_5f_2',['port_',['../classDeviceOnlineMonitor.html#a038dad2e3eabcce46163b1cfbc810843',1,'DeviceOnlineMonitor::port_'],['../classtools_1_1SimpleTcpClient.html#a038dad2e3eabcce46163b1cfbc810843',1,'tools::SimpleTcpClient::port_']]],
-  ['ppid_3',['ppid',['../structProcessInfo.html#a3e6a4222de552b3170858a81898dd657',1,'ProcessInfo']]],
-  ['process_5finfo_5f_4',['process_info_',['../classHealthSnapshot.html#a023f7e27b233927e97980863bd602f21',1,'HealthSnapshot']]]
+  ['online_5f_0',['online_',['../classDeviceOnlineMonitor.html#ab2466239c16e1dfebe0e673718c9f5b8',1,'DeviceOnlineMonitor']]],
+  ['options_5f_1',['options_',['../classArgumentParser.html#a40c2f75b921519c27f456fc3aace94a9',1,'ArgumentParser']]],
+  ['output_5fto_5fconsole_5f_2',['output_to_console_',['../classSoftHealthMonitorConfig.html#ad5375a2742a28bb62a5859255db671c0',1,'SoftHealthMonitorConfig']]]
 ];

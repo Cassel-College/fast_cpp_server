@@ -10,5 +10,6 @@ var searchData=
   ['collectprocessinfo_7',['CollectProcessInfo',['../classMySystemHealthy_1_1ProcessInfoTools.html#a8060e509305fc018a68eddbd3ef0d380',1,'MySystemHealthy::ProcessInfoTools']]],
   ['collectsnapshot_8',['collectSnapshot',['../classSoftHealthMonitorManager.html#ad3c5d5ef0c2e6ca7eed38a9e2a1617f4',1,'SoftHealthMonitorManager']]],
   ['connecttoserver_9',['connectToServer',['../classtools_1_1SimpleTcpClient.html#a6fb250ec0fd5c020fc82c524a3080a70',1,'tools::SimpleTcpClient']]],
-  ['cpuinfotools_10',['CPUInfoTools',['../classMySystemHealthy_1_1CPUInfoTools.html#abaf35e72699bd36dcab743dbf3867c4a',1,'MySystemHealthy::CPUInfoTools']]]
+  ['cpuinfotools_10',['CPUInfoTools',['../classMySystemHealthy_1_1CPUInfoTools.html#abaf35e72699bd36dcab743dbf3867c4a',1,'MySystemHealthy::CPUInfoTools']]],
+  ['currenttimestamp_11',['CurrentTimestamp',['../namespaceMyLog.html#a686e4f865c2c588547f037e0b2cfafcb',1,'MyLog']]]
 ];

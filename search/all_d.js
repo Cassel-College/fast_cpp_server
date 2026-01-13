@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['online_5f_0',['online_',['../classDeviceOnlineMonitor.html#ab2466239c16e1dfebe0e673718c9f5b8',1,'DeviceOnlineMonitor']]],
-  ['option_1',['Option',['../structArgumentParser_1_1Option.html',1,'ArgumentParser']]],
-  ['options_5f_2',['options_',['../classArgumentParser.html#a40c2f75b921519c27f456fc3aace94a9',1,'ArgumentParser']]],
-  ['output_5fto_5fconsole_5f_3',['output_to_console_',['../classSoftHealthMonitorConfig.html#ad5375a2742a28bb62a5859255db671c0',1,'SoftHealthMonitorConfig']]]
+  ['name_0',['name',['../structThreadSnapshot.html#a9b45b3e13bd9167aab02e17e08916231',1,'ThreadSnapshot::name'],['../structProcessInfo.html#a9b45b3e13bd9167aab02e17e08916231',1,'ProcessInfo::name']]],
+  ['netinfotools_1',['netinfotools',['../classMySystemHealthy_1_1NetInfoTools.html',1,'NetInfoTools'],['../classMySystemHealthy_1_1NetInfoTools.html#a52fedba1a95602edf7238e3ec65b9afe',1,'MySystemHealthy::NetInfoTools::NetInfoTools()']]],
+  ['netinfotools_2ecpp_2',['NetInfoTools.cpp',['../NetInfoTools_8cpp.html',1,'']]],
+  ['netinfotools_2eh_3',['NetInfoTools.h',['../NetInfoTools_8h.html',1,'']]]
 ];
