@@ -10,8 +10,7 @@ var searchData=
   ['collectnetinfo_7',['CollectNetInfo',['../classMySystemHealthy_1_1NetInfoTools.html#aa39609741bef5a7e60b2acf97a68d972',1,'MySystemHealthy::NetInfoTools']]],
   ['collectprocessinfo_8',['CollectProcessInfo',['../classMySystemHealthy_1_1ProcessInfoTools.html#a8060e509305fc018a68eddbd3ef0d380',1,'MySystemHealthy::ProcessInfoTools']]],
   ['collectsnapshot_9',['collectSnapshot',['../classSoftHealthMonitorManager.html#ad3c5d5ef0c2e6ca7eed38a9e2a1617f4',1,'SoftHealthMonitorManager']]],
-  ['connectionpipe_10',['ConnectionPipe',['../classtools_1_1pipeline_1_1ConnectionPipe.html#ad520d05512d5f94a8b15ddce150ca028',1,'tools::pipeline::ConnectionPipe']]],
-  ['connecttoserver_11',['connectToServer',['../classtools_1_1SimpleTcpClient.html#a6fb250ec0fd5c020fc82c524a3080a70',1,'tools::SimpleTcpClient']]],
-  ['cpuinfotools_12',['CPUInfoTools',['../classMySystemHealthy_1_1CPUInfoTools.html#abaf35e72699bd36dcab743dbf3867c4a',1,'MySystemHealthy::CPUInfoTools']]],
-  ['currenttimestamp_13',['CurrentTimestamp',['../namespaceMyLog.html#a686e4f865c2c588547f037e0b2cfafcb',1,'MyLog']]]
+  ['connecttoserver_10',['connectToServer',['../classtools_1_1SimpleTcpClient.html#a6fb250ec0fd5c020fc82c524a3080a70',1,'tools::SimpleTcpClient']]],
+  ['cpuinfotools_11',['CPUInfoTools',['../classMySystemHealthy_1_1CPUInfoTools.html#abaf35e72699bd36dcab743dbf3867c4a',1,'MySystemHealthy::CPUInfoTools']]],
+  ['currenttimestamp_12',['CurrentTimestamp',['../namespaceMyLog.html#a686e4f865c2c588547f037e0b2cfafcb',1,'MyLog']]]
 ];
