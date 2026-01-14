@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/tools/init_tools/InitTools.cpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_1563a38af0d3a5e4a6330d6d45e9792a.html">tools</a></li><li class="navelem"><a class="el" href="dir_f3aff3871dd8fbb6c8788a2ae58b9d2f.html">init_tools</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">InitTools.cpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &lt;exception&gt;</code><br />
+<code>#include &quot;<a class="el" href="InitTools_8h_source.html">InitTools.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="MyINIConfig_8h_source.html">MyINIConfig.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="MyJSONConfig_8h_source.html">MyJSONConfig.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="MyYAMLConfig_8h_source.html">MyYAMLConfig.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+InitTools.cpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="InitTools_8cpp__incl.png" border="0" usemap="#asrc_2tools_2init__tools_2InitTools_8cpp" alt=""/></div>
+<map name="asrc_2tools_2init__tools_2InitTools_8cpp" id="asrc_2tools_2init__tools_2InitTools_8cpp">
+<area shape="rect" title=" " alt="" coords="300,5,441,45"/>
+<area shape="rect" title=" " alt="" coords="5,93,80,119"/>
+<area shape="poly" title=" " alt="" coords="301,46,94,95,93,90,299,41"/>
+<area shape="rect" title=" " alt="" coords="87,167,167,192"/>
+<area shape="poly" title=" " alt="" coords="301,43,242,63,212,78,186,95,159,124,140,156,135,153,155,121,182,91,210,73,240,59,299,38"/>
+<area shape="rect" title=" " alt="" coords="517,167,576,192"/>
+<area shape="poly" title=" " alt="" coords="403,43,468,91,530,154,526,158,465,95,400,48"/>
+<area shape="rect" title=" " alt="" coords="209,167,271,192"/>
+<area shape="poly" title=" " alt="" coords="301,37,271,44,242,56,216,73,196,95,191,110,195,125,218,156,213,159,190,128,186,110,191,92,213,69,240,51,270,39,299,31"/>
+<area shape="rect" title=" " alt="" coords="305,167,356,192"/>
+<area shape="poly" title=" " alt="" coords="368,47,340,154,335,153,363,45"/>
+<area shape="rect" title=" " alt="" coords="369,93,455,119"/>
+<area shape="poly" title=" " alt="" coords="383,44,402,80,397,82,378,47"/>
+<area shape="rect" href="InitTools_8h.html" title=" " alt="" coords="205,93,293,119"/>
+<area shape="poly" title=" " alt="" coords="343,48,280,88,277,84,340,43"/>
+<area shape="rect" href="MyINIConfig_8h.html" title=" " alt="" coords="531,93,645,119"/>
+<area shape="poly" title=" " alt="" coords="424,43,544,86,542,91,422,48"/>
+<area shape="rect" href="MyJSONConfig_8h.html" title=" " alt="" coords="669,93,795,119"/>
+<area shape="poly" title=" " alt="" coords="442,39,667,88,666,93,441,45"/>
+<area shape="rect" href="MyYAMLConfig_8h.html" title=" " alt="" coords="820,93,951,119"/>
+<area shape="poly" title=" " alt="" coords="442,35,807,90,806,95,441,40"/>
+<area shape="poly" title=" " alt="" coords="231,121,160,162,157,157,228,116"/>
+<area shape="poly" title=" " alt="" coords="294,115,505,165,503,170,293,121"/>
+<area shape="poly" title=" " alt="" coords="250,119,246,154,241,153,245,119"/>
+<area shape="poly" title=" " alt="" coords="264,117,309,156,305,160,261,121"/>
+<area shape="poly" title=" " alt="" coords="583,120,563,156,558,153,579,118"/>
+<area shape="poly" title=" " alt="" coords="547,121,370,170,369,165,546,116"/>
+<area shape="rect" title=" " alt="" coords="771,167,835,192"/>
+<area shape="poly" title=" " alt="" coords="623,116,758,161,757,166,622,121"/>
+<area shape="poly" title=" " alt="" coords="703,121,590,164,588,159,701,116"/>
+<area shape="poly" title=" " alt="" coords="746,117,784,155,780,159,742,121"/>
+<area shape="rect" title=" " alt="" coords="600,167,747,192"/>
+<area shape="poly" title=" " alt="" coords="724,121,693,158,689,155,720,117"/>
+<area shape="poly" title=" " alt="" coords="822,121,590,169,589,164,821,116"/>
+<area shape="poly" title=" " alt="" coords="874,121,828,160,825,155,870,117"/>
+<area shape="rect" title=" " alt="" coords="859,167,991,192"/>
+<area shape="poly" title=" " alt="" coords="894,118,914,153,910,156,890,120"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacetools" id="r_namespacetools"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetools.html">tools</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacetools_1_1init__tools" id="r_namespacetools_1_1init__tools"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetools_1_1init__tools.html">tools::init_tools</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a2b0cf61e8177f65ecc60bbc0a8830f21" id="r_a2b0cf61e8177f65ecc60bbc0a8830f21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetools_1_1init__tools.html#a2b0cf61e8177f65ecc60bbc0a8830f21">loadConfigFromArguments</a> (const std::vector&lt; std::map&lt; std::string, std::string &gt; &gt; &amp;args, std::vector&lt; std::string &gt; &amp;logInfos, std::string &amp;configFilePath)</td></tr>
+<tr class="separator:a2b0cf61e8177f65ecc60bbc0a8830f21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3e9a8959b02909119161038c861d2ce" id="r_ad3e9a8959b02909119161038c861d2ce"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetools_1_1init__tools.html#ad3e9a8959b02909119161038c861d2ce">initLoadConfig</a> (const std::string &amp;type_, const std::string &amp;config_file_path, std::vector&lt; std::string &gt; &amp;logInfos)</td></tr>
+<tr class="separator:ad3e9a8959b02909119161038c861d2ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

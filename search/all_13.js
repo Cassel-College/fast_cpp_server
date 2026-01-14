@@ -15,7 +15,9 @@ var searchData=
   ['tid_12',['tid',['../structThreadSnapshot.html#a8cc3dd191f714ba4ae35b2d3ac5b557a',1,'ThreadSnapshot']]],
   ['tojsonstring_13',['tojsonstring',['../classSoftHealthMonitorConfig.html#a2f97cb49a773afd89fc8b59216d02165',1,'SoftHealthMonitorConfig::toJsonString()'],['../classHealthSnapshot.html#a2f97cb49a773afd89fc8b59216d02165',1,'HealthSnapshot::toJsonString()']]],
   ['tools_14',['tools',['../namespacetools.html',1,'']]],
-  ['tools_3a_3apingtools_15',['PingTools',['../namespacetools_1_1PingTools.html',1,'tools']]],
-  ['tools_3a_3athread_5fsafe_5fqueue_16',['thread_safe_queue',['../namespacetools_1_1thread__safe__queue.html',1,'tools']]],
-  ['tryconnect_17',['tryConnect',['../classDeviceOnlineMonitor.html#ad074c174ce59c112ba75f34e83f08794',1,'DeviceOnlineMonitor']]]
+  ['tools_3a_3afree_5ffunc_15',['free_func',['../namespacetools_1_1free__func.html',1,'tools']]],
+  ['tools_3a_3ainit_5ftools_16',['init_tools',['../namespacetools_1_1init__tools.html',1,'tools']]],
+  ['tools_3a_3apingtools_17',['PingTools',['../namespacetools_1_1PingTools.html',1,'tools']]],
+  ['tools_3a_3athread_5fsafe_5fqueue_18',['thread_safe_queue',['../namespacetools_1_1thread__safe__queue.html',1,'tools']]],
+  ['tryconnect_19',['tryConnect',['../classDeviceOnlineMonitor.html#ad074c174ce59c112ba75f34e83f08794',1,'DeviceOnlineMonitor']]]
 ];
