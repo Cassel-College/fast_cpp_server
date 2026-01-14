@@ -1,23 +1,6 @@
 var searchData=
 [
-  ['senddata_0',['sendData',['../classtools_1_1SimpleTcpClient.html#ace6171e2f6d3f88916da494acfe04a3d',1,'tools::SimpleTcpClient']]],
-  ['sendheartbeat_1',['SendHeartbeat',['../classHeartbeatManager.html#a890ae550c1b299cae3811af268d83c7a',1,'HeartbeatManager']]],
-  ['setenablesubprocesscheck_2',['setEnableSubprocessCheck',['../classSoftHealthMonitorConfig.html#ab20167ee1639ea84db88d4441eac64d9',1,'SoftHealthMonitorConfig']]],
-  ['setenablethreadtree_3',['setEnableThreadTree',['../classSoftHealthMonitorConfig.html#aa55bcd535e6e9d759168ade36bf994ba',1,'SoftHealthMonitorConfig']]],
-  ['setintervalseconds_4',['setintervalseconds',['../classSoftHealthMonitorConfig.html#aee6097b246f8f541a0b9413f4555d73f',1,'SoftHealthMonitorConfig::setIntervalSeconds()'],['../classSoftHealthMonitorManager.html#a567c0bf7ad78eed5eceb05e206b5b1ad',1,'SoftHealthMonitorManager::setIntervalSeconds()']]],
-  ['setmaxsize_5',['setMaxSize',['../classtools_1_1thread__safe__queue_1_1ThreadSafeQueue.html#ae8251cb2f2a2016a4e028f3d1456993b',1,'tools::thread_safe_queue::ThreadSafeQueue']]],
-  ['setoutputtoconsole_6',['setOutputToConsole',['../classSoftHealthMonitorConfig.html#ac6b69a28989e82df8460bc9d872d324d',1,'SoftHealthMonitorConfig']]],
-  ['setprocessinfo_7',['setProcessInfo',['../classHealthSnapshot.html#ae21c405e4c94076065eb0296fefd0ddc',1,'HealthSnapshot']]],
-  ['setthreadsnapshots_8',['setThreadSnapshots',['../classHealthSnapshot.html#a01643e4840a9e11183749dcdc6a2b6e4',1,'HealthSnapshot']]],
-  ['setuptime_9',['setUptime',['../classHealthSnapshot.html#ad0731b3e89fe4ac255af6999d4a55ddd',1,'HealthSnapshot']]],
-  ['showconfig_10',['showconfig',['../classMyConfig.html#a80aa14c3f0f19434325411fe9afb678c',1,'MyConfig::ShowConfig()'],['../classMyINIConfig.html#adced5d59c4ac66746d4515f312141884',1,'MyINIConfig::ShowConfig()'],['../classMyJSONConfig.html#adced5d59c4ac66746d4515f312141884',1,'MyJSONConfig::ShowConfig()'],['../classMyYAMLConfig.html#adced5d59c4ac66746d4515f312141884',1,'MyYAMLConfig::ShowConfig()']]],
-  ['showmyconfig_11',['showMyConfig',['../namespacetools_1_1free__func.html#a13a51766df4d05cbad07e61951781b3a',1,'tools::free_func']]],
-  ['shutdown_12',['shutdown',['../classtools_1_1thread__safe__queue_1_1ThreadSafeQueue.html#a7861ee1569802186a619778efc85af13',1,'tools::thread_safe_queue::ThreadSafeQueue::shutdown()'],['../classMySystemHealthy_1_1MySystemHealthyManager.html#ac5f038c2b480cf9ef5e19e3eba8dbaf9',1,'MySystemHealthy::MySystemHealthyManager::Shutdown()']]],
-  ['simpletcpclient_13',['SimpleTcpClient',['../classtools_1_1SimpleTcpClient.html#a1745a371702da3b33bfa83c4fa2d462f',1,'tools::SimpleTcpClient']]],
-  ['size_14',['size',['../classtools_1_1ThreadSafeBuffer.html#a259cb5a711406a8c3e5d937eb9350cca',1,'tools::ThreadSafeBuffer::size()'],['../classtools_1_1thread__safe__queue_1_1ThreadSafeQueue.html#a259cb5a711406a8c3e5d937eb9350cca',1,'tools::thread_safe_queue::ThreadSafeQueue::size()']]],
-  ['softhealthmonitorconfig_15',['SoftHealthMonitorConfig',['../classSoftHealthMonitorConfig.html#af4bc8ee367e2992aea6249b20f8ff5f3',1,'SoftHealthMonitorConfig']]],
-  ['softhealthmonitormanager_16',['SoftHealthMonitorManager',['../classSoftHealthMonitorManager.html#a587b2f9aeeec9c0559ba24ffd4568415',1,'SoftHealthMonitorManager']]],
-  ['start_17',['start',['../classDeviceOnlineMonitor.html#a60de64d75454385b23995437f1d72669',1,'DeviceOnlineMonitor::start()'],['../classSoftHealthMonitorManager.html#a60de64d75454385b23995437f1d72669',1,'SoftHealthMonitorManager::start()'],['../classHeartbeatManager.html#a07aaf1227e4d645f15e0a964f54ef291',1,'HeartbeatManager::Start()']]],
-  ['stop_18',['stop',['../classDeviceOnlineMonitor.html#a8c528baf37154d347366083f0f816846',1,'DeviceOnlineMonitor::stop()'],['../classSoftHealthMonitorManager.html#a8c528baf37154d347366083f0f816846',1,'SoftHealthMonitorManager::stop()'],['../classHeartbeatManager.html#a17a237457e57625296e6b24feb19c60a',1,'HeartbeatManager::Stop()']]],
-  ['subtract_19',['subtract',['../classExample.html#a470a2cec9c256d196c0e6b8fc7a6ec36',1,'Example']]]
+  ['raw_0',['Raw',['../classMyJSONConfig.html#aa867f7fcf9454bce1e39fbc87146fe3b',1,'MyJSONConfig']]],
+  ['readdata_1',['readData',['../classtools_1_1SimpleTcpClient.html#a6eb9b16b75e6d7ddb37b516ea3dc14fb',1,'tools::SimpleTcpClient']]],
+  ['receiveloop_2',['receiveLoop',['../classtools_1_1SimpleTcpClient.html#a15f044dcc8ea299eb3b9c88024e27257',1,'tools::SimpleTcpClient']]]
 ];
