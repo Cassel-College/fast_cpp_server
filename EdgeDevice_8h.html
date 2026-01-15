@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_edge/EdgeDevice.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_1c8e19e5f988aabcb1d6c4e45e28b8fb.html">my_edge</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#enum-members">枚举</a>  </div>
+  <div class="headertitle"><div class="title">EdgeDevice.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &lt;thread&gt;</code><br />
+<code>#include &lt;atomic&gt;</code><br />
+<code>#include &lt;mutex&gt;</code><br />
+<code>#include &lt;nlohmann/json.hpp&gt;</code><br />
+<code>#include &quot;<a class="el" href="MyLog_8h_source.html">MyLog.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="DeviceOnlineMonitor_8h_source.html">DeviceOnlineMonitor.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+EdgeDevice.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="EdgeDevice_8h__incl.png" border="0" usemap="#asrc_2util_2my__edge_2EdgeDevice_8h" alt=""/></div>
+<map name="asrc_2util_2my__edge_2EdgeDevice_8h" id="asrc_2util_2my__edge_2EdgeDevice_8h">
+<area shape="rect" title=" " alt="" coords="841,5,1064,31"/>
+<area shape="rect" title=" " alt="" coords="771,159,830,185"/>
+<area shape="poly" title=" " alt="" coords="860,33,818,51,800,64,786,80,779,96,779,113,790,146,785,148,774,113,774,94,781,77,797,60,816,46,858,28"/>
+<area shape="rect" title=" " alt="" coords="1102,79,1153,104"/>
+<area shape="poly" title=" " alt="" coords="982,28,1090,72,1088,77,980,33"/>
+<area shape="rect" title=" " alt="" coords="854,159,918,185"/>
+<area shape="poly" title=" " alt="" coords="871,33,829,51,811,64,796,80,792,90,792,100,802,119,823,136,848,151,845,155,820,140,798,122,786,101,786,89,792,77,807,60,826,46,869,28"/>
+<area shape="rect" title=" " alt="" coords="942,159,1009,185"/>
+<area shape="poly" title=" " alt="" coords="964,29,979,51,991,78,994,114,987,146,982,145,988,113,986,79,974,53,960,32"/>
+<area shape="rect" title=" " alt="" coords="1033,159,1097,185"/>
+<area shape="poly" title=" " alt="" coords="967,29,1012,77,1055,145,1050,148,1008,80,963,33"/>
+<area shape="rect" title=" " alt="" coords="1177,79,1323,104"/>
+<area shape="poly" title=" " alt="" coords="1001,28,1189,73,1188,78,1000,33"/>
+<area shape="rect" href="MyLog_8h.html" title=" " alt="" coords="523,79,601,104"/>
+<area shape="poly" title=" " alt="" coords="890,33,615,83,614,78,889,28"/>
+<area shape="rect" href="DeviceOnlineMonitor_8h.html" title=" " alt="" coords="806,79,977,104"/>
+<area shape="poly" title=" " alt="" coords="945,33,912,70,908,66,941,29"/>
+<area shape="poly" title=" " alt="" coords="601,100,676,121,760,149,765,151,763,156,758,155,674,126,600,105"/>
+<area shape="rect" title=" " alt="" coords="5,159,129,185"/>
+<area shape="poly" title=" " alt="" coords="523,99,356,120,141,155,122,159,121,154,140,149,356,114,523,94"/>
+<area shape="rect" title=" " alt="" coords="153,152,312,192"/>
+<area shape="poly" title=" " alt="" coords="524,105,326,151,324,146,522,99"/>
+<area shape="rect" title=" " alt="" coords="336,159,455,185"/>
+<area shape="poly" title=" " alt="" coords="539,106,433,156,431,151,537,102"/>
+<area shape="rect" title=" " alt="" coords="479,159,645,185"/>
+<area shape="poly" title=" " alt="" coords="565,104,565,145,559,145,559,104"/>
+<area shape="rect" title=" " alt="" coords="670,159,747,185"/>
+<area shape="poly" title=" " alt="" coords="585,102,676,150,674,155,582,107"/>
+<area shape="poly" title=" " alt="" coords="880,106,826,152,823,148,876,102"/>
+<area shape="poly" title=" " alt="" coords="893,104,890,146,885,145,888,104"/>
+<area shape="poly" title=" " alt="" coords="906,102,955,148,951,152,902,106"/>
+<area shape="poly" title=" " alt="" coords="918,102,1028,151,1026,156,915,106"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="EdgeDevice_8h__dep__incl.png" border="0" usemap="#asrc_2util_2my__edge_2EdgeDevice_8hdep" alt=""/></div>
+<map name="asrc_2util_2my__edge_2EdgeDevice_8hdep" id="asrc_2util_2my__edge_2EdgeDevice_8hdep">
+<area shape="rect" title=" " alt="" coords="31,5,254,31"/>
+<area shape="rect" href="Pipeline_8cpp.html" title=" " alt="" coords="20,152,153,192"/>
+<area shape="poly" title=" " alt="" coords="71,38,38,55,13,80,9,89,8,99,17,117,34,135,54,150,51,154,30,139,12,120,3,100,4,88,8,77,35,50,69,33"/>
+<area shape="rect" href="EdgeDevice_8cpp.html" title=" " alt="" coords="23,79,262,104"/>
+<area shape="poly" title=" " alt="" coords="145,44,145,79,140,79,140,44"/>
+<area shape="rect" href="MyEdgeManager_8h.html" title=" " alt="" coords="286,79,541,104"/>
+<area shape="poly" title=" " alt="" coords="200,32,370,76,369,81,198,37"/>
+<area shape="poly" title=" " alt="" coords="353,110,154,157,153,152,352,105"/>
+<area shape="rect" href="MyEdgeManager_8cpp.html" title=" " alt="" coords="228,159,497,185"/>
+<area shape="poly" title=" " alt="" coords="401,117,372,161,368,158,396,114"/>
+<area shape="rect" href="MyHeartbeatManager_8cpp.html" title=" " alt="" coords="521,152,716,192"/>
+<area shape="poly" title=" " alt="" coords="457,106,570,149,568,154,455,111"/>
+</map>
+</div>
+</div>
+<p><a href="EdgeDevice_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structedge_1_1EdgeAction.html">EdgeAction</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedge_1_1EdgeDevice.html">EdgeDevice</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespaceedge" id="r_namespaceedge"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceedge.html">edge</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a7e30cbec0a19bcaac66399613db9ee88" id="r_a7e30cbec0a19bcaac66399613db9ee88"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="EdgeDevice_8h.html#a7e30cbec0a19bcaac66399613db9ee88">EDGE_DEVICE_H</a></td></tr>
+<tr class="separator:a7e30cbec0a19bcaac66399613db9ee88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:a705af4082cd372cbec46518713ce86f2" id="r_a705af4082cd372cbec46518713ce86f2"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceedge.html#a705af4082cd372cbec46518713ce86f2">DeviceBusinessStatus</a> { <a class="el" href="namespaceedge.html#a705af4082cd372cbec46518713ce86f2aa5daf7f2ebbba4975d61dab1c40188c7">IDLE</a>
+, <a class="el" href="namespaceedge.html#a705af4082cd372cbec46518713ce86f2a279d7651aba75af46949322315dd5045">COLLECTING</a>
+, <a class="el" href="namespaceedge.html#a705af4082cd372cbec46518713ce86f2ac6e6064fdaf5aa9b04472acaffdcea5b">EXECUTING</a>
+, <a class="el" href="namespaceedge.html#a705af4082cd372cbec46518713ce86f2a893b3aaf1661e3717b18e8335ff93a72">FAULT</a>
+ }</td></tr>
+<tr class="separator:a705af4082cd372cbec46518713ce86f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a7e30cbec0a19bcaac66399613db9ee88" name="a7e30cbec0a19bcaac66399613db9ee88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e30cbec0a19bcaac66399613db9ee88">&#9670;&#160;</a></span>EDGE_DEVICE_H</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EDGE_DEVICE_H</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

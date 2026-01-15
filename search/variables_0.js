@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['buffer_5f_0',['buffer_',['../classtools_1_1SimpleTcpClient.html#a9fcab6aebd2ef14d2f3008fd25fc1ae5',1,'tools::SimpleTcpClient::buffer_'],['../classtools_1_1ThreadSafeBuffer.html#a28b7d835357a513d86c8c436c24cc0e7',1,'tools::ThreadSafeBuffer::buffer_']]]
+  ['action_5fmap_5f_0',['action_map_',['../classedge_1_1EdgeDevice.html#ab29a045163cb40a50eb70f1f7585f503',1,'edge::EdgeDevice']]]
 ];

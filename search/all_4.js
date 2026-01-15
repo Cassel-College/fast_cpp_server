@@ -1,10 +1,23 @@
 var searchData=
 [
-  ['empty_0',['empty',['../classtools_1_1thread__safe__queue_1_1ThreadSafeQueue.html#a644718bb2fb240de962dc3c9a1fdf0dc',1,'tools::thread_safe_queue::ThreadSafeQueue']]],
-  ['enable_5fsubprocess_5fcheck_5f_1',['enable_subprocess_check_',['../classSoftHealthMonitorConfig.html#a06c3ffc721c17632405a2aad43ac40c1',1,'SoftHealthMonitorConfig']]],
-  ['enable_5fthread_5ftree_5f_2',['enable_thread_tree_',['../classSoftHealthMonitorConfig.html#aa8b4548202d8e771e4a42494f7dca4ee',1,'SoftHealthMonitorConfig']]],
-  ['error_3',['Error',['../namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6',1,'MyLog']]],
-  ['example_4',['example',['../classExample.html',1,'Example'],['../classExample.html#a3e2a8f88b54d42d9427768ff44d36704',1,'Example::Example()']]],
-  ['example_2ecpp_5',['example.cpp',['../example_8cpp.html',1,'']]],
-  ['example_2eh_6',['example.h',['../example_8h.html',1,'']]]
+  ['edge_0',['edge',['../namespaceedge.html',1,'']]],
+  ['edge_5fdevice_5fh_1',['EDGE_DEVICE_H',['../EdgeDevice_8h.html#a7e30cbec0a19bcaac66399613db9ee88',1,'EdgeDevice.h']]],
+  ['edgeaction_2',['EdgeAction',['../structedge_1_1EdgeAction.html',1,'edge']]],
+  ['edgedevice_3',['edgedevice',['../classedge_1_1EdgeDevice.html',1,'EdgeDevice'],['../classedge_1_1EdgeDevice.html#ad1aa8763d74e756dce1365dec67fa180',1,'edge::EdgeDevice::EdgeDevice()']]],
+  ['edgedevice_2ecpp_4',['EdgeDevice.cpp',['../EdgeDevice_8cpp.html',1,'']]],
+  ['edgedevice_2eh_5',['EdgeDevice.h',['../EdgeDevice_8h.html',1,'']]],
+  ['empty_6',['empty',['../classtools_1_1thread__safe__queue_1_1ThreadSafeQueue.html#a644718bb2fb240de962dc3c9a1fdf0dc',1,'tools::thread_safe_queue::ThreadSafeQueue']]],
+  ['enable_5fsubprocess_5fcheck_5f_7',['enable_subprocess_check_',['../classSoftHealthMonitorConfig.html#a06c3ffc721c17632405a2aad43ac40c1',1,'SoftHealthMonitorConfig']]],
+  ['enable_5fthread_5ftree_5f_8',['enable_thread_tree_',['../classSoftHealthMonitorConfig.html#aa8b4548202d8e771e4a42494f7dca4ee',1,'SoftHealthMonitorConfig']]],
+  ['error_9',['Error',['../namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6',1,'MyLog']]],
+  ['example_10',['example',['../classExample.html#a3e2a8f88b54d42d9427768ff44d36704',1,'Example::Example()'],['../classExample.html',1,'Example']]],
+  ['example_2ecpp_11',['example.cpp',['../example_8cpp.html',1,'']]],
+  ['example_2eh_12',['example.h',['../example_8h.html',1,'']]],
+  ['execute_13',['execute',['../classtools_1_1service__guard_1_1ServiceGuard.html#a99d97a313751705af64bd75e50fee026',1,'tools::service_guard::ServiceGuard::Execute()'],['../classedge_1_1EdgeDevice.html#a6dfb29a7cdf0de25117b3fb67bc73940',1,'edge::EdgeDevice::Execute()']]],
+  ['executeaction_14',['ExecuteAction',['../classedge_1_1MyEdgeManager.html#a6793d67f6360254160292f84d1cf3cb4',1,'edge::MyEdgeManager']]],
+  ['executebyps_15',['ExecuteByPS',['../classtools_1_1service__guard_1_1ServiceGuard.html#a8698c77956232f828176ff4dbce0b19d',1,'tools::service_guard::ServiceGuard']]],
+  ['executebysystemcal_16',['ExecuteBySystemcal',['../classtools_1_1service__guard_1_1ServiceGuard.html#a1330d55ded43e5af3a18b9f2be4e686e',1,'tools::service_guard::ServiceGuard']]],
+  ['executeshell_17',['ExecuteShell',['../classtools_1_1service__guard_1_1ServiceGuard.html#ada2e44948495509ff2c647d87d005fbf',1,'tools::service_guard::ServiceGuard']]],
+  ['executeshelllines_18',['ExecuteShellLines',['../classtools_1_1service__guard_1_1ServiceGuard.html#a8c41f29edebe6ebe147670eff8c21db0',1,'tools::service_guard::ServiceGuard']]],
+  ['executing_19',['EXECUTING',['../namespaceedge.html#a705af4082cd372cbec46518713ce86f2ac6e6064fdaf5aa9b04472acaffdcea5b',1,'edge']]]
 ];

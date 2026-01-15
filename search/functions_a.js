@@ -1,12 +1,14 @@
 var searchData=
 [
-  ['main_0',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]],
-  ['meminfotools_1',['MemInfoTools',['../classMySystemHealthy_1_1MemInfoTools.html#aa93bba8ace3b3bcc3e5bb9dd39a9d0b4',1,'MySystemHealthy::MemInfoTools']]],
-  ['monitorconnection_2',['monitorConnection',['../classtools_1_1SimpleTcpClient.html#a0b32b04537729e310e1f9f9c0a8fc7dc',1,'tools::SimpleTcpClient']]],
-  ['monitorloop_3',['monitorloop',['../classDeviceOnlineMonitor.html#a70a4677f113e64393ea51d131e5b4391',1,'DeviceOnlineMonitor::monitorLoop()'],['../classSoftHealthMonitorManager.html#a70a4677f113e64393ea51d131e5b4391',1,'SoftHealthMonitorManager::monitorLoop()']]],
-  ['myconfig_4',['MyConfig',['../classMyConfig.html#a678cd6805d655e8b3159b5c90fc54e45',1,'MyConfig']]],
-  ['myiniconfig_5',['MyINIConfig',['../classMyINIConfig.html#a32fddfe19cf7b2fe08489d3278b742af',1,'MyINIConfig']]],
-  ['myjsonconfig_6',['MyJSONConfig',['../classMyJSONConfig.html#a1dd192bb829c3c041b29da6d11360595',1,'MyJSONConfig']]],
-  ['mysystemhealthymanager_7',['MySystemHealthyManager',['../classMySystemHealthy_1_1MySystemHealthyManager.html#a476947e3d41da37fe3c6d7ce9d668cc8',1,'MySystemHealthy::MySystemHealthyManager']]],
-  ['myyamlconfig_8',['MyYAMLConfig',['../classMyYAMLConfig.html#aaba4bb4d685230dd3a74990721264d05',1,'MyYAMLConfig']]]
+  ['launchcomm_0',['LaunchComm',['../classtools_1_1pipeline_1_1Pipeline.html#a8983381deeb84bb686b05a8f2296e9f9',1,'tools::pipeline::Pipeline']]],
+  ['launchedgemonitor_1',['LaunchEdgeMonitor',['../classtools_1_1pipeline_1_1Pipeline.html#ae2998fc95a900a6a10a1f7e39fa2bd03',1,'tools::pipeline::Pipeline']]],
+  ['launchheartbeat_2',['LaunchHeartbeat',['../classtools_1_1pipeline_1_1Pipeline.html#afe3d91fd6adf24f8f0ec4c876667f0e3',1,'tools::pipeline::Pipeline']]],
+  ['launchsystemhealthy_3',['LaunchSystemHealthy',['../classtools_1_1pipeline_1_1Pipeline.html#a1222a49df5bd5c7a8935e4c465ee9cbf',1,'tools::pipeline::Pipeline']]],
+  ['load_4',['load',['../classMyINIConfig.html#a232e59acebed58c41d3f37209da2d55f',1,'MyINIConfig::Load()'],['../classMyJSONConfig.html#a232e59acebed58c41d3f37209da2d55f',1,'MyJSONConfig::Load()'],['../classMyYAMLConfig.html#a232e59acebed58c41d3f37209da2d55f',1,'MyYAMLConfig::Load()']]],
+  ['loadconfig_5',['LoadConfig',['../classMyConfig.html#adeded25a5f5b659b838e6fadf3fe0aae',1,'MyConfig']]],
+  ['loadconfigfromarguments_6',['loadConfigFromArguments',['../namespacetools_1_1init__tools.html#a2b0cf61e8177f65ecc60bbc0a8830f21',1,'tools::init_tools']]],
+  ['loadlogconfigfrominiconfig_7',['loadLogConfigFromINIConfig',['../namespacetools_1_1free__func.html#a3ac10b8d2f35c52b8f9656650947cdfc',1,'tools::free_func']]],
+  ['logarg_8',['LogArg',['../classtools_1_1pipeline_1_1Pipeline.html#ad0112bc6d7fb4529c0469b9013dde1aa',1,'tools::pipeline::Pipeline']]],
+  ['logrecursive_9',['LogRecursive',['../classtools_1_1pipeline_1_1Pipeline.html#a4277153c332354e0545e9102f9771bce',1,'tools::pipeline::Pipeline']]],
+  ['logwelcomemessage_10',['logWelcomeMessage',['../namespacetools_1_1free__func.html#ac9ac315588f531b65fa15c1f345ef032',1,'tools::free_func']]]
 ];

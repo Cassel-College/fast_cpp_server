@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_edge/MyEdgeManager.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_1c8e19e5f988aabcb1d6c4e45e28b8fb.html">my_edge</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">MyEdgeManager.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="MyEdgeManager_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#ifndef MY_EDGE_MANAGER_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="MyEdgeManager_8h.html#ab1af7fd0a3d7b00b1a1c314a20c5a552">    3</a></span><span class="preprocessor">#define MY_EDGE_MANAGER_H</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="EdgeDevice_8h.html">EdgeDevice.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;shared_mutex&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceedge.html">edge</a> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classedge_1_1MyEdgeManager.html">   12</a></span><span class="keyword">class </span><a class="code hl_class" href="classedge_1_1MyEdgeManager.html">MyEdgeManager</a> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="}">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classedge_1_1MyEdgeManager.html#a1bb96f6c20847acd52ac992e54a9d440">   14</a></span>    <span class="keyword">static</span> <a class="code hl_class" href="classedge_1_1MyEdgeManager.html">MyEdgeManager</a>&amp; <a class="code hl_function" href="classedge_1_1MyEdgeManager.html#a1bb96f6c20847acd52ac992e54a9d440">GetInstance</a>() {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keyword">static</span> <a class="code hl_class" href="classedge_1_1MyEdgeManager.html">MyEdgeManager</a> instance;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keywordflow">return</span> instance;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    }</div>
+</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classedge_1_1MyEdgeManager.html#a7f4316c2db2046d65224620a3095c8c5">Init</a>(<span class="keyword">const</span> nlohmann::json&amp; args);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="comment">// 单设备精细化管理</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classedge_1_1MyEdgeManager.html#a2452689759e7af0c1f06085b6718c333">StartDevice</a>(<span class="keyword">const</span> std::string&amp; name);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classedge_1_1MyEdgeManager.html#ab809c40f8d05fce5a1645d8450461e21">StopDevice</a>(<span class="keyword">const</span> std::string&amp; name);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classedge_1_1MyEdgeManager.html#a3fbb1ed2b22f1ef69d593c1f10f2a0a3">StartAll</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classedge_1_1MyEdgeManager.html#a583bc75f14252ec5421d61f7b3e44f08">StopAll</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="comment">// 状态查询</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    nlohmann::json <a class="code hl_function" href="classedge_1_1MyEdgeManager.html#a373ad3f792de13e3ad9600da512a9923">ShowEdgesStatus</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classedge_1_1MyEdgeManager.html#aeb5cf8fa1838f222f523a27af9eec117">   29</a></span>    std::string <a class="code hl_function" href="classedge_1_1MyEdgeManager.html#aeb5cf8fa1838f222f523a27af9eec117">GetDeviceThreadInfo</a>(<span class="keyword">const</span> std::string&amp; name);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="comment">// 指令穿透</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classedge_1_1MyEdgeManager.html#a6793d67f6360254160292f84d1cf3cb4">ExecuteAction</a>(<span class="keyword">const</span> std::string&amp; dev_name, <span class="keyword">const</span> std::string&amp; act_name, <span class="keyword">const</span> nlohmann::json&amp; p);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classedge_1_1MyEdgeManager.html#a57b546fa3dde8c753e8145838f440116">   35</a></span>    <a class="code hl_function" href="classedge_1_1MyEdgeManager.html#a57b546fa3dde8c753e8145838f440116">MyEdgeManager</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classedge_1_1MyEdgeManager.html#aadefd6a2c54aef8e775997f3469af541">   37</a></span>    std::map&lt;std::string, std::shared_ptr&lt;EdgeDevice&gt;&gt; <a class="code hl_variable" href="classedge_1_1MyEdgeManager.html#aadefd6a2c54aef8e775997f3469af541">device_map_</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classedge_1_1MyEdgeManager.html#a3f7fceadda2b13af52092701177669f0">   38</a></span>    std::shared_mutex <a class="code hl_variable" href="classedge_1_1MyEdgeManager.html#a3f7fceadda2b13af52092701177669f0">rw_mutex_</a>; <span class="comment">// 读写锁：支持并发查询</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>};</div>
+</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>} <span class="comment">// namespace edge</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#endif </span><span class="comment">// MY_EDGE_MANAGER_H</span></div>
+<div class="ttc" id="aEdgeDevice_8h_html"><div class="ttname"><a href="EdgeDevice_8h.html">EdgeDevice.h</a></div></div>
+<div class="ttc" id="aclassedge_1_1MyEdgeManager_html"><div class="ttname"><a href="classedge_1_1MyEdgeManager.html">edge::MyEdgeManager</a></div><div class="ttdef"><b>Definition</b> MyEdgeManager.h:12</div></div>
+<div class="ttc" id="aclassedge_1_1MyEdgeManager_html_a1bb96f6c20847acd52ac992e54a9d440"><div class="ttname"><a href="classedge_1_1MyEdgeManager.html#a1bb96f6c20847acd52ac992e54a9d440">edge::MyEdgeManager::GetInstance</a></div><div class="ttdeci">static MyEdgeManager &amp; GetInstance()</div><div class="ttdef"><b>Definition</b> MyEdgeManager.h:14</div></div>
+<div class="ttc" id="aclassedge_1_1MyEdgeManager_html_a2452689759e7af0c1f06085b6718c333"><div class="ttname"><a href="classedge_1_1MyEdgeManager.html#a2452689759e7af0c1f06085b6718c333">edge::MyEdgeManager::StartDevice</a></div><div class="ttdeci">void StartDevice(const std::string &amp;name)</div><div class="ttdef"><b>Definition</b> MyEdgeManager.cpp:47</div></div>
+<div class="ttc" id="aclassedge_1_1MyEdgeManager_html_a373ad3f792de13e3ad9600da512a9923"><div class="ttname"><a href="classedge_1_1MyEdgeManager.html#a373ad3f792de13e3ad9600da512a9923">edge::MyEdgeManager::ShowEdgesStatus</a></div><div class="ttdeci">nlohmann::json ShowEdgesStatus()</div><div class="ttdef"><b>Definition</b> MyEdgeManager.cpp:21</div></div>
+<div class="ttc" id="aclassedge_1_1MyEdgeManager_html_a3f7fceadda2b13af52092701177669f0"><div class="ttname"><a href="classedge_1_1MyEdgeManager.html#a3f7fceadda2b13af52092701177669f0">edge::MyEdgeManager::rw_mutex_</a></div><div class="ttdeci">std::shared_mutex rw_mutex_</div><div class="ttdef"><b>Definition</b> MyEdgeManager.h:38</div></div>
+<div class="ttc" id="aclassedge_1_1MyEdgeManager_html_a3fbb1ed2b22f1ef69d593c1f10f2a0a3"><div class="ttname"><a href="classedge_1_1MyEdgeManager.html#a3fbb1ed2b22f1ef69d593c1f10f2a0a3">edge::MyEdgeManager::StartAll</a></div><div class="ttdeci">void StartAll()</div><div class="ttdef"><b>Definition</b> MyEdgeManager.cpp:33</div></div>
+<div class="ttc" id="aclassedge_1_1MyEdgeManager_html_a57b546fa3dde8c753e8145838f440116"><div class="ttname"><a href="classedge_1_1MyEdgeManager.html#a57b546fa3dde8c753e8145838f440116">edge::MyEdgeManager::MyEdgeManager</a></div><div class="ttdeci">MyEdgeManager()=default</div></div>
+<div class="ttc" id="aclassedge_1_1MyEdgeManager_html_a583bc75f14252ec5421d61f7b3e44f08"><div class="ttname"><a href="classedge_1_1MyEdgeManager.html#a583bc75f14252ec5421d61f7b3e44f08">edge::MyEdgeManager::StopAll</a></div><div class="ttdeci">void StopAll()</div><div class="ttdef"><b>Definition</b> MyEdgeManager.cpp:40</div></div>
+<div class="ttc" id="aclassedge_1_1MyEdgeManager_html_a6793d67f6360254160292f84d1cf3cb4"><div class="ttname"><a href="classedge_1_1MyEdgeManager.html#a6793d67f6360254160292f84d1cf3cb4">edge::MyEdgeManager::ExecuteAction</a></div><div class="ttdeci">bool ExecuteAction(const std::string &amp;dev_name, const std::string &amp;act_name, const nlohmann::json &amp;p)</div><div class="ttdef"><b>Definition</b> MyEdgeManager.cpp:63</div></div>
+<div class="ttc" id="aclassedge_1_1MyEdgeManager_html_a7f4316c2db2046d65224620a3095c8c5"><div class="ttname"><a href="classedge_1_1MyEdgeManager.html#a7f4316c2db2046d65224620a3095c8c5">edge::MyEdgeManager::Init</a></div><div class="ttdeci">void Init(const nlohmann::json &amp;args)</div><div class="ttdef"><b>Definition</b> MyEdgeManager.cpp:5</div></div>
+<div class="ttc" id="aclassedge_1_1MyEdgeManager_html_aadefd6a2c54aef8e775997f3469af541"><div class="ttname"><a href="classedge_1_1MyEdgeManager.html#aadefd6a2c54aef8e775997f3469af541">edge::MyEdgeManager::device_map_</a></div><div class="ttdeci">std::map&lt; std::string, std::shared_ptr&lt; EdgeDevice &gt; &gt; device_map_</div><div class="ttdef"><b>Definition</b> MyEdgeManager.h:37</div></div>
+<div class="ttc" id="aclassedge_1_1MyEdgeManager_html_ab809c40f8d05fce5a1645d8450461e21"><div class="ttname"><a href="classedge_1_1MyEdgeManager.html#ab809c40f8d05fce5a1645d8450461e21">edge::MyEdgeManager::StopDevice</a></div><div class="ttdeci">void StopDevice(const std::string &amp;name)</div><div class="ttdef"><b>Definition</b> MyEdgeManager.cpp:56</div></div>
+<div class="ttc" id="aclassedge_1_1MyEdgeManager_html_aeb5cf8fa1838f222f523a27af9eec117"><div class="ttname"><a href="classedge_1_1MyEdgeManager.html#aeb5cf8fa1838f222f523a27af9eec117">edge::MyEdgeManager::GetDeviceThreadInfo</a></div><div class="ttdeci">std::string GetDeviceThreadInfo(const std::string &amp;name)</div></div>
+<div class="ttc" id="anamespaceedge_html"><div class="ttname"><a href="namespaceedge.html">edge</a></div><div class="ttdef"><b>Definition</b> EdgeDevice.cpp:5</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

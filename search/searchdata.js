@@ -2,12 +2,14 @@ var indexSectionsWithContent =
 {
   0: "abcdefghijklmnopqrstuvw~",
   1: "acdeghmnopst",
-  2: "mt",
+  2: "emt",
   3: "acdefgimnprst",
-  4: "abcdefghilmnoprstw~",
-  5: "bcdefhiklmnopqrstuvw",
+  4: "abcdefghiklmnoprstw~",
+  5: "abcdefhiklmnopqrstuvw",
   6: "j",
-  7: "mp"
+  7: "d",
+  8: "cefi",
+  9: "emps"
 };
 
 var indexSectionNames =
@@ -19,7 +21,9 @@ var indexSectionNames =
   4: "functions",
   5: "variables",
   6: "typedefs",
-  7: "defines"
+  7: "enums",
+  8: "enumvalues",
+  9: "defines"
 };
 
 var indexSectionLabels =
@@ -31,6 +35,8 @@ var indexSectionLabels =
   4: "函数",
   5: "变量",
   6: "类型定义",
-  7: "宏定义"
+  7: "枚举",
+  8: "枚举值",
+  9: "宏定义"
 };
 

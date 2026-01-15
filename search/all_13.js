@@ -19,6 +19,7 @@ var searchData=
   ['tools_3a_3ainit_5ftools_16',['init_tools',['../namespacetools_1_1init__tools.html',1,'tools']]],
   ['tools_3a_3apingtools_17',['PingTools',['../namespacetools_1_1PingTools.html',1,'tools']]],
   ['tools_3a_3apipeline_18',['pipeline',['../namespacetools_1_1pipeline.html',1,'tools']]],
-  ['tools_3a_3athread_5fsafe_5fqueue_19',['thread_safe_queue',['../namespacetools_1_1thread__safe__queue.html',1,'tools']]],
-  ['tryconnect_20',['tryConnect',['../classDeviceOnlineMonitor.html#ad074c174ce59c112ba75f34e83f08794',1,'DeviceOnlineMonitor']]]
+  ['tools_3a_3aservice_5fguard_19',['service_guard',['../namespacetools_1_1service__guard.html',1,'tools']]],
+  ['tools_3a_3athread_5fsafe_5fqueue_20',['thread_safe_queue',['../namespacetools_1_1thread__safe__queue.html',1,'tools']]],
+  ['tryconnect_21',['tryConnect',['../classDeviceOnlineMonitor.html#ad074c174ce59c112ba75f34e83f08794',1,'DeviceOnlineMonitor']]]
 ];

@@ -29,7 +29,8 @@ var menudata={children:[
 {text:"命名空间成员",url:"namespacemembers.html",children:[
 {text:"全部",url:"namespacemembers.html"},
 {text:"函数",url:"namespacemembers_func.html"},
-{text:"变量",url:"namespacemembers_vars.html"}]}]},
+{text:"变量",url:"namespacemembers_vars.html"},
+{text:"枚举",url:"namespacemembers_enum.html"}]}]},
 {text:"结构体",url:"annotated.html",children:[
 {text:"结构体",url:"annotated.html"},
 {text:"结构体索引",url:"classes.html"},
@@ -67,6 +68,7 @@ var menudata={children:[
 {text:"g",url:"functions_func.html#index_g"},
 {text:"h",url:"functions_func.html#index_h"},
 {text:"i",url:"functions_func.html#index_i"},
+{text:"k",url:"functions_func.html#index_k"},
 {text:"l",url:"functions_func.html#index_l"},
 {text:"m",url:"functions_func.html#index_m"},
 {text:"n",url:"functions_func.html#index_n"},
@@ -78,6 +80,7 @@ var menudata={children:[
 {text:"w",url:"functions_func.html#index_w"},
 {text:"~",url:"functions_func.html#index__7E"}]},
 {text:"变量",url:"functions_vars.html",children:[
+{text:"a",url:"functions_vars.html#index_a"},
 {text:"b",url:"functions_vars.html#index_b"},
 {text:"c",url:"functions_vars.html#index_c"},
 {text:"d",url:"functions_vars.html#index_d"},

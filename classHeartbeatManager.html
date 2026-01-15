@@ -115,6 +115,8 @@ Private 属性</h2></td></tr>
 <tr class="separator:ae727e1f60c7e02e3e4bb8c932308b579"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a322335c6177209ab6d4260f4453b5e88" id="r_a322335c6177209ab6d4260f4453b5e88"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHeartbeatManager.html#a322335c6177209ab6d4260f4453b5e88">interval_sec_</a> {5}</td></tr>
 <tr class="separator:a322335c6177209ab6d4260f4453b5e88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad901705d736229a43dddad4e66efd2a1" id="r_ad901705d736229a43dddad4e66efd2a1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHeartbeatManager.html#ad901705d736229a43dddad4e66efd2a1">simple_json4log</a> {false}</td></tr>
+<tr class="separator:ad901705d736229a43dddad4e66efd2a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a146511d2ae2f8b5c118eb262868e9b68" id="r_a146511d2ae2f8b5c118eb262868e9b68"><td class="memItemLeft" align="right" valign="top">time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHeartbeatManager.html#a146511d2ae2f8b5c118eb262868e9b68">start_time_</a> {0}</td></tr>
 <tr class="separator:a146511d2ae2f8b5c118eb262868e9b68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -168,19 +170,37 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">引用了 <a class="el" href="classHeartbeatManager.html#ae727e1f60c7e02e3e4bb8c932308b579">config_</a> , 以及 <a class="el" href="classHeartbeatManager.html#a146511d2ae2f8b5c118eb262868e9b68">start_time_</a>.</p>
+<p class="reference">引用了 <a class="el" href="classHeartbeatManager.html#ae727e1f60c7e02e3e4bb8c932308b579">config_</a>, <a class="el" href="classedge_1_1MyEdgeManager.html#a1bb96f6c20847acd52ac992e54a9d440">MyEdgeManager::GetInstance()</a>, <a class="el" href="classedge_1_1MyEdgeManager.html#a373ad3f792de13e3ad9600da512a9923">MyEdgeManager::ShowEdgesStatus()</a> , 以及 <a class="el" href="classHeartbeatManager.html#a146511d2ae2f8b5c118eb262868e9b68">start_time_</a>.</p>
 
 <p class="reference">被这些函数引用 <a class="el" href="classHeartbeatManager.html#a78e2a4289515dd73f4ef63bc0b635ff4">WorkerLoop()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classHeartbeatManager_afe981eccb32b8fcc022718ba18c37f6f_cgraph.png" border="0" usemap="#aclassHeartbeatManager_afe981eccb32b8fcc022718ba18c37f6f_cgraph" alt=""/></div>
+<map name="aclassHeartbeatManager_afe981eccb32b8fcc022718ba18c37f6f_cgraph" id="aclassHeartbeatManager_afe981eccb32b8fcc022718ba18c37f6f_cgraph">
+<area shape="rect" title=" " alt="" coords="5,45,125,70"/>
+<area shape="rect" href="classedge_1_1MyEdgeManager.html#a1bb96f6c20847acd52ac992e54a9d440" title=" " alt="" coords="173,5,344,45"/>
+<area shape="poly" title=" " alt="" coords="125,45,159,39,160,44,126,50"/>
+<area shape="rect" href="classedge_1_1MyEdgeManager.html#a373ad3f792de13e3ad9600da512a9923" title=" " alt="" coords="173,69,344,109"/>
+<area shape="poly" title=" " alt="" coords="126,65,160,70,159,76,125,70"/>
+</map>
+</div>
 <div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="classHeartbeatManager_afe981eccb32b8fcc022718ba18c37f6f_icgraph.png" border="0" usemap="#aclassHeartbeatManager_afe981eccb32b8fcc022718ba18c37f6f_icgraph" alt=""/></div>
 <map name="aclassHeartbeatManager_afe981eccb32b8fcc022718ba18c37f6f_icgraph" id="aclassHeartbeatManager_afe981eccb32b8fcc022718ba18c37f6f_icgraph">
-<area shape="rect" title=" " alt="" coords="253,5,373,31"/>
-<area shape="rect" href="classHeartbeatManager.html#a78e2a4289515dd73f4ef63bc0b635ff4" title=" " alt="" coords="107,5,205,31"/>
-<area shape="poly" title=" " alt="" coords="240,21,206,21,206,15,240,15"/>
-<area shape="rect" href="classHeartbeatManager.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="5,5,59,31"/>
-<area shape="poly" title=" " alt="" coords="93,21,59,21,59,15,93,15"/>
+<area shape="rect" title=" " alt="" coords="801,13,921,38"/>
+<area shape="rect" href="classHeartbeatManager.html#a78e2a4289515dd73f4ef63bc0b635ff4" title=" " alt="" coords="655,13,753,38"/>
+<area shape="poly" title=" " alt="" coords="788,28,754,28,754,23,788,23"/>
+<area shape="rect" href="classHeartbeatManager.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="553,13,607,38"/>
+<area shape="poly" title=" " alt="" coords="641,28,607,28,607,23,641,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#afe3d91fd6adf24f8f0ec4c876667f0e3" title=" " alt="" coords="331,5,505,45"/>
+<area shape="poly" title=" " alt="" coords="540,28,506,28,506,23,540,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="108,5,283,45"/>
+<area shape="poly" title=" " alt="" coords="317,28,283,28,283,23,317,23"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,13,60,38"/>
+<area shape="poly" title=" " alt="" coords="95,28,60,28,60,23,95,23"/>
 </map>
 </div>
 
@@ -229,15 +249,19 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="classtools_1_1pipeline_1_1Pipeline.html#afe3d91fd6adf24f8f0ec4c876667f0e3">Pipeline::LaunchHeartbeat()</a>.</p>
 <div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="classHeartbeatManager_a7ca5f88c3263d47e63bb9256768b9c12_icgraph.png" border="0" usemap="#aclassHeartbeatManager_a7ca5f88c3263d47e63bb9256768b9c12_icgraph" alt=""/></div>
 <map name="aclassHeartbeatManager_a7ca5f88c3263d47e63bb9256768b9c12_icgraph" id="aclassHeartbeatManager_a7ca5f88c3263d47e63bb9256768b9c12_icgraph">
-<area shape="rect" title=" " alt="" coords="108,5,185,31"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,60,31"/>
-<area shape="poly" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
+<area shape="rect" title=" " alt="" coords="553,13,631,38"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#afe3d91fd6adf24f8f0ec4c876667f0e3" title=" " alt="" coords="331,5,505,45"/>
+<area shape="poly" title=" " alt="" coords="540,28,506,28,506,23,540,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="108,5,283,45"/>
+<area shape="poly" title=" " alt="" coords="317,28,283,28,283,23,317,23"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,13,60,38"/>
+<area shape="poly" title=" " alt="" coords="95,28,60,28,60,23,95,23"/>
 </map>
 </div>
 
@@ -267,7 +291,7 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">引用了 <a class="el" href="classHeartbeatManager.html#ae727e1f60c7e02e3e4bb8c932308b579">config_</a> , 以及 <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>.</p>
+<p class="reference">引用了 <a class="el" href="classHeartbeatManager.html#ae727e1f60c7e02e3e4bb8c932308b579">config_</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a> , 以及 <a class="el" href="classHeartbeatManager.html#ad901705d736229a43dddad4e66efd2a1">simple_json4log</a>.</p>
 
 <p class="reference">被这些函数引用 <a class="el" href="classHeartbeatManager.html#a78e2a4289515dd73f4ef63bc0b635ff4">WorkerLoop()</a>.</p>
 <div class="dynheader">
@@ -275,11 +299,17 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="classHeartbeatManager_a890ae550c1b299cae3811af268d83c7a_icgraph.png" border="0" usemap="#aclassHeartbeatManager_a890ae550c1b299cae3811af268d83c7a_icgraph" alt=""/></div>
 <map name="aclassHeartbeatManager_a890ae550c1b299cae3811af268d83c7a_icgraph" id="aclassHeartbeatManager_a890ae550c1b299cae3811af268d83c7a_icgraph">
-<area shape="rect" title=" " alt="" coords="253,5,372,31"/>
-<area shape="rect" href="classHeartbeatManager.html#a78e2a4289515dd73f4ef63bc0b635ff4" title=" " alt="" coords="107,5,205,31"/>
-<area shape="poly" title=" " alt="" coords="240,21,206,21,206,15,240,15"/>
-<area shape="rect" href="classHeartbeatManager.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="5,5,59,31"/>
-<area shape="poly" title=" " alt="" coords="93,21,59,21,59,15,93,15"/>
+<area shape="rect" title=" " alt="" coords="801,13,920,38"/>
+<area shape="rect" href="classHeartbeatManager.html#a78e2a4289515dd73f4ef63bc0b635ff4" title=" " alt="" coords="655,13,753,38"/>
+<area shape="poly" title=" " alt="" coords="788,28,754,28,754,23,788,23"/>
+<area shape="rect" href="classHeartbeatManager.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="553,13,607,38"/>
+<area shape="poly" title=" " alt="" coords="641,28,607,28,607,23,641,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#afe3d91fd6adf24f8f0ec4c876667f0e3" title=" " alt="" coords="331,5,505,45"/>
+<area shape="poly" title=" " alt="" coords="540,28,506,28,506,23,540,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="108,5,283,45"/>
+<area shape="poly" title=" " alt="" coords="317,28,283,28,283,23,317,23"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,13,60,38"/>
+<area shape="poly" title=" " alt="" coords="95,28,60,28,60,23,95,23"/>
 </map>
 </div>
 
@@ -301,18 +331,38 @@ Private 属性</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="reference">引用了 <a class="el" href="classHeartbeatManager.html#aa9620a15c76ada2388bf678e373a6463">running_</a>, <a class="el" href="classHeartbeatManager.html#a2d17662c59ba51130a35fdaa8567db74">worker_</a> , 以及 <a class="el" href="classHeartbeatManager.html#a78e2a4289515dd73f4ef63bc0b635ff4">WorkerLoop()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classtools_1_1pipeline_1_1Pipeline.html#afe3d91fd6adf24f8f0ec4c876667f0e3">Pipeline::LaunchHeartbeat()</a>.</p>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
 <div class="center"><img src="classHeartbeatManager_a07aaf1227e4d645f15e0a964f54ef291_cgraph.png" border="0" usemap="#aclassHeartbeatManager_a07aaf1227e4d645f15e0a964f54ef291_cgraph" alt=""/></div>
 <map name="aclassHeartbeatManager_a07aaf1227e4d645f15e0a964f54ef291_cgraph" id="aclassHeartbeatManager_a07aaf1227e4d645f15e0a964f54ef291_cgraph">
-<area shape="rect" title=" " alt="" coords="5,31,59,56"/>
-<area shape="rect" href="classHeartbeatManager.html#a78e2a4289515dd73f4ef63bc0b635ff4" title=" " alt="" coords="107,31,205,56"/>
-<area shape="poly" title=" " alt="" coords="59,41,93,41,93,46,59,46"/>
-<area shape="rect" href="classHeartbeatManager.html#afe981eccb32b8fcc022718ba18c37f6f" title=" " alt="" coords="253,5,373,31"/>
-<area shape="poly" title=" " alt="" coords="205,33,239,27,240,32,206,38"/>
-<area shape="rect" href="classHeartbeatManager.html#a890ae550c1b299cae3811af268d83c7a" title=" " alt="" coords="254,55,373,80"/>
-<area shape="poly" title=" " alt="" coords="206,48,241,54,240,59,205,53"/>
+<area shape="rect" title=" " alt="" coords="5,70,59,95"/>
+<area shape="rect" href="classHeartbeatManager.html#a78e2a4289515dd73f4ef63bc0b635ff4" title=" " alt="" coords="107,70,205,95"/>
+<area shape="poly" title=" " alt="" coords="59,80,93,80,93,85,59,85"/>
+<area shape="rect" href="classHeartbeatManager.html#afe981eccb32b8fcc022718ba18c37f6f" title=" " alt="" coords="253,45,373,70"/>
+<area shape="poly" title=" " alt="" coords="205,72,239,67,240,72,206,77"/>
+<area shape="rect" href="classHeartbeatManager.html#a890ae550c1b299cae3811af268d83c7a" title=" " alt="" coords="254,94,373,119"/>
+<area shape="poly" title=" " alt="" coords="206,87,241,93,240,98,205,93"/>
+<area shape="rect" href="classedge_1_1MyEdgeManager.html#a1bb96f6c20847acd52ac992e54a9d440" title=" " alt="" coords="421,5,592,45"/>
+<area shape="poly" title=" " alt="" coords="373,45,407,39,408,44,374,50"/>
+<area shape="rect" href="classedge_1_1MyEdgeManager.html#a373ad3f792de13e3ad9600da512a9923" title=" " alt="" coords="421,69,592,109"/>
+<area shape="poly" title=" " alt="" coords="374,65,408,70,407,76,373,70"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classHeartbeatManager_a07aaf1227e4d645f15e0a964f54ef291_icgraph.png" border="0" usemap="#aclassHeartbeatManager_a07aaf1227e4d645f15e0a964f54ef291_icgraph" alt=""/></div>
+<map name="aclassHeartbeatManager_a07aaf1227e4d645f15e0a964f54ef291_icgraph" id="aclassHeartbeatManager_a07aaf1227e4d645f15e0a964f54ef291_icgraph">
+<area shape="rect" title=" " alt="" coords="553,13,607,38"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#afe3d91fd6adf24f8f0ec4c876667f0e3" title=" " alt="" coords="331,5,505,45"/>
+<area shape="poly" title=" " alt="" coords="540,28,506,28,506,23,540,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="108,5,283,45"/>
+<area shape="poly" title=" " alt="" coords="317,28,283,28,283,23,317,23"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,13,60,38"/>
+<area shape="poly" title=" " alt="" coords="95,28,60,28,60,23,95,23"/>
 </map>
 </div>
 
@@ -368,11 +418,15 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="classHeartbeatManager_a78e2a4289515dd73f4ef63bc0b635ff4_cgraph.png" border="0" usemap="#aclassHeartbeatManager_a78e2a4289515dd73f4ef63bc0b635ff4_cgraph" alt=""/></div>
 <map name="aclassHeartbeatManager_a78e2a4289515dd73f4ef63bc0b635ff4_cgraph" id="aclassHeartbeatManager_a78e2a4289515dd73f4ef63bc0b635ff4_cgraph">
-<area shape="rect" title=" " alt="" coords="5,31,104,56"/>
-<area shape="rect" href="classHeartbeatManager.html#afe981eccb32b8fcc022718ba18c37f6f" title=" " alt="" coords="152,5,272,31"/>
-<area shape="poly" title=" " alt="" coords="104,33,138,27,139,32,105,38"/>
-<area shape="rect" href="classHeartbeatManager.html#a890ae550c1b299cae3811af268d83c7a" title=" " alt="" coords="153,55,271,80"/>
-<area shape="poly" title=" " alt="" coords="104,48,139,54,139,59,104,53"/>
+<area shape="rect" title=" " alt="" coords="5,70,104,95"/>
+<area shape="rect" href="classHeartbeatManager.html#afe981eccb32b8fcc022718ba18c37f6f" title=" " alt="" coords="152,45,272,70"/>
+<area shape="poly" title=" " alt="" coords="104,72,138,67,139,72,105,77"/>
+<area shape="rect" href="classHeartbeatManager.html#a890ae550c1b299cae3811af268d83c7a" title=" " alt="" coords="153,94,271,119"/>
+<area shape="poly" title=" " alt="" coords="104,87,139,93,139,98,104,93"/>
+<area shape="rect" href="classedge_1_1MyEdgeManager.html#a1bb96f6c20847acd52ac992e54a9d440" title=" " alt="" coords="320,5,491,45"/>
+<area shape="poly" title=" " alt="" coords="272,45,306,39,307,44,273,50"/>
+<area shape="rect" href="classedge_1_1MyEdgeManager.html#a373ad3f792de13e3ad9600da512a9923" title=" " alt="" coords="320,69,491,109"/>
+<area shape="poly" title=" " alt="" coords="273,65,307,70,306,76,272,70"/>
 </map>
 </div>
 <div class="dynheader">
@@ -380,9 +434,15 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="classHeartbeatManager_a78e2a4289515dd73f4ef63bc0b635ff4_icgraph.png" border="0" usemap="#aclassHeartbeatManager_a78e2a4289515dd73f4ef63bc0b635ff4_icgraph" alt=""/></div>
 <map name="aclassHeartbeatManager_a78e2a4289515dd73f4ef63bc0b635ff4_icgraph" id="aclassHeartbeatManager_a78e2a4289515dd73f4ef63bc0b635ff4_icgraph">
-<area shape="rect" title=" " alt="" coords="107,5,205,31"/>
-<area shape="rect" href="classHeartbeatManager.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="5,5,59,31"/>
-<area shape="poly" title=" " alt="" coords="93,21,59,21,59,15,93,15"/>
+<area shape="rect" title=" " alt="" coords="655,13,753,38"/>
+<area shape="rect" href="classHeartbeatManager.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="553,13,607,38"/>
+<area shape="poly" title=" " alt="" coords="641,28,607,28,607,23,641,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#afe3d91fd6adf24f8f0ec4c876667f0e3" title=" " alt="" coords="331,5,505,45"/>
+<area shape="poly" title=" " alt="" coords="540,28,506,28,506,23,540,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="108,5,283,45"/>
+<area shape="poly" title=" " alt="" coords="317,28,283,28,283,23,317,23"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,13,60,38"/>
+<area shape="poly" title=" " alt="" coords="95,28,60,28,60,23,95,23"/>
 </map>
 </div>
 
@@ -458,6 +518,30 @@ Private 属性</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="reference">被这些函数引用 <a class="el" href="classHeartbeatManager.html#a07aaf1227e4d645f15e0a964f54ef291">Start()</a>, <a class="el" href="classHeartbeatManager.html#a17a237457e57625296e6b24feb19c60a">Stop()</a> , 以及 <a class="el" href="classHeartbeatManager.html#a78e2a4289515dd73f4ef63bc0b635ff4">WorkerLoop()</a>.</p>
+
+</div>
+</div>
+<a id="ad901705d736229a43dddad4e66efd2a1" name="ad901705d736229a43dddad4e66efd2a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad901705d736229a43dddad4e66efd2a1">&#9670;&#160;</a></span>simple_json4log</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool simple_json4log {false}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classHeartbeatManager.html#a890ae550c1b299cae3811af268d83c7a">SendHeartbeat()</a>.</p>
 
 </div>
 </div>
