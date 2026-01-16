@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_api/MyAPI.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_f1ee40842c724b3bf8a04800f5f521a7.html">my_api</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">MyAPI.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;thread&gt;</code><br />
+<code>#include &lt;atomic&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &quot;<a class="el" href="MyLog_8h_source.html">MyLog.h</a>&quot;</code><br />
+<code>#include &lt;csignal&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+MyAPI.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="MyAPI_8h__incl.png" border="0" usemap="#asrc_2util_2my__api_2MyAPI_8h" alt=""/></div>
+<map name="asrc_2util_2my__api_2MyAPI_8h" id="asrc_2util_2my__api_2MyAPI_8h">
+<area shape="rect" title=" " alt="" coords="171,5,346,31"/>
+<area shape="rect" title=" " alt="" coords="67,79,131,104"/>
+<area shape="poly" title=" " alt="" coords="234,33,138,75,136,71,232,28"/>
+<area shape="rect" title=" " alt="" coords="155,79,221,104"/>
+<area shape="poly" title=" " alt="" coords="249,33,211,71,207,67,245,29"/>
+<area shape="rect" title=" " alt="" coords="5,159,83,185"/>
+<area shape="poly" title=" " alt="" coords="261,31,255,67,248,88,235,106,202,131,171,140,136,144,95,155,88,157,86,152,94,149,135,139,170,135,200,126,231,102,243,85,250,66,256,30"/>
+<area shape="rect" href="MyLog_8h.html" title=" " alt="" coords="296,79,373,104"/>
+<area shape="poly" title=" " alt="" coords="273,29,314,67,310,71,269,33"/>
+<area shape="rect" title=" " alt="" coords="398,79,466,104"/>
+<area shape="poly" title=" " alt="" coords="288,28,392,71,390,76,286,33"/>
+<area shape="poly" title=" " alt="" coords="296,104,204,125,95,155,87,157,85,152,94,149,203,120,295,98"/>
+<area shape="rect" title=" " alt="" coords="107,159,231,185"/>
+<area shape="poly" title=" " alt="" coords="312,106,207,156,205,151,309,102"/>
+<area shape="rect" title=" " alt="" coords="255,152,414,192"/>
+<area shape="poly" title=" " alt="" coords="337,104,337,138,332,138,332,104"/>
+<area shape="rect" title=" " alt="" coords="438,159,557,185"/>
+<area shape="poly" title=" " alt="" coords="359,102,463,151,460,156,357,106"/>
+<area shape="rect" title=" " alt="" coords="581,159,747,185"/>
+<area shape="poly" title=" " alt="" coords="374,99,603,154,602,159,373,105"/>
+<area shape="rect" title=" " alt="" coords="772,159,831,185"/>
+<area shape="poly" title=" " alt="" coords="374,99,387,101,492,114,575,119,657,127,761,149,767,152,766,157,759,155,657,132,575,124,492,120,386,107,373,104"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="MyAPI_8h__dep__incl.png" border="0" usemap="#asrc_2util_2my__api_2MyAPI_8hdep" alt=""/></div>
+<map name="asrc_2util_2my__api_2MyAPI_8hdep" id="asrc_2util_2my__api_2MyAPI_8hdep">
+<area shape="rect" title=" " alt="" coords="115,5,289,31"/>
+<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="5,86,111,111"/>
+<area shape="poly" title=" " alt="" coords="170,40,81,88,78,83,168,35"/>
+<area shape="rect" href="Pipeline_8cpp.html" title=" " alt="" coords="135,79,269,119"/>
+<area shape="poly" title=" " alt="" coords="205,44,205,79,199,79,199,44"/>
+<area shape="rect" href="MyAPI_8cpp.html" title=" " alt="" coords="293,86,484,111"/>
+<area shape="poly" title=" " alt="" coords="243,33,363,84,360,88,241,38"/>
+</map>
+</div>
+</div>
+<p><a href="MyAPI_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__api_1_1MyAPI.html">MyAPI</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacemy__api" id="r_namespacemy__api"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__api.html">my_api</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:af1f005da9c1eb8472f3c1c65b1090439" id="r_af1f005da9c1eb8472f3c1c65b1090439"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="MyAPI_8h.html#af1f005da9c1eb8472f3c1c65b1090439">MY_API_H</a></td></tr>
+<tr class="separator:af1f005da9c1eb8472f3c1c65b1090439"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a7709e79247abfc5516836522f85289a3" id="r_a7709e79247abfc5516836522f85289a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__api.html#a7709e79247abfc5516836522f85289a3">RunRestServer</a> (int port)</td></tr>
+<tr class="separator:a7709e79247abfc5516836522f85289a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="af1f005da9c1eb8472f3c1c65b1090439" name="af1f005da9c1eb8472f3c1c65b1090439"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1f005da9c1eb8472f3c1c65b1090439">&#9670;&#160;</a></span>MY_API_H</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MY_API_H</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

@@ -12,5 +12,6 @@ var searchData=
   ['collectsnapshot_9',['collectSnapshot',['../classSoftHealthMonitorManager.html#ad3c5d5ef0c2e6ca7eed38a9e2a1617f4',1,'SoftHealthMonitorManager']]],
   ['connecttoserver_10',['connectToServer',['../classtools_1_1SimpleTcpClient.html#a6fb250ec0fd5c020fc82c524a3080a70',1,'tools::SimpleTcpClient']]],
   ['cpuinfotools_11',['CPUInfoTools',['../classMySystemHealthy_1_1CPUInfoTools.html#abaf35e72699bd36dcab743dbf3867c4a',1,'MySystemHealthy::CPUInfoTools']]],
-  ['currenttimestamp_12',['CurrentTimestamp',['../namespaceMyLog.html#a686e4f865c2c588547f037e0b2cfafcb',1,'MyLog']]]
+  ['createshared_12',['createShared',['../classmy__api_1_1EdgeController.html#a06b931473ad95f71474cbc448e0ee20d',1,'my_api::EdgeController']]],
+  ['currenttimestamp_13',['CurrentTimestamp',['../namespaceMyLog.html#a686e4f865c2c588547f037e0b2cfafcb',1,'MyLog']]]
 ];

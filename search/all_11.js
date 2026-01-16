@@ -9,5 +9,6 @@ var searchData=
   ['resourceusageanalyzer_2eh_6',['ResourceUsageAnalyzer.h',['../ResourceUsageAnalyzer_8h.html',1,'']]],
   ['root_5f_7',['root_',['../classMyYAMLConfig.html#aaf3d84dfe296f881f2576d4ceeed67c3',1,'MyYAMLConfig']]],
   ['running_5f_8',['running_',['../classtools_1_1SimpleTcpClient.html#aa9620a15c76ada2388bf678e373a6463',1,'tools::SimpleTcpClient::running_'],['../classDeviceOnlineMonitor.html#aa9620a15c76ada2388bf678e373a6463',1,'DeviceOnlineMonitor::running_'],['../classHeartbeatManager.html#aa9620a15c76ada2388bf678e373a6463',1,'HeartbeatManager::running_'],['../classSoftHealthMonitorManager.html#aa9620a15c76ada2388bf678e373a6463',1,'SoftHealthMonitorManager::running_'],['../classMySystemHealthy_1_1MySystemHealthyManager.html#aa9620a15c76ada2388bf678e373a6463',1,'MySystemHealthy::MySystemHealthyManager::running_']]],
-  ['rw_5fmutex_5f_9',['rw_mutex_',['../classedge_1_1MyEdgeManager.html#a3f7fceadda2b13af52092701177669f0',1,'edge::MyEdgeManager']]]
+  ['runrestserver_9',['RunRestServer',['../namespacemy__api.html#a7709e79247abfc5516836522f85289a3',1,'my_api']]],
+  ['rw_5fmutex_5f_10',['rw_mutex_',['../classedge_1_1MyEdgeManager.html#a3f7fceadda2b13af52092701177669f0',1,'edge::MyEdgeManager']]]
 ];

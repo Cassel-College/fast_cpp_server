@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['checkconfigloadstatus_0',['checkconfigloadstatus',['../namespacetools_1_1free__func.html#accd3d44793b2022f1d64ff922149577d',1,'tools::free_func::checkConfigLoadStatus()'],['../namespacetools_1_1init__tools.html#accd3d44793b2022f1d64ff922149577d',1,'tools::init_tools::checkConfigLoadStatus()']]],
+  ['checkconfigloadstatus_0',['checkconfigloadstatus',['../namespacetools_1_1init__tools.html#accd3d44793b2022f1d64ff922149577d',1,'tools::init_tools::checkConfigLoadStatus()'],['../namespacetools_1_1free__func.html#accd3d44793b2022f1d64ff922149577d',1,'tools::free_func::checkConfigLoadStatus()']]],
   ['children_1',['children',['../structThreadTreeNode.html#a6a9c08669a23fb80d2f2018ca1e86f03',1,'ThreadTreeNode']]],
   ['children_5fpids_2',['children_pids',['../structProcessInfo.html#a1a4dfa775149aaf177ecdc921fc74fe9',1,'ProcessInfo']]],
   ['clear_3',['clear',['../classtools_1_1thread__safe__queue_1_1ThreadSafeQueue.html#ac8bb3912a3ce86b15842e79d0b421204',1,'tools::thread_safe_queue::ThreadSafeQueue']]],
@@ -15,15 +15,18 @@ var searchData=
   ['collectsnapshot_12',['collectSnapshot',['../classSoftHealthMonitorManager.html#ad3c5d5ef0c2e6ca7eed38a9e2a1617f4',1,'SoftHealthMonitorManager']]],
   ['cond_5fnot_5fempty_5f_13',['cond_not_empty_',['../classtools_1_1thread__safe__queue_1_1ThreadSafeQueue.html#a5933b851bf5abc701afe9196e3e82c56',1,'tools::thread_safe_queue::ThreadSafeQueue']]],
   ['cond_5fnot_5ffull_5f_14',['cond_not_full_',['../classtools_1_1thread__safe__queue_1_1ThreadSafeQueue.html#a918d039d3fe1dafba7d5992b90807de9',1,'tools::thread_safe_queue::ThreadSafeQueue']]],
-  ['config_5f_15',['config_',['../classMyConfig.html#ae727e1f60c7e02e3e4bb8c932308b579',1,'MyConfig::config_'],['../classMyJSONConfig.html#ae727e1f60c7e02e3e4bb8c932308b579',1,'MyJSONConfig::config_'],['../classHeartbeatManager.html#ae727e1f60c7e02e3e4bb8c932308b579',1,'HeartbeatManager::config_'],['../classSoftHealthMonitorManager.html#a9a7ad6db67a5e85449dfcdc6d219e00c',1,'SoftHealthMonitorManager::config_']]],
+  ['config_5f_15',['config_',['../classSoftHealthMonitorManager.html#a9a7ad6db67a5e85449dfcdc6d219e00c',1,'SoftHealthMonitorManager::config_'],['../classMyJSONConfig.html#ae727e1f60c7e02e3e4bb8c932308b579',1,'MyJSONConfig::config_'],['../classHeartbeatManager.html#ae727e1f60c7e02e3e4bb8c932308b579',1,'HeartbeatManager::config_'],['../classMyConfig.html#ae727e1f60c7e02e3e4bb8c932308b579',1,'MyConfig::config_']]],
   ['config_5fdata_5f_16',['config_data_',['../classtools_1_1pipeline_1_1Pipeline.html#ab5e51e74ebaab2834d9c1385007fd446',1,'tools::pipeline::Pipeline']]],
   ['connected_5f_17',['connected_',['../classtools_1_1SimpleTcpClient.html#a394f715193a382d9c59ec69143a3cc4d',1,'tools::SimpleTcpClient']]],
   ['connecttoserver_18',['connectToServer',['../classtools_1_1SimpleTcpClient.html#a6fb250ec0fd5c020fc82c524a3080a70',1,'tools::SimpleTcpClient']]],
   ['connmutex_5f_19',['connMutex_',['../classtools_1_1SimpleTcpClient.html#ac669324da44bb5dd470e9bfc1f8b00b5',1,'tools::SimpleTcpClient']]],
-  ['cpu_5fusage_5fpercent_20',['cpu_usage_percent',['../structThreadSnapshot.html#a295e34a22c4d3d19004e4ff577ea2f5d',1,'ThreadSnapshot']]],
-  ['cpuinfotools_21',['cpuinfotools',['../classMySystemHealthy_1_1CPUInfoTools.html#abaf35e72699bd36dcab743dbf3867c4a',1,'MySystemHealthy::CPUInfoTools::CPUInfoTools()'],['../classMySystemHealthy_1_1CPUInfoTools.html',1,'CPUInfoTools']]],
-  ['cpuinfotools_2ecpp_22',['CPUInfoTools.cpp',['../CPUInfoTools_8cpp.html',1,'']]],
-  ['cpuinfotools_2eh_23',['CPUInfoTools.h',['../CPUInfoTools_8h.html',1,'']]],
-  ['current_5finfo_5f_24',['current_info_',['../classMySystemHealthy_1_1MySystemHealthyManager.html#a462cf695b2e418a69ff82950b1d9a295',1,'MySystemHealthy::MySystemHealthyManager']]],
-  ['currenttimestamp_25',['CurrentTimestamp',['../namespaceMyLog.html#a686e4f865c2c588547f037e0b2cfafcb',1,'MyLog']]]
+  ['corsinterceptor_20',['CorsInterceptor',['../classmy__api_1_1CorsInterceptor.html',1,'my_api']]],
+  ['corsresponseinterceptor_21',['CorsResponseInterceptor',['../classmy__api_1_1CorsResponseInterceptor.html',1,'my_api']]],
+  ['cpu_5fusage_5fpercent_22',['cpu_usage_percent',['../structThreadSnapshot.html#a295e34a22c4d3d19004e4ff577ea2f5d',1,'ThreadSnapshot']]],
+  ['cpuinfotools_23',['cpuinfotools',['../classMySystemHealthy_1_1CPUInfoTools.html#abaf35e72699bd36dcab743dbf3867c4a',1,'MySystemHealthy::CPUInfoTools::CPUInfoTools()'],['../classMySystemHealthy_1_1CPUInfoTools.html',1,'CPUInfoTools']]],
+  ['cpuinfotools_2ecpp_24',['CPUInfoTools.cpp',['../CPUInfoTools_8cpp.html',1,'']]],
+  ['cpuinfotools_2eh_25',['CPUInfoTools.h',['../CPUInfoTools_8h.html',1,'']]],
+  ['createshared_26',['createShared',['../classmy__api_1_1EdgeController.html#a06b931473ad95f71474cbc448e0ee20d',1,'my_api::EdgeController']]],
+  ['current_5finfo_5f_27',['current_info_',['../classMySystemHealthy_1_1MySystemHealthyManager.html#a462cf695b2e418a69ff82950b1d9a295',1,'MySystemHealthy::MySystemHealthyManager']]],
+  ['currenttimestamp_28',['CurrentTimestamp',['../namespaceMyLog.html#a686e4f865c2c588547f037e0b2cfafcb',1,'MyLog']]]
 ];

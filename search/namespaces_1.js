@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['mylog_0',['MyLog',['../namespaceMyLog.html',1,'']]],
-  ['mysystemhealthy_1',['MySystemHealthy',['../namespaceMySystemHealthy.html',1,'']]]
+  ['my_5fapi_0',['my_api',['../namespacemy__api.html',1,'']]],
+  ['mylog_1',['MyLog',['../namespaceMyLog.html',1,'']]],
+  ['mysystemhealthy_2',['MySystemHealthy',['../namespaceMySystemHealthy.html',1,'']]]
 ];
