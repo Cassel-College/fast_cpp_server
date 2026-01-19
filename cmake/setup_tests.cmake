@@ -8,6 +8,8 @@ include(cmake/deps/setup_gtest.cmake)
 set(TEST_PROGRAM_NAME ${PROJECT_NAME}_Test)
 file(GLOB_RECURSE TEST_SOURCES "test/*.cpp")
 
+pretty_print_list("TEST_SOURCES List" TEST_SOURCES)
+
 add_executable(${TEST_PROGRAM_NAME} ${TEST_SOURCES})
 
 # [关键修复]：直接链接第三方库 Target
@@ -31,3 +33,12 @@ target_include_directories(${TEST_PROGRAM_NAME} PRIVATE
 
 include(GoogleTest)
 gtest_discover_tests(${TEST_PROGRAM_NAME} DISCOVERY_TIMEOUT 30)
+
+
+option(ENABLE_TEST "Enable unit testing" ON)
+# start test
+if(ENABLE_TEST) 
+    enable_testing()
+    add_test(NAME ${PROJECT_NAME}UnitTest COMMAND ${TEST_PROGRAM_NAME})
+endif()
+print_colored_message("------------------------------" COLOR magenta)

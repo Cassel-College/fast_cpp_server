@@ -1,2 +1,3 @@
+message("设置Eigen依赖")
 set(EIGEN3_INCLUDE_DIR ${CMAKE_SOURCE_DIR}/external/eigen)
 list(APPEND THIRD_PARTY_INCLUDES ${EIGEN3_INCLUDE_DIR})

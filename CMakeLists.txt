@@ -179,23 +179,23 @@ add_subdirectory(src/util/my_config)
 # # 添加 OpenCV 子目录
 # add_subdirectory(external/opencv EXCLUDE_FROM_ALL)
 
-# --------------------- Eigen 设置 ---------------------
-# Eigen 是头文件库，不需要编译，只需添加路径
-set(EIGEN3_INCLUDE_DIR ${CMAKE_SOURCE_DIR}/external/eigen)
-include_directories(${EIGEN3_INCLUDE_DIR})
+# # --------------------- Eigen 设置 ---------------------
+# # Eigen 是头文件库，不需要编译，只需添加路径
+# set(EIGEN3_INCLUDE_DIR ${CMAKE_SOURCE_DIR}/external/eigen)
+# include_directories(${EIGEN3_INCLUDE_DIR})
 
-# --------------------- SymEngine 设置 ---------------------
-# 启用静态构建（可选）
-set(BUILD_SHARED_LIBS OFF CACHE BOOL "Build static symengine")
-set(HAVE_SYMENGINE_GMP OFF CACHE BOOL "Not use GMP")
-set(SYMENGINE_USE_MPFR OFF CACHE BOOL "")
-set(SYMENGINE_USE_MPC OFF CACHE BOOL "")
-set(SYMENGINE_USE_FLINT OFF CACHE BOOL "")
-# 关闭测试与示例
-set(BUILD_TESTS OFF CACHE BOOL "")
-set(BUILD_BENCHMARKS OFF CACHE BOOL "")
-set(BUILD_EXAMPLES OFF CACHE BOOL "")
-add_subdirectory(external/symengine EXCLUDE_FROM_ALL)
+# # --------------------- SymEngine 设置 ---------------------
+# # 启用静态构建（可选）
+# set(BUILD_SHARED_LIBS OFF CACHE BOOL "Build static symengine")
+# set(HAVE_SYMENGINE_GMP OFF CACHE BOOL "Not use GMP")
+# set(SYMENGINE_USE_MPFR OFF CACHE BOOL "")
+# set(SYMENGINE_USE_MPC OFF CACHE BOOL "")
+# set(SYMENGINE_USE_FLINT OFF CACHE BOOL "")
+# # 关闭测试与示例
+# set(BUILD_TESTS OFF CACHE BOOL "")
+# set(BUILD_BENCHMARKS OFF CACHE BOOL "")
+# set(BUILD_EXAMPLES OFF CACHE BOOL "")
+# add_subdirectory(external/symengine EXCLUDE_FROM_ALL)
 
 # 添加 myproto 库
 set(BUILD_MY_PROTO ON CACHE BOOL "Build myproto library")
@@ -326,25 +326,25 @@ target_link_libraries(${PROJECT_NAME} PRIVATE symengine)
 # # 包含 Eigen 头文件
 # target_include_directories(${PROJECT_NAME} PRIVATE ${EIGEN3_INCLUDE_DIR})
 
-add_dependencies(mylog spdlog::spdlog)
-add_dependencies(mylib mylog)
-add_dependencies(mylib my_heartbeat)
-add_dependencies(mylib my_edge)
-add_dependencies(mylib my_db)
-add_dependencies(mylib my_cache)
-add_dependencies(mylib myconfig)
-add_dependencies(mylib my_comm)
-add_dependencies(mylib my_control)
-add_dependencies(mylib my_network)
-add_dependencies(mylib my_ai_interface)
-add_dependencies(mylib my_data)
-add_dependencies(mylib myproto)
-add_dependencies(mylib my_soft_healthy)
-add_dependencies(mylib libzmq)
-add_dependencies(mylib yaml-cpp)
-add_dependencies(mylib cpr::cpr)
-add_dependencies(mylib nlohmann_json::nlohmann_json)
-add_dependencies(mylib symengine)
+# add_dependencies(mylog spdlog::spdlog)
+# add_dependencies(mylib mylog)
+# add_dependencies(mylib my_heartbeat)
+# add_dependencies(mylib my_edge)
+# add_dependencies(mylib my_db)
+# add_dependencies(mylib my_cache)
+# add_dependencies(mylib myconfig)
+# add_dependencies(mylib my_comm)
+# add_dependencies(mylib my_control)
+# add_dependencies(mylib my_network)
+# add_dependencies(mylib my_ai_interface)
+# add_dependencies(mylib my_data)
+# add_dependencies(mylib myproto)
+# add_dependencies(mylib my_soft_healthy)
+# add_dependencies(mylib libzmq)
+# add_dependencies(mylib yaml-cpp)
+# add_dependencies(mylib cpr::cpr)
+# add_dependencies(mylib nlohmann_json::nlohmann_json)
+# add_dependencies(mylib symengine)
 # add_dependencies(mylib oatpp::oatpp)
 # add_dependencies(mylib oatpp::oatpp-swagger)
 
@@ -372,71 +372,72 @@ pretty_print_list("SOURCES List" SOURCES)
 pretty_print_list("THIRD_INCLUDE_DIRECTORIES List" THIRD_INCLUDE_DIRECTORIES)
 print_colored_message("------------------------------" COLOR magenta)
 
-# -------------------------------- Unit test ------------------------------
-print_colored_message("------------------------------" COLOR magenta)
-print_colored_message("Building Unit Test soft ..." COLOR yellow)
-set(TEST_PROGRAM_NAME ${PROJECT_NAME}_Test)
-# find all test source files
-file(GLOB_RECURSE TEST_SOURCES "test/*.cpp")
-# 添加google test库
-set(INSTALL_GTEST OFF CACHE BOOL "" FORCE)
-set(INSTALL_GMOCK OFF CACHE BOOL "" FORCE)
-add_subdirectory(external/googletest)
-pretty_print_list("TEST_SOURCES List" TEST_SOURCES)
-# 添加测试
-add_executable(${TEST_PROGRAM_NAME} ${TEST_SOURCES})
-target_include_directories(
-    ${TEST_PROGRAM_NAME} PRIVATE ${THIRD_INCLUDE_DIRECTORIES}
-)
+# # -------------------------------- Unit test ------------------------------
+# include(cmake/setup_tests.cmake)
+# print_colored_message("------------------------------" COLOR magenta)
+# print_colored_message("Building Unit Test soft ..." COLOR yellow)
+# set(TEST_PROGRAM_NAME ${PROJECT_NAME}_Test)
+# # find all test source files
+# file(GLOB_RECURSE TEST_SOURCES "test/*.cpp")
+# # 添加google test库
+# set(INSTALL_GTEST OFF CACHE BOOL "" FORCE)
+# set(INSTALL_GMOCK OFF CACHE BOOL "" FORCE)
+# add_subdirectory(external/googletest)
+# pretty_print_list("TEST_SOURCES List" TEST_SOURCES)
+# # 添加测试
+# add_executable(${TEST_PROGRAM_NAME} ${TEST_SOURCES})
+# target_include_directories(
+#     ${TEST_PROGRAM_NAME} PRIVATE ${THIRD_INCLUDE_DIRECTORIES}
+# )
 
-target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE gtest gtest_main)
-target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE pthread)
-target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE mylog)
-target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE myconfig)
-target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE myproto)
-target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE my_arg_parser)
-target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE mylib)
-target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE my_soft_healthy)
-target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE my_system_healthy)
-# 链接 OpenCV 库
-target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE opencv_calib3d)
-target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE opencv_core)
-target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE opencv_dnn)
-target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE opencv_features2d)
-target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE opencv_flann)
-target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE opencv_gapi)
-target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE opencv_highgui)
-target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE opencv_imgcodecs)
-target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE opencv_imgproc)
-target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE opencv_ml)
-target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE opencv_objdetect)
-target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE opencv_photo)
-target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE opencv_stitching)
-target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE opencv_video)
-target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE opencv_videoio)
-# target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE oatpp::oatpp)
-# target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE oatpp::oatpp-swagger)
+# target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE gtest gtest_main)
+# target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE pthread)
+# target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE mylog)
+# target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE myconfig)
+# target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE myproto)
+# target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE my_arg_parser)
+# target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE mylib)
+# target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE my_soft_healthy)
+# target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE my_system_healthy)
+# # 链接 OpenCV 库
+# target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE opencv_calib3d)
+# target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE opencv_core)
+# target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE opencv_dnn)
+# target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE opencv_features2d)
+# target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE opencv_flann)
+# target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE opencv_gapi)
+# target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE opencv_highgui)
+# target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE opencv_imgcodecs)
+# target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE opencv_imgproc)
+# target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE opencv_ml)
+# target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE opencv_objdetect)
+# target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE opencv_photo)
+# target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE opencv_stitching)
+# target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE opencv_video)
+# target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE opencv_videoio)
+# # target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE oatpp::oatpp)
+# # target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE oatpp::oatpp-swagger)
 
     
-# 链接 SymEngine（Eigen 是头文件库，不需要 link）
-target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE symengine)
-# 包含 Eigen 头文件
-target_include_directories(${TEST_PROGRAM_NAME} PRIVATE ${EIGEN3_INCLUDE_DIR})
+# # 链接 SymEngine（Eigen 是头文件库，不需要 link）
+# target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE symengine)
+# # 包含 Eigen 头文件
+# target_include_directories(${TEST_PROGRAM_NAME} PRIVATE ${EIGEN3_INCLUDE_DIR})
 
 
-include(GoogleTest)
-gtest_discover_tests(${TEST_PROGRAM_NAME}
-    TEST_PREFIX "${TEST_PROGRAM_NAME}."
-    DISCOVERY_TIMEOUT 30
-)
+# include(GoogleTest)
+# gtest_discover_tests(${TEST_PROGRAM_NAME}
+#     TEST_PREFIX "${TEST_PROGRAM_NAME}."
+#     DISCOVERY_TIMEOUT 30
+# )
 
-option(ENABLE_TEST "Enable unit testing" ON)
-# start test
-if(ENABLE_TEST) 
-    enable_testing()
-    add_test(NAME ${PROJECT_NAME}UnitTest COMMAND ${TEST_PROGRAM_NAME})
-endif()
-print_colored_message("------------------------------" COLOR magenta)
+# option(ENABLE_TEST "Enable unit testing" ON)
+# # start test
+# if(ENABLE_TEST) 
+#     enable_testing()
+#     add_test(NAME ${PROJECT_NAME}UnitTest COMMAND ${TEST_PROGRAM_NAME})
+# endif()
+# print_colored_message("------------------------------" COLOR magenta)
 
 # -------------------------------- Coverage ------------------------------
 # custom target for coverage
