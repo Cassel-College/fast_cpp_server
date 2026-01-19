@@ -31,3 +31,13 @@ add_subdirectory(external/oatpp-swagger)
 if(TARGET oatpp-swagger)
     add_library(oatpp::oatpp-swagger ALIAS oatpp-swagger)
 endif()
+
+# # 假设你原来的 setup_oatpp.cmake 内容，这里确保包含 swagger
+# # 确保你已经 clone 了 git 仓库到 external/oatpp 和 external/oatpp-swagger
+# option(OATPP_BUILD_TESTS "Oat++ build tests" OFF)
+# add_subdirectory(external/oatpp EXCLUDE_FROM_ALL)
+# add_subdirectory(external/oatpp-swagger EXCLUDE_FROM_ALL)
+# list(APPEND THIRD_PARTY_INCLUDES 
+#     ${CMAKE_SOURCE_DIR}/external/oatpp/src
+#     ${CMAKE_SOURCE_DIR}/external/oatpp-swagger/src
+# )

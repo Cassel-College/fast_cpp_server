@@ -1,0 +1,8 @@
+set(protobuf_INSTALL OFF CACHE BOOL "Disable protobuf install" FORCE)
+set(protobuf_BUILD_TESTS OFF CACHE BOOL "Disable protobuf tests")
+set(protobuf_USE_EXTERNAL_GTEST OFF CACHE BOOL "Disable external GTest usage")
+add_subdirectory(external/protobuf EXCLUDE_FROM_ALL)
+set(Protobuf_PROTOC_EXECUTABLE $<TARGET_FILE:protoc>)
+message(STATUS "Protobuf protoc executable: ${Protobuf_PROTOC_EXECUTABLE}")
+message(STATUS "添加 Protobuf 包含路径到 THIRD_PARTY_INCLUDES")
+list(APPEND THIRD_PARTY_INCLUDES ${CMAKE_SOURCE_DIR}/external/protobuf/src)

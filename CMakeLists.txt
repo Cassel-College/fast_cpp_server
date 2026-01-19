@@ -35,145 +35,149 @@ endif()
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib) # 静态库 (.a)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib) # 动态库 (.so)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin) # 可执行文件
+# 2. 加载模块
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+include(utils)
 
+# function(pretty_print_list title list_var)
+#     # 定义颜色
+#     string(ASCII 27 Esc)
+#     set(ColorGreen "${Esc}[32m")
+#     set(ColorCyan  "${Esc}[36m")
+#     set(ColorReset "${Esc}[0m")
 
-function(pretty_print_list title list_var)
-    # 定义颜色
-    string(ASCII 27 Esc)
-    set(ColorGreen "${Esc}[32m")
-    set(ColorCyan  "${Esc}[36m")
-    set(ColorReset "${Esc}[0m")
+#     # 打印标题
+#     message(STATUS "${ColorCyan}${title}:${ColorReset}")
 
-    # 打印标题
-    message(STATUS "${ColorCyan}${title}:${ColorReset}")
+#     # 获取传入列表变量的内容
+#     set(list_content "${${list_var}}")
 
-    # 获取传入列表变量的内容
-    set(list_content "${${list_var}}")
+#     # 找出最长项长度
+#     set(max_len 0)
+#     foreach(item ${list_content})
+#         string(LENGTH "${item}" len)
+#         if(len GREATER max_len)
+#             set(max_len ${len})
+#         endif()
+#     endforeach()
 
-    # 找出最长项长度
-    set(max_len 0)
-    foreach(item ${list_content})
-        string(LENGTH "${item}" len)
-        if(len GREATER max_len)
-            set(max_len ${len})
-        endif()
-    endforeach()
+#     # 打印每一项（对齐）
+#     foreach(item ${list_content})
+#         string(LENGTH "${item}" len)
+#         math(EXPR padding "${max_len} - ${len}")
+#         string(REPEAT " " ${padding} spaces)
+#         message(STATUS "${ColorGreen}item:${ColorReset} ${item}${spaces}")
+#     endforeach()
+# endfunction()
 
-    # 打印每一项（对齐）
-    foreach(item ${list_content})
-        string(LENGTH "${item}" len)
-        math(EXPR padding "${max_len} - ${len}")
-        string(REPEAT " " ${padding} spaces)
-        message(STATUS "${ColorGreen}item:${ColorReset} ${item}${spaces}")
-    endforeach()
-endfunction()
+# function(print_colored_message MESSAGE_STRING)
+#     set(options BOLD)
+#     set(oneValueArgs COLOR)
+#     cmake_parse_arguments(PARSE_ARGV 1 ARG "${options}" "${oneValueArgs}" "")
 
-function(print_colored_message MESSAGE_STRING)
-    set(options BOLD)
-    set(oneValueArgs COLOR)
-    cmake_parse_arguments(PARSE_ARGV 1 ARG "${options}" "${oneValueArgs}" "")
+#     # ANSI escape codes
+#     string(ASCII 27 Esc)
 
-    # ANSI escape codes
-    string(ASCII 27 Esc)
+#     set(color_reset "${Esc}[0m")
+#     set(color_bold "${Esc}[1m")
 
-    set(color_reset "${Esc}[0m")
-    set(color_bold "${Esc}[1m")
+#     # Define color codes
+#     set(color_red "${Esc}[31m")
+#     set(color_green "${Esc}[32m")
+#     set(color_yellow "${Esc}[33m")
+#     set(color_blue "${Esc}[34m")
+#     set(color_magenta "${Esc}[35m")
+#     set(color_cyan "${Esc}[36m")
+#     set(color_white "${Esc}[37m")
 
-    # Define color codes
-    set(color_red "${Esc}[31m")
-    set(color_green "${Esc}[32m")
-    set(color_yellow "${Esc}[33m")
-    set(color_blue "${Esc}[34m")
-    set(color_magenta "${Esc}[35m")
-    set(color_cyan "${Esc}[36m")
-    set(color_white "${Esc}[37m")
+#     # Get selected color
+#     set(color_code "")
+#     if(ARG_COLOR STREQUAL "red")
+#         set(color_code "${color_red}")
+#     elseif(ARG_COLOR STREQUAL "green")
+#         set(color_code "${color_green}")
+#     elseif(ARG_COLOR STREQUAL "yellow")
+#         set(color_code "${color_yellow}")
+#     elseif(ARG_COLOR STREQUAL "blue")
+#         set(color_code "${color_blue}")
+#     elseif(ARG_COLOR STREQUAL "magenta")
+#         set(color_code "${color_magenta}")
+#     elseif(ARG_COLOR STREQUAL "cyan")
+#         set(color_code "${color_cyan}")
+#     elseif(ARG_COLOR STREQUAL "white")
+#         set(color_code "${color_white}")
+#     endif()
 
-    # Get selected color
-    set(color_code "")
-    if(ARG_COLOR STREQUAL "red")
-        set(color_code "${color_red}")
-    elseif(ARG_COLOR STREQUAL "green")
-        set(color_code "${color_green}")
-    elseif(ARG_COLOR STREQUAL "yellow")
-        set(color_code "${color_yellow}")
-    elseif(ARG_COLOR STREQUAL "blue")
-        set(color_code "${color_blue}")
-    elseif(ARG_COLOR STREQUAL "magenta")
-        set(color_code "${color_magenta}")
-    elseif(ARG_COLOR STREQUAL "cyan")
-        set(color_code "${color_cyan}")
-    elseif(ARG_COLOR STREQUAL "white")
-        set(color_code "${color_white}")
-    endif()
+#     # Add bold if requested
+#     if(ARG_BOLD)
+#         set(color_code "${color_bold}${color_code}")
+#     endif()
 
-    # Add bold if requested
-    if(ARG_BOLD)
-        set(color_code "${color_bold}${color_code}")
-    endif()
-
-    # Print the colored message
-    message("${color_code}${MESSAGE_STRING}${color_reset}")
-endfunction()
+#     # Print the colored message
+#     message("${color_code}${MESSAGE_STRING}${color_reset}")
+# endfunction()
 
 message(STATUS ">>> 正在加载第三方依赖...")
-include(cmake/setup_oatpp.cmake)
+# include(cmake/deps/setup_oatpp.cmake)
+include(cmake/setup_dependencies.cmake)
 
-# 添加protobuf库
-# Protobuf: 明确禁止安装
-set(protobuf_INSTALL OFF CACHE BOOL "Disable protobuf install" FORCE)
-set(protobuf_BUILD_TESTS OFF CACHE BOOL "Disable protobuf tests")
-set(protobuf_USE_EXTERNAL_GTEST OFF CACHE BOOL "Disable external GTest usage")
-add_subdirectory(external/protobuf EXCLUDE_FROM_ALL)
-# 假设你生成后的 protoc 可执行文件在 build/bin 目录中
-set(Protobuf_PROTOC_EXECUTABLE $<TARGET_FILE:protoc>)
-# set(Protobuf_PROTOC_EXECUTABLE ${PROJECT_SOURCE_DIR}/build/bin/protoc)
-message(STATUS "Protobuf protoc executable: ${Protobuf_PROTOC_EXECUTABLE}")
+
+# # 添加protobuf库
+# # Protobuf: 明确禁止安装
+# set(protobuf_INSTALL OFF CACHE BOOL "Disable protobuf install" FORCE)
+# set(protobuf_BUILD_TESTS OFF CACHE BOOL "Disable protobuf tests")
+# set(protobuf_USE_EXTERNAL_GTEST OFF CACHE BOOL "Disable external GTest usage")
+# add_subdirectory(external/protobuf EXCLUDE_FROM_ALL)
+# # 假设你生成后的 protoc 可执行文件在 build/bin 目录中
+# set(Protobuf_PROTOC_EXECUTABLE $<TARGET_FILE:protoc>)
+# # set(Protobuf_PROTOC_EXECUTABLE ${PROJECT_SOURCE_DIR}/build/bin/protoc)
+# message(STATUS "Protobuf protoc executable: ${Protobuf_PROTOC_EXECUTABLE}")
 # # 添加easyloggingpp库
 # set(build_static_lib ON)
 # add_subdirectory(external/easyloggingpp)
-# 设置spdlog为静态库
-set(SPDLOG_BUILD_SHARED OFF)
-# 添加spdlog库
-add_subdirectory(external/spdlog EXCLUDE_FROM_ALL)
-# 添加 yaml-cpp 库
-add_subdirectory(external/yaml-cpp EXCLUDE_FROM_ALL)
+# # 设置spdlog为静态库
+# set(SPDLOG_BUILD_SHARED OFF)
+# # 添加spdlog库
+# add_subdirectory(external/spdlog EXCLUDE_FROM_ALL)
+# # 添加 yaml-cpp 库
+# add_subdirectory(external/yaml-cpp EXCLUDE_FROM_ALL)
 # 添加日志模块
 set(BUILD_MY_LOG ON CACHE BOOL "Build mylog library")
 add_subdirectory(src/util/my_log)
-# 添加nlohmann/json库
-add_subdirectory(external/json)
+# # 添加nlohmann/json库
+# add_subdirectory(external/json)
 # 添加 myconfig 库
 set(BUILD_MY_CONFIG ON CACHE BOOL "Build my_config library")
 add_subdirectory(src/util/my_config)
-# 添加cpr库
-# 强制使用系统 curl
-set(CPR_USE_SYSTEM_CURL ON CACHE BOOL "" FORCE)
-# CPR 自身
-set(CPR_ENABLE_SSL ON CACHE BOOL "" FORCE)
-add_subdirectory(external/cpr EXCLUDE_FROM_ALL)
-# 添加mosquitto库
-set(DOCUMENTATION OFF CACHE BOOL "Disable documentation generation")
-add_subdirectory(external/mosquitto)
-# 添加libzmq库
-set(WITH_TLS OFF)
-add_subdirectory(external/libzmq EXCLUDE_FROM_ALL)
+# # 添加cpr库
+# # 强制使用系统 curl
+# set(CPR_USE_SYSTEM_CURL ON CACHE BOOL "" FORCE)
+# # CPR 自身
+# set(CPR_ENABLE_SSL ON CACHE BOOL "" FORCE)
+# add_subdirectory(external/cpr EXCLUDE_FROM_ALL)
+# # 添加mosquitto库
+# set(DOCUMENTATION OFF CACHE BOOL "Disable documentation generation")
+# add_subdirectory(external/mosquitto)
+# # 添加libzmq库
+# set(WITH_TLS OFF)
+# add_subdirectory(external/libzmq EXCLUDE_FROM_ALL)
 
-# --------------------- OpenCV 设置 ---------------------
-# 指定需要构建的模块（可按需调整）,
+# # --------------------- OpenCV 设置 ---------------------
+# # 指定需要构建的模块（可按需调整）,
 
-set(BUILD_LIST calib3d,core,dnn,features2d,flann,gapi,highgui,imgcodecs,imgproc,ml,objdetect,photo,stitching,video,videoio)
-# 是否构建为静态库
-set(BUILD_SHARED_LIBS OFF CACHE BOOL "Build static libs")
-# opencv contrib 路径（可选）
-set(OPENCV_EXTRA_MODULES_PATH ${CMAKE_SOURCE_DIR}/external/opencv_contrib/modules)
-set(WITH_PROTOBUF OFF CACHE BOOL "Don't use protobuf in OpenCV")
-set(INSTALL_CREATE_DISTRIBUTION OFF CACHE BOOL "" FORCE)
-set(INSTALL_C_EXAMPLES OFF CACHE BOOL "" FORCE)
-set(INSTALL_PYTHON_EXAMPLES OFF CACHE BOOL "" FORCE)
-set(BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
-set(OPENCV_GENERATE_PKGCONFIG OFF CACHE BOOL "" FORCE)
-# 添加 OpenCV 子目录
-add_subdirectory(external/opencv EXCLUDE_FROM_ALL)
+# set(BUILD_LIST calib3d,core,dnn,features2d,flann,gapi,highgui,imgcodecs,imgproc,ml,objdetect,photo,stitching,video,videoio)
+# # 是否构建为静态库
+# set(BUILD_SHARED_LIBS OFF CACHE BOOL "Build static libs")
+# # opencv contrib 路径（可选）
+# set(OPENCV_EXTRA_MODULES_PATH ${CMAKE_SOURCE_DIR}/external/opencv_contrib/modules)
+# set(WITH_PROTOBUF OFF CACHE BOOL "Don't use protobuf in OpenCV")
+# set(INSTALL_CREATE_DISTRIBUTION OFF CACHE BOOL "" FORCE)
+# set(INSTALL_C_EXAMPLES OFF CACHE BOOL "" FORCE)
+# set(INSTALL_PYTHON_EXAMPLES OFF CACHE BOOL "" FORCE)
+# set(BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
+# set(OPENCV_GENERATE_PKGCONFIG OFF CACHE BOOL "" FORCE)
+# # 添加 OpenCV 子目录
+# add_subdirectory(external/opencv EXCLUDE_FROM_ALL)
 
 # --------------------- Eigen 设置 ---------------------
 # Eigen 是头文件库，不需要编译，只需添加路径
@@ -564,6 +568,6 @@ if(TARGET libzmq)
     install(FILES $<TARGET_FILE:libzmq> DESTINATION lib)
 endif()
 
-# if(TARGET libmosquitto)
-#     install(FILES $<TARGET_FILE:libmosquitto> DESTINATION lib)
-# endif()
+if(TARGET libmosquitto)
+    install(FILES $<TARGET_FILE:libmosquitto> DESTINATION lib)
+endif()

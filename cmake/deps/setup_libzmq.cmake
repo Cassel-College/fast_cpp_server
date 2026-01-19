@@ -1,0 +1,5 @@
+set(WITH_TLS OFF)
+add_subdirectory(external/libzmq EXCLUDE_FROM_ALL)
+message(STATUS "添加 libzmq 包含路径到 THIRD_PARTY_INCLUDES")
+message(STATUS "libzmq include path: ${CMAKE_SOURCE_DIR}/external/libzmq/include")
+list(APPEND THIRD_PARTY_INCLUDES ${CMAKE_SOURCE_DIR}/external/libzmq/include)
