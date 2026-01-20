@@ -32,6 +32,21 @@ if(TARGET oatpp-swagger)
     add_library(oatpp::oatpp-swagger ALIAS oatpp-swagger)
 endif()
 
+if (NOT EXISTS "${CMAKE_SOURCE_DIR}/external/oatpp/src")
+    message(FATAL_ERROR "oatpp include path not found: ${CMAKE_SOURCE_DIR}/external/oatpp/src")
+else()
+    print_colored_message("<include> Found oatpp include" COLOR green)
+    list(APPEND THIRD_INCLUDE_DIRECTORIES ${CMAKE_SOURCE_DIR}/external/oatpp/src)
+endif()
+
+if (NOT EXISTS "${CMAKE_SOURCE_DIR}/external/oatpp-swagger/src")
+    message(FATAL_ERROR "oatpp-swagger include path not found: ${CMAKE_SOURCE_DIR}/external/oatpp-swagger/src")
+else()
+    print_colored_message("<include> Found oatpp-swagger include" COLOR green)
+    list(APPEND THIRD_INCLUDE_DIRECTORIES ${CMAKE_SOURCE_DIR}/external/oatpp-swagger/src)
+endif()
+
+
 # # 假设你原来的 setup_oatpp.cmake 内容，这里确保包含 swagger
 # # 确保你已经 clone 了 git 仓库到 external/oatpp 和 external/oatpp-swagger
 # option(OATPP_BUILD_TESTS "Oat++ build tests" OFF)

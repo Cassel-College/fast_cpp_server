@@ -2,5 +2,10 @@ set(SPDLOG_BUILD_SHARED OFF)
 add_subdirectory(external/spdlog EXCLUDE_FROM_ALL)
 
 message(STATUS "添加 spdlog 包含路径到 THIRD_PARTY_INCLUDES")
-
+if (NOT EXISTS "${CMAKE_SOURCE_DIR}/external/spdlog/include")
+    message(FATAL_ERROR "spdlog include path not found: ${CMAKE_SOURCE_DIR}/external/spdlog/include")
+else()
+    print_colored_message("<include> Found spdlog include" COLOR green)
+    list(APPEND THIRD_INCLUDE_DIRECTORIES ${CMAKE_SOURCE_DIR}/external/spdlog/include)
+endif()
 list(APPEND THIRD_PARTY_INCLUDES ${CMAKE_SOURCE_DIR}/external/spdlog/include)

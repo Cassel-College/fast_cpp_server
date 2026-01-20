@@ -5,4 +5,12 @@ add_subdirectory(external/protobuf EXCLUDE_FROM_ALL)
 set(Protobuf_PROTOC_EXECUTABLE $<TARGET_FILE:protoc>)
 message(STATUS "Protobuf protoc executable: ${Protobuf_PROTOC_EXECUTABLE}")
 message(STATUS "添加 Protobuf 包含路径到 THIRD_PARTY_INCLUDES")
+
+if (NOT EXISTS "${CMAKE_SOURCE_DIR}/external/protobuf/src")
+    message(FATAL_ERROR "Protobuf include path not found: ${CMAKE_SOURCE_DIR}/external/protobuf/src")
+else()
+    print_colored_message("<include> Found Protobuf include" COLOR green)
+    list(APPEND THIRD_INCLUDE_DIRECTORIES ${CMAKE_SOURCE_DIR}/external/protobuf/src)
+endif()
+
 list(APPEND THIRD_PARTY_INCLUDES ${CMAKE_SOURCE_DIR}/external/protobuf/src)

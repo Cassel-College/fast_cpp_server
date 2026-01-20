@@ -7,6 +7,7 @@ LIB_PATH="${INSTALL_PATH}/lib/${PROGRAM_NAME}"
 CONFIG_PATH="/etc/${PROGRAM_NAME}"
 LOG_PATH="/var/${PROGRAM_NAME}/logs"
 TEMP_DIR="/tmp/${PROGRAM_NAME}"
+SHARE_DIR="/usr/share/${PROGRAM_NAME}"
 SERVICE_PATH="/etc/systemd/system"
 
 SUPER="sudo"
@@ -100,6 +101,17 @@ else
     execute "${SUPER}" mkdir -p "${TEMP_DIR}"
 fi
 
+#Copy share folder to /usr/share/${PROGRAM_NAME}
+echo "📁 Checking share directory at ${SHARE_DIR}..."
+if [ -d "${SHARE_DIR}" ]; then
+    echo "✅ Share directory already exists."
+else
+    echo "📁 Creating share directory..."
+    execute "${SUPER}" mkdir -p "${SHARE_DIR}"
+fi
+echo "📄 Copying share files to ${SHARE_DIR}..."
+execute "${SUPER}" cp -r ./swagger-res "${SHARE_DIR}/"
+
 # Copy service file to /etc/systemd/system
 echo "📁 Checking service file at ${SERVICE_PATH}..."
 if [ -f "${SERVICE_PATH}/${PROGRAM_NAME}.service" ]; then
@@ -131,6 +143,7 @@ echo "       log path: ${LOG_PATH}"
 echo "   service path: ${SERVICE_PATH}"
 echo "   service name: ${PROGRAM_NAME}.service"
 echo "      temp path: ${TEMP_DIR}"
+echo "     share path: ${SHARE_DIR}"
 # echo " service status: $(sudo systemctl status ${PROGRAM_NAME}.service | grep Active)"
 # echo "    service log: $(sudo journalctl -u ${PROGRAM_NAME}.service --no-pager | tail -n 10)"
 echo "-----------------------------------------------------------------"

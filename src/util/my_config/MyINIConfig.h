@@ -8,6 +8,7 @@ public:
     static void Init(const std::string& config_file_path);
     static MyINIConfig& GetInstance();
 
+    bool HasKey(const std::string& key) const;
     bool GetString(const std::string& key, const std::string& def, std::string& out) const;
     bool GetInt(const std::string& key, int def, int& out) const;
     bool GetDouble(const std::string& key, double def, double& out) const;

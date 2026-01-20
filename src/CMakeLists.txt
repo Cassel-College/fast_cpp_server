@@ -16,6 +16,58 @@ file(GLOB_RECURSE MYLIB_SOURCES
     ${PROJECT_SOURCE_DIR}/src/tools/pipeline/*.cpp
 )
 
+
+set(BUILD_MY_LOG            ON CACHE BOOL "Build mylog library")
+set(BUILD_MY_CONFIG         ON CACHE BOOL "Build my_config library")
+set(BUILD_MY_PROTO          ON CACHE BOOL "Build myproto library")
+set(BUILD_MY_ARG_PARSER     ON CACHE BOOL "Build my_arg_parser library")
+set(BUILD_MY_SOFT_HEALTHY   ON CACHE BOOL "Build my_soft_healthy library")
+set(BUILD_MY_SYSTEM_HEALTHY ON CACHE BOOL "Build my_system_healthy library")
+set(BUILD_MY_HEARTBEAT      ON CACHE BOOL "Build my_heartbeat library")
+set(BUILD_MY_CACHE          ON CACHE BOOL "Build my_cache library")
+set(BUILD_MY_DB             ON CACHE BOOL "Build my_db library")
+set(BUILD_MY_API            ON CACHE BOOL "Build my_api library")
+set(BUILD_MY_EDGE           ON CACHE BOOL "Build my_edge library")
+set(BUILD_MY_DATA           ON CACHE BOOL "Build my_data library")
+set(BUILD_MY_CONTROL        ON CACHE BOOL "Build my_control library")
+set(BUILD_MY_COMM           ON CACHE BOOL "Build my_comm library")
+set(BUILD_MY_AI_INTERFACE   ON CACHE BOOL "Build my_ai_interface library")
+set(BUILD_MY_NETWORK        ON CACHE BOOL "Build my_network library")
+
+add_subdirectory(util/my_log)
+add_subdirectory(util/my_config)
+add_subdirectory(protobuf)
+add_subdirectory(util/my_arg_parser)
+add_subdirectory(util/my_soft_healthy)
+add_subdirectory(util/my_system_healthy)
+add_subdirectory(util/my_heartbeat)
+add_subdirectory(util/my_cache)
+add_subdirectory(util/my_db)
+add_subdirectory(util/my_api)
+add_subdirectory(util/my_edge)
+add_subdirectory(util/my_data)
+add_subdirectory(util/my_control)
+add_subdirectory(util/my_comm)
+add_subdirectory(util/my_ai_interface)
+add_subdirectory(util/my_network)
+
+# add_subdirectory(src/util/my_log)
+# add_subdirectory(src/util/my_config)
+# add_subdirectory(src/protobuf)
+# add_subdirectory(src/util/my_arg_parser)
+# add_subdirectory(src/util/my_soft_healthy)
+# add_subdirectory(src/util/my_system_healthy)
+# add_subdirectory(src/util/my_heartbeat)
+# add_subdirectory(src/util/my_cache)
+# add_subdirectory(src/util/my_db)
+# add_subdirectory(src/util/my_api)
+# add_subdirectory(src/util/my_edge)
+# add_subdirectory(src/util/my_data)
+# add_subdirectory(src/util/my_control)
+# add_subdirectory(src/util/my_comm)
+# add_subdirectory(src/util/my_ai_interface)
+# add_subdirectory(src/util/my_network)
+
 # 创建静态库 mylib
 add_library(mylib STATIC ${MYLIB_SOURCES})
 
@@ -47,46 +99,30 @@ print_colored_message("Adding mylib library with sources ..." COLOR yellow)
 pretty_print_list("MYLIB_SOURCES List" MYLIB_SOURCES)
 pretty_print_list("MYLIB_INCLUDE_DIRECTORIES List" MYLIB_INCLUDE_DIRECTORIES)
 
-# # spdlog
 # target_link_libraries(mylib PUBLIC spdlog)
 target_link_libraries(mylib PUBLIC nlohmann_json::nlohmann_json)
-# protobuf
 target_link_libraries(mylib PUBLIC protobuf::libprotobuf)
-# oatpp
 target_link_libraries(mylib PUBLIC oatpp::oatpp)
-# oatpp-swagger
 target_link_libraries(mylib PUBLIC oatpp::oatpp-swagger)
-# mylog
 target_link_libraries(mylib PUBLIC mylog)
-# myconfig
 target_link_libraries(mylib PUBLIC myconfig)
-# my_heartbeat
 target_link_libraries(mylib PUBLIC my_heartbeat)
-# my_edge
 target_link_libraries(mylib PUBLIC my_edge)
-# my_db
 target_link_libraries(mylib PUBLIC my_db)
-# my_cache
 target_link_libraries(mylib PUBLIC my_cache)
-# my_comm
 target_link_libraries(mylib PUBLIC my_comm)
 target_link_libraries(mylib PUBLIC my_control)
 target_link_libraries(mylib PUBLIC my_network)
 target_link_libraries(mylib PUBLIC my_ai_interface)
 target_link_libraries(mylib PUBLIC my_data)
 target_link_libraries(mylib PUBLIC my_api)
-# myproto
 target_link_libraries(mylib PUBLIC myproto)
-# cpr
 target_link_libraries(mylib PUBLIC cpr::cpr)
-# zmq
 target_link_libraries(mylib PUBLIC libzmq)
-# pthread
 target_link_libraries(mylib PUBLIC pthread)
-# my_soft_healthy
 target_link_libraries(mylib PRIVATE my_soft_healthy)
-# my_system_healthy
 target_link_libraries(mylib PRIVATE my_system_healthy)
+target_link_libraries(mylib PRIVATE symengine)
 
 print_colored_message("Adding mylib library with sources over" COLOR yellow)
 print_colored_message("------------------------------" COLOR magenta)

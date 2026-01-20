@@ -11,6 +11,9 @@
 // #include "oatpp/Environment.hpp"
 #include "oatpp/core/base/Environment.hpp"
 #include "oatpp/web/server/interceptor/RequestInterceptor.hpp"
+#include "MyINIConfig.h"
+#include "MyLog.h"
+
 
 namespace my_api {
 
@@ -53,6 +56,22 @@ void MyAPI::ServerThread(int port) {
     {
         auto objectMapper = std::make_shared<oatpp::parser::json::mapping::ObjectMapper>();
         std::string OATPP_SWAGGER_RES_PATH = "/home/cs/DockerRoot/fast_cpp_server/external/oatpp-swagger/res";
+        if (MyINIConfig::GetInstance().HasKey("swagger_res_dir")) {
+            std::string res_dir;
+            MyINIConfig::GetInstance().GetString("swagger_res_dir", "", res_dir);
+            if (res_dir.empty()) {
+                MYLOG_WARN("MyAPI: 配置项 swagger_res_dir 为空，使用默认路径: {}", OATPP_SWAGGER_RES_PATH);
+            }
+            // 判断路径是否存在
+            else {
+                if (std::filesystem::exists(res_dir)) {
+                    OATPP_SWAGGER_RES_PATH = res_dir;
+                    MYLOG_INFO("MyAPI: 使用配置的 Swagger 资源路径: {}", OATPP_SWAGGER_RES_PATH);
+                } else {
+                    MYLOG_WARN("MyAPI: 配置的 swagger_res_dir 路径不存在，使用默认路径: {}", OATPP_SWAGGER_RES_PATH);
+                }
+            }
+        }
         auto swaggerResources = oatpp::swagger::Resources::loadResources(OATPP_SWAGGER_RES_PATH);
 
         auto docInfo = oatpp::swagger::DocumentInfo::Builder()

@@ -59,3 +59,7 @@ std::string MyINIConfig::ShowConfig() const {
     for (auto& kv : kv_) oss << kv.first << "=" << kv.second << "\n";
     return oss.str();
 }
+
+bool MyINIConfig::HasKey(const std::string& key) const {
+    return kv_.find(key) != kv_.end();
+}

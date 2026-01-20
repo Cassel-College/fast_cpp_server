@@ -6,8 +6,9 @@ TARGET_SERVICE_FILE_PATH=/etc/systemd/system/${SERVICE_FILE_NAME}
 BIN_PATH="/usr/local/bin/${PROGRAM_NAME}"
 CONFIG_PATH="/etc/${PROGRAM_NAME}"
 LIB_PATH="/usr/local/lib/${PROGRAM_NAME}"
-LOG_PATH="/var/log/${PROGRAM_NAME}"
+LOG_PATH="/var/${PROGRAM_NAME}"
 TEMP_DIR="/tmp/${PROGRAM_NAME}"
+SHARE_DIR="/usr/share/${PROGRAM_NAME}"
 
 SUPER="sudo"
 SUPER=""
@@ -86,6 +87,15 @@ if [ -d "${TEMP_DIR}" ]; then
     echo "✅ Temp folder deleted."
 else
     echo "⚠️ Temp folder ${TEMP_DIR} does not exist. Skipping deletion."
+fi
+
+# delete share folder
+echo "🗑️ Deleting share folder at ${SHARE_DIR}..."
+if [ -d "${SHARE_DIR}" ]; then
+    execute "${SUPER}" rm -rf "${SHARE_DIR}"
+    echo "✅ Share folder deleted."
+else
+    echo "⚠️ Share folder ${SHARE_DIR} does not exist. Skipping deletion."
 fi
 
 # Delete service file
