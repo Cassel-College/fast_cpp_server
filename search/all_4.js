@@ -13,7 +13,7 @@ var searchData=
   ['empty_10',['empty',['../classtools_1_1thread__safe__queue_1_1ThreadSafeQueue.html#a644718bb2fb240de962dc3c9a1fdf0dc',1,'tools::thread_safe_queue::ThreadSafeQueue']]],
   ['enable_5fsubprocess_5fcheck_5f_11',['enable_subprocess_check_',['../classSoftHealthMonitorConfig.html#a06c3ffc721c17632405a2aad43ac40c1',1,'SoftHealthMonitorConfig']]],
   ['enable_5fthread_5ftree_5f_12',['enable_thread_tree_',['../classSoftHealthMonitorConfig.html#aa8b4548202d8e771e4a42494f7dca4ee',1,'SoftHealthMonitorConfig']]],
-  ['endpoint_13',['endpoint',['../classmy__api_1_1EdgeController.html#a29656a2aa47c566f405992448aa08de9',1,'my_api::EdgeController::ENDPOINT(&quot;GET&quot;, &quot;/v1/edges/status&quot;, getEdgesStatus)'],['../classmy__api_1_1EdgeController.html#a929b20bffdd4f22c8a0d66b2c85af4fb',1,'my_api::EdgeController::ENDPOINT(&quot;POST&quot;, &quot;/v1/edges/{name}/start&quot;, startDevice, PATH(String, name))'],['../classmy__api_1_1EdgeController.html#ad34e91f633a5991b40183fda8dbfc3b4',1,'my_api::EdgeController::ENDPOINT(&quot;POST&quot;, &quot;/v1/edges/{name}/stop&quot;, stopDevice, PATH(String, name))']]],
+  ['endpoint_13',['endpoint',['../classmy__api_1_1EdgeController.html#ad34e91f633a5991b40183fda8dbfc3b4',1,'my_api::EdgeController::ENDPOINT(&quot;POST&quot;, &quot;/v1/edges/{name}/stop&quot;, stopDevice, PATH(String, name))'],['../classmy__api_1_1EdgeController.html#a29656a2aa47c566f405992448aa08de9',1,'my_api::EdgeController::ENDPOINT(&quot;GET&quot;, &quot;/v1/edges/status&quot;, getEdgesStatus)'],['../classmy__api_1_1EdgeController.html#a929b20bffdd4f22c8a0d66b2c85af4fb',1,'my_api::EdgeController::ENDPOINT(&quot;POST&quot;, &quot;/v1/edges/{name}/start&quot;, startDevice, PATH(String, name))']]],
   ['error_14',['Error',['../namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6',1,'MyLog']]],
   ['example_15',['example',['../classExample.html#a3e2a8f88b54d42d9427768ff44d36704',1,'Example::Example()'],['../classExample.html',1,'Example']]],
   ['example_2ecpp_16',['example.cpp',['../example_8cpp.html',1,'']]],
@@ -24,5 +24,6 @@ var searchData=
   ['executebysystemcal_21',['ExecuteBySystemcal',['../classtools_1_1service__guard_1_1ServiceGuard.html#a1330d55ded43e5af3a18b9f2be4e686e',1,'tools::service_guard::ServiceGuard']]],
   ['executeshell_22',['ExecuteShell',['../classtools_1_1service__guard_1_1ServiceGuard.html#ada2e44948495509ff2c647d87d005fbf',1,'tools::service_guard::ServiceGuard']]],
   ['executeshelllines_23',['ExecuteShellLines',['../classtools_1_1service__guard_1_1ServiceGuard.html#a8c41f29edebe6ebe147670eff8c21db0',1,'tools::service_guard::ServiceGuard']]],
-  ['executing_24',['EXECUTING',['../namespaceedge.html#a705af4082cd372cbec46518713ce86f2ac6e6064fdaf5aa9b04472acaffdcea5b',1,'edge']]]
+  ['executing_24',['EXECUTING',['../namespaceedge.html#a705af4082cd372cbec46518713ce86f2ac6e6064fdaf5aa9b04472acaffdcea5b',1,'edge']]],
+  ['expected_25',['expected',['../structmy__doctor_1_1CheckItem.html#a3b69631535313e83809cd7746027cc62',1,'my_doctor::CheckItem']]]
 ];

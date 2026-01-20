@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_doctor/MyDoctor.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_da5de31281e392ad7b6e1f3e0ca2b731.html">my_doctor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">MyDoctor.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="MyDoctor_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#ifndef MY_DOCTOR_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="MyDoctor_8h.html#ad11079503ff5f72009caa2e3ed3841b0">    3</a></span><span class="preprocessor">#define MY_DOCTOR_H</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="MyLog_8h.html">MyLog.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__doctor.html">my_doctor</a> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structmy__doctor_1_1CheckItem.html">   15</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structmy__doctor_1_1CheckItem.html">CheckItem</a> {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="structmy__doctor_1_1CheckItem.html#a4037f4b000f850b04463d2573c772e1d">   17</a></span>    std::string <a class="code hl_variable" href="structmy__doctor_1_1CheckItem.html#a4037f4b000f850b04463d2573c772e1d">module_name</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="structmy__doctor_1_1CheckItem.html#aa139e7c7d968328493be1eaea54c5193">   19</a></span>    std::string <a class="code hl_variable" href="structmy__doctor_1_1CheckItem.html#aa139e7c7d968328493be1eaea54c5193">target</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="structmy__doctor_1_1CheckItem.html#a3b69631535313e83809cd7746027cc62">   21</a></span>    std::string <a class="code hl_variable" href="structmy__doctor_1_1CheckItem.html#a3b69631535313e83809cd7746027cc62">expected</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>};</div>
+</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="};">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="structmy__doctor_1_1CheckResult.html">   27</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structmy__doctor_1_1CheckResult.html">CheckResult</a> {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="structmy__doctor_1_1CheckResult.html#a4037f4b000f850b04463d2573c772e1d">   29</a></span>    std::string <a class="code hl_variable" href="structmy__doctor_1_1CheckResult.html#a4037f4b000f850b04463d2573c772e1d">module_name</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="structmy__doctor_1_1CheckResult.html#a7960f9c558f9ee2c3d4a8fdea096fb56">   31</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structmy__doctor_1_1CheckResult.html#a7960f9c558f9ee2c3d4a8fdea096fb56">success</a>{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structmy__doctor_1_1CheckResult.html#a36bd74109f547f7f8198faf5a12d2879">   33</a></span>    std::string <a class="code hl_variable" href="structmy__doctor_1_1CheckResult.html#a36bd74109f547f7f8198faf5a12d2879">message</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structmy__doctor_1_1CheckResult.html#a06f18b7e05b64c4ff0d03f07ae379a68">   35</a></span>    std::string <a class="code hl_variable" href="structmy__doctor_1_1CheckResult.html#a06f18b7e05b64c4ff0d03f07ae379a68">detail</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>};</div>
+</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="foldopen" id="foldopen00038" data-start="{" data-end="};">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classmy__doctor_1_1MyDoctor.html">   38</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__doctor_1_1MyDoctor.html">MyDoctor</a> {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">static</span> <a class="code hl_class" href="classmy__doctor_1_1MyDoctor.html">MyDoctor</a>&amp; <a class="code hl_function" href="classmy__doctor_1_1MyDoctor.html#ace24bbed4542a5caa0827247c5084c22">GetInstance</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__doctor_1_1MyDoctor.html#a6907518a5ce2c3afa6fd6743e1697d08">Init</a>(<span class="keyword">const</span> std::vector&lt;CheckItem&gt;&amp; items);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__doctor_1_1MyDoctor.html#a3fbb1ed2b22f1ef69d593c1f10f2a0a3">StartAll</a>();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    std::string <a class="code hl_function" href="classmy__doctor_1_1MyDoctor.html#a908a115b57885da98a8babc0d1f258fc">ToJson</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classmy__doctor_1_1MyDoctor.html#a24ea705fdd4c4d4bb0ca15e5c81c10d5">   64</a></span>    <a class="code hl_function" href="classmy__doctor_1_1MyDoctor.html#a24ea705fdd4c4d4bb0ca15e5c81c10d5">MyDoctor</a>();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classmy__doctor_1_1MyDoctor.html#ae39358cf8da998daa77f6d0db27747f0">   65</a></span>    <a class="code hl_function" href="classmy__doctor_1_1MyDoctor.html#ae39358cf8da998daa77f6d0db27747f0">~MyDoctor</a>();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <a class="code hl_struct" href="structmy__doctor_1_1CheckResult.html">CheckResult</a> <a class="code hl_function" href="classmy__doctor_1_1MyDoctor.html#acb33a1db87ec803c19cac0b588546824">RunCheck</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structmy__doctor_1_1CheckItem.html">CheckItem</a>&amp; item);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classmy__doctor_1_1MyDoctor.html#afc3a6f678213e23f745b57170c5663e4">   70</a></span>    std::vector&lt;CheckItem&gt; <a class="code hl_variable" href="classmy__doctor_1_1MyDoctor.html#afc3a6f678213e23f745b57170c5663e4">items_</a>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classmy__doctor_1_1MyDoctor.html#a8055078a018ce52574310863867920e7">   71</a></span>    std::vector&lt;CheckResult&gt; <a class="code hl_variable" href="classmy__doctor_1_1MyDoctor.html#a8055078a018ce52574310863867920e7">results_</a>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classmy__doctor_1_1MyDoctor.html#aeef4a7229a433a6ef6c6a8960b5fe413">   72</a></span>    <span class="keyword">mutable</span> std::mutex <a class="code hl_variable" href="classmy__doctor_1_1MyDoctor.html#aeef4a7229a433a6ef6c6a8960b5fe413">mtx_</a>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>}; <span class="comment">// class MyDocter</span></div>
+</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>} <span class="comment">// namespace my_docktor</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aMyLog_8h_html"><div class="ttname"><a href="MyLog_8h.html">MyLog.h</a></div></div>
+<div class="ttc" id="aclassmy__doctor_1_1MyDoctor_html"><div class="ttname"><a href="classmy__doctor_1_1MyDoctor.html">my_doctor::MyDoctor</a></div><div class="ttdef"><b>Definition</b> MyDoctor.h:38</div></div>
+<div class="ttc" id="aclassmy__doctor_1_1MyDoctor_html_a24ea705fdd4c4d4bb0ca15e5c81c10d5"><div class="ttname"><a href="classmy__doctor_1_1MyDoctor.html#a24ea705fdd4c4d4bb0ca15e5c81c10d5">my_doctor::MyDoctor::MyDoctor</a></div><div class="ttdeci">MyDoctor()</div></div>
+<div class="ttc" id="aclassmy__doctor_1_1MyDoctor_html_a3fbb1ed2b22f1ef69d593c1f10f2a0a3"><div class="ttname"><a href="classmy__doctor_1_1MyDoctor.html#a3fbb1ed2b22f1ef69d593c1f10f2a0a3">my_doctor::MyDoctor::StartAll</a></div><div class="ttdeci">void StartAll()</div><div class="ttdoc">执行所有检查项</div><div class="ttdef"><b>Definition</b> MyDoctor.cpp:22</div></div>
+<div class="ttc" id="aclassmy__doctor_1_1MyDoctor_html_a6907518a5ce2c3afa6fd6743e1697d08"><div class="ttname"><a href="classmy__doctor_1_1MyDoctor.html#a6907518a5ce2c3afa6fd6743e1697d08">my_doctor::MyDoctor::Init</a></div><div class="ttdeci">bool Init(const std::vector&lt; CheckItem &gt; &amp;items)</div><div class="ttdoc">初始化检查项</div><div class="ttdef"><b>Definition</b> MyDoctor.cpp:14</div></div>
+<div class="ttc" id="aclassmy__doctor_1_1MyDoctor_html_a8055078a018ce52574310863867920e7"><div class="ttname"><a href="classmy__doctor_1_1MyDoctor.html#a8055078a018ce52574310863867920e7">my_doctor::MyDoctor::results_</a></div><div class="ttdeci">std::vector&lt; CheckResult &gt; results_</div><div class="ttdef"><b>Definition</b> MyDoctor.h:71</div></div>
+<div class="ttc" id="aclassmy__doctor_1_1MyDoctor_html_a908a115b57885da98a8babc0d1f258fc"><div class="ttname"><a href="classmy__doctor_1_1MyDoctor.html#a908a115b57885da98a8babc0d1f258fc">my_doctor::MyDoctor::ToJson</a></div><div class="ttdeci">std::string ToJson() const</div><div class="ttdoc">将检查结果转换为 JSON 文本</div><div class="ttdef"><b>Definition</b> MyDoctor.cpp:43</div></div>
+<div class="ttc" id="aclassmy__doctor_1_1MyDoctor_html_acb33a1db87ec803c19cac0b588546824"><div class="ttname"><a href="classmy__doctor_1_1MyDoctor.html#acb33a1db87ec803c19cac0b588546824">my_doctor::MyDoctor::RunCheck</a></div><div class="ttdeci">CheckResult RunCheck(const CheckItem &amp;item)</div><div class="ttdef"><b>Definition</b> MyDoctor.cpp:33</div></div>
+<div class="ttc" id="aclassmy__doctor_1_1MyDoctor_html_ace24bbed4542a5caa0827247c5084c22"><div class="ttname"><a href="classmy__doctor_1_1MyDoctor.html#ace24bbed4542a5caa0827247c5084c22">my_doctor::MyDoctor::GetInstance</a></div><div class="ttdeci">static MyDoctor &amp; GetInstance()</div><div class="ttdoc">获取单例实例</div><div class="ttdef"><b>Definition</b> MyDoctor.cpp:6</div></div>
+<div class="ttc" id="aclassmy__doctor_1_1MyDoctor_html_ae39358cf8da998daa77f6d0db27747f0"><div class="ttname"><a href="classmy__doctor_1_1MyDoctor.html#ae39358cf8da998daa77f6d0db27747f0">my_doctor::MyDoctor::~MyDoctor</a></div><div class="ttdeci">~MyDoctor()</div></div>
+<div class="ttc" id="aclassmy__doctor_1_1MyDoctor_html_aeef4a7229a433a6ef6c6a8960b5fe413"><div class="ttname"><a href="classmy__doctor_1_1MyDoctor.html#aeef4a7229a433a6ef6c6a8960b5fe413">my_doctor::MyDoctor::mtx_</a></div><div class="ttdeci">std::mutex mtx_</div><div class="ttdef"><b>Definition</b> MyDoctor.h:72</div></div>
+<div class="ttc" id="aclassmy__doctor_1_1MyDoctor_html_afc3a6f678213e23f745b57170c5663e4"><div class="ttname"><a href="classmy__doctor_1_1MyDoctor.html#afc3a6f678213e23f745b57170c5663e4">my_doctor::MyDoctor::items_</a></div><div class="ttdeci">std::vector&lt; CheckItem &gt; items_</div><div class="ttdef"><b>Definition</b> MyDoctor.h:70</div></div>
+<div class="ttc" id="anamespacemy__doctor_html"><div class="ttname"><a href="namespacemy__doctor.html">my_doctor</a></div><div class="ttdef"><b>Definition</b> MyDoctor.cpp:4</div></div>
+<div class="ttc" id="astructmy__doctor_1_1CheckItem_html"><div class="ttname"><a href="structmy__doctor_1_1CheckItem.html">my_doctor::CheckItem</a></div><div class="ttdoc">单项检查配置</div><div class="ttdef"><b>Definition</b> MyDoctor.h:15</div></div>
+<div class="ttc" id="astructmy__doctor_1_1CheckItem_html_a3b69631535313e83809cd7746027cc62"><div class="ttname"><a href="structmy__doctor_1_1CheckItem.html#a3b69631535313e83809cd7746027cc62">my_doctor::CheckItem::expected</a></div><div class="ttdeci">std::string expected</div><div class="ttdoc">期望的版本或阈值</div><div class="ttdef"><b>Definition</b> MyDoctor.h:21</div></div>
+<div class="ttc" id="astructmy__doctor_1_1CheckItem_html_a4037f4b000f850b04463d2573c772e1d"><div class="ttname"><a href="structmy__doctor_1_1CheckItem.html#a4037f4b000f850b04463d2573c772e1d">my_doctor::CheckItem::module_name</a></div><div class="ttdeci">std::string module_name</div><div class="ttdoc">模块名称</div><div class="ttdef"><b>Definition</b> MyDoctor.h:17</div></div>
+<div class="ttc" id="astructmy__doctor_1_1CheckItem_html_aa139e7c7d968328493be1eaea54c5193"><div class="ttname"><a href="structmy__doctor_1_1CheckItem.html#aa139e7c7d968328493be1eaea54c5193">my_doctor::CheckItem::target</a></div><div class="ttdeci">std::string target</div><div class="ttdoc">检查的目标路径或命令</div><div class="ttdef"><b>Definition</b> MyDoctor.h:19</div></div>
+<div class="ttc" id="astructmy__doctor_1_1CheckResult_html"><div class="ttname"><a href="structmy__doctor_1_1CheckResult.html">my_doctor::CheckResult</a></div><div class="ttdoc">单项检查结果</div><div class="ttdef"><b>Definition</b> MyDoctor.h:27</div></div>
+<div class="ttc" id="astructmy__doctor_1_1CheckResult_html_a06f18b7e05b64c4ff0d03f07ae379a68"><div class="ttname"><a href="structmy__doctor_1_1CheckResult.html#a06f18b7e05b64c4ff0d03f07ae379a68">my_doctor::CheckResult::detail</a></div><div class="ttdeci">std::string detail</div><div class="ttdoc">结果详情</div><div class="ttdef"><b>Definition</b> MyDoctor.h:35</div></div>
+<div class="ttc" id="astructmy__doctor_1_1CheckResult_html_a36bd74109f547f7f8198faf5a12d2879"><div class="ttname"><a href="structmy__doctor_1_1CheckResult.html#a36bd74109f547f7f8198faf5a12d2879">my_doctor::CheckResult::message</a></div><div class="ttdeci">std::string message</div><div class="ttdoc">结果简述</div><div class="ttdef"><b>Definition</b> MyDoctor.h:33</div></div>
+<div class="ttc" id="astructmy__doctor_1_1CheckResult_html_a4037f4b000f850b04463d2573c772e1d"><div class="ttname"><a href="structmy__doctor_1_1CheckResult.html#a4037f4b000f850b04463d2573c772e1d">my_doctor::CheckResult::module_name</a></div><div class="ttdeci">std::string module_name</div><div class="ttdoc">模块名称</div><div class="ttdef"><b>Definition</b> MyDoctor.h:29</div></div>
+<div class="ttc" id="astructmy__doctor_1_1CheckResult_html_a7960f9c558f9ee2c3d4a8fdea096fb56"><div class="ttname"><a href="structmy__doctor_1_1CheckResult.html#a7960f9c558f9ee2c3d4a8fdea096fb56">my_doctor::CheckResult::success</a></div><div class="ttdeci">bool success</div><div class="ttdoc">是否通过</div><div class="ttdef"><b>Definition</b> MyDoctor.h:31</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>
