@@ -69,7 +69,7 @@ namespace init_tools {
             }
             return false;
         };
-
+        std::cout << "config_file_path: " << config_file_path << std::endl;
         // ========== INI ==========
         if (type_ == "ini" || type_ == "all") {
             load_ok |= tryLoad(

@@ -23,6 +23,7 @@ target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE
     myconfig
     myproto
     my_arg_parser
+    my_doctor
     mylib
     my_soft_healthy
     my_system_healthy
