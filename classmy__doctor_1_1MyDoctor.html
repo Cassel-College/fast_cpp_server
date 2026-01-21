@@ -89,12 +89,18 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a6907518a5ce2c3afa6fd6743e1697d08" id="r_a6907518a5ce2c3afa6fd6743e1697d08"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__doctor_1_1MyDoctor.html#a6907518a5ce2c3afa6fd6743e1697d08">Init</a> (const std::vector&lt; <a class="el" href="structmy__doctor_1_1CheckItem.html">CheckItem</a> &gt; &amp;items)</td></tr>
 <tr class="memdesc:a6907518a5ce2c3afa6fd6743e1697d08"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化检查项  <br /></td></tr>
 <tr class="separator:a6907518a5ce2c3afa6fd6743e1697d08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e84f95cb3dccadcdd22172797589876" id="r_a1e84f95cb3dccadcdd22172797589876"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__doctor_1_1MyDoctor.html#a1e84f95cb3dccadcdd22172797589876">InitDefault</a> ()</td></tr>
+<tr class="memdesc:a1e84f95cb3dccadcdd22172797589876"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用默认检查项初始化  <br /></td></tr>
+<tr class="separator:a1e84f95cb3dccadcdd22172797589876"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3fbb1ed2b22f1ef69d593c1f10f2a0a3" id="r_a3fbb1ed2b22f1ef69d593c1f10f2a0a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__doctor_1_1MyDoctor.html#a3fbb1ed2b22f1ef69d593c1f10f2a0a3">StartAll</a> ()</td></tr>
 <tr class="memdesc:a3fbb1ed2b22f1ef69d593c1f10f2a0a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">执行所有检查项  <br /></td></tr>
 <tr class="separator:a3fbb1ed2b22f1ef69d593c1f10f2a0a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a908a115b57885da98a8babc0d1f258fc" id="r_a908a115b57885da98a8babc0d1f258fc"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__doctor_1_1MyDoctor.html#a908a115b57885da98a8babc0d1f258fc">ToJson</a> () const</td></tr>
 <tr class="memdesc:a908a115b57885da98a8babc0d1f258fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">将检查结果转换为 JSON 文本  <br /></td></tr>
 <tr class="separator:a908a115b57885da98a8babc0d1f258fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76d8c44489df9896f969058dcee67aae" id="r_a76d8c44489df9896f969058dcee67aae"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__doctor_1_1MyDoctor.html#a76d8c44489df9896f969058dcee67aae">ShowCheckResults</a> () const</td></tr>
+<tr class="memdesc:a76d8c44489df9896f969058dcee67aae"><td class="mdescLeft">&#160;</td><td class="mdescRight">以可读格式显示检查结果  <br /></td></tr>
+<tr class="separator:a76d8c44489df9896f969058dcee67aae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -197,6 +203,18 @@ Private 属性</h2></td></tr>
 
 <p>获取单例实例 </p>
 
+<p class="reference">被这些函数引用 <a class="el" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__doctor_1_1MyDoctor_ace24bbed4542a5caa0827247c5084c22_icgraph.png" border="0" usemap="#aclassmy__doctor_1_1MyDoctor_ace24bbed4542a5caa0827247c5084c22_icgraph" alt=""/></div>
+<map name="aclassmy__doctor_1_1MyDoctor_ace24bbed4542a5caa0827247c5084c22_icgraph" id="aclassmy__doctor_1_1MyDoctor_ace24bbed4542a5caa0827247c5084c22_icgraph">
+<area shape="rect" title="获取单例实例" alt="" coords="108,5,208,31"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,60,31"/>
+<area shape="poly" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a6907518a5ce2c3afa6fd6743e1697d08" name="a6907518a5ce2c3afa6fd6743e1697d08"></a>
@@ -225,6 +243,64 @@ Private 属性</h2></td></tr>
 <dl class="section return"><dt>返回</dt><dd>初始化是否成功 </dd></dl>
 
 <p class="reference">引用了 <a class="el" href="classmy__doctor_1_1MyDoctor.html#afc3a6f678213e23f745b57170c5663e4">MyDoctor::items_</a>, <a class="el" href="classmy__doctor_1_1MyDoctor.html#aeef4a7229a433a6ef6c6a8960b5fe413">MyDoctor::mtx_</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a> , 以及 <a class="el" href="classmy__doctor_1_1MyDoctor.html#a8055078a018ce52574310863867920e7">MyDoctor::results_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__doctor_1_1MyDoctor.html#a1e84f95cb3dccadcdd22172797589876">MyDoctor::InitDefault()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__doctor_1_1MyDoctor_a6907518a5ce2c3afa6fd6743e1697d08_icgraph.png" border="0" usemap="#aclassmy__doctor_1_1MyDoctor_a6907518a5ce2c3afa6fd6743e1697d08_icgraph" alt=""/></div>
+<map name="aclassmy__doctor_1_1MyDoctor_a6907518a5ce2c3afa6fd6743e1697d08_icgraph" id="aclassmy__doctor_1_1MyDoctor_a6907518a5ce2c3afa6fd6743e1697d08_icgraph">
+<area shape="rect" title="初始化检查项" alt="" coords="247,5,289,31"/>
+<area shape="rect" href="classmy__doctor_1_1MyDoctor.html#a1e84f95cb3dccadcdd22172797589876" title="使用默认检查项初始化" alt="" coords="108,5,199,31"/>
+<area shape="poly" title=" " alt="" coords="233,21,199,21,199,15,233,15"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,60,31"/>
+<area shape="poly" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1e84f95cb3dccadcdd22172797589876" name="a1e84f95cb3dccadcdd22172797589876"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e84f95cb3dccadcdd22172797589876">&#9670;&#160;</a></span>InitDefault()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool InitDefault </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>使用默认检查项初始化 </p>
+<dl class="section return"><dt>返回</dt><dd>初始化是否成功 </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="namespacemy__doctor.html#a0522d6bb0c6399c4971af10467d11d04a26097a57f572fe88a7cdf80543422cb1">my_doctor::COMMAND</a>, <a class="el" href="namespacemy__doctor.html#a0522d6bb0c6399c4971af10467d11d04ac66b718fccde8692bf1f26cb604b326b">my_doctor::FILE_PATH</a>, <a class="el" href="classmy__doctor_1_1MyDoctor.html#a6907518a5ce2c3afa6fd6743e1697d08">MyDoctor::Init()</a> , 以及 <a class="el" href="namespacemy__doctor.html#a0522d6bb0c6399c4971af10467d11d04af9e81a746a286bbac225d69520d1e67a">my_doctor::SERVICE</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__doctor_1_1MyDoctor_a1e84f95cb3dccadcdd22172797589876_cgraph.png" border="0" usemap="#aclassmy__doctor_1_1MyDoctor_a1e84f95cb3dccadcdd22172797589876_cgraph" alt=""/></div>
+<map name="aclassmy__doctor_1_1MyDoctor_a1e84f95cb3dccadcdd22172797589876_cgraph" id="aclassmy__doctor_1_1MyDoctor_a1e84f95cb3dccadcdd22172797589876_cgraph">
+<area shape="rect" title="使用默认检查项初始化" alt="" coords="5,5,96,31"/>
+<area shape="rect" href="classmy__doctor_1_1MyDoctor.html#a6907518a5ce2c3afa6fd6743e1697d08" title="初始化检查项" alt="" coords="144,5,187,31"/>
+<area shape="poly" title=" " alt="" coords="96,15,130,15,130,21,96,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__doctor_1_1MyDoctor_a1e84f95cb3dccadcdd22172797589876_icgraph.png" border="0" usemap="#aclassmy__doctor_1_1MyDoctor_a1e84f95cb3dccadcdd22172797589876_icgraph" alt=""/></div>
+<map name="aclassmy__doctor_1_1MyDoctor_a1e84f95cb3dccadcdd22172797589876_icgraph" id="aclassmy__doctor_1_1MyDoctor_a1e84f95cb3dccadcdd22172797589876_icgraph">
+<area shape="rect" title="使用默认检查项初始化" alt="" coords="108,5,199,31"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,60,31"/>
+<area shape="poly" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -260,9 +336,45 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="classmy__doctor_1_1MyDoctor_acb33a1db87ec803c19cac0b588546824_icgraph.png" border="0" usemap="#aclassmy__doctor_1_1MyDoctor_acb33a1db87ec803c19cac0b588546824_icgraph" alt=""/></div>
 <map name="aclassmy__doctor_1_1MyDoctor_acb33a1db87ec803c19cac0b588546824_icgraph" id="aclassmy__doctor_1_1MyDoctor_acb33a1db87ec803c19cac0b588546824_icgraph">
-<area shape="rect" title=" " alt="" coords="124,5,211,31"/>
-<area shape="rect" href="classmy__doctor_1_1MyDoctor.html#a3fbb1ed2b22f1ef69d593c1f10f2a0a3" title="执行所有检查项" alt="" coords="5,5,76,31"/>
-<area shape="poly" title=" " alt="" coords="110,21,76,21,76,15,110,15"/>
+<area shape="rect" title=" " alt="" coords="227,5,313,31"/>
+<area shape="rect" href="classmy__doctor_1_1MyDoctor.html#a3fbb1ed2b22f1ef69d593c1f10f2a0a3" title="执行所有检查项" alt="" coords="108,5,179,31"/>
+<area shape="poly" title=" " alt="" coords="213,21,179,21,179,15,213,15"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,60,31"/>
+<area shape="poly" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a76d8c44489df9896f969058dcee67aae" name="a76d8c44489df9896f969058dcee67aae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76d8c44489df9896f969058dcee67aae">&#9670;&#160;</a></span>ShowCheckResults()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ShowCheckResults </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>以可读格式显示检查结果 </p>
+<dl class="section return"><dt>返回</dt><dd>格式化的检查结果字符串 </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="classmy__doctor_1_1MyDoctor.html#aeef4a7229a433a6ef6c6a8960b5fe413">MyDoctor::mtx_</a> , 以及 <a class="el" href="classmy__doctor_1_1MyDoctor.html#a8055078a018ce52574310863867920e7">MyDoctor::results_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__doctor_1_1MyDoctor_a76d8c44489df9896f969058dcee67aae_icgraph.png" border="0" usemap="#aclassmy__doctor_1_1MyDoctor_a76d8c44489df9896f969058dcee67aae_icgraph" alt=""/></div>
+<map name="aclassmy__doctor_1_1MyDoctor_a76d8c44489df9896f969058dcee67aae_icgraph" id="aclassmy__doctor_1_1MyDoctor_a76d8c44489df9896f969058dcee67aae_icgraph">
+<area shape="rect" title="以可读格式显示检查结果" alt="" coords="108,5,253,31"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,60,31"/>
+<area shape="poly" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
 </map>
 </div>
 
@@ -286,6 +398,8 @@ Private 属性</h2></td></tr>
 <p>执行所有检查项 </p>
 
 <p class="reference">引用了 <a class="el" href="classmy__doctor_1_1MyDoctor.html#afc3a6f678213e23f745b57170c5663e4">MyDoctor::items_</a>, <a class="el" href="classmy__doctor_1_1MyDoctor.html#aeef4a7229a433a6ef6c6a8960b5fe413">MyDoctor::mtx_</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="classmy__doctor_1_1MyDoctor.html#a8055078a018ce52574310863867920e7">MyDoctor::results_</a> , 以及 <a class="el" href="classmy__doctor_1_1MyDoctor.html#acb33a1db87ec803c19cac0b588546824">MyDoctor::RunCheck()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main()</a>.</p>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
@@ -294,6 +408,16 @@ Private 属性</h2></td></tr>
 <area shape="rect" title="执行所有检查项" alt="" coords="5,5,76,31"/>
 <area shape="rect" href="classmy__doctor_1_1MyDoctor.html#acb33a1db87ec803c19cac0b588546824" title=" " alt="" coords="124,5,211,31"/>
 <area shape="poly" title=" " alt="" coords="77,15,110,15,110,21,77,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__doctor_1_1MyDoctor_a3fbb1ed2b22f1ef69d593c1f10f2a0a3_icgraph.png" border="0" usemap="#aclassmy__doctor_1_1MyDoctor_a3fbb1ed2b22f1ef69d593c1f10f2a0a3_icgraph" alt=""/></div>
+<map name="aclassmy__doctor_1_1MyDoctor_a3fbb1ed2b22f1ef69d593c1f10f2a0a3_icgraph" id="aclassmy__doctor_1_1MyDoctor_a3fbb1ed2b22f1ef69d593c1f10f2a0a3_icgraph">
+<area shape="rect" title="执行所有检查项" alt="" coords="108,5,179,31"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,60,31"/>
+<area shape="poly" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
 </map>
 </div>
 
@@ -366,7 +490,7 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="classmy__doctor_1_1MyDoctor.html#a6907518a5ce2c3afa6fd6743e1697d08">MyDoctor::Init()</a>, <a class="el" href="classmy__doctor_1_1MyDoctor.html#a3fbb1ed2b22f1ef69d593c1f10f2a0a3">MyDoctor::StartAll()</a> , 以及 <a class="el" href="classmy__doctor_1_1MyDoctor.html#a908a115b57885da98a8babc0d1f258fc">MyDoctor::ToJson()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="classmy__doctor_1_1MyDoctor.html#a6907518a5ce2c3afa6fd6743e1697d08">MyDoctor::Init()</a>, <a class="el" href="classmy__doctor_1_1MyDoctor.html#a76d8c44489df9896f969058dcee67aae">MyDoctor::ShowCheckResults()</a>, <a class="el" href="classmy__doctor_1_1MyDoctor.html#a3fbb1ed2b22f1ef69d593c1f10f2a0a3">MyDoctor::StartAll()</a> , 以及 <a class="el" href="classmy__doctor_1_1MyDoctor.html#a908a115b57885da98a8babc0d1f258fc">MyDoctor::ToJson()</a>.</p>
 
 </div>
 </div>
@@ -390,7 +514,7 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="classmy__doctor_1_1MyDoctor.html#a6907518a5ce2c3afa6fd6743e1697d08">MyDoctor::Init()</a>, <a class="el" href="classmy__doctor_1_1MyDoctor.html#a3fbb1ed2b22f1ef69d593c1f10f2a0a3">MyDoctor::StartAll()</a> , 以及 <a class="el" href="classmy__doctor_1_1MyDoctor.html#a908a115b57885da98a8babc0d1f258fc">MyDoctor::ToJson()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="classmy__doctor_1_1MyDoctor.html#a6907518a5ce2c3afa6fd6743e1697d08">MyDoctor::Init()</a>, <a class="el" href="classmy__doctor_1_1MyDoctor.html#a76d8c44489df9896f969058dcee67aae">MyDoctor::ShowCheckResults()</a>, <a class="el" href="classmy__doctor_1_1MyDoctor.html#a3fbb1ed2b22f1ef69d593c1f10f2a0a3">MyDoctor::StartAll()</a> , 以及 <a class="el" href="classmy__doctor_1_1MyDoctor.html#a908a115b57885da98a8babc0d1f258fc">MyDoctor::ToJson()</a>.</p>
 
 </div>
 </div>
