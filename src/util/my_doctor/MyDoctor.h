@@ -10,9 +10,25 @@
 namespace my_doctor {
 
 /**
+ * @brief 检查类型枚举
+ */
+enum class CheckType {
+    /// 执行命令检查
+    COMMAND,
+    /// 文件路径检查
+    FILE_PATH,
+    /// 服务状态检查
+    SERVICE
+};
+
+/**
  * @brief 单项检查配置
  */
 struct CheckItem {
+    /// 检测项名称
+    std::string check_name;
+    /// 检查类型，如 COMMAND、FILE_PATH、SERVICE
+    CheckType check_type;
     /// 模块名称
     std::string module_name;
     /// 检查的目标路径或命令
@@ -50,6 +66,12 @@ public:
     bool Init(const std::vector<CheckItem>& items);
 
     /**
+     * @brief 使用默认检查项初始化
+     * @return 初始化是否成功
+     */
+    bool InitDefault();
+    
+    /**
      * @brief 执行所有检查项
      */
     void StartAll();
@@ -59,6 +81,12 @@ public:
      * @return JSON 字符串
      */
     std::string ToJson() const;
+
+    /**
+     * @brief 以可读格式显示检查结果
+     * @return 格式化的检查结果字符串
+     */
+    std::string ShowCheckResults() const;
 
 private:
     MyDoctor();

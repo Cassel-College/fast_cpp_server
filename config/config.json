@@ -21,7 +21,8 @@
         "executes": {
             "0": {
                 "model_args": {
-                    "interval_sec_": 3
+                    "interval_sec_": 3,
+                    "simple_json4log": true
                 },
                 "model_name": "heartbeat",
                 "step_time_interval": 2

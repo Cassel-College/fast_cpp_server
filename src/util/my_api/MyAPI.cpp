@@ -104,7 +104,7 @@ void MyAPI::ServerThread(int port) {
         
         oatpp::network::Server server(connectionProvider, connectionHandler);
 
-        MYLOG_INFO("MyAPI: REST Server 已就绪: http://0.0.0.0:{}/swagger/ui", port);
+        MYLOG_INFO("MyAPI: REST Server 已就绪: http://127.0.0.1:{}/swagger/ui", port);
         server.run([this](){ return is_running_.load(); }); 
     }
 

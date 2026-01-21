@@ -12,7 +12,8 @@ namespace MyLog {
 // 初始化日志系统（异步、文件输出、最大大小与滚动数）
 void Init(const std::string& log_file = "logs/server.log",
           size_t max_file_size = 1048576 * 5,  // 5MB
-          size_t max_files = 3);              // 最多保留3个文件
+          size_t max_files = 3,                // 最多保留3个文件
+          bool console_output = false);        // 是否输出到控制台
 
 // 可选封装函数
 void Info(const std::string& msg);

@@ -14,10 +14,14 @@ HeartbeatManager& HeartbeatManager::Instance() {
 
 void HeartbeatManager::Init(const nlohmann::json& config) {
     config_ = config;
+    MYLOG_INFO("初始化 HeartbeatManager 配置: {}", config_.dump(4));
     interval_sec_ = 5; // 如果不是对象，使用硬编码默认值
     try {
         interval_sec_ = config.value("interval_sec", 5);
-        std::cout << "[HeartbeatManager] Config: " << config.dump(2) << std::endl;
+        MYLOG_INFO("HeartbeatManager interval_sec set to {}", interval_sec_);
+        simple_json4log = config.value("simple_json4log", false);
+        MYLOG_INFO("HeartbeatManager config loaded: interval_sec = {}, simple_json4log = {}", 
+                   interval_sec_, simple_json4log);
     } catch (const std::exception& e) {
         std::cout << "[HeartbeatManager] Failed to get interval_sec from global config: " << e.what() << std::endl;
     }

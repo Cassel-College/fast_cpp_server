@@ -75,6 +75,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE my_system_healthy)
 target_link_libraries(${PROJECT_NAME} PRIVATE my_heartbeat)
 target_link_libraries(${PROJECT_NAME} PRIVATE my_edge)
 target_link_libraries(${PROJECT_NAME} PRIVATE my_db)
+target_link_libraries(${PROJECT_NAME} PRIVATE my_doctor)
 target_link_libraries(${PROJECT_NAME} PRIVATE my_cache)
 target_link_libraries(${PROJECT_NAME} PRIVATE mylib)
 # 链接 OpenCV 库

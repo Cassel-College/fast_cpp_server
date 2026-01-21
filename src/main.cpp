@@ -30,9 +30,12 @@
 #include "ThreadSafeBuffer.h"
 #include "DeviceOnlineMonitor.h"
 #include "ServiceGuard.h"
+#include "MyDoctor.h"
+
 
 using namespace tools;
 using namespace my_api;
+using namespace my_doctor;
 // using namespace MySystemHealthy;
 using json = nlohmann::json;
 
@@ -57,6 +60,7 @@ int main(int argc, char* argv[]) {
     parser.addOption("-v", "--version", "Show version info");
     parser.addOption("-s", "--setup",   "Setup mode",       true);
     parser.addOption("-c", "--config",  "Set config file",  true);
+    parser.addOption("-d", "--docter",  "Run MyDoctor self-check", false);
 
     std::vector<std::map<std::string, std::string>> args = parser.parse(argc, argv);
     for (const auto& item : args) {
@@ -89,7 +93,7 @@ int main(int argc, char* argv[]) {
     bool load_ini_config_status  = tools::init_tools::initLoadConfig("ini",  configFilePath,  logInfos);
     bool load_json_config_status = tools::init_tools::initLoadConfig("json", defaultJSONConfigFilePath, logInfos);
     bool load_yaml_config_status = tools::init_tools::initLoadConfig("yaml", defaultYAMLConfigFilePath, logInfos);
-
+    bool console_output          = false;
     // 初始化日志系统
     if (!tools::free_func::loadLogConfigFromINIConfig(logInfos, logDirPath, logFilePath, appName)) {
         logDirPath = defaultLogDirPath;
@@ -97,8 +101,22 @@ int main(int argc, char* argv[]) {
         std::cout << "[LogConfig] 使用默认日志目录: " << logDirPath << std::endl;
         logInfos.emplace_back("[LogConfig] 使用默认日志目录: " + logDirPath);
     }
-    MyLog::Init(logFilePath);  // ✅ 只调用一次
+    MyINIConfig::GetInstance().GetBool("console_output", false, console_output);
+    logInfos.emplace_back("[LogConfig] 日志是否输出到控制台: " + std::string(console_output ? "是" : "否"));
+
+    MyLog::Init(logFilePath, 1048576 * 5, 3, console_output);  // ✅ 只调用一次
     
+    for (const auto& item : args) {
+        if (item.at("key") == "-d" || item.at("key") == "--docter") {
+            MYLOG_INFO("Starting MyDoctor self-check...");
+            my_doctor::MyDoctor& doctor = my_doctor::MyDoctor::GetInstance();
+            doctor.InitDefault();
+            doctor.StartAll();
+            std::cout << doctor.ShowCheckResults() << std::endl;
+            return 0;
+        }
+    }
+
     MYLOG_INFO("----------------------------------- Init Log -------------------------");
     if (!tools::free_func::checkConfigLoadStatus(load_ini_config_status, load_json_config_status, load_yaml_config_status)) {
         MYLOG_ERROR("配置加载失败，程序退出.");
@@ -108,6 +126,7 @@ int main(int argc, char* argv[]) {
         MYLOG_INFO(logItem);
     }
     MYLOG_INFO("----------------------------------------------------------------------");
+
     tools::free_func::logWelcomeMessage();
     MYLOG_INFO("App is starting...");
     MYLOG_INFO(" * defaultINIConfigFilePath: {}", defaultINIConfigFilePath);
@@ -142,7 +161,6 @@ int main(int argc, char* argv[]) {
     while (true) {
         // 获取推出信号
         if (break_loop) { break;} 
-        MYLOG_INFO("Main thread is running... : {}", logFilePath);
         sleep(3);
     }
     // 4. 停止并清理

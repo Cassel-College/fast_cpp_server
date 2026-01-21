@@ -72,7 +72,7 @@ void ArchiveOldLogs(const std::string& log_dir, const std::string& archive_dir, 
 }
 
 
-void Init(const std::string& log_file, size_t max_file_size, size_t max_files) {
+void Init(const std::string& log_file, size_t max_file_size, size_t max_files, bool console_output) {
 
     std::vector<std::string> logInfos = {};
     std::string archive_dir = "archive";
@@ -116,7 +116,15 @@ void Init(const std::string& log_file, size_t max_file_size, size_t max_files) {
     console_sink->set_level(spdlog::level::debug); // 可以单独设置终端显示的级别
 
     // 3. 组合两个 Sinks
-    std::vector<spdlog::sink_ptr> sinks {file_sink, console_sink};
+    std::vector<spdlog::sink_ptr> sinks = {};
+    // {file_sink, console_sink};
+    if (true) {
+        sinks.push_back(file_sink);
+    }
+    if (console_output) {
+        sinks.push_back(console_sink);
+    }
+    
 
     // 4. 创建异步 logger，传入 sinks 列表
     logger = std::make_shared<spdlog::async_logger>(

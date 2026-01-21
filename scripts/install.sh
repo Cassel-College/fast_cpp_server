@@ -1,15 +1,17 @@
 #!/bin/bash
 
 PROGRAM_NAME="fast_cpp_server"
+MQTT_PROGRAM_NAME="mosquitto"
 INSTALL_PATH="/usr/local"
-BIN_PATH="${INSTALL_PATH}/bin"
+BIN_FOLDER_PATH="/usr/local/bin/${PROGRAM_NAME}_dir"
+BIN_PATH="${BIN_FOLDER_PATH}/${PROGRAM_NAME}"
 LIB_PATH="${INSTALL_PATH}/lib/${PROGRAM_NAME}"
 CONFIG_PATH="/etc/${PROGRAM_NAME}"
 LOG_PATH="/var/${PROGRAM_NAME}/logs"
 TEMP_DIR="/tmp/${PROGRAM_NAME}"
 SHARE_DIR="/usr/share/${PROGRAM_NAME}"
 SERVICE_PATH="/etc/systemd/system"
-
+START_SCRIPT_NAME="start.sh"
 SUPER="sudo"
 
 # Check if DEBUG mode is enabled
@@ -45,7 +47,7 @@ if [ -d "${LOG_PATH}" ]; then
 else
     echo "📁 Creating log directory..."
     execute "${SUPER}" mkdir -p "${LOG_PATH}"
-    execute "${SUPER}" chmod 755 "${LOG_PATH}"
+    execute "${SUPER}" chmod 777 "${LOG_PATH}"
 fi
 
 # Check and create config directory, then copy config file
@@ -74,23 +76,32 @@ echo "📄 Copying library files or folders to ${LIB_PATH}..."
 execute "${SUPER}" cp -r ./lib/* "${LIB_PATH}/"
 execute "${SUPER}" chmod 644 "${LIB_PATH}/*"
 
-# Copy binary file to /usr/local/bin
-echo "📁 Checking binary directory at ${BIN_PATH}..."
-if [ -d "${BIN_PATH}" ]; then
+# Copy binary file to /usr/local/bin/fast_cpp_server
+echo "📁 Checking binary directory at ${BIN_FOLDER_PATH}..."
+if [ -d "${BIN_FOLDER_PATH}" ]; then
     echo "✅ Binary directory already exists."
 else
     echo "📁 Creating binary directory..."
-    execute "${SUPER}" mkdir -p "${BIN_PATH}"
+    execute "${SUPER}" mkdir -p "${BIN_FOLDER_PATH}"
 fi
 
-echo "📄 Copying binary file to ${BIN_PATH}..."
-if [ -f "${BIN_PATH}/${PROGRAM_NAME}" ]; then
-    echo "⚠️ Binary file: ${BIN_PATH}/${PROGRAM_NAME} already exists. Replacing it..."
-    echo "🔧 ${SUPER} rm -f ${BIN_PATH}/${PROGRAM_NAME}"
-    ${SUPER} rm -f "${BIN_PATH}/${PROGRAM_NAME}"
+echo "📄 Copying binary file to ${BIN_FOLDER_PATH}..."
+if [ -f "${BIN_FOLDER_PATH}/${PROGRAM_NAME}" ]; then
+    echo "⚠️ Binary file: ${BIN_FOLDER_PATH}/${PROGRAM_NAME} already exists. Replacing it..."
+    echo "🔧 ${SUPER} rm -f ${BIN_FOLDER_PATH}/${PROGRAM_NAME}"
+    ${SUPER} rm -f "${BIN_FOLDER_PATH}/${PROGRAM_NAME}"
 fi
-execute "${SUPER}" cp ./bin/${PROGRAM_NAME} "${BIN_PATH}/${PROGRAM_NAME}"
-execute "${SUPER}" chmod 755 "${BIN_PATH}/${PROGRAM_NAME}"
+if [ -f "${BIN_FOLDER_PATH}/${MQTT_PROGRAM_NAME}" ]; then
+    echo "⚠️ Binary file: ${BIN_FOLDER_PATH}/${MQTT_PROGRAM_NAME} already exists. Replacing it..."
+    echo "🔧 ${SUPER} rm -f ${BIN_FOLDER_PATH}/${MQTT_PROGRAM_NAME}"
+    ${SUPER} rm -f "${BIN_FOLDER_PATH}/${MQTT_PROGRAM_NAME}"
+fi
+execute "${SUPER}" cp ./bin/${PROGRAM_NAME}         "${BIN_FOLDER_PATH}/${PROGRAM_NAME}"
+execute "${SUPER}" cp ./bin/${MQTT_PROGRAM_NAME}    "${BIN_FOLDER_PATH}/${MQTT_PROGRAM_NAME}"
+execute "${SUPER}" cp ./${START_SCRIPT_NAME}        "${BIN_FOLDER_PATH}/${START_SCRIPT_NAME}"
+execute "${SUPER}" chmod 755 "${BIN_FOLDER_PATH}/${PROGRAM_NAME}"
+execute "${SUPER}" chmod 755 "${BIN_FOLDER_PATH}/${MQTT_PROGRAM_NAME}"
+execute "${SUPER}" chmod 755 "${BIN_FOLDER_PATH}/${START_SCRIPT_NAME}"
 
 # Copy temp folder to /tmp/${PROGRAM_NAME}
 echo "📁 Checking temp directory at ${TEMP_DIR}..."
@@ -120,7 +131,6 @@ fi
 execute "${SUPER}" cp ./service/${PROGRAM_NAME}.service "${SERVICE_PATH}/${PROGRAM_NAME}.service"
 execute "${SUPER}" chmod 777 "${SERVICE_PATH}/${PROGRAM_NAME}.service"
 
-
 # Reload systemd configuration
 echo "🔄 Reloading systemd daemon..."
 execute "${SUPER}" systemctl daemon-reload
@@ -136,7 +146,9 @@ echo ""
 echo "-----------------------------------------------------------------"
 echo "🔍 Installation details:"
 echo "-----------------------------------------------------------------"
-echo "       bin path: ${BIN_PATH}/${PROGRAM_NAME}"
+echo "       bin path: ${BIN_FOLDER_PATH}/${PROGRAM_NAME}"
+echo "  MQTT bin path: ${BIN_FOLDER_PATH}/${MQTT_PROGRAM_NAME}"
+echo "  start script : ${BIN_FOLDER_PATH}/${START_SCRIPT_NAME}"
 echo "       lib path: ${LIB_PATH}"
 echo "    config path: ${CONFIG_PATH}"
 echo "       log path: ${LOG_PATH}"

@@ -21,8 +21,8 @@ TEST(MyDoctorTest, GetInstance) {
  */
 TEST(MyDoctorTest, Init) {
     std::vector<my_doctor::CheckItem> items = {
-        {"env", "/usr/bin/env", "any"},
-        {"config", "/etc/hosts", "exists"}
+        {"Git Version Check", CheckType::COMMAND, "Git", "git --version", "2.20.0"},
+        {"CMake Version Check", CheckType::COMMAND, "CMake", "cmake --version", "3.15.0"}
     };
 
     auto& doctor = my_doctor::MyDoctor::GetInstance();
@@ -36,8 +36,8 @@ TEST(MyDoctorTest, Init) {
  */
 TEST(MyDoctorTest, StartAll) {
     std::vector<my_doctor::CheckItem> items = {
-        {"memory", "system", "8GB"},
-        {"cpu", "system", "4cores"}
+        {"Git Version Check", CheckType::COMMAND, "Git", "git --version", "2.20.0"},
+        {"CMake Version Check", CheckType::COMMAND, "CMake", "cmake --version", "3.15.0"},
     };
 
     auto& doctor = my_doctor::MyDoctor::GetInstance();
@@ -52,8 +52,8 @@ TEST(MyDoctorTest, StartAll) {
  */
 TEST(MyDoctorTest, ToJson) {
     std::vector<my_doctor::CheckItem> items = {
-        {"env", "/usr/bin/env", "any"},
-        {"config", "/etc/hosts", "exists"}
+        {"Git Version Check", CheckType::COMMAND, "Git", "git --version", "2.20.0"},
+        {"CMake Version Check", CheckType::COMMAND, "CMake", "cmake --version", "3.15.0"},
     };
 
     auto& doctor = my_doctor::MyDoctor::GetInstance();
@@ -94,11 +94,11 @@ TEST(MyDoctorTest, EmptyItems) {
  */
 TEST(MyDoctorTest, MultipleInit) {
     std::vector<CheckItem> items1 = {
-        {"test1", "path1", "v1"}
+        {"Git Version Check", CheckType::COMMAND, "Git", "git --version", "2.20.0"}
     };
     
     std::vector<CheckItem> items2 = {
-        {"test2", "path2", "v2"}
+        {"CMake Version Check", CheckType::COMMAND, "CMake", "cmake --version", "3.15.0"}
     };
 
     auto& doctor = my_doctor::MyDoctor::GetInstance();

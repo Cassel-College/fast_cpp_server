@@ -23,7 +23,7 @@ namespace init_tools {
             if (item.at("key") == "--config" || item.at("key") == "-c") {
                 try {
                     std::string configFile = item.at("value");
-                    std::cout << "Using config file: " << configFile << std::endl;
+                    // std::cout << "Using config file: " << configFile << std::endl;
                     logInfos.emplace_back("Using config file: " + configFile);
                     if (access(configFile.c_str(), F_OK) != 0) {
                         std::cerr << "Config file does not exist: " << configFile << std::endl;
@@ -46,12 +46,12 @@ namespace init_tools {
         bool load_ok = false;
 
         if (config_file_path.empty()) {
-            std::cout << "[" << type_ << "] Config file path:" << config_file_path << " is empty, skipping load." << std::endl;
+            // std::cout << "[" << type_ << "] Config file path:" << config_file_path << " is empty, skipping load." << std::endl;
             logInfos.emplace_back("[Config] ❌ 配置文件路径为空，跳过 " + type_ + " 配置加载: " + config_file_path);
             return false;
         }
         if (access(config_file_path.c_str(), F_OK) != 0) {
-            std::cout << "[" << type_ << "] Config file does not exist: " << config_file_path << std::endl;
+            // std::cout << "[" << type_ << "] Config file does not exist: " << config_file_path << std::endl;
             logInfos.emplace_back("[Config] ❌ 配置文件不存在: " + config_file_path + "，跳过 " + type_ + " 配置加载");
             return false;
         }
@@ -59,8 +59,8 @@ namespace init_tools {
             try {
                 initFunc();
                 logInfos.emplace_back("[Config] " + name + " 配置加载成功");
-                std::cout << "[" << name << "] Config Loaded Successfully." << std::endl;
-                std::cout << showFunc() << std::endl;
+                // std::cout << "[" << name << "] Config Loaded Successfully." << std::endl;
+                // std::cout << showFunc() << std::endl;
                 return true;
             } catch (const std::exception& e) {
                 logInfos.emplace_back("[Config] " + name + " 配置加载失败: " + e.what());
@@ -69,7 +69,7 @@ namespace init_tools {
             }
             return false;
         };
-        std::cout << "config_file_path: " << config_file_path << std::endl;
+        // std::cout << "config_file_path: " << config_file_path << std::endl;
         // ========== INI ==========
         if (type_ == "ini" || type_ == "all") {
             load_ok |= tryLoad(

@@ -3,7 +3,8 @@
 PROGRAM_NAME="fast_cpp_server"
 SERVICE_FILE_NAME=${PROGRAM_NAME}.service
 TARGET_SERVICE_FILE_PATH=/etc/systemd/system/${SERVICE_FILE_NAME}
-BIN_PATH="/usr/local/bin/${PROGRAM_NAME}"
+BIN_FOLDER_PATH="/usr/local/bin/${PROGRAM_NAME}_dir"
+BIN_PATH="${BIN_FOLDER_PATH}/${PROGRAM_NAME}"
 CONFIG_PATH="/etc/${PROGRAM_NAME}"
 LIB_PATH="/usr/local/lib/${PROGRAM_NAME}"
 LOG_PATH="/var/${PROGRAM_NAME}"
@@ -11,7 +12,6 @@ TEMP_DIR="/tmp/${PROGRAM_NAME}"
 SHARE_DIR="/usr/share/${PROGRAM_NAME}"
 
 SUPER="sudo"
-SUPER=""
 
 # Check if DEBUG mode is enabled
 DEBUG=false
@@ -51,6 +51,15 @@ if [ -f "${BIN_PATH}" ]; then
     echo "✅ Binary file deleted."
 else
     echo "⚠️ Binary file ${BIN_PATH} does not exist. Skipping deletion."
+fi
+
+# Delete binary folder
+echo "🗑️ Deleting binary folder at ${BIN_FOLDER_PATH}..."
+if [ -d "${BIN_FOLDER_PATH}" ]; then
+    execute "${SUPER}" rm -rf "${BIN_FOLDER_PATH}"
+    echo "✅ Binary folder deleted."
+else
+    echo "⚠️ Binary folder ${BIN_FOLDER_PATH} does not exist. Skipping deletion."
 fi
 
 # Delete config files and folder
@@ -118,7 +127,7 @@ echo ""
 echo "-----------------------------------------------------------------"
 echo "🔍 Installation details:"
 echo "-----------------------------------------------------------------"
-echo "       bin path: ${BIN_PATH}"
+echo "       bin path: ${BIN_FOLDER_PATH}"
 echo "       lib path: ${LIB_PATH}"
 echo "    config path: ${CONFIG_PATH}"
 echo "       log path: ${LOG_PATH}"
