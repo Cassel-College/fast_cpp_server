@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_mqtt/fast_mqtt_server/MFMQTTServer.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_981a29cbd485ec749937590b01151537.html">my_mqtt</a></li><li class="navelem"><a class="el" href="dir_1f97419999475071d64e8783e51645b8.html">fast_mqtt_server</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">MFMQTTServer.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="MFMQTTServer_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;nlohmann/json.hpp&gt;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;optional&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;sys/types.h&gt;</span> <span class="comment">// for pid_t</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacefast__mqtt.html">fast_mqtt</a> {</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="foldopen" id="foldopen00008" data-start="{" data-end="};">
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="classfast__mqtt_1_1MFMQTTServer.html">    8</a></span><span class="keyword">class </span><a class="code hl_class" href="classfast__mqtt_1_1MFMQTTServer.html">MFMQTTServer</a> {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classfast__mqtt_1_1MFMQTTServer.html#a4c90b8e9e8ced7f0cc06c7354410f8ab">init</a>(<span class="keyword">const</span> nlohmann::json&amp; cfg);</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classfast__mqtt_1_1MFMQTTServer.html#aad5997aaaa2d622f0ca57f8b24a51a7b">start</a>();</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classfast__mqtt_1_1MFMQTTServer.html#a68a350717fe6bf9012843e7c977d87b2">stop</a>();</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classfast__mqtt_1_1MFMQTTServer.html#a1343dd9b1efb2a21f3adf69fe1710ab8">   13</a></span>    std::optional&lt;pid_t&gt; <a class="code hl_function" href="classfast__mqtt_1_1MFMQTTServer.html#a1343dd9b1efb2a21f3adf69fe1710ab8">pid</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classfast__mqtt_1_1MFMQTTServer.html#ac36ef9f816897f2b42040aa170e21442">pid_</a>; }</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classfast__mqtt_1_1MFMQTTServer.html#a41ff4a5aa9803ebe56a6272e1965e8af">   16</a></span>    std::string <a class="code hl_variable" href="classfast__mqtt_1_1MFMQTTServer.html#a41ff4a5aa9803ebe56a6272e1965e8af">mosquitto_path_</a> = <span class="stringliteral">&quot;mosquitto&quot;</span>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classfast__mqtt_1_1MFMQTTServer.html#a3dbe8c5660246118bcd892b577215864">   17</a></span>    std::string <a class="code hl_variable" href="classfast__mqtt_1_1MFMQTTServer.html#a3dbe8c5660246118bcd892b577215864">conf_path_</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classfast__mqtt_1_1MFMQTTServer.html#a87ea78bb08ae6e6909c2d48fbe2a904b">   18</a></span>    std::string <a class="code hl_variable" href="classfast__mqtt_1_1MFMQTTServer.html#a87ea78bb08ae6e6909c2d48fbe2a904b">log_path_</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classfast__mqtt_1_1MFMQTTServer.html#ac36ef9f816897f2b42040aa170e21442">   19</a></span>    std::optional&lt;pid_t&gt; <a class="code hl_variable" href="classfast__mqtt_1_1MFMQTTServer.html#ac36ef9f816897f2b42040aa170e21442">pid_</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classfast__mqtt_1_1MFMQTTServer.html#ab6d49423f76ea026d6eb25402274d258">   20</a></span>    nlohmann::json <a class="code hl_variable" href="classfast__mqtt_1_1MFMQTTServer.html#ab6d49423f76ea026d6eb25402274d258">cfg_</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    std::string <a class="code hl_function" href="classfast__mqtt_1_1MFMQTTServer.html#a080d1e91ef6f8206b89e10d002dbc97e">expand_env</a>(<span class="keyword">const</span> std::string&amp; s);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classfast__mqtt_1_1MFMQTTServer.html#a8369054b2fb3828cea222bee91a9ee8d">write_conf</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>};</div>
+</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>} <span class="comment">// namespace fast_mqtt</span></div>
+<div class="ttc" id="aclassfast__mqtt_1_1MFMQTTServer_html"><div class="ttname"><a href="classfast__mqtt_1_1MFMQTTServer.html">fast_mqtt::MFMQTTServer</a></div><div class="ttdef"><b>Definition</b> MFMQTTServer.h:8</div></div>
+<div class="ttc" id="aclassfast__mqtt_1_1MFMQTTServer_html_a080d1e91ef6f8206b89e10d002dbc97e"><div class="ttname"><a href="classfast__mqtt_1_1MFMQTTServer.html#a080d1e91ef6f8206b89e10d002dbc97e">fast_mqtt::MFMQTTServer::expand_env</a></div><div class="ttdeci">std::string expand_env(const std::string &amp;s)</div><div class="ttdef"><b>Definition</b> MFMQTTServer.cpp:19</div></div>
+<div class="ttc" id="aclassfast__mqtt_1_1MFMQTTServer_html_a1343dd9b1efb2a21f3adf69fe1710ab8"><div class="ttname"><a href="classfast__mqtt_1_1MFMQTTServer.html#a1343dd9b1efb2a21f3adf69fe1710ab8">fast_mqtt::MFMQTTServer::pid</a></div><div class="ttdeci">std::optional&lt; pid_t &gt; pid() const</div><div class="ttdef"><b>Definition</b> MFMQTTServer.h:13</div></div>
+<div class="ttc" id="aclassfast__mqtt_1_1MFMQTTServer_html_a3dbe8c5660246118bcd892b577215864"><div class="ttname"><a href="classfast__mqtt_1_1MFMQTTServer.html#a3dbe8c5660246118bcd892b577215864">fast_mqtt::MFMQTTServer::conf_path_</a></div><div class="ttdeci">std::string conf_path_</div><div class="ttdef"><b>Definition</b> MFMQTTServer.h:17</div></div>
+<div class="ttc" id="aclassfast__mqtt_1_1MFMQTTServer_html_a41ff4a5aa9803ebe56a6272e1965e8af"><div class="ttname"><a href="classfast__mqtt_1_1MFMQTTServer.html#a41ff4a5aa9803ebe56a6272e1965e8af">fast_mqtt::MFMQTTServer::mosquitto_path_</a></div><div class="ttdeci">std::string mosquitto_path_</div><div class="ttdef"><b>Definition</b> MFMQTTServer.h:16</div></div>
+<div class="ttc" id="aclassfast__mqtt_1_1MFMQTTServer_html_a4c90b8e9e8ced7f0cc06c7354410f8ab"><div class="ttname"><a href="classfast__mqtt_1_1MFMQTTServer.html#a4c90b8e9e8ced7f0cc06c7354410f8ab">fast_mqtt::MFMQTTServer::init</a></div><div class="ttdeci">void init(const nlohmann::json &amp;cfg)</div><div class="ttdef"><b>Definition</b> MFMQTTServer.cpp:10</div></div>
+<div class="ttc" id="aclassfast__mqtt_1_1MFMQTTServer_html_a68a350717fe6bf9012843e7c977d87b2"><div class="ttname"><a href="classfast__mqtt_1_1MFMQTTServer.html#a68a350717fe6bf9012843e7c977d87b2">fast_mqtt::MFMQTTServer::stop</a></div><div class="ttdeci">bool stop()</div><div class="ttdef"><b>Definition</b> MFMQTTServer.cpp:77</div></div>
+<div class="ttc" id="aclassfast__mqtt_1_1MFMQTTServer_html_a8369054b2fb3828cea222bee91a9ee8d"><div class="ttname"><a href="classfast__mqtt_1_1MFMQTTServer.html#a8369054b2fb3828cea222bee91a9ee8d">fast_mqtt::MFMQTTServer::write_conf</a></div><div class="ttdeci">bool write_conf()</div><div class="ttdef"><b>Definition</b> MFMQTTServer.cpp:30</div></div>
+<div class="ttc" id="aclassfast__mqtt_1_1MFMQTTServer_html_a87ea78bb08ae6e6909c2d48fbe2a904b"><div class="ttname"><a href="classfast__mqtt_1_1MFMQTTServer.html#a87ea78bb08ae6e6909c2d48fbe2a904b">fast_mqtt::MFMQTTServer::log_path_</a></div><div class="ttdeci">std::string log_path_</div><div class="ttdef"><b>Definition</b> MFMQTTServer.h:18</div></div>
+<div class="ttc" id="aclassfast__mqtt_1_1MFMQTTServer_html_aad5997aaaa2d622f0ca57f8b24a51a7b"><div class="ttname"><a href="classfast__mqtt_1_1MFMQTTServer.html#aad5997aaaa2d622f0ca57f8b24a51a7b">fast_mqtt::MFMQTTServer::start</a></div><div class="ttdeci">bool start()</div><div class="ttdef"><b>Definition</b> MFMQTTServer.cpp:57</div></div>
+<div class="ttc" id="aclassfast__mqtt_1_1MFMQTTServer_html_ab6d49423f76ea026d6eb25402274d258"><div class="ttname"><a href="classfast__mqtt_1_1MFMQTTServer.html#ab6d49423f76ea026d6eb25402274d258">fast_mqtt::MFMQTTServer::cfg_</a></div><div class="ttdeci">nlohmann::json cfg_</div><div class="ttdef"><b>Definition</b> MFMQTTServer.h:20</div></div>
+<div class="ttc" id="aclassfast__mqtt_1_1MFMQTTServer_html_ac36ef9f816897f2b42040aa170e21442"><div class="ttname"><a href="classfast__mqtt_1_1MFMQTTServer.html#ac36ef9f816897f2b42040aa170e21442">fast_mqtt::MFMQTTServer::pid_</a></div><div class="ttdeci">std::optional&lt; pid_t &gt; pid_</div><div class="ttdef"><b>Definition</b> MFMQTTServer.h:19</div></div>
+<div class="ttc" id="anamespacefast__mqtt_html"><div class="ttname"><a href="namespacefast__mqtt.html">fast_mqtt</a></div><div class="ttdef"><b>Definition</b> MFMQTTClient.cpp:15</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

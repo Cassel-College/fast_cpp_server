@@ -1,10 +1,7 @@
 var searchData=
 [
-  ['tools_0',['tools',['../namespacetools.html',1,'']]],
-  ['tools_3a_3afree_5ffunc_1',['free_func',['../namespacetools_1_1free__func.html',1,'tools']]],
-  ['tools_3a_3ainit_5ftools_2',['init_tools',['../namespacetools_1_1init__tools.html',1,'tools']]],
-  ['tools_3a_3apingtools_3',['PingTools',['../namespacetools_1_1PingTools.html',1,'tools']]],
-  ['tools_3a_3apipeline_4',['pipeline',['../namespacetools_1_1pipeline.html',1,'tools']]],
-  ['tools_3a_3aservice_5fguard_5',['service_guard',['../namespacetools_1_1service__guard.html',1,'tools']]],
-  ['tools_3a_3athread_5fsafe_5fqueue_6',['thread_safe_queue',['../namespacetools_1_1thread__safe__queue.html',1,'tools']]]
+  ['my_5fapi_0',['my_api',['../namespacemy__api.html',1,'']]],
+  ['my_5fdoctor_1',['my_doctor',['../namespacemy__doctor.html',1,'']]],
+  ['mylog_2',['MyLog',['../namespaceMyLog.html',1,'']]],
+  ['mysystemhealthy_3',['MySystemHealthy',['../namespaceMySystemHealthy.html',1,'']]]
 ];

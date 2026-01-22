@@ -10,8 +10,9 @@ var searchData=
   ['collectnetinfo_7',['CollectNetInfo',['../classMySystemHealthy_1_1NetInfoTools.html#aa39609741bef5a7e60b2acf97a68d972',1,'MySystemHealthy::NetInfoTools']]],
   ['collectprocessinfo_8',['CollectProcessInfo',['../classMySystemHealthy_1_1ProcessInfoTools.html#a8060e509305fc018a68eddbd3ef0d380',1,'MySystemHealthy::ProcessInfoTools']]],
   ['collectsnapshot_9',['collectSnapshot',['../classSoftHealthMonitorManager.html#ad3c5d5ef0c2e6ca7eed38a9e2a1617f4',1,'SoftHealthMonitorManager']]],
-  ['connecttoserver_10',['connectToServer',['../classtools_1_1SimpleTcpClient.html#a6fb250ec0fd5c020fc82c524a3080a70',1,'tools::SimpleTcpClient']]],
-  ['cpuinfotools_11',['CPUInfoTools',['../classMySystemHealthy_1_1CPUInfoTools.html#abaf35e72699bd36dcab743dbf3867c4a',1,'MySystemHealthy::CPUInfoTools']]],
-  ['createshared_12',['createShared',['../classmy__api_1_1EdgeController.html#a06b931473ad95f71474cbc448e0ee20d',1,'my_api::EdgeController']]],
-  ['currenttimestamp_13',['CurrentTimestamp',['../namespaceMyLog.html#a686e4f865c2c588547f037e0b2cfafcb',1,'MyLog']]]
+  ['connect_10',['connect',['../classfast__mqtt_1_1MFMQTTClient.html#aa0a57e883c6c9fc19e62a609d967be9c',1,'fast_mqtt::MFMQTTClient']]],
+  ['connecttoserver_11',['connectToServer',['../classtools_1_1SimpleTcpClient.html#a6fb250ec0fd5c020fc82c524a3080a70',1,'tools::SimpleTcpClient']]],
+  ['cpuinfotools_12',['CPUInfoTools',['../classMySystemHealthy_1_1CPUInfoTools.html#abaf35e72699bd36dcab743dbf3867c4a',1,'MySystemHealthy::CPUInfoTools']]],
+  ['createshared_13',['createShared',['../classmy__api_1_1EdgeController.html#a06b931473ad95f71474cbc448e0ee20d',1,'my_api::EdgeController']]],
+  ['currenttimestamp_14',['CurrentTimestamp',['../namespaceMyLog.html#a686e4f865c2c588547f037e0b2cfafcb',1,'MyLog']]]
 ];

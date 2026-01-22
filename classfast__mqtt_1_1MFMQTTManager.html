@@ -1,0 +1,353 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: MFMQTTManager类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacefast__mqtt.html">fast_mqtt</a></li><li class="navelem"><a class="el" href="classfast__mqtt_1_1MFMQTTManager.html">MFMQTTManager</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a>  </div>
+  <div class="headertitle"><div class="title">MFMQTTManager类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="MFMQTTManager_8h_source.html">MFMQTTManager.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a887c55d9a1d952d8ca008e77cc09fcb3" id="r_a887c55d9a1d952d8ca008e77cc09fcb3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfast__mqtt_1_1MFMQTTManager.html#a887c55d9a1d952d8ca008e77cc09fcb3">add_client</a> (const std::string &amp;name, const nlohmann::json &amp;cfg)</td></tr>
+<tr class="separator:a887c55d9a1d952d8ca008e77cc09fcb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae28e3a27157fc816ad47f1e92ef0791" id="r_aae28e3a27157fc816ad47f1e92ef0791"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfast__mqtt_1_1MFMQTTManager.html#aae28e3a27157fc816ad47f1e92ef0791">remove_client</a> (const std::string &amp;name)</td></tr>
+<tr class="separator:aae28e3a27157fc816ad47f1e92ef0791"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a411bee45d739a4ae4c504f83a1323bf8" id="r_a411bee45d739a4ae4c504f83a1323bf8"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classfast__mqtt_1_1MFMQTTClient.html">MFMQTTClient</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfast__mqtt_1_1MFMQTTManager.html#a411bee45d739a4ae4c504f83a1323bf8">get</a> (const std::string &amp;name)</td></tr>
+<tr class="separator:a411bee45d739a4ae4c504f83a1323bf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a091b8cddb09995a3de9ef0f21ad9db59" id="r_a091b8cddb09995a3de9ef0f21ad9db59"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfast__mqtt_1_1MFMQTTManager.html#a091b8cddb09995a3de9ef0f21ad9db59">publish</a> (const std::string &amp;name, const std::string &amp;topic, const std::string &amp;payload, int qos=-1, bool retain=false)</td></tr>
+<tr class="separator:a091b8cddb09995a3de9ef0f21ad9db59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf8e712cd11953b8d254e662958c4954" id="r_adf8e712cd11953b8d254e662958c4954"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfast__mqtt_1_1MFMQTTManager.html#adf8e712cd11953b8d254e662958c4954">subscribe</a> (const std::string &amp;name, const std::string &amp;topic, int qos=-1)</td></tr>
+<tr class="separator:adf8e712cd11953b8d254e662958c4954"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:af7cb41123fa522e9972d623e3784b52d" id="r_af7cb41123fa522e9972d623e3784b52d"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, std::shared_ptr&lt; <a class="el" href="classfast__mqtt_1_1MFMQTTClient.html">MFMQTTClient</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfast__mqtt_1_1MFMQTTManager.html#af7cb41123fa522e9972d623e3784b52d">clients_</a></td></tr>
+<tr class="separator:af7cb41123fa522e9972d623e3784b52d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeef4a7229a433a6ef6c6a8960b5fe413" id="r_aeef4a7229a433a6ef6c6a8960b5fe413"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfast__mqtt_1_1MFMQTTManager.html#aeef4a7229a433a6ef6c6a8960b5fe413">mtx_</a></td></tr>
+<tr class="separator:aeef4a7229a433a6ef6c6a8960b5fe413"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a887c55d9a1d952d8ca008e77cc09fcb3" name="a887c55d9a1d952d8ca008e77cc09fcb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a887c55d9a1d952d8ca008e77cc09fcb3">&#9670;&#160;</a></span>add_client()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool add_client </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>cfg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classfast__mqtt_1_1MFMQTTManager.html#af7cb41123fa522e9972d623e3784b52d">MFMQTTManager::clients_</a>, <a class="el" href="classfast__mqtt_1_1MFMQTTManager.html#aeef4a7229a433a6ef6c6a8960b5fe413">MFMQTTManager::mtx_</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a> , 以及 <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>.</p>
+
+</div>
+</div>
+<a id="a411bee45d739a4ae4c504f83a1323bf8" name="a411bee45d739a4ae4c504f83a1323bf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a411bee45d739a4ae4c504f83a1323bf8">&#9670;&#160;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classfast__mqtt_1_1MFMQTTClient.html">MFMQTTClient</a> &gt; get </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classfast__mqtt_1_1MFMQTTManager.html#af7cb41123fa522e9972d623e3784b52d">MFMQTTManager::clients_</a> , 以及 <a class="el" href="classfast__mqtt_1_1MFMQTTManager.html#aeef4a7229a433a6ef6c6a8960b5fe413">MFMQTTManager::mtx_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classfast__mqtt_1_1MFMQTTManager.html#a091b8cddb09995a3de9ef0f21ad9db59">MFMQTTManager::publish()</a> , 以及 <a class="el" href="classfast__mqtt_1_1MFMQTTManager.html#adf8e712cd11953b8d254e662958c4954">MFMQTTManager::subscribe()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classfast__mqtt_1_1MFMQTTManager_a411bee45d739a4ae4c504f83a1323bf8_icgraph.png" border="0" usemap="#aclassfast__mqtt_1_1MFMQTTManager_a411bee45d739a4ae4c504f83a1323bf8_icgraph" alt=""/></div>
+<map name="aclassfast__mqtt_1_1MFMQTTManager_a411bee45d739a4ae4c504f83a1323bf8_icgraph" id="aclassfast__mqtt_1_1MFMQTTManager_a411bee45d739a4ae4c504f83a1323bf8_icgraph">
+<area shape="rect" title=" " alt="" coords="137,31,180,56"/>
+<area shape="rect" href="classfast__mqtt_1_1MFMQTTManager.html#a091b8cddb09995a3de9ef0f21ad9db59" title=" " alt="" coords="13,5,82,31"/>
+<area shape="poly" title=" " alt="" coords="123,38,82,28,83,23,124,33"/>
+<area shape="rect" href="classfast__mqtt_1_1MFMQTTManager.html#adf8e712cd11953b8d254e662958c4954" title=" " alt="" coords="5,55,89,80"/>
+<area shape="poly" title=" " alt="" coords="124,53,90,61,89,56,123,48"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a091b8cddb09995a3de9ef0f21ad9db59" name="a091b8cddb09995a3de9ef0f21ad9db59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a091b8cddb09995a3de9ef0f21ad9db59">&#9670;&#160;</a></span>publish()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool publish </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>topic</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>payload</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>qos</em> = <code>-1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>retain</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classfast__mqtt_1_1MFMQTTManager.html#a411bee45d739a4ae4c504f83a1323bf8">MFMQTTManager::get()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classfast__mqtt_1_1MFMQTTManager_a091b8cddb09995a3de9ef0f21ad9db59_cgraph.png" border="0" usemap="#aclassfast__mqtt_1_1MFMQTTManager_a091b8cddb09995a3de9ef0f21ad9db59_cgraph" alt=""/></div>
+<map name="aclassfast__mqtt_1_1MFMQTTManager_a091b8cddb09995a3de9ef0f21ad9db59_cgraph" id="aclassfast__mqtt_1_1MFMQTTManager_a091b8cddb09995a3de9ef0f21ad9db59_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,75,31"/>
+<area shape="rect" href="classfast__mqtt_1_1MFMQTTManager.html#a411bee45d739a4ae4c504f83a1323bf8" title=" " alt="" coords="123,5,165,31"/>
+<area shape="poly" title=" " alt="" coords="75,15,109,15,109,21,75,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aae28e3a27157fc816ad47f1e92ef0791" name="aae28e3a27157fc816ad47f1e92ef0791"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae28e3a27157fc816ad47f1e92ef0791">&#9670;&#160;</a></span>remove_client()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool remove_client </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classfast__mqtt_1_1MFMQTTManager.html#af7cb41123fa522e9972d623e3784b52d">MFMQTTManager::clients_</a>, <a class="el" href="classfast__mqtt_1_1MFMQTTManager.html#aeef4a7229a433a6ef6c6a8960b5fe413">MFMQTTManager::mtx_</a> , 以及 <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>.</p>
+
+</div>
+</div>
+<a id="adf8e712cd11953b8d254e662958c4954" name="adf8e712cd11953b8d254e662958c4954"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf8e712cd11953b8d254e662958c4954">&#9670;&#160;</a></span>subscribe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool subscribe </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>topic</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>qos</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classfast__mqtt_1_1MFMQTTManager.html#a411bee45d739a4ae4c504f83a1323bf8">MFMQTTManager::get()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classfast__mqtt_1_1MFMQTTManager_adf8e712cd11953b8d254e662958c4954_cgraph.png" border="0" usemap="#aclassfast__mqtt_1_1MFMQTTManager_adf8e712cd11953b8d254e662958c4954_cgraph" alt=""/></div>
+<map name="aclassfast__mqtt_1_1MFMQTTManager_adf8e712cd11953b8d254e662958c4954_cgraph" id="aclassfast__mqtt_1_1MFMQTTManager_adf8e712cd11953b8d254e662958c4954_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,89,31"/>
+<area shape="rect" href="classfast__mqtt_1_1MFMQTTManager.html#a411bee45d739a4ae4c504f83a1323bf8" title=" " alt="" coords="137,5,180,31"/>
+<area shape="poly" title=" " alt="" coords="90,15,123,15,123,21,90,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">结构体成员变量说明</h2>
+<a id="af7cb41123fa522e9972d623e3784b52d" name="af7cb41123fa522e9972d623e3784b52d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7cb41123fa522e9972d623e3784b52d">&#9670;&#160;</a></span>clients_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;std::string, std::shared_ptr&lt;<a class="el" href="classfast__mqtt_1_1MFMQTTClient.html">MFMQTTClient</a>&gt; &gt; clients_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classfast__mqtt_1_1MFMQTTManager.html#a887c55d9a1d952d8ca008e77cc09fcb3">MFMQTTManager::add_client()</a>, <a class="el" href="classfast__mqtt_1_1MFMQTTManager.html#a411bee45d739a4ae4c504f83a1323bf8">MFMQTTManager::get()</a> , 以及 <a class="el" href="classfast__mqtt_1_1MFMQTTManager.html#aae28e3a27157fc816ad47f1e92ef0791">MFMQTTManager::remove_client()</a>.</p>
+
+</div>
+</div>
+<a id="aeef4a7229a433a6ef6c6a8960b5fe413" name="aeef4a7229a433a6ef6c6a8960b5fe413"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeef4a7229a433a6ef6c6a8960b5fe413">&#9670;&#160;</a></span>mtx_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex mtx_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classfast__mqtt_1_1MFMQTTManager.html#a887c55d9a1d952d8ca008e77cc09fcb3">MFMQTTManager::add_client()</a>, <a class="el" href="classfast__mqtt_1_1MFMQTTManager.html#a411bee45d739a4ae4c504f83a1323bf8">MFMQTTManager::get()</a> , 以及 <a class="el" href="classfast__mqtt_1_1MFMQTTManager.html#aae28e3a27157fc816ad47f1e92ef0791">MFMQTTManager::remove_client()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/util/my_mqtt/fast_mqtt_client/<a class="el" href="MFMQTTManager_8h_source.html">MFMQTTManager.h</a></li>
+<li>src/util/my_mqtt/fast_mqtt_client/<a class="el" href="MFMQTTManager_8cpp.html">MFMQTTManager.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

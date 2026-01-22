@@ -11,5 +11,6 @@ var searchData=
   ['executebyps_8',['ExecuteByPS',['../classtools_1_1service__guard_1_1ServiceGuard.html#a8698c77956232f828176ff4dbce0b19d',1,'tools::service_guard::ServiceGuard']]],
   ['executebysystemcal_9',['ExecuteBySystemcal',['../classtools_1_1service__guard_1_1ServiceGuard.html#a1330d55ded43e5af3a18b9f2be4e686e',1,'tools::service_guard::ServiceGuard']]],
   ['executeshell_10',['ExecuteShell',['../classtools_1_1service__guard_1_1ServiceGuard.html#ada2e44948495509ff2c647d87d005fbf',1,'tools::service_guard::ServiceGuard']]],
-  ['executeshelllines_11',['ExecuteShellLines',['../classtools_1_1service__guard_1_1ServiceGuard.html#a8c41f29edebe6ebe147670eff8c21db0',1,'tools::service_guard::ServiceGuard']]]
+  ['executeshelllines_11',['ExecuteShellLines',['../classtools_1_1service__guard_1_1ServiceGuard.html#a8c41f29edebe6ebe147670eff8c21db0',1,'tools::service_guard::ServiceGuard']]],
+  ['expand_5fenv_12',['expand_env',['../classfast__mqtt_1_1MFMQTTServer.html#a080d1e91ef6f8206b89e10d002dbc97e',1,'fast_mqtt::MFMQTTServer']]]
 ];
