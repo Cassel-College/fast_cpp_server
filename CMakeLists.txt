@@ -63,7 +63,7 @@ print_colored_message("Building bin exec file ..." COLOR yellow)
 # 添加可执行文件
 add_executable(${PROJECT_NAME} ${MIAN_SOURCE} ${SOURCES})
 
-# # 链接spdlog静态库，使用 PRIVATE 关键字
+# # 链接静态库，使用 PRIVATE 关键字
 target_link_libraries(${PROJECT_NAME} PRIVATE pthread)
 target_link_libraries(${PROJECT_NAME} PRIVATE yaml-cpp)
 target_link_libraries(${PROJECT_NAME} PRIVATE mylog)
@@ -78,6 +78,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE my_db)
 target_link_libraries(${PROJECT_NAME} PRIVATE my_doctor)
 target_link_libraries(${PROJECT_NAME} PRIVATE my_cache)
 target_link_libraries(${PROJECT_NAME} PRIVATE mylib)
+target_link_libraries(${PROJECT_NAME} PRIVATE libmosquitto_static)
 # 链接 OpenCV 库
 target_link_libraries(${PROJECT_NAME} PRIVATE opencv_calib3d)
 target_link_libraries(${PROJECT_NAME} PRIVATE opencv_core)

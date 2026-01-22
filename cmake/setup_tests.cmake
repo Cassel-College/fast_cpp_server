@@ -24,7 +24,7 @@ target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE
     myproto
     my_arg_parser
     my_doctor
-    mylib
+    my_mqtt
     my_soft_healthy
     my_system_healthy
     symengine              # 修复 symengine/expression.h 找不到
@@ -50,6 +50,7 @@ target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE
     oatpp::oatpp-swagger
     cpr::cpr
     libzmq
+    libmosquitto_static
 )
 
 # 包含内部路径
