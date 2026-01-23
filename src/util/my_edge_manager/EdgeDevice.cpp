@@ -2,7 +2,7 @@
 #include <chrono>
 #include <sstream>
 
-namespace edge {
+namespace edge_manager {
 
 EdgeDevice::EdgeDevice(const nlohmann::json& config, int global_interval) {
     name_ = config.value("name", "unnamed");

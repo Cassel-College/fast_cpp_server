@@ -25,6 +25,11 @@ target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE
     my_arg_parser
     my_doctor
     my_mqtt
+    my_edge
+    my_edge_manager
+    my_control
+    my_device
+    my_data
     my_soft_healthy
     my_system_healthy
     symengine              # 修复 symengine/expression.h 找不到

@@ -12,7 +12,9 @@ if (BUILD_MY_DATA)
     print_colored_message("Building my_data library..." COLOR yellow)
     
     set(MY_DATA_INCLUDE_DIRECTORIES ${PROJECT_SOURCE_DIR}/src/util/my_data)
-    file(GLOB_RECURSE MY_DATA_SOURCES ${PROJECT_SOURCE_DIR}/src/util/my_data/*.cpp)
+    file(GLOB_RECURSE MY_DATA_SOURCES 
+            ${PROJECT_SOURCE_DIR}/src/util/my_data/*.cpp
+    )
 
     pretty_print_list("MY_DATA_INCLUDE_DIRECTORIES List" MY_DATA_INCLUDE_DIRECTORIES)
     pretty_print_list("MY_DATA_SOURCES List" MY_DATA_SOURCES)

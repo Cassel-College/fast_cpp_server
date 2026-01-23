@@ -7,7 +7,7 @@
 #include <shared_mutex>
 
 
-namespace edge {
+namespace edge_manager {
 
 class MyEdgeManager {
 public:

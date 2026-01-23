@@ -183,7 +183,7 @@ void Pipeline::LaunchEdgeMonitor(const nlohmann::json& args) {
 
     try {
         // 1. 获取业务单例
-        auto& em = edge::MyEdgeManager::GetInstance();
+        auto& em = edge_manager::MyEdgeManager::GetInstance();
 
         // 2. 初始化配置 (带保护)
         if (args.is_null() || args.empty()) {
@@ -195,7 +195,7 @@ void Pipeline::LaunchEdgeMonitor(const nlohmann::json& args) {
 
         // 3. 启动线程 (不使用匿名函数/Lambda)
         // 使用成员函数指针：&类名::函数名, 实例地址
-        workers_.emplace_back(&edge::MyEdgeManager::StartAll, &em);
+        workers_.emplace_back(&edge_manager::MyEdgeManager::StartAll, &em);
 
         MYLOG_INFO("* 模块: {}, 状态: {}", module_name, "线程已成功创建并加入管理列表");
 

@@ -9,9 +9,9 @@
 #include <mutex>
 #include <nlohmann/json.hpp>
 #include "MyLog.h"
-#include "DeviceOnlineMonitor.h" // 引入您实现的在线检查器
+#include "device_online_monitor/DeviceOnlineMonitor.h" // 引入您实现的在线检查器
 
-namespace edge {
+namespace edge_manager {
 
 struct EdgeAction {
     std::string name;
@@ -63,5 +63,5 @@ private:
     std::mutex biz_mutex_;               // 保护业务姿态切换
 };
 
-} // namespace edge
+} // namespace edge_manager
 #endif

@@ -5,7 +5,7 @@
 #include "MyLog.h"
 #include "MyEdgeManager.h"
 
-using namespace edge;
+using namespace edge_manager;
 
 HeartbeatManager& HeartbeatManager::Instance() {
     static HeartbeatManager inst;
@@ -65,7 +65,7 @@ nlohmann::json HeartbeatManager::BuildHeartbeat() const {
     heartbeat["base"] = base;
     heartbeat["extra"] = config_.value("extra", nlohmann::json::object());
 
-    nlohmann::json edgeData = edge::MyEdgeManager::GetInstance().ShowEdgesStatus();
+    nlohmann::json edgeData = edge_manager::MyEdgeManager::GetInstance().ShowEdgesStatus();
     heartbeat["edge_devices"] = edgeData;
 
     return {{"heartbeat", heartbeat}};

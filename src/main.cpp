@@ -28,7 +28,7 @@
 #include "Pipeline.h"
 #include "SimpleTcpClient.h"
 #include "ThreadSafeBuffer.h"
-#include "DeviceOnlineMonitor.h"
+#include "device_online_monitor/DeviceOnlineMonitor.h"
 #include "ServiceGuard.h"
 #include "MyDoctor.h"
 

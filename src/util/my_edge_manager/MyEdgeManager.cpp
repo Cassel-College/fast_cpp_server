@@ -1,6 +1,6 @@
 #include "MyEdgeManager.h"
 
-namespace edge {
+namespace edge_manager {
 
 void MyEdgeManager::Init(const nlohmann::json& args) {
     MYLOG_INFO("===== MyEdgeManager 批量初始化开始 =====");

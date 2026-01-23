@@ -11,7 +11,7 @@
 // #include "oatpp/Types.hpp"
 
 // 业务头文件
-#include "MyEdgeManager.h" 
+#include "MyEdgeManager.h"
 #include "MyLog.h"
 
 namespace my_api {
@@ -45,7 +45,7 @@ public:
 
     ENDPOINT("GET", "/v1/edges/status", getEdgesStatus) {
         MYLOG_INFO("[API] 收到请求: GET /v1/edges/status");
-        auto status_list = edge::MyEdgeManager::GetInstance().ShowEdgesStatus();
+        auto status_list = edge_manager::MyEdgeManager::GetInstance().ShowEdgesStatus();
         
         auto result = oatpp::Vector<oatpp::Object<EdgeStatusDto>>::createShared();
         for (const auto& item : status_list) {
@@ -64,14 +64,14 @@ public:
         // 安全转换 String
         std::string deviceName = (name && name->size() > 0) ? name->c_str() : "";
         MYLOG_INFO("[API] 启动设备: {}", deviceName);
-        edge::MyEdgeManager::GetInstance().StartDevice(deviceName);
+        edge_manager::MyEdgeManager::GetInstance().StartDevice(deviceName);
         return createResponse(Status::CODE_200, "Device start command issued.");
     }
 
     ENDPOINT("POST", "/v1/edges/{name}/stop", stopDevice, PATH(String, name)) {
         std::string deviceName = (name && name->size() > 0) ? name->c_str() : "";
         MYLOG_INFO("[API] 停止设备: {}", deviceName);
-        edge::MyEdgeManager::GetInstance().StopDevice(deviceName);
+        edge_manager::MyEdgeManager::GetInstance().StopDevice(deviceName);
         return createResponse(Status::CODE_200, "Device stop command issued.");
     }
 };
