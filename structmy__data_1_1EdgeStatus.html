@@ -1,0 +1,393 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: EdgeStatus结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacemy__data.html">my_data</a></li><li class="navelem"><a class="el" href="structmy__data_1_1EdgeStatus.html">EdgeStatus</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pub-attribs">成员变量</a>  </div>
+  <div class="headertitle"><div class="title">EdgeStatus结构体 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Edge状态快照  
+ <a href="structmy__data_1_1EdgeStatus.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Status_8h_source.html">Status.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a1fe5121d6528fdea3f243321b3fa3a49" id="r_a1fe5121d6528fdea3f243321b3fa3a49"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmy__data_1_1EdgeStatus.html#a1fe5121d6528fdea3f243321b3fa3a49">toString</a> () const</td></tr>
+<tr class="separator:a1fe5121d6528fdea3f243321b3fa3a49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a098007f3dd2a938824a819aa09423ca9" id="r_a098007f3dd2a938824a819aa09423ca9"><td class="memItemLeft" align="right" valign="top">nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmy__data_1_1EdgeStatus.html#a098007f3dd2a938824a819aa09423ca9">toJson</a> () const</td></tr>
+<tr class="separator:a098007f3dd2a938824a819aa09423ca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a4ff712b7cd7b98f14760e531a5033c92" id="r_a4ff712b7cd7b98f14760e531a5033c92"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structmy__data_1_1EdgeStatus.html">EdgeStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmy__data_1_1EdgeStatus.html#a4ff712b7cd7b98f14760e531a5033c92">fromJson</a> (const nlohmann::json &amp;j)</td></tr>
+<tr class="separator:a4ff712b7cd7b98f14760e531a5033c92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+成员变量</h2></td></tr>
+<tr class="memitem:af22da43be64b543c95019aedb667869f" id="r_af22da43be64b543c95019aedb667869f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemy__data.html#aa97613f313f7fbbad8c368f2599e3f26">EdgeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmy__data_1_1EdgeStatus.html#af22da43be64b543c95019aedb667869f">edge_id</a> {}</td></tr>
+<tr class="separator:af22da43be64b543c95019aedb667869f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff8572eb2424678f34d665b8b17aae32" id="r_aff8572eb2424678f34d665b8b17aae32"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemy__data.html#a30e0a55991505e8f6aed4feb61c131e4">EdgeRunState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmy__data_1_1EdgeStatus.html#aff8572eb2424678f34d665b8b17aae32">run_state</a> {<a class="el" href="namespacemy__data.html#a30e0a55991505e8f6aed4feb61c131e4a32b169f72b293ef80d35435e9894f8e2">EdgeRunState::Initializing</a>}</td></tr>
+<tr class="separator:aff8572eb2424678f34d665b8b17aae32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b8fc8514b4a3ab879867ce4e8e3f867" id="r_a7b8fc8514b4a3ab879867ce4e8e3f867"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemy__data.html#ab0a41a12b2c8afae2a15c3987f587e0d">TimestampMs</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmy__data_1_1EdgeStatus.html#a7b8fc8514b4a3ab879867ce4e8e3f867">boot_at_ms</a> {0}</td></tr>
+<tr class="separator:a7b8fc8514b4a3ab879867ce4e8e3f867"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e32979639bef9048e9ff1afbdb19859" id="r_a6e32979639bef9048e9ff1afbdb19859"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemy__data.html#ab0a41a12b2c8afae2a15c3987f587e0d">TimestampMs</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmy__data_1_1EdgeStatus.html#a6e32979639bef9048e9ff1afbdb19859">last_heartbeat_at_ms</a> {0}</td></tr>
+<tr class="separator:a6e32979639bef9048e9ff1afbdb19859"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a933cfe7fd6b47e6f196a06e7f16ba8f7" id="r_a933cfe7fd6b47e6f196a06e7f16ba8f7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmy__data_1_1EdgeStatus.html#a933cfe7fd6b47e6f196a06e7f16ba8f7">estop_active</a> {false}</td></tr>
+<tr class="separator:a933cfe7fd6b47e6f196a06e7f16ba8f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0af406c708fcc720d774864e27063b8" id="r_aa0af406c708fcc720d774864e27063b8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmy__data_1_1EdgeStatus.html#aa0af406c708fcc720d774864e27063b8">estop_reason</a> {}</td></tr>
+<tr class="separator:aa0af406c708fcc720d774864e27063b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a879f5747a0f337ee3d098ed2a3ec120e" id="r_a879f5747a0f337ee3d098ed2a3ec120e"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; <a class="el" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">DeviceId</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html">DeviceStatus</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmy__data_1_1EdgeStatus.html#a879f5747a0f337ee3d098ed2a3ec120e">devices</a></td></tr>
+<tr class="separator:a879f5747a0f337ee3d098ed2a3ec120e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d78ec5965940b9d384f2b448fd45ee8" id="r_a5d78ec5965940b9d384f2b448fd45ee8"><td class="memItemLeft" align="right" valign="top">std::int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmy__data_1_1EdgeStatus.html#a5d78ec5965940b9d384f2b448fd45ee8">tasks_pending_total</a> {0}</td></tr>
+<tr class="separator:a5d78ec5965940b9d384f2b448fd45ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a823b629498fc0cb094d3bc1d8c9320e3" id="r_a823b629498fc0cb094d3bc1d8c9320e3"><td class="memItemLeft" align="right" valign="top">std::int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmy__data_1_1EdgeStatus.html#a823b629498fc0cb094d3bc1d8c9320e3">tasks_running_total</a> {0}</td></tr>
+<tr class="separator:a823b629498fc0cb094d3bc1d8c9320e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a728b969e374aba4020e39aea7e02e64f" id="r_a728b969e374aba4020e39aea7e02e64f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmy__data_1_1EdgeStatus.html#a728b969e374aba4020e39aea7e02e64f">version</a> {&quot;0.1.0&quot;}</td></tr>
+<tr class="separator:a728b969e374aba4020e39aea7e02e64f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Edge状态快照 </p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a4ff712b7cd7b98f14760e531a5033c92" name="a4ff712b7cd7b98f14760e531a5033c92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ff712b7cd7b98f14760e531a5033c92">&#9670;&#160;</a></span>fromJson()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmy__data_1_1EdgeStatus.html">EdgeStatus</a> fromJson </td>
+          <td>(</td>
+          <td class="paramtype">const nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>j</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="structmy__data_1_1EdgeStatus.html#a7b8fc8514b4a3ab879867ce4e8e3f867">EdgeStatus::boot_at_ms</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a879f5747a0f337ee3d098ed2a3ec120e">EdgeStatus::devices</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#af22da43be64b543c95019aedb667869f">EdgeStatus::edge_id</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a933cfe7fd6b47e6f196a06e7f16ba8f7">EdgeStatus::estop_active</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#aa0af406c708fcc720d774864e27063b8">EdgeStatus::estop_reason</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#a29d3bccc9ad241c8414cea88877f5de1">DeviceStatus::fromJson()</a>, <a class="el" href="namespacemy__data_1_1jsonutil.html#ac42292cdcdd29239af5ee9bdb0b6d8ef">my_data::jsonutil::GetInt64Or()</a>, <a class="el" href="namespacemy__data_1_1jsonutil.html#a494c8f5acc19636cc8c10304bf44bc0e">my_data::jsonutil::GetIntOr()</a>, <a class="el" href="namespacemy__data_1_1jsonutil.html#ae4d2199a0a0cd74b256332de45ea68a4">my_data::jsonutil::GetStringOr()</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a6e32979639bef9048e9ff1afbdb19859">EdgeStatus::last_heartbeat_at_ms</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#aff8572eb2424678f34d665b8b17aae32">EdgeStatus::run_state</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a5d78ec5965940b9d384f2b448fd45ee8">EdgeStatus::tasks_pending_total</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a823b629498fc0cb094d3bc1d8c9320e3">EdgeStatus::tasks_running_total</a> , 以及 <a class="el" href="structmy__data_1_1EdgeStatus.html#a728b969e374aba4020e39aea7e02e64f">EdgeStatus::version</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="structmy__data_1_1EdgeStatus_a4ff712b7cd7b98f14760e531a5033c92_cgraph.png" border="0" usemap="#astructmy__data_1_1EdgeStatus_a4ff712b7cd7b98f14760e531a5033c92_cgraph" alt=""/></div>
+<map name="astructmy__data_1_1EdgeStatus_a4ff712b7cd7b98f14760e531a5033c92_cgraph" id="astructmy__data_1_1EdgeStatus_a4ff712b7cd7b98f14760e531a5033c92_cgraph">
+<area shape="rect" title=" " alt="" coords="5,94,85,119"/>
+<area shape="rect" href="structmy__data_1_1DeviceStatus.html#a29d3bccc9ad241c8414cea88877f5de1" title=" " alt="" coords="133,57,307,97"/>
+<area shape="poly" title=" " alt="" coords="85,97,119,92,120,97,86,103"/>
+<area shape="rect" href="namespacemy__data_1_1jsonutil.html#ac42292cdcdd29239af5ee9bdb0b6d8ef" title="从 json 中读取 int64，key 不存在或为 null 则返回默认值" alt="" coords="355,5,497,45"/>
+<area shape="poly" title=" " alt="" coords="58,92,90,66,132,43,185,28,240,20,341,17,341,22,240,25,186,34,134,48,93,70,62,96"/>
+<area shape="rect" href="namespacemy__data_1_1jsonutil.html#a494c8f5acc19636cc8c10304bf44bc0e" title="从 json 中读取 int，key 不存在或为 null 则返回默认值" alt="" coords="355,73,497,113"/>
+<area shape="poly" title=" " alt="" coords="86,105,133,107,220,109,307,107,341,103,341,109,307,112,220,114,133,112,85,111"/>
+<area shape="rect" href="namespacemy__data_1_1jsonutil.html#ae4d2199a0a0cd74b256332de45ea68a4" title="从 json 中读取 string，key 不存在或为 null 则返回默认值" alt="" coords="355,147,497,187"/>
+<area shape="poly" title=" " alt="" coords="86,110,341,151,341,156,85,115"/>
+<area shape="poly" title=" " alt="" coords="299,55,341,44,342,49,301,60"/>
+<area shape="poly" title=" " alt="" coords="307,81,341,84,341,89,307,87"/>
+<area shape="poly" title=" " alt="" coords="268,95,367,139,365,143,266,100"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a098007f3dd2a938824a819aa09423ca9" name="a098007f3dd2a938824a819aa09423ca9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a098007f3dd2a938824a819aa09423ca9">&#9670;&#160;</a></span>toJson()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nlohmann::json toJson </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="structmy__data_1_1EdgeStatus.html#a7b8fc8514b4a3ab879867ce4e8e3f867">EdgeStatus::boot_at_ms</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a879f5747a0f337ee3d098ed2a3ec120e">EdgeStatus::devices</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#af22da43be64b543c95019aedb667869f">EdgeStatus::edge_id</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a933cfe7fd6b47e6f196a06e7f16ba8f7">EdgeStatus::estop_active</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#aa0af406c708fcc720d774864e27063b8">EdgeStatus::estop_reason</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a6e32979639bef9048e9ff1afbdb19859">EdgeStatus::last_heartbeat_at_ms</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#aff8572eb2424678f34d665b8b17aae32">EdgeStatus::run_state</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a5d78ec5965940b9d384f2b448fd45ee8">EdgeStatus::tasks_pending_total</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a823b629498fc0cb094d3bc1d8c9320e3">EdgeStatus::tasks_running_total</a> , 以及 <a class="el" href="structmy__data_1_1EdgeStatus.html#a728b969e374aba4020e39aea7e02e64f">EdgeStatus::version</a>.</p>
+
+</div>
+</div>
+<a id="a1fe5121d6528fdea3f243321b3fa3a49" name="a1fe5121d6528fdea3f243321b3fa3a49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fe5121d6528fdea3f243321b3fa3a49">&#9670;&#160;</a></span>toString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string toString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="structmy__data_1_1EdgeStatus.html#a7b8fc8514b4a3ab879867ce4e8e3f867">EdgeStatus::boot_at_ms</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a879f5747a0f337ee3d098ed2a3ec120e">EdgeStatus::devices</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#af22da43be64b543c95019aedb667869f">EdgeStatus::edge_id</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a933cfe7fd6b47e6f196a06e7f16ba8f7">EdgeStatus::estop_active</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#aa0af406c708fcc720d774864e27063b8">EdgeStatus::estop_reason</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a6e32979639bef9048e9ff1afbdb19859">EdgeStatus::last_heartbeat_at_ms</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#aff8572eb2424678f34d665b8b17aae32">EdgeStatus::run_state</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a5d78ec5965940b9d384f2b448fd45ee8">EdgeStatus::tasks_pending_total</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a823b629498fc0cb094d3bc1d8c9320e3">EdgeStatus::tasks_running_total</a>, <a class="el" href="namespacemy__data.html#aa2c3b20a64b6aef24654f21b84592582">my_data::ToString()</a> , 以及 <a class="el" href="structmy__data_1_1EdgeStatus.html#a728b969e374aba4020e39aea7e02e64f">EdgeStatus::version</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="structmy__data_1_1EdgeStatus_a1fe5121d6528fdea3f243321b3fa3a49_cgraph.png" border="0" usemap="#astructmy__data_1_1EdgeStatus_a1fe5121d6528fdea3f243321b3fa3a49_cgraph" alt=""/></div>
+<map name="astructmy__data_1_1EdgeStatus_a1fe5121d6528fdea3f243321b3fa3a49_cgraph" id="astructmy__data_1_1EdgeStatus_a1fe5121d6528fdea3f243321b3fa3a49_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,79,31"/>
+<area shape="rect" href="namespacemy__data.html#aa2c3b20a64b6aef24654f21b84592582" title="将错误码转为可读字符串" alt="" coords="127,5,265,31"/>
+<area shape="poly" title=" " alt="" coords="79,15,113,15,113,21,79,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">结构体成员变量说明</h2>
+<a id="a7b8fc8514b4a3ab879867ce4e8e3f867" name="a7b8fc8514b4a3ab879867ce4e8e3f867"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b8fc8514b4a3ab879867ce4e8e3f867">&#9670;&#160;</a></span>boot_at_ms</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemy__data.html#ab0a41a12b2c8afae2a15c3987f587e0d">TimestampMs</a> boot_at_ms {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1EdgeStatus.html#a4ff712b7cd7b98f14760e531a5033c92">EdgeStatus::fromJson()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">UUVEdge::GetStatusSnapshot()</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a098007f3dd2a938824a819aa09423ca9">EdgeStatus::toJson()</a> , 以及 <a class="el" href="structmy__data_1_1EdgeStatus.html#a1fe5121d6528fdea3f243321b3fa3a49">EdgeStatus::toString()</a>.</p>
+
+</div>
+</div>
+<a id="a879f5747a0f337ee3d098ed2a3ec120e" name="a879f5747a0f337ee3d098ed2a3ec120e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a879f5747a0f337ee3d098ed2a3ec120e">&#9670;&#160;</a></span>devices</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;<a class="el" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">DeviceId</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html">DeviceStatus</a>&gt; devices</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1EdgeStatus.html#a4ff712b7cd7b98f14760e531a5033c92">EdgeStatus::fromJson()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">UUVEdge::GetStatusSnapshot()</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a098007f3dd2a938824a819aa09423ca9">EdgeStatus::toJson()</a> , 以及 <a class="el" href="structmy__data_1_1EdgeStatus.html#a1fe5121d6528fdea3f243321b3fa3a49">EdgeStatus::toString()</a>.</p>
+
+</div>
+</div>
+<a id="af22da43be64b543c95019aedb667869f" name="af22da43be64b543c95019aedb667869f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af22da43be64b543c95019aedb667869f">&#9670;&#160;</a></span>edge_id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemy__data.html#aa97613f313f7fbbad8c368f2599e3f26">EdgeId</a> edge_id {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1EdgeStatus.html#a4ff712b7cd7b98f14760e531a5033c92">EdgeStatus::fromJson()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">UUVEdge::GetStatusSnapshot()</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a098007f3dd2a938824a819aa09423ca9">EdgeStatus::toJson()</a> , 以及 <a class="el" href="structmy__data_1_1EdgeStatus.html#a1fe5121d6528fdea3f243321b3fa3a49">EdgeStatus::toString()</a>.</p>
+
+</div>
+</div>
+<a id="a933cfe7fd6b47e6f196a06e7f16ba8f7" name="a933cfe7fd6b47e6f196a06e7f16ba8f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a933cfe7fd6b47e6f196a06e7f16ba8f7">&#9670;&#160;</a></span>estop_active</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool estop_active {false}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1EdgeStatus.html#a4ff712b7cd7b98f14760e531a5033c92">EdgeStatus::fromJson()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">UUVEdge::GetStatusSnapshot()</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a098007f3dd2a938824a819aa09423ca9">EdgeStatus::toJson()</a> , 以及 <a class="el" href="structmy__data_1_1EdgeStatus.html#a1fe5121d6528fdea3f243321b3fa3a49">EdgeStatus::toString()</a>.</p>
+
+</div>
+</div>
+<a id="aa0af406c708fcc720d774864e27063b8" name="aa0af406c708fcc720d774864e27063b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0af406c708fcc720d774864e27063b8">&#9670;&#160;</a></span>estop_reason</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string estop_reason {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1EdgeStatus.html#a4ff712b7cd7b98f14760e531a5033c92">EdgeStatus::fromJson()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">UUVEdge::GetStatusSnapshot()</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a098007f3dd2a938824a819aa09423ca9">EdgeStatus::toJson()</a> , 以及 <a class="el" href="structmy__data_1_1EdgeStatus.html#a1fe5121d6528fdea3f243321b3fa3a49">EdgeStatus::toString()</a>.</p>
+
+</div>
+</div>
+<a id="a6e32979639bef9048e9ff1afbdb19859" name="a6e32979639bef9048e9ff1afbdb19859"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e32979639bef9048e9ff1afbdb19859">&#9670;&#160;</a></span>last_heartbeat_at_ms</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemy__data.html#ab0a41a12b2c8afae2a15c3987f587e0d">TimestampMs</a> last_heartbeat_at_ms {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1EdgeStatus.html#a4ff712b7cd7b98f14760e531a5033c92">EdgeStatus::fromJson()</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a098007f3dd2a938824a819aa09423ca9">EdgeStatus::toJson()</a> , 以及 <a class="el" href="structmy__data_1_1EdgeStatus.html#a1fe5121d6528fdea3f243321b3fa3a49">EdgeStatus::toString()</a>.</p>
+
+</div>
+</div>
+<a id="aff8572eb2424678f34d665b8b17aae32" name="aff8572eb2424678f34d665b8b17aae32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff8572eb2424678f34d665b8b17aae32">&#9670;&#160;</a></span>run_state</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemy__data.html#a30e0a55991505e8f6aed4feb61c131e4">EdgeRunState</a> run_state {<a class="el" href="namespacemy__data.html#a30e0a55991505e8f6aed4feb61c131e4a32b169f72b293ef80d35435e9894f8e2">EdgeRunState::Initializing</a>}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1EdgeStatus.html#a4ff712b7cd7b98f14760e531a5033c92">EdgeStatus::fromJson()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">UUVEdge::GetStatusSnapshot()</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a098007f3dd2a938824a819aa09423ca9">EdgeStatus::toJson()</a> , 以及 <a class="el" href="structmy__data_1_1EdgeStatus.html#a1fe5121d6528fdea3f243321b3fa3a49">EdgeStatus::toString()</a>.</p>
+
+</div>
+</div>
+<a id="a5d78ec5965940b9d384f2b448fd45ee8" name="a5d78ec5965940b9d384f2b448fd45ee8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d78ec5965940b9d384f2b448fd45ee8">&#9670;&#160;</a></span>tasks_pending_total</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::int64_t tasks_pending_total {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1EdgeStatus.html#a4ff712b7cd7b98f14760e531a5033c92">EdgeStatus::fromJson()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">UUVEdge::GetStatusSnapshot()</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a098007f3dd2a938824a819aa09423ca9">EdgeStatus::toJson()</a> , 以及 <a class="el" href="structmy__data_1_1EdgeStatus.html#a1fe5121d6528fdea3f243321b3fa3a49">EdgeStatus::toString()</a>.</p>
+
+</div>
+</div>
+<a id="a823b629498fc0cb094d3bc1d8c9320e3" name="a823b629498fc0cb094d3bc1d8c9320e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a823b629498fc0cb094d3bc1d8c9320e3">&#9670;&#160;</a></span>tasks_running_total</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::int64_t tasks_running_total {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1EdgeStatus.html#a4ff712b7cd7b98f14760e531a5033c92">EdgeStatus::fromJson()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">UUVEdge::GetStatusSnapshot()</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a098007f3dd2a938824a819aa09423ca9">EdgeStatus::toJson()</a> , 以及 <a class="el" href="structmy__data_1_1EdgeStatus.html#a1fe5121d6528fdea3f243321b3fa3a49">EdgeStatus::toString()</a>.</p>
+
+</div>
+</div>
+<a id="a728b969e374aba4020e39aea7e02e64f" name="a728b969e374aba4020e39aea7e02e64f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a728b969e374aba4020e39aea7e02e64f">&#9670;&#160;</a></span>version</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string version {&quot;0.1.0&quot;}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1EdgeStatus.html#a4ff712b7cd7b98f14760e531a5033c92">EdgeStatus::fromJson()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">UUVEdge::GetStatusSnapshot()</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a098007f3dd2a938824a819aa09423ca9">EdgeStatus::toJson()</a> , 以及 <a class="el" href="structmy__data_1_1EdgeStatus.html#a1fe5121d6528fdea3f243321b3fa3a49">EdgeStatus::toString()</a>.</p>
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li>src/util/my_data/demo/<a class="el" href="Status_8h_source.html">Status.h</a></li>
+<li>src/util/my_data/demo/<a class="el" href="Status_8cpp.html">Status.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_data/demo/Status.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_d2fb9e0fa2d8020e5b4e7c6f3725e339.html">my_data</a></li><li class="navelem"><a class="el" href="dir_91c0827ce5bb70ce9c454ba2182d2133.html">demo</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Status.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="Status_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="Types_8h.html">Types.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;nlohmann/json.hpp&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__data.html">my_data</a> {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="namespacemy__data.html#a69c46968483fe8b647c643ea0779baa3">   12</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="namespacemy__data.html#a69c46968483fe8b647c643ea0779baa3">DeviceConnState</a> { <a class="code hl_enumvalue" href="namespacemy__data.html#a69c46968483fe8b647c643ea0779baa3a88183b946cc5f0e8c96b2e66e1c74a7e">Unknown</a> = 0, <a class="code hl_enumvalue" href="namespacemy__data.html#a69c46968483fe8b647c643ea0779baa3a54f664c70c22054ea0d8d26fc3997ce7">Online</a> = 1, <a class="code hl_enumvalue" href="namespacemy__data.html#a69c46968483fe8b647c643ea0779baa3a8d9da4bc0e49a50e09ac9f7e56789d39">Offline</a> = 2 };</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="namespacemy__data.html#ab741123951602d5912c8b5aba6bf3372">   17</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="namespacemy__data.html#ab741123951602d5912c8b5aba6bf3372">DeviceWorkState</a> { <a class="code hl_enumvalue" href="namespacemy__data.html#ab741123951602d5912c8b5aba6bf3372ae599161956d626eda4cb0a5ffb85271c">Idle</a> = 0, <a class="code hl_enumvalue" href="namespacemy__data.html#ab741123951602d5912c8b5aba6bf3372ad8a942ef2b04672adfafef0ad817a407">Busy</a> = 1, <a class="code hl_enumvalue" href="namespacemy__data.html#ab741123951602d5912c8b5aba6bf3372a2b310d05c23325e2935ec87b25a60b8f">Faulted</a> = 2 };</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="namespacemy__data.html#a30e0a55991505e8f6aed4feb61c131e4">   22</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="namespacemy__data.html#a30e0a55991505e8f6aed4feb61c131e4">EdgeRunState</a> { <a class="code hl_enumvalue" href="namespacemy__data.html#a30e0a55991505e8f6aed4feb61c131e4a32b169f72b293ef80d35435e9894f8e2">Initializing</a> = 0, <a class="code hl_enumvalue" href="namespacemy__data.html#a30e0a55991505e8f6aed4feb61c131e4a5bda814c4aedb126839228f1a3d92f09">Running</a> = 1, <a class="code hl_enumvalue" href="namespacemy__data.html#a59e56af19e754a6aa26a612ebf91d05fa30ed97dc28749ab04581aeb9febe8ea2">EStop</a> = 2, <a class="code hl_enumvalue" href="namespacemy__data.html#a30e0a55991505e8f6aed4feb61c131e4aaa95669cd5732a57e8f6467705f06642">Degraded</a> = 3 };</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>std::string <a class="code hl_function" href="namespacemy__data.html#aa2c3b20a64b6aef24654f21b84592582">ToString</a>(<a class="code hl_enumeration" href="namespacemy__data.html#a69c46968483fe8b647c643ea0779baa3">DeviceConnState</a> s);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>std::string <a class="code hl_function" href="namespacemy__data.html#aa2c3b20a64b6aef24654f21b84592582">ToString</a>(<a class="code hl_enumeration" href="namespacemy__data.html#ab741123951602d5912c8b5aba6bf3372">DeviceWorkState</a> s);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>std::string <a class="code hl_function" href="namespacemy__data.html#aa2c3b20a64b6aef24654f21b84592582">ToString</a>(<a class="code hl_enumeration" href="namespacemy__data.html#a30e0a55991505e8f6aed4feb61c131e4">EdgeRunState</a> s);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="};">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="structmy__data_1_1DeviceStatus.html">   31</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structmy__data_1_1DeviceStatus.html">DeviceStatus</a> {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="structmy__data_1_1DeviceStatus.html#a47449c9a7a840d9fa6b4a69688305e10">   32</a></span>  <a class="code hl_typedef" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">DeviceId</a> <a class="code hl_variable" href="structmy__data_1_1DeviceStatus.html#a47449c9a7a840d9fa6b4a69688305e10">device_id</a>{};</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structmy__data_1_1DeviceStatus.html#af821acee7e457efc9a0e768d1e938949">   33</a></span>  <a class="code hl_enumeration" href="namespacemy__data.html#a69c46968483fe8b647c643ea0779baa3">DeviceConnState</a> <a class="code hl_variable" href="structmy__data_1_1DeviceStatus.html#af821acee7e457efc9a0e768d1e938949">conn_state</a>{<a class="code hl_enumvalue" href="namespacemy__data.html#a69c46968483fe8b647c643ea0779baa3a88183b946cc5f0e8c96b2e66e1c74a7e">DeviceConnState::Unknown</a>};</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="structmy__data_1_1DeviceStatus.html#a80ffc9c37fe70d68ed7247de9e383269">   34</a></span>  <a class="code hl_enumeration" href="namespacemy__data.html#ab741123951602d5912c8b5aba6bf3372">DeviceWorkState</a> <a class="code hl_variable" href="structmy__data_1_1DeviceStatus.html#a80ffc9c37fe70d68ed7247de9e383269">work_state</a>{<a class="code hl_enumvalue" href="namespacemy__data.html#ab741123951602d5912c8b5aba6bf3372ae599161956d626eda4cb0a5ffb85271c">DeviceWorkState::Idle</a>};</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="structmy__data_1_1DeviceStatus.html#a5408f1fbf295730816160360d0593a61">   36</a></span>  <a class="code hl_typedef" href="namespacemy__data.html#a1b9d3b04810d37cf4227a7e624359f04">TaskId</a> <a class="code hl_variable" href="structmy__data_1_1DeviceStatus.html#a5408f1fbf295730816160360d0593a61">running_task_id</a>{};</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="structmy__data_1_1DeviceStatus.html#adef2c57c01aebddd44f7913264efc06f">   37</a></span>  <a class="code hl_typedef" href="namespacemy__data.html#ab0a41a12b2c8afae2a15c3987f587e0d">TimestampMs</a> <a class="code hl_variable" href="structmy__data_1_1DeviceStatus.html#adef2c57c01aebddd44f7913264efc06f">last_task_at_ms</a>{0};</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="structmy__data_1_1DeviceStatus.html#ad1f973f56df6185040bd96ef12911bf9">   38</a></span>  <a class="code hl_typedef" href="namespacemy__data.html#ab0a41a12b2c8afae2a15c3987f587e0d">TimestampMs</a> <a class="code hl_variable" href="structmy__data_1_1DeviceStatus.html#ad1f973f56df6185040bd96ef12911bf9">last_seen_at_ms</a>{0};</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structmy__data_1_1DeviceStatus.html#ad6976c458c4c2009292fa9a0a938e44e">   39</a></span>  std::string <a class="code hl_variable" href="structmy__data_1_1DeviceStatus.html#ad6976c458c4c2009292fa9a0a938e44e">last_error</a>{};</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="structmy__data_1_1DeviceStatus.html#a570f70dac26e232386edfcdaa3549c6d">   41</a></span>  std::int64_t <a class="code hl_variable" href="structmy__data_1_1DeviceStatus.html#a570f70dac26e232386edfcdaa3549c6d">queue_depth</a>{0};</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  std::string <a class="code hl_function" href="structmy__data_1_1DeviceStatus.html#a1fe5121d6528fdea3f243321b3fa3a49">toString</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  nlohmann::json <a class="code hl_function" href="structmy__data_1_1DeviceStatus.html#a098007f3dd2a938824a819aa09423ca9">toJson</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="keyword">static</span> <a class="code hl_struct" href="structmy__data_1_1DeviceStatus.html">DeviceStatus</a> <a class="code hl_function" href="structmy__data_1_1DeviceStatus.html#a29d3bccc9ad241c8414cea88877f5de1">fromJson</a>(<span class="keyword">const</span> nlohmann::json&amp; j);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>};</div>
+</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="foldopen" id="foldopen00051" data-start="{" data-end="};">
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="structmy__data_1_1EdgeStatus.html">   51</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structmy__data_1_1EdgeStatus.html">EdgeStatus</a> {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="structmy__data_1_1EdgeStatus.html#af22da43be64b543c95019aedb667869f">   52</a></span>  <a class="code hl_typedef" href="namespacemy__data.html#aa97613f313f7fbbad8c368f2599e3f26">EdgeId</a> <a class="code hl_variable" href="structmy__data_1_1EdgeStatus.html#af22da43be64b543c95019aedb667869f">edge_id</a>{};</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="structmy__data_1_1EdgeStatus.html#aff8572eb2424678f34d665b8b17aae32">   53</a></span>  <a class="code hl_enumeration" href="namespacemy__data.html#a30e0a55991505e8f6aed4feb61c131e4">EdgeRunState</a> <a class="code hl_variable" href="structmy__data_1_1EdgeStatus.html#aff8572eb2424678f34d665b8b17aae32">run_state</a>{<a class="code hl_enumvalue" href="namespacemy__data.html#a30e0a55991505e8f6aed4feb61c131e4a32b169f72b293ef80d35435e9894f8e2">EdgeRunState::Initializing</a>};</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="structmy__data_1_1EdgeStatus.html#a7b8fc8514b4a3ab879867ce4e8e3f867">   55</a></span>  <a class="code hl_typedef" href="namespacemy__data.html#ab0a41a12b2c8afae2a15c3987f587e0d">TimestampMs</a> <a class="code hl_variable" href="structmy__data_1_1EdgeStatus.html#a7b8fc8514b4a3ab879867ce4e8e3f867">boot_at_ms</a>{0};</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="structmy__data_1_1EdgeStatus.html#a6e32979639bef9048e9ff1afbdb19859">   56</a></span>  <a class="code hl_typedef" href="namespacemy__data.html#ab0a41a12b2c8afae2a15c3987f587e0d">TimestampMs</a> <a class="code hl_variable" href="structmy__data_1_1EdgeStatus.html#a6e32979639bef9048e9ff1afbdb19859">last_heartbeat_at_ms</a>{0};</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="structmy__data_1_1EdgeStatus.html#a933cfe7fd6b47e6f196a06e7f16ba8f7">   58</a></span>  <span class="keywordtype">bool</span> <a class="code hl_variable" href="structmy__data_1_1EdgeStatus.html#a933cfe7fd6b47e6f196a06e7f16ba8f7">estop_active</a>{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="structmy__data_1_1EdgeStatus.html#aa0af406c708fcc720d774864e27063b8">   59</a></span>  std::string <a class="code hl_variable" href="structmy__data_1_1EdgeStatus.html#aa0af406c708fcc720d774864e27063b8">estop_reason</a>{};</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="structmy__data_1_1EdgeStatus.html#a879f5747a0f337ee3d098ed2a3ec120e">   61</a></span>  std::unordered_map&lt;DeviceId, DeviceStatus&gt; <a class="code hl_variable" href="structmy__data_1_1EdgeStatus.html#a879f5747a0f337ee3d098ed2a3ec120e">devices</a>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="structmy__data_1_1EdgeStatus.html#a5d78ec5965940b9d384f2b448fd45ee8">   63</a></span>  std::int64_t <a class="code hl_variable" href="structmy__data_1_1EdgeStatus.html#a5d78ec5965940b9d384f2b448fd45ee8">tasks_pending_total</a>{0};</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="structmy__data_1_1EdgeStatus.html#a823b629498fc0cb094d3bc1d8c9320e3">   64</a></span>  std::int64_t <a class="code hl_variable" href="structmy__data_1_1EdgeStatus.html#a823b629498fc0cb094d3bc1d8c9320e3">tasks_running_total</a>{0};</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="structmy__data_1_1EdgeStatus.html#a728b969e374aba4020e39aea7e02e64f">   66</a></span>  std::string <a class="code hl_variable" href="structmy__data_1_1EdgeStatus.html#a728b969e374aba4020e39aea7e02e64f">version</a>{<span class="stringliteral">&quot;0.1.0&quot;</span>};</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  std::string <a class="code hl_function" href="structmy__data_1_1EdgeStatus.html#a1fe5121d6528fdea3f243321b3fa3a49">toString</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  nlohmann::json <a class="code hl_function" href="structmy__data_1_1EdgeStatus.html#a098007f3dd2a938824a819aa09423ca9">toJson</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <span class="keyword">static</span> <a class="code hl_struct" href="structmy__data_1_1EdgeStatus.html">EdgeStatus</a> <a class="code hl_function" href="structmy__data_1_1EdgeStatus.html#a4ff712b7cd7b98f14760e531a5033c92">fromJson</a>(<span class="keyword">const</span> nlohmann::json&amp; j);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>};</div>
+</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>} <span class="comment">// namespace my_data</span></div>
+<div class="ttc" id="aTypes_8h_html"><div class="ttname"><a href="Types_8h.html">Types.h</a></div></div>
+<div class="ttc" id="anamespacemy__data_html"><div class="ttname"><a href="namespacemy__data.html">my_data</a></div><div class="ttdef"><b>Definition</b> Error.cpp:3</div></div>
+<div class="ttc" id="anamespacemy__data_html_a1b9d3b04810d37cf4227a7e624359f04"><div class="ttname"><a href="namespacemy__data.html#a1b9d3b04810d37cf4227a7e624359f04">my_data::TaskId</a></div><div class="ttdeci">std::string TaskId</div><div class="ttdoc">Task ID</div><div class="ttdef"><b>Definition</b> Types.h:20</div></div>
+<div class="ttc" id="anamespacemy__data_html_a30e0a55991505e8f6aed4feb61c131e4"><div class="ttname"><a href="namespacemy__data.html#a30e0a55991505e8f6aed4feb61c131e4">my_data::EdgeRunState</a></div><div class="ttdeci">EdgeRunState</div><div class="ttdoc">Edge运行状态</div><div class="ttdef"><b>Definition</b> Status.h:22</div></div>
+<div class="ttc" id="anamespacemy__data_html_a30e0a55991505e8f6aed4feb61c131e4a32b169f72b293ef80d35435e9894f8e2"><div class="ttname"><a href="namespacemy__data.html#a30e0a55991505e8f6aed4feb61c131e4a32b169f72b293ef80d35435e9894f8e2">my_data::EdgeRunState::Initializing</a></div><div class="ttdeci">@ Initializing</div></div>
+<div class="ttc" id="anamespacemy__data_html_a30e0a55991505e8f6aed4feb61c131e4a5bda814c4aedb126839228f1a3d92f09"><div class="ttname"><a href="namespacemy__data.html#a30e0a55991505e8f6aed4feb61c131e4a5bda814c4aedb126839228f1a3d92f09">my_data::EdgeRunState::Running</a></div><div class="ttdeci">@ Running</div></div>
+<div class="ttc" id="anamespacemy__data_html_a30e0a55991505e8f6aed4feb61c131e4aaa95669cd5732a57e8f6467705f06642"><div class="ttname"><a href="namespacemy__data.html#a30e0a55991505e8f6aed4feb61c131e4aaa95669cd5732a57e8f6467705f06642">my_data::EdgeRunState::Degraded</a></div><div class="ttdeci">@ Degraded</div></div>
+<div class="ttc" id="anamespacemy__data_html_a59e56af19e754a6aa26a612ebf91d05fa30ed97dc28749ab04581aeb9febe8ea2"><div class="ttname"><a href="namespacemy__data.html#a59e56af19e754a6aa26a612ebf91d05fa30ed97dc28749ab04581aeb9febe8ea2">my_data::ErrorCode::EStop</a></div><div class="ttdeci">@ EStop</div></div>
+<div class="ttc" id="anamespacemy__data_html_a69c46968483fe8b647c643ea0779baa3"><div class="ttname"><a href="namespacemy__data.html#a69c46968483fe8b647c643ea0779baa3">my_data::DeviceConnState</a></div><div class="ttdeci">DeviceConnState</div><div class="ttdoc">设备连接状态</div><div class="ttdef"><b>Definition</b> Status.h:12</div></div>
+<div class="ttc" id="anamespacemy__data_html_a69c46968483fe8b647c643ea0779baa3a54f664c70c22054ea0d8d26fc3997ce7"><div class="ttname"><a href="namespacemy__data.html#a69c46968483fe8b647c643ea0779baa3a54f664c70c22054ea0d8d26fc3997ce7">my_data::DeviceConnState::Online</a></div><div class="ttdeci">@ Online</div></div>
+<div class="ttc" id="anamespacemy__data_html_a69c46968483fe8b647c643ea0779baa3a88183b946cc5f0e8c96b2e66e1c74a7e"><div class="ttname"><a href="namespacemy__data.html#a69c46968483fe8b647c643ea0779baa3a88183b946cc5f0e8c96b2e66e1c74a7e">my_data::DeviceConnState::Unknown</a></div><div class="ttdeci">@ Unknown</div></div>
+<div class="ttc" id="anamespacemy__data_html_a69c46968483fe8b647c643ea0779baa3a8d9da4bc0e49a50e09ac9f7e56789d39"><div class="ttname"><a href="namespacemy__data.html#a69c46968483fe8b647c643ea0779baa3a8d9da4bc0e49a50e09ac9f7e56789d39">my_data::DeviceConnState::Offline</a></div><div class="ttdeci">@ Offline</div></div>
+<div class="ttc" id="anamespacemy__data_html_a7f44417fe7bdfd39f515815285f3c8fd"><div class="ttname"><a href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a></div><div class="ttdeci">std::string DeviceId</div><div class="ttdoc">专业设备ID（按 device_id 一对一实例）</div><div class="ttdef"><b>Definition</b> Types.h:15</div></div>
+<div class="ttc" id="anamespacemy__data_html_aa2c3b20a64b6aef24654f21b84592582"><div class="ttname"><a href="namespacemy__data.html#aa2c3b20a64b6aef24654f21b84592582">my_data::ToString</a></div><div class="ttdeci">std::string ToString(ErrorCode code)</div><div class="ttdoc">将错误码转为可读字符串</div><div class="ttdef"><b>Definition</b> Error.cpp:5</div></div>
+<div class="ttc" id="anamespacemy__data_html_aa97613f313f7fbbad8c368f2599e3f26"><div class="ttname"><a href="namespacemy__data.html#aa97613f313f7fbbad8c368f2599e3f26">my_data::EdgeId</a></div><div class="ttdeci">std::string EdgeId</div><div class="ttdoc">边缘执行器ID</div><div class="ttdef"><b>Definition</b> Types.h:10</div></div>
+<div class="ttc" id="anamespacemy__data_html_ab0a41a12b2c8afae2a15c3987f587e0d"><div class="ttname"><a href="namespacemy__data.html#ab0a41a12b2c8afae2a15c3987f587e0d">my_data::TimestampMs</a></div><div class="ttdeci">std::int64_t TimestampMs</div><div class="ttdoc">毫秒时间戳</div><div class="ttdef"><b>Definition</b> Types.h:30</div></div>
+<div class="ttc" id="anamespacemy__data_html_ab741123951602d5912c8b5aba6bf3372"><div class="ttname"><a href="namespacemy__data.html#ab741123951602d5912c8b5aba6bf3372">my_data::DeviceWorkState</a></div><div class="ttdeci">DeviceWorkState</div><div class="ttdoc">设备工作状态</div><div class="ttdef"><b>Definition</b> Status.h:17</div></div>
+<div class="ttc" id="anamespacemy__data_html_ab741123951602d5912c8b5aba6bf3372a2b310d05c23325e2935ec87b25a60b8f"><div class="ttname"><a href="namespacemy__data.html#ab741123951602d5912c8b5aba6bf3372a2b310d05c23325e2935ec87b25a60b8f">my_data::DeviceWorkState::Faulted</a></div><div class="ttdeci">@ Faulted</div></div>
+<div class="ttc" id="anamespacemy__data_html_ab741123951602d5912c8b5aba6bf3372ad8a942ef2b04672adfafef0ad817a407"><div class="ttname"><a href="namespacemy__data.html#ab741123951602d5912c8b5aba6bf3372ad8a942ef2b04672adfafef0ad817a407">my_data::DeviceWorkState::Busy</a></div><div class="ttdeci">@ Busy</div></div>
+<div class="ttc" id="anamespacemy__data_html_ab741123951602d5912c8b5aba6bf3372ae599161956d626eda4cb0a5ffb85271c"><div class="ttname"><a href="namespacemy__data.html#ab741123951602d5912c8b5aba6bf3372ae599161956d626eda4cb0a5ffb85271c">my_data::DeviceWorkState::Idle</a></div><div class="ttdeci">@ Idle</div></div>
+<div class="ttc" id="astructmy__data_1_1DeviceStatus_html"><div class="ttname"><a href="structmy__data_1_1DeviceStatus.html">my_data::DeviceStatus</a></div><div class="ttdoc">单设备状态快照</div><div class="ttdef"><b>Definition</b> Status.h:31</div></div>
+<div class="ttc" id="astructmy__data_1_1DeviceStatus_html_a098007f3dd2a938824a819aa09423ca9"><div class="ttname"><a href="structmy__data_1_1DeviceStatus.html#a098007f3dd2a938824a819aa09423ca9">my_data::DeviceStatus::toJson</a></div><div class="ttdeci">nlohmann::json toJson() const</div><div class="ttdef"><b>Definition</b> Status.cpp:47</div></div>
+<div class="ttc" id="astructmy__data_1_1DeviceStatus_html_a1fe5121d6528fdea3f243321b3fa3a49"><div class="ttname"><a href="structmy__data_1_1DeviceStatus.html#a1fe5121d6528fdea3f243321b3fa3a49">my_data::DeviceStatus::toString</a></div><div class="ttdeci">std::string toString() const</div><div class="ttdef"><b>Definition</b> Status.cpp:33</div></div>
+<div class="ttc" id="astructmy__data_1_1DeviceStatus_html_a29d3bccc9ad241c8414cea88877f5de1"><div class="ttname"><a href="structmy__data_1_1DeviceStatus.html#a29d3bccc9ad241c8414cea88877f5de1">my_data::DeviceStatus::fromJson</a></div><div class="ttdeci">static DeviceStatus fromJson(const nlohmann::json &amp;j)</div><div class="ttdef"><b>Definition</b> Status.cpp:60</div></div>
+<div class="ttc" id="astructmy__data_1_1DeviceStatus_html_a47449c9a7a840d9fa6b4a69688305e10"><div class="ttname"><a href="structmy__data_1_1DeviceStatus.html#a47449c9a7a840d9fa6b4a69688305e10">my_data::DeviceStatus::device_id</a></div><div class="ttdeci">DeviceId device_id</div><div class="ttdef"><b>Definition</b> Status.h:32</div></div>
+<div class="ttc" id="astructmy__data_1_1DeviceStatus_html_a5408f1fbf295730816160360d0593a61"><div class="ttname"><a href="structmy__data_1_1DeviceStatus.html#a5408f1fbf295730816160360d0593a61">my_data::DeviceStatus::running_task_id</a></div><div class="ttdeci">TaskId running_task_id</div><div class="ttdef"><b>Definition</b> Status.h:36</div></div>
+<div class="ttc" id="astructmy__data_1_1DeviceStatus_html_a570f70dac26e232386edfcdaa3549c6d"><div class="ttname"><a href="structmy__data_1_1DeviceStatus.html#a570f70dac26e232386edfcdaa3549c6d">my_data::DeviceStatus::queue_depth</a></div><div class="ttdeci">std::int64_t queue_depth</div><div class="ttdef"><b>Definition</b> Status.h:41</div></div>
+<div class="ttc" id="astructmy__data_1_1DeviceStatus_html_a80ffc9c37fe70d68ed7247de9e383269"><div class="ttname"><a href="structmy__data_1_1DeviceStatus.html#a80ffc9c37fe70d68ed7247de9e383269">my_data::DeviceStatus::work_state</a></div><div class="ttdeci">DeviceWorkState work_state</div><div class="ttdef"><b>Definition</b> Status.h:34</div></div>
+<div class="ttc" id="astructmy__data_1_1DeviceStatus_html_ad1f973f56df6185040bd96ef12911bf9"><div class="ttname"><a href="structmy__data_1_1DeviceStatus.html#ad1f973f56df6185040bd96ef12911bf9">my_data::DeviceStatus::last_seen_at_ms</a></div><div class="ttdeci">TimestampMs last_seen_at_ms</div><div class="ttdef"><b>Definition</b> Status.h:38</div></div>
+<div class="ttc" id="astructmy__data_1_1DeviceStatus_html_ad6976c458c4c2009292fa9a0a938e44e"><div class="ttname"><a href="structmy__data_1_1DeviceStatus.html#ad6976c458c4c2009292fa9a0a938e44e">my_data::DeviceStatus::last_error</a></div><div class="ttdeci">std::string last_error</div><div class="ttdef"><b>Definition</b> Status.h:39</div></div>
+<div class="ttc" id="astructmy__data_1_1DeviceStatus_html_adef2c57c01aebddd44f7913264efc06f"><div class="ttname"><a href="structmy__data_1_1DeviceStatus.html#adef2c57c01aebddd44f7913264efc06f">my_data::DeviceStatus::last_task_at_ms</a></div><div class="ttdeci">TimestampMs last_task_at_ms</div><div class="ttdef"><b>Definition</b> Status.h:37</div></div>
+<div class="ttc" id="astructmy__data_1_1DeviceStatus_html_af821acee7e457efc9a0e768d1e938949"><div class="ttname"><a href="structmy__data_1_1DeviceStatus.html#af821acee7e457efc9a0e768d1e938949">my_data::DeviceStatus::conn_state</a></div><div class="ttdeci">DeviceConnState conn_state</div><div class="ttdef"><b>Definition</b> Status.h:33</div></div>
+<div class="ttc" id="astructmy__data_1_1EdgeStatus_html"><div class="ttname"><a href="structmy__data_1_1EdgeStatus.html">my_data::EdgeStatus</a></div><div class="ttdoc">Edge状态快照</div><div class="ttdef"><b>Definition</b> Status.h:51</div></div>
+<div class="ttc" id="astructmy__data_1_1EdgeStatus_html_a098007f3dd2a938824a819aa09423ca9"><div class="ttname"><a href="structmy__data_1_1EdgeStatus.html#a098007f3dd2a938824a819aa09423ca9">my_data::EdgeStatus::toJson</a></div><div class="ttdeci">nlohmann::json toJson() const</div><div class="ttdef"><b>Definition</b> Status.cpp:89</div></div>
+<div class="ttc" id="astructmy__data_1_1EdgeStatus_html_a1fe5121d6528fdea3f243321b3fa3a49"><div class="ttname"><a href="structmy__data_1_1EdgeStatus.html#a1fe5121d6528fdea3f243321b3fa3a49">my_data::EdgeStatus::toString</a></div><div class="ttdeci">std::string toString() const</div><div class="ttdef"><b>Definition</b> Status.cpp:73</div></div>
+<div class="ttc" id="astructmy__data_1_1EdgeStatus_html_a4ff712b7cd7b98f14760e531a5033c92"><div class="ttname"><a href="structmy__data_1_1EdgeStatus.html#a4ff712b7cd7b98f14760e531a5033c92">my_data::EdgeStatus::fromJson</a></div><div class="ttdeci">static EdgeStatus fromJson(const nlohmann::json &amp;j)</div><div class="ttdef"><b>Definition</b> Status.cpp:109</div></div>
+<div class="ttc" id="astructmy__data_1_1EdgeStatus_html_a5d78ec5965940b9d384f2b448fd45ee8"><div class="ttname"><a href="structmy__data_1_1EdgeStatus.html#a5d78ec5965940b9d384f2b448fd45ee8">my_data::EdgeStatus::tasks_pending_total</a></div><div class="ttdeci">std::int64_t tasks_pending_total</div><div class="ttdef"><b>Definition</b> Status.h:63</div></div>
+<div class="ttc" id="astructmy__data_1_1EdgeStatus_html_a6e32979639bef9048e9ff1afbdb19859"><div class="ttname"><a href="structmy__data_1_1EdgeStatus.html#a6e32979639bef9048e9ff1afbdb19859">my_data::EdgeStatus::last_heartbeat_at_ms</a></div><div class="ttdeci">TimestampMs last_heartbeat_at_ms</div><div class="ttdef"><b>Definition</b> Status.h:56</div></div>
+<div class="ttc" id="astructmy__data_1_1EdgeStatus_html_a728b969e374aba4020e39aea7e02e64f"><div class="ttname"><a href="structmy__data_1_1EdgeStatus.html#a728b969e374aba4020e39aea7e02e64f">my_data::EdgeStatus::version</a></div><div class="ttdeci">std::string version</div><div class="ttdef"><b>Definition</b> Status.h:66</div></div>
+<div class="ttc" id="astructmy__data_1_1EdgeStatus_html_a7b8fc8514b4a3ab879867ce4e8e3f867"><div class="ttname"><a href="structmy__data_1_1EdgeStatus.html#a7b8fc8514b4a3ab879867ce4e8e3f867">my_data::EdgeStatus::boot_at_ms</a></div><div class="ttdeci">TimestampMs boot_at_ms</div><div class="ttdef"><b>Definition</b> Status.h:55</div></div>
+<div class="ttc" id="astructmy__data_1_1EdgeStatus_html_a823b629498fc0cb094d3bc1d8c9320e3"><div class="ttname"><a href="structmy__data_1_1EdgeStatus.html#a823b629498fc0cb094d3bc1d8c9320e3">my_data::EdgeStatus::tasks_running_total</a></div><div class="ttdeci">std::int64_t tasks_running_total</div><div class="ttdef"><b>Definition</b> Status.h:64</div></div>
+<div class="ttc" id="astructmy__data_1_1EdgeStatus_html_a879f5747a0f337ee3d098ed2a3ec120e"><div class="ttname"><a href="structmy__data_1_1EdgeStatus.html#a879f5747a0f337ee3d098ed2a3ec120e">my_data::EdgeStatus::devices</a></div><div class="ttdeci">std::unordered_map&lt; DeviceId, DeviceStatus &gt; devices</div><div class="ttdef"><b>Definition</b> Status.h:61</div></div>
+<div class="ttc" id="astructmy__data_1_1EdgeStatus_html_a933cfe7fd6b47e6f196a06e7f16ba8f7"><div class="ttname"><a href="structmy__data_1_1EdgeStatus.html#a933cfe7fd6b47e6f196a06e7f16ba8f7">my_data::EdgeStatus::estop_active</a></div><div class="ttdeci">bool estop_active</div><div class="ttdef"><b>Definition</b> Status.h:58</div></div>
+<div class="ttc" id="astructmy__data_1_1EdgeStatus_html_aa0af406c708fcc720d774864e27063b8"><div class="ttname"><a href="structmy__data_1_1EdgeStatus.html#aa0af406c708fcc720d774864e27063b8">my_data::EdgeStatus::estop_reason</a></div><div class="ttdeci">std::string estop_reason</div><div class="ttdef"><b>Definition</b> Status.h:59</div></div>
+<div class="ttc" id="astructmy__data_1_1EdgeStatus_html_af22da43be64b543c95019aedb667869f"><div class="ttname"><a href="structmy__data_1_1EdgeStatus.html#af22da43be64b543c95019aedb667869f">my_data::EdgeStatus::edge_id</a></div><div class="ttdeci">EdgeId edge_id</div><div class="ttdef"><b>Definition</b> Status.h:52</div></div>
+<div class="ttc" id="astructmy__data_1_1EdgeStatus_html_aff8572eb2424678f34d665b8b17aae32"><div class="ttname"><a href="structmy__data_1_1EdgeStatus.html#aff8572eb2424678f34d665b8b17aae32">my_data::EdgeStatus::run_state</a></div><div class="ttdeci">EdgeRunState run_state</div><div class="ttdef"><b>Definition</b> Status.h:53</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

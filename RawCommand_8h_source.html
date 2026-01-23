@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_data/demo/RawCommand.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_d2fb9e0fa2d8020e5b4e7c6f3725e339.html">my_data</a></li><li class="navelem"><a class="el" href="dir_91c0827ce5bb70ce9c454ba2182d2133.html">demo</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">RawCommand.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="RawCommand_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="Types_8h.html">Types.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;nlohmann/json.hpp&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__data.html">my_data</a> {</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structmy__data_1_1RawCommand.html">   15</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structmy__data_1_1RawCommand.html">RawCommand</a> {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="structmy__data_1_1RawCommand.html#a472457d1112db62f4ba446013be35517">   16</a></span>  <a class="code hl_typedef" href="namespacemy__data.html#ac23d9638c60a0a676f3c71b8f191ed64">CommandId</a> <a class="code hl_variable" href="structmy__data_1_1RawCommand.html#a472457d1112db62f4ba446013be35517">command_id</a>{};</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="structmy__data_1_1RawCommand.html#a14ee39a9a59b08e6fad497e78e450f7e">   17</a></span>  std::string <a class="code hl_variable" href="structmy__data_1_1RawCommand.html#a14ee39a9a59b08e6fad497e78e450f7e">source</a>{};</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="structmy__data_1_1RawCommand.html#aa9b683d9bd3d648dea1fd050185b31b1">   18</a></span>  nlohmann::json <a class="code hl_variable" href="structmy__data_1_1RawCommand.html#aa9b683d9bd3d648dea1fd050185b31b1">payload</a> = nlohmann::json::object();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="structmy__data_1_1RawCommand.html#ab93f10eb3ec0a1860726fdac12e92235">   19</a></span>  <a class="code hl_typedef" href="namespacemy__data.html#ab0a41a12b2c8afae2a15c3987f587e0d">TimestampMs</a> <a class="code hl_variable" href="structmy__data_1_1RawCommand.html#ab93f10eb3ec0a1860726fdac12e92235">received_at_ms</a>{0};</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="comment">// 幂等（预留，不启用）</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="structmy__data_1_1RawCommand.html#a8953531e4f1b13e11fed951933e98b8d">   22</a></span>  std::string <a class="code hl_variable" href="structmy__data_1_1RawCommand.html#a8953531e4f1b13e11fed951933e98b8d">idempotency_key</a>{};</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="structmy__data_1_1RawCommand.html#acf6c3ebf83bf4e675928b52c82c60084">   23</a></span>  std::int64_t <a class="code hl_variable" href="structmy__data_1_1RawCommand.html#acf6c3ebf83bf4e675928b52c82c60084">dedup_window_ms</a>{0};</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  std::string <a class="code hl_function" href="structmy__data_1_1RawCommand.html#a1fe5121d6528fdea3f243321b3fa3a49">toString</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  nlohmann::json <a class="code hl_function" href="structmy__data_1_1RawCommand.html#a098007f3dd2a938824a819aa09423ca9">toJson</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <span class="keyword">static</span> <a class="code hl_struct" href="structmy__data_1_1RawCommand.html">RawCommand</a> <a class="code hl_function" href="structmy__data_1_1RawCommand.html#a9e48010592cdfa19e269aaa0607e3d24">fromJson</a>(<span class="keyword">const</span> nlohmann::json&amp; j);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>};</div>
+</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>} <span class="comment">// namespace my_data</span></div>
+<div class="ttc" id="aTypes_8h_html"><div class="ttname"><a href="Types_8h.html">Types.h</a></div></div>
+<div class="ttc" id="anamespacemy__data_html"><div class="ttname"><a href="namespacemy__data.html">my_data</a></div><div class="ttdef"><b>Definition</b> Error.cpp:3</div></div>
+<div class="ttc" id="anamespacemy__data_html_ab0a41a12b2c8afae2a15c3987f587e0d"><div class="ttname"><a href="namespacemy__data.html#ab0a41a12b2c8afae2a15c3987f587e0d">my_data::TimestampMs</a></div><div class="ttdeci">std::int64_t TimestampMs</div><div class="ttdoc">毫秒时间戳</div><div class="ttdef"><b>Definition</b> Types.h:30</div></div>
+<div class="ttc" id="anamespacemy__data_html_ac23d9638c60a0a676f3c71b8f191ed64"><div class="ttname"><a href="namespacemy__data.html#ac23d9638c60a0a676f3c71b8f191ed64">my_data::CommandId</a></div><div class="ttdeci">std::string CommandId</div><div class="ttdoc">Command ID（外部输入或上层生成，用于溯源/幂等）</div><div class="ttdef"><b>Definition</b> Types.h:25</div></div>
+<div class="ttc" id="astructmy__data_1_1RawCommand_html"><div class="ttname"><a href="structmy__data_1_1RawCommand.html">my_data::RawCommand</a></div><div class="ttdoc">原始控制命令（接收层输入）</div><div class="ttdef"><b>Definition</b> RawCommand.h:15</div></div>
+<div class="ttc" id="astructmy__data_1_1RawCommand_html_a098007f3dd2a938824a819aa09423ca9"><div class="ttname"><a href="structmy__data_1_1RawCommand.html#a098007f3dd2a938824a819aa09423ca9">my_data::RawCommand::toJson</a></div><div class="ttdeci">nlohmann::json toJson() const</div><div class="ttdef"><b>Definition</b> RawCommand.cpp:19</div></div>
+<div class="ttc" id="astructmy__data_1_1RawCommand_html_a14ee39a9a59b08e6fad497e78e450f7e"><div class="ttname"><a href="structmy__data_1_1RawCommand.html#a14ee39a9a59b08e6fad497e78e450f7e">my_data::RawCommand::source</a></div><div class="ttdeci">std::string source</div><div class="ttdef"><b>Definition</b> RawCommand.h:17</div></div>
+<div class="ttc" id="astructmy__data_1_1RawCommand_html_a1fe5121d6528fdea3f243321b3fa3a49"><div class="ttname"><a href="structmy__data_1_1RawCommand.html#a1fe5121d6528fdea3f243321b3fa3a49">my_data::RawCommand::toString</a></div><div class="ttdeci">std::string toString() const</div><div class="ttdef"><b>Definition</b> RawCommand.cpp:7</div></div>
+<div class="ttc" id="astructmy__data_1_1RawCommand_html_a472457d1112db62f4ba446013be35517"><div class="ttname"><a href="structmy__data_1_1RawCommand.html#a472457d1112db62f4ba446013be35517">my_data::RawCommand::command_id</a></div><div class="ttdeci">CommandId command_id</div><div class="ttdef"><b>Definition</b> RawCommand.h:16</div></div>
+<div class="ttc" id="astructmy__data_1_1RawCommand_html_a8953531e4f1b13e11fed951933e98b8d"><div class="ttname"><a href="structmy__data_1_1RawCommand.html#a8953531e4f1b13e11fed951933e98b8d">my_data::RawCommand::idempotency_key</a></div><div class="ttdeci">std::string idempotency_key</div><div class="ttdef"><b>Definition</b> RawCommand.h:22</div></div>
+<div class="ttc" id="astructmy__data_1_1RawCommand_html_a9e48010592cdfa19e269aaa0607e3d24"><div class="ttname"><a href="structmy__data_1_1RawCommand.html#a9e48010592cdfa19e269aaa0607e3d24">my_data::RawCommand::fromJson</a></div><div class="ttdeci">static RawCommand fromJson(const nlohmann::json &amp;j)</div><div class="ttdef"><b>Definition</b> RawCommand.cpp:30</div></div>
+<div class="ttc" id="astructmy__data_1_1RawCommand_html_aa9b683d9bd3d648dea1fd050185b31b1"><div class="ttname"><a href="structmy__data_1_1RawCommand.html#aa9b683d9bd3d648dea1fd050185b31b1">my_data::RawCommand::payload</a></div><div class="ttdeci">nlohmann::json payload</div><div class="ttdef"><b>Definition</b> RawCommand.h:18</div></div>
+<div class="ttc" id="astructmy__data_1_1RawCommand_html_ab93f10eb3ec0a1860726fdac12e92235"><div class="ttname"><a href="structmy__data_1_1RawCommand.html#ab93f10eb3ec0a1860726fdac12e92235">my_data::RawCommand::received_at_ms</a></div><div class="ttdeci">TimestampMs received_at_ms</div><div class="ttdef"><b>Definition</b> RawCommand.h:19</div></div>
+<div class="ttc" id="astructmy__data_1_1RawCommand_html_acf6c3ebf83bf4e675928b52c82c60084"><div class="ttname"><a href="structmy__data_1_1RawCommand.html#acf6c3ebf83bf4e675928b52c82c60084">my_data::RawCommand::dedup_window_ms</a></div><div class="ttdeci">std::int64_t dedup_window_ms</div><div class="ttdef"><b>Definition</b> RawCommand.h:23</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

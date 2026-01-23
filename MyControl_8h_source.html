@@ -81,7 +81,41 @@ $(document).ready(function() { init_codefold(0); });
   <div class="headertitle"><div class="title">MyControl.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="MyControl_8h.html">浏览该文件的文档.</a><div class="fragment"></div><!-- fragment --></div><!-- contents -->
+<a href="MyControl_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="ICommandNormalizer_8h.html">ICommandNormalizer.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="IControl_8h.html">IControl.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="MyLog_8h.html">MyLog.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__control.html">my_control</a> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classmy__control_1_1MyControl.html">   20</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__control_1_1MyControl.html">MyControl</a> {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <span class="keyword">static</span> <a class="code hl_class" href="classmy__control_1_1MyControl.html">MyControl</a>&amp; <a class="code hl_function" href="classmy__control_1_1MyControl.html#a867d8de756c913549ea1427caf29ee65">GetInstance</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  std::unique_ptr&lt;ICommandNormalizer&gt; <a class="code hl_function" href="classmy__control_1_1MyControl.html#aad117ef61f9bcaed5bc89f3a90d4d8c3">CreateNormalizer</a>(<span class="keyword">const</span> std::string&amp; type);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  std::unique_ptr&lt;IControl&gt; <a class="code hl_function" href="classmy__control_1_1MyControl.html#ae8ff31b91612c6727b4d9dd8c8ebc467">CreateControl</a>(<span class="keyword">const</span> std::string&amp; type);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classmy__control_1_1MyControl.html#ac79878660c47c5f5e195dfb8ef50bfd8">   28</a></span>  <a class="code hl_function" href="classmy__control_1_1MyControl.html#ac79878660c47c5f5e195dfb8ef50bfd8">MyControl</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>};</div>
+</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>} <span class="comment">// namespace my_control</span></div>
+<div class="ttc" id="aICommandNormalizer_8h_html"><div class="ttname"><a href="ICommandNormalizer_8h.html">ICommandNormalizer.h</a></div></div>
+<div class="ttc" id="aIControl_8h_html"><div class="ttname"><a href="IControl_8h.html">IControl.h</a></div></div>
+<div class="ttc" id="aMyLog_8h_html"><div class="ttname"><a href="MyLog_8h.html">MyLog.h</a></div></div>
+<div class="ttc" id="aclassmy__control_1_1MyControl_html"><div class="ttname"><a href="classmy__control_1_1MyControl.html">my_control::MyControl</a></div><div class="ttdoc">my_control 门面（轻量）</div><div class="ttdef"><b>Definition</b> MyControl.h:20</div></div>
+<div class="ttc" id="aclassmy__control_1_1MyControl_html_a867d8de756c913549ea1427caf29ee65"><div class="ttname"><a href="classmy__control_1_1MyControl.html#a867d8de756c913549ea1427caf29ee65">my_control::MyControl::GetInstance</a></div><div class="ttdeci">static MyControl &amp; GetInstance()</div><div class="ttdef"><b>Definition</b> MyControl.cpp:8</div></div>
+<div class="ttc" id="aclassmy__control_1_1MyControl_html_aad117ef61f9bcaed5bc89f3a90d4d8c3"><div class="ttname"><a href="classmy__control_1_1MyControl.html#aad117ef61f9bcaed5bc89f3a90d4d8c3">my_control::MyControl::CreateNormalizer</a></div><div class="ttdeci">std::unique_ptr&lt; ICommandNormalizer &gt; CreateNormalizer(const std::string &amp;type)</div><div class="ttdef"><b>Definition</b> MyControl.cpp:13</div></div>
+<div class="ttc" id="aclassmy__control_1_1MyControl_html_ac79878660c47c5f5e195dfb8ef50bfd8"><div class="ttname"><a href="classmy__control_1_1MyControl.html#ac79878660c47c5f5e195dfb8ef50bfd8">my_control::MyControl::MyControl</a></div><div class="ttdeci">MyControl()=default</div></div>
+<div class="ttc" id="aclassmy__control_1_1MyControl_html_ae8ff31b91612c6727b4d9dd8c8ebc467"><div class="ttname"><a href="classmy__control_1_1MyControl.html#ae8ff31b91612c6727b4d9dd8c8ebc467">my_control::MyControl::CreateControl</a></div><div class="ttdeci">std::unique_ptr&lt; IControl &gt; CreateControl(const std::string &amp;type)</div><div class="ttdef"><b>Definition</b> MyControl.cpp:24</div></div>
+<div class="ttc" id="anamespacemy__control_html"><div class="ttname"><a href="namespacemy__control.html">my_control</a></div><div class="ttdef"><b>Definition</b> UUVCommandNormalizer.cpp:7</div></div>
+</div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8

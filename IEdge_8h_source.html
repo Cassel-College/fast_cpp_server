@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_edge/IEdge.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_1c8e19e5f988aabcb1d6c4e45e28b8fb.html">my_edge</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">IEdge.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="IEdge_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;nlohmann/json.hpp&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="MyData_8h.html">MyData.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__edge.html">my_edge</a> {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacemy__data.html">my_data</a>;</div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123">   15</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123">SubmitCode</a> {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  <a class="code hl_enumvalue" href="namespacemy__data.html#a59e56af19e754a6aa26a612ebf91d05faa60852f204ed8028c1c58808b746d115">Ok</a> = 0,            </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  <a class="code hl_enumvalue" href="namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123ae457ff7a83d0a8681fa483f898788515">NotRunning</a> = 1,    </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <a class="code hl_enumvalue" href="namespacemy__data.html#a59e56af19e754a6aa26a612ebf91d05fa30ed97dc28749ab04581aeb9febe8ea2">EStop</a> = 2,         </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  <a class="code hl_enumvalue" href="namespacemy__data.html#a59e56af19e754a6aa26a612ebf91d05fae01b8763e8076df4395e3fa649286e67">InvalidCommand</a> = 3,</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <a class="code hl_enumvalue" href="namespacemy__data.html#a59e56af19e754a6aa26a612ebf91d05fa594aff36300fd5882c438e822a84df0c">UnknownDevice</a> = 4, </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <a class="code hl_enumvalue" href="namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123abdf0d370094dbc12551f8bcb592eee60">QueueShutdown</a> = 5, </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <a class="code hl_enumvalue" href="namespacemy__data.html#a59e56af19e754a6aa26a612ebf91d05fa8462b58246e70e5c83e5b939a9332cb5">InternalError</a> = 6  </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>};</div>
+</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structmy__edge_1_1SubmitResult.html">   28</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structmy__edge_1_1SubmitResult.html">SubmitResult</a> {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="structmy__edge_1_1SubmitResult.html#a8e917b709d37e81cc98952ee3eafe53a">   29</a></span>  <a class="code hl_enumeration" href="namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123">SubmitCode</a> <a class="code hl_variable" href="structmy__edge_1_1SubmitResult.html#a8e917b709d37e81cc98952ee3eafe53a">code</a>{<a class="code hl_enumvalue" href="namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123a8462b58246e70e5c83e5b939a9332cb5">SubmitCode::InternalError</a>};</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="structmy__edge_1_1SubmitResult.html#a36bd74109f547f7f8198faf5a12d2879">   30</a></span>  std::string <a class="code hl_variable" href="structmy__edge_1_1SubmitResult.html#a36bd74109f547f7f8198faf5a12d2879">message</a>{};</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="structmy__edge_1_1SubmitResult.html#a8e66bd7ab8e4d233e434794c9004724a">   32</a></span>  <a class="code hl_typedef" href="namespacemy__data.html#aa97613f313f7fbbad8c368f2599e3f26">my_data::EdgeId</a> <a class="code hl_variable" href="structmy__edge_1_1SubmitResult.html#a8e66bd7ab8e4d233e434794c9004724a">edge_id</a>{};</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structmy__edge_1_1SubmitResult.html#a359b04c509e360ee3b29f70f8613f894">   33</a></span>  <a class="code hl_typedef" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a> <a class="code hl_variable" href="structmy__edge_1_1SubmitResult.html#a359b04c509e360ee3b29f70f8613f894">device_id</a>{};</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="structmy__edge_1_1SubmitResult.html#afd8b683aa30fbfd3583d9dde72c1a124">   34</a></span>  <a class="code hl_typedef" href="namespacemy__data.html#ac23d9638c60a0a676f3c71b8f191ed64">my_data::CommandId</a> <a class="code hl_variable" href="structmy__edge_1_1SubmitResult.html#afd8b683aa30fbfd3583d9dde72c1a124">command_id</a>{};</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structmy__edge_1_1SubmitResult.html#a76ae69131c1aab7d9450f4e7205174ef">   35</a></span>  <a class="code hl_typedef" href="namespacemy__data.html#a1b9d3b04810d37cf4227a7e624359f04">my_data::TaskId</a> <a class="code hl_variable" href="structmy__edge_1_1SubmitResult.html#a76ae69131c1aab7d9450f4e7205174ef">task_id</a>{};</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="structmy__edge_1_1SubmitResult.html#a2ed473ea97eaaa2af939fa3d7dbc583a">   37</a></span>  std::int64_t <a class="code hl_variable" href="structmy__edge_1_1SubmitResult.html#a2ed473ea97eaaa2af939fa3d7dbc583a">queue_size_after</a>{0};</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structmy__edge_1_1SubmitResult.html#a03cb7eaa663dc83af68bc28a596d09e6">   39</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="structmy__edge_1_1SubmitResult.html#a03cb7eaa663dc83af68bc28a596d09e6">ok</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="structmy__edge_1_1SubmitResult.html#a8e917b709d37e81cc98952ee3eafe53a">code</a> == <a class="code hl_enumvalue" href="namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123aa60852f204ed8028c1c58808b746d115">SubmitCode::Ok</a>; }</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="structmy__edge_1_1SubmitResult.html#a1fe5121d6528fdea3f243321b3fa3a49">   41</a></span>  std::string <a class="code hl_function" href="structmy__edge_1_1SubmitResult.html#a1fe5121d6528fdea3f243321b3fa3a49">toString</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    std::ostringstream oss;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    oss &lt;&lt; <span class="stringliteral">&quot;SubmitResult{code=&quot;</span> &lt;&lt; <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_variable" href="structmy__edge_1_1SubmitResult.html#a8e917b709d37e81cc98952ee3eafe53a">code</a>)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        &lt;&lt; <span class="stringliteral">&quot;, message=&quot;</span> &lt;&lt; <a class="code hl_variable" href="structmy__edge_1_1SubmitResult.html#a36bd74109f547f7f8198faf5a12d2879">message</a></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        &lt;&lt; <span class="stringliteral">&quot;, edge_id=&quot;</span> &lt;&lt; <a class="code hl_variable" href="structmy__edge_1_1SubmitResult.html#a8e66bd7ab8e4d233e434794c9004724a">edge_id</a></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        &lt;&lt; <span class="stringliteral">&quot;, device_id=&quot;</span> &lt;&lt; <a class="code hl_variable" href="structmy__edge_1_1SubmitResult.html#a359b04c509e360ee3b29f70f8613f894">device_id</a></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        &lt;&lt; <span class="stringliteral">&quot;, command_id=&quot;</span> &lt;&lt; <a class="code hl_variable" href="structmy__edge_1_1SubmitResult.html#afd8b683aa30fbfd3583d9dde72c1a124">command_id</a></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        &lt;&lt; <span class="stringliteral">&quot;, task_id=&quot;</span> &lt;&lt; <a class="code hl_variable" href="structmy__edge_1_1SubmitResult.html#a76ae69131c1aab7d9450f4e7205174ef">task_id</a></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        &lt;&lt; <span class="stringliteral">&quot;, queue_size_after=&quot;</span> &lt;&lt; <a class="code hl_variable" href="structmy__edge_1_1SubmitResult.html#a2ed473ea97eaaa2af939fa3d7dbc583a">queue_size_after</a></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        &lt;&lt; <span class="stringliteral">&quot;}&quot;</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordflow">return</span> oss.str();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  }</div>
+</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>};</div>
+</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="foldopen" id="foldopen00058" data-start="{" data-end="}">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="namespacemy__edge.html#a3cdd67e7b070da9e7e0ea5cbd24e0ae2">   58</a></span><span class="keyword">inline</span> std::string <a class="code hl_function" href="namespacemy__data.html#aa2c3b20a64b6aef24654f21b84592582">ToString</a>(<a class="code hl_enumeration" href="namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123">SubmitCode</a> c) {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <span class="keywordflow">switch</span> (c) {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123aa60852f204ed8028c1c58808b746d115">SubmitCode::Ok</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;Ok&quot;</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123ae457ff7a83d0a8681fa483f898788515">SubmitCode::NotRunning</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;NotRunning&quot;</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123a30ed97dc28749ab04581aeb9febe8ea2">SubmitCode::EStop</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;EStop&quot;</span>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123ae01b8763e8076df4395e3fa649286e67">SubmitCode::InvalidCommand</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;InvalidCommand&quot;</span>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123a594aff36300fd5882c438e822a84df0c">SubmitCode::UnknownDevice</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;UnknownDevice&quot;</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123abdf0d370094dbc12551f8bcb592eee60">SubmitCode::QueueShutdown</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;QueueShutdown&quot;</span>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123a8462b58246e70e5c83e5b939a9332cb5">SubmitCode::InternalError</a>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;InternalError&quot;</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordflow">default</span>: <span class="keywordflow">return</span> <span class="stringliteral">&quot;UnknownSubmitCode&quot;</span>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>}</div>
+</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="foldopen" id="foldopen00074" data-start="{" data-end="};">
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="classmy__edge_1_1IEdge.html">   74</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__edge_1_1IEdge.html">IEdge</a> {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="classmy__edge_1_1IEdge.html#a7becc3120434acd304be22e8c95e3483">   76</a></span>  <span class="keyword">virtual</span> <a class="code hl_function" href="classmy__edge_1_1IEdge.html#a7becc3120434acd304be22e8c95e3483">~IEdge</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classmy__edge_1_1IEdge.html#a318f0835a0611f2d747aa141e674af64">   81</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__edge_1_1IEdge.html#a318f0835a0611f2d747aa141e674af64">Init</a>(<span class="keyword">const</span> nlohmann::json&amp; cfg, std::string* err) = 0;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="classmy__edge_1_1IEdge.html#a744bb0d3d651433606080b5b26d35e0c">   86</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__edge_1_1IEdge.html#a744bb0d3d651433606080b5b26d35e0c">Start</a>(std::string* err) = 0;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="classmy__edge_1_1IEdge.html#a3712183223e5f485d82c12ba25933af6">   91</a></span>  <span class="keyword">virtual</span> <a class="code hl_struct" href="structmy__edge_1_1SubmitResult.html">SubmitResult</a> <a class="code hl_function" href="classmy__edge_1_1IEdge.html#a3712183223e5f485d82c12ba25933af6">Submit</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structmy__data_1_1RawCommand.html">my_data::RawCommand</a>&amp; cmd) = 0;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="classmy__edge_1_1IEdge.html#addca2278689b784b5ee28ae266ec58b6">   96</a></span>  <span class="keyword">virtual</span> <a class="code hl_struct" href="structmy__data_1_1EdgeStatus.html">my_data::EdgeStatus</a> <a class="code hl_function" href="classmy__edge_1_1IEdge.html#addca2278689b784b5ee28ae266ec58b6">GetStatusSnapshot</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="classmy__edge_1_1IEdge.html#a40c608fbe6f7a113fc20b8f7f5e8758a">  101</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__edge_1_1IEdge.html#a40c608fbe6f7a113fc20b8f7f5e8758a">SetEStop</a>(<span class="keywordtype">bool</span> active, <span class="keyword">const</span> std::string&amp; reason) = 0;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="classmy__edge_1_1IEdge.html#abe320d57c3dd6c601efaa6e3eeed73d1">  106</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__edge_1_1IEdge.html#abe320d57c3dd6c601efaa6e3eeed73d1">Shutdown</a>() = 0;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="classmy__edge_1_1IEdge.html#a951e7cb90a822e527ac15fe273b4972a">  108</a></span>  <span class="keyword">virtual</span> <a class="code hl_typedef" href="namespacemy__data.html#aa97613f313f7fbbad8c368f2599e3f26">my_data::EdgeId</a> <a class="code hl_function" href="classmy__edge_1_1IEdge.html#a951e7cb90a822e527ac15fe273b4972a">Id</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>};</div>
+</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>} <span class="comment">// namespace my_edge</span></div>
+<div class="ttc" id="aMyData_8h_html"><div class="ttname"><a href="MyData_8h.html">MyData.h</a></div><div class="ttdoc">my_data 模块聚合头文件</div></div>
+<div class="ttc" id="aclassmy__edge_1_1IEdge_html"><div class="ttname"><a href="classmy__edge_1_1IEdge.html">my_edge::IEdge</a></div><div class="ttdoc">Edge Runtime 接口（Init/Start 分离）</div><div class="ttdef"><b>Definition</b> IEdge.h:74</div></div>
+<div class="ttc" id="aclassmy__edge_1_1IEdge_html_a318f0835a0611f2d747aa141e674af64"><div class="ttname"><a href="classmy__edge_1_1IEdge.html#a318f0835a0611f2d747aa141e674af64">my_edge::IEdge::Init</a></div><div class="ttdeci">virtual bool Init(const nlohmann::json &amp;cfg, std::string *err)=0</div><div class="ttdoc">初始化：仅装配，不启动线程</div></div>
+<div class="ttc" id="aclassmy__edge_1_1IEdge_html_a3712183223e5f485d82c12ba25933af6"><div class="ttname"><a href="classmy__edge_1_1IEdge.html#a3712183223e5f485d82c12ba25933af6">my_edge::IEdge::Submit</a></div><div class="ttdeci">virtual SubmitResult Submit(const my_data::RawCommand &amp;cmd)=0</div><div class="ttdoc">Submit：命令入口（Normalize 并入队）</div></div>
+<div class="ttc" id="aclassmy__edge_1_1IEdge_html_a40c608fbe6f7a113fc20b8f7f5e8758a"><div class="ttname"><a href="classmy__edge_1_1IEdge.html#a40c608fbe6f7a113fc20b8f7f5e8758a">my_edge::IEdge::SetEStop</a></div><div class="ttdeci">virtual void SetEStop(bool active, const std::string &amp;reason)=0</div><div class="ttdoc">设置紧急停止</div></div>
+<div class="ttc" id="aclassmy__edge_1_1IEdge_html_a744bb0d3d651433606080b5b26d35e0c"><div class="ttname"><a href="classmy__edge_1_1IEdge.html#a744bb0d3d651433606080b5b26d35e0c">my_edge::IEdge::Start</a></div><div class="ttdeci">virtual bool Start(std::string *err)=0</div><div class="ttdoc">启动：启动所有 device/workflow</div></div>
+<div class="ttc" id="aclassmy__edge_1_1IEdge_html_a7becc3120434acd304be22e8c95e3483"><div class="ttname"><a href="classmy__edge_1_1IEdge.html#a7becc3120434acd304be22e8c95e3483">my_edge::IEdge::~IEdge</a></div><div class="ttdeci">virtual ~IEdge()=default</div></div>
+<div class="ttc" id="aclassmy__edge_1_1IEdge_html_a951e7cb90a822e527ac15fe273b4972a"><div class="ttname"><a href="classmy__edge_1_1IEdge.html#a951e7cb90a822e527ac15fe273b4972a">my_edge::IEdge::Id</a></div><div class="ttdeci">virtual my_data::EdgeId Id() const =0</div></div>
+<div class="ttc" id="aclassmy__edge_1_1IEdge_html_abe320d57c3dd6c601efaa6e3eeed73d1"><div class="ttname"><a href="classmy__edge_1_1IEdge.html#abe320d57c3dd6c601efaa6e3eeed73d1">my_edge::IEdge::Shutdown</a></div><div class="ttdeci">virtual void Shutdown()=0</div><div class="ttdoc">全局停机：Stop devices + Shutdown queues + Join</div></div>
+<div class="ttc" id="aclassmy__edge_1_1IEdge_html_addca2278689b784b5ee28ae266ec58b6"><div class="ttname"><a href="classmy__edge_1_1IEdge.html#addca2278689b784b5ee28ae266ec58b6">my_edge::IEdge::GetStatusSnapshot</a></div><div class="ttdeci">virtual my_data::EdgeStatus GetStatusSnapshot() const =0</div><div class="ttdoc">获取状态快照（EdgeStatus，补 queue_depth/pending/running）</div></div>
+<div class="ttc" id="anamespacemy__data_html"><div class="ttname"><a href="namespacemy__data.html">my_data</a></div><div class="ttdef"><b>Definition</b> Error.cpp:3</div></div>
+<div class="ttc" id="anamespacemy__data_html_a1b9d3b04810d37cf4227a7e624359f04"><div class="ttname"><a href="namespacemy__data.html#a1b9d3b04810d37cf4227a7e624359f04">my_data::TaskId</a></div><div class="ttdeci">std::string TaskId</div><div class="ttdoc">Task ID</div><div class="ttdef"><b>Definition</b> Types.h:20</div></div>
+<div class="ttc" id="anamespacemy__data_html_a59e56af19e754a6aa26a612ebf91d05fa30ed97dc28749ab04581aeb9febe8ea2"><div class="ttname"><a href="namespacemy__data.html#a59e56af19e754a6aa26a612ebf91d05fa30ed97dc28749ab04581aeb9febe8ea2">my_data::ErrorCode::EStop</a></div><div class="ttdeci">@ EStop</div></div>
+<div class="ttc" id="anamespacemy__data_html_a59e56af19e754a6aa26a612ebf91d05fa594aff36300fd5882c438e822a84df0c"><div class="ttname"><a href="namespacemy__data.html#a59e56af19e754a6aa26a612ebf91d05fa594aff36300fd5882c438e822a84df0c">my_data::ErrorCode::UnknownDevice</a></div><div class="ttdeci">@ UnknownDevice</div></div>
+<div class="ttc" id="anamespacemy__data_html_a59e56af19e754a6aa26a612ebf91d05fa8462b58246e70e5c83e5b939a9332cb5"><div class="ttname"><a href="namespacemy__data.html#a59e56af19e754a6aa26a612ebf91d05fa8462b58246e70e5c83e5b939a9332cb5">my_data::ErrorCode::InternalError</a></div><div class="ttdeci">@ InternalError</div></div>
+<div class="ttc" id="anamespacemy__data_html_a59e56af19e754a6aa26a612ebf91d05faa60852f204ed8028c1c58808b746d115"><div class="ttname"><a href="namespacemy__data.html#a59e56af19e754a6aa26a612ebf91d05faa60852f204ed8028c1c58808b746d115">my_data::ErrorCode::Ok</a></div><div class="ttdeci">@ Ok</div></div>
+<div class="ttc" id="anamespacemy__data_html_a59e56af19e754a6aa26a612ebf91d05fae01b8763e8076df4395e3fa649286e67"><div class="ttname"><a href="namespacemy__data.html#a59e56af19e754a6aa26a612ebf91d05fae01b8763e8076df4395e3fa649286e67">my_data::ErrorCode::InvalidCommand</a></div><div class="ttdeci">@ InvalidCommand</div></div>
+<div class="ttc" id="anamespacemy__data_html_a7f44417fe7bdfd39f515815285f3c8fd"><div class="ttname"><a href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a></div><div class="ttdeci">std::string DeviceId</div><div class="ttdoc">专业设备ID（按 device_id 一对一实例）</div><div class="ttdef"><b>Definition</b> Types.h:15</div></div>
+<div class="ttc" id="anamespacemy__data_html_aa2c3b20a64b6aef24654f21b84592582"><div class="ttname"><a href="namespacemy__data.html#aa2c3b20a64b6aef24654f21b84592582">my_data::ToString</a></div><div class="ttdeci">std::string ToString(ErrorCode code)</div><div class="ttdoc">将错误码转为可读字符串</div><div class="ttdef"><b>Definition</b> Error.cpp:5</div></div>
+<div class="ttc" id="anamespacemy__data_html_aa97613f313f7fbbad8c368f2599e3f26"><div class="ttname"><a href="namespacemy__data.html#aa97613f313f7fbbad8c368f2599e3f26">my_data::EdgeId</a></div><div class="ttdeci">std::string EdgeId</div><div class="ttdoc">边缘执行器ID</div><div class="ttdef"><b>Definition</b> Types.h:10</div></div>
+<div class="ttc" id="anamespacemy__data_html_ac23d9638c60a0a676f3c71b8f191ed64"><div class="ttname"><a href="namespacemy__data.html#ac23d9638c60a0a676f3c71b8f191ed64">my_data::CommandId</a></div><div class="ttdeci">std::string CommandId</div><div class="ttdoc">Command ID（外部输入或上层生成，用于溯源/幂等）</div><div class="ttdef"><b>Definition</b> Types.h:25</div></div>
+<div class="ttc" id="anamespacemy__edge_html"><div class="ttname"><a href="namespacemy__edge.html">my_edge</a></div><div class="ttdef"><b>Definition</b> UUVEdge.cpp:9</div></div>
+<div class="ttc" id="anamespacemy__edge_html_a605c0c17413514783b3c6ce96188e123"><div class="ttname"><a href="namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123">my_edge::SubmitCode</a></div><div class="ttdeci">SubmitCode</div><div class="ttdoc">Submit 结果码：用于表达 Submit 的详细含义（替代 bool）</div><div class="ttdef"><b>Definition</b> IEdge.h:15</div></div>
+<div class="ttc" id="anamespacemy__edge_html_a605c0c17413514783b3c6ce96188e123a30ed97dc28749ab04581aeb9febe8ea2"><div class="ttname"><a href="namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123a30ed97dc28749ab04581aeb9febe8ea2">my_edge::SubmitCode::EStop</a></div><div class="ttdeci">@ EStop</div><div class="ttdoc">EStop 激活，默认拒绝入队（可配置允许入队）</div></div>
+<div class="ttc" id="anamespacemy__edge_html_a605c0c17413514783b3c6ce96188e123a594aff36300fd5882c438e822a84df0c"><div class="ttname"><a href="namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123a594aff36300fd5882c438e822a84df0c">my_edge::SubmitCode::UnknownDevice</a></div><div class="ttdeci">@ UnknownDevice</div><div class="ttdoc">未注册 device_id</div></div>
+<div class="ttc" id="anamespacemy__edge_html_a605c0c17413514783b3c6ce96188e123a8462b58246e70e5c83e5b939a9332cb5"><div class="ttname"><a href="namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123a8462b58246e70e5c83e5b939a9332cb5">my_edge::SubmitCode::InternalError</a></div><div class="ttdeci">@ InternalError</div><div class="ttdoc">未知异常</div></div>
+<div class="ttc" id="anamespacemy__edge_html_a605c0c17413514783b3c6ce96188e123aa60852f204ed8028c1c58808b746d115"><div class="ttname"><a href="namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123aa60852f204ed8028c1c58808b746d115">my_edge::SubmitCode::Ok</a></div><div class="ttdeci">@ Ok</div><div class="ttdoc">入队成功（不代表执行成功）</div></div>
+<div class="ttc" id="anamespacemy__edge_html_a605c0c17413514783b3c6ce96188e123abdf0d370094dbc12551f8bcb592eee60"><div class="ttname"><a href="namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123abdf0d370094dbc12551f8bcb592eee60">my_edge::SubmitCode::QueueShutdown</a></div><div class="ttdeci">@ QueueShutdown</div><div class="ttdoc">队列已 shutdown（通常是 shutdown 过程中）</div></div>
+<div class="ttc" id="anamespacemy__edge_html_a605c0c17413514783b3c6ce96188e123ae01b8763e8076df4395e3fa649286e67"><div class="ttname"><a href="namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123ae01b8763e8076df4395e3fa649286e67">my_edge::SubmitCode::InvalidCommand</a></div><div class="ttdeci">@ InvalidCommand</div><div class="ttdoc">规范化失败（字段缺失/格式错误）</div></div>
+<div class="ttc" id="anamespacemy__edge_html_a605c0c17413514783b3c6ce96188e123ae457ff7a83d0a8681fa483f898788515"><div class="ttname"><a href="namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123ae457ff7a83d0a8681fa483f898788515">my_edge::SubmitCode::NotRunning</a></div><div class="ttdeci">@ NotRunning</div><div class="ttdoc">Edge 未 Start（Ready 状态拒绝入队）</div></div>
+<div class="ttc" id="astructmy__data_1_1EdgeStatus_html"><div class="ttname"><a href="structmy__data_1_1EdgeStatus.html">my_data::EdgeStatus</a></div><div class="ttdoc">Edge状态快照</div><div class="ttdef"><b>Definition</b> Status.h:51</div></div>
+<div class="ttc" id="astructmy__data_1_1RawCommand_html"><div class="ttname"><a href="structmy__data_1_1RawCommand.html">my_data::RawCommand</a></div><div class="ttdoc">原始控制命令（接收层输入）</div><div class="ttdef"><b>Definition</b> RawCommand.h:15</div></div>
+<div class="ttc" id="astructmy__edge_1_1SubmitResult_html"><div class="ttname"><a href="structmy__edge_1_1SubmitResult.html">my_edge::SubmitResult</a></div><div class="ttdoc">Submit 结构化返回</div><div class="ttdef"><b>Definition</b> IEdge.h:28</div></div>
+<div class="ttc" id="astructmy__edge_1_1SubmitResult_html_a03cb7eaa663dc83af68bc28a596d09e6"><div class="ttname"><a href="structmy__edge_1_1SubmitResult.html#a03cb7eaa663dc83af68bc28a596d09e6">my_edge::SubmitResult::ok</a></div><div class="ttdeci">bool ok() const</div><div class="ttdef"><b>Definition</b> IEdge.h:39</div></div>
+<div class="ttc" id="astructmy__edge_1_1SubmitResult_html_a1fe5121d6528fdea3f243321b3fa3a49"><div class="ttname"><a href="structmy__edge_1_1SubmitResult.html#a1fe5121d6528fdea3f243321b3fa3a49">my_edge::SubmitResult::toString</a></div><div class="ttdeci">std::string toString() const</div><div class="ttdef"><b>Definition</b> IEdge.h:41</div></div>
+<div class="ttc" id="astructmy__edge_1_1SubmitResult_html_a2ed473ea97eaaa2af939fa3d7dbc583a"><div class="ttname"><a href="structmy__edge_1_1SubmitResult.html#a2ed473ea97eaaa2af939fa3d7dbc583a">my_edge::SubmitResult::queue_size_after</a></div><div class="ttdeci">std::int64_t queue_size_after</div><div class="ttdef"><b>Definition</b> IEdge.h:37</div></div>
+<div class="ttc" id="astructmy__edge_1_1SubmitResult_html_a359b04c509e360ee3b29f70f8613f894"><div class="ttname"><a href="structmy__edge_1_1SubmitResult.html#a359b04c509e360ee3b29f70f8613f894">my_edge::SubmitResult::device_id</a></div><div class="ttdeci">my_data::DeviceId device_id</div><div class="ttdef"><b>Definition</b> IEdge.h:33</div></div>
+<div class="ttc" id="astructmy__edge_1_1SubmitResult_html_a36bd74109f547f7f8198faf5a12d2879"><div class="ttname"><a href="structmy__edge_1_1SubmitResult.html#a36bd74109f547f7f8198faf5a12d2879">my_edge::SubmitResult::message</a></div><div class="ttdeci">std::string message</div><div class="ttdef"><b>Definition</b> IEdge.h:30</div></div>
+<div class="ttc" id="astructmy__edge_1_1SubmitResult_html_a76ae69131c1aab7d9450f4e7205174ef"><div class="ttname"><a href="structmy__edge_1_1SubmitResult.html#a76ae69131c1aab7d9450f4e7205174ef">my_edge::SubmitResult::task_id</a></div><div class="ttdeci">my_data::TaskId task_id</div><div class="ttdef"><b>Definition</b> IEdge.h:35</div></div>
+<div class="ttc" id="astructmy__edge_1_1SubmitResult_html_a8e66bd7ab8e4d233e434794c9004724a"><div class="ttname"><a href="structmy__edge_1_1SubmitResult.html#a8e66bd7ab8e4d233e434794c9004724a">my_edge::SubmitResult::edge_id</a></div><div class="ttdeci">my_data::EdgeId edge_id</div><div class="ttdef"><b>Definition</b> IEdge.h:32</div></div>
+<div class="ttc" id="astructmy__edge_1_1SubmitResult_html_a8e917b709d37e81cc98952ee3eafe53a"><div class="ttname"><a href="structmy__edge_1_1SubmitResult.html#a8e917b709d37e81cc98952ee3eafe53a">my_edge::SubmitResult::code</a></div><div class="ttdeci">SubmitCode code</div><div class="ttdef"><b>Definition</b> IEdge.h:29</div></div>
+<div class="ttc" id="astructmy__edge_1_1SubmitResult_html_afd8b683aa30fbfd3583d9dde72c1a124"><div class="ttname"><a href="structmy__edge_1_1SubmitResult.html#afd8b683aa30fbfd3583d9dde72c1a124">my_edge::SubmitResult::command_id</a></div><div class="ttdeci">my_data::CommandId command_id</div><div class="ttdef"><b>Definition</b> IEdge.h:34</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

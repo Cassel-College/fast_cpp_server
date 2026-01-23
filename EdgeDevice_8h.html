@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PROJECT_NAME: src/util/my_edge/EdgeDevice.h 文件参考</title>
+<title>PROJECT_NAME: src/util/my_edge_manager/EdgeDevice.h 文件参考</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,7 +69,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_1c8e19e5f988aabcb1d6c4e45e28b8fb.html">my_edge</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_750db74546a36ac2571b553de100cfae.html">my_edge_manager</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -88,67 +88,67 @@ $(function() {
 <code>#include &lt;mutex&gt;</code><br />
 <code>#include &lt;nlohmann/json.hpp&gt;</code><br />
 <code>#include &quot;<a class="el" href="MyLog_8h_source.html">MyLog.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="DeviceOnlineMonitor_8h_source.html">DeviceOnlineMonitor.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="DeviceOnlineMonitor_8h_source.html">device_online_monitor/DeviceOnlineMonitor.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 EdgeDevice.h 的引用(Include)关系图:</div>
 <div class="dyncontent">
-<div class="center"><img src="EdgeDevice_8h__incl.png" border="0" usemap="#asrc_2util_2my__edge_2EdgeDevice_8h" alt=""/></div>
-<map name="asrc_2util_2my__edge_2EdgeDevice_8h" id="asrc_2util_2my__edge_2EdgeDevice_8h">
-<area shape="rect" title=" " alt="" coords="841,5,1064,31"/>
-<area shape="rect" title=" " alt="" coords="771,159,830,185"/>
-<area shape="poly" title=" " alt="" coords="860,33,818,51,800,64,786,80,779,96,779,113,790,146,785,148,774,113,774,94,781,77,797,60,816,46,858,28"/>
-<area shape="rect" title=" " alt="" coords="1102,79,1153,104"/>
-<area shape="poly" title=" " alt="" coords="982,28,1090,72,1088,77,980,33"/>
-<area shape="rect" title=" " alt="" coords="854,159,918,185"/>
-<area shape="poly" title=" " alt="" coords="871,33,829,51,811,64,796,80,792,90,792,100,802,119,823,136,848,151,845,155,820,140,798,122,786,101,786,89,792,77,807,60,826,46,869,28"/>
-<area shape="rect" title=" " alt="" coords="942,159,1009,185"/>
-<area shape="poly" title=" " alt="" coords="964,29,979,51,991,78,994,114,987,146,982,145,988,113,986,79,974,53,960,32"/>
-<area shape="rect" title=" " alt="" coords="1033,159,1097,185"/>
-<area shape="poly" title=" " alt="" coords="967,29,1012,77,1055,145,1050,148,1008,80,963,33"/>
-<area shape="rect" title=" " alt="" coords="1177,79,1323,104"/>
-<area shape="poly" title=" " alt="" coords="1001,28,1189,73,1188,78,1000,33"/>
-<area shape="rect" href="MyLog_8h.html" title=" " alt="" coords="523,79,601,104"/>
-<area shape="poly" title=" " alt="" coords="890,33,615,83,614,78,889,28"/>
-<area shape="rect" href="DeviceOnlineMonitor_8h.html" title=" " alt="" coords="806,79,977,104"/>
-<area shape="poly" title=" " alt="" coords="945,33,912,70,908,66,941,29"/>
-<area shape="poly" title=" " alt="" coords="601,100,676,121,760,149,765,151,763,156,758,155,674,126,600,105"/>
-<area shape="rect" title=" " alt="" coords="5,159,129,185"/>
-<area shape="poly" title=" " alt="" coords="523,99,356,120,141,155,122,159,121,154,140,149,356,114,523,94"/>
-<area shape="rect" title=" " alt="" coords="153,152,312,192"/>
-<area shape="poly" title=" " alt="" coords="524,105,326,151,324,146,522,99"/>
-<area shape="rect" title=" " alt="" coords="336,159,455,185"/>
-<area shape="poly" title=" " alt="" coords="539,106,433,156,431,151,537,102"/>
-<area shape="rect" title=" " alt="" coords="479,159,645,185"/>
-<area shape="poly" title=" " alt="" coords="565,104,565,145,559,145,559,104"/>
-<area shape="rect" title=" " alt="" coords="670,159,747,185"/>
-<area shape="poly" title=" " alt="" coords="585,102,676,150,674,155,582,107"/>
-<area shape="poly" title=" " alt="" coords="880,106,826,152,823,148,876,102"/>
-<area shape="poly" title=" " alt="" coords="893,104,890,146,885,145,888,104"/>
-<area shape="poly" title=" " alt="" coords="906,102,955,148,951,152,902,106"/>
-<area shape="poly" title=" " alt="" coords="918,102,1028,151,1026,156,915,106"/>
+<div class="center"><img src="EdgeDevice_8h__incl.png" border="0" usemap="#asrc_2util_2my__edge__manager_2EdgeDevice_8h" alt=""/></div>
+<map name="asrc_2util_2my__edge__manager_2EdgeDevice_8h" id="asrc_2util_2my__edge__manager_2EdgeDevice_8h">
+<area shape="rect" title=" " alt="" coords="854,5,1049,45"/>
+<area shape="rect" title=" " alt="" coords="771,189,830,214"/>
+<area shape="poly" title=" " alt="" coords="855,44,812,64,794,78,779,95,772,114,773,135,779,156,788,176,783,178,774,158,767,136,766,113,774,92,790,74,809,59,852,39"/>
+<area shape="rect" title=" " alt="" coords="1102,101,1153,126"/>
+<area shape="poly" title=" " alt="" coords="991,43,1093,92,1091,97,989,48"/>
+<area shape="rect" title=" " alt="" coords="854,189,918,214"/>
+<area shape="poly" title=" " alt="" coords="856,48,819,67,804,79,791,95,785,113,791,132,816,155,854,180,851,184,812,159,786,135,779,113,786,92,800,76,816,62,853,43"/>
+<area shape="rect" title=" " alt="" coords="942,189,1009,214"/>
+<area shape="poly" title=" " alt="" coords="967,44,980,67,990,93,993,137,986,176,980,175,987,136,985,94,975,69,962,47"/>
+<area shape="rect" title=" " alt="" coords="1033,189,1097,214"/>
+<area shape="poly" title=" " alt="" coords="972,44,1011,92,1037,135,1056,175,1052,177,1032,138,1006,95,968,47"/>
+<area shape="rect" title=" " alt="" coords="1177,101,1323,126"/>
+<area shape="poly" title=" " alt="" coords="1018,43,1198,94,1197,100,1016,48"/>
+<area shape="rect" href="MyLog_8h.html" title=" " alt="" coords="523,101,601,126"/>
+<area shape="poly" title=" " alt="" coords="866,48,615,103,614,98,865,43"/>
+<area shape="rect" href="DeviceOnlineMonitor_8h.html" title=" " alt="" coords="801,93,976,133"/>
+<area shape="poly" title=" " alt="" coords="940,47,913,84,908,81,935,44"/>
+<area shape="poly" title=" " alt="" coords="600,123,760,179,765,181,763,186,758,184,598,129"/>
+<area shape="rect" title=" " alt="" coords="5,189,129,214"/>
+<area shape="poly" title=" " alt="" coords="523,122,357,146,141,184,123,188,122,183,140,179,356,141,522,117"/>
+<area shape="rect" title=" " alt="" coords="153,181,312,221"/>
+<area shape="poly" title=" " alt="" coords="524,127,319,180,318,175,522,122"/>
+<area shape="rect" title=" " alt="" coords="336,189,455,214"/>
+<area shape="poly" title=" " alt="" coords="541,129,431,185,429,180,538,124"/>
+<area shape="rect" title=" " alt="" coords="479,189,645,214"/>
+<area shape="poly" title=" " alt="" coords="565,126,565,174,559,174,559,126"/>
+<area shape="rect" title=" " alt="" coords="670,189,747,214"/>
+<area shape="poly" title=" " alt="" coords="583,124,678,179,675,184,580,128"/>
+<area shape="poly" title=" " alt="" coords="871,136,825,180,821,177,867,132"/>
+<area shape="poly" title=" " alt="" coords="891,134,889,175,884,175,885,134"/>
+<area shape="poly" title=" " alt="" coords="910,132,955,177,952,180,906,136"/>
+<area shape="poly" title=" " alt="" coords="928,131,1030,180,1028,185,926,136"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 此图展示该文件直接或间接的被哪些文件引用了:</div>
 <div class="dyncontent">
-<div class="center"><img src="EdgeDevice_8h__dep__incl.png" border="0" usemap="#asrc_2util_2my__edge_2EdgeDevice_8hdep" alt=""/></div>
-<map name="asrc_2util_2my__edge_2EdgeDevice_8hdep" id="asrc_2util_2my__edge_2EdgeDevice_8hdep">
-<area shape="rect" title=" " alt="" coords="118,5,341,31"/>
-<area shape="rect" href="Pipeline_8cpp.html" title=" " alt="" coords="5,152,139,192"/>
-<area shape="poly" title=" " alt="" coords="168,37,131,55,99,80,89,97,81,116,75,152,70,151,76,115,84,95,95,77,128,50,165,33"/>
-<area shape="rect" href="EdgeDevice_8cpp.html" title=" " alt="" coords="110,79,349,104"/>
-<area shape="poly" title=" " alt="" coords="232,44,232,79,227,79,227,44"/>
-<area shape="rect" href="MyEdgeManager_8h.html" title=" " alt="" coords="373,79,627,104"/>
-<area shape="poly" title=" " alt="" coords="287,32,457,76,455,81,285,37"/>
-<area shape="poly" title=" " alt="" coords="412,109,151,155,139,157,138,152,150,149,411,103"/>
-<area shape="rect" href="EdgeController_8hpp.html" title=" " alt="" coords="163,159,408,185"/>
-<area shape="poly" title=" " alt="" coords="457,111,317,162,316,157,455,106"/>
-<area shape="rect" href="MyEdgeManager_8cpp.html" title=" " alt="" coords="432,159,701,185"/>
-<area shape="poly" title=" " alt="" coords="521,113,559,157,555,161,517,116"/>
-<area shape="rect" href="MyHeartbeatManager_8cpp.html" title=" " alt="" coords="725,152,920,192"/>
-<area shape="poly" title=" " alt="" coords="561,105,746,149,744,155,559,110"/>
-<area shape="rect" href="MyAPI_8cpp.html" title=" " alt="" coords="190,240,381,265"/>
-<area shape="poly" title=" " alt="" coords="288,198,288,240,283,240,283,198"/>
+<div class="center"><img src="EdgeDevice_8h__dep__incl.png" border="0" usemap="#asrc_2util_2my__edge__manager_2EdgeDevice_8hdep" alt=""/></div>
+<map name="asrc_2util_2my__edge__manager_2EdgeDevice_8hdep" id="asrc_2util_2my__edge__manager_2EdgeDevice_8hdep">
+<area shape="rect" title=" " alt="" coords="109,5,304,45"/>
+<area shape="rect" href="Pipeline_8cpp.html" title=" " alt="" coords="5,181,139,221"/>
+<area shape="poly" title=" " alt="" coords="149,54,122,72,99,95,88,116,81,139,75,182,70,181,75,138,83,114,95,92,118,68,146,50"/>
+<area shape="rect" href="EdgeDevice_8cpp.html" title=" " alt="" coords="109,93,304,133"/>
+<area shape="poly" title=" " alt="" coords="209,59,209,93,204,93,204,59"/>
+<area shape="rect" href="MyEdgeManager_8h.html" title=" " alt="" coords="328,93,523,133"/>
+<area shape="poly" title=" " alt="" coords="268,48,378,91,376,96,267,53"/>
+<area shape="poly" title=" " alt="" coords="335,139,140,186,139,181,334,134"/>
+<area shape="rect" href="EdgeController_8hpp.html" title=" " alt="" coords="163,189,408,214"/>
+<area shape="poly" title=" " alt="" coords="384,143,305,191,303,186,382,138"/>
+<area shape="rect" href="MyEdgeManager_8cpp.html" title=" " alt="" coords="432,181,627,221"/>
+<area shape="poly" title=" " alt="" coords="461,140,508,179,505,183,457,144"/>
+<area shape="rect" href="MyHeartbeatManager_8cpp.html" title=" " alt="" coords="651,181,845,221"/>
+<area shape="poly" title=" " alt="" coords="510,134,678,179,677,184,508,139"/>
+<area shape="rect" href="MyAPI_8cpp.html" title=" " alt="" coords="190,269,381,295"/>
+<area shape="poly" title=" " alt="" coords="288,228,288,269,283,269,283,228"/>
 </map>
 </div>
 </div>
@@ -156,14 +156,14 @@ EdgeDevice.h 的引用(Include)关系图:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 结构体</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structedge_1_1EdgeAction.html">EdgeAction</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structedge__manager_1_1EdgeAction.html">EdgeAction</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedge_1_1EdgeDevice.html">EdgeDevice</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedge__manager_1_1EdgeDevice.html">EdgeDevice</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 命名空间</h2></td></tr>
-<tr class="memitem:namespaceedge" id="r_namespaceedge"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceedge.html">edge</a></td></tr>
+<tr class="memitem:namespaceedge__manager" id="r_namespaceedge__manager"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceedge__manager.html">edge_manager</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
@@ -173,10 +173,10 @@ EdgeDevice.h 的引用(Include)关系图:</div>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 枚举</h2></td></tr>
-<tr class="memitem:a705af4082cd372cbec46518713ce86f2" id="r_a705af4082cd372cbec46518713ce86f2"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceedge.html#a705af4082cd372cbec46518713ce86f2">DeviceBusinessStatus</a> { <a class="el" href="namespaceedge.html#a705af4082cd372cbec46518713ce86f2aa5daf7f2ebbba4975d61dab1c40188c7">IDLE</a>
-, <a class="el" href="namespaceedge.html#a705af4082cd372cbec46518713ce86f2a279d7651aba75af46949322315dd5045">COLLECTING</a>
-, <a class="el" href="namespaceedge.html#a705af4082cd372cbec46518713ce86f2ac6e6064fdaf5aa9b04472acaffdcea5b">EXECUTING</a>
-, <a class="el" href="namespaceedge.html#a705af4082cd372cbec46518713ce86f2a893b3aaf1661e3717b18e8335ff93a72">FAULT</a>
+<tr class="memitem:a705af4082cd372cbec46518713ce86f2" id="r_a705af4082cd372cbec46518713ce86f2"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceedge__manager.html#a705af4082cd372cbec46518713ce86f2">DeviceBusinessStatus</a> { <a class="el" href="namespaceedge__manager.html#a705af4082cd372cbec46518713ce86f2aa5daf7f2ebbba4975d61dab1c40188c7">IDLE</a>
+, <a class="el" href="namespaceedge__manager.html#a705af4082cd372cbec46518713ce86f2a279d7651aba75af46949322315dd5045">COLLECTING</a>
+, <a class="el" href="namespaceedge__manager.html#a705af4082cd372cbec46518713ce86f2ac6e6064fdaf5aa9b04472acaffdcea5b">EXECUTING</a>
+, <a class="el" href="namespaceedge__manager.html#a705af4082cd372cbec46518713ce86f2a893b3aaf1661e3717b18e8335ff93a72">FAULT</a>
  }</td></tr>
 <tr class="separator:a705af4082cd372cbec46518713ce86f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>

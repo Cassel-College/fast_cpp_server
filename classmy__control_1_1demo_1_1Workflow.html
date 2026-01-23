@@ -1,0 +1,856 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: Workflow类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacemy__control.html">my_control</a></li><li class="navelem"><a class="el" href="namespacemy__control_1_1demo.html">demo</a></li><li class="navelem"><a class="el" href="classmy__control_1_1demo_1_1Workflow.html">Workflow</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a>  </div>
+  <div class="headertitle"><div class="title">Workflow类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Workflow（调度线程）：每个 device_id 一条线程  
+ <a href="classmy__control_1_1demo_1_1Workflow.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Workflow_8h_source.html">Workflow.h</a>&gt;</code></p>
+<div class="dynheader">
+Workflow 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__control_1_1demo_1_1Workflow__coll__graph.png" border="0" usemap="#aWorkflow_coll__map" alt="Collaboration graph"/></div>
+<map name="aWorkflow_coll__map" id="aWorkflow_coll__map">
+<area shape="rect" title="Workflow（调度线程）：每个 device_id 一条线程" alt="" coords="64,93,147,119"/>
+<area shape="rect" href="classmy__control_1_1TaskQueue.html" title="线程安全任务队列（MVP）" alt="" coords="5,5,99,31"/>
+<area shape="poly" title=" " alt="" coords="66,42,81,68,98,92,94,95,76,71,61,44"/>
+<area shape="rect" href="classmy__control_1_1IControl.html" title="执行器抽象接口：负责真正执行 Task" alt="" coords="123,5,197,31"/>
+<area shape="poly" title=" " alt="" coords="149,44,133,71,116,95,112,92,128,68,144,42"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:af260224de6bec2a95a889501d19809f2" id="r_af260224de6bec2a95a889501d19809f2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__control_1_1demo_1_1Workflow.html#af260224de6bec2a95a889501d19809f2">StartCallback</a> = std::function&lt; void(const <a class="el" href="structmy__data_1_1Task.html">my_data::Task</a> &amp;)&gt;</td></tr>
+<tr class="separator:af260224de6bec2a95a889501d19809f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dd461a10fac993210cf36ee20c87422" id="r_a3dd461a10fac993210cf36ee20c87422"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a3dd461a10fac993210cf36ee20c87422">FinishCallback</a> = std::function&lt; void(const <a class="el" href="structmy__data_1_1Task.html">my_data::Task</a> &amp;, const <a class="el" href="structmy__data_1_1TaskResult.html">my_data::TaskResult</a> &amp;)&gt;</td></tr>
+<tr class="separator:a3dd461a10fac993210cf36ee20c87422"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ac1f0cbdf0411057fb0a5f8f2cbd19e70" id="r_ac1f0cbdf0411057fb0a5f8f2cbd19e70"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__control_1_1demo_1_1Workflow.html#ac1f0cbdf0411057fb0a5f8f2cbd19e70">Workflow</a> (std::string name, <a class="el" href="classmy__control_1_1TaskQueue.html">my_control::TaskQueue</a> &amp;queue, <a class="el" href="classmy__control_1_1IControl.html">my_control::IControl</a> &amp;control)</td></tr>
+<tr class="separator:ac1f0cbdf0411057fb0a5f8f2cbd19e70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab282c005f4ccf9a3c9b713e978d8f751" id="r_ab282c005f4ccf9a3c9b713e978d8f751"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__control_1_1demo_1_1Workflow.html#ab282c005f4ccf9a3c9b713e978d8f751">~Workflow</a> ()</td></tr>
+<tr class="separator:ab282c005f4ccf9a3c9b713e978d8f751"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2704cf8dcf98a56e82960da17689ff47" id="r_a2704cf8dcf98a56e82960da17689ff47"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a2704cf8dcf98a56e82960da17689ff47">Workflow</a> (const <a class="el" href="classmy__control_1_1demo_1_1Workflow.html">Workflow</a> &amp;)=delete</td></tr>
+<tr class="separator:a2704cf8dcf98a56e82960da17689ff47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8318357d5d41fd38132374fba7de3eb5" id="r_a8318357d5d41fd38132374fba7de3eb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmy__control_1_1demo_1_1Workflow.html">Workflow</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a8318357d5d41fd38132374fba7de3eb5">operator=</a> (const <a class="el" href="classmy__control_1_1demo_1_1Workflow.html">Workflow</a> &amp;)=delete</td></tr>
+<tr class="separator:a8318357d5d41fd38132374fba7de3eb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af98d5e0ae43de666618d49a1988d3615" id="r_af98d5e0ae43de666618d49a1988d3615"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__control_1_1demo_1_1Workflow.html#af98d5e0ae43de666618d49a1988d3615">SetEStopFlag</a> (std::atomic&lt; bool &gt; *estop_flag)</td></tr>
+<tr class="separator:af98d5e0ae43de666618d49a1988d3615"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3938ea4b50a522213084eb63e463c79" id="r_ac3938ea4b50a522213084eb63e463c79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__control_1_1demo_1_1Workflow.html#ac3938ea4b50a522213084eb63e463c79">SetStartCallback</a> (<a class="el" href="classmy__control_1_1demo_1_1Workflow.html#af260224de6bec2a95a889501d19809f2">StartCallback</a> cb)</td></tr>
+<tr class="memdesc:ac3938ea4b50a522213084eb63e463c79"><td class="mdescLeft">&#160;</td><td class="mdescRight">任务开始回调（Pop 成功后、DoTask 前触发）  <br /></td></tr>
+<tr class="separator:ac3938ea4b50a522213084eb63e463c79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafddcadd1d6307b5f20f8a33be71fb83" id="r_aafddcadd1d6307b5f20f8a33be71fb83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__control_1_1demo_1_1Workflow.html#aafddcadd1d6307b5f20f8a33be71fb83">SetFinishCallback</a> (<a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a3dd461a10fac993210cf36ee20c87422">FinishCallback</a> cb)</td></tr>
+<tr class="memdesc:aafddcadd1d6307b5f20f8a33be71fb83"><td class="mdescLeft">&#160;</td><td class="mdescRight">任务完成回调（DoTask 后触发）  <br /></td></tr>
+<tr class="separator:aafddcadd1d6307b5f20f8a33be71fb83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa70efaa4751ac6d5d54dce88fe725e0a" id="r_aa70efaa4751ac6d5d54dce88fe725e0a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__control_1_1demo_1_1Workflow.html#aa70efaa4751ac6d5d54dce88fe725e0a">Start</a> ()</td></tr>
+<tr class="separator:aa70efaa4751ac6d5d54dce88fe725e0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17a237457e57625296e6b24feb19c60a" id="r_a17a237457e57625296e6b24feb19c60a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a17a237457e57625296e6b24feb19c60a">Stop</a> ()</td></tr>
+<tr class="separator:a17a237457e57625296e6b24feb19c60a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac24a06ec0749cb482b60f621833bddd7" id="r_ac24a06ec0749cb482b60f621833bddd7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__control_1_1demo_1_1Workflow.html#ac24a06ec0749cb482b60f621833bddd7">Join</a> ()</td></tr>
+<tr class="separator:ac24a06ec0749cb482b60f621833bddd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad201152b05beda61e51e3594ff07c8fe" id="r_ad201152b05beda61e51e3594ff07c8fe"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__control_1_1demo_1_1Workflow.html#ad201152b05beda61e51e3594ff07c8fe">IsRunning</a> () const</td></tr>
+<tr class="separator:ad201152b05beda61e51e3594ff07c8fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8546382b04c2126bd39cc17d72d0b5a2" id="r_a8546382b04c2126bd39cc17d72d0b5a2"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a8546382b04c2126bd39cc17d72d0b5a2">Name</a> () const</td></tr>
+<tr class="separator:a8546382b04c2126bd39cc17d72d0b5a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a2037369e5ec6b779d3c3de24e2cbb614" id="r_a2037369e5ec6b779d3c3de24e2cbb614"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a2037369e5ec6b779d3c3de24e2cbb614">RunLoop</a> ()</td></tr>
+<tr class="separator:a2037369e5ec6b779d3c3de24e2cbb614"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a4d739cc5d335052eb9f5b2ca559b81d1" id="r_a4d739cc5d335052eb9f5b2ca559b81d1"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a4d739cc5d335052eb9f5b2ca559b81d1">name_</a></td></tr>
+<tr class="separator:a4d739cc5d335052eb9f5b2ca559b81d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa88f6b751e2bbe911c4ae2d35a631022" id="r_aa88f6b751e2bbe911c4ae2d35a631022"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmy__control_1_1TaskQueue.html">my_control::TaskQueue</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__control_1_1demo_1_1Workflow.html#aa88f6b751e2bbe911c4ae2d35a631022">queue_</a></td></tr>
+<tr class="separator:aa88f6b751e2bbe911c4ae2d35a631022"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bcaddb83e39d2c871ce71f1085aeb51" id="r_a5bcaddb83e39d2c871ce71f1085aeb51"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmy__control_1_1IControl.html">my_control::IControl</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a5bcaddb83e39d2c871ce71f1085aeb51">control_</a></td></tr>
+<tr class="separator:a5bcaddb83e39d2c871ce71f1085aeb51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9620a15c76ada2388bf678e373a6463" id="r_aa9620a15c76ada2388bf678e373a6463"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__control_1_1demo_1_1Workflow.html#aa9620a15c76ada2388bf678e373a6463">running_</a> {false}</td></tr>
+<tr class="separator:aa9620a15c76ada2388bf678e373a6463"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1a1eeaa4661c67f8e75985160abf62a" id="r_ae1a1eeaa4661c67f8e75985160abf62a"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__control_1_1demo_1_1Workflow.html#ae1a1eeaa4661c67f8e75985160abf62a">stop_</a> {false}</td></tr>
+<tr class="separator:ae1a1eeaa4661c67f8e75985160abf62a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d17662c59ba51130a35fdaa8567db74" id="r_a2d17662c59ba51130a35fdaa8567db74"><td class="memItemLeft" align="right" valign="top">std::thread&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a2d17662c59ba51130a35fdaa8567db74">worker_</a></td></tr>
+<tr class="separator:a2d17662c59ba51130a35fdaa8567db74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af207f215387c2fd372ebb20aa2cc527b" id="r_af207f215387c2fd372ebb20aa2cc527b"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; bool &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__control_1_1demo_1_1Workflow.html#af207f215387c2fd372ebb20aa2cc527b">estop_flag_</a> {nullptr}</td></tr>
+<tr class="separator:af207f215387c2fd372ebb20aa2cc527b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50c19bd995b4eaefa1294e1782781d8e" id="r_a50c19bd995b4eaefa1294e1782781d8e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmy__control_1_1demo_1_1Workflow.html#af260224de6bec2a95a889501d19809f2">StartCallback</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a50c19bd995b4eaefa1294e1782781d8e">on_start_</a> {}</td></tr>
+<tr class="separator:a50c19bd995b4eaefa1294e1782781d8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae64a1b1311cc665802d1bc7326f74bb9" id="r_ae64a1b1311cc665802d1bc7326f74bb9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a3dd461a10fac993210cf36ee20c87422">FinishCallback</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__control_1_1demo_1_1Workflow.html#ae64a1b1311cc665802d1bc7326f74bb9">on_finish_</a> {}</td></tr>
+<tr class="separator:ae64a1b1311cc665802d1bc7326f74bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Workflow（调度线程）：每个 device_id 一条线程 </p>
+<ul>
+<li>绑定：TaskQueue&amp; + <a class="el" href="classmy__control_1_1IControl.html" title="执行器抽象接口：负责真正执行 Task">IControl</a>&amp;</li>
+<li>运行：循环 pop task -&gt; (on_start) -&gt; doTask -&gt; (on_finish)</li>
+<li>停止：Stop + Join；通常由 Device/Edge 生命周期控制 </li>
+</ul>
+</div><h2 class="groupheader">成员类型定义说明</h2>
+<a id="a3dd461a10fac993210cf36ee20c87422" name="a3dd461a10fac993210cf36ee20c87422"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dd461a10fac993210cf36ee20c87422">&#9670;&#160;</a></span>FinishCallback</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a3dd461a10fac993210cf36ee20c87422">FinishCallback</a> =  std::function&lt;void(const <a class="el" href="structmy__data_1_1Task.html">my_data::Task</a>&amp;, const <a class="el" href="structmy__data_1_1TaskResult.html">my_data::TaskResult</a>&amp;)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af260224de6bec2a95a889501d19809f2" name="af260224de6bec2a95a889501d19809f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af260224de6bec2a95a889501d19809f2">&#9670;&#160;</a></span>StartCallback</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#af260224de6bec2a95a889501d19809f2">StartCallback</a> =  std::function&lt;void(const <a class="el" href="structmy__data_1_1Task.html">my_data::Task</a>&amp;)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="ac1f0cbdf0411057fb0a5f8f2cbd19e70" name="ac1f0cbdf0411057fb0a5f8f2cbd19e70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1f0cbdf0411057fb0a5f8f2cbd19e70">&#9670;&#160;</a></span>Workflow() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmy__control_1_1demo_1_1Workflow.html">Workflow</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmy__control_1_1TaskQueue.html">my_control::TaskQueue</a> &amp;&#160;</td>
+          <td class="paramname"><em>queue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmy__control_1_1IControl.html">my_control::IControl</a> &amp;&#160;</td>
+          <td class="paramname"><em>control</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a5bcaddb83e39d2c871ce71f1085aeb51">Workflow::control_</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="classmy__control_1_1IControl.html#aaa9504c3f74e2088c4dc945cc61f1237">IControl::Name()</a>, <a class="el" href="classmy__control_1_1TaskQueue.html#a8546382b04c2126bd39cc17d72d0b5a2">TaskQueue::Name()</a>, <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a4d739cc5d335052eb9f5b2ca559b81d1">Workflow::name_</a> , 以及 <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#aa88f6b751e2bbe911c4ae2d35a631022">Workflow::queue_</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__control_1_1demo_1_1Workflow_ac1f0cbdf0411057fb0a5f8f2cbd19e70_cgraph.png" border="0" usemap="#aclassmy__control_1_1demo_1_1Workflow_ac1f0cbdf0411057fb0a5f8f2cbd19e70_cgraph" alt=""/></div>
+<map name="aclassmy__control_1_1demo_1_1Workflow_ac1f0cbdf0411057fb0a5f8f2cbd19e70_cgraph" id="aclassmy__control_1_1demo_1_1Workflow_ac1f0cbdf0411057fb0a5f8f2cbd19e70_cgraph">
+<area shape="rect" title=" " alt="" coords="5,45,88,70"/>
+<area shape="rect" href="classmy__control_1_1IControl.html#aaa9504c3f74e2088c4dc945cc61f1237" title="名称（用于日志）" alt="" coords="146,5,301,45"/>
+<area shape="poly" title=" " alt="" coords="88,47,132,39,133,44,89,53"/>
+<area shape="rect" href="classmy__control_1_1TaskQueue.html#a8546382b04c2126bd39cc17d72d0b5a2" title="队列名字（用于日志与定位）" alt="" coords="136,69,311,109"/>
+<area shape="poly" title=" " alt="" coords="89,62,123,68,122,74,88,67"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab282c005f4ccf9a3c9b713e978d8f751" name="ab282c005f4ccf9a3c9b713e978d8f751"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab282c005f4ccf9a3c9b713e978d8f751">&#9670;&#160;</a></span>~Workflow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classmy__control_1_1demo_1_1Workflow.html">Workflow</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#ac24a06ec0749cb482b60f621833bddd7">Workflow::Join()</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a4d739cc5d335052eb9f5b2ca559b81d1">Workflow::name_</a> , 以及 <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a17a237457e57625296e6b24feb19c60a">Workflow::Stop()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__control_1_1demo_1_1Workflow_ab282c005f4ccf9a3c9b713e978d8f751_cgraph.png" border="0" usemap="#aclassmy__control_1_1demo_1_1Workflow_ab282c005f4ccf9a3c9b713e978d8f751_cgraph" alt=""/></div>
+<map name="aclassmy__control_1_1demo_1_1Workflow_ab282c005f4ccf9a3c9b713e978d8f751_cgraph" id="aclassmy__control_1_1demo_1_1Workflow_ab282c005f4ccf9a3c9b713e978d8f751_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,99,56"/>
+<area shape="rect" href="classmy__control_1_1demo_1_1Workflow.html#ac24a06ec0749cb482b60f621833bddd7" title=" " alt="" coords="149,5,195,31"/>
+<area shape="poly" title=" " alt="" coords="98,31,135,23,136,28,99,36"/>
+<area shape="rect" href="classmy__control_1_1demo_1_1Workflow.html#a17a237457e57625296e6b24feb19c60a" title=" " alt="" coords="147,55,197,80"/>
+<area shape="poly" title=" " alt="" coords="99,50,134,57,133,62,98,55"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2704cf8dcf98a56e82960da17689ff47" name="a2704cf8dcf98a56e82960da17689ff47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2704cf8dcf98a56e82960da17689ff47">&#9670;&#160;</a></span>Workflow() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmy__control_1_1demo_1_1Workflow.html">Workflow</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmy__control_1_1demo_1_1Workflow.html">Workflow</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="ad201152b05beda61e51e3594ff07c8fe" name="ad201152b05beda61e51e3594ff07c8fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad201152b05beda61e51e3594ff07c8fe">&#9670;&#160;</a></span>IsRunning()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsRunning </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#aa9620a15c76ada2388bf678e373a6463">Workflow::running_</a>.</p>
+
+</div>
+</div>
+<a id="ac24a06ec0749cb482b60f621833bddd7" name="ac24a06ec0749cb482b60f621833bddd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac24a06ec0749cb482b60f621833bddd7">&#9670;&#160;</a></span>Join()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Join </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a4d739cc5d335052eb9f5b2ca559b81d1">Workflow::name_</a>, <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#aa9620a15c76ada2388bf678e373a6463">Workflow::running_</a> , 以及 <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a2d17662c59ba51130a35fdaa8567db74">Workflow::worker_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#ab282c005f4ccf9a3c9b713e978d8f751">Workflow::~Workflow()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__control_1_1demo_1_1Workflow_ac24a06ec0749cb482b60f621833bddd7_icgraph.png" border="0" usemap="#aclassmy__control_1_1demo_1_1Workflow_ac24a06ec0749cb482b60f621833bddd7_icgraph" alt=""/></div>
+<map name="aclassmy__control_1_1demo_1_1Workflow_ac24a06ec0749cb482b60f621833bddd7_icgraph" id="aclassmy__control_1_1demo_1_1Workflow_ac24a06ec0749cb482b60f621833bddd7_icgraph">
+<area shape="rect" title=" " alt="" coords="147,5,193,31"/>
+<area shape="rect" href="classmy__control_1_1demo_1_1Workflow.html#ab282c005f4ccf9a3c9b713e978d8f751" title=" " alt="" coords="5,5,99,31"/>
+<area shape="poly" title=" " alt="" coords="133,21,99,21,99,15,133,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8546382b04c2126bd39cc17d72d0b5a2" name="a8546382b04c2126bd39cc17d72d0b5a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8546382b04c2126bd39cc17d72d0b5a2">&#9670;&#160;</a></span>Name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; Name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a4d739cc5d335052eb9f5b2ca559b81d1">Workflow::name_</a>.</p>
+
+</div>
+</div>
+<a id="a8318357d5d41fd38132374fba7de3eb5" name="a8318357d5d41fd38132374fba7de3eb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8318357d5d41fd38132374fba7de3eb5">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmy__control_1_1demo_1_1Workflow.html">Workflow</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmy__control_1_1demo_1_1Workflow.html">Workflow</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2037369e5ec6b779d3c3de24e2cbb614" name="a2037369e5ec6b779d3c3de24e2cbb614"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2037369e5ec6b779d3c3de24e2cbb614">&#9670;&#160;</a></span>RunLoop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RunLoop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="structmy__data_1_1Task.html#a057699cf114942bd42087102f39351f4">Task::action</a>, <a class="el" href="structmy__data_1_1Task.html#a586d4b3f6ee263311139695f7554f978">Task::capability</a>, <a class="el" href="structmy__data_1_1TaskResult.html#a2a8da57251af6baf047d8b57ae811203">TaskResult::code</a>, <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a5bcaddb83e39d2c871ce71f1085aeb51">Workflow::control_</a>, <a class="el" href="structmy__data_1_1Task.html#a47449c9a7a840d9fa6b4a69688305e10">Task::device_id</a>, <a class="el" href="classmy__control_1_1IControl.html#ada398df5df213190ef2398448e9d29cd">IControl::DoTask()</a>, <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#af207f215387c2fd372ebb20aa2cc527b">Workflow::estop_flag_</a>, <a class="el" href="namespacemy__data.html#a59e56af19e754a6aa26a612ebf91d05fa8462b58246e70e5c83e5b939a9332cb5">my_data::InternalError</a>, <a class="el" href="classmy__control_1_1TaskQueue.html#a1438c61ff8693b71ae3ad71e2364d3d7">TaskQueue::IsShutdown()</a>, <a class="el" href="structmy__data_1_1TaskResult.html#a36bd74109f547f7f8198faf5a12d2879">TaskResult::message</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>, <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a4d739cc5d335052eb9f5b2ca559b81d1">Workflow::name_</a>, <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#ae64a1b1311cc665802d1bc7326f74bb9">Workflow::on_finish_</a>, <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a50c19bd995b4eaefa1294e1782781d8e">Workflow::on_start_</a>, <a class="el" href="classmy__control_1_1TaskQueue.html#a50ceb1782d47e5d3b6ded5db4b2af239">TaskQueue::PopBlocking()</a>, <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#aa88f6b751e2bbe911c4ae2d35a631022">Workflow::queue_</a>, <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#aa9620a15c76ada2388bf678e373a6463">Workflow::running_</a>, <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#ae1a1eeaa4661c67f8e75985160abf62a">Workflow::stop_</a>, <a class="el" href="structmy__data_1_1Task.html#aa3e1e8eb26b010a643bd4a49d570662e">Task::task_id</a> , 以及 <a class="el" href="namespacemy__data.html#aa2c3b20a64b6aef24654f21b84592582">my_data::ToString()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#aa70efaa4751ac6d5d54dce88fe725e0a">Workflow::Start()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__control_1_1demo_1_1Workflow_a2037369e5ec6b779d3c3de24e2cbb614_cgraph.png" border="0" usemap="#aclassmy__control_1_1demo_1_1Workflow_a2037369e5ec6b779d3c3de24e2cbb614_cgraph" alt=""/></div>
+<map name="aclassmy__control_1_1demo_1_1Workflow_a2037369e5ec6b779d3c3de24e2cbb614_cgraph" id="aclassmy__control_1_1demo_1_1Workflow_a2037369e5ec6b779d3c3de24e2cbb614_cgraph">
+<area shape="rect" title=" " alt="" coords="5,109,84,134"/>
+<area shape="rect" href="classmy__control_1_1IControl.html#ada398df5df213190ef2398448e9d29cd" title="执行任务（MVP：同步返回结果）" alt="" coords="142,5,297,45"/>
+<area shape="poly" title=" " alt="" coords="59,107,91,81,131,55,144,49,146,53,133,60,94,85,62,111"/>
+<area shape="rect" href="classmy__control_1_1TaskQueue.html#a1438c61ff8693b71ae3ad71e2364d3d7" title="队列是否已关闭" alt="" coords="132,69,307,109"/>
+<area shape="poly" title=" " alt="" coords="84,112,118,105,119,110,85,117"/>
+<area shape="rect" href="classmy__control_1_1TaskQueue.html#a50ceb1782d47e5d3b6ded5db4b2af239" title="阻塞出队" alt="" coords="132,133,307,173"/>
+<area shape="poly" title=" " alt="" coords="85,126,119,132,118,137,84,131"/>
+<area shape="rect" href="namespacemy__data.html#aa2c3b20a64b6aef24654f21b84592582" title="将错误码转为可读字符串" alt="" coords="150,198,289,223"/>
+<area shape="poly" title=" " alt="" coords="62,132,93,158,133,183,152,191,150,196,131,188,90,162,58,136"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__control_1_1demo_1_1Workflow_a2037369e5ec6b779d3c3de24e2cbb614_icgraph.png" border="0" usemap="#aclassmy__control_1_1demo_1_1Workflow_a2037369e5ec6b779d3c3de24e2cbb614_icgraph" alt=""/></div>
+<map name="aclassmy__control_1_1demo_1_1Workflow_a2037369e5ec6b779d3c3de24e2cbb614_icgraph" id="aclassmy__control_1_1demo_1_1Workflow_a2037369e5ec6b779d3c3de24e2cbb614_icgraph">
+<area shape="rect" title=" " alt="" coords="107,5,185,31"/>
+<area shape="rect" href="classmy__control_1_1demo_1_1Workflow.html#aa70efaa4751ac6d5d54dce88fe725e0a" title=" " alt="" coords="5,5,59,31"/>
+<area shape="poly" title=" " alt="" coords="93,21,59,21,59,15,93,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af98d5e0ae43de666618d49a1988d3615" name="af98d5e0ae43de666618d49a1988d3615"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af98d5e0ae43de666618d49a1988d3615">&#9670;&#160;</a></span>SetEStopFlag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetEStopFlag </td>
+          <td>(</td>
+          <td class="paramtype">std::atomic&lt; bool &gt; *&#160;</td>
+          <td class="paramname"><em>estop_flag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#af207f215387c2fd372ebb20aa2cc527b">Workflow::estop_flag_</a>.</p>
+
+</div>
+</div>
+<a id="aafddcadd1d6307b5f20f8a33be71fb83" name="aafddcadd1d6307b5f20f8a33be71fb83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafddcadd1d6307b5f20f8a33be71fb83">&#9670;&#160;</a></span>SetFinishCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetFinishCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a3dd461a10fac993210cf36ee20c87422">FinishCallback</a>&#160;</td>
+          <td class="paramname"><em>cb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>任务完成回调（DoTask 后触发） </p>
+
+<p class="reference">引用了 <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#ae64a1b1311cc665802d1bc7326f74bb9">Workflow::on_finish_</a>.</p>
+
+</div>
+</div>
+<a id="ac3938ea4b50a522213084eb63e463c79" name="ac3938ea4b50a522213084eb63e463c79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3938ea4b50a522213084eb63e463c79">&#9670;&#160;</a></span>SetStartCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetStartCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmy__control_1_1demo_1_1Workflow.html#af260224de6bec2a95a889501d19809f2">StartCallback</a>&#160;</td>
+          <td class="paramname"><em>cb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>任务开始回调（Pop 成功后、DoTask 前触发） </p>
+
+<p class="reference">引用了 <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a50c19bd995b4eaefa1294e1782781d8e">Workflow::on_start_</a>.</p>
+
+</div>
+</div>
+<a id="aa70efaa4751ac6d5d54dce88fe725e0a" name="aa70efaa4751ac6d5d54dce88fe725e0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa70efaa4751ac6d5d54dce88fe725e0a">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>, <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a4d739cc5d335052eb9f5b2ca559b81d1">Workflow::name_</a>, <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a2037369e5ec6b779d3c3de24e2cbb614">Workflow::RunLoop()</a>, <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#aa9620a15c76ada2388bf678e373a6463">Workflow::running_</a>, <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#ae1a1eeaa4661c67f8e75985160abf62a">Workflow::stop_</a> , 以及 <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a2d17662c59ba51130a35fdaa8567db74">Workflow::worker_</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__control_1_1demo_1_1Workflow_aa70efaa4751ac6d5d54dce88fe725e0a_cgraph.png" border="0" usemap="#aclassmy__control_1_1demo_1_1Workflow_aa70efaa4751ac6d5d54dce88fe725e0a_cgraph" alt=""/></div>
+<map name="aclassmy__control_1_1demo_1_1Workflow_aa70efaa4751ac6d5d54dce88fe725e0a_cgraph" id="aclassmy__control_1_1demo_1_1Workflow_aa70efaa4751ac6d5d54dce88fe725e0a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,109,59,134"/>
+<area shape="rect" href="classmy__control_1_1demo_1_1Workflow.html#a2037369e5ec6b779d3c3de24e2cbb614" title=" " alt="" coords="107,109,185,134"/>
+<area shape="poly" title=" " alt="" coords="59,119,93,119,93,124,59,124"/>
+<area shape="rect" href="classmy__control_1_1IControl.html#ada398df5df213190ef2398448e9d29cd" title="执行任务（MVP：同步返回结果）" alt="" coords="243,5,398,45"/>
+<area shape="poly" title=" " alt="" coords="160,107,192,81,232,55,245,49,247,53,235,60,195,85,163,111"/>
+<area shape="rect" href="classmy__control_1_1TaskQueue.html#a1438c61ff8693b71ae3ad71e2364d3d7" title="队列是否已关闭" alt="" coords="233,69,408,109"/>
+<area shape="poly" title=" " alt="" coords="185,112,219,105,220,110,186,117"/>
+<area shape="rect" href="classmy__control_1_1TaskQueue.html#a50ceb1782d47e5d3b6ded5db4b2af239" title="阻塞出队" alt="" coords="233,133,408,173"/>
+<area shape="poly" title=" " alt="" coords="186,126,220,132,219,137,185,131"/>
+<area shape="rect" href="namespacemy__data.html#aa2c3b20a64b6aef24654f21b84592582" title="将错误码转为可读字符串" alt="" coords="251,198,390,223"/>
+<area shape="poly" title=" " alt="" coords="163,132,195,158,235,183,254,191,252,196,232,188,192,162,160,136"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a17a237457e57625296e6b24feb19c60a" name="a17a237457e57625296e6b24feb19c60a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17a237457e57625296e6b24feb19c60a">&#9670;&#160;</a></span>Stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>, <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a4d739cc5d335052eb9f5b2ca559b81d1">Workflow::name_</a>, <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#aa9620a15c76ada2388bf678e373a6463">Workflow::running_</a> , 以及 <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#ae1a1eeaa4661c67f8e75985160abf62a">Workflow::stop_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#ab282c005f4ccf9a3c9b713e978d8f751">Workflow::~Workflow()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__control_1_1demo_1_1Workflow_a17a237457e57625296e6b24feb19c60a_icgraph.png" border="0" usemap="#aclassmy__control_1_1demo_1_1Workflow_a17a237457e57625296e6b24feb19c60a_icgraph" alt=""/></div>
+<map name="aclassmy__control_1_1demo_1_1Workflow_a17a237457e57625296e6b24feb19c60a_icgraph" id="aclassmy__control_1_1demo_1_1Workflow_a17a237457e57625296e6b24feb19c60a_icgraph">
+<area shape="rect" title=" " alt="" coords="147,5,197,31"/>
+<area shape="rect" href="classmy__control_1_1demo_1_1Workflow.html#ab282c005f4ccf9a3c9b713e978d8f751" title=" " alt="" coords="5,5,99,31"/>
+<area shape="poly" title=" " alt="" coords="133,21,99,21,99,15,133,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">结构体成员变量说明</h2>
+<a id="a5bcaddb83e39d2c871ce71f1085aeb51" name="a5bcaddb83e39d2c871ce71f1085aeb51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bcaddb83e39d2c871ce71f1085aeb51">&#9670;&#160;</a></span>control_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmy__control_1_1IControl.html">my_control::IControl</a>&amp; control_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a2037369e5ec6b779d3c3de24e2cbb614">Workflow::RunLoop()</a> , 以及 <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#ac1f0cbdf0411057fb0a5f8f2cbd19e70">Workflow::Workflow()</a>.</p>
+
+</div>
+</div>
+<a id="af207f215387c2fd372ebb20aa2cc527b" name="af207f215387c2fd372ebb20aa2cc527b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af207f215387c2fd372ebb20aa2cc527b">&#9670;&#160;</a></span>estop_flag_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;bool&gt;* estop_flag_ {nullptr}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a2037369e5ec6b779d3c3de24e2cbb614">Workflow::RunLoop()</a> , 以及 <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#af98d5e0ae43de666618d49a1988d3615">Workflow::SetEStopFlag()</a>.</p>
+
+</div>
+</div>
+<a id="a4d739cc5d335052eb9f5b2ca559b81d1" name="a4d739cc5d335052eb9f5b2ca559b81d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d739cc5d335052eb9f5b2ca559b81d1">&#9670;&#160;</a></span>name_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string name_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#ac24a06ec0749cb482b60f621833bddd7">Workflow::Join()</a>, <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a8546382b04c2126bd39cc17d72d0b5a2">Workflow::Name()</a>, <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a2037369e5ec6b779d3c3de24e2cbb614">Workflow::RunLoop()</a>, <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#aa70efaa4751ac6d5d54dce88fe725e0a">Workflow::Start()</a>, <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a17a237457e57625296e6b24feb19c60a">Workflow::Stop()</a>, <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#ac1f0cbdf0411057fb0a5f8f2cbd19e70">Workflow::Workflow()</a> , 以及 <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#ab282c005f4ccf9a3c9b713e978d8f751">Workflow::~Workflow()</a>.</p>
+
+</div>
+</div>
+<a id="ae64a1b1311cc665802d1bc7326f74bb9" name="ae64a1b1311cc665802d1bc7326f74bb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae64a1b1311cc665802d1bc7326f74bb9">&#9670;&#160;</a></span>on_finish_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a3dd461a10fac993210cf36ee20c87422">FinishCallback</a> on_finish_ {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a2037369e5ec6b779d3c3de24e2cbb614">Workflow::RunLoop()</a> , 以及 <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#aafddcadd1d6307b5f20f8a33be71fb83">Workflow::SetFinishCallback()</a>.</p>
+
+</div>
+</div>
+<a id="a50c19bd995b4eaefa1294e1782781d8e" name="a50c19bd995b4eaefa1294e1782781d8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50c19bd995b4eaefa1294e1782781d8e">&#9670;&#160;</a></span>on_start_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmy__control_1_1demo_1_1Workflow.html#af260224de6bec2a95a889501d19809f2">StartCallback</a> on_start_ {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a2037369e5ec6b779d3c3de24e2cbb614">Workflow::RunLoop()</a> , 以及 <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#ac3938ea4b50a522213084eb63e463c79">Workflow::SetStartCallback()</a>.</p>
+
+</div>
+</div>
+<a id="aa88f6b751e2bbe911c4ae2d35a631022" name="aa88f6b751e2bbe911c4ae2d35a631022"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa88f6b751e2bbe911c4ae2d35a631022">&#9670;&#160;</a></span>queue_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmy__control_1_1TaskQueue.html">my_control::TaskQueue</a>&amp; queue_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a2037369e5ec6b779d3c3de24e2cbb614">Workflow::RunLoop()</a> , 以及 <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#ac1f0cbdf0411057fb0a5f8f2cbd19e70">Workflow::Workflow()</a>.</p>
+
+</div>
+</div>
+<a id="aa9620a15c76ada2388bf678e373a6463" name="aa9620a15c76ada2388bf678e373a6463"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9620a15c76ada2388bf678e373a6463">&#9670;&#160;</a></span>running_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;bool&gt; running_ {false}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#ad201152b05beda61e51e3594ff07c8fe">Workflow::IsRunning()</a>, <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#ac24a06ec0749cb482b60f621833bddd7">Workflow::Join()</a>, <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a2037369e5ec6b779d3c3de24e2cbb614">Workflow::RunLoop()</a>, <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#aa70efaa4751ac6d5d54dce88fe725e0a">Workflow::Start()</a> , 以及 <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a17a237457e57625296e6b24feb19c60a">Workflow::Stop()</a>.</p>
+
+</div>
+</div>
+<a id="ae1a1eeaa4661c67f8e75985160abf62a" name="ae1a1eeaa4661c67f8e75985160abf62a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1a1eeaa4661c67f8e75985160abf62a">&#9670;&#160;</a></span>stop_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;bool&gt; stop_ {false}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a2037369e5ec6b779d3c3de24e2cbb614">Workflow::RunLoop()</a>, <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#aa70efaa4751ac6d5d54dce88fe725e0a">Workflow::Start()</a> , 以及 <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a17a237457e57625296e6b24feb19c60a">Workflow::Stop()</a>.</p>
+
+</div>
+</div>
+<a id="a2d17662c59ba51130a35fdaa8567db74" name="a2d17662c59ba51130a35fdaa8567db74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d17662c59ba51130a35fdaa8567db74">&#9670;&#160;</a></span>worker_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::thread worker_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#ac24a06ec0749cb482b60f621833bddd7">Workflow::Join()</a> , 以及 <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#aa70efaa4751ac6d5d54dce88fe725e0a">Workflow::Start()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/util/my_control/demo/<a class="el" href="Workflow_8h_source.html">Workflow.h</a></li>
+<li>src/util/my_control/demo/<a class="el" href="Workflow_8cpp.html">Workflow.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

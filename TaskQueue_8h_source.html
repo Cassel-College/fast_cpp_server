@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_control/TaskQueue.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_d1e87e24b8b4140cc626618e929dade3.html">my_control</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">TaskQueue.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="TaskQueue_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;condition_variable&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;cstddef&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;deque&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="MyData_8h.html">MyData.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="MyLog_8h.html">MyLog.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__control.html">my_control</a> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacemy__data.html">my_data</a>;</div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classmy__control_1_1TaskQueue.html">   28</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__control_1_1TaskQueue.html">TaskQueue</a> {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <a class="code hl_function" href="classmy__control_1_1TaskQueue.html#ae8fef6f9216767f184e439756b81c354">TaskQueue</a>();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <span class="keyword">explicit</span> <a class="code hl_function" href="classmy__control_1_1TaskQueue.html#ae8fef6f9216767f184e439756b81c354">TaskQueue</a>(std::string name);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <a class="code hl_function" href="classmy__control_1_1TaskQueue.html#a59499d260cf14de9fb3bc4256ac889c8">~TaskQueue</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classmy__control_1_1TaskQueue.html#ad265ed4fd7ec6a140fd5202ddf1682f1">   34</a></span>  <a class="code hl_function" href="classmy__control_1_1TaskQueue.html#ad265ed4fd7ec6a140fd5202ddf1682f1">TaskQueue</a>(<span class="keyword">const</span> <a class="code hl_class" href="classmy__control_1_1TaskQueue.html">TaskQueue</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classmy__control_1_1TaskQueue.html#a4c36b617f231a30db4db8e8754f37fc6">   35</a></span>  <a class="code hl_class" href="classmy__control_1_1TaskQueue.html">TaskQueue</a>&amp; <a class="code hl_function" href="classmy__control_1_1TaskQueue.html#a4c36b617f231a30db4db8e8754f37fc6">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classmy__control_1_1TaskQueue.html">TaskQueue</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__control_1_1TaskQueue.html#a335412643911c2d1a2ec43e0b302edcc">Push</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structmy__data_1_1Task.html">my_data::Task</a>&amp; task);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__control_1_1TaskQueue.html#a50ceb1782d47e5d3b6ded5db4b2af239">PopBlocking</a>(<a class="code hl_struct" href="structmy__data_1_1Task.html">my_data::Task</a>&amp; out, <span class="keywordtype">int</span> timeout_ms = -1);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  std::size_t <a class="code hl_function" href="classmy__control_1_1TaskQueue.html#abe619a353eeb51b30742195efb9b37cc">Size</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__control_1_1TaskQueue.html#aa71d36872f416feaa853788a7a7a7ef8">Clear</a>();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__control_1_1TaskQueue.html#ac5f038c2b480cf9ef5e19e3eba8dbaf9">Shutdown</a>();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__control_1_1TaskQueue.html#a1438c61ff8693b71ae3ad71e2364d3d7">IsShutdown</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="classmy__control_1_1TaskQueue.html#a8546382b04c2126bd39cc17d72d0b5a2">   73</a></span>  <span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="classmy__control_1_1TaskQueue.html#a8546382b04c2126bd39cc17d72d0b5a2">Name</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classmy__control_1_1TaskQueue.html#a4d739cc5d335052eb9f5b2ca559b81d1">name_</a>; }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="classmy__control_1_1TaskQueue.html#a4d739cc5d335052eb9f5b2ca559b81d1">   76</a></span>  std::string <a class="code hl_variable" href="classmy__control_1_1TaskQueue.html#a4d739cc5d335052eb9f5b2ca559b81d1">name_</a>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="classmy__control_1_1TaskQueue.html#a8d7d60531a551843107cd30bf8a0539d">   78</a></span>  <span class="keyword">mutable</span> std::mutex <a class="code hl_variable" href="classmy__control_1_1TaskQueue.html#a8d7d60531a551843107cd30bf8a0539d">mu_</a>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="classmy__control_1_1TaskQueue.html#a5eb1f373ea25b73577b6e0205ad7b399">   79</a></span>  std::condition_variable <a class="code hl_variable" href="classmy__control_1_1TaskQueue.html#a5eb1f373ea25b73577b6e0205ad7b399">cv_</a>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="classmy__control_1_1TaskQueue.html#a0ee1e53e11bb1ae981775dd302637c5e">   80</a></span>  std::deque&lt;my_data::Task&gt; <a class="code hl_variable" href="classmy__control_1_1TaskQueue.html#a0ee1e53e11bb1ae981775dd302637c5e">q_</a>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classmy__control_1_1TaskQueue.html#a516248545bae05b96887aea52ebc6715">   81</a></span>  <span class="keywordtype">bool</span> <a class="code hl_variable" href="classmy__control_1_1TaskQueue.html#a516248545bae05b96887aea52ebc6715">shutdown_</a>{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>};</div>
+</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>} <span class="comment">// namespace my_control</span></div>
+<div class="ttc" id="aMyData_8h_html"><div class="ttname"><a href="MyData_8h.html">MyData.h</a></div><div class="ttdoc">my_data 模块聚合头文件</div></div>
+<div class="ttc" id="aMyLog_8h_html"><div class="ttname"><a href="MyLog_8h.html">MyLog.h</a></div></div>
+<div class="ttc" id="aclassmy__control_1_1TaskQueue_html"><div class="ttname"><a href="classmy__control_1_1TaskQueue.html">my_control::TaskQueue</a></div><div class="ttdoc">线程安全任务队列（MVP）</div><div class="ttdef"><b>Definition</b> TaskQueue.h:28</div></div>
+<div class="ttc" id="aclassmy__control_1_1TaskQueue_html_a0ee1e53e11bb1ae981775dd302637c5e"><div class="ttname"><a href="classmy__control_1_1TaskQueue.html#a0ee1e53e11bb1ae981775dd302637c5e">my_control::TaskQueue::q_</a></div><div class="ttdeci">std::deque&lt; my_data::Task &gt; q_</div><div class="ttdef"><b>Definition</b> TaskQueue.h:80</div></div>
+<div class="ttc" id="aclassmy__control_1_1TaskQueue_html_a1438c61ff8693b71ae3ad71e2364d3d7"><div class="ttname"><a href="classmy__control_1_1TaskQueue.html#a1438c61ff8693b71ae3ad71e2364d3d7">my_control::TaskQueue::IsShutdown</a></div><div class="ttdeci">bool IsShutdown() const</div><div class="ttdoc">队列是否已关闭</div><div class="ttdef"><b>Definition</b> TaskQueue.cpp:91</div></div>
+<div class="ttc" id="aclassmy__control_1_1TaskQueue_html_a335412643911c2d1a2ec43e0b302edcc"><div class="ttname"><a href="classmy__control_1_1TaskQueue.html#a335412643911c2d1a2ec43e0b302edcc">my_control::TaskQueue::Push</a></div><div class="ttdeci">void Push(const my_data::Task &amp;task)</div><div class="ttdoc">入队一个 Task（线程安全）</div><div class="ttdef"><b>Definition</b> TaskQueue.cpp:20</div></div>
+<div class="ttc" id="aclassmy__control_1_1TaskQueue_html_a4c36b617f231a30db4db8e8754f37fc6"><div class="ttname"><a href="classmy__control_1_1TaskQueue.html#a4c36b617f231a30db4db8e8754f37fc6">my_control::TaskQueue::operator=</a></div><div class="ttdeci">TaskQueue &amp; operator=(const TaskQueue &amp;)=delete</div></div>
+<div class="ttc" id="aclassmy__control_1_1TaskQueue_html_a4d739cc5d335052eb9f5b2ca559b81d1"><div class="ttname"><a href="classmy__control_1_1TaskQueue.html#a4d739cc5d335052eb9f5b2ca559b81d1">my_control::TaskQueue::name_</a></div><div class="ttdeci">std::string name_</div><div class="ttdef"><b>Definition</b> TaskQueue.h:76</div></div>
+<div class="ttc" id="aclassmy__control_1_1TaskQueue_html_a50ceb1782d47e5d3b6ded5db4b2af239"><div class="ttname"><a href="classmy__control_1_1TaskQueue.html#a50ceb1782d47e5d3b6ded5db4b2af239">my_control::TaskQueue::PopBlocking</a></div><div class="ttdeci">bool PopBlocking(my_data::Task &amp;out, int timeout_ms=-1)</div><div class="ttdoc">阻塞出队</div><div class="ttdef"><b>Definition</b> TaskQueue.cpp:34</div></div>
+<div class="ttc" id="aclassmy__control_1_1TaskQueue_html_a516248545bae05b96887aea52ebc6715"><div class="ttname"><a href="classmy__control_1_1TaskQueue.html#a516248545bae05b96887aea52ebc6715">my_control::TaskQueue::shutdown_</a></div><div class="ttdeci">bool shutdown_</div><div class="ttdef"><b>Definition</b> TaskQueue.h:81</div></div>
+<div class="ttc" id="aclassmy__control_1_1TaskQueue_html_a59499d260cf14de9fb3bc4256ac889c8"><div class="ttname"><a href="classmy__control_1_1TaskQueue.html#a59499d260cf14de9fb3bc4256ac889c8">my_control::TaskQueue::~TaskQueue</a></div><div class="ttdeci">~TaskQueue()</div><div class="ttdef"><b>Definition</b> TaskQueue.cpp:14</div></div>
+<div class="ttc" id="aclassmy__control_1_1TaskQueue_html_a5eb1f373ea25b73577b6e0205ad7b399"><div class="ttname"><a href="classmy__control_1_1TaskQueue.html#a5eb1f373ea25b73577b6e0205ad7b399">my_control::TaskQueue::cv_</a></div><div class="ttdeci">std::condition_variable cv_</div><div class="ttdef"><b>Definition</b> TaskQueue.h:79</div></div>
+<div class="ttc" id="aclassmy__control_1_1TaskQueue_html_a8546382b04c2126bd39cc17d72d0b5a2"><div class="ttname"><a href="classmy__control_1_1TaskQueue.html#a8546382b04c2126bd39cc17d72d0b5a2">my_control::TaskQueue::Name</a></div><div class="ttdeci">const std::string &amp; Name() const</div><div class="ttdoc">队列名字（用于日志与定位）</div><div class="ttdef"><b>Definition</b> TaskQueue.h:73</div></div>
+<div class="ttc" id="aclassmy__control_1_1TaskQueue_html_a8d7d60531a551843107cd30bf8a0539d"><div class="ttname"><a href="classmy__control_1_1TaskQueue.html#a8d7d60531a551843107cd30bf8a0539d">my_control::TaskQueue::mu_</a></div><div class="ttdeci">std::mutex mu_</div><div class="ttdef"><b>Definition</b> TaskQueue.h:78</div></div>
+<div class="ttc" id="aclassmy__control_1_1TaskQueue_html_aa71d36872f416feaa853788a7a7a7ef8"><div class="ttname"><a href="classmy__control_1_1TaskQueue.html#aa71d36872f416feaa853788a7a7a7ef8">my_control::TaskQueue::Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdoc">清空队列（线程安全）</div><div class="ttdef"><b>Definition</b> TaskQueue.cpp:74</div></div>
+<div class="ttc" id="aclassmy__control_1_1TaskQueue_html_abe619a353eeb51b30742195efb9b37cc"><div class="ttname"><a href="classmy__control_1_1TaskQueue.html#abe619a353eeb51b30742195efb9b37cc">my_control::TaskQueue::Size</a></div><div class="ttdeci">std::size_t Size() const</div><div class="ttdoc">队列长度（线程安全）</div><div class="ttdef"><b>Definition</b> TaskQueue.cpp:69</div></div>
+<div class="ttc" id="aclassmy__control_1_1TaskQueue_html_ac5f038c2b480cf9ef5e19e3eba8dbaf9"><div class="ttname"><a href="classmy__control_1_1TaskQueue.html#ac5f038c2b480cf9ef5e19e3eba8dbaf9">my_control::TaskQueue::Shutdown</a></div><div class="ttdeci">void Shutdown()</div><div class="ttdoc">关闭队列并唤醒所有等待线程</div><div class="ttdef"><b>Definition</b> TaskQueue.cpp:81</div></div>
+<div class="ttc" id="aclassmy__control_1_1TaskQueue_html_ad265ed4fd7ec6a140fd5202ddf1682f1"><div class="ttname"><a href="classmy__control_1_1TaskQueue.html#ad265ed4fd7ec6a140fd5202ddf1682f1">my_control::TaskQueue::TaskQueue</a></div><div class="ttdeci">TaskQueue(const TaskQueue &amp;)=delete</div></div>
+<div class="ttc" id="aclassmy__control_1_1TaskQueue_html_ae8fef6f9216767f184e439756b81c354"><div class="ttname"><a href="classmy__control_1_1TaskQueue.html#ae8fef6f9216767f184e439756b81c354">my_control::TaskQueue::TaskQueue</a></div><div class="ttdeci">TaskQueue()</div><div class="ttdef"><b>Definition</b> TaskQueue.cpp:8</div></div>
+<div class="ttc" id="anamespacemy__control_html"><div class="ttname"><a href="namespacemy__control.html">my_control</a></div><div class="ttdef"><b>Definition</b> UUVCommandNormalizer.cpp:7</div></div>
+<div class="ttc" id="anamespacemy__data_html"><div class="ttname"><a href="namespacemy__data.html">my_data</a></div><div class="ttdef"><b>Definition</b> Error.cpp:3</div></div>
+<div class="ttc" id="astructmy__data_1_1Task_html"><div class="ttname"><a href="structmy__data_1_1Task.html">my_data::Task</a></div><div class="ttdoc">Task（内部统一任务）</div><div class="ttdef"><b>Definition</b> Task.h:27</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

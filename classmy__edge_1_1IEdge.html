@@ -1,0 +1,385 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: IEdge类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacemy__edge.html">my_edge</a></li><li class="navelem"><a class="el" href="classmy__edge_1_1IEdge.html">IEdge</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a>  </div>
+  <div class="headertitle"><div class="title">IEdge类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Edge Runtime 接口（Init/Start 分离）  
+ <a href="classmy__edge_1_1IEdge.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="IEdge_8h_source.html">IEdge.h</a>&gt;</code></p>
+<div class="dynheader">
+类 IEdge 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1IEdge__inherit__graph.png" border="0" usemap="#aIEdge_inherit__map" alt="Inheritance graph"/></div>
+<map name="aIEdge_inherit__map" id="aIEdge_inherit__map">
+<area shape="rect" title="Edge Runtime 接口（Init/Start 分离）" alt="" coords="17,5,76,31"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html" title="UUVEdge：demo Edge Runtime" alt="" coords="5,79,88,104"/>
+<area shape="poly" title=" " alt="" coords="49,44,49,79,44,79,44,44"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a7becc3120434acd304be22e8c95e3483" id="r_a7becc3120434acd304be22e8c95e3483"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1IEdge.html#a7becc3120434acd304be22e8c95e3483">~IEdge</a> ()=default</td></tr>
+<tr class="separator:a7becc3120434acd304be22e8c95e3483"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a318f0835a0611f2d747aa141e674af64" id="r_a318f0835a0611f2d747aa141e674af64"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1IEdge.html#a318f0835a0611f2d747aa141e674af64">Init</a> (const nlohmann::json &amp;cfg, std::string *err)=0</td></tr>
+<tr class="memdesc:a318f0835a0611f2d747aa141e674af64"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化：仅装配，不启动线程  <br /></td></tr>
+<tr class="separator:a318f0835a0611f2d747aa141e674af64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a744bb0d3d651433606080b5b26d35e0c" id="r_a744bb0d3d651433606080b5b26d35e0c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1IEdge.html#a744bb0d3d651433606080b5b26d35e0c">Start</a> (std::string *err)=0</td></tr>
+<tr class="memdesc:a744bb0d3d651433606080b5b26d35e0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">启动：启动所有 device/workflow  <br /></td></tr>
+<tr class="separator:a744bb0d3d651433606080b5b26d35e0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3712183223e5f485d82c12ba25933af6" id="r_a3712183223e5f485d82c12ba25933af6"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structmy__edge_1_1SubmitResult.html">SubmitResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1IEdge.html#a3712183223e5f485d82c12ba25933af6">Submit</a> (const <a class="el" href="structmy__data_1_1RawCommand.html">my_data::RawCommand</a> &amp;cmd)=0</td></tr>
+<tr class="memdesc:a3712183223e5f485d82c12ba25933af6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Submit：命令入口（Normalize 并入队）  <br /></td></tr>
+<tr class="separator:a3712183223e5f485d82c12ba25933af6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addca2278689b784b5ee28ae266ec58b6" id="r_addca2278689b784b5ee28ae266ec58b6"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structmy__data_1_1EdgeStatus.html">my_data::EdgeStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1IEdge.html#addca2278689b784b5ee28ae266ec58b6">GetStatusSnapshot</a> () const =0</td></tr>
+<tr class="memdesc:addca2278689b784b5ee28ae266ec58b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取状态快照（EdgeStatus，补 queue_depth/pending/running）  <br /></td></tr>
+<tr class="separator:addca2278689b784b5ee28ae266ec58b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40c608fbe6f7a113fc20b8f7f5e8758a" id="r_a40c608fbe6f7a113fc20b8f7f5e8758a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1IEdge.html#a40c608fbe6f7a113fc20b8f7f5e8758a">SetEStop</a> (bool active, const std::string &amp;reason)=0</td></tr>
+<tr class="memdesc:a40c608fbe6f7a113fc20b8f7f5e8758a"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置紧急停止  <br /></td></tr>
+<tr class="separator:a40c608fbe6f7a113fc20b8f7f5e8758a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe320d57c3dd6c601efaa6e3eeed73d1" id="r_abe320d57c3dd6c601efaa6e3eeed73d1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1IEdge.html#abe320d57c3dd6c601efaa6e3eeed73d1">Shutdown</a> ()=0</td></tr>
+<tr class="memdesc:abe320d57c3dd6c601efaa6e3eeed73d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">全局停机：Stop devices + Shutdown queues + Join  <br /></td></tr>
+<tr class="separator:abe320d57c3dd6c601efaa6e3eeed73d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a951e7cb90a822e527ac15fe273b4972a" id="r_a951e7cb90a822e527ac15fe273b4972a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacemy__data.html#aa97613f313f7fbbad8c368f2599e3f26">my_data::EdgeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1IEdge.html#a951e7cb90a822e527ac15fe273b4972a">Id</a> () const =0</td></tr>
+<tr class="separator:a951e7cb90a822e527ac15fe273b4972a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>Edge Runtime 接口（Init/Start 分离） </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a7becc3120434acd304be22e8c95e3483" name="a7becc3120434acd304be22e8c95e3483"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7becc3120434acd304be22e8c95e3483">&#9670;&#160;</a></span>~IEdge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ~<a class="el" href="classmy__edge_1_1IEdge.html">IEdge</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="addca2278689b784b5ee28ae266ec58b6" name="addca2278689b784b5ee28ae266ec58b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addca2278689b784b5ee28ae266ec58b6">&#9670;&#160;</a></span>GetStatusSnapshot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structmy__data_1_1EdgeStatus.html">my_data::EdgeStatus</a> GetStatusSnapshot </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取状态快照（EdgeStatus，补 queue_depth/pending/running） </p>
+
+<p>在 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">UUVEdge</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a951e7cb90a822e527ac15fe273b4972a" name="a951e7cb90a822e527ac15fe273b4972a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a951e7cb90a822e527ac15fe273b4972a">&#9670;&#160;</a></span>Id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespacemy__data.html#aa97613f313f7fbbad8c368f2599e3f26">my_data::EdgeId</a> Id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a14a921badc0c0cfd1d63dee98f734b80">UUVEdge</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a318f0835a0611f2d747aa141e674af64" name="a318f0835a0611f2d747aa141e674af64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a318f0835a0611f2d747aa141e674af64">&#9670;&#160;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Init </td>
+          <td>(</td>
+          <td class="paramtype">const nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>cfg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>err</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>初始化：仅装配，不启动线程 </p>
+
+<p>在 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">UUVEdge</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a40c608fbe6f7a113fc20b8f7f5e8758a" name="a40c608fbe6f7a113fc20b8f7f5e8758a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40c608fbe6f7a113fc20b8f7f5e8758a">&#9670;&#160;</a></span>SetEStop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void SetEStop </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>active</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>reason</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置紧急停止 </p>
+
+<p>在 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a930b466b41c7d75b7318e6ca5853b5c9">UUVEdge</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="abe320d57c3dd6c601efaa6e3eeed73d1" name="abe320d57c3dd6c601efaa6e3eeed73d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe320d57c3dd6c601efaa6e3eeed73d1">&#9670;&#160;</a></span>Shutdown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Shutdown </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>全局停机：Stop devices + Shutdown queues + Join </p>
+
+<p>在 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d">UUVEdge</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a744bb0d3d651433606080b5b26d35e0c" name="a744bb0d3d651433606080b5b26d35e0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a744bb0d3d651433606080b5b26d35e0c">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Start </td>
+          <td>(</td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>err</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>启动：启动所有 device/workflow </p>
+
+<p>在 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a46b15f1cef85897da0f2fed19f72ed4c">UUVEdge</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a3712183223e5f485d82c12ba25933af6" name="a3712183223e5f485d82c12ba25933af6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3712183223e5f485d82c12ba25933af6">&#9670;&#160;</a></span>Submit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structmy__edge_1_1SubmitResult.html">SubmitResult</a> Submit </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structmy__data_1_1RawCommand.html">my_data::RawCommand</a> &amp;&#160;</td>
+          <td class="paramname"><em>cmd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Submit：命令入口（Normalize 并入队） </p>
+
+<p>在 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">UUVEdge</a> 内被实现.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/util/my_edge/<a class="el" href="IEdge_8h_source.html">IEdge.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

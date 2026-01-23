@@ -1,17 +1,15 @@
 var searchData=
 [
-  ['main_0',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]],
-  ['meminfotools_1',['MemInfoTools',['../classMySystemHealthy_1_1MemInfoTools.html#aa93bba8ace3b3bcc3e5bb9dd39a9d0b4',1,'MySystemHealthy::MemInfoTools']]],
-  ['mfmqttclient_2',['MFMQTTClient',['../classfast__mqtt_1_1MFMQTTClient.html#a3ac0d0ff88f7f52784ccaee645afbb8d',1,'fast_mqtt::MFMQTTClient']]],
-  ['mfsmqttclient_3',['mfsmqttclient',['../classfast__mqtt_1_1MFSMQTTClient.html#a38dd215a237ae1fe7b04a7ee6ef466d2',1,'fast_mqtt::MFSMQTTClient::MFSMQTTClient(const MFSMQTTClient &amp;)=delete'],['../classfast__mqtt_1_1MFSMQTTClient.html#a6db06e514c7c8bb11fe07cbcf54777b8',1,'fast_mqtt::MFSMQTTClient::MFSMQTTClient()=default']]],
-  ['monitorconnection_4',['monitorConnection',['../classtools_1_1SimpleTcpClient.html#a0b32b04537729e310e1f9f9c0a8fc7dc',1,'tools::SimpleTcpClient']]],
-  ['monitorloop_5',['monitorloop',['../classDeviceOnlineMonitor.html#a70a4677f113e64393ea51d131e5b4391',1,'DeviceOnlineMonitor::monitorLoop()'],['../classSoftHealthMonitorManager.html#a70a4677f113e64393ea51d131e5b4391',1,'SoftHealthMonitorManager::monitorLoop()']]],
-  ['myapi_6',['myapi',['../classmy__api_1_1MyAPI.html#a0c6ee101f7d115253d607250c38ec3d5',1,'my_api::MyAPI::MyAPI(const MyAPI &amp;)=delete'],['../classmy__api_1_1MyAPI.html#afeedb939f9a0f3c5a082f83ee6fb1238',1,'my_api::MyAPI::MyAPI()']]],
-  ['myconfig_7',['MyConfig',['../classMyConfig.html#a678cd6805d655e8b3159b5c90fc54e45',1,'MyConfig']]],
-  ['mydoctor_8',['MyDoctor',['../classmy__doctor_1_1MyDoctor.html#a24ea705fdd4c4d4bb0ca15e5c81c10d5',1,'my_doctor::MyDoctor']]],
-  ['myedgemanager_9',['MyEdgeManager',['../classedge_1_1MyEdgeManager.html#a57b546fa3dde8c753e8145838f440116',1,'edge::MyEdgeManager']]],
-  ['myiniconfig_10',['MyINIConfig',['../classMyINIConfig.html#a32fddfe19cf7b2fe08489d3278b742af',1,'MyINIConfig']]],
-  ['myjsonconfig_11',['MyJSONConfig',['../classMyJSONConfig.html#a1dd192bb829c3c041b29da6d11360595',1,'MyJSONConfig']]],
-  ['mysystemhealthymanager_12',['MySystemHealthyManager',['../classMySystemHealthy_1_1MySystemHealthyManager.html#a476947e3d41da37fe3c6d7ce9d668cc8',1,'MySystemHealthy::MySystemHealthyManager']]],
-  ['myyamlconfig_13',['MyYAMLConfig',['../classMyYAMLConfig.html#aaba4bb4d685230dd3a74990721264d05',1,'MyYAMLConfig']]]
+  ['launchcomm_0',['LaunchComm',['../classtools_1_1pipeline_1_1Pipeline.html#a8983381deeb84bb686b05a8f2296e9f9',1,'tools::pipeline::Pipeline']]],
+  ['launchedgemonitor_1',['LaunchEdgeMonitor',['../classtools_1_1pipeline_1_1Pipeline.html#ae2998fc95a900a6a10a1f7e39fa2bd03',1,'tools::pipeline::Pipeline']]],
+  ['launchheartbeat_2',['LaunchHeartbeat',['../classtools_1_1pipeline_1_1Pipeline.html#afe3d91fd6adf24f8f0ec4c876667f0e3',1,'tools::pipeline::Pipeline']]],
+  ['launchrestapi_3',['LaunchRestAPI',['../classtools_1_1pipeline_1_1Pipeline.html#a94c1d1c5924ef14f6226b73cca5d3a99',1,'tools::pipeline::Pipeline']]],
+  ['launchsystemhealthy_4',['LaunchSystemHealthy',['../classtools_1_1pipeline_1_1Pipeline.html#a1222a49df5bd5c7a8935e4c465ee9cbf',1,'tools::pipeline::Pipeline']]],
+  ['load_5',['load',['../classMyINIConfig.html#a232e59acebed58c41d3f37209da2d55f',1,'MyINIConfig::Load()'],['../classMyJSONConfig.html#a232e59acebed58c41d3f37209da2d55f',1,'MyJSONConfig::Load()'],['../classMyYAMLConfig.html#a232e59acebed58c41d3f37209da2d55f',1,'MyYAMLConfig::Load()']]],
+  ['loadconfig_6',['LoadConfig',['../classMyConfig.html#adeded25a5f5b659b838e6fadf3fe0aae',1,'MyConfig']]],
+  ['loadconfigfromarguments_7',['loadConfigFromArguments',['../namespacetools_1_1init__tools.html#a2b0cf61e8177f65ecc60bbc0a8830f21',1,'tools::init_tools']]],
+  ['loadlogconfigfrominiconfig_8',['loadLogConfigFromINIConfig',['../namespacetools_1_1free__func.html#a3ac10b8d2f35c52b8f9656650947cdfc',1,'tools::free_func']]],
+  ['logarg_9',['LogArg',['../classtools_1_1pipeline_1_1Pipeline.html#ad0112bc6d7fb4529c0469b9013dde1aa',1,'tools::pipeline::Pipeline']]],
+  ['logrecursive_10',['LogRecursive',['../classtools_1_1pipeline_1_1Pipeline.html#a4277153c332354e0545e9102f9771bce',1,'tools::pipeline::Pipeline']]],
+  ['logwelcomemessage_11',['logWelcomeMessage',['../namespacetools_1_1free__func.html#ac9ac315588f531b65fa15c1f345ef032',1,'tools::free_func']]]
 ];

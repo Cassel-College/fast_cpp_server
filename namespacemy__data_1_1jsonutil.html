@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: my_data::jsonutil 命名空间参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacemy__data.html">my_data</a></li><li class="navelem"><a class="el" href="namespacemy__data_1_1jsonutil.html">jsonutil</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">my_data::jsonutil 命名空间参考</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ae4d2199a0a0cd74b256332de45ea68a4" id="r_ae4d2199a0a0cd74b256332de45ea68a4"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__data_1_1jsonutil.html#ae4d2199a0a0cd74b256332de45ea68a4">GetStringOr</a> (const nlohmann::json &amp;j, const char *key, const std::string &amp;def)</td></tr>
+<tr class="memdesc:ae4d2199a0a0cd74b256332de45ea68a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">从 json 中读取 string，key 不存在或为 null 则返回默认值  <br /></td></tr>
+<tr class="separator:ae4d2199a0a0cd74b256332de45ea68a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a494c8f5acc19636cc8c10304bf44bc0e" id="r_a494c8f5acc19636cc8c10304bf44bc0e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__data_1_1jsonutil.html#a494c8f5acc19636cc8c10304bf44bc0e">GetIntOr</a> (const nlohmann::json &amp;j, const char *key, int def)</td></tr>
+<tr class="memdesc:a494c8f5acc19636cc8c10304bf44bc0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">从 json 中读取 int，key 不存在或为 null 则返回默认值  <br /></td></tr>
+<tr class="separator:a494c8f5acc19636cc8c10304bf44bc0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac42292cdcdd29239af5ee9bdb0b6d8ef" id="r_ac42292cdcdd29239af5ee9bdb0b6d8ef"><td class="memItemLeft" align="right" valign="top">std::int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__data_1_1jsonutil.html#ac42292cdcdd29239af5ee9bdb0b6d8ef">GetInt64Or</a> (const nlohmann::json &amp;j, const char *key, std::int64_t def)</td></tr>
+<tr class="memdesc:ac42292cdcdd29239af5ee9bdb0b6d8ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">从 json 中读取 int64，key 不存在或为 null 则返回默认值  <br /></td></tr>
+<tr class="separator:ac42292cdcdd29239af5ee9bdb0b6d8ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a id="ac42292cdcdd29239af5ee9bdb0b6d8ef" name="ac42292cdcdd29239af5ee9bdb0b6d8ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac42292cdcdd29239af5ee9bdb0b6d8ef">&#9670;&#160;</a></span>GetInt64Or()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::int64_t GetInt64Or </td>
+          <td>(</td>
+          <td class="paramtype">const nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>j</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::int64_t&#160;</td>
+          <td class="paramname"><em>def</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>从 json 中读取 int64，key 不存在或为 null 则返回默认值 </p>
+
+<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1RawCommand.html#a9e48010592cdfa19e269aaa0607e3d24">RawCommand::fromJson()</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#a29d3bccc9ad241c8414cea88877f5de1">DeviceStatus::fromJson()</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a4ff712b7cd7b98f14760e531a5033c92">EdgeStatus::fromJson()</a>, <a class="el" href="structmy__data_1_1Task.html#a2a9cf913f1d9683cdea2d4106dfb8802">Task::fromJson()</a> , 以及 <a class="el" href="structmy__data_1_1TaskResult.html#a60ff4fd9d09ec9c3ff58980ef05d6fe6">TaskResult::fromJson()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemy__data_1_1jsonutil_ac42292cdcdd29239af5ee9bdb0b6d8ef_icgraph.png" border="0" usemap="#anamespacemy__data_1_1jsonutil_ac42292cdcdd29239af5ee9bdb0b6d8ef_icgraph" alt=""/></div>
+<map name="anamespacemy__data_1_1jsonutil_ac42292cdcdd29239af5ee9bdb0b6d8ef_icgraph" id="anamespacemy__data_1_1jsonutil_ac42292cdcdd29239af5ee9bdb0b6d8ef_icgraph">
+<area shape="rect" title="从 json 中读取 int64，key 不存在或为 null 则返回默认值" alt="" coords="467,134,560,159"/>
+<area shape="rect" href="structmy__data_1_1RawCommand.html#a9e48010592cdfa19e269aaa0607e3d24" title=" " alt="" coords="236,5,419,45"/>
+<area shape="poly" title=" " alt="" coords="491,125,458,92,417,60,394,48,397,43,420,55,462,88,495,121"/>
+<area shape="rect" href="structmy__data_1_1DeviceStatus.html#a29d3bccc9ad241c8414cea88877f5de1" title=" " alt="" coords="241,69,414,109"/>
+<area shape="poly" title=" " alt="" coords="458,132,392,112,393,107,459,127"/>
+<area shape="rect" href="structmy__data_1_1EdgeStatus.html#a4ff712b7cd7b98f14760e531a5033c92" title=" " alt="" coords="17,111,177,151"/>
+<area shape="poly" title=" " alt="" coords="453,147,177,136,177,131,453,142"/>
+<area shape="rect" href="structmy__data_1_1Task.html#a2a9cf913f1d9683cdea2d4106dfb8802" title=" " alt="" coords="5,201,188,226"/>
+<area shape="poly" title=" " alt="" coords="454,159,177,203,176,198,453,154"/>
+<area shape="rect" href="structmy__data_1_1TaskResult.html#a60ff4fd9d09ec9c3ff58980ef05d6fe6" title="从 json 解析" alt="" coords="249,235,406,275"/>
+<area shape="poly" title=" " alt="" coords="488,171,420,218,382,237,380,232,417,214,485,166"/>
+<area shape="poly" title=" " alt="" coords="228,110,177,119,176,114,227,105"/>
+<area shape="poly" title=" " alt="" coords="234,241,168,229,169,223,235,235"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a494c8f5acc19636cc8c10304bf44bc0e" name="a494c8f5acc19636cc8c10304bf44bc0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a494c8f5acc19636cc8c10304bf44bc0e">&#9670;&#160;</a></span>GetIntOr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetIntOr </td>
+          <td>(</td>
+          <td class="paramtype">const nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>j</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>def</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>从 json 中读取 int，key 不存在或为 null 则返回默认值 </p>
+
+<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1DeviceStatus.html#a29d3bccc9ad241c8414cea88877f5de1">DeviceStatus::fromJson()</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a4ff712b7cd7b98f14760e531a5033c92">EdgeStatus::fromJson()</a>, <a class="el" href="structmy__data_1_1Task.html#a2a9cf913f1d9683cdea2d4106dfb8802">Task::fromJson()</a> , 以及 <a class="el" href="structmy__data_1_1TaskResult.html#a60ff4fd9d09ec9c3ff58980ef05d6fe6">TaskResult::fromJson()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemy__data_1_1jsonutil_a494c8f5acc19636cc8c10304bf44bc0e_icgraph.png" border="0" usemap="#anamespacemy__data_1_1jsonutil_a494c8f5acc19636cc8c10304bf44bc0e_icgraph" alt=""/></div>
+<map name="anamespacemy__data_1_1jsonutil_a494c8f5acc19636cc8c10304bf44bc0e_icgraph" id="anamespacemy__data_1_1jsonutil_a494c8f5acc19636cc8c10304bf44bc0e_icgraph">
+<area shape="rect" title="从 json 中读取 int，key 不存在或为 null 则返回默认值" alt="" coords="457,95,535,121"/>
+<area shape="rect" href="structmy__data_1_1DeviceStatus.html#a29d3bccc9ad241c8414cea88877f5de1" title=" " alt="" coords="236,5,409,45"/>
+<area shape="poly" title=" " alt="" coords="457,91,408,66,368,48,370,43,410,62,460,86"/>
+<area shape="rect" href="structmy__data_1_1EdgeStatus.html#a4ff712b7cd7b98f14760e531a5033c92" title=" " alt="" coords="17,47,177,87"/>
+<area shape="poly" title=" " alt="" coords="443,105,177,78,177,72,444,100"/>
+<area shape="rect" href="structmy__data_1_1Task.html#a2a9cf913f1d9683cdea2d4106dfb8802" title=" " alt="" coords="5,137,188,162"/>
+<area shape="poly" title=" " alt="" coords="444,116,189,143,188,137,443,111"/>
+<area shape="rect" href="structmy__data_1_1TaskResult.html#a60ff4fd9d09ec9c3ff58980ef05d6fe6" title="从 json 解析" alt="" coords="244,171,401,211"/>
+<area shape="poly" title=" " alt="" coords="460,130,410,154,370,173,368,168,408,150,457,125"/>
+<area shape="poly" title=" " alt="" coords="223,46,177,55,176,49,222,41"/>
+<area shape="poly" title=" " alt="" coords="230,177,166,165,167,159,231,171"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae4d2199a0a0cd74b256332de45ea68a4" name="ae4d2199a0a0cd74b256332de45ea68a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4d2199a0a0cd74b256332de45ea68a4">&#9670;&#160;</a></span>GetStringOr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GetStringOr </td>
+          <td>(</td>
+          <td class="paramtype">const nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>j</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>def</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>从 json 中读取 string，key 不存在或为 null 则返回默认值 </p>
+
+<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1RawCommand.html#a9e48010592cdfa19e269aaa0607e3d24">RawCommand::fromJson()</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#a29d3bccc9ad241c8414cea88877f5de1">DeviceStatus::fromJson()</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a4ff712b7cd7b98f14760e531a5033c92">EdgeStatus::fromJson()</a>, <a class="el" href="structmy__data_1_1Task.html#a2a9cf913f1d9683cdea2d4106dfb8802">Task::fromJson()</a>, <a class="el" href="structmy__data_1_1TaskResult.html#a60ff4fd9d09ec9c3ff58980ef05d6fe6">TaskResult::fromJson()</a>, <a class="el" href="classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559">UUVCommandNormalizer::Normalize()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">UUVEdge::Submit()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemy__data_1_1jsonutil_ae4d2199a0a0cd74b256332de45ea68a4_icgraph.png" border="0" usemap="#anamespacemy__data_1_1jsonutil_ae4d2199a0a0cd74b256332de45ea68a4_icgraph" alt=""/></div>
+<map name="anamespacemy__data_1_1jsonutil_ae4d2199a0a0cd74b256332de45ea68a4_icgraph" id="anamespacemy__data_1_1jsonutil_ae4d2199a0a0cd74b256332de45ea68a4_icgraph">
+<area shape="rect" title="从 json 中读取 string，key 不存在或为 null 则返回默认值" alt="" coords="528,185,627,210"/>
+<area shape="rect" href="structmy__data_1_1RawCommand.html#a9e48010592cdfa19e269aaa0607e3d24" title=" " alt="" coords="267,5,449,45"/>
+<area shape="poly" title=" " alt="" coords="563,173,531,115,507,85,478,60,448,44,451,39,482,55,511,81,535,112,568,171"/>
+<area shape="rect" href="structmy__data_1_1DeviceStatus.html#a29d3bccc9ad241c8414cea88877f5de1" title=" " alt="" coords="271,69,445,109"/>
+<area shape="poly" title=" " alt="" coords="549,178,517,153,479,130,434,112,436,107,481,126,520,149,552,174"/>
+<area shape="rect" href="structmy__data_1_1EdgeStatus.html#a4ff712b7cd7b98f14760e531a5033c92" title=" " alt="" coords="17,111,177,151"/>
+<area shape="poly" title=" " alt="" coords="514,191,176,144,177,139,515,186"/>
+<area shape="rect" href="structmy__data_1_1Task.html#a2a9cf913f1d9683cdea2d4106dfb8802" title=" " alt="" coords="5,201,188,226"/>
+<area shape="poly" title=" " alt="" coords="514,202,188,213,188,208,514,197"/>
+<area shape="rect" href="structmy__data_1_1TaskResult.html#a60ff4fd9d09ec9c3ff58980ef05d6fe6" title="从 json 解析" alt="" coords="279,235,437,275"/>
+<area shape="poly" title=" " alt="" coords="516,216,436,237,434,232,514,211"/>
+<area shape="rect" href="classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559" title="将 RawCommand 转为 Task" alt="" coords="236,299,480,339"/>
+<area shape="poly" title=" " alt="" coords="559,223,525,257,481,289,454,301,452,296,479,284,521,253,555,219"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html#a0d90b8b5b262d714bf5378e4a6c54773" title="Submit：命令入口（Normalize 并入队）" alt="" coords="260,363,456,403"/>
+<area shape="poly" title=" " alt="" coords="569,224,537,289,513,323,482,353,458,366,455,362,478,349,509,320,533,286,565,222"/>
+<area shape="poly" title=" " alt="" coords="258,108,177,121,176,115,257,102"/>
+<area shape="poly" title=" " alt="" coords="265,243,177,229,178,223,266,237"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

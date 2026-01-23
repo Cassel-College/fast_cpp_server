@@ -1,11 +1,7 @@
 var searchData=
 [
-  ['on_5fconnect_0',['on_connect',['../classfast__mqtt_1_1MFMQTTClient.html#abae512fe718d3bf730d92437a899070e',1,'fast_mqtt::MFMQTTClient']]],
-  ['on_5fconnect_5fstatic_1',['on_connect_static',['../classfast__mqtt_1_1MFMQTTClient.html#ad2edbd47af142d850196dc58d4a6ae7e',1,'fast_mqtt::MFMQTTClient']]],
-  ['on_5fdisconnect_2',['on_disconnect',['../classfast__mqtt_1_1MFMQTTClient.html#a81fde1654bd17db0f01016774102ae95',1,'fast_mqtt::MFMQTTClient']]],
-  ['on_5fdisconnect_5fstatic_3',['on_disconnect_static',['../classfast__mqtt_1_1MFMQTTClient.html#a87990c1b86e2aa6fb8ca548c82acc2bd',1,'fast_mqtt::MFMQTTClient']]],
-  ['on_5flog_5fstatic_4',['on_log_static',['../classfast__mqtt_1_1MFMQTTClient.html#aa277606de7dd16893619ce2fd99136eb',1,'fast_mqtt::MFMQTTClient']]],
-  ['on_5fmessage_5',['on_message',['../classfast__mqtt_1_1MFMQTTClient.html#a0edaf40960e70c82f6fe2fa52609078a',1,'fast_mqtt::MFMQTTClient']]],
-  ['on_5fmessage_5fstatic_6',['on_message_static',['../classfast__mqtt_1_1MFMQTTClient.html#ae9ca35eafa45c520234231b3bc4d689f',1,'fast_mqtt::MFMQTTClient']]],
-  ['operator_3d_7',['operator=',['../classtools_1_1pipeline_1_1Pipeline.html#af9ba5327e33612eaf937c4dc0fd84f01',1,'tools::pipeline::Pipeline::operator=()'],['../classmy__api_1_1MyAPI.html#ae8bfe17a74a804dd600850fc726999d9',1,'my_api::MyAPI::operator=()'],['../classfast__mqtt_1_1MFSMQTTClient.html#ab9e6de4d680e96748d84e2cd4fc96329',1,'fast_mqtt::MFSMQTTClient::operator=()']]]
+  ['name_0',['name',['../classmy__control_1_1demo_1_1UUVCommandNormalizer.html#af6c796e93970e75b0cf8d88a49edb30e',1,'my_control::demo::UUVCommandNormalizer::Name()'],['../classmy__control_1_1demo_1_1UUVControl.html#af6c796e93970e75b0cf8d88a49edb30e',1,'my_control::demo::UUVControl::Name()'],['../classmy__control_1_1demo_1_1Workflow.html#a8546382b04c2126bd39cc17d72d0b5a2',1,'my_control::demo::Workflow::Name()'],['../classmy__control_1_1ICommandNormalizer.html#aaa9504c3f74e2088c4dc945cc61f1237',1,'my_control::ICommandNormalizer::Name()'],['../classmy__control_1_1IControl.html#aaa9504c3f74e2088c4dc945cc61f1237',1,'my_control::IControl::Name()'],['../classmy__control_1_1TaskQueue.html#a8546382b04c2126bd39cc17d72d0b5a2',1,'my_control::TaskQueue::Name()']]],
+  ['netinfotools_1',['NetInfoTools',['../classMySystemHealthy_1_1NetInfoTools.html#a52fedba1a95602edf7238e3ec65b9afe',1,'MySystemHealthy::NetInfoTools']]],
+  ['normalize_2',['normalize',['../classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559',1,'my_control::demo::UUVCommandNormalizer::Normalize()'],['../classmy__control_1_1ICommandNormalizer.html#a2af5a284c6843754eb6ddcefb0378885',1,'my_control::ICommandNormalizer::Normalize()']]],
+  ['nowms_3',['NowMs',['../namespacemy__data.html#a9313adf4c1d0935b3d9526e245a23403',1,'my_data']]]
 ];

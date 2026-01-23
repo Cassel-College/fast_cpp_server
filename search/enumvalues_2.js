@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['fault_0',['FAULT',['../namespaceedge.html#a705af4082cd372cbec46518713ce86f2a893b3aaf1661e3717b18e8335ff93a72',1,'edge']]],
-  ['file_5fpath_1',['FILE_PATH',['../namespacemy__doctor.html#a0522d6bb0c6399c4971af10467d11d04ac66b718fccde8692bf1f26cb604b326b',1,'my_doctor']]]
+  ['degraded_0',['Degraded',['../namespacemy__data.html#a30e0a55991505e8f6aed4feb61c131e4aaa95669cd5732a57e8f6467705f06642',1,'my_data']]],
+  ['deviceoffline_1',['DeviceOffline',['../namespacemy__data.html#a59e56af19e754a6aa26a612ebf91d05faffae4a4d0cefef9840d6134ead4014ee',1,'my_data']]],
+  ['drivererror_2',['DriverError',['../namespacemy__data.html#a59e56af19e754a6aa26a612ebf91d05fabac1f6f75d93a625283f2ef3da9f3942',1,'my_data']]]
 ];

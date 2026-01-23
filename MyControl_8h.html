@@ -73,11 +73,127 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#namespaces">命名空间</a>  </div>
   <div class="headertitle"><div class="title">MyControl.h 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
-
+<div class="textblock"><code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &quot;<a class="el" href="ICommandNormalizer_8h_source.html">ICommandNormalizer.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="IControl_8h_source.html">IControl.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="MyLog_8h_source.html">MyLog.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+MyControl.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="MyControl_8h__incl.png" border="0" usemap="#asrc_2util_2my__control_2MyControl_8h" alt=""/></div>
+<map name="asrc_2util_2my__control_2MyControl_8h" id="asrc_2util_2my__control_2MyControl_8h">
+<area shape="rect" title=" " alt="" coords="573,5,715,45"/>
+<area shape="rect" title=" " alt="" coords="43,247,120,273"/>
+<area shape="poly" title=" " alt="" coords="599,48,123,245,121,240,597,43"/>
+<area shape="rect" title=" " alt="" coords="1115,475,1173,500"/>
+<area shape="poly" title=" " alt="" coords="573,31,414,41,320,51,227,65,142,84,72,109,45,124,25,140,12,158,8,178,8,342,10,351,17,360,45,378,89,394,148,409,297,433,475,451,662,465,841,474,1100,482,1100,488,841,479,662,470,474,457,296,438,147,414,88,399,43,383,14,364,5,353,3,342,3,178,7,156,21,137,42,120,69,104,140,79,226,60,320,46,413,36,572,26"/>
+<area shape="rect" href="ICommandNormalizer_8h.html" title=" " alt="" coords="1257,93,1433,119"/>
+<area shape="poly" title=" " alt="" coords="716,32,1244,91,1243,96,715,37"/>
+<area shape="rect" href="MyLog_8h.html" title=" " alt="" coords="605,167,683,192"/>
+<area shape="poly" title=" " alt="" coords="647,46,647,153,641,153,641,46"/>
+<area shape="rect" href="IControl_8h.html" title=" " alt="" coords="831,93,916,119"/>
+<area shape="poly" title=" " alt="" coords="700,43,828,86,826,91,698,48"/>
+<area shape="poly" title=" " alt="" coords="1434,105,1616,111,1722,119,1828,132,1925,152,2004,178,2035,194,2058,213,2073,235,2079,258,2079,343,2070,360,2047,376,2011,391,1964,404,1844,427,1701,446,1404,473,1187,487,1187,481,1403,468,1700,441,1843,422,1962,399,2009,386,2044,372,2066,357,2073,341,2073,259,2068,237,2054,217,2032,199,2002,183,1923,157,1827,138,1722,125,1616,116,1433,110"/>
+<area shape="rect" title=" " alt="" coords="1207,401,1353,427"/>
+<area shape="poly" title=" " alt="" coords="1344,120,1329,167,1303,291,1286,388,1281,387,1298,290,1324,166,1339,118"/>
+<area shape="rect" title=" " alt="" coords="2113,167,2188,192"/>
+<area shape="poly" title=" " alt="" coords="1434,108,1728,126,1911,142,2095,164,2100,165,2099,170,2094,169,1910,147,1727,131,1433,114"/>
+<area shape="rect" href="MyData_8h.html" title="my_data 模块聚合头文件" alt="" coords="1339,167,1424,192"/>
+<area shape="poly" title=" " alt="" coords="1354,118,1372,153,1367,156,1349,120"/>
+<area shape="poly" title=" " alt="" coords="1257,119,696,175,696,170,1257,114"/>
+<area shape="rect" href="Types_8h.html" title=" " alt="" coords="1628,401,1740,427"/>
+<area shape="poly" title=" " alt="" coords="1424,181,1559,195,1734,223,1821,242,1899,265,1962,293,1985,309,2002,327,2008,341,2002,355,1985,368,1961,380,1897,396,1823,406,1754,412,1753,407,1823,401,1896,391,1959,374,1983,364,1998,352,2003,341,1998,329,1982,313,1959,298,1897,270,1820,247,1733,228,1558,201,1424,187"/>
+<area shape="rect" href="Error_8h.html" title=" " alt="" coords="975,401,1081,427"/>
+<area shape="poly" title=" " alt="" coords="1339,186,1230,202,1167,218,1106,242,1071,260,1044,276,1023,296,1004,329,1000,344,1002,359,1014,388,1009,391,997,360,995,343,999,327,1019,293,1041,271,1068,255,1104,238,1165,213,1229,197,1338,181"/>
+<area shape="rect" href="TaskResult_8h.html" title=" " alt="" coords="1013,328,1158,353"/>
+<area shape="poly" title=" " alt="" coords="1339,184,1295,189,1245,198,1193,216,1146,242,1129,258,1115,278,1096,316,1091,314,1110,275,1125,255,1142,238,1191,211,1243,193,1294,183,1338,179"/>
+<area shape="rect" href="Task_8h.html" title=" " alt="" coords="1156,247,1260,273"/>
+<area shape="poly" title=" " alt="" coords="1357,194,1247,244,1245,239,1355,190"/>
+<area shape="rect" href="Status_8h.html" title=" " alt="" coords="1335,328,1451,353"/>
+<area shape="poly" title=" " alt="" coords="1385,192,1394,314,1389,314,1380,192"/>
+<area shape="rect" href="RawCommand_8h.html" title=" " alt="" coords="1476,328,1647,353"/>
+<area shape="poly" title=" " alt="" coords="1396,190,1540,317,1536,321,1393,194"/>
+<area shape="rect" href="TimeUtil_8h.html" title=" " alt="" coords="1721,328,1852,353"/>
+<area shape="poly" title=" " alt="" coords="1411,190,1745,320,1743,325,1410,195"/>
+<area shape="rect" href="IdUtil_8h.html" title=" " alt="" coords="1877,328,1987,353"/>
+<area shape="poly" title=" " alt="" coords="1425,189,1603,237,1883,321,1882,326,1602,243,1424,194"/>
+<area shape="poly" title=" " alt="" coords="1628,427,1610,429,1187,483,1187,478,1609,424,1627,421"/>
+<area shape="rect" title=" " alt="" coords="1651,475,1717,500"/>
+<area shape="poly" title=" " alt="" coords="1687,427,1687,461,1681,461,1681,427"/>
+<area shape="poly" title=" " alt="" coords="1048,424,1115,465,1112,470,1045,429"/>
+<area shape="poly" title=" " alt="" coords="1093,353,1137,461,1132,463,1088,355"/>
+<area shape="poly" title=" " alt="" coords="1118,351,1236,394,1235,399,1116,356"/>
+<area shape="poly" title=" " alt="" coords="1158,348,1615,402,1614,407,1158,353"/>
+<area shape="poly" title=" " alt="" coords="1078,355,1048,392,1044,389,1074,352"/>
+<area shape="poly" title=" " alt="" coords="1207,274,1154,462,1148,461,1202,272"/>
+<area shape="poly" title=" " alt="" coords="1216,272,1271,388,1266,390,1211,274"/>
+<area shape="poly" title=" " alt="" coords="1260,260,1359,264,1477,274,1587,294,1630,308,1660,326,1672,339,1679,355,1686,387,1681,388,1674,357,1667,342,1657,330,1628,313,1586,299,1477,280,1359,269,1260,265"/>
+<area shape="poly" title=" " alt="" coords="1191,275,1116,323,1113,318,1188,271"/>
+<area shape="poly" title=" " alt="" coords="1395,354,1389,390,1380,411,1367,429,1325,457,1277,475,1230,485,1188,489,1187,483,1229,480,1276,470,1323,453,1363,425,1376,408,1384,389,1390,353"/>
+<area shape="poly" title=" " alt="" coords="1377,356,1311,396,1308,392,1374,351"/>
+<area shape="poly" title=" " alt="" coords="1441,351,1625,395,1623,401,1439,356"/>
+<area shape="rect" title=" " alt="" coords="1429,401,1553,427"/>
+<area shape="poly" title=" " alt="" coords="1411,351,1465,391,1462,395,1407,356"/>
+<area shape="poly" title=" " alt="" coords="1569,353,1578,389,1577,410,1567,428,1540,448,1500,462,1450,473,1395,481,1281,488,1187,489,1187,484,1280,483,1394,475,1449,468,1499,457,1538,443,1563,425,1571,408,1572,389,1564,354"/>
+<area shape="poly" title=" " alt="" coords="1517,356,1339,400,1338,395,1515,351"/>
+<area shape="poly" title=" " alt="" coords="1582,351,1654,392,1651,397,1580,356"/>
+<area shape="poly" title=" " alt="" coords="1772,356,1714,395,1711,391,1769,351"/>
+<area shape="poly" title=" " alt="" coords="1893,356,1738,400,1737,395,1891,351"/>
+<area shape="poly" title=" " alt="" coords="605,185,401,200,267,217,133,243,122,245,121,240,131,237,266,211,401,194,605,179"/>
+<area shape="poly" title=" " alt="" coords="683,183,743,201,773,217,799,238,817,263,825,287,827,335,827,359,830,381,838,403,856,425,874,436,899,446,965,462,1101,480,1101,485,964,467,897,451,871,440,853,429,834,406,824,382,821,359,821,335,820,288,812,265,795,242,770,221,741,206,682,189"/>
+<area shape="rect" title=" " alt="" coords="335,247,459,273"/>
+<area shape="poly" title=" " alt="" coords="609,195,447,246,445,241,607,189"/>
+<area shape="rect" title=" " alt="" coords="483,240,642,280"/>
+<area shape="poly" title=" " alt="" coords="634,194,594,233,590,229,630,190"/>
+<area shape="rect" title=" " alt="" coords="666,247,785,273"/>
+<area shape="poly" title=" " alt="" coords="658,190,705,236,702,240,654,194"/>
+<area shape="rect" title=" " alt="" coords="145,247,311,273"/>
+<area shape="poly" title=" " alt="" coords="605,190,323,243,299,247,298,242,322,237,604,185"/>
+<area shape="poly" title=" " alt="" coords="876,119,876,259,876,342,882,376,900,404,927,427,960,445,996,459,1034,469,1102,480,1101,485,1033,474,995,464,958,450,924,431,896,408,878,378,871,342,871,259,871,119"/>
+<area shape="poly" title=" " alt="" coords="880,118,933,240,969,308,987,334,1003,351,1035,367,1083,380,1194,400,1193,405,1081,385,1033,372,1000,355,983,338,965,311,928,242,876,120"/>
+<area shape="poly" title=" " alt="" coords="917,111,1325,167,1324,173,916,116"/>
+<area shape="poly" title=" " alt="" coords="837,121,695,165,694,160,836,116"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="MyControl_8h__dep__incl.png" border="0" usemap="#asrc_2util_2my__control_2MyControl_8hdep" alt=""/></div>
+<map name="asrc_2util_2my__control_2MyControl_8hdep" id="asrc_2util_2my__control_2MyControl_8hdep">
+<area shape="rect" title=" " alt="" coords="177,5,320,45"/>
+<area shape="rect" href="MyControl_8cpp.html" title=" " alt="" coords="5,93,148,133"/>
+<area shape="poly" title=" " alt="" coords="200,54,116,96,113,91,197,49"/>
+<area shape="rect" href="demo_2UUVDevice_8h.html" title=" " alt="" coords="172,93,325,133"/>
+<area shape="poly" title=" " alt="" coords="251,59,251,93,246,93,246,59"/>
+<area shape="rect" href="UUVEdge_8cpp.html" title=" " alt="" coords="350,93,521,133"/>
+<area shape="poly" title=" " alt="" coords="303,49,396,91,393,96,301,53"/>
+<area shape="rect" href="my__device_2MyDevice_8cpp.html" title=" " alt="" coords="89,181,230,221"/>
+<area shape="poly" title=" " alt="" coords="221,145,181,183,177,179,217,141"/>
+<area shape="rect" href="demo_2UUVDevice_8cpp.html" title=" " alt="" coords="254,181,422,221"/>
+<area shape="poly" title=" " alt="" coords="280,141,320,179,316,183,277,145"/>
+</map>
+</div>
+</div>
 <p><a href="MyControl_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__control_1_1MyControl.html">MyControl</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespacemy__control.html">my_control</a> 门面（轻量）  <a href="classmy__control_1_1MyControl.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacemy__control" id="r_namespacemy__control"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__control.html">my_control</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

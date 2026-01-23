@@ -1,0 +1,364 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: DeviceStatus结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacemy__data.html">my_data</a></li><li class="navelem"><a class="el" href="structmy__data_1_1DeviceStatus.html">DeviceStatus</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pub-attribs">成员变量</a>  </div>
+  <div class="headertitle"><div class="title">DeviceStatus结构体 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>单设备状态快照  
+ <a href="structmy__data_1_1DeviceStatus.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Status_8h_source.html">Status.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a1fe5121d6528fdea3f243321b3fa3a49" id="r_a1fe5121d6528fdea3f243321b3fa3a49"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmy__data_1_1DeviceStatus.html#a1fe5121d6528fdea3f243321b3fa3a49">toString</a> () const</td></tr>
+<tr class="separator:a1fe5121d6528fdea3f243321b3fa3a49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a098007f3dd2a938824a819aa09423ca9" id="r_a098007f3dd2a938824a819aa09423ca9"><td class="memItemLeft" align="right" valign="top">nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmy__data_1_1DeviceStatus.html#a098007f3dd2a938824a819aa09423ca9">toJson</a> () const</td></tr>
+<tr class="separator:a098007f3dd2a938824a819aa09423ca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a29d3bccc9ad241c8414cea88877f5de1" id="r_a29d3bccc9ad241c8414cea88877f5de1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structmy__data_1_1DeviceStatus.html">DeviceStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmy__data_1_1DeviceStatus.html#a29d3bccc9ad241c8414cea88877f5de1">fromJson</a> (const nlohmann::json &amp;j)</td></tr>
+<tr class="separator:a29d3bccc9ad241c8414cea88877f5de1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+成员变量</h2></td></tr>
+<tr class="memitem:a47449c9a7a840d9fa6b4a69688305e10" id="r_a47449c9a7a840d9fa6b4a69688305e10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">DeviceId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmy__data_1_1DeviceStatus.html#a47449c9a7a840d9fa6b4a69688305e10">device_id</a> {}</td></tr>
+<tr class="separator:a47449c9a7a840d9fa6b4a69688305e10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af821acee7e457efc9a0e768d1e938949" id="r_af821acee7e457efc9a0e768d1e938949"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemy__data.html#a69c46968483fe8b647c643ea0779baa3">DeviceConnState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmy__data_1_1DeviceStatus.html#af821acee7e457efc9a0e768d1e938949">conn_state</a> {<a class="el" href="namespacemy__data.html#a69c46968483fe8b647c643ea0779baa3a88183b946cc5f0e8c96b2e66e1c74a7e">DeviceConnState::Unknown</a>}</td></tr>
+<tr class="separator:af821acee7e457efc9a0e768d1e938949"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80ffc9c37fe70d68ed7247de9e383269" id="r_a80ffc9c37fe70d68ed7247de9e383269"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemy__data.html#ab741123951602d5912c8b5aba6bf3372">DeviceWorkState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmy__data_1_1DeviceStatus.html#a80ffc9c37fe70d68ed7247de9e383269">work_state</a> {<a class="el" href="namespacemy__data.html#ab741123951602d5912c8b5aba6bf3372ae599161956d626eda4cb0a5ffb85271c">DeviceWorkState::Idle</a>}</td></tr>
+<tr class="separator:a80ffc9c37fe70d68ed7247de9e383269"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5408f1fbf295730816160360d0593a61" id="r_a5408f1fbf295730816160360d0593a61"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemy__data.html#a1b9d3b04810d37cf4227a7e624359f04">TaskId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmy__data_1_1DeviceStatus.html#a5408f1fbf295730816160360d0593a61">running_task_id</a> {}</td></tr>
+<tr class="separator:a5408f1fbf295730816160360d0593a61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adef2c57c01aebddd44f7913264efc06f" id="r_adef2c57c01aebddd44f7913264efc06f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemy__data.html#ab0a41a12b2c8afae2a15c3987f587e0d">TimestampMs</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmy__data_1_1DeviceStatus.html#adef2c57c01aebddd44f7913264efc06f">last_task_at_ms</a> {0}</td></tr>
+<tr class="separator:adef2c57c01aebddd44f7913264efc06f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1f973f56df6185040bd96ef12911bf9" id="r_ad1f973f56df6185040bd96ef12911bf9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemy__data.html#ab0a41a12b2c8afae2a15c3987f587e0d">TimestampMs</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmy__data_1_1DeviceStatus.html#ad1f973f56df6185040bd96ef12911bf9">last_seen_at_ms</a> {0}</td></tr>
+<tr class="separator:ad1f973f56df6185040bd96ef12911bf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6976c458c4c2009292fa9a0a938e44e" id="r_ad6976c458c4c2009292fa9a0a938e44e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmy__data_1_1DeviceStatus.html#ad6976c458c4c2009292fa9a0a938e44e">last_error</a> {}</td></tr>
+<tr class="separator:ad6976c458c4c2009292fa9a0a938e44e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a570f70dac26e232386edfcdaa3549c6d" id="r_a570f70dac26e232386edfcdaa3549c6d"><td class="memItemLeft" align="right" valign="top">std::int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmy__data_1_1DeviceStatus.html#a570f70dac26e232386edfcdaa3549c6d">queue_depth</a> {0}</td></tr>
+<tr class="separator:a570f70dac26e232386edfcdaa3549c6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>单设备状态快照 </p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a29d3bccc9ad241c8414cea88877f5de1" name="a29d3bccc9ad241c8414cea88877f5de1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29d3bccc9ad241c8414cea88877f5de1">&#9670;&#160;</a></span>fromJson()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmy__data_1_1DeviceStatus.html">DeviceStatus</a> fromJson </td>
+          <td>(</td>
+          <td class="paramtype">const nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>j</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="structmy__data_1_1DeviceStatus.html#af821acee7e457efc9a0e768d1e938949">DeviceStatus::conn_state</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#a47449c9a7a840d9fa6b4a69688305e10">DeviceStatus::device_id</a>, <a class="el" href="namespacemy__data_1_1jsonutil.html#ac42292cdcdd29239af5ee9bdb0b6d8ef">my_data::jsonutil::GetInt64Or()</a>, <a class="el" href="namespacemy__data_1_1jsonutil.html#a494c8f5acc19636cc8c10304bf44bc0e">my_data::jsonutil::GetIntOr()</a>, <a class="el" href="namespacemy__data_1_1jsonutil.html#ae4d2199a0a0cd74b256332de45ea68a4">my_data::jsonutil::GetStringOr()</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#ad6976c458c4c2009292fa9a0a938e44e">DeviceStatus::last_error</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#ad1f973f56df6185040bd96ef12911bf9">DeviceStatus::last_seen_at_ms</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#adef2c57c01aebddd44f7913264efc06f">DeviceStatus::last_task_at_ms</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#a570f70dac26e232386edfcdaa3549c6d">DeviceStatus::queue_depth</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#a5408f1fbf295730816160360d0593a61">DeviceStatus::running_task_id</a> , 以及 <a class="el" href="structmy__data_1_1DeviceStatus.html#a80ffc9c37fe70d68ed7247de9e383269">DeviceStatus::work_state</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1EdgeStatus.html#a4ff712b7cd7b98f14760e531a5033c92">EdgeStatus::fromJson()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="structmy__data_1_1DeviceStatus_a29d3bccc9ad241c8414cea88877f5de1_cgraph.png" border="0" usemap="#astructmy__data_1_1DeviceStatus_a29d3bccc9ad241c8414cea88877f5de1_cgraph" alt=""/></div>
+<map name="astructmy__data_1_1DeviceStatus_a29d3bccc9ad241c8414cea88877f5de1_cgraph" id="astructmy__data_1_1DeviceStatus_a29d3bccc9ad241c8414cea88877f5de1_cgraph">
+<area shape="rect" title=" " alt="" coords="5,77,85,102"/>
+<area shape="rect" href="namespacemy__data_1_1jsonutil.html#ac42292cdcdd29239af5ee9bdb0b6d8ef" title="从 json 中读取 int64，key 不存在或为 null 则返回默认值" alt="" coords="133,5,276,45"/>
+<area shape="poly" title=" " alt="" coords="77,74,141,48,143,53,79,79"/>
+<area shape="rect" href="namespacemy__data_1_1jsonutil.html#a494c8f5acc19636cc8c10304bf44bc0e" title="从 json 中读取 int，key 不存在或为 null 则返回默认值" alt="" coords="133,69,276,109"/>
+<area shape="poly" title=" " alt="" coords="85,87,120,87,120,92,85,92"/>
+<area shape="rect" href="namespacemy__data_1_1jsonutil.html#ae4d2199a0a0cd74b256332de45ea68a4" title="从 json 中读取 string，key 不存在或为 null 则返回默认值" alt="" coords="133,133,276,173"/>
+<area shape="poly" title=" " alt="" coords="79,100,143,126,141,131,77,105"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="structmy__data_1_1DeviceStatus_a29d3bccc9ad241c8414cea88877f5de1_icgraph.png" border="0" usemap="#astructmy__data_1_1DeviceStatus_a29d3bccc9ad241c8414cea88877f5de1_icgraph" alt=""/></div>
+<map name="astructmy__data_1_1DeviceStatus_a29d3bccc9ad241c8414cea88877f5de1_icgraph" id="astructmy__data_1_1DeviceStatus_a29d3bccc9ad241c8414cea88877f5de1_icgraph">
+<area shape="rect" title=" " alt="" coords="213,13,293,38"/>
+<area shape="rect" href="structmy__data_1_1EdgeStatus.html#a4ff712b7cd7b98f14760e531a5033c92" title=" " alt="" coords="5,5,165,45"/>
+<area shape="poly" title=" " alt="" coords="200,28,166,28,166,23,200,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a098007f3dd2a938824a819aa09423ca9" name="a098007f3dd2a938824a819aa09423ca9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a098007f3dd2a938824a819aa09423ca9">&#9670;&#160;</a></span>toJson()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nlohmann::json toJson </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="structmy__data_1_1DeviceStatus.html#af821acee7e457efc9a0e768d1e938949">DeviceStatus::conn_state</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#a47449c9a7a840d9fa6b4a69688305e10">DeviceStatus::device_id</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#ad6976c458c4c2009292fa9a0a938e44e">DeviceStatus::last_error</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#ad1f973f56df6185040bd96ef12911bf9">DeviceStatus::last_seen_at_ms</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#adef2c57c01aebddd44f7913264efc06f">DeviceStatus::last_task_at_ms</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#a570f70dac26e232386edfcdaa3549c6d">DeviceStatus::queue_depth</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#a5408f1fbf295730816160360d0593a61">DeviceStatus::running_task_id</a> , 以及 <a class="el" href="structmy__data_1_1DeviceStatus.html#a80ffc9c37fe70d68ed7247de9e383269">DeviceStatus::work_state</a>.</p>
+
+</div>
+</div>
+<a id="a1fe5121d6528fdea3f243321b3fa3a49" name="a1fe5121d6528fdea3f243321b3fa3a49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fe5121d6528fdea3f243321b3fa3a49">&#9670;&#160;</a></span>toString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string toString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="structmy__data_1_1DeviceStatus.html#af821acee7e457efc9a0e768d1e938949">DeviceStatus::conn_state</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#a47449c9a7a840d9fa6b4a69688305e10">DeviceStatus::device_id</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#ad6976c458c4c2009292fa9a0a938e44e">DeviceStatus::last_error</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#ad1f973f56df6185040bd96ef12911bf9">DeviceStatus::last_seen_at_ms</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#adef2c57c01aebddd44f7913264efc06f">DeviceStatus::last_task_at_ms</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#a570f70dac26e232386edfcdaa3549c6d">DeviceStatus::queue_depth</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#a5408f1fbf295730816160360d0593a61">DeviceStatus::running_task_id</a>, <a class="el" href="namespacemy__data.html#aa2c3b20a64b6aef24654f21b84592582">my_data::ToString()</a> , 以及 <a class="el" href="structmy__data_1_1DeviceStatus.html#a80ffc9c37fe70d68ed7247de9e383269">DeviceStatus::work_state</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="structmy__data_1_1DeviceStatus_a1fe5121d6528fdea3f243321b3fa3a49_cgraph.png" border="0" usemap="#astructmy__data_1_1DeviceStatus_a1fe5121d6528fdea3f243321b3fa3a49_cgraph" alt=""/></div>
+<map name="astructmy__data_1_1DeviceStatus_a1fe5121d6528fdea3f243321b3fa3a49_cgraph" id="astructmy__data_1_1DeviceStatus_a1fe5121d6528fdea3f243321b3fa3a49_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,79,31"/>
+<area shape="rect" href="namespacemy__data.html#aa2c3b20a64b6aef24654f21b84592582" title="将错误码转为可读字符串" alt="" coords="127,5,265,31"/>
+<area shape="poly" title=" " alt="" coords="79,15,113,15,113,21,79,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">结构体成员变量说明</h2>
+<a id="af821acee7e457efc9a0e768d1e938949" name="af821acee7e457efc9a0e768d1e938949"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af821acee7e457efc9a0e768d1e938949">&#9670;&#160;</a></span>conn_state</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemy__data.html#a69c46968483fe8b647c643ea0779baa3">DeviceConnState</a> conn_state {<a class="el" href="namespacemy__data.html#a69c46968483fe8b647c643ea0779baa3a88183b946cc5f0e8c96b2e66e1c74a7e">DeviceConnState::Unknown</a>}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1DeviceStatus.html#a29d3bccc9ad241c8414cea88877f5de1">DeviceStatus::fromJson()</a>, <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#aeaad4d1e08909ec413c6e934fb718dc7">UUVDevice::Init()</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#a098007f3dd2a938824a819aa09423ca9">DeviceStatus::toJson()</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#a1fe5121d6528fdea3f243321b3fa3a49">DeviceStatus::toString()</a> , 以及 <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a667de3be7fa6d87d5e1b5b3fd8065859">UUVDevice::UUVDevice()</a>.</p>
+
+</div>
+</div>
+<a id="a47449c9a7a840d9fa6b4a69688305e10" name="a47449c9a7a840d9fa6b4a69688305e10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47449c9a7a840d9fa6b4a69688305e10">&#9670;&#160;</a></span>device_id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">DeviceId</a> device_id {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1DeviceStatus.html#a29d3bccc9ad241c8414cea88877f5de1">DeviceStatus::fromJson()</a>, <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#aeaad4d1e08909ec413c6e934fb718dc7">UUVDevice::Init()</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#a098007f3dd2a938824a819aa09423ca9">DeviceStatus::toJson()</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#a1fe5121d6528fdea3f243321b3fa3a49">DeviceStatus::toString()</a> , 以及 <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a667de3be7fa6d87d5e1b5b3fd8065859">UUVDevice::UUVDevice()</a>.</p>
+
+</div>
+</div>
+<a id="ad6976c458c4c2009292fa9a0a938e44e" name="ad6976c458c4c2009292fa9a0a938e44e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6976c458c4c2009292fa9a0a938e44e">&#9670;&#160;</a></span>last_error</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string last_error {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1DeviceStatus.html#a29d3bccc9ad241c8414cea88877f5de1">DeviceStatus::fromJson()</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#a098007f3dd2a938824a819aa09423ca9">DeviceStatus::toJson()</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#a1fe5121d6528fdea3f243321b3fa3a49">DeviceStatus::toString()</a>, <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a81dd0a772bae5a5e534a5fb3894509e9">UUVDevice::UpdateOnTaskFinish()</a> , 以及 <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a667de3be7fa6d87d5e1b5b3fd8065859">UUVDevice::UUVDevice()</a>.</p>
+
+</div>
+</div>
+<a id="ad1f973f56df6185040bd96ef12911bf9" name="ad1f973f56df6185040bd96ef12911bf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1f973f56df6185040bd96ef12911bf9">&#9670;&#160;</a></span>last_seen_at_ms</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemy__data.html#ab0a41a12b2c8afae2a15c3987f587e0d">TimestampMs</a> last_seen_at_ms {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1DeviceStatus.html#a29d3bccc9ad241c8414cea88877f5de1">DeviceStatus::fromJson()</a>, <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#aeaad4d1e08909ec413c6e934fb718dc7">UUVDevice::Init()</a>, <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a634c58de2126b4a4e6a2a093e60e1290">UUVDevice::Stop()</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#a098007f3dd2a938824a819aa09423ca9">DeviceStatus::toJson()</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#a1fe5121d6528fdea3f243321b3fa3a49">DeviceStatus::toString()</a>, <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a81dd0a772bae5a5e534a5fb3894509e9">UUVDevice::UpdateOnTaskFinish()</a>, <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a59c55e446776e18cbd4b693f09ea501c">UUVDevice::UpdateOnTaskStart()</a> , 以及 <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a667de3be7fa6d87d5e1b5b3fd8065859">UUVDevice::UUVDevice()</a>.</p>
+
+</div>
+</div>
+<a id="adef2c57c01aebddd44f7913264efc06f" name="adef2c57c01aebddd44f7913264efc06f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adef2c57c01aebddd44f7913264efc06f">&#9670;&#160;</a></span>last_task_at_ms</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemy__data.html#ab0a41a12b2c8afae2a15c3987f587e0d">TimestampMs</a> last_task_at_ms {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1DeviceStatus.html#a29d3bccc9ad241c8414cea88877f5de1">DeviceStatus::fromJson()</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#a098007f3dd2a938824a819aa09423ca9">DeviceStatus::toJson()</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#a1fe5121d6528fdea3f243321b3fa3a49">DeviceStatus::toString()</a> , 以及 <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a81dd0a772bae5a5e534a5fb3894509e9">UUVDevice::UpdateOnTaskFinish()</a>.</p>
+
+</div>
+</div>
+<a id="a570f70dac26e232386edfcdaa3549c6d" name="a570f70dac26e232386edfcdaa3549c6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a570f70dac26e232386edfcdaa3549c6d">&#9670;&#160;</a></span>queue_depth</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::int64_t queue_depth {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1DeviceStatus.html#a29d3bccc9ad241c8414cea88877f5de1">DeviceStatus::fromJson()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">UUVEdge::GetStatusSnapshot()</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#a098007f3dd2a938824a819aa09423ca9">DeviceStatus::toJson()</a> , 以及 <a class="el" href="structmy__data_1_1DeviceStatus.html#a1fe5121d6528fdea3f243321b3fa3a49">DeviceStatus::toString()</a>.</p>
+
+</div>
+</div>
+<a id="a5408f1fbf295730816160360d0593a61" name="a5408f1fbf295730816160360d0593a61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5408f1fbf295730816160360d0593a61">&#9670;&#160;</a></span>running_task_id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemy__data.html#a1b9d3b04810d37cf4227a7e624359f04">TaskId</a> running_task_id {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1DeviceStatus.html#a29d3bccc9ad241c8414cea88877f5de1">DeviceStatus::fromJson()</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#a098007f3dd2a938824a819aa09423ca9">DeviceStatus::toJson()</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#a1fe5121d6528fdea3f243321b3fa3a49">DeviceStatus::toString()</a>, <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a81dd0a772bae5a5e534a5fb3894509e9">UUVDevice::UpdateOnTaskFinish()</a>, <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a59c55e446776e18cbd4b693f09ea501c">UUVDevice::UpdateOnTaskStart()</a> , 以及 <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a667de3be7fa6d87d5e1b5b3fd8065859">UUVDevice::UUVDevice()</a>.</p>
+
+</div>
+</div>
+<a id="a80ffc9c37fe70d68ed7247de9e383269" name="a80ffc9c37fe70d68ed7247de9e383269"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80ffc9c37fe70d68ed7247de9e383269">&#9670;&#160;</a></span>work_state</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemy__data.html#ab741123951602d5912c8b5aba6bf3372">DeviceWorkState</a> work_state {<a class="el" href="namespacemy__data.html#ab741123951602d5912c8b5aba6bf3372ae599161956d626eda4cb0a5ffb85271c">DeviceWorkState::Idle</a>}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1DeviceStatus.html#a29d3bccc9ad241c8414cea88877f5de1">DeviceStatus::fromJson()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">UUVEdge::GetStatusSnapshot()</a>, <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#aeaad4d1e08909ec413c6e934fb718dc7">UUVDevice::Init()</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#a098007f3dd2a938824a819aa09423ca9">DeviceStatus::toJson()</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#a1fe5121d6528fdea3f243321b3fa3a49">DeviceStatus::toString()</a>, <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a81dd0a772bae5a5e534a5fb3894509e9">UUVDevice::UpdateOnTaskFinish()</a>, <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a59c55e446776e18cbd4b693f09ea501c">UUVDevice::UpdateOnTaskStart()</a> , 以及 <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a667de3be7fa6d87d5e1b5b3fd8065859">UUVDevice::UUVDevice()</a>.</p>
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li>src/util/my_data/demo/<a class="el" href="Status_8h_source.html">Status.h</a></li>
+<li>src/util/my_data/demo/<a class="el" href="Status_8cpp.html">Status.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

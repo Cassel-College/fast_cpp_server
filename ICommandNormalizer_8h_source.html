@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_control/ICommandNormalizer.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_d1e87e24b8b4140cc626618e929dade3.html">my_control</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">ICommandNormalizer.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="ICommandNormalizer_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;nlohmann/json.hpp&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;optional&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="MyData_8h.html">MyData.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="MyLog_8h.html">MyLog.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__control.html">my_control</a> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classmy__control_1_1ICommandNormalizer.html">   21</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__control_1_1ICommandNormalizer.html">ICommandNormalizer</a> {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classmy__control_1_1ICommandNormalizer.html#a63f7bd21c0f7213256beb5e7b567795a">   23</a></span>  <span class="keyword">virtual</span> <a class="code hl_function" href="classmy__control_1_1ICommandNormalizer.html#a63f7bd21c0f7213256beb5e7b567795a">~ICommandNormalizer</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classmy__control_1_1ICommandNormalizer.html#a2af5a284c6843754eb6ddcefb0378885">   32</a></span>  <span class="keyword">virtual</span> std::optional&lt;my_data::Task&gt; <a class="code hl_function" href="classmy__control_1_1ICommandNormalizer.html#a2af5a284c6843754eb6ddcefb0378885">Normalize</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structmy__data_1_1RawCommand.html">my_data::RawCommand</a>&amp; in,</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                                                 <span class="keyword">const</span> <a class="code hl_typedef" href="namespacemy__data.html#aa97613f313f7fbbad8c368f2599e3f26">my_data::EdgeId</a>&amp; edge_id,</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                                                 std::string* err) = 0;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classmy__control_1_1ICommandNormalizer.html#aaa9504c3f74e2088c4dc945cc61f1237">   36</a></span>  <span class="keyword">virtual</span> std::string <a class="code hl_function" href="classmy__control_1_1ICommandNormalizer.html#aaa9504c3f74e2088c4dc945cc61f1237">Name</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;ICommandNormalizer&quot;</span>; }</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>};</div>
+</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>} <span class="comment">// namespace my_control</span></div>
+<div class="ttc" id="aMyData_8h_html"><div class="ttname"><a href="MyData_8h.html">MyData.h</a></div><div class="ttdoc">my_data 模块聚合头文件</div></div>
+<div class="ttc" id="aMyLog_8h_html"><div class="ttname"><a href="MyLog_8h.html">MyLog.h</a></div></div>
+<div class="ttc" id="aclassmy__control_1_1ICommandNormalizer_html"><div class="ttname"><a href="classmy__control_1_1ICommandNormalizer.html">my_control::ICommandNormalizer</a></div><div class="ttdoc">命令规范化接口：RawCommand/json -&gt; Task</div><div class="ttdef"><b>Definition</b> ICommandNormalizer.h:21</div></div>
+<div class="ttc" id="aclassmy__control_1_1ICommandNormalizer_html_a2af5a284c6843754eb6ddcefb0378885"><div class="ttname"><a href="classmy__control_1_1ICommandNormalizer.html#a2af5a284c6843754eb6ddcefb0378885">my_control::ICommandNormalizer::Normalize</a></div><div class="ttdeci">virtual std::optional&lt; my_data::Task &gt; Normalize(const my_data::RawCommand &amp;in, const my_data::EdgeId &amp;edge_id, std::string *err)=0</div><div class="ttdoc">将 RawCommand 转为 Task</div></div>
+<div class="ttc" id="aclassmy__control_1_1ICommandNormalizer_html_a63f7bd21c0f7213256beb5e7b567795a"><div class="ttname"><a href="classmy__control_1_1ICommandNormalizer.html#a63f7bd21c0f7213256beb5e7b567795a">my_control::ICommandNormalizer::~ICommandNormalizer</a></div><div class="ttdeci">virtual ~ICommandNormalizer()=default</div></div>
+<div class="ttc" id="aclassmy__control_1_1ICommandNormalizer_html_aaa9504c3f74e2088c4dc945cc61f1237"><div class="ttname"><a href="classmy__control_1_1ICommandNormalizer.html#aaa9504c3f74e2088c4dc945cc61f1237">my_control::ICommandNormalizer::Name</a></div><div class="ttdeci">virtual std::string Name() const</div><div class="ttdef"><b>Definition</b> ICommandNormalizer.h:36</div></div>
+<div class="ttc" id="anamespacemy__control_html"><div class="ttname"><a href="namespacemy__control.html">my_control</a></div><div class="ttdef"><b>Definition</b> UUVCommandNormalizer.cpp:7</div></div>
+<div class="ttc" id="anamespacemy__data_html_aa97613f313f7fbbad8c368f2599e3f26"><div class="ttname"><a href="namespacemy__data.html#aa97613f313f7fbbad8c368f2599e3f26">my_data::EdgeId</a></div><div class="ttdeci">std::string EdgeId</div><div class="ttdoc">边缘执行器ID</div><div class="ttdef"><b>Definition</b> Types.h:10</div></div>
+<div class="ttc" id="astructmy__data_1_1RawCommand_html"><div class="ttname"><a href="structmy__data_1_1RawCommand.html">my_data::RawCommand</a></div><div class="ttdoc">原始控制命令（接收层输入）</div><div class="ttdef"><b>Definition</b> RawCommand.h:15</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

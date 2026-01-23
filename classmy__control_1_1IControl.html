@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: IControl类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacemy__control.html">my_control</a></li><li class="navelem"><a class="el" href="classmy__control_1_1IControl.html">IControl</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a>  </div>
+  <div class="headertitle"><div class="title">IControl类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>执行器抽象接口：负责真正执行 Task  
+ <a href="classmy__control_1_1IControl.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="IControl_8h_source.html">IControl.h</a>&gt;</code></p>
+<div class="dynheader">
+类 IControl 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__control_1_1IControl__inherit__graph.png" border="0" usemap="#aIControl_inherit__map" alt="Inheritance graph"/></div>
+<map name="aIControl_inherit__map" id="aIControl_inherit__map">
+<area shape="rect" title="执行器抽象接口：负责真正执行 Task" alt="" coords="18,5,91,31"/>
+<area shape="rect" href="classmy__control_1_1demo_1_1UUVControl.html" title="UUV 执行器（demo）" alt="" coords="5,79,104,104"/>
+<area shape="poly" title=" " alt="" coords="57,44,57,79,52,79,52,44"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ac4c81c747378d5048253e743d9cf7e5d" id="r_ac4c81c747378d5048253e743d9cf7e5d"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__control_1_1IControl.html#ac4c81c747378d5048253e743d9cf7e5d">~IControl</a> ()=default</td></tr>
+<tr class="separator:ac4c81c747378d5048253e743d9cf7e5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a318f0835a0611f2d747aa141e674af64" id="r_a318f0835a0611f2d747aa141e674af64"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__control_1_1IControl.html#a318f0835a0611f2d747aa141e674af64">Init</a> (const nlohmann::json &amp;cfg, std::string *err)=0</td></tr>
+<tr class="memdesc:a318f0835a0611f2d747aa141e674af64"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化执行器（加载驱动配置）  <br /></td></tr>
+<tr class="separator:a318f0835a0611f2d747aa141e674af64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada398df5df213190ef2398448e9d29cd" id="r_ada398df5df213190ef2398448e9d29cd"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structmy__data_1_1TaskResult.html">my_data::TaskResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__control_1_1IControl.html#ada398df5df213190ef2398448e9d29cd">DoTask</a> (const <a class="el" href="structmy__data_1_1Task.html">my_data::Task</a> &amp;task)=0</td></tr>
+<tr class="memdesc:ada398df5df213190ef2398448e9d29cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">执行任务（MVP：同步返回结果）  <br /></td></tr>
+<tr class="separator:ada398df5df213190ef2398448e9d29cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70900d90f4931bca98078a6e0992c2d8" id="r_a70900d90f4931bca98078a6e0992c2d8"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__control_1_1IControl.html#a70900d90f4931bca98078a6e0992c2d8">HealthCheck</a> ()</td></tr>
+<tr class="memdesc:a70900d90f4931bca98078a6e0992c2d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">健康检查（可选）  <br /></td></tr>
+<tr class="separator:a70900d90f4931bca98078a6e0992c2d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa9504c3f74e2088c4dc945cc61f1237" id="r_aaa9504c3f74e2088c4dc945cc61f1237"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__control_1_1IControl.html#aaa9504c3f74e2088c4dc945cc61f1237">Name</a> () const</td></tr>
+<tr class="memdesc:aaa9504c3f74e2088c4dc945cc61f1237"><td class="mdescLeft">&#160;</td><td class="mdescRight">名称（用于日志）  <br /></td></tr>
+<tr class="separator:aaa9504c3f74e2088c4dc945cc61f1237"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>执行器抽象接口：负责真正执行 Task </p>
+<dl class="section note"><dt>注解</dt><dd><ul>
+<li>不负责排队、不负责调度、不负责状态汇总</li>
+<li>由每个 device_id 的 Device 持有一个 <a class="el" href="classmy__control_1_1IControl.html" title="执行器抽象接口：负责真正执行 Task">IControl</a> 实例（通常是具体设备实现类） </li>
+</ul>
+</dd></dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="ac4c81c747378d5048253e743d9cf7e5d" name="ac4c81c747378d5048253e743d9cf7e5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4c81c747378d5048253e743d9cf7e5d">&#9670;&#160;</a></span>~IControl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ~<a class="el" href="classmy__control_1_1IControl.html">IControl</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="ada398df5df213190ef2398448e9d29cd" name="ada398df5df213190ef2398448e9d29cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada398df5df213190ef2398448e9d29cd">&#9670;&#160;</a></span>DoTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structmy__data_1_1TaskResult.html">my_data::TaskResult</a> DoTask </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structmy__data_1_1Task.html">my_data::Task</a> &amp;&#160;</td>
+          <td class="paramname"><em>task</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>执行任务（MVP：同步返回结果） </p>
+
+<p>在 <a class="el" href="classmy__control_1_1demo_1_1UUVControl.html#ac797965a05a93bf646c6ac643a3461c8">UUVControl</a> 内被实现.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a2037369e5ec6b779d3c3de24e2cbb614">Workflow::RunLoop()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__control_1_1IControl_ada398df5df213190ef2398448e9d29cd_icgraph.png" border="0" usemap="#aclassmy__control_1_1IControl_ada398df5df213190ef2398448e9d29cd_icgraph" alt=""/></div>
+<map name="aclassmy__control_1_1IControl_ada398df5df213190ef2398448e9d29cd_icgraph" id="aclassmy__control_1_1IControl_ada398df5df213190ef2398448e9d29cd_icgraph">
+<area shape="rect" title="执行任务（MVP：同步返回结果）" alt="" coords="517,13,587,38"/>
+<area shape="rect" href="classmy__control_1_1demo_1_1Workflow.html#a2037369e5ec6b779d3c3de24e2cbb614" title=" " alt="" coords="261,5,469,45"/>
+<area shape="poly" title=" " alt="" coords="503,28,469,28,469,23,503,23"/>
+<area shape="rect" href="classmy__control_1_1demo_1_1Workflow.html#aa70efaa4751ac6d5d54dce88fe725e0a" title=" " alt="" coords="5,5,213,45"/>
+<area shape="poly" title=" " alt="" coords="248,28,213,28,213,23,248,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a70900d90f4931bca98078a6e0992c2d8" name="a70900d90f4931bca98078a6e0992c2d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70900d90f4931bca98078a6e0992c2d8">&#9670;&#160;</a></span>HealthCheck()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool HealthCheck </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>健康检查（可选） </p>
+
+</div>
+</div>
+<a id="a318f0835a0611f2d747aa141e674af64" name="a318f0835a0611f2d747aa141e674af64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a318f0835a0611f2d747aa141e674af64">&#9670;&#160;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Init </td>
+          <td>(</td>
+          <td class="paramtype">const nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>cfg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>err</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>初始化执行器（加载驱动配置） </p>
+
+<p>在 <a class="el" href="classmy__control_1_1demo_1_1UUVControl.html#aeaad4d1e08909ec413c6e934fb718dc7">UUVControl</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="aaa9504c3f74e2088c4dc945cc61f1237" name="aaa9504c3f74e2088c4dc945cc61f1237"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa9504c3f74e2088c4dc945cc61f1237">&#9670;&#160;</a></span>Name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string Name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>名称（用于日志） </p>
+
+<p>被 <a class="el" href="classmy__control_1_1demo_1_1UUVControl.html#af6c796e93970e75b0cf8d88a49edb30e">UUVControl</a> 重载.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#ac1f0cbdf0411057fb0a5f8f2cbd19e70">Workflow::Workflow()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__control_1_1IControl_aaa9504c3f74e2088c4dc945cc61f1237_icgraph.png" border="0" usemap="#aclassmy__control_1_1IControl_aaa9504c3f74e2088c4dc945cc61f1237_icgraph" alt=""/></div>
+<map name="aclassmy__control_1_1IControl_aaa9504c3f74e2088c4dc945cc61f1237_icgraph" id="aclassmy__control_1_1IControl_aaa9504c3f74e2088c4dc945cc61f1237_icgraph">
+<area shape="rect" title="名称（用于日志）" alt="" coords="261,13,323,38"/>
+<area shape="rect" href="classmy__control_1_1demo_1_1Workflow.html#ac1f0cbdf0411057fb0a5f8f2cbd19e70" title=" " alt="" coords="5,5,213,45"/>
+<area shape="poly" title=" " alt="" coords="248,28,214,28,214,23,248,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/util/my_control/<a class="el" href="IControl_8h_source.html">IControl.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

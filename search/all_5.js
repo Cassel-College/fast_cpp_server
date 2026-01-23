@@ -1,12 +1,17 @@
 var searchData=
 [
   ['fail_5fthreshold_5f_0',['fail_threshold_',['../classDeviceOnlineMonitor.html#a28450f07310db00c5371a7a5287ba5d6',1,'DeviceOnlineMonitor']]],
-  ['fast_5fmqtt_1',['fast_mqtt',['../namespacefast__mqtt.html',1,'']]],
-  ['fast_5fmqtt_5fmfmqtttclient_5fh_2',['FAST_MQTT_MFMQTTTCLIENT_H',['../MFMQTTClient_8h.html#a4e8f088949b14df1b0d6f29d132c6a33',1,'MFMQTTClient.h']]],
-  ['fast_5fmqtt_5fmfmqtttsclient_5fh_3',['FAST_MQTT_MFMQTTTSCLIENT_H',['../MFSMQTTClient_8h.html#ac8641bcef04bfa7b9b1569d5b36f16e2',1,'MFSMQTTClient.h']]],
-  ['fault_4',['FAULT',['../namespaceedge.html#a705af4082cd372cbec46518713ce86f2a893b3aaf1661e3717b18e8335ff93a72',1,'edge']]],
-  ['file_5fpath_5',['FILE_PATH',['../namespacemy__doctor.html#a0522d6bb0c6399c4971af10467d11d04ac66b718fccde8692bf1f26cb604b326b',1,'my_doctor']]],
-  ['flush_6',['Flush',['../namespaceMyLog.html#a0e2644b2df3c228e8d71a55b60723f31',1,'MyLog']]],
-  ['freefunc_2ecpp_7',['FreeFunc.cpp',['../FreeFunc_8cpp.html',1,'']]],
-  ['freefunc_2eh_8',['FreeFunc.h',['../FreeFunc_8h.html',1,'']]]
+  ['failed_1',['Failed',['../namespacemy__data.html#a724f9ce2351c125b3b7f6c7923822bcead7c8c85bf79bbe1b7188497c32c3b0ca',1,'my_data']]],
+  ['fast_5fmqtt_2',['fast_mqtt',['../namespacefast__mqtt.html',1,'']]],
+  ['fast_5fmqtt_5fmfmqtttclient_5fh_3',['FAST_MQTT_MFMQTTTCLIENT_H',['../MFMQTTClient_8h.html#a4e8f088949b14df1b0d6f29d132c6a33',1,'MFMQTTClient.h']]],
+  ['fast_5fmqtt_5fmfmqtttsclient_5fh_4',['FAST_MQTT_MFMQTTTSCLIENT_H',['../MFSMQTTClient_8h.html#ac8641bcef04bfa7b9b1569d5b36f16e2',1,'MFSMQTTClient.h']]],
+  ['fault_5',['FAULT',['../namespaceedge__manager.html#a705af4082cd372cbec46518713ce86f2a893b3aaf1661e3717b18e8335ff93a72',1,'edge_manager']]],
+  ['faulted_6',['Faulted',['../namespacemy__data.html#ab741123951602d5912c8b5aba6bf3372a2b310d05c23325e2935ec87b25a60b8f',1,'my_data']]],
+  ['file_5fpath_7',['FILE_PATH',['../namespacemy__doctor.html#a0522d6bb0c6399c4971af10467d11d04ac66b718fccde8692bf1f26cb604b326b',1,'my_doctor']]],
+  ['finishcallback_8',['FinishCallback',['../classmy__control_1_1demo_1_1Workflow.html#a3dd461a10fac993210cf36ee20c87422',1,'my_control::demo::Workflow']]],
+  ['finished_5fat_5fms_9',['finished_at_ms',['../structmy__data_1_1TaskResult.html#a5f8349b647a9346f27756e72a3372f3c',1,'my_data::TaskResult']]],
+  ['flush_10',['Flush',['../namespaceMyLog.html#a0e2644b2df3c228e8d71a55b60723f31',1,'MyLog']]],
+  ['freefunc_2ecpp_11',['FreeFunc.cpp',['../FreeFunc_8cpp.html',1,'']]],
+  ['freefunc_2eh_12',['FreeFunc.h',['../FreeFunc_8h.html',1,'']]],
+  ['fromjson_13',['fromjson',['../structmy__data_1_1TaskResult.html#a60ff4fd9d09ec9c3ff58980ef05d6fe6',1,'my_data::TaskResult::fromJson()'],['../structmy__data_1_1Task.html#a2a9cf913f1d9683cdea2d4106dfb8802',1,'my_data::Task::fromJson()'],['../structmy__data_1_1EdgeStatus.html#a4ff712b7cd7b98f14760e531a5033c92',1,'my_data::EdgeStatus::fromJson()'],['../structmy__data_1_1DeviceStatus.html#a29d3bccc9ad241c8414cea88877f5de1',1,'my_data::DeviceStatus::fromJson()'],['../structmy__data_1_1RawCommand.html#a9e48010592cdfa19e269aaa0607e3d24',1,'my_data::RawCommand::fromJson()']]]
 ];

@@ -1,0 +1,7 @@
+<map id="Workflow" name="Workflow">
+<area shape="rect" id="Node000001" title="Workflow（调度线程）：每个 device_id 一条线程" alt="" coords="64,93,147,119"/>
+<area shape="rect" id="Node000002" href="$classmy__control_1_1TaskQueue.html" title="线程安全任务队列（MVP）" alt="" coords="5,5,99,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="66,42,81,68,98,92,94,95,76,71,61,44"/>
+<area shape="rect" id="Node000003" href="$classmy__control_1_1IControl.html" title="执行器抽象接口：负责真正执行 Task" alt="" coords="123,5,197,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="149,44,133,71,116,95,112,92,128,68,144,42"/>
+</map>

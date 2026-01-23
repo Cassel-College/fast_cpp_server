@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_control/demo/Workflow.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_d1e87e24b8b4140cc626618e929dade3.html">my_control</a></li><li class="navelem"><a class="el" href="dir_28768e32588eb008f25d5c5244af8165.html">demo</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Workflow.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="Workflow_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;atomic&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;thread&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="MyData_8h.html">MyData.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="MyLog_8h.html">MyLog.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="TaskQueue_8h.html">TaskQueue.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="IControl_8h.html">IControl.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__control_1_1demo.html">my_control::demo</a> {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classmy__control_1_1demo_1_1Workflow.html">   23</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__control_1_1demo_1_1Workflow.html">Workflow</a> {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classmy__control_1_1demo_1_1Workflow.html#af260224de6bec2a95a889501d19809f2">   25</a></span>  <span class="keyword">using </span><a class="code hl_typedef" href="classmy__control_1_1demo_1_1Workflow.html#af260224de6bec2a95a889501d19809f2">StartCallback</a> = std::function&lt;void(<span class="keyword">const</span> <a class="code hl_struct" href="structmy__data_1_1Task.html">my_data::Task</a>&amp;)&gt;;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classmy__control_1_1demo_1_1Workflow.html#a3dd461a10fac993210cf36ee20c87422">   26</a></span>  <span class="keyword">using </span><a class="code hl_typedef" href="classmy__control_1_1demo_1_1Workflow.html#a3dd461a10fac993210cf36ee20c87422">FinishCallback</a> = std::function&lt;void(<span class="keyword">const</span> <a class="code hl_struct" href="structmy__data_1_1Task.html">my_data::Task</a>&amp;, <span class="keyword">const</span> <a class="code hl_struct" href="structmy__data_1_1TaskResult.html">my_data::TaskResult</a>&amp;)&gt;;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <a class="code hl_class" href="classmy__control_1_1demo_1_1Workflow.html">Workflow</a>(std::string name, <a class="code hl_class" href="classmy__control_1_1TaskQueue.html">my_control::TaskQueue</a>&amp; queue, <a class="code hl_class" href="classmy__control_1_1IControl.html">my_control::IControl</a>&amp; control);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <a class="code hl_function" href="classmy__control_1_1demo_1_1Workflow.html#ab282c005f4ccf9a3c9b713e978d8f751">~Workflow</a>();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classmy__control_1_1demo_1_1Workflow.html#a2704cf8dcf98a56e82960da17689ff47">   32</a></span>  <a class="code hl_function" href="classmy__control_1_1demo_1_1Workflow.html#a2704cf8dcf98a56e82960da17689ff47">Workflow</a>(<span class="keyword">const</span> <a class="code hl_class" href="classmy__control_1_1demo_1_1Workflow.html">Workflow</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classmy__control_1_1demo_1_1Workflow.html#a8318357d5d41fd38132374fba7de3eb5">   33</a></span>  <a class="code hl_class" href="classmy__control_1_1demo_1_1Workflow.html">Workflow</a>&amp; <a class="code hl_function" href="classmy__control_1_1demo_1_1Workflow.html#a8318357d5d41fd38132374fba7de3eb5">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classmy__control_1_1demo_1_1Workflow.html">Workflow</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classmy__control_1_1demo_1_1Workflow.html#af98d5e0ae43de666618d49a1988d3615">   35</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__control_1_1demo_1_1Workflow.html#af98d5e0ae43de666618d49a1988d3615">SetEStopFlag</a>(std::atomic&lt;bool&gt;* estop_flag) { <a class="code hl_variable" href="classmy__control_1_1demo_1_1Workflow.html#af207f215387c2fd372ebb20aa2cc527b">estop_flag_</a> = estop_flag; }</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classmy__control_1_1demo_1_1Workflow.html#ac3938ea4b50a522213084eb63e463c79">   40</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__control_1_1demo_1_1Workflow.html#ac3938ea4b50a522213084eb63e463c79">SetStartCallback</a>(<a class="code hl_typedef" href="classmy__control_1_1demo_1_1Workflow.html#af260224de6bec2a95a889501d19809f2">StartCallback</a> cb) { <a class="code hl_variable" href="classmy__control_1_1demo_1_1Workflow.html#a50c19bd995b4eaefa1294e1782781d8e">on_start_</a> = std::move(cb); }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classmy__control_1_1demo_1_1Workflow.html#aafddcadd1d6307b5f20f8a33be71fb83">   45</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__control_1_1demo_1_1Workflow.html#aafddcadd1d6307b5f20f8a33be71fb83">SetFinishCallback</a>(<a class="code hl_typedef" href="classmy__control_1_1demo_1_1Workflow.html#a3dd461a10fac993210cf36ee20c87422">FinishCallback</a> cb) { <a class="code hl_variable" href="classmy__control_1_1demo_1_1Workflow.html#ae64a1b1311cc665802d1bc7326f74bb9">on_finish_</a> = std::move(cb); }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__control_1_1demo_1_1Workflow.html#aa70efaa4751ac6d5d54dce88fe725e0a">Start</a>();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__control_1_1demo_1_1Workflow.html#a17a237457e57625296e6b24feb19c60a">Stop</a>();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__control_1_1demo_1_1Workflow.html#ac24a06ec0749cb482b60f621833bddd7">Join</a>();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classmy__control_1_1demo_1_1Workflow.html#ad201152b05beda61e51e3594ff07c8fe">   51</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__control_1_1demo_1_1Workflow.html#ad201152b05beda61e51e3594ff07c8fe">IsRunning</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classmy__control_1_1demo_1_1Workflow.html#aa9620a15c76ada2388bf678e373a6463">running_</a>.load(); }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classmy__control_1_1demo_1_1Workflow.html#a8546382b04c2126bd39cc17d72d0b5a2">   52</a></span>  <span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="classmy__control_1_1demo_1_1Workflow.html#a8546382b04c2126bd39cc17d72d0b5a2">Name</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classmy__control_1_1demo_1_1Workflow.html#a4d739cc5d335052eb9f5b2ca559b81d1">name_</a>; }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__control_1_1demo_1_1Workflow.html#a2037369e5ec6b779d3c3de24e2cbb614">RunLoop</a>();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classmy__control_1_1demo_1_1Workflow.html#a4d739cc5d335052eb9f5b2ca559b81d1">   58</a></span>  std::string <a class="code hl_variable" href="classmy__control_1_1demo_1_1Workflow.html#a4d739cc5d335052eb9f5b2ca559b81d1">name_</a>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classmy__control_1_1demo_1_1Workflow.html#aa88f6b751e2bbe911c4ae2d35a631022">   59</a></span>  <a class="code hl_class" href="classmy__control_1_1TaskQueue.html">my_control::TaskQueue</a>&amp; <a class="code hl_variable" href="classmy__control_1_1demo_1_1Workflow.html#aa88f6b751e2bbe911c4ae2d35a631022">queue_</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classmy__control_1_1demo_1_1Workflow.html#a5bcaddb83e39d2c871ce71f1085aeb51">   60</a></span>  <a class="code hl_class" href="classmy__control_1_1IControl.html">my_control::IControl</a>&amp; <a class="code hl_variable" href="classmy__control_1_1demo_1_1Workflow.html#a5bcaddb83e39d2c871ce71f1085aeb51">control_</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classmy__control_1_1demo_1_1Workflow.html#aa9620a15c76ada2388bf678e373a6463">   62</a></span>  std::atomic&lt;bool&gt; <a class="code hl_variable" href="classmy__control_1_1demo_1_1Workflow.html#aa9620a15c76ada2388bf678e373a6463">running_</a>{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="classmy__control_1_1demo_1_1Workflow.html#ae1a1eeaa4661c67f8e75985160abf62a">   63</a></span>  std::atomic&lt;bool&gt; <a class="code hl_variable" href="classmy__control_1_1demo_1_1Workflow.html#ae1a1eeaa4661c67f8e75985160abf62a">stop_</a>{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classmy__control_1_1demo_1_1Workflow.html#a2d17662c59ba51130a35fdaa8567db74">   64</a></span>  std::thread <a class="code hl_variable" href="classmy__control_1_1demo_1_1Workflow.html#a2d17662c59ba51130a35fdaa8567db74">worker_</a>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  <span class="comment">// 外部注入（由 Edge 或 Device 注入），EStop=true 时不再取新任务</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classmy__control_1_1demo_1_1Workflow.html#af207f215387c2fd372ebb20aa2cc527b">   67</a></span>  std::atomic&lt;bool&gt;* <a class="code hl_variable" href="classmy__control_1_1demo_1_1Workflow.html#af207f215387c2fd372ebb20aa2cc527b">estop_flag_</a>{<span class="keyword">nullptr</span>};</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="classmy__control_1_1demo_1_1Workflow.html#a50c19bd995b4eaefa1294e1782781d8e">   69</a></span>  <a class="code hl_typedef" href="classmy__control_1_1demo_1_1Workflow.html#af260224de6bec2a95a889501d19809f2">StartCallback</a> <a class="code hl_variable" href="classmy__control_1_1demo_1_1Workflow.html#a50c19bd995b4eaefa1294e1782781d8e">on_start_</a>{};</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classmy__control_1_1demo_1_1Workflow.html#ae64a1b1311cc665802d1bc7326f74bb9">   70</a></span>  <a class="code hl_typedef" href="classmy__control_1_1demo_1_1Workflow.html#a3dd461a10fac993210cf36ee20c87422">FinishCallback</a> <a class="code hl_variable" href="classmy__control_1_1demo_1_1Workflow.html#ae64a1b1311cc665802d1bc7326f74bb9">on_finish_</a>{};</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>};</div>
+</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>} <span class="comment">// namespace my_control::demo</span></div>
+<div class="ttc" id="aIControl_8h_html"><div class="ttname"><a href="IControl_8h.html">IControl.h</a></div></div>
+<div class="ttc" id="aMyData_8h_html"><div class="ttname"><a href="MyData_8h.html">MyData.h</a></div><div class="ttdoc">my_data 模块聚合头文件</div></div>
+<div class="ttc" id="aMyLog_8h_html"><div class="ttname"><a href="MyLog_8h.html">MyLog.h</a></div></div>
+<div class="ttc" id="aTaskQueue_8h_html"><div class="ttname"><a href="TaskQueue_8h.html">TaskQueue.h</a></div></div>
+<div class="ttc" id="aclassmy__control_1_1IControl_html"><div class="ttname"><a href="classmy__control_1_1IControl.html">my_control::IControl</a></div><div class="ttdoc">执行器抽象接口：负责真正执行 Task</div><div class="ttdef"><b>Definition</b> IControl.h:18</div></div>
+<div class="ttc" id="aclassmy__control_1_1TaskQueue_html"><div class="ttname"><a href="classmy__control_1_1TaskQueue.html">my_control::TaskQueue</a></div><div class="ttdoc">线程安全任务队列（MVP）</div><div class="ttdef"><b>Definition</b> TaskQueue.h:28</div></div>
+<div class="ttc" id="aclassmy__control_1_1demo_1_1Workflow_html"><div class="ttname"><a href="classmy__control_1_1demo_1_1Workflow.html">my_control::demo::Workflow</a></div><div class="ttdoc">Workflow（调度线程）：每个 device_id 一条线程</div><div class="ttdef"><b>Definition</b> Workflow.h:23</div></div>
+<div class="ttc" id="aclassmy__control_1_1demo_1_1Workflow_html_a17a237457e57625296e6b24feb19c60a"><div class="ttname"><a href="classmy__control_1_1demo_1_1Workflow.html#a17a237457e57625296e6b24feb19c60a">my_control::demo::Workflow::Stop</a></div><div class="ttdeci">void Stop()</div><div class="ttdef"><b>Definition</b> Workflow.cpp:31</div></div>
+<div class="ttc" id="aclassmy__control_1_1demo_1_1Workflow_html_a2037369e5ec6b779d3c3de24e2cbb614"><div class="ttname"><a href="classmy__control_1_1demo_1_1Workflow.html#a2037369e5ec6b779d3c3de24e2cbb614">my_control::demo::Workflow::RunLoop</a></div><div class="ttdeci">void RunLoop()</div><div class="ttdef"><b>Definition</b> Workflow.cpp:50</div></div>
+<div class="ttc" id="aclassmy__control_1_1demo_1_1Workflow_html_a2704cf8dcf98a56e82960da17689ff47"><div class="ttname"><a href="classmy__control_1_1demo_1_1Workflow.html#a2704cf8dcf98a56e82960da17689ff47">my_control::demo::Workflow::Workflow</a></div><div class="ttdeci">Workflow(const Workflow &amp;)=delete</div></div>
+<div class="ttc" id="aclassmy__control_1_1demo_1_1Workflow_html_a2d17662c59ba51130a35fdaa8567db74"><div class="ttname"><a href="classmy__control_1_1demo_1_1Workflow.html#a2d17662c59ba51130a35fdaa8567db74">my_control::demo::Workflow::worker_</a></div><div class="ttdeci">std::thread worker_</div><div class="ttdef"><b>Definition</b> Workflow.h:64</div></div>
+<div class="ttc" id="aclassmy__control_1_1demo_1_1Workflow_html_a3dd461a10fac993210cf36ee20c87422"><div class="ttname"><a href="classmy__control_1_1demo_1_1Workflow.html#a3dd461a10fac993210cf36ee20c87422">my_control::demo::Workflow::FinishCallback</a></div><div class="ttdeci">std::function&lt; void(const my_data::Task &amp;, const my_data::TaskResult &amp;)&gt; FinishCallback</div><div class="ttdef"><b>Definition</b> Workflow.h:26</div></div>
+<div class="ttc" id="aclassmy__control_1_1demo_1_1Workflow_html_a4d739cc5d335052eb9f5b2ca559b81d1"><div class="ttname"><a href="classmy__control_1_1demo_1_1Workflow.html#a4d739cc5d335052eb9f5b2ca559b81d1">my_control::demo::Workflow::name_</a></div><div class="ttdeci">std::string name_</div><div class="ttdef"><b>Definition</b> Workflow.h:58</div></div>
+<div class="ttc" id="aclassmy__control_1_1demo_1_1Workflow_html_a50c19bd995b4eaefa1294e1782781d8e"><div class="ttname"><a href="classmy__control_1_1demo_1_1Workflow.html#a50c19bd995b4eaefa1294e1782781d8e">my_control::demo::Workflow::on_start_</a></div><div class="ttdeci">StartCallback on_start_</div><div class="ttdef"><b>Definition</b> Workflow.h:69</div></div>
+<div class="ttc" id="aclassmy__control_1_1demo_1_1Workflow_html_a5bcaddb83e39d2c871ce71f1085aeb51"><div class="ttname"><a href="classmy__control_1_1demo_1_1Workflow.html#a5bcaddb83e39d2c871ce71f1085aeb51">my_control::demo::Workflow::control_</a></div><div class="ttdeci">my_control::IControl &amp; control_</div><div class="ttdef"><b>Definition</b> Workflow.h:60</div></div>
+<div class="ttc" id="aclassmy__control_1_1demo_1_1Workflow_html_a8318357d5d41fd38132374fba7de3eb5"><div class="ttname"><a href="classmy__control_1_1demo_1_1Workflow.html#a8318357d5d41fd38132374fba7de3eb5">my_control::demo::Workflow::operator=</a></div><div class="ttdeci">Workflow &amp; operator=(const Workflow &amp;)=delete</div></div>
+<div class="ttc" id="aclassmy__control_1_1demo_1_1Workflow_html_a8546382b04c2126bd39cc17d72d0b5a2"><div class="ttname"><a href="classmy__control_1_1demo_1_1Workflow.html#a8546382b04c2126bd39cc17d72d0b5a2">my_control::demo::Workflow::Name</a></div><div class="ttdeci">const std::string &amp; Name() const</div><div class="ttdef"><b>Definition</b> Workflow.h:52</div></div>
+<div class="ttc" id="aclassmy__control_1_1demo_1_1Workflow_html_aa70efaa4751ac6d5d54dce88fe725e0a"><div class="ttname"><a href="classmy__control_1_1demo_1_1Workflow.html#aa70efaa4751ac6d5d54dce88fe725e0a">my_control::demo::Workflow::Start</a></div><div class="ttdeci">bool Start()</div><div class="ttdef"><b>Definition</b> Workflow.cpp:19</div></div>
+<div class="ttc" id="aclassmy__control_1_1demo_1_1Workflow_html_aa88f6b751e2bbe911c4ae2d35a631022"><div class="ttname"><a href="classmy__control_1_1demo_1_1Workflow.html#aa88f6b751e2bbe911c4ae2d35a631022">my_control::demo::Workflow::queue_</a></div><div class="ttdeci">my_control::TaskQueue &amp; queue_</div><div class="ttdef"><b>Definition</b> Workflow.h:59</div></div>
+<div class="ttc" id="aclassmy__control_1_1demo_1_1Workflow_html_aa9620a15c76ada2388bf678e373a6463"><div class="ttname"><a href="classmy__control_1_1demo_1_1Workflow.html#aa9620a15c76ada2388bf678e373a6463">my_control::demo::Workflow::running_</a></div><div class="ttdeci">std::atomic&lt; bool &gt; running_</div><div class="ttdef"><b>Definition</b> Workflow.h:62</div></div>
+<div class="ttc" id="aclassmy__control_1_1demo_1_1Workflow_html_aafddcadd1d6307b5f20f8a33be71fb83"><div class="ttname"><a href="classmy__control_1_1demo_1_1Workflow.html#aafddcadd1d6307b5f20f8a33be71fb83">my_control::demo::Workflow::SetFinishCallback</a></div><div class="ttdeci">void SetFinishCallback(FinishCallback cb)</div><div class="ttdoc">任务完成回调（DoTask 后触发）</div><div class="ttdef"><b>Definition</b> Workflow.h:45</div></div>
+<div class="ttc" id="aclassmy__control_1_1demo_1_1Workflow_html_ab282c005f4ccf9a3c9b713e978d8f751"><div class="ttname"><a href="classmy__control_1_1demo_1_1Workflow.html#ab282c005f4ccf9a3c9b713e978d8f751">my_control::demo::Workflow::~Workflow</a></div><div class="ttdeci">~Workflow()</div><div class="ttdef"><b>Definition</b> Workflow.cpp:13</div></div>
+<div class="ttc" id="aclassmy__control_1_1demo_1_1Workflow_html_ac24a06ec0749cb482b60f621833bddd7"><div class="ttname"><a href="classmy__control_1_1demo_1_1Workflow.html#ac24a06ec0749cb482b60f621833bddd7">my_control::demo::Workflow::Join</a></div><div class="ttdeci">void Join()</div><div class="ttdef"><b>Definition</b> Workflow.cpp:41</div></div>
+<div class="ttc" id="aclassmy__control_1_1demo_1_1Workflow_html_ac3938ea4b50a522213084eb63e463c79"><div class="ttname"><a href="classmy__control_1_1demo_1_1Workflow.html#ac3938ea4b50a522213084eb63e463c79">my_control::demo::Workflow::SetStartCallback</a></div><div class="ttdeci">void SetStartCallback(StartCallback cb)</div><div class="ttdoc">任务开始回调（Pop 成功后、DoTask 前触发）</div><div class="ttdef"><b>Definition</b> Workflow.h:40</div></div>
+<div class="ttc" id="aclassmy__control_1_1demo_1_1Workflow_html_ad201152b05beda61e51e3594ff07c8fe"><div class="ttname"><a href="classmy__control_1_1demo_1_1Workflow.html#ad201152b05beda61e51e3594ff07c8fe">my_control::demo::Workflow::IsRunning</a></div><div class="ttdeci">bool IsRunning() const</div><div class="ttdef"><b>Definition</b> Workflow.h:51</div></div>
+<div class="ttc" id="aclassmy__control_1_1demo_1_1Workflow_html_ae1a1eeaa4661c67f8e75985160abf62a"><div class="ttname"><a href="classmy__control_1_1demo_1_1Workflow.html#ae1a1eeaa4661c67f8e75985160abf62a">my_control::demo::Workflow::stop_</a></div><div class="ttdeci">std::atomic&lt; bool &gt; stop_</div><div class="ttdef"><b>Definition</b> Workflow.h:63</div></div>
+<div class="ttc" id="aclassmy__control_1_1demo_1_1Workflow_html_ae64a1b1311cc665802d1bc7326f74bb9"><div class="ttname"><a href="classmy__control_1_1demo_1_1Workflow.html#ae64a1b1311cc665802d1bc7326f74bb9">my_control::demo::Workflow::on_finish_</a></div><div class="ttdeci">FinishCallback on_finish_</div><div class="ttdef"><b>Definition</b> Workflow.h:70</div></div>
+<div class="ttc" id="aclassmy__control_1_1demo_1_1Workflow_html_af207f215387c2fd372ebb20aa2cc527b"><div class="ttname"><a href="classmy__control_1_1demo_1_1Workflow.html#af207f215387c2fd372ebb20aa2cc527b">my_control::demo::Workflow::estop_flag_</a></div><div class="ttdeci">std::atomic&lt; bool &gt; * estop_flag_</div><div class="ttdef"><b>Definition</b> Workflow.h:67</div></div>
+<div class="ttc" id="aclassmy__control_1_1demo_1_1Workflow_html_af260224de6bec2a95a889501d19809f2"><div class="ttname"><a href="classmy__control_1_1demo_1_1Workflow.html#af260224de6bec2a95a889501d19809f2">my_control::demo::Workflow::StartCallback</a></div><div class="ttdeci">std::function&lt; void(const my_data::Task &amp;)&gt; StartCallback</div><div class="ttdef"><b>Definition</b> Workflow.h:25</div></div>
+<div class="ttc" id="aclassmy__control_1_1demo_1_1Workflow_html_af98d5e0ae43de666618d49a1988d3615"><div class="ttname"><a href="classmy__control_1_1demo_1_1Workflow.html#af98d5e0ae43de666618d49a1988d3615">my_control::demo::Workflow::SetEStopFlag</a></div><div class="ttdeci">void SetEStopFlag(std::atomic&lt; bool &gt; *estop_flag)</div><div class="ttdef"><b>Definition</b> Workflow.h:35</div></div>
+<div class="ttc" id="anamespacemy__control_1_1demo_html"><div class="ttname"><a href="namespacemy__control_1_1demo.html">my_control::demo</a></div><div class="ttdef"><b>Definition</b> UUVCommandNormalizer.cpp:7</div></div>
+<div class="ttc" id="astructmy__data_1_1TaskResult_html"><div class="ttname"><a href="structmy__data_1_1TaskResult.html">my_data::TaskResult</a></div><div class="ttdoc">Task 执行结果</div><div class="ttdef"><b>Definition</b> TaskResult.h:12</div></div>
+<div class="ttc" id="astructmy__data_1_1Task_html"><div class="ttname"><a href="structmy__data_1_1Task.html">my_data::Task</a></div><div class="ttdoc">Task（内部统一任务）</div><div class="ttdef"><b>Definition</b> Task.h:27</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

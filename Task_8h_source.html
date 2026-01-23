@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_data/demo/Task.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_d2fb9e0fa2d8020e5b4e7c6f3725e339.html">my_data</a></li><li class="navelem"><a class="el" href="dir_91c0827ce5bb70ce9c454ba2182d2133.html">demo</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Task.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="Task_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="TaskResult_8h.html">TaskResult.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="Types_8h.html">Types.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;nlohmann/json.hpp&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__data.html">my_data</a> {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="namespacemy__data.html#a724f9ce2351c125b3b7f6c7923822bce">   12</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="namespacemy__data.html#a724f9ce2351c125b3b7f6c7923822bce">TaskState</a> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  <a class="code hl_enumvalue" href="namespacemy__data.html#a724f9ce2351c125b3b7f6c7923822bcea2d13df6f8b5e4c5af9f87e0dc39df69d">Pending</a> = 0,</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  <a class="code hl_enumvalue" href="namespacemy__data.html#a30e0a55991505e8f6aed4feb61c131e4a5bda814c4aedb126839228f1a3d92f09">Running</a> = 1,</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  <a class="code hl_enumvalue" href="namespacemy__data.html#a724f9ce2351c125b3b7f6c7923822bcea66d02c2f8a582446f8dd8752366002b5">Succeeded</a> = 2,</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  <a class="code hl_enumvalue" href="namespacemy__data.html#a724f9ce2351c125b3b7f6c7923822bcead7c8c85bf79bbe1b7188497c32c3b0ca">Failed</a> = 3,</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  <a class="code hl_enumvalue" href="namespacemy__data.html#a724f9ce2351c125b3b7f6c7923822bceaa149e85a44aeec9140e92733d9ed694e">Cancelled</a> = 4,</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>};</div>
+</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="};">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="structmy__data_1_1Task.html">   27</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structmy__data_1_1Task.html">Task</a> {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <span class="comment">// 身份</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="structmy__data_1_1Task.html#aa3e1e8eb26b010a643bd4a49d570662e">   29</a></span>  <a class="code hl_typedef" href="namespacemy__data.html#a1b9d3b04810d37cf4227a7e624359f04">TaskId</a> <a class="code hl_variable" href="structmy__data_1_1Task.html#aa3e1e8eb26b010a643bd4a49d570662e">task_id</a>{};</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="structmy__data_1_1Task.html#a472457d1112db62f4ba446013be35517">   30</a></span>  <a class="code hl_typedef" href="namespacemy__data.html#ac23d9638c60a0a676f3c71b8f191ed64">CommandId</a> <a class="code hl_variable" href="structmy__data_1_1Task.html#a472457d1112db62f4ba446013be35517">command_id</a>{};</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <span class="comment">// 追踪（预留）</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structmy__data_1_1Task.html#a6045d0d6e63ad1676518b14055da138c">   33</a></span>  std::string <a class="code hl_variable" href="structmy__data_1_1Task.html#a6045d0d6e63ad1676518b14055da138c">trace_id</a>{};</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="structmy__data_1_1Task.html#a4db4afc9bac1f41d3ecf007a549c85e1">   34</a></span>  std::string <a class="code hl_variable" href="structmy__data_1_1Task.html#a4db4afc9bac1f41d3ecf007a549c85e1">span_id</a>{};</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  <span class="comment">// 路由</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="structmy__data_1_1Task.html#af22da43be64b543c95019aedb667869f">   37</a></span>  <a class="code hl_typedef" href="namespacemy__data.html#aa97613f313f7fbbad8c368f2599e3f26">EdgeId</a> <a class="code hl_variable" href="structmy__data_1_1Task.html#af22da43be64b543c95019aedb667869f">edge_id</a>{};</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="structmy__data_1_1Task.html#a47449c9a7a840d9fa6b4a69688305e10">   38</a></span>  <a class="code hl_typedef" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">DeviceId</a> <a class="code hl_variable" href="structmy__data_1_1Task.html#a47449c9a7a840d9fa6b4a69688305e10">device_id</a>{};</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <span class="comment">// 能力与动作</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="structmy__data_1_1Task.html#a586d4b3f6ee263311139695f7554f978">   41</a></span>  std::string <a class="code hl_variable" href="structmy__data_1_1Task.html#a586d4b3f6ee263311139695f7554f978">capability</a>{};</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="structmy__data_1_1Task.html#a057699cf114942bd42087102f39351f4">   42</a></span>  std::string <a class="code hl_variable" href="structmy__data_1_1Task.html#a057699cf114942bd42087102f39351f4">action</a>{};</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="structmy__data_1_1Task.html#abc73548c91149865f3cd09a381cf9283">   43</a></span>  nlohmann::json <a class="code hl_variable" href="structmy__data_1_1Task.html#abc73548c91149865f3cd09a381cf9283">params</a> = nlohmann::json::object();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="comment">// 幂等（预留，不启用）</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="structmy__data_1_1Task.html#a8953531e4f1b13e11fed951933e98b8d">   46</a></span>  std::string <a class="code hl_variable" href="structmy__data_1_1Task.html#a8953531e4f1b13e11fed951933e98b8d">idempotency_key</a>{};</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="structmy__data_1_1Task.html#acf6c3ebf83bf4e675928b52c82c60084">   47</a></span>  std::int64_t <a class="code hl_variable" href="structmy__data_1_1Task.html#acf6c3ebf83bf4e675928b52c82c60084">dedup_window_ms</a>{0};</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="comment">// 调度（预留）</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="structmy__data_1_1Task.html#acec9ce2df15222151ad66fcb1d74eb9f">   50</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="structmy__data_1_1Task.html#acec9ce2df15222151ad66fcb1d74eb9f">priority</a>{0};</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="structmy__data_1_1Task.html#a61c4b89651eebddabd9c4a9cedb78087">   51</a></span>  <a class="code hl_typedef" href="namespacemy__data.html#ab0a41a12b2c8afae2a15c3987f587e0d">TimestampMs</a> <a class="code hl_variable" href="structmy__data_1_1Task.html#a61c4b89651eebddabd9c4a9cedb78087">created_at_ms</a>{0};</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="structmy__data_1_1Task.html#ab3829f57ebde8ac0220883dcb2cf126b">   52</a></span>  <a class="code hl_typedef" href="namespacemy__data.html#ab0a41a12b2c8afae2a15c3987f587e0d">TimestampMs</a> <a class="code hl_variable" href="structmy__data_1_1Task.html#ab3829f57ebde8ac0220883dcb2cf126b">deadline_at_ms</a>{0};</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="structmy__data_1_1Task.html#a72b5d1d36076ccd76a06eadfa1baa509">   53</a></span>  nlohmann::json <a class="code hl_variable" href="structmy__data_1_1Task.html#a72b5d1d36076ccd76a06eadfa1baa509">policy</a> = nlohmann::json::object();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <span class="comment">// 运行态</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="structmy__data_1_1Task.html#aebc38c74e1bb052cdefe524ef4806f2b">   56</a></span>  <a class="code hl_enumeration" href="namespacemy__data.html#a724f9ce2351c125b3b7f6c7923822bce">TaskState</a> <a class="code hl_variable" href="structmy__data_1_1Task.html#aebc38c74e1bb052cdefe524ef4806f2b">state</a>{<a class="code hl_enumvalue" href="namespacemy__data.html#a724f9ce2351c125b3b7f6c7923822bcea2d13df6f8b5e4c5af9f87e0dc39df69d">TaskState::Pending</a>};</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="structmy__data_1_1Task.html#a0f2899bfa962332f60c878939f1570a7">   57</a></span>  <a class="code hl_struct" href="structmy__data_1_1TaskResult.html">TaskResult</a> <a class="code hl_variable" href="structmy__data_1_1Task.html#a0f2899bfa962332f60c878939f1570a7">result</a>{};</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  std::string <a class="code hl_function" href="structmy__data_1_1Task.html#a1fe5121d6528fdea3f243321b3fa3a49">toString</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  nlohmann::json <a class="code hl_function" href="structmy__data_1_1Task.html#a098007f3dd2a938824a819aa09423ca9">toJson</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <span class="keyword">static</span> <a class="code hl_struct" href="structmy__data_1_1Task.html">Task</a> <a class="code hl_function" href="structmy__data_1_1Task.html#a2a9cf913f1d9683cdea2d4106dfb8802">fromJson</a>(<span class="keyword">const</span> nlohmann::json&amp; j);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>};</div>
+</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>std::string <a class="code hl_function" href="namespacemy__data.html#aa2c3b20a64b6aef24654f21b84592582">ToString</a>(<a class="code hl_enumeration" href="namespacemy__data.html#a724f9ce2351c125b3b7f6c7923822bce">TaskState</a> s);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>} <span class="comment">// namespace my_data</span></div>
+<div class="ttc" id="aTaskResult_8h_html"><div class="ttname"><a href="TaskResult_8h.html">TaskResult.h</a></div></div>
+<div class="ttc" id="aTypes_8h_html"><div class="ttname"><a href="Types_8h.html">Types.h</a></div></div>
+<div class="ttc" id="anamespacemy__data_html"><div class="ttname"><a href="namespacemy__data.html">my_data</a></div><div class="ttdef"><b>Definition</b> Error.cpp:3</div></div>
+<div class="ttc" id="anamespacemy__data_html_a1b9d3b04810d37cf4227a7e624359f04"><div class="ttname"><a href="namespacemy__data.html#a1b9d3b04810d37cf4227a7e624359f04">my_data::TaskId</a></div><div class="ttdeci">std::string TaskId</div><div class="ttdoc">Task ID</div><div class="ttdef"><b>Definition</b> Types.h:20</div></div>
+<div class="ttc" id="anamespacemy__data_html_a30e0a55991505e8f6aed4feb61c131e4a5bda814c4aedb126839228f1a3d92f09"><div class="ttname"><a href="namespacemy__data.html#a30e0a55991505e8f6aed4feb61c131e4a5bda814c4aedb126839228f1a3d92f09">my_data::EdgeRunState::Running</a></div><div class="ttdeci">@ Running</div></div>
+<div class="ttc" id="anamespacemy__data_html_a724f9ce2351c125b3b7f6c7923822bce"><div class="ttname"><a href="namespacemy__data.html#a724f9ce2351c125b3b7f6c7923822bce">my_data::TaskState</a></div><div class="ttdeci">TaskState</div><div class="ttdoc">Task 状态（MVP）</div><div class="ttdef"><b>Definition</b> Task.h:12</div></div>
+<div class="ttc" id="anamespacemy__data_html_a724f9ce2351c125b3b7f6c7923822bcea2d13df6f8b5e4c5af9f87e0dc39df69d"><div class="ttname"><a href="namespacemy__data.html#a724f9ce2351c125b3b7f6c7923822bcea2d13df6f8b5e4c5af9f87e0dc39df69d">my_data::TaskState::Pending</a></div><div class="ttdeci">@ Pending</div></div>
+<div class="ttc" id="anamespacemy__data_html_a724f9ce2351c125b3b7f6c7923822bcea66d02c2f8a582446f8dd8752366002b5"><div class="ttname"><a href="namespacemy__data.html#a724f9ce2351c125b3b7f6c7923822bcea66d02c2f8a582446f8dd8752366002b5">my_data::TaskState::Succeeded</a></div><div class="ttdeci">@ Succeeded</div></div>
+<div class="ttc" id="anamespacemy__data_html_a724f9ce2351c125b3b7f6c7923822bceaa149e85a44aeec9140e92733d9ed694e"><div class="ttname"><a href="namespacemy__data.html#a724f9ce2351c125b3b7f6c7923822bceaa149e85a44aeec9140e92733d9ed694e">my_data::TaskState::Cancelled</a></div><div class="ttdeci">@ Cancelled</div></div>
+<div class="ttc" id="anamespacemy__data_html_a724f9ce2351c125b3b7f6c7923822bcead7c8c85bf79bbe1b7188497c32c3b0ca"><div class="ttname"><a href="namespacemy__data.html#a724f9ce2351c125b3b7f6c7923822bcead7c8c85bf79bbe1b7188497c32c3b0ca">my_data::TaskState::Failed</a></div><div class="ttdeci">@ Failed</div></div>
+<div class="ttc" id="anamespacemy__data_html_a7f44417fe7bdfd39f515815285f3c8fd"><div class="ttname"><a href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a></div><div class="ttdeci">std::string DeviceId</div><div class="ttdoc">专业设备ID（按 device_id 一对一实例）</div><div class="ttdef"><b>Definition</b> Types.h:15</div></div>
+<div class="ttc" id="anamespacemy__data_html_aa2c3b20a64b6aef24654f21b84592582"><div class="ttname"><a href="namespacemy__data.html#aa2c3b20a64b6aef24654f21b84592582">my_data::ToString</a></div><div class="ttdeci">std::string ToString(ErrorCode code)</div><div class="ttdoc">将错误码转为可读字符串</div><div class="ttdef"><b>Definition</b> Error.cpp:5</div></div>
+<div class="ttc" id="anamespacemy__data_html_aa97613f313f7fbbad8c368f2599e3f26"><div class="ttname"><a href="namespacemy__data.html#aa97613f313f7fbbad8c368f2599e3f26">my_data::EdgeId</a></div><div class="ttdeci">std::string EdgeId</div><div class="ttdoc">边缘执行器ID</div><div class="ttdef"><b>Definition</b> Types.h:10</div></div>
+<div class="ttc" id="anamespacemy__data_html_ab0a41a12b2c8afae2a15c3987f587e0d"><div class="ttname"><a href="namespacemy__data.html#ab0a41a12b2c8afae2a15c3987f587e0d">my_data::TimestampMs</a></div><div class="ttdeci">std::int64_t TimestampMs</div><div class="ttdoc">毫秒时间戳</div><div class="ttdef"><b>Definition</b> Types.h:30</div></div>
+<div class="ttc" id="anamespacemy__data_html_ac23d9638c60a0a676f3c71b8f191ed64"><div class="ttname"><a href="namespacemy__data.html#ac23d9638c60a0a676f3c71b8f191ed64">my_data::CommandId</a></div><div class="ttdeci">std::string CommandId</div><div class="ttdoc">Command ID（外部输入或上层生成，用于溯源/幂等）</div><div class="ttdef"><b>Definition</b> Types.h:25</div></div>
+<div class="ttc" id="astructmy__data_1_1TaskResult_html"><div class="ttname"><a href="structmy__data_1_1TaskResult.html">my_data::TaskResult</a></div><div class="ttdoc">Task 执行结果</div><div class="ttdef"><b>Definition</b> TaskResult.h:12</div></div>
+<div class="ttc" id="astructmy__data_1_1Task_html"><div class="ttname"><a href="structmy__data_1_1Task.html">my_data::Task</a></div><div class="ttdoc">Task（内部统一任务）</div><div class="ttdef"><b>Definition</b> Task.h:27</div></div>
+<div class="ttc" id="astructmy__data_1_1Task_html_a057699cf114942bd42087102f39351f4"><div class="ttname"><a href="structmy__data_1_1Task.html#a057699cf114942bd42087102f39351f4">my_data::Task::action</a></div><div class="ttdeci">std::string action</div><div class="ttdef"><b>Definition</b> Task.h:42</div></div>
+<div class="ttc" id="astructmy__data_1_1Task_html_a098007f3dd2a938824a819aa09423ca9"><div class="ttname"><a href="structmy__data_1_1Task.html#a098007f3dd2a938824a819aa09423ca9">my_data::Task::toJson</a></div><div class="ttdeci">nlohmann::json toJson() const</div><div class="ttdef"><b>Definition</b> Task.cpp:39</div></div>
+<div class="ttc" id="astructmy__data_1_1Task_html_a0f2899bfa962332f60c878939f1570a7"><div class="ttname"><a href="structmy__data_1_1Task.html#a0f2899bfa962332f60c878939f1570a7">my_data::Task::result</a></div><div class="ttdeci">TaskResult result</div><div class="ttdef"><b>Definition</b> Task.h:57</div></div>
+<div class="ttc" id="astructmy__data_1_1Task_html_a1fe5121d6528fdea3f243321b3fa3a49"><div class="ttname"><a href="structmy__data_1_1Task.html#a1fe5121d6528fdea3f243321b3fa3a49">my_data::Task::toString</a></div><div class="ttdeci">std::string toString() const</div><div class="ttdef"><b>Definition</b> Task.cpp:18</div></div>
+<div class="ttc" id="astructmy__data_1_1Task_html_a2a9cf913f1d9683cdea2d4106dfb8802"><div class="ttname"><a href="structmy__data_1_1Task.html#a2a9cf913f1d9683cdea2d4106dfb8802">my_data::Task::fromJson</a></div><div class="ttdeci">static Task fromJson(const nlohmann::json &amp;j)</div><div class="ttdef"><b>Definition</b> Task.cpp:61</div></div>
+<div class="ttc" id="astructmy__data_1_1Task_html_a472457d1112db62f4ba446013be35517"><div class="ttname"><a href="structmy__data_1_1Task.html#a472457d1112db62f4ba446013be35517">my_data::Task::command_id</a></div><div class="ttdeci">CommandId command_id</div><div class="ttdef"><b>Definition</b> Task.h:30</div></div>
+<div class="ttc" id="astructmy__data_1_1Task_html_a47449c9a7a840d9fa6b4a69688305e10"><div class="ttname"><a href="structmy__data_1_1Task.html#a47449c9a7a840d9fa6b4a69688305e10">my_data::Task::device_id</a></div><div class="ttdeci">DeviceId device_id</div><div class="ttdef"><b>Definition</b> Task.h:38</div></div>
+<div class="ttc" id="astructmy__data_1_1Task_html_a4db4afc9bac1f41d3ecf007a549c85e1"><div class="ttname"><a href="structmy__data_1_1Task.html#a4db4afc9bac1f41d3ecf007a549c85e1">my_data::Task::span_id</a></div><div class="ttdeci">std::string span_id</div><div class="ttdef"><b>Definition</b> Task.h:34</div></div>
+<div class="ttc" id="astructmy__data_1_1Task_html_a586d4b3f6ee263311139695f7554f978"><div class="ttname"><a href="structmy__data_1_1Task.html#a586d4b3f6ee263311139695f7554f978">my_data::Task::capability</a></div><div class="ttdeci">std::string capability</div><div class="ttdef"><b>Definition</b> Task.h:41</div></div>
+<div class="ttc" id="astructmy__data_1_1Task_html_a6045d0d6e63ad1676518b14055da138c"><div class="ttname"><a href="structmy__data_1_1Task.html#a6045d0d6e63ad1676518b14055da138c">my_data::Task::trace_id</a></div><div class="ttdeci">std::string trace_id</div><div class="ttdef"><b>Definition</b> Task.h:33</div></div>
+<div class="ttc" id="astructmy__data_1_1Task_html_a61c4b89651eebddabd9c4a9cedb78087"><div class="ttname"><a href="structmy__data_1_1Task.html#a61c4b89651eebddabd9c4a9cedb78087">my_data::Task::created_at_ms</a></div><div class="ttdeci">TimestampMs created_at_ms</div><div class="ttdef"><b>Definition</b> Task.h:51</div></div>
+<div class="ttc" id="astructmy__data_1_1Task_html_a72b5d1d36076ccd76a06eadfa1baa509"><div class="ttname"><a href="structmy__data_1_1Task.html#a72b5d1d36076ccd76a06eadfa1baa509">my_data::Task::policy</a></div><div class="ttdeci">nlohmann::json policy</div><div class="ttdef"><b>Definition</b> Task.h:53</div></div>
+<div class="ttc" id="astructmy__data_1_1Task_html_a8953531e4f1b13e11fed951933e98b8d"><div class="ttname"><a href="structmy__data_1_1Task.html#a8953531e4f1b13e11fed951933e98b8d">my_data::Task::idempotency_key</a></div><div class="ttdeci">std::string idempotency_key</div><div class="ttdef"><b>Definition</b> Task.h:46</div></div>
+<div class="ttc" id="astructmy__data_1_1Task_html_aa3e1e8eb26b010a643bd4a49d570662e"><div class="ttname"><a href="structmy__data_1_1Task.html#aa3e1e8eb26b010a643bd4a49d570662e">my_data::Task::task_id</a></div><div class="ttdeci">TaskId task_id</div><div class="ttdef"><b>Definition</b> Task.h:29</div></div>
+<div class="ttc" id="astructmy__data_1_1Task_html_ab3829f57ebde8ac0220883dcb2cf126b"><div class="ttname"><a href="structmy__data_1_1Task.html#ab3829f57ebde8ac0220883dcb2cf126b">my_data::Task::deadline_at_ms</a></div><div class="ttdeci">TimestampMs deadline_at_ms</div><div class="ttdef"><b>Definition</b> Task.h:52</div></div>
+<div class="ttc" id="astructmy__data_1_1Task_html_abc73548c91149865f3cd09a381cf9283"><div class="ttname"><a href="structmy__data_1_1Task.html#abc73548c91149865f3cd09a381cf9283">my_data::Task::params</a></div><div class="ttdeci">nlohmann::json params</div><div class="ttdef"><b>Definition</b> Task.h:43</div></div>
+<div class="ttc" id="astructmy__data_1_1Task_html_acec9ce2df15222151ad66fcb1d74eb9f"><div class="ttname"><a href="structmy__data_1_1Task.html#acec9ce2df15222151ad66fcb1d74eb9f">my_data::Task::priority</a></div><div class="ttdeci">int priority</div><div class="ttdef"><b>Definition</b> Task.h:50</div></div>
+<div class="ttc" id="astructmy__data_1_1Task_html_acf6c3ebf83bf4e675928b52c82c60084"><div class="ttname"><a href="structmy__data_1_1Task.html#acf6c3ebf83bf4e675928b52c82c60084">my_data::Task::dedup_window_ms</a></div><div class="ttdeci">std::int64_t dedup_window_ms</div><div class="ttdef"><b>Definition</b> Task.h:47</div></div>
+<div class="ttc" id="astructmy__data_1_1Task_html_aebc38c74e1bb052cdefe524ef4806f2b"><div class="ttname"><a href="structmy__data_1_1Task.html#aebc38c74e1bb052cdefe524ef4806f2b">my_data::Task::state</a></div><div class="ttdeci">TaskState state</div><div class="ttdef"><b>Definition</b> Task.h:56</div></div>
+<div class="ttc" id="astructmy__data_1_1Task_html_af22da43be64b543c95019aedb667869f"><div class="ttname"><a href="structmy__data_1_1Task.html#af22da43be64b543c95019aedb667869f">my_data::Task::edge_id</a></div><div class="ttdeci">EdgeId edge_id</div><div class="ttdef"><b>Definition</b> Task.h:37</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>
