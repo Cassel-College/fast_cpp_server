@@ -206,6 +206,8 @@ Public 成员函数</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="reference">引用了 <a class="el" href="structmy__data_1_1EdgeStatus.html#a7b8fc8514b4a3ab879867ce4e8e3f867">EdgeStatus::boot_at_ms</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a879f5747a0f337ee3d098ed2a3ec120e">EdgeStatus::devices</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#af22da43be64b543c95019aedb667869f">EdgeStatus::edge_id</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a933cfe7fd6b47e6f196a06e7f16ba8f7">EdgeStatus::estop_active</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#aa0af406c708fcc720d774864e27063b8">EdgeStatus::estop_reason</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a6e32979639bef9048e9ff1afbdb19859">EdgeStatus::last_heartbeat_at_ms</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#aff8572eb2424678f34d665b8b17aae32">EdgeStatus::run_state</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a5d78ec5965940b9d384f2b448fd45ee8">EdgeStatus::tasks_pending_total</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a823b629498fc0cb094d3bc1d8c9320e3">EdgeStatus::tasks_running_total</a>, <a class="el" href="namespacemy__data.html#aa2c3b20a64b6aef24654f21b84592582">my_data::ToString()</a> , 以及 <a class="el" href="structmy__data_1_1EdgeStatus.html#a728b969e374aba4020e39aea7e02e64f">EdgeStatus::version</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__db_1_1demo_1_1StatusRepository.html#a74212c1aedab5e93c3b51234448a520b">StatusRepository::InsertEdgeSnapshot()</a>.</p>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
@@ -214,6 +216,16 @@ Public 成员函数</h2></td></tr>
 <area shape="rect" title=" " alt="" coords="5,5,79,31"/>
 <area shape="rect" href="namespacemy__data.html#aa2c3b20a64b6aef24654f21b84592582" title="将错误码转为可读字符串" alt="" coords="127,5,265,31"/>
 <area shape="poly" title=" " alt="" coords="79,15,113,15,113,21,79,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="structmy__data_1_1EdgeStatus_a1fe5121d6528fdea3f243321b3fa3a49_icgraph.png" border="0" usemap="#astructmy__data_1_1EdgeStatus_a1fe5121d6528fdea3f243321b3fa3a49_icgraph" alt=""/></div>
+<map name="astructmy__data_1_1EdgeStatus_a1fe5121d6528fdea3f243321b3fa3a49_icgraph" id="astructmy__data_1_1EdgeStatus_a1fe5121d6528fdea3f243321b3fa3a49_icgraph">
+<area shape="rect" title=" " alt="" coords="284,13,357,38"/>
+<area shape="rect" href="classmy__db_1_1demo_1_1StatusRepository.html#a74212c1aedab5e93c3b51234448a520b" title=" " alt="" coords="5,5,236,45"/>
+<area shape="poly" title=" " alt="" coords="270,28,236,28,236,23,270,23"/>
 </map>
 </div>
 
@@ -248,7 +260,7 @@ Public 成员函数</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1EdgeStatus.html#a4ff712b7cd7b98f14760e531a5033c92">EdgeStatus::fromJson()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">UUVEdge::GetStatusSnapshot()</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a098007f3dd2a938824a819aa09423ca9">EdgeStatus::toJson()</a> , 以及 <a class="el" href="structmy__data_1_1EdgeStatus.html#a1fe5121d6528fdea3f243321b3fa3a49">EdgeStatus::toString()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1EdgeStatus.html#a4ff712b7cd7b98f14760e531a5033c92">EdgeStatus::fromJson()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">UUVEdge::GetStatusSnapshot()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acf4df206592b39205ec28dc4272b70c4">UUVEdge::StatusSnapshotLoop()</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a098007f3dd2a938824a819aa09423ca9">EdgeStatus::toJson()</a> , 以及 <a class="el" href="structmy__data_1_1EdgeStatus.html#a1fe5121d6528fdea3f243321b3fa3a49">EdgeStatus::toString()</a>.</p>
 
 </div>
 </div>
@@ -264,7 +276,7 @@ Public 成员函数</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1EdgeStatus.html#a4ff712b7cd7b98f14760e531a5033c92">EdgeStatus::fromJson()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">UUVEdge::GetStatusSnapshot()</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a098007f3dd2a938824a819aa09423ca9">EdgeStatus::toJson()</a> , 以及 <a class="el" href="structmy__data_1_1EdgeStatus.html#a1fe5121d6528fdea3f243321b3fa3a49">EdgeStatus::toString()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1EdgeStatus.html#a4ff712b7cd7b98f14760e531a5033c92">EdgeStatus::fromJson()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">UUVEdge::GetStatusSnapshot()</a>, <a class="el" href="classmy__db_1_1demo_1_1StatusRepository.html#a74212c1aedab5e93c3b51234448a520b">StatusRepository::InsertEdgeSnapshot()</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a098007f3dd2a938824a819aa09423ca9">EdgeStatus::toJson()</a> , 以及 <a class="el" href="structmy__data_1_1EdgeStatus.html#a1fe5121d6528fdea3f243321b3fa3a49">EdgeStatus::toString()</a>.</p>
 
 </div>
 </div>

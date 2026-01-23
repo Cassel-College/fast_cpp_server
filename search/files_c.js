@@ -11,5 +11,7 @@ var searchData=
   ['softhealthsnapshot_2ecpp_8',['SoftHealthSnapshot.cpp',['../SoftHealthSnapshot_8cpp.html',1,'']]],
   ['softhealthsnapshot_2eh_9',['SoftHealthSnapshot.h',['../SoftHealthSnapshot_8h.html',1,'']]],
   ['status_2ecpp_10',['Status.cpp',['../Status_8cpp.html',1,'']]],
-  ['status_2eh_11',['Status.h',['../Status_8h.html',1,'']]]
+  ['status_2eh_11',['Status.h',['../Status_8h.html',1,'']]],
+  ['statusrepository_2ecpp_12',['StatusRepository.cpp',['../StatusRepository_8cpp.html',1,'']]],
+  ['statusrepository_2eh_13',['StatusRepository.h',['../StatusRepository_8h.html',1,'']]]
 ];

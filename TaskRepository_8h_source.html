@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_db/demo/TaskRepository.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_8225e4bdcdbe4bf0dd37b881ac5fd6f3.html">my_db</a></li><li class="navelem"><a class="el" href="dir_42611945d6549d4ab969a26ae3cee561.html">demo</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">TaskRepository.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="TaskRepository_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;optional&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="MyDB_8h.html">MyDB.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="MyData_8h.html">MyData.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="MyLog_8h.html">MyLog.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__db_1_1demo.html">my_db::demo</a> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classmy__db_1_1demo_1_1TaskRepository.html">   12</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__db_1_1demo_1_1TaskRepository.html">TaskRepository</a> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  <span class="keyword">static</span> <a class="code hl_class" href="classmy__db_1_1demo_1_1TaskRepository.html">TaskRepository</a>&amp; <a class="code hl_function" href="classmy__db_1_1demo_1_1TaskRepository.html#a0c295643882b2b1e3c3feaad5797a662">GetInstance</a>();</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__db_1_1demo_1_1TaskRepository.html#a95f33d0b2df4f62bc0b1fa2ae28c451b">UpsertTask</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structmy__data_1_1Task.html">my_data::Task</a>&amp; task, std::string* err);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__db_1_1demo_1_1TaskRepository.html#abea3020c80866719099935b63e77c6dc">UpsertResult</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="namespacemy__data.html#a1b9d3b04810d37cf4227a7e624359f04">my_data::TaskId</a>&amp; task_id, <span class="keyword">const</span> <a class="code hl_struct" href="structmy__data_1_1TaskResult.html">my_data::TaskResult</a>&amp; r, std::string* err);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__db_1_1demo_1_1TaskRepository.html#a0e04456bdb4daab502ef7619b82cd712">ExistsTask</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="namespacemy__data.html#a1b9d3b04810d37cf4227a7e624359f04">my_data::TaskId</a>&amp; task_id, <span class="keywordtype">bool</span>* exists, std::string* err);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="comment">// 为 CRUD 测试提供：读取存储的 JSON 字符串（当前实现存的是 toString()）</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__db_1_1demo_1_1TaskRepository.html#a356ef43319b122dda3e91d5aef51b081">GetTaskJson</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="namespacemy__data.html#a1b9d3b04810d37cf4227a7e624359f04">my_data::TaskId</a>&amp; task_id, std::string* out_task_json, std::string* err);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__db_1_1demo_1_1TaskRepository.html#a8d3bdb54f174c0b16870ebb0694bcdb6">GetResultJson</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="namespacemy__data.html#a1b9d3b04810d37cf4227a7e624359f04">my_data::TaskId</a>&amp; task_id, std::string* out_result_json, std::string* err);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__db_1_1demo_1_1TaskRepository.html#a12f77e367227345c95e95148ebc86933">UpdateTaskState</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="namespacemy__data.html#a1b9d3b04810d37cf4227a7e624359f04">my_data::TaskId</a>&amp; task_id, <a class="code hl_enumeration" href="namespacemy__data.html#a724f9ce2351c125b3b7f6c7923822bce">my_data::TaskState</a> state, std::string* err);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <span class="comment">// 删除任务（results 通过外键 ON DELETE CASCADE 自动删除）</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__db_1_1demo_1_1TaskRepository.html#a1db3bc5b878ccef032df03e4834c536b">DeleteTask</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="namespacemy__data.html#a1b9d3b04810d37cf4227a7e624359f04">my_data::TaskId</a>&amp; task_id, std::string* err);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classmy__db_1_1demo_1_1TaskRepository.html#acdc9a87d148c6bf3c77789538e2ef12c">   31</a></span>  <a class="code hl_function" href="classmy__db_1_1demo_1_1TaskRepository.html#acdc9a87d148c6bf3c77789538e2ef12c">TaskRepository</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>};</div>
+</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>} <span class="comment">// namespace my_db::demo</span></div>
+<div class="ttc" id="aMyDB_8h_html"><div class="ttname"><a href="MyDB_8h.html">MyDB.h</a></div></div>
+<div class="ttc" id="aMyData_8h_html"><div class="ttname"><a href="MyData_8h.html">MyData.h</a></div><div class="ttdoc">my_data 模块聚合头文件</div></div>
+<div class="ttc" id="aMyLog_8h_html"><div class="ttname"><a href="MyLog_8h.html">MyLog.h</a></div></div>
+<div class="ttc" id="aclassmy__db_1_1demo_1_1TaskRepository_html"><div class="ttname"><a href="classmy__db_1_1demo_1_1TaskRepository.html">my_db::demo::TaskRepository</a></div><div class="ttdef"><b>Definition</b> TaskRepository.h:12</div></div>
+<div class="ttc" id="aclassmy__db_1_1demo_1_1TaskRepository_html_a0c295643882b2b1e3c3feaad5797a662"><div class="ttname"><a href="classmy__db_1_1demo_1_1TaskRepository.html#a0c295643882b2b1e3c3feaad5797a662">my_db::demo::TaskRepository::GetInstance</a></div><div class="ttdeci">static TaskRepository &amp; GetInstance()</div><div class="ttdef"><b>Definition</b> TaskRepository.cpp:9</div></div>
+<div class="ttc" id="aclassmy__db_1_1demo_1_1TaskRepository_html_a0e04456bdb4daab502ef7619b82cd712"><div class="ttname"><a href="classmy__db_1_1demo_1_1TaskRepository.html#a0e04456bdb4daab502ef7619b82cd712">my_db::demo::TaskRepository::ExistsTask</a></div><div class="ttdeci">bool ExistsTask(const my_data::TaskId &amp;task_id, bool *exists, std::string *err)</div><div class="ttdef"><b>Definition</b> TaskRepository.cpp:166</div></div>
+<div class="ttc" id="aclassmy__db_1_1demo_1_1TaskRepository_html_a12f77e367227345c95e95148ebc86933"><div class="ttname"><a href="classmy__db_1_1demo_1_1TaskRepository.html#a12f77e367227345c95e95148ebc86933">my_db::demo::TaskRepository::UpdateTaskState</a></div><div class="ttdeci">bool UpdateTaskState(const my_data::TaskId &amp;task_id, my_data::TaskState state, std::string *err)</div><div class="ttdef"><b>Definition</b> TaskRepository.cpp:299</div></div>
+<div class="ttc" id="aclassmy__db_1_1demo_1_1TaskRepository_html_a1db3bc5b878ccef032df03e4834c536b"><div class="ttname"><a href="classmy__db_1_1demo_1_1TaskRepository.html#a1db3bc5b878ccef032df03e4834c536b">my_db::demo::TaskRepository::DeleteTask</a></div><div class="ttdeci">bool DeleteTask(const my_data::TaskId &amp;task_id, std::string *err)</div><div class="ttdef"><b>Definition</b> TaskRepository.cpp:342</div></div>
+<div class="ttc" id="aclassmy__db_1_1demo_1_1TaskRepository_html_a356ef43319b122dda3e91d5aef51b081"><div class="ttname"><a href="classmy__db_1_1demo_1_1TaskRepository.html#a356ef43319b122dda3e91d5aef51b081">my_db::demo::TaskRepository::GetTaskJson</a></div><div class="ttdeci">bool GetTaskJson(const my_data::TaskId &amp;task_id, std::string *out_task_json, std::string *err)</div><div class="ttdef"><b>Definition</b> TaskRepository.cpp:209</div></div>
+<div class="ttc" id="aclassmy__db_1_1demo_1_1TaskRepository_html_a8d3bdb54f174c0b16870ebb0694bcdb6"><div class="ttname"><a href="classmy__db_1_1demo_1_1TaskRepository.html#a8d3bdb54f174c0b16870ebb0694bcdb6">my_db::demo::TaskRepository::GetResultJson</a></div><div class="ttdeci">bool GetResultJson(const my_data::TaskId &amp;task_id, std::string *out_result_json, std::string *err)</div><div class="ttdef"><b>Definition</b> TaskRepository.cpp:254</div></div>
+<div class="ttc" id="aclassmy__db_1_1demo_1_1TaskRepository_html_a95f33d0b2df4f62bc0b1fa2ae28c451b"><div class="ttname"><a href="classmy__db_1_1demo_1_1TaskRepository.html#a95f33d0b2df4f62bc0b1fa2ae28c451b">my_db::demo::TaskRepository::UpsertTask</a></div><div class="ttdeci">bool UpsertTask(const my_data::Task &amp;task, std::string *err)</div><div class="ttdef"><b>Definition</b> TaskRepository.cpp:39</div></div>
+<div class="ttc" id="aclassmy__db_1_1demo_1_1TaskRepository_html_abea3020c80866719099935b63e77c6dc"><div class="ttname"><a href="classmy__db_1_1demo_1_1TaskRepository.html#abea3020c80866719099935b63e77c6dc">my_db::demo::TaskRepository::UpsertResult</a></div><div class="ttdeci">bool UpsertResult(const my_data::TaskId &amp;task_id, const my_data::TaskResult &amp;r, std::string *err)</div><div class="ttdef"><b>Definition</b> TaskRepository.cpp:107</div></div>
+<div class="ttc" id="aclassmy__db_1_1demo_1_1TaskRepository_html_acdc9a87d148c6bf3c77789538e2ef12c"><div class="ttname"><a href="classmy__db_1_1demo_1_1TaskRepository.html#acdc9a87d148c6bf3c77789538e2ef12c">my_db::demo::TaskRepository::TaskRepository</a></div><div class="ttdeci">TaskRepository()=default</div></div>
+<div class="ttc" id="anamespacemy__data_html_a1b9d3b04810d37cf4227a7e624359f04"><div class="ttname"><a href="namespacemy__data.html#a1b9d3b04810d37cf4227a7e624359f04">my_data::TaskId</a></div><div class="ttdeci">std::string TaskId</div><div class="ttdoc">Task ID</div><div class="ttdef"><b>Definition</b> Types.h:20</div></div>
+<div class="ttc" id="anamespacemy__data_html_a724f9ce2351c125b3b7f6c7923822bce"><div class="ttname"><a href="namespacemy__data.html#a724f9ce2351c125b3b7f6c7923822bce">my_data::TaskState</a></div><div class="ttdeci">TaskState</div><div class="ttdoc">Task 状态（MVP）</div><div class="ttdef"><b>Definition</b> Task.h:12</div></div>
+<div class="ttc" id="anamespacemy__db_1_1demo_html"><div class="ttname"><a href="namespacemy__db_1_1demo.html">my_db::demo</a></div><div class="ttdef"><b>Definition</b> StatusRepository.cpp:5</div></div>
+<div class="ttc" id="astructmy__data_1_1TaskResult_html"><div class="ttname"><a href="structmy__data_1_1TaskResult.html">my_data::TaskResult</a></div><div class="ttdoc">Task 执行结果</div><div class="ttdef"><b>Definition</b> TaskResult.h:12</div></div>
+<div class="ttc" id="astructmy__data_1_1Task_html"><div class="ttname"><a href="structmy__data_1_1Task.html">my_data::Task</a></div><div class="ttdoc">Task（内部统一任务）</div><div class="ttdef"><b>Definition</b> Task.h:27</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

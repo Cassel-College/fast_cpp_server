@@ -245,7 +245,7 @@ Public 成员函数</h2></td></tr>
 
 <p class="reference">引用了 <a class="el" href="structmy__data_1_1Task.html#a057699cf114942bd42087102f39351f4">Task::action</a>, <a class="el" href="structmy__data_1_1Task.html#a586d4b3f6ee263311139695f7554f978">Task::capability</a>, <a class="el" href="structmy__data_1_1Task.html#a472457d1112db62f4ba446013be35517">Task::command_id</a>, <a class="el" href="structmy__data_1_1Task.html#a61c4b89651eebddabd9c4a9cedb78087">Task::created_at_ms</a>, <a class="el" href="structmy__data_1_1Task.html#ab3829f57ebde8ac0220883dcb2cf126b">Task::deadline_at_ms</a>, <a class="el" href="structmy__data_1_1Task.html#acf6c3ebf83bf4e675928b52c82c60084">Task::dedup_window_ms</a>, <a class="el" href="structmy__data_1_1Task.html#a47449c9a7a840d9fa6b4a69688305e10">Task::device_id</a>, <a class="el" href="structmy__data_1_1Task.html#af22da43be64b543c95019aedb667869f">Task::edge_id</a>, <a class="el" href="structmy__data_1_1Task.html#a8953531e4f1b13e11fed951933e98b8d">Task::idempotency_key</a>, <a class="el" href="structmy__data_1_1Task.html#abc73548c91149865f3cd09a381cf9283">Task::params</a>, <a class="el" href="structmy__data_1_1Task.html#a72b5d1d36076ccd76a06eadfa1baa509">Task::policy</a>, <a class="el" href="structmy__data_1_1Task.html#acec9ce2df15222151ad66fcb1d74eb9f">Task::priority</a>, <a class="el" href="structmy__data_1_1Task.html#a0f2899bfa962332f60c878939f1570a7">Task::result</a>, <a class="el" href="structmy__data_1_1Task.html#aebc38c74e1bb052cdefe524ef4806f2b">Task::state</a>, <a class="el" href="structmy__data_1_1Task.html#aa3e1e8eb26b010a643bd4a49d570662e">Task::task_id</a>, <a class="el" href="structmy__data_1_1TaskResult.html#a1fe5121d6528fdea3f243321b3fa3a49">TaskResult::toString()</a> , 以及 <a class="el" href="namespacemy__data.html#aa2c3b20a64b6aef24654f21b84592582">my_data::ToString()</a>.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559">UUVCommandNormalizer::Normalize()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559">UUVCommandNormalizer::Normalize()</a> , 以及 <a class="el" href="classmy__db_1_1demo_1_1TaskRepository.html#a95f33d0b2df4f62bc0b1fa2ae28c451b">TaskRepository::UpsertTask()</a>.</p>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
@@ -264,9 +264,11 @@ Public 成员函数</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="structmy__data_1_1Task_a1fe5121d6528fdea3f243321b3fa3a49_icgraph.png" border="0" usemap="#astructmy__data_1_1Task_a1fe5121d6528fdea3f243321b3fa3a49_icgraph" alt=""/></div>
 <map name="astructmy__data_1_1Task_a1fe5121d6528fdea3f243321b3fa3a49_icgraph" id="astructmy__data_1_1Task_a1fe5121d6528fdea3f243321b3fa3a49_icgraph">
-<area shape="rect" title=" " alt="" coords="297,13,371,38"/>
+<area shape="rect" title=" " alt="" coords="297,45,371,70"/>
 <area shape="rect" href="classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559" title="将 RawCommand 转为 Task" alt="" coords="5,5,249,45"/>
-<area shape="poly" title=" " alt="" coords="284,28,250,28,250,23,284,23"/>
+<area shape="poly" title=" " alt="" coords="283,52,249,47,250,42,284,47"/>
+<area shape="rect" href="classmy__db_1_1demo_1_1TaskRepository.html#a95f33d0b2df4f62bc0b1fa2ae28c451b" title=" " alt="" coords="18,69,237,109"/>
+<area shape="poly" title=" " alt="" coords="284,68,237,75,237,70,283,62"/>
 </map>
 </div>
 
@@ -285,7 +287,7 @@ Public 成员函数</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="classmy__control_1_1demo_1_1UUVControl.html#ac797965a05a93bf646c6ac643a3461c8">UUVControl::DoTask()</a>, <a class="el" href="structmy__data_1_1Task.html#a2a9cf913f1d9683cdea2d4106dfb8802">Task::fromJson()</a>, <a class="el" href="classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559">UUVCommandNormalizer::Normalize()</a>, <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a2037369e5ec6b779d3c3de24e2cbb614">Workflow::RunLoop()</a>, <a class="el" href="structmy__data_1_1Task.html#a098007f3dd2a938824a819aa09423ca9">Task::toJson()</a>, <a class="el" href="structmy__data_1_1Task.html#a1fe5121d6528fdea3f243321b3fa3a49">Task::toString()</a> , 以及 <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a59c55e446776e18cbd4b693f09ea501c">UUVDevice::UpdateOnTaskStart()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="classmy__control_1_1demo_1_1UUVControl.html#ac797965a05a93bf646c6ac643a3461c8">UUVControl::DoTask()</a>, <a class="el" href="structmy__data_1_1Task.html#a2a9cf913f1d9683cdea2d4106dfb8802">Task::fromJson()</a>, <a class="el" href="classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559">UUVCommandNormalizer::Normalize()</a>, <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a2037369e5ec6b779d3c3de24e2cbb614">Workflow::RunLoop()</a>, <a class="el" href="structmy__data_1_1Task.html#a098007f3dd2a938824a819aa09423ca9">Task::toJson()</a>, <a class="el" href="structmy__data_1_1Task.html#a1fe5121d6528fdea3f243321b3fa3a49">Task::toString()</a>, <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a59c55e446776e18cbd4b693f09ea501c">UUVDevice::UpdateOnTaskStart()</a> , 以及 <a class="el" href="classmy__db_1_1demo_1_1TaskRepository.html#a95f33d0b2df4f62bc0b1fa2ae28c451b">TaskRepository::UpsertTask()</a>.</p>
 
 </div>
 </div>
@@ -301,7 +303,7 @@ Public 成员函数</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="classmy__control_1_1demo_1_1UUVControl.html#ac797965a05a93bf646c6ac643a3461c8">UUVControl::DoTask()</a>, <a class="el" href="structmy__data_1_1Task.html#a2a9cf913f1d9683cdea2d4106dfb8802">Task::fromJson()</a>, <a class="el" href="classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559">UUVCommandNormalizer::Normalize()</a>, <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a2037369e5ec6b779d3c3de24e2cbb614">Workflow::RunLoop()</a>, <a class="el" href="structmy__data_1_1Task.html#a098007f3dd2a938824a819aa09423ca9">Task::toJson()</a>, <a class="el" href="structmy__data_1_1Task.html#a1fe5121d6528fdea3f243321b3fa3a49">Task::toString()</a> , 以及 <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a59c55e446776e18cbd4b693f09ea501c">UUVDevice::UpdateOnTaskStart()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="classmy__control_1_1demo_1_1UUVControl.html#ac797965a05a93bf646c6ac643a3461c8">UUVControl::DoTask()</a>, <a class="el" href="structmy__data_1_1Task.html#a2a9cf913f1d9683cdea2d4106dfb8802">Task::fromJson()</a>, <a class="el" href="classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559">UUVCommandNormalizer::Normalize()</a>, <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a2037369e5ec6b779d3c3de24e2cbb614">Workflow::RunLoop()</a>, <a class="el" href="structmy__data_1_1Task.html#a098007f3dd2a938824a819aa09423ca9">Task::toJson()</a>, <a class="el" href="structmy__data_1_1Task.html#a1fe5121d6528fdea3f243321b3fa3a49">Task::toString()</a>, <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a59c55e446776e18cbd4b693f09ea501c">UUVDevice::UpdateOnTaskStart()</a> , 以及 <a class="el" href="classmy__db_1_1demo_1_1TaskRepository.html#a95f33d0b2df4f62bc0b1fa2ae28c451b">TaskRepository::UpsertTask()</a>.</p>
 
 </div>
 </div>
@@ -317,7 +319,7 @@ Public 成员函数</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1Task.html#a2a9cf913f1d9683cdea2d4106dfb8802">Task::fromJson()</a>, <a class="el" href="classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559">UUVCommandNormalizer::Normalize()</a>, <a class="el" href="structmy__data_1_1Task.html#a098007f3dd2a938824a819aa09423ca9">Task::toJson()</a> , 以及 <a class="el" href="structmy__data_1_1Task.html#a1fe5121d6528fdea3f243321b3fa3a49">Task::toString()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1Task.html#a2a9cf913f1d9683cdea2d4106dfb8802">Task::fromJson()</a>, <a class="el" href="classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559">UUVCommandNormalizer::Normalize()</a>, <a class="el" href="structmy__data_1_1Task.html#a098007f3dd2a938824a819aa09423ca9">Task::toJson()</a>, <a class="el" href="structmy__data_1_1Task.html#a1fe5121d6528fdea3f243321b3fa3a49">Task::toString()</a> , 以及 <a class="el" href="classmy__db_1_1demo_1_1TaskRepository.html#a95f33d0b2df4f62bc0b1fa2ae28c451b">TaskRepository::UpsertTask()</a>.</p>
 
 </div>
 </div>
@@ -333,7 +335,7 @@ Public 成员函数</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1Task.html#a2a9cf913f1d9683cdea2d4106dfb8802">Task::fromJson()</a>, <a class="el" href="classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559">UUVCommandNormalizer::Normalize()</a>, <a class="el" href="structmy__data_1_1Task.html#a098007f3dd2a938824a819aa09423ca9">Task::toJson()</a> , 以及 <a class="el" href="structmy__data_1_1Task.html#a1fe5121d6528fdea3f243321b3fa3a49">Task::toString()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1Task.html#a2a9cf913f1d9683cdea2d4106dfb8802">Task::fromJson()</a>, <a class="el" href="classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559">UUVCommandNormalizer::Normalize()</a>, <a class="el" href="structmy__data_1_1Task.html#a098007f3dd2a938824a819aa09423ca9">Task::toJson()</a>, <a class="el" href="structmy__data_1_1Task.html#a1fe5121d6528fdea3f243321b3fa3a49">Task::toString()</a> , 以及 <a class="el" href="classmy__db_1_1demo_1_1TaskRepository.html#a95f33d0b2df4f62bc0b1fa2ae28c451b">TaskRepository::UpsertTask()</a>.</p>
 
 </div>
 </div>
@@ -349,7 +351,7 @@ Public 成员函数</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1Task.html#a2a9cf913f1d9683cdea2d4106dfb8802">Task::fromJson()</a>, <a class="el" href="structmy__data_1_1Task.html#a098007f3dd2a938824a819aa09423ca9">Task::toJson()</a> , 以及 <a class="el" href="structmy__data_1_1Task.html#a1fe5121d6528fdea3f243321b3fa3a49">Task::toString()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1Task.html#a2a9cf913f1d9683cdea2d4106dfb8802">Task::fromJson()</a>, <a class="el" href="structmy__data_1_1Task.html#a098007f3dd2a938824a819aa09423ca9">Task::toJson()</a>, <a class="el" href="structmy__data_1_1Task.html#a1fe5121d6528fdea3f243321b3fa3a49">Task::toString()</a> , 以及 <a class="el" href="classmy__db_1_1demo_1_1TaskRepository.html#a95f33d0b2df4f62bc0b1fa2ae28c451b">TaskRepository::UpsertTask()</a>.</p>
 
 </div>
 </div>
@@ -381,7 +383,7 @@ Public 成员函数</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1Task.html#a2a9cf913f1d9683cdea2d4106dfb8802">Task::fromJson()</a>, <a class="el" href="classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559">UUVCommandNormalizer::Normalize()</a>, <a class="el" href="classmy__control_1_1TaskQueue.html#a50ceb1782d47e5d3b6ded5db4b2af239">TaskQueue::PopBlocking()</a>, <a class="el" href="classmy__control_1_1TaskQueue.html#a335412643911c2d1a2ec43e0b302edcc">TaskQueue::Push()</a>, <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a2037369e5ec6b779d3c3de24e2cbb614">Workflow::RunLoop()</a>, <a class="el" href="structmy__data_1_1Task.html#a098007f3dd2a938824a819aa09423ca9">Task::toJson()</a> , 以及 <a class="el" href="structmy__data_1_1Task.html#a1fe5121d6528fdea3f243321b3fa3a49">Task::toString()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1Task.html#a2a9cf913f1d9683cdea2d4106dfb8802">Task::fromJson()</a>, <a class="el" href="classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559">UUVCommandNormalizer::Normalize()</a>, <a class="el" href="classmy__control_1_1TaskQueue.html#a50ceb1782d47e5d3b6ded5db4b2af239">TaskQueue::PopBlocking()</a>, <a class="el" href="classmy__control_1_1TaskQueue.html#a335412643911c2d1a2ec43e0b302edcc">TaskQueue::Push()</a>, <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a2037369e5ec6b779d3c3de24e2cbb614">Workflow::RunLoop()</a>, <a class="el" href="structmy__data_1_1Task.html#a098007f3dd2a938824a819aa09423ca9">Task::toJson()</a>, <a class="el" href="structmy__data_1_1Task.html#a1fe5121d6528fdea3f243321b3fa3a49">Task::toString()</a> , 以及 <a class="el" href="classmy__db_1_1demo_1_1TaskRepository.html#a95f33d0b2df4f62bc0b1fa2ae28c451b">TaskRepository::UpsertTask()</a>.</p>
 
 </div>
 </div>
@@ -397,7 +399,7 @@ Public 成员函数</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1Task.html#a2a9cf913f1d9683cdea2d4106dfb8802">Task::fromJson()</a>, <a class="el" href="classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559">UUVCommandNormalizer::Normalize()</a>, <a class="el" href="structmy__data_1_1Task.html#a098007f3dd2a938824a819aa09423ca9">Task::toJson()</a> , 以及 <a class="el" href="structmy__data_1_1Task.html#a1fe5121d6528fdea3f243321b3fa3a49">Task::toString()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1Task.html#a2a9cf913f1d9683cdea2d4106dfb8802">Task::fromJson()</a>, <a class="el" href="classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559">UUVCommandNormalizer::Normalize()</a>, <a class="el" href="structmy__data_1_1Task.html#a098007f3dd2a938824a819aa09423ca9">Task::toJson()</a>, <a class="el" href="structmy__data_1_1Task.html#a1fe5121d6528fdea3f243321b3fa3a49">Task::toString()</a> , 以及 <a class="el" href="classmy__db_1_1demo_1_1TaskRepository.html#a95f33d0b2df4f62bc0b1fa2ae28c451b">TaskRepository::UpsertTask()</a>.</p>
 
 </div>
 </div>
@@ -509,7 +511,7 @@ Public 成员函数</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1Task.html#a2a9cf913f1d9683cdea2d4106dfb8802">Task::fromJson()</a>, <a class="el" href="classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559">UUVCommandNormalizer::Normalize()</a>, <a class="el" href="structmy__data_1_1Task.html#a098007f3dd2a938824a819aa09423ca9">Task::toJson()</a> , 以及 <a class="el" href="structmy__data_1_1Task.html#a1fe5121d6528fdea3f243321b3fa3a49">Task::toString()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1Task.html#a2a9cf913f1d9683cdea2d4106dfb8802">Task::fromJson()</a>, <a class="el" href="classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559">UUVCommandNormalizer::Normalize()</a>, <a class="el" href="structmy__data_1_1Task.html#a098007f3dd2a938824a819aa09423ca9">Task::toJson()</a>, <a class="el" href="structmy__data_1_1Task.html#a1fe5121d6528fdea3f243321b3fa3a49">Task::toString()</a> , 以及 <a class="el" href="classmy__db_1_1demo_1_1TaskRepository.html#a95f33d0b2df4f62bc0b1fa2ae28c451b">TaskRepository::UpsertTask()</a>.</p>
 
 </div>
 </div>
@@ -525,7 +527,7 @@ Public 成员函数</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="classmy__control_1_1demo_1_1UUVControl.html#ac797965a05a93bf646c6ac643a3461c8">UUVControl::DoTask()</a>, <a class="el" href="structmy__data_1_1Task.html#a2a9cf913f1d9683cdea2d4106dfb8802">Task::fromJson()</a>, <a class="el" href="classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559">UUVCommandNormalizer::Normalize()</a>, <a class="el" href="classmy__control_1_1TaskQueue.html#a50ceb1782d47e5d3b6ded5db4b2af239">TaskQueue::PopBlocking()</a>, <a class="el" href="classmy__control_1_1TaskQueue.html#a335412643911c2d1a2ec43e0b302edcc">TaskQueue::Push()</a>, <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a2037369e5ec6b779d3c3de24e2cbb614">Workflow::RunLoop()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">UUVEdge::Submit()</a>, <a class="el" href="structmy__data_1_1Task.html#a098007f3dd2a938824a819aa09423ca9">Task::toJson()</a>, <a class="el" href="structmy__data_1_1Task.html#a1fe5121d6528fdea3f243321b3fa3a49">Task::toString()</a>, <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a81dd0a772bae5a5e534a5fb3894509e9">UUVDevice::UpdateOnTaskFinish()</a> , 以及 <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a59c55e446776e18cbd4b693f09ea501c">UUVDevice::UpdateOnTaskStart()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="classmy__control_1_1demo_1_1UUVControl.html#ac797965a05a93bf646c6ac643a3461c8">UUVControl::DoTask()</a>, <a class="el" href="structmy__data_1_1Task.html#a2a9cf913f1d9683cdea2d4106dfb8802">Task::fromJson()</a>, <a class="el" href="classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559">UUVCommandNormalizer::Normalize()</a>, <a class="el" href="classmy__control_1_1TaskQueue.html#a50ceb1782d47e5d3b6ded5db4b2af239">TaskQueue::PopBlocking()</a>, <a class="el" href="classmy__control_1_1TaskQueue.html#a335412643911c2d1a2ec43e0b302edcc">TaskQueue::Push()</a>, <a class="el" href="classmy__control_1_1demo_1_1Workflow.html#a2037369e5ec6b779d3c3de24e2cbb614">Workflow::RunLoop()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">UUVEdge::Submit()</a>, <a class="el" href="structmy__data_1_1Task.html#a098007f3dd2a938824a819aa09423ca9">Task::toJson()</a>, <a class="el" href="structmy__data_1_1Task.html#a1fe5121d6528fdea3f243321b3fa3a49">Task::toString()</a>, <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a81dd0a772bae5a5e534a5fb3894509e9">UUVDevice::UpdateOnTaskFinish()</a>, <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a59c55e446776e18cbd4b693f09ea501c">UUVDevice::UpdateOnTaskStart()</a> , 以及 <a class="el" href="classmy__db_1_1demo_1_1TaskRepository.html#a95f33d0b2df4f62bc0b1fa2ae28c451b">TaskRepository::UpsertTask()</a>.</p>
 
 </div>
 </div>

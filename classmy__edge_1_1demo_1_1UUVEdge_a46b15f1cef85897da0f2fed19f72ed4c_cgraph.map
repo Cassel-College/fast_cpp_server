@@ -1,5 +1,15 @@
 <map id="Start" name="Start">
-<area shape="rect" id="Node000001" title="启动：启动所有 device/workflow" alt="" coords="5,5,59,31"/>
-<area shape="rect" id="Node000002" href="$classmy__edge_1_1demo_1_1UUVEdge.html#a9be7e9b9935ea7612f5430b4134d0809" title=" " alt="" coords="107,5,181,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="59,15,93,15,93,21,59,21"/>
+<area shape="rect" id="Node000001" title="启动：启动所有 device/workflow" alt="" coords="5,59,59,84"/>
+<area shape="rect" id="Node000002" href="$classmy__edge_1_1demo_1_1UUVEdge.html#a97d1170c8d61790b8c6cb9af695b371c" title=" " alt="" coords="107,22,305,62"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="59,64,93,58,93,64,59,70"/>
+<area shape="rect" id="Node000007" href="$classmy__edge_1_1demo_1_1UUVEdge.html#a9be7e9b9935ea7612f5430b4134d0809" title=" " alt="" coords="169,87,243,112"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="59,73,155,89,154,94,59,78"/>
+<area shape="rect" id="Node000003" href="$classmy__db_1_1MyDB.html#a6fdab88dc790c78b3bdc1d91cad600f0" title=" " alt="" coords="353,5,552,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="305,30,339,26,340,32,306,35"/>
+<area shape="rect" id="Node000004" href="$classmy__edge_1_1demo_1_1UUVEdge.html#acf4df206592b39205ec28dc4272b70c4" title=" " alt="" coords="375,55,530,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="306,50,362,55,361,61,305,55"/>
+<area shape="rect" id="Node000005" href="$classmy__db_1_1demo_1_1StatusRepository.html#a967b2d5f2133dbe3f28d84248d6a311a" title=" " alt="" coords="600,18,831,58"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="530,56,586,50,587,55,531,61"/>
+<area shape="rect" id="Node000006" href="$classmy__edge_1_1demo_1_1UUVEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe" title="获取状态快照（EdgeStatus，补 queue_depth/pending/running）" alt="" coords="642,83,789,108"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="531,73,629,83,628,89,530,78"/>
 </map>

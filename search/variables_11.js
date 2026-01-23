@@ -8,5 +8,6 @@ var searchData=
   ['thread_5ftree_5f_5',['thread_tree_',['../classHealthSnapshot.html#a35e045efcc03184c5d35c917e89ad332',1,'HealthSnapshot']]],
   ['threads_5f_6',['threads_',['../classHealthSnapshot.html#af641a6dcc32a1ebca4f62316c7b7b0f0',1,'HealthSnapshot']]],
   ['tid_7',['tid',['../structThreadSnapshot.html#a8cc3dd191f714ba4ae35b2d3ac5b557a',1,'ThreadSnapshot']]],
-  ['trace_5fid_8',['trace_id',['../structmy__data_1_1Task.html#a6045d0d6e63ad1676518b14055da138c',1,'my_data::Task']]]
+  ['trace_5fid_8',['trace_id',['../structmy__data_1_1Task.html#a6045d0d6e63ad1676518b14055da138c',1,'my_data::Task']]],
+  ['type_9',['type',['../structmy__db_1_1DBConfig.html#a75b160f574a0be26114bae2c7686a5e1',1,'my_db::DBConfig']]]
 ];

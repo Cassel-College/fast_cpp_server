@@ -8,12 +8,13 @@ var searchData=
   ['myapi_5',['MyAPI',['../classmy__api_1_1MyAPI.html',1,'my_api']]],
   ['myconfig_6',['MyConfig',['../classMyConfig.html',1,'']]],
   ['mycontrol_7',['MyControl',['../classmy__control_1_1MyControl.html',1,'my_control']]],
-  ['mydevice_8',['MyDevice',['../classmy__device_1_1MyDevice.html',1,'my_device']]],
-  ['mydoctor_9',['MyDoctor',['../classmy__doctor_1_1MyDoctor.html',1,'my_doctor']]],
-  ['myedge_10',['MyEdge',['../classmy__edge_1_1MyEdge.html',1,'my_edge']]],
-  ['myedgemanager_11',['MyEdgeManager',['../classedge__manager_1_1MyEdgeManager.html',1,'edge_manager']]],
-  ['myiniconfig_12',['MyINIConfig',['../classMyINIConfig.html',1,'']]],
-  ['myjsonconfig_13',['MyJSONConfig',['../classMyJSONConfig.html',1,'']]],
-  ['mysystemhealthymanager_14',['MySystemHealthyManager',['../classMySystemHealthy_1_1MySystemHealthyManager.html',1,'MySystemHealthy']]],
-  ['myyamlconfig_15',['MyYAMLConfig',['../classMyYAMLConfig.html',1,'']]]
+  ['mydb_8',['MyDB',['../classmy__db_1_1MyDB.html',1,'my_db']]],
+  ['mydevice_9',['MyDevice',['../classmy__device_1_1MyDevice.html',1,'my_device']]],
+  ['mydoctor_10',['MyDoctor',['../classmy__doctor_1_1MyDoctor.html',1,'my_doctor']]],
+  ['myedge_11',['MyEdge',['../classmy__edge_1_1MyEdge.html',1,'my_edge']]],
+  ['myedgemanager_12',['MyEdgeManager',['../classedge__manager_1_1MyEdgeManager.html',1,'edge_manager']]],
+  ['myiniconfig_13',['MyINIConfig',['../classMyINIConfig.html',1,'']]],
+  ['myjsonconfig_14',['MyJSONConfig',['../classMyJSONConfig.html',1,'']]],
+  ['mysystemhealthymanager_15',['MySystemHealthyManager',['../classMySystemHealthy_1_1MySystemHealthyManager.html',1,'MySystemHealthy']]],
+  ['myyamlconfig_16',['MyYAMLConfig',['../classMyYAMLConfig.html',1,'']]]
 ];

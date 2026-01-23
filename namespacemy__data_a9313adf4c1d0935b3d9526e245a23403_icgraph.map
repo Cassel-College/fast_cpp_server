@@ -1,27 +1,31 @@
 <map id="NowMs" name="NowMs">
-<area shape="rect" id="Node000001" title="时间工具：获取当前毫秒时间戳" alt="" coords="569,242,640,267"/>
-<area shape="rect" id="Node000002" href="$classmy__control_1_1demo_1_1UUVControl.html#ac797965a05a93bf646c6ac643a3461c8" title="执行任务（MVP：同步返回结果）" alt="" coords="297,5,521,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="597,229,589,191,575,145,552,99,520,59,503,48,506,43,523,55,556,96,580,143,594,189,602,228"/>
-<area shape="rect" id="Node000003" href="$namespacemy__data.html#aab723b1463878131314617bd6cec2d12" title="生成一个“够用”的ID（MVP 版）" alt="" coords="362,70,457,95"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="593,230,566,172,545,142,520,117,489,100,456,91,458,85,491,95,523,113,549,139,570,170,597,228"/>
+<area shape="rect" id="Node000001" title="时间工具：获取当前毫秒时间戳" alt="" coords="576,306,647,331"/>
+<area shape="rect" id="Node000002" href="$classmy__control_1_1demo_1_1UUVControl.html#ac797965a05a93bf646c6ac643a3461c8" title="执行任务（MVP：同步返回结果）" alt="" coords="301,5,525,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="607,292,603,243,590,180,566,115,548,85,526,59,511,48,514,43,530,55,553,82,571,113,595,178,608,242,612,292"/>
+<area shape="rect" id="Node000003" href="$namespacemy__data.html#aab723b1463878131314617bd6cec2d12" title="生成一个“够用”的ID（MVP 版）" alt="" coords="365,70,460,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="604,293,597,254,582,206,560,158,544,136,526,117,495,98,460,89,461,84,497,93,530,113,548,133,564,155,587,204,602,253,610,292"/>
 <area shape="rect" id="Node000004" href="$classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559" title="将 RawCommand 转为 Task" alt="" coords="5,88,249,128"/>
-<area shape="poly" id="edge6_Node000001_Node000004" title=" " alt="" coords="587,231,559,194,541,176,520,161,473,145,405,132,249,117,250,111,405,127,474,140,523,156,544,171,563,190,592,228"/>
-<area shape="rect" id="Node000005" href="$classmy__device_1_1demo_1_1UUVDevice.html#aeaad4d1e08909ec413c6e934fb718dc7" title="初始化设备（加载配置、创建/初始化 control 等）" alt="" coords="299,171,519,211"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="559,240,520,225,483,213,484,208,522,220,561,235"/>
-<area shape="rect" id="Node000006" href="$classmy__edge_1_1demo_1_1UUVEdge.html#aeaad4d1e08909ec413c6e934fb718dc7" title="初始化：仅装配，不启动线程" alt="" coords="311,235,507,275"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="556,257,508,257,508,252,556,252"/>
-<area shape="rect" id="Node000007" href="$classmy__device_1_1demo_1_1UUVDevice.html#a634c58de2126b4a4e6a2a093e60e1290" title="请求停止（不负责 shutdown queue）" alt="" coords="299,299,519,339"/>
-<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="561,275,522,289,484,301,483,296,520,284,559,270"/>
-<area shape="rect" id="Node000009" href="$classmy__device_1_1demo_1_1UUVDevice.html#a81dd0a772bae5a5e534a5fb3894509e9" title=" " alt="" coords="299,363,519,403"/>
-<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="590,281,562,318,523,353,500,365,497,360,520,348,558,315,586,278"/>
-<area shape="rect" id="Node000011" href="$classmy__device_1_1demo_1_1UUVDevice.html#a59c55e446776e18cbd4b693f09ea501c" title=" " alt="" coords="299,427,519,467"/>
-<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="600,281,589,313,574,349,552,385,523,417,505,429,502,424,520,413,548,382,569,347,584,311,594,280"/>
-<area shape="rect" id="Node000012" href="$classmy__device_1_1demo_1_1UUVDevice.html#a667de3be7fa6d87d5e1b5b3fd8065859" title=" " alt="" coords="299,491,519,531"/>
-<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="604,282,597,325,583,378,560,433,543,458,523,481,507,493,504,488,520,477,539,455,555,431,578,377,592,324,599,281"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="349,91,250,100,249,94,348,85"/>
-<area shape="rect" id="Node000008" href="$classmy__device_1_1demo_1_1UUVDevice.html#ab6c2f994d41932c6cd7222dcc3c67da0" title=" " alt="" coords="17,299,237,339"/>
-<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="286,321,238,321,238,316,286,316"/>
-<area shape="rect" id="Node000010" href="$classmy__device_1_1demo_1_1UUVDevice.html#a24a097fb4fcef1837583a96466f5d3e2" title="启动设备执行单元（注入队列引用 + EStop 引用）" alt="" coords="17,395,237,435"/>
-<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="286,399,238,405,237,400,286,394"/>
-<area shape="poly" id="edge12_Node000011_Node000010" title=" " alt="" coords="286,435,237,430,238,424,286,430"/>
+<area shape="poly" id="edge8_Node000001_Node000004" title=" " alt="" coords="602,293,593,261,578,225,556,190,526,161,507,150,480,142,410,128,329,119,250,114,250,108,330,114,411,123,481,136,509,146,530,157,560,186,582,223,598,260,607,292"/>
+<area shape="rect" id="Node000005" href="$classmy__device_1_1demo_1_1UUVDevice.html#aeaad4d1e08909ec413c6e934fb718dc7" title="初始化设备（加载配置、创建/初始化 control 等）" alt="" coords="303,171,523,211"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="593,296,565,259,526,225,504,213,506,208,530,220,569,255,597,293"/>
+<area shape="rect" id="Node000006" href="$classmy__edge_1_1demo_1_1UUVEdge.html#aeaad4d1e08909ec413c6e934fb718dc7" title="初始化：仅装配，不启动线程" alt="" coords="315,235,511,275"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="566,303,527,289,489,277,491,272,529,284,568,298"/>
+<area shape="rect" id="Node000007" href="$classmy__db_1_1demo_1_1StatusRepository.html#aa1d564dbf68ca960e28f1c812f7c31f4" title=" " alt="" coords="297,299,528,339"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="562,321,528,321,528,316,562,316"/>
+<area shape="rect" id="Node000008" href="$classmy__db_1_1demo_1_1StatusRepository.html#a74212c1aedab5e93c3b51234448a520b" title=" " alt="" coords="297,363,528,403"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="568,339,529,353,491,365,489,360,527,348,566,334"/>
+<area shape="rect" id="Node000009" href="$classmy__device_1_1demo_1_1UUVDevice.html#a634c58de2126b4a4e6a2a093e60e1290" title="请求停止（不负责 shutdown queue）" alt="" coords="303,427,523,467"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="597,345,569,382,530,417,506,429,504,424,526,412,565,378,593,341"/>
+<area shape="rect" id="Node000011" href="$classmy__device_1_1demo_1_1UUVDevice.html#a81dd0a772bae5a5e534a5fb3894509e9" title=" " alt="" coords="303,491,523,531"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="606,345,596,377,581,413,559,450,530,481,511,493,508,488,526,477,554,446,576,411,591,375,601,344"/>
+<area shape="rect" id="Node000013" href="$classmy__device_1_1demo_1_1UUVDevice.html#a59c55e446776e18cbd4b693f09ea501c" title=" " alt="" coords="303,555,523,595"/>
+<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="611,346,604,389,590,442,566,497,550,522,530,545,513,557,510,552,526,541,546,519,562,495,585,441,599,388,605,345"/>
+<area shape="rect" id="Node000014" href="$classmy__device_1_1demo_1_1UUVDevice.html#a667de3be7fa6d87d5e1b5b3fd8065859" title=" " alt="" coords="303,619,523,659"/>
+<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="613,345,610,400,599,470,589,508,574,544,555,578,530,609,515,620,511,616,526,605,550,575,569,542,583,506,594,469,605,399,608,345"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="352,91,250,100,249,94,352,85"/>
+<area shape="rect" id="Node000010" href="$classmy__device_1_1demo_1_1UUVDevice.html#ab6c2f994d41932c6cd7222dcc3c67da0" title=" " alt="" coords="17,427,237,467"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="289,449,237,449,237,444,289,444"/>
+<area shape="rect" id="Node000012" href="$classmy__device_1_1demo_1_1UUVDevice.html#a24a097fb4fcef1837583a96466f5d3e2" title="启动设备执行单元（注入队列引用 + EStop 引用）" alt="" coords="17,523,237,563"/>
+<area shape="poly" id="edge12_Node000011_Node000012" title=" " alt="" coords="289,527,238,533,237,528,289,522"/>
+<area shape="poly" id="edge14_Node000013_Node000012" title=" " alt="" coords="289,563,237,558,238,552,289,558"/>
 </map>
