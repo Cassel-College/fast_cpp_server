@@ -95,12 +95,54 @@ if(ENABLE_INSTALL_MQTT)
         print_colored_message("警告: MQTT 配置目录不存在，跳过打包 etc/ ..." COLOR red)
     endif()
 
-    # 显式安装 libmosquitto 目标文件
-    if(TARGET libmosquitto)
-        print_colored_message("准备打包 libmosquitto 库文件至 lib/ ..." COLOR green)
-        install(FILES $<TARGET_FILE:libmosquitto> DESTINATION lib)
-    else()
-        print_colored_message("警告: libmosquitto 目标不存在，跳过打包 lib/ ..." COLOR red)
+    # # 显式安装 libmosquitto 目标文件
+    # if(TARGET libmosquitto)
+    #     print_colored_message("准备打包 libmosquitto 库文件至 lib/ ..." COLOR green)
+    #     install(FILES $<TARGET_FILE:libmosquitto> DESTINATION lib)
+    # else()
+    #     print_colored_message("警告: libmosquitto 目标不存在，跳过打包 lib/ ..." COLOR red)
+    # endif()
+    # 显式安装 mosquitto 库文件（兼容 static/shared，避免安装不存在的文件导致 CPack 失败）
+    set(_installed_mosquitto_lib FALSE)
+
+    # 1) 优先安装静态库（你当前实际生成了 libmosquitto_static.a）
+    if(TARGET mosquitto_static)
+        print_colored_message("准备打包 mosquitto_static 库文件至 lib/ ..." COLOR green)
+        install(FILES $<TARGET_FILE:mosquitto_static> DESTINATION lib)
+        set(_installed_mosquitto_lib TRUE)
+    elseif(TARGET libmosquitto_static)
+        print_colored_message("准备打包 libmosquitto_static 库文件至 lib/ ..." COLOR green)
+        install(FILES $<TARGET_FILE:libmosquitto_static> DESTINATION lib)
+        set(_installed_mosquitto_lib TRUE)
+    endif()
+
+    # 2) 如果存在共享库 target，再安装共享库
+    # 注意：不要假设它一定存在；而且不要因为它存在就装一个不存在的输出文件
+    if(NOT _installed_mosquitto_lib)
+        if(TARGET mosquitto) # 有些版本 target 叫 mosquitto
+            print_colored_message("准备打包 mosquitto(shared) 库文件至 lib/ ..." COLOR green)
+            install(FILES $<TARGET_FILE:mosquitto> DESTINATION lib)
+            set(_installed_mosquitto_lib TRUE)
+        elseif(TARGET libmosquitto) # 你原来用的
+            print_colored_message("准备打包 libmosquitto(shared) 库文件至 lib/ ..." COLOR green)
+            install(FILES $<TARGET_FILE:libmosquitto> DESTINATION lib)
+            set(_installed_mosquitto_lib TRUE)
+        endif()
+    endif()
+
+    # 3) 最后兜底：如果 target 名不匹配，但文件确实生成了，就用 glob 安装（只在 configure 阶段存在时才会执行）
+    if(NOT _installed_mosquitto_lib)
+        file(GLOB _mosq_candidates
+            "${CMAKE_BINARY_DIR}/lib/libmosquitto*.so*"
+            "${CMAKE_BINARY_DIR}/lib/libmosquitto*.a"
+        )
+        if(_mosq_candidates)
+            print_colored_message("准备打包 mosquitto 库文件(兜底 glob) 至 lib/ ..." COLOR green)
+            install(FILES ${_mosq_candidates} DESTINATION lib)
+            set(_installed_mosquitto_lib TRUE)
+        else()
+            print_colored_message("警告: 未找到 mosquitto 库文件产物，跳过打包 lib/ ..." COLOR red)
+        endif()
     endif()
     
     # 安装 mosquitto 可执行文件

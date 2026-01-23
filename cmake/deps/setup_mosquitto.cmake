@@ -5,7 +5,7 @@
 # add_subdirectory(external/mosquitto EXCLUDE_FROM_ALL)
 
 set(WITH_STATIC_LIBRARIES   ON          CACHE BOOL "" FORCE) # 开启静态库编译 (.a)
-set(WITH_SHARED_LIBRARIES   OFF         CACHE BOOL "" FORCE) # 如果你只需要静态库，可以关闭共享库
+set(WITH_SHARED_LIBRARIES   ON          CACHE BOOL "" FORCE) # 如果你只需要静态库，可以关闭共享库
 set(WITH_APPS               OFF         CACHE BOOL "" FORCE) # 不编译 mosquitto_pub/sub 等工具
 set(WITH_BROKER             ON          CACHE BOOL "" FORCE) # 如果你只需要 Client 库，不编译服务端二进制
 set(DOCUMENTATION           OFF         CACHE BOOL "Disable documentation generation")
