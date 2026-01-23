@@ -119,6 +119,7 @@ target_link_libraries(mylib PUBLIC pthread)
 target_link_libraries(mylib PRIVATE my_soft_healthy)
 target_link_libraries(mylib PRIVATE my_system_healthy)
 target_link_libraries(mylib PRIVATE symengine)
+target_link_libraries(mylib PRIVATE sqlite3_static)
 
 print_colored_message("Adding mylib library with sources over" COLOR yellow)
 print_colored_message("------------------------------" COLOR magenta)

@@ -82,7 +82,6 @@ target_link_libraries(${PROJECT_NAME} PRIVATE my_doctor)
 target_link_libraries(${PROJECT_NAME} PRIVATE my_cache)
 target_link_libraries(${PROJECT_NAME} PRIVATE mylib)
 target_link_libraries(${PROJECT_NAME} PRIVATE libmosquitto_static)
-# 链接 OpenCV 库
 target_link_libraries(${PROJECT_NAME} PRIVATE opencv_calib3d)
 target_link_libraries(${PROJECT_NAME} PRIVATE opencv_core)
 target_link_libraries(${PROJECT_NAME} PRIVATE opencv_dnn)
@@ -101,6 +100,8 @@ target_link_libraries(${PROJECT_NAME} PRIVATE opencv_videoio)
 target_link_libraries(${PROJECT_NAME} PRIVATE oatpp::oatpp)
 target_link_libraries(${PROJECT_NAME} PRIVATE oatpp::oatpp-swagger)
 target_link_libraries(${PROJECT_NAME} PRIVATE symengine)
+target_link_libraries(${PROJECT_NAME} PRIVATE sqlite3_static)
+
 # # 包含 Eigen 头文件
 # target_include_directories(${PROJECT_NAME} PRIVATE ${EIGEN3_INCLUDE_DIR})
 

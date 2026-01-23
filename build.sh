@@ -91,6 +91,15 @@ else
   echo "⬇️ Failed to download spdlog. ❌"
 fi
 
+# 下载 sqlite amalgamation（第三方镜像仓库，提供 sqlite3.c/sqlite3.h）
+if [ -d "external/sqlite" ]; then
+  echo "⬇️ Directory 'external/sqlite' already exists. ✅"
+elif git clone https://github.com/azadkuh/sqlite-amalgamation.git external/sqlite; then
+  echo "⬇️ Successfully downloaded SQLite amalgamation repo. ✅"
+else
+  echo "⬇️ Failed to download SQLite amalgamation repo. ❌"
+fi
+
 # 下载easyloggingpp
 if [ -d "external/easyloggingpp" ]; then
   echo "⬇️ Directory 'external/easyloggingpp' already exists. ✅"

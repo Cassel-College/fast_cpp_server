@@ -30,6 +30,7 @@ target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE
     my_control
     my_device
     my_data
+    my_db
     my_soft_healthy
     my_system_healthy
     symengine              # 修复 symengine/expression.h 找不到
@@ -56,6 +57,7 @@ target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE
     cpr::cpr
     libzmq
     libmosquitto_static
+    sqlite3_static
 )
 
 # 包含内部路径

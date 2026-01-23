@@ -4,6 +4,7 @@
 #include <memory>
 #include <shared_mutex>
 #include <string>
+#include <thread>
 #include <unordered_map>
 
 #include <nlohmann/json.hpp>
@@ -13,34 +14,14 @@
 #include "MyLog.h"
 
 
-
 #include "IDevice.h"
 
 
 #include "ICommandNormalizer.h"
 #include "TaskQueue.h"
 
-using namespace my_data;
-using namespace my_control;
-
-
 namespace my_edge::demo {
 
-/**
- * @brief UUVEdge：demo Edge Runtime
- *
- * @details
- * - Init/Start 分离
- * - 每个 device_id：
- *   - Edge 持有 TaskQueue 实例（unique_ptr）
- *   - Edge 持有 Device 实例（unique_ptr）
- * - Submit:
- *   - 从 payload 顶层读 device_id（强制要求）
- *   - 找到 device type
- *   - 按 type 选择 normalizer（ICommandNormalizer）
- *   - Normalize 得 Task 并 Push 到队列
- * - EStop 默认拒绝入队（可 cfg allow_queue_when_estop）
- */
 class UUVEdge final : public my_edge::IEdge {
 public:
   UUVEdge();
@@ -58,7 +39,6 @@ public:
 
 private:
   enum class RunState { Initializing, Ready, Running, Stopping, Stopped };
-
   static std::string ToString(RunState s);
 
   SubmitResult MakeResult(SubmitCode code, const std::string& msg,
@@ -68,6 +48,11 @@ private:
                           std::int64_t queue_size_after = 0) const;
 
   bool EnsureNormalizerForTypeLocked(const std::string& type, std::string* err);
+
+  // ---- status snapshot thread ----
+  void StartStatusSnapshotThreadLocked();
+  void StopStatusSnapshotThreadLocked();
+  void StatusSnapshotLoop();
 
 private:
   mutable std::shared_mutex rw_mutex_;
@@ -96,8 +81,14 @@ private:
   std::unordered_map<my_data::DeviceId, std::unique_ptr<my_control::TaskQueue>> queues_;
   std::unordered_map<my_data::DeviceId, std::unique_ptr<my_device::IDevice>> devices_;
 
-  // 保存 cfg（可选：为了调试/查看）
+  // 保存 cfg（调试）
   nlohmann::json cfg_;
+
+  // ---- snapshot thread config/state ----
+  bool status_snapshot_enable_{false};
+  int status_snapshot_interval_ms_{5000};
+  std::atomic<bool> snapshot_stop_{false};
+  std::thread snapshot_thread_;
 };
 
 } // namespace my_edge::demo

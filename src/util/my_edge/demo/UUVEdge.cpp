@@ -1,12 +1,19 @@
 #include "UUVEdge.h"
 
+#include <chrono>
+#include <thread>
+#include <utility>
+
 #include "JsonUtil.h"
-// 依赖 my_device / my_control
-#include "MyDevice.h"
 #include "MyControl.h"
-
-
+#include "MyDevice.h"
+#include "demo/StatusRepository.h"
 namespace my_edge::demo {
+
+using namespace my_data;
+using namespace my_control;
+using namespace my_device;
+
 
 UUVEdge::UUVEdge() {
   MYLOG_INFO("[Edge:{}] 构造完成 (UUVEdge)", edge_id_);
@@ -45,10 +52,8 @@ SubmitResult UUVEdge::MakeResult(SubmitCode code, const std::string& msg,
 }
 
 bool UUVEdge::EnsureNormalizerForTypeLocked(const std::string& type, std::string* err) {
-  // rw_mutex_ 必须已被 unique_lock 持有（Init 阶段）
-  if (normalizers_by_type_.find(type) != normalizers_by_type_.end()) {
-    return true;
-  }
+  // rw_mutex_ must be held with unique_lock by caller (Init path)
+  if (normalizers_by_type_.find(type) != normalizers_by_type_.end()) return true;
 
   MYLOG_INFO("[Edge:{}] 创建 normalizer: type={}", edge_id_, type);
 
@@ -75,16 +80,27 @@ bool UUVEdge::Init(const nlohmann::json& cfg, std::string* err) {
   allow_queue_when_estop_ = cfg.value("allow_queue_when_estop", false);
   boot_at_ms_ = my_data::NowMs();
 
-  MYLOG_INFO("[Edge:{}] Init 开始：version={}, allow_queue_when_estop={}, cfg={}",
-             edge_id_, version_, allow_queue_when_estop_, cfg.dump());
+  // snapshot config from cfg.db
+  status_snapshot_enable_ = false;
+  status_snapshot_interval_ms_ = 5000;
+  if (cfg.contains("db") && cfg["db"].is_object()) {
+    const auto& dbj = cfg["db"];
+    bool db_enable = dbj.value("enable", false);
+    bool snap_enable = dbj.value("status_snapshot_enable", false);
+    status_snapshot_enable_ = db_enable && snap_enable;
+    status_snapshot_interval_ms_ = dbj.value("status_snapshot_interval_ms", status_snapshot_interval_ms_);
+  }
 
-  // 清理旧资源（若重复 Init）
+  MYLOG_INFO("[Edge:{}] Init 开始：version={}, allow_queue_when_estop={}, snapshot_enable={}, interval_ms={}, cfg={}",
+             edge_id_, version_, allow_queue_when_estop_, status_snapshot_enable_, status_snapshot_interval_ms_, cfg.dump());
+
+  // clear previous resources (if re-init)
   devices_.clear();
   queues_.clear();
   device_type_by_id_.clear();
   normalizers_by_type_.clear();
 
-  // devices 配置
+  // devices config
   if (!cfg.contains("devices") || !cfg["devices"].is_array()) {
     std::string e = "cfg.devices is required and must be array";
     if (err) *err = e;
@@ -93,7 +109,6 @@ bool UUVEdge::Init(const nlohmann::json& cfg, std::string* err) {
     return false;
   }
 
-  // 逐设备创建 queue + device
   for (const auto& dcfg : cfg["devices"]) {
     std::string device_id = dcfg.value("device_id", "");
     std::string type = dcfg.value("type", "");
@@ -106,22 +121,20 @@ bool UUVEdge::Init(const nlohmann::json& cfg, std::string* err) {
       return false;
     }
 
-    // 记录映射
     device_type_by_id_[device_id] = type;
 
-    // 准备 normalizer（按 type）
+    // ensure normalizer for this type
     if (!EnsureNormalizerForTypeLocked(type, err)) {
       run_state_ = RunState::Initializing;
       return false;
     }
 
-    // 创建队列
+    // create queue
     std::string qname = "queue-" + device_id;
-    auto q = std::make_unique<my_control::TaskQueue>(qname);
+    queues_[device_id] = std::make_unique<my_control::TaskQueue>(qname);
     MYLOG_INFO("[Edge:{}] 创建队列：device_id={}, queue={}", edge_id_, device_id, qname);
-    queues_[device_id] = std::move(q);
 
-    // 创建设备
+    // create device
     auto dev = my_device::MyDevice::GetInstance().Create(type);
     if (!dev) {
       std::string e = "CreateDevice failed for type=" + type;
@@ -131,7 +144,6 @@ bool UUVEdge::Init(const nlohmann::json& cfg, std::string* err) {
       return false;
     }
 
-    // 初始化设备（但不 Start）
     std::string dev_err;
     if (!dev->Init(dcfg, &dev_err)) {
       std::string e = "device.Init failed: " + dev_err;
@@ -141,8 +153,8 @@ bool UUVEdge::Init(const nlohmann::json& cfg, std::string* err) {
       return false;
     }
 
-    MYLOG_INFO("[Edge:{}] 创建设备成功：device_id={}, type={}", edge_id_, device_id, type);
     devices_[device_id] = std::move(dev);
+    MYLOG_INFO("[Edge:{}] 创建设备成功：device_id={}, type={}", edge_id_, device_id, type);
   }
 
   run_state_ = RunState::Ready;
@@ -163,7 +175,6 @@ bool UUVEdge::Start(std::string* err) {
 
   MYLOG_INFO("[Edge:{}] Start 开始：devices={}", edge_id_, devices_.size());
 
-  // 启动每个 device（注入 queue + estop）
   for (auto& [device_id, dev] : devices_) {
     auto qit = queues_.find(device_id);
     if (qit == queues_.end()) {
@@ -189,17 +200,20 @@ bool UUVEdge::Start(std::string* err) {
 
   run_state_ = RunState::Running;
   MYLOG_INFO("[Edge:{}] Start 成功：run_state={}", edge_id_, ToString(run_state_.load()));
+
+  // start snapshot thread after running
+  StartStatusSnapshotThreadLocked();
+
   return true;
 }
 
 SubmitResult UUVEdge::Submit(const my_data::RawCommand& cmd) {
-  // Submit 为高频：shared_lock
   std::shared_lock<std::shared_mutex> lk(rw_mutex_);
 
   MYLOG_INFO("[Edge:{}] Submit 开始：command_id={}, source={}, payload={}",
              edge_id_, cmd.command_id, cmd.source, cmd.payload.dump());
 
-  // 1) 状态校验：Ready 状态拒绝（你已确认）
+  // 1) run_state check (Ready => NotRunning)
   RunState rs = run_state_.load();
   if (rs != RunState::Running) {
     auto r = MakeResult(SubmitCode::NotRunning,
@@ -209,7 +223,7 @@ SubmitResult UUVEdge::Submit(const my_data::RawCommand& cmd) {
     return r;
   }
 
-  // 2) EStop 校验：默认拒绝，可配置允许入队
+  // 2) estop check (default reject)
   if (estop_.load() && !allow_queue_when_estop_) {
     std::string reason;
     {
@@ -223,7 +237,7 @@ SubmitResult UUVEdge::Submit(const my_data::RawCommand& cmd) {
     return r;
   }
 
-  // 3) 从 payload 顶层读取 device_id（强制要求）
+  // 3) payload must be object and contain device_id (top-level)
   if (!cmd.payload.is_object()) {
     auto r = MakeResult(SubmitCode::InvalidCommand, "payload must be object", cmd);
     MYLOG_ERROR("[Edge:{}] Submit 失败：{}", edge_id_, r.toString());
@@ -237,7 +251,7 @@ SubmitResult UUVEdge::Submit(const my_data::RawCommand& cmd) {
     return r;
   }
 
-  // 4) 查 device_id 是否存在
+  // 4) lookup type
   auto dit = device_type_by_id_.find(device_id);
   if (dit == device_type_by_id_.end()) {
     auto r = MakeResult(SubmitCode::UnknownDevice, "unknown device_id=" + device_id, cmd, device_id);
@@ -247,7 +261,7 @@ SubmitResult UUVEdge::Submit(const my_data::RawCommand& cmd) {
 
   const std::string& type = dit->second;
 
-  // 5) 选 normalizer
+  // 5) select normalizer by type
   auto nit = normalizers_by_type_.find(type);
   if (nit == normalizers_by_type_.end() || !nit->second) {
     auto r = MakeResult(SubmitCode::InternalError, "normalizer missing for type=" + type, cmd, device_id);
@@ -255,7 +269,7 @@ SubmitResult UUVEdge::Submit(const my_data::RawCommand& cmd) {
     return r;
   }
 
-  // 6) Normalize
+  // 6) normalize
   std::string nerr;
   auto maybe_task = nit->second->Normalize(cmd, edge_id_, &nerr);
   if (!maybe_task.has_value()) {
@@ -268,11 +282,11 @@ SubmitResult UUVEdge::Submit(const my_data::RawCommand& cmd) {
 
   my_data::Task task = *maybe_task;
 
-  // 7) 找队列并入队
+  // 7) push to queue
   auto qit = queues_.find(device_id);
   if (qit == queues_.end() || !qit->second) {
     auto r = MakeResult(SubmitCode::InternalError, "queue missing for device_id=" + device_id, cmd, device_id, task.task_id);
-    MYLOG_ERROR("[Edge:{}] Submit 失败：{}", edge_id_, r.toString());
+    MYLOG_ERROR("[Edge:{}] Submit 失��：{}", edge_id_, r.toString());
     return r;
   }
 
@@ -298,7 +312,6 @@ my_data::EdgeStatus UUVEdge::GetStatusSnapshot() const {
   s.boot_at_ms = boot_at_ms_;
   s.version = version_;
 
-  // run_state -> my_data::EdgeRunState
   RunState rs = run_state_.load();
   if (rs == RunState::Initializing || rs == RunState::Ready) {
     s.run_state = my_data::EdgeRunState::Initializing;
@@ -316,7 +329,6 @@ my_data::EdgeStatus UUVEdge::GetStatusSnapshot() const {
     s.estop_reason = estop_reason_;
   }
 
-  // 汇总 devices + queue_depth
   std::int64_t pending_total = 0;
   std::int64_t running_total = 0;
 
@@ -325,7 +337,6 @@ my_data::EdgeStatus UUVEdge::GetStatusSnapshot() const {
 
     my_data::DeviceStatus ds = dev->GetStatusSnapshot();
 
-    // queue_depth 由 Edge 聚合（你已确认）
     auto qit = queues_.find(device_id);
     if (qit != queues_.end() && qit->second) {
       ds.queue_depth = static_cast<std::int64_t>(qit->second->Size());
@@ -359,25 +370,89 @@ void UUVEdge::SetEStop(bool active, const std::string& reason) {
   MYLOG_WARN("[Edge:{}] SetEStop：active={}, reason={}", edge_id_, active ? "true" : "false", reason);
 }
 
+void UUVEdge::StartStatusSnapshotThreadLocked() {
+  // rw_mutex_ must already be held (unique_lock)
+  if (!status_snapshot_enable_) {
+    MYLOG_INFO("[Edge:{}] StatusSnapshotThread disabled by cfg", edge_id_);
+    return;
+  }
+
+  // DB not initialized => do not start
+  if (!my_db::MyDB::GetInstance().IsInitialized()) {
+    MYLOG_WARN("[Edge:{}] StatusSnapshotThread not started: MyDB not initialized", edge_id_);
+    return;
+  }
+
+  if (snapshot_thread_.joinable()) {
+    MYLOG_WARN("[Edge:{}] StatusSnapshotThread already running", edge_id_);
+    return;
+  }
+
+  snapshot_stop_.store(false);
+  MYLOG_INFO("[Edge:{}] StatusSnapshotThread start: interval_ms={}", edge_id_, status_snapshot_interval_ms_);
+  snapshot_thread_ = std::thread(&UUVEdge::StatusSnapshotLoop, this);
+}
+
+void UUVEdge::StopStatusSnapshotThreadLocked() {
+  snapshot_stop_.store(true);
+  if (snapshot_thread_.joinable()) {
+    MYLOG_INFO("[Edge:{}] StatusSnapshotThread join...", edge_id_);
+    snapshot_thread_.join();
+    MYLOG_INFO("[Edge:{}] StatusSnapshotThread stopped", edge_id_);
+  }
+}
+
+void UUVEdge::StatusSnapshotLoop() {
+  MYLOG_INFO("[Edge:{}] StatusSnapshotLoop enter", edge_id_);
+
+  while (!snapshot_stop_.load()) {
+    my_data::EdgeStatus st = GetStatusSnapshot();
+
+    std::string err;
+    auto& repo = my_db::demo::StatusRepository::GetInstance();
+
+    if (!repo.InsertEdgeSnapshot(st, &err)) {
+      MYLOG_ERROR("[Edge:{}] StatusSnapshot: InsertEdgeSnapshot failed: {}", edge_id_, err);
+    } else {
+      MYLOG_DEBUG("[Edge:{}] StatusSnapshot: edge snapshot inserted", edge_id_);
+    }
+
+    for (const auto& [device_id, ds] : st.devices) {
+      std::string e2;
+      if (!repo.InsertDeviceSnapshot(edge_id_, ds, &e2)) {
+        MYLOG_ERROR("[Edge:{}] StatusSnapshot: InsertDeviceSnapshot failed: device_id={}, err={}",
+                    edge_id_, device_id, e2);
+      }
+    }
+
+    int interval = status_snapshot_interval_ms_;
+    if (interval < 200) interval = 200;
+    std::this_thread::sleep_for(std::chrono::milliseconds(interval));
+  }
+
+  MYLOG_WARN("[Edge:{}] StatusSnapshotLoop exit", edge_id_);
+}
+
 void UUVEdge::Shutdown() {
   std::unique_lock<std::shared_mutex> lk(rw_mutex_);
 
   RunState rs = run_state_.load();
-  if (rs == RunState::Stopped || rs == RunState::Stopping) {
-    return;
-  }
+  if (rs == RunState::Stopped || rs == RunState::Stopping) return;
 
   MYLOG_WARN("[Edge:{}] Shutdown 开始：run_state={}", edge_id_, ToString(rs));
   run_state_ = RunState::Stopping;
 
-  // 1) Stop devices（不 shutdown queue）
+  // stop snapshot thread first (avoid concurrent access after clearing maps)
+  StopStatusSnapshotThreadLocked();
+
+  // 1) Stop devices (do not shutdown queue here)
   for (auto& [device_id, dev] : devices_) {
     if (!dev) continue;
     MYLOG_WARN("[Edge:{}] Shutdown: device.Stop device_id={}", edge_id_, device_id);
     dev->Stop();
   }
 
-  // 2) Shutdown all queues（你已确认：全局 shutdown 由 Edge 统一 shutdown 队列）
+  // 2) Shutdown all queues (global shutdown by Edge)
   for (auto& [device_id, q] : queues_) {
     if (!q) continue;
     MYLOG_WARN("[Edge:{}] Shutdown: queue.Shutdown device_id={}, queue={}", edge_id_, device_id, q->Name());
