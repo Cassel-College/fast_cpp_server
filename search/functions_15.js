@@ -23,7 +23,6 @@ var searchData=
   ['_7esofthealthmonitormanager_20',['~SoftHealthMonitorManager',['../classSoftHealthMonitorManager.html#a2be274bcd23041d6c57916fc64fdb587',1,'SoftHealthMonitorManager']]],
   ['_7etaskqueue_21',['~TaskQueue',['../classmy__control_1_1TaskQueue.html#a59499d260cf14de9fb3bc4256ac889c8',1,'my_control::TaskQueue']]],
   ['_7ethreadsafebuffer_22',['~ThreadSafeBuffer',['../classtools_1_1ThreadSafeBuffer.html#a55aa12b545c080a86f993b06f51311df',1,'tools::ThreadSafeBuffer']]],
-  ['_7euuvdevice_23',['~UUVDevice',['../classmy__device_1_1demo_1_1UUVDevice.html#ab6c2f994d41932c6cd7222dcc3c67da0',1,'my_device::demo::UUVDevice']]],
-  ['_7euuvedge_24',['~UUVEdge',['../classmy__edge_1_1demo_1_1UUVEdge.html#aa8982df7c38aa98b570f85c45f51d8d8',1,'my_edge::demo::UUVEdge']]],
-  ['_7eworkflow_25',['~Workflow',['../classmy__control_1_1demo_1_1Workflow.html#ab282c005f4ccf9a3c9b713e978d8f751',1,'my_control::demo::Workflow']]]
+  ['_7euuvedge_23',['~UUVEdge',['../classmy__edge_1_1demo_1_1UUVEdge.html#aa8982df7c38aa98b570f85c45f51d8d8',1,'my_edge::demo::UUVEdge']]],
+  ['_7eworkflow_24',['~Workflow',['../classmy__control_1_1demo_1_1Workflow.html#ab282c005f4ccf9a3c9b713e978d8f751',1,'my_control::demo::Workflow']]]
 ];

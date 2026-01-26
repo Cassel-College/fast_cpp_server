@@ -1,9 +1,4 @@
 var searchData=
 [
-  ['serviceguard_0',['ServiceGuard',['../classtools_1_1service__guard_1_1ServiceGuard.html',1,'tools::service_guard']]],
-  ['simpletcpclient_1',['SimpleTcpClient',['../classtools_1_1SimpleTcpClient.html',1,'tools']]],
-  ['softhealthmonitorconfig_2',['SoftHealthMonitorConfig',['../classSoftHealthMonitorConfig.html',1,'']]],
-  ['softhealthmonitormanager_3',['SoftHealthMonitorManager',['../classSoftHealthMonitorManager.html',1,'']]],
-  ['statusrepository_4',['StatusRepository',['../classmy__db_1_1demo_1_1StatusRepository.html',1,'my_db::demo']]],
-  ['submitresult_5',['SubmitResult',['../structmy__edge_1_1SubmitResult.html',1,'my_edge']]]
+  ['rawcommand_0',['RawCommand',['../structmy__data_1_1RawCommand.html',1,'my_data']]]
 ];

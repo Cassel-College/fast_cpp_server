@@ -109,6 +109,8 @@ UUVEdge 的协作图:</div>
 Public 成员函数</h2></td></tr>
 <tr class="memitem:a1fefa38a543ac3a9dc43150b3ffc5a50" id="r_a1fefa38a543ac3a9dc43150b3ffc5a50"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a1fefa38a543ac3a9dc43150b3ffc5a50">UUVEdge</a> ()</td></tr>
 <tr class="separator:a1fefa38a543ac3a9dc43150b3ffc5a50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab69eb9171ee3c27d2c7cc35879356f05" id="r_ab69eb9171ee3c27d2c7cc35879356f05"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#ab69eb9171ee3c27d2c7cc35879356f05">UUVEdge</a> (const nlohmann::json &amp;cfg, std::string *err=nullptr)</td></tr>
+<tr class="separator:ab69eb9171ee3c27d2c7cc35879356f05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8982df7c38aa98b570f85c45f51d8d8" id="r_aa8982df7c38aa98b570f85c45f51d8d8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#aa8982df7c38aa98b570f85c45f51d8d8">~UUVEdge</a> () override</td></tr>
 <tr class="separator:aa8982df7c38aa98b570f85c45f51d8d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeaad4d1e08909ec413c6e934fb718dc7" id="r_aeaad4d1e08909ec413c6e934fb718dc7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">Init</a> (const nlohmann::json &amp;cfg, std::string *err) override</td></tr>
@@ -129,6 +131,9 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a39b81cd3edfaba4190ff12d8c8b9d69d" id="r_a39b81cd3edfaba4190ff12d8c8b9d69d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d">Shutdown</a> () override</td></tr>
 <tr class="memdesc:a39b81cd3edfaba4190ff12d8c8b9d69d"><td class="mdescLeft">&#160;</td><td class="mdescRight">全局停机：Stop devices + Shutdown queues + Join  <br /></td></tr>
 <tr class="separator:a39b81cd3edfaba4190ff12d8c8b9d69d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b0f7d4b008896d9b742c7c14f29c2e7" id="r_a6b0f7d4b008896d9b742c7c14f29c2e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a6b0f7d4b008896d9b742c7c14f29c2e7">ShowAnalyzeInitArgs</a> (const nlohmann::json &amp;cfg) const override</td></tr>
+<tr class="memdesc:a6b0f7d4b008896d9b742c7c14f29c2e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">解释 Init 的入参并打印到日志（用于调试/前置检查）  <br /></td></tr>
+<tr class="separator:a6b0f7d4b008896d9b742c7c14f29c2e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14a921badc0c0cfd1d63dee98f734b80" id="r_a14a921badc0c0cfd1d63dee98f734b80"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemy__data.html#aa97613f313f7fbbad8c368f2599e3f26">my_data::EdgeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a14a921badc0c0cfd1d63dee98f734b80">Id</a> () const override</td></tr>
 <tr class="separator:a14a921badc0c0cfd1d63dee98f734b80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classmy__edge_1_1IEdge"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmy__edge_1_1IEdge')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classmy__edge_1_1IEdge.html">IEdge</a></td></tr>
@@ -237,7 +242,7 @@ Private 属性</h2></td></tr>
 </div>
 <h2 class="groupheader">构造及析构函数说明</h2>
 <a id="a1fefa38a543ac3a9dc43150b3ffc5a50" name="a1fefa38a543ac3a9dc43150b3ffc5a50"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1fefa38a543ac3a9dc43150b3ffc5a50">&#9670;&#160;</a></span>UUVEdge()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fefa38a543ac3a9dc43150b3ffc5a50">&#9670;&#160;</a></span>UUVEdge() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -252,6 +257,60 @@ Private 属性</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="reference">引用了 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a4f600ad4ee5566df049ec8213e99986b">UUVEdge::edge_id_</a> , 以及 <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>.</p>
+
+</div>
+</div>
+<a id="ab69eb9171ee3c27d2c7cc35879356f05" name="ab69eb9171ee3c27d2c7cc35879356f05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab69eb9171ee3c27d2c7cc35879356f05">&#9670;&#160;</a></span>UUVEdge() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html">UUVEdge</a> </td>
+          <td>(</td>
+          <td class="paramtype">const nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>cfg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>err</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a4f600ad4ee5566df049ec8213e99986b">UUVEdge::edge_id_</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">UUVEdge::Init()</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a> , 以及 <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1demo_1_1UUVEdge_ab69eb9171ee3c27d2c7cc35879356f05_cgraph.png" border="0" usemap="#aclassmy__edge_1_1demo_1_1UUVEdge_ab69eb9171ee3c27d2c7cc35879356f05_cgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1demo_1_1UUVEdge_ab69eb9171ee3c27d2c7cc35879356f05_cgraph" id="aclassmy__edge_1_1demo_1_1UUVEdge_ab69eb9171ee3c27d2c7cc35879356f05_cgraph">
+<area shape="rect" title=" " alt="" coords="5,127,88,153"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html#aeaad4d1e08909ec413c6e934fb718dc7" title="初始化：仅装配，不启动线程" alt="" coords="136,127,179,153"/>
+<area shape="poly" title=" " alt="" coords="88,137,122,137,122,143,88,143"/>
+<area shape="rect" href="classmy__device_1_1MyDevice.html#a1c77f692541f351b7078a92a7dc458a4" title="创建具体设备实例" alt="" coords="260,5,427,45"/>
+<area shape="poly" title=" " alt="" coords="164,125,188,91,205,72,225,56,246,45,249,50,228,61,209,76,192,94,168,128"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html#a68e60df7386ed4d5a071623abc676d1a" title=" " alt="" coords="227,70,460,95"/>
+<area shape="poly" title=" " alt="" coords="178,127,226,105,258,96,259,101,228,111,180,131"/>
+<area shape="rect" href="classmy__device_1_1MyDevice.html#a63f5b56942d205be905c74fdbcac1548" title=" " alt="" coords="260,120,427,160"/>
+<area shape="poly" title=" " alt="" coords="179,137,246,137,246,143,179,143"/>
+<area shape="rect" href="namespacemy__data.html#a9313adf4c1d0935b3d9526e245a23403" title="时间工具：获取当前毫秒时间戳" alt="" coords="276,185,411,210"/>
+<area shape="poly" title=" " alt="" coords="180,149,228,169,263,180,262,185,226,175,178,153"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html#a9be7e9b9935ea7612f5430b4134d0809" title=" " alt="" coords="306,234,381,259"/>
+<area shape="poly" title=" " alt="" coords="168,151,191,187,208,205,228,220,260,234,293,241,292,246,258,239,225,225,205,209,187,190,163,154"/>
+<area shape="rect" href="classmy__control_1_1MyControl.html#aad117ef61f9bcaed5bc89f3a90d4d8c3" title=" " alt="" coords="508,31,679,71"/>
+<area shape="poly" title=" " alt="" coords="442,67,494,61,495,66,443,73"/>
+<area shape="rect" href="classmy__control_1_1MyControl.html#a867d8de756c913549ea1427caf29ee65" title=" " alt="" coords="508,95,679,135"/>
+<area shape="poly" title=" " alt="" coords="443,93,495,99,494,105,442,98"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -351,9 +410,11 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="classmy__edge_1_1demo_1_1UUVEdge_a68e60df7386ed4d5a071623abc676d1a_icgraph.png" border="0" usemap="#aclassmy__edge_1_1demo_1_1UUVEdge_a68e60df7386ed4d5a071623abc676d1a_icgraph" alt=""/></div>
 <map name="aclassmy__edge_1_1demo_1_1UUVEdge_a68e60df7386ed4d5a071623abc676d1a_icgraph" id="aclassmy__edge_1_1demo_1_1UUVEdge_a68e60df7386ed4d5a071623abc676d1a_icgraph">
-<area shape="rect" title=" " alt="" coords="96,5,329,31"/>
-<area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html#aeaad4d1e08909ec413c6e934fb718dc7" title="初始化：仅装配，不启动线程" alt="" coords="5,5,48,31"/>
-<area shape="poly" title=" " alt="" coords="82,21,48,21,48,15,82,15"/>
+<area shape="rect" title=" " alt="" coords="227,5,460,31"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html#aeaad4d1e08909ec413c6e934fb718dc7" title="初始化：仅装配，不启动线程" alt="" coords="136,5,179,31"/>
+<area shape="poly" title=" " alt="" coords="213,21,179,21,179,15,213,15"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html#ab69eb9171ee3c27d2c7cc35879356f05" title=" " alt="" coords="5,5,88,31"/>
+<area shape="poly" title=" " alt="" coords="122,21,88,21,88,15,122,15"/>
 </map>
 </div>
 
@@ -474,6 +535,8 @@ Private 属性</h2></td></tr>
 <p>实现了 <a class="el" href="classmy__edge_1_1IEdge.html#a318f0835a0611f2d747aa141e674af64">IEdge</a>.</p>
 
 <p class="reference">引用了 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a954eca40836570008806de5a41e5675a">UUVEdge::allow_queue_when_estop_</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#aaf585eb429176fc02a2ce6ab40ac64ea">UUVEdge::boot_at_ms_</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#ab6d49423f76ea026d6eb25402274d258">UUVEdge::cfg_</a>, <a class="el" href="classmy__device_1_1MyDevice.html#a1c77f692541f351b7078a92a7dc458a4">MyDevice::Create()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a5222e3e02d930f6a24bdc3f99791cade">UUVEdge::device_type_by_id_</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#af49c8df428c22b20a08d4a30bd03a87a">UUVEdge::devices_</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a4f600ad4ee5566df049ec8213e99986b">UUVEdge::edge_id_</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a68e60df7386ed4d5a071623abc676d1a">UUVEdge::EnsureNormalizerForTypeLocked()</a>, <a class="el" href="classmy__device_1_1MyDevice.html#a63f5b56942d205be905c74fdbcac1548">MyDevice::GetInstance()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a86567c2b79a1ea4b5bc908d49665a16ea32b169f72b293ef80d35435e9894f8e2">UUVEdge::Initializing</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a72ea075057b11b850f0e4f65ba2b6406">UUVEdge::normalizers_by_type_</a>, <a class="el" href="namespacemy__data.html#a9313adf4c1d0935b3d9526e245a23403">my_data::NowMs()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#aab5c8a55e8f1af292a2c4475e624c57f">UUVEdge::queues_</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a86567c2b79a1ea4b5bc908d49665a16eae7d31fc0602fb2ede144d18cdffd816b">UUVEdge::Ready</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a0dc127e03572e3a176890ca61612ecbd">UUVEdge::run_state_</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a3f7fceadda2b13af52092701177669f0">UUVEdge::rw_mutex_</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a5e869474b6af6fa2dd365db02c0d0281">UUVEdge::status_snapshot_enable_</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a9fe26c93b6e6e1f1f91a96b3154d5613">UUVEdge::status_snapshot_interval_ms_</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a9be7e9b9935ea7612f5430b4134d0809">UUVEdge::ToString()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a61c8f42943e4a184067a3d6e00410d38">UUVEdge::version_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#ab69eb9171ee3c27d2c7cc35879356f05">UUVEdge::UUVEdge()</a>.</p>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
@@ -494,6 +557,16 @@ Private 属性</h2></td></tr>
 <area shape="poly" title=" " alt="" coords="312,67,364,61,364,66,312,73"/>
 <area shape="rect" href="classmy__control_1_1MyControl.html#a867d8de756c913549ea1427caf29ee65" title=" " alt="" coords="377,95,548,135"/>
 <area shape="poly" title=" " alt="" coords="312,93,364,99,364,105,312,98"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1demo_1_1UUVEdge_aeaad4d1e08909ec413c6e934fb718dc7_icgraph.png" border="0" usemap="#aclassmy__edge_1_1demo_1_1UUVEdge_aeaad4d1e08909ec413c6e934fb718dc7_icgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1demo_1_1UUVEdge_aeaad4d1e08909ec413c6e934fb718dc7_icgraph" id="aclassmy__edge_1_1demo_1_1UUVEdge_aeaad4d1e08909ec413c6e934fb718dc7_icgraph">
+<area shape="rect" title="初始化：仅装配，不启动线程" alt="" coords="136,5,179,31"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html#ab69eb9171ee3c27d2c7cc35879356f05" title=" " alt="" coords="5,5,88,31"/>
+<area shape="poly" title=" " alt="" coords="122,21,88,21,88,15,122,15"/>
 </map>
 </div>
 
@@ -612,6 +685,44 @@ Private 属性</h2></td></tr>
 <p>实现了 <a class="el" href="classmy__edge_1_1IEdge.html#a40c608fbe6f7a113fc20b8f7f5e8758a">IEdge</a>.</p>
 
 <p class="reference">引用了 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a4f600ad4ee5566df049ec8213e99986b">UUVEdge::edge_id_</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a6f2e808d95e8be1520f4dc1e7911fd28">UUVEdge::estop_</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a9bcd7b8c4e79c5c073ee6423acd40496">UUVEdge::estop_mu_</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#ad396b58abeb0b99c96df140e8dc525f3">UUVEdge::estop_reason_</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a3f7fceadda2b13af52092701177669f0">UUVEdge::rw_mutex_</a>.</p>
+
+</div>
+</div>
+<a id="a6b0f7d4b008896d9b742c7c14f29c2e7" name="a6b0f7d4b008896d9b742c7c14f29c2e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b0f7d4b008896d9b742c7c14f29c2e7">&#9670;&#160;</a></span>ShowAnalyzeInitArgs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ShowAnalyzeInitArgs </td>
+          <td>(</td>
+          <td class="paramtype">const nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>cfg</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>解释 Init 的入参并打印到日志（用于调试/前置检查） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cfg</td><td>Init 时接收的 JSON 配置（不会修改） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="classmy__edge_1_1IEdge.html#a7b2646cea46ea711c70b6332bbc779d4">IEdge</a>.</p>
+
+<p class="reference">引用了 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a4f600ad4ee5566df049ec8213e99986b">UUVEdge::edge_id_</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a3f7fceadda2b13af52092701177669f0">UUVEdge::rw_mutex_</a>.</p>
 
 </div>
 </div>
@@ -958,6 +1069,8 @@ Private 属性</h2></td></tr>
 <area shape="poly" title=" " alt="" coords="270,105,219,114,218,109,269,99"/>
 <area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html#a0d90b8b5b262d714bf5378e4a6c54773" title="Submit：命令入口（Normalize 并入队）" alt="" coords="157,153,225,179"/>
 <area shape="poly" title=" " alt="" coords="286,115,216,155,213,151,284,110"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html#ab69eb9171ee3c27d2c7cc35879356f05" title=" " alt="" coords="11,5,94,31"/>
+<area shape="poly" title=" " alt="" coords="156,21,94,21,94,15,156,15"/>
 <area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html#aa8982df7c38aa98b570f85c45f51d8d8" title=" " alt="" coords="5,55,100,80"/>
 <area shape="poly" title=" " alt="" coords="134,70,100,70,100,65,134,65"/>
 </map>
@@ -1106,7 +1219,7 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a68e60df7386ed4d5a071623abc676d1a">UUVEdge::EnsureNormalizerForTypeLocked()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">UUVEdge::GetStatusSnapshot()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a14a921badc0c0cfd1d63dee98f734b80">UUVEdge::Id()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">UUVEdge::Init()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a81d4d98ed19966308bde4556e02ed6a6">UUVEdge::MakeResult()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a930b466b41c7d75b7318e6ca5853b5c9">UUVEdge::SetEStop()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d">UUVEdge::Shutdown()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a46b15f1cef85897da0f2fed19f72ed4c">UUVEdge::Start()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a97d1170c8d61790b8c6cb9af695b371c">UUVEdge::StartStatusSnapshotThreadLocked()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acf4df206592b39205ec28dc4272b70c4">UUVEdge::StatusSnapshotLoop()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a5108065e97bedefe5d5c5f0a26c5334c">UUVEdge::StopStatusSnapshotThreadLocked()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">UUVEdge::Submit()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a1fefa38a543ac3a9dc43150b3ffc5a50">UUVEdge::UUVEdge()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#aa8982df7c38aa98b570f85c45f51d8d8">UUVEdge::~UUVEdge()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a68e60df7386ed4d5a071623abc676d1a">UUVEdge::EnsureNormalizerForTypeLocked()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">UUVEdge::GetStatusSnapshot()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a14a921badc0c0cfd1d63dee98f734b80">UUVEdge::Id()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">UUVEdge::Init()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a81d4d98ed19966308bde4556e02ed6a6">UUVEdge::MakeResult()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a930b466b41c7d75b7318e6ca5853b5c9">UUVEdge::SetEStop()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a6b0f7d4b008896d9b742c7c14f29c2e7">UUVEdge::ShowAnalyzeInitArgs()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d">UUVEdge::Shutdown()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a46b15f1cef85897da0f2fed19f72ed4c">UUVEdge::Start()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a97d1170c8d61790b8c6cb9af695b371c">UUVEdge::StartStatusSnapshotThreadLocked()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acf4df206592b39205ec28dc4272b70c4">UUVEdge::StatusSnapshotLoop()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a5108065e97bedefe5d5c5f0a26c5334c">UUVEdge::StopStatusSnapshotThreadLocked()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">UUVEdge::Submit()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a1fefa38a543ac3a9dc43150b3ffc5a50">UUVEdge::UUVEdge()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#ab69eb9171ee3c27d2c7cc35879356f05">UUVEdge::UUVEdge()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#aa8982df7c38aa98b570f85c45f51d8d8">UUVEdge::~UUVEdge()</a>.</p>
 
 </div>
 </div>
@@ -1274,7 +1387,7 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">UUVEdge::GetStatusSnapshot()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">UUVEdge::Init()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a930b466b41c7d75b7318e6ca5853b5c9">UUVEdge::SetEStop()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d">UUVEdge::Shutdown()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a46b15f1cef85897da0f2fed19f72ed4c">UUVEdge::Start()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">UUVEdge::Submit()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">UUVEdge::GetStatusSnapshot()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">UUVEdge::Init()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a930b466b41c7d75b7318e6ca5853b5c9">UUVEdge::SetEStop()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a6b0f7d4b008896d9b742c7c14f29c2e7">UUVEdge::ShowAnalyzeInitArgs()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d">UUVEdge::Shutdown()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a46b15f1cef85897da0f2fed19f72ed4c">UUVEdge::Start()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">UUVEdge::Submit()</a>.</p>
 
 </div>
 </div>

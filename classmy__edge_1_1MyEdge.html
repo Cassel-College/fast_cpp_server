@@ -91,6 +91,9 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a60915da7f461a0a7144d2df23607abe8" id="r_a60915da7f461a0a7144d2df23607abe8"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classmy__edge_1_1IEdge.html">IEdge</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1MyEdge.html#a60915da7f461a0a7144d2df23607abe8">Create</a> (const std::string &amp;type)</td></tr>
 <tr class="memdesc:a60915da7f461a0a7144d2df23607abe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">按类型创建设备边缘运行时（demo）  <br /></td></tr>
 <tr class="separator:a60915da7f461a0a7144d2df23607abe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5da5fc8704313e27422211e9ef62b55" id="r_aa5da5fc8704313e27422211e9ef62b55"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classmy__edge_1_1IEdge.html">IEdge</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1MyEdge.html#aa5da5fc8704313e27422211e9ef62b55">Create</a> (const std::string &amp;type, const nlohmann::json &amp;cfg, std::string *err=nullptr)</td></tr>
+<tr class="memdesc:aa5da5fc8704313e27422211e9ef62b55"><td class="mdescLeft">&#160;</td><td class="mdescRight">按类型创建设备边缘运行时（demo）  <br /></td></tr>
+<tr class="separator:aa5da5fc8704313e27422211e9ef62b55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -132,7 +135,7 @@ Private 成员函数</h2></td></tr>
 </div>
 <h2 class="groupheader">成员函数说明</h2>
 <a id="a60915da7f461a0a7144d2df23607abe8" name="a60915da7f461a0a7144d2df23607abe8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a60915da7f461a0a7144d2df23607abe8">&#9670;&#160;</a></span>Create()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a60915da7f461a0a7144d2df23607abe8">&#9670;&#160;</a></span>Create() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -151,6 +154,67 @@ Private 成员函数</h2></td></tr>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">type</td><td>例如 "uuv" </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">引用了 <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a> , 以及 <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classtools_1_1pipeline_1_1Pipeline.html#a85eb2192803f813cc0043fa173a4cd9d">Pipeline::LaunchEdge()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1MyEdge_a60915da7f461a0a7144d2df23607abe8_icgraph.png" border="0" usemap="#aclassmy__edge_1_1MyEdge_a60915da7f461a0a7144d2df23607abe8_icgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1MyEdge_a60915da7f461a0a7144d2df23607abe8_icgraph" id="aclassmy__edge_1_1MyEdge_a60915da7f461a0a7144d2df23607abe8_icgraph">
+<area shape="rect" title="按类型创建设备边缘运行时（demo）" alt="" coords="553,13,619,38"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a85eb2192803f813cc0043fa173a4cd9d" title=" " alt="" coords="331,5,505,45"/>
+<area shape="poly" title=" " alt="" coords="540,28,505,28,505,23,540,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="108,5,283,45"/>
+<area shape="poly" title=" " alt="" coords="317,28,283,28,283,23,317,23"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,13,60,38"/>
+<area shape="poly" title=" " alt="" coords="95,28,60,28,60,23,95,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa5da5fc8704313e27422211e9ef62b55" name="aa5da5fc8704313e27422211e9ef62b55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5da5fc8704313e27422211e9ef62b55">&#9670;&#160;</a></span>Create() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="classmy__edge_1_1IEdge.html">IEdge</a> &gt; Create </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>cfg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>err</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>按类型创建设备边缘运行时（demo） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>例如 "uuv" </td></tr>
+    <tr><td class="paramname">cfg</td><td>初始化配置 </td></tr>
   </table>
   </dd>
 </dl>
@@ -181,6 +245,22 @@ Private 成员函数</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classtools_1_1pipeline_1_1Pipeline.html#a85eb2192803f813cc0043fa173a4cd9d">Pipeline::LaunchEdge()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1MyEdge_a0d478eb7ccd51b3c4c4f3a65cc863c06_icgraph.png" border="0" usemap="#aclassmy__edge_1_1MyEdge_a0d478eb7ccd51b3c4c4f3a65cc863c06_icgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1MyEdge_a0d478eb7ccd51b3c4c4f3a65cc863c06_icgraph" id="aclassmy__edge_1_1MyEdge_a0d478eb7ccd51b3c4c4f3a65cc863c06_icgraph">
+<area shape="rect" title=" " alt="" coords="553,13,653,38"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a85eb2192803f813cc0043fa173a4cd9d" title=" " alt="" coords="331,5,505,45"/>
+<area shape="poly" title=" " alt="" coords="540,28,505,28,505,23,540,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="108,5,283,45"/>
+<area shape="poly" title=" " alt="" coords="317,28,283,28,283,23,317,23"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,13,60,38"/>
+<area shape="poly" title=" " alt="" coords="95,28,60,28,60,23,95,23"/>
+</map>
+</div>
 
 </div>
 </div>

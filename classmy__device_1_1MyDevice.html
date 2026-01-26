@@ -84,13 +84,16 @@ $(function() {
 <p><a class="el" href="namespacemy__device.html">my_device</a> 模块门面/工厂  
  <a href="classmy__device_1_1MyDevice.html#details">更多...</a></p>
 
-<p><code>#include &lt;<a class="el" href="my__device_2MyDevice_8h_source.html">MyDevice.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="MyDevice_8h_source.html">MyDevice.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
 <tr class="memitem:a1c77f692541f351b7078a92a7dc458a4" id="r_a1c77f692541f351b7078a92a7dc458a4"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classmy__device_1_1IDevice.html">IDevice</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__device_1_1MyDevice.html#a1c77f692541f351b7078a92a7dc458a4">Create</a> (const std::string &amp;type)</td></tr>
 <tr class="memdesc:a1c77f692541f351b7078a92a7dc458a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建具体设备实例  <br /></td></tr>
 <tr class="separator:a1c77f692541f351b7078a92a7dc458a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97cabcddd7545675af730afa728eec86" id="r_a97cabcddd7545675af730afa728eec86"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classmy__device_1_1IDevice.html">IDevice</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__device_1_1MyDevice.html#a97cabcddd7545675af730afa728eec86">Create</a> (const std::string &amp;type, const nlohmann::json &amp;cfg, std::string *err=nullptr)</td></tr>
+<tr class="memdesc:a97cabcddd7545675af730afa728eec86"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建具体设备实例  <br /></td></tr>
+<tr class="separator:a97cabcddd7545675af730afa728eec86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -136,7 +139,7 @@ Private 成员函数</h2></td></tr>
 </div>
 <h2 class="groupheader">成员函数说明</h2>
 <a id="a1c77f692541f351b7078a92a7dc458a4" name="a1c77f692541f351b7078a92a7dc458a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c77f692541f351b7078a92a7dc458a4">&#9670;&#160;</a></span>Create()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c77f692541f351b7078a92a7dc458a4">&#9670;&#160;</a></span>Create() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -167,11 +170,58 @@ Private 成员函数</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="classmy__device_1_1MyDevice_a1c77f692541f351b7078a92a7dc458a4_icgraph.png" border="0" usemap="#aclassmy__device_1_1MyDevice_a1c77f692541f351b7078a92a7dc458a4_icgraph" alt=""/></div>
 <map name="aclassmy__device_1_1MyDevice_a1c77f692541f351b7078a92a7dc458a4_icgraph" id="aclassmy__device_1_1MyDevice_a1c77f692541f351b7078a92a7dc458a4_icgraph">
-<area shape="rect" title="创建具体设备实例" alt="" coords="249,13,315,38"/>
-<area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html#aeaad4d1e08909ec413c6e934fb718dc7" title="初始化：仅装配，不启动线程" alt="" coords="5,5,201,45"/>
-<area shape="poly" title=" " alt="" coords="236,28,202,28,202,23,236,23"/>
+<area shape="rect" title="创建具体设备实例" alt="" coords="493,13,559,38"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html#aeaad4d1e08909ec413c6e934fb718dc7" title="初始化：仅装配，不启动线程" alt="" coords="249,5,445,45"/>
+<area shape="poly" title=" " alt="" coords="480,28,446,28,446,23,480,23"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html#ab69eb9171ee3c27d2c7cc35879356f05" title=" " alt="" coords="5,5,201,45"/>
+<area shape="poly" title=" " alt="" coords="236,28,201,28,201,23,236,23"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a97cabcddd7545675af730afa728eec86" name="a97cabcddd7545675af730afa728eec86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97cabcddd7545675af730afa728eec86">&#9670;&#160;</a></span>Create() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="classmy__device_1_1IDevice.html">IDevice</a> &gt; Create </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>cfg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>err</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>创建具体设备实例 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>设备类型（如 "uuv"） </td></tr>
+    <tr><td class="paramname">cfg</td><td>初始化配置 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">引用了 <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a> , 以及 <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>.</p>
 
 </div>
 </div>
@@ -204,17 +254,19 @@ Private 成员函数</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="classmy__device_1_1MyDevice_a63f5b56942d205be905c74fdbcac1548_icgraph.png" border="0" usemap="#aclassmy__device_1_1MyDevice_a63f5b56942d205be905c74fdbcac1548_icgraph" alt=""/></div>
 <map name="aclassmy__device_1_1MyDevice_a63f5b56942d205be905c74fdbcac1548_icgraph" id="aclassmy__device_1_1MyDevice_a63f5b56942d205be905c74fdbcac1548_icgraph">
-<area shape="rect" title=" " alt="" coords="249,13,349,38"/>
-<area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html#aeaad4d1e08909ec413c6e934fb718dc7" title="初始化：仅装配，不启动线程" alt="" coords="5,5,201,45"/>
-<area shape="poly" title=" " alt="" coords="236,28,202,28,202,23,236,23"/>
+<area shape="rect" title=" " alt="" coords="493,13,593,38"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html#aeaad4d1e08909ec413c6e934fb718dc7" title="初始化：仅装配，不启动线程" alt="" coords="249,5,445,45"/>
+<area shape="poly" title=" " alt="" coords="480,28,446,28,446,23,480,23"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html#ab69eb9171ee3c27d2c7cc35879356f05" title=" " alt="" coords="5,5,201,45"/>
+<area shape="poly" title=" " alt="" coords="236,28,201,28,201,23,236,23"/>
 </map>
 </div>
 
 </div>
 </div>
 <hr/>该类的文档由以下文件生成:<ul>
-<li>src/util/my_device/<a class="el" href="my__device_2MyDevice_8h_source.html">MyDevice.h</a></li>
-<li>src/util/my_device/<a class="el" href="my__device_2MyDevice_8cpp.html">MyDevice.cpp</a></li>
+<li>src/util/my_device/<a class="el" href="MyDevice_8h_source.html">MyDevice.h</a></li>
+<li>src/util/my_device/<a class="el" href="MyDevice_8cpp.html">MyDevice.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

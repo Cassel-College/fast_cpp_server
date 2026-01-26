@@ -195,15 +195,21 @@ received_at_ms 由接收层填写，表示接收时间戳（毫秒）。 </dd></
 
 <p class="reference">引用了 <a class="el" href="structmy__data_1_1RawCommand.html#a472457d1112db62f4ba446013be35517">RawCommand::command_id</a>, <a class="el" href="structmy__data_1_1RawCommand.html#acf6c3ebf83bf4e675928b52c82c60084">RawCommand::dedup_window_ms</a>, <a class="el" href="structmy__data_1_1RawCommand.html#a8953531e4f1b13e11fed951933e98b8d">RawCommand::idempotency_key</a>, <a class="el" href="structmy__data_1_1RawCommand.html#aa9b683d9bd3d648dea1fd050185b31b1">RawCommand::payload</a>, <a class="el" href="structmy__data_1_1RawCommand.html#ab93f10eb3ec0a1860726fdac12e92235">RawCommand::received_at_ms</a> , 以及 <a class="el" href="structmy__data_1_1RawCommand.html#a14ee39a9a59b08e6fad497e78e450f7e">RawCommand::source</a>.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559">UUVCommandNormalizer::Normalize()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="classmy__control_1_1demo_1_1DepthSensorCommandNormalizer.html#a3b53f502aab08afbd793fefbbe6fb114">DepthSensorCommandNormalizer::Normalize()</a>, <a class="el" href="classmy__control_1_1demo_1_1FlowSensorCommandNormalizer.html#a3b53f502aab08afbd793fefbbe6fb114">FlowSensorCommandNormalizer::Normalize()</a>, <a class="el" href="classmy__control_1_1demo_1_1WindSensorCommandNormalizer.html#a3b53f502aab08afbd793fefbbe6fb114">WindSensorCommandNormalizer::Normalize()</a> , 以及 <a class="el" href="classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559">UUVCommandNormalizer::Normalize()</a>.</p>
 <div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="structmy__data_1_1RawCommand_a1fe5121d6528fdea3f243321b3fa3a49_icgraph.png" border="0" usemap="#astructmy__data_1_1RawCommand_a1fe5121d6528fdea3f243321b3fa3a49_icgraph" alt=""/></div>
 <map name="astructmy__data_1_1RawCommand_a1fe5121d6528fdea3f243321b3fa3a49_icgraph" id="astructmy__data_1_1RawCommand_a1fe5121d6528fdea3f243321b3fa3a49_icgraph">
-<area shape="rect" title=" " alt="" coords="297,13,371,38"/>
-<area shape="rect" href="classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559" title="将 RawCommand 转为 Task" alt="" coords="5,5,249,45"/>
-<area shape="poly" title=" " alt="" coords="284,28,250,28,250,23,284,23"/>
+<area shape="rect" title=" " alt="" coords="297,109,371,134"/>
+<area shape="rect" href="classmy__control_1_1demo_1_1DepthSensorCommandNormalizer.html#a3b53f502aab08afbd793fefbbe6fb114" title="将 RawCommand 转为 Task" alt="" coords="9,5,245,45"/>
+<area shape="poly" title=" " alt="" coords="308,102,280,80,248,60,219,48,221,43,251,55,284,75,311,98"/>
+<area shape="rect" href="classmy__control_1_1demo_1_1FlowSensorCommandNormalizer.html#a3b53f502aab08afbd793fefbbe6fb114" title="将 RawCommand 转为 Task" alt="" coords="9,69,245,109"/>
+<area shape="poly" title=" " alt="" coords="283,116,245,110,246,105,284,111"/>
+<area shape="rect" href="classmy__control_1_1demo_1_1WindSensorCommandNormalizer.html#a3b53f502aab08afbd793fefbbe6fb114" title="将 RawCommand 转为 Task" alt="" coords="9,133,245,173"/>
+<area shape="poly" title=" " alt="" coords="284,132,246,138,245,132,283,126"/>
+<area shape="rect" href="classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559" title="将 RawCommand 转为 Task" alt="" coords="5,197,249,237"/>
+<area shape="poly" title=" " alt="" coords="311,145,284,167,251,188,221,200,219,195,248,183,280,163,308,141"/>
 </map>
 </div>
 
@@ -222,7 +228,7 @@ received_at_ms 由接收层填写，表示接收时间戳（毫秒）。 </dd></
       </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1RawCommand.html#a9e48010592cdfa19e269aaa0607e3d24">RawCommand::fromJson()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a81d4d98ed19966308bde4556e02ed6a6">UUVEdge::MakeResult()</a>, <a class="el" href="classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559">UUVCommandNormalizer::Normalize()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">UUVEdge::Submit()</a>, <a class="el" href="structmy__data_1_1RawCommand.html#a098007f3dd2a938824a819aa09423ca9">RawCommand::toJson()</a> , 以及 <a class="el" href="structmy__data_1_1RawCommand.html#a1fe5121d6528fdea3f243321b3fa3a49">RawCommand::toString()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1RawCommand.html#a9e48010592cdfa19e269aaa0607e3d24">RawCommand::fromJson()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a81d4d98ed19966308bde4556e02ed6a6">UUVEdge::MakeResult()</a>, <a class="el" href="classmy__control_1_1demo_1_1DepthSensorCommandNormalizer.html#a3b53f502aab08afbd793fefbbe6fb114">DepthSensorCommandNormalizer::Normalize()</a>, <a class="el" href="classmy__control_1_1demo_1_1FlowSensorCommandNormalizer.html#a3b53f502aab08afbd793fefbbe6fb114">FlowSensorCommandNormalizer::Normalize()</a>, <a class="el" href="classmy__control_1_1demo_1_1WindSensorCommandNormalizer.html#a3b53f502aab08afbd793fefbbe6fb114">WindSensorCommandNormalizer::Normalize()</a>, <a class="el" href="classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559">UUVCommandNormalizer::Normalize()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">UUVEdge::Submit()</a>, <a class="el" href="structmy__data_1_1RawCommand.html#a098007f3dd2a938824a819aa09423ca9">RawCommand::toJson()</a> , 以及 <a class="el" href="structmy__data_1_1RawCommand.html#a1fe5121d6528fdea3f243321b3fa3a49">RawCommand::toString()</a>.</p>
 
 </div>
 </div>
@@ -238,7 +244,7 @@ received_at_ms 由接收层填写，表示接收时间戳（毫秒）。 </dd></
       </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1RawCommand.html#a9e48010592cdfa19e269aaa0607e3d24">RawCommand::fromJson()</a>, <a class="el" href="classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559">UUVCommandNormalizer::Normalize()</a>, <a class="el" href="structmy__data_1_1RawCommand.html#a098007f3dd2a938824a819aa09423ca9">RawCommand::toJson()</a> , 以及 <a class="el" href="structmy__data_1_1RawCommand.html#a1fe5121d6528fdea3f243321b3fa3a49">RawCommand::toString()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1RawCommand.html#a9e48010592cdfa19e269aaa0607e3d24">RawCommand::fromJson()</a>, <a class="el" href="classmy__control_1_1demo_1_1DepthSensorCommandNormalizer.html#a3b53f502aab08afbd793fefbbe6fb114">DepthSensorCommandNormalizer::Normalize()</a>, <a class="el" href="classmy__control_1_1demo_1_1FlowSensorCommandNormalizer.html#a3b53f502aab08afbd793fefbbe6fb114">FlowSensorCommandNormalizer::Normalize()</a>, <a class="el" href="classmy__control_1_1demo_1_1WindSensorCommandNormalizer.html#a3b53f502aab08afbd793fefbbe6fb114">WindSensorCommandNormalizer::Normalize()</a>, <a class="el" href="classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559">UUVCommandNormalizer::Normalize()</a>, <a class="el" href="structmy__data_1_1RawCommand.html#a098007f3dd2a938824a819aa09423ca9">RawCommand::toJson()</a> , 以及 <a class="el" href="structmy__data_1_1RawCommand.html#a1fe5121d6528fdea3f243321b3fa3a49">RawCommand::toString()</a>.</p>
 
 </div>
 </div>
@@ -254,7 +260,7 @@ received_at_ms 由接收层填写，表示接收时间戳（毫秒）。 </dd></
       </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1RawCommand.html#a9e48010592cdfa19e269aaa0607e3d24">RawCommand::fromJson()</a>, <a class="el" href="classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559">UUVCommandNormalizer::Normalize()</a>, <a class="el" href="structmy__data_1_1RawCommand.html#a098007f3dd2a938824a819aa09423ca9">RawCommand::toJson()</a> , 以及 <a class="el" href="structmy__data_1_1RawCommand.html#a1fe5121d6528fdea3f243321b3fa3a49">RawCommand::toString()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1RawCommand.html#a9e48010592cdfa19e269aaa0607e3d24">RawCommand::fromJson()</a>, <a class="el" href="classmy__control_1_1demo_1_1DepthSensorCommandNormalizer.html#a3b53f502aab08afbd793fefbbe6fb114">DepthSensorCommandNormalizer::Normalize()</a>, <a class="el" href="classmy__control_1_1demo_1_1FlowSensorCommandNormalizer.html#a3b53f502aab08afbd793fefbbe6fb114">FlowSensorCommandNormalizer::Normalize()</a>, <a class="el" href="classmy__control_1_1demo_1_1WindSensorCommandNormalizer.html#a3b53f502aab08afbd793fefbbe6fb114">WindSensorCommandNormalizer::Normalize()</a>, <a class="el" href="classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559">UUVCommandNormalizer::Normalize()</a>, <a class="el" href="structmy__data_1_1RawCommand.html#a098007f3dd2a938824a819aa09423ca9">RawCommand::toJson()</a> , 以及 <a class="el" href="structmy__data_1_1RawCommand.html#a1fe5121d6528fdea3f243321b3fa3a49">RawCommand::toString()</a>.</p>
 
 </div>
 </div>
@@ -270,7 +276,7 @@ received_at_ms 由接收层填写，表示接收时间戳（毫秒）。 </dd></
       </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1RawCommand.html#a9e48010592cdfa19e269aaa0607e3d24">RawCommand::fromJson()</a>, <a class="el" href="classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559">UUVCommandNormalizer::Normalize()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">UUVEdge::Submit()</a>, <a class="el" href="structmy__data_1_1RawCommand.html#a098007f3dd2a938824a819aa09423ca9">RawCommand::toJson()</a> , 以及 <a class="el" href="structmy__data_1_1RawCommand.html#a1fe5121d6528fdea3f243321b3fa3a49">RawCommand::toString()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1RawCommand.html#a9e48010592cdfa19e269aaa0607e3d24">RawCommand::fromJson()</a>, <a class="el" href="classmy__control_1_1demo_1_1DepthSensorCommandNormalizer.html#a3b53f502aab08afbd793fefbbe6fb114">DepthSensorCommandNormalizer::Normalize()</a>, <a class="el" href="classmy__control_1_1demo_1_1FlowSensorCommandNormalizer.html#a3b53f502aab08afbd793fefbbe6fb114">FlowSensorCommandNormalizer::Normalize()</a>, <a class="el" href="classmy__control_1_1demo_1_1WindSensorCommandNormalizer.html#a3b53f502aab08afbd793fefbbe6fb114">WindSensorCommandNormalizer::Normalize()</a>, <a class="el" href="classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559">UUVCommandNormalizer::Normalize()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">UUVEdge::Submit()</a>, <a class="el" href="structmy__data_1_1RawCommand.html#a098007f3dd2a938824a819aa09423ca9">RawCommand::toJson()</a> , 以及 <a class="el" href="structmy__data_1_1RawCommand.html#a1fe5121d6528fdea3f243321b3fa3a49">RawCommand::toString()</a>.</p>
 
 </div>
 </div>
@@ -286,7 +292,7 @@ received_at_ms 由接收层填写，表示接收时间戳（毫秒）。 </dd></
       </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1RawCommand.html#a9e48010592cdfa19e269aaa0607e3d24">RawCommand::fromJson()</a>, <a class="el" href="classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559">UUVCommandNormalizer::Normalize()</a>, <a class="el" href="structmy__data_1_1RawCommand.html#a098007f3dd2a938824a819aa09423ca9">RawCommand::toJson()</a> , 以及 <a class="el" href="structmy__data_1_1RawCommand.html#a1fe5121d6528fdea3f243321b3fa3a49">RawCommand::toString()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1RawCommand.html#a9e48010592cdfa19e269aaa0607e3d24">RawCommand::fromJson()</a>, <a class="el" href="classmy__control_1_1demo_1_1DepthSensorCommandNormalizer.html#a3b53f502aab08afbd793fefbbe6fb114">DepthSensorCommandNormalizer::Normalize()</a>, <a class="el" href="classmy__control_1_1demo_1_1FlowSensorCommandNormalizer.html#a3b53f502aab08afbd793fefbbe6fb114">FlowSensorCommandNormalizer::Normalize()</a>, <a class="el" href="classmy__control_1_1demo_1_1WindSensorCommandNormalizer.html#a3b53f502aab08afbd793fefbbe6fb114">WindSensorCommandNormalizer::Normalize()</a>, <a class="el" href="classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559">UUVCommandNormalizer::Normalize()</a>, <a class="el" href="structmy__data_1_1RawCommand.html#a098007f3dd2a938824a819aa09423ca9">RawCommand::toJson()</a> , 以及 <a class="el" href="structmy__data_1_1RawCommand.html#a1fe5121d6528fdea3f243321b3fa3a49">RawCommand::toString()</a>.</p>
 
 </div>
 </div>
@@ -302,7 +308,7 @@ received_at_ms 由接收层填写，表示接收时间戳（毫秒）。 </dd></
       </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1RawCommand.html#a9e48010592cdfa19e269aaa0607e3d24">RawCommand::fromJson()</a>, <a class="el" href="classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559">UUVCommandNormalizer::Normalize()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">UUVEdge::Submit()</a>, <a class="el" href="structmy__data_1_1RawCommand.html#a098007f3dd2a938824a819aa09423ca9">RawCommand::toJson()</a> , 以及 <a class="el" href="structmy__data_1_1RawCommand.html#a1fe5121d6528fdea3f243321b3fa3a49">RawCommand::toString()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="structmy__data_1_1RawCommand.html#a9e48010592cdfa19e269aaa0607e3d24">RawCommand::fromJson()</a>, <a class="el" href="classmy__control_1_1demo_1_1DepthSensorCommandNormalizer.html#a3b53f502aab08afbd793fefbbe6fb114">DepthSensorCommandNormalizer::Normalize()</a>, <a class="el" href="classmy__control_1_1demo_1_1FlowSensorCommandNormalizer.html#a3b53f502aab08afbd793fefbbe6fb114">FlowSensorCommandNormalizer::Normalize()</a>, <a class="el" href="classmy__control_1_1demo_1_1WindSensorCommandNormalizer.html#a3b53f502aab08afbd793fefbbe6fb114">WindSensorCommandNormalizer::Normalize()</a>, <a class="el" href="classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559">UUVCommandNormalizer::Normalize()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">UUVEdge::Submit()</a>, <a class="el" href="structmy__data_1_1RawCommand.html#a098007f3dd2a938824a819aa09423ca9">RawCommand::toJson()</a> , 以及 <a class="el" href="structmy__data_1_1RawCommand.html#a1fe5121d6528fdea3f243321b3fa3a49">RawCommand::toString()</a>.</p>
 
 </div>
 </div>

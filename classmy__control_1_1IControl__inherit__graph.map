@@ -1,5 +1,11 @@
 <map id="IControl" name="IControl">
-<area shape="rect" id="Node000001" title="执行器抽象接口：负责真正执行 Task" alt="" coords="18,5,91,31"/>
-<area shape="rect" id="Node000002" href="$classmy__control_1_1demo_1_1UUVControl.html" title="UUV 执行器（demo）" alt="" coords="5,79,104,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="57,44,57,79,52,79,52,44"/>
+<area shape="rect" id="Node000001" title="执行器抽象接口：负责真正执行 Task" alt="" coords="289,5,362,31"/>
+<area shape="rect" id="Node000002" href="$classmy__control_1_1demo_1_1DepthSensorControl.html" title="水深传感器执行器（demo）" alt="" coords="5,79,157,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="276,36,122,81,120,76,275,31"/>
+<area shape="rect" id="Node000003" href="$classmy__control_1_1demo_1_1FlowSensorControl.html" title="流速传感器执行器（demo）" alt="" coords="181,79,325,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="305,43,267,80,263,77,302,39"/>
+<area shape="rect" id="Node000004" href="$classmy__control_1_1demo_1_1UUVControl.html" title="UUV 执行器（demo）" alt="" coords="349,79,448,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="349,38,389,77,385,80,345,42"/>
+<area shape="rect" id="Node000005" href="$classmy__control_1_1demo_1_1WindSensorDevice.html" title="分速传感器执行器（demo）" alt="" coords="472,79,616,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="374,32,509,76,508,81,373,37"/>
 </map>

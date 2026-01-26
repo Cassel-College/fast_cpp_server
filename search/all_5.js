@@ -10,8 +10,16 @@ var searchData=
   ['file_5fpath_7',['FILE_PATH',['../namespacemy__doctor.html#a0522d6bb0c6399c4971af10467d11d04ac66b718fccde8692bf1f26cb604b326b',1,'my_doctor']]],
   ['finishcallback_8',['FinishCallback',['../classmy__control_1_1demo_1_1Workflow.html#a3dd461a10fac993210cf36ee20c87422',1,'my_control::demo::Workflow']]],
   ['finished_5fat_5fms_9',['finished_at_ms',['../structmy__data_1_1TaskResult.html#a5f8349b647a9346f27756e72a3372f3c',1,'my_data::TaskResult']]],
-  ['flush_10',['Flush',['../namespaceMyLog.html#a0e2644b2df3c228e8d71a55b60723f31',1,'MyLog']]],
-  ['freefunc_2ecpp_11',['FreeFunc.cpp',['../FreeFunc_8cpp.html',1,'']]],
-  ['freefunc_2eh_12',['FreeFunc.h',['../FreeFunc_8h.html',1,'']]],
-  ['fromjson_13',['fromjson',['../structmy__data_1_1TaskResult.html#a60ff4fd9d09ec9c3ff58980ef05d6fe6',1,'my_data::TaskResult::fromJson()'],['../structmy__data_1_1Task.html#a2a9cf913f1d9683cdea2d4106dfb8802',1,'my_data::Task::fromJson()'],['../structmy__data_1_1EdgeStatus.html#a4ff712b7cd7b98f14760e531a5033c92',1,'my_data::EdgeStatus::fromJson()'],['../structmy__data_1_1DeviceStatus.html#a29d3bccc9ad241c8414cea88877f5de1',1,'my_data::DeviceStatus::fromJson()'],['../structmy__data_1_1RawCommand.html#a9e48010592cdfa19e269aaa0607e3d24',1,'my_data::RawCommand::fromJson()'],['../structmy__db_1_1DBConfig.html#a213a60ded340c4980eb8c27188b9b6fb',1,'my_db::DBConfig::FromJson()']]]
+  ['flow_5fbase_5fmps_5f_10',['flow_base_mps_',['../classmy__control_1_1demo_1_1FlowSensorControl.html#aff7d5f6ec2d5c81ba0abf7ae5a059adc',1,'my_control::demo::FlowSensorControl']]],
+  ['flow_5fnoise_5fmps_5f_11',['flow_noise_mps_',['../classmy__control_1_1demo_1_1FlowSensorControl.html#a5f9674a520c68102c803ad55f2e5a22a',1,'my_control::demo::FlowSensorControl']]],
+  ['flowsensorcommandnormalizer_12',['FlowSensorCommandNormalizer',['../classmy__control_1_1demo_1_1FlowSensorCommandNormalizer.html',1,'my_control::demo']]],
+  ['flowsensorcommandnormalizer_2ecpp_13',['FlowSensorCommandNormalizer.cpp',['../FlowSensorCommandNormalizer_8cpp.html',1,'']]],
+  ['flowsensorcommandnormalizer_2eh_14',['FlowSensorCommandNormalizer.h',['../FlowSensorCommandNormalizer_8h.html',1,'']]],
+  ['flowsensorcontrol_15',['FlowSensorControl',['../classmy__control_1_1demo_1_1FlowSensorControl.html',1,'my_control::demo']]],
+  ['flowsensorcontrol_2ecpp_16',['FlowSensorControl.cpp',['../FlowSensorControl_8cpp.html',1,'']]],
+  ['flowsensorcontrol_2eh_17',['FlowSensorControl.h',['../FlowSensorControl_8h.html',1,'']]],
+  ['flush_18',['Flush',['../namespaceMyLog.html#a0e2644b2df3c228e8d71a55b60723f31',1,'MyLog']]],
+  ['freefunc_2ecpp_19',['FreeFunc.cpp',['../FreeFunc_8cpp.html',1,'']]],
+  ['freefunc_2eh_20',['FreeFunc.h',['../FreeFunc_8h.html',1,'']]],
+  ['fromjson_21',['fromjson',['../structmy__data_1_1DeviceStatus.html#a29d3bccc9ad241c8414cea88877f5de1',1,'my_data::DeviceStatus::fromJson()'],['../structmy__data_1_1EdgeStatus.html#a4ff712b7cd7b98f14760e531a5033c92',1,'my_data::EdgeStatus::fromJson()'],['../structmy__data_1_1Task.html#a2a9cf913f1d9683cdea2d4106dfb8802',1,'my_data::Task::fromJson()'],['../structmy__data_1_1TaskResult.html#a60ff4fd9d09ec9c3ff58980ef05d6fe6',1,'my_data::TaskResult::fromJson()'],['../structmy__data_1_1RawCommand.html#a9e48010592cdfa19e269aaa0607e3d24',1,'my_data::RawCommand::fromJson()'],['../structmy__db_1_1DBConfig.html#a213a60ded340c4980eb8c27188b9b6fb',1,'my_db::DBConfig::FromJson()']]]
 ];

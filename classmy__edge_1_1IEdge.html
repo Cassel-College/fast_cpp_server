@@ -118,6 +118,9 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:abe320d57c3dd6c601efaa6e3eeed73d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a951e7cb90a822e527ac15fe273b4972a" id="r_a951e7cb90a822e527ac15fe273b4972a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacemy__data.html#aa97613f313f7fbbad8c368f2599e3f26">my_data::EdgeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1IEdge.html#a951e7cb90a822e527ac15fe273b4972a">Id</a> () const =0</td></tr>
 <tr class="separator:a951e7cb90a822e527ac15fe273b4972a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b2646cea46ea711c70b6332bbc779d4" id="r_a7b2646cea46ea711c70b6332bbc779d4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1IEdge.html#a7b2646cea46ea711c70b6332bbc779d4">ShowAnalyzeInitArgs</a> (const nlohmann::json &amp;cfg) const =0</td></tr>
+<tr class="memdesc:a7b2646cea46ea711c70b6332bbc779d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">解释 Init 的入参并打印到日志（用于调试/前置检查）  <br /></td></tr>
+<tr class="separator:a7b2646cea46ea711c70b6332bbc779d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>Edge Runtime 接口（Init/Start 分离） </p>
@@ -281,6 +284,42 @@ Public 成员函数</h2></td></tr>
 <p>设置紧急停止 </p>
 
 <p>在 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a930b466b41c7d75b7318e6ca5853b5c9">UUVEdge</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a7b2646cea46ea711c70b6332bbc779d4" name="a7b2646cea46ea711c70b6332bbc779d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b2646cea46ea711c70b6332bbc779d4">&#9670;&#160;</a></span>ShowAnalyzeInitArgs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ShowAnalyzeInitArgs </td>
+          <td>(</td>
+          <td class="paramtype">const nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>cfg</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>解释 Init 的入参并打印到日志（用于调试/前置检查） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cfg</td><td>Init 时接收的 JSON 配置（不会修改） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a6b0f7d4b008896d9b742c7c14f29c2e7">UUVEdge</a> 内被实现.</p>
 
 </div>
 </div>

@@ -1,31 +1,33 @@
 <map id="NowMs" name="NowMs">
-<area shape="rect" id="Node000001" title="时间工具：获取当前毫秒时间戳" alt="" coords="576,306,647,331"/>
-<area shape="rect" id="Node000002" href="$classmy__control_1_1demo_1_1UUVControl.html#ac797965a05a93bf646c6ac643a3461c8" title="执行任务（MVP：同步返回结果）" alt="" coords="301,5,525,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="607,292,603,243,590,180,566,115,548,85,526,59,511,48,514,43,530,55,553,82,571,113,595,178,608,242,612,292"/>
-<area shape="rect" id="Node000003" href="$namespacemy__data.html#aab723b1463878131314617bd6cec2d12" title="生成一个“够用”的ID（MVP 版）" alt="" coords="365,70,460,95"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="604,293,597,254,582,206,560,158,544,136,526,117,495,98,460,89,461,84,497,93,530,113,548,133,564,155,587,204,602,253,610,292"/>
-<area shape="rect" id="Node000004" href="$classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559" title="将 RawCommand 转为 Task" alt="" coords="5,88,249,128"/>
-<area shape="poly" id="edge8_Node000001_Node000004" title=" " alt="" coords="602,293,593,261,578,225,556,190,526,161,507,150,480,142,410,128,329,119,250,114,250,108,330,114,411,123,481,136,509,146,530,157,560,186,582,223,598,260,607,292"/>
-<area shape="rect" id="Node000005" href="$classmy__device_1_1demo_1_1UUVDevice.html#aeaad4d1e08909ec413c6e934fb718dc7" title="初始化设备（加载配置、创建/初始化 control 等）" alt="" coords="303,171,523,211"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="593,296,565,259,526,225,504,213,506,208,530,220,569,255,597,293"/>
-<area shape="rect" id="Node000006" href="$classmy__edge_1_1demo_1_1UUVEdge.html#aeaad4d1e08909ec413c6e934fb718dc7" title="初始化：仅装配，不启动线程" alt="" coords="315,235,511,275"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="566,303,527,289,489,277,491,272,529,284,568,298"/>
-<area shape="rect" id="Node000007" href="$classmy__db_1_1demo_1_1StatusRepository.html#aa1d564dbf68ca960e28f1c812f7c31f4" title=" " alt="" coords="297,299,528,339"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="562,321,528,321,528,316,562,316"/>
-<area shape="rect" id="Node000008" href="$classmy__db_1_1demo_1_1StatusRepository.html#a74212c1aedab5e93c3b51234448a520b" title=" " alt="" coords="297,363,528,403"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="568,339,529,353,491,365,489,360,527,348,566,334"/>
-<area shape="rect" id="Node000009" href="$classmy__device_1_1demo_1_1UUVDevice.html#a634c58de2126b4a4e6a2a093e60e1290" title="请求停止（不负责 shutdown queue）" alt="" coords="303,427,523,467"/>
-<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="597,345,569,382,530,417,506,429,504,424,526,412,565,378,593,341"/>
-<area shape="rect" id="Node000011" href="$classmy__device_1_1demo_1_1UUVDevice.html#a81dd0a772bae5a5e534a5fb3894509e9" title=" " alt="" coords="303,491,523,531"/>
-<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="606,345,596,377,581,413,559,450,530,481,511,493,508,488,526,477,554,446,576,411,591,375,601,344"/>
-<area shape="rect" id="Node000013" href="$classmy__device_1_1demo_1_1UUVDevice.html#a59c55e446776e18cbd4b693f09ea501c" title=" " alt="" coords="303,555,523,595"/>
-<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="611,346,604,389,590,442,566,497,550,522,530,545,513,557,510,552,526,541,546,519,562,495,585,441,599,388,605,345"/>
-<area shape="rect" id="Node000014" href="$classmy__device_1_1demo_1_1UUVDevice.html#a667de3be7fa6d87d5e1b5b3fd8065859" title=" " alt="" coords="303,619,523,659"/>
-<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="613,345,610,400,599,470,589,508,574,544,555,578,530,609,515,620,511,616,526,605,550,575,569,542,583,506,594,469,605,399,608,345"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="352,91,250,100,249,94,352,85"/>
-<area shape="rect" id="Node000010" href="$classmy__device_1_1demo_1_1UUVDevice.html#ab6c2f994d41932c6cd7222dcc3c67da0" title=" " alt="" coords="17,427,237,467"/>
-<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="289,449,237,449,237,444,289,444"/>
-<area shape="rect" id="Node000012" href="$classmy__device_1_1demo_1_1UUVDevice.html#a24a097fb4fcef1837583a96466f5d3e2" title="启动设备执行单元（注入队列引用 + EStop 引用）" alt="" coords="17,523,237,563"/>
-<area shape="poly" id="edge12_Node000011_Node000012" title=" " alt="" coords="289,527,238,533,237,528,289,522"/>
-<area shape="poly" id="edge14_Node000013_Node000012" title=" " alt="" coords="289,563,237,558,238,552,289,558"/>
+<area shape="rect" id="Node000001" title="时间工具：获取当前毫秒时间戳" alt="" coords="576,338,647,363"/>
+<area shape="rect" id="Node000002" href="$classmy__control_1_1demo_1_1DepthSensorControl.html#ac797965a05a93bf646c6ac643a3461c8" title="执行任务（MVP：同步返回结果）" alt="" coords="297,5,528,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="608,325,606,269,595,198,584,160,570,124,551,89,526,59,511,48,515,43,530,55,555,86,575,121,589,159,600,197,611,269,613,324"/>
+<area shape="rect" id="Node000003" href="$classmy__control_1_1demo_1_1FlowSensorControl.html#ac797965a05a93bf646c6ac643a3461c8" title="执行任务（MVP：同步返回结果）" alt="" coords="301,69,524,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="606,324,599,280,586,226,562,171,546,145,526,123,510,111,513,107,530,119,550,142,567,168,591,225,605,279,611,324"/>
+<area shape="rect" id="Node000004" href="$classmy__control_1_1demo_1_1UUVControl.html#ac797965a05a93bf646c6ac643a3461c8" title="执行任务（MVP：同步返回结果）" alt="" coords="301,133,525,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="602,325,592,293,577,256,555,219,526,187,508,176,511,171,530,183,559,216,581,254,597,291,607,324"/>
+<area shape="rect" id="Node000005" href="$classmy__control_1_1demo_1_1WindSensorDevice.html#ac797965a05a93bf646c6ac643a3461c8" title="执行任务（MVP：同步返回结果）" alt="" coords="300,197,525,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="592,328,564,292,526,258,490,240,493,235,530,254,568,288,597,325"/>
+<area shape="rect" id="Node000006" href="$namespacemy__data.html#aab723b1463878131314617bd6cec2d12" title="生成一个“够用”的ID（MVP 版）" alt="" coords="365,363,460,389"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="563,359,461,373,460,367,562,354"/>
+<area shape="rect" id="Node000007" href="$classmy__control_1_1demo_1_1DepthSensorCommandNormalizer.html#a3b53f502aab08afbd793fefbbe6fb114" title="将 RawCommand 转为 Task" alt="" coords="9,256,245,296"/>
+<area shape="poly" id="edge14_Node000001_Node000007" title=" " alt="" coords="562,339,527,331,381,306,245,290,246,284,382,301,529,325,564,334"/>
+<area shape="rect" id="Node000008" href="$classmy__control_1_1demo_1_1FlowSensorCommandNormalizer.html#a3b53f502aab08afbd793fefbbe6fb114" title="将 RawCommand 转为 Task" alt="" coords="9,320,245,360"/>
+<area shape="poly" id="edge15_Node000001_Node000008" title=" " alt="" coords="562,352,246,345,246,340,562,347"/>
+<area shape="rect" id="Node000009" href="$classmy__control_1_1demo_1_1WindSensorCommandNormalizer.html#a3b53f502aab08afbd793fefbbe6fb114" title="将 RawCommand 转为 Task" alt="" coords="9,384,245,424"/>
+<area shape="poly" id="edge16_Node000001_Node000009" title=" " alt="" coords="585,374,559,390,529,403,457,418,383,424,311,425,245,421,246,416,311,420,382,419,456,412,527,397,556,385,582,370"/>
+<area shape="rect" id="Node000010" href="$classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559" title="将 RawCommand 转为 Task" alt="" coords="5,449,249,489"/>
+<area shape="poly" id="edge17_Node000001_Node000010" title=" " alt="" coords="594,376,566,406,529,430,460,455,387,470,316,477,250,479,250,474,315,472,386,465,459,450,527,426,562,402,590,373"/>
+<area shape="rect" id="Node000011" href="$classmy__edge_1_1demo_1_1UUVEdge.html#aeaad4d1e08909ec413c6e934fb718dc7" title="初始化：仅装配，不启动线程" alt="" coords="315,515,511,555"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="604,377,578,438,556,470,530,498,499,517,496,512,526,494,552,467,573,435,600,375"/>
+<area shape="rect" id="Node000013" href="$classmy__db_1_1demo_1_1StatusRepository.html#aa1d564dbf68ca960e28f1c812f7c31f4" title=" " alt="" coords="297,579,528,619"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="610,377,603,419,589,471,566,523,549,547,530,569,513,581,510,576,526,565,545,544,561,521,584,469,598,418,605,377"/>
+<area shape="rect" id="Node000014" href="$classmy__db_1_1demo_1_1StatusRepository.html#a74212c1aedab5e93c3b51234448a520b" title=" " alt="" coords="297,643,528,683"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="613,377,610,430,598,499,588,535,573,570,554,603,530,633,514,645,511,641,526,629,550,600,568,568,583,533,593,497,604,430,608,377"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="371,360,248,311,210,299,212,294,250,305,373,355"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="351,371,245,358,246,352,352,366"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="352,385,246,395,245,390,351,379"/>
+<area shape="poly" id="edge9_Node000006_Node000010" title=" " alt="" coords="368,396,250,439,206,452,204,447,248,433,366,391"/>
+<area shape="rect" id="Node000012" href="$classmy__edge_1_1demo_1_1UUVEdge.html#ab69eb9171ee3c27d2c7cc35879356f05" title=" " alt="" coords="29,515,225,555"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="301,537,225,537,225,532,301,532"/>
 </map>

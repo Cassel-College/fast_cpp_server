@@ -85,6 +85,12 @@ $(function() {
 <tr class="separator:a2b0cf61e8177f65ecc60bbc0a8830f21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3e9a8959b02909119161038c861d2ce" id="r_ad3e9a8959b02909119161038c861d2ce"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetools_1_1init__tools.html#ad3e9a8959b02909119161038c861d2ce">initLoadConfig</a> (const std::string &amp;type_, const std::string &amp;config_file_path, std::vector&lt; std::string &gt; &amp;logInfos)</td></tr>
 <tr class="separator:ad3e9a8959b02909119161038c861d2ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65929c9707f4dc222d1466abe1f8cffe" id="r_a65929c9707f4dc222d1466abe1f8cffe"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetools_1_1init__tools.html#a65929c9707f4dc222d1466abe1f8cffe">getJsonConfigPathFromINIConfig</a> (const std::string &amp;ini_config_file_path, std::string &amp;json_config_path, const std::string &amp;default_json_config_path, std::vector&lt; std::string &gt; &amp;logInfos)</td></tr>
+<tr class="memdesc:a65929c9707f4dc222d1466abe1f8cffe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Json Config Path From I N I Config object  <br /></td></tr>
+<tr class="separator:a65929c9707f4dc222d1466abe1f8cffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6edd91ad140c1e3ea4311b11af3f9cea" id="r_a6edd91ad140c1e3ea4311b11af3f9cea"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetools_1_1init__tools.html#a6edd91ad140c1e3ea4311b11af3f9cea">getYamlConfigPathFromINIConfig</a> (const std::string &amp;ini_config_file_path, std::string &amp;yaml_config_path, const std::string &amp;default_yaml_config_path, std::vector&lt; std::string &gt; &amp;logInfos)</td></tr>
+<tr class="memdesc:a6edd91ad140c1e3ea4311b11af3f9cea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Yaml Config Path From I N I Config object  <br /></td></tr>
+<tr class="separator:a6edd91ad140c1e3ea4311b11af3f9cea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:accd3d44793b2022f1d64ff922149577d" id="r_accd3d44793b2022f1d64ff922149577d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetools_1_1init__tools.html#accd3d44793b2022f1d64ff922149577d">checkConfigLoadStatus</a> (bool load_ini_config_status, bool load_json_config_status, bool load_yaml_config_status)</td></tr>
 <tr class="separator:accd3d44793b2022f1d64ff922149577d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -120,6 +126,166 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a65929c9707f4dc222d1466abe1f8cffe" name="a65929c9707f4dc222d1466abe1f8cffe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65929c9707f4dc222d1466abe1f8cffe">&#9670;&#160;</a></span>getJsonConfigPathFromINIConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool getJsonConfigPathFromINIConfig </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>ini_config_file_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>json_config_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>default_json_config_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>logInfos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the Json Config Path From I N I Config object </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">{type}</td><td>ini_config_file_path </td></tr>
+    <tr><td class="paramname">{type}</td><td>json_config_path </td></tr>
+    <tr><td class="paramname">{type}</td><td>default_json_config_path </td></tr>
+    <tr><td class="paramname">{type}</td><td>logInfos </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="classMyINIConfig.html#ae89861074a9476484e56ca4b93d2af5c">MyINIConfig::GetInstance()</a> , 以及 <a class="el" href="classMyINIConfig.html#a1b2fd204c9cdf21af9887e93e5266be3">MyINIConfig::GetString()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacetools_1_1init__tools_a65929c9707f4dc222d1466abe1f8cffe_cgraph.png" border="0" usemap="#anamespacetools_1_1init__tools_a65929c9707f4dc222d1466abe1f8cffe_cgraph" alt=""/></div>
+<map name="anamespacetools_1_1init__tools_a65929c9707f4dc222d1466abe1f8cffe_cgraph" id="anamespacetools_1_1init__tools_a65929c9707f4dc222d1466abe1f8cffe_cgraph">
+<area shape="rect" title="Get the Json Config Path From I N I Config object" alt="" coords="5,31,236,56"/>
+<area shape="rect" href="classMyINIConfig.html#ae89861074a9476484e56ca4b93d2af5c" title=" " alt="" coords="284,5,471,31"/>
+<area shape="poly" title=" " alt="" coords="236,29,270,26,271,31,237,35"/>
+<area shape="rect" href="classMyINIConfig.html#a1b2fd204c9cdf21af9887e93e5266be3" title=" " alt="" coords="292,55,463,80"/>
+<area shape="poly" title=" " alt="" coords="237,51,279,55,278,61,236,57"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacetools_1_1init__tools_a65929c9707f4dc222d1466abe1f8cffe_icgraph.png" border="0" usemap="#anamespacetools_1_1init__tools_a65929c9707f4dc222d1466abe1f8cffe_icgraph" alt=""/></div>
+<map name="anamespacetools_1_1init__tools_a65929c9707f4dc222d1466abe1f8cffe_icgraph" id="anamespacetools_1_1init__tools_a65929c9707f4dc222d1466abe1f8cffe_icgraph">
+<area shape="rect" title="Get the Json Config Path From I N I Config object" alt="" coords="108,5,339,31"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,60,31"/>
+<area shape="poly" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6edd91ad140c1e3ea4311b11af3f9cea" name="a6edd91ad140c1e3ea4311b11af3f9cea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6edd91ad140c1e3ea4311b11af3f9cea">&#9670;&#160;</a></span>getYamlConfigPathFromINIConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool getYamlConfigPathFromINIConfig </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>ini_config_file_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>yaml_config_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>default_yaml_config_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>logInfos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the Yaml Config Path From I N I Config object </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">{type}</td><td>ini_config_file_path </td></tr>
+    <tr><td class="paramname">{type}</td><td>yaml_config_path </td></tr>
+    <tr><td class="paramname">{type}</td><td>default_yaml_config_path </td></tr>
+    <tr><td class="paramname">{type}</td><td>logInfos </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="classMyINIConfig.html#ae89861074a9476484e56ca4b93d2af5c">MyINIConfig::GetInstance()</a> , 以及 <a class="el" href="classMyINIConfig.html#a1b2fd204c9cdf21af9887e93e5266be3">MyINIConfig::GetString()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacetools_1_1init__tools_a6edd91ad140c1e3ea4311b11af3f9cea_cgraph.png" border="0" usemap="#anamespacetools_1_1init__tools_a6edd91ad140c1e3ea4311b11af3f9cea_cgraph" alt=""/></div>
+<map name="anamespacetools_1_1init__tools_a6edd91ad140c1e3ea4311b11af3f9cea_cgraph" id="anamespacetools_1_1init__tools_a6edd91ad140c1e3ea4311b11af3f9cea_cgraph">
+<area shape="rect" title="Get the Yaml Config Path From I N I Config object" alt="" coords="5,31,240,56"/>
+<area shape="rect" href="classMyINIConfig.html#ae89861074a9476484e56ca4b93d2af5c" title=" " alt="" coords="288,5,475,31"/>
+<area shape="poly" title=" " alt="" coords="240,29,274,26,274,31,240,35"/>
+<area shape="rect" href="classMyINIConfig.html#a1b2fd204c9cdf21af9887e93e5266be3" title=" " alt="" coords="296,55,467,80"/>
+<area shape="poly" title=" " alt="" coords="240,52,282,56,282,61,240,57"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacetools_1_1init__tools_a6edd91ad140c1e3ea4311b11af3f9cea_icgraph.png" border="0" usemap="#anamespacetools_1_1init__tools_a6edd91ad140c1e3ea4311b11af3f9cea_icgraph" alt=""/></div>
+<map name="anamespacetools_1_1init__tools_a6edd91ad140c1e3ea4311b11af3f9cea_icgraph" id="anamespacetools_1_1init__tools_a6edd91ad140c1e3ea4311b11af3f9cea_icgraph">
+<area shape="rect" title="Get the Yaml Config Path From I N I Config object" alt="" coords="108,5,343,31"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,60,31"/>
+<area shape="poly" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
+</map>
+</div>
 
 </div>
 </div>

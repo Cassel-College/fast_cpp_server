@@ -35,7 +35,7 @@ var searchData=
   ['timestampms_32',['TimestampMs',['../namespacemy__data.html#ab0a41a12b2c8afae2a15c3987f587e0d',1,'my_data']]],
   ['timeutil_2ecpp_33',['TimeUtil.cpp',['../TimeUtil_8cpp.html',1,'']]],
   ['timeutil_2eh_34',['TimeUtil.h',['../TimeUtil_8h.html',1,'']]],
-  ['tojson_35',['tojson',['../structmy__data_1_1TaskResult.html#a098007f3dd2a938824a819aa09423ca9',1,'my_data::TaskResult::toJson()'],['../structmy__data_1_1EdgeStatus.html#a098007f3dd2a938824a819aa09423ca9',1,'my_data::EdgeStatus::toJson()'],['../structmy__data_1_1DeviceStatus.html#a098007f3dd2a938824a819aa09423ca9',1,'my_data::DeviceStatus::toJson()'],['../structmy__data_1_1Task.html#a098007f3dd2a938824a819aa09423ca9',1,'my_data::Task::toJson()'],['../structmy__data_1_1RawCommand.html#a098007f3dd2a938824a819aa09423ca9',1,'my_data::RawCommand::toJson()'],['../classmy__doctor_1_1MyDoctor.html#a908a115b57885da98a8babc0d1f258fc',1,'my_doctor::MyDoctor::ToJson()']]],
+  ['tojson_35',['tojson',['../structmy__data_1_1TaskResult.html#a098007f3dd2a938824a819aa09423ca9',1,'my_data::TaskResult::toJson()'],['../classmy__doctor_1_1MyDoctor.html#a908a115b57885da98a8babc0d1f258fc',1,'my_doctor::MyDoctor::ToJson()'],['../structmy__data_1_1EdgeStatus.html#a098007f3dd2a938824a819aa09423ca9',1,'my_data::EdgeStatus::toJson()'],['../structmy__data_1_1Task.html#a098007f3dd2a938824a819aa09423ca9',1,'my_data::Task::toJson()'],['../structmy__data_1_1DeviceStatus.html#a098007f3dd2a938824a819aa09423ca9',1,'my_data::DeviceStatus::toJson()'],['../structmy__data_1_1RawCommand.html#a098007f3dd2a938824a819aa09423ca9',1,'my_data::RawCommand::toJson()']]],
   ['tojsonstring_36',['tojsonstring',['../classSoftHealthMonitorConfig.html#a2f97cb49a773afd89fc8b59216d02165',1,'SoftHealthMonitorConfig::toJsonString()'],['../classHealthSnapshot.html#a2f97cb49a773afd89fc8b59216d02165',1,'HealthSnapshot::toJsonString()']]],
   ['tools_37',['tools',['../namespacetools.html',1,'']]],
   ['tools_3a_3afree_5ffunc_38',['free_func',['../namespacetools_1_1free__func.html',1,'tools']]],
@@ -49,6 +49,6 @@ var searchData=
   ['transaction_46',['Transaction',['../classmy__db_1_1MyDB.html#a929e46c255e065862b811ba9e7b29432',1,'my_db::MyDB']]],
   ['transactionlocked_47',['TransactionLocked',['../classmy__db_1_1MyDB.html#ad33e6be7955c7fc12c049dd1dae38069',1,'my_db::MyDB']]],
   ['tryconnect_48',['tryConnect',['../classDeviceOnlineMonitor.html#ad074c174ce59c112ba75f34e83f08794',1,'DeviceOnlineMonitor']]],
-  ['type_49',['type',['../classmy__device_1_1demo_1_1UUVDevice.html#a5da1a2df331263b3cc8b0b7165e56f26',1,'my_device::demo::UUVDevice::Type()'],['../classmy__device_1_1IDevice.html#ab6b6147feb5e0688469b735a6546c222',1,'my_device::IDevice::Type()'],['../structmy__db_1_1DBConfig.html#a75b160f574a0be26114bae2c7686a5e1',1,'my_db::DBConfig::type']]],
+  ['type_49',['type',['../classmy__device_1_1IDevice.html#ab6b6147feb5e0688469b735a6546c222',1,'my_device::IDevice::Type()'],['../structmy__db_1_1DBConfig.html#a75b160f574a0be26114bae2c7686a5e1',1,'my_db::DBConfig::type']]],
   ['types_2eh_50',['Types.h',['../Types_8h.html',1,'']]]
 ];
