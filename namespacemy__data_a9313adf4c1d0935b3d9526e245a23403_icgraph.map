@@ -1,33 +1,101 @@
 <map id="NowMs" name="NowMs">
-<area shape="rect" id="Node000001" title="时间工具：获取当前毫秒时间戳" alt="" coords="576,338,647,363"/>
-<area shape="rect" id="Node000002" href="$classmy__control_1_1demo_1_1DepthSensorControl.html#ac797965a05a93bf646c6ac643a3461c8" title="执行任务（MVP：同步返回结果）" alt="" coords="297,5,528,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="608,325,606,269,595,198,584,160,570,124,551,89,526,59,511,48,515,43,530,55,555,86,575,121,589,159,600,197,611,269,613,324"/>
-<area shape="rect" id="Node000003" href="$classmy__control_1_1demo_1_1FlowSensorControl.html#ac797965a05a93bf646c6ac643a3461c8" title="执行任务（MVP：同步返回结果）" alt="" coords="301,69,524,109"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="606,324,599,280,586,226,562,171,546,145,526,123,510,111,513,107,530,119,550,142,567,168,591,225,605,279,611,324"/>
-<area shape="rect" id="Node000004" href="$classmy__control_1_1demo_1_1UUVControl.html#ac797965a05a93bf646c6ac643a3461c8" title="执行任务（MVP：同步返回结果）" alt="" coords="301,133,525,173"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="602,325,592,293,577,256,555,219,526,187,508,176,511,171,530,183,559,216,581,254,597,291,607,324"/>
-<area shape="rect" id="Node000005" href="$classmy__control_1_1demo_1_1WindSensorDevice.html#ac797965a05a93bf646c6ac643a3461c8" title="执行任务（MVP：同步返回结果）" alt="" coords="300,197,525,237"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="592,328,564,292,526,258,490,240,493,235,530,254,568,288,597,325"/>
-<area shape="rect" id="Node000006" href="$namespacemy__data.html#aab723b1463878131314617bd6cec2d12" title="生成一个“够用”的ID（MVP 版）" alt="" coords="365,363,460,389"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="563,359,461,373,460,367,562,354"/>
-<area shape="rect" id="Node000007" href="$classmy__control_1_1demo_1_1DepthSensorCommandNormalizer.html#a3b53f502aab08afbd793fefbbe6fb114" title="将 RawCommand 转为 Task" alt="" coords="9,256,245,296"/>
-<area shape="poly" id="edge14_Node000001_Node000007" title=" " alt="" coords="562,339,527,331,381,306,245,290,246,284,382,301,529,325,564,334"/>
-<area shape="rect" id="Node000008" href="$classmy__control_1_1demo_1_1FlowSensorCommandNormalizer.html#a3b53f502aab08afbd793fefbbe6fb114" title="将 RawCommand 转为 Task" alt="" coords="9,320,245,360"/>
-<area shape="poly" id="edge15_Node000001_Node000008" title=" " alt="" coords="562,352,246,345,246,340,562,347"/>
-<area shape="rect" id="Node000009" href="$classmy__control_1_1demo_1_1WindSensorCommandNormalizer.html#a3b53f502aab08afbd793fefbbe6fb114" title="将 RawCommand 转为 Task" alt="" coords="9,384,245,424"/>
-<area shape="poly" id="edge16_Node000001_Node000009" title=" " alt="" coords="585,374,559,390,529,403,457,418,383,424,311,425,245,421,246,416,311,420,382,419,456,412,527,397,556,385,582,370"/>
-<area shape="rect" id="Node000010" href="$classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559" title="将 RawCommand 转为 Task" alt="" coords="5,449,249,489"/>
-<area shape="poly" id="edge17_Node000001_Node000010" title=" " alt="" coords="594,376,566,406,529,430,460,455,387,470,316,477,250,479,250,474,315,472,386,465,459,450,527,426,562,402,590,373"/>
-<area shape="rect" id="Node000011" href="$classmy__edge_1_1demo_1_1UUVEdge.html#aeaad4d1e08909ec413c6e934fb718dc7" title="初始化：仅装配，不启动线程" alt="" coords="315,515,511,555"/>
-<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="604,377,578,438,556,470,530,498,499,517,496,512,526,494,552,467,573,435,600,375"/>
-<area shape="rect" id="Node000013" href="$classmy__db_1_1demo_1_1StatusRepository.html#aa1d564dbf68ca960e28f1c812f7c31f4" title=" " alt="" coords="297,579,528,619"/>
-<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="610,377,603,419,589,471,566,523,549,547,530,569,513,581,510,576,526,565,545,544,561,521,584,469,598,418,605,377"/>
-<area shape="rect" id="Node000014" href="$classmy__db_1_1demo_1_1StatusRepository.html#a74212c1aedab5e93c3b51234448a520b" title=" " alt="" coords="297,643,528,683"/>
-<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="613,377,610,430,598,499,588,535,573,570,554,603,530,633,514,645,511,641,526,629,550,600,568,568,583,533,593,497,604,430,608,377"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="371,360,248,311,210,299,212,294,250,305,373,355"/>
-<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="351,371,245,358,246,352,352,366"/>
-<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="352,385,246,395,245,390,351,379"/>
-<area shape="poly" id="edge9_Node000006_Node000010" title=" " alt="" coords="368,396,250,439,206,452,204,447,248,433,366,391"/>
-<area shape="rect" id="Node000012" href="$classmy__edge_1_1demo_1_1UUVEdge.html#ab69eb9171ee3c27d2c7cc35879356f05" title=" " alt="" coords="29,515,225,555"/>
-<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="301,537,225,537,225,532,301,532"/>
+<area shape="rect" id="Node000001" title="时间工具：获取当前毫秒时间戳" alt="" coords="576,938,647,963"/>
+<area shape="rect" id="Node000002" href="$classmy__device_1_1demo_1_1DepthSensorDevice.html#a8ecf41f5bfe6506ffac52e17b0ee60c0" title=" " alt="" coords="298,5,527,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="607,924,600,739,586,464,575,325,562,202,545,109,536,78,526,59,513,47,517,43,530,56,541,76,550,108,567,201,580,324,591,463,606,739,612,924"/>
+<area shape="rect" id="Node000003" href="$classmy__control_1_1demo_1_1DepthSensorControl.html#ac797965a05a93bf646c6ac643a3461c8" title="执行任务（MVP：同步返回结果）" alt="" coords="297,69,528,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="606,924,599,751,584,496,573,368,560,255,544,169,535,140,526,123,513,111,517,107,530,120,540,138,549,168,565,254,578,367,589,495,605,750,612,924"/>
+<area shape="rect" id="Node000004" href="$classmy__control_1_1demo_1_1FlowSensorControl.html#ac797965a05a93bf646c6ac643a3461c8" title="执行任务（MVP：同步返回结果）" alt="" coords="301,133,524,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="606,925,598,763,582,529,558,308,543,229,534,203,526,187,513,175,517,171,530,184,539,201,548,228,563,307,587,528,603,763,612,924"/>
+<area shape="rect" id="Node000005" href="$classmy__control_1_1demo_1_1UUVControl.html#ac797965a05a93bf646c6ac643a3461c8" title="执行任务（MVP：同步返回结果）" alt="" coords="301,197,525,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="606,925,597,775,580,561,556,360,541,289,534,265,526,251,513,239,517,236,530,248,539,263,547,288,561,359,585,561,602,775,611,924"/>
+<area shape="rect" id="Node000006" href="$classmy__control_1_1demo_1_1WindSensorDevice.html#ac797965a05a93bf646c6ac643a3461c8" title="执行任务（MVP：同步返回结果）" alt="" coords="300,261,525,301"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="608,924,606,795,597,613,587,519,572,433,552,363,540,336,526,315,513,304,517,300,530,312,545,333,557,361,578,432,592,518,602,612,612,795,613,924"/>
+<area shape="rect" id="Node000007" href="$classmy__device_1_1demo_1_1FlowSensorDevice.html#a2e9903130efd769fea672bb2236ff810" title=" " alt="" coords="302,325,523,365"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="607,924,603,809,592,648,581,566,567,490,549,428,526,386,504,368,507,363,530,382,554,426,573,489,587,565,597,648,609,809,612,924"/>
+<area shape="rect" id="Node000008" href="$namespacemy__data.html#aab723b1463878131314617bd6cec2d12" title="生成一个“够用”的ID（MVP 版）" alt="" coords="365,491,460,517"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="606,924,598,837,583,721,560,610,544,567,526,538,512,526,496,518,460,508,461,503,498,513,515,522,530,534,549,565,565,609,588,720,603,837,611,924"/>
+<area shape="rect" id="Node000009" href="$classmy__control_1_1demo_1_1DepthSensorCommandNormalizer.html#a3b53f502aab08afbd793fefbbe6fb114" title="将 RawCommand 转为 Task" alt="" coords="9,384,245,424"/>
+<area shape="poly" id="edge24_Node000001_Node000009" title=" " alt="" coords="607,924,604,819,592,675,582,603,568,537,549,483,538,463,526,449,495,424,460,406,422,394,383,386,303,381,230,387,229,381,303,376,383,380,424,389,462,401,498,420,530,445,543,460,554,481,573,535,587,602,597,675,609,819,612,924"/>
+<area shape="rect" id="Node000010" href="$classmy__control_1_1demo_1_1FlowSensorCommandNormalizer.html#a3b53f502aab08afbd793fefbbe6fb114" title="将 RawCommand 转为 Task" alt="" coords="9,448,245,488"/>
+<area shape="poly" id="edge25_Node000001_Node000010" title=" " alt="" coords="607,924,603,824,591,690,581,622,567,561,549,512,538,494,526,481,507,470,481,462,410,453,327,453,246,458,245,453,327,448,410,448,482,456,509,465,530,477,542,491,553,510,572,559,586,621,596,689,608,824,612,924"/>
+<area shape="rect" id="Node000011" href="$classmy__control_1_1demo_1_1WindSensorCommandNormalizer.html#a3b53f502aab08afbd793fefbbe6fb114" title="将 RawCommand 转为 Task" alt="" coords="9,512,245,552"/>
+<area shape="poly" id="edge26_Node000001_Node000011" title=" " alt="" coords="605,925,597,848,581,749,558,655,543,619,526,595,507,583,481,572,410,555,327,545,245,538,246,533,328,539,411,550,482,567,510,578,530,591,548,616,563,653,586,748,602,848,610,924"/>
+<area shape="rect" id="Node000012" href="$classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559" title="将 RawCommand 转为 Task" alt="" coords="5,577,249,617"/>
+<area shape="poly" id="edge27_Node000001_Node000012" title=" " alt="" coords="605,925,595,855,579,767,556,684,542,653,526,633,507,621,481,613,411,601,330,596,249,595,249,590,330,590,412,595,482,607,510,617,530,629,546,650,561,682,584,765,600,854,610,924"/>
+<area shape="rect" id="Node000013" href="$classmy__device_1_1demo_1_1DepthSensorDevice.html#aeaad4d1e08909ec413c6e934fb718dc7" title="初始化设备（加载配置、创建/初始化 control 等）" alt="" coords="298,643,527,683"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="607,924,602,875,590,814,565,751,548,722,526,697,511,685,514,681,530,693,552,719,570,749,595,813,607,875,612,924"/>
+<area shape="rect" id="Node000015" href="$classmy__device_1_1demo_1_1FlowSensorDevice.html#aeaad4d1e08909ec413c6e934fb718dc7" title="初始化设备（加载配置、创建/初始化 control 等）" alt="" coords="302,707,523,747"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="604,925,595,888,581,844,558,799,526,761,509,749,512,745,530,757,563,796,586,841,600,886,609,924"/>
+<area shape="rect" id="Node000017" href="$classmy__device_1_1demo_1_1UUVDevice.html#aeaad4d1e08909ec413c6e934fb718dc7" title="初始化设备（加载配置、创建/初始化 control 等）" alt="" coords="303,771,523,811"/>
+<area shape="poly" id="edge16_Node000001_Node000017" title=" " alt="" coords="598,927,571,874,551,848,526,825,507,813,509,809,530,821,555,844,575,872,603,924"/>
+<area shape="rect" id="Node000019" href="$classmy__device_1_1demo_1_1WindSensorDevice.html#aeaad4d1e08909ec413c6e934fb718dc7" title="初始化设备（加载配置、创建/初始化 control 等）" alt="" coords="301,835,524,875"/>
+<area shape="poly" id="edge18_Node000001_Node000019" title=" " alt="" coords="585,930,558,909,527,889,498,877,500,872,529,884,561,904,588,926"/>
+<area shape="rect" id="Node000021" href="$classmy__edge_1_1demo_1_1UUVEdge.html#aeaad4d1e08909ec413c6e934fb718dc7" title="初始化：仅装配，不启动线程" alt="" coords="315,899,511,939"/>
+<area shape="poly" id="edge20_Node000001_Node000021" title=" " alt="" coords="562,946,510,937,511,932,563,940"/>
+<area shape="rect" id="Node000023" href="$classmy__db_1_1demo_1_1StatusRepository.html#aa1d564dbf68ca960e28f1c812f7c31f4" title=" " alt="" coords="297,963,528,1003"/>
+<area shape="poly" id="edge22_Node000001_Node000023" title=" " alt="" coords="563,961,529,967,528,961,562,956"/>
+<area shape="rect" id="Node000024" href="$classmy__db_1_1demo_1_1StatusRepository.html#a74212c1aedab5e93c3b51234448a520b" title=" " alt="" coords="297,1027,528,1067"/>
+<area shape="poly" id="edge23_Node000001_Node000024" title=" " alt="" coords="588,975,561,997,529,1017,500,1029,498,1024,527,1012,558,993,585,971"/>
+<area shape="rect" id="Node000025" href="$classmy__device_1_1demo_1_1DepthSensorDevice.html#a634c58de2126b4a4e6a2a093e60e1290" title="请求停止（不负责 shutdown queue）" alt="" coords="298,1091,527,1131"/>
+<area shape="poly" id="edge28_Node000001_Node000025" title=" " alt="" coords="603,977,575,1030,555,1057,530,1081,509,1093,507,1088,526,1077,551,1054,571,1027,598,975"/>
+<area shape="rect" id="Node000027" href="$classmy__device_1_1demo_1_1FlowSensorDevice.html#a634c58de2126b4a4e6a2a093e60e1290" title="请求停止（不负责 shutdown queue）" alt="" coords="302,1155,523,1195"/>
+<area shape="poly" id="edge30_Node000001_Node000027" title=" " alt="" coords="609,978,600,1015,586,1060,563,1105,530,1145,512,1157,509,1152,526,1141,558,1103,581,1058,595,1013,604,976"/>
+<area shape="rect" id="Node000029" href="$classmy__device_1_1demo_1_1UUVDevice.html#a634c58de2126b4a4e6a2a093e60e1290" title="请求停止（不负责 shutdown queue）" alt="" coords="303,1219,523,1259"/>
+<area shape="poly" id="edge32_Node000001_Node000029" title=" " alt="" coords="612,978,607,1027,595,1089,570,1153,552,1182,530,1209,514,1221,511,1216,526,1205,548,1179,565,1150,590,1087,602,1026,607,977"/>
+<area shape="rect" id="Node000031" href="$classmy__device_1_1demo_1_1WindSensorDevice.html#a634c58de2126b4a4e6a2a093e60e1290" title="请求停止（不负责 shutdown queue）" alt="" coords="301,1283,524,1323"/>
+<area shape="poly" id="edge34_Node000001_Node000031" title=" " alt="" coords="609,978,599,1047,582,1135,559,1218,545,1250,530,1272,515,1285,511,1280,526,1269,541,1247,554,1216,577,1133,594,1046,604,977"/>
+<area shape="rect" id="Node000033" href="$classmy__device_1_1demo_1_1DepthSensorDevice.html#a81dd0a772bae5a5e534a5fb3894509e9" title=" " alt="" coords="298,1347,527,1387"/>
+<area shape="poly" id="edge36_Node000001_Node000033" title=" " alt="" coords="611,977,602,1058,587,1166,563,1268,548,1309,530,1336,516,1348,512,1344,526,1333,543,1306,558,1267,581,1165,597,1058,605,977"/>
+<area shape="rect" id="Node000035" href="$classmy__device_1_1demo_1_1FlowSensorDevice.html#a81dd0a772bae5a5e534a5fb3894509e9" title=" " alt="" coords="302,1475,523,1515"/>
+<area shape="poly" id="edge38_Node000001_Node000035" title=" " alt="" coords="612,977,607,1083,595,1228,584,1302,570,1370,553,1426,530,1464,516,1477,512,1473,526,1461,548,1424,565,1369,579,1301,589,1228,602,1082,607,977"/>
+<area shape="rect" id="Node000037" href="$classmy__device_1_1demo_1_1UUVDevice.html#a81dd0a772bae5a5e534a5fb3894509e9" title=" " alt="" coords="303,1603,523,1643"/>
+<area shape="poly" id="edge40_Node000001_Node000037" title=" " alt="" coords="613,977,612,1106,603,1290,593,1384,578,1471,557,1543,545,1571,530,1592,517,1604,513,1600,526,1589,540,1568,552,1541,573,1470,587,1384,597,1289,607,1106,608,977"/>
+<area shape="rect" id="Node000039" href="$classmy__device_1_1demo_1_1WindSensorDevice.html#a81dd0a772bae5a5e534a5fb3894509e9" title=" " alt="" coords="301,1731,524,1771"/>
+<area shape="poly" id="edge42_Node000001_Node000039" title=" " alt="" coords="612,977,604,1139,587,1374,563,1597,548,1676,539,1703,530,1720,517,1733,513,1729,526,1717,534,1701,543,1675,558,1596,582,1374,598,1139,606,977"/>
+<area shape="rect" id="Node000041" href="$classmy__device_1_1demo_1_1DepthSensorDevice.html#a59c55e446776e18cbd4b693f09ea501c" title=" " alt="" coords="298,1411,527,1451"/>
+<area shape="poly" id="edge44_Node000001_Node000041" title=" " alt="" coords="611,977,605,1071,591,1197,580,1261,567,1319,550,1367,530,1400,516,1413,512,1409,526,1397,545,1365,562,1318,575,1260,585,1196,600,1070,606,977"/>
+<area shape="rect" id="Node000042" href="$classmy__device_1_1demo_1_1FlowSensorDevice.html#a59c55e446776e18cbd4b693f09ea501c" title=" " alt="" coords="302,1539,523,1579"/>
+<area shape="poly" id="edge46_Node000001_Node000042" title=" " alt="" coords="613,977,610,1094,599,1259,588,1343,574,1420,555,1484,543,1509,530,1528,516,1540,513,1536,526,1525,539,1507,550,1482,569,1419,583,1342,593,1258,604,1094,607,977"/>
+<area shape="rect" id="Node000043" href="$classmy__device_1_1demo_1_1UUVDevice.html#a59c55e446776e18cbd4b693f09ea501c" title=" " alt="" coords="303,1667,523,1707"/>
+<area shape="poly" id="edge48_Node000001_Node000043" title=" " alt="" coords="611,977,602,1127,585,1342,561,1544,547,1616,539,1641,530,1656,517,1668,513,1665,526,1653,534,1639,542,1615,556,1543,580,1341,597,1127,606,977"/>
+<area shape="rect" id="Node000044" href="$classmy__device_1_1demo_1_1WindSensorDevice.html#a59c55e446776e18cbd4b693f09ea501c" title=" " alt="" coords="301,1795,524,1835"/>
+<area shape="poly" id="edge50_Node000001_Node000044" title=" " alt="" coords="612,978,605,1152,589,1407,578,1536,565,1650,549,1736,540,1766,530,1784,517,1797,513,1793,526,1781,535,1764,544,1735,560,1649,573,1536,584,1407,599,1151,606,977"/>
+<area shape="rect" id="Node000045" href="$classmy__device_1_1demo_1_1UUVDevice.html#a667de3be7fa6d87d5e1b5b3fd8065859" title=" " alt="" coords="303,1859,523,1899"/>
+<area shape="poly" id="edge52_Node000001_Node000045" title=" " alt="" coords="612,977,606,1163,591,1439,580,1579,567,1702,550,1796,541,1828,530,1848,517,1861,513,1857,526,1845,536,1826,545,1795,562,1701,575,1578,586,1439,600,1163,607,977"/>
+<area shape="rect" id="Node000046" href="$classmy__device_1_1demo_1_1WindSensorDevice.html#a79b2dd97ff94cc594162a65481863711" title=" " alt="" coords="301,1923,524,1963"/>
+<area shape="poly" id="edge53_Node000001_Node000046" title=" " alt="" coords="612,977,607,1174,593,1471,583,1621,569,1754,552,1856,541,1891,530,1912,517,1925,513,1921,526,1909,536,1889,546,1855,564,1754,577,1621,588,1471,601,1174,607,977"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="371,488,248,439,210,427,212,422,250,433,373,483"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="351,499,245,486,246,480,352,494"/>
+<area shape="poly" id="edge10_Node000008_Node000011" title=" " alt="" coords="352,513,246,523,245,518,351,507"/>
+<area shape="poly" id="edge11_Node000008_Node000012" title=" " alt="" coords="368,524,250,567,206,580,204,575,248,561,366,519"/>
+<area shape="rect" id="Node000014" href="$classmy__device_1_1demo_1_1DepthSensorDevice.html#a61ef64a843e829ffbf6da4f6d635a13d" title=" " alt="" coords="13,643,242,683"/>
+<area shape="poly" id="edge13_Node000013_Node000014" title=" " alt="" coords="285,665,242,665,242,660,285,660"/>
+<area shape="rect" id="Node000016" href="$classmy__device_1_1demo_1_1FlowSensorDevice.html#a515da41778212a154a76063a3d936595" title=" " alt="" coords="17,707,238,747"/>
+<area shape="poly" id="edge15_Node000015_Node000016" title=" " alt="" coords="288,729,238,729,238,724,288,724"/>
+<area shape="rect" id="Node000018" href="$classmy__device_1_1demo_1_1UUVDevice.html#add7072b896af18d695ba43056fd26d44" title=" " alt="" coords="17,771,237,811"/>
+<area shape="poly" id="edge17_Node000017_Node000018" title=" " alt="" coords="289,793,237,793,237,788,289,788"/>
+<area shape="rect" id="Node000020" href="$classmy__device_1_1demo_1_1WindSensorDevice.html#ae5ddd577dec30dd98eec5f142588eb17" title=" " alt="" coords="16,835,239,875"/>
+<area shape="poly" id="edge19_Node000019_Node000020" title=" " alt="" coords="288,857,239,857,239,852,288,852"/>
+<area shape="rect" id="Node000022" href="$classmy__edge_1_1demo_1_1UUVEdge.html#ab69eb9171ee3c27d2c7cc35879356f05" title=" " alt="" coords="29,899,225,939"/>
+<area shape="poly" id="edge21_Node000021_Node000022" title=" " alt="" coords="301,921,225,921,225,916,301,916"/>
+<area shape="rect" id="Node000026" href="$classmy__device_1_1demo_1_1DepthSensorDevice.html#ab280be1189b48ce68ce1e0b4c862eec7" title=" " alt="" coords="13,1091,242,1131"/>
+<area shape="poly" id="edge29_Node000025_Node000026" title=" " alt="" coords="285,1113,242,1113,242,1108,285,1108"/>
+<area shape="rect" id="Node000028" href="$classmy__device_1_1demo_1_1FlowSensorDevice.html#a2c1ff289132db43a79456b3d02034c73" title=" " alt="" coords="17,1155,238,1195"/>
+<area shape="poly" id="edge31_Node000027_Node000028" title=" " alt="" coords="288,1177,238,1177,238,1172,288,1172"/>
+<area shape="rect" id="Node000030" href="$classmy__device_1_1demo_1_1UUVDevice.html#ab6c2f994d41932c6cd7222dcc3c67da0" title=" " alt="" coords="17,1219,237,1259"/>
+<area shape="poly" id="edge33_Node000029_Node000030" title=" " alt="" coords="289,1241,237,1241,237,1236,289,1236"/>
+<area shape="rect" id="Node000032" href="$classmy__device_1_1demo_1_1WindSensorDevice.html#aa4f2ee22ff19317effb60e6df6cbcfef" title=" " alt="" coords="16,1283,239,1323"/>
+<area shape="poly" id="edge35_Node000031_Node000032" title=" " alt="" coords="288,1305,239,1305,239,1300,288,1300"/>
+<area shape="rect" id="Node000034" href="$classmy__device_1_1demo_1_1DepthSensorDevice.html#a24a097fb4fcef1837583a96466f5d3e2" title="启动设备执行单元（注入队列引用 + EStop 引用）" alt="" coords="13,1379,242,1419"/>
+<area shape="poly" id="edge37_Node000033_Node000034" title=" " alt="" coords="285,1384,242,1388,242,1383,284,1378"/>
+<area shape="rect" id="Node000036" href="$classmy__device_1_1demo_1_1FlowSensorDevice.html#a24a097fb4fcef1837583a96466f5d3e2" title="启动设备执行单元（注入队列引用 + EStop 引用）" alt="" coords="17,1507,238,1547"/>
+<area shape="poly" id="edge39_Node000035_Node000036" title=" " alt="" coords="289,1511,239,1517,238,1512,288,1506"/>
+<area shape="rect" id="Node000038" href="$classmy__device_1_1demo_1_1UUVDevice.html#a24a097fb4fcef1837583a96466f5d3e2" title="启动设备执行单元（注入队列引用 + EStop 引用）" alt="" coords="17,1651,237,1691"/>
+<area shape="poly" id="edge41_Node000037_Node000038" title=" " alt="" coords="289,1646,238,1655,237,1650,288,1641"/>
+<area shape="rect" id="Node000040" href="$classmy__device_1_1demo_1_1WindSensorDevice.html#a24a097fb4fcef1837583a96466f5d3e2" title="启动设备执行单元（注入队列引用 + EStop 引用）" alt="" coords="16,1747,239,1787"/>
+<area shape="poly" id="edge43_Node000039_Node000040" title=" " alt="" coords="288,1760,239,1763,239,1758,288,1755"/>
+<area shape="poly" id="edge45_Node000041_Node000034" title=" " alt="" coords="284,1419,242,1414,242,1409,285,1414"/>
+<area shape="poly" id="edge47_Node000042_Node000036" title=" " alt="" coords="288,1547,238,1542,239,1536,289,1542"/>
+<area shape="poly" id="edge49_Node000043_Node000038" title=" " alt="" coords="289,1682,237,1679,238,1674,289,1677"/>
+<area shape="poly" id="edge51_Node000044_Node000040" title=" " alt="" coords="287,1796,238,1788,239,1783,288,1791"/>
 </map>

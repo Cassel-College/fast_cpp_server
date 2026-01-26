@@ -4,6 +4,8 @@ var searchData=
   ['uuvcommandnormalizer_2eh_1',['UUVCommandNormalizer.h',['../UUVCommandNormalizer_8h.html',1,'']]],
   ['uuvcontrol_2ecpp_2',['UUVControl.cpp',['../UUVControl_8cpp.html',1,'']]],
   ['uuvcontrol_2eh_3',['UUVControl.h',['../UUVControl_8h.html',1,'']]],
-  ['uuvedge_2ecpp_4',['UUVEdge.cpp',['../UUVEdge_8cpp.html',1,'']]],
-  ['uuvedge_2eh_5',['UUVEdge.h',['../UUVEdge_8h.html',1,'']]]
+  ['uuvdevice_2ecpp_4',['UUVDevice.cpp',['../UUVDevice_8cpp.html',1,'']]],
+  ['uuvdevice_2eh_5',['UUVDevice.h',['../UUVDevice_8h.html',1,'']]],
+  ['uuvedge_2ecpp_6',['UUVEdge.cpp',['../UUVEdge_8cpp.html',1,'']]],
+  ['uuvedge_2eh_7',['UUVEdge.h',['../UUVEdge_8h.html',1,'']]]
 ];

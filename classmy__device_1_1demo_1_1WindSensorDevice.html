@@ -1,0 +1,957 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: WindSensorDevice类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacemy__device.html">my_device</a></li><li class="navelem"><a class="el" href="namespacemy__device_1_1demo.html">demo</a></li><li class="navelem"><a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html">WindSensorDevice</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a>  </div>
+  <div class="headertitle"><div class="title">WindSensorDevice类 参考<span class="mlabels"><span class="mlabel">final</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="my__device_2demo_2wind__sensor_2WindSensorDevice_8h_source.html">WindSensorDevice.h</a>&gt;</code></p>
+<div class="dynheader">
+类 WindSensorDevice 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__device_1_1demo_1_1WindSensorDevice__inherit__graph.png" border="0" usemap="#aWindSensorDevice_inherit__map" alt="Inheritance graph"/></div>
+<map name="aWindSensorDevice_inherit__map" id="aWindSensorDevice_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,79,149,104"/>
+<area shape="rect" href="classmy__device_1_1IDevice.html" title="设备执行单元接口（每个 device_id 一个实例）" alt="" coords="42,5,113,31"/>
+<area shape="poly" title=" " alt="" coords="80,44,80,79,75,79,75,44"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+WindSensorDevice 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__device_1_1demo_1_1WindSensorDevice__coll__graph.png" border="0" usemap="#aWindSensorDevice_coll__map" alt="Collaboration graph"/></div>
+<map name="aWindSensorDevice_coll__map" id="aWindSensorDevice_coll__map">
+<area shape="rect" title=" " alt="" coords="75,93,219,119"/>
+<area shape="rect" href="classmy__device_1_1IDevice.html" title="设备执行单元接口（每个 device_id 一个实例）" alt="" coords="5,5,76,31"/>
+<area shape="poly" title=" " alt="" coords="67,37,135,91,131,95,64,41"/>
+<area shape="rect" href="classmy__control_1_1TaskQueue.html" title="线程安全任务队列（MVP）" alt="" coords="101,5,194,31"/>
+<area shape="poly" title=" " alt="" coords="150,45,150,93,145,93,145,45"/>
+<area shape="rect" href="structmy__data_1_1DeviceStatus.html" title="单设备状态快照" alt="" coords="219,5,327,31"/>
+<area shape="poly" title=" " alt="" coords="248,41,206,72,168,96,165,91,203,67,245,37"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a79b2dd97ff94cc594162a65481863711" id="r_a79b2dd97ff94cc594162a65481863711"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a79b2dd97ff94cc594162a65481863711">WindSensorDevice</a> ()</td></tr>
+<tr class="separator:a79b2dd97ff94cc594162a65481863711"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5ddd577dec30dd98eec5f142588eb17" id="r_ae5ddd577dec30dd98eec5f142588eb17"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#ae5ddd577dec30dd98eec5f142588eb17">WindSensorDevice</a> (const nlohmann::json &amp;cfg, std::string *err)</td></tr>
+<tr class="separator:ae5ddd577dec30dd98eec5f142588eb17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4f2ee22ff19317effb60e6df6cbcfef" id="r_aa4f2ee22ff19317effb60e6df6cbcfef"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#aa4f2ee22ff19317effb60e6df6cbcfef">~WindSensorDevice</a> () override</td></tr>
+<tr class="separator:aa4f2ee22ff19317effb60e6df6cbcfef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaad4d1e08909ec413c6e934fb718dc7" id="r_aeaad4d1e08909ec413c6e934fb718dc7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#aeaad4d1e08909ec413c6e934fb718dc7">Init</a> (const nlohmann::json &amp;cfg, std::string *err) override</td></tr>
+<tr class="memdesc:aeaad4d1e08909ec413c6e934fb718dc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化设备（加载配置、创建/初始化 control 等）  <br /></td></tr>
+<tr class="separator:aeaad4d1e08909ec413c6e934fb718dc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24a097fb4fcef1837583a96466f5d3e2" id="r_a24a097fb4fcef1837583a96466f5d3e2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a24a097fb4fcef1837583a96466f5d3e2">Start</a> (<a class="el" href="classmy__control_1_1TaskQueue.html">my_control::TaskQueue</a> &amp;queue, std::atomic&lt; bool &gt; *estop_flag, std::string *err) override</td></tr>
+<tr class="memdesc:a24a097fb4fcef1837583a96466f5d3e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">启动设备执行单元（注入队列引用 + EStop 引用）  <br /></td></tr>
+<tr class="separator:a24a097fb4fcef1837583a96466f5d3e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a634c58de2126b4a4e6a2a093e60e1290" id="r_a634c58de2126b4a4e6a2a093e60e1290"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a634c58de2126b4a4e6a2a093e60e1290">Stop</a> () override</td></tr>
+<tr class="memdesc:a634c58de2126b4a4e6a2a093e60e1290"><td class="mdescLeft">&#160;</td><td class="mdescRight">请求停止（不负责 shutdown queue）  <br /></td></tr>
+<tr class="separator:a634c58de2126b4a4e6a2a093e60e1290"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af73e570330884bb1dea45c95f92b42c8" id="r_af73e570330884bb1dea45c95f92b42c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#af73e570330884bb1dea45c95f92b42c8">Join</a> () override</td></tr>
+<tr class="memdesc:af73e570330884bb1dea45c95f92b42c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">等待线程退出  <br /></td></tr>
+<tr class="separator:af73e570330884bb1dea45c95f92b42c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaad57e9b1df3a0235ac05ffe705e6a8" id="r_acaad57e9b1df3a0235ac05ffe705e6a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmy__data_1_1DeviceStatus.html">my_data::DeviceStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#acaad57e9b1df3a0235ac05ffe705e6a8">GetStatusSnapshot</a> () const override</td></tr>
+<tr class="memdesc:acaad57e9b1df3a0235ac05ffe705e6a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取设备状态快照（线程安全）  <br /></td></tr>
+<tr class="separator:acaad57e9b1df3a0235ac05ffe705e6a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d48a1df2f601a9c27c0a467bd5ada0e" id="r_a1d48a1df2f601a9c27c0a467bd5ada0e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a1d48a1df2f601a9c27c0a467bd5ada0e">Id</a> () const override</td></tr>
+<tr class="memdesc:a1d48a1df2f601a9c27c0a467bd5ada0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">设备ID  <br /></td></tr>
+<tr class="separator:a1d48a1df2f601a9c27c0a467bd5ada0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5da1a2df331263b3cc8b0b7165e56f26" id="r_a5da1a2df331263b3cc8b0b7165e56f26"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a5da1a2df331263b3cc8b0b7165e56f26">Type</a> () const override</td></tr>
+<tr class="memdesc:a5da1a2df331263b3cc8b0b7165e56f26"><td class="mdescLeft">&#160;</td><td class="mdescRight">设备���型（如 "uuv"）  <br /></td></tr>
+<tr class="separator:a5da1a2df331263b3cc8b0b7165e56f26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classmy__device_1_1IDevice"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmy__device_1_1IDevice')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classmy__device_1_1IDevice.html">IDevice</a></td></tr>
+<tr class="memitem:a9e97ffd49973ab5e97e7afbeb7d68499 inherit pub_methods_classmy__device_1_1IDevice" id="r_a9e97ffd49973ab5e97e7afbeb7d68499"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__device_1_1IDevice.html#a9e97ffd49973ab5e97e7afbeb7d68499">~IDevice</a> ()=default</td></tr>
+<tr class="separator:a9e97ffd49973ab5e97e7afbeb7d68499 inherit pub_methods_classmy__device_1_1IDevice"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a59c55e446776e18cbd4b693f09ea501c" id="r_a59c55e446776e18cbd4b693f09ea501c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a59c55e446776e18cbd4b693f09ea501c">UpdateOnTaskStart</a> (const <a class="el" href="structmy__data_1_1Task.html">my_data::Task</a> &amp;task)</td></tr>
+<tr class="separator:a59c55e446776e18cbd4b693f09ea501c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81dd0a772bae5a5e534a5fb3894509e9" id="r_a81dd0a772bae5a5e534a5fb3894509e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a81dd0a772bae5a5e534a5fb3894509e9">UpdateOnTaskFinish</a> (const <a class="el" href="structmy__data_1_1Task.html">my_data::Task</a> &amp;task, const <a class="el" href="structmy__data_1_1TaskResult.html">my_data::TaskResult</a> &amp;r)</td></tr>
+<tr class="separator:a81dd0a772bae5a5e534a5fb3894509e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:ae232acc05c0836a4180ca95ccdef8183" id="r_ae232acc05c0836a4180ca95ccdef8183"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#ae232acc05c0836a4180ca95ccdef8183">device_id_</a> {&quot;split-unknown&quot;}</td></tr>
+<tr class="separator:ae232acc05c0836a4180ca95ccdef8183"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af93af29b25b5fd684c739a8afa52f9e5" id="r_af93af29b25b5fd684c739a8afa52f9e5"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#af93af29b25b5fd684c739a8afa52f9e5">device_name_</a> {&quot;split-speed-sensor-demo&quot;}</td></tr>
+<tr class="separator:af93af29b25b5fd684c739a8afa52f9e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36443a557da28dbcbfcbeea57530f8d1" id="r_a36443a557da28dbcbfcbeea57530f8d1"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classmy__control_1_1IControl.html">my_control::IControl</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a36443a557da28dbcbfcbeea57530f8d1">control_</a></td></tr>
+<tr class="separator:a36443a557da28dbcbfcbeea57530f8d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4253f83181fa594dd93e5e00074e136a" id="r_a4253f83181fa594dd93e5e00074e136a"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classmy__control_1_1demo_1_1Workflow.html">my_control::demo::Workflow</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a4253f83181fa594dd93e5e00074e136a">workflow_</a></td></tr>
+<tr class="separator:a4253f83181fa594dd93e5e00074e136a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addbd48eafa023df2ea507c0d02e93fcc" id="r_addbd48eafa023df2ea507c0d02e93fcc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmy__control_1_1TaskQueue.html">my_control::TaskQueue</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#addbd48eafa023df2ea507c0d02e93fcc">queue_</a> {nullptr}</td></tr>
+<tr class="separator:addbd48eafa023df2ea507c0d02e93fcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af207f215387c2fd372ebb20aa2cc527b" id="r_af207f215387c2fd372ebb20aa2cc527b"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; bool &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#af207f215387c2fd372ebb20aa2cc527b">estop_flag_</a> {nullptr}</td></tr>
+<tr class="separator:af207f215387c2fd372ebb20aa2cc527b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea61a494307a84601f457b895b72a7e7" id="r_aea61a494307a84601f457b895b72a7e7"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#aea61a494307a84601f457b895b72a7e7">status_mu_</a></td></tr>
+<tr class="separator:aea61a494307a84601f457b895b72a7e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59d37b4cc53fed7bce45e094078ba676" id="r_a59d37b4cc53fed7bce45e094078ba676"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmy__data_1_1DeviceStatus.html">my_data::DeviceStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a59d37b4cc53fed7bce45e094078ba676">status_</a></td></tr>
+<tr class="separator:a59d37b4cc53fed7bce45e094078ba676"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a70859062a9f0fb838b8e0d2f795717" id="r_a4a70859062a9f0fb838b8e0d2f795717"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="structmy__data_1_1Task.html">my_data::Task</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a4a70859062a9f0fb838b8e0d2f795717">running_task_snapshot_</a></td></tr>
+<tr class="separator:a4a70859062a9f0fb838b8e0d2f795717"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a79b2dd97ff94cc594162a65481863711" name="a79b2dd97ff94cc594162a65481863711"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79b2dd97ff94cc594162a65481863711">&#9670;&#160;</a></span>WindSensorDevice() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html">WindSensorDevice</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="structmy__data_1_1DeviceStatus.html#af821acee7e457efc9a0e768d1e938949">DeviceStatus::conn_state</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#a47449c9a7a840d9fa6b4a69688305e10">DeviceStatus::device_id</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#ae232acc05c0836a4180ca95ccdef8183">WindSensorDevice::device_id_</a>, <a class="el" href="namespacemy__data.html#ab741123951602d5912c8b5aba6bf3372ae599161956d626eda4cb0a5ffb85271c">my_data::Idle</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#ad6976c458c4c2009292fa9a0a938e44e">DeviceStatus::last_error</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#ad1f973f56df6185040bd96ef12911bf9">DeviceStatus::last_seen_at_ms</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="namespacemy__data.html#a9313adf4c1d0935b3d9526e245a23403">my_data::NowMs()</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#a5408f1fbf295730816160360d0593a61">DeviceStatus::running_task_id</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a59d37b4cc53fed7bce45e094078ba676">WindSensorDevice::status_</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#aea61a494307a84601f457b895b72a7e7">WindSensorDevice::status_mu_</a>, <a class="el" href="namespacemy__data.html#a69c46968483fe8b647c643ea0779baa3a88183b946cc5f0e8c96b2e66e1c74a7e">my_data::Unknown</a> , 以及 <a class="el" href="structmy__data_1_1DeviceStatus.html#a80ffc9c37fe70d68ed7247de9e383269">DeviceStatus::work_state</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__device_1_1demo_1_1WindSensorDevice_a79b2dd97ff94cc594162a65481863711_cgraph.png" border="0" usemap="#aclassmy__device_1_1demo_1_1WindSensorDevice_a79b2dd97ff94cc594162a65481863711_cgraph" alt=""/></div>
+<map name="aclassmy__device_1_1demo_1_1WindSensorDevice_a79b2dd97ff94cc594162a65481863711_cgraph" id="aclassmy__device_1_1demo_1_1WindSensorDevice_a79b2dd97ff94cc594162a65481863711_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,149,31"/>
+<area shape="rect" href="namespacemy__data.html#a9313adf4c1d0935b3d9526e245a23403" title="时间工具：获取当前毫秒时间戳" alt="" coords="197,5,332,31"/>
+<area shape="poly" title=" " alt="" coords="150,15,184,15,184,21,150,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae5ddd577dec30dd98eec5f142588eb17" name="ae5ddd577dec30dd98eec5f142588eb17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5ddd577dec30dd98eec5f142588eb17">&#9670;&#160;</a></span>WindSensorDevice() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html">WindSensorDevice</a> </td>
+          <td>(</td>
+          <td class="paramtype">const nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>cfg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>err</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#ae232acc05c0836a4180ca95ccdef8183">WindSensorDevice::device_id_</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#aeaad4d1e08909ec413c6e934fb718dc7">WindSensorDevice::Init()</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a> , 以及 <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__device_1_1demo_1_1WindSensorDevice_ae5ddd577dec30dd98eec5f142588eb17_cgraph.png" border="0" usemap="#aclassmy__device_1_1demo_1_1WindSensorDevice_ae5ddd577dec30dd98eec5f142588eb17_cgraph" alt=""/></div>
+<map name="aclassmy__device_1_1demo_1_1WindSensorDevice_ae5ddd577dec30dd98eec5f142588eb17_cgraph" id="aclassmy__device_1_1demo_1_1WindSensorDevice_ae5ddd577dec30dd98eec5f142588eb17_cgraph">
+<area shape="rect" title=" " alt="" coords="5,77,149,102"/>
+<area shape="rect" href="classmy__device_1_1demo_1_1WindSensorDevice.html#aeaad4d1e08909ec413c6e934fb718dc7" title="初始化设备（加载配置、创建/初始化 control 等）" alt="" coords="197,77,240,102"/>
+<area shape="poly" title=" " alt="" coords="150,87,183,87,183,92,150,92"/>
+<area shape="rect" href="classmy__control_1_1MyControl.html#ae8ff31b91612c6727b4d9dd8c8ebc467" title=" " alt="" coords="288,5,459,45"/>
+<area shape="poly" title=" " alt="" coords="239,77,287,55,304,48,306,53,289,60,241,82"/>
+<area shape="rect" href="classmy__control_1_1MyControl.html#a867d8de756c913549ea1427caf29ee65" title=" " alt="" coords="288,69,459,109"/>
+<area shape="poly" title=" " alt="" coords="240,87,274,87,274,92,240,92"/>
+<area shape="rect" href="namespacemy__data.html#a9313adf4c1d0935b3d9526e245a23403" title="时间工具：获取当前毫秒时间戳" alt="" coords="306,134,441,159"/>
+<area shape="poly" title=" " alt="" coords="242,98,289,119,313,127,312,132,287,124,239,102"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa4f2ee22ff19317effb60e6df6cbcfef" name="aa4f2ee22ff19317effb60e6df6cbcfef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4f2ee22ff19317effb60e6df6cbcfef">&#9670;&#160;</a></span>~WindSensorDevice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html">WindSensorDevice</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#ae232acc05c0836a4180ca95ccdef8183">WindSensorDevice::device_id_</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#af73e570330884bb1dea45c95f92b42c8">WindSensorDevice::Join()</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a> , 以及 <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a634c58de2126b4a4e6a2a093e60e1290">WindSensorDevice::Stop()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__device_1_1demo_1_1WindSensorDevice_aa4f2ee22ff19317effb60e6df6cbcfef_cgraph.png" border="0" usemap="#aclassmy__device_1_1demo_1_1WindSensorDevice_aa4f2ee22ff19317effb60e6df6cbcfef_cgraph" alt=""/></div>
+<map name="aclassmy__device_1_1demo_1_1WindSensorDevice_aa4f2ee22ff19317effb60e6df6cbcfef_cgraph" id="aclassmy__device_1_1demo_1_1WindSensorDevice_aa4f2ee22ff19317effb60e6df6cbcfef_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,160,56"/>
+<area shape="rect" href="classmy__device_1_1demo_1_1WindSensorDevice.html#af73e570330884bb1dea45c95f92b42c8" title="等待线程退出" alt="" coords="210,5,257,31"/>
+<area shape="poly" title=" " alt="" coords="158,28,196,22,197,27,159,33"/>
+<area shape="rect" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a634c58de2126b4a4e6a2a093e60e1290" title="请求停止（不负责 shutdown queue）" alt="" coords="208,55,259,80"/>
+<area shape="poly" title=" " alt="" coords="161,53,195,59,194,64,160,58"/>
+<area shape="rect" href="namespacemy__data.html#a9313adf4c1d0935b3d9526e245a23403" title="时间工具：获取当前毫秒时间戳" alt="" coords="307,55,441,80"/>
+<area shape="poly" title=" " alt="" coords="259,65,293,65,293,70,259,70"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="acaad57e9b1df3a0235ac05ffe705e6a8" name="acaad57e9b1df3a0235ac05ffe705e6a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acaad57e9b1df3a0235ac05ffe705e6a8">&#9670;&#160;</a></span>GetStatusSnapshot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmy__data_1_1DeviceStatus.html">my_data::DeviceStatus</a> GetStatusSnapshot </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取设备状态快照（线程安全） </p>
+
+<p>实现了 <a class="el" href="classmy__device_1_1IDevice.html#a19ba5a1e3d929f8492d848c14eae61e4">IDevice</a>.</p>
+
+<p class="reference">引用了 <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a59d37b4cc53fed7bce45e094078ba676">WindSensorDevice::status_</a> , 以及 <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#aea61a494307a84601f457b895b72a7e7">WindSensorDevice::status_mu_</a>.</p>
+
+</div>
+</div>
+<a id="a1d48a1df2f601a9c27c0a467bd5ada0e" name="a1d48a1df2f601a9c27c0a467bd5ada0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d48a1df2f601a9c27c0a467bd5ada0e">&#9670;&#160;</a></span>Id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a> Id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设备ID </p>
+
+<p>实现了 <a class="el" href="classmy__device_1_1IDevice.html#ac517614dfdc5b00f112b7c657e38e429">IDevice</a>.</p>
+
+<p class="reference">引用了 <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#ae232acc05c0836a4180ca95ccdef8183">WindSensorDevice::device_id_</a>.</p>
+
+</div>
+</div>
+<a id="aeaad4d1e08909ec413c6e934fb718dc7" name="aeaad4d1e08909ec413c6e934fb718dc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaad4d1e08909ec413c6e934fb718dc7">&#9670;&#160;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Init </td>
+          <td>(</td>
+          <td class="paramtype">const nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>cfg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>err</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>初始化设备（加载配置、创建/初始化 control 等） </p>
+
+<p>实现了 <a class="el" href="classmy__device_1_1IDevice.html#a318f0835a0611f2d747aa141e674af64">IDevice</a>.</p>
+
+<p class="reference">引用了 <a class="el" href="structmy__data_1_1DeviceStatus.html#af821acee7e457efc9a0e768d1e938949">DeviceStatus::conn_state</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a36443a557da28dbcbfcbeea57530f8d1">WindSensorDevice::control_</a>, <a class="el" href="classmy__control_1_1MyControl.html#ae8ff31b91612c6727b4d9dd8c8ebc467">MyControl::CreateControl()</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#a47449c9a7a840d9fa6b4a69688305e10">DeviceStatus::device_id</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#ae232acc05c0836a4180ca95ccdef8183">WindSensorDevice::device_id_</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#af93af29b25b5fd684c739a8afa52f9e5">WindSensorDevice::device_name_</a>, <a class="el" href="classmy__control_1_1MyControl.html#a867d8de756c913549ea1427caf29ee65">MyControl::GetInstance()</a>, <a class="el" href="namespacemy__data.html#ab741123951602d5912c8b5aba6bf3372ae599161956d626eda4cb0a5ffb85271c">my_data::Idle</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#ad1f973f56df6185040bd96ef12911bf9">DeviceStatus::last_seen_at_ms</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="namespacemy__data.html#a9313adf4c1d0935b3d9526e245a23403">my_data::NowMs()</a>, <a class="el" href="namespacemy__data.html#a69c46968483fe8b647c643ea0779baa3a54f664c70c22054ea0d8d26fc3997ce7">my_data::Online</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a59d37b4cc53fed7bce45e094078ba676">WindSensorDevice::status_</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#aea61a494307a84601f457b895b72a7e7">WindSensorDevice::status_mu_</a> , 以及 <a class="el" href="structmy__data_1_1DeviceStatus.html#a80ffc9c37fe70d68ed7247de9e383269">DeviceStatus::work_state</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#ae5ddd577dec30dd98eec5f142588eb17">WindSensorDevice::WindSensorDevice()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__device_1_1demo_1_1WindSensorDevice_aeaad4d1e08909ec413c6e934fb718dc7_cgraph.png" border="0" usemap="#aclassmy__device_1_1demo_1_1WindSensorDevice_aeaad4d1e08909ec413c6e934fb718dc7_cgraph" alt=""/></div>
+<map name="aclassmy__device_1_1demo_1_1WindSensorDevice_aeaad4d1e08909ec413c6e934fb718dc7_cgraph" id="aclassmy__device_1_1demo_1_1WindSensorDevice_aeaad4d1e08909ec413c6e934fb718dc7_cgraph">
+<area shape="rect" title="初始化设备（加载配置、创建/初始化 control 等）" alt="" coords="5,77,48,102"/>
+<area shape="rect" href="classmy__control_1_1MyControl.html#ae8ff31b91612c6727b4d9dd8c8ebc467" title=" " alt="" coords="96,5,267,45"/>
+<area shape="poly" title=" " alt="" coords="47,77,95,55,112,48,114,53,97,60,49,82"/>
+<area shape="rect" href="classmy__control_1_1MyControl.html#a867d8de756c913549ea1427caf29ee65" title=" " alt="" coords="96,69,267,109"/>
+<area shape="poly" title=" " alt="" coords="48,87,82,87,82,92,48,92"/>
+<area shape="rect" href="namespacemy__data.html#a9313adf4c1d0935b3d9526e245a23403" title="时间工具：获取当前毫秒时间戳" alt="" coords="114,134,249,159"/>
+<area shape="poly" title=" " alt="" coords="50,98,97,119,121,127,120,132,95,124,47,102"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__device_1_1demo_1_1WindSensorDevice_aeaad4d1e08909ec413c6e934fb718dc7_icgraph.png" border="0" usemap="#aclassmy__device_1_1demo_1_1WindSensorDevice_aeaad4d1e08909ec413c6e934fb718dc7_icgraph" alt=""/></div>
+<map name="aclassmy__device_1_1demo_1_1WindSensorDevice_aeaad4d1e08909ec413c6e934fb718dc7_icgraph" id="aclassmy__device_1_1demo_1_1WindSensorDevice_aeaad4d1e08909ec413c6e934fb718dc7_icgraph">
+<area shape="rect" title="初始化设备（加载配置、创建/初始化 control 等）" alt="" coords="197,5,240,31"/>
+<area shape="rect" href="classmy__device_1_1demo_1_1WindSensorDevice.html#ae5ddd577dec30dd98eec5f142588eb17" title=" " alt="" coords="5,5,149,31"/>
+<area shape="poly" title=" " alt="" coords="183,21,150,21,150,15,183,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af73e570330884bb1dea45c95f92b42c8" name="af73e570330884bb1dea45c95f92b42c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af73e570330884bb1dea45c95f92b42c8">&#9670;&#160;</a></span>Join()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Join </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>等待线程退出 </p>
+
+<p>实现了 <a class="el" href="classmy__device_1_1IDevice.html#af91a5eba595a7f7a9742ea592066e255">IDevice</a>.</p>
+
+<p class="reference">引用了 <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#ae232acc05c0836a4180ca95ccdef8183">WindSensorDevice::device_id_</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a> , 以及 <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a4253f83181fa594dd93e5e00074e136a">WindSensorDevice::workflow_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#aa4f2ee22ff19317effb60e6df6cbcfef">WindSensorDevice::~WindSensorDevice()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__device_1_1demo_1_1WindSensorDevice_af73e570330884bb1dea45c95f92b42c8_icgraph.png" border="0" usemap="#aclassmy__device_1_1demo_1_1WindSensorDevice_af73e570330884bb1dea45c95f92b42c8_icgraph" alt=""/></div>
+<map name="aclassmy__device_1_1demo_1_1WindSensorDevice_af73e570330884bb1dea45c95f92b42c8_icgraph" id="aclassmy__device_1_1demo_1_1WindSensorDevice_af73e570330884bb1dea45c95f92b42c8_icgraph">
+<area shape="rect" title="等待线程退出" alt="" coords="208,5,255,31"/>
+<area shape="rect" href="classmy__device_1_1demo_1_1WindSensorDevice.html#aa4f2ee22ff19317effb60e6df6cbcfef" title=" " alt="" coords="5,5,160,31"/>
+<area shape="poly" title=" " alt="" coords="194,21,160,21,160,15,194,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a24a097fb4fcef1837583a96466f5d3e2" name="a24a097fb4fcef1837583a96466f5d3e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24a097fb4fcef1837583a96466f5d3e2">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Start </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmy__control_1_1TaskQueue.html">my_control::TaskQueue</a> &amp;&#160;</td>
+          <td class="paramname"><em>queue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::atomic&lt; bool &gt; *&#160;</td>
+          <td class="paramname"><em>estop_flag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>err</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>启动设备执行单元（注入队列引用 + EStop 引用） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">queue</td><td>队列引用（实例归 Edge） </td></tr>
+    <tr><td class="paramname">estop_flag</td><td>全局 EStop 标志（可为 nullptr） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="classmy__device_1_1IDevice.html#a28af5759dcd3a08784c5d97bf8fe293b">IDevice</a>.</p>
+
+<p class="reference">引用了 <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a36443a557da28dbcbfcbeea57530f8d1">WindSensorDevice::control_</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#ae232acc05c0836a4180ca95ccdef8183">WindSensorDevice::device_id_</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#af207f215387c2fd372ebb20aa2cc527b">WindSensorDevice::estop_flag_</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="classmy__control_1_1TaskQueue.html#a8546382b04c2126bd39cc17d72d0b5a2">TaskQueue::Name()</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#addbd48eafa023df2ea507c0d02e93fcc">WindSensorDevice::queue_</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a81dd0a772bae5a5e534a5fb3894509e9">WindSensorDevice::UpdateOnTaskFinish()</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a59c55e446776e18cbd4b693f09ea501c">WindSensorDevice::UpdateOnTaskStart()</a> , 以及 <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a4253f83181fa594dd93e5e00074e136a">WindSensorDevice::workflow_</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__device_1_1demo_1_1WindSensorDevice_a24a097fb4fcef1837583a96466f5d3e2_cgraph.png" border="0" usemap="#aclassmy__device_1_1demo_1_1WindSensorDevice_a24a097fb4fcef1837583a96466f5d3e2_cgraph" alt=""/></div>
+<map name="aclassmy__device_1_1demo_1_1WindSensorDevice_a24a097fb4fcef1837583a96466f5d3e2_cgraph" id="aclassmy__device_1_1demo_1_1WindSensorDevice_a24a097fb4fcef1837583a96466f5d3e2_cgraph">
+<area shape="rect" title="启动设备执行单元（注入队列引用 + EStop 引用）" alt="" coords="5,70,59,95"/>
+<area shape="rect" href="classmy__control_1_1TaskQueue.html#a8546382b04c2126bd39cc17d72d0b5a2" title="队列名字（用于日志与定位）" alt="" coords="107,5,281,45"/>
+<area shape="poly" title=" " alt="" coords="58,71,123,47,125,52,60,76"/>
+<area shape="rect" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a81dd0a772bae5a5e534a5fb3894509e9" title=" " alt="" coords="117,119,271,145"/>
+<area shape="poly" title=" " alt="" coords="60,89,107,104,136,113,135,118,106,109,58,94"/>
+<area shape="rect" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a59c55e446776e18cbd4b693f09ea501c" title=" " alt="" coords="121,70,267,95"/>
+<area shape="poly" title=" " alt="" coords="59,80,107,80,107,85,59,85"/>
+<area shape="rect" href="namespacemy__data.html#a9313adf4c1d0935b3d9526e245a23403" title="时间工具：获取当前毫秒时间戳" alt="" coords="331,70,466,95"/>
+<area shape="poly" title=" " alt="" coords="247,117,331,96,333,101,248,122"/>
+<area shape="rect" href="namespacemy__data.html#aa2c3b20a64b6aef24654f21b84592582" title="将错误码转为可读字符串" alt="" coords="329,119,468,145"/>
+<area shape="poly" title=" " alt="" coords="272,129,315,129,315,135,272,135"/>
+<area shape="poly" title=" " alt="" coords="268,80,318,80,318,85,268,85"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a634c58de2126b4a4e6a2a093e60e1290" name="a634c58de2126b4a4e6a2a093e60e1290"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a634c58de2126b4a4e6a2a093e60e1290">&#9670;&#160;</a></span>Stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>请求停止（不负责 shutdown queue） </p>
+
+<p>实现了 <a class="el" href="classmy__device_1_1IDevice.html#a4d7bebcc22c1b09cf961b83bf84033b6">IDevice</a>.</p>
+
+<p class="reference">引用了 <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#ae232acc05c0836a4180ca95ccdef8183">WindSensorDevice::device_id_</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#ad1f973f56df6185040bd96ef12911bf9">DeviceStatus::last_seen_at_ms</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>, <a class="el" href="namespacemy__data.html#a9313adf4c1d0935b3d9526e245a23403">my_data::NowMs()</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a59d37b4cc53fed7bce45e094078ba676">WindSensorDevice::status_</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#aea61a494307a84601f457b895b72a7e7">WindSensorDevice::status_mu_</a> , 以及 <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a4253f83181fa594dd93e5e00074e136a">WindSensorDevice::workflow_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#aa4f2ee22ff19317effb60e6df6cbcfef">WindSensorDevice::~WindSensorDevice()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__device_1_1demo_1_1WindSensorDevice_a634c58de2126b4a4e6a2a093e60e1290_cgraph.png" border="0" usemap="#aclassmy__device_1_1demo_1_1WindSensorDevice_a634c58de2126b4a4e6a2a093e60e1290_cgraph" alt=""/></div>
+<map name="aclassmy__device_1_1demo_1_1WindSensorDevice_a634c58de2126b4a4e6a2a093e60e1290_cgraph" id="aclassmy__device_1_1demo_1_1WindSensorDevice_a634c58de2126b4a4e6a2a093e60e1290_cgraph">
+<area shape="rect" title="请求停止（不负责 shutdown queue）" alt="" coords="5,5,56,31"/>
+<area shape="rect" href="namespacemy__data.html#a9313adf4c1d0935b3d9526e245a23403" title="时间工具：获取当前毫秒时间戳" alt="" coords="104,5,239,31"/>
+<area shape="poly" title=" " alt="" coords="56,15,90,15,90,21,56,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__device_1_1demo_1_1WindSensorDevice_a634c58de2126b4a4e6a2a093e60e1290_icgraph.png" border="0" usemap="#aclassmy__device_1_1demo_1_1WindSensorDevice_a634c58de2126b4a4e6a2a093e60e1290_icgraph" alt=""/></div>
+<map name="aclassmy__device_1_1demo_1_1WindSensorDevice_a634c58de2126b4a4e6a2a093e60e1290_icgraph" id="aclassmy__device_1_1demo_1_1WindSensorDevice_a634c58de2126b4a4e6a2a093e60e1290_icgraph">
+<area shape="rect" title="请求停止（不负责 shutdown queue）" alt="" coords="208,5,259,31"/>
+<area shape="rect" href="classmy__device_1_1demo_1_1WindSensorDevice.html#aa4f2ee22ff19317effb60e6df6cbcfef" title=" " alt="" coords="5,5,160,31"/>
+<area shape="poly" title=" " alt="" coords="194,21,160,21,160,15,194,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5da1a2df331263b3cc8b0b7165e56f26" name="a5da1a2df331263b3cc8b0b7165e56f26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5da1a2df331263b3cc8b0b7165e56f26">&#9670;&#160;</a></span>Type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Type </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设备���型（如 "uuv"） </p>
+
+<p>实现了 <a class="el" href="classmy__device_1_1IDevice.html#ab6b6147feb5e0688469b735a6546c222">IDevice</a>.</p>
+
+</div>
+</div>
+<a id="a81dd0a772bae5a5e534a5fb3894509e9" name="a81dd0a772bae5a5e534a5fb3894509e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81dd0a772bae5a5e534a5fb3894509e9">&#9670;&#160;</a></span>UpdateOnTaskFinish()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UpdateOnTaskFinish </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structmy__data_1_1Task.html">my_data::Task</a> &amp;&#160;</td>
+          <td class="paramname"><em>task</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structmy__data_1_1TaskResult.html">my_data::TaskResult</a> &amp;&#160;</td>
+          <td class="paramname"><em>r</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="structmy__data_1_1TaskResult.html#a2a8da57251af6baf047d8b57ae811203">TaskResult::code</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#ae232acc05c0836a4180ca95ccdef8183">WindSensorDevice::device_id_</a>, <a class="el" href="namespacemy__data.html#ab741123951602d5912c8b5aba6bf3372a2b310d05c23325e2935ec87b25a60b8f">my_data::Faulted</a>, <a class="el" href="namespacemy__data.html#ab741123951602d5912c8b5aba6bf3372ae599161956d626eda4cb0a5ffb85271c">my_data::Idle</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#ad6976c458c4c2009292fa9a0a938e44e">DeviceStatus::last_error</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#ad1f973f56df6185040bd96ef12911bf9">DeviceStatus::last_seen_at_ms</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#adef2c57c01aebddd44f7913264efc06f">DeviceStatus::last_task_at_ms</a>, <a class="el" href="structmy__data_1_1TaskResult.html#a36bd74109f547f7f8198faf5a12d2879">TaskResult::message</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="namespacemy__data.html#a9313adf4c1d0935b3d9526e245a23403">my_data::NowMs()</a>, <a class="el" href="namespacemy__data.html#a59e56af19e754a6aa26a612ebf91d05faa60852f204ed8028c1c58808b746d115">my_data::Ok</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#a5408f1fbf295730816160360d0593a61">DeviceStatus::running_task_id</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a4a70859062a9f0fb838b8e0d2f795717">WindSensorDevice::running_task_snapshot_</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a59d37b4cc53fed7bce45e094078ba676">WindSensorDevice::status_</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#aea61a494307a84601f457b895b72a7e7">WindSensorDevice::status_mu_</a>, <a class="el" href="structmy__data_1_1Task.html#aa3e1e8eb26b010a643bd4a49d570662e">Task::task_id</a>, <a class="el" href="namespacemy__data.html#aa2c3b20a64b6aef24654f21b84592582">my_data::ToString()</a> , 以及 <a class="el" href="structmy__data_1_1DeviceStatus.html#a80ffc9c37fe70d68ed7247de9e383269">DeviceStatus::work_state</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a24a097fb4fcef1837583a96466f5d3e2">WindSensorDevice::Start()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__device_1_1demo_1_1WindSensorDevice_a81dd0a772bae5a5e534a5fb3894509e9_cgraph.png" border="0" usemap="#aclassmy__device_1_1demo_1_1WindSensorDevice_a81dd0a772bae5a5e534a5fb3894509e9_cgraph" alt=""/></div>
+<map name="aclassmy__device_1_1demo_1_1WindSensorDevice_a81dd0a772bae5a5e534a5fb3894509e9_cgraph" id="aclassmy__device_1_1demo_1_1WindSensorDevice_a81dd0a772bae5a5e534a5fb3894509e9_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,160,56"/>
+<area shape="rect" href="namespacemy__data.html#a9313adf4c1d0935b3d9526e245a23403" title="时间工具：获取当前毫秒时间戳" alt="" coords="210,5,345,31"/>
+<area shape="poly" title=" " alt="" coords="160,31,196,26,197,31,161,36"/>
+<area shape="rect" href="namespacemy__data.html#aa2c3b20a64b6aef24654f21b84592582" title="将错误码转为可读字符串" alt="" coords="208,55,347,80"/>
+<area shape="poly" title=" " alt="" coords="161,50,195,54,194,60,160,56"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__device_1_1demo_1_1WindSensorDevice_a81dd0a772bae5a5e534a5fb3894509e9_icgraph.png" border="0" usemap="#aclassmy__device_1_1demo_1_1WindSensorDevice_a81dd0a772bae5a5e534a5fb3894509e9_icgraph" alt=""/></div>
+<map name="aclassmy__device_1_1demo_1_1WindSensorDevice_a81dd0a772bae5a5e534a5fb3894509e9_icgraph" id="aclassmy__device_1_1demo_1_1WindSensorDevice_a81dd0a772bae5a5e534a5fb3894509e9_icgraph">
+<area shape="rect" title=" " alt="" coords="107,5,261,31"/>
+<area shape="rect" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a24a097fb4fcef1837583a96466f5d3e2" title="启动设备执行单元（注入队列引用 + EStop 引用）" alt="" coords="5,5,59,31"/>
+<area shape="poly" title=" " alt="" coords="93,21,59,21,59,15,93,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a59c55e446776e18cbd4b693f09ea501c" name="a59c55e446776e18cbd4b693f09ea501c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59c55e446776e18cbd4b693f09ea501c">&#9670;&#160;</a></span>UpdateOnTaskStart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UpdateOnTaskStart </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structmy__data_1_1Task.html">my_data::Task</a> &amp;&#160;</td>
+          <td class="paramname"><em>task</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="structmy__data_1_1Task.html#a057699cf114942bd42087102f39351f4">Task::action</a>, <a class="el" href="namespacemy__data.html#ab741123951602d5912c8b5aba6bf3372ad8a942ef2b04672adfafef0ad817a407">my_data::Busy</a>, <a class="el" href="structmy__data_1_1Task.html#a586d4b3f6ee263311139695f7554f978">Task::capability</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#ae232acc05c0836a4180ca95ccdef8183">WindSensorDevice::device_id_</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#ad1f973f56df6185040bd96ef12911bf9">DeviceStatus::last_seen_at_ms</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="namespacemy__data.html#a9313adf4c1d0935b3d9526e245a23403">my_data::NowMs()</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#a5408f1fbf295730816160360d0593a61">DeviceStatus::running_task_id</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a4a70859062a9f0fb838b8e0d2f795717">WindSensorDevice::running_task_snapshot_</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a59d37b4cc53fed7bce45e094078ba676">WindSensorDevice::status_</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#aea61a494307a84601f457b895b72a7e7">WindSensorDevice::status_mu_</a>, <a class="el" href="structmy__data_1_1Task.html#aa3e1e8eb26b010a643bd4a49d570662e">Task::task_id</a> , 以及 <a class="el" href="structmy__data_1_1DeviceStatus.html#a80ffc9c37fe70d68ed7247de9e383269">DeviceStatus::work_state</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a24a097fb4fcef1837583a96466f5d3e2">WindSensorDevice::Start()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__device_1_1demo_1_1WindSensorDevice_a59c55e446776e18cbd4b693f09ea501c_cgraph.png" border="0" usemap="#aclassmy__device_1_1demo_1_1WindSensorDevice_a59c55e446776e18cbd4b693f09ea501c_cgraph" alt=""/></div>
+<map name="aclassmy__device_1_1demo_1_1WindSensorDevice_a59c55e446776e18cbd4b693f09ea501c_cgraph" id="aclassmy__device_1_1demo_1_1WindSensorDevice_a59c55e446776e18cbd4b693f09ea501c_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,152,31"/>
+<area shape="rect" href="namespacemy__data.html#a9313adf4c1d0935b3d9526e245a23403" title="时间工具：获取当前毫秒时间戳" alt="" coords="200,5,335,31"/>
+<area shape="poly" title=" " alt="" coords="152,15,186,15,186,21,152,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__device_1_1demo_1_1WindSensorDevice_a59c55e446776e18cbd4b693f09ea501c_icgraph.png" border="0" usemap="#aclassmy__device_1_1demo_1_1WindSensorDevice_a59c55e446776e18cbd4b693f09ea501c_icgraph" alt=""/></div>
+<map name="aclassmy__device_1_1demo_1_1WindSensorDevice_a59c55e446776e18cbd4b693f09ea501c_icgraph" id="aclassmy__device_1_1demo_1_1WindSensorDevice_a59c55e446776e18cbd4b693f09ea501c_icgraph">
+<area shape="rect" title=" " alt="" coords="107,5,253,31"/>
+<area shape="rect" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a24a097fb4fcef1837583a96466f5d3e2" title="启动设备执行单元（注入队列引用 + EStop 引用）" alt="" coords="5,5,59,31"/>
+<area shape="poly" title=" " alt="" coords="93,21,59,21,59,15,93,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">结构体成员变量说明</h2>
+<a id="a36443a557da28dbcbfcbeea57530f8d1" name="a36443a557da28dbcbfcbeea57530f8d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36443a557da28dbcbfcbeea57530f8d1">&#9670;&#160;</a></span>control_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classmy__control_1_1IControl.html">my_control::IControl</a>&gt; control_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#aeaad4d1e08909ec413c6e934fb718dc7">WindSensorDevice::Init()</a> , 以及 <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a24a097fb4fcef1837583a96466f5d3e2">WindSensorDevice::Start()</a>.</p>
+
+</div>
+</div>
+<a id="ae232acc05c0836a4180ca95ccdef8183" name="ae232acc05c0836a4180ca95ccdef8183"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae232acc05c0836a4180ca95ccdef8183">&#9670;&#160;</a></span>device_id_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a> device_id_ {&quot;split-unknown&quot;}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a1d48a1df2f601a9c27c0a467bd5ada0e">WindSensorDevice::Id()</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#aeaad4d1e08909ec413c6e934fb718dc7">WindSensorDevice::Init()</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#af73e570330884bb1dea45c95f92b42c8">WindSensorDevice::Join()</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a24a097fb4fcef1837583a96466f5d3e2">WindSensorDevice::Start()</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a634c58de2126b4a4e6a2a093e60e1290">WindSensorDevice::Stop()</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a81dd0a772bae5a5e534a5fb3894509e9">WindSensorDevice::UpdateOnTaskFinish()</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a59c55e446776e18cbd4b693f09ea501c">WindSensorDevice::UpdateOnTaskStart()</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a79b2dd97ff94cc594162a65481863711">WindSensorDevice::WindSensorDevice()</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#ae5ddd577dec30dd98eec5f142588eb17">WindSensorDevice::WindSensorDevice()</a> , 以及 <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#aa4f2ee22ff19317effb60e6df6cbcfef">WindSensorDevice::~WindSensorDevice()</a>.</p>
+
+</div>
+</div>
+<a id="af93af29b25b5fd684c739a8afa52f9e5" name="af93af29b25b5fd684c739a8afa52f9e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af93af29b25b5fd684c739a8afa52f9e5">&#9670;&#160;</a></span>device_name_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string device_name_ {&quot;split-speed-sensor-demo&quot;}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#aeaad4d1e08909ec413c6e934fb718dc7">WindSensorDevice::Init()</a>.</p>
+
+</div>
+</div>
+<a id="af207f215387c2fd372ebb20aa2cc527b" name="af207f215387c2fd372ebb20aa2cc527b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af207f215387c2fd372ebb20aa2cc527b">&#9670;&#160;</a></span>estop_flag_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;bool&gt;* estop_flag_ {nullptr}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a24a097fb4fcef1837583a96466f5d3e2">WindSensorDevice::Start()</a>.</p>
+
+</div>
+</div>
+<a id="addbd48eafa023df2ea507c0d02e93fcc" name="addbd48eafa023df2ea507c0d02e93fcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addbd48eafa023df2ea507c0d02e93fcc">&#9670;&#160;</a></span>queue_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmy__control_1_1TaskQueue.html">my_control::TaskQueue</a>* queue_ {nullptr}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a24a097fb4fcef1837583a96466f5d3e2">WindSensorDevice::Start()</a>.</p>
+
+</div>
+</div>
+<a id="a4a70859062a9f0fb838b8e0d2f795717" name="a4a70859062a9f0fb838b8e0d2f795717"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a70859062a9f0fb838b8e0d2f795717">&#9670;&#160;</a></span>running_task_snapshot_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;<a class="el" href="structmy__data_1_1Task.html">my_data::Task</a>&gt; running_task_snapshot_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a81dd0a772bae5a5e534a5fb3894509e9">WindSensorDevice::UpdateOnTaskFinish()</a> , 以及 <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a59c55e446776e18cbd4b693f09ea501c">WindSensorDevice::UpdateOnTaskStart()</a>.</p>
+
+</div>
+</div>
+<a id="a59d37b4cc53fed7bce45e094078ba676" name="a59d37b4cc53fed7bce45e094078ba676"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59d37b4cc53fed7bce45e094078ba676">&#9670;&#160;</a></span>status_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmy__data_1_1DeviceStatus.html">my_data::DeviceStatus</a> status_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#acaad57e9b1df3a0235ac05ffe705e6a8">WindSensorDevice::GetStatusSnapshot()</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#aeaad4d1e08909ec413c6e934fb718dc7">WindSensorDevice::Init()</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a634c58de2126b4a4e6a2a093e60e1290">WindSensorDevice::Stop()</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a81dd0a772bae5a5e534a5fb3894509e9">WindSensorDevice::UpdateOnTaskFinish()</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a59c55e446776e18cbd4b693f09ea501c">WindSensorDevice::UpdateOnTaskStart()</a> , 以及 <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a79b2dd97ff94cc594162a65481863711">WindSensorDevice::WindSensorDevice()</a>.</p>
+
+</div>
+</div>
+<a id="aea61a494307a84601f457b895b72a7e7" name="aea61a494307a84601f457b895b72a7e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea61a494307a84601f457b895b72a7e7">&#9670;&#160;</a></span>status_mu_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex status_mu_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#acaad57e9b1df3a0235ac05ffe705e6a8">WindSensorDevice::GetStatusSnapshot()</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#aeaad4d1e08909ec413c6e934fb718dc7">WindSensorDevice::Init()</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a634c58de2126b4a4e6a2a093e60e1290">WindSensorDevice::Stop()</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a81dd0a772bae5a5e534a5fb3894509e9">WindSensorDevice::UpdateOnTaskFinish()</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a59c55e446776e18cbd4b693f09ea501c">WindSensorDevice::UpdateOnTaskStart()</a> , 以及 <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a79b2dd97ff94cc594162a65481863711">WindSensorDevice::WindSensorDevice()</a>.</p>
+
+</div>
+</div>
+<a id="a4253f83181fa594dd93e5e00074e136a" name="a4253f83181fa594dd93e5e00074e136a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4253f83181fa594dd93e5e00074e136a">&#9670;&#160;</a></span>workflow_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classmy__control_1_1demo_1_1Workflow.html">my_control::demo::Workflow</a>&gt; workflow_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#af73e570330884bb1dea45c95f92b42c8">WindSensorDevice::Join()</a>, <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a24a097fb4fcef1837583a96466f5d3e2">WindSensorDevice::Start()</a> , 以及 <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a634c58de2126b4a4e6a2a093e60e1290">WindSensorDevice::Stop()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/util/my_device/demo/wind_sensor/<a class="el" href="my__device_2demo_2wind__sensor_2WindSensorDevice_8h_source.html">WindSensorDevice.h</a></li>
+<li>src/util/my_device/demo/wind_sensor/<a class="el" href="my__device_2demo_2wind__sensor_2WindSensorDevice_8cpp.html">WindSensorDevice.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>
