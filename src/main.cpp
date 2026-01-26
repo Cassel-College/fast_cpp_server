@@ -49,7 +49,9 @@ int main(int argc, char* argv[]) {
     std::string defaultYAMLConfigFilePath   = "/etc/fast_cpp_server/config.yaml";
     std::string defaultLogDirPath           = "/var/fast_cpp_server/logs/";
     std::string defaultLogFilePath          = defaultLogDirPath + appName + ".log";
-    std::string configFilePath              = defaultINIConfigFilePath;
+    std::string iniConfigFilePath           = defaultINIConfigFilePath;
+    std::string jsonConfigFilePath          = defaultJSONConfigFilePath;
+    std::string yamlConfigFilePath          = defaultYAMLConfigFilePath;
     std::string logDirPath                  = defaultLogDirPath;
     std::string logFilePath                 = defaultLogFilePath;
     std::vector<std::string> logInfos       = {};
@@ -83,16 +85,27 @@ int main(int argc, char* argv[]) {
             }
             tools::service_guard::ServiceGuard::GetInstance().Execute(is_hard_setup);       // 执行服务自检
         } else if (item.at("key") == "-c" || item.at("key") == "--config") {
-            tools::init_tools::loadConfigFromArguments(args, logInfos, configFilePath);
+            tools::init_tools::loadConfigFromArguments(args, logInfos, iniConfigFilePath);
         } else {
             // Unknown argument, can log or ignore
         }
     }
 
+    
+    bool load_ini_config_status  = tools::init_tools::initLoadConfig("ini",  iniConfigFilePath,  logInfos);
     // 加载配置文件
-    bool load_ini_config_status  = tools::init_tools::initLoadConfig("ini",  configFilePath,  logInfos);
-    bool load_json_config_status = tools::init_tools::initLoadConfig("json", defaultJSONConfigFilePath, logInfos);
-    bool load_yaml_config_status = tools::init_tools::initLoadConfig("yaml", defaultYAMLConfigFilePath, logInfos);
+    bool load_json_condig_from_ini = tools::init_tools::getJsonConfigPathFromINIConfig(
+        iniConfigFilePath,
+        jsonConfigFilePath,
+        defaultJSONConfigFilePath,
+        logInfos);
+    bool load_yaml_condig_from_ini = tools::init_tools::getYamlConfigPathFromINIConfig(
+        iniConfigFilePath,
+        yamlConfigFilePath,
+        defaultYAMLConfigFilePath,
+        logInfos);
+    bool load_json_config_status = tools::init_tools::initLoadConfig("json", jsonConfigFilePath, logInfos);
+    bool load_yaml_config_status = tools::init_tools::initLoadConfig("yaml", yamlConfigFilePath, logInfos);
     bool console_output          = false;
     // 初始化日志系统
     if (!tools::free_func::loadLogConfigFromINIConfig(logInfos, logDirPath, logFilePath, appName)) {

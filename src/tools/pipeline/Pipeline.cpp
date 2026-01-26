@@ -2,10 +2,16 @@
 #include "MyHeartbeatManager.h"
 #include "MyEdgeManager.h"
 #include "EdgeDevice.h"
+#include "IEdge.h"
+#include "MyEdge.h"
 #include "MyAPI.h"
+#include "MyLog.h"
+#include <memory>
 
 namespace tools {
 namespace pipeline {
+
+using namespace my_edge;
 
 Pipeline::~Pipeline() {
     Stop();
@@ -107,6 +113,9 @@ void Pipeline::Start() {
                     success_count++;
                 } else if (model_name == "rest_api") {
                     LaunchRestAPI(model_args);
+                    success_count++;
+                } else if (model_name == "edge") {
+                    LaunchEdge(model_args);
                     success_count++;
                 } else {
                     MYLOG_INFO("* Arg: {}, Value: {}", "节点[" + node_index + "]警告", "未知的模型名称: " + model_name);
@@ -259,6 +268,75 @@ void Pipeline::LaunchSystemHealthy(const nlohmann::json& args) {
             std::this_thread::sleep_for(std::chrono::seconds(interval));
         }
     });
+}
+
+void Pipeline::LaunchEdge(const nlohmann::json& args) {
+    int interval = args.value("interval_sec_", 10);
+
+    MYLOG_INFO("开始启动 Edge 模块，间隔: {} 秒", interval);
+    MYLOG_INFO("Edge 模块参数: {}", args.dump(4));
+    // 这里可以根据 args 创建和管理多个 Edge 设备实例
+    // "model_args": {
+    //     "edge_create_args": [
+    //       {
+    //         "edge_type": "UUV",
+    //         "name": "uuv_001"
+    //       }
+    //     ],
+    //     "edge_number": 1,
+    //     "interval_sec_": 10
+    //   },
+    try {
+        int edge_number = args.value("edge_number", 1);
+        nlohmann::json edge_create_args = args.value("edge_create_args", nlohmann::json::array({}));
+        MYLOG_INFO("准备启动 {} 个 Edge 设备", edge_number);
+        std::string error_msg = "";
+        MYLOG_INFO("-------------------------------------------");
+        for (int i = 0; i < edge_number; ++i) {
+            MYLOG_INFO("----- 正在启动 Edge 设备 ID: {} -----", i);
+            nlohmann::json single_edge_args = nlohmann::json::object();
+            if (i < edge_create_args.size()) {
+                single_edge_args = edge_create_args[i];
+            }
+            std::string edge_type = single_edge_args.value("edge_type", "UnknownType");
+            // 如果上层配置缺失 devices 字段，自动构造一个最小 devices 列表，满足 Edge.Init 的要求
+            if (!single_edge_args.contains("devices") || !single_edge_args["devices"].is_array()) {
+                std::string device_id = single_edge_args.value("name", "device_" + std::to_string(i));
+                std::string dev_type = single_edge_args.value("edge_type", edge_type);
+                nlohmann::json dev = nlohmann::json::object();
+                dev["device_id"] = device_id;
+                dev["type"] = dev_type;
+                single_edge_args["devices"] = nlohmann::json::array();
+                single_edge_args["devices"].push_back(dev);
+                // 补上 edge_id 方便日志/内部使用
+                if (!single_edge_args.contains("edge_id")) {
+                    single_edge_args["edge_id"] = single_edge_args.value("name", "edge_" + std::to_string(i));
+                }
+                MYLOG_INFO("Edge 设备 ID: {} 自动补全 devices 字段: {}", i, single_edge_args["devices"].dump());
+            }
+            MYLOG_INFO("Edge 设备 ID: {} 类型: {}", i, edge_type);
+            MYLOG_INFO("Edge 设备 ID: {} 参数: {}", i, single_edge_args.dump(4));
+            // 创建 Edge 设备实例
+            std::unique_ptr<my_edge::IEdge> edge_device = my_edge::MyEdge::GetInstance().Create(edge_type, single_edge_args, &error_msg);
+            edge_device->ShowAnalyzeInitArgs(single_edge_args);
+            // 初始化 Edge 设备
+            if (!edge_device) {
+                MYLOG_ERROR("Edge 设备 ID: {} 创建失败，类型未知: {}", i, edge_type);
+                continue;
+            } else {
+                MYLOG_INFO("Edge 设备 ID: {} 创建成功", i);
+            }
+            
+            // 启动 Edge 设备
+            if (!edge_device->Start(&error_msg)) {
+                MYLOG_ERROR("Edge 设备 ID: {} 启动失败: {}", i, error_msg);
+                continue;
+            }
+            MYLOG_INFO("成功启动 Edge 设备 ID: {}", i);
+        }
+    } catch (const std::exception& e) {
+        MYLOG_ERROR("启动 Edge 模块时捕获异常: {}", e.what());
+    }
 }
 
 void Pipeline::Stop() {

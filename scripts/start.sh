@@ -1,114 +1,149 @@
 #!/bin/bash
+set -euo pipefail
 
-# ==============================================================================
-# Fast C++ Server Start Wrapper (无日志托管版)
-# ==============================================================================
-
-# --- 1. 配置区域 ---
 APP_NAME="fast_cpp_server"
-APP_BIN="/usr/local/bin/fast_cpp_server_dir/fast_cpp_server"
-APP_HOME="/usr/local/bin"
+PROGRAM_NAME="fast_cpp_server"
 
-# MQTT 配置
+MODE="system"
+DEBUG=false
 MQTT_ENABLED=true
-MQTT_BIN="/usr/local/bin/fast_cpp_server_dir/mosquitto"
-MQTT_CONF="/etc/fast_cpp_server/mosquitto.conf"
 
-# 脚本自身的运行日志 (只记录启动、停止、重启等行为)
-SCRIPT_LOG="${HOME}/startup.log"
+# system
+SYS_BIN_DIR="/usr/local/bin/fast_cpp_server_dir"
+SYS_LIB_DIR="/usr/local/lib/fast_cpp_server"
+SYS_CONFIG_DIR="/etc/fast_cpp_server"
+APP_BIN_SYS="${SYS_BIN_DIR}/fast_cpp_server"
+MQTT_BIN_SYS="${SYS_BIN_DIR}/mosquitto"
+MQTT_CONF_SYS="${SYS_CONFIG_DIR}/mosquitto.conf"
 
-# 动态库路径
-export LD_LIBRARY_PATH=/usr/local/lib/fast_cpp_server:$LD_LIBRARY_PATH
+# user
+USER_PREFIX="${HOME}/.local/${PROGRAM_NAME}"
+USER_BIN_DIR="${USER_PREFIX}/bin"
+USER_LIB_DIR="${USER_PREFIX}/lib"
+USER_CONFIG_DIR="${HOME}/.config/${PROGRAM_NAME}"
+USER_DATA_ROOT="${HOME}/.local/share/${PROGRAM_NAME}"
+USER_LOG_DIR="${USER_DATA_ROOT}/logs"
+USER_RUN_DIR="${USER_DATA_ROOT}/run"
+USER_DATA_DIR="${USER_DATA_ROOT}/data"
+APP_BIN_USER="${USER_BIN_DIR}/fast_cpp_server"
+MQTT_BIN_USER="${USER_BIN_DIR}/mosquitto"
+MQTT_CONF_USER="${USER_CONFIG_DIR}/mosquitto.conf"
 
-# 定义一个不依赖外部定义的 log 函数
-log_to_file() {
-    local DATE=$(date '+%Y-%m-%d %H:%M:%S')
-    # 打印到系统日志（可以通过 journalctl -u 查看）
-    echo "[$DATE] $1"
-    # 同时物理写入文件
-    echo "[$DATE] $1" >> "$SCRIPT_LOG" 2>/dev/null
+# logging
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+LOG_DIR="${SCRIPT_DIR}/logs"
+TS="$(date '+%Y%m%d_%H%M%S')"
+LOG_FILE="${LOG_DIR}/start_${TS}.log"
+
+C_RESET="\033[0m"
+C_GREEN="\033[32m"
+C_YELLOW="\033[33m"
+C_RED="\033[31m"
+C_MAGENTA="\033[35m"
+C_CYAN="\033[36m"
+
+tag() {
+  case "${1:-}" in
+    dev)  echo -e "${C_MAGENTA}[dev]${C_RESET}" ;;
+    pro)  echo -e "${C_GREEN}[pro]${C_RESET}" ;;
+    info) echo -e "${C_CYAN}[info]${C_RESET}" ;;
+    warn) echo -e "${C_YELLOW}[warn]${C_RESET}" ;;
+    err)  echo -e "${C_RED}[err]${C_RESET}" ;;
+    *)    echo -e "[log]" ;;
+  esac
 }
 
-# 测试写入权限
-touch "$SCRIPT_LOG" 2>/dev/null
-if [ $? -ne 0 ]; then
-    # 如果写不进去文件，至少让它在 systemctl status 里报错
-    echo "ERROR: Cannot write to $SCRIPT_LOG. Check permissions." >&2
-fi
-
-log_to_file ">>> Systemd 正在拉起脚本..."
-log_to_file "工作目录: $(pwd)"
-log_to_file "程序路径: $APP_BIN"
-log_to_file "MQTT 支持: $MQTT_ENABLED"
-log_to_file "启动程序日志路径: $SCRIPT_LOG"
-
-cleanup() {
-    log_to_file "收到停止信号，正在终止进程..."
-    if [ -n "$APP_PID" ]; then
-        kill -SIGTERM "$APP_PID" 2>/dev/null
-        wait "$APP_PID" 2>/dev/null
-        log_to_file "主程序已停止。"
-    fi
-    if [ "$MQTT_ENABLED" = true ]; then
-        pkill -x "mosquitto"
-        log_to_file "MQTT Broker 已停止。"
-    fi
-    exit 0
+log_line() {
+  local level="$1"; shift
+  local msg="$*"
+  mkdir -p "${LOG_DIR}" >/dev/null 2>&1 || true
+  echo "[$(date '+%Y-%m-%d %H:%M:%S')] [${level}] ${msg}" >> "${LOG_FILE}" 2>/dev/null || true
+  echo -e "$(tag "${level}") ${msg}"
 }
 
-trap cleanup SIGINT SIGTERM
+run_cmd() {
+  local cmd="$*"
+  if $DEBUG; then
+    log_line dev "${cmd}"
+    return 0
+  else
+    log_line pro "${cmd}"
+    bash -c "${cmd}" >> "${LOG_FILE}" 2>&1 || true
+    return 0
+  fi
+}
 
-# --- 3. 参数解析 ---
-for arg in "$@"
-do
-    case $arg in
-        --no-mqtt)
-        MQTT_ENABLED=false
-        shift
-        ;;
-    esac
+for arg in "$@"; do
+  case "$arg" in
+    --debug) DEBUG=true ;;
+    --no-mqtt) MQTT_ENABLED=false ;;
+    --user) MODE="user" ;;
+    --system) MODE="system" ;;
+  esac
 done
 
-# --- 4. 初始化 ---
-cd "$APP_HOME" || exit 1
-log_to_file ">>> 启动脚本开始执行..."
+log_line info "Start begin: MODE=${MODE}, DEBUG=${DEBUG}, MQTT_ENABLED=${MQTT_ENABLED}"
+log_line info "Log file: ${LOG_FILE}"
 
-# --- 5. 启动 MQTT ---
+if [ "${MODE}" == "user" ]; then
+  APP_BIN="${APP_BIN_USER}"
+  MQTT_BIN="${MQTT_BIN_USER}"
+  MQTT_CONF="${MQTT_CONF_USER}"
+  export LD_LIBRARY_PATH="${USER_LIB_DIR}:${LD_LIBRARY_PATH:-}"
+  export PATH="${USER_BIN_DIR}:${PATH}"
+  mkdir -p "${USER_LOG_DIR}" "${USER_RUN_DIR}" "${USER_DATA_DIR}"
+else
+  APP_BIN="${APP_BIN_SYS}"
+  MQTT_BIN="${MQTT_BIN_SYS}"
+  MQTT_CONF="${MQTT_CONF_SYS}"
+  export LD_LIBRARY_PATH="${SYS_LIB_DIR}:${LD_LIBRARY_PATH:-}"
+fi
+
+log_line info "APP_BIN=${APP_BIN}"
+log_line info "MQTT_BIN=${MQTT_BIN}"
+log_line info "MQTT_CONF=${MQTT_CONF}"
+log_line info "LD_LIBRARY_PATH=${LD_LIBRARY_PATH}"
+
+cleanup() {
+  log_line warn "Received stop signal, cleaning up..."
+  if [ -n "${APP_PID:-}" ]; then
+    run_cmd "kill -SIGTERM ${APP_PID} 2>/dev/null || true"
+    run_cmd "wait ${APP_PID} 2>/dev/null || true"
+  fi
+  if [ "${MQTT_ENABLED}" = true ]; then
+    run_cmd "pkill -x mosquitto 2>/dev/null || true"
+  fi
+  log_line info "Exit."
+  exit 0
+}
+trap cleanup SIGINT SIGTERM
+
 start_mqtt() {
-    if [ "$MQTT_ENABLED" = true ]; then
-        if pgrep -x "mosquitto" > /dev/null; then
-            log_to_file "MQTT Broker 已经在运行中。"
-        else
-            log_to_file "正在启动 MQTT Broker..."
-            $MQTT_BIN -c "$MQTT_CONF" -d
-            sleep 1
-        fi
-    fi
+  if [ "${MQTT_ENABLED}" = true ]; then
+    run_cmd "pgrep -x mosquitto >/dev/null 2>&1 && echo 'mosquitto already running' || true"
+    run_cmd "\"${MQTT_BIN}\" -c \"${MQTT_CONF}\" -d || true"
+    run_cmd "sleep 1"
+  fi
 }
 
-# --- 6. 主循环 (守护进程模式) ---
 start_mqtt
 
 while true; do
-    log_to_file "正在启动主程序: $APP_NAME"
-    
-    # ---------------------------------------------------------
-    # 修改点：不再进行日志重定向，直接后台启动
-    # 程序内部会自动处理日志文件的生成
-    # ---------------------------------------------------------
-    $APP_BIN &
-    
+  log_line info "Launching ${APP_NAME}..."
+  if $DEBUG; then
+    log_line dev "\"${APP_BIN}\" &"
+    log_line dev "APP_PID=<dry-run>"
+    log_line dev "wait <dry-run>"
+    log_line dev "sleep 3"
+    break
+  else
+    "${APP_BIN}" >> "${LOG_FILE}" 2>&1 &
     APP_PID=$!
-    log_to_file "主程序已启动 (PID: $APP_PID)"
-
-    # 阻塞等待进程结束
-    wait "$APP_PID"
+    log_line info "APP started PID=${APP_PID}"
+    wait "${APP_PID}" || true
     EXIT_CODE=$?
-
-    log_to_file "主程序异常退出 (Exit Code: $EXIT_CODE)，3秒后尝试重启..."
-    
-    # 检查 MQTT 状态，防止它也挂了
+    log_line warn "APP exited code=${EXIT_CODE}, restart in 3s..."
     start_mqtt
-    
     sleep 3
+  fi
 done

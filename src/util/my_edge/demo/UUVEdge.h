@@ -25,6 +25,7 @@ namespace my_edge::demo {
 class UUVEdge final : public my_edge::IEdge {
 public:
   UUVEdge();
+  UUVEdge(const nlohmann::json& cfg, std::string* err=nullptr);
   ~UUVEdge() override;
 
   bool Init(const nlohmann::json& cfg, std::string* err) override;
@@ -34,6 +35,9 @@ public:
   my_data::EdgeStatus GetStatusSnapshot() const override;
   void SetEStop(bool active, const std::string& reason) override;
   void Shutdown() override;
+
+  // 解释 Init 入参并输出到日志（实现 IEdge 接口）
+  void ShowAnalyzeInitArgs(const nlohmann::json& cfg) const override;
 
   my_data::EdgeId Id() const override { return edge_id_; }
 

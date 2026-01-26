@@ -1,140 +1,126 @@
 #!/bin/bash
+set -euo pipefail
 
 PROGRAM_NAME="fast_cpp_server"
-SERVICE_FILE_NAME=${PROGRAM_NAME}.service
-TARGET_SERVICE_FILE_PATH=/etc/systemd/system/${SERVICE_FILE_NAME}
+SERVICE_FILE_NAME="${PROGRAM_NAME}.service"
+
+MODE="system"
+DEBUG=false
+SUPER="sudo"
+
+# system paths
 BIN_FOLDER_PATH="/usr/local/bin/${PROGRAM_NAME}_dir"
-BIN_PATH="${BIN_FOLDER_PATH}/${PROGRAM_NAME}"
 CONFIG_PATH="/etc/${PROGRAM_NAME}"
 LIB_PATH="/usr/local/lib/${PROGRAM_NAME}"
 LOG_PATH="/var/${PROGRAM_NAME}"
 TEMP_DIR="/tmp/${PROGRAM_NAME}"
 SHARE_DIR="/usr/share/${PROGRAM_NAME}"
+TARGET_SERVICE_FILE_PATH="/etc/systemd/system/${SERVICE_FILE_NAME}"
 
-SUPER="sudo"
+# user paths
+USER_PREFIX="${HOME}/.local/${PROGRAM_NAME}"
+USER_CONFIG_PATH="${HOME}/.config/${PROGRAM_NAME}"
+USER_DATA_ROOT="${HOME}/.local/share/${PROGRAM_NAME}"
+USER_CACHE_ROOT="${HOME}/.cache/${PROGRAM_NAME}"
 
-# Check if DEBUG mode is enabled
-DEBUG=false
-if [ "$1" == "--debug" ]; then
-    DEBUG=true
-    echo "🔧 DEBUG mode enabled. No changes will be made."
-else
-    echo "🔧 DEBUG mode disabled. Changes will be made."
-fi
+# logging
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+LOG_DIR="${SCRIPT_DIR}/logs"
+TS="$(date '+%Y%m%d_%H%M%S')"
+LOG_FILE="${LOG_DIR}/uninstall_${TS}.log"
 
-# Function to execute commands or print them in DEBUG mode
-execute() {
-    if $DEBUG; then
-        echo "DEBUG: $*"
-    else
-        eval "$@"
-    fi
+C_RESET="\033[0m"
+C_GREEN="\033[32m"
+C_YELLOW="\033[33m"
+C_RED="\033[31m"
+C_MAGENTA="\033[35m"
+C_CYAN="\033[36m"
+
+tag() {
+  case "${1:-}" in
+    dev)  echo -e "${C_MAGENTA}[dev]${C_RESET}" ;;
+    pro)  echo -e "${C_GREEN}[pro]${C_RESET}" ;;
+    info) echo -e "${C_CYAN}[info]${C_RESET}" ;;
+    warn) echo -e "${C_YELLOW}[warn]${C_RESET}" ;;
+    err)  echo -e "${C_RED}[err]${C_RESET}" ;;
+    *)    echo -e "[log]" ;;
+  esac
 }
 
-echo "Uninstalling ${PROGRAM_NAME}..."
+log_line() {
+  local level="$1"; shift
+  local msg="$*"
+  mkdir -p "${LOG_DIR}" >/dev/null 2>&1 || true
+  echo "[$(date '+%Y-%m-%d %H:%M:%S')] [${level}] ${msg}" >> "${LOG_FILE}" 2>/dev/null || true
+  echo -e "$(tag "${level}") ${msg}"
+}
 
-# Stop the service
-echo "🛑 Stopping service ${SERVICE_FILE_NAME}..."
-if [ -f "${TARGET_SERVICE_FILE_PATH}" ]; then
-    
-    execute "${SUPER}" systemctl stop "${SERVICE_FILE_NAME}"
-    execute "${SUPER}" systemctl disable "${SERVICE_FILE_NAME}"
+run_cmd() {
+  local cmd="$*"
+  if $DEBUG; then
+    log_line dev "${cmd}"
+    return 0
+  else
+    log_line pro "${cmd}"
+    set +e
+    bash -c "${cmd}" >> "${LOG_FILE}" 2>&1
+    local rc=$?
+    set -e
+    if [ $rc -ne 0 ]; then
+      log_line err "Command failed (rc=${rc}): ${cmd}"
+      log_line err "See log: ${LOG_FILE}"
+      exit $rc
+    fi
+    return 0
+  fi
+}
+
+need_sudo_or_die() {
+  if $DEBUG; then return 0; fi
+  if ! sudo -n true 2>/dev/null; then
+    log_line err "sudo is not available. Use: ./uninstall.sh --user"
+    exit 1
+  fi
+}
+
+for arg in "$@"; do
+  case "$arg" in
+    --debug) DEBUG=true ;;
+    --user) MODE="user" ;;
+    --system) MODE="system" ;;
+  esac
+done
+
+log_line info "Uninstall begin: MODE=${MODE}, DEBUG=${DEBUG}"
+log_line info "Log file: ${LOG_FILE}"
+
+if [ "${MODE}" == "system" ]; then
+  need_sudo_or_die
+
+  log_line info "Stop and disable service (ignore errors)"
+  run_cmd "${SUPER} systemctl stop ${SERVICE_FILE_NAME} 2>/dev/null || true"
+  run_cmd "${SUPER} systemctl disable ${SERVICE_FILE_NAME} 2>/dev/null || true"
+
+  log_line info "Remove system files"
+  run_cmd "${SUPER} rm -rf ${BIN_FOLDER_PATH} || true"
+  run_cmd "${SUPER} rm -rf ${CONFIG_PATH} || true"
+  run_cmd "${SUPER} rm -rf ${LIB_PATH} || true"
+  run_cmd "${SUPER} rm -rf ${LOG_PATH} || true"
+  run_cmd "${SUPER} rm -rf ${TEMP_DIR} || true"
+  run_cmd "${SUPER} rm -rf ${SHARE_DIR} || true"
+  run_cmd "${SUPER} rm -f ${TARGET_SERVICE_FILE_PATH} || true"
+
+  log_line info "Reload systemd daemon"
+  run_cmd "${SUPER} systemctl daemon-reload || true"
+
+  log_line info "Uninstall done (system)."
 else
-    echo "Executing: "${SUPER}" systemctl stop ${SERVICE_FILE_NAME}"
-    echo "⚠️ Service file ${TARGET_SERVICE_FILE_PATH} does not exist. Skipping stop and disable."
+  log_line info "Remove user files"
+  run_cmd "rm -rf ${USER_PREFIX} || true"
+  run_cmd "rm -rf ${USER_CONFIG_PATH} || true"
+  run_cmd "rm -rf ${USER_DATA_ROOT} || true"
+  run_cmd "rm -rf ${USER_CACHE_ROOT} || true"
+  log_line info "Uninstall done (user)."
 fi
 
-# Delete binary file
-echo "🗑️ Deleting binary file at ${BIN_PATH}..."
-if [ -f "${BIN_PATH}" ]; then
-    execute "${SUPER}" rm -f "${BIN_PATH}"
-    echo "✅ Binary file deleted."
-else
-    echo "⚠️ Binary file ${BIN_PATH} does not exist. Skipping deletion."
-fi
-
-# Delete binary folder
-echo "🗑️ Deleting binary folder at ${BIN_FOLDER_PATH}..."
-if [ -d "${BIN_FOLDER_PATH}" ]; then
-    execute "${SUPER}" rm -rf "${BIN_FOLDER_PATH}"
-    echo "✅ Binary folder deleted."
-else
-    echo "⚠️ Binary folder ${BIN_FOLDER_PATH} does not exist. Skipping deletion."
-fi
-
-# Delete config files and folder
-echo "🗑️ Deleting config files and folder at ${CONFIG_PATH}..."
-if [ -d "${CONFIG_PATH}" ]; then
-    execute "${SUPER}" rm -rf "${CONFIG_PATH}"
-    echo "✅ Config files and folder deleted."
-else
-    echo "⚠️ Config folder ${CONFIG_PATH} does not exist. Skipping deletion."
-fi
-
-# Delete library files and folder
-echo "🗑️ Deleting library files and folder at ${LIB_PATH}..."
-if [ -d "${LIB_PATH}" ]; then
-    execute "${SUPER}" rm -rf "${LIB_PATH}"
-    echo "✅ Library files and folder deleted."
-else
-    echo "⚠️ Library folder ${LIB_PATH} does not exist. Skipping deletion."
-fi
-
-# Delete log files and folder
-echo "🗑️ Deleting log files and folder at ${LOG_PATH}..."
-if [ -d "${LOG_PATH}" ]; then
-    execute "${SUPER}" rm -rf "${LOG_PATH}"
-    echo "✅ Log files and folder deleted."
-else
-    echo "⚠️ Log folder ${LOG_PATH} does not exist. Skipping deletion."
-fi
-
-# delete tmp folder
-echo "🗑️ Deleting temp folder at ${TEMP_DIR}..."
-if [ -d "${TEMP_DIR}" ]; then
-    execute "${SUPER}" rm -rf "${TEMP_DIR}"
-    echo "✅ Temp folder deleted."
-else
-    echo "⚠️ Temp folder ${TEMP_DIR} does not exist. Skipping deletion."
-fi
-
-# delete share folder
-echo "🗑️ Deleting share folder at ${SHARE_DIR}..."
-if [ -d "${SHARE_DIR}" ]; then
-    execute "${SUPER}" rm -rf "${SHARE_DIR}"
-    echo "✅ Share folder deleted."
-else
-    echo "⚠️ Share folder ${SHARE_DIR} does not exist. Skipping deletion."
-fi
-
-# Delete service file
-echo "🗑️ Deleting service file at ${TARGET_SERVICE_FILE_PATH}..."
-if [ -f "${TARGET_SERVICE_FILE_PATH}" ]; then
-    execute "${SUPER}" rm -f "${TARGET_SERVICE_FILE_PATH}"
-    echo "✅ Service file deleted."
-else
-    echo "⚠️ Service file ${TARGET_SERVICE_FILE_PATH} does not exist. Skipping deletion."
-fi
-
-# Reload systemd daemon
-echo "🔄 Reloading systemd daemon..."
-execute "${SUPER}" systemctl daemon-reload
-
-echo "🍺 Uninstallation of ${PROGRAM_NAME} completed!"
-
-
-echo ""
-echo "-----------------------------------------------------------------"
-echo "🔍 Installation details:"
-echo "-----------------------------------------------------------------"
-echo "       bin path: ${BIN_FOLDER_PATH}"
-echo "       lib path: ${LIB_PATH}"
-echo "    config path: ${CONFIG_PATH}"
-echo "       log path: ${LOG_PATH}"
-echo "   service path: ${TARGET_SERVICE_FILE_PATH}"
-echo "      temp path: ${TEMP_DIR}"
-# echo " service status: $(sudo systemctl status ${PROGRAM_NAME}.service | grep Active)"
-# echo "    service log: $(sudo journalctl -u ${PROGRAM_NAME}.service --no-pager | tail -n 10)"
-echo "-----------------------------------------------------------------"
-echo ">>> "${SUPER}" systemctl status ${PROGRAM_NAME}.service"
-execute "${SUPER}" systemctl status "${PROGRAM_NAME}.service"
+log_line info "Uninstall finished successfully."

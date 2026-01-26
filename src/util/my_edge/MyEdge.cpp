@@ -20,4 +20,17 @@ std::unique_ptr<IEdge> MyEdge::Create(const std::string& type) {
   return nullptr;
 }
 
+
+std::unique_ptr<IEdge> MyEdge::Create(const std::string& type, const nlohmann::json& cfg, std::string* err) {
+  MYLOG_INFO("[MyEdge] Create with cfg: type={}", type);
+
+  if (type == "uuv" || type == "UUV") {
+    return std::make_unique<my_edge::demo::UUVEdge>(cfg, err);
+  }
+
+  MYLOG_WARN("[MyEdge] Create with cfg: unknown type={}, return nullptr", type);
+  return nullptr;
+}
+
+
 } // namespace my_edge

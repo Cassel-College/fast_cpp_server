@@ -28,6 +28,9 @@ static std::string CurrentTimestamp() {
 }
 
 void ArchiveOldLogs(const std::string& log_dir, const std::string& archive_dir, std::vector<std::string>& logInfos) {
+    std::cout << "检查并归档旧日志文件..." << std::endl;
+    std::cout << "日志目录: " << log_dir << std::endl;
+    std::cout << "归档目录: " << archive_dir << std::endl;
     try {
         if (!fs::exists(log_dir) || !fs::is_directory(log_dir)) {
             logInfos.push_back("日志文件夹不存在: " + log_dir);
@@ -74,6 +77,9 @@ void ArchiveOldLogs(const std::string& log_dir, const std::string& archive_dir, 
 
 void Init(const std::string& log_file, size_t max_file_size, size_t max_files, bool console_output) {
 
+    std::cout << "初始化日志系统..." << std::endl;
+    std::cout << "日志文件: " << log_file << std::endl;
+    
     std::vector<std::string> logInfos = {};
     std::string archive_dir = "archive";
     // ① 从 log_file 推导日志目录

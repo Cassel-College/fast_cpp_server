@@ -1,163 +1,248 @@
 #!/bin/bash
+set -euo pipefail
 
 PROGRAM_NAME="fast_cpp_server"
 MQTT_PROGRAM_NAME="mosquitto"
+START_SCRIPT_NAME="start.sh"
+
+MODE="system"   # system | user
+DEBUG=false     # --debug => dry-run
+
+# -------- system paths (need root) --------
 INSTALL_PATH="/usr/local"
 BIN_FOLDER_PATH="/usr/local/bin/${PROGRAM_NAME}_dir"
-BIN_PATH="${BIN_FOLDER_PATH}/${PROGRAM_NAME}"
 LIB_PATH="${INSTALL_PATH}/lib/${PROGRAM_NAME}"
 CONFIG_PATH="/etc/${PROGRAM_NAME}"
 LOG_PATH="/var/${PROGRAM_NAME}/logs"
 TEMP_DIR="/tmp/${PROGRAM_NAME}"
 SHARE_DIR="/usr/share/${PROGRAM_NAME}"
 SERVICE_PATH="/etc/systemd/system"
-START_SCRIPT_NAME="start.sh"
+
+# -------- user paths (no root) --------
+USER_PREFIX="${HOME}/.local/${PROGRAM_NAME}"
+USER_BIN_FOLDER_PATH="${USER_PREFIX}/bin"
+USER_LIB_PATH="${USER_PREFIX}/lib"
+USER_CONFIG_PATH="${HOME}/.config/${PROGRAM_NAME}"
+USER_LOG_PATH="${HOME}/.local/share/${PROGRAM_NAME}/logs"
+USER_DATA_PATH="${HOME}/.local/share/${PROGRAM_NAME}/data"
+USER_TEMP_DIR="${HOME}/.cache/${PROGRAM_NAME}"
+USER_SHARE_DIR="${USER_PREFIX}/share"
+
 SUPER="sudo"
 
-# Check if DEBUG mode is enabled
-DEBUG=false
-if [ "$1" == "--debug" ]; then
-    DEBUG=true
-    echo "🔧 DEBUG mode enabled. No changes will be made."
-else
-    echo "🔧 DEBUG mode disabled. Changes will be made."
-fi
+# -------- logging --------
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+LOG_DIR="${SCRIPT_DIR}/logs"
+TS="$(date '+%Y%m%d_%H%M%S')"
+LOG_FILE="${LOG_DIR}/install_${TS}.log"
 
-echo "Installing ${PROGRAM_NAME}..."
+# colors
+C_RESET="\033[0m"
+C_GREEN="\033[32m"
+C_YELLOW="\033[33m"
+C_RED="\033[31m"
+C_MAGENTA="\033[35m"
+C_CYAN="\033[36m"
 
-# Function to execute commands or print them in DEBUG mode
-execute() {
-    if $DEBUG; then
-        echo "DEBUG: $*"
-    else
-        eval "$@"
-    fi
+tag() {
+  case "${1:-}" in
+    dev)  echo -e "${C_MAGENTA}[dev]${C_RESET}" ;;
+    pro)  echo -e "${C_GREEN}[pro]${C_RESET}" ;;
+    info) echo -e "${C_CYAN}[info]${C_RESET}" ;;
+    warn) echo -e "${C_YELLOW}[warn]${C_RESET}" ;;
+    err)  echo -e "${C_RED}[err]${C_RESET}" ;;
+    *)    echo -e "[log]" ;;
+  esac
 }
 
-# 停止并禁用已有服务
-echo "🛑 Stopping and disabling existing ${PROGRAM_NAME} service if any..."
-echo "🔧 ${SUPER} systemctl stop ${PROGRAM_NAME}.service 2>/dev/null"
-execute "${SUPER}" systemctl stop "${PROGRAM_NAME}.service" 2>/dev/null
-echo "🔧 ---------------------------------------------------------------"
+log_line() {
+  local level="$1"; shift
+  local msg="$*"
+  mkdir -p "${LOG_DIR}" >/dev/null 2>&1 || true
+  echo "[$(date '+%Y-%m-%d %H:%M:%S')] [${level}] ${msg}" >> "${LOG_FILE}" 2>/dev/null || true
+  echo -e "$(tag "${level}") ${msg}"
+}
 
-# Check and create log directory
-echo "📁 Checking log directory at ${LOG_PATH}..."
-if [ -d "${LOG_PATH}" ]; then
-    echo "✅ Log directory already exists."
+run_cmd() {
+  local cmd="$*"
+  if $DEBUG; then
+    log_line dev "${cmd}"
+    return 0
+  else
+    log_line pro "${cmd}"
+    set +e
+    bash -c "${cmd}" >> "${LOG_FILE}" 2>&1
+    local rc=$?
+    set -e
+    if [ $rc -ne 0 ]; then
+      log_line err "Command failed (rc=${rc}): ${cmd}"
+      log_line err "See log: ${LOG_FILE}"
+      exit $rc
+    fi
+    return 0
+  fi
+}
+
+need_sudo_or_die() {
+  if $DEBUG; then return 0; fi
+  if ! sudo -n true 2>/dev/null; then
+    log_line err "sudo is not available (possibly no_new_privileges)."
+    log_line err "Use: ./install.sh --user"
+    exit 1
+  fi
+}
+
+# -------- parse args --------
+for arg in "$@"; do
+  case "$arg" in
+    --debug) DEBUG=true ;;
+    --user) MODE="user" ;;
+    --system) MODE="system" ;;
+  esac
+done
+
+log_line info "Install begin: PROGRAM_NAME=${PROGRAM_NAME}, MODE=${MODE}, DEBUG=${DEBUG}"
+log_line info "Release dir: ${SCRIPT_DIR}"
+log_line info "Log file: ${LOG_FILE}"
+
+# -------- main --------
+if [ "${MODE}" == "system" ]; then
+  need_sudo_or_die
+
+  log_line info "Stopping existing service if any..."
+  run_cmd "${SUPER} systemctl stop ${PROGRAM_NAME}.service 2>/dev/null || true"
+  run_cmd "${SUPER} systemctl disable ${PROGRAM_NAME}.service 2>/dev/null || true"
+
+  log_line info "Prepare log dir: ${LOG_PATH}"
+  run_cmd "${SUPER} mkdir -p ${LOG_PATH}"
+  run_cmd "${SUPER} chmod 777 ${LOG_PATH} || true"
+
+  log_line info "Prepare config dir: ${CONFIG_PATH}"
+  run_cmd "${SUPER} mkdir -p ${CONFIG_PATH}"
+
+  log_line info "Install configs: ./config/* -> ${CONFIG_PATH}/"
+  run_cmd "${SUPER} cp -r ./config/* ${CONFIG_PATH}/"
+  run_cmd "${SUPER} chmod 644 ${CONFIG_PATH}/* || true"
+
+  # Ensure /etc/fast_cpp_server/config.ini exists (program reads config.ini)
+  if [ -f "./config/config.system.ini" ]; then
+    log_line info "Ensure system config.ini: ./config/config.system.ini -> ${CONFIG_PATH}/config.ini"
+    run_cmd "${SUPER} cp ./config/config.system.ini ${CONFIG_PATH}/config.ini"
+    run_cmd "${SUPER} chmod 644 ${CONFIG_PATH}/config.ini || true"
+  else
+    log_line warn "Missing ./config/config.system.ini (skip generating ${CONFIG_PATH}/config.ini)"
+  fi
+
+  log_line info "Prepare lib dir: ${LIB_PATH}"
+  run_cmd "${SUPER} mkdir -p ${LIB_PATH}"
+  log_line info "Install libs: ./lib/* -> ${LIB_PATH}/"
+  run_cmd "${SUPER} cp -r ./lib/* ${LIB_PATH}/"
+  run_cmd "${SUPER} chmod 644 ${LIB_PATH}/* || true"
+
+  log_line info "Prepare bin dir: ${BIN_FOLDER_PATH}"
+  run_cmd "${SUPER} mkdir -p ${BIN_FOLDER_PATH}"
+  log_line info "Install bins: ./bin/${PROGRAM_NAME}, ./bin/${MQTT_PROGRAM_NAME}, ./${START_SCRIPT_NAME}"
+  run_cmd "${SUPER} cp ./bin/${PROGRAM_NAME}      ${BIN_FOLDER_PATH}/${PROGRAM_NAME}"
+  run_cmd "${SUPER} cp ./bin/${MQTT_PROGRAM_NAME} ${BIN_FOLDER_PATH}/${MQTT_PROGRAM_NAME}"
+  run_cmd "${SUPER} cp ./${START_SCRIPT_NAME}     ${BIN_FOLDER_PATH}/${START_SCRIPT_NAME}"
+  run_cmd "${SUPER} chmod 755 ${BIN_FOLDER_PATH}/${PROGRAM_NAME}"
+  run_cmd "${SUPER} chmod 755 ${BIN_FOLDER_PATH}/${MQTT_PROGRAM_NAME}"
+  run_cmd "${SUPER} chmod 755 ${BIN_FOLDER_PATH}/${START_SCRIPT_NAME}"
+
+  log_line info "Prepare temp dir: ${TEMP_DIR}"
+  run_cmd "${SUPER} mkdir -p ${TEMP_DIR}"
+
+  log_line info "Prepare share dir: ${SHARE_DIR}"
+  run_cmd "${SUPER} mkdir -p ${SHARE_DIR}"
+  log_line info "Install swagger-res -> ${SHARE_DIR}/"
+  run_cmd "${SUPER} cp -r ./swagger-res ${SHARE_DIR}/"
+
+  log_line info "Install systemd service: ./service/${PROGRAM_NAME}.service -> ${SERVICE_PATH}/"
+  run_cmd "${SUPER} cp ./service/${PROGRAM_NAME}.service ${SERVICE_PATH}/${PROGRAM_NAME}.service"
+  run_cmd "${SUPER} chmod 644 ${SERVICE_PATH}/${PROGRAM_NAME}.service"
+
+  log_line info "Reload systemd daemon"
+  run_cmd "${SUPER} systemctl daemon-reload"
+
+  log_line info "Enable and start service"
+  run_cmd "${SUPER} systemctl enable ${PROGRAM_NAME}.service"
+  run_cmd "${SUPER} systemctl start ${PROGRAM_NAME}.service"
+
+  log_line info "Install done (system)."
+  log_line info "bin: ${BIN_FOLDER_PATH}/${PROGRAM_NAME}"
+  log_line info "mqtt: ${BIN_FOLDER_PATH}/${MQTT_PROGRAM_NAME}"
+  log_line info "cfg: ${CONFIG_PATH}/config.ini"
+  log_line info "lib: ${LIB_PATH}"
+  log_line info "log: ${LOG_PATH}"
+  log_line info "service: ${SERVICE_PATH}/${PROGRAM_NAME}.service"
+  log_line info "Check: ${SUPER} systemctl status ${PROGRAM_NAME}.service"
+
+  if ! $DEBUG; then
+    set +e
+    ${SUPER} systemctl status "${PROGRAM_NAME}.service" >> "${LOG_FILE}" 2>&1
+    set -e
+  fi
+
 else
-    echo "📁 Creating log directory..."
-    execute "${SUPER}" mkdir -p "${LOG_PATH}"
-    execute "${SUPER}" chmod 777 "${LOG_PATH}"
+  log_line info "User install: no sudo, no systemd."
+  log_line info "prefix: ${USER_PREFIX}"
+
+  run_cmd "mkdir -p ${USER_BIN_FOLDER_PATH} ${USER_LIB_PATH} ${USER_SHARE_DIR}"
+  run_cmd "mkdir -p ${USER_CONFIG_PATH} ${USER_LOG_PATH} ${USER_DATA_PATH} ${USER_TEMP_DIR}"
+
+  log_line info "Install bins -> ${USER_BIN_FOLDER_PATH}/"
+  run_cmd "cp ./bin/${PROGRAM_NAME}      ${USER_BIN_FOLDER_PATH}/${PROGRAM_NAME}"
+  run_cmd "cp ./bin/${MQTT_PROGRAM_NAME} ${USER_BIN_FOLDER_PATH}/${MQTT_PROGRAM_NAME}"
+  run_cmd "cp ./${START_SCRIPT_NAME}     ${USER_BIN_FOLDER_PATH}/${START_SCRIPT_NAME}"
+  run_cmd "chmod 755 ${USER_BIN_FOLDER_PATH}/${PROGRAM_NAME}"
+  run_cmd "chmod 755 ${USER_BIN_FOLDER_PATH}/${MQTT_PROGRAM_NAME}"
+  run_cmd "chmod 755 ${USER_BIN_FOLDER_PATH}/${START_SCRIPT_NAME}"
+
+  log_line info "Install libs -> ${USER_LIB_PATH}/"
+  run_cmd "cp -r ./lib/* ${USER_LIB_PATH}/"
+  run_cmd "chmod 644 ${USER_LIB_PATH}/* || true"
+
+  log_line info "Install swagger-res -> ${USER_SHARE_DIR}/"
+  run_cmd "cp -r ./swagger-res ${USER_SHARE_DIR}/"
+
+  # configs: non-overwrite
+  log_line info "Install configs (non-overwrite) -> ${USER_CONFIG_PATH}/"
+  if $DEBUG; then
+    run_cmd "for f in ./config/*; do echo \"would copy \$f -> ${USER_CONFIG_PATH}/\"; done"
+  else
+    for f in ./config/*; do
+      base="$(basename "$f")"
+      if [ ! -f "${USER_CONFIG_PATH}/${base}" ]; then
+        log_line pro "cp ${f} ${USER_CONFIG_PATH}/${base}"
+        cp "$f" "${USER_CONFIG_PATH}/${base}" >> "${LOG_FILE}" 2>&1
+        chmod 644 "${USER_CONFIG_PATH}/${base}" >> "${LOG_FILE}" 2>&1 || true
+      else
+        log_line info "Keep existing config: ${USER_CONFIG_PATH}/${base}"
+      fi
+    done
+  fi
+
+  # Generate runtime config.ini from template (program reads config.ini)
+  TEMPLATE="./config/config.user.template.ini"
+  OUT_CFG="${USER_CONFIG_PATH}/config.ini"
+  log_line info "Generate user runtime config.ini -> ${OUT_CFG}"
+  if [ -f "${TEMPLATE}" ]; then
+    if $DEBUG; then
+      run_cmd "sed \"s|\\\${HOME}|${HOME}|g\" ${TEMPLATE} > ${OUT_CFG}"
+    else
+      sed "s|\${HOME}|${HOME}|g" "${TEMPLATE}" > "${OUT_CFG}"
+      chmod 644 "${OUT_CFG}" || true
+      log_line pro "Generated: ${OUT_CFG}"
+    fi
+  else
+    log_line warn "Missing template: ${TEMPLATE} (skip generating ${OUT_CFG})"
+  fi
+
+  log_line info "Install done (user)."
+  log_line info "Run: ${USER_BIN_FOLDER_PATH}/${START_SCRIPT_NAME} --user"
+  log_line info "Config: ${USER_CONFIG_PATH}/config.ini"
+  log_line info "Logs: ${USER_LOG_PATH}"
+  log_line info "Data: ${USER_DATA_PATH}"
 fi
 
-# Check and create config directory, then copy config file
-echo "📁 Checking config directory at ${CONFIG_PATH}..."
-if [ -d "${CONFIG_PATH}" ]; then
-    echo "✅ Config directory already exists."
-else
-    echo "📁 Creating config directory..."
-    execute "${SUPER}" mkdir -p "${CONFIG_PATH}"
-fi
-
-echo "📄 Copying config file to ${CONFIG_PATH}..."
-execute "${SUPER}" cp -r ./config/* "${CONFIG_PATH}/"
-execute "${SUPER}" chmod 644 "${CONFIG_PATH}/*"
-
-# Check and create library directory, then copy library files or folders
-echo "📁 Checking library directory at ${LIB_PATH}..."
-if [ -d "${LIB_PATH}" ]; then
-    echo "✅ Library directory already exists."
-else
-    echo "📁 Creating library directory..."
-    execute "${SUPER}" mkdir -p "${LIB_PATH}"
-fi
-
-echo "📄 Copying library files or folders to ${LIB_PATH}..."
-execute "${SUPER}" cp -r ./lib/* "${LIB_PATH}/"
-execute "${SUPER}" chmod 644 "${LIB_PATH}/*"
-
-# Copy binary file to /usr/local/bin/fast_cpp_server
-echo "📁 Checking binary directory at ${BIN_FOLDER_PATH}..."
-if [ -d "${BIN_FOLDER_PATH}" ]; then
-    echo "✅ Binary directory already exists."
-else
-    echo "📁 Creating binary directory..."
-    execute "${SUPER}" mkdir -p "${BIN_FOLDER_PATH}"
-fi
-
-echo "📄 Copying binary file to ${BIN_FOLDER_PATH}..."
-if [ -f "${BIN_FOLDER_PATH}/${PROGRAM_NAME}" ]; then
-    echo "⚠️ Binary file: ${BIN_FOLDER_PATH}/${PROGRAM_NAME} already exists. Replacing it..."
-    echo "🔧 ${SUPER} rm -f ${BIN_FOLDER_PATH}/${PROGRAM_NAME}"
-    ${SUPER} rm -f "${BIN_FOLDER_PATH}/${PROGRAM_NAME}"
-fi
-if [ -f "${BIN_FOLDER_PATH}/${MQTT_PROGRAM_NAME}" ]; then
-    echo "⚠️ Binary file: ${BIN_FOLDER_PATH}/${MQTT_PROGRAM_NAME} already exists. Replacing it..."
-    echo "🔧 ${SUPER} rm -f ${BIN_FOLDER_PATH}/${MQTT_PROGRAM_NAME}"
-    ${SUPER} rm -f "${BIN_FOLDER_PATH}/${MQTT_PROGRAM_NAME}"
-fi
-execute "${SUPER}" cp ./bin/${PROGRAM_NAME}         "${BIN_FOLDER_PATH}/${PROGRAM_NAME}"
-execute "${SUPER}" cp ./bin/${MQTT_PROGRAM_NAME}    "${BIN_FOLDER_PATH}/${MQTT_PROGRAM_NAME}"
-execute "${SUPER}" cp ./${START_SCRIPT_NAME}        "${BIN_FOLDER_PATH}/${START_SCRIPT_NAME}"
-execute "${SUPER}" chmod 755 "${BIN_FOLDER_PATH}/${PROGRAM_NAME}"
-execute "${SUPER}" chmod 755 "${BIN_FOLDER_PATH}/${MQTT_PROGRAM_NAME}"
-execute "${SUPER}" chmod 755 "${BIN_FOLDER_PATH}/${START_SCRIPT_NAME}"
-
-# Copy temp folder to /tmp/${PROGRAM_NAME}
-echo "📁 Checking temp directory at ${TEMP_DIR}..."
-if [ -d "${TEMP_DIR}" ]; then
-    echo "✅ Temp directory already exists."
-else
-    echo "📁 Creating temp directory..."
-    execute "${SUPER}" mkdir -p "${TEMP_DIR}"
-fi
-
-#Copy share folder to /usr/share/${PROGRAM_NAME}
-echo "📁 Checking share directory at ${SHARE_DIR}..."
-if [ -d "${SHARE_DIR}" ]; then
-    echo "✅ Share directory already exists."
-else
-    echo "📁 Creating share directory..."
-    execute "${SUPER}" mkdir -p "${SHARE_DIR}"
-fi
-echo "📄 Copying share files to ${SHARE_DIR}..."
-execute "${SUPER}" cp -r ./swagger-res "${SHARE_DIR}/"
-
-# Copy service file to /etc/systemd/system
-echo "📁 Checking service file at ${SERVICE_PATH}..."
-if [ -f "${SERVICE_PATH}/${PROGRAM_NAME}.service" ]; then
-    echo "⚠️ Service file:${SERVICE_PATH}/${PROGRAM_NAME}.service already exists. Replacing it..."
-fi
-execute "${SUPER}" cp ./service/${PROGRAM_NAME}.service "${SERVICE_PATH}/${PROGRAM_NAME}.service"
-execute "${SUPER}" chmod 777 "${SERVICE_PATH}/${PROGRAM_NAME}.service"
-
-# Reload systemd configuration
-echo "🔄 Reloading systemd daemon..."
-execute "${SUPER}" systemctl daemon-reload
-
-# Enable and start the service
-echo "🚀 Enabling and starting ${PROGRAM_NAME} service..."
-execute "${SUPER}" systemctl enable "${PROGRAM_NAME}.service"
-execute "${SUPER}" systemctl start "${PROGRAM_NAME}.service"
-
-echo "🍺 Installation complete!"
-
-echo ""
-echo "-----------------------------------------------------------------"
-echo "🔍 Installation details:"
-echo "-----------------------------------------------------------------"
-echo "       bin path: ${BIN_FOLDER_PATH}/${PROGRAM_NAME}"
-echo "  MQTT bin path: ${BIN_FOLDER_PATH}/${MQTT_PROGRAM_NAME}"
-echo "  start script : ${BIN_FOLDER_PATH}/${START_SCRIPT_NAME}"
-echo "       lib path: ${LIB_PATH}"
-echo "    config path: ${CONFIG_PATH}"
-echo "       log path: ${LOG_PATH}"
-echo "   service path: ${SERVICE_PATH}"
-echo "   service name: ${PROGRAM_NAME}.service"
-echo "      temp path: ${TEMP_DIR}"
-echo "     share path: ${SHARE_DIR}"
-# echo " service status: $(sudo systemctl status ${PROGRAM_NAME}.service | grep Active)"
-# echo "    service log: $(sudo journalctl -u ${PROGRAM_NAME}.service --no-pager | tail -n 10)"
-echo "-----------------------------------------------------------------"
-echo ">>> "${SUPER}" systemctl status ${PROGRAM_NAME}.service"
-execute "${SUPER}" systemctl status "${PROGRAM_NAME}.service"
+log_line info "Install finished successfully."

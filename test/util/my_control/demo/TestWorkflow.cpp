@@ -7,7 +7,7 @@
 #include "MyData.h"
 #include "TaskQueue.h"
 #include "demo/Workflow.h"
-#include "demo/UUVControl.h"
+#include "demo/uuv/UUVControl.h"
 
 using namespace my_control;
 using namespace my_control::demo;

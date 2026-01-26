@@ -17,100 +17,62 @@
         }
     },
     "pipeline": {
-        "execute_node_number": 3,
+        "execute_node_number": 1,
         "executes": {
             "0": {
                 "model_args": {
-                    "interval_sec_": 3,
-                    "simple_json4log": true
-                },
-                "model_name": "heartbeat",
-                "step_time_interval": 2
-            },
-            "1": {
-                "model_args": {
-                    "interval_sec_": 3
-                },
-                "model_name": "comm"
-            },
-            "2": {
-                "model_args": {
-                    "interval_sec_": 3
-                },
-                "model_name": "system_healthy",
-                "step_time_interval": 5
-            },
-            "3": {
-                "model_args": {
-                    "edges": {
-                        "0": {
-                            "ip": "127.0.0.1",
-                            "name": "wind",
-                            "port": 2000,
-                            "actions": {
-                                "getData": {
-                                    "interface": "/getData"
-                                }
-                            }
-                        },
-                        "1":{
-                            
-                            "ip": "127.0.0.1",
-                            "name": "solar",
-                            "port": 3000,
-                            "actions": {
-                                "getData": {
-                                    "interface": "/getData"
+                    "interval_sec_": 10,
+                    "edge_number": 1,
+                    "edge_create_args": [
+                        {
+                            "edge_type": "UUV",
+                            "edge_id": "uuv_001",
+                            "name": "uuv_001",
+                            "version": "0.1.0",
+                            "allow_queue_when_estop": false,
+                            "devices_count": 3,
+                            "devices": [
+                                {
+                                    "device_id": "depth_001",
+                                    "type": "depth_sensor",
+                                    "name": "depth_sensor_001",
+                                    "capability": "water_depth",
+                                    "unit": "m",
+                                    "control": {
+                                        "simulate": true,
+                                        "simulate_latency_ms": 10,
+                                        "sample_interval_ms": 500
+                                    }
                                 },
-                                "download": {
-                                    "interface": "/download"
+                                {
+                                    "device_id": "flow_001",
+                                    "type": "flow_sensor",
+                                    "name": "flow_sensor_001",
+                                    "capability": "water_flow_speed",
+                                    "unit": "m/s",
+                                    "control": {
+                                        "simulate": true,
+                                        "simulate_latency_ms": 10,
+                                        "sample_interval_ms": 500
+                                    }
                                 },
-                                "upload": {
-                                    "interface": "/upload"
+                                {
+                                    "device_id": "split_001",
+                                    "type": "wind_sensor",
+                                    "name": "wind_sensor_001",
+                                    "capability": "wind",
+                                    "unit": "m/s",
+                                    "control": {
+                                        "simulate": true,
+                                        "simulate_latency_ms": 10,
+                                        "sample_interval_ms": 500
+                                    }
                                 }
+                            ]
                             }
-                        },
-                        "2": {
-                            "ip": "127.0.0.1",
-                            "name": "robot_001",
-                            "port": 2000,
-                            "actions": {
-                                "getData": {
-                                    "interface": "/getData"
-                                }
-                            }
-                        },
-                        "3": {
-                            "ip": "127.0.0.1",
-                            "name": "robot_002",
-                            "port": 2000,
-                            "actions": {
-                                "getData": {
-                                    "interface": "/getData"
-                                }
-                            }
-                        },
-                        "4": {
-                            "ip": "127.0.0.1",
-                            "name": "rebot_003",
-                            "port": 2000,
-                            "actions": {
-                                "getData": {
-                                    "interface": "/getData"
-                                }
-                            }
-                        }
-                    },
-                    "edges_number": 5,
-                    "interval_sec_": 3
+                    ]
                 },
-                "model_name": "edge_monitor"
-            },
-            "4": {
-                "model_args": {
-                    "port": 9999
-                },
-                "model_name": "rest_api"
+                "model_name": "edge"
             }
         }
     }

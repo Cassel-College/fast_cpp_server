@@ -106,6 +106,12 @@ public:
   virtual void Shutdown() = 0;
 
   virtual my_data::EdgeId Id() const = 0;
+
+  /**
+   * @brief 解释 Init 的入参并打印到日志（用于调试/前置检查）
+   * @param cfg Init 时接收的 JSON 配置（不会修改）
+   */
+  virtual void ShowAnalyzeInitArgs(const nlohmann::json& cfg) const = 0;
 };
 
 } // namespace my_edge

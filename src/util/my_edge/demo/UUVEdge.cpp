@@ -7,6 +7,7 @@
 #include "JsonUtil.h"
 #include "MyControl.h"
 #include "MyDevice.h"
+#include "MyLog.h"
 #include "demo/StatusRepository.h"
 namespace my_edge::demo {
 
@@ -17,6 +18,14 @@ using namespace my_device;
 
 UUVEdge::UUVEdge() {
   MYLOG_INFO("[Edge:{}] 构造完成 (UUVEdge)", edge_id_);
+}
+
+UUVEdge::UUVEdge(const nlohmann::json& cfg, std::string* err) : UUVEdge() {
+  if (!Init(cfg, err)) {
+    MYLOG_ERROR("[Edge:{}] 构造失败 (UUVEdge)：Init 失败", edge_id_);
+  } else {
+    MYLOG_INFO("[Edge:{}] 构造成功 (UUVEdge)", edge_id_);
+  }
 }
 
 UUVEdge::~UUVEdge() {
@@ -80,16 +89,16 @@ bool UUVEdge::Init(const nlohmann::json& cfg, std::string* err) {
   allow_queue_when_estop_ = cfg.value("allow_queue_when_estop", false);
   boot_at_ms_ = my_data::NowMs();
 
-  // snapshot config from cfg.db
-  status_snapshot_enable_ = false;
-  status_snapshot_interval_ms_ = 5000;
-  if (cfg.contains("db") && cfg["db"].is_object()) {
-    const auto& dbj = cfg["db"];
-    bool db_enable = dbj.value("enable", false);
-    bool snap_enable = dbj.value("status_snapshot_enable", false);
-    status_snapshot_enable_ = db_enable && snap_enable;
-    status_snapshot_interval_ms_ = dbj.value("status_snapshot_interval_ms", status_snapshot_interval_ms_);
-  }
+  // // snapshot config from cfg.db
+  // status_snapshot_enable_ = false;
+  // status_snapshot_interval_ms_ = 5000;
+  // if (cfg.contains("db") && cfg["db"].is_object()) {
+  //   const auto& dbj = cfg["db"];
+  //   bool db_enable = dbj.value("enable", false);
+  //   bool snap_enable = dbj.value("status_snapshot_enable", false);
+  //   status_snapshot_enable_ = db_enable && snap_enable;
+  //   status_snapshot_interval_ms_ = dbj.value("status_snapshot_interval_ms", status_snapshot_interval_ms_);
+  // }
 
   MYLOG_INFO("[Edge:{}] Init 开始：version={}, allow_queue_when_estop={}, snapshot_enable={}, interval_ms={}, cfg={}",
              edge_id_, version_, allow_queue_when_estop_, status_snapshot_enable_, status_snapshot_interval_ms_, cfg.dump());
@@ -100,6 +109,9 @@ bool UUVEdge::Init(const nlohmann::json& cfg, std::string* err) {
   device_type_by_id_.clear();
   normalizers_by_type_.clear();
 
+  MYLOG_INFO("[Edge:{}] 清理旧资源完成", edge_id_);
+  MYLOG_INFO("[Edge:{}] 开始创建设备与队列", edge_id_);
+
   // devices config
   if (!cfg.contains("devices") || !cfg["devices"].is_array()) {
     std::string e = "cfg.devices is required and must be array";
@@ -107,59 +119,66 @@ bool UUVEdge::Init(const nlohmann::json& cfg, std::string* err) {
     MYLOG_ERROR("[Edge:{}] Init 失败：{}", edge_id_, e);
     run_state_ = RunState::Initializing;
     return false;
+  } else {
+    MYLOG_INFO("[Edge:{}] 设备配置数量：{}", edge_id_, cfg["devices"].size());
   }
-
+  int device_index = 0;
   for (const auto& dcfg : cfg["devices"]) {
-    std::string device_id = dcfg.value("device_id", "");
-    std::string type = dcfg.value("type", "");
+    device_index++;
+    MYLOG_INFO("[Edge:{}] 初始化设备 {} / {}: {}", edge_id_, device_index, cfg["devices"].size(), dcfg.dump());
+    try {
+      std::string device_id = dcfg.value("device_id", "");
+      std::string type = dcfg.value("type", "");
 
-    if (device_id.empty() || type.empty()) {
-      std::string e = "device item missing device_id/type";
-      if (err) *err = e;
-      MYLOG_ERROR("[Edge:{}] Init 失败：{} item={}", edge_id_, e, dcfg.dump());
-      run_state_ = RunState::Initializing;
-      return false;
-    }
+      if (device_id.empty() || type.empty()) {
+        std::string e = "device item missing device_id/type";
+        if (err) *err = e;
+        MYLOG_ERROR("[Edge:{}] Init 失败：{} item={}", edge_id_, e, dcfg.dump());
+        run_state_ = RunState::Initializing;
+        return false;
+      } else {
+        MYLOG_INFO("[Edge:{}] 设备配置：device_id={}, type={}", edge_id_, device_id, type);
+      }
 
-    device_type_by_id_[device_id] = type;
+      device_type_by_id_[device_id] = type;
 
-    // ensure normalizer for this type
-    if (!EnsureNormalizerForTypeLocked(type, err)) {
-      run_state_ = RunState::Initializing;
-      return false;
-    }
+      // ensure normalizer for this type
+      if (!EnsureNormalizerForTypeLocked(type, err)) {
+        run_state_ = RunState::Initializing;
+        return false;
+      }
 
-    // create queue
-    std::string qname = "queue-" + device_id;
-    queues_[device_id] = std::make_unique<my_control::TaskQueue>(qname);
-    MYLOG_INFO("[Edge:{}] 创建队列：device_id={}, queue={}", edge_id_, device_id, qname);
+      // create queue
+      std::string qname = "queue-" + device_id;
+      queues_[device_id] = std::make_unique<my_control::TaskQueue>(qname);
+      MYLOG_INFO("[Edge:{}] 创建队列：device_id={}, queue={}", edge_id_, device_id, qname);
 
-    // create device
-    auto dev = my_device::MyDevice::GetInstance().Create(type);
-    if (!dev) {
-      std::string e = "CreateDevice failed for type=" + type;
-      if (err) *err = e;
-      MYLOG_ERROR("[Edge:{}] Init 失败：device_id={}, {}", edge_id_, device_id, e);
-      run_state_ = RunState::Initializing;
-      return false;
-    }
+      // create device
+      auto dev = my_device::MyDevice::GetInstance().Create(type, dcfg, err);
+      if (!dev) {
+        std::string e = "CreateDevice failed for type=" + type;
+        if (err) *err = e;
+        MYLOG_ERROR("[Edge:{}] Init 失败：device_id={}, {}", edge_id_, device_id, e);
+        run_state_ = RunState::Initializing;
+        return false;
+      } else {
+        MYLOG_INFO("[Edge:{}] CreateDevice 成功：device_id={}, type={}", edge_id_, device_id, type);
+      }
 
-    std::string dev_err;
-    if (!dev->Init(dcfg, &dev_err)) {
-      std::string e = "device.Init failed: " + dev_err;
-      if (err) *err = e;
-      MYLOG_ERROR("[Edge:{}] Init 失败：device_id={}, {}", edge_id_, device_id, e);
-      run_state_ = RunState::Initializing;
-      return false;
-    }
-
-    devices_[device_id] = std::move(dev);
-    MYLOG_INFO("[Edge:{}] 创建设备成功：device_id={}, type={}", edge_id_, device_id, type);
-  }
-
-  run_state_ = RunState::Ready;
-  MYLOG_INFO("[Edge:{}] Init 成功：devices={}, queues={}, run_state={}",
+      devices_[device_id] = std::move(dev);
+      MYLOG_INFO("[Edge:{}] 创建设备成功：device_id={}, type={}", edge_id_, device_id, type);
+      run_state_ = RunState::Ready;
+      MYLOG_INFO("[Edge:{}] Init 成功：devices={}, queues={}, run_state={}",
              edge_id_, devices_.size(), queues_.size(), ToString(run_state_.load()));
+    } catch (const std::exception& e) {
+      std::string emsg = "exception caught: ";
+      emsg += e.what();
+      if (err) *err = emsg;
+      MYLOG_ERROR("[Edge:{}] Init 失败：{}", edge_id_, emsg);
+      run_state_ = RunState::Initializing;
+      return false;
+    }
+  }
   return true;
 }
 
@@ -473,6 +492,43 @@ void UUVEdge::Shutdown() {
 
   run_state_ = RunState::Stopped;
   MYLOG_WARN("[Edge:{}] Shutdown 完成：run_state={}", edge_id_, ToString(run_state_.load()));
+}
+
+
+// 新增：解释 Init 入参并记录到日志
+void UUVEdge::ShowAnalyzeInitArgs(const nlohmann::json& cfg) const {
+  std::shared_lock<std::shared_mutex> lk(rw_mutex_);
+  try {
+    MYLOG_INFO("[Edge:{}] ShowAnalyzeInitArgs 开始：cfg={}", edge_id_, cfg.dump(4));
+
+    std::string cfg_edge_id = cfg.value("edge_id", std::string("<none>"));
+    std::string cfg_version = cfg.value("version", std::string("<none>"));
+    bool cfg_allow_queue_when_estop = cfg.value("allow_queue_when_estop", false);
+    int devices_count = 0;
+    if (cfg.contains("devices") && cfg["devices"].is_array()) {
+      devices_count = static_cast<int>(cfg["devices"].size());
+    }
+
+    MYLOG_INFO("[Edge:{}] Parsed Init Args: edge_id={}, version={}, allow_queue_when_estop={}, devices_count={}",
+               edge_id_, cfg_edge_id, cfg_version, cfg_allow_queue_when_estop, devices_count);
+
+    if (devices_count > 0) {
+      for (size_t i = 0; i < cfg["devices"].size(); ++i) {
+        const auto& d = cfg["devices"][i];
+        std::string did = d.value("device_id", std::string("<none>"));
+        std::string dtype = d.value("type", std::string("<none>"));
+        std::string dname = d.value("name", std::string("<none>"));
+        MYLOG_INFO("[Edge:{}] Device[{}] device_id={}, type={}, name={}", edge_id_, i, did, dtype, dname);
+      }
+    } else {
+      MYLOG_WARN("[Edge:{}] ShowAnalInitArgs: no devices found in cfg", edge_id_);
+    }
+
+  } catch (const std::exception& e) {
+    MYLOG_ERROR("[Edge:{}] ShowAnalInitArgs 捕获异常: {}", edge_id_, e.what());
+  } catch (...) {
+    MYLOG_ERROR("[Edge:{}] ShowAnalInitArgs 捕获未知异常", edge_id_);
+  }
 }
 
 } // namespace my_edge::demo

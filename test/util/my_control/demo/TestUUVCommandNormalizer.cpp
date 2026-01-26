@@ -3,7 +3,7 @@
 
 #include "MyData.h"
 #include "MyLog.h"
-#include "demo/UUVCommandNormalizer.h"
+#include "demo/uuv/UUVCommandNormalizer.h"
 
 using namespace my_control::demo;
 

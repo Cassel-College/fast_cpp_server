@@ -25,6 +25,13 @@ public:
    */
   std::unique_ptr<IDevice> Create(const std::string& type);
 
+  /**
+   * @brief 创建具体设备实例
+   * @param type 设备类型（如 "uuv"）
+   * @param cfg 初始化配置
+   */
+  std::unique_ptr<IDevice> Create(const std::string& type, const nlohmann::json& cfg, std::string* err=nullptr);
+  
 private:
   MyDevice() = default;
 };

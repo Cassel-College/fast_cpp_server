@@ -21,6 +21,13 @@ public:
    */
   std::unique_ptr<IEdge> Create(const std::string& type);
 
+  /**
+   * @brief 按类型创建设备边缘运行时（demo）
+   * @param type 例如 "uuv"
+   * @param cfg 初始化配置
+   */
+  std::unique_ptr<IEdge> Create(const std::string& type, const nlohmann::json& cfg, std::string* err=nullptr);
+
 private:
   MyEdge() = default;
 };
