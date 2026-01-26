@@ -3,7 +3,7 @@
 #include "demo/uuv/UUVDevice.h"
 #include "demo/depth_sensor/DepthSensorDevice.h"
 #include "demo/flow_sensor/FlowSensorDevice.h"
-#include "demo/wind_sensor/WindDevice.h"
+#include "demo/wind_sensor/WindSensorDevice.h"
 
 namespace my_device {
 
@@ -25,7 +25,7 @@ std::unique_ptr<IDevice> MyDevice::Create(const std::string& type) {
     return std::make_unique<my_device::demo::FlowSensorDevice>();
   }
   if (type == "split_speed_sensor") {
-    return std::make_unique<my_device::demo::WindDevice>();
+    return std::make_unique<my_device::demo::WindSensorDevice>();
   }
 
   MYLOG_WARN("[MyDevice] Create: unknown type={}, return nullptr", type);
@@ -46,7 +46,7 @@ std::unique_ptr<IDevice> MyDevice::Create(const std::string& type, const nlohman
     return std::make_unique<my_device::demo::FlowSensorDevice>(cfg, err);
   }
   if (type == "split_speed_sensor") {
-    return std::make_unique<my_device::demo::WindDevice>(cfg, err);
+    return std::make_unique<my_device::demo::WindSensorDevice>(cfg, err);
   }
 
   MYLOG_WARN("[MyDevice] Create with cfg: unknown type={}, return nullptr", type);

@@ -316,10 +316,11 @@ void Pipeline::LaunchEdge(const nlohmann::json& args) {
             }
             MYLOG_INFO("Edge 设备 ID: {} 类型: {}", i, edge_type);
             MYLOG_INFO("Edge 设备 ID: {} 参数: {}", i, single_edge_args.dump(4));
-            // 创建 Edge 设备实例
+            MYLOG_INFO("-------------------------------------------");
+
+            // 创建 Edge 设备实例 + 初始化 Edge 设备
             std::unique_ptr<my_edge::IEdge> edge_device = my_edge::MyEdge::GetInstance().Create(edge_type, single_edge_args, &error_msg);
             edge_device->ShowAnalyzeInitArgs(single_edge_args);
-            // 初始化 Edge 设备
             if (!edge_device) {
                 MYLOG_ERROR("Edge 设备 ID: {} 创建失败，类型未知: {}", i, edge_type);
                 continue;
