@@ -24,7 +24,7 @@ std::unique_ptr<IDevice> MyDevice::Create(const std::string& type) {
   if (type == "flow_sensor") {
     return std::make_unique<my_device::demo::FlowSensorDevice>();
   }
-  if (type == "split_speed_sensor") {
+  if (type == "wind_sensor") {
     return std::make_unique<my_device::demo::WindSensorDevice>();
   }
 
@@ -45,7 +45,7 @@ std::unique_ptr<IDevice> MyDevice::Create(const std::string& type, const nlohman
   if (type == "flow_sensor") {
     return std::make_unique<my_device::demo::FlowSensorDevice>(cfg, err);
   }
-  if (type == "split_speed_sensor") {
+  if (type == "wind_sensor") {
     return std::make_unique<my_device::demo::WindSensorDevice>(cfg, err);
   }
 

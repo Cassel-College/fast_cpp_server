@@ -105,13 +105,28 @@ public:
    */
   virtual void Shutdown() = 0;
 
+  /**
+   * @brief 获取 Edge ID
+   * 
+   * @return my_data::EdgeId 
+   */
   virtual my_data::EdgeId Id() const = 0;
+
+  /**
+   * @brief 获取 Edge 类型
+   * 
+   * @return std::string 
+   */
+  virtual std::string EdgeType() const = 0;
 
   /**
    * @brief 解释 Init 的入参并打印到日志（用于调试/前置检查）
    * @param cfg Init 时接收的 JSON 配置（不会修改）
    */
   virtual void ShowAnalyzeInitArgs(const nlohmann::json& cfg) const = 0;
+
+  // 获取类内元素,有几个队列，几个映射关系等，以及设备信息等（仅供调试/日志使用）
+  virtual nlohmann::json DumpInternalInfo() const = 0;
 };
 
 } // namespace my_edge

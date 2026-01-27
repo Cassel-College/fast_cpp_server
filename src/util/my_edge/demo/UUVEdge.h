@@ -35,11 +35,13 @@ public:
   my_data::EdgeStatus GetStatusSnapshot() const override;
   void SetEStop(bool active, const std::string& reason) override;
   void Shutdown() override;
-
+  nlohmann::json DumpInternalInfo() const override;
   // 解释 Init 入参并输出到日志（实现 IEdge 接口）
   void ShowAnalyzeInitArgs(const nlohmann::json& cfg) const override;
 
   my_data::EdgeId Id() const override { return edge_id_; }
+
+  std::string EdgeType() const override { return edge_type_; }
 
 private:
   enum class RunState { Initializing, Ready, Running, Stopping, Stopped };
@@ -73,6 +75,7 @@ private:
   my_data::EdgeId edge_id_{"edge-unknown"};
   std::string version_{"0.1.0"};
   my_data::TimestampMs boot_at_ms_{0};
+  std::string edge_type_{"uuv"};
 
   // 运行态
   std::atomic<RunState> run_state_{RunState::Initializing};

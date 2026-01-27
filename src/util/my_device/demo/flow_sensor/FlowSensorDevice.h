@@ -25,6 +25,7 @@ public:
   bool Init(const nlohmann::json& cfg, std::string* err) override;
   bool Start(my_control::TaskQueue& queue, std::atomic<bool>* estop_flag, std::string* err) override;
 
+  void ShowAnalyzeInitArgs(const nlohmann::json& cfg) override;
   void Stop() override;
   void Join() override;
 

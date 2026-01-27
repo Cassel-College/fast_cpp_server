@@ -21,8 +21,8 @@ private:
     std::atomic<bool> running_{false};
     std::thread worker_;
 
-    nlohmann::json config_;         // 心跳配置
-    int interval_sec_{5};           // 心跳间隔，默认5秒
-    bool simple_json4log{false};     // 默认启用简化日志格式
-    time_t start_time_{0};          // 启动时间
+    nlohmann::json config_;             // 心跳配置
+    int interval_sec_{5};               // 心跳间隔，默认5秒
+    bool simple_json4log{false};        // 默认启用简化日志格式
+    time_t start_time_{0};              // 启动时间
 };

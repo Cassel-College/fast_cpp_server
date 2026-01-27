@@ -1,4 +1,5 @@
 #include "DepthSensorDevice.h"
+#include "MyLog.h"
 
 #include <utility>
 
@@ -30,15 +31,34 @@ DepthSensorDevice::DepthSensorDevice(const nlohmann::json& cfg, std::string* err
     MYLOG_ERROR("[Device:{}] 通过配置构造异常：{}", device_id_, e.what());
   }
 }
+
 DepthSensorDevice::~DepthSensorDevice() {
   Stop();
   Join();
   MYLOG_INFO("[Device:{}] 析构完成 (DepthSensorDevice)", device_id_);
 }
 
-bool DepthSensorDevice::Init(const nlohmann::json& cfg, std::string* err) {
-  MYLOG_INFO("[Device:{}] Init 开始，cfg={}", device_id_, cfg.dump());
+void DepthSensorDevice::ShowAnalyzeInitArgs(const nlohmann::json& cfg) {
+  MYLOG_INFO("-------------------- Device {} ----构造参数 ----------------------------------", device_id_);
+  MYLOG_INFO("{}", cfg.dump(4));
+  try {
+    std::string cfg_device_id = cfg.value("device_id", std::string("<none>"));
+    std::string cfg_device_name = cfg.value("device_name", std::string("<none>"));
+    nlohmann::json control_cfg = cfg.value("control", nlohmann::json::object());
 
+    MYLOG_INFO("[Device:{}] Parsed Init Args: device_id={}, device_name={}",
+               device_id_, cfg_device_id, cfg_device_name);
+
+  } catch (const std::exception& e) {
+    MYLOG_ERROR("[Device:{}] ShowAnalyzeInitArgs 捕获异常: {}", device_id_, e.what());
+  } catch (...) {
+    MYLOG_ERROR("[Device:{}] ShowAnalyzeInitArgs 捕获未知异常", device_id_);
+  }
+}
+
+bool DepthSensorDevice::Init(const nlohmann::json& cfg, std::string* err) {
+  MYLOG_INFO("[Device:{}] Init 开始 ...", device_id_);
+  this->ShowAnalyzeInitArgs(cfg);
   try {
     device_id_ = cfg.value("device_id", device_id_);
     device_name_ = cfg.value("device_name", device_name_);

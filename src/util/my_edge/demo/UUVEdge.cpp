@@ -21,6 +21,7 @@ UUVEdge::UUVEdge() {
 }
 
 UUVEdge::UUVEdge(const nlohmann::json& cfg, std::string* err) : UUVEdge() {
+  this->ShowAnalyzeInitArgs(cfg);
   if (!Init(cfg, err)) {
     MYLOG_ERROR("[Edge:{}] 构造失败 (UUVEdge)：Init 失败", edge_id_);
   } else {
@@ -75,7 +76,7 @@ bool UUVEdge::EnsureNormalizerForTypeLocked(const std::string& type, std::string
   }
 
   normalizers_by_type_[type] = std::move(n);
-  MYLOG_INFO("[Edge:{}] normalizer 创建成功: type={}", edge_id_, type);
+  MYLOG_INFO("[Edge:{}] normalizer 创建成功: type={} ------------------------------- 完成", edge_id_, type);
   return true;
 }
 
@@ -84,9 +85,9 @@ bool UUVEdge::Init(const nlohmann::json& cfg, std::string* err) {
 
   cfg_ = cfg;
   bool initStatus = true;
-
   edge_id_ = cfg.value("edge_id", edge_id_);
   version_ = cfg.value("version", version_);
+  edge_type_ = cfg.value("edge_type", edge_type_);
   allow_queue_when_estop_ = cfg.value("allow_queue_when_estop", false);
   boot_at_ms_ = my_data::NowMs();
 
@@ -101,8 +102,8 @@ bool UUVEdge::Init(const nlohmann::json& cfg, std::string* err) {
   //   status_snapshot_interval_ms_ = dbj.value("status_snapshot_interval_ms", status_snapshot_interval_ms_);
   // }
 
-  MYLOG_INFO("[Edge:{}] Init 开始：version={}, allow_queue_when_estop={}, snapshot_enable={}, interval_ms={}, cfg={}",
-             edge_id_, version_, allow_queue_when_estop_, status_snapshot_enable_, status_snapshot_interval_ms_, cfg.dump());
+  // MYLOG_INFO("[Edge:{}] Init 开始：version={}, allow_queue_when_estop={}, snapshot_enable={}, interval_ms={}, cfg={}",
+  //            edge_id_, version_, allow_queue_when_estop_, status_snapshot_enable_, status_snapshot_interval_ms_, cfg.dump());
 
   // clear previous resources (if re-init)
   devices_.clear();
@@ -128,7 +129,9 @@ bool UUVEdge::Init(const nlohmann::json& cfg, std::string* err) {
   for (const auto& dcfg : cfg["devices"]) {
     MYLOG_INFO("----------------------------------------------------------------------------------------------");
     device_index++;
-    MYLOG_INFO("[Edge:{}] 初始化设备 {} / {}: {}", edge_id_, device_index, cfg["devices"].size(), dcfg.dump());
+    MYLOG_INFO("[Edge:{}] 初始化设备 {} / {}: {}", edge_id_, device_index, cfg["devices"].size());
+    // dcfg.dump(4));
+    // MYLOG_INFO("参数");
     try {
       std::string device_id = dcfg.value("device_id", "");
       std::string type = dcfg.value("type", "");
@@ -156,7 +159,7 @@ bool UUVEdge::Init(const nlohmann::json& cfg, std::string* err) {
       // create queue
       std::string qname = "queue-" + device_id;
       queues_[device_id] = std::make_unique<my_control::TaskQueue>(qname);
-      MYLOG_INFO("[Edge:{}] 创建队列：device_id={}, queue={}", edge_id_, device_id, qname);
+      MYLOG_INFO("[Edge:{}] 创建队列：device_id={}, queue={} ------------------------------- 完成", edge_id_, device_id, qname);
 
       // create device
       auto dev = my_device::MyDevice::GetInstance().Create(type, dcfg, err);
@@ -168,7 +171,7 @@ bool UUVEdge::Init(const nlohmann::json& cfg, std::string* err) {
         initStatus = false;
         continue;
       } else {
-        MYLOG_INFO("[Edge:{}] Create Device 成功：device_id={}, type={}", edge_id_, device_id, type);
+        MYLOG_INFO("[Edge:{}] Create Device 成功：device_id={}, type={} ------------------------------- 完成", edge_id_, device_id, type);
       }
 
       devices_[device_id] = std::move(dev);
@@ -508,7 +511,7 @@ void UUVEdge::ShowAnalyzeInitArgs(const nlohmann::json& cfg) const {
   std::shared_lock<std::shared_mutex> lk(rw_mutex_);
   try {
     MYLOG_INFO("[Edge:{}] ShowAnalyzeInitArgs 开始：cfg={}", edge_id_, cfg.dump(4));
-
+    
     std::string cfg_edge_id = cfg.value("edge_id", std::string("<none>"));
     std::string cfg_version = cfg.value("version", std::string("<none>"));
     bool cfg_allow_queue_when_estop = cfg.value("allow_queue_when_estop", false);
@@ -537,6 +540,71 @@ void UUVEdge::ShowAnalyzeInitArgs(const nlohmann::json& cfg) const {
   } catch (...) {
     MYLOG_ERROR("[Edge:{}] ShowAnalInitArgs 捕获未知异常", edge_id_);
   }
+}
+
+
+nlohmann::json UUVEdge::DumpInternalInfo() const {
+  std::shared_lock<std::shared_mutex> lk(rw_mutex_);
+  nlohmann::json edgeInfo = nlohmann::json::object();
+  // 获取类内元素,有几个队列，几个映射关系等，以及设备信息等（仅供调试/日志使用）
+
+  // 获取基本信息
+  edgeInfo["edge_id"] = edge_id_;
+  edgeInfo["edge_type"] = edge_type_;
+  edgeInfo["version"] = version_;
+  edgeInfo["run_state"] = ToString(run_state_.load());
+  edgeInfo["estop_active"] = estop_.load();
+
+  // 获取任务队列信息
+  nlohmann::json queuesJson = nlohmann::json::object();
+  for (const auto& [device_id, queue] : queues_) {
+    if (!queue) continue;
+    nlohmann::json queueInfo;
+    queueInfo["name"] = queue->Name();
+    queueInfo["size"] = queue->Size();
+    queuesJson[device_id] = queueInfo;
+  }
+  edgeInfo["task-queues"] = queuesJson;
+
+  // 获取设备信息
+  nlohmann::json devicesJson = nlohmann::json::object();
+  for (const auto& [device_id, dev] : devices_) {
+    if (!dev) continue;
+    nlohmann::json devInfo;
+    // dev->DumpInternalInfo(devInfo);
+    devicesJson[device_id] = devInfo;
+  }
+  edgeInfo["devices"] = devicesJson;
+
+  // 获取 Normalizer 信息
+  nlohmann::json normalizersJson = nlohmann::json::object();
+  for (const auto& [type, norm] : normalizers_by_type_) {
+    if (!norm) continue;
+    nlohmann::json normInfo;
+    // norm->DumpInternalInfo(normInfo);
+    normalizersJson[type] = normInfo;
+  }
+  edgeInfo["normalizers"] = normalizersJson;
+  
+  // nlohmann::json devicesJson = nlohmann::json::object();
+  // for (const auto& [device_id, dev] : devices_) {
+  //   if (!dev) continue;
+  //   nlohmann::json devInfo;
+  //   dev->DumpInternalInfo(devInfo);
+  //   devicesJson[device_id] = devInfo;
+  // }
+  // edgeInfo["devices"] = devicesJson;
+
+  // nlohmann::json normalizersJson = nlohmann::json::object();
+  // for (const auto& [type, norm] : normalizers_by_type_) {
+  //   if (!norm) continue;
+  //   nlohmann::json normInfo;
+  //   norm->DumpInternalInfo(normInfo);
+  //   normalizersJson[type] = normInfo;
+  // }
+  // edgeInfo["normalizers"] = normalizersJson;
+
+  return edgeInfo;
 }
 
 } // namespace my_edge::demo

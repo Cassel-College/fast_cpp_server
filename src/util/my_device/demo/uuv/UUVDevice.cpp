@@ -37,6 +37,23 @@ UUVDevice::~UUVDevice() {
   MYLOG_INFO("[Device:{}] 析构完成 (UUVDevice)", device_id_);
 }
 
+void UUVDevice::ShowAnalyzeInitArgs(const nlohmann::json& cfg) {
+  MYLOG_INFO("-------------------- Device {} ----构造参数 ----------------------------------", device_id_);
+  MYLOG_INFO("{}", cfg.dump(4));
+  try {
+    std::string cfg_device_id = cfg.value("device_id", std::string("<none>"));
+    std::string cfg_device_name = cfg.value("device_name", std::string("<none>"));
+
+    MYLOG_INFO("[Device:{}] Parsed Init Args: device_id={}, device_name={}",
+               device_id_, cfg_device_id, cfg_device_name);
+
+  } catch (const std::exception& e) {
+    MYLOG_ERROR("[Device:{}] ShowAnalyzeInitArgs 捕获异常: {}", device_id_, e.what());
+  } catch (...) {
+    MYLOG_ERROR("[Device:{}] ShowAnalyzeInitArgs 捕获未知异常", device_id_);
+  }
+}
+
 bool UUVDevice::Init(const nlohmann::json& cfg, std::string* err) {
   MYLOG_INFO("[Device:{}] Init 开始，cfg={}", device_id_, cfg.dump());
 

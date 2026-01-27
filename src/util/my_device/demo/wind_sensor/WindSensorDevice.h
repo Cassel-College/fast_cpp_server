@@ -24,14 +24,14 @@ public:
 
   bool Init(const nlohmann::json& cfg, std::string* err) override;
   bool Start(my_control::TaskQueue& queue, std::atomic<bool>* estop_flag, std::string* err) override;
-
+  void ShowAnalyzeInitArgs(const nlohmann::json& cfg) override;
   void Stop() override;
   void Join() override;
 
   my_data::DeviceStatus GetStatusSnapshot() const override;
 
   my_data::DeviceId Id() const override { return device_id_; }
-  std::string Type() const override { return "split_speed_sensor"; }
+  std::string Type() const override { return "wind_sensor"; }
 
 private:
   void UpdateOnTaskStart(const my_data::Task& task);
