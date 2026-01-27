@@ -1,5 +1,6 @@
 #include "HeartBeatController.h"
 #include "dto/HeartbeatDto.hpp"
+#include "MyHeartbeatManager.h"
 #include "MyLog.h"
 
 namespace my_api::heartbeat {
@@ -33,6 +34,8 @@ HeartBeatController::postHeartbeat(
         return badRequest("heartbeat body is empty");
     }
 
+    auto result =
+        oatpp::Vector<oatpp::Object<my_api::dto::HeartbeatDto>>::createShared();
     MYLOG_INFO(
         "[API] Heartbeat POST from={}, timestamp={}, status={}",
         heartbeat->from ? heartbeat->from->c_str() : "null",
@@ -44,8 +47,12 @@ HeartBeatController::postHeartbeat(
     // - 更新设备在线状态
     // - 写数据库
     // - 更新心跳时间戳
+    heartbeat->heartbeat = HeartbeatManager::Instance().GetHeartbeatSnapshot().dump();
+    result->push_back(heartbeat);
 
-    return ok("heartbeat received");
+    // return ok("heartbeat received");
+    // return createDtoResponse(Status::CODE_200, heartbeat);
+    return createDtoResponse(Status::CODE_200, result);
 }
 
 } // namespace my_api::heartbeat

@@ -24,6 +24,8 @@ public:
     // 心跳上报
     ENDPOINT("POST", "/v1/heartbeat", postHeartbeat,
              BODY_DTO(oatpp::Object<my_api::dto::HeartbeatDto>, heartbeat));
+
+             
 };
 
 #include OATPP_CODEGEN_END(ApiController)

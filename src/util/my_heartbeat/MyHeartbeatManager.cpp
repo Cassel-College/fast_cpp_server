@@ -2,10 +2,13 @@
 #include <unistd.h>
 #include <iostream>
 #include <ctime>
+#include <mutex>
+
 #include "MyEdges.h"
 #include "MyLog.h"
 #include "MyEdgeManager.h"
 #include "IEdge.h"
+
 
 using namespace edge_manager;
 
@@ -47,8 +50,8 @@ void HeartbeatManager::Stop() {
 void HeartbeatManager::WorkerLoop() {
     while (running_) {
         try {
-            auto hb = BuildHeartbeat();
-            SendHeartbeat(hb);
+            BuildHeartbeat();
+            SendHeartbeat(heartbeat_data_);
         } catch (const std::exception& e) {
             MYLOG_ERROR("Heartbeat error: {}", e.what());
         }
@@ -56,26 +59,31 @@ void HeartbeatManager::WorkerLoop() {
     }
 }
 
-nlohmann::json HeartbeatManager::BuildHeartbeat() const {
+void HeartbeatManager::BuildHeartbeat() {
+    // 加锁
+    // std::lock_guard<std::mutex> lock(mutex_);
     nlohmann::json base = config_.value("base", nlohmann::json::object());
 
     base["pid"] = getpid();
     base["timestamp"] = time(nullptr);
     base["uptime_sec"] = time(nullptr) - start_time_;
+    
+    heartbeat_data_ = nlohmann::json::object();
 
-    nlohmann::json heartbeat;
-    heartbeat["base"] = base;
-    heartbeat["extra"] = config_.value("extra", nlohmann::json::object());
+    heartbeat_data_["base"] = base;
+    heartbeat_data_["extra"] = config_.value("extra", nlohmann::json::object());
 
     nlohmann::json edgeData = edge_manager::MyEdgeManager::GetInstance().ShowEdgesStatus();
-    heartbeat["edge_devices"] = edgeData;
-
+    heartbeat_data_["edge_devices"] = edgeData;
     // 添加边缘设备信息
     if (true) {
-        heartbeat["edge_summary"] = my_edge::MyEdges::GetInstance().GetHeartbeatInfo();
+        heartbeat_data_["edge_summary"] = my_edge::MyEdges::GetInstance().GetHeartbeatInfo();
     }
+}
 
-    return {{"heartbeat", heartbeat}};
+nlohmann::json HeartbeatManager::GetHeartbeatSnapshot() {
+    std::lock_guard<std::mutex> lock(mutex_);
+    return heartbeat_data_;
 }
 
 void HeartbeatManager::SendHeartbeat(const nlohmann::json& data) {

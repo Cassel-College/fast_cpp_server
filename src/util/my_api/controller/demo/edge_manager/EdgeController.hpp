@@ -16,11 +16,11 @@ public:
 
     static std::shared_ptr<EdgeController> createShared(const std::shared_ptr<ObjectMapper>& objectMapper);
 
-    ENDPOINT("GET", "/v1/edges/status", getEdgesStatus);
+    ENDPOINT("GET", "/v1/MyEdgeManager/status", getEdgesStatus);
 
-    ENDPOINT("POST", "/v1/edges/{name}/start", startDevice, PATH(String, name));
+    ENDPOINT("POST", "/v1/MyEdgeManager/{name}/start", startDevice, PATH(String, name));
 
-    ENDPOINT("POST", "/v1/edges/{name}/stop", stopDevice, PATH(String, name));
+    ENDPOINT("POST", "/v1/MyEdgeManager/{name}/stop", stopDevice, PATH(String, name));
 };
 
 #include OATPP_CODEGEN_END(ApiController)
