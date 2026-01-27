@@ -8,7 +8,6 @@
 #include "MyLog.h"
 #include <csignal>
 
-
 namespace my_api {
 
 class MyAPI {

@@ -2,7 +2,7 @@
 
 #include "controller/demo/edge_manager/EdgeController.hpp"
 #include "controller/heartbeat_manager/HeartBeatController.h"
-
+#include "controller/demo/edges/EdgesController.hpp"
 
 
 // #include "oatpp/json/ObjectMapper.hpp" 
@@ -101,6 +101,11 @@ void MyAPI::ServerThread(int port) {
         router->addController(heartbeatController);
         docEndpoints.append(heartbeatController->getEndpoints());
 
+        auto edgesController = my_api::edge::EdgesController::createShared(
+            std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper)
+        );
+        router->addController(edgesController);
+        docEndpoints.append(edgesController->getEndpoints());
 
         auto swaggerController = oatpp::swagger::Controller::createShared(docEndpoints, docInfo, swaggerResources);
         router->addController(swaggerController);

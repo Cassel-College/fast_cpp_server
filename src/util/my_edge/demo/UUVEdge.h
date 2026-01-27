@@ -94,6 +94,7 @@ private:
 
   // device_id -> queue/device（实例归 Edge 持有）
   std::unordered_map<my_data::DeviceId, std::unique_ptr<my_control::TaskQueue>> queues_;
+  std::unordered_map<my_data::DeviceId, std::unique_ptr<my_control::TaskQueue>> history_queues_;
   std::unordered_map<my_data::DeviceId, std::unique_ptr<my_device::IDevice>> devices_;
 
   // 保存 cfg（调试）

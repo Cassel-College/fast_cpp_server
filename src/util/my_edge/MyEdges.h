@@ -93,6 +93,86 @@ public:
      */
     nlohmann::json GetHeartbeatInfo() const;
 
+    // /**
+    //  * @brief 检查是否存在指定 ID 的 Edge。
+    //  * @param edge_id Edge 的 ID。
+    //  * @return 如果存在则返回 true，否则返回 false。
+    //  */
+    // bool HasEdge(const std::string& edge_id) const;
+
+    // /**
+    //  * @brief 检查集合是否为空。
+    //  * @return 如果为空则返回 true，否则返回 false。
+    //  */
+    // bool IsEmpty() const;
+
+    // /** 
+    //  * @brief 根据 ID 选择 Edge 并执行操作。
+    //  * @param edge_id Edge 的 ID。
+    //  * @param action 要执行的操作，使用 nlohmann::json 表示。
+    //  * @return 如果操作成功执行则返回 true，否则返回 false。
+    //  */
+    // bool SelectEdgeByIdDoAction(const std::string& edge_id, const nlohmann::json& action) const;
+
+    // /**
+    //  * @brief 向指定 ID 的 Edge 添加任务。
+    //  * @param edge_id Edge 的 ID。
+    //  * @param task 要添加的任务，使用 nlohmann::json 表示。
+    //  * @return 如果任务成功添加则返回 true，否则返回 false。
+    //  */
+    // bool appendTaskToEdgeById(const std::string& edge_id, const nlohmann::json& task) const;
+
+    // /**
+    //  * @brief 设置指定 ID 的 Edge 的紧急停止状态。
+    //  * @param edge_id Edge 的 ID。
+    //  * @param estop 紧急停止状态。
+    //  * @return 如果成功设置则返回 true，否则返回 false。
+    //  */
+    // bool setESTOP(const std::string& edge_id, bool estop) const;
+
+    // /**
+    //  * @brief 设置所有 Edge 的紧急停止状态。
+    //  * @param estop 紧急停止状态。
+    //  * @return 如果成功设置则返回 true，否则返回 false。
+    //  */
+    // bool setAllEdgesESTOP(bool estop) const;
+
+    // /**
+    //  * @brief 获取指定 ID 的 Edge 的在线状态。
+    //  * @param edge_id Edge 的 ID。
+    //  * @return 如果在线则返回 true，否则返回 false。
+    //  */
+    // bool getEdgeOnlineStatus(const std::string& edge_id) const;
+
+    // /**
+    //  * @brief 获取所有 Edge 的在线状态。
+    //  * @param status_map 用于存储 Edge ID 和其在线状态的映射。
+    //  * @return 如果成功获取则返回 true，否则返回 false。
+    //  */
+    // bool getAllEdgesOnlineStatus(std::unordered_map<std::string, bool>& status_map) const;
+    // /**
+    //  * @brief 获取所有在线的 Edge ID 列表。
+    //  * @param online_edges 用于存储在线 Edge ID 的向量。
+    //  * @return 如果成功获取则返回 true，否则返回 false。
+    //  */
+    // bool getOnlineEdges(std::vector<std::string>& online_edges) const;
+
+    // /**
+    //  * @brief 获取指定 ID 的 Edge 的任务状态。
+    //  * @param edge_id Edge 的 ID。
+    //  * @param task_status 用于存储任务状态的 JSON 对象。
+    //  * @return 如果成功获取则返回 true，否则返回 false。
+    //  */
+    // bool getEdgeTaskStatus(const std::string& edge_id, nlohmann::json& task_status) const;
+
+    // /**
+    //  * @brief 获取指定 ID 的 Edge 的历史任务状态。
+    //  * @param edge_id Edge 的 ID。
+    //  * @param history_task_status 用于存储历史任务状态的 JSON 对象。
+    //  * @return 如果成功获取则返回 true，否则返回 false。
+    //  */
+    // bool getEdgeHistoryTaskStatus(const std::string& edge_id, nlohmann::json& history_task_status) const;
+
 private:
     MyEdges() = default;
     ~MyEdges() = default;  // 析构函数，用于必要清理
