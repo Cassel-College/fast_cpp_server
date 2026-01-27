@@ -1,5 +1,9 @@
 #include "MyAPI.h"
-#include "EdgeController.hpp"
+
+#include "controller/demo/edge_manager/EdgeController.hpp"
+#include "controller/heartbeat_manager/HeartBeatController.h"
+
+
 
 // #include "oatpp/json/ObjectMapper.hpp" 
 #include "oatpp/parser/json/mapping/ObjectMapper.hpp" 
@@ -13,7 +17,7 @@
 #include "oatpp/web/server/interceptor/RequestInterceptor.hpp"
 #include "MyINIConfig.h"
 #include "MyLog.h"
-
+#include <filesystem>
 
 namespace my_api {
 
@@ -75,18 +79,28 @@ void MyAPI::ServerThread(int port) {
         auto swaggerResources = oatpp::swagger::Resources::loadResources(OATPP_SWAGGER_RES_PATH);
 
         auto docInfo = oatpp::swagger::DocumentInfo::Builder()
-            .setTitle("Edge API Server")
+            .setTitle("Fast C++ Server: API Server")
             .setVersion("1.0")
             .build();
 
         auto router = oatpp::web::server::HttpRouter::createShared();
         auto docEndpoints = oatpp::web::server::api::Endpoints();
 
-        auto edgeController = EdgeController::createShared(
+        auto edgeController = my_api::edge::EdgeController::createShared(
             std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper)
         );
         router->addController(edgeController);
         docEndpoints.append(edgeController->getEndpoints());
+
+
+        auto heartbeatController =
+        my_api::heartbeat::HeartBeatController::createShared(
+            std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper)
+        );
+
+        router->addController(heartbeatController);
+        docEndpoints.append(heartbeatController->getEndpoints());
+
 
         auto swaggerController = oatpp::swagger::Controller::createShared(docEndpoints, docInfo, swaggerResources);
         router->addController(swaggerController);
