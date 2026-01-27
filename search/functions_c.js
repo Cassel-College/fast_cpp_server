@@ -17,8 +17,9 @@ var searchData=
   ['mydoctor_14',['MyDoctor',['../classmy__doctor_1_1MyDoctor.html#a24ea705fdd4c4d4bb0ca15e5c81c10d5',1,'my_doctor::MyDoctor']]],
   ['myedge_15',['MyEdge',['../classmy__edge_1_1MyEdge.html#a5593966dfeb97bccb152f0c7a67c335c',1,'my_edge::MyEdge']]],
   ['myedgemanager_16',['MyEdgeManager',['../classedge__manager_1_1MyEdgeManager.html#a57b546fa3dde8c753e8145838f440116',1,'edge_manager::MyEdgeManager']]],
-  ['myiniconfig_17',['MyINIConfig',['../classMyINIConfig.html#a32fddfe19cf7b2fe08489d3278b742af',1,'MyINIConfig']]],
-  ['myjsonconfig_18',['MyJSONConfig',['../classMyJSONConfig.html#a1dd192bb829c3c041b29da6d11360595',1,'MyJSONConfig']]],
-  ['mysystemhealthymanager_19',['MySystemHealthyManager',['../classMySystemHealthy_1_1MySystemHealthyManager.html#a476947e3d41da37fe3c6d7ce9d668cc8',1,'MySystemHealthy::MySystemHealthyManager']]],
-  ['myyamlconfig_20',['MyYAMLConfig',['../classMyYAMLConfig.html#aaba4bb4d685230dd3a74990721264d05',1,'MyYAMLConfig']]]
+  ['myedges_17',['myedges',['../classmy__edge_1_1MyEdges.html#af70cc1d4dfff09fb5fa79aa3eaf9c82a',1,'my_edge::MyEdges::MyEdges()=default'],['../classmy__edge_1_1MyEdges.html#a755cae61f47bc697cb8a005b8f736a7c',1,'my_edge::MyEdges::MyEdges(const MyEdges &amp;)=delete']]],
+  ['myiniconfig_18',['MyINIConfig',['../classMyINIConfig.html#a32fddfe19cf7b2fe08489d3278b742af',1,'MyINIConfig']]],
+  ['myjsonconfig_19',['MyJSONConfig',['../classMyJSONConfig.html#a1dd192bb829c3c041b29da6d11360595',1,'MyJSONConfig']]],
+  ['mysystemhealthymanager_20',['MySystemHealthyManager',['../classMySystemHealthy_1_1MySystemHealthyManager.html#a476947e3d41da37fe3c6d7ce9d668cc8',1,'MySystemHealthy::MySystemHealthyManager']]],
+  ['myyamlconfig_21',['MyYAMLConfig',['../classMyYAMLConfig.html#aaba4bb4d685230dd3a74990721264d05',1,'MyYAMLConfig']]]
 ];

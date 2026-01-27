@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_api/controller/heartbeat_manager/HeartBeatController.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_f1ee40842c724b3bf8a04800f5f521a7.html">my_api</a></li><li class="navelem"><a class="el" href="dir_6ef159f9932051522d309704773cf407.html">controller</a></li><li class="navelem"><a class="el" href="dir_4d4f2590a56ae6d2a0aa471ef5987773.html">heartbeat_manager</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">HeartBeatController.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="HeartBeatController_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="BaseApiController_8hpp.html">BaseApiController.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;oatpp/web/server/api/ApiController.hpp&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;oatpp/core/macro/codegen.hpp&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="HeartbeatDto_8hpp.html">dto/HeartbeatDto.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__api_1_1heartbeat.html">my_api::heartbeat</a> {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include OATPP_CODEGEN_BEGIN(ApiController)</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classmy__api_1_1heartbeat_1_1HeartBeatController.html">   12</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__api_1_1heartbeat_1_1HeartBeatController.html">HeartBeatController</a> : <span class="keyword">public</span> <a class="code hl_class" href="classmy__api_1_1base_1_1BaseApiController.html">base::BaseApiController</a> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="classmy__api_1_1heartbeat_1_1HeartBeatController.html">HeartBeatController</a>(</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keyword">const</span> std::shared_ptr&lt;ObjectMapper&gt;&amp; objectMapper</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    );</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">static</span> std::shared_ptr&lt;HeartBeatController&gt;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_function" href="classmy__api_1_1heartbeat_1_1HeartBeatController.html#a491a8d72860c9698b468c05bd2531d31">createShared</a>(<span class="keyword">const</span> std::shared_ptr&lt;ObjectMapper&gt;&amp; objectMapper);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="comment">// 服务存活检查</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classmy__api_1_1heartbeat_1_1HeartBeatController.html#a204f51014b3a3c4c6278070679a752c1">   22</a></span>    <a class="code hl_function" href="classmy__api_1_1heartbeat_1_1HeartBeatController.html#a204f51014b3a3c4c6278070679a752c1">ENDPOINT</a>(<span class="stringliteral">&quot;GET&quot;</span>, <span class="stringliteral">&quot;/v1/heartbeat&quot;</span>, getHeartbeat);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="comment">// 心跳上报</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classmy__api_1_1heartbeat_1_1HeartBeatController.html#a649d1b25ac1a9e6e5d8050f563db14e9">   25</a></span>    <a class="code hl_function" href="classmy__api_1_1heartbeat_1_1HeartBeatController.html#a649d1b25ac1a9e6e5d8050f563db14e9">ENDPOINT</a>(<span class="stringliteral">&quot;POST&quot;</span>, <span class="stringliteral">&quot;/v1/heartbeat&quot;</span>, postHeartbeat,</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>             BODY_DTO(oatpp::Object&lt;my_api::dto::HeartbeatDto&gt;, heartbeat));</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>};</div>
+</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include OATPP_CODEGEN_END(ApiController)</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>} <span class="comment">// namespace my_api::heartbeat</span></div>
+<div class="ttc" id="aBaseApiController_8hpp_html"><div class="ttname"><a href="BaseApiController_8hpp.html">BaseApiController.hpp</a></div></div>
+<div class="ttc" id="aHeartbeatDto_8hpp_html"><div class="ttname"><a href="HeartbeatDto_8hpp.html">HeartbeatDto.hpp</a></div></div>
+<div class="ttc" id="aclassmy__api_1_1base_1_1BaseApiController_html"><div class="ttname"><a href="classmy__api_1_1base_1_1BaseApiController.html">my_api::base::BaseApiController</a></div><div class="ttdef"><b>Definition</b> BaseApiController.hpp:12</div></div>
+<div class="ttc" id="aclassmy__api_1_1heartbeat_1_1HeartBeatController_html"><div class="ttname"><a href="classmy__api_1_1heartbeat_1_1HeartBeatController.html">my_api::heartbeat::HeartBeatController</a></div><div class="ttdef"><b>Definition</b> HeartBeatController.h:12</div></div>
+<div class="ttc" id="aclassmy__api_1_1heartbeat_1_1HeartBeatController_html_a204f51014b3a3c4c6278070679a752c1"><div class="ttname"><a href="classmy__api_1_1heartbeat_1_1HeartBeatController.html#a204f51014b3a3c4c6278070679a752c1">my_api::heartbeat::HeartBeatController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;GET&quot;, &quot;/v1/heartbeat&quot;, getHeartbeat)</div></div>
+<div class="ttc" id="aclassmy__api_1_1heartbeat_1_1HeartBeatController_html_a491a8d72860c9698b468c05bd2531d31"><div class="ttname"><a href="classmy__api_1_1heartbeat_1_1HeartBeatController.html#a491a8d72860c9698b468c05bd2531d31">my_api::heartbeat::HeartBeatController::createShared</a></div><div class="ttdeci">static std::shared_ptr&lt; HeartBeatController &gt; createShared(const std::shared_ptr&lt; ObjectMapper &gt; &amp;objectMapper)</div><div class="ttdef"><b>Definition</b> HeartBeatController.cpp:13</div></div>
+<div class="ttc" id="aclassmy__api_1_1heartbeat_1_1HeartBeatController_html_a649d1b25ac1a9e6e5d8050f563db14e9"><div class="ttname"><a href="classmy__api_1_1heartbeat_1_1HeartBeatController.html#a649d1b25ac1a9e6e5d8050f563db14e9">my_api::heartbeat::HeartBeatController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;POST&quot;, &quot;/v1/heartbeat&quot;, postHeartbeat, BODY_DTO(oatpp::Object&lt; my_api::dto::HeartbeatDto &gt;, heartbeat))</div></div>
+<div class="ttc" id="anamespacemy__api_1_1heartbeat_html"><div class="ttname"><a href="namespacemy__api_1_1heartbeat.html">my_api::heartbeat</a></div><div class="ttdef"><b>Definition</b> HeartBeatController.cpp:5</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

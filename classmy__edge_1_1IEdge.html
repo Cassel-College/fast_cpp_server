@@ -117,10 +117,16 @@ Public 成员函数</h2></td></tr>
 <tr class="memdesc:abe320d57c3dd6c601efaa6e3eeed73d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">全局停机：Stop devices + Shutdown queues + Join  <br /></td></tr>
 <tr class="separator:abe320d57c3dd6c601efaa6e3eeed73d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a951e7cb90a822e527ac15fe273b4972a" id="r_a951e7cb90a822e527ac15fe273b4972a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacemy__data.html#aa97613f313f7fbbad8c368f2599e3f26">my_data::EdgeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1IEdge.html#a951e7cb90a822e527ac15fe273b4972a">Id</a> () const =0</td></tr>
+<tr class="memdesc:a951e7cb90a822e527ac15fe273b4972a"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取 Edge ID  <br /></td></tr>
 <tr class="separator:a951e7cb90a822e527ac15fe273b4972a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3291f517b24bce7dfd0557f46a3eae1a" id="r_a3291f517b24bce7dfd0557f46a3eae1a"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1IEdge.html#a3291f517b24bce7dfd0557f46a3eae1a">EdgeType</a> () const =0</td></tr>
+<tr class="memdesc:a3291f517b24bce7dfd0557f46a3eae1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取 Edge 类型  <br /></td></tr>
+<tr class="separator:a3291f517b24bce7dfd0557f46a3eae1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b2646cea46ea711c70b6332bbc779d4" id="r_a7b2646cea46ea711c70b6332bbc779d4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1IEdge.html#a7b2646cea46ea711c70b6332bbc779d4">ShowAnalyzeInitArgs</a> (const nlohmann::json &amp;cfg) const =0</td></tr>
 <tr class="memdesc:a7b2646cea46ea711c70b6332bbc779d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">解释 Init 的入参并打印到日志（用于调试/前置检查）  <br /></td></tr>
 <tr class="separator:a7b2646cea46ea711c70b6332bbc779d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cbe3c7f548498eb15d911537896b376" id="r_a2cbe3c7f548498eb15d911537896b376"><td class="memItemLeft" align="right" valign="top">virtual nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1IEdge.html#a2cbe3c7f548498eb15d911537896b376">DumpInternalInfo</a> () const =0</td></tr>
+<tr class="separator:a2cbe3c7f548498eb15d911537896b376"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>Edge Runtime 接口（Init/Start 分离） </p>
@@ -151,6 +157,63 @@ Public 成员函数</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">成员函数说明</h2>
+<a id="a2cbe3c7f548498eb15d911537896b376" name="a2cbe3c7f548498eb15d911537896b376"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cbe3c7f548498eb15d911537896b376">&#9670;&#160;</a></span>DumpInternalInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual nlohmann::json DumpInternalInfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>在 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acdccf5b178dd52cd19d8af660e6d168b">UUVEdge</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a3291f517b24bce7dfd0557f46a3eae1a" name="a3291f517b24bce7dfd0557f46a3eae1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3291f517b24bce7dfd0557f46a3eae1a">&#9670;&#160;</a></span>EdgeType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string EdgeType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取 Edge 类型 </p>
+<dl class="section return"><dt>返回</dt><dd>std::string </dd></dl>
+
+<p>在 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#ac66580e78dc7f12bc1d449ee4a4d0552">UUVEdge</a> 内被实现.</p>
+
+</div>
+</div>
 <a id="addca2278689b784b5ee28ae266ec58b6" name="addca2278689b784b5ee28ae266ec58b6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#addca2278689b784b5ee28ae266ec58b6">&#9670;&#160;</a></span>GetStatusSnapshot()</h2>
 
@@ -202,6 +265,9 @@ Public 成员函数</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>获取 Edge ID </p>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="namespacemy__data.html#aa97613f313f7fbbad8c368f2599e3f26" title="边缘执行器ID">my_data::EdgeId</a> </dd></dl>
 
 <p>在 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a14a921badc0c0cfd1d63dee98f734b80">UUVEdge</a> 内被实现.</p>
 

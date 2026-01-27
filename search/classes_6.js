@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['healthsnapshot_0',['HealthSnapshot',['../classHealthSnapshot.html',1,'']]],
-  ['heartbeatmanager_1',['HeartbeatManager',['../classHeartbeatManager.html',1,'']]]
+  ['gpuinfotools_0',['GPUInfoTools',['../classMySystemHealthy_1_1GPUInfoTools.html',1,'MySystemHealthy']]]
 ];

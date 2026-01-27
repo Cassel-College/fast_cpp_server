@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PROJECT_NAME: src/util/my_api/EdgeController.hpp 源文件</title>
+<title>PROJECT_NAME: src/util/my_api/controller/demo/edge_manager/EdgeController.hpp 源文件</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -74,7 +74,7 @@ $(document).ready(function() { init_codefold(0); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_f1ee40842c724b3bf8a04800f5f521a7.html">my_api</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_f1ee40842c724b3bf8a04800f5f521a7.html">my_api</a></li><li class="navelem"><a class="el" href="dir_6ef159f9932051522d309704773cf407.html">controller</a></li><li class="navelem"><a class="el" href="dir_efee1950756d23a7c2edd3e724e10f93.html">demo</a></li><li class="navelem"><a class="el" href="dir_e11ddfff632bd89c1e4a8af3677c16e5.html">edge_manager</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -82,120 +82,43 @@ $(document).ready(function() { init_codefold(0); });
 </div><!--header-->
 <div class="contents">
 <a href="EdgeController_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#ifndef EDGE_CONTROLLER_HPP</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="EdgeController_8hpp.html#a4b38417c29d72688655d8579558e52ae">    3</a></span><span class="preprocessor">#define EDGE_CONTROLLER_HPP</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;oatpp/web/server/api/ApiController.hpp&quot;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;oatpp/core/macro/codegen.hpp&quot;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;oatpp/core/macro/component.hpp&quot;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;oatpp/core/Types.hpp&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">// #include &quot;oatpp/macro/codegen.hpp&quot;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">// #include &quot;oatpp/macro/component.hpp&quot;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// #include &quot;oatpp/Types.hpp&quot;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// 业务头文件</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="MyEdgeManager_8h.html">MyEdgeManager.h</a>&quot;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="MyLog_8h.html">MyLog.h</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="BaseApiController_8hpp.html">BaseApiController.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;oatpp/web/server/api/ApiController.hpp&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;oatpp/core/macro/codegen.hpp&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__api_1_1edge.html">my_api::edge</a> {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include OATPP_CODEGEN_BEGIN(ApiController)</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classmy__api_1_1edge_1_1EdgeController.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__api_1_1edge_1_1EdgeController.html">EdgeController</a> : <span class="keyword">public</span> <a class="code hl_class" href="classmy__api_1_1base_1_1BaseApiController.html">base::BaseApiController</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="classmy__api_1_1edge_1_1EdgeController.html">EdgeController</a>(</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keyword">const</span> std::shared_ptr&lt;ObjectMapper&gt;&amp; objectMapper</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    );</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="foldopen" id="foldopen00017" data-start="{" data-end="}">
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="namespacemy__api.html">   17</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__api.html">my_api</a> {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">static</span> std::shared_ptr&lt;EdgeController&gt; <a class="code hl_function" href="classmy__api_1_1edge_1_1EdgeController.html#a2de3ddcefde3bd7867b0ec1b4fb8aec0">createShared</a>(<span class="keyword">const</span> std::shared_ptr&lt;ObjectMapper&gt;&amp; objectMapper);</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include OATPP_CODEGEN_BEGIN(DTO)</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classmy__api_1_1edge_1_1EdgeController.html#a29656a2aa47c566f405992448aa08de9">   19</a></span>    <a class="code hl_function" href="classmy__api_1_1edge_1_1EdgeController.html#a29656a2aa47c566f405992448aa08de9">ENDPOINT</a>(<span class="stringliteral">&quot;GET&quot;</span>, <span class="stringliteral">&quot;/v1/edges/status&quot;</span>, getEdgesStatus);</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classmy__api_1_1EdgeStatusDto.html">   21</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__api_1_1EdgeStatusDto.html">EdgeStatusDto</a> : <span class="keyword">public</span> oatpp::DTO {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    DTO_INIT(<a class="code hl_class" href="classmy__api_1_1EdgeStatusDto.html">EdgeStatusDto</a>, DTO)</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classmy__api_1_1EdgeStatusDto.html#a662bdb82e7a8b845c388ff48de1fc22e">   23</a></span>    <a class="code hl_function" href="classmy__api_1_1EdgeStatusDto.html#a662bdb82e7a8b845c388ff48de1fc22e">DTO_FIELD</a>(String, name);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classmy__api_1_1EdgeStatusDto.html#a4f7bd5af04811f9074ef36bdc18d31f3">   24</a></span>    <a class="code hl_function" href="classmy__api_1_1EdgeStatusDto.html#a662bdb82e7a8b845c388ff48de1fc22e">DTO_FIELD</a>(String, ip);</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classmy__api_1_1EdgeStatusDto.html#a42a6078af0279b55bdbbe6e28b687e8b">   25</a></span>    <a class="code hl_function" href="classmy__api_1_1EdgeStatusDto.html#a662bdb82e7a8b845c388ff48de1fc22e">DTO_FIELD</a>(Boolean, online);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classmy__api_1_1EdgeStatusDto.html#aebc90934f1d8e66da16e9780d2de19ae">   26</a></span>    <a class="code hl_function" href="classmy__api_1_1EdgeStatusDto.html#a662bdb82e7a8b845c388ff48de1fc22e">DTO_FIELD</a>(String, biz_status);</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classmy__api_1_1EdgeStatusDto.html#a6773da439d5a3f9c863113237e8f08c8">   27</a></span>    <a class="code hl_function" href="classmy__api_1_1EdgeStatusDto.html#a662bdb82e7a8b845c388ff48de1fc22e">DTO_FIELD</a>(String, thread_id);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>};</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classmy__api_1_1edge_1_1EdgeController.html#a929b20bffdd4f22c8a0d66b2c85af4fb">   21</a></span>    <a class="code hl_function" href="classmy__api_1_1edge_1_1EdgeController.html#a929b20bffdd4f22c8a0d66b2c85af4fb">ENDPOINT</a>(<span class="stringliteral">&quot;POST&quot;</span>, <span class="stringliteral">&quot;/v1/edges/{name}/start&quot;</span>, startDevice, PATH(String, name));</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classmy__api_1_1edge_1_1EdgeController.html#ad34e91f633a5991b40183fda8dbfc3b4">   23</a></span>    <a class="code hl_function" href="classmy__api_1_1edge_1_1EdgeController.html#ad34e91f633a5991b40183fda8dbfc3b4">ENDPOINT</a>(<span class="stringliteral">&quot;POST&quot;</span>, <span class="stringliteral">&quot;/v1/edges/{name}/stop&quot;</span>, stopDevice, PATH(String, name));</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>};</div>
 </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include OATPP_CODEGEN_END(DTO)</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include OATPP_CODEGEN_BEGIN(ApiController)</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="foldopen" id="foldopen00034" data-start="{" data-end="};">
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classmy__api_1_1EdgeController.html">   34</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__api_1_1EdgeController.html">EdgeController</a> : <span class="keyword">public</span> oatpp::web::server::api::ApiController {</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="comment">// --- 1. 修改构造函数：显式接收 ObjectMapper ---</span></div>
-<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classmy__api_1_1EdgeController.html#ada0f86bd6ffc5462e948dc67625cb76a">   37</a></span>    <a class="code hl_function" href="classmy__api_1_1EdgeController.html#ada0f86bd6ffc5462e948dc67625cb76a">EdgeController</a>(<span class="keyword">const</span> std::shared_ptr&lt;ObjectMapper&gt;&amp; objectMapper)</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        : oatpp::web::server::api::ApiController(objectMapper) </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    {}</div>
-</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="comment">// --- 2. 修改工厂方法：显式接收并传递 ObjectMapper ---</span></div>
-<div class="foldopen" id="foldopen00042" data-start="{" data-end="}">
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classmy__api_1_1EdgeController.html#a06b931473ad95f71474cbc448e0ee20d">   42</a></span>    <span class="keyword">static</span> std::shared_ptr&lt;EdgeController&gt; <a class="code hl_function" href="classmy__api_1_1EdgeController.html#a06b931473ad95f71474cbc448e0ee20d">createShared</a>(<span class="keyword">const</span> std::shared_ptr&lt;ObjectMapper&gt;&amp; objectMapper) {</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordflow">return</span> std::make_shared&lt;EdgeController&gt;(objectMapper);</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    }</div>
-</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="foldopen" id="foldopen00046" data-start="{" data-end="}">
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classmy__api_1_1EdgeController.html#a29656a2aa47c566f405992448aa08de9">   46</a></span>    <a class="code hl_function" href="classmy__api_1_1EdgeController.html#a29656a2aa47c566f405992448aa08de9">ENDPOINT</a>(<span class="stringliteral">&quot;GET&quot;</span>, <span class="stringliteral">&quot;/v1/edges/status&quot;</span>, getEdgesStatus) {</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <a class="code hl_define" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>(<span class="stringliteral">&quot;[API] 收到请求: GET /v1/edges/status&quot;</span>);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keyword">auto</span> status_list = <a class="code hl_function" href="classedge__manager_1_1MyEdgeManager.html#a1bb96f6c20847acd52ac992e54a9d440">edge_manager::MyEdgeManager::GetInstance</a>().<a class="code hl_function" href="classedge__manager_1_1MyEdgeManager.html#a373ad3f792de13e3ad9600da512a9923">ShowEdgesStatus</a>();</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keyword">auto</span> result = oatpp::Vector&lt;oatpp::Object&lt;EdgeStatusDto&gt;&gt;::createShared();</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; item : status_list) {</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <span class="keyword">auto</span> dto = EdgeStatusDto::createShared();</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            dto-&gt;name = item.value(<span class="stringliteral">&quot;name&quot;</span>, <span class="stringliteral">&quot;&quot;</span>).c_str();</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            dto-&gt;ip = item.value(<span class="stringliteral">&quot;ip&quot;</span>, <span class="stringliteral">&quot;&quot;</span>).c_str();</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            dto-&gt;online = item.value(<span class="stringliteral">&quot;online&quot;</span>, <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            dto-&gt;biz_status = item.value(<span class="stringliteral">&quot;biz_status&quot;</span>, <span class="stringliteral">&quot;&quot;</span>).c_str();</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            dto-&gt;thread_id = item.value(<span class="stringliteral">&quot;thread_id&quot;</span>, <span class="stringliteral">&quot;&quot;</span>).c_str();</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            result-&gt;push_back(dto);</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        }</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordflow">return</span> createDtoResponse(Status::CODE_200, result);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    }</div>
-</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="foldopen" id="foldopen00063" data-start="{" data-end="}">
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="classmy__api_1_1EdgeController.html#a929b20bffdd4f22c8a0d66b2c85af4fb">   63</a></span>    <a class="code hl_function" href="classmy__api_1_1EdgeController.html#a929b20bffdd4f22c8a0d66b2c85af4fb">ENDPOINT</a>(<span class="stringliteral">&quot;POST&quot;</span>, <span class="stringliteral">&quot;/v1/edges/{name}/start&quot;</span>, startDevice, PATH(String, name)) {</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="comment">// 安全转换 String</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        std::string deviceName = (name &amp;&amp; name-&gt;size() &gt; 0) ? name-&gt;c_str() : <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <a class="code hl_define" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>(<span class="stringliteral">&quot;[API] 启动设备: {}&quot;</span>, deviceName);</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <a class="code hl_function" href="classedge__manager_1_1MyEdgeManager.html#a1bb96f6c20847acd52ac992e54a9d440">edge_manager::MyEdgeManager::GetInstance</a>().<a class="code hl_function" href="classedge__manager_1_1MyEdgeManager.html#a2452689759e7af0c1f06085b6718c333">StartDevice</a>(deviceName);</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordflow">return</span> createResponse(Status::CODE_200, <span class="stringliteral">&quot;Device start command issued.&quot;</span>);</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    }</div>
-</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="foldopen" id="foldopen00071" data-start="{" data-end="}">
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classmy__api_1_1EdgeController.html#ad34e91f633a5991b40183fda8dbfc3b4">   71</a></span>    <a class="code hl_function" href="classmy__api_1_1EdgeController.html#ad34e91f633a5991b40183fda8dbfc3b4">ENDPOINT</a>(<span class="stringliteral">&quot;POST&quot;</span>, <span class="stringliteral">&quot;/v1/edges/{name}/stop&quot;</span>, stopDevice, PATH(String, name)) {</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        std::string deviceName = (name &amp;&amp; name-&gt;size() &gt; 0) ? name-&gt;c_str() : <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <a class="code hl_define" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>(<span class="stringliteral">&quot;[API] 停止设备: {}&quot;</span>, deviceName);</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <a class="code hl_function" href="classedge__manager_1_1MyEdgeManager.html#a1bb96f6c20847acd52ac992e54a9d440">edge_manager::MyEdgeManager::GetInstance</a>().<a class="code hl_function" href="classedge__manager_1_1MyEdgeManager.html#ab809c40f8d05fce5a1645d8450461e21">StopDevice</a>(deviceName);</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordflow">return</span> createResponse(Status::CODE_200, <span class="stringliteral">&quot;Device stop command issued.&quot;</span>);</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    }</div>
-</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>};</div>
-</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="preprocessor">#include OATPP_CODEGEN_END(ApiController)</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>} <span class="comment">// namespace my_api</span></div>
-</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aMyEdgeManager_8h_html"><div class="ttname"><a href="MyEdgeManager_8h.html">MyEdgeManager.h</a></div></div>
-<div class="ttc" id="aMyLog_8h_html"><div class="ttname"><a href="MyLog_8h.html">MyLog.h</a></div></div>
-<div class="ttc" id="aMyLog_8h_html_a800125219a3ff4a245066255316ead8b"><div class="ttname"><a href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a></div><div class="ttdeci">#define MYLOG_INFO(...)</div><div class="ttdef"><b>Definition</b> MyLog.h:33</div></div>
-<div class="ttc" id="aclassedge__manager_1_1MyEdgeManager_html_a1bb96f6c20847acd52ac992e54a9d440"><div class="ttname"><a href="classedge__manager_1_1MyEdgeManager.html#a1bb96f6c20847acd52ac992e54a9d440">edge_manager::MyEdgeManager::GetInstance</a></div><div class="ttdeci">static MyEdgeManager &amp; GetInstance()</div><div class="ttdef"><b>Definition</b> MyEdgeManager.h:14</div></div>
-<div class="ttc" id="aclassedge__manager_1_1MyEdgeManager_html_a2452689759e7af0c1f06085b6718c333"><div class="ttname"><a href="classedge__manager_1_1MyEdgeManager.html#a2452689759e7af0c1f06085b6718c333">edge_manager::MyEdgeManager::StartDevice</a></div><div class="ttdeci">void StartDevice(const std::string &amp;name)</div><div class="ttdef"><b>Definition</b> MyEdgeManager.cpp:47</div></div>
-<div class="ttc" id="aclassedge__manager_1_1MyEdgeManager_html_a373ad3f792de13e3ad9600da512a9923"><div class="ttname"><a href="classedge__manager_1_1MyEdgeManager.html#a373ad3f792de13e3ad9600da512a9923">edge_manager::MyEdgeManager::ShowEdgesStatus</a></div><div class="ttdeci">nlohmann::json ShowEdgesStatus()</div><div class="ttdef"><b>Definition</b> MyEdgeManager.cpp:21</div></div>
-<div class="ttc" id="aclassedge__manager_1_1MyEdgeManager_html_ab809c40f8d05fce5a1645d8450461e21"><div class="ttname"><a href="classedge__manager_1_1MyEdgeManager.html#ab809c40f8d05fce5a1645d8450461e21">edge_manager::MyEdgeManager::StopDevice</a></div><div class="ttdeci">void StopDevice(const std::string &amp;name)</div><div class="ttdef"><b>Definition</b> MyEdgeManager.cpp:56</div></div>
-<div class="ttc" id="aclassmy__api_1_1EdgeController_html"><div class="ttname"><a href="classmy__api_1_1EdgeController.html">my_api::EdgeController</a></div><div class="ttdef"><b>Definition</b> EdgeController.hpp:34</div></div>
-<div class="ttc" id="aclassmy__api_1_1EdgeController_html_a06b931473ad95f71474cbc448e0ee20d"><div class="ttname"><a href="classmy__api_1_1EdgeController.html#a06b931473ad95f71474cbc448e0ee20d">my_api::EdgeController::createShared</a></div><div class="ttdeci">static std::shared_ptr&lt; EdgeController &gt; createShared(const std::shared_ptr&lt; ObjectMapper &gt; &amp;objectMapper)</div><div class="ttdef"><b>Definition</b> EdgeController.hpp:42</div></div>
-<div class="ttc" id="aclassmy__api_1_1EdgeController_html_a29656a2aa47c566f405992448aa08de9"><div class="ttname"><a href="classmy__api_1_1EdgeController.html#a29656a2aa47c566f405992448aa08de9">my_api::EdgeController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;GET&quot;, &quot;/v1/edges/status&quot;, getEdgesStatus)</div><div class="ttdef"><b>Definition</b> EdgeController.hpp:46</div></div>
-<div class="ttc" id="aclassmy__api_1_1EdgeController_html_a929b20bffdd4f22c8a0d66b2c85af4fb"><div class="ttname"><a href="classmy__api_1_1EdgeController.html#a929b20bffdd4f22c8a0d66b2c85af4fb">my_api::EdgeController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;POST&quot;, &quot;/v1/edges/{name}/start&quot;, startDevice, PATH(String, name))</div><div class="ttdef"><b>Definition</b> EdgeController.hpp:63</div></div>
-<div class="ttc" id="aclassmy__api_1_1EdgeController_html_ad34e91f633a5991b40183fda8dbfc3b4"><div class="ttname"><a href="classmy__api_1_1EdgeController.html#ad34e91f633a5991b40183fda8dbfc3b4">my_api::EdgeController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;POST&quot;, &quot;/v1/edges/{name}/stop&quot;, stopDevice, PATH(String, name))</div><div class="ttdef"><b>Definition</b> EdgeController.hpp:71</div></div>
-<div class="ttc" id="aclassmy__api_1_1EdgeController_html_ada0f86bd6ffc5462e948dc67625cb76a"><div class="ttname"><a href="classmy__api_1_1EdgeController.html#ada0f86bd6ffc5462e948dc67625cb76a">my_api::EdgeController::EdgeController</a></div><div class="ttdeci">EdgeController(const std::shared_ptr&lt; ObjectMapper &gt; &amp;objectMapper)</div><div class="ttdef"><b>Definition</b> EdgeController.hpp:37</div></div>
-<div class="ttc" id="aclassmy__api_1_1EdgeStatusDto_html"><div class="ttname"><a href="classmy__api_1_1EdgeStatusDto.html">my_api::EdgeStatusDto</a></div><div class="ttdef"><b>Definition</b> EdgeController.hpp:21</div></div>
-<div class="ttc" id="aclassmy__api_1_1EdgeStatusDto_html_a662bdb82e7a8b845c388ff48de1fc22e"><div class="ttname"><a href="classmy__api_1_1EdgeStatusDto.html#a662bdb82e7a8b845c388ff48de1fc22e">my_api::EdgeStatusDto::DTO_FIELD</a></div><div class="ttdeci">DTO_FIELD(String, name)</div></div>
-<div class="ttc" id="anamespacemy__api_html"><div class="ttname"><a href="namespacemy__api.html">my_api</a></div><div class="ttdef"><b>Definition</b> EdgeController.hpp:17</div></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include OATPP_CODEGEN_END(ApiController)</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>} <span class="comment">// namespace my_api::edge</span></div>
+<div class="ttc" id="aBaseApiController_8hpp_html"><div class="ttname"><a href="BaseApiController_8hpp.html">BaseApiController.hpp</a></div></div>
+<div class="ttc" id="aclassmy__api_1_1base_1_1BaseApiController_html"><div class="ttname"><a href="classmy__api_1_1base_1_1BaseApiController.html">my_api::base::BaseApiController</a></div><div class="ttdef"><b>Definition</b> BaseApiController.hpp:12</div></div>
+<div class="ttc" id="aclassmy__api_1_1edge_1_1EdgeController_html"><div class="ttname"><a href="classmy__api_1_1edge_1_1EdgeController.html">my_api::edge::EdgeController</a></div><div class="ttdef"><b>Definition</b> EdgeController.hpp:11</div></div>
+<div class="ttc" id="aclassmy__api_1_1edge_1_1EdgeController_html_a29656a2aa47c566f405992448aa08de9"><div class="ttname"><a href="classmy__api_1_1edge_1_1EdgeController.html#a29656a2aa47c566f405992448aa08de9">my_api::edge::EdgeController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;GET&quot;, &quot;/v1/edges/status&quot;, getEdgesStatus)</div></div>
+<div class="ttc" id="aclassmy__api_1_1edge_1_1EdgeController_html_a2de3ddcefde3bd7867b0ec1b4fb8aec0"><div class="ttname"><a href="classmy__api_1_1edge_1_1EdgeController.html#a2de3ddcefde3bd7867b0ec1b4fb8aec0">my_api::edge::EdgeController::createShared</a></div><div class="ttdeci">static std::shared_ptr&lt; EdgeController &gt; createShared(const std::shared_ptr&lt; ObjectMapper &gt; &amp;objectMapper)</div><div class="ttdef"><b>Definition</b> EdgeController.cpp:14</div></div>
+<div class="ttc" id="aclassmy__api_1_1edge_1_1EdgeController_html_a929b20bffdd4f22c8a0d66b2c85af4fb"><div class="ttname"><a href="classmy__api_1_1edge_1_1EdgeController.html#a929b20bffdd4f22c8a0d66b2c85af4fb">my_api::edge::EdgeController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;POST&quot;, &quot;/v1/edges/{name}/start&quot;, startDevice, PATH(String, name))</div></div>
+<div class="ttc" id="aclassmy__api_1_1edge_1_1EdgeController_html_ad34e91f633a5991b40183fda8dbfc3b4"><div class="ttname"><a href="classmy__api_1_1edge_1_1EdgeController.html#ad34e91f633a5991b40183fda8dbfc3b4">my_api::edge::EdgeController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;POST&quot;, &quot;/v1/edges/{name}/stop&quot;, stopDevice, PATH(String, name))</div></div>
+<div class="ttc" id="anamespacemy__api_1_1edge_html"><div class="ttname"><a href="namespacemy__api_1_1edge.html">my_api::edge</a></div><div class="ttdef"><b>Definition</b> EdgeController.cpp:6</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

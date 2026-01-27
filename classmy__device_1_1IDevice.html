@@ -107,6 +107,9 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a318f0835a0611f2d747aa141e674af64" id="r_a318f0835a0611f2d747aa141e674af64"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__device_1_1IDevice.html#a318f0835a0611f2d747aa141e674af64">Init</a> (const nlohmann::json &amp;cfg, std::string *err)=0</td></tr>
 <tr class="memdesc:a318f0835a0611f2d747aa141e674af64"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化设备（加载配置、创建/初始化 control 等）  <br /></td></tr>
 <tr class="separator:a318f0835a0611f2d747aa141e674af64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a365931dd3974486c703e6bea7e0c3abd" id="r_a365931dd3974486c703e6bea7e0c3abd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__device_1_1IDevice.html#a365931dd3974486c703e6bea7e0c3abd">ShowAnalyzeInitArgs</a> (const nlohmann::json &amp;cfg)=0</td></tr>
+<tr class="memdesc:a365931dd3974486c703e6bea7e0c3abd"><td class="mdescLeft">&#160;</td><td class="mdescRight">显示和解释构造参数  <br /></td></tr>
+<tr class="separator:a365931dd3974486c703e6bea7e0c3abd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28af5759dcd3a08784c5d97bf8fe293b" id="r_a28af5759dcd3a08784c5d97bf8fe293b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__device_1_1IDevice.html#a28af5759dcd3a08784c5d97bf8fe293b">Start</a> (<a class="el" href="classmy__control_1_1TaskQueue.html">my_control::TaskQueue</a> &amp;queue, std::atomic&lt; bool &gt; *estop_flag, std::string *err)=0</td></tr>
 <tr class="memdesc:a28af5759dcd3a08784c5d97bf8fe293b"><td class="mdescLeft">&#160;</td><td class="mdescRight">启动设备执行单元（注入队列引用 + EStop 引用）  <br /></td></tr>
 <tr class="separator:a28af5759dcd3a08784c5d97bf8fe293b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -292,6 +295,42 @@ Public 成员函数</h2></td></tr>
 <p>等待线程退出 </p>
 
 <p>在 <a class="el" href="classmy__device_1_1demo_1_1DepthSensorDevice.html#af73e570330884bb1dea45c95f92b42c8">DepthSensorDevice</a>, <a class="el" href="classmy__device_1_1demo_1_1FlowSensorDevice.html#af73e570330884bb1dea45c95f92b42c8">FlowSensorDevice</a>, <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#af73e570330884bb1dea45c95f92b42c8">UUVDevice</a> , 以及 <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#af73e570330884bb1dea45c95f92b42c8">WindSensorDevice</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a365931dd3974486c703e6bea7e0c3abd" name="a365931dd3974486c703e6bea7e0c3abd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a365931dd3974486c703e6bea7e0c3abd">&#9670;&#160;</a></span>ShowAnalyzeInitArgs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ShowAnalyzeInitArgs </td>
+          <td>(</td>
+          <td class="paramtype">const nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>cfg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>显示和解释构造参数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cfg</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>在 <a class="el" href="classmy__device_1_1demo_1_1DepthSensorDevice.html#a6c05b05787be97a622a0f99f348d21c1">DepthSensorDevice</a>, <a class="el" href="classmy__device_1_1demo_1_1FlowSensorDevice.html#a6c05b05787be97a622a0f99f348d21c1">FlowSensorDevice</a>, <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a6c05b05787be97a622a0f99f348d21c1">UUVDevice</a> , 以及 <a class="el" href="classmy__device_1_1demo_1_1WindSensorDevice.html#a6c05b05787be97a622a0f99f348d21c1">WindSensorDevice</a> 内被实现.</p>
 
 </div>
 </div>

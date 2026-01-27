@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_edge/MyEdges.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_1c8e19e5f988aabcb1d6c4e45e28b8fb.html">my_edge</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">MyEdges.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="MyEdges_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;nlohmann/json.hpp&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="IEdge_8h.html">IEdge.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="MyLog_8h.html">MyLog.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__edge.html">my_edge</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classmy__edge_1_1EdgeNotFoundException.html">   16</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__edge_1_1EdgeNotFoundException.html">EdgeNotFoundException</a> : <span class="keyword">public</span> std::runtime_error {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="}">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classmy__edge_1_1EdgeNotFoundException.html#ac8ba91ee5b1be4fa45ac63635c15f239">   18</a></span>    <span class="keyword">explicit</span> <a class="code hl_function" href="classmy__edge_1_1EdgeNotFoundException.html#ac8ba91ee5b1be4fa45ac63635c15f239">EdgeNotFoundException</a>(<span class="keyword">const</span> std::string&amp; edge_id)</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        : std::runtime_error(<span class="stringliteral">&quot;ID 为 &#39;&quot;</span> + edge_id + <span class="stringliteral">&quot;&#39; 的 Edge 未找到。&quot;</span>) {}</div>
+</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>};</div>
+</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classmy__edge_1_1DuplicateEdgeException.html">   25</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__edge_1_1DuplicateEdgeException.html">DuplicateEdgeException</a> : <span class="keyword">public</span> std::runtime_error {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="}">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classmy__edge_1_1DuplicateEdgeException.html#ada4b557a2a9d4a76bb8e321aac403d56">   27</a></span>    <span class="keyword">explicit</span> <a class="code hl_function" href="classmy__edge_1_1DuplicateEdgeException.html#ada4b557a2a9d4a76bb8e321aac403d56">DuplicateEdgeException</a>(<span class="keyword">const</span> std::string&amp; edge_id)</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        : std::runtime_error(<span class="stringliteral">&quot;ID 为 &#39;&quot;</span> + edge_id + <span class="stringliteral">&quot;&#39; 的 Edge 已存在。&quot;</span>) {}</div>
+</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>};</div>
+</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="};">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classmy__edge_1_1MyEdges.html">   37</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__edge_1_1MyEdges.html">MyEdges</a> {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">static</span> <a class="code hl_class" href="classmy__edge_1_1MyEdges.html">MyEdges</a>&amp; <a class="code hl_function" href="classmy__edge_1_1MyEdges.html#ab8ce25c65b76a1b6cf2eb518c4d022e2">GetInstance</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__edge_1_1MyEdges.html#ab07cfa36269ad610130c8a8d49cf2553">appendEdge</a>(std::unique_ptr&lt;IEdge&gt; edge_ptr);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">const</span> std::vector&lt;const IEdge*&gt;&amp; <a class="code hl_function" href="classmy__edge_1_1MyEdges.html#a02d58ea4a6169b67b869c4f825592e63">getEdges</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; <a class="code hl_function" href="classmy__edge_1_1MyEdges.html#a086bb047ca3722c8e25c06cba957b2a8">getEdgeIds</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__edge_1_1MyEdges.html#a2d69d51d4a07eab449efe3ff895ce4af">deleteEdgeById</a>(<span class="keyword">const</span> std::string&amp; edge_id);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__edge_1_1MyEdges.html#a4ee4779764b56d29a018aca675070835">startAllEdges</a>();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keyword">const</span> std::unique_ptr&lt;IEdge&gt;&amp; <a class="code hl_function" href="classmy__edge_1_1MyEdges.html#a39cf62462d42d308401c21760ed589c8">getEdgeById</a>(<span class="keyword">const</span> std::string&amp; edge_id) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    nlohmann::json <a class="code hl_function" href="classmy__edge_1_1MyEdges.html#aa9a8e8ba2fbf620b75975789af2d3117">GetHeartbeatInfo</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="classmy__edge_1_1MyEdges.html#af70cc1d4dfff09fb5fa79aa3eaf9c82a">   97</a></span>    <a class="code hl_function" href="classmy__edge_1_1MyEdges.html#af70cc1d4dfff09fb5fa79aa3eaf9c82a">MyEdges</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="classmy__edge_1_1MyEdges.html#a16bb6f64d77e865b89925ebc1a86c077">   98</a></span>    <a class="code hl_function" href="classmy__edge_1_1MyEdges.html#a16bb6f64d77e865b89925ebc1a86c077">~MyEdges</a>() = <span class="keywordflow">default</span>;  <span class="comment">// 析构函数，用于必要清理</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="classmy__edge_1_1MyEdges.html#a755cae61f47bc697cb8a005b8f736a7c">   99</a></span>    <a class="code hl_function" href="classmy__edge_1_1MyEdges.html#a755cae61f47bc697cb8a005b8f736a7c">MyEdges</a>(<span class="keyword">const</span> <a class="code hl_class" href="classmy__edge_1_1MyEdges.html">MyEdges</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="classmy__edge_1_1MyEdges.html#acee88384f9e95f16458190bcc63ef0f1">  100</a></span>    <a class="code hl_class" href="classmy__edge_1_1MyEdges.html">MyEdges</a>&amp; <a class="code hl_function" href="classmy__edge_1_1MyEdges.html#acee88384f9e95f16458190bcc63ef0f1">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classmy__edge_1_1MyEdges.html">MyEdges</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="classmy__edge_1_1MyEdges.html#a281b5ec791338d4378e22ef44a51b4a1">  102</a></span>    <span class="keyword">mutable</span> std::mutex <a class="code hl_variable" href="classmy__edge_1_1MyEdges.html#a281b5ec791338d4378e22ef44a51b4a1">mutex_</a>;  <span class="comment">// 用于线程安全</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="classmy__edge_1_1MyEdges.html#afb76b49ada8310d831e8f77056661d5f">  103</a></span>    std::unordered_map&lt;std::string, std::unique_ptr&lt;IEdge&gt;&gt; <a class="code hl_variable" href="classmy__edge_1_1MyEdges.html#afb76b49ada8310d831e8f77056661d5f">edges_</a>;  <span class="comment">// 以 ID 为键的高效存储</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>};</div>
+</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>}  <span class="comment">// namespace my_edge</span></div>
+<div class="ttc" id="aIEdge_8h_html"><div class="ttname"><a href="IEdge_8h.html">IEdge.h</a></div></div>
+<div class="ttc" id="aMyLog_8h_html"><div class="ttname"><a href="MyLog_8h.html">MyLog.h</a></div></div>
+<div class="ttc" id="aclassmy__edge_1_1DuplicateEdgeException_html"><div class="ttname"><a href="classmy__edge_1_1DuplicateEdgeException.html">my_edge::DuplicateEdgeException</a></div><div class="ttdoc">尝试添加具有重复 ID 的 Edge 时抛出的异常。</div><div class="ttdef"><b>Definition</b> MyEdges.h:25</div></div>
+<div class="ttc" id="aclassmy__edge_1_1DuplicateEdgeException_html_ada4b557a2a9d4a76bb8e321aac403d56"><div class="ttname"><a href="classmy__edge_1_1DuplicateEdgeException.html#ada4b557a2a9d4a76bb8e321aac403d56">my_edge::DuplicateEdgeException::DuplicateEdgeException</a></div><div class="ttdeci">DuplicateEdgeException(const std::string &amp;edge_id)</div><div class="ttdef"><b>Definition</b> MyEdges.h:27</div></div>
+<div class="ttc" id="aclassmy__edge_1_1EdgeNotFoundException_html"><div class="ttname"><a href="classmy__edge_1_1EdgeNotFoundException.html">my_edge::EdgeNotFoundException</a></div><div class="ttdoc">当指定 ID 的 Edge 未找到时抛出的异常。</div><div class="ttdef"><b>Definition</b> MyEdges.h:16</div></div>
+<div class="ttc" id="aclassmy__edge_1_1EdgeNotFoundException_html_ac8ba91ee5b1be4fa45ac63635c15f239"><div class="ttname"><a href="classmy__edge_1_1EdgeNotFoundException.html#ac8ba91ee5b1be4fa45ac63635c15f239">my_edge::EdgeNotFoundException::EdgeNotFoundException</a></div><div class="ttdeci">EdgeNotFoundException(const std::string &amp;edge_id)</div><div class="ttdef"><b>Definition</b> MyEdges.h:18</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyEdges_html"><div class="ttname"><a href="classmy__edge_1_1MyEdges.html">my_edge::MyEdges</a></div><div class="ttdoc">MyEdges - 企业级单例 IEdge 实例管理器。</div><div class="ttdef"><b>Definition</b> MyEdges.h:37</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyEdges_html_a02d58ea4a6169b67b869c4f825592e63"><div class="ttname"><a href="classmy__edge_1_1MyEdges.html#a02d58ea4a6169b67b869c4f825592e63">my_edge::MyEdges::getEdges</a></div><div class="ttdeci">const std::vector&lt; const IEdge * &gt; &amp; getEdges() const</div><div class="ttdoc">获取所有 Edge 实例（只读）。</div><div class="ttdef"><b>Definition</b> MyEdges.cpp:43</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyEdges_html_a086bb047ca3722c8e25c06cba957b2a8"><div class="ttname"><a href="classmy__edge_1_1MyEdges.html#a086bb047ca3722c8e25c06cba957b2a8">my_edge::MyEdges::getEdgeIds</a></div><div class="ttdeci">const std::vector&lt; std::string &gt; &amp; getEdgeIds() const</div><div class="ttdoc">获取所有 Edge ID。</div><div class="ttdef"><b>Definition</b> MyEdges.cpp:59</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyEdges_html_a16bb6f64d77e865b89925ebc1a86c077"><div class="ttname"><a href="classmy__edge_1_1MyEdges.html#a16bb6f64d77e865b89925ebc1a86c077">my_edge::MyEdges::~MyEdges</a></div><div class="ttdeci">~MyEdges()=default</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyEdges_html_a281b5ec791338d4378e22ef44a51b4a1"><div class="ttname"><a href="classmy__edge_1_1MyEdges.html#a281b5ec791338d4378e22ef44a51b4a1">my_edge::MyEdges::mutex_</a></div><div class="ttdeci">std::mutex mutex_</div><div class="ttdef"><b>Definition</b> MyEdges.h:102</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyEdges_html_a2d69d51d4a07eab449efe3ff895ce4af"><div class="ttname"><a href="classmy__edge_1_1MyEdges.html#a2d69d51d4a07eab449efe3ff895ce4af">my_edge::MyEdges::deleteEdgeById</a></div><div class="ttdeci">bool deleteEdgeById(const std::string &amp;edge_id)</div><div class="ttdoc">通过 ID 删除 Edge。</div><div class="ttdef"><b>Definition</b> MyEdges.cpp:75</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyEdges_html_a39cf62462d42d308401c21760ed589c8"><div class="ttname"><a href="classmy__edge_1_1MyEdges.html#a39cf62462d42d308401c21760ed589c8">my_edge::MyEdges::getEdgeById</a></div><div class="ttdeci">const std::unique_ptr&lt; IEdge &gt; &amp; getEdgeById(const std::string &amp;edge_id) const</div><div class="ttdoc">通过 ID 获取 Edge（只读）。</div><div class="ttdef"><b>Definition</b> MyEdges.cpp:117</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyEdges_html_a4ee4779764b56d29a018aca675070835"><div class="ttname"><a href="classmy__edge_1_1MyEdges.html#a4ee4779764b56d29a018aca675070835">my_edge::MyEdges::startAllEdges</a></div><div class="ttdeci">bool startAllEdges()</div><div class="ttdoc">启动所有 Edge 实例。</div><div class="ttdef"><b>Definition</b> MyEdges.cpp:92</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyEdges_html_a755cae61f47bc697cb8a005b8f736a7c"><div class="ttname"><a href="classmy__edge_1_1MyEdges.html#a755cae61f47bc697cb8a005b8f736a7c">my_edge::MyEdges::MyEdges</a></div><div class="ttdeci">MyEdges(const MyEdges &amp;)=delete</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyEdges_html_aa9a8e8ba2fbf620b75975789af2d3117"><div class="ttname"><a href="classmy__edge_1_1MyEdges.html#aa9a8e8ba2fbf620b75975789af2d3117">my_edge::MyEdges::GetHeartbeatInfo</a></div><div class="ttdeci">nlohmann::json GetHeartbeatInfo() const</div><div class="ttdoc">Get the Heartbeat Info object/获取给模块的心跳信息</div><div class="ttdef"><b>Definition</b> MyEdges.cpp:134</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyEdges_html_ab07cfa36269ad610130c8a8d49cf2553"><div class="ttname"><a href="classmy__edge_1_1MyEdges.html#ab07cfa36269ad610130c8a8d49cf2553">my_edge::MyEdges::appendEdge</a></div><div class="ttdeci">bool appendEdge(std::unique_ptr&lt; IEdge &gt; edge_ptr)</div><div class="ttdoc">将 Edge 实例添加到集合中。</div><div class="ttdef"><b>Definition</b> MyEdges.cpp:17</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyEdges_html_ab8ce25c65b76a1b6cf2eb518c4d022e2"><div class="ttname"><a href="classmy__edge_1_1MyEdges.html#ab8ce25c65b76a1b6cf2eb518c4d022e2">my_edge::MyEdges::GetInstance</a></div><div class="ttdeci">static MyEdges &amp; GetInstance()</div><div class="ttdoc">获取单例实例。</div><div class="ttdef"><b>Definition</b> MyEdges.cpp:7</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyEdges_html_acee88384f9e95f16458190bcc63ef0f1"><div class="ttname"><a href="classmy__edge_1_1MyEdges.html#acee88384f9e95f16458190bcc63ef0f1">my_edge::MyEdges::operator=</a></div><div class="ttdeci">MyEdges &amp; operator=(const MyEdges &amp;)=delete</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyEdges_html_af70cc1d4dfff09fb5fa79aa3eaf9c82a"><div class="ttname"><a href="classmy__edge_1_1MyEdges.html#af70cc1d4dfff09fb5fa79aa3eaf9c82a">my_edge::MyEdges::MyEdges</a></div><div class="ttdeci">MyEdges()=default</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyEdges_html_afb76b49ada8310d831e8f77056661d5f"><div class="ttname"><a href="classmy__edge_1_1MyEdges.html#afb76b49ada8310d831e8f77056661d5f">my_edge::MyEdges::edges_</a></div><div class="ttdeci">std::unordered_map&lt; std::string, std::unique_ptr&lt; IEdge &gt; &gt; edges_</div><div class="ttdef"><b>Definition</b> MyEdges.h:103</div></div>
+<div class="ttc" id="anamespacemy__edge_html"><div class="ttname"><a href="namespacemy__edge.html">my_edge</a></div><div class="ttdef"><b>Definition</b> UUVEdge.cpp:12</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

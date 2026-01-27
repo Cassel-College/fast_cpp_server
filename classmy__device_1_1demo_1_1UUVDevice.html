@@ -124,6 +124,9 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a24a097fb4fcef1837583a96466f5d3e2" id="r_a24a097fb4fcef1837583a96466f5d3e2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a24a097fb4fcef1837583a96466f5d3e2">Start</a> (<a class="el" href="classmy__control_1_1TaskQueue.html">my_control::TaskQueue</a> &amp;queue, std::atomic&lt; bool &gt; *estop_flag, std::string *err) override</td></tr>
 <tr class="memdesc:a24a097fb4fcef1837583a96466f5d3e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">启动设备执行单元（注入队列引用 + EStop 引用）  <br /></td></tr>
 <tr class="separator:a24a097fb4fcef1837583a96466f5d3e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c05b05787be97a622a0f99f348d21c1" id="r_a6c05b05787be97a622a0f99f348d21c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a6c05b05787be97a622a0f99f348d21c1">ShowAnalyzeInitArgs</a> (const nlohmann::json &amp;cfg) override</td></tr>
+<tr class="memdesc:a6c05b05787be97a622a0f99f348d21c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">显示和解释构造参数  <br /></td></tr>
+<tr class="separator:a6c05b05787be97a622a0f99f348d21c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a634c58de2126b4a4e6a2a093e60e1290" id="r_a634c58de2126b4a4e6a2a093e60e1290"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a634c58de2126b4a4e6a2a093e60e1290">Stop</a> () override</td></tr>
 <tr class="memdesc:a634c58de2126b4a4e6a2a093e60e1290"><td class="mdescLeft">&#160;</td><td class="mdescRight">请求停止（不负责 shutdown queue）  <br /></td></tr>
 <tr class="separator:a634c58de2126b4a4e6a2a093e60e1290"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -469,6 +472,44 @@ Private 属性</h2></td></tr>
 
 </div>
 </div>
+<a id="a6c05b05787be97a622a0f99f348d21c1" name="a6c05b05787be97a622a0f99f348d21c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c05b05787be97a622a0f99f348d21c1">&#9670;&#160;</a></span>ShowAnalyzeInitArgs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ShowAnalyzeInitArgs </td>
+          <td>(</td>
+          <td class="paramtype">const nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>cfg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>显示和解释构造参数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cfg</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="classmy__device_1_1IDevice.html#a365931dd3974486c703e6bea7e0c3abd">IDevice</a>.</p>
+
+<p class="reference">引用了 <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#ae232acc05c0836a4180ca95ccdef8183">UUVDevice::device_id_</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a> , 以及 <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>.</p>
+
+</div>
+</div>
 <a id="a24a097fb4fcef1837583a96466f5d3e2" name="a24a097fb4fcef1837583a96466f5d3e2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a24a097fb4fcef1837583a96466f5d3e2">&#9670;&#160;</a></span>Start()</h2>
 
@@ -782,7 +823,7 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a1d48a1df2f601a9c27c0a467bd5ada0e">UUVDevice::Id()</a>, <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#aeaad4d1e08909ec413c6e934fb718dc7">UUVDevice::Init()</a>, <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#af73e570330884bb1dea45c95f92b42c8">UUVDevice::Join()</a>, <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a24a097fb4fcef1837583a96466f5d3e2">UUVDevice::Start()</a>, <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a634c58de2126b4a4e6a2a093e60e1290">UUVDevice::Stop()</a>, <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a81dd0a772bae5a5e534a5fb3894509e9">UUVDevice::UpdateOnTaskFinish()</a>, <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a59c55e446776e18cbd4b693f09ea501c">UUVDevice::UpdateOnTaskStart()</a>, <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a667de3be7fa6d87d5e1b5b3fd8065859">UUVDevice::UUVDevice()</a>, <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#add7072b896af18d695ba43056fd26d44">UUVDevice::UUVDevice()</a> , 以及 <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#ab6c2f994d41932c6cd7222dcc3c67da0">UUVDevice::~UUVDevice()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a1d48a1df2f601a9c27c0a467bd5ada0e">UUVDevice::Id()</a>, <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#aeaad4d1e08909ec413c6e934fb718dc7">UUVDevice::Init()</a>, <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#af73e570330884bb1dea45c95f92b42c8">UUVDevice::Join()</a>, <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a6c05b05787be97a622a0f99f348d21c1">UUVDevice::ShowAnalyzeInitArgs()</a>, <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a24a097fb4fcef1837583a96466f5d3e2">UUVDevice::Start()</a>, <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a634c58de2126b4a4e6a2a093e60e1290">UUVDevice::Stop()</a>, <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a81dd0a772bae5a5e534a5fb3894509e9">UUVDevice::UpdateOnTaskFinish()</a>, <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a59c55e446776e18cbd4b693f09ea501c">UUVDevice::UpdateOnTaskStart()</a>, <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#a667de3be7fa6d87d5e1b5b3fd8065859">UUVDevice::UUVDevice()</a>, <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#add7072b896af18d695ba43056fd26d44">UUVDevice::UUVDevice()</a> , 以及 <a class="el" href="classmy__device_1_1demo_1_1UUVDevice.html#ab6c2f994d41932c6cd7222dcc3c67da0">UUVDevice::~UUVDevice()</a>.</p>
 
 </div>
 </div>
