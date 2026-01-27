@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_api/controller/demo/edges/EdgesController.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_f1ee40842c724b3bf8a04800f5f521a7.html">my_api</a></li><li class="navelem"><a class="el" href="dir_6ef159f9932051522d309704773cf407.html">controller</a></li><li class="navelem"><a class="el" href="dir_efee1950756d23a7c2edd3e724e10f93.html">demo</a></li><li class="navelem"><a class="el" href="dir_1c74adba8bf300907a0b02c02966f8cd.html">edges</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">EdgesController.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="EdgesController_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="BaseApiController_8hpp.html">BaseApiController.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;oatpp/web/server/api/ApiController.hpp&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;oatpp/core/macro/codegen.hpp&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__api_1_1edge.html">my_api::edge</a> {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include OATPP_CODEGEN_BEGIN(ApiController)</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classmy__api_1_1edge_1_1EdgesController.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__api_1_1edge_1_1EdgesController.html">EdgesController</a> : <span class="keyword">public</span> <a class="code hl_class" href="classmy__api_1_1base_1_1BaseApiController.html">base::BaseApiController</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="classmy__api_1_1edge_1_1EdgesController.html">EdgesController</a>(</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keyword">const</span> std::shared_ptr&lt;ObjectMapper&gt;&amp; objectMapper</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    );</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">static</span> std::shared_ptr&lt;EdgesController&gt; <a class="code hl_function" href="classmy__api_1_1edge_1_1EdgesController.html#aaa5faa707bb660bf7a03e93d29163c95">createShared</a>(<span class="keyword">const</span> std::shared_ptr&lt;ObjectMapper&gt;&amp; objectMapper);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classmy__api_1_1edge_1_1EdgesController.html#a29656a2aa47c566f405992448aa08de9">   19</a></span>    <a class="code hl_function" href="classmy__api_1_1edge_1_1EdgesController.html#a29656a2aa47c566f405992448aa08de9">ENDPOINT</a>(<span class="stringliteral">&quot;GET&quot;</span>, <span class="stringliteral">&quot;/v1/edges/status&quot;</span>, getEdgesStatus);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classmy__api_1_1edge_1_1EdgesController.html#a436dbdeb610831a5630e18e82a9b58a8">   21</a></span>    <a class="code hl_function" href="classmy__api_1_1edge_1_1EdgesController.html#a436dbdeb610831a5630e18e82a9b58a8">ENDPOINT</a>(<span class="stringliteral">&quot;POST&quot;</span>, <span class="stringliteral">&quot;/v1/edges/startAllEdges&quot;</span>, startAllEdges);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classmy__api_1_1edge_1_1EdgesController.html#aadabb68c9cdff6aace2d5277e92ad181">   23</a></span>    <a class="code hl_function" href="classmy__api_1_1edge_1_1EdgesController.html#aadabb68c9cdff6aace2d5277e92ad181">ENDPOINT</a>(<span class="stringliteral">&quot;POST&quot;</span>, </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>             <span class="stringliteral">&quot;/v1/edges/appendTaskToEdgeById&quot;</span>, </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>             appendTaskToEdgeById, </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>             REQUEST(std::shared_ptr&lt;oatpp::web::protocol::http::incoming::Request&gt;, request)</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            );</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>};</div>
+</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include OATPP_CODEGEN_END(ApiController)</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>} <span class="comment">// namespace my_api::edge</span></div>
+<div class="ttc" id="aBaseApiController_8hpp_html"><div class="ttname"><a href="BaseApiController_8hpp.html">BaseApiController.hpp</a></div></div>
+<div class="ttc" id="aclassmy__api_1_1base_1_1BaseApiController_html"><div class="ttname"><a href="classmy__api_1_1base_1_1BaseApiController.html">my_api::base::BaseApiController</a></div><div class="ttdef"><b>Definition</b> BaseApiController.hpp:12</div></div>
+<div class="ttc" id="aclassmy__api_1_1edge_1_1EdgesController_html"><div class="ttname"><a href="classmy__api_1_1edge_1_1EdgesController.html">my_api::edge::EdgesController</a></div><div class="ttdef"><b>Definition</b> EdgesController.hpp:11</div></div>
+<div class="ttc" id="aclassmy__api_1_1edge_1_1EdgesController_html_a29656a2aa47c566f405992448aa08de9"><div class="ttname"><a href="classmy__api_1_1edge_1_1EdgesController.html#a29656a2aa47c566f405992448aa08de9">my_api::edge::EdgesController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;GET&quot;, &quot;/v1/edges/status&quot;, getEdgesStatus)</div></div>
+<div class="ttc" id="aclassmy__api_1_1edge_1_1EdgesController_html_a436dbdeb610831a5630e18e82a9b58a8"><div class="ttname"><a href="classmy__api_1_1edge_1_1EdgesController.html#a436dbdeb610831a5630e18e82a9b58a8">my_api::edge::EdgesController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;POST&quot;, &quot;/v1/edges/startAllEdges&quot;, startAllEdges)</div></div>
+<div class="ttc" id="aclassmy__api_1_1edge_1_1EdgesController_html_aaa5faa707bb660bf7a03e93d29163c95"><div class="ttname"><a href="classmy__api_1_1edge_1_1EdgesController.html#aaa5faa707bb660bf7a03e93d29163c95">my_api::edge::EdgesController::createShared</a></div><div class="ttdeci">static std::shared_ptr&lt; EdgesController &gt; createShared(const std::shared_ptr&lt; ObjectMapper &gt; &amp;objectMapper)</div><div class="ttdef"><b>Definition</b> EdgesController.cpp:17</div></div>
+<div class="ttc" id="aclassmy__api_1_1edge_1_1EdgesController_html_aadabb68c9cdff6aace2d5277e92ad181"><div class="ttname"><a href="classmy__api_1_1edge_1_1EdgesController.html#aadabb68c9cdff6aace2d5277e92ad181">my_api::edge::EdgesController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;POST&quot;, &quot;/v1/edges/appendTaskToEdgeById&quot;, appendTaskToEdgeById,)</div></div>
+<div class="ttc" id="anamespacemy__api_1_1edge_html"><div class="ttname"><a href="namespacemy__api_1_1edge.html">my_api::edge</a></div><div class="ttdef"><b>Definition</b> EdgeController.cpp:6</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>
