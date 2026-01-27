@@ -51,6 +51,14 @@ private:
                           const my_data::TaskId& task_id = "",
                           std::int64_t queue_size_after = 0) const;
 
+  /**
+   * @brief 
+   * 
+   * @param {type} type 
+   * @param {type} err 
+   * @return true 
+   * @return false 
+   */
   bool EnsureNormalizerForTypeLocked(const std::string& type, std::string* err);
 
   // ---- status snapshot thread ----

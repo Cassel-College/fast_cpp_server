@@ -17,7 +17,7 @@
         }
     },
     "pipeline": {
-        "execute_node_number": 1,
+        "execute_node_number": 6,
         "executes": {
             "0": {
                 "model_args": {
@@ -73,6 +73,99 @@
                     ]
                 },
                 "model_name": "edge"
+            },
+            "1": {
+                "model_args": {
+                    "interval_sec_": 3
+                },
+                "model_name": "comm"
+            },
+            "2": {
+                "model_args": {
+                    "interval_sec_": 3
+                },
+                "model_name": "system_healthy",
+                "step_time_interval": 5
+            },
+            "3": {
+                "model_args": {
+                    "edges": {
+                        "0": {
+                            "ip": "127.0.0.1",
+                            "name": "wind",
+                            "port": 2000,
+                            "actions": {
+                                "getData": {
+                                    "interface": "/getData"
+                                }
+                            }
+                        },
+                        "1":{
+                            
+                            "ip": "127.0.0.1",
+                            "name": "solar",
+                            "port": 3000,
+                            "actions": {
+                                "getData": {
+                                    "interface": "/getData"
+                                },
+                                "download": {
+                                    "interface": "/download"
+                                },
+                                "upload": {
+                                    "interface": "/upload"
+                                }
+                            }
+                        },
+                        "2": {
+                            "ip": "127.0.0.1",
+                            "name": "robot_001",
+                            "port": 2000,
+                            "actions": {
+                                "getData": {
+                                    "interface": "/getData"
+                                }
+                            }
+                        },
+                        "3": {
+                            "ip": "127.0.0.1",
+                            "name": "robot_002",
+                            "port": 2000,
+                            "actions": {
+                                "getData": {
+                                    "interface": "/getData"
+                                }
+                            }
+                        },
+                        "4": {
+                            "ip": "127.0.0.1",
+                            "name": "rebot_003",
+                            "port": 2000,
+                            "actions": {
+                                "getData": {
+                                    "interface": "/getData"
+                                }
+                            }
+                        }
+                    },
+                    "edges_number": 5,
+                    "interval_sec_": 3
+                },
+                "model_name": "edge_monitor"
+            },
+            "4": {
+                "model_args": {
+                    "port": 9999
+                },
+                "model_name": "rest_api"
+            },
+            "5": {
+                "model_args": {
+                    "interval_sec_": 3,
+                    "simple_json4log": true
+                },
+                "model_name": "heartbeat",
+                "step_time_interval": 2
             }
         }
     }

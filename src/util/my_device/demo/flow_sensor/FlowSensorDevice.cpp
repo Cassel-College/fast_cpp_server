@@ -1,4 +1,5 @@
 #include "FlowSensorDevice.h"
+#include "MyLog.h"
 
 #include <utility>
 
@@ -38,8 +39,9 @@ FlowSensorDevice::~FlowSensorDevice() {
 }
 
 bool FlowSensorDevice::Init(const nlohmann::json& cfg, std::string* err) {
+  MYLOG_INFO("----------------------------------------------------------");
   MYLOG_INFO("[Device:{}] Init 开始，cfg={}", device_id_, cfg.dump());
-
+  bool initStatus = false;
   try {
     device_id_ = cfg.value("device_id", device_id_);
     device_name_ = cfg.value("device_name", device_name_);
@@ -57,6 +59,7 @@ bool FlowSensorDevice::Init(const nlohmann::json& cfg, std::string* err) {
     if (!control_) {
       if (err) *err = "CreateControl(flow_sensor) failed";
       MYLOG_ERROR("[Device:{}] Init 失败：CreateControl(flow_sensor) 返回 nullptr", device_id_);
+      initStatus = false;
       return false;
     }
 
@@ -65,17 +68,17 @@ bool FlowSensorDevice::Init(const nlohmann::json& cfg, std::string* err) {
     if (!control_->Init(control_cfg, &control_err)) {
       if (err) *err = control_err;
       MYLOG_ERROR("[Device:{}] Init 失败：control.Init 失败，err={}", device_id_, control_err);
-      return false;
+      initStatus = false;
     }
 
-    MYLOG_INFO("[Device:{}] Init 成功：device_name={}, control={}",
-               device_id_, device_name_, control_->Name());
-    return true;
+    MYLOG_INFO("[Device:{}] Init 成功：device_name={}, control={}", device_id_, device_name_, control_->Name());
   } catch (const std::exception& e) {
     if (err) *err = e.what();
     MYLOG_ERROR("[Device:{}] Init 异常：{}", device_id_, e.what());
-    return false;
+    initStatus = false;
   }
+  MYLOG_INFO("----------------------------------------------------------");
+  return initStatus;
 }
 
 bool FlowSensorDevice::Start(my_control::TaskQueue& queue, std::atomic<bool>* estop_flag, std::string* err) {

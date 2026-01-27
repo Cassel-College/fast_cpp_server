@@ -83,6 +83,7 @@ bool UUVEdge::Init(const nlohmann::json& cfg, std::string* err) {
   std::unique_lock<std::shared_mutex> lk(rw_mutex_);
 
   cfg_ = cfg;
+  bool initStatus = true;
 
   edge_id_ = cfg.value("edge_id", edge_id_);
   version_ = cfg.value("version", version_);
@@ -114,16 +115,18 @@ bool UUVEdge::Init(const nlohmann::json& cfg, std::string* err) {
 
   // devices config
   if (!cfg.contains("devices") || !cfg["devices"].is_array()) {
-    std::string e = "cfg.devices is required and must be array";
+    // std::string e = "cfg.devices is required and must be array";
+    std::string e = "边缘设备需要有末端设备，请补充Device设备信息";
     if (err) *err = e;
     MYLOG_ERROR("[Edge:{}] Init 失败：{}", edge_id_, e);
     run_state_ = RunState::Initializing;
-    return false;
+    initStatus = false;
   } else {
     MYLOG_INFO("[Edge:{}] 设备配置数量：{}", edge_id_, cfg["devices"].size());
   }
   int device_index = 0;
   for (const auto& dcfg : cfg["devices"]) {
+    MYLOG_INFO("----------------------------------------------------------------------------------------------");
     device_index++;
     MYLOG_INFO("[Edge:{}] 初始化设备 {} / {}: {}", edge_id_, device_index, cfg["devices"].size(), dcfg.dump());
     try {
@@ -135,7 +138,8 @@ bool UUVEdge::Init(const nlohmann::json& cfg, std::string* err) {
         if (err) *err = e;
         MYLOG_ERROR("[Edge:{}] Init 失败：{} item={}", edge_id_, e, dcfg.dump());
         run_state_ = RunState::Initializing;
-        return false;
+        initStatus = false;
+        continue;
       } else {
         MYLOG_INFO("[Edge:{}] 设备配置：device_id={}, type={}", edge_id_, device_id, type);
       }
@@ -145,7 +149,8 @@ bool UUVEdge::Init(const nlohmann::json& cfg, std::string* err) {
       // ensure normalizer for this type
       if (!EnsureNormalizerForTypeLocked(type, err)) {
         run_state_ = RunState::Initializing;
-        return false;
+        initStatus = false;
+        continue;
       }
 
       // create queue
@@ -160,15 +165,16 @@ bool UUVEdge::Init(const nlohmann::json& cfg, std::string* err) {
         if (err) *err = e;
         MYLOG_ERROR("[Edge:{}] Init 失败：device_id={}, {}", edge_id_, device_id, e);
         run_state_ = RunState::Initializing;
-        return false;
+        initStatus = false;
+        continue;
       } else {
-        MYLOG_INFO("[Edge:{}] CreateDevice 成功：device_id={}, type={}", edge_id_, device_id, type);
+        MYLOG_INFO("[Edge:{}] Create Device 成功：device_id={}, type={}", edge_id_, device_id, type);
       }
 
       devices_[device_id] = std::move(dev);
       MYLOG_INFO("[Edge:{}] 创建设备成功：device_id={}, type={}", edge_id_, device_id, type);
       run_state_ = RunState::Ready;
-      MYLOG_INFO("[Edge:{}] Init 成功：devices={}, queues={}, run_state={}",
+      MYLOG_INFO("[Edge:{}] Device Init 成功：devices={}, queues={}, run_state={}",
              edge_id_, devices_.size(), queues_.size(), ToString(run_state_.load()));
     } catch (const std::exception& e) {
       std::string emsg = "exception caught: ";
@@ -176,10 +182,12 @@ bool UUVEdge::Init(const nlohmann::json& cfg, std::string* err) {
       if (err) *err = emsg;
       MYLOG_ERROR("[Edge:{}] Init 失败：{}", edge_id_, emsg);
       run_state_ = RunState::Initializing;
-      return false;
+      initStatus = false;
+      continue;
     }
+    MYLOG_INFO("----------------------------------------------------------------------------------------------");
   }
-  return true;
+  return initStatus;
 }
 
 bool UUVEdge::Start(std::string* err) {
