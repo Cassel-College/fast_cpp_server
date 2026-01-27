@@ -18,14 +18,17 @@ docker run -it --name my_container_name -p 8004:4444 -p 8005:5555 -v /code:/work
 
 ## show code coverage in docker server
 
-![file_tree](./images/coverage.png)
+![file_tree](./docs/images/coverage.png)
 
 ### show code document
 
-![file_tree](./images/file_tree.png)
+![file_tree](./docs/images/file_tree.png)
 
-![file_tree](./images/class_info.png)
+![file_tree](./docs/images/class_info.png)
 
+### API interface
+
+![file_tree](./docs/images/api.png)
 ## How can I compile binary executable file ?
 
 ```shell
