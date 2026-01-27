@@ -83,27 +83,32 @@ $(document).ready(function() { init_codefold(0); });
 <div class="contents">
 <a href="HeartbeatDto_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;oatpp/core/Types.hpp&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;oatpp/core/macro/codegen.hpp&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__api_1_1dto.html">my_api::dto</a> {</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include OATPP_CODEGEN_BEGIN(DTO)</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classmy__api_1_1dto_1_1HeartbeatDto.html">   10</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__api_1_1dto_1_1HeartbeatDto.html">HeartbeatDto</a> : <span class="keyword">public</span> oatpp::DTO {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    DTO_INIT(<a class="code hl_class" href="classmy__api_1_1dto_1_1HeartbeatDto.html">HeartbeatDto</a>, DTO)</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;nlohmann/json.hpp&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// #include &quot;nlohmann/json_fwd.hpp&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// #include &quot;oatpp-swagger/oas3/Model.hpp&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;oatpp/core/Types.hpp&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;oatpp/core/macro/codegen.hpp&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__api_1_1dto.html">my_api::dto</a> {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include OATPP_CODEGEN_BEGIN(DTO)</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classmy__api_1_1dto_1_1HeartbeatDto.html#a46d2db30b1e22be094e07f750b512c8f">   13</a></span>    <a class="code hl_function" href="classmy__api_1_1dto_1_1HeartbeatDto.html#a46d2db30b1e22be094e07f750b512c8f">DTO_FIELD</a>(String, from);        <span class="comment">// 心跳来源</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classmy__api_1_1dto_1_1HeartbeatDto.html#a29111b18f73eda1aa7b716acc6841da7">   14</a></span>    <a class="code hl_function" href="classmy__api_1_1dto_1_1HeartbeatDto.html#a46d2db30b1e22be094e07f750b512c8f">DTO_FIELD</a>(Int64,  timestamp);   <span class="comment">// 时间戳</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classmy__api_1_1dto_1_1HeartbeatDto.html#aac256e9bf204949bf9ea661db50a40a1">   15</a></span>    <a class="code hl_function" href="classmy__api_1_1dto_1_1HeartbeatDto.html#a46d2db30b1e22be094e07f750b512c8f">DTO_FIELD</a>(String, status);      <span class="comment">// 状态</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>};</div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classmy__api_1_1dto_1_1HeartbeatDto.html">   13</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__api_1_1dto_1_1HeartbeatDto.html">HeartbeatDto</a> : <span class="keyword">public</span> oatpp::DTO {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    DTO_INIT(<a class="code hl_class" href="classmy__api_1_1dto_1_1HeartbeatDto.html">HeartbeatDto</a>, DTO)</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classmy__api_1_1dto_1_1HeartbeatDto.html#a46d2db30b1e22be094e07f750b512c8f">   16</a></span>    <a class="code hl_function" href="classmy__api_1_1dto_1_1HeartbeatDto.html#a46d2db30b1e22be094e07f750b512c8f">DTO_FIELD</a>(String,           from);        <span class="comment">// 心跳来源</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classmy__api_1_1dto_1_1HeartbeatDto.html#a29111b18f73eda1aa7b716acc6841da7">   17</a></span>    <a class="code hl_function" href="classmy__api_1_1dto_1_1HeartbeatDto.html#a46d2db30b1e22be094e07f750b512c8f">DTO_FIELD</a>(Int64,            timestamp);   <span class="comment">// 时间戳</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classmy__api_1_1dto_1_1HeartbeatDto.html#aac256e9bf204949bf9ea661db50a40a1">   18</a></span>    <a class="code hl_function" href="classmy__api_1_1dto_1_1HeartbeatDto.html#a46d2db30b1e22be094e07f750b512c8f">DTO_FIELD</a>(String,           status);      <span class="comment">// 状态</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="comment">// DTO_FIELD(nlohmann::json,   heartbeat);   // 额外心跳数据</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classmy__api_1_1dto_1_1HeartbeatDto.html#a8e2e8550bcf7ba0f9568cf3a6eb71d5b">   20</a></span>    <a class="code hl_function" href="classmy__api_1_1dto_1_1HeartbeatDto.html#a46d2db30b1e22be094e07f750b512c8f">DTO_FIELD</a>(String,           heartbeat);   <span class="comment">// 额外心跳数据（JSON 字符串）</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>};</div>
 </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include OATPP_CODEGEN_END(DTO)</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>} <span class="comment">// namespace my_api::dto</span></div>
-<div class="ttc" id="aclassmy__api_1_1dto_1_1HeartbeatDto_html"><div class="ttname"><a href="classmy__api_1_1dto_1_1HeartbeatDto.html">my_api::dto::HeartbeatDto</a></div><div class="ttdef"><b>Definition</b> HeartbeatDto.hpp:10</div></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include OATPP_CODEGEN_END(DTO)</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>} <span class="comment">// namespace my_api::dto</span></div>
+<div class="ttc" id="aclassmy__api_1_1dto_1_1HeartbeatDto_html"><div class="ttname"><a href="classmy__api_1_1dto_1_1HeartbeatDto.html">my_api::dto::HeartbeatDto</a></div><div class="ttdef"><b>Definition</b> HeartbeatDto.hpp:13</div></div>
 <div class="ttc" id="aclassmy__api_1_1dto_1_1HeartbeatDto_html_a46d2db30b1e22be094e07f750b512c8f"><div class="ttname"><a href="classmy__api_1_1dto_1_1HeartbeatDto.html#a46d2db30b1e22be094e07f750b512c8f">my_api::dto::HeartbeatDto::DTO_FIELD</a></div><div class="ttdeci">DTO_FIELD(String, from)</div></div>
 <div class="ttc" id="anamespacemy__api_1_1dto_html"><div class="ttname"><a href="namespacemy__api_1_1dto.html">my_api::dto</a></div><div class="ttdef"><b>Definition</b> EdgeStatusDto.hpp:6</div></div>
 </div><!-- fragment --></div><!-- contents -->

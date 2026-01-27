@@ -12,7 +12,7 @@ var searchData=
   ['boot_5fat_5fms_9',['boot_at_ms',['../structmy__data_1_1EdgeStatus.html#a7b8fc8514b4a3ab879867ce4e8e3f867',1,'my_data::EdgeStatus']]],
   ['boot_5fat_5fms_5f_10',['boot_at_ms_',['../classmy__edge_1_1demo_1_1UUVEdge.html#aaf585eb429176fc02a2ce6ab40ac64ea',1,'my_edge::demo::UUVEdge']]],
   ['buffer_5f_11',['buffer_',['../classtools_1_1SimpleTcpClient.html#a9fcab6aebd2ef14d2f3008fd25fc1ae5',1,'tools::SimpleTcpClient::buffer_'],['../classtools_1_1ThreadSafeBuffer.html#a28b7d835357a513d86c8c436c24cc0e7',1,'tools::ThreadSafeBuffer::buffer_']]],
-  ['buildheartbeat_12',['BuildHeartbeat',['../classHeartbeatManager.html#afe981eccb32b8fcc022718ba18c37f6f',1,'HeartbeatManager']]],
+  ['buildheartbeat_12',['BuildHeartbeat',['../classHeartbeatManager.html#a7394f16ced4d39b120077258d26c2ed9',1,'HeartbeatManager']]],
   ['buildthreadtree_13',['buildThreadTree',['../classHealthSnapshot.html#a72265d535f959df02f73b10c0c67d2d6',1,'HealthSnapshot']]],
   ['busy_14',['Busy',['../namespacemy__data.html#ab741123951602d5912c8b5aba6bf3372ad8a942ef2b04672adfafef0ad817a407',1,'my_data']]],
   ['busy_5ftimeout_5fms_15',['busy_timeout_ms',['../structmy__db_1_1DBConfig.html#a1d8584dda5609a17bb937aca1955b7f8',1,'my_db::DBConfig']]]

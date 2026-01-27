@@ -108,20 +108,22 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="comment">// 心跳上报</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classmy__api_1_1heartbeat_1_1HeartBeatController.html#a649d1b25ac1a9e6e5d8050f563db14e9">   25</a></span>    <a class="code hl_function" href="classmy__api_1_1heartbeat_1_1HeartBeatController.html#a649d1b25ac1a9e6e5d8050f563db14e9">ENDPOINT</a>(<span class="stringliteral">&quot;POST&quot;</span>, <span class="stringliteral">&quot;/v1/heartbeat&quot;</span>, postHeartbeat,</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>             BODY_DTO(oatpp::Object&lt;my_api::dto::HeartbeatDto&gt;, heartbeat));</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>};</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>             </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>};</div>
 </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include OATPP_CODEGEN_END(ApiController)</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>} <span class="comment">// namespace my_api::heartbeat</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include OATPP_CODEGEN_END(ApiController)</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>} <span class="comment">// namespace my_api::heartbeat</span></div>
 <div class="ttc" id="aBaseApiController_8hpp_html"><div class="ttname"><a href="BaseApiController_8hpp.html">BaseApiController.hpp</a></div></div>
 <div class="ttc" id="aHeartbeatDto_8hpp_html"><div class="ttname"><a href="HeartbeatDto_8hpp.html">HeartbeatDto.hpp</a></div></div>
 <div class="ttc" id="aclassmy__api_1_1base_1_1BaseApiController_html"><div class="ttname"><a href="classmy__api_1_1base_1_1BaseApiController.html">my_api::base::BaseApiController</a></div><div class="ttdef"><b>Definition</b> BaseApiController.hpp:12</div></div>
 <div class="ttc" id="aclassmy__api_1_1heartbeat_1_1HeartBeatController_html"><div class="ttname"><a href="classmy__api_1_1heartbeat_1_1HeartBeatController.html">my_api::heartbeat::HeartBeatController</a></div><div class="ttdef"><b>Definition</b> HeartBeatController.h:12</div></div>
 <div class="ttc" id="aclassmy__api_1_1heartbeat_1_1HeartBeatController_html_a204f51014b3a3c4c6278070679a752c1"><div class="ttname"><a href="classmy__api_1_1heartbeat_1_1HeartBeatController.html#a204f51014b3a3c4c6278070679a752c1">my_api::heartbeat::HeartBeatController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;GET&quot;, &quot;/v1/heartbeat&quot;, getHeartbeat)</div></div>
-<div class="ttc" id="aclassmy__api_1_1heartbeat_1_1HeartBeatController_html_a491a8d72860c9698b468c05bd2531d31"><div class="ttname"><a href="classmy__api_1_1heartbeat_1_1HeartBeatController.html#a491a8d72860c9698b468c05bd2531d31">my_api::heartbeat::HeartBeatController::createShared</a></div><div class="ttdeci">static std::shared_ptr&lt; HeartBeatController &gt; createShared(const std::shared_ptr&lt; ObjectMapper &gt; &amp;objectMapper)</div><div class="ttdef"><b>Definition</b> HeartBeatController.cpp:13</div></div>
+<div class="ttc" id="aclassmy__api_1_1heartbeat_1_1HeartBeatController_html_a491a8d72860c9698b468c05bd2531d31"><div class="ttname"><a href="classmy__api_1_1heartbeat_1_1HeartBeatController.html#a491a8d72860c9698b468c05bd2531d31">my_api::heartbeat::HeartBeatController::createShared</a></div><div class="ttdeci">static std::shared_ptr&lt; HeartBeatController &gt; createShared(const std::shared_ptr&lt; ObjectMapper &gt; &amp;objectMapper)</div><div class="ttdef"><b>Definition</b> HeartBeatController.cpp:14</div></div>
 <div class="ttc" id="aclassmy__api_1_1heartbeat_1_1HeartBeatController_html_a649d1b25ac1a9e6e5d8050f563db14e9"><div class="ttname"><a href="classmy__api_1_1heartbeat_1_1HeartBeatController.html#a649d1b25ac1a9e6e5d8050f563db14e9">my_api::heartbeat::HeartBeatController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;POST&quot;, &quot;/v1/heartbeat&quot;, postHeartbeat, BODY_DTO(oatpp::Object&lt; my_api::dto::HeartbeatDto &gt;, heartbeat))</div></div>
-<div class="ttc" id="anamespacemy__api_1_1heartbeat_html"><div class="ttname"><a href="namespacemy__api_1_1heartbeat.html">my_api::heartbeat</a></div><div class="ttdef"><b>Definition</b> HeartBeatController.cpp:5</div></div>
+<div class="ttc" id="anamespacemy__api_1_1heartbeat_html"><div class="ttname"><a href="namespacemy__api_1_1heartbeat.html">my_api::heartbeat</a></div><div class="ttdef"><b>Definition</b> HeartBeatController.cpp:6</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

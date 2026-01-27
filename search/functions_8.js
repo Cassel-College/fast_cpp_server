@@ -11,7 +11,7 @@ var searchData=
   ['intercept_8',['intercept',['../classmy__api_1_1CorsInterceptor.html#afd5bb10c6664456ffe1e8d2d7bd5ee51',1,'my_api::CorsInterceptor::intercept()'],['../classmy__api_1_1CorsResponseInterceptor.html#a44253f10f6dbb41308a57b82aba478d5',1,'my_api::CorsResponseInterceptor::intercept()']]],
   ['isconsoleoutputenabled_9',['isConsoleOutputEnabled',['../classSoftHealthMonitorConfig.html#ac5e012dc757ff106ea8c2151fdfca7a6',1,'SoftHealthMonitorConfig']]],
   ['isinitialized_10',['IsInitialized',['../classmy__db_1_1MyDB.html#a475d2bd8072f3c9df7b37581c4f1eca4',1,'my_db::MyDB']]],
-  ['isonline_11',['isonline',['../classedge__manager_1_1EdgeDevice.html#a31c964d7df054a0c1e51af505286eb71',1,'edge_manager::EdgeDevice::IsOnline()'],['../classDeviceOnlineMonitor.html#a1eceab28885f971892b9d4fc76e0e542',1,'DeviceOnlineMonitor::isOnline()']]],
+  ['isonline_11',['isonline',['../classDeviceOnlineMonitor.html#a1eceab28885f971892b9d4fc76e0e542',1,'DeviceOnlineMonitor::isOnline()'],['../classedge__manager_1_1EdgeDevice.html#a31c964d7df054a0c1e51af505286eb71',1,'edge_manager::EdgeDevice::IsOnline()']]],
   ['isprocessalive_12',['IsProcessAlive',['../classtools_1_1service__guard_1_1ServiceGuard.html#af04b9eb6da54da1b20e602e2780252ef',1,'tools::service_guard::ServiceGuard']]],
   ['isrunning_13',['isrunning',['../classmy__api_1_1MyAPI.html#ad201152b05beda61e51e3594ff07c8fe',1,'my_api::MyAPI::IsRunning()'],['../classmy__control_1_1demo_1_1Workflow.html#ad201152b05beda61e51e3594ff07c8fe',1,'my_control::demo::Workflow::IsRunning()']]],
   ['isshutdown_14',['IsShutdown',['../classmy__control_1_1TaskQueue.html#a1438c61ff8693b71ae3ad71e2364d3d7',1,'my_control::TaskQueue']]],
