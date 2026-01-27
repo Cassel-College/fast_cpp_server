@@ -1,4 +1,5 @@
 #include "WindSensorDevice.h"
+#include "MyLog.h"
 
 #include <utility>
 
@@ -37,9 +38,25 @@ WindSensorDevice::~WindSensorDevice() {
   MYLOG_INFO("[Device:{}] 析构完成 (WindSensorDevice)", device_id_);
 }
 
-bool WindSensorDevice::Init(const nlohmann::json& cfg, std::string* err) {
-  MYLOG_INFO("[Device:{}] Init 开始，cfg={}", device_id_, cfg.dump());
+void WindSensorDevice::ShowAnalyzeInitArgs(const nlohmann::json& cfg) {
+  MYLOG_INFO("-------------------- Device {} ----构造参数 ----------------------------------", device_id_);
+  MYLOG_INFO("{}", cfg.dump(4));
+  try {
+    std::string cfg_device_id = cfg.value("device_id", std::string("<none>"));
+    std::string cfg_device_name = cfg.value("device_name", std::string("<none>"));
 
+    MYLOG_INFO("[Device:{}] Parsed Init Args: device_id={}, device_name={}",
+               device_id_, cfg_device_id, cfg_device_name);
+
+  } catch (const std::exception& e) {
+    MYLOG_ERROR("[Device:{}] ShowAnalyzeInitArgs 捕获异常: {}", device_id_, e.what());
+  } catch (...) {
+    MYLOG_ERROR("[Device:{}] ShowAnalyzeInitArgs 捕获未知异常", device_id_);
+  }
+}
+
+bool WindSensorDevice::Init(const nlohmann::json& cfg, std::string* err) {
+  this->ShowAnalyzeInitArgs(cfg);
   try {
     device_id_ = cfg.value("device_id", device_id_);
     device_name_ = cfg.value("device_name", device_name_);
@@ -53,10 +70,10 @@ bool WindSensorDevice::Init(const nlohmann::json& cfg, std::string* err) {
     }
 
     MYLOG_INFO("[Device:{}] 创建 Control 实例...", device_id_);
-    control_ = my_control::MyControl::GetInstance().CreateControl("split_speed_sensor");
+    control_ = my_control::MyControl::GetInstance().CreateControl("wind_sensor");
     if (!control_) {
-      if (err) *err = "CreateControl(split_speed_sensor) failed";
-      MYLOG_ERROR("[Device:{}] Init 失败：CreateControl(split_speed_sensor) 返回 nullptr", device_id_);
+      if (err) *err = "CreateControl(wind_sensor) failed";
+      MYLOG_ERROR("[Device:{}] Init 失败：CreateControl(wind_sensor) 返回 nullptr", device_id_);
       return false;
     }
 

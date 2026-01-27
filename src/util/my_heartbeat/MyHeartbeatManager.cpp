@@ -2,8 +2,10 @@
 #include <unistd.h>
 #include <iostream>
 #include <ctime>
+#include "MyEdges.h"
 #include "MyLog.h"
 #include "MyEdgeManager.h"
+#include "IEdge.h"
 
 using namespace edge_manager;
 
@@ -67,6 +69,11 @@ nlohmann::json HeartbeatManager::BuildHeartbeat() const {
 
     nlohmann::json edgeData = edge_manager::MyEdgeManager::GetInstance().ShowEdgesStatus();
     heartbeat["edge_devices"] = edgeData;
+
+    // 添加边缘设备信息
+    if (true) {
+        heartbeat["edge_summary"] = my_edge::MyEdges::GetInstance().GetHeartbeatInfo();
+    }
 
     return {{"heartbeat", heartbeat}};
 }

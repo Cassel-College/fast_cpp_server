@@ -30,6 +30,13 @@ public:
 
   my_data::DeviceStatus GetStatusSnapshot() const override;
 
+  /**
+   * @brief 显示和解释构造参数
+   * 
+   * @param cfg 
+   */
+  void ShowAnalyzeInitArgs(const nlohmann::json& cfg) override;
+
   my_data::DeviceId Id() const override { return device_id_; }
   std::string Type() const override { return "depth_sensor"; }
 

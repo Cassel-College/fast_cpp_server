@@ -3,6 +3,7 @@
 #include "MyEdgeManager.h"
 #include "EdgeDevice.h"
 #include "IEdge.h"
+#include "MyEdges.h"
 #include "MyEdge.h"
 #include "MyAPI.h"
 #include "MyLog.h"
@@ -320,7 +321,7 @@ void Pipeline::LaunchEdge(const nlohmann::json& args) {
 
             // 创建 Edge 设备实例 + 初始化 Edge 设备
             std::unique_ptr<my_edge::IEdge> edge_device = my_edge::MyEdge::GetInstance().Create(edge_type, single_edge_args, &error_msg);
-            edge_device->ShowAnalyzeInitArgs(single_edge_args);
+            // edge_device->ShowAnalyzeInitArgs(single_edge_args);
             if (!edge_device) {
                 MYLOG_ERROR("Edge 设备 ID: {} 创建失败，类型未知: {}", i, edge_type);
                 continue;
@@ -328,12 +329,10 @@ void Pipeline::LaunchEdge(const nlohmann::json& args) {
                 MYLOG_INFO("Edge 设备 ID: {} 创建成功", i);
             }
             
-            // 启动 Edge 设备
-            if (!edge_device->Start(&error_msg)) {
-                MYLOG_ERROR("Edge 设备 ID: {} 启动失败: {}", i, error_msg);
-                continue;
-            }
             MYLOG_INFO("成功启动 Edge 设备 ID: {}", i);
+            MYLOG_INFO("获取数据快照: {}", edge_device->GetStatusSnapshot().toString());
+            MYLOG_INFO("内部信息: {}", edge_device->DumpInternalInfo().dump(4));
+            my_edge::MyEdges::GetInstance().appendEdge(std::move(edge_device));
         }
     } catch (const std::exception& e) {
         MYLOG_ERROR("启动 Edge 模块时捕获异常: {}", e.what());

@@ -35,6 +35,13 @@ public:
   virtual bool Init(const nlohmann::json& cfg, std::string* err) = 0;
 
   /**
+   * @brief 显示和解释构造参数
+   * 
+   * @param cfg 
+   */
+  virtual void ShowAnalyzeInitArgs(const nlohmann::json& cfg) = 0;
+
+  /**
    * @brief 启动设备执行单元（注入队列引用 + EStop 引用）
    * @param queue 队列引用（实例归 Edge）
    * @param estop_flag 全局 EStop 标志（可为 nullptr）

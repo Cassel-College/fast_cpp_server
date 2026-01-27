@@ -19,7 +19,7 @@ FlowSensorDevice::FlowSensorDevice() {
 }
 
 FlowSensorDevice::FlowSensorDevice(const nlohmann::json& cfg, std::string* err) : FlowSensorDevice() {
-  MYLOG_INFO("[Device:{}] 通过配置构造 FlowSensorDevice，cfg={}", device_id_, cfg.dump());
+  MYLOG_INFO("[Device:{}] 通过配置构造 FlowSensorDevice.", device_id_);
   try {
     if (!Init(cfg, err)) {
       MYLOG_ERROR("[Device:{}] 通过配置构造失败，err={}", device_id_, err ? *err : "unknown");
@@ -38,10 +38,26 @@ FlowSensorDevice::~FlowSensorDevice() {
   MYLOG_INFO("[Device:{}] 析构完成 (FlowSensorDevice)", device_id_);
 }
 
+void FlowSensorDevice::ShowAnalyzeInitArgs(const nlohmann::json& cfg) {
+  MYLOG_INFO("-------------------- Device {} ----构造参数 ----------------------------------", device_id_);
+  MYLOG_INFO("{}", cfg.dump(4));
+  try {
+    std::string cfg_device_id = cfg.value("device_id", std::string("<none>"));
+    std::string cfg_device_name = cfg.value("device_name", std::string("<none>"));
+
+    MYLOG_INFO("[Device:{}] Parsed Init Args: device_id={}, device_name={}",
+               device_id_, cfg_device_id, cfg_device_name);
+
+  } catch (const std::exception& e) {
+    MYLOG_ERROR("[Device:{}] ShowAnalyzeInitArgs 捕获异常: {}", device_id_, e.what());
+  } catch (...) {
+    MYLOG_ERROR("[Device:{}] ShowAnalyzeInitArgs 捕获未知异常", device_id_);
+  }
+}
+
 bool FlowSensorDevice::Init(const nlohmann::json& cfg, std::string* err) {
-  MYLOG_INFO("----------------------------------------------------------");
-  MYLOG_INFO("[Device:{}] Init 开始，cfg={}", device_id_, cfg.dump());
-  bool initStatus = false;
+  this->ShowAnalyzeInitArgs(cfg);
+  bool initStatus = true;
   try {
     device_id_ = cfg.value("device_id", device_id_);
     device_name_ = cfg.value("device_name", device_name_);
