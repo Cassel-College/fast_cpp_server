@@ -16,6 +16,7 @@ var searchData=
   ['myedges_13',['MyEdges',['../classmy__edge_1_1MyEdges.html',1,'my_edge']]],
   ['myiniconfig_14',['MyINIConfig',['../classMyINIConfig.html',1,'']]],
   ['myjsonconfig_15',['MyJSONConfig',['../classMyJSONConfig.html',1,'']]],
-  ['mysystemhealthymanager_16',['MySystemHealthyManager',['../classMySystemHealthy_1_1MySystemHealthyManager.html',1,'MySystemHealthy']]],
-  ['myyamlconfig_17',['MyYAMLConfig',['../classMyYAMLConfig.html',1,'']]]
+  ['mymqttbrokermanager_16',['MyMqttBrokerManager',['../classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html',1,'my_mqtt_broker_manager']]],
+  ['mysystemhealthymanager_17',['MySystemHealthyManager',['../classMySystemHealthy_1_1MySystemHealthyManager.html',1,'MySystemHealthy']]],
+  ['myyamlconfig_18',['MyYAMLConfig',['../classMyYAMLConfig.html',1,'']]]
 ];

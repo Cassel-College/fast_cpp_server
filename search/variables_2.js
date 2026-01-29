@@ -1,7 +1,7 @@
 var searchData=
 [
   ['capability_0',['capability',['../structmy__data_1_1Task.html#a586d4b3f6ee263311139695f7554f978',1,'my_data::Task']]],
-  ['cfg_5f_1',['cfg_',['../classmy__db_1_1MyDB.html#a24453dde91ecf16ada18671e7985ed8a',1,'my_db::MyDB::cfg_'],['../classfast__mqtt_1_1MFMQTTServer.html#ab6d49423f76ea026d6eb25402274d258',1,'fast_mqtt::MFMQTTServer::cfg_'],['../classmy__edge_1_1demo_1_1UUVEdge.html#ab6d49423f76ea026d6eb25402274d258',1,'my_edge::demo::UUVEdge::cfg_']]],
+  ['cfg_5f_1',['cfg_',['../classmy__db_1_1MyDB.html#a24453dde91ecf16ada18671e7985ed8a',1,'my_db::MyDB::cfg_'],['../classmy__edge_1_1demo_1_1UUVEdge.html#ab6d49423f76ea026d6eb25402274d258',1,'my_edge::demo::UUVEdge::cfg_'],['../classfast__mqtt_1_1MFMQTTServer.html#ab6d49423f76ea026d6eb25402274d258',1,'fast_mqtt::MFMQTTServer::cfg_']]],
   ['check_5fname_2',['check_name',['../structmy__doctor_1_1CheckItem.html#a41a35a40c87784811ce23d35950cd8d4',1,'my_doctor::CheckItem']]],
   ['check_5ftype_3',['check_type',['../structmy__doctor_1_1CheckItem.html#a3c803e8aa530e8d68fd5a796f8ca6467',1,'my_doctor::CheckItem']]],
   ['children_4',['children',['../structThreadTreeNode.html#a6a9c08669a23fb80d2f2018ca1e86f03',1,'ThreadTreeNode']]],
@@ -15,15 +15,16 @@ var searchData=
   ['cond_5fnot_5fempty_5f_12',['cond_not_empty_',['../classtools_1_1thread__safe__queue_1_1ThreadSafeQueue.html#a5933b851bf5abc701afe9196e3e82c56',1,'tools::thread_safe_queue::ThreadSafeQueue']]],
   ['cond_5fnot_5ffull_5f_13',['cond_not_full_',['../classtools_1_1thread__safe__queue_1_1ThreadSafeQueue.html#a918d039d3fe1dafba7d5992b90807de9',1,'tools::thread_safe_queue::ThreadSafeQueue']]],
   ['conf_5fpath_5f_14',['conf_path_',['../classfast__mqtt_1_1MFMQTTServer.html#a3dbe8c5660246118bcd892b577215864',1,'fast_mqtt::MFMQTTServer']]],
-  ['config_5f_15',['config_',['../classMyJSONConfig.html#ae727e1f60c7e02e3e4bb8c932308b579',1,'MyJSONConfig::config_'],['../classHeartbeatManager.html#ae727e1f60c7e02e3e4bb8c932308b579',1,'HeartbeatManager::config_'],['../classSoftHealthMonitorManager.html#a9a7ad6db67a5e85449dfcdc6d219e00c',1,'SoftHealthMonitorManager::config_'],['../classMyConfig.html#ae727e1f60c7e02e3e4bb8c932308b579',1,'MyConfig::config_']]],
+  ['config_5f_15',['config_',['../classMyConfig.html#ae727e1f60c7e02e3e4bb8c932308b579',1,'MyConfig::config_'],['../classSoftHealthMonitorManager.html#a9a7ad6db67a5e85449dfcdc6d219e00c',1,'SoftHealthMonitorManager::config_'],['../classMyJSONConfig.html#ae727e1f60c7e02e3e4bb8c932308b579',1,'MyJSONConfig::config_'],['../classHeartbeatManager.html#ae727e1f60c7e02e3e4bb8c932308b579',1,'HeartbeatManager::config_']]],
   ['config_5fdata_5f_16',['config_data_',['../classtools_1_1pipeline_1_1Pipeline.html#ab5e51e74ebaab2834d9c1385007fd446',1,'tools::pipeline::Pipeline']]],
-  ['conn_5fstate_17',['conn_state',['../structmy__data_1_1DeviceStatus.html#af821acee7e457efc9a0e768d1e938949',1,'my_data::DeviceStatus']]],
-  ['connected_5f_18',['connected_',['../classtools_1_1SimpleTcpClient.html#a394f715193a382d9c59ec69143a3cc4d',1,'tools::SimpleTcpClient::connected_'],['../classfast__mqtt_1_1MFMQTTClient.html#a394f715193a382d9c59ec69143a3cc4d',1,'fast_mqtt::MFMQTTClient::connected_']]],
-  ['connmutex_5f_19',['connMutex_',['../classtools_1_1SimpleTcpClient.html#ac669324da44bb5dd470e9bfc1f8b00b5',1,'tools::SimpleTcpClient']]],
-  ['control_5f_20',['control_',['../classmy__control_1_1demo_1_1Workflow.html#a5bcaddb83e39d2c871ce71f1085aeb51',1,'my_control::demo::Workflow::control_'],['../classmy__device_1_1demo_1_1WindSensorDevice.html#a36443a557da28dbcbfcbeea57530f8d1',1,'my_device::demo::WindSensorDevice::control_'],['../classmy__device_1_1demo_1_1UUVDevice.html#a36443a557da28dbcbfcbeea57530f8d1',1,'my_device::demo::UUVDevice::control_'],['../classmy__device_1_1demo_1_1FlowSensorDevice.html#a36443a557da28dbcbfcbeea57530f8d1',1,'my_device::demo::FlowSensorDevice::control_'],['../classmy__device_1_1demo_1_1DepthSensorDevice.html#a36443a557da28dbcbfcbeea57530f8d1',1,'my_device::demo::DepthSensorDevice::control_']]],
-  ['cpu_5fusage_5fpercent_21',['cpu_usage_percent',['../structThreadSnapshot.html#a295e34a22c4d3d19004e4ff577ea2f5d',1,'ThreadSnapshot']]],
-  ['created_5fat_5fms_22',['created_at_ms',['../structmy__data_1_1Task.html#a61c4b89651eebddabd9c4a9cedb78087',1,'my_data::Task']]],
-  ['current_5fbackoff_5f_23',['current_backoff_',['../classfast__mqtt_1_1MFMQTTClient.html#a203ecacd3cdb6701dd60054683521f7e',1,'fast_mqtt::MFMQTTClient']]],
-  ['current_5finfo_5f_24',['current_info_',['../classMySystemHealthy_1_1MySystemHealthyManager.html#a462cf695b2e418a69ff82950b1d9a295',1,'MySystemHealthy::MySystemHealthyManager']]],
-  ['cv_5f_25',['cv_',['../classmy__control_1_1TaskQueue.html#a5eb1f373ea25b73577b6e0205ad7b399',1,'my_control::TaskQueue']]]
+  ['config_5finitialized_5f_17',['config_initialized_',['../classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#af12f78ccc8851d5ba4723d3ab6541ea5',1,'my_mqtt_broker_manager::MyMqttBrokerManager']]],
+  ['conn_5fstate_18',['conn_state',['../structmy__data_1_1DeviceStatus.html#af821acee7e457efc9a0e768d1e938949',1,'my_data::DeviceStatus']]],
+  ['connected_5f_19',['connected_',['../classtools_1_1SimpleTcpClient.html#a394f715193a382d9c59ec69143a3cc4d',1,'tools::SimpleTcpClient::connected_'],['../classfast__mqtt_1_1MFMQTTClient.html#a394f715193a382d9c59ec69143a3cc4d',1,'fast_mqtt::MFMQTTClient::connected_']]],
+  ['connmutex_5f_20',['connMutex_',['../classtools_1_1SimpleTcpClient.html#ac669324da44bb5dd470e9bfc1f8b00b5',1,'tools::SimpleTcpClient']]],
+  ['control_5f_21',['control_',['../classmy__device_1_1demo_1_1DepthSensorDevice.html#a36443a557da28dbcbfcbeea57530f8d1',1,'my_device::demo::DepthSensorDevice::control_'],['../classmy__device_1_1demo_1_1WindSensorDevice.html#a36443a557da28dbcbfcbeea57530f8d1',1,'my_device::demo::WindSensorDevice::control_'],['../classmy__device_1_1demo_1_1UUVDevice.html#a36443a557da28dbcbfcbeea57530f8d1',1,'my_device::demo::UUVDevice::control_'],['../classmy__device_1_1demo_1_1FlowSensorDevice.html#a36443a557da28dbcbfcbeea57530f8d1',1,'my_device::demo::FlowSensorDevice::control_'],['../classmy__control_1_1demo_1_1Workflow.html#a5bcaddb83e39d2c871ce71f1085aeb51',1,'my_control::demo::Workflow::control_']]],
+  ['cpu_5fusage_5fpercent_22',['cpu_usage_percent',['../structThreadSnapshot.html#a295e34a22c4d3d19004e4ff577ea2f5d',1,'ThreadSnapshot']]],
+  ['created_5fat_5fms_23',['created_at_ms',['../structmy__data_1_1Task.html#a61c4b89651eebddabd9c4a9cedb78087',1,'my_data::Task']]],
+  ['current_5fbackoff_5f_24',['current_backoff_',['../classfast__mqtt_1_1MFMQTTClient.html#a203ecacd3cdb6701dd60054683521f7e',1,'fast_mqtt::MFMQTTClient']]],
+  ['current_5finfo_5f_25',['current_info_',['../classMySystemHealthy_1_1MySystemHealthyManager.html#a462cf695b2e418a69ff82950b1d9a295',1,'MySystemHealthy::MySystemHealthyManager']]],
+  ['cv_5f_26',['cv_',['../classmy__control_1_1TaskQueue.html#a5eb1f373ea25b73577b6e0205ad7b399',1,'my_control::TaskQueue']]]
 ];

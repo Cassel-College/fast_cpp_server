@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_mqtt_broker_manager/MyMqttBrokerManager.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_de66bcdf9db83ae6c46cf200196f69ad.html">my_mqtt_broker_manager</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">MyMqttBrokerManager.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="MyMqttBrokerManager_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;nlohmann/json.hpp&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;thread&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;chrono&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;csignal&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__mqtt__broker__manager.html">my_mqtt_broker_manager</a> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html">   14</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html">MyMqttBrokerManager</a> {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="comment">// 获取单例实例</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">static</span> <a class="code hl_class" href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html">MyMqttBrokerManager</a>&amp; <a class="code hl_function" href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#aa5dd3caf6f567b12a6ef670aa7389478">GetInstance</a>();</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="comment">// 初始化配置</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#ac933e753013e97524e4f594875990de6">Init</a>(<span class="keyword">const</span> nlohmann::json&amp; config);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="comment">// 启动 Broker 服务</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#aa70efaa4751ac6d5d54dce88fe725e0a">Start</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="comment">// 停止 Broker 服务</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#a17a237457e57625296e6b24feb19c60a">Stop</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="comment">// 检查 Broker 是否运行</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#ad201152b05beda61e51e3594ff07c8fe">IsRunning</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="comment">// 获取心跳信息</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    nlohmann::json <a class="code hl_function" href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#a227a4ddc497d4955792267c970c8d482">GetHeartbeat</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#af1cdeea2f9db7ffdf0852207c87f1283">   35</a></span>    <a class="code hl_function" href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#af1cdeea2f9db7ffdf0852207c87f1283">MyMqttBrokerManager</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_function" href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#ac99f03802adf001025b224773015ca58">~MyMqttBrokerManager</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="comment">// 启动并管理 Broker 子进程</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#aabdce0bb152357814ce71c82fe92382a">BrokerProcessManager</a>();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#a352df8c6647a119d688ea43a365a652b">HealthCheck</a>();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="comment">// Broker 子进程 PID</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#ab7cd29a65a993a35b2ad3f9e2eb2089d">   48</a></span>    pid_t <a class="code hl_variable" href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#ab7cd29a65a993a35b2ad3f9e2eb2089d">broker_pid_</a>{-1};</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="comment">// 配置文件路径</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#ae3e6cca0b57cdc12a1ad79a7c4274a72">   51</a></span>    std::string <a class="code hl_variable" href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#ae3e6cca0b57cdc12a1ad79a7c4274a72">broker_bin_</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#ad83b32e4efcb4793b038c606086db294">   52</a></span>    std::string <a class="code hl_variable" href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#ad83b32e4efcb4793b038c606086db294">broker_config_</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#a49246154fac16e9f036956debddc2c80">   53</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#a49246154fac16e9f036956debddc2c80">broker_port_</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#a88fb19f385969e52e323e6c97f9bec53">   54</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#a88fb19f385969e52e323e6c97f9bec53">broker_foreground_</a>{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="comment">// 心跳状态</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#aab81986b027323c6a7d58e32b4383dd6">   57</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#aab81986b027323c6a7d58e32b4383dd6">broker_running_</a>{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="comment">// 配置初始化成功标记</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#af12f78ccc8851d5ba4723d3ab6541ea5">   60</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#af12f78ccc8851d5ba4723d3ab6541ea5">config_initialized_</a>{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="comment">// 线程</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#aba4233173b6b49fedecbef7f5eb90880">   63</a></span>    std::thread <a class="code hl_variable" href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#aba4233173b6b49fedecbef7f5eb90880">broker_manager_thread_</a>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>};</div>
+</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>};</div>
+<div class="ttc" id="aclassmy__mqtt__broker__manager_1_1MyMqttBrokerManager_html"><div class="ttname"><a href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html">my_mqtt_broker_manager::MyMqttBrokerManager</a></div><div class="ttdef"><b>Definition</b> MyMqttBrokerManager.h:14</div></div>
+<div class="ttc" id="aclassmy__mqtt__broker__manager_1_1MyMqttBrokerManager_html_a17a237457e57625296e6b24feb19c60a"><div class="ttname"><a href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#a17a237457e57625296e6b24feb19c60a">my_mqtt_broker_manager::MyMqttBrokerManager::Stop</a></div><div class="ttdeci">void Stop()</div><div class="ttdef"><b>Definition</b> MyMqttBrokerManager.cpp:44</div></div>
+<div class="ttc" id="aclassmy__mqtt__broker__manager_1_1MyMqttBrokerManager_html_a227a4ddc497d4955792267c970c8d482"><div class="ttname"><a href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#a227a4ddc497d4955792267c970c8d482">my_mqtt_broker_manager::MyMqttBrokerManager::GetHeartbeat</a></div><div class="ttdeci">nlohmann::json GetHeartbeat() const</div><div class="ttdef"><b>Definition</b> MyMqttBrokerManager.cpp:64</div></div>
+<div class="ttc" id="aclassmy__mqtt__broker__manager_1_1MyMqttBrokerManager_html_a352df8c6647a119d688ea43a365a652b"><div class="ttname"><a href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#a352df8c6647a119d688ea43a365a652b">my_mqtt_broker_manager::MyMqttBrokerManager::HealthCheck</a></div><div class="ttdeci">void HealthCheck()</div><div class="ttdoc">定期检查 Broker 健康状况</div><div class="ttdef"><b>Definition</b> MyMqttBrokerManager.cpp:91</div></div>
+<div class="ttc" id="aclassmy__mqtt__broker__manager_1_1MyMqttBrokerManager_html_a49246154fac16e9f036956debddc2c80"><div class="ttname"><a href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#a49246154fac16e9f036956debddc2c80">my_mqtt_broker_manager::MyMqttBrokerManager::broker_port_</a></div><div class="ttdeci">int broker_port_</div><div class="ttdef"><b>Definition</b> MyMqttBrokerManager.h:53</div></div>
+<div class="ttc" id="aclassmy__mqtt__broker__manager_1_1MyMqttBrokerManager_html_a88fb19f385969e52e323e6c97f9bec53"><div class="ttname"><a href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#a88fb19f385969e52e323e6c97f9bec53">my_mqtt_broker_manager::MyMqttBrokerManager::broker_foreground_</a></div><div class="ttdeci">bool broker_foreground_</div><div class="ttdef"><b>Definition</b> MyMqttBrokerManager.h:54</div></div>
+<div class="ttc" id="aclassmy__mqtt__broker__manager_1_1MyMqttBrokerManager_html_aa5dd3caf6f567b12a6ef670aa7389478"><div class="ttname"><a href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#aa5dd3caf6f567b12a6ef670aa7389478">my_mqtt_broker_manager::MyMqttBrokerManager::GetInstance</a></div><div class="ttdeci">static MyMqttBrokerManager &amp; GetInstance()</div><div class="ttdef"><b>Definition</b> MyMqttBrokerManager.cpp:11</div></div>
+<div class="ttc" id="aclassmy__mqtt__broker__manager_1_1MyMqttBrokerManager_html_aa70efaa4751ac6d5d54dce88fe725e0a"><div class="ttname"><a href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#aa70efaa4751ac6d5d54dce88fe725e0a">my_mqtt_broker_manager::MyMqttBrokerManager::Start</a></div><div class="ttdeci">bool Start()</div><div class="ttdef"><b>Definition</b> MyMqttBrokerManager.cpp:33</div></div>
+<div class="ttc" id="aclassmy__mqtt__broker__manager_1_1MyMqttBrokerManager_html_aab81986b027323c6a7d58e32b4383dd6"><div class="ttname"><a href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#aab81986b027323c6a7d58e32b4383dd6">my_mqtt_broker_manager::MyMqttBrokerManager::broker_running_</a></div><div class="ttdeci">bool broker_running_</div><div class="ttdef"><b>Definition</b> MyMqttBrokerManager.h:57</div></div>
+<div class="ttc" id="aclassmy__mqtt__broker__manager_1_1MyMqttBrokerManager_html_aabdce0bb152357814ce71c82fe92382a"><div class="ttname"><a href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#aabdce0bb152357814ce71c82fe92382a">my_mqtt_broker_manager::MyMqttBrokerManager::BrokerProcessManager</a></div><div class="ttdeci">void BrokerProcessManager()</div><div class="ttdef"><b>Definition</b> MyMqttBrokerManager.cpp:73</div></div>
+<div class="ttc" id="aclassmy__mqtt__broker__manager_1_1MyMqttBrokerManager_html_ab7cd29a65a993a35b2ad3f9e2eb2089d"><div class="ttname"><a href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#ab7cd29a65a993a35b2ad3f9e2eb2089d">my_mqtt_broker_manager::MyMqttBrokerManager::broker_pid_</a></div><div class="ttdeci">pid_t broker_pid_</div><div class="ttdef"><b>Definition</b> MyMqttBrokerManager.h:48</div></div>
+<div class="ttc" id="aclassmy__mqtt__broker__manager_1_1MyMqttBrokerManager_html_aba4233173b6b49fedecbef7f5eb90880"><div class="ttname"><a href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#aba4233173b6b49fedecbef7f5eb90880">my_mqtt_broker_manager::MyMqttBrokerManager::broker_manager_thread_</a></div><div class="ttdeci">std::thread broker_manager_thread_</div><div class="ttdef"><b>Definition</b> MyMqttBrokerManager.h:63</div></div>
+<div class="ttc" id="aclassmy__mqtt__broker__manager_1_1MyMqttBrokerManager_html_ac933e753013e97524e4f594875990de6"><div class="ttname"><a href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#ac933e753013e97524e4f594875990de6">my_mqtt_broker_manager::MyMqttBrokerManager::Init</a></div><div class="ttdeci">void Init(const nlohmann::json &amp;config)</div><div class="ttdef"><b>Definition</b> MyMqttBrokerManager.cpp:16</div></div>
+<div class="ttc" id="aclassmy__mqtt__broker__manager_1_1MyMqttBrokerManager_html_ac99f03802adf001025b224773015ca58"><div class="ttname"><a href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#ac99f03802adf001025b224773015ca58">my_mqtt_broker_manager::MyMqttBrokerManager::~MyMqttBrokerManager</a></div><div class="ttdeci">~MyMqttBrokerManager()</div><div class="ttdef"><b>Definition</b> MyMqttBrokerManager.cpp:103</div></div>
+<div class="ttc" id="aclassmy__mqtt__broker__manager_1_1MyMqttBrokerManager_html_ad201152b05beda61e51e3594ff07c8fe"><div class="ttname"><a href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#ad201152b05beda61e51e3594ff07c8fe">my_mqtt_broker_manager::MyMqttBrokerManager::IsRunning</a></div><div class="ttdeci">bool IsRunning() const</div><div class="ttdef"><b>Definition</b> MyMqttBrokerManager.cpp:57</div></div>
+<div class="ttc" id="aclassmy__mqtt__broker__manager_1_1MyMqttBrokerManager_html_ad83b32e4efcb4793b038c606086db294"><div class="ttname"><a href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#ad83b32e4efcb4793b038c606086db294">my_mqtt_broker_manager::MyMqttBrokerManager::broker_config_</a></div><div class="ttdeci">std::string broker_config_</div><div class="ttdef"><b>Definition</b> MyMqttBrokerManager.h:52</div></div>
+<div class="ttc" id="aclassmy__mqtt__broker__manager_1_1MyMqttBrokerManager_html_ae3e6cca0b57cdc12a1ad79a7c4274a72"><div class="ttname"><a href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#ae3e6cca0b57cdc12a1ad79a7c4274a72">my_mqtt_broker_manager::MyMqttBrokerManager::broker_bin_</a></div><div class="ttdeci">std::string broker_bin_</div><div class="ttdef"><b>Definition</b> MyMqttBrokerManager.h:51</div></div>
+<div class="ttc" id="aclassmy__mqtt__broker__manager_1_1MyMqttBrokerManager_html_af12f78ccc8851d5ba4723d3ab6541ea5"><div class="ttname"><a href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#af12f78ccc8851d5ba4723d3ab6541ea5">my_mqtt_broker_manager::MyMqttBrokerManager::config_initialized_</a></div><div class="ttdeci">bool config_initialized_</div><div class="ttdef"><b>Definition</b> MyMqttBrokerManager.h:60</div></div>
+<div class="ttc" id="aclassmy__mqtt__broker__manager_1_1MyMqttBrokerManager_html_af1cdeea2f9db7ffdf0852207c87f1283"><div class="ttname"><a href="classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#af1cdeea2f9db7ffdf0852207c87f1283">my_mqtt_broker_manager::MyMqttBrokerManager::MyMqttBrokerManager</a></div><div class="ttdeci">MyMqttBrokerManager()=default</div></div>
+<div class="ttc" id="anamespacemy__mqtt__broker__manager_html"><div class="ttname"><a href="namespacemy__mqtt__broker__manager.html">my_mqtt_broker_manager</a></div><div class="ttdef"><b>Definition</b> MyMqttBrokerManager.cpp:9</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

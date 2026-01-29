@@ -16,6 +16,7 @@ var searchData=
   ['my_5fdoctor_13',['my_doctor',['../namespacemy__doctor.html',1,'']]],
   ['my_5fedge_14',['my_edge',['../namespacemy__edge.html',1,'']]],
   ['my_5fedge_3a_3ademo_15',['demo',['../namespacemy__edge_1_1demo.html',1,'my_edge']]],
-  ['mylog_16',['MyLog',['../namespaceMyLog.html',1,'']]],
-  ['mysystemhealthy_17',['MySystemHealthy',['../namespaceMySystemHealthy.html',1,'']]]
+  ['my_5fmqtt_5fbroker_5fmanager_16',['my_mqtt_broker_manager',['../namespacemy__mqtt__broker__manager.html',1,'']]],
+  ['mylog_17',['MyLog',['../namespaceMyLog.html',1,'']]],
+  ['mysystemhealthy_18',['MySystemHealthy',['../namespaceMySystemHealthy.html',1,'']]]
 ];

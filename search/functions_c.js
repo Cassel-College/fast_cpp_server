@@ -20,6 +20,7 @@ var searchData=
   ['myedges_17',['myedges',['../classmy__edge_1_1MyEdges.html#af70cc1d4dfff09fb5fa79aa3eaf9c82a',1,'my_edge::MyEdges::MyEdges()=default'],['../classmy__edge_1_1MyEdges.html#a755cae61f47bc697cb8a005b8f736a7c',1,'my_edge::MyEdges::MyEdges(const MyEdges &amp;)=delete']]],
   ['myiniconfig_18',['MyINIConfig',['../classMyINIConfig.html#a32fddfe19cf7b2fe08489d3278b742af',1,'MyINIConfig']]],
   ['myjsonconfig_19',['MyJSONConfig',['../classMyJSONConfig.html#a1dd192bb829c3c041b29da6d11360595',1,'MyJSONConfig']]],
-  ['mysystemhealthymanager_20',['MySystemHealthyManager',['../classMySystemHealthy_1_1MySystemHealthyManager.html#a476947e3d41da37fe3c6d7ce9d668cc8',1,'MySystemHealthy::MySystemHealthyManager']]],
-  ['myyamlconfig_21',['MyYAMLConfig',['../classMyYAMLConfig.html#aaba4bb4d685230dd3a74990721264d05',1,'MyYAMLConfig']]]
+  ['mymqttbrokermanager_20',['MyMqttBrokerManager',['../classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#af1cdeea2f9db7ffdf0852207c87f1283',1,'my_mqtt_broker_manager::MyMqttBrokerManager']]],
+  ['mysystemhealthymanager_21',['MySystemHealthyManager',['../classMySystemHealthy_1_1MySystemHealthyManager.html#a476947e3d41da37fe3c6d7ce9d668cc8',1,'MySystemHealthy::MySystemHealthyManager']]],
+  ['myyamlconfig_22',['MyYAMLConfig',['../classMyYAMLConfig.html#aaba4bb4d685230dd3a74990721264d05',1,'MyYAMLConfig']]]
 ];

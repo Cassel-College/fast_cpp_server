@@ -110,6 +110,39 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:aa9a8e8ba2fbf620b75975789af2d3117" id="r_aa9a8e8ba2fbf620b75975789af2d3117"><td class="memItemLeft" align="right" valign="top">nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1MyEdges.html#aa9a8e8ba2fbf620b75975789af2d3117">GetHeartbeatInfo</a> () const</td></tr>
 <tr class="memdesc:aa9a8e8ba2fbf620b75975789af2d3117"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Heartbeat Info object/获取给模块的心跳信息  <br /></td></tr>
 <tr class="separator:aa9a8e8ba2fbf620b75975789af2d3117"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a854fe8569df85e2931fabfe24c288e82" id="r_a854fe8569df85e2931fabfe24c288e82"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1MyEdges.html#a854fe8569df85e2931fabfe24c288e82">HasEdge</a> (const std::string &amp;edge_id) const</td></tr>
+<tr class="memdesc:a854fe8569df85e2931fabfe24c288e82"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查是否存在指定 ID 的 Edge。  <br /></td></tr>
+<tr class="separator:a854fe8569df85e2931fabfe24c288e82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e12342fc420701fbffd97025421575a" id="r_a8e12342fc420701fbffd97025421575a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1MyEdges.html#a8e12342fc420701fbffd97025421575a">IsEmpty</a> () const</td></tr>
+<tr class="memdesc:a8e12342fc420701fbffd97025421575a"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查集合是否为空。  <br /></td></tr>
+<tr class="separator:a8e12342fc420701fbffd97025421575a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2064f4e8fed18a8c7c3819448152bce4" id="r_a2064f4e8fed18a8c7c3819448152bce4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1MyEdges.html#a2064f4e8fed18a8c7c3819448152bce4">SelectEdgeByIdDoAction</a> (const std::string &amp;edge_id, const nlohmann::json &amp;action) const</td></tr>
+<tr class="memdesc:a2064f4e8fed18a8c7c3819448152bce4"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据 ID 选择 Edge 并执行操作。  <br /></td></tr>
+<tr class="separator:a2064f4e8fed18a8c7c3819448152bce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a452dcef018edf8b9c7ead466dbfff9c3" id="r_a452dcef018edf8b9c7ead466dbfff9c3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1MyEdges.html#a452dcef018edf8b9c7ead466dbfff9c3">appendTaskToEdgeById</a> (const std::string &amp;edge_id, const nlohmann::json &amp;task) const</td></tr>
+<tr class="memdesc:a452dcef018edf8b9c7ead466dbfff9c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">向指定 ID 的 Edge 添加任务。  <br /></td></tr>
+<tr class="separator:a452dcef018edf8b9c7ead466dbfff9c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad76c4ac0f9582379a160c95676645557" id="r_ad76c4ac0f9582379a160c95676645557"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1MyEdges.html#ad76c4ac0f9582379a160c95676645557">setESTOP</a> (const std::string &amp;edge_id, bool estop) const</td></tr>
+<tr class="memdesc:ad76c4ac0f9582379a160c95676645557"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置指定 ID 的 Edge 的紧急停止状态。  <br /></td></tr>
+<tr class="separator:ad76c4ac0f9582379a160c95676645557"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a851517501bbd13a1bf5ad65e30a31389" id="r_a851517501bbd13a1bf5ad65e30a31389"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1MyEdges.html#a851517501bbd13a1bf5ad65e30a31389">setAllEdgesESTOP</a> (bool estop) const</td></tr>
+<tr class="memdesc:a851517501bbd13a1bf5ad65e30a31389"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置所有 Edge 的紧急停止状态。  <br /></td></tr>
+<tr class="separator:a851517501bbd13a1bf5ad65e30a31389"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c92bd6c0ed2fc49b5b7eac9a138f6fc" id="r_a6c92bd6c0ed2fc49b5b7eac9a138f6fc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1MyEdges.html#a6c92bd6c0ed2fc49b5b7eac9a138f6fc">getEdgeOnlineStatus</a> (const std::string &amp;edge_id) const</td></tr>
+<tr class="memdesc:a6c92bd6c0ed2fc49b5b7eac9a138f6fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定 ID 的 Edge 的在线状态。  <br /></td></tr>
+<tr class="separator:a6c92bd6c0ed2fc49b5b7eac9a138f6fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c3ef3130d0aabd4743486b4a326784e" id="r_a4c3ef3130d0aabd4743486b4a326784e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1MyEdges.html#a4c3ef3130d0aabd4743486b4a326784e">getAllEdgesOnlineStatus</a> (std::unordered_map&lt; std::string, bool &gt; &amp;status_map) const</td></tr>
+<tr class="memdesc:a4c3ef3130d0aabd4743486b4a326784e"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取所有 Edge 的在线状态。  <br /></td></tr>
+<tr class="separator:a4c3ef3130d0aabd4743486b4a326784e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f1ceccf67f3e54f61dc7207cb33353a" id="r_a7f1ceccf67f3e54f61dc7207cb33353a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1MyEdges.html#a7f1ceccf67f3e54f61dc7207cb33353a">getOnlineEdges</a> (std::vector&lt; std::string &gt; &amp;online_edges) const</td></tr>
+<tr class="memdesc:a7f1ceccf67f3e54f61dc7207cb33353a"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取所有在线的 Edge ID 列表。  <br /></td></tr>
+<tr class="separator:a7f1ceccf67f3e54f61dc7207cb33353a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff91e9e4737e8d8511870db5d41db512" id="r_aff91e9e4737e8d8511870db5d41db512"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1MyEdges.html#aff91e9e4737e8d8511870db5d41db512">getEdgeTaskStatus</a> (const std::string &amp;edge_id, nlohmann::json &amp;task_status) const</td></tr>
+<tr class="memdesc:aff91e9e4737e8d8511870db5d41db512"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定 ID 的 Edge 的任务状态。  <br /></td></tr>
+<tr class="separator:aff91e9e4737e8d8511870db5d41db512"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afea0edb709e9fe78b5bff2db15cd621f" id="r_afea0edb709e9fe78b5bff2db15cd621f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1MyEdges.html#afea0edb709e9fe78b5bff2db15cd621f">getEdgeHistoryTaskStatus</a> (const std::string &amp;edge_id, nlohmann::json &amp;history_task_status) const</td></tr>
+<tr class="memdesc:afea0edb709e9fe78b5bff2db15cd621f"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定 ID 的 Edge 的历史任务状态。  <br /></td></tr>
+<tr class="separator:afea0edb709e9fe78b5bff2db15cd621f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -281,6 +314,58 @@ Private 属性</h2></td></tr>
 
 </div>
 </div>
+<a id="a452dcef018edf8b9c7ead466dbfff9c3" name="a452dcef018edf8b9c7ead466dbfff9c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a452dcef018edf8b9c7ead466dbfff9c3">&#9670;&#160;</a></span>appendTaskToEdgeById()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool appendTaskToEdgeById </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>edge_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>task</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>向指定 ID 的 Edge 添加任务。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">edge_id</td><td>Edge 的 ID。 </td></tr>
+    <tr><td class="paramname">task</td><td>要添加的任务，使用 nlohmann::json 表示。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>如果任务成功添加则返回 true，否则返回 false。 </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="classmy__edge_1_1MyEdges.html#afb76b49ada8310d831e8f77056661d5f">MyEdges::edges_</a>, <a class="el" href="namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6">MyLog::Error()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#a281b5ec791338d4378e22ef44a51b4a1">MyEdges::mutex_</a> , 以及 <a class="el" href="namespaceMyLog.html#ac7b48b396b001feab27694d3151873a0">MyLog::Warn()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1MyEdges_a452dcef018edf8b9c7ead466dbfff9c3_cgraph.png" border="0" usemap="#aclassmy__edge_1_1MyEdges_a452dcef018edf8b9c7ead466dbfff9c3_cgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1MyEdges_a452dcef018edf8b9c7ead466dbfff9c3_cgraph" id="aclassmy__edge_1_1MyEdges_a452dcef018edf8b9c7ead466dbfff9c3_cgraph">
+<area shape="rect" title="向指定 ID 的 Edge 添加任务。" alt="" coords="5,31,180,56"/>
+<area shape="rect" href="namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6" title=" " alt="" coords="229,5,333,31"/>
+<area shape="poly" title=" " alt="" coords="180,29,215,24,216,29,181,34"/>
+<area shape="rect" href="namespaceMyLog.html#ac7b48b396b001feab27694d3151873a0" title=" " alt="" coords="228,55,335,80"/>
+<area shape="poly" title=" " alt="" coords="181,52,215,56,214,61,180,57"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a2d69d51d4a07eab449efe3ff895ce4af" name="a2d69d51d4a07eab449efe3ff895ce4af"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2d69d51d4a07eab449efe3ff895ce4af">&#9670;&#160;</a></span>deleteEdgeById()</h2>
 
@@ -319,6 +404,45 @@ Private 属性</h2></td></tr>
 <area shape="poly" title=" " alt="" coords="129,65,167,65,167,70,129,70"/>
 <area shape="rect" href="namespaceMyLog.html#ac7b48b396b001feab27694d3151873a0" title=" " alt="" coords="177,104,284,129"/>
 <area shape="poly" title=" " alt="" coords="111,77,176,97,174,102,109,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4c3ef3130d0aabd4743486b4a326784e" name="a4c3ef3130d0aabd4743486b4a326784e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c3ef3130d0aabd4743486b4a326784e">&#9670;&#160;</a></span>getAllEdgesOnlineStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool getAllEdgesOnlineStatus </td>
+          <td>(</td>
+          <td class="paramtype">std::unordered_map&lt; std::string, bool &gt; &amp;&#160;</td>
+          <td class="paramname"><em>status_map</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取所有 Edge 的在线状态。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">status_map</td><td>用于存储 Edge ID 和其在线状态的映射。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>如果成功获取则返回 true，否则返回 false。 </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="classmy__edge_1_1MyEdges.html#afb76b49ada8310d831e8f77056661d5f">MyEdges::edges_</a>, <a class="el" href="namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6">MyLog::Error()</a> , 以及 <a class="el" href="classmy__edge_1_1MyEdges.html#a281b5ec791338d4378e22ef44a51b4a1">MyEdges::mutex_</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1MyEdges_a4c3ef3130d0aabd4743486b4a326784e_cgraph.png" border="0" usemap="#aclassmy__edge_1_1MyEdges_a4c3ef3130d0aabd4743486b4a326784e_cgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1MyEdges_a4c3ef3130d0aabd4743486b4a326784e_cgraph" id="aclassmy__edge_1_1MyEdges_a4c3ef3130d0aabd4743486b4a326784e_cgraph">
+<area shape="rect" title="获取所有 Edge 的在线状态。" alt="" coords="5,5,188,31"/>
+<area shape="rect" href="namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6" title=" " alt="" coords="236,5,340,31"/>
+<area shape="poly" title=" " alt="" coords="188,15,222,15,222,21,188,21"/>
 </map>
 </div>
 
@@ -372,6 +496,58 @@ Private 属性</h2></td></tr>
 
 </div>
 </div>
+<a id="afea0edb709e9fe78b5bff2db15cd621f" name="afea0edb709e9fe78b5bff2db15cd621f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afea0edb709e9fe78b5bff2db15cd621f">&#9670;&#160;</a></span>getEdgeHistoryTaskStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool getEdgeHistoryTaskStatus </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>edge_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>history_task_status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取指定 ID 的 Edge 的历史任务状态。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">edge_id</td><td>Edge 的 ID。 </td></tr>
+    <tr><td class="paramname">history_task_status</td><td>用于存储历史任务状态的 JSON 对象。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>如果成功获取则返回 true，否则返回 false。 </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="classmy__edge_1_1MyEdges.html#afb76b49ada8310d831e8f77056661d5f">MyEdges::edges_</a>, <a class="el" href="namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6">MyLog::Error()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#a281b5ec791338d4378e22ef44a51b4a1">MyEdges::mutex_</a> , 以及 <a class="el" href="namespaceMyLog.html#ac7b48b396b001feab27694d3151873a0">MyLog::Warn()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1MyEdges_afea0edb709e9fe78b5bff2db15cd621f_cgraph.png" border="0" usemap="#aclassmy__edge_1_1MyEdges_afea0edb709e9fe78b5bff2db15cd621f_cgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1MyEdges_afea0edb709e9fe78b5bff2db15cd621f_cgraph" id="aclassmy__edge_1_1MyEdges_afea0edb709e9fe78b5bff2db15cd621f_cgraph">
+<area shape="rect" title="获取指定 ID 的 Edge 的历史任务状态。" alt="" coords="5,31,197,56"/>
+<area shape="rect" href="namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6" title=" " alt="" coords="247,5,351,31"/>
+<area shape="poly" title=" " alt="" coords="197,28,233,24,233,29,198,34"/>
+<area shape="rect" href="namespaceMyLog.html#ac7b48b396b001feab27694d3151873a0" title=" " alt="" coords="245,55,352,80"/>
+<area shape="poly" title=" " alt="" coords="198,52,232,57,231,62,197,58"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a086bb047ca3722c8e25c06cba957b2a8" name="a086bb047ca3722c8e25c06cba957b2a8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a086bb047ca3722c8e25c06cba957b2a8">&#9670;&#160;</a></span>getEdgeIds()</h2>
 
@@ -404,6 +580,47 @@ Private 属性</h2></td></tr>
 
 </div>
 </div>
+<a id="a6c92bd6c0ed2fc49b5b7eac9a138f6fc" name="a6c92bd6c0ed2fc49b5b7eac9a138f6fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c92bd6c0ed2fc49b5b7eac9a138f6fc">&#9670;&#160;</a></span>getEdgeOnlineStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool getEdgeOnlineStatus </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>edge_id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取指定 ID 的 Edge 的在线状态。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">edge_id</td><td>Edge 的 ID。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>如果在线则返回 true，否则返回 false。 </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="classmy__edge_1_1MyEdges.html#afb76b49ada8310d831e8f77056661d5f">MyEdges::edges_</a>, <a class="el" href="namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6">MyLog::Error()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#a281b5ec791338d4378e22ef44a51b4a1">MyEdges::mutex_</a> , 以及 <a class="el" href="namespaceMyLog.html#ac7b48b396b001feab27694d3151873a0">MyLog::Warn()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1MyEdges_a6c92bd6c0ed2fc49b5b7eac9a138f6fc_cgraph.png" border="0" usemap="#aclassmy__edge_1_1MyEdges_a6c92bd6c0ed2fc49b5b7eac9a138f6fc_cgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1MyEdges_a6c92bd6c0ed2fc49b5b7eac9a138f6fc_cgraph" id="aclassmy__edge_1_1MyEdges_a6c92bd6c0ed2fc49b5b7eac9a138f6fc_cgraph">
+<area shape="rect" title="获取指定 ID 的 Edge 的在线状态。" alt="" coords="5,31,164,56"/>
+<area shape="rect" href="namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6" title=" " alt="" coords="213,5,317,31"/>
+<area shape="poly" title=" " alt="" coords="164,30,199,24,200,30,164,35"/>
+<area shape="rect" href="namespaceMyLog.html#ac7b48b396b001feab27694d3151873a0" title=" " alt="" coords="212,55,319,80"/>
+<area shape="poly" title=" " alt="" coords="164,51,199,56,198,61,164,57"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a02d58ea4a6169b67b869c4f825592e63" name="a02d58ea4a6169b67b869c4f825592e63"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a02d58ea4a6169b67b869c4f825592e63">&#9670;&#160;</a></span>getEdges()</h2>
 
@@ -431,6 +648,58 @@ Private 属性</h2></td></tr>
 <area shape="rect" title="获取所有 Edge 实例（只读）。" alt="" coords="5,5,88,31"/>
 <area shape="rect" href="namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6" title=" " alt="" coords="136,5,240,31"/>
 <area shape="poly" title=" " alt="" coords="88,15,122,15,122,21,88,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aff91e9e4737e8d8511870db5d41db512" name="aff91e9e4737e8d8511870db5d41db512"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff91e9e4737e8d8511870db5d41db512">&#9670;&#160;</a></span>getEdgeTaskStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool getEdgeTaskStatus </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>edge_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>task_status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取指定 ID 的 Edge 的任务状态。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">edge_id</td><td>Edge 的 ID。 </td></tr>
+    <tr><td class="paramname">task_status</td><td>用于存储任务状态的 JSON 对象。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>如果成功获取则返回 true，否则返回 false。 </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="classmy__edge_1_1MyEdges.html#afb76b49ada8310d831e8f77056661d5f">MyEdges::edges_</a>, <a class="el" href="namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6">MyLog::Error()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#a281b5ec791338d4378e22ef44a51b4a1">MyEdges::mutex_</a> , 以及 <a class="el" href="namespaceMyLog.html#ac7b48b396b001feab27694d3151873a0">MyLog::Warn()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1MyEdges_aff91e9e4737e8d8511870db5d41db512_cgraph.png" border="0" usemap="#aclassmy__edge_1_1MyEdges_aff91e9e4737e8d8511870db5d41db512_cgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1MyEdges_aff91e9e4737e8d8511870db5d41db512_cgraph" id="aclassmy__edge_1_1MyEdges_aff91e9e4737e8d8511870db5d41db512_cgraph">
+<area shape="rect" title="获取指定 ID 的 Edge 的任务状态。" alt="" coords="5,31,151,56"/>
+<area shape="rect" href="namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6" title=" " alt="" coords="200,5,304,31"/>
+<area shape="poly" title=" " alt="" coords="151,30,186,25,187,30,151,35"/>
+<area shape="rect" href="namespaceMyLog.html#ac7b48b396b001feab27694d3151873a0" title=" " alt="" coords="199,55,305,80"/>
+<area shape="poly" title=" " alt="" coords="151,51,186,56,185,61,151,56"/>
 </map>
 </div>
 
@@ -555,6 +824,116 @@ Private 属性</h2></td></tr>
 
 </div>
 </div>
+<a id="a7f1ceccf67f3e54f61dc7207cb33353a" name="a7f1ceccf67f3e54f61dc7207cb33353a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f1ceccf67f3e54f61dc7207cb33353a">&#9670;&#160;</a></span>getOnlineEdges()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool getOnlineEdges </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>online_edges</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取所有在线的 Edge ID 列表。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">online_edges</td><td>用于存储在线 Edge ID 的向量。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>如果成功获取则返回 true，否则返回 false。 </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="classmy__edge_1_1MyEdges.html#afb76b49ada8310d831e8f77056661d5f">MyEdges::edges_</a>, <a class="el" href="namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6">MyLog::Error()</a> , 以及 <a class="el" href="classmy__edge_1_1MyEdges.html#a281b5ec791338d4378e22ef44a51b4a1">MyEdges::mutex_</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1MyEdges_a7f1ceccf67f3e54f61dc7207cb33353a_cgraph.png" border="0" usemap="#aclassmy__edge_1_1MyEdges_a7f1ceccf67f3e54f61dc7207cb33353a_cgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1MyEdges_a7f1ceccf67f3e54f61dc7207cb33353a_cgraph" id="aclassmy__edge_1_1MyEdges_a7f1ceccf67f3e54f61dc7207cb33353a_cgraph">
+<area shape="rect" title="获取所有在线的 Edge ID 列表。" alt="" coords="5,5,129,31"/>
+<area shape="rect" href="namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6" title=" " alt="" coords="177,5,281,31"/>
+<area shape="poly" title=" " alt="" coords="129,15,164,15,164,21,129,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a854fe8569df85e2931fabfe24c288e82" name="a854fe8569df85e2931fabfe24c288e82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a854fe8569df85e2931fabfe24c288e82">&#9670;&#160;</a></span>HasEdge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool HasEdge </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>edge_id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>检查是否存在指定 ID 的 Edge。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">edge_id</td><td>Edge 的 ID。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>如果存在则返回 true，否则返回 false。 </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="classmy__edge_1_1MyEdges.html#afb76b49ada8310d831e8f77056661d5f">MyEdges::edges_</a>, <a class="el" href="namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6">MyLog::Error()</a> , 以及 <a class="el" href="classmy__edge_1_1MyEdges.html#a281b5ec791338d4378e22ef44a51b4a1">MyEdges::mutex_</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1MyEdges_a854fe8569df85e2931fabfe24c288e82_cgraph.png" border="0" usemap="#aclassmy__edge_1_1MyEdges_a854fe8569df85e2931fabfe24c288e82_cgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1MyEdges_a854fe8569df85e2931fabfe24c288e82_cgraph" id="aclassmy__edge_1_1MyEdges_a854fe8569df85e2931fabfe24c288e82_cgraph">
+<area shape="rect" title="检查是否存在指定 ID 的 Edge。" alt="" coords="5,5,84,31"/>
+<area shape="rect" href="namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6" title=" " alt="" coords="132,5,236,31"/>
+<area shape="poly" title=" " alt="" coords="84,15,118,15,118,21,84,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8e12342fc420701fbffd97025421575a" name="a8e12342fc420701fbffd97025421575a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e12342fc420701fbffd97025421575a">&#9670;&#160;</a></span>IsEmpty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsEmpty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>检查集合是否为空。 </p>
+<dl class="section return"><dt>返回</dt><dd>如果为空则返回 true，否则返回 false。 </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="classmy__edge_1_1MyEdges.html#afb76b49ada8310d831e8f77056661d5f">MyEdges::edges_</a>, <a class="el" href="namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6">MyLog::Error()</a> , 以及 <a class="el" href="classmy__edge_1_1MyEdges.html#a281b5ec791338d4378e22ef44a51b4a1">MyEdges::mutex_</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1MyEdges_a8e12342fc420701fbffd97025421575a_cgraph.png" border="0" usemap="#aclassmy__edge_1_1MyEdges_a8e12342fc420701fbffd97025421575a_cgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1MyEdges_a8e12342fc420701fbffd97025421575a_cgraph" id="aclassmy__edge_1_1MyEdges_a8e12342fc420701fbffd97025421575a_cgraph">
+<area shape="rect" title="检查集合是否为空。" alt="" coords="5,5,80,31"/>
+<area shape="rect" href="namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6" title=" " alt="" coords="128,5,232,31"/>
+<area shape="poly" title=" " alt="" coords="80,15,114,15,114,21,80,21"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="acee88384f9e95f16458190bcc63ef0f1" name="acee88384f9e95f16458190bcc63ef0f1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acee88384f9e95f16458190bcc63ef0f1">&#9670;&#160;</a></span>operator=()</h2>
 
@@ -578,6 +957,149 @@ Private 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2064f4e8fed18a8c7c3819448152bce4" name="a2064f4e8fed18a8c7c3819448152bce4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2064f4e8fed18a8c7c3819448152bce4">&#9670;&#160;</a></span>SelectEdgeByIdDoAction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SelectEdgeByIdDoAction </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>edge_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>action</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>根据 ID 选择 Edge 并执行操作。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">edge_id</td><td>Edge 的 ID。 </td></tr>
+    <tr><td class="paramname">action</td><td>要执行的操作，使用 nlohmann::json 表示。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>如果操作成功执行则返回 true，否则返回 false。 </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="classmy__edge_1_1MyEdges.html#afb76b49ada8310d831e8f77056661d5f">MyEdges::edges_</a>, <a class="el" href="namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6">MyLog::Error()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#a281b5ec791338d4378e22ef44a51b4a1">MyEdges::mutex_</a> , 以及 <a class="el" href="namespaceMyLog.html#ac7b48b396b001feab27694d3151873a0">MyLog::Warn()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1MyEdges_a2064f4e8fed18a8c7c3819448152bce4_cgraph.png" border="0" usemap="#aclassmy__edge_1_1MyEdges_a2064f4e8fed18a8c7c3819448152bce4_cgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1MyEdges_a2064f4e8fed18a8c7c3819448152bce4_cgraph" id="aclassmy__edge_1_1MyEdges_a2064f4e8fed18a8c7c3819448152bce4_cgraph">
+<area shape="rect" title="根据 ID 选择 Edge 并执行操作。" alt="" coords="5,31,188,56"/>
+<area shape="rect" href="namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6" title=" " alt="" coords="237,5,341,31"/>
+<area shape="poly" title=" " alt="" coords="188,29,223,24,224,29,189,34"/>
+<area shape="rect" href="namespaceMyLog.html#ac7b48b396b001feab27694d3151873a0" title=" " alt="" coords="236,55,343,80"/>
+<area shape="poly" title=" " alt="" coords="189,52,223,56,222,62,188,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a851517501bbd13a1bf5ad65e30a31389" name="a851517501bbd13a1bf5ad65e30a31389"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a851517501bbd13a1bf5ad65e30a31389">&#9670;&#160;</a></span>setAllEdgesESTOP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool setAllEdgesESTOP </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>estop</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置所有 Edge 的紧急停止状态。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">estop</td><td>紧急停止状态。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>如果成功设置则返回 true，否则返回 false。 </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="classmy__edge_1_1MyEdges.html#afb76b49ada8310d831e8f77056661d5f">MyEdges::edges_</a>, <a class="el" href="namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6">MyLog::Error()</a> , 以及 <a class="el" href="classmy__edge_1_1MyEdges.html#a281b5ec791338d4378e22ef44a51b4a1">MyEdges::mutex_</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1MyEdges_a851517501bbd13a1bf5ad65e30a31389_cgraph.png" border="0" usemap="#aclassmy__edge_1_1MyEdges_a851517501bbd13a1bf5ad65e30a31389_cgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1MyEdges_a851517501bbd13a1bf5ad65e30a31389_cgraph" id="aclassmy__edge_1_1MyEdges_a851517501bbd13a1bf5ad65e30a31389_cgraph">
+<area shape="rect" title="设置所有 Edge 的紧急停止状态。" alt="" coords="5,5,145,31"/>
+<area shape="rect" href="namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6" title=" " alt="" coords="193,5,297,31"/>
+<area shape="poly" title=" " alt="" coords="146,15,179,15,179,21,146,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad76c4ac0f9582379a160c95676645557" name="ad76c4ac0f9582379a160c95676645557"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad76c4ac0f9582379a160c95676645557">&#9670;&#160;</a></span>setESTOP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool setESTOP </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>edge_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>estop</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置指定 ID 的 Edge 的紧急停止状态。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">edge_id</td><td>Edge 的 ID。 </td></tr>
+    <tr><td class="paramname">estop</td><td>紧急停止状态。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>如果成功设置则返回 true，否则返回 false。 </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="classmy__edge_1_1MyEdges.html#afb76b49ada8310d831e8f77056661d5f">MyEdges::edges_</a>, <a class="el" href="namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6">MyLog::Error()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#a281b5ec791338d4378e22ef44a51b4a1">MyEdges::mutex_</a> , 以及 <a class="el" href="namespaceMyLog.html#ac7b48b396b001feab27694d3151873a0">MyLog::Warn()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1MyEdges_ad76c4ac0f9582379a160c95676645557_cgraph.png" border="0" usemap="#aclassmy__edge_1_1MyEdges_ad76c4ac0f9582379a160c95676645557_cgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1MyEdges_ad76c4ac0f9582379a160c95676645557_cgraph" id="aclassmy__edge_1_1MyEdges_ad76c4ac0f9582379a160c95676645557_cgraph">
+<area shape="rect" title="设置指定 ID 的 Edge 的紧急停止状态。" alt="" coords="5,31,89,56"/>
+<area shape="rect" href="namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6" title=" " alt="" coords="139,5,243,31"/>
+<area shape="poly" title=" " alt="" coords="89,33,124,27,125,32,90,39"/>
+<area shape="rect" href="namespaceMyLog.html#ac7b48b396b001feab27694d3151873a0" title=" " alt="" coords="137,55,244,80"/>
+<area shape="poly" title=" " alt="" coords="90,48,124,54,124,59,89,53"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -636,7 +1158,7 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1MyEdges.html#ab07cfa36269ad610130c8a8d49cf2553">MyEdges::appendEdge()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#a2d69d51d4a07eab449efe3ff895ce4af">MyEdges::deleteEdgeById()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#a39cf62462d42d308401c21760ed589c8">MyEdges::getEdgeById()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#a086bb047ca3722c8e25c06cba957b2a8">MyEdges::getEdgeIds()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#a02d58ea4a6169b67b869c4f825592e63">MyEdges::getEdges()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#aa9a8e8ba2fbf620b75975789af2d3117">MyEdges::GetHeartbeatInfo()</a> , 以及 <a class="el" href="classmy__edge_1_1MyEdges.html#a4ee4779764b56d29a018aca675070835">MyEdges::startAllEdges()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1MyEdges.html#ab07cfa36269ad610130c8a8d49cf2553">MyEdges::appendEdge()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#a452dcef018edf8b9c7ead466dbfff9c3">MyEdges::appendTaskToEdgeById()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#a2d69d51d4a07eab449efe3ff895ce4af">MyEdges::deleteEdgeById()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#a4c3ef3130d0aabd4743486b4a326784e">MyEdges::getAllEdgesOnlineStatus()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#a39cf62462d42d308401c21760ed589c8">MyEdges::getEdgeById()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#afea0edb709e9fe78b5bff2db15cd621f">MyEdges::getEdgeHistoryTaskStatus()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#a086bb047ca3722c8e25c06cba957b2a8">MyEdges::getEdgeIds()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#a6c92bd6c0ed2fc49b5b7eac9a138f6fc">MyEdges::getEdgeOnlineStatus()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#a02d58ea4a6169b67b869c4f825592e63">MyEdges::getEdges()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#aff91e9e4737e8d8511870db5d41db512">MyEdges::getEdgeTaskStatus()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#aa9a8e8ba2fbf620b75975789af2d3117">MyEdges::GetHeartbeatInfo()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#a7f1ceccf67f3e54f61dc7207cb33353a">MyEdges::getOnlineEdges()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#a854fe8569df85e2931fabfe24c288e82">MyEdges::HasEdge()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#a8e12342fc420701fbffd97025421575a">MyEdges::IsEmpty()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#a2064f4e8fed18a8c7c3819448152bce4">MyEdges::SelectEdgeByIdDoAction()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#a851517501bbd13a1bf5ad65e30a31389">MyEdges::setAllEdgesESTOP()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#ad76c4ac0f9582379a160c95676645557">MyEdges::setESTOP()</a> , 以及 <a class="el" href="classmy__edge_1_1MyEdges.html#a4ee4779764b56d29a018aca675070835">MyEdges::startAllEdges()</a>.</p>
 
 </div>
 </div>
@@ -660,7 +1182,7 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1MyEdges.html#ab07cfa36269ad610130c8a8d49cf2553">MyEdges::appendEdge()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#a2d69d51d4a07eab449efe3ff895ce4af">MyEdges::deleteEdgeById()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#a39cf62462d42d308401c21760ed589c8">MyEdges::getEdgeById()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#a086bb047ca3722c8e25c06cba957b2a8">MyEdges::getEdgeIds()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#a02d58ea4a6169b67b869c4f825592e63">MyEdges::getEdges()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#aa9a8e8ba2fbf620b75975789af2d3117">MyEdges::GetHeartbeatInfo()</a> , 以及 <a class="el" href="classmy__edge_1_1MyEdges.html#a4ee4779764b56d29a018aca675070835">MyEdges::startAllEdges()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1MyEdges.html#ab07cfa36269ad610130c8a8d49cf2553">MyEdges::appendEdge()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#a452dcef018edf8b9c7ead466dbfff9c3">MyEdges::appendTaskToEdgeById()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#a2d69d51d4a07eab449efe3ff895ce4af">MyEdges::deleteEdgeById()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#a4c3ef3130d0aabd4743486b4a326784e">MyEdges::getAllEdgesOnlineStatus()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#a39cf62462d42d308401c21760ed589c8">MyEdges::getEdgeById()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#afea0edb709e9fe78b5bff2db15cd621f">MyEdges::getEdgeHistoryTaskStatus()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#a086bb047ca3722c8e25c06cba957b2a8">MyEdges::getEdgeIds()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#a6c92bd6c0ed2fc49b5b7eac9a138f6fc">MyEdges::getEdgeOnlineStatus()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#a02d58ea4a6169b67b869c4f825592e63">MyEdges::getEdges()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#aff91e9e4737e8d8511870db5d41db512">MyEdges::getEdgeTaskStatus()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#aa9a8e8ba2fbf620b75975789af2d3117">MyEdges::GetHeartbeatInfo()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#a7f1ceccf67f3e54f61dc7207cb33353a">MyEdges::getOnlineEdges()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#a854fe8569df85e2931fabfe24c288e82">MyEdges::HasEdge()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#a8e12342fc420701fbffd97025421575a">MyEdges::IsEmpty()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#a2064f4e8fed18a8c7c3819448152bce4">MyEdges::SelectEdgeByIdDoAction()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#a851517501bbd13a1bf5ad65e30a31389">MyEdges::setAllEdgesESTOP()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#ad76c4ac0f9582379a160c95676645557">MyEdges::setESTOP()</a> , 以及 <a class="el" href="classmy__edge_1_1MyEdges.html#a4ee4779764b56d29a018aca675070835">MyEdges::startAllEdges()</a>.</p>
 
 </div>
 </div>

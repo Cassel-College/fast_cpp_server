@@ -11,9 +11,17 @@ var searchData=
   ['biz_5fstatus_5f_8',['biz_status_',['../classedge__manager_1_1EdgeDevice.html#a09d2dd50c4d37a3844bd1a35a522da0d',1,'edge_manager::EdgeDevice']]],
   ['boot_5fat_5fms_9',['boot_at_ms',['../structmy__data_1_1EdgeStatus.html#a7b8fc8514b4a3ab879867ce4e8e3f867',1,'my_data::EdgeStatus']]],
   ['boot_5fat_5fms_5f_10',['boot_at_ms_',['../classmy__edge_1_1demo_1_1UUVEdge.html#aaf585eb429176fc02a2ce6ab40ac64ea',1,'my_edge::demo::UUVEdge']]],
-  ['buffer_5f_11',['buffer_',['../classtools_1_1SimpleTcpClient.html#a9fcab6aebd2ef14d2f3008fd25fc1ae5',1,'tools::SimpleTcpClient::buffer_'],['../classtools_1_1ThreadSafeBuffer.html#a28b7d835357a513d86c8c436c24cc0e7',1,'tools::ThreadSafeBuffer::buffer_']]],
-  ['buildheartbeat_12',['BuildHeartbeat',['../classHeartbeatManager.html#a7394f16ced4d39b120077258d26c2ed9',1,'HeartbeatManager']]],
-  ['buildthreadtree_13',['buildThreadTree',['../classHealthSnapshot.html#a72265d535f959df02f73b10c0c67d2d6',1,'HealthSnapshot']]],
-  ['busy_14',['Busy',['../namespacemy__data.html#ab741123951602d5912c8b5aba6bf3372ad8a942ef2b04672adfafef0ad817a407',1,'my_data']]],
-  ['busy_5ftimeout_5fms_15',['busy_timeout_ms',['../structmy__db_1_1DBConfig.html#a1d8584dda5609a17bb937aca1955b7f8',1,'my_db::DBConfig']]]
+  ['broker_5fbin_5f_11',['broker_bin_',['../classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#ae3e6cca0b57cdc12a1ad79a7c4274a72',1,'my_mqtt_broker_manager::MyMqttBrokerManager']]],
+  ['broker_5fconfig_5f_12',['broker_config_',['../classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#ad83b32e4efcb4793b038c606086db294',1,'my_mqtt_broker_manager::MyMqttBrokerManager']]],
+  ['broker_5fforeground_5f_13',['broker_foreground_',['../classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#a88fb19f385969e52e323e6c97f9bec53',1,'my_mqtt_broker_manager::MyMqttBrokerManager']]],
+  ['broker_5fmanager_5fthread_5f_14',['broker_manager_thread_',['../classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#aba4233173b6b49fedecbef7f5eb90880',1,'my_mqtt_broker_manager::MyMqttBrokerManager']]],
+  ['broker_5fpid_5f_15',['broker_pid_',['../classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#ab7cd29a65a993a35b2ad3f9e2eb2089d',1,'my_mqtt_broker_manager::MyMqttBrokerManager']]],
+  ['broker_5fport_5f_16',['broker_port_',['../classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#a49246154fac16e9f036956debddc2c80',1,'my_mqtt_broker_manager::MyMqttBrokerManager']]],
+  ['broker_5frunning_5f_17',['broker_running_',['../classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#aab81986b027323c6a7d58e32b4383dd6',1,'my_mqtt_broker_manager::MyMqttBrokerManager']]],
+  ['brokerprocessmanager_18',['BrokerProcessManager',['../classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#aabdce0bb152357814ce71c82fe92382a',1,'my_mqtt_broker_manager::MyMqttBrokerManager']]],
+  ['buffer_5f_19',['buffer_',['../classtools_1_1ThreadSafeBuffer.html#a28b7d835357a513d86c8c436c24cc0e7',1,'tools::ThreadSafeBuffer::buffer_'],['../classtools_1_1SimpleTcpClient.html#a9fcab6aebd2ef14d2f3008fd25fc1ae5',1,'tools::SimpleTcpClient::buffer_']]],
+  ['buildheartbeat_20',['BuildHeartbeat',['../classHeartbeatManager.html#a7394f16ced4d39b120077258d26c2ed9',1,'HeartbeatManager']]],
+  ['buildthreadtree_21',['buildThreadTree',['../classHealthSnapshot.html#a72265d535f959df02f73b10c0c67d2d6',1,'HealthSnapshot']]],
+  ['busy_22',['Busy',['../namespacemy__data.html#ab741123951602d5912c8b5aba6bf3372ad8a942ef2b04672adfafef0ad817a407',1,'my_data']]],
+  ['busy_5ftimeout_5fms_23',['busy_timeout_ms',['../structmy__db_1_1DBConfig.html#a1d8584dda5609a17bb937aca1955b7f8',1,'my_db::DBConfig']]]
 ];
