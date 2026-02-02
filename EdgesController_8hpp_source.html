@@ -84,51 +84,101 @@ $(document).ready(function() { init_codefold(0); });
 <a href="EdgesController_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="BaseApiController_8hpp.html">BaseApiController.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;oatpp/web/server/api/ApiController.hpp&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;oatpp/core/macro/codegen.hpp&quot;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__api_1_1edge.html">my_api::edge</a> {</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="EdgeStatusDto_8hpp.html">dto/demo/EdgeStatusDto.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="TaskDto_8hpp.html">dto/demo/TaskDto.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;oatpp/web/server/api/ApiController.hpp&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;oatpp/core/macro/codegen.hpp&quot;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include OATPP_CODEGEN_BEGIN(ApiController)</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classmy__api_1_1edge_1_1EdgesController.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__api_1_1edge_1_1EdgesController.html">EdgesController</a> : <span class="keyword">public</span> <a class="code hl_class" href="classmy__api_1_1base_1_1BaseApiController.html">base::BaseApiController</a> {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="classmy__api_1_1edge_1_1EdgesController.html">EdgesController</a>(</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keyword">const</span> std::shared_ptr&lt;ObjectMapper&gt;&amp; objectMapper</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    );</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">static</span> std::shared_ptr&lt;EdgesController&gt; <a class="code hl_function" href="classmy__api_1_1edge_1_1EdgesController.html#aaa5faa707bb660bf7a03e93d29163c95">createShared</a>(<span class="keyword">const</span> std::shared_ptr&lt;ObjectMapper&gt;&amp; objectMapper);</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classmy__api_1_1edge_1_1EdgesController.html#a29656a2aa47c566f405992448aa08de9">   19</a></span>    <a class="code hl_function" href="classmy__api_1_1edge_1_1EdgesController.html#a29656a2aa47c566f405992448aa08de9">ENDPOINT</a>(<span class="stringliteral">&quot;GET&quot;</span>, <span class="stringliteral">&quot;/v1/edges/status&quot;</span>, getEdgesStatus);</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__api_1_1edge.html">my_api::edge</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include OATPP_CODEGEN_BEGIN(ApiController)</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classmy__api_1_1edge_1_1EdgesController.html">   15</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__api_1_1edge_1_1EdgesController.html">EdgesController</a> : <span class="keyword">public</span> <a class="code hl_class" href="classmy__api_1_1base_1_1BaseApiController.html">base::BaseApiController</a> {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="classmy__api_1_1edge_1_1EdgesController.html">EdgesController</a>(</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keyword">const</span> std::shared_ptr&lt;ObjectMapper&gt;&amp; objectMapper</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    );</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classmy__api_1_1edge_1_1EdgesController.html#a436dbdeb610831a5630e18e82a9b58a8">   21</a></span>    <a class="code hl_function" href="classmy__api_1_1edge_1_1EdgesController.html#a436dbdeb610831a5630e18e82a9b58a8">ENDPOINT</a>(<span class="stringliteral">&quot;POST&quot;</span>, <span class="stringliteral">&quot;/v1/edges/startAllEdges&quot;</span>, startAllEdges);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">static</span> std::shared_ptr&lt;EdgesController&gt; <a class="code hl_function" href="classmy__api_1_1edge_1_1EdgesController.html#aaa5faa707bb660bf7a03e93d29163c95">createShared</a>(<span class="keyword">const</span> std::shared_ptr&lt;ObjectMapper&gt;&amp; objectMapper);</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classmy__api_1_1edge_1_1EdgesController.html#aadabb68c9cdff6aace2d5277e92ad181">   23</a></span>    <a class="code hl_function" href="classmy__api_1_1edge_1_1EdgesController.html#aadabb68c9cdff6aace2d5277e92ad181">ENDPOINT</a>(<span class="stringliteral">&quot;POST&quot;</span>, </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>             <span class="stringliteral">&quot;/v1/edges/appendTaskToEdgeById&quot;</span>, </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>             appendTaskToEdgeById, </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>             REQUEST(std::shared_ptr&lt;oatpp::web::protocol::http::incoming::Request&gt;, request)</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            );</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classmy__api_1_1edge_1_1EdgesController.html#a9c9c63224cb625c000bfe33d93a077b5">   29</a></span>    <a class="code hl_function" href="classmy__api_1_1edge_1_1EdgesController.html#a9c9c63224cb625c000bfe33d93a077b5">ENDPOINT</a>(<span class="stringliteral">&quot;GET&quot;</span>, </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>             <span class="stringliteral">&quot;/v1/edges/getOnlineEdges&quot;</span>, </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>             getOnlineEdges</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            );</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>};</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classmy__api_1_1edge_1_1EdgesController.html#a29656a2aa47c566f405992448aa08de9">   23</a></span>    <a class="code hl_function" href="classmy__api_1_1edge_1_1EdgesController.html#a29656a2aa47c566f405992448aa08de9">ENDPOINT</a>(<span class="stringliteral">&quot;GET&quot;</span>, <span class="stringliteral">&quot;/v1/edges/status&quot;</span>, getEdgesStatus);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classmy__api_1_1edge_1_1EdgesController.html#a436dbdeb610831a5630e18e82a9b58a8">   25</a></span>    <a class="code hl_function" href="classmy__api_1_1edge_1_1EdgesController.html#a436dbdeb610831a5630e18e82a9b58a8">ENDPOINT</a>(<span class="stringliteral">&quot;POST&quot;</span>, <span class="stringliteral">&quot;/v1/edges/startAllEdges&quot;</span>, startAllEdges);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="comment">// ENDPOINT_INFO 提供 Swagger 示例与 response 类型（返回 JSON 字符串）</span></div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classmy__api_1_1edge_1_1EdgesController.html#a1965c850a61c1d4fb6676a1bc0006e96">   28</a></span>    <a class="code hl_function" href="classmy__api_1_1edge_1_1EdgesController.html#a1965c850a61c1d4fb6676a1bc0006e96">ENDPOINT_INFO</a>(appendTaskToEdgeById) {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>      info-&gt;summary = <span class="stringliteral">&quot;向指定的 Edge 添加任务&quot;</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>      info-&gt;description = <span class="stringliteral">&quot;请求体示例:\n&quot;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                          <span class="stringliteral">&quot;{\n&quot;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                          <span class="stringliteral">&quot;  \&quot;edgeId\&quot;: \&quot;edge-001\&quot;,\n&quot;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                          <span class="stringliteral">&quot;  \&quot;taskType\&quot;: \&quot;run_job\&quot;,\n&quot;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                          <span class="stringliteral">&quot;  \&quot;paramsJson\&quot;: \&quot;{ \\\&quot;cmd\\\&quot;: \\\&quot;/usr/bin/do_something\\\&quot;, \\\&quot;timeout\\\&quot;: 30 }\&quot;\n&quot;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                          <span class="stringliteral">&quot;}\n&quot;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                          <span class="stringliteral">&quot;注意：paramsJson 是一个 JSON 字符串，业务端会把它解析为 JSON 对象。&quot;</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>      info-&gt;addConsumes&lt;oatpp::Object&lt;my_api::dto::TaskDto&gt;&gt;(<span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>      <span class="comment">// 返回原始 JSON 字符串（统一封装后的响应），使用 oatpp::String 类型</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>      info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_200, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>      info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_400, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>      info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_500, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    }</div>
 </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include OATPP_CODEGEN_END(ApiController)</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>} <span class="comment">// namespace my_api::edge</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classmy__api_1_1edge_1_1EdgesController.html#aadabb68c9cdff6aace2d5277e92ad181">   43</a></span>    <a class="code hl_function" href="classmy__api_1_1edge_1_1EdgesController.html#aadabb68c9cdff6aace2d5277e92ad181">ENDPOINT</a>(<span class="stringliteral">&quot;POST&quot;</span>,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>             <span class="stringliteral">&quot;/v1/edges/appendTaskToEdgeById&quot;</span>,</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>             appendTaskToEdgeById,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>             BODY_DTO(oatpp::Object&lt;my_api::dto::TaskDto&gt;, taskDto)</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            );</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classmy__api_1_1edge_1_1EdgesController.html#a585c821943d5001661f9a792f792a35b">   49</a></span>    <a class="code hl_function" href="classmy__api_1_1edge_1_1EdgesController.html#a585c821943d5001661f9a792f792a35b">ENDPOINT_INFO</a>(getOnlineEdges) {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>      info-&gt;summary = <span class="stringliteral">&quot;获取所有在线的 Edge ID 列表&quot;</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      info-&gt;description = <span class="stringliteral">&quot;返回在线的 Edge 设备 ID 列表。&quot;</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>      info-&gt;addResponse&lt;oatpp::Vector&lt;oatpp::String&gt;&gt;(Status::CODE_200, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    }</div>
+</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classmy__api_1_1edge_1_1EdgesController.html#a9c9c63224cb625c000bfe33d93a077b5">   54</a></span>    <a class="code hl_function" href="classmy__api_1_1edge_1_1EdgesController.html#a9c9c63224cb625c000bfe33d93a077b5">ENDPOINT</a>(<span class="stringliteral">&quot;GET&quot;</span>,</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>             <span class="stringliteral">&quot;/v1/edges/getOnlineEdges&quot;</span>,</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>             getOnlineEdges</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            );</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="foldopen" id="foldopen00059" data-start="{" data-end="}">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classmy__api_1_1edge_1_1EdgesController.html#af6a98b48a7051a5fdda1ca7221109bd7">   59</a></span>    <a class="code hl_function" href="classmy__api_1_1edge_1_1EdgesController.html#af6a98b48a7051a5fdda1ca7221109bd7">ENDPOINT_INFO</a>(getTargetEdgeDumpInternalInfo) {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        info-&gt;summary = <span class="stringliteral">&quot;获取指定 Edge 的内部信息 Dump&quot;</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        info-&gt;description = <span class="stringliteral">&quot;返回指定 Edge 的内部信息，用于调试和诊断。&quot;</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        info-&gt;addConsumes&lt;oatpp::Object&lt;my_api::dto::EdgeIDDto&gt;&gt;(<span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_200, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_404, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classmy__api_1_1edge_1_1EdgesController.html#afc70e89ff8fa5568791f26d459c61d4a">   66</a></span>    <a class="code hl_function" href="classmy__api_1_1edge_1_1EdgesController.html#afc70e89ff8fa5568791f26d459c61d4a">ENDPOINT</a>(<span class="stringliteral">&quot;POST&quot;</span>,</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>             <span class="stringliteral">&quot;/v1/edges/dumpInternalInfo&quot;</span>,</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>             getTargetEdgeDumpInternalInfo,</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>             BODY_DTO(oatpp::Object&lt;my_api::dto::EdgeIDDto&gt;, edgeIdDto)</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            );</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>}; <span class="comment">// class EdgesController</span></div>
+</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">#include OATPP_CODEGEN_END(ApiController)</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>} <span class="comment">// namespace my_api::edge</span></div>
 <div class="ttc" id="aBaseApiController_8hpp_html"><div class="ttname"><a href="BaseApiController_8hpp.html">BaseApiController.hpp</a></div></div>
-<div class="ttc" id="aclassmy__api_1_1base_1_1BaseApiController_html"><div class="ttname"><a href="classmy__api_1_1base_1_1BaseApiController.html">my_api::base::BaseApiController</a></div><div class="ttdef"><b>Definition</b> BaseApiController.hpp:12</div></div>
-<div class="ttc" id="aclassmy__api_1_1edge_1_1EdgesController_html"><div class="ttname"><a href="classmy__api_1_1edge_1_1EdgesController.html">my_api::edge::EdgesController</a></div><div class="ttdef"><b>Definition</b> EdgesController.hpp:11</div></div>
+<div class="ttc" id="aEdgeStatusDto_8hpp_html"><div class="ttname"><a href="EdgeStatusDto_8hpp.html">EdgeStatusDto.hpp</a></div></div>
+<div class="ttc" id="aTaskDto_8hpp_html"><div class="ttname"><a href="TaskDto_8hpp.html">TaskDto.hpp</a></div></div>
+<div class="ttc" id="aclassmy__api_1_1base_1_1BaseApiController_html"><div class="ttname"><a href="classmy__api_1_1base_1_1BaseApiController.html">my_api::base::BaseApiController</a></div><div class="ttdef"><b>Definition</b> BaseApiController.hpp:13</div></div>
+<div class="ttc" id="aclassmy__api_1_1edge_1_1EdgesController_html"><div class="ttname"><a href="classmy__api_1_1edge_1_1EdgesController.html">my_api::edge::EdgesController</a></div><div class="ttdef"><b>Definition</b> EdgesController.hpp:15</div></div>
+<div class="ttc" id="aclassmy__api_1_1edge_1_1EdgesController_html_a1965c850a61c1d4fb6676a1bc0006e96"><div class="ttname"><a href="classmy__api_1_1edge_1_1EdgesController.html#a1965c850a61c1d4fb6676a1bc0006e96">my_api::edge::EdgesController::ENDPOINT_INFO</a></div><div class="ttdeci">ENDPOINT_INFO(appendTaskToEdgeById)</div><div class="ttdef"><b>Definition</b> EdgesController.hpp:28</div></div>
 <div class="ttc" id="aclassmy__api_1_1edge_1_1EdgesController_html_a29656a2aa47c566f405992448aa08de9"><div class="ttname"><a href="classmy__api_1_1edge_1_1EdgesController.html#a29656a2aa47c566f405992448aa08de9">my_api::edge::EdgesController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;GET&quot;, &quot;/v1/edges/status&quot;, getEdgesStatus)</div></div>
 <div class="ttc" id="aclassmy__api_1_1edge_1_1EdgesController_html_a436dbdeb610831a5630e18e82a9b58a8"><div class="ttname"><a href="classmy__api_1_1edge_1_1EdgesController.html#a436dbdeb610831a5630e18e82a9b58a8">my_api::edge::EdgesController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;POST&quot;, &quot;/v1/edges/startAllEdges&quot;, startAllEdges)</div></div>
+<div class="ttc" id="aclassmy__api_1_1edge_1_1EdgesController_html_a585c821943d5001661f9a792f792a35b"><div class="ttname"><a href="classmy__api_1_1edge_1_1EdgesController.html#a585c821943d5001661f9a792f792a35b">my_api::edge::EdgesController::ENDPOINT_INFO</a></div><div class="ttdeci">ENDPOINT_INFO(getOnlineEdges)</div><div class="ttdef"><b>Definition</b> EdgesController.hpp:49</div></div>
 <div class="ttc" id="aclassmy__api_1_1edge_1_1EdgesController_html_a9c9c63224cb625c000bfe33d93a077b5"><div class="ttname"><a href="classmy__api_1_1edge_1_1EdgesController.html#a9c9c63224cb625c000bfe33d93a077b5">my_api::edge::EdgesController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;GET&quot;, &quot;/v1/edges/getOnlineEdges&quot;, getOnlineEdges)</div></div>
-<div class="ttc" id="aclassmy__api_1_1edge_1_1EdgesController_html_aaa5faa707bb660bf7a03e93d29163c95"><div class="ttname"><a href="classmy__api_1_1edge_1_1EdgesController.html#aaa5faa707bb660bf7a03e93d29163c95">my_api::edge::EdgesController::createShared</a></div><div class="ttdeci">static std::shared_ptr&lt; EdgesController &gt; createShared(const std::shared_ptr&lt; ObjectMapper &gt; &amp;objectMapper)</div><div class="ttdef"><b>Definition</b> EdgesController.cpp:17</div></div>
+<div class="ttc" id="aclassmy__api_1_1edge_1_1EdgesController_html_aaa5faa707bb660bf7a03e93d29163c95"><div class="ttname"><a href="classmy__api_1_1edge_1_1EdgesController.html#aaa5faa707bb660bf7a03e93d29163c95">my_api::edge::EdgesController::createShared</a></div><div class="ttdeci">static std::shared_ptr&lt; EdgesController &gt; createShared(const std::shared_ptr&lt; ObjectMapper &gt; &amp;objectMapper)</div><div class="ttdef"><b>Definition</b> EdgesController.cpp:25</div></div>
 <div class="ttc" id="aclassmy__api_1_1edge_1_1EdgesController_html_aadabb68c9cdff6aace2d5277e92ad181"><div class="ttname"><a href="classmy__api_1_1edge_1_1EdgesController.html#aadabb68c9cdff6aace2d5277e92ad181">my_api::edge::EdgesController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;POST&quot;, &quot;/v1/edges/appendTaskToEdgeById&quot;, appendTaskToEdgeById,)</div></div>
-<div class="ttc" id="anamespacemy__api_1_1edge_html"><div class="ttname"><a href="namespacemy__api_1_1edge.html">my_api::edge</a></div><div class="ttdef"><b>Definition</b> EdgeController.cpp:6</div></div>
+<div class="ttc" id="aclassmy__api_1_1edge_1_1EdgesController_html_af6a98b48a7051a5fdda1ca7221109bd7"><div class="ttname"><a href="classmy__api_1_1edge_1_1EdgesController.html#af6a98b48a7051a5fdda1ca7221109bd7">my_api::edge::EdgesController::ENDPOINT_INFO</a></div><div class="ttdeci">ENDPOINT_INFO(getTargetEdgeDumpInternalInfo)</div><div class="ttdef"><b>Definition</b> EdgesController.hpp:59</div></div>
+<div class="ttc" id="aclassmy__api_1_1edge_1_1EdgesController_html_afc70e89ff8fa5568791f26d459c61d4a"><div class="ttname"><a href="classmy__api_1_1edge_1_1EdgesController.html#afc70e89ff8fa5568791f26d459c61d4a">my_api::edge::EdgesController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;POST&quot;, &quot;/v1/edges/dumpInternalInfo&quot;, getTargetEdgeDumpInternalInfo,)</div></div>
+<div class="ttc" id="anamespacemy__api_1_1edge_html"><div class="ttname"><a href="namespacemy__api_1_1edge.html">my_api::edge</a></div><div class="ttdef"><b>Definition</b> EdgesController.cpp:15</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

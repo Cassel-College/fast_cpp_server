@@ -9,13 +9,14 @@ var searchData=
   ['insertedgesnapshot_6',['InsertEdgeSnapshot',['../classmy__db_1_1demo_1_1StatusRepository.html#a74212c1aedab5e93c3b51234448a520b',1,'my_db::demo::StatusRepository']]],
   ['instance_7',['instance',['../classfast__mqtt_1_1MFSMQTTClient.html#a5d0d7d3e04ede05b7f6ae66a994c441c',1,'fast_mqtt::MFSMQTTClient::instance()'],['../classHeartbeatManager.html#a7ca5f88c3263d47e63bb9256768b9c12',1,'HeartbeatManager::Instance()']]],
   ['intercept_8',['intercept',['../classmy__api_1_1CorsInterceptor.html#afd5bb10c6664456ffe1e8d2d7bd5ee51',1,'my_api::CorsInterceptor::intercept()'],['../classmy__api_1_1CorsResponseInterceptor.html#a44253f10f6dbb41308a57b82aba478d5',1,'my_api::CorsResponseInterceptor::intercept()']]],
-  ['isconsoleoutputenabled_9',['isConsoleOutputEnabled',['../classSoftHealthMonitorConfig.html#ac5e012dc757ff106ea8c2151fdfca7a6',1,'SoftHealthMonitorConfig']]],
-  ['isempty_10',['IsEmpty',['../classmy__edge_1_1MyEdges.html#a8e12342fc420701fbffd97025421575a',1,'my_edge::MyEdges']]],
-  ['isinitialized_11',['IsInitialized',['../classmy__db_1_1MyDB.html#a475d2bd8072f3c9df7b37581c4f1eca4',1,'my_db::MyDB']]],
-  ['isonline_12',['isonline',['../classedge__manager_1_1EdgeDevice.html#a31c964d7df054a0c1e51af505286eb71',1,'edge_manager::EdgeDevice::IsOnline()'],['../classDeviceOnlineMonitor.html#a1eceab28885f971892b9d4fc76e0e542',1,'DeviceOnlineMonitor::isOnline()']]],
-  ['isprocessalive_13',['IsProcessAlive',['../classtools_1_1service__guard_1_1ServiceGuard.html#af04b9eb6da54da1b20e602e2780252ef',1,'tools::service_guard::ServiceGuard']]],
-  ['isrunning_14',['isrunning',['../classmy__api_1_1MyAPI.html#ad201152b05beda61e51e3594ff07c8fe',1,'my_api::MyAPI::IsRunning()'],['../classmy__control_1_1demo_1_1Workflow.html#ad201152b05beda61e51e3594ff07c8fe',1,'my_control::demo::Workflow::IsRunning()'],['../classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#ad201152b05beda61e51e3594ff07c8fe',1,'my_mqtt_broker_manager::MyMqttBrokerManager::IsRunning()']]],
-  ['isshutdown_15',['IsShutdown',['../classmy__control_1_1TaskQueue.html#a1438c61ff8693b71ae3ad71e2364d3d7',1,'my_control::TaskQueue']]],
-  ['issubprocesscheckenabled_16',['isSubprocessCheckEnabled',['../classSoftHealthMonitorConfig.html#aad62c61a849a7a6c339ca7d4d272a3b0',1,'SoftHealthMonitorConfig']]],
-  ['isthreadtreeenabled_17',['isThreadTreeEnabled',['../classSoftHealthMonitorConfig.html#ad9ad94b0ac4cc75ddb1bd645df4dc651',1,'SoftHealthMonitorConfig']]]
+  ['is_5fport_5favailable_9',['is_port_available',['../classtools_1_1pipeline_1_1Pipeline.html#a5d2f4efbe03e4701e78eb9ce93cd7ae2',1,'tools::pipeline::Pipeline']]],
+  ['isconsoleoutputenabled_10',['isConsoleOutputEnabled',['../classSoftHealthMonitorConfig.html#ac5e012dc757ff106ea8c2151fdfca7a6',1,'SoftHealthMonitorConfig']]],
+  ['isempty_11',['IsEmpty',['../classmy__edge_1_1MyEdges.html#a8e12342fc420701fbffd97025421575a',1,'my_edge::MyEdges']]],
+  ['isinitialized_12',['IsInitialized',['../classmy__db_1_1MyDB.html#a475d2bd8072f3c9df7b37581c4f1eca4',1,'my_db::MyDB']]],
+  ['isonline_13',['isonline',['../classDeviceOnlineMonitor.html#a1eceab28885f971892b9d4fc76e0e542',1,'DeviceOnlineMonitor::isOnline()'],['../classedge__manager_1_1EdgeDevice.html#a31c964d7df054a0c1e51af505286eb71',1,'edge_manager::EdgeDevice::IsOnline()']]],
+  ['isprocessalive_14',['IsProcessAlive',['../classtools_1_1service__guard_1_1ServiceGuard.html#af04b9eb6da54da1b20e602e2780252ef',1,'tools::service_guard::ServiceGuard']]],
+  ['isrunning_15',['isrunning',['../classmy__api_1_1MyAPI.html#ad201152b05beda61e51e3594ff07c8fe',1,'my_api::MyAPI::IsRunning()'],['../classmy__control_1_1demo_1_1Workflow.html#ad201152b05beda61e51e3594ff07c8fe',1,'my_control::demo::Workflow::IsRunning()'],['../classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#ad201152b05beda61e51e3594ff07c8fe',1,'my_mqtt_broker_manager::MyMqttBrokerManager::IsRunning()']]],
+  ['isshutdown_16',['IsShutdown',['../classmy__control_1_1TaskQueue.html#a1438c61ff8693b71ae3ad71e2364d3d7',1,'my_control::TaskQueue']]],
+  ['issubprocesscheckenabled_17',['isSubprocessCheckEnabled',['../classSoftHealthMonitorConfig.html#aad62c61a849a7a6c339ca7d4d272a3b0',1,'SoftHealthMonitorConfig']]],
+  ['isthreadtreeenabled_18',['isThreadTreeEnabled',['../classSoftHealthMonitorConfig.html#ad9ad94b0ac4cc75ddb1bd645df4dc651',1,'SoftHealthMonitorConfig']]]
 ];

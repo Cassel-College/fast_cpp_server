@@ -12,5 +12,5 @@ var searchData=
   ['heartbeatdto_2ehpp_9',['HeartbeatDto.hpp',['../HeartbeatDto_8hpp.html',1,'']]],
   ['heartbeatmanager_10',['heartbeatmanager',['../classHeartbeatManager.html',1,'HeartbeatManager'],['../classHeartbeatManager.html#a9d1b10a740b6f228ef930c4306c3b0ee',1,'HeartbeatManager::HeartbeatManager()']]],
   ['history_5fqueues_5f_11',['history_queues_',['../classmy__edge_1_1demo_1_1UUVEdge.html#a691631ea2ece717cb61fc98d8a0fffbb',1,'my_edge::demo::UUVEdge']]],
-  ['host_5f_12',['host_',['../classfast__mqtt_1_1MFMQTTClient.html#ada0f95acb51c9a574d38befa858d78fa',1,'fast_mqtt::MFMQTTClient::host_'],['../classDeviceOnlineMonitor.html#ada0f95acb51c9a574d38befa858d78fa',1,'DeviceOnlineMonitor::host_']]]
+  ['host_5f_12',['host_',['../classfast__mqtt_1_1MFMQTTClient.html#ada0f95acb51c9a574d38befa858d78fa',1,'fast_mqtt::MFMQTTClient::host_'],['../classmy__mqtt_1_1MosqPublisher.html#ada0f95acb51c9a574d38befa858d78fa',1,'my_mqtt::MosqPublisher::host_'],['../classDeviceOnlineMonitor.html#ada0f95acb51c9a574d38befa858d78fa',1,'DeviceOnlineMonitor::host_']]]
 ];

@@ -75,7 +75,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
-<a href="#pro-methods">Protected 成员函数</a>  </div>
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a>  </div>
   <div class="headertitle"><div class="title">BaseApiController类 参考</div></div>
 </div><!--header-->
 <div class="contents">
@@ -86,15 +87,15 @@ $(function() {
 <div class="dyncontent">
 <div class="center"><img src="classmy__api_1_1base_1_1BaseApiController__inherit__graph.png" border="0" usemap="#aBaseApiController_inherit__map" alt="Inheritance graph"/></div>
 <map name="aBaseApiController_inherit__map" id="aBaseApiController_inherit__map">
-<area shape="rect" title=" " alt="" coords="142,79,281,104"/>
-<area shape="rect" href="classmy__api_1_1edge_1_1EdgeController.html" title=" " alt="" coords="5,152,124,177"/>
-<area shape="poly" title=" " alt="" coords="177,112,90,154,88,149,175,107"/>
-<area shape="rect" href="classmy__api_1_1edge_1_1EdgesController.html" title=" " alt="" coords="149,152,274,177"/>
-<area shape="poly" title=" " alt="" coords="214,118,214,152,209,152,209,118"/>
-<area shape="rect" href="classmy__api_1_1heartbeat_1_1HeartBeatController.html" title=" " alt="" coords="298,152,450,177"/>
-<area shape="poly" title=" " alt="" coords="251,107,348,149,346,154,249,112"/>
-<area shape="rect" title=" " alt="" coords="158,5,265,31"/>
-<area shape="poly" title=" " alt="" coords="214,44,214,79,209,79,209,44"/>
+<area shape="rect" title=" " alt="" coords="145,79,284,104"/>
+<area shape="rect" href="classmy__api_1_1edge_1_1EdgesController.html" title=" " alt="" coords="5,152,131,177"/>
+<area shape="poly" title=" " alt="" coords="180,112,93,154,91,149,178,107"/>
+<area shape="rect" href="classmy__api_1_1edge__manager_1_1EdgeController.html" title=" " alt="" coords="155,152,274,177"/>
+<area shape="poly" title=" " alt="" coords="217,118,217,152,212,152,212,118"/>
+<area shape="rect" href="classmy__api_1_1heartbeat_1_1HeartBeatController.html" title=" " alt="" coords="299,152,451,177"/>
+<area shape="poly" title=" " alt="" coords="254,107,350,149,347,154,252,112"/>
+<area shape="rect" title=" " alt="" coords="161,5,268,31"/>
+<area shape="poly" title=" " alt="" coords="217,44,217,79,212,79,212,44"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
 <div class="dynheader">
@@ -122,6 +123,17 @@ Protected 成员函数</h2></td></tr>
 <tr class="separator:acfad371d9c9ed0b6a109bbc6452e2185"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3cdc575411589b9f6f28ed9e7b15e9e1" id="r_a3cdc575411589b9f6f28ed9e7b15e9e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemy__api_1_1base.html#a165d20d3aad92cb49d5c33b67531974c">OutgoingResponsePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__api_1_1base_1_1BaseApiController.html#a3cdc575411589b9f6f28ed9e7b15e9e1">badRequest</a> (const oatpp::String &amp;message)</td></tr>
 <tr class="separator:a3cdc575411589b9f6f28ed9e7b15e9e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e67577e3970293c32c1e368f7513660" id="r_a6e67577e3970293c32c1e368f7513660"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemy__api_1_1base.html#a165d20d3aad92cb49d5c33b67531974c">OutgoingResponsePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__api_1_1base_1_1BaseApiController.html#a6e67577e3970293c32c1e368f7513660">jsonResponse</a> (const oatpp::web::protocol::http::Status &amp;status, const nlohmann::json &amp;body)</td></tr>
+<tr class="separator:a6e67577e3970293c32c1e368f7513660"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a182a2064395126bd889666c41f1917ff" id="r_a182a2064395126bd889666c41f1917ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemy__api_1_1base.html#a165d20d3aad92cb49d5c33b67531974c">OutgoingResponsePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__api_1_1base_1_1BaseApiController.html#a182a2064395126bd889666c41f1917ff">jsonOk</a> (const nlohmann::json &amp;data=nlohmann::json::object(), const std::string &amp;message=&quot;OK&quot;)</td></tr>
+<tr class="separator:a182a2064395126bd889666c41f1917ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f1f11dedcb1932f7aa2b347bedca2f3" id="r_a0f1f11dedcb1932f7aa2b347bedca2f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemy__api_1_1base.html#a165d20d3aad92cb49d5c33b67531974c">OutgoingResponsePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__api_1_1base_1_1BaseApiController.html#a0f1f11dedcb1932f7aa2b347bedca2f3">jsonError</a> (int code, const std::string &amp;message, const nlohmann::json &amp;details=nlohmann::json())</td></tr>
+<tr class="separator:a0f1f11dedcb1932f7aa2b347bedca2f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:aff96a7fec1ed5270eaf4c7000f576bc5" id="r_aff96a7fec1ed5270eaf4c7000f576bc5"><td class="memItemLeft" align="right" valign="top">oatpp::web::protocol::http::Status&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__api_1_1base_1_1BaseApiController.html#aff96a7fec1ed5270eaf4c7000f576bc5">mapStatusCode</a> (int code) const</td></tr>
+<tr class="separator:aff96a7fec1ed5270eaf4c7000f576bc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">构造及析构函数说明</h2>
 <a id="abadbd0083ec16bdd603b36b46299a828" name="abadbd0083ec16bdd603b36b46299a828"></a>
@@ -174,6 +186,198 @@ Protected 成员函数</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0f1f11dedcb1932f7aa2b347bedca2f3" name="a0f1f11dedcb1932f7aa2b347bedca2f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f1f11dedcb1932f7aa2b347bedca2f3">&#9670;&#160;</a></span>jsonError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemy__api_1_1base.html#a165d20d3aad92cb49d5c33b67531974c">OutgoingResponsePtr</a> jsonError </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>code</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>details</em> = <code>nlohmann::json()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classmy__api_1_1base_1_1BaseApiController.html#a6e67577e3970293c32c1e368f7513660">BaseApiController::jsonResponse()</a> , 以及 <a class="el" href="classmy__api_1_1base_1_1BaseApiController.html#aff96a7fec1ed5270eaf4c7000f576bc5">BaseApiController::mapStatusCode()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__api_1_1base_1_1BaseApiController_a0f1f11dedcb1932f7aa2b347bedca2f3_cgraph.png" border="0" usemap="#aclassmy__api_1_1base_1_1BaseApiController_a0f1f11dedcb1932f7aa2b347bedca2f3_cgraph" alt=""/></div>
+<map name="aclassmy__api_1_1base_1_1BaseApiController_a0f1f11dedcb1932f7aa2b347bedca2f3_cgraph" id="aclassmy__api_1_1base_1_1BaseApiController_a0f1f11dedcb1932f7aa2b347bedca2f3_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,85,56"/>
+<area shape="rect" href="classmy__api_1_1base_1_1BaseApiController.html#a6e67577e3970293c32c1e368f7513660" title=" " alt="" coords="140,5,252,31"/>
+<area shape="poly" title=" " alt="" coords="85,34,126,27,127,32,86,39"/>
+<area shape="rect" href="classmy__api_1_1base_1_1BaseApiController.html#aff96a7fec1ed5270eaf4c7000f576bc5" title=" " alt="" coords="133,55,259,80"/>
+<area shape="poly" title=" " alt="" coords="86,47,120,53,119,58,85,52"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a182a2064395126bd889666c41f1917ff" name="a182a2064395126bd889666c41f1917ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a182a2064395126bd889666c41f1917ff">&#9670;&#160;</a></span>jsonOk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemy__api_1_1base.html#a165d20d3aad92cb49d5c33b67531974c">OutgoingResponsePtr</a> jsonOk </td>
+          <td>(</td>
+          <td class="paramtype">const nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>data</em> = <code>nlohmann::json::object()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>message</em> = <code>&quot;OK&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classmy__api_1_1base_1_1BaseApiController.html#a6e67577e3970293c32c1e368f7513660">BaseApiController::jsonResponse()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__api_1_1base_1_1BaseApiController_a182a2064395126bd889666c41f1917ff_cgraph.png" border="0" usemap="#aclassmy__api_1_1base_1_1BaseApiController_a182a2064395126bd889666c41f1917ff_cgraph" alt=""/></div>
+<map name="aclassmy__api_1_1base_1_1BaseApiController_a182a2064395126bd889666c41f1917ff_cgraph" id="aclassmy__api_1_1base_1_1BaseApiController_a182a2064395126bd889666c41f1917ff_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,72,31"/>
+<area shape="rect" href="classmy__api_1_1base_1_1BaseApiController.html#a6e67577e3970293c32c1e368f7513660" title=" " alt="" coords="120,5,232,31"/>
+<area shape="poly" title=" " alt="" coords="72,15,106,15,106,21,72,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6e67577e3970293c32c1e368f7513660" name="a6e67577e3970293c32c1e368f7513660"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e67577e3970293c32c1e368f7513660">&#9670;&#160;</a></span>jsonResponse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemy__api_1_1base.html#a165d20d3aad92cb49d5c33b67531974c">OutgoingResponsePtr</a> jsonResponse </td>
+          <td>(</td>
+          <td class="paramtype">const oatpp::web::protocol::http::Status &amp;&#160;</td>
+          <td class="paramname"><em>status</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>body</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__api_1_1base_1_1BaseApiController.html#a0f1f11dedcb1932f7aa2b347bedca2f3">BaseApiController::jsonError()</a> , 以及 <a class="el" href="classmy__api_1_1base_1_1BaseApiController.html#a182a2064395126bd889666c41f1917ff">BaseApiController::jsonOk()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__api_1_1base_1_1BaseApiController_a6e67577e3970293c32c1e368f7513660_icgraph.png" border="0" usemap="#aclassmy__api_1_1base_1_1BaseApiController_a6e67577e3970293c32c1e368f7513660_icgraph" alt=""/></div>
+<map name="aclassmy__api_1_1base_1_1BaseApiController_a6e67577e3970293c32c1e368f7513660_icgraph" id="aclassmy__api_1_1base_1_1BaseApiController_a6e67577e3970293c32c1e368f7513660_icgraph">
+<area shape="rect" title=" " alt="" coords="133,31,245,56"/>
+<area shape="rect" href="classmy__api_1_1base_1_1BaseApiController.html#a0f1f11dedcb1932f7aa2b347bedca2f3" title=" " alt="" coords="5,5,85,31"/>
+<area shape="poly" title=" " alt="" coords="119,34,85,28,86,22,120,28"/>
+<area shape="rect" href="classmy__api_1_1base_1_1BaseApiController.html#a182a2064395126bd889666c41f1917ff" title=" " alt="" coords="12,55,79,80"/>
+<area shape="poly" title=" " alt="" coords="120,58,79,64,78,59,119,52"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aff96a7fec1ed5270eaf4c7000f576bc5" name="aff96a7fec1ed5270eaf4c7000f576bc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff96a7fec1ed5270eaf4c7000f576bc5">&#9670;&#160;</a></span>mapStatusCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">oatpp::web::protocol::http::Status mapStatusCode </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>code</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__api_1_1base_1_1BaseApiController.html#a0f1f11dedcb1932f7aa2b347bedca2f3">BaseApiController::jsonError()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__api_1_1base_1_1BaseApiController_aff96a7fec1ed5270eaf4c7000f576bc5_icgraph.png" border="0" usemap="#aclassmy__api_1_1base_1_1BaseApiController_aff96a7fec1ed5270eaf4c7000f576bc5_icgraph" alt=""/></div>
+<map name="aclassmy__api_1_1base_1_1BaseApiController_aff96a7fec1ed5270eaf4c7000f576bc5_icgraph" id="aclassmy__api_1_1base_1_1BaseApiController_aff96a7fec1ed5270eaf4c7000f576bc5_icgraph">
+<area shape="rect" title=" " alt="" coords="133,5,259,31"/>
+<area shape="rect" href="classmy__api_1_1base_1_1BaseApiController.html#a0f1f11dedcb1932f7aa2b347bedca2f3" title=" " alt="" coords="5,5,85,31"/>
+<area shape="poly" title=" " alt="" coords="120,21,85,21,85,15,120,15"/>
+</map>
+</div>
 
 </div>
 </div>

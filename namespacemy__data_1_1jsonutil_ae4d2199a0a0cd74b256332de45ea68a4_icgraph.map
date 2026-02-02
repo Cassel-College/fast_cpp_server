@@ -1,25 +1,30 @@
 <map id="GetStringOr" name="GetStringOr">
-<area shape="rect" id="Node000001" title="从 json 中读取 string，key 不存在或为 null 则返回默认值" alt="" coords="528,274,627,299"/>
-<area shape="rect" id="Node000002" href="$structmy__data_1_1RawCommand.html#a9e48010592cdfa19e269aaa0607e3d24" title=" " alt="" coords="267,5,449,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="570,261,561,217,544,162,517,107,499,81,478,59,448,42,451,37,482,55,504,78,522,104,549,160,566,216,575,260"/>
-<area shape="rect" id="Node000003" href="$structmy__data_1_1DeviceStatus.html#a29d3bccc9ad241c8414cea88877f5de1" title=" " alt="" coords="271,69,445,109"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="565,262,533,196,509,161,478,130,444,111,446,106,482,126,513,157,538,193,570,260"/>
-<area shape="rect" id="Node000004" href="$structmy__data_1_1EdgeStatus.html#a4ff712b7cd7b98f14760e531a5033c92" title=" " alt="" coords="17,111,177,151"/>
-<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="557,264,524,226,502,208,479,193,403,163,322,145,244,135,177,132,177,126,245,130,323,139,404,158,481,188,506,204,527,223,561,261"/>
-<area shape="rect" id="Node000005" href="$structmy__data_1_1Task.html#a2a9cf913f1d9683cdea2d4106dfb8802" title=" " alt="" coords="5,201,188,226"/>
-<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="551,267,518,244,479,225,405,208,328,201,254,200,188,204,188,199,254,195,328,195,405,203,481,220,521,239,554,263"/>
-<area shape="rect" id="Node000006" href="$structmy__data_1_1TaskResult.html#a60ff4fd9d09ec9c3ff58980ef05d6fe6" title="从 json 解析" alt="" coords="279,235,437,275"/>
-<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="514,280,437,269,437,264,515,275"/>
-<area shape="rect" id="Node000007" href="$classmy__control_1_1demo_1_1DepthSensorCommandNormalizer.html#a3b53f502aab08afbd793fefbbe6fb114" title="将 RawCommand 转为 Task" alt="" coords="240,299,476,339"/>
-<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="515,298,477,304,476,299,514,293"/>
-<area shape="rect" id="Node000008" href="$classmy__control_1_1demo_1_1FlowSensorCommandNormalizer.html#a3b53f502aab08afbd793fefbbe6fb114" title="将 RawCommand 转为 Task" alt="" coords="240,363,476,403"/>
-<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="551,310,518,333,481,353,450,365,448,360,479,348,516,328,548,306"/>
-<area shape="rect" id="Node000009" href="$classmy__control_1_1demo_1_1WindSensorCommandNormalizer.html#a3b53f502aab08afbd793fefbbe6fb114" title="将 RawCommand 转为 Task" alt="" coords="240,427,476,467"/>
-<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="566,313,533,366,509,393,482,417,459,429,457,424,478,412,506,390,529,362,562,310"/>
-<area shape="rect" id="Node000010" href="$classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559" title="将 RawCommand 转为 Task" alt="" coords="236,491,480,531"/>
-<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="573,314,562,351,544,396,517,442,482,481,463,493,460,488,478,477,513,439,539,394,557,350,568,312"/>
-<area shape="rect" id="Node000011" href="$classmy__edge_1_1demo_1_1UUVEdge.html#a0d90b8b5b262d714bf5378e4a6c54773" title="Submit：命令入口（Normalize 并入队）" alt="" coords="260,555,456,595"/>
-<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="577,313,569,363,553,425,525,489,506,519,482,545,458,560,455,556,478,541,501,515,520,487,548,423,564,361,571,313"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="258,108,177,121,176,115,257,102"/>
-<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="265,243,177,229,178,223,266,237"/>
+<area shape="rect" id="Node000001" title="从 json 中读取 string，key 不存在或为 null 则返回默认值" alt="" coords="780,309,879,334"/>
+<area shape="rect" id="Node000002" href="$classmy__edge_1_1demo_1_1UUVEdge.html#ad6ccbe6aa525e1634eab750c2bb8d93b" title="向 Edge 添加任务。" alt="" coords="5,130,201,170"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="825,296,820,244,806,179,793,145,777,114,756,86,730,62,694,41,655,26,615,15,573,10,488,12,403,27,322,51,249,79,140,132,138,127,247,74,320,46,402,22,487,7,574,5,616,10,657,20,696,36,734,58,760,82,782,111,798,143,811,177,825,243,830,295"/>
+<area shape="rect" id="Node000003" href="$structmy__data_1_1RawCommand.html#a9e48010592cdfa19e269aaa0607e3d24" title=" " alt="" coords="519,72,701,112"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="820,296,809,258,792,212,766,166,730,126,701,109,703,105,734,122,770,163,797,210,814,256,825,295"/>
+<area shape="rect" id="Node000004" href="$structmy__data_1_1DeviceStatus.html#a29d3bccc9ad241c8414cea88877f5de1" title=" " alt="" coords="523,136,697,176"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="813,298,780,247,757,220,730,197,696,179,698,174,734,193,761,216,784,244,818,295"/>
+<area shape="rect" id="Node000005" href="$structmy__data_1_1EdgeStatus.html#a4ff712b7cd7b98f14760e531a5033c92" title=" " alt="" coords="265,162,425,202"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="800,302,768,280,731,260,652,233,570,213,492,199,424,191,425,185,493,194,571,208,653,228,733,255,771,275,803,298"/>
+<area shape="rect" id="Node000006" href="$structmy__data_1_1Task.html#a2a9cf913f1d9683cdea2d4106dfb8802" title=" " alt="" coords="253,252,436,277"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="783,307,731,292,654,280,576,272,436,266,436,261,576,267,655,275,733,287,784,302"/>
+<area shape="rect" id="Node000007" href="$structmy__data_1_1TaskResult.html#a60ff4fd9d09ec9c3ff58980ef05d6fe6" title="从 json 解析" alt="" coords="531,302,689,342"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="766,324,689,324,689,319,766,319"/>
+<area shape="rect" id="Node000009" href="$classmy__control_1_1demo_1_1DepthSensorCommandNormalizer.html#a3b53f502aab08afbd793fefbbe6fb114" title="将 RawCommand 转为 Task" alt="" coords="492,366,728,406"/>
+<area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="780,341,733,356,691,368,689,363,731,351,778,336"/>
+<area shape="rect" id="Node000010" href="$classmy__control_1_1demo_1_1FlowSensorCommandNormalizer.html#a3b53f502aab08afbd793fefbbe6fb114" title="将 RawCommand 转为 Task" alt="" coords="492,430,728,470"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="812,347,778,385,733,420,708,432,706,427,731,415,775,381,808,344"/>
+<area shape="rect" id="Node000011" href="$classmy__control_1_1demo_1_1WindSensorCommandNormalizer.html#a3b53f502aab08afbd793fefbbe6fb114" title="将 RawCommand 转为 Task" alt="" coords="492,494,728,534"/>
+<area shape="poly" id="edge13_Node000001_Node000011" title=" " alt="" coords="822,349,809,380,790,417,765,453,734,484,714,496,711,491,730,480,761,449,786,414,804,378,817,347"/>
+<area shape="rect" id="Node000012" href="$classmy__control_1_1demo_1_1UUVCommandNormalizer.html#a87ed8a073355703286937ce384261559" title="将 RawCommand 转为 Task" alt="" coords="488,558,732,598"/>
+<area shape="poly" id="edge14_Node000001_Node000012" title=" " alt="" coords="827,348,818,392,800,446,773,501,755,526,734,548,716,560,713,555,730,544,751,522,769,498,796,444,813,390,822,347"/>
+<area shape="rect" id="Node000013" href="$classmy__edge_1_1demo_1_1UUVEdge.html#a0d90b8b5b262d714bf5378e4a6c54773" title="Submit：命令入口（Normalize 并入队）" alt="" coords="512,622,708,662"/>
+<area shape="poly" id="edge15_Node000001_Node000013" title=" " alt="" coords="830,349,824,404,809,474,797,512,781,548,760,582,734,612,710,628,707,623,730,608,756,579,776,545,792,510,804,473,819,403,825,348"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="510,169,425,177,425,171,509,163"/>
+<area shape="poly" id="edge7_Node000006_Node000002" title=" " alt="" coords="303,248,145,172,148,167,305,243"/>
+<area shape="poly" id="edge9_Node000007_Node000006" title=" " alt="" coords="518,305,404,280,405,274,519,299"/>
+<area shape="rect" id="Node000008" href="$classmy__api_1_1dto_1_1TaskDataDto.html#ab4085aeee3e9071139c1c59ca0084202" title=" " alt="" coords="249,302,440,342"/>
+<area shape="poly" id="edge10_Node000007_Node000008" title=" " alt="" coords="518,324,440,324,440,319,518,319"/>
 </map>

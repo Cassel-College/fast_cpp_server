@@ -24,6 +24,7 @@ var searchData=
   ['status_5fsnapshot_5finterval_5fms_5f_21',['status_snapshot_interval_ms_',['../classmy__edge_1_1demo_1_1UUVEdge.html#a9fe26c93b6e6e1f1f91a96b3154d5613',1,'my_edge::demo::UUVEdge']]],
   ['stime_5fticks_22',['stime_ticks',['../structThreadSnapshot.html#a885100b88d47e835b932d893f8c3cc73',1,'ThreadSnapshot']]],
   ['stop_5f_23',['stop_',['../classmy__control_1_1demo_1_1Workflow.html#ae1a1eeaa4661c67f8e75985160abf62a',1,'my_control::demo::Workflow::stop_'],['../classfast__mqtt_1_1MFMQTTClient.html#ae1a1eeaa4661c67f8e75985160abf62a',1,'fast_mqtt::MFMQTTClient::stop_']]],
-  ['success_24',['success',['../structmy__doctor_1_1CheckResult.html#a7960f9c558f9ee2c3d4a8fdea096fb56',1,'my_doctor::CheckResult']]],
-  ['synchronous_25',['synchronous',['../structmy__db_1_1DBConfig.html#a6ae6b16a98c382d5b2e80545a4ce0254',1,'my_db::DBConfig']]]
+  ['stopping_5f_24',['stopping_',['../classmy__mqtt_1_1MosqPublisher.html#ad3d6282e43666dcfc553e0fff3952fe4',1,'my_mqtt::MosqPublisher']]],
+  ['success_25',['success',['../structmy__doctor_1_1CheckResult.html#a7960f9c558f9ee2c3d4a8fdea096fb56',1,'my_doctor::CheckResult']]],
+  ['synchronous_26',['synchronous',['../structmy__db_1_1DBConfig.html#a6ae6b16a98c382d5b2e80545a4ce0254',1,'my_db::DBConfig']]]
 ];

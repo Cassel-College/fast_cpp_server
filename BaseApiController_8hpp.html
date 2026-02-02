@@ -82,16 +82,19 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &quot;oatpp/web/server/api/ApiController.hpp&quot;</code><br />
 <code>#include &quot;oatpp/core/Types.hpp&quot;</code><br />
+<code>#include &lt;nlohmann/json.hpp&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 BaseApiController.hpp 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="BaseApiController_8hpp__incl.png" border="0" usemap="#asrc_2util_2my__api_2BaseApiController_8hpp" alt=""/></div>
 <map name="asrc_2util_2my__api_2BaseApiController_8hpp" id="asrc_2util_2my__api_2BaseApiController_8hpp">
-<area shape="rect" title=" " alt="" coords="43,5,310,31"/>
+<area shape="rect" title=" " alt="" coords="135,5,402,31"/>
 <area shape="rect" title=" " alt="" coords="5,79,164,119"/>
-<area shape="poly" title=" " alt="" coords="165,33,119,72,116,68,161,29"/>
+<area shape="poly" title=" " alt="" coords="243,33,142,76,140,71,241,28"/>
 <area shape="rect" title=" " alt="" coords="189,86,349,111"/>
-<area shape="poly" title=" " alt="" coords="192,29,246,75,243,79,189,33"/>
+<area shape="poly" title=" " alt="" coords="271,31,271,72,266,72,266,31"/>
+<area shape="rect" title=" " alt="" coords="373,86,519,111"/>
+<area shape="poly" title=" " alt="" coords="296,28,409,78,407,83,293,33"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -99,25 +102,26 @@ BaseApiController.hpp 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="BaseApiController_8hpp__dep__incl.png" border="0" usemap="#asrc_2util_2my__api_2BaseApiController_8hppdep" alt=""/></div>
 <map name="asrc_2util_2my__api_2BaseApiController_8hppdep" id="asrc_2util_2my__api_2BaseApiController_8hppdep">
-<area shape="rect" title=" " alt="" coords="429,5,695,31"/>
+<area shape="rect" title=" " alt="" coords="630,5,897,31"/>
 <area shape="rect" href="BaseApiController_8cpp.html" title=" " alt="" coords="5,86,271,111"/>
-<area shape="poly" title=" " alt="" coords="488,36,200,89,199,83,487,30"/>
-<area shape="rect" href="EdgeController_8hpp.html" title=" " alt="" coords="882,79,1173,119"/>
-<area shape="poly" title=" " alt="" coords="643,30,916,76,915,81,642,36"/>
-<area shape="rect" href="EdgesController_8hpp.html" title=" " alt="" coords="295,79,535,119"/>
-<area shape="poly" title=" " alt="" coords="530,40,452,81,449,76,527,35"/>
-<area shape="rect" href="HeartBeatController_8h.html" title=" " alt="" coords="559,79,858,119"/>
-<area shape="poly" title=" " alt="" coords="597,35,675,76,672,81,594,40"/>
-<area shape="rect" href="MyAPI_8cpp.html" title=" " alt="" coords="447,174,637,199"/>
-<area shape="poly" title=" " alt="" coords="908,124,607,177,606,171,907,118"/>
-<area shape="rect" href="EdgeController_8cpp.html" title=" " alt="" coords="1001,167,1291,207"/>
-<area shape="poly" title=" " alt="" coords="1066,125,1121,164,1118,169,1063,129"/>
-<area shape="poly" title=" " alt="" coords="456,124,526,172,523,176,453,129"/>
-<area shape="rect" href="EdgesController_8cpp.html" title=" " alt="" coords="184,167,423,207"/>
-<area shape="poly" title=" " alt="" coords="381,129,330,169,327,164,378,125"/>
-<area shape="poly" title=" " alt="" coords="661,127,565,176,563,172,659,123"/>
-<area shape="rect" href="HeartBeatController_8cpp.html" title=" " alt="" coords="662,167,977,207"/>
-<area shape="poly" title=" " alt="" coords="746,125,796,164,793,169,743,129"/>
+<area shape="poly" title=" " alt="" coords="657,35,284,81,226,89,226,83,283,76,657,30"/>
+<area shape="rect" href="EdgeController_8hpp.html" title=" " alt="" coords="618,79,909,119"/>
+<area shape="poly" title=" " alt="" coords="766,44,766,79,761,79,761,44"/>
+<area shape="rect" href="EdgesController_8cpp.html" title=" " alt="" coords="1091,167,1329,207"/>
+<area shape="poly" title=" " alt="" coords="911,20,992,26,1073,37,1141,53,1167,64,1187,77,1202,97,1210,121,1214,166,1209,167,1205,122,1197,100,1183,81,1165,69,1139,58,1072,42,992,31,910,25"/>
+<area shape="rect" href="EdgesController_8hpp.html" title=" " alt="" coords="933,79,1173,119"/>
+<area shape="poly" title=" " alt="" coords="819,32,984,76,982,81,818,37"/>
+<area shape="rect" href="HeartBeatController_8h.html" title=" " alt="" coords="295,79,594,119"/>
+<area shape="poly" title=" " alt="" coords="704,37,522,81,521,76,703,31"/>
+<area shape="rect" href="MyAPI_8cpp.html" title=" " alt="" coords="876,174,1067,199"/>
+<area shape="poly" title=" " alt="" coords="823,121,945,172,943,176,820,126"/>
+<area shape="rect" href="EdgeController_8cpp.html" title=" " alt="" coords="561,167,851,207"/>
+<area shape="poly" title=" " alt="" coords="745,132,721,168,716,165,741,129"/>
+<area shape="poly" title=" " alt="" coords="1027,131,985,175,981,172,1023,127"/>
+<area shape="poly" title=" " alt="" coords="1100,123,1177,164,1174,169,1098,128"/>
+<area shape="poly" title=" " alt="" coords="579,118,864,164,907,171,906,177,863,169,578,123"/>
+<area shape="rect" href="HeartBeatController_8cpp.html" title=" " alt="" coords="222,167,537,207"/>
+<area shape="poly" title=" " alt="" coords="424,131,396,168,392,165,420,128"/>
 </map>
 </div>
 </div>
@@ -141,6 +145,8 @@ BaseApiController.hpp 的引用(Include)关系图:</div>
 <tr class="separator:a793bad1a8bad6b831b72c302dc268c91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a165d20d3aad92cb49d5c33b67531974c" id="r_a165d20d3aad92cb49d5c33b67531974c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__api_1_1base.html#a165d20d3aad92cb49d5c33b67531974c">OutgoingResponsePtr</a> = std::shared_ptr&lt; <a class="el" href="namespacemy__api_1_1base.html#a793bad1a8bad6b831b72c302dc268c91">OutgoingResponse</a> &gt;</td></tr>
 <tr class="separator:a165d20d3aad92cb49d5c33b67531974c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f322b9fe1e5f6d8df76f102affb49c6" id="r_a1f322b9fe1e5f6d8df76f102affb49c6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__api_1_1base.html#a1f322b9fe1e5f6d8df76f102affb49c6">MyAPIResponsePtr</a> = std::shared_ptr&lt; oatpp::web::protocol::http::outgoing::Response &gt;</td></tr>
+<tr class="separator:a1f322b9fe1e5f6d8df76f102affb49c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

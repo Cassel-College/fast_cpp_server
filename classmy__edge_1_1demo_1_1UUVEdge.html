@@ -136,6 +136,12 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a6b0f7d4b008896d9b742c7c14f29c2e7" id="r_a6b0f7d4b008896d9b742c7c14f29c2e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a6b0f7d4b008896d9b742c7c14f29c2e7">ShowAnalyzeInitArgs</a> (const nlohmann::json &amp;cfg) const override</td></tr>
 <tr class="memdesc:a6b0f7d4b008896d9b742c7c14f29c2e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">解释 Init 的入参并打印到日志（用于调试/前置检查）  <br /></td></tr>
 <tr class="separator:a6b0f7d4b008896d9b742c7c14f29c2e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1381f71c6f6b97b7dfea100449fed59c" id="r_a1381f71c6f6b97b7dfea100449fed59c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a1381f71c6f6b97b7dfea100449fed59c">AppendTask</a> (const <a class="el" href="structmy__data_1_1Task.html">my_data::Task</a> &amp;task) override</td></tr>
+<tr class="memdesc:a1381f71c6f6b97b7dfea100449fed59c"><td class="mdescLeft">&#160;</td><td class="mdescRight">向 Edge 添加任务。  <br /></td></tr>
+<tr class="separator:a1381f71c6f6b97b7dfea100449fed59c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6ccbe6aa525e1634eab750c2bb8d93b" id="r_ad6ccbe6aa525e1634eab750c2bb8d93b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#ad6ccbe6aa525e1634eab750c2bb8d93b">AppendJsonTask</a> (const nlohmann::json &amp;task) override</td></tr>
+<tr class="memdesc:ad6ccbe6aa525e1634eab750c2bb8d93b"><td class="mdescLeft">&#160;</td><td class="mdescRight">向 Edge 添加任务。  <br /></td></tr>
+<tr class="separator:ad6ccbe6aa525e1634eab750c2bb8d93b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14a921badc0c0cfd1d63dee98f734b80" id="r_a14a921badc0c0cfd1d63dee98f734b80"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemy__data.html#aa97613f313f7fbbad8c368f2599e3f26">my_data::EdgeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a14a921badc0c0cfd1d63dee98f734b80">Id</a> () const override</td></tr>
 <tr class="memdesc:a14a921badc0c0cfd1d63dee98f734b80"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取 Edge ID  <br /></td></tr>
 <tr class="separator:a14a921badc0c0cfd1d63dee98f734b80"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -171,6 +177,8 @@ Private 成员函数</h2></td></tr>
 <tr class="separator:a5108065e97bedefe5d5c5f0a26c5334c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf4df206592b39205ec28dc4272b70c4" id="r_acf4df206592b39205ec28dc4272b70c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acf4df206592b39205ec28dc4272b70c4">StatusSnapshotLoop</a> ()</td></tr>
 <tr class="separator:acf4df206592b39205ec28dc4272b70c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f682267f34851d53d23609c61bf1495" id="r_a6f682267f34851d53d23609c61bf1495"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a6f682267f34851d53d23609c61bf1495">AppendTaskToTargetTaskQueue</a> (const <a class="el" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a> &amp;device_id, const <a class="el" href="structmy__data_1_1Task.html">Task</a> &amp;task)</td></tr>
+<tr class="separator:a6f682267f34851d53d23609c61bf1495"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
 静态 Private 成员函数</h2></td></tr>
@@ -368,6 +376,186 @@ Private 属性</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">成员函数说明</h2>
+<a id="ad6ccbe6aa525e1634eab750c2bb8d93b" name="ad6ccbe6aa525e1634eab750c2bb8d93b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6ccbe6aa525e1634eab750c2bb8d93b">&#9670;&#160;</a></span>AppendJsonTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AppendJsonTask </td>
+          <td>(</td>
+          <td class="paramtype">const nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>task</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>向 Edge 添加任务。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">task</td><td>要添加的任务的 JSON 表示。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>如果成功添加任务则返回 true，否则返回 false。 </dd></dl>
+
+<p>实现了 <a class="el" href="classmy__edge_1_1IEdge.html#a440a5a618c768b291970886af4da128f">IEdge</a>.</p>
+
+<p class="reference">引用了 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a6f682267f34851d53d23609c61bf1495">UUVEdge::AppendTaskToTargetTaskQueue()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a4f600ad4ee5566df049ec8213e99986b">UUVEdge::edge_id_</a>, <a class="el" href="namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6">MyLog::Error()</a>, <a class="el" href="structmy__data_1_1Task.html#a2a9cf913f1d9683cdea2d4106dfb8802">Task::fromJson()</a>, <a class="el" href="namespacemy__data_1_1jsonutil.html#ae4d2199a0a0cd74b256332de45ea68a4">my_data::jsonutil::GetStringOr()</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a3f7fceadda2b13af52092701177669f0">UUVEdge::rw_mutex_</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1demo_1_1UUVEdge_ad6ccbe6aa525e1634eab750c2bb8d93b_cgraph.png" border="0" usemap="#aclassmy__edge_1_1demo_1_1UUVEdge_ad6ccbe6aa525e1634eab750c2bb8d93b_cgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1demo_1_1UUVEdge_ad6ccbe6aa525e1634eab750c2bb8d93b_cgraph" id="aclassmy__edge_1_1demo_1_1UUVEdge_ad6ccbe6aa525e1634eab750c2bb8d93b_cgraph">
+<area shape="rect" title="向 Edge 添加任务。" alt="" coords="5,58,132,84"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html#a6f682267f34851d53d23609c61bf1495" title=" " alt="" coords="180,33,405,58"/>
+<area shape="poly" title=" " alt="" coords="132,61,167,57,167,62,133,66"/>
+<area shape="rect" href="namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6" title=" " alt="" coords="480,8,584,33"/>
+<area shape="poly" title=" " alt="" coords="89,56,130,35,179,18,256,6,333,3,406,5,467,9,466,15,405,10,333,8,256,12,181,23,132,40,92,61"/>
+<area shape="rect" href="structmy__data_1_1Task.html#a2a9cf913f1d9683cdea2d4106dfb8802" title=" " alt="" coords="201,192,384,217"/>
+<area shape="poly" title=" " alt="" coords="93,81,260,182,257,187,90,86"/>
+<area shape="rect" href="namespacemy__data_1_1jsonutil.html#ae4d2199a0a0cd74b256332de45ea68a4" title="从 json 中读取 string，key 不存在或为 null 则返回默认值" alt="" coords="659,127,801,167"/>
+<area shape="poly" title=" " alt="" coords="133,76,646,135,645,140,132,81"/>
+<area shape="poly" title=" " alt="" coords="405,31,465,25,466,30,406,36"/>
+<area shape="rect" href="structmy__data_1_1TaskResult.html#a60ff4fd9d09ec9c3ff58980ef05d6fe6" title="从 json 解析" alt="" coords="453,184,611,224"/>
+<area shape="poly" title=" " alt="" coords="384,202,439,202,439,207,384,207"/>
+<area shape="rect" href="namespacemy__data_1_1jsonutil.html#ac42292cdcdd29239af5ee9bdb0b6d8ef" title="从 json 中读取 int64，key 不存在或为 null 则返回默认值" alt="" coords="659,200,801,240"/>
+<area shape="poly" title=" " alt="" coords="345,214,397,225,454,234,532,238,610,234,645,230,645,236,611,239,532,243,453,239,396,231,344,220"/>
+<area shape="rect" href="namespacemy__data_1_1jsonutil.html#a494c8f5acc19636cc8c10304bf44bc0e" title="从 json 中读取 int，key 不存在或为 null 则返回默认值" alt="" coords="659,283,801,323"/>
+<area shape="poly" title=" " alt="" coords="341,214,454,243,646,284,645,289,453,248,340,220"/>
+<area shape="poly" title=" " alt="" coords="349,189,453,170,644,150,645,155,454,175,350,194"/>
+<area shape="poly" title=" " alt="" coords="611,208,645,211,644,216,611,213"/>
+<area shape="poly" title=" " alt="" coords="575,222,678,275,676,279,572,227"/>
+<area shape="poly" title=" " alt="" coords="601,182,646,168,648,173,602,187"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1381f71c6f6b97b7dfea100449fed59c" name="a1381f71c6f6b97b7dfea100449fed59c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1381f71c6f6b97b7dfea100449fed59c">&#9670;&#160;</a></span>AppendTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AppendTask </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structmy__data_1_1Task.html">my_data::Task</a> &amp;&#160;</td>
+          <td class="paramname"><em>task</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>向 Edge 添加任务。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">task</td><td>要添加的任务对象。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>如果成功添加任务则返回 true，否则返回 false。 </dd></dl>
+
+<p>实现了 <a class="el" href="classmy__edge_1_1IEdge.html#a7018dbffbe4da9d9bb4ee5f143ad6350">IEdge</a>.</p>
+
+<p class="reference">引用了 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a6f682267f34851d53d23609c61bf1495">UUVEdge::AppendTaskToTargetTaskQueue()</a>, <a class="el" href="structmy__data_1_1Task.html#a47449c9a7a840d9fa6b4a69688305e10">Task::device_id</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a4f600ad4ee5566df049ec8213e99986b">UUVEdge::edge_id_</a>, <a class="el" href="namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6">MyLog::Error()</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a3f7fceadda2b13af52092701177669f0">UUVEdge::rw_mutex_</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1demo_1_1UUVEdge_a1381f71c6f6b97b7dfea100449fed59c_cgraph.png" border="0" usemap="#aclassmy__edge_1_1demo_1_1UUVEdge_a1381f71c6f6b97b7dfea100449fed59c_cgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1demo_1_1UUVEdge_a1381f71c6f6b97b7dfea100449fed59c_cgraph" id="aclassmy__edge_1_1demo_1_1UUVEdge_a1381f71c6f6b97b7dfea100449fed59c_cgraph">
+<area shape="rect" title="向 Edge 添加任务。" alt="" coords="5,31,105,56"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html#a6f682267f34851d53d23609c61bf1495" title=" " alt="" coords="153,5,379,31"/>
+<area shape="poly" title=" " alt="" coords="105,35,147,30,147,35,106,40"/>
+<area shape="rect" href="namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6" title=" " alt="" coords="427,31,531,56"/>
+<area shape="poly" title=" " alt="" coords="105,41,413,41,413,46,105,46"/>
+<area shape="poly" title=" " alt="" coords="373,28,413,33,413,38,373,33"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6f682267f34851d53d23609c61bf1495" name="a6f682267f34851d53d23609c61bf1495"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f682267f34851d53d23609c61bf1495">&#9670;&#160;</a></span>AppendTaskToTargetTaskQueue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AppendTaskToTargetTaskQueue </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a> &amp;&#160;</td>
+          <td class="paramname"><em>device_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structmy__data_1_1Task.html">Task</a> &amp;&#160;</td>
+          <td class="paramname"><em>task</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a4f600ad4ee5566df049ec8213e99986b">UUVEdge::edge_id_</a>, <a class="el" href="namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6">MyLog::Error()</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#aab5c8a55e8f1af292a2c4475e624c57f">UUVEdge::queues_</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a3f7fceadda2b13af52092701177669f0">UUVEdge::rw_mutex_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#ad6ccbe6aa525e1634eab750c2bb8d93b">UUVEdge::AppendJsonTask()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a1381f71c6f6b97b7dfea100449fed59c">UUVEdge::AppendTask()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1demo_1_1UUVEdge_a6f682267f34851d53d23609c61bf1495_cgraph.png" border="0" usemap="#aclassmy__edge_1_1demo_1_1UUVEdge_a6f682267f34851d53d23609c61bf1495_cgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1demo_1_1UUVEdge_a6f682267f34851d53d23609c61bf1495_cgraph" id="aclassmy__edge_1_1demo_1_1UUVEdge_a6f682267f34851d53d23609c61bf1495_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,231,31"/>
+<area shape="rect" href="namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6" title=" " alt="" coords="279,5,383,31"/>
+<area shape="poly" title=" " alt="" coords="231,15,265,15,265,21,231,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1demo_1_1UUVEdge_a6f682267f34851d53d23609c61bf1495_icgraph.png" border="0" usemap="#aclassmy__edge_1_1demo_1_1UUVEdge_a6f682267f34851d53d23609c61bf1495_icgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1demo_1_1UUVEdge_a6f682267f34851d53d23609c61bf1495_icgraph" id="aclassmy__edge_1_1demo_1_1UUVEdge_a6f682267f34851d53d23609c61bf1495_icgraph">
+<area shape="rect" title=" " alt="" coords="180,31,405,56"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html#ad6ccbe6aa525e1634eab750c2bb8d93b" title="向 Edge 添加任务。" alt="" coords="5,5,132,31"/>
+<area shape="poly" title=" " alt="" coords="166,32,132,28,133,22,167,26"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html#a1381f71c6f6b97b7dfea100449fed59c" title="向 Edge 添加任务。" alt="" coords="19,55,119,80"/>
+<area shape="poly" title=" " alt="" coords="166,60,119,65,119,59,166,54"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="acdccf5b178dd52cd19d8af660e6d168b" name="acdccf5b178dd52cd19d8af660e6d168b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acdccf5b178dd52cd19d8af660e6d168b">&#9670;&#160;</a></span>DumpInternalInfo()</h2>
 
@@ -1329,7 +1517,7 @@ false </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acdccf5b178dd52cd19d8af660e6d168b">UUVEdge::DumpInternalInfo()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a68e60df7386ed4d5a071623abc676d1a">UUVEdge::EnsureNormalizerForTypeLocked()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">UUVEdge::GetStatusSnapshot()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a14a921badc0c0cfd1d63dee98f734b80">UUVEdge::Id()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">UUVEdge::Init()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a81d4d98ed19966308bde4556e02ed6a6">UUVEdge::MakeResult()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a930b466b41c7d75b7318e6ca5853b5c9">UUVEdge::SetEStop()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a6b0f7d4b008896d9b742c7c14f29c2e7">UUVEdge::ShowAnalyzeInitArgs()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d">UUVEdge::Shutdown()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a46b15f1cef85897da0f2fed19f72ed4c">UUVEdge::Start()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a97d1170c8d61790b8c6cb9af695b371c">UUVEdge::StartStatusSnapshotThreadLocked()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acf4df206592b39205ec28dc4272b70c4">UUVEdge::StatusSnapshotLoop()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a5108065e97bedefe5d5c5f0a26c5334c">UUVEdge::StopStatusSnapshotThreadLocked()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">UUVEdge::Submit()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a1fefa38a543ac3a9dc43150b3ffc5a50">UUVEdge::UUVEdge()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#ab69eb9171ee3c27d2c7cc35879356f05">UUVEdge::UUVEdge()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#aa8982df7c38aa98b570f85c45f51d8d8">UUVEdge::~UUVEdge()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#ad6ccbe6aa525e1634eab750c2bb8d93b">UUVEdge::AppendJsonTask()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a1381f71c6f6b97b7dfea100449fed59c">UUVEdge::AppendTask()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a6f682267f34851d53d23609c61bf1495">UUVEdge::AppendTaskToTargetTaskQueue()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acdccf5b178dd52cd19d8af660e6d168b">UUVEdge::DumpInternalInfo()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a68e60df7386ed4d5a071623abc676d1a">UUVEdge::EnsureNormalizerForTypeLocked()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">UUVEdge::GetStatusSnapshot()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a14a921badc0c0cfd1d63dee98f734b80">UUVEdge::Id()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">UUVEdge::Init()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a81d4d98ed19966308bde4556e02ed6a6">UUVEdge::MakeResult()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a930b466b41c7d75b7318e6ca5853b5c9">UUVEdge::SetEStop()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a6b0f7d4b008896d9b742c7c14f29c2e7">UUVEdge::ShowAnalyzeInitArgs()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d">UUVEdge::Shutdown()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a46b15f1cef85897da0f2fed19f72ed4c">UUVEdge::Start()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a97d1170c8d61790b8c6cb9af695b371c">UUVEdge::StartStatusSnapshotThreadLocked()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acf4df206592b39205ec28dc4272b70c4">UUVEdge::StatusSnapshotLoop()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a5108065e97bedefe5d5c5f0a26c5334c">UUVEdge::StopStatusSnapshotThreadLocked()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">UUVEdge::Submit()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a1fefa38a543ac3a9dc43150b3ffc5a50">UUVEdge::UUVEdge()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#ab69eb9171ee3c27d2c7cc35879356f05">UUVEdge::UUVEdge()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#aa8982df7c38aa98b570f85c45f51d8d8">UUVEdge::~UUVEdge()</a>.</p>
 
 </div>
 </div>
@@ -1495,7 +1683,7 @@ false </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acdccf5b178dd52cd19d8af660e6d168b">UUVEdge::DumpInternalInfo()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">UUVEdge::GetStatusSnapshot()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">UUVEdge::Init()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d">UUVEdge::Shutdown()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a46b15f1cef85897da0f2fed19f72ed4c">UUVEdge::Start()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">UUVEdge::Submit()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a6f682267f34851d53d23609c61bf1495">UUVEdge::AppendTaskToTargetTaskQueue()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acdccf5b178dd52cd19d8af660e6d168b">UUVEdge::DumpInternalInfo()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">UUVEdge::GetStatusSnapshot()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">UUVEdge::Init()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d">UUVEdge::Shutdown()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a46b15f1cef85897da0f2fed19f72ed4c">UUVEdge::Start()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">UUVEdge::Submit()</a>.</p>
 
 </div>
 </div>
@@ -1543,7 +1731,7 @@ false </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acdccf5b178dd52cd19d8af660e6d168b">UUVEdge::DumpInternalInfo()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">UUVEdge::GetStatusSnapshot()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">UUVEdge::Init()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a930b466b41c7d75b7318e6ca5853b5c9">UUVEdge::SetEStop()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a6b0f7d4b008896d9b742c7c14f29c2e7">UUVEdge::ShowAnalyzeInitArgs()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d">UUVEdge::Shutdown()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a46b15f1cef85897da0f2fed19f72ed4c">UUVEdge::Start()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">UUVEdge::Submit()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#ad6ccbe6aa525e1634eab750c2bb8d93b">UUVEdge::AppendJsonTask()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a1381f71c6f6b97b7dfea100449fed59c">UUVEdge::AppendTask()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a6f682267f34851d53d23609c61bf1495">UUVEdge::AppendTaskToTargetTaskQueue()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acdccf5b178dd52cd19d8af660e6d168b">UUVEdge::DumpInternalInfo()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">UUVEdge::GetStatusSnapshot()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">UUVEdge::Init()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a930b466b41c7d75b7318e6ca5853b5c9">UUVEdge::SetEStop()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a6b0f7d4b008896d9b742c7c14f29c2e7">UUVEdge::ShowAnalyzeInitArgs()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d">UUVEdge::Shutdown()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a46b15f1cef85897da0f2fed19f72ed4c">UUVEdge::Start()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">UUVEdge::Submit()</a>.</p>
 
 </div>
 </div>
