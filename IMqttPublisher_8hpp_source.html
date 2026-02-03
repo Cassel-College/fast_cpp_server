@@ -83,45 +83,29 @@ $(document).ready(function() { init_codefold(0); });
 <div class="contents">
 <a href="IMqttPublisher_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="foldopen" id="foldopen00005" data-start="{" data-end="}">
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="namespacemy__mqtt.html">    5</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__mqtt.html">my_mqtt</a> {</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classmy__mqtt_1_1IMqttPublisher.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__mqtt_1_1IMqttPublisher.html">IMqttPublisher</a> {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classmy__mqtt_1_1IMqttPublisher.html#aea34d2d13466cc3d2a6a9c70213a8923">   13</a></span>  <span class="keyword">virtual</span> <a class="code hl_function" href="classmy__mqtt_1_1IMqttPublisher.html#aea34d2d13466cc3d2a6a9c70213a8923">~IMqttPublisher</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  <span class="comment">// 同步连接（或等待连接完成），返回是否连接成功</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classmy__mqtt_1_1IMqttPublisher.html#ac0538a758e823e929951bfaebf9155fd">   16</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__mqtt_1_1IMqttPublisher.html#ac0538a758e823e929951bfaebf9155fd">Connect</a>() = 0;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <span class="comment">// 断开连接（并清理）</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classmy__mqtt_1_1IMqttPublisher.html#aef419fd33238518b2e37e2a892bf712d">   19</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__mqtt_1_1IMqttPublisher.html#aef419fd33238518b2e37e2a892bf712d">Disconnect</a>() = 0;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="foldopen" id="foldopen00004" data-start="{" data-end="}">
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="namespacemy__mqtt.html">    4</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__mqtt.html">my_mqtt</a> {</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classmy__mqtt_1_1IMqttPublisher.html">   10</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__mqtt_1_1IMqttPublisher.html">IMqttPublisher</a> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classmy__mqtt_1_1IMqttPublisher.html#aea34d2d13466cc3d2a6a9c70213a8923">   12</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="classmy__mqtt_1_1IMqttPublisher.html#aea34d2d13466cc3d2a6a9c70213a8923">~IMqttPublisher</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="comment">// 发布 payload 到 topic，返回是否提交成功（不保证对端收到）</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classmy__mqtt_1_1IMqttPublisher.html#a92f005e302be60c14f61aef584772a19">   15</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__mqtt_1_1IMqttPublisher.html#a92f005e302be60c14f61aef584772a19">Publish</a>(<span class="keyword">const</span> std::string&amp; topic,</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>                         <span class="keyword">const</span> std::string&amp; payload,</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                         <span class="keywordtype">int</span> qos = 0,</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                         <span class="keywordtype">bool</span> retain = <span class="keyword">false</span>) = 0;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>};</div>
+</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="comment">// 发布 payload 到 topic，返回是否提交成功（不保证被接收）</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classmy__mqtt_1_1IMqttPublisher.html#a92f005e302be60c14f61aef584772a19">   22</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__mqtt_1_1IMqttPublisher.html#a92f005e302be60c14f61aef584772a19">Publish</a>(<span class="keyword">const</span> std::string&amp; topic,</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                       <span class="keyword">const</span> std::string&amp; payload,</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                       <span class="keywordtype">int</span> qos = 0,</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                       <span class="keywordtype">bool</span> retain = <span class="keyword">false</span>) = 0;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <span class="comment">// 设置 LWT（will），在连接时生效</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classmy__mqtt_1_1IMqttPublisher.html#af25cb9bdf12c5b02e1b216f1a62020ff">   28</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__mqtt_1_1IMqttPublisher.html#af25cb9bdf12c5b02e1b216f1a62020ff">SetLastWill</a>(<span class="keyword">const</span> std::string&amp; topic,</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                           <span class="keyword">const</span> std::string&amp; payload,</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                           <span class="keywordtype">int</span> qos = 1,</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                           <span class="keywordtype">bool</span> retain = <span class="keyword">true</span>) = 0;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>};</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>} <span class="comment">// namespace my_new_mqtt</span></div>
 </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>} <span class="comment">// namespace my_mqtt</span></div>
-</div>
-<div class="ttc" id="aclassmy__mqtt_1_1IMqttPublisher_html"><div class="ttname"><a href="classmy__mqtt_1_1IMqttPublisher.html">my_mqtt::IMqttPublisher</a></div><div class="ttdef"><b>Definition</b> IMqttPublisher.hpp:11</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1IMqttPublisher_html"><div class="ttname"><a href="classmy__mqtt_1_1IMqttPublisher.html">my_mqtt::IMqttPublisher</a></div><div class="ttdef"><b>Definition</b> IMqttPublisher.hpp:10</div></div>
 <div class="ttc" id="aclassmy__mqtt_1_1IMqttPublisher_html_a92f005e302be60c14f61aef584772a19"><div class="ttname"><a href="classmy__mqtt_1_1IMqttPublisher.html#a92f005e302be60c14f61aef584772a19">my_mqtt::IMqttPublisher::Publish</a></div><div class="ttdeci">virtual bool Publish(const std::string &amp;topic, const std::string &amp;payload, int qos=0, bool retain=false)=0</div></div>
-<div class="ttc" id="aclassmy__mqtt_1_1IMqttPublisher_html_ac0538a758e823e929951bfaebf9155fd"><div class="ttname"><a href="classmy__mqtt_1_1IMqttPublisher.html#ac0538a758e823e929951bfaebf9155fd">my_mqtt::IMqttPublisher::Connect</a></div><div class="ttdeci">virtual bool Connect()=0</div></div>
 <div class="ttc" id="aclassmy__mqtt_1_1IMqttPublisher_html_aea34d2d13466cc3d2a6a9c70213a8923"><div class="ttname"><a href="classmy__mqtt_1_1IMqttPublisher.html#aea34d2d13466cc3d2a6a9c70213a8923">my_mqtt::IMqttPublisher::~IMqttPublisher</a></div><div class="ttdeci">virtual ~IMqttPublisher()=default</div></div>
-<div class="ttc" id="aclassmy__mqtt_1_1IMqttPublisher_html_aef419fd33238518b2e37e2a892bf712d"><div class="ttname"><a href="classmy__mqtt_1_1IMqttPublisher.html#aef419fd33238518b2e37e2a892bf712d">my_mqtt::IMqttPublisher::Disconnect</a></div><div class="ttdeci">virtual void Disconnect()=0</div></div>
-<div class="ttc" id="aclassmy__mqtt_1_1IMqttPublisher_html_af25cb9bdf12c5b02e1b216f1a62020ff"><div class="ttname"><a href="classmy__mqtt_1_1IMqttPublisher.html#af25cb9bdf12c5b02e1b216f1a62020ff">my_mqtt::IMqttPublisher::SetLastWill</a></div><div class="ttdeci">virtual void SetLastWill(const std::string &amp;topic, const std::string &amp;payload, int qos=1, bool retain=true)=0</div></div>
-<div class="ttc" id="anamespacemy__mqtt_html"><div class="ttname"><a href="namespacemy__mqtt.html">my_mqtt</a></div><div class="ttdef"><b>Definition</b> IMqttPublisher.hpp:5</div></div>
+<div class="ttc" id="anamespacemy__mqtt_html"><div class="ttname"><a href="namespacemy__mqtt.html">my_mqtt</a></div><div class="ttdef"><b>Definition</b> IMqttPublisher.hpp:4</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

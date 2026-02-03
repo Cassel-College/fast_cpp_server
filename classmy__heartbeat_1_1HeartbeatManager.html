@@ -1,0 +1,1237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: HeartbeatManager类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacemy__heartbeat.html">my_heartbeat</a></li><li class="navelem"><a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html">HeartbeatManager</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a>  </div>
+  <div class="headertitle"><div class="title">HeartbeatManager类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="MyHeartbeatManager_8h_source.html">MyHeartbeatManager.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ac933e753013e97524e4f594875990de6" id="r_ac933e753013e97524e4f594875990de6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#ac933e753013e97524e4f594875990de6">Init</a> (const nlohmann::json &amp;config)</td></tr>
+<tr class="separator:ac933e753013e97524e4f594875990de6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1f123060d3bd450b4e34d5e133bb1a5" id="r_aa1f123060d3bd450b4e34d5e133bb1a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#aa1f123060d3bd450b4e34d5e133bb1a5">SetPublisher</a> (std::shared_ptr&lt; <a class="el" href="classmy__mqtt_1_1IMqttPublisher.html">my_mqtt::IMqttPublisher</a> &gt; publisher)</td></tr>
+<tr class="memdesc:aa1f123060d3bd450b4e34d5e133bb1a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Publisher object  <br /></td></tr>
+<tr class="separator:aa1f123060d3bd450b4e34d5e133bb1a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f5292de20cea26f4163f013647b20b4" id="r_a4f5292de20cea26f4163f013647b20b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a4f5292de20cea26f4163f013647b20b4">SetMqttPublishConfig</a> (std::string topic_fmt, int qos=1, bool retain=false)</td></tr>
+<tr class="memdesc:a4f5292de20cea26f4163f013647b20b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Mqtt Publish Config object  <br /></td></tr>
+<tr class="separator:a4f5292de20cea26f4163f013647b20b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07aaf1227e4d645f15e0a964f54ef291" id="r_a07aaf1227e4d645f15e0a964f54ef291"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a07aaf1227e4d645f15e0a964f54ef291">Start</a> ()</td></tr>
+<tr class="separator:a07aaf1227e4d645f15e0a964f54ef291"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17a237457e57625296e6b24feb19c60a" id="r_a17a237457e57625296e6b24feb19c60a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a17a237457e57625296e6b24feb19c60a">Stop</a> ()</td></tr>
+<tr class="separator:a17a237457e57625296e6b24feb19c60a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29f0da045a06c4d25b83beea99a9415f" id="r_a29f0da045a06c4d25b83beea99a9415f"><td class="memItemLeft" align="right" valign="top">nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a29f0da045a06c4d25b83beea99a9415f">GetHeartbeatSnapshot</a> ()</td></tr>
+<tr class="memdesc:a29f0da045a06c4d25b83beea99a9415f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Heartbeat Snapshot object / 获取心跳数据快照  <br /></td></tr>
+<tr class="separator:a29f0da045a06c4d25b83beea99a9415f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa00e3ae8bd1e76c36dbc3d6e8dbd08ae" id="r_aa00e3ae8bd1e76c36dbc3d6e8dbd08ae"><td class="memItemLeft" align="right" valign="top">nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#aa00e3ae8bd1e76c36dbc3d6e8dbd08ae">GetInitConfig</a> ()</td></tr>
+<tr class="separator:aa00e3ae8bd1e76c36dbc3d6e8dbd08ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:afd7e843c24da931d3719544b1d517f89" id="r_afd7e843c24da931d3719544b1d517f89"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html">HeartbeatManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#afd7e843c24da931d3719544b1d517f89">GetInstance</a> ()</td></tr>
+<tr class="separator:afd7e843c24da931d3719544b1d517f89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a9d1b10a740b6f228ef930c4306c3b0ee" id="r_a9d1b10a740b6f228ef930c4306c3b0ee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a9d1b10a740b6f228ef930c4306c3b0ee">HeartbeatManager</a> ()=default</td></tr>
+<tr class="separator:a9d1b10a740b6f228ef930c4306c3b0ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fe7fe103b23e63494ae4c5f2af9d25e" id="r_a3fe7fe103b23e63494ae4c5f2af9d25e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a3fe7fe103b23e63494ae4c5f2af9d25e">~HeartbeatManager</a> ()</td></tr>
+<tr class="separator:a3fe7fe103b23e63494ae4c5f2af9d25e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78e2a4289515dd73f4ef63bc0b635ff4" id="r_a78e2a4289515dd73f4ef63bc0b635ff4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a78e2a4289515dd73f4ef63bc0b635ff4">WorkerLoop</a> ()</td></tr>
+<tr class="memdesc:a78e2a4289515dd73f4ef63bc0b635ff4"><td class="mdescLeft">&#160;</td><td class="mdescRight">心跳工作线程主循环  <br /></td></tr>
+<tr class="separator:a78e2a4289515dd73f4ef63bc0b635ff4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7394f16ced4d39b120077258d26c2ed9" id="r_a7394f16ced4d39b120077258d26c2ed9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a7394f16ced4d39b120077258d26c2ed9">BuildHeartbeat</a> ()</td></tr>
+<tr class="memdesc:a7394f16ced4d39b120077258d26c2ed9"><td class="mdescLeft">&#160;</td><td class="mdescRight">构建心跳数据  <br /></td></tr>
+<tr class="separator:a7394f16ced4d39b120077258d26c2ed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22bd917f3f7de25a98c2d81de1b52b67" id="r_a22bd917f3f7de25a98c2d81de1b52b67"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a22bd917f3f7de25a98c2d81de1b52b67">SendHeartbeat</a> ()</td></tr>
+<tr class="memdesc:a22bd917f3f7de25a98c2d81de1b52b67"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送心跳数据  <br /></td></tr>
+<tr class="separator:a22bd917f3f7de25a98c2d81de1b52b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06b3142855081abe276dc4ffa29339c2" id="r_a06b3142855081abe276dc4ffa29339c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a06b3142855081abe276dc4ffa29339c2">SendOnceByMQTT</a> ()</td></tr>
+<tr class="memdesc:a06b3142855081abe276dc4ffa29339c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送一次心跳（内部使用）  <br /></td></tr>
+<tr class="separator:a06b3142855081abe276dc4ffa29339c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:a017d6e9f23222cfe63d24745631ea6eb" id="r_a017d6e9f23222cfe63d24745631ea6eb"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a017d6e9f23222cfe63d24745631ea6eb">formatTopic</a> (const std::string &amp;fmt, const std::string &amp;source)</td></tr>
+<tr class="separator:a017d6e9f23222cfe63d24745631ea6eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:aa9620a15c76ada2388bf678e373a6463" id="r_aa9620a15c76ada2388bf678e373a6463"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#aa9620a15c76ada2388bf678e373a6463">running_</a> {false}</td></tr>
+<tr class="separator:aa9620a15c76ada2388bf678e373a6463"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d17662c59ba51130a35fdaa8567db74" id="r_a2d17662c59ba51130a35fdaa8567db74"><td class="memItemLeft" align="right" valign="top">std::thread&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a2d17662c59ba51130a35fdaa8567db74">worker_</a></td></tr>
+<tr class="separator:a2d17662c59ba51130a35fdaa8567db74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84df7a10f6a5317e3997d82ee8c369a9" id="r_a84df7a10f6a5317e3997d82ee8c369a9"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classmy__mqtt_1_1IMqttPublisher.html">my_mqtt::IMqttPublisher</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a84df7a10f6a5317e3997d82ee8c369a9">publisher_</a> {nullptr}</td></tr>
+<tr class="separator:a84df7a10f6a5317e3997d82ee8c369a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e3021a5d52d7ad647a9b391813e10fc" id="r_a2e3021a5d52d7ad647a9b391813e10fc"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a2e3021a5d52d7ad647a9b391813e10fc">topic_fmt_</a> {&quot;system/heartbeats/{source}&quot;}</td></tr>
+<tr class="separator:a2e3021a5d52d7ad647a9b391813e10fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc0ec38bec373e93ab56783cc58a37f0" id="r_adc0ec38bec373e93ab56783cc58a37f0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#adc0ec38bec373e93ab56783cc58a37f0">qos_</a> {1}</td></tr>
+<tr class="separator:adc0ec38bec373e93ab56783cc58a37f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a712b2adecdd9082613a3eaab9bb638a2" id="r_a712b2adecdd9082613a3eaab9bb638a2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a712b2adecdd9082613a3eaab9bb638a2">retain_</a> {false}</td></tr>
+<tr class="separator:a712b2adecdd9082613a3eaab9bb638a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac71e5e08985a183982b1fd5a6d439a14" id="r_ac71e5e08985a183982b1fd5a6d439a14"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#ac71e5e08985a183982b1fd5a6d439a14">seq_</a> {0}</td></tr>
+<tr class="separator:ac71e5e08985a183982b1fd5a6d439a14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a281b5ec791338d4378e22ef44a51b4a1" id="r_a281b5ec791338d4378e22ef44a51b4a1"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a281b5ec791338d4378e22ef44a51b4a1">mutex_</a></td></tr>
+<tr class="separator:a281b5ec791338d4378e22ef44a51b4a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae727e1f60c7e02e3e4bb8c932308b579" id="r_ae727e1f60c7e02e3e4bb8c932308b579"><td class="memItemLeft" align="right" valign="top">nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#ae727e1f60c7e02e3e4bb8c932308b579">config_</a></td></tr>
+<tr class="separator:ae727e1f60c7e02e3e4bb8c932308b579"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1996ae8f612adf12d0cf12f6d15916bc" id="r_a1996ae8f612adf12d0cf12f6d15916bc"><td class="memItemLeft" align="right" valign="top">nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a1996ae8f612adf12d0cf12f6d15916bc">heartbeat_data_</a></td></tr>
+<tr class="separator:a1996ae8f612adf12d0cf12f6d15916bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a322335c6177209ab6d4260f4453b5e88" id="r_a322335c6177209ab6d4260f4453b5e88"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a322335c6177209ab6d4260f4453b5e88">interval_sec_</a> {5}</td></tr>
+<tr class="separator:a322335c6177209ab6d4260f4453b5e88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad901705d736229a43dddad4e66efd2a1" id="r_ad901705d736229a43dddad4e66efd2a1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#ad901705d736229a43dddad4e66efd2a1">simple_json4log</a> {false}</td></tr>
+<tr class="separator:ad901705d736229a43dddad4e66efd2a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a146511d2ae2f8b5c118eb262868e9b68" id="r_a146511d2ae2f8b5c118eb262868e9b68"><td class="memItemLeft" align="right" valign="top">time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a146511d2ae2f8b5c118eb262868e9b68">start_time_</a> {0}</td></tr>
+<tr class="separator:a146511d2ae2f8b5c118eb262868e9b68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1895d07e12e2eee7d0b83db764d99de" id="r_ac1895d07e12e2eee7d0b83db764d99de"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#ac1895d07e12e2eee7d0b83db764d99de">source_id_</a></td></tr>
+<tr class="separator:ac1895d07e12e2eee7d0b83db764d99de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a9d1b10a740b6f228ef930c4306c3b0ee" name="a9d1b10a740b6f228ef930c4306c3b0ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d1b10a740b6f228ef930c4306c3b0ee">&#9670;&#160;</a></span>HeartbeatManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html">HeartbeatManager</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3fe7fe103b23e63494ae4c5f2af9d25e" name="a3fe7fe103b23e63494ae4c5f2af9d25e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fe7fe103b23e63494ae4c5f2af9d25e">&#9670;&#160;</a></span>~HeartbeatManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html">HeartbeatManager</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a17a237457e57625296e6b24feb19c60a">HeartbeatManager::Stop()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__heartbeat_1_1HeartbeatManager_a3fe7fe103b23e63494ae4c5f2af9d25e_cgraph.png" border="0" usemap="#aclassmy__heartbeat_1_1HeartbeatManager_a3fe7fe103b23e63494ae4c5f2af9d25e_cgraph" alt=""/></div>
+<map name="aclassmy__heartbeat_1_1HeartbeatManager_a3fe7fe103b23e63494ae4c5f2af9d25e_cgraph" id="aclassmy__heartbeat_1_1HeartbeatManager_a3fe7fe103b23e63494ae4c5f2af9d25e_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,160,31"/>
+<area shape="rect" href="classmy__heartbeat_1_1HeartbeatManager.html#a17a237457e57625296e6b24feb19c60a" title=" " alt="" coords="208,5,259,31"/>
+<area shape="poly" title=" " alt="" coords="160,15,194,15,194,21,160,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a7394f16ced4d39b120077258d26c2ed9" name="a7394f16ced4d39b120077258d26c2ed9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7394f16ced4d39b120077258d26c2ed9">&#9670;&#160;</a></span>BuildHeartbeat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BuildHeartbeat </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构建心跳数据 </p>
+
+<p class="reference">引用了 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#ae727e1f60c7e02e3e4bb8c932308b579">HeartbeatManager::config_</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#aa9a8e8ba2fbf620b75975789af2d3117">MyEdges::GetHeartbeatInfo()</a>, <a class="el" href="classmy__edge_1_1MyEdges.html#ab8ce25c65b76a1b6cf2eb518c4d022e2">MyEdges::GetInstance()</a>, <a class="el" href="classedge__manager_1_1MyEdgeManager.html#a1bb96f6c20847acd52ac992e54a9d440">MyEdgeManager::GetInstance()</a>, <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a1996ae8f612adf12d0cf12f6d15916bc">HeartbeatManager::heartbeat_data_</a>, <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a281b5ec791338d4378e22ef44a51b4a1">HeartbeatManager::mutex_</a>, <a class="el" href="classedge__manager_1_1MyEdgeManager.html#a373ad3f792de13e3ad9600da512a9923">MyEdgeManager::ShowEdgesStatus()</a> , 以及 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a146511d2ae2f8b5c118eb262868e9b68">HeartbeatManager::start_time_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a78e2a4289515dd73f4ef63bc0b635ff4">HeartbeatManager::WorkerLoop()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__heartbeat_1_1HeartbeatManager_a7394f16ced4d39b120077258d26c2ed9_cgraph.png" border="0" usemap="#aclassmy__heartbeat_1_1HeartbeatManager_a7394f16ced4d39b120077258d26c2ed9_cgraph" alt=""/></div>
+<map name="aclassmy__heartbeat_1_1HeartbeatManager_a7394f16ced4d39b120077258d26c2ed9_cgraph" id="aclassmy__heartbeat_1_1HeartbeatManager_a7394f16ced4d39b120077258d26c2ed9_cgraph">
+<area shape="rect" title="构建心跳数据" alt="" coords="5,84,125,109"/>
+<area shape="rect" href="classmy__edge_1_1MyEdges.html#aa9a8e8ba2fbf620b75975789af2d3117" title="Get the Heartbeat Info object/获取给模块的心跳信息" alt="" coords="173,5,444,31"/>
+<area shape="poly" title=" " alt="" coords="86,82,125,60,172,39,202,31,203,36,174,45,127,65,88,86"/>
+<area shape="rect" href="classmy__edge_1_1MyEdges.html#ab8ce25c65b76a1b6cf2eb518c4d022e2" title="获取单例实例。" alt="" coords="191,55,426,80"/>
+<area shape="poly" title=" " alt="" coords="125,87,189,79,190,84,126,92"/>
+<area shape="rect" href="classedge__manager_1_1MyEdgeManager.html#a1bb96f6c20847acd52ac992e54a9d440" title=" " alt="" coords="191,105,427,145"/>
+<area shape="poly" title=" " alt="" coords="126,101,177,107,176,112,125,106"/>
+<area shape="rect" href="classedge__manager_1_1MyEdgeManager.html#a373ad3f792de13e3ad9600da512a9923" title=" " alt="" coords="191,169,427,209"/>
+<area shape="poly" title=" " alt="" coords="87,107,126,131,174,154,197,162,195,167,172,159,124,136,84,112"/>
+<area shape="rect" href="namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6" title=" " alt="" coords="492,31,596,56"/>
+<area shape="poly" title=" " alt="" coords="427,28,478,34,478,39,426,33"/>
+<area shape="poly" title=" " alt="" coords="426,53,478,47,478,53,427,58"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__heartbeat_1_1HeartbeatManager_a7394f16ced4d39b120077258d26c2ed9_icgraph.png" border="0" usemap="#aclassmy__heartbeat_1_1HeartbeatManager_a7394f16ced4d39b120077258d26c2ed9_icgraph" alt=""/></div>
+<map name="aclassmy__heartbeat_1_1HeartbeatManager_a7394f16ced4d39b120077258d26c2ed9_icgraph" id="aclassmy__heartbeat_1_1HeartbeatManager_a7394f16ced4d39b120077258d26c2ed9_icgraph">
+<area shape="rect" title="构建心跳数据" alt="" coords="1024,13,1144,38"/>
+<area shape="rect" href="classmy__heartbeat_1_1HeartbeatManager.html#a78e2a4289515dd73f4ef63bc0b635ff4" title="心跳工作线程主循环" alt="" coords="877,13,976,38"/>
+<area shape="poly" title=" " alt="" coords="1010,28,976,28,976,23,1010,23"/>
+<area shape="rect" href="classmy__heartbeat_1_1HeartbeatManager.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="776,13,829,38"/>
+<area shape="poly" title=" " alt="" coords="864,28,829,28,829,23,864,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#afe3d91fd6adf24f8f0ec4c876667f0e3" title=" " alt="" coords="553,5,728,45"/>
+<area shape="poly" title=" " alt="" coords="762,28,728,28,728,23,762,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="331,5,505,45"/>
+<area shape="poly" title=" " alt="" coords="540,28,505,28,505,23,540,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="108,5,283,45"/>
+<area shape="poly" title=" " alt="" coords="317,28,283,28,283,23,317,23"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,13,60,38"/>
+<area shape="poly" title=" " alt="" coords="95,28,60,28,60,23,95,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a017d6e9f23222cfe63d24745631ea6eb" name="a017d6e9f23222cfe63d24745631ea6eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a017d6e9f23222cfe63d24745631ea6eb">&#9670;&#160;</a></span>formatTopic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string formatTopic </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>source</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a06b3142855081abe276dc4ffa29339c2">HeartbeatManager::SendOnceByMQTT()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__heartbeat_1_1HeartbeatManager_a017d6e9f23222cfe63d24745631ea6eb_icgraph.png" border="0" usemap="#aclassmy__heartbeat_1_1HeartbeatManager_a017d6e9f23222cfe63d24745631ea6eb_icgraph" alt=""/></div>
+<map name="aclassmy__heartbeat_1_1HeartbeatManager_a017d6e9f23222cfe63d24745631ea6eb_icgraph" id="aclassmy__heartbeat_1_1HeartbeatManager_a017d6e9f23222cfe63d24745631ea6eb_icgraph">
+<area shape="rect" title=" " alt="" coords="1215,13,1313,38"/>
+<area shape="rect" href="classmy__heartbeat_1_1HeartbeatManager.html#a06b3142855081abe276dc4ffa29339c2" title="发送一次心跳（内部使用）" alt="" coords="1024,13,1167,38"/>
+<area shape="poly" title=" " alt="" coords="1201,28,1167,28,1167,23,1201,23"/>
+<area shape="rect" href="classmy__heartbeat_1_1HeartbeatManager.html#a78e2a4289515dd73f4ef63bc0b635ff4" title="心跳工作线程主循环" alt="" coords="877,13,976,38"/>
+<area shape="poly" title=" " alt="" coords="1010,28,976,28,976,23,1010,23"/>
+<area shape="rect" href="classmy__heartbeat_1_1HeartbeatManager.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="776,13,829,38"/>
+<area shape="poly" title=" " alt="" coords="864,28,829,28,829,23,864,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#afe3d91fd6adf24f8f0ec4c876667f0e3" title=" " alt="" coords="553,5,728,45"/>
+<area shape="poly" title=" " alt="" coords="762,28,728,28,728,23,762,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="331,5,505,45"/>
+<area shape="poly" title=" " alt="" coords="540,28,505,28,505,23,540,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="108,5,283,45"/>
+<area shape="poly" title=" " alt="" coords="317,28,283,28,283,23,317,23"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,13,60,38"/>
+<area shape="poly" title=" " alt="" coords="95,28,60,28,60,23,95,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a29f0da045a06c4d25b83beea99a9415f" name="a29f0da045a06c4d25b83beea99a9415f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29f0da045a06c4d25b83beea99a9415f">&#9670;&#160;</a></span>GetHeartbeatSnapshot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nlohmann::json GetHeartbeatSnapshot </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the Heartbeat Snapshot object / 获取心跳数据快照 </p>
+<dl class="section return"><dt>返回</dt><dd>nlohmann::json </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a1996ae8f612adf12d0cf12f6d15916bc">HeartbeatManager::heartbeat_data_</a> , 以及 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a281b5ec791338d4378e22ef44a51b4a1">HeartbeatManager::mutex_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a22bd917f3f7de25a98c2d81de1b52b67">HeartbeatManager::SendHeartbeat()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__heartbeat_1_1HeartbeatManager_a29f0da045a06c4d25b83beea99a9415f_icgraph.png" border="0" usemap="#aclassmy__heartbeat_1_1HeartbeatManager_a29f0da045a06c4d25b83beea99a9415f_icgraph" alt=""/></div>
+<map name="aclassmy__heartbeat_1_1HeartbeatManager_a29f0da045a06c4d25b83beea99a9415f_icgraph" id="aclassmy__heartbeat_1_1HeartbeatManager_a29f0da045a06c4d25b83beea99a9415f_icgraph">
+<area shape="rect" title="Get the Heartbeat Snapshot object / 获取心跳数据快照" alt="" coords="1191,13,1361,38"/>
+<area shape="rect" href="classmy__heartbeat_1_1HeartbeatManager.html#a22bd917f3f7de25a98c2d81de1b52b67" title="发送心跳数据" alt="" coords="1024,13,1143,38"/>
+<area shape="poly" title=" " alt="" coords="1177,28,1143,28,1143,23,1177,23"/>
+<area shape="rect" href="classmy__heartbeat_1_1HeartbeatManager.html#a78e2a4289515dd73f4ef63bc0b635ff4" title="心跳工作线程主循环" alt="" coords="877,13,976,38"/>
+<area shape="poly" title=" " alt="" coords="1010,28,976,28,976,23,1010,23"/>
+<area shape="rect" href="classmy__heartbeat_1_1HeartbeatManager.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="776,13,829,38"/>
+<area shape="poly" title=" " alt="" coords="864,28,829,28,829,23,864,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#afe3d91fd6adf24f8f0ec4c876667f0e3" title=" " alt="" coords="553,5,728,45"/>
+<area shape="poly" title=" " alt="" coords="762,28,728,28,728,23,762,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="331,5,505,45"/>
+<area shape="poly" title=" " alt="" coords="540,28,505,28,505,23,540,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="108,5,283,45"/>
+<area shape="poly" title=" " alt="" coords="317,28,283,28,283,23,317,23"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,13,60,38"/>
+<area shape="poly" title=" " alt="" coords="95,28,60,28,60,23,95,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa00e3ae8bd1e76c36dbc3d6e8dbd08ae" name="aa00e3ae8bd1e76c36dbc3d6e8dbd08ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa00e3ae8bd1e76c36dbc3d6e8dbd08ae">&#9670;&#160;</a></span>GetInitConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nlohmann::json GetInitConfig </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#ae727e1f60c7e02e3e4bb8c932308b579">HeartbeatManager::config_</a> , 以及 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a281b5ec791338d4378e22ef44a51b4a1">HeartbeatManager::mutex_</a>.</p>
+
+</div>
+</div>
+<a id="afd7e843c24da931d3719544b1d517f89" name="afd7e843c24da931d3719544b1d517f89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd7e843c24da931d3719544b1d517f89">&#9670;&#160;</a></span>GetInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html">HeartbeatManager</a> &amp; GetInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classtools_1_1pipeline_1_1Pipeline.html#afe3d91fd6adf24f8f0ec4c876667f0e3">Pipeline::LaunchHeartbeat()</a> , 以及 <a class="el" href="classtools_1_1pipeline_1_1Pipeline.html#ab7587a797e845df29793177ea59eed08">Pipeline::LaunchMQTTComm()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__heartbeat_1_1HeartbeatManager_afd7e843c24da931d3719544b1d517f89_icgraph.png" border="0" usemap="#aclassmy__heartbeat_1_1HeartbeatManager_afd7e843c24da931d3719544b1d517f89_icgraph" alt=""/></div>
+<map name="aclassmy__heartbeat_1_1HeartbeatManager_afd7e843c24da931d3719544b1d517f89_icgraph" id="aclassmy__heartbeat_1_1HeartbeatManager_afd7e843c24da931d3719544b1d517f89_icgraph">
+<area shape="rect" title=" " alt="" coords="776,45,876,70"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#afe3d91fd6adf24f8f0ec4c876667f0e3" title=" " alt="" coords="553,5,728,45"/>
+<area shape="poly" title=" " alt="" coords="762,49,728,43,729,38,763,44"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#ab7587a797e845df29793177ea59eed08" title=" " alt="" coords="553,69,728,109"/>
+<area shape="poly" title=" " alt="" coords="763,71,729,77,728,72,762,66"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="331,37,505,77"/>
+<area shape="poly" title=" " alt="" coords="540,42,506,47,505,42,539,37"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="108,37,283,77"/>
+<area shape="poly" title=" " alt="" coords="317,60,283,60,283,55,317,55"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,45,60,70"/>
+<area shape="poly" title=" " alt="" coords="95,60,60,60,60,55,95,55"/>
+<area shape="poly" title=" " alt="" coords="539,77,505,72,506,67,540,72"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac933e753013e97524e4f594875990de6" name="ac933e753013e97524e4f594875990de6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac933e753013e97524e4f594875990de6">&#9670;&#160;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Init </td>
+          <td>(</td>
+          <td class="paramtype">const nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#ae727e1f60c7e02e3e4bb8c932308b579">HeartbeatManager::config_</a>, <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a322335c6177209ab6d4260f4453b5e88">HeartbeatManager::interval_sec_</a>, <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a281b5ec791338d4378e22ef44a51b4a1">HeartbeatManager::mutex_</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#adc0ec38bec373e93ab56783cc58a37f0">HeartbeatManager::qos_</a>, <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a712b2adecdd9082613a3eaab9bb638a2">HeartbeatManager::retain_</a>, <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#ad901705d736229a43dddad4e66efd2a1">HeartbeatManager::simple_json4log</a>, <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#ac1895d07e12e2eee7d0b83db764d99de">HeartbeatManager::source_id_</a>, <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a146511d2ae2f8b5c118eb262868e9b68">HeartbeatManager::start_time_</a> , 以及 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a2e3021a5d52d7ad647a9b391813e10fc">HeartbeatManager::topic_fmt_</a>.</p>
+
+</div>
+</div>
+<a id="a22bd917f3f7de25a98c2d81de1b52b67" name="a22bd917f3f7de25a98c2d81de1b52b67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22bd917f3f7de25a98c2d81de1b52b67">&#9670;&#160;</a></span>SendHeartbeat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SendHeartbeat </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>发送心跳数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>心跳数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">引用了 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#ae727e1f60c7e02e3e4bb8c932308b579">HeartbeatManager::config_</a>, <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a29f0da045a06c4d25b83beea99a9415f">HeartbeatManager::GetHeartbeatSnapshot()</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a> , 以及 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#ad901705d736229a43dddad4e66efd2a1">HeartbeatManager::simple_json4log</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a78e2a4289515dd73f4ef63bc0b635ff4">HeartbeatManager::WorkerLoop()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__heartbeat_1_1HeartbeatManager_a22bd917f3f7de25a98c2d81de1b52b67_cgraph.png" border="0" usemap="#aclassmy__heartbeat_1_1HeartbeatManager_a22bd917f3f7de25a98c2d81de1b52b67_cgraph" alt=""/></div>
+<map name="aclassmy__heartbeat_1_1HeartbeatManager_a22bd917f3f7de25a98c2d81de1b52b67_cgraph" id="aclassmy__heartbeat_1_1HeartbeatManager_a22bd917f3f7de25a98c2d81de1b52b67_cgraph">
+<area shape="rect" title="发送心跳数据" alt="" coords="5,5,124,31"/>
+<area shape="rect" href="classmy__heartbeat_1_1HeartbeatManager.html#a29f0da045a06c4d25b83beea99a9415f" title="Get the Heartbeat Snapshot object / 获取心跳数据快照" alt="" coords="172,5,343,31"/>
+<area shape="poly" title=" " alt="" coords="124,15,158,15,158,21,124,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__heartbeat_1_1HeartbeatManager_a22bd917f3f7de25a98c2d81de1b52b67_icgraph.png" border="0" usemap="#aclassmy__heartbeat_1_1HeartbeatManager_a22bd917f3f7de25a98c2d81de1b52b67_icgraph" alt=""/></div>
+<map name="aclassmy__heartbeat_1_1HeartbeatManager_a22bd917f3f7de25a98c2d81de1b52b67_icgraph" id="aclassmy__heartbeat_1_1HeartbeatManager_a22bd917f3f7de25a98c2d81de1b52b67_icgraph">
+<area shape="rect" title="发送心跳数据" alt="" coords="1024,13,1143,38"/>
+<area shape="rect" href="classmy__heartbeat_1_1HeartbeatManager.html#a78e2a4289515dd73f4ef63bc0b635ff4" title="心跳工作线程主循环" alt="" coords="877,13,976,38"/>
+<area shape="poly" title=" " alt="" coords="1010,28,976,28,976,23,1010,23"/>
+<area shape="rect" href="classmy__heartbeat_1_1HeartbeatManager.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="776,13,829,38"/>
+<area shape="poly" title=" " alt="" coords="864,28,829,28,829,23,864,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#afe3d91fd6adf24f8f0ec4c876667f0e3" title=" " alt="" coords="553,5,728,45"/>
+<area shape="poly" title=" " alt="" coords="762,28,728,28,728,23,762,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="331,5,505,45"/>
+<area shape="poly" title=" " alt="" coords="540,28,505,28,505,23,540,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="108,5,283,45"/>
+<area shape="poly" title=" " alt="" coords="317,28,283,28,283,23,317,23"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,13,60,38"/>
+<area shape="poly" title=" " alt="" coords="95,28,60,28,60,23,95,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a06b3142855081abe276dc4ffa29339c2" name="a06b3142855081abe276dc4ffa29339c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06b3142855081abe276dc4ffa29339c2">&#9670;&#160;</a></span>SendOnceByMQTT()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SendOnceByMQTT </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>发送一次心跳（内部使用） </p>
+
+<p class="reference">引用了 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a017d6e9f23222cfe63d24745631ea6eb">HeartbeatManager::formatTopic()</a>, <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a281b5ec791338d4378e22ef44a51b4a1">HeartbeatManager::mutex_</a>, <a class="el" href="MyLog_8h.html#a58669a9dee26041e1cd68f2e62214b0f">MYLOG_DEBUG</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>, <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a84df7a10f6a5317e3997d82ee8c369a9">HeartbeatManager::publisher_</a>, <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#adc0ec38bec373e93ab56783cc58a37f0">HeartbeatManager::qos_</a>, <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a712b2adecdd9082613a3eaab9bb638a2">HeartbeatManager::retain_</a>, <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#ac71e5e08985a183982b1fd5a6d439a14">HeartbeatManager::seq_</a>, <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#ac1895d07e12e2eee7d0b83db764d99de">HeartbeatManager::source_id_</a> , 以及 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a2e3021a5d52d7ad647a9b391813e10fc">HeartbeatManager::topic_fmt_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a78e2a4289515dd73f4ef63bc0b635ff4">HeartbeatManager::WorkerLoop()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__heartbeat_1_1HeartbeatManager_a06b3142855081abe276dc4ffa29339c2_cgraph.png" border="0" usemap="#aclassmy__heartbeat_1_1HeartbeatManager_a06b3142855081abe276dc4ffa29339c2_cgraph" alt=""/></div>
+<map name="aclassmy__heartbeat_1_1HeartbeatManager_a06b3142855081abe276dc4ffa29339c2_cgraph" id="aclassmy__heartbeat_1_1HeartbeatManager_a06b3142855081abe276dc4ffa29339c2_cgraph">
+<area shape="rect" title="发送一次心跳（内部使用）" alt="" coords="5,5,148,31"/>
+<area shape="rect" href="classmy__heartbeat_1_1HeartbeatManager.html#a017d6e9f23222cfe63d24745631ea6eb" title=" " alt="" coords="196,5,295,31"/>
+<area shape="poly" title=" " alt="" coords="148,15,182,15,182,21,148,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__heartbeat_1_1HeartbeatManager_a06b3142855081abe276dc4ffa29339c2_icgraph.png" border="0" usemap="#aclassmy__heartbeat_1_1HeartbeatManager_a06b3142855081abe276dc4ffa29339c2_icgraph" alt=""/></div>
+<map name="aclassmy__heartbeat_1_1HeartbeatManager_a06b3142855081abe276dc4ffa29339c2_icgraph" id="aclassmy__heartbeat_1_1HeartbeatManager_a06b3142855081abe276dc4ffa29339c2_icgraph">
+<area shape="rect" title="发送一次心跳（内部使用）" alt="" coords="1024,13,1167,38"/>
+<area shape="rect" href="classmy__heartbeat_1_1HeartbeatManager.html#a78e2a4289515dd73f4ef63bc0b635ff4" title="心跳工作线程主循环" alt="" coords="877,13,976,38"/>
+<area shape="poly" title=" " alt="" coords="1010,28,976,28,976,23,1010,23"/>
+<area shape="rect" href="classmy__heartbeat_1_1HeartbeatManager.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="776,13,829,38"/>
+<area shape="poly" title=" " alt="" coords="864,28,829,28,829,23,864,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#afe3d91fd6adf24f8f0ec4c876667f0e3" title=" " alt="" coords="553,5,728,45"/>
+<area shape="poly" title=" " alt="" coords="762,28,728,28,728,23,762,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="331,5,505,45"/>
+<area shape="poly" title=" " alt="" coords="540,28,505,28,505,23,540,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="108,5,283,45"/>
+<area shape="poly" title=" " alt="" coords="317,28,283,28,283,23,317,23"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,13,60,38"/>
+<area shape="poly" title=" " alt="" coords="95,28,60,28,60,23,95,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4f5292de20cea26f4163f013647b20b4" name="a4f5292de20cea26f4163f013647b20b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f5292de20cea26f4163f013647b20b4">&#9670;&#160;</a></span>SetMqttPublishConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetMqttPublishConfig </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>topic_fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>qos</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>retain</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the Mqtt Publish Config object </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">topic_fmt</td><td>主题格式字符串，支持 {source} 占位符 </td></tr>
+    <tr><td class="paramname">qos</td><td>MQTT QoS 等级，默认 1 </td></tr>
+    <tr><td class="paramname">retain</td><td>是否保留消息，默认 false </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">引用了 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a281b5ec791338d4378e22ef44a51b4a1">HeartbeatManager::mutex_</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#adc0ec38bec373e93ab56783cc58a37f0">HeartbeatManager::qos_</a>, <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a712b2adecdd9082613a3eaab9bb638a2">HeartbeatManager::retain_</a> , 以及 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a2e3021a5d52d7ad647a9b391813e10fc">HeartbeatManager::topic_fmt_</a>.</p>
+
+</div>
+</div>
+<a id="aa1f123060d3bd450b4e34d5e133bb1a5" name="aa1f123060d3bd450b4e34d5e133bb1a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1f123060d3bd450b4e34d5e133bb1a5">&#9670;&#160;</a></span>SetPublisher()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetPublisher </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classmy__mqtt_1_1IMqttPublisher.html">my_mqtt::IMqttPublisher</a> &gt;&#160;</td>
+          <td class="paramname"><em>publisher</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the Publisher object </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">publisher</td><td>共享指针，指向已连接的 IMqttPublisher 实例 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">引用了 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a281b5ec791338d4378e22ef44a51b4a1">HeartbeatManager::mutex_</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a> , 以及 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a84df7a10f6a5317e3997d82ee8c369a9">HeartbeatManager::publisher_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classtools_1_1pipeline_1_1Pipeline.html#ab7587a797e845df29793177ea59eed08">Pipeline::LaunchMQTTComm()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__heartbeat_1_1HeartbeatManager_aa1f123060d3bd450b4e34d5e133bb1a5_icgraph.png" border="0" usemap="#aclassmy__heartbeat_1_1HeartbeatManager_aa1f123060d3bd450b4e34d5e133bb1a5_icgraph" alt=""/></div>
+<map name="aclassmy__heartbeat_1_1HeartbeatManager_aa1f123060d3bd450b4e34d5e133bb1a5_icgraph" id="aclassmy__heartbeat_1_1HeartbeatManager_aa1f123060d3bd450b4e34d5e133bb1a5_icgraph">
+<area shape="rect" title="Set the Publisher object" alt="" coords="776,13,879,38"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#ab7587a797e845df29793177ea59eed08" title=" " alt="" coords="553,5,728,45"/>
+<area shape="poly" title=" " alt="" coords="762,28,728,28,728,23,762,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="331,5,505,45"/>
+<area shape="poly" title=" " alt="" coords="540,28,505,28,505,23,540,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="108,5,283,45"/>
+<area shape="poly" title=" " alt="" coords="317,28,283,28,283,23,317,23"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,13,60,38"/>
+<area shape="poly" title=" " alt="" coords="95,28,60,28,60,23,95,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a07aaf1227e4d645f15e0a964f54ef291" name="a07aaf1227e4d645f15e0a964f54ef291"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07aaf1227e4d645f15e0a964f54ef291">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>, <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#aa9620a15c76ada2388bf678e373a6463">HeartbeatManager::running_</a>, <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a2d17662c59ba51130a35fdaa8567db74">HeartbeatManager::worker_</a> , 以及 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a78e2a4289515dd73f4ef63bc0b635ff4">HeartbeatManager::WorkerLoop()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classtools_1_1pipeline_1_1Pipeline.html#afe3d91fd6adf24f8f0ec4c876667f0e3">Pipeline::LaunchHeartbeat()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__heartbeat_1_1HeartbeatManager_a07aaf1227e4d645f15e0a964f54ef291_cgraph.png" border="0" usemap="#aclassmy__heartbeat_1_1HeartbeatManager_a07aaf1227e4d645f15e0a964f54ef291_cgraph" alt=""/></div>
+<map name="aclassmy__heartbeat_1_1HeartbeatManager_a07aaf1227e4d645f15e0a964f54ef291_cgraph" id="aclassmy__heartbeat_1_1HeartbeatManager_a07aaf1227e4d645f15e0a964f54ef291_cgraph">
+<area shape="rect" title=" " alt="" coords="5,233,59,259"/>
+<area shape="rect" href="classmy__heartbeat_1_1HeartbeatManager.html#a78e2a4289515dd73f4ef63bc0b635ff4" title="心跳工作线程主循环" alt="" coords="107,233,205,259"/>
+<area shape="poly" title=" " alt="" coords="59,243,93,243,93,249,59,249"/>
+<area shape="rect" href="classmy__heartbeat_1_1HeartbeatManager.html#a7394f16ced4d39b120077258d26c2ed9" title="构建心跳数据" alt="" coords="265,112,385,137"/>
+<area shape="poly" title=" " alt="" coords="174,231,293,144,296,148,177,235"/>
+<area shape="rect" href="classmy__heartbeat_1_1HeartbeatManager.html#a22bd917f3f7de25a98c2d81de1b52b67" title="发送心跳数据" alt="" coords="265,233,384,259"/>
+<area shape="poly" title=" " alt="" coords="205,243,251,243,251,249,205,249"/>
+<area shape="rect" href="classmy__heartbeat_1_1HeartbeatManager.html#a06b3142855081abe276dc4ffa29339c2" title="发送一次心跳（内部使用）" alt="" coords="253,283,396,308"/>
+<area shape="poly" title=" " alt="" coords="201,256,268,276,266,281,199,261"/>
+<area shape="rect" href="classmy__edge_1_1MyEdges.html#aa9a8e8ba2fbf620b75975789af2d3117" title="Get the Heartbeat Info object/获取给模块的心跳信息" alt="" coords="444,5,715,31"/>
+<area shape="poly" title=" " alt="" coords="338,110,383,74,412,55,443,40,465,32,466,37,445,44,414,60,386,79,342,114"/>
+<area shape="rect" href="classmy__edge_1_1MyEdges.html#ab8ce25c65b76a1b6cf2eb518c4d022e2" title="获取单例实例。" alt="" coords="462,55,697,80"/>
+<area shape="poly" title=" " alt="" coords="369,109,443,90,491,80,492,85,445,95,370,115"/>
+<area shape="rect" href="classedge__manager_1_1MyEdgeManager.html#a1bb96f6c20847acd52ac992e54a9d440" title=" " alt="" coords="461,105,697,145"/>
+<area shape="poly" title=" " alt="" coords="385,122,448,122,448,127,385,127"/>
+<area shape="rect" href="classedge__manager_1_1MyEdgeManager.html#a373ad3f792de13e3ad9600da512a9923" title=" " alt="" coords="461,169,697,209"/>
+<area shape="poly" title=" " alt="" coords="373,135,445,154,480,163,479,168,443,159,371,140"/>
+<area shape="rect" href="namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6" title=" " alt="" coords="763,31,867,56"/>
+<area shape="poly" title=" " alt="" coords="698,28,749,34,749,39,697,33"/>
+<area shape="poly" title=" " alt="" coords="697,53,748,47,749,53,697,58"/>
+<area shape="rect" href="classmy__heartbeat_1_1HeartbeatManager.html#a29f0da045a06c4d25b83beea99a9415f" title="Get the Heartbeat Snapshot object / 获取心跳数据快照" alt="" coords="494,233,665,259"/>
+<area shape="poly" title=" " alt="" coords="384,243,480,243,480,249,384,249"/>
+<area shape="rect" href="classmy__heartbeat_1_1HeartbeatManager.html#a017d6e9f23222cfe63d24745631ea6eb" title=" " alt="" coords="530,283,629,308"/>
+<area shape="poly" title=" " alt="" coords="396,293,516,293,516,298,396,298"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__heartbeat_1_1HeartbeatManager_a07aaf1227e4d645f15e0a964f54ef291_icgraph.png" border="0" usemap="#aclassmy__heartbeat_1_1HeartbeatManager_a07aaf1227e4d645f15e0a964f54ef291_icgraph" alt=""/></div>
+<map name="aclassmy__heartbeat_1_1HeartbeatManager_a07aaf1227e4d645f15e0a964f54ef291_icgraph" id="aclassmy__heartbeat_1_1HeartbeatManager_a07aaf1227e4d645f15e0a964f54ef291_icgraph">
+<area shape="rect" title=" " alt="" coords="776,13,829,38"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#afe3d91fd6adf24f8f0ec4c876667f0e3" title=" " alt="" coords="553,5,728,45"/>
+<area shape="poly" title=" " alt="" coords="762,28,728,28,728,23,762,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="331,5,505,45"/>
+<area shape="poly" title=" " alt="" coords="540,28,505,28,505,23,540,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="108,5,283,45"/>
+<area shape="poly" title=" " alt="" coords="317,28,283,28,283,23,317,23"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,13,60,38"/>
+<area shape="poly" title=" " alt="" coords="95,28,60,28,60,23,95,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a17a237457e57625296e6b24feb19c60a" name="a17a237457e57625296e6b24feb19c60a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17a237457e57625296e6b24feb19c60a">&#9670;&#160;</a></span>Stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#aa9620a15c76ada2388bf678e373a6463">HeartbeatManager::running_</a> , 以及 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a2d17662c59ba51130a35fdaa8567db74">HeartbeatManager::worker_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a3fe7fe103b23e63494ae4c5f2af9d25e">HeartbeatManager::~HeartbeatManager()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__heartbeat_1_1HeartbeatManager_a17a237457e57625296e6b24feb19c60a_icgraph.png" border="0" usemap="#aclassmy__heartbeat_1_1HeartbeatManager_a17a237457e57625296e6b24feb19c60a_icgraph" alt=""/></div>
+<map name="aclassmy__heartbeat_1_1HeartbeatManager_a17a237457e57625296e6b24feb19c60a_icgraph" id="aclassmy__heartbeat_1_1HeartbeatManager_a17a237457e57625296e6b24feb19c60a_icgraph">
+<area shape="rect" title=" " alt="" coords="208,5,259,31"/>
+<area shape="rect" href="classmy__heartbeat_1_1HeartbeatManager.html#a3fe7fe103b23e63494ae4c5f2af9d25e" title=" " alt="" coords="5,5,160,31"/>
+<area shape="poly" title=" " alt="" coords="194,21,160,21,160,15,194,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a78e2a4289515dd73f4ef63bc0b635ff4" name="a78e2a4289515dd73f4ef63bc0b635ff4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78e2a4289515dd73f4ef63bc0b635ff4">&#9670;&#160;</a></span>WorkerLoop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WorkerLoop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>心跳工作线程主循环 </p>
+
+<p class="reference">引用了 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a7394f16ced4d39b120077258d26c2ed9">HeartbeatManager::BuildHeartbeat()</a>, <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a322335c6177209ab6d4260f4453b5e88">HeartbeatManager::interval_sec_</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#aa9620a15c76ada2388bf678e373a6463">HeartbeatManager::running_</a>, <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a22bd917f3f7de25a98c2d81de1b52b67">HeartbeatManager::SendHeartbeat()</a> , 以及 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a06b3142855081abe276dc4ffa29339c2">HeartbeatManager::SendOnceByMQTT()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a07aaf1227e4d645f15e0a964f54ef291">HeartbeatManager::Start()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__heartbeat_1_1HeartbeatManager_a78e2a4289515dd73f4ef63bc0b635ff4_cgraph.png" border="0" usemap="#aclassmy__heartbeat_1_1HeartbeatManager_a78e2a4289515dd73f4ef63bc0b635ff4_cgraph" alt=""/></div>
+<map name="aclassmy__heartbeat_1_1HeartbeatManager_a78e2a4289515dd73f4ef63bc0b635ff4_cgraph" id="aclassmy__heartbeat_1_1HeartbeatManager_a78e2a4289515dd73f4ef63bc0b635ff4_cgraph">
+<area shape="rect" title="心跳工作线程主循环" alt="" coords="5,233,104,259"/>
+<area shape="rect" href="classmy__heartbeat_1_1HeartbeatManager.html#a7394f16ced4d39b120077258d26c2ed9" title="构建心跳数据" alt="" coords="163,112,283,137"/>
+<area shape="poly" title=" " alt="" coords="72,231,192,144,195,148,75,235"/>
+<area shape="rect" href="classmy__heartbeat_1_1HeartbeatManager.html#a22bd917f3f7de25a98c2d81de1b52b67" title="发送心跳数据" alt="" coords="164,233,283,259"/>
+<area shape="poly" title=" " alt="" coords="104,243,150,243,150,249,104,249"/>
+<area shape="rect" href="classmy__heartbeat_1_1HeartbeatManager.html#a06b3142855081abe276dc4ffa29339c2" title="发送一次心跳（内部使用）" alt="" coords="152,283,295,308"/>
+<area shape="poly" title=" " alt="" coords="100,256,166,276,165,281,98,261"/>
+<area shape="rect" href="classmy__edge_1_1MyEdges.html#aa9a8e8ba2fbf620b75975789af2d3117" title="Get the Heartbeat Info object/获取给模块的心跳信息" alt="" coords="343,5,613,31"/>
+<area shape="poly" title=" " alt="" coords="237,110,281,74,310,55,342,40,363,32,365,37,344,44,313,60,285,79,240,114"/>
+<area shape="rect" href="classmy__edge_1_1MyEdges.html#ab8ce25c65b76a1b6cf2eb518c4d022e2" title="获取单例实例。" alt="" coords="361,55,595,80"/>
+<area shape="poly" title=" " alt="" coords="268,109,342,90,390,80,391,85,343,95,269,115"/>
+<area shape="rect" href="classedge__manager_1_1MyEdgeManager.html#a1bb96f6c20847acd52ac992e54a9d440" title=" " alt="" coords="360,105,596,145"/>
+<area shape="poly" title=" " alt="" coords="284,122,346,122,346,127,284,127"/>
+<area shape="rect" href="classedge__manager_1_1MyEdgeManager.html#a373ad3f792de13e3ad9600da512a9923" title=" " alt="" coords="360,169,596,209"/>
+<area shape="poly" title=" " alt="" coords="271,135,343,154,378,163,377,168,342,159,270,140"/>
+<area shape="rect" href="namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6" title=" " alt="" coords="661,31,765,56"/>
+<area shape="poly" title=" " alt="" coords="596,28,648,34,647,39,596,33"/>
+<area shape="poly" title=" " alt="" coords="595,53,647,47,648,53,596,58"/>
+<area shape="rect" href="classmy__heartbeat_1_1HeartbeatManager.html#a29f0da045a06c4d25b83beea99a9415f" title="Get the Heartbeat Snapshot object / 获取心跳数据快照" alt="" coords="393,233,563,259"/>
+<area shape="poly" title=" " alt="" coords="283,243,379,243,379,249,283,249"/>
+<area shape="rect" href="classmy__heartbeat_1_1HeartbeatManager.html#a017d6e9f23222cfe63d24745631ea6eb" title=" " alt="" coords="429,283,527,308"/>
+<area shape="poly" title=" " alt="" coords="295,293,415,293,415,298,295,298"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__heartbeat_1_1HeartbeatManager_a78e2a4289515dd73f4ef63bc0b635ff4_icgraph.png" border="0" usemap="#aclassmy__heartbeat_1_1HeartbeatManager_a78e2a4289515dd73f4ef63bc0b635ff4_icgraph" alt=""/></div>
+<map name="aclassmy__heartbeat_1_1HeartbeatManager_a78e2a4289515dd73f4ef63bc0b635ff4_icgraph" id="aclassmy__heartbeat_1_1HeartbeatManager_a78e2a4289515dd73f4ef63bc0b635ff4_icgraph">
+<area shape="rect" title="心跳工作线程主循环" alt="" coords="877,13,976,38"/>
+<area shape="rect" href="classmy__heartbeat_1_1HeartbeatManager.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="776,13,829,38"/>
+<area shape="poly" title=" " alt="" coords="864,28,829,28,829,23,864,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#afe3d91fd6adf24f8f0ec4c876667f0e3" title=" " alt="" coords="553,5,728,45"/>
+<area shape="poly" title=" " alt="" coords="762,28,728,28,728,23,762,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="331,5,505,45"/>
+<area shape="poly" title=" " alt="" coords="540,28,505,28,505,23,540,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="108,5,283,45"/>
+<area shape="poly" title=" " alt="" coords="317,28,283,28,283,23,317,23"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,13,60,38"/>
+<area shape="poly" title=" " alt="" coords="95,28,60,28,60,23,95,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">结构体成员变量说明</h2>
+<a id="ae727e1f60c7e02e3e4bb8c932308b579" name="ae727e1f60c7e02e3e4bb8c932308b579"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae727e1f60c7e02e3e4bb8c932308b579">&#9670;&#160;</a></span>config_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nlohmann::json config_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a7394f16ced4d39b120077258d26c2ed9">HeartbeatManager::BuildHeartbeat()</a>, <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#aa00e3ae8bd1e76c36dbc3d6e8dbd08ae">HeartbeatManager::GetInitConfig()</a>, <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#ac933e753013e97524e4f594875990de6">HeartbeatManager::Init()</a> , 以及 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a22bd917f3f7de25a98c2d81de1b52b67">HeartbeatManager::SendHeartbeat()</a>.</p>
+
+</div>
+</div>
+<a id="a1996ae8f612adf12d0cf12f6d15916bc" name="a1996ae8f612adf12d0cf12f6d15916bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1996ae8f612adf12d0cf12f6d15916bc">&#9670;&#160;</a></span>heartbeat_data_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nlohmann::json heartbeat_data_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a7394f16ced4d39b120077258d26c2ed9">HeartbeatManager::BuildHeartbeat()</a> , 以及 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a29f0da045a06c4d25b83beea99a9415f">HeartbeatManager::GetHeartbeatSnapshot()</a>.</p>
+
+</div>
+</div>
+<a id="a322335c6177209ab6d4260f4453b5e88" name="a322335c6177209ab6d4260f4453b5e88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a322335c6177209ab6d4260f4453b5e88">&#9670;&#160;</a></span>interval_sec_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int interval_sec_ {5}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#ac933e753013e97524e4f594875990de6">HeartbeatManager::Init()</a> , 以及 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a78e2a4289515dd73f4ef63bc0b635ff4">HeartbeatManager::WorkerLoop()</a>.</p>
+
+</div>
+</div>
+<a id="a281b5ec791338d4378e22ef44a51b4a1" name="a281b5ec791338d4378e22ef44a51b4a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a281b5ec791338d4378e22ef44a51b4a1">&#9670;&#160;</a></span>mutex_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex mutex_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a7394f16ced4d39b120077258d26c2ed9">HeartbeatManager::BuildHeartbeat()</a>, <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a29f0da045a06c4d25b83beea99a9415f">HeartbeatManager::GetHeartbeatSnapshot()</a>, <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#aa00e3ae8bd1e76c36dbc3d6e8dbd08ae">HeartbeatManager::GetInitConfig()</a>, <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#ac933e753013e97524e4f594875990de6">HeartbeatManager::Init()</a>, <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a06b3142855081abe276dc4ffa29339c2">HeartbeatManager::SendOnceByMQTT()</a>, <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a4f5292de20cea26f4163f013647b20b4">HeartbeatManager::SetMqttPublishConfig()</a> , 以及 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#aa1f123060d3bd450b4e34d5e133bb1a5">HeartbeatManager::SetPublisher()</a>.</p>
+
+</div>
+</div>
+<a id="a84df7a10f6a5317e3997d82ee8c369a9" name="a84df7a10f6a5317e3997d82ee8c369a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84df7a10f6a5317e3997d82ee8c369a9">&#9670;&#160;</a></span>publisher_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classmy__mqtt_1_1IMqttPublisher.html">my_mqtt::IMqttPublisher</a>&gt; publisher_ {nullptr}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a06b3142855081abe276dc4ffa29339c2">HeartbeatManager::SendOnceByMQTT()</a> , 以及 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#aa1f123060d3bd450b4e34d5e133bb1a5">HeartbeatManager::SetPublisher()</a>.</p>
+
+</div>
+</div>
+<a id="adc0ec38bec373e93ab56783cc58a37f0" name="adc0ec38bec373e93ab56783cc58a37f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc0ec38bec373e93ab56783cc58a37f0">&#9670;&#160;</a></span>qos_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int qos_ {1}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#ac933e753013e97524e4f594875990de6">HeartbeatManager::Init()</a>, <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a06b3142855081abe276dc4ffa29339c2">HeartbeatManager::SendOnceByMQTT()</a> , 以及 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a4f5292de20cea26f4163f013647b20b4">HeartbeatManager::SetMqttPublishConfig()</a>.</p>
+
+</div>
+</div>
+<a id="a712b2adecdd9082613a3eaab9bb638a2" name="a712b2adecdd9082613a3eaab9bb638a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a712b2adecdd9082613a3eaab9bb638a2">&#9670;&#160;</a></span>retain_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool retain_ {false}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#ac933e753013e97524e4f594875990de6">HeartbeatManager::Init()</a>, <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a06b3142855081abe276dc4ffa29339c2">HeartbeatManager::SendOnceByMQTT()</a> , 以及 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a4f5292de20cea26f4163f013647b20b4">HeartbeatManager::SetMqttPublishConfig()</a>.</p>
+
+</div>
+</div>
+<a id="aa9620a15c76ada2388bf678e373a6463" name="aa9620a15c76ada2388bf678e373a6463"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9620a15c76ada2388bf678e373a6463">&#9670;&#160;</a></span>running_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;bool&gt; running_ {false}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a07aaf1227e4d645f15e0a964f54ef291">HeartbeatManager::Start()</a>, <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a17a237457e57625296e6b24feb19c60a">HeartbeatManager::Stop()</a> , 以及 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a78e2a4289515dd73f4ef63bc0b635ff4">HeartbeatManager::WorkerLoop()</a>.</p>
+
+</div>
+</div>
+<a id="ac71e5e08985a183982b1fd5a6d439a14" name="ac71e5e08985a183982b1fd5a6d439a14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac71e5e08985a183982b1fd5a6d439a14">&#9670;&#160;</a></span>seq_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t seq_ {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a06b3142855081abe276dc4ffa29339c2">HeartbeatManager::SendOnceByMQTT()</a>.</p>
+
+</div>
+</div>
+<a id="ad901705d736229a43dddad4e66efd2a1" name="ad901705d736229a43dddad4e66efd2a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad901705d736229a43dddad4e66efd2a1">&#9670;&#160;</a></span>simple_json4log</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool simple_json4log {false}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#ac933e753013e97524e4f594875990de6">HeartbeatManager::Init()</a> , 以及 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a22bd917f3f7de25a98c2d81de1b52b67">HeartbeatManager::SendHeartbeat()</a>.</p>
+
+</div>
+</div>
+<a id="ac1895d07e12e2eee7d0b83db764d99de" name="ac1895d07e12e2eee7d0b83db764d99de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1895d07e12e2eee7d0b83db764d99de">&#9670;&#160;</a></span>source_id_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string source_id_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#ac933e753013e97524e4f594875990de6">HeartbeatManager::Init()</a> , 以及 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a06b3142855081abe276dc4ffa29339c2">HeartbeatManager::SendOnceByMQTT()</a>.</p>
+
+</div>
+</div>
+<a id="a146511d2ae2f8b5c118eb262868e9b68" name="a146511d2ae2f8b5c118eb262868e9b68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a146511d2ae2f8b5c118eb262868e9b68">&#9670;&#160;</a></span>start_time_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">time_t start_time_ {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a7394f16ced4d39b120077258d26c2ed9">HeartbeatManager::BuildHeartbeat()</a> , 以及 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#ac933e753013e97524e4f594875990de6">HeartbeatManager::Init()</a>.</p>
+
+</div>
+</div>
+<a id="a2e3021a5d52d7ad647a9b391813e10fc" name="a2e3021a5d52d7ad647a9b391813e10fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e3021a5d52d7ad647a9b391813e10fc">&#9670;&#160;</a></span>topic_fmt_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string topic_fmt_ {&quot;system/heartbeats/{source}&quot;}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#ac933e753013e97524e4f594875990de6">HeartbeatManager::Init()</a>, <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a06b3142855081abe276dc4ffa29339c2">HeartbeatManager::SendOnceByMQTT()</a> , 以及 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a4f5292de20cea26f4163f013647b20b4">HeartbeatManager::SetMqttPublishConfig()</a>.</p>
+
+</div>
+</div>
+<a id="a2d17662c59ba51130a35fdaa8567db74" name="a2d17662c59ba51130a35fdaa8567db74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d17662c59ba51130a35fdaa8567db74">&#9670;&#160;</a></span>worker_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::thread worker_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a07aaf1227e4d645f15e0a964f54ef291">HeartbeatManager::Start()</a> , 以及 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a17a237457e57625296e6b24feb19c60a">HeartbeatManager::Stop()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/util/my_heartbeat/<a class="el" href="MyHeartbeatManager_8h_source.html">MyHeartbeatManager.h</a></li>
+<li>src/util/my_heartbeat/<a class="el" href="MyHeartbeatManager_8cpp.html">MyHeartbeatManager.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

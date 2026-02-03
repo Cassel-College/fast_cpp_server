@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_mqtt/MqttService.hpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_981a29cbd485ec749937590b01151537.html">my_mqtt</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#typedef-members">类型定义</a>  </div>
+  <div class="headertitle"><div class="title">MqttService.hpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;atomic&gt;</code><br />
+<code>#include &lt;functional&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;mutex&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;nlohmann/json.hpp&gt;</code><br />
+<code>#include &lt;mosquitto.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="IMqttPublisher_8hpp_source.html">IMqttPublisher.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+MqttService.hpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="MqttService_8hpp__incl.png" border="0" usemap="#asrc_2util_2my__mqtt_2MqttService_8hpp" alt=""/></div>
+<map name="asrc_2util_2my__mqtt_2MqttService_8hpp" id="asrc_2util_2my__mqtt_2MqttService_8hpp">
+<area shape="rect" title=" " alt="" coords="291,5,530,31"/>
+<area shape="rect" title=" " alt="" coords="5,79,72,104"/>
+<area shape="poly" title=" " alt="" coords="341,33,86,81,85,76,340,28"/>
+<area shape="rect" title=" " alt="" coords="97,79,183,104"/>
+<area shape="poly" title=" " alt="" coords="368,33,197,78,196,73,367,28"/>
+<area shape="rect" title=" " alt="" coords="208,79,285,104"/>
+<area shape="poly" title=" " alt="" coords="385,33,287,76,285,71,383,28"/>
+<area shape="rect" title=" " alt="" coords="309,79,373,104"/>
+<area shape="poly" title=" " alt="" coords="401,33,364,71,360,67,397,29"/>
+<area shape="rect" title=" " alt="" coords="627,152,685,177"/>
+<area shape="poly" title=" " alt="" coords="414,31,419,66,427,86,439,102,479,130,525,147,572,157,613,161,613,166,571,162,524,153,477,135,435,106,422,88,414,68,408,31"/>
+<area shape="rect" title=" " alt="" coords="449,79,511,104"/>
+<area shape="poly" title=" " alt="" coords="424,29,461,67,457,71,420,33"/>
+<area shape="rect" title=" " alt="" coords="536,79,683,104"/>
+<area shape="poly" title=" " alt="" coords="443,28,565,71,563,76,442,33"/>
+<area shape="rect" title=" " alt="" coords="707,79,807,104"/>
+<area shape="poly" title=" " alt="" coords="467,28,694,74,693,80,466,33"/>
+<area shape="rect" href="IMqttPublisher_8hpp.html" title=" " alt="" coords="831,79,974,104"/>
+<area shape="poly" title=" " alt="" coords="490,28,818,75,817,80,489,33"/>
+<area shape="poly" title=" " alt="" coords="864,107,699,154,698,149,862,101"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="MqttService_8hpp__dep__incl.png" border="0" usemap="#asrc_2util_2my__mqtt_2MqttService_8hppdep" alt=""/></div>
+<map name="asrc_2util_2my__mqtt_2MqttService_8hppdep" id="asrc_2util_2my__mqtt_2MqttService_8hppdep">
+<area shape="rect" title=" " alt="" coords="141,5,379,31"/>
+<area shape="rect" href="Pipeline_8cpp.html" title=" " alt="" coords="5,79,139,119"/>
+<area shape="poly" title=" " alt="" coords="221,38,118,81,116,76,219,33"/>
+<area shape="rect" href="MyHeartbeatManager_8cpp.html" title=" " alt="" coords="163,79,357,119"/>
+<area shape="poly" title=" " alt="" coords="263,44,263,79,257,79,257,44"/>
+<area shape="rect" href="MqttService_8cpp.html" title=" " alt="" coords="382,86,621,111"/>
+<area shape="poly" title=" " alt="" coords="309,32,467,83,465,89,307,37"/>
+</map>
+</div>
+</div>
+<p><a href="MqttService_8hpp_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__mqtt_1_1MqttService.html">MqttService</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">MQTT 服务单例类  <a href="classmy__mqtt_1_1MqttService.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacemy__mqtt" id="r_namespacemy__mqtt"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__mqtt.html">my_mqtt</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:a02e0f589c5b1c3c1789627e8cc4f0d5c" id="r_a02e0f589c5b1c3c1789627e8cc4f0d5c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__mqtt.html#a02e0f589c5b1c3c1789627e8cc4f0d5c">Handler</a> = std::function&lt; void(const std::string &amp;topic, const std::string &amp;payload)&gt;</td></tr>
+<tr class="separator:a02e0f589c5b1c3c1789627e8cc4f0d5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

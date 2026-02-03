@@ -1,9 +1,18 @@
 var searchData=
 [
-  ['q_5f_0',['q_',['../classmy__control_1_1TaskQueue.html#a0ee1e53e11bb1ae981775dd302637c5e',1,'my_control::TaskQueue']]],
-  ['qos_5f_1',['qos_',['../classfast__mqtt_1_1MFMQTTClient.html#adc0ec38bec373e93ab56783cc58a37f0',1,'fast_mqtt::MFMQTTClient']]],
-  ['queue_5f_2',['queue_',['../classtools_1_1thread__safe__queue_1_1ThreadSafeQueue.html#a5695ac325a1e85216cf5046a3022d388',1,'tools::thread_safe_queue::ThreadSafeQueue::queue_'],['../classmy__control_1_1demo_1_1Workflow.html#aa88f6b751e2bbe911c4ae2d35a631022',1,'my_control::demo::Workflow::queue_'],['../classmy__device_1_1demo_1_1DepthSensorDevice.html#addbd48eafa023df2ea507c0d02e93fcc',1,'my_device::demo::DepthSensorDevice::queue_'],['../classmy__device_1_1demo_1_1FlowSensorDevice.html#addbd48eafa023df2ea507c0d02e93fcc',1,'my_device::demo::FlowSensorDevice::queue_'],['../classmy__device_1_1demo_1_1UUVDevice.html#addbd48eafa023df2ea507c0d02e93fcc',1,'my_device::demo::UUVDevice::queue_'],['../classmy__device_1_1demo_1_1WindSensorDevice.html#addbd48eafa023df2ea507c0d02e93fcc',1,'my_device::demo::WindSensorDevice::queue_']]],
-  ['queue_5fdepth_3',['queue_depth',['../structmy__data_1_1DeviceStatus.html#a570f70dac26e232386edfcdaa3549c6d',1,'my_data::DeviceStatus']]],
-  ['queue_5fsize_5fafter_4',['queue_size_after',['../structmy__edge_1_1SubmitResult.html#a2ed473ea97eaaa2af939fa3d7dbc583a',1,'my_edge::SubmitResult']]],
-  ['queues_5f_5',['queues_',['../classmy__edge_1_1demo_1_1UUVEdge.html#aab5c8a55e8f1af292a2c4475e624c57f',1,'my_edge::demo::UUVEdge']]]
+  ['params_0',['params',['../structmy__data_1_1Task.html#abc73548c91149865f3cd09a381cf9283',1,'my_data::Task']]],
+  ['parent_5ftid_1',['parent_tid',['../structThreadSnapshot.html#a25fc5be704b4b3fe2494b3aa05c7ecdf',1,'ThreadSnapshot']]],
+  ['password_5f_2',['password_',['../classmy__mqtt_1_1MqttService.html#ac5e3f63926c385695cf5fdc29750449a',1,'my_mqtt::MqttService']]],
+  ['path_3',['path',['../structmy__db_1_1DBConfig.html#a4d455efceee21e97d8e21ee40e9b4a20',1,'my_db::DBConfig']]],
+  ['payload_4',['payload',['../structmy__data_1_1RawCommand.html#aa9b683d9bd3d648dea1fd050185b31b1',1,'my_data::RawCommand']]],
+  ['pid_5',['pid',['../structProcessInfo.html#af500917c052066b40cf47f96b43c607b',1,'ProcessInfo']]],
+  ['pid_5ffile_5fpath_5f_6',['pid_file_path_',['../classtools_1_1service__guard_1_1ServiceGuard.html#ab207e9c2852384c39c71e8ae91782dd7',1,'tools::service_guard::ServiceGuard']]],
+  ['policy_7',['policy',['../structmy__data_1_1Task.html#a72b5d1d36076ccd76a06eadfa1baa509',1,'my_data::Task']]],
+  ['port_5f_8',['port_',['../classedge__manager_1_1EdgeDevice.html#a038dad2e3eabcce46163b1cfbc810843',1,'edge_manager::EdgeDevice::port_'],['../classDeviceOnlineMonitor.html#a038dad2e3eabcce46163b1cfbc810843',1,'DeviceOnlineMonitor::port_'],['../classmy__mqtt_1_1MqttService.html#a038dad2e3eabcce46163b1cfbc810843',1,'my_mqtt::MqttService::port_'],['../classtools_1_1SimpleTcpClient.html#a038dad2e3eabcce46163b1cfbc810843',1,'tools::SimpleTcpClient::port_']]],
+  ['ppid_9',['ppid',['../structProcessInfo.html#a3e6a4222de552b3170858a81898dd657',1,'ProcessInfo']]],
+  ['priority_10',['priority',['../structmy__data_1_1Task.html#acec9ce2df15222151ad66fcb1d74eb9f',1,'my_data::Task']]],
+  ['process_5finfo_5f_11',['process_info_',['../classHealthSnapshot.html#a023f7e27b233927e97980863bd602f21',1,'HealthSnapshot']]],
+  ['pub_5fmtx_5f_12',['pub_mtx_',['../classmy__mqtt_1_1MqttService.html#a9bd9bd9759e662b688d6bd23b8071bf8',1,'my_mqtt::MqttService']]],
+  ['publisher_5f_13',['publisher_',['../classmy__heartbeat_1_1HeartbeatManager.html#a84df7a10f6a5317e3997d82ee8c369a9',1,'my_heartbeat::HeartbeatManager']]],
+  ['publisher_5fadapter_5f_14',['publisher_adapter_',['../classmy__mqtt_1_1MqttService.html#a54c38c765487f9ce11a8f061c68c5250',1,'my_mqtt::MqttService']]]
 ];

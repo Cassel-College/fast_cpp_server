@@ -5,6 +5,6 @@ var searchData=
   ['bindint64_2',['bindint64',['../namespacemy__db_1_1demo.html#adb9ddcbbf3302a79f4b0930a7d23a9b6',1,'my_db::demo::BindInt64(sqlite3_stmt *stmt, int idx, std::int64_t v, std::string *err)'],['../namespacemy__db_1_1demo.html#adb9ddcbbf3302a79f4b0930a7d23a9b6',1,'my_db::demo::BindInt64(sqlite3_stmt *stmt, int idx, std::int64_t v, std::string *err)']]],
   ['bindtext_3',['bindtext',['../namespacemy__db_1_1demo.html#ac9eb60d17e02c6c5370687cf813838ad',1,'my_db::demo::BindText(sqlite3_stmt *stmt, int idx, const std::string &amp;s, std::string *err)'],['../namespacemy__db_1_1demo.html#ac9eb60d17e02c6c5370687cf813838ad',1,'my_db::demo::BindText(sqlite3_stmt *stmt, int idx, const std::string &amp;s, std::string *err)']]],
   ['brokerprocessmanager_4',['BrokerProcessManager',['../classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#aabdce0bb152357814ce71c82fe92382a',1,'my_mqtt_broker_manager::MyMqttBrokerManager']]],
-  ['buildheartbeat_5',['BuildHeartbeat',['../classHeartbeatManager.html#a7394f16ced4d39b120077258d26c2ed9',1,'HeartbeatManager']]],
+  ['buildheartbeat_5',['BuildHeartbeat',['../classmy__heartbeat_1_1HeartbeatManager.html#a7394f16ced4d39b120077258d26c2ed9',1,'my_heartbeat::HeartbeatManager']]],
   ['buildthreadtree_6',['buildThreadTree',['../classHealthSnapshot.html#a72265d535f959df02f73b10c0c67d2d6',1,'HealthSnapshot']]]
 ];

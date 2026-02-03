@@ -1,8 +1,8 @@
 var searchData=
 [
   ['add_0',['add',['../classExample.html#aa99823a0fc8313c9c32541ce768fb801',1,'Example']]],
-  ['add_5fclient_1',['add_client',['../classfast__mqtt_1_1MFMQTTManager.html#a887c55d9a1d952d8ca008e77cc09fcb3',1,'fast_mqtt::MFMQTTManager']]],
-  ['addoption_2',['addOption',['../classArgumentParser.html#ae1196c0e42faa519ffc00f87c736bf3d',1,'ArgumentParser']]],
+  ['addoption_1',['addOption',['../classArgumentParser.html#ae1196c0e42faa519ffc00f87c736bf3d',1,'ArgumentParser']]],
+  ['addroute_2',['AddRoute',['../classmy__mqtt_1_1MqttService.html#a954c92b80afa6bab4284cbae327de6ad',1,'my_mqtt::MqttService']]],
   ['appendedge_3',['appendEdge',['../classmy__edge_1_1MyEdges.html#ab07cfa36269ad610130c8a8d49cf2553',1,'my_edge::MyEdges']]],
   ['appendjsontask_4',['appendjsontask',['../classmy__edge_1_1demo_1_1UUVEdge.html#ad6ccbe6aa525e1634eab750c2bb8d93b',1,'my_edge::demo::UUVEdge::AppendJsonTask()'],['../classmy__edge_1_1IEdge.html#a440a5a618c768b291970886af4da128f',1,'my_edge::IEdge::AppendJsonTask()']]],
   ['appendtask_5',['appendtask',['../classmy__edge_1_1demo_1_1UUVEdge.html#a1381f71c6f6b97b7dfea100449fed59c',1,'my_edge::demo::UUVEdge::AppendTask()'],['../classmy__edge_1_1IEdge.html#a7018dbffbe4da9d9bb4ee5f143ad6350',1,'my_edge::IEdge::AppendTask()']]],

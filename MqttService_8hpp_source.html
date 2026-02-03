@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_mqtt/MqttService.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_981a29cbd485ec749937590b01151537.html">my_mqtt</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">MqttService.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="MqttService_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;atomic&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;nlohmann/json.hpp&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;mosquitto.h&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="IMqttPublisher_8hpp.html">IMqttPublisher.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__mqtt.html">my_mqtt</a> {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="namespacemy__mqtt.html#a02e0f589c5b1c3c1789627e8cc4f0d5c">   16</a></span><span class="keyword">using </span><a class="code hl_typedef" href="namespacemy__mqtt.html#a02e0f589c5b1c3c1789627e8cc4f0d5c">Handler</a> = std::function&lt;void(<span class="keyword">const</span> std::string&amp; topic, <span class="keyword">const</span> std::string&amp; payload)&gt;;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">class </span><a class="code hl_class" href="classmy__mqtt_1_1MqttService.html">MqttService</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">struct </span><a class="code hl_struct" href="structmy__mqtt_1_1Route.html">Route</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">class </span><a class="code hl_class" href="classmy__mqtt_1_1PublisherAdapter.html">PublisherAdapter</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classmy__mqtt_1_1MqttService.html">   26</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__mqtt_1_1MqttService.html">MqttService</a> {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">static</span> <a class="code hl_class" href="classmy__mqtt_1_1MqttService.html">MqttService</a>&amp; <a class="code hl_function" href="classmy__mqtt_1_1MqttService.html#a8a88459b535d228e294ae262f696ea4b">GetInstance</a>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="comment">// cfg 示例：</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="comment">// {</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="comment">//   &quot;host&quot;:&quot;127.0.0.1&quot;,</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="comment">//   &quot;port&quot;:1883,</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="comment">//   &quot;keepalive&quot;:60,</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="comment">//   &quot;client_id&quot;:&quot;app_01&quot;,</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="comment">//   &quot;clean_session&quot;:true,</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="comment">//   &quot;username&quot;:&quot;&quot;, &quot;password&quot;:&quot;&quot;,</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="comment">//   &quot;reconnect&quot;: { &quot;min_sec&quot;:2, &quot;max_sec&quot;:32 }</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="comment">// }</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__mqtt_1_1MqttService.html#a7ff7d0b5d868d9a1810db69988a56ef9">Init</a>(<span class="keyword">const</span> nlohmann::json&amp; cfg);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__mqtt_1_1MqttService.html#aa70efaa4751ac6d5d54dce88fe725e0a">Start</a>();   <span class="comment">// connect + loop_start</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__mqtt_1_1MqttService.html#a17a237457e57625296e6b24feb19c60a">Stop</a>();    <span class="comment">// disconnect + loop_stop</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classmy__mqtt_1_1MqttService.html#ad201152b05beda61e51e3594ff07c8fe">   45</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__mqtt_1_1MqttService.html#ad201152b05beda61e51e3594ff07c8fe">IsRunning</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classmy__mqtt_1_1MqttService.html#aa9620a15c76ada2388bf678e373a6463">running_</a>.load(); }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__mqtt_1_1MqttService.html#ab02531f99e8789e7e752c6b683702e34">Publish</a>(<span class="keyword">const</span> std::string&amp; topic,</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                 <span class="keyword">const</span> std::string&amp; payload,</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                 <span class="keywordtype">int</span> qos = 0,</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                 <span class="keywordtype">bool</span> retain = <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__mqtt_1_1MqttService.html#aacbd416bcad6aed0748c09cf370602a7">Subscribe</a>(<span class="keyword">const</span> std::string&amp; topicFilter, <span class="keywordtype">int</span> qos = 0);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__mqtt_1_1MqttService.html#a954c92b80afa6bab4284cbae327de6ad">AddRoute</a>(std::string topicFilter, <a class="code hl_typedef" href="namespacemy__mqtt.html#a02e0f589c5b1c3c1789627e8cc4f0d5c">Handler</a> handler, <span class="keywordtype">int</span> qos = 0);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    std::shared_ptr&lt;IMqttPublisher&gt; <a class="code hl_function" href="classmy__mqtt_1_1MqttService.html#af25f6940f611ac24290e6c236d28f90e">GetPublisher</a>();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keyword">const</span> nlohmann::json <a class="code hl_function" href="classmy__mqtt_1_1MqttService.html#a3a9af3208b271020600c21a82420ac02">GetConfig</a>();</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keyword">const</span> nlohmann::json <a class="code hl_function" href="classmy__mqtt_1_1MqttService.html#a881267d159c526a203ac9e2d90b54703">GetRoutes</a>();</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="classmy__mqtt_1_1MqttService.html#a2d0706855bb7061371abaca0b44c0916">   92</a></span>    <a class="code hl_function" href="classmy__mqtt_1_1MqttService.html#a2d0706855bb7061371abaca0b44c0916">MqttService</a>() = <span class="keywordflow">default</span>;                                <span class="comment">// 私有构造函数</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <a class="code hl_function" href="classmy__mqtt_1_1MqttService.html#af8f3271fa0cd582047a0303a87bc9fdb">~MqttService</a>();                                         <span class="comment">// 私有析构函数</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="classmy__mqtt_1_1MqttService.html#a67227f6c867b1291e22203a68a86a1dc">   94</a></span>    <a class="code hl_function" href="classmy__mqtt_1_1MqttService.html#a67227f6c867b1291e22203a68a86a1dc">MqttService</a>(<span class="keyword">const</span> <a class="code hl_class" href="classmy__mqtt_1_1MqttService.html">MqttService</a>&amp;) = <span class="keyword">delete</span>;               <span class="comment">// 禁用拷贝构造</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="classmy__mqtt_1_1MqttService.html#aff861cf21393afcdf9987ca120da6b7b">   95</a></span>    <a class="code hl_class" href="classmy__mqtt_1_1MqttService.html">MqttService</a>&amp; <a class="code hl_function" href="classmy__mqtt_1_1MqttService.html#aff861cf21393afcdf9987ca120da6b7b">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classmy__mqtt_1_1MqttService.html">MqttService</a>&amp;) = <span class="keyword">delete</span>;    <span class="comment">// 禁用赋值操作符</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="comment">// mosquitto callbacks</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__mqtt_1_1MqttService.html#ad2edbd47af142d850196dc58d4a6ae7e">on_connect_static</a>(<span class="keyword">struct</span> mosquitto* m, <span class="keywordtype">void</span>* obj, <span class="keywordtype">int</span> rc);                          <span class="comment">// NOLINT</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__mqtt_1_1MqttService.html#a87990c1b86e2aa6fb8ca548c82acc2bd">on_disconnect_static</a>(<span class="keyword">struct</span> mosquitto* m, <span class="keywordtype">void</span>* obj, <span class="keywordtype">int</span> rc);                       <span class="comment">// NOLINT</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__mqtt_1_1MqttService.html#ae9ca35eafa45c520234231b3bc4d689f">on_message_static</a>(<span class="keyword">struct</span> mosquitto* m, <span class="keywordtype">void</span>* obj, <span class="keyword">const</span> mosquitto_message* msg);    <span class="comment">// NOLINT</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__mqtt_1_1MqttService.html#aa277606de7dd16893619ce2fd99136eb">on_log_static</a>(<span class="keyword">struct</span> mosquitto* m, <span class="keywordtype">void</span>* obj, <span class="keywordtype">int</span> level, <span class="keyword">const</span> <span class="keywordtype">char</span>* str);          <span class="comment">// NOLINT</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__mqtt_1_1MqttService.html#aaf76957653f52bb76c9d4b72095423ee">OnConnect</a>(<span class="keywordtype">int</span> rc);                                                                         <span class="comment">// NOLINT</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__mqtt_1_1MqttService.html#acd16d8473c499d75cfdf06cc69834be5">OnDisconnect</a>(<span class="keywordtype">int</span> rc);                                                                      <span class="comment">// NOLINT</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__mqtt_1_1MqttService.html#ac43a46b7f03ee11f09f97082ca06615d">OnMessage</a>(<span class="keyword">const</span> mosquitto_message* msg);                                                   <span class="comment">// NOLINT</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__mqtt_1_1MqttService.html#a1277ebb1e1f8cfbd8c6a90cb2ae9e056">DispatchRoutes</a>(<span class="keyword">const</span> std::string&amp; topic, <span class="keyword">const</span> std::string&amp; payload);                      <span class="comment">// NOLINT</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__mqtt_1_1MqttService.html#a5065132a307272381759ad4d0848b278">MatchTopicFilter</a>(<span class="keyword">const</span> std::string&amp; filter, <span class="keyword">const</span> std::string&amp; topic);              <span class="comment">// NOLINT</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="classmy__mqtt_1_1MqttService.html#aeef4a7229a433a6ef6c6a8960b5fe413">  112</a></span>    std::mutex                              <a class="code hl_variable" href="classmy__mqtt_1_1MqttService.html#aeef4a7229a433a6ef6c6a8960b5fe413">mtx_</a>;                       <span class="comment">// 保护 mosq_ / routes_ / config</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="classmy__mqtt_1_1MqttService.html#a9bd9bd9759e662b688d6bd23b8071bf8">  113</a></span>    std::mutex                              <a class="code hl_variable" href="classmy__mqtt_1_1MqttService.html#a9bd9bd9759e662b688d6bd23b8071bf8">pub_mtx_</a>;                   <span class="comment">// 保护 mosquitto_publish（线程安全）</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="classmy__mqtt_1_1MqttService.html#ab6d49423f76ea026d6eb25402274d258">  114</a></span>    nlohmann::json                          <a class="code hl_variable" href="classmy__mqtt_1_1MqttService.html#ab6d49423f76ea026d6eb25402274d258">cfg_</a>;                       <span class="comment">// 配置                   </span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="classmy__mqtt_1_1MqttService.html#ada0f95acb51c9a574d38befa858d78fa">  115</a></span>    std::string                             <a class="code hl_variable" href="classmy__mqtt_1_1MqttService.html#ada0f95acb51c9a574d38befa858d78fa">host_</a>;                      <span class="comment">// MQTT 服务器地址</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="classmy__mqtt_1_1MqttService.html#a038dad2e3eabcce46163b1cfbc810843">  116</a></span>    <span class="keywordtype">int</span>                                     <a class="code hl_variable" href="classmy__mqtt_1_1MqttService.html#a038dad2e3eabcce46163b1cfbc810843">port_</a>{1883};                <span class="comment">// MQTT 服务器端口</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="classmy__mqtt_1_1MqttService.html#a87c5b6eba7602daa9b3f5b69a1b6ac66">  117</a></span>    <span class="keywordtype">int</span>                                     <a class="code hl_variable" href="classmy__mqtt_1_1MqttService.html#a87c5b6eba7602daa9b3f5b69a1b6ac66">keepalive_</a>{60};             <span class="comment">// 保持连接时间间隔               </span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="classmy__mqtt_1_1MqttService.html#ab931e8e043d71fc6c5fe7b7be7572e4e">  118</a></span>    std::string                             <a class="code hl_variable" href="classmy__mqtt_1_1MqttService.html#ab931e8e043d71fc6c5fe7b7be7572e4e">client_id_</a>;                 <span class="comment">// 客户端 ID                 </span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="classmy__mqtt_1_1MqttService.html#a263d932e47de950862d8c4ecee7a80e1">  119</a></span>    <span class="keywordtype">bool</span>                                    <a class="code hl_variable" href="classmy__mqtt_1_1MqttService.html#a263d932e47de950862d8c4ecee7a80e1">clean_session_</a>{<span class="keyword">true</span>};       <span class="comment">// 清理会话标志</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="classmy__mqtt_1_1MqttService.html#af2b4f039aca633dc809200792500bf47">  120</a></span>    std::string                             <a class="code hl_variable" href="classmy__mqtt_1_1MqttService.html#af2b4f039aca633dc809200792500bf47">username_</a>;                  <span class="comment">// 用户名</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="classmy__mqtt_1_1MqttService.html#ac5e3f63926c385695cf5fdc29750449a">  121</a></span>    std::string                             <a class="code hl_variable" href="classmy__mqtt_1_1MqttService.html#ac5e3f63926c385695cf5fdc29750449a">password_</a>;                  <span class="comment">// 密码</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="classmy__mqtt_1_1MqttService.html#a51ae1d1fa8a1110a942fc33bf65b747c">  122</a></span>    <span class="keywordtype">int</span>                                     <a class="code hl_variable" href="classmy__mqtt_1_1MqttService.html#a51ae1d1fa8a1110a942fc33bf65b747c">reconnect_min_sec_</a>{2};      <span class="comment">// 重连最小间隔秒数</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="classmy__mqtt_1_1MqttService.html#a7707f7a93898fd6211c4a100e69edfd9">  123</a></span>    <span class="keywordtype">int</span>                                     <a class="code hl_variable" href="classmy__mqtt_1_1MqttService.html#a7707f7a93898fd6211c4a100e69edfd9">reconnect_max_sec_</a>{32};     <span class="comment">// 重连最大间隔秒数</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="classmy__mqtt_1_1MqttService.html#abb35e640c7d0e6d7bc452ea7f591c471">  124</a></span>    std::atomic&lt;bool&gt;                       <a class="code hl_variable" href="classmy__mqtt_1_1MqttService.html#abb35e640c7d0e6d7bc452ea7f591c471">inited_</a>{<span class="keyword">false</span>};         <span class="comment">// 是否已初始化</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="classmy__mqtt_1_1MqttService.html#aa9620a15c76ada2388bf678e373a6463">  125</a></span>    std::atomic&lt;bool&gt;                       <a class="code hl_variable" href="classmy__mqtt_1_1MqttService.html#aa9620a15c76ada2388bf678e373a6463">running_</a>{<span class="keyword">false</span>};        <span class="comment">// 是否正在运行</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="classmy__mqtt_1_1MqttService.html#a394f715193a382d9c59ec69143a3cc4d">  126</a></span>    std::atomic&lt;bool&gt;                       <a class="code hl_variable" href="classmy__mqtt_1_1MqttService.html#a394f715193a382d9c59ec69143a3cc4d">connected_</a>{<span class="keyword">false</span>};      <span class="comment">// 是否已连接</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="classmy__mqtt_1_1MqttService.html#a19fe5c99bbb49071efec1a215b323ea9">  127</a></span>    <span class="keyword">struct </span>mosquitto*                       <a class="code hl_variable" href="classmy__mqtt_1_1MqttService.html#a19fe5c99bbb49071efec1a215b323ea9">mosq_</a>{<span class="keyword">nullptr</span>};             <span class="comment">// mosquitto 客户端句柄</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="classmy__mqtt_1_1MqttService.html#a2e4c289e8b6bc28bf2ad4299476a9058">  128</a></span>    std::vector&lt;Route&gt;                      <a class="code hl_variable" href="classmy__mqtt_1_1MqttService.html#a2e4c289e8b6bc28bf2ad4299476a9058">routes_</a>;                    <span class="comment">// 路由列表</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="classmy__mqtt_1_1MqttService.html#a54c38c765487f9ce11a8f061c68c5250">  129</a></span>    std::shared_ptr&lt;PublisherAdapter&gt;       <a class="code hl_variable" href="classmy__mqtt_1_1MqttService.html#a54c38c765487f9ce11a8f061c68c5250">publisher_adapter_</a>;         <span class="comment">// 发布者适配器</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>};</div>
+</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>} <span class="comment">// namespace my_mqtt</span></div>
+<div class="ttc" id="aIMqttPublisher_8hpp_html"><div class="ttname"><a href="IMqttPublisher_8hpp.html">IMqttPublisher.hpp</a></div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html">my_mqtt::MqttService</a></div><div class="ttdoc">MQTT 服务单例类</div><div class="ttdef"><b>Definition</b> MqttService.hpp:26</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_a038dad2e3eabcce46163b1cfbc810843"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#a038dad2e3eabcce46163b1cfbc810843">my_mqtt::MqttService::port_</a></div><div class="ttdeci">int port_</div><div class="ttdef"><b>Definition</b> MqttService.hpp:116</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_a1277ebb1e1f8cfbd8c6a90cb2ae9e056"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#a1277ebb1e1f8cfbd8c6a90cb2ae9e056">my_mqtt::MqttService::DispatchRoutes</a></div><div class="ttdeci">void DispatchRoutes(const std::string &amp;topic, const std::string &amp;payload)</div><div class="ttdef"><b>Definition</b> MqttService.cpp:305</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_a17a237457e57625296e6b24feb19c60a"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#a17a237457e57625296e6b24feb19c60a">my_mqtt::MqttService::Stop</a></div><div class="ttdeci">void Stop()</div><div class="ttdef"><b>Definition</b> MqttService.cpp:149</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_a19fe5c99bbb49071efec1a215b323ea9"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#a19fe5c99bbb49071efec1a215b323ea9">my_mqtt::MqttService::mosq_</a></div><div class="ttdeci">struct mosquitto * mosq_</div><div class="ttdef"><b>Definition</b> MqttService.hpp:127</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_a263d932e47de950862d8c4ecee7a80e1"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#a263d932e47de950862d8c4ecee7a80e1">my_mqtt::MqttService::clean_session_</a></div><div class="ttdeci">bool clean_session_</div><div class="ttdef"><b>Definition</b> MqttService.hpp:119</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_a2d0706855bb7061371abaca0b44c0916"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#a2d0706855bb7061371abaca0b44c0916">my_mqtt::MqttService::MqttService</a></div><div class="ttdeci">MqttService()=default</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_a2e4c289e8b6bc28bf2ad4299476a9058"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#a2e4c289e8b6bc28bf2ad4299476a9058">my_mqtt::MqttService::routes_</a></div><div class="ttdeci">std::vector&lt; Route &gt; routes_</div><div class="ttdef"><b>Definition</b> MqttService.hpp:128</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_a394f715193a382d9c59ec69143a3cc4d"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#a394f715193a382d9c59ec69143a3cc4d">my_mqtt::MqttService::connected_</a></div><div class="ttdeci">std::atomic&lt; bool &gt; connected_</div><div class="ttdef"><b>Definition</b> MqttService.hpp:126</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_a3a9af3208b271020600c21a82420ac02"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#a3a9af3208b271020600c21a82420ac02">my_mqtt::MqttService::GetConfig</a></div><div class="ttdeci">const nlohmann::json GetConfig()</div><div class="ttdef"><b>Definition</b> MqttService.cpp:357</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_a5065132a307272381759ad4d0848b278"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#a5065132a307272381759ad4d0848b278">my_mqtt::MqttService::MatchTopicFilter</a></div><div class="ttdeci">static bool MatchTopicFilter(const std::string &amp;filter, const std::string &amp;topic)</div><div class="ttdef"><b>Definition</b> MqttService.cpp:326</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_a51ae1d1fa8a1110a942fc33bf65b747c"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#a51ae1d1fa8a1110a942fc33bf65b747c">my_mqtt::MqttService::reconnect_min_sec_</a></div><div class="ttdeci">int reconnect_min_sec_</div><div class="ttdef"><b>Definition</b> MqttService.hpp:122</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_a54c38c765487f9ce11a8f061c68c5250"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#a54c38c765487f9ce11a8f061c68c5250">my_mqtt::MqttService::publisher_adapter_</a></div><div class="ttdeci">std::shared_ptr&lt; PublisherAdapter &gt; publisher_adapter_</div><div class="ttdef"><b>Definition</b> MqttService.hpp:129</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_a67227f6c867b1291e22203a68a86a1dc"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#a67227f6c867b1291e22203a68a86a1dc">my_mqtt::MqttService::MqttService</a></div><div class="ttdeci">MqttService(const MqttService &amp;)=delete</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_a7707f7a93898fd6211c4a100e69edfd9"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#a7707f7a93898fd6211c4a100e69edfd9">my_mqtt::MqttService::reconnect_max_sec_</a></div><div class="ttdeci">int reconnect_max_sec_</div><div class="ttdef"><b>Definition</b> MqttService.hpp:123</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_a7ff7d0b5d868d9a1810db69988a56ef9"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#a7ff7d0b5d868d9a1810db69988a56ef9">my_mqtt::MqttService::Init</a></div><div class="ttdeci">bool Init(const nlohmann::json &amp;cfg)</div><div class="ttdef"><b>Definition</b> MqttService.cpp:51</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_a87990c1b86e2aa6fb8ca548c82acc2bd"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#a87990c1b86e2aa6fb8ca548c82acc2bd">my_mqtt::MqttService::on_disconnect_static</a></div><div class="ttdeci">static void on_disconnect_static(struct mosquitto *m, void *obj, int rc)</div><div class="ttdef"><b>Definition</b> MqttService.cpp:241</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_a87c5b6eba7602daa9b3f5b69a1b6ac66"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#a87c5b6eba7602daa9b3f5b69a1b6ac66">my_mqtt::MqttService::keepalive_</a></div><div class="ttdeci">int keepalive_</div><div class="ttdef"><b>Definition</b> MqttService.hpp:117</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_a881267d159c526a203ac9e2d90b54703"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#a881267d159c526a203ac9e2d90b54703">my_mqtt::MqttService::GetRoutes</a></div><div class="ttdeci">const nlohmann::json GetRoutes()</div><div class="ttdef"><b>Definition</b> MqttService.cpp:369</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_a8a88459b535d228e294ae262f696ea4b"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#a8a88459b535d228e294ae262f696ea4b">my_mqtt::MqttService::GetInstance</a></div><div class="ttdeci">static MqttService &amp; GetInstance()</div><div class="ttdef"><b>Definition</b> MqttService.cpp:38</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_a954c92b80afa6bab4284cbae327de6ad"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#a954c92b80afa6bab4284cbae327de6ad">my_mqtt::MqttService::AddRoute</a></div><div class="ttdeci">void AddRoute(std::string topicFilter, Handler handler, int qos=0)</div><div class="ttdoc">添加路由，注册后自动订阅对应主题过滤器</div><div class="ttdef"><b>Definition</b> MqttService.cpp:216</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_a9bd9bd9759e662b688d6bd23b8071bf8"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#a9bd9bd9759e662b688d6bd23b8071bf8">my_mqtt::MqttService::pub_mtx_</a></div><div class="ttdeci">std::mutex pub_mtx_</div><div class="ttdef"><b>Definition</b> MqttService.hpp:113</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_aa277606de7dd16893619ce2fd99136eb"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#aa277606de7dd16893619ce2fd99136eb">my_mqtt::MqttService::on_log_static</a></div><div class="ttdeci">static void on_log_static(struct mosquitto *m, void *obj, int level, const char *str)</div><div class="ttdef"><b>Definition</b> MqttService.cpp:253</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_aa70efaa4751ac6d5d54dce88fe725e0a"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#aa70efaa4751ac6d5d54dce88fe725e0a">my_mqtt::MqttService::Start</a></div><div class="ttdeci">bool Start()</div><div class="ttdef"><b>Definition</b> MqttService.cpp:120</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_aa9620a15c76ada2388bf678e373a6463"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#aa9620a15c76ada2388bf678e373a6463">my_mqtt::MqttService::running_</a></div><div class="ttdeci">std::atomic&lt; bool &gt; running_</div><div class="ttdef"><b>Definition</b> MqttService.hpp:125</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_aacbd416bcad6aed0748c09cf370602a7"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#aacbd416bcad6aed0748c09cf370602a7">my_mqtt::MqttService::Subscribe</a></div><div class="ttdeci">bool Subscribe(const std::string &amp;topicFilter, int qos=0)</div><div class="ttdoc">订阅主题</div><div class="ttdef"><b>Definition</b> MqttService.cpp:203</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_aaf76957653f52bb76c9d4b72095423ee"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#aaf76957653f52bb76c9d4b72095423ee">my_mqtt::MqttService::OnConnect</a></div><div class="ttdeci">void OnConnect(int rc)</div><div class="ttdef"><b>Definition</b> MqttService.cpp:259</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_ab02531f99e8789e7e752c6b683702e34"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#ab02531f99e8789e7e752c6b683702e34">my_mqtt::MqttService::Publish</a></div><div class="ttdeci">bool Publish(const std::string &amp;topic, const std::string &amp;payload, int qos=0, bool retain=false)</div><div class="ttdoc">发布消息</div><div class="ttdef"><b>Definition</b> MqttService.cpp:178</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_ab6d49423f76ea026d6eb25402274d258"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#ab6d49423f76ea026d6eb25402274d258">my_mqtt::MqttService::cfg_</a></div><div class="ttdeci">nlohmann::json cfg_</div><div class="ttdef"><b>Definition</b> MqttService.hpp:114</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_ab931e8e043d71fc6c5fe7b7be7572e4e"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#ab931e8e043d71fc6c5fe7b7be7572e4e">my_mqtt::MqttService::client_id_</a></div><div class="ttdeci">std::string client_id_</div><div class="ttdef"><b>Definition</b> MqttService.hpp:118</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_abb35e640c7d0e6d7bc452ea7f591c471"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#abb35e640c7d0e6d7bc452ea7f591c471">my_mqtt::MqttService::inited_</a></div><div class="ttdeci">std::atomic&lt; bool &gt; inited_</div><div class="ttdef"><b>Definition</b> MqttService.hpp:124</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_ac43a46b7f03ee11f09f97082ca06615d"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#ac43a46b7f03ee11f09f97082ca06615d">my_mqtt::MqttService::OnMessage</a></div><div class="ttdeci">void OnMessage(const mosquitto_message *msg)</div><div class="ttdef"><b>Definition</b> MqttService.cpp:292</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_ac5e3f63926c385695cf5fdc29750449a"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#ac5e3f63926c385695cf5fdc29750449a">my_mqtt::MqttService::password_</a></div><div class="ttdeci">std::string password_</div><div class="ttdef"><b>Definition</b> MqttService.hpp:121</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_acd16d8473c499d75cfdf06cc69834be5"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#acd16d8473c499d75cfdf06cc69834be5">my_mqtt::MqttService::OnDisconnect</a></div><div class="ttdeci">void OnDisconnect(int rc)</div><div class="ttdef"><b>Definition</b> MqttService.cpp:283</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_ad201152b05beda61e51e3594ff07c8fe"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#ad201152b05beda61e51e3594ff07c8fe">my_mqtt::MqttService::IsRunning</a></div><div class="ttdeci">bool IsRunning() const</div><div class="ttdef"><b>Definition</b> MqttService.hpp:45</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_ad2edbd47af142d850196dc58d4a6ae7e"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#ad2edbd47af142d850196dc58d4a6ae7e">my_mqtt::MqttService::on_connect_static</a></div><div class="ttdeci">static void on_connect_static(struct mosquitto *m, void *obj, int rc)</div><div class="ttdef"><b>Definition</b> MqttService.cpp:235</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_ada0f95acb51c9a574d38befa858d78fa"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#ada0f95acb51c9a574d38befa858d78fa">my_mqtt::MqttService::host_</a></div><div class="ttdeci">std::string host_</div><div class="ttdef"><b>Definition</b> MqttService.hpp:115</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_ae9ca35eafa45c520234231b3bc4d689f"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#ae9ca35eafa45c520234231b3bc4d689f">my_mqtt::MqttService::on_message_static</a></div><div class="ttdeci">static void on_message_static(struct mosquitto *m, void *obj, const mosquitto_message *msg)</div><div class="ttdef"><b>Definition</b> MqttService.cpp:247</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_aeef4a7229a433a6ef6c6a8960b5fe413"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#aeef4a7229a433a6ef6c6a8960b5fe413">my_mqtt::MqttService::mtx_</a></div><div class="ttdeci">std::mutex mtx_</div><div class="ttdef"><b>Definition</b> MqttService.hpp:112</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_af25f6940f611ac24290e6c236d28f90e"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#af25f6940f611ac24290e6c236d28f90e">my_mqtt::MqttService::GetPublisher</a></div><div class="ttdeci">std::shared_ptr&lt; IMqttPublisher &gt; GetPublisher()</div><div class="ttdoc">获取发布者接口，用于业务层注入</div><div class="ttdef"><b>Definition</b> MqttService.cpp:173</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_af2b4f039aca633dc809200792500bf47"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#af2b4f039aca633dc809200792500bf47">my_mqtt::MqttService::username_</a></div><div class="ttdeci">std::string username_</div><div class="ttdef"><b>Definition</b> MqttService.hpp:120</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_af8f3271fa0cd582047a0303a87bc9fdb"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#af8f3271fa0cd582047a0303a87bc9fdb">my_mqtt::MqttService::~MqttService</a></div><div class="ttdeci">~MqttService()</div><div class="ttdef"><b>Definition</b> MqttService.cpp:43</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1MqttService_html_aff861cf21393afcdf9987ca120da6b7b"><div class="ttname"><a href="classmy__mqtt_1_1MqttService.html#aff861cf21393afcdf9987ca120da6b7b">my_mqtt::MqttService::operator=</a></div><div class="ttdeci">MqttService &amp; operator=(const MqttService &amp;)=delete</div></div>
+<div class="ttc" id="aclassmy__mqtt_1_1PublisherAdapter_html"><div class="ttname"><a href="classmy__mqtt_1_1PublisherAdapter.html">my_mqtt::PublisherAdapter</a></div><div class="ttdef"><b>Definition</b> MqttService.cpp:17</div></div>
+<div class="ttc" id="anamespacemy__mqtt_html"><div class="ttname"><a href="namespacemy__mqtt.html">my_mqtt</a></div><div class="ttdef"><b>Definition</b> IMqttPublisher.hpp:4</div></div>
+<div class="ttc" id="anamespacemy__mqtt_html_a02e0f589c5b1c3c1789627e8cc4f0d5c"><div class="ttname"><a href="namespacemy__mqtt.html#a02e0f589c5b1c3c1789627e8cc4f0d5c">my_mqtt::Handler</a></div><div class="ttdeci">std::function&lt; void(const std::string &amp;topic, const std::string &amp;payload)&gt; Handler</div><div class="ttdef"><b>Definition</b> MqttService.hpp:16</div></div>
+<div class="ttc" id="astructmy__mqtt_1_1Route_html"><div class="ttname"><a href="structmy__mqtt_1_1Route.html">my_mqtt::Route</a></div><div class="ttdef"><b>Definition</b> MqttService.cpp:11</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

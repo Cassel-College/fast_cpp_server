@@ -10,7 +10,7 @@ var searchData=
   ['upserttask_7',['UpsertTask',['../classmy__db_1_1demo_1_1TaskRepository.html#a95f33d0b2df4f62bc0b1fa2ae28c451b',1,'my_db::demo::TaskRepository']]],
   ['uptime_5fseconds_5f_8',['uptime_seconds_',['../classHealthSnapshot.html#ac662d536b7c95052402ff3c5714d82d4',1,'HealthSnapshot']]],
   ['usedlog_5f_9',['usedLog_',['../classtools_1_1thread__safe__queue_1_1ThreadSafeQueue.html#ac0a712e0ea26eff9dd5e637f490edf1c',1,'tools::thread_safe_queue::ThreadSafeQueue']]],
-  ['username_5f_10',['username_',['../classfast__mqtt_1_1MFMQTTClient.html#af2b4f039aca633dc809200792500bf47',1,'fast_mqtt::MFMQTTClient']]],
+  ['username_5f_10',['username_',['../classmy__mqtt_1_1MqttService.html#af2b4f039aca633dc809200792500bf47',1,'my_mqtt::MqttService']]],
   ['utime_5fticks_11',['utime_ticks',['../structThreadSnapshot.html#a5aca92105028d05f07063b6f0b6a9710',1,'ThreadSnapshot']]],
   ['uuvcommandnormalizer_12',['UUVCommandNormalizer',['../classmy__control_1_1demo_1_1UUVCommandNormalizer.html',1,'my_control::demo']]],
   ['uuvcommandnormalizer_2ecpp_13',['UUVCommandNormalizer.cpp',['../UUVCommandNormalizer_8cpp.html',1,'']]],

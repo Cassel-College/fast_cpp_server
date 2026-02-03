@@ -70,7 +70,10 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">结构体</a>  </div>
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
   <div class="headertitle"><div class="title">my_mqtt 命名空间参考</div></div>
 </div><!--header-->
 <div class="contents">
@@ -79,9 +82,124 @@ $(function() {
 结构体</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__mqtt_1_1IMqttPublisher.html">IMqttPublisher</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__mqtt_1_1MosqPublisher.html">MosqPublisher</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__mqtt_1_1MqttService.html">MqttService</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">MQTT 服务单例类  <a href="classmy__mqtt_1_1MqttService.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__mqtt_1_1PublisherAdapter.html">PublisherAdapter</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmy__mqtt_1_1Route.html">Route</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:a02e0f589c5b1c3c1789627e8cc4f0d5c" id="r_a02e0f589c5b1c3c1789627e8cc4f0d5c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__mqtt.html#a02e0f589c5b1c3c1789627e8cc4f0d5c">Handler</a> = std::function&lt; void(const std::string &amp;topic, const std::string &amp;payload)&gt;</td></tr>
+<tr class="separator:a02e0f589c5b1c3c1789627e8cc4f0d5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ab0e06fe193d3d1274251ec56ad71374d" id="r_ab0e06fe193d3d1274251ec56ad71374d"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__mqtt.html#ab0e06fe193d3d1274251ec56ad71374d">splitTopic</a> (const std::string &amp;s)</td></tr>
+<tr class="separator:ab0e06fe193d3d1274251ec56ad71374d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a354c4e181a2fb547027dda65832008d4" id="r_a354c4e181a2fb547027dda65832008d4"><td class="memItemLeft" align="right" valign="top">static std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__mqtt.html#a354c4e181a2fb547027dda65832008d4">g_mosq_inited</a> {false}</td></tr>
+<tr class="separator:a354c4e181a2fb547027dda65832008d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="a02e0f589c5b1c3c1789627e8cc4f0d5c" name="a02e0f589c5b1c3c1789627e8cc4f0d5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02e0f589c5b1c3c1789627e8cc4f0d5c">&#9670;&#160;</a></span>Handler</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacemy__mqtt.html#a02e0f589c5b1c3c1789627e8cc4f0d5c">Handler</a> =  std::function&lt;void(const std::string&amp; topic, const std::string&amp; payload)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="ab0e06fe193d3d1274251ec56ad71374d" name="ab0e06fe193d3d1274251ec56ad71374d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0e06fe193d3d1274251ec56ad71374d">&#9670;&#160;</a></span>splitTopic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::vector&lt; std::string &gt; splitTopic </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__mqtt_1_1MqttService.html#a5065132a307272381759ad4d0848b278">MqttService::MatchTopicFilter()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemy__mqtt_ab0e06fe193d3d1274251ec56ad71374d_icgraph.png" border="0" usemap="#anamespacemy__mqtt_ab0e06fe193d3d1274251ec56ad71374d_icgraph" alt=""/></div>
+<map name="anamespacemy__mqtt_ab0e06fe193d3d1274251ec56ad71374d_icgraph" id="anamespacemy__mqtt_ab0e06fe193d3d1274251ec56ad71374d_icgraph">
+<area shape="rect" title=" " alt="" coords="1849,13,1932,38"/>
+<area shape="rect" href="classmy__mqtt_1_1MqttService.html#a5065132a307272381759ad4d0848b278" title=" " alt="" coords="1635,5,1801,45"/>
+<area shape="poly" title=" " alt="" coords="1835,28,1801,28,1801,23,1835,23"/>
+<area shape="rect" href="classmy__mqtt_1_1MqttService.html#a1277ebb1e1f8cfbd8c6a90cb2ae9e056" title=" " alt="" coords="1420,5,1587,45"/>
+<area shape="poly" title=" " alt="" coords="1621,28,1587,28,1587,23,1621,23"/>
+<area shape="rect" href="classmy__mqtt_1_1MqttService.html#ac43a46b7f03ee11f09f97082ca06615d" title=" " alt="" coords="1205,5,1372,45"/>
+<area shape="poly" title=" " alt="" coords="1406,28,1372,28,1372,23,1406,23"/>
+<area shape="rect" href="classmy__mqtt_1_1MqttService.html#ae9ca35eafa45c520234231b3bc4d689f" title=" " alt="" coords="991,5,1157,45"/>
+<area shape="poly" title=" " alt="" coords="1191,28,1158,28,1158,23,1191,23"/>
+<area shape="rect" href="classmy__mqtt_1_1MqttService.html#a7ff7d0b5d868d9a1810db69988a56ef9" title=" " alt="" coords="776,5,943,45"/>
+<area shape="poly" title=" " alt="" coords="977,28,943,28,943,23,977,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#ab7587a797e845df29793177ea59eed08" title=" " alt="" coords="553,5,728,45"/>
+<area shape="poly" title=" " alt="" coords="762,28,728,28,728,23,762,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="331,5,505,45"/>
+<area shape="poly" title=" " alt="" coords="540,28,505,28,505,23,540,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="108,5,283,45"/>
+<area shape="poly" title=" " alt="" coords="317,28,283,28,283,23,317,23"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,13,60,38"/>
+<area shape="poly" title=" " alt="" coords="95,28,60,28,60,23,95,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="a354c4e181a2fb547027dda65832008d4" name="a354c4e181a2fb547027dda65832008d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a354c4e181a2fb547027dda65832008d4">&#9670;&#160;</a></span>g_mosq_inited</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;bool&gt; g_mosq_inited {false}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__mqtt_1_1MqttService.html#a7ff7d0b5d868d9a1810db69988a56ef9">MqttService::Init()</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
