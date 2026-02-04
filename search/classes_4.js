@@ -8,5 +8,6 @@ var searchData=
   ['edgescontroller_5',['EdgesController',['../classmy__api_1_1edge_1_1EdgesController.html',1,'my_api::edge']]],
   ['edgestatus_6',['EdgeStatus',['../structmy__data_1_1EdgeStatus.html',1,'my_data']]],
   ['edgestatusdto_7',['EdgeStatusDto',['../classmy__api_1_1dto_1_1EdgeStatusDto.html',1,'my_api::dto']]],
-  ['example_8',['Example',['../classExample.html',1,'']]]
+  ['example_8',['Example',['../classExample.html',1,'']]],
+  ['execresult_9',['ExecResult',['../structmy__script_1_1ExecResult.html',1,'my_script']]]
 ];

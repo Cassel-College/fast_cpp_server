@@ -12,5 +12,6 @@ var searchData=
   ['broker_5fport_5f_9',['broker_port_',['../classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#a49246154fac16e9f036956debddc2c80',1,'my_mqtt_broker_manager::MyMqttBrokerManager']]],
   ['broker_5frunning_5f_10',['broker_running_',['../classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#aab81986b027323c6a7d58e32b4383dd6',1,'my_mqtt_broker_manager::MyMqttBrokerManager']]],
   ['buffer_5f_11',['buffer_',['../classtools_1_1SimpleTcpClient.html#a9fcab6aebd2ef14d2f3008fd25fc1ae5',1,'tools::SimpleTcpClient::buffer_'],['../classtools_1_1ThreadSafeBuffer.html#a28b7d835357a513d86c8c436c24cc0e7',1,'tools::ThreadSafeBuffer::buffer_']]],
-  ['busy_5ftimeout_5fms_12',['busy_timeout_ms',['../structmy__db_1_1DBConfig.html#a1d8584dda5609a17bb937aca1955b7f8',1,'my_db::DBConfig']]]
+  ['busy_5ftimeout_5fms_12',['busy_timeout_ms',['../structmy__db_1_1DBConfig.html#a1d8584dda5609a17bb937aca1955b7f8',1,'my_db::DBConfig']]],
+  ['buttons_13',['buttons',['../namespacebot.html#ab25f60de6d1c5f370231402aa1097c95',1,'bot']]]
 ];

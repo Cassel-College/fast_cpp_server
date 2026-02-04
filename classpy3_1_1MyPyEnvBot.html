@@ -1,0 +1,806 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: MyPyEnvBot类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacepy3.html">py3</a></li><li class="navelem"><a class="el" href="classpy3_1_1MyPyEnvBot.html">MyPyEnvBot</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">静态 Public 成员函数</a>  </div>
+  <div class="headertitle"><div class="title">MyPyEnvBot类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="MyPyEnvBot_8h_source.html">MyPyEnvBot.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a4ea519c05062d53e0d65fae19e20a457" id="r_a4ea519c05062d53e0d65fae19e20a457"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpy3_1_1MyPyEnvBot.html#a4ea519c05062d53e0d65fae19e20a457">createEnv</a> (const std::string &amp;path, std::string *out_msg=nullptr)</td></tr>
+<tr class="memdesc:a4ea519c05062d53e0d65fae19e20a457"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a Env object  <br /></td></tr>
+<tr class="separator:a4ea519c05062d53e0d65fae19e20a457"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a601a96b73c7a4ee967eb797dee7ff92f" id="r_a601a96b73c7a4ee967eb797dee7ff92f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structmy__script_1_1ExecResult.html">my_script::ExecResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpy3_1_1MyPyEnvBot.html#a601a96b73c7a4ee967eb797dee7ff92f">installPackages</a> (const std::string &amp;venvPath, const std::vector&lt; std::string &gt; &amp;packages, int timeout_seconds=120)</td></tr>
+<tr class="memdesc:a601a96b73c7a4ee967eb797dee7ff92f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Install packages into the specified venv  <br /></td></tr>
+<tr class="separator:a601a96b73c7a4ee967eb797dee7ff92f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77cd4dc40a0a8bf1ec65d91aa288eb84" id="r_a77cd4dc40a0a8bf1ec65d91aa288eb84"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpy3_1_1MyPyEnvBot.html#a77cd4dc40a0a8bf1ec65d91aa288eb84">listInstalled</a> (const std::string &amp;venvPath, int timeout_seconds=30)</td></tr>
+<tr class="memdesc:a77cd4dc40a0a8bf1ec65d91aa288eb84"><td class="mdescLeft">&#160;</td><td class="mdescRight">List installed packages in the specified venv  <br /></td></tr>
+<tr class="separator:a77cd4dc40a0a8bf1ec65d91aa288eb84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d480601c8513dea3f3e095336947945" id="r_a9d480601c8513dea3f3e095336947945"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpy3_1_1MyPyEnvBot.html#a9d480601c8513dea3f3e095336947945">removeEnv</a> (const std::string &amp;path, std::string *out_msg=nullptr)</td></tr>
+<tr class="memdesc:a9d480601c8513dea3f3e095336947945"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the specified venv  <br /></td></tr>
+<tr class="separator:a9d480601c8513dea3f3e095336947945"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab741c4c7bd8cb2e9a4072b167f0c37c0" id="r_ab741c4c7bd8cb2e9a4072b167f0c37c0"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpy3_1_1MyPyEnvBot.html#ab741c4c7bd8cb2e9a4072b167f0c37c0">getPythonPath</a> (const std::string &amp;venvPath)</td></tr>
+<tr class="memdesc:ab741c4c7bd8cb2e9a4072b167f0c37c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Python executable path within the specified venv  <br /></td></tr>
+<tr class="separator:ab741c4c7bd8cb2e9a4072b167f0c37c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acce3815b65ea90d0ecba58d90d2d2514" id="r_acce3815b65ea90d0ecba58d90d2d2514"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpy3_1_1MyPyEnvBot.html#acce3815b65ea90d0ecba58d90d2d2514">getPipPath</a> (const std::string &amp;venvPath)</td></tr>
+<tr class="memdesc:acce3815b65ea90d0ecba58d90d2d2514"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Pip executable path within the specified venv  <br /></td></tr>
+<tr class="separator:acce3815b65ea90d0ecba58d90d2d2514"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7051fa49585f01472123ad64da47abe" id="r_ab7051fa49585f01472123ad64da47abe"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpy3_1_1MyPyEnvBot.html#ab7051fa49585f01472123ad64da47abe">checkHealth</a> (const std::string &amp;venvPath, std::string *out_msg=nullptr)</td></tr>
+<tr class="memdesc:ab7051fa49585f01472123ad64da47abe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the health of the specified venv  <br /></td></tr>
+<tr class="separator:ab7051fa49585f01472123ad64da47abe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a904aba98263b104b4e2afc0830443422" id="r_a904aba98263b104b4e2afc0830443422"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structmy__script_1_1ExecResult.html">my_script::ExecResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpy3_1_1MyPyEnvBot.html#a904aba98263b104b4e2afc0830443422">runPythonScript</a> (const std::string &amp;venvPath, const std::string &amp;scriptPath, const std::vector&lt; std::string &gt; &amp;args={}, int timeout_seconds=0, size_t memory_limit_bytes=0, int cpu_time_limit_seconds=0)</td></tr>
+<tr class="memdesc:a904aba98263b104b4e2afc0830443422"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run a Python script within the specified venv  <br /></td></tr>
+<tr class="separator:a904aba98263b104b4e2afc0830443422"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab48ecf9c246e227ea13111b1d867007" id="r_aab48ecf9c246e227ea13111b1d867007"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structmy__script_1_1ExecResult.html">my_script::ExecResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpy3_1_1MyPyEnvBot.html#aab48ecf9c246e227ea13111b1d867007">runInCurrentEnv</a> (const std::string &amp;scriptPath, const std::vector&lt; std::string &gt; &amp;args={}, int timeout_seconds=0, size_t memory_limit_bytes=0, int cpu_time_limit_seconds=0)</td></tr>
+<tr class="memdesc:aab48ecf9c246e227ea13111b1d867007"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run a Python script using the system/current python (not a venv)  <br /></td></tr>
+<tr class="separator:aab48ecf9c246e227ea13111b1d867007"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b2f0353cc6ede45e35c8ffc86ca7fa6" id="r_a2b2f0353cc6ede45e35c8ffc86ca7fa6"><td class="memItemLeft" align="right" valign="top">static nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpy3_1_1MyPyEnvBot.html#a2b2f0353cc6ede45e35c8ffc86ca7fa6">getCurrentPythonInfo</a> (int timeout_seconds=5)</td></tr>
+<tr class="memdesc:a2b2f0353cc6ede45e35c8ffc86ca7fa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Query current system python environment information as JSON string.  <br /></td></tr>
+<tr class="separator:a2b2f0353cc6ede45e35c8ffc86ca7fa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="ab7051fa49585f01472123ad64da47abe" name="ab7051fa49585f01472123ad64da47abe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7051fa49585f01472123ad64da47abe">&#9670;&#160;</a></span>checkHealth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool checkHealth </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>venvPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>out_msg</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check the health of the specified venv </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">venvPath</td><td></td></tr>
+    <tr><td class="paramname">out_msg</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="classpy3_1_1MyPyEnvBot.html#ab741c4c7bd8cb2e9a4072b167f0c37c0">MyPyEnvBot::getPythonPath()</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a> , 以及 <a class="el" href="classbash_1_1MyBashEnvBot.html#a6e397ca352da76ca41ade61383928220">MyBashEnvBot::runBash()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__script_1_1MyScriptManager.html#a86380f140c1c01bfe818c8a5ed2a27b9">MyScriptManager::checkPythonEnvHealth()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpy3_1_1MyPyEnvBot_ab7051fa49585f01472123ad64da47abe_cgraph.png" border="0" usemap="#aclasspy3_1_1MyPyEnvBot_ab7051fa49585f01472123ad64da47abe_cgraph" alt=""/></div>
+<map name="aclasspy3_1_1MyPyEnvBot_ab7051fa49585f01472123ad64da47abe_cgraph" id="aclasspy3_1_1MyPyEnvBot_ab7051fa49585f01472123ad64da47abe_cgraph">
+<area shape="rect" title="Check the health of the specified venv" alt="" coords="5,35,108,60"/>
+<area shape="rect" href="classpy3_1_1MyPyEnvBot.html#ab741c4c7bd8cb2e9a4072b167f0c37c0" title="Get the Python executable path within the specified venv" alt="" coords="177,5,293,31"/>
+<area shape="poly" title=" " alt="" coords="108,36,163,27,164,32,109,42"/>
+<area shape="rect" href="classbash_1_1MyBashEnvBot.html#a6e397ca352da76ca41ade61383928220" title=" " alt="" coords="156,55,315,95"/>
+<area shape="poly" title=" " alt="" coords="109,53,143,58,142,63,108,58"/>
+<area shape="rect" href="namespacebash.html#aaa8a766997f41ec4be7e94a85d4e8877" title=" " alt="" coords="363,63,496,88"/>
+<area shape="poly" title=" " alt="" coords="315,73,349,73,349,78,315,78"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpy3_1_1MyPyEnvBot_ab7051fa49585f01472123ad64da47abe_icgraph.png" border="0" usemap="#aclasspy3_1_1MyPyEnvBot_ab7051fa49585f01472123ad64da47abe_icgraph" alt=""/></div>
+<map name="aclasspy3_1_1MyPyEnvBot_ab7051fa49585f01472123ad64da47abe_icgraph" id="aclasspy3_1_1MyPyEnvBot_ab7051fa49585f01472123ad64da47abe_icgraph">
+<area shape="rect" title="Check the health of the specified venv" alt="" coords="261,13,364,38"/>
+<area shape="rect" href="classmy__script_1_1MyScriptManager.html#a86380f140c1c01bfe818c8a5ed2a27b9" title=" " alt="" coords="5,5,213,45"/>
+<area shape="poly" title=" " alt="" coords="248,28,213,28,213,23,248,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4ea519c05062d53e0d65fae19e20a457" name="a4ea519c05062d53e0d65fae19e20a457"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ea519c05062d53e0d65fae19e20a457">&#9670;&#160;</a></span>createEnv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool createEnv </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>out_msg</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a Env object </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td></td></tr>
+    <tr><td class="paramname">out_msg</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a> , 以及 <a class="el" href="classbash_1_1MyBashEnvBot.html#a6e397ca352da76ca41ade61383928220">MyBashEnvBot::runBash()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__script_1_1MyScriptManager.html#ae116721166734d0bc16dafb011c9f39f">MyScriptManager::createPythonEnv()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpy3_1_1MyPyEnvBot_a4ea519c05062d53e0d65fae19e20a457_cgraph.png" border="0" usemap="#aclasspy3_1_1MyPyEnvBot_a4ea519c05062d53e0d65fae19e20a457_cgraph" alt=""/></div>
+<map name="aclasspy3_1_1MyPyEnvBot_a4ea519c05062d53e0d65fae19e20a457_cgraph" id="aclasspy3_1_1MyPyEnvBot_a4ea519c05062d53e0d65fae19e20a457_cgraph">
+<area shape="rect" title="Create a Env object" alt="" coords="5,13,92,38"/>
+<area shape="rect" href="classbash_1_1MyBashEnvBot.html#a6e397ca352da76ca41ade61383928220" title=" " alt="" coords="140,5,299,45"/>
+<area shape="poly" title=" " alt="" coords="92,23,126,23,126,28,92,28"/>
+<area shape="rect" href="namespacebash.html#aaa8a766997f41ec4be7e94a85d4e8877" title=" " alt="" coords="347,13,480,38"/>
+<area shape="poly" title=" " alt="" coords="299,23,333,23,333,28,299,28"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpy3_1_1MyPyEnvBot_a4ea519c05062d53e0d65fae19e20a457_icgraph.png" border="0" usemap="#aclasspy3_1_1MyPyEnvBot_a4ea519c05062d53e0d65fae19e20a457_icgraph" alt=""/></div>
+<map name="aclasspy3_1_1MyPyEnvBot_a4ea519c05062d53e0d65fae19e20a457_icgraph" id="aclasspy3_1_1MyPyEnvBot_a4ea519c05062d53e0d65fae19e20a457_icgraph">
+<area shape="rect" title="Create a Env object" alt="" coords="261,13,348,38"/>
+<area shape="rect" href="classmy__script_1_1MyScriptManager.html#ae116721166734d0bc16dafb011c9f39f" title=" " alt="" coords="5,5,213,45"/>
+<area shape="poly" title=" " alt="" coords="248,28,214,28,214,23,248,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2b2f0353cc6ede45e35c8ffc86ca7fa6" name="a2b2f0353cc6ede45e35c8ffc86ca7fa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b2f0353cc6ede45e35c8ffc86ca7fa6">&#9670;&#160;</a></span>getCurrentPythonInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nlohmann::json getCurrentPythonInfo </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout_seconds</em> = <code>5</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Query current system python environment information as JSON string. </p>
+<p>Returns a JSON string with keys: executable, version, platform, prefix, pip_version. </p>
+
+<p class="reference">引用了 <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a> , 以及 <a class="el" href="classbash_1_1MyBashEnvBot.html#a6e397ca352da76ca41ade61383928220">MyBashEnvBot::runBash()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpy3_1_1MyPyEnvBot_a2b2f0353cc6ede45e35c8ffc86ca7fa6_cgraph.png" border="0" usemap="#aclasspy3_1_1MyPyEnvBot_a2b2f0353cc6ede45e35c8ffc86ca7fa6_cgraph" alt=""/></div>
+<map name="aclasspy3_1_1MyPyEnvBot_a2b2f0353cc6ede45e35c8ffc86ca7fa6_cgraph" id="aclasspy3_1_1MyPyEnvBot_a2b2f0353cc6ede45e35c8ffc86ca7fa6_cgraph">
+<area shape="rect" title="Query current system python environment information as JSON string." alt="" coords="5,13,167,38"/>
+<area shape="rect" href="classbash_1_1MyBashEnvBot.html#a6e397ca352da76ca41ade61383928220" title=" " alt="" coords="215,5,373,45"/>
+<area shape="poly" title=" " alt="" coords="167,23,201,23,201,28,167,28"/>
+<area shape="rect" href="namespacebash.html#aaa8a766997f41ec4be7e94a85d4e8877" title=" " alt="" coords="421,13,555,38"/>
+<area shape="poly" title=" " alt="" coords="374,23,408,23,408,28,374,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="acce3815b65ea90d0ecba58d90d2d2514" name="acce3815b65ea90d0ecba58d90d2d2514"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acce3815b65ea90d0ecba58d90d2d2514">&#9670;&#160;</a></span>getPipPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string getPipPath </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>venvPath</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the Pip executable path within the specified venv </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">venvPath</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>std::string </dd></dl>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__script_1_1MyScriptManager.html#acce3815b65ea90d0ecba58d90d2d2514">MyScriptManager::getPipPath()</a> , 以及 <a class="el" href="classpy3_1_1MyPyEnvBot.html#a77cd4dc40a0a8bf1ec65d91aa288eb84">MyPyEnvBot::listInstalled()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpy3_1_1MyPyEnvBot_acce3815b65ea90d0ecba58d90d2d2514_icgraph.png" border="0" usemap="#aclasspy3_1_1MyPyEnvBot_acce3815b65ea90d0ecba58d90d2d2514_icgraph" alt=""/></div>
+<map name="aclasspy3_1_1MyPyEnvBot_acce3815b65ea90d0ecba58d90d2d2514_icgraph" id="aclasspy3_1_1MyPyEnvBot_acce3815b65ea90d0ecba58d90d2d2514_icgraph">
+<area shape="rect" title="Get the Pip executable path within the specified venv" alt="" coords="517,42,608,67"/>
+<area shape="rect" href="classmy__script_1_1MyScriptManager.html#acce3815b65ea90d0ecba58d90d2d2514" title=" " alt="" coords="261,5,469,45"/>
+<area shape="poly" title=" " alt="" coords="503,49,469,43,470,38,504,43"/>
+<area shape="rect" href="classpy3_1_1MyPyEnvBot.html#a77cd4dc40a0a8bf1ec65d91aa288eb84" title="List installed packages in the specified venv" alt="" coords="316,70,415,95"/>
+<area shape="poly" title=" " alt="" coords="504,66,415,78,414,73,503,60"/>
+<area shape="rect" href="classmy__script_1_1MyScriptManager.html#acfd36a8f2dcfbbc8ce875864db8ee41b" title=" " alt="" coords="5,63,213,103"/>
+<area shape="poly" title=" " alt="" coords="302,85,214,85,214,80,302,80"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab741c4c7bd8cb2e9a4072b167f0c37c0" name="ab741c4c7bd8cb2e9a4072b167f0c37c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab741c4c7bd8cb2e9a4072b167f0c37c0">&#9670;&#160;</a></span>getPythonPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string getPythonPath </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>venvPath</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the Python executable path within the specified venv </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">venvPath</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>std::string </dd></dl>
+
+<p class="reference">被这些函数引用 <a class="el" href="classpy3_1_1MyPyEnvBot.html#ab7051fa49585f01472123ad64da47abe">MyPyEnvBot::checkHealth()</a>, <a class="el" href="classmy__script_1_1MyScriptManager.html#ab741c4c7bd8cb2e9a4072b167f0c37c0">MyScriptManager::getPythonPath()</a>, <a class="el" href="classpy3_1_1MyPyEnvBot.html#a601a96b73c7a4ee967eb797dee7ff92f">MyPyEnvBot::installPackages()</a> , 以及 <a class="el" href="classpy3_1_1MyPyEnvBot.html#a904aba98263b104b4e2afc0830443422">MyPyEnvBot::runPythonScript()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpy3_1_1MyPyEnvBot_ab741c4c7bd8cb2e9a4072b167f0c37c0_icgraph.png" border="0" usemap="#aclasspy3_1_1MyPyEnvBot_ab741c4c7bd8cb2e9a4072b167f0c37c0_icgraph" alt=""/></div>
+<map name="aclasspy3_1_1MyPyEnvBot_ab741c4c7bd8cb2e9a4072b167f0c37c0_icgraph" id="aclasspy3_1_1MyPyEnvBot_ab741c4c7bd8cb2e9a4072b167f0c37c0_icgraph">
+<area shape="rect" title="Get the Python executable path within the specified venv" alt="" coords="517,99,633,125"/>
+<area shape="rect" href="classpy3_1_1MyPyEnvBot.html#ab7051fa49585f01472123ad64da47abe" title="Check the health of the specified venv" alt="" coords="314,13,417,38"/>
+<area shape="poly" title=" " alt="" coords="543,94,508,73,468,53,416,37,417,32,470,48,510,68,546,89"/>
+<area shape="rect" href="classmy__script_1_1MyScriptManager.html#ab741c4c7bd8cb2e9a4072b167f0c37c0" title=" " alt="" coords="261,63,469,103"/>
+<area shape="poly" title=" " alt="" coords="503,105,469,100,470,95,504,99"/>
+<area shape="rect" href="classpy3_1_1MyPyEnvBot.html#a601a96b73c7a4ee967eb797dee7ff92f" title="Install packages into the specified venv" alt="" coords="304,127,427,153"/>
+<area shape="poly" title=" " alt="" coords="504,124,427,135,427,129,503,119"/>
+<area shape="rect" href="classpy3_1_1MyPyEnvBot.html#a904aba98263b104b4e2afc0830443422" title="Run a Python script within the specified venv" alt="" coords="303,177,428,202"/>
+<area shape="poly" title=" " alt="" coords="542,134,470,168,429,180,427,175,468,163,540,129"/>
+<area shape="rect" href="classmy__script_1_1MyScriptManager.html#a86380f140c1c01bfe818c8a5ed2a27b9" title=" " alt="" coords="5,5,213,45"/>
+<area shape="poly" title=" " alt="" coords="300,28,214,28,214,23,300,23"/>
+<area shape="rect" href="classmy__script_1_1MyScriptManager.html#aaaafe4e6da8ee59e349657c9de2d80ef" title=" " alt="" coords="5,120,213,160"/>
+<area shape="poly" title=" " alt="" coords="291,143,213,143,213,137,291,137"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a601a96b73c7a4ee967eb797dee7ff92f" name="a601a96b73c7a4ee967eb797dee7ff92f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a601a96b73c7a4ee967eb797dee7ff92f">&#9670;&#160;</a></span>installPackages()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmy__script_1_1ExecResult.html">my_script::ExecResult</a> installPackages </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>venvPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>packages</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout_seconds</em> = <code>120</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Install packages into the specified venv </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">venvPath</td><td></td></tr>
+    <tr><td class="paramname">packages</td><td></td></tr>
+    <tr><td class="paramname">timeout_seconds</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="structmy__script_1_1ExecResult.html">my_script::ExecResult</a> </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="classpy3_1_1MyPyEnvBot.html#ab741c4c7bd8cb2e9a4072b167f0c37c0">MyPyEnvBot::getPythonPath()</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a> , 以及 <a class="el" href="classbash_1_1MyBashEnvBot.html#a6e397ca352da76ca41ade61383928220">MyBashEnvBot::runBash()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__script_1_1MyScriptManager.html#aaaafe4e6da8ee59e349657c9de2d80ef">MyScriptManager::installPythonPackages()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpy3_1_1MyPyEnvBot_a601a96b73c7a4ee967eb797dee7ff92f_cgraph.png" border="0" usemap="#aclasspy3_1_1MyPyEnvBot_a601a96b73c7a4ee967eb797dee7ff92f_cgraph" alt=""/></div>
+<map name="aclasspy3_1_1MyPyEnvBot_a601a96b73c7a4ee967eb797dee7ff92f_cgraph" id="aclasspy3_1_1MyPyEnvBot_a601a96b73c7a4ee967eb797dee7ff92f_cgraph">
+<area shape="rect" title="Install packages into the specified venv" alt="" coords="5,35,128,60"/>
+<area shape="rect" href="classpy3_1_1MyPyEnvBot.html#ab741c4c7bd8cb2e9a4072b167f0c37c0" title="Get the Python executable path within the specified venv" alt="" coords="197,5,313,31"/>
+<area shape="poly" title=" " alt="" coords="128,35,183,26,184,32,129,40"/>
+<area shape="rect" href="classbash_1_1MyBashEnvBot.html#a6e397ca352da76ca41ade61383928220" title=" " alt="" coords="176,55,335,95"/>
+<area shape="poly" title=" " alt="" coords="129,54,163,59,162,64,128,59"/>
+<area shape="rect" href="namespacebash.html#aaa8a766997f41ec4be7e94a85d4e8877" title=" " alt="" coords="383,63,516,88"/>
+<area shape="poly" title=" " alt="" coords="335,73,369,73,369,78,335,78"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpy3_1_1MyPyEnvBot_a601a96b73c7a4ee967eb797dee7ff92f_icgraph.png" border="0" usemap="#aclasspy3_1_1MyPyEnvBot_a601a96b73c7a4ee967eb797dee7ff92f_icgraph" alt=""/></div>
+<map name="aclasspy3_1_1MyPyEnvBot_a601a96b73c7a4ee967eb797dee7ff92f_icgraph" id="aclasspy3_1_1MyPyEnvBot_a601a96b73c7a4ee967eb797dee7ff92f_icgraph">
+<area shape="rect" title="Install packages into the specified venv" alt="" coords="261,13,384,38"/>
+<area shape="rect" href="classmy__script_1_1MyScriptManager.html#aaaafe4e6da8ee59e349657c9de2d80ef" title=" " alt="" coords="5,5,213,45"/>
+<area shape="poly" title=" " alt="" coords="247,28,214,28,214,23,247,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a77cd4dc40a0a8bf1ec65d91aa288eb84" name="a77cd4dc40a0a8bf1ec65d91aa288eb84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77cd4dc40a0a8bf1ec65d91aa288eb84">&#9670;&#160;</a></span>listInstalled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; listInstalled </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>venvPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout_seconds</em> = <code>30</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>List installed packages in the specified venv </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">venvPath</td><td></td></tr>
+    <tr><td class="paramname">timeout_seconds</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>std::vector&lt;std::string&gt; </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="classpy3_1_1MyPyEnvBot.html#acce3815b65ea90d0ecba58d90d2d2514">MyPyEnvBot::getPipPath()</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a> , 以及 <a class="el" href="classbash_1_1MyBashEnvBot.html#a6e397ca352da76ca41ade61383928220">MyBashEnvBot::runBash()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__script_1_1MyScriptManager.html#acfd36a8f2dcfbbc8ce875864db8ee41b">MyScriptManager::listInstalledPackages()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpy3_1_1MyPyEnvBot_a77cd4dc40a0a8bf1ec65d91aa288eb84_cgraph.png" border="0" usemap="#aclasspy3_1_1MyPyEnvBot_a77cd4dc40a0a8bf1ec65d91aa288eb84_cgraph" alt=""/></div>
+<map name="aclasspy3_1_1MyPyEnvBot_a77cd4dc40a0a8bf1ec65d91aa288eb84_cgraph" id="aclasspy3_1_1MyPyEnvBot_a77cd4dc40a0a8bf1ec65d91aa288eb84_cgraph">
+<area shape="rect" title="List installed packages in the specified venv" alt="" coords="5,35,104,60"/>
+<area shape="rect" href="classpy3_1_1MyPyEnvBot.html#acce3815b65ea90d0ecba58d90d2d2514" title="Get the Pip executable path within the specified venv" alt="" coords="186,5,277,31"/>
+<area shape="poly" title=" " alt="" coords="104,37,172,25,173,30,104,42"/>
+<area shape="rect" href="classbash_1_1MyBashEnvBot.html#a6e397ca352da76ca41ade61383928220" title=" " alt="" coords="152,55,311,95"/>
+<area shape="poly" title=" " alt="" coords="104,52,139,58,138,63,104,58"/>
+<area shape="rect" href="namespacebash.html#aaa8a766997f41ec4be7e94a85d4e8877" title=" " alt="" coords="359,63,492,88"/>
+<area shape="poly" title=" " alt="" coords="311,73,345,73,345,78,311,78"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpy3_1_1MyPyEnvBot_a77cd4dc40a0a8bf1ec65d91aa288eb84_icgraph.png" border="0" usemap="#aclasspy3_1_1MyPyEnvBot_a77cd4dc40a0a8bf1ec65d91aa288eb84_icgraph" alt=""/></div>
+<map name="aclasspy3_1_1MyPyEnvBot_a77cd4dc40a0a8bf1ec65d91aa288eb84_icgraph" id="aclasspy3_1_1MyPyEnvBot_a77cd4dc40a0a8bf1ec65d91aa288eb84_icgraph">
+<area shape="rect" title="List installed packages in the specified venv" alt="" coords="261,13,360,38"/>
+<area shape="rect" href="classmy__script_1_1MyScriptManager.html#acfd36a8f2dcfbbc8ce875864db8ee41b" title=" " alt="" coords="5,5,213,45"/>
+<area shape="poly" title=" " alt="" coords="248,28,214,28,214,23,248,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9d480601c8513dea3f3e095336947945" name="a9d480601c8513dea3f3e095336947945"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d480601c8513dea3f3e095336947945">&#9670;&#160;</a></span>removeEnv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool removeEnv </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>out_msg</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remove the specified venv </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td></td></tr>
+    <tr><td class="paramname">out_msg</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a> , 以及 <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__script_1_1MyScriptManager.html#ada9dee6ff4a54e41bc466b52c47a3a28">MyScriptManager::removePythonEnv()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpy3_1_1MyPyEnvBot_a9d480601c8513dea3f3e095336947945_icgraph.png" border="0" usemap="#aclasspy3_1_1MyPyEnvBot_a9d480601c8513dea3f3e095336947945_icgraph" alt=""/></div>
+<map name="aclasspy3_1_1MyPyEnvBot_a9d480601c8513dea3f3e095336947945_icgraph" id="aclasspy3_1_1MyPyEnvBot_a9d480601c8513dea3f3e095336947945_icgraph">
+<area shape="rect" title="Remove the specified venv" alt="" coords="261,13,357,38"/>
+<area shape="rect" href="classmy__script_1_1MyScriptManager.html#ada9dee6ff4a54e41bc466b52c47a3a28" title=" " alt="" coords="5,5,213,45"/>
+<area shape="poly" title=" " alt="" coords="248,28,213,28,213,23,248,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aab48ecf9c246e227ea13111b1d867007" name="aab48ecf9c246e227ea13111b1d867007"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab48ecf9c246e227ea13111b1d867007">&#9670;&#160;</a></span>runInCurrentEnv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmy__script_1_1ExecResult.html">my_script::ExecResult</a> runInCurrentEnv </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>scriptPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>args</em> = <code>{}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout_seconds</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>memory_limit_bytes</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cpu_time_limit_seconds</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Run a Python script using the system/current python (not a venv) </p>
+
+<p class="reference">引用了 <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a> , 以及 <a class="el" href="classbash_1_1MyBashEnvBot.html#a6e397ca352da76ca41ade61383928220">MyBashEnvBot::runBash()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpy3_1_1MyPyEnvBot_aab48ecf9c246e227ea13111b1d867007_cgraph.png" border="0" usemap="#aclasspy3_1_1MyPyEnvBot_aab48ecf9c246e227ea13111b1d867007_cgraph" alt=""/></div>
+<map name="aclasspy3_1_1MyPyEnvBot_aab48ecf9c246e227ea13111b1d867007_cgraph" id="aclasspy3_1_1MyPyEnvBot_aab48ecf9c246e227ea13111b1d867007_cgraph">
+<area shape="rect" title="Run a Python script using the system/current python (not a venv)" alt="" coords="5,13,132,38"/>
+<area shape="rect" href="classbash_1_1MyBashEnvBot.html#a6e397ca352da76ca41ade61383928220" title=" " alt="" coords="180,5,339,45"/>
+<area shape="poly" title=" " alt="" coords="132,23,166,23,166,28,132,28"/>
+<area shape="rect" href="namespacebash.html#aaa8a766997f41ec4be7e94a85d4e8877" title=" " alt="" coords="387,13,520,38"/>
+<area shape="poly" title=" " alt="" coords="339,23,373,23,373,28,339,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a904aba98263b104b4e2afc0830443422" name="a904aba98263b104b4e2afc0830443422"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a904aba98263b104b4e2afc0830443422">&#9670;&#160;</a></span>runPythonScript()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmy__script_1_1ExecResult.html">my_script::ExecResult</a> runPythonScript </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>venvPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>scriptPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>args</em> = <code>{}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout_seconds</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>memory_limit_bytes</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cpu_time_limit_seconds</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Run a Python script within the specified venv </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">venvPath</td><td></td></tr>
+    <tr><td class="paramname">scriptPath</td><td></td></tr>
+    <tr><td class="paramname">args</td><td></td></tr>
+    <tr><td class="paramname">timeout_seconds</td><td></td></tr>
+    <tr><td class="paramname">memory_limit_bytes</td><td></td></tr>
+    <tr><td class="paramname">cpu_time_limit_seconds</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="structmy__script_1_1ExecResult.html">my_script::ExecResult</a> </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="classpy3_1_1MyPyEnvBot.html#ab741c4c7bd8cb2e9a4072b167f0c37c0">MyPyEnvBot::getPythonPath()</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a> , 以及 <a class="el" href="classbash_1_1MyBashEnvBot.html#a6e397ca352da76ca41ade61383928220">MyBashEnvBot::runBash()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpy3_1_1MyPyEnvBot_a904aba98263b104b4e2afc0830443422_cgraph.png" border="0" usemap="#aclasspy3_1_1MyPyEnvBot_a904aba98263b104b4e2afc0830443422_cgraph" alt=""/></div>
+<map name="aclasspy3_1_1MyPyEnvBot_a904aba98263b104b4e2afc0830443422_cgraph" id="aclasspy3_1_1MyPyEnvBot_a904aba98263b104b4e2afc0830443422_cgraph">
+<area shape="rect" title="Run a Python script within the specified venv" alt="" coords="5,35,131,60"/>
+<area shape="rect" href="classpy3_1_1MyPyEnvBot.html#ab741c4c7bd8cb2e9a4072b167f0c37c0" title="Get the Python executable path within the specified venv" alt="" coords="200,5,316,31"/>
+<area shape="poly" title=" " alt="" coords="130,35,186,26,186,32,131,40"/>
+<area shape="rect" href="classbash_1_1MyBashEnvBot.html#a6e397ca352da76ca41ade61383928220" title=" " alt="" coords="179,55,337,95"/>
+<area shape="poly" title=" " alt="" coords="131,54,165,59,164,64,130,59"/>
+<area shape="rect" href="namespacebash.html#aaa8a766997f41ec4be7e94a85d4e8877" title=" " alt="" coords="385,63,519,88"/>
+<area shape="poly" title=" " alt="" coords="338,73,372,73,372,78,338,78"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/util/my_script/py3/<a class="el" href="MyPyEnvBot_8h_source.html">MyPyEnvBot.h</a></li>
+<li>src/util/my_script/py3/<a class="el" href="MyPyEnvBot_8cpp.html">MyPyEnvBot.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

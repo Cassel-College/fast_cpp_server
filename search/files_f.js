@@ -16,5 +16,7 @@ var searchData=
   ['threadsafebuffer_2eh_13',['ThreadSafeBuffer.h',['../ThreadSafeBuffer_8h.html',1,'']]],
   ['timeutil_2ecpp_14',['TimeUtil.cpp',['../TimeUtil_8cpp.html',1,'']]],
   ['timeutil_2eh_15',['TimeUtil.h',['../TimeUtil_8h.html',1,'']]],
-  ['types_2eh_16',['Types.h',['../Types_8h.html',1,'']]]
+  ['tunacontroller_2ecpp_16',['TunaController.cpp',['../TunaController_8cpp.html',1,'']]],
+  ['tunacontroller_2eh_17',['TunaController.h',['../TunaController_8h.html',1,'']]],
+  ['types_2eh_18',['Types.h',['../Types_8h.html',1,'']]]
 ];

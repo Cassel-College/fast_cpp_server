@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_script/MyScriptManager.cpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_ce675c1b4b0ca17703f55ce8d95e2fd8.html">my_script</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">命名空间</a>  </div>
+  <div class="headertitle"><div class="title">MyScriptManager.cpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="MyScriptManager_8h_source.html">MyScriptManager.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="MyBashEnvBot_8h_source.html">bash/MyBashEnvBot.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="MyPyEnvBot_8h_source.html">py3/MyPyEnvBot.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="MyLog_8h_source.html">MyLog.h</a>&quot;</code><br />
+<code>#include &lt;filesystem&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+MyScriptManager.cpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="MyScriptManager_8cpp__incl.png" border="0" usemap="#asrc_2util_2my__script_2MyScriptManager_8cpp" alt=""/></div>
+<map name="asrc_2util_2my__script_2MyScriptManager_8cpp" id="asrc_2util_2my__script_2MyScriptManager_8cpp">
+<area shape="rect" title=" " alt="" coords="291,5,457,45"/>
+<area shape="rect" href="MyScriptManager_8h.html" title=" " alt="" coords="118,167,265,192"/>
+<area shape="poly" title=" " alt="" coords="316,48,275,68,237,95,216,124,202,155,197,152,211,121,233,91,272,63,313,43"/>
+<area shape="rect" href="MyBashEnvBot_8h.html" title=" " alt="" coords="5,93,172,119"/>
+<area shape="poly" title=" " alt="" coords="306,48,144,92,143,87,305,43"/>
+<area shape="rect" href="MyLog_8h.html" title=" " alt="" coords="390,167,467,192"/>
+<area shape="poly" title=" " alt="" coords="386,45,406,92,425,152,420,154,401,94,381,47"/>
+<area shape="rect" href="MyPyEnvBot_8h.html" title=" " alt="" coords="247,93,391,119"/>
+<area shape="poly" title=" " alt="" coords="363,47,337,84,333,80,359,44"/>
+<area shape="rect" title=" " alt="" coords="466,93,557,119"/>
+<area shape="poly" title=" " alt="" coords="408,43,480,84,478,89,406,48"/>
+<area shape="rect" title=" " alt="" coords="581,93,655,119"/>
+<area shape="poly" title=" " alt="" coords="433,43,570,86,568,92,432,48"/>
+<area shape="rect" title=" " alt="" coords="162,247,221,273"/>
+<area shape="poly" title=" " alt="" coords="194,192,194,233,189,233,189,192"/>
+<area shape="rect" title=" " alt="" coords="75,247,137,273"/>
+<area shape="poly" title=" " alt="" coords="181,194,131,240,127,236,177,190"/>
+<area shape="rect" title=" " alt="" coords="245,247,322,273"/>
+<area shape="poly" title=" " alt="" coords="207,190,261,236,258,240,203,194"/>
+<area shape="poly" title=" " alt="" coords="107,116,165,156,162,161,104,121"/>
+<area shape="poly" title=" " alt="" coords="91,119,95,153,100,172,108,191,131,217,159,238,156,242,128,221,104,193,95,174,89,154,86,119"/>
+<area shape="poly" title=" " alt="" coords="83,120,67,153,63,172,65,191,75,215,89,235,84,238,70,217,59,193,57,172,62,151,78,118"/>
+<area shape="poly" title=" " alt="" coords="144,116,377,165,376,170,143,121"/>
+<area shape="poly" title=" " alt="" coords="391,193,317,214,234,243,229,244,227,239,232,237,316,209,389,188"/>
+<area shape="poly" title=" " alt="" coords="408,195,318,243,316,238,406,190"/>
+<area shape="rect" title=" " alt="" coords="863,247,987,273"/>
+<area shape="poly" title=" " alt="" coords="468,187,480,189,584,205,666,212,748,221,852,237,871,242,870,247,851,243,747,226,665,218,583,210,479,195,467,192"/>
+<area shape="rect" title=" " alt="" coords="347,240,505,280"/>
+<area shape="poly" title=" " alt="" coords="431,192,430,226,424,226,426,192"/>
+<area shape="rect" title=" " alt="" coords="529,247,648,273"/>
+<area shape="poly" title=" " alt="" coords="453,190,554,239,552,244,451,194"/>
+<area shape="rect" title=" " alt="" coords="672,247,839,273"/>
+<area shape="poly" title=" " alt="" coords="468,187,695,242,694,247,467,193"/>
+<area shape="poly" title=" " alt="" coords="300,121,226,162,223,157,297,116"/>
+<area shape="poly" title=" " alt="" coords="326,118,332,153,330,174,323,194,288,216,231,244,228,239,285,211,319,190,325,173,326,153,320,119"/>
+<area shape="poly" title=" " alt="" coords="319,120,306,156,294,176,278,194,247,216,218,225,188,231,151,243,146,244,144,240,149,237,186,226,217,220,245,211,275,190,289,173,301,153,314,118"/>
+<area shape="poly" title=" " alt="" coords="338,116,401,157,398,161,335,121"/>
+<area shape="rect" title=" " alt="" coords="491,167,638,192"/>
+<area shape="poly" title=" " alt="" coords="359,116,513,160,511,165,358,121"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacemy__script" id="r_namespacemy__script"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__script.html">my_script</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

@@ -13,5 +13,6 @@ var searchData=
   ['estop_5fmu_5f_10',['estop_mu_',['../classmy__edge_1_1demo_1_1UUVEdge.html#a9bcd7b8c4e79c5c073ee6423acd40496',1,'my_edge::demo::UUVEdge']]],
   ['estop_5freason_11',['estop_reason',['../structmy__data_1_1EdgeStatus.html#aa0af406c708fcc720d774864e27063b8',1,'my_data::EdgeStatus']]],
   ['estop_5freason_5f_12',['estop_reason_',['../classmy__edge_1_1demo_1_1UUVEdge.html#ad396b58abeb0b99c96df140e8dc525f3',1,'my_edge::demo::UUVEdge']]],
-  ['expected_13',['expected',['../structmy__doctor_1_1CheckItem.html#a3b69631535313e83809cd7746027cc62',1,'my_doctor::CheckItem']]]
+  ['exit_5fcode_13',['exit_code',['../structmy__script_1_1ExecResult.html#ab1729158be557ef60548f7b7575ea4dd',1,'my_script::ExecResult']]],
+  ['expected_14',['expected',['../structmy__doctor_1_1CheckItem.html#a3b69631535313e83809cd7746027cc62',1,'my_doctor::CheckItem']]]
 ];

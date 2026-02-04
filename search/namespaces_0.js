@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['edge_5fmanager_0',['edge_manager',['../namespaceedge__manager.html',1,'']]]
+  ['bash_0',['bash',['../namespacebash.html',1,'']]],
+  ['bot_1',['bot',['../namespacebot.html',1,'']]]
 ];
