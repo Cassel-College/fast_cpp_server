@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['battery_5fvoltage_0',['battery_voltage',['../structmy__edge_1_1VehicleStatus.html#a18472f6318b4979228d5264f23b8a88f',1,'my_edge::VehicleStatus']]],
+  ['battery_5fvoltage_0',['battery_voltage',['../structmy__edge_1_1MavVehicleStatus.html#a18472f6318b4979228d5264f23b8a88f',1,'my_edge::MavVehicleStatus']]],
   ['biz_5fmutex_5f_1',['biz_mutex_',['../classedge__manager_1_1EdgeDevice.html#a2fc0184ec837cc4690a32de54794ec83',1,'edge_manager::EdgeDevice']]],
   ['biz_5fstatus_5f_2',['biz_status_',['../classedge__manager_1_1EdgeDevice.html#a09d2dd50c4d37a3844bd1a35a522da0d',1,'edge_manager::EdgeDevice']]],
   ['boot_5fat_5fms_3',['boot_at_ms',['../structmy__data_1_1EdgeStatus.html#a7b8fc8514b4a3ab879867ce4e8e3f867',1,'my_data::EdgeStatus']]],
-  ['boot_5fat_5fms_5f_4',['boot_at_ms_',['../classmy__edge_1_1demo_1_1UUVEdge.html#aaf585eb429176fc02a2ce6ab40ac64ea',1,'my_edge::demo::UUVEdge']]],
+  ['boot_5fat_5fms_5f_4',['boot_at_ms_',['../classmy__edge_1_1demo_1_1TUNAEdge.html#a75ea97b52b5523bf95ef90932a9a8913',1,'my_edge::demo::TUNAEdge::boot_at_ms_'],['../classmy__edge_1_1demo_1_1UUVEdge.html#aaf585eb429176fc02a2ce6ab40ac64ea',1,'my_edge::demo::UUVEdge::boot_at_ms_']]],
   ['broker_5fbin_5f_5',['broker_bin_',['../classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#ae3e6cca0b57cdc12a1ad79a7c4274a72',1,'my_mqtt_broker_manager::MyMqttBrokerManager']]],
   ['broker_5fconfig_5f_6',['broker_config_',['../classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#ad83b32e4efcb4793b038c606086db294',1,'my_mqtt_broker_manager::MyMqttBrokerManager']]],
   ['broker_5fforeground_5f_7',['broker_foreground_',['../classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#a88fb19f385969e52e323e6c97f9bec53',1,'my_mqtt_broker_manager::MyMqttBrokerManager']]],

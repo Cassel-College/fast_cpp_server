@@ -1,0 +1,1726 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: TUNAEdge类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacemy__edge.html">my_edge</a></li><li class="navelem"><a class="el" href="namespacemy__edge_1_1demo.html">demo</a></li><li class="navelem"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html">TUNAEdge</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a>  </div>
+  <div class="headertitle"><div class="title">TUNAEdge类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>TUNAEdge（第三版）  
+ <a href="classmy__edge_1_1demo_1_1TUNAEdge.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="TUNAEdge_8h_source.html">TUNAEdge.h</a>&gt;</code></p>
+<div class="dynheader">
+类 TUNAEdge 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1demo_1_1TUNAEdge__inherit__graph.png" border="0" usemap="#aTUNAEdge_inherit__map" alt="Inheritance graph"/></div>
+<map name="aTUNAEdge_inherit__map" id="aTUNAEdge_inherit__map">
+<area shape="rect" title="TUNAEdge（第三版）" alt="" coords="5,79,96,104"/>
+<area shape="rect" href="classmy__edge_1_1IEdge.html" title="Edge Runtime 接口（Init/Start 分离）" alt="" coords="21,5,80,31"/>
+<area shape="poly" title=" " alt="" coords="53,44,53,79,48,79,48,44"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+TUNAEdge 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1demo_1_1TUNAEdge__coll__graph.png" border="0" usemap="#aTUNAEdge_coll__map" alt="Collaboration graph"/></div>
+<map name="aTUNAEdge_coll__map" id="aTUNAEdge_coll__map">
+<area shape="rect" title="TUNAEdge（第三版）" alt="" coords="5,79,96,104"/>
+<area shape="rect" href="classmy__edge_1_1IEdge.html" title="Edge Runtime 接口（Init/Start 分离）" alt="" coords="21,5,80,31"/>
+<area shape="poly" title=" " alt="" coords="53,44,53,79,48,79,48,44"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a9dd54b12e9b354f37d7b7e0905333dff" id="r_a9dd54b12e9b354f37d7b7e0905333dff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a9dd54b12e9b354f37d7b7e0905333dff">TUNAEdge</a> ()</td></tr>
+<tr class="separator:a9dd54b12e9b354f37d7b7e0905333dff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94b8fc2658982a8327c112703fede479" id="r_a94b8fc2658982a8327c112703fede479"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a94b8fc2658982a8327c112703fede479">TUNAEdge</a> (const nlohmann::json &amp;cfg, std::string *err=nullptr)</td></tr>
+<tr class="separator:a94b8fc2658982a8327c112703fede479"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a589edaae153d663d5e5618a314bd8cfb" id="r_a589edaae153d663d5e5618a314bd8cfb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a589edaae153d663d5e5618a314bd8cfb">~TUNAEdge</a> () override</td></tr>
+<tr class="separator:a589edaae153d663d5e5618a314bd8cfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaad4d1e08909ec413c6e934fb718dc7" id="r_aeaad4d1e08909ec413c6e934fb718dc7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">Init</a> (const nlohmann::json &amp;cfg, std::string *err) override</td></tr>
+<tr class="memdesc:aeaad4d1e08909ec413c6e934fb718dc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化：仅装配，不启动线程  <br /></td></tr>
+<tr class="separator:aeaad4d1e08909ec413c6e934fb718dc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46b15f1cef85897da0f2fed19f72ed4c" id="r_a46b15f1cef85897da0f2fed19f72ed4c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a46b15f1cef85897da0f2fed19f72ed4c">Start</a> (std::string *err) override</td></tr>
+<tr class="memdesc:a46b15f1cef85897da0f2fed19f72ed4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">启动：启动所有 device/workflow  <br /></td></tr>
+<tr class="separator:a46b15f1cef85897da0f2fed19f72ed4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d90b8b5b262d714bf5378e4a6c54773" id="r_a0d90b8b5b262d714bf5378e4a6c54773"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmy__edge_1_1SubmitResult.html">SubmitResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">Submit</a> (const <a class="el" href="structmy__data_1_1RawCommand.html">my_data::RawCommand</a> &amp;cmd) override</td></tr>
+<tr class="memdesc:a0d90b8b5b262d714bf5378e4a6c54773"><td class="mdescLeft">&#160;</td><td class="mdescRight">Submit：命令入口（Normalize 并入队）  <br /></td></tr>
+<tr class="separator:a0d90b8b5b262d714bf5378e4a6c54773"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbb56ebb7a2b543aeedcf0c6a3716abe" id="r_acbb56ebb7a2b543aeedcf0c6a3716abe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmy__data_1_1EdgeStatus.html">my_data::EdgeStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">GetStatusSnapshot</a> () const override</td></tr>
+<tr class="memdesc:acbb56ebb7a2b543aeedcf0c6a3716abe"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取状态快照（EdgeStatus，补 queue_depth/pending/running）  <br /></td></tr>
+<tr class="separator:acbb56ebb7a2b543aeedcf0c6a3716abe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a930b466b41c7d75b7318e6ca5853b5c9" id="r_a930b466b41c7d75b7318e6ca5853b5c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a930b466b41c7d75b7318e6ca5853b5c9">SetEStop</a> (bool active, const std::string &amp;reason) override</td></tr>
+<tr class="memdesc:a930b466b41c7d75b7318e6ca5853b5c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置紧急停止  <br /></td></tr>
+<tr class="separator:a930b466b41c7d75b7318e6ca5853b5c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39b81cd3edfaba4190ff12d8c8b9d69d" id="r_a39b81cd3edfaba4190ff12d8c8b9d69d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d">Shutdown</a> () override</td></tr>
+<tr class="memdesc:a39b81cd3edfaba4190ff12d8c8b9d69d"><td class="mdescLeft">&#160;</td><td class="mdescRight">全局停机：Stop devices + Shutdown queues + Join  <br /></td></tr>
+<tr class="separator:a39b81cd3edfaba4190ff12d8c8b9d69d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14a921badc0c0cfd1d63dee98f734b80" id="r_a14a921badc0c0cfd1d63dee98f734b80"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemy__data.html#aa97613f313f7fbbad8c368f2599e3f26">my_data::EdgeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a14a921badc0c0cfd1d63dee98f734b80">Id</a> () const override</td></tr>
+<tr class="memdesc:a14a921badc0c0cfd1d63dee98f734b80"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取 Edge ID  <br /></td></tr>
+<tr class="separator:a14a921badc0c0cfd1d63dee98f734b80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac66580e78dc7f12bc1d449ee4a4d0552" id="r_ac66580e78dc7f12bc1d449ee4a4d0552"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#ac66580e78dc7f12bc1d449ee4a4d0552">EdgeType</a> () const override</td></tr>
+<tr class="memdesc:ac66580e78dc7f12bc1d449ee4a4d0552"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取 Edge 类型  <br /></td></tr>
+<tr class="separator:ac66580e78dc7f12bc1d449ee4a4d0552"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b0f7d4b008896d9b742c7c14f29c2e7" id="r_a6b0f7d4b008896d9b742c7c14f29c2e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a6b0f7d4b008896d9b742c7c14f29c2e7">ShowAnalyzeInitArgs</a> (const nlohmann::json &amp;cfg) const override</td></tr>
+<tr class="memdesc:a6b0f7d4b008896d9b742c7c14f29c2e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">解释 Init 的入参并打印到日志（用于调试/前置检查）  <br /></td></tr>
+<tr class="separator:a6b0f7d4b008896d9b742c7c14f29c2e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdccf5b178dd52cd19d8af660e6d168b" id="r_acdccf5b178dd52cd19d8af660e6d168b"><td class="memItemLeft" align="right" valign="top">nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acdccf5b178dd52cd19d8af660e6d168b">DumpInternalInfo</a> () const override</td></tr>
+<tr class="separator:acdccf5b178dd52cd19d8af660e6d168b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6ccbe6aa525e1634eab750c2bb8d93b" id="r_ad6ccbe6aa525e1634eab750c2bb8d93b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#ad6ccbe6aa525e1634eab750c2bb8d93b">AppendJsonTask</a> (const nlohmann::json &amp;task) override</td></tr>
+<tr class="memdesc:ad6ccbe6aa525e1634eab750c2bb8d93b"><td class="mdescLeft">&#160;</td><td class="mdescRight">向 Edge 添加任务。  <br /></td></tr>
+<tr class="separator:ad6ccbe6aa525e1634eab750c2bb8d93b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1381f71c6f6b97b7dfea100449fed59c" id="r_a1381f71c6f6b97b7dfea100449fed59c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a1381f71c6f6b97b7dfea100449fed59c">AppendTask</a> (const <a class="el" href="structmy__data_1_1Task.html">my_data::Task</a> &amp;task) override</td></tr>
+<tr class="memdesc:a1381f71c6f6b97b7dfea100449fed59c"><td class="mdescLeft">&#160;</td><td class="mdescRight">向 Edge 添加任务。  <br /></td></tr>
+<tr class="separator:a1381f71c6f6b97b7dfea100449fed59c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classmy__edge_1_1IEdge"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmy__edge_1_1IEdge')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classmy__edge_1_1IEdge.html">IEdge</a></td></tr>
+<tr class="memitem:a7becc3120434acd304be22e8c95e3483 inherit pub_methods_classmy__edge_1_1IEdge" id="r_a7becc3120434acd304be22e8c95e3483"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1IEdge.html#a7becc3120434acd304be22e8c95e3483">~IEdge</a> ()=default</td></tr>
+<tr class="separator:a7becc3120434acd304be22e8c95e3483 inherit pub_methods_classmy__edge_1_1IEdge"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a562130502f0dded66849b3b35dddd4f3" id="r_a562130502f0dded66849b3b35dddd4f3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a562130502f0dded66849b3b35dddd4f3">ToString</a> (<a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16e">RunState</a> s) const</td></tr>
+<tr class="separator:a562130502f0dded66849b3b35dddd4f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31b7d93ab879336b0a7b38da67eeed3f" id="r_a31b7d93ab879336b0a7b38da67eeed3f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmy__edge_1_1SubmitResult.html">SubmitResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a31b7d93ab879336b0a7b38da67eeed3f">MakeResult</a> (<a class="el" href="namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123">SubmitCode</a> code, const std::string &amp;msg, const <a class="el" href="structmy__data_1_1RawCommand.html">my_data::RawCommand</a> &amp;cmd, const <a class="el" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a> &amp;device_id=&quot;&quot;, const <a class="el" href="namespacemy__data.html#a1b9d3b04810d37cf4227a7e624359f04">my_data::TaskId</a> &amp;task_id=0, std::int64_t queue_size_after=0) const</td></tr>
+<tr class="separator:a31b7d93ab879336b0a7b38da67eeed3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97d1170c8d61790b8c6cb9af695b371c" id="r_a97d1170c8d61790b8c6cb9af695b371c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a97d1170c8d61790b8c6cb9af695b371c">StartStatusSnapshotThreadLocked</a> ()</td></tr>
+<tr class="separator:a97d1170c8d61790b8c6cb9af695b371c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5108065e97bedefe5d5c5f0a26c5334c" id="r_a5108065e97bedefe5d5c5f0a26c5334c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a5108065e97bedefe5d5c5f0a26c5334c">StopStatusSnapshotThreadLocked</a> ()</td></tr>
+<tr class="separator:a5108065e97bedefe5d5c5f0a26c5334c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf4df206592b39205ec28dc4272b70c4" id="r_acf4df206592b39205ec28dc4272b70c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acf4df206592b39205ec28dc4272b70c4">StatusSnapshotLoop</a> ()</td></tr>
+<tr class="separator:acf4df206592b39205ec28dc4272b70c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95eda853f106e39a3a44daa01155e188" id="r_a95eda853f106e39a3a44daa01155e188"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a95eda853f106e39a3a44daa01155e188">AppendTaskToTargetTaskQueue</a> (const <a class="el" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a> &amp;device_id, const <a class="el" href="structmy__data_1_1Task.html">my_data::Task</a> &amp;task)</td></tr>
+<tr class="separator:a95eda853f106e39a3a44daa01155e188"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a4f600ad4ee5566df049ec8213e99986b" id="r_a4f600ad4ee5566df049ec8213e99986b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemy__data.html#aa97613f313f7fbbad8c368f2599e3f26">my_data::EdgeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a4f600ad4ee5566df049ec8213e99986b">edge_id_</a> {&quot;tuna-default&quot;}</td></tr>
+<tr class="separator:a4f600ad4ee5566df049ec8213e99986b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fe7946ebaf9caa2ba00335aa87c2376" id="r_a8fe7946ebaf9caa2ba00335aa87c2376"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a8fe7946ebaf9caa2ba00335aa87c2376">edge_type_</a> {&quot;tuna&quot;}</td></tr>
+<tr class="separator:a8fe7946ebaf9caa2ba00335aa87c2376"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61c8f42943e4a184067a3d6e00410d38" id="r_a61c8f42943e4a184067a3d6e00410d38"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a61c8f42943e4a184067a3d6e00410d38">version_</a> {&quot;0.0&quot;}</td></tr>
+<tr class="separator:a61c8f42943e4a184067a3d6e00410d38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6d49423f76ea026d6eb25402274d258" id="r_ab6d49423f76ea026d6eb25402274d258"><td class="memItemLeft" align="right" valign="top">nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#ab6d49423f76ea026d6eb25402274d258">cfg_</a></td></tr>
+<tr class="separator:ab6d49423f76ea026d6eb25402274d258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dc127e03572e3a176890ca61612ecbd" id="r_a0dc127e03572e3a176890ca61612ecbd"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; <a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16e">RunState</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a0dc127e03572e3a176890ca61612ecbd">run_state_</a> {<a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16ea32b169f72b293ef80d35435e9894f8e2">RunState::Initializing</a>}</td></tr>
+<tr class="separator:a0dc127e03572e3a176890ca61612ecbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75ea97b52b5523bf95ef90932a9a8913" id="r_a75ea97b52b5523bf95ef90932a9a8913"><td class="memItemLeft" align="right" valign="top">std::int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a75ea97b52b5523bf95ef90932a9a8913">boot_at_ms_</a> {0}</td></tr>
+<tr class="separator:a75ea97b52b5523bf95ef90932a9a8913"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f2e808d95e8be1520f4dc1e7911fd28" id="r_a6f2e808d95e8be1520f4dc1e7911fd28"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a6f2e808d95e8be1520f4dc1e7911fd28">estop_</a> {false}</td></tr>
+<tr class="separator:a6f2e808d95e8be1520f4dc1e7911fd28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bcd7b8c4e79c5c073ee6423acd40496" id="r_a9bcd7b8c4e79c5c073ee6423acd40496"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a9bcd7b8c4e79c5c073ee6423acd40496">estop_mu_</a></td></tr>
+<tr class="separator:a9bcd7b8c4e79c5c073ee6423acd40496"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad396b58abeb0b99c96df140e8dc525f3" id="r_ad396b58abeb0b99c96df140e8dc525f3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#ad396b58abeb0b99c96df140e8dc525f3">estop_reason_</a></td></tr>
+<tr class="separator:ad396b58abeb0b99c96df140e8dc525f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a954eca40836570008806de5a41e5675a" id="r_a954eca40836570008806de5a41e5675a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a954eca40836570008806de5a41e5675a">allow_queue_when_estop_</a> {false}</td></tr>
+<tr class="separator:a954eca40836570008806de5a41e5675a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af49c8df428c22b20a08d4a30bd03a87a" id="r_af49c8df428c22b20a08d4a30bd03a87a"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; <a class="el" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a>, std::unique_ptr&lt; <a class="el" href="classmy__device_1_1IDevice.html">my_device::IDevice</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#af49c8df428c22b20a08d4a30bd03a87a">devices_</a></td></tr>
+<tr class="separator:af49c8df428c22b20a08d4a30bd03a87a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab5c8a55e8f1af292a2c4475e624c57f" id="r_aab5c8a55e8f1af292a2c4475e624c57f"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; <a class="el" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a>, std::unique_ptr&lt; <a class="el" href="classmy__control_1_1TaskQueue.html">my_control::TaskQueue</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#aab5c8a55e8f1af292a2c4475e624c57f">queues_</a></td></tr>
+<tr class="separator:aab5c8a55e8f1af292a2c4475e624c57f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75cc44d7c9b830c4eb9a6103c44e59ae" id="r_a75cc44d7c9b830c4eb9a6103c44e59ae"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a75cc44d7c9b830c4eb9a6103c44e59ae">device_type_by_id_</a></td></tr>
+<tr class="separator:a75cc44d7c9b830c4eb9a6103c44e59ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f7fceadda2b13af52092701177669f0" id="r_a3f7fceadda2b13af52092701177669f0"><td class="memItemLeft" align="right" valign="top">std::shared_mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a3f7fceadda2b13af52092701177669f0">rw_mutex_</a></td></tr>
+<tr class="separator:a3f7fceadda2b13af52092701177669f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e869474b6af6fa2dd365db02c0d0281" id="r_a5e869474b6af6fa2dd365db02c0d0281"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a5e869474b6af6fa2dd365db02c0d0281">status_snapshot_enable_</a> {false}</td></tr>
+<tr class="separator:a5e869474b6af6fa2dd365db02c0d0281"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fe26c93b6e6e1f1f91a96b3154d5613" id="r_a9fe26c93b6e6e1f1f91a96b3154d5613"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a9fe26c93b6e6e1f1f91a96b3154d5613">status_snapshot_interval_ms_</a> {5000}</td></tr>
+<tr class="separator:a9fe26c93b6e6e1f1f91a96b3154d5613"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b39e91acd655a7ecfd4054ca42f2576" id="r_a7b39e91acd655a7ecfd4054ca42f2576"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a7b39e91acd655a7ecfd4054ca42f2576">snapshot_stop_</a> {false}</td></tr>
+<tr class="separator:a7b39e91acd655a7ecfd4054ca42f2576"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4f0da63d92cd2ee7e2a7ad05c0e902b" id="r_ab4f0da63d92cd2ee7e2a7ad05c0e902b"><td class="memItemLeft" align="right" valign="top">std::thread&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#ab4f0da63d92cd2ee7e2a7ad05c0e902b">snapshot_thread_</a></td></tr>
+<tr class="separator:ab4f0da63d92cd2ee7e2a7ad05c0e902b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96f9ad4daae3ab474eac3d0e8b11fe0f" id="r_a96f9ad4daae3ab474eac3d0e8b11fe0f"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classmy__edge_1_1MyMavVehicle.html">MyMavVehicle</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a96f9ad4daae3ab474eac3d0e8b11fe0f">vehicle_</a></td></tr>
+<tr class="separator:a96f9ad4daae3ab474eac3d0e8b11fe0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>TUNAEdge（第三版） </p>
+<ul>
+<li>不再持有 persistent normalizers_by_type_</li>
+<li>在 Submit 时按需创建 normalizer（临时），使用后销毁</li>
+<li>其余成员与 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html">UUVEdge</a> 保持一致（设备、队列、snapshot、vehicle 等） </li>
+</ul>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a9dd54b12e9b354f37d7b7e0905333dff" name="a9dd54b12e9b354f37d7b7e0905333dff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dd54b12e9b354f37d7b7e0905333dff">&#9670;&#160;</a></span>TUNAEdge() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html">TUNAEdge</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a4f600ad4ee5566df049ec8213e99986b">TUNAEdge::edge_id_</a> , 以及 <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>.</p>
+
+</div>
+</div>
+<a id="a94b8fc2658982a8327c112703fede479" name="a94b8fc2658982a8327c112703fede479"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94b8fc2658982a8327c112703fede479">&#9670;&#160;</a></span>TUNAEdge() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html">TUNAEdge</a> </td>
+          <td>(</td>
+          <td class="paramtype">const nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>cfg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>err</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a4f600ad4ee5566df049ec8213e99986b">TUNAEdge::edge_id_</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">TUNAEdge::Init()</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a6b0f7d4b008896d9b742c7c14f29c2e7">TUNAEdge::ShowAnalyzeInitArgs()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1demo_1_1TUNAEdge_a94b8fc2658982a8327c112703fede479_cgraph.png" border="0" usemap="#aclassmy__edge_1_1demo_1_1TUNAEdge_a94b8fc2658982a8327c112703fede479_cgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1demo_1_1TUNAEdge_a94b8fc2658982a8327c112703fede479_cgraph" id="aclassmy__edge_1_1demo_1_1TUNAEdge_a94b8fc2658982a8327c112703fede479_cgraph">
+<area shape="rect" title=" " alt="" coords="5,131,96,157"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#aeaad4d1e08909ec413c6e934fb718dc7" title="初始化：仅装配，不启动线程" alt="" coords="202,106,245,131"/>
+<area shape="poly" title=" " alt="" coords="96,135,188,121,189,126,97,140"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a6b0f7d4b008896d9b742c7c14f29c2e7" title="解释 Init 的入参并打印到日志（用于调试/前置检查）" alt="" coords="144,155,303,181"/>
+<area shape="poly" title=" " alt="" coords="97,148,131,152,130,158,96,153"/>
+<area shape="rect" href="classmy__device_1_1MyDevice.html#a1c77f692541f351b7078a92a7dc458a4" title="创建具体设备实例" alt="" coords="351,5,517,45"/>
+<area shape="poly" title=" " alt="" coords="244,106,350,55,366,48,368,53,352,60,246,111"/>
+<area shape="rect" href="classmy__device_1_1MyDevice.html#a63f5b56942d205be905c74fdbcac1548" title=" " alt="" coords="351,69,517,109"/>
+<area shape="poly" title=" " alt="" coords="245,113,336,100,337,106,245,118"/>
+<area shape="rect" href="namespacemy__data.html#a9313adf4c1d0935b3d9526e245a23403" title="时间工具：获取当前毫秒时间戳" alt="" coords="367,134,501,159"/>
+<area shape="poly" title=" " alt="" coords="245,119,353,133,352,139,245,124"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a562130502f0dded66849b3b35dddd4f3" title=" " alt="" coords="397,183,471,209"/>
+<area shape="poly" title=" " alt="" coords="246,121,304,140,328,154,352,168,384,180,383,185,350,173,325,159,302,145,244,126"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a589edaae153d663d5e5618a314bd8cfb" name="a589edaae153d663d5e5618a314bd8cfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a589edaae153d663d5e5618a314bd8cfb">&#9670;&#160;</a></span>~TUNAEdge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html">TUNAEdge</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a4f600ad4ee5566df049ec8213e99986b">TUNAEdge::edge_id_</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d">TUNAEdge::Shutdown()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1demo_1_1TUNAEdge_a589edaae153d663d5e5618a314bd8cfb_cgraph.png" border="0" usemap="#aclassmy__edge_1_1demo_1_1TUNAEdge_a589edaae153d663d5e5618a314bd8cfb_cgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1demo_1_1TUNAEdge_a589edaae153d663d5e5618a314bd8cfb_cgraph" id="aclassmy__edge_1_1demo_1_1TUNAEdge_a589edaae153d663d5e5618a314bd8cfb_cgraph">
+<area shape="rect" title=" " alt="" coords="5,42,108,67"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d" title="全局停机：Stop devices + Shutdown queues + Join" alt="" coords="156,42,243,67"/>
+<area shape="poly" title=" " alt="" coords="108,52,142,52,142,57,108,57"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a5108065e97bedefe5d5c5f0a26c5334c" title=" " alt="" coords="291,5,488,45"/>
+<area shape="poly" title=" " alt="" coords="242,45,277,40,278,45,243,51"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a562130502f0dded66849b3b35dddd4f3" title=" " alt="" coords="352,70,427,95"/>
+<area shape="poly" title=" " alt="" coords="243,58,339,73,338,78,242,64"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="ad6ccbe6aa525e1634eab750c2bb8d93b" name="ad6ccbe6aa525e1634eab750c2bb8d93b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6ccbe6aa525e1634eab750c2bb8d93b">&#9670;&#160;</a></span>AppendJsonTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AppendJsonTask </td>
+          <td>(</td>
+          <td class="paramtype">const nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>task</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>向 Edge 添加任务。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">task</td><td>要添加的任务的 JSON 表示。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>如果成功添加任务则返回 true，否则返回 false。 </dd></dl>
+
+<p>实现了 <a class="el" href="classmy__edge_1_1IEdge.html#a440a5a618c768b291970886af4da128f">IEdge</a>.</p>
+
+<p class="reference">引用了 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a95eda853f106e39a3a44daa01155e188">TUNAEdge::AppendTaskToTargetTaskQueue()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a4f600ad4ee5566df049ec8213e99986b">TUNAEdge::edge_id_</a>, <a class="el" href="namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6">MyLog::Error()</a>, <a class="el" href="structmy__data_1_1Task.html#a2a9cf913f1d9683cdea2d4106dfb8802">Task::fromJson()</a>, <a class="el" href="namespacemy__data_1_1jsonutil.html#ae4d2199a0a0cd74b256332de45ea68a4">my_data::jsonutil::GetStringOr()</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a3f7fceadda2b13af52092701177669f0">TUNAEdge::rw_mutex_</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1demo_1_1TUNAEdge_ad6ccbe6aa525e1634eab750c2bb8d93b_cgraph.png" border="0" usemap="#aclassmy__edge_1_1demo_1_1TUNAEdge_ad6ccbe6aa525e1634eab750c2bb8d93b_cgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1demo_1_1TUNAEdge_ad6ccbe6aa525e1634eab750c2bb8d93b_cgraph" id="aclassmy__edge_1_1demo_1_1TUNAEdge_ad6ccbe6aa525e1634eab750c2bb8d93b_cgraph">
+<area shape="rect" title="向 Edge 添加任务。" alt="" coords="5,58,132,84"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a95eda853f106e39a3a44daa01155e188" title=" " alt="" coords="180,33,405,58"/>
+<area shape="poly" title=" " alt="" coords="132,61,167,57,167,62,133,66"/>
+<area shape="rect" href="namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6" title=" " alt="" coords="480,8,584,33"/>
+<area shape="poly" title=" " alt="" coords="89,56,130,35,179,18,256,6,333,3,406,5,467,9,466,15,405,10,333,8,256,12,181,23,132,40,92,61"/>
+<area shape="rect" href="structmy__data_1_1Task.html#a2a9cf913f1d9683cdea2d4106dfb8802" title=" " alt="" coords="201,192,384,217"/>
+<area shape="poly" title=" " alt="" coords="93,81,260,182,257,187,90,86"/>
+<area shape="rect" href="namespacemy__data_1_1jsonutil.html#ae4d2199a0a0cd74b256332de45ea68a4" title="从 json 中读取 string，key 不存在或为 null 则返回默认值" alt="" coords="659,127,801,167"/>
+<area shape="poly" title=" " alt="" coords="133,76,646,135,645,140,132,81"/>
+<area shape="poly" title=" " alt="" coords="405,31,465,25,466,30,406,36"/>
+<area shape="rect" href="structmy__data_1_1TaskResult.html#a60ff4fd9d09ec9c3ff58980ef05d6fe6" title="从 json 解析" alt="" coords="453,184,611,224"/>
+<area shape="poly" title=" " alt="" coords="384,202,439,202,439,207,384,207"/>
+<area shape="rect" href="namespacemy__data_1_1jsonutil.html#ac42292cdcdd29239af5ee9bdb0b6d8ef" title="从 json 中读取 int64，key 不存在或为 null 则返回默认值" alt="" coords="659,200,801,240"/>
+<area shape="poly" title=" " alt="" coords="345,214,397,225,454,234,532,238,610,234,645,230,645,236,611,239,532,243,453,239,396,231,344,220"/>
+<area shape="rect" href="namespacemy__data_1_1jsonutil.html#a494c8f5acc19636cc8c10304bf44bc0e" title="从 json 中读取 int，key 不存在或为 null 则返回默认值" alt="" coords="659,283,801,323"/>
+<area shape="poly" title=" " alt="" coords="341,214,454,243,646,284,645,289,453,248,340,220"/>
+<area shape="poly" title=" " alt="" coords="349,189,453,170,644,150,645,155,454,175,350,194"/>
+<area shape="poly" title=" " alt="" coords="611,208,645,211,644,216,611,213"/>
+<area shape="poly" title=" " alt="" coords="575,222,678,275,676,279,572,227"/>
+<area shape="poly" title=" " alt="" coords="601,182,646,168,648,173,602,187"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1381f71c6f6b97b7dfea100449fed59c" name="a1381f71c6f6b97b7dfea100449fed59c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1381f71c6f6b97b7dfea100449fed59c">&#9670;&#160;</a></span>AppendTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AppendTask </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structmy__data_1_1Task.html">my_data::Task</a> &amp;&#160;</td>
+          <td class="paramname"><em>task</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>向 Edge 添加任务。 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">task</td><td>要添加的任务对象。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>如果成功添加任务则返回 true，否则返回 false。 </dd></dl>
+
+<p>实现了 <a class="el" href="classmy__edge_1_1IEdge.html#a7018dbffbe4da9d9bb4ee5f143ad6350">IEdge</a>.</p>
+
+<p class="reference">引用了 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a95eda853f106e39a3a44daa01155e188">TUNAEdge::AppendTaskToTargetTaskQueue()</a>, <a class="el" href="structmy__data_1_1Task.html#a47449c9a7a840d9fa6b4a69688305e10">Task::device_id</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a4f600ad4ee5566df049ec8213e99986b">TUNAEdge::edge_id_</a>, <a class="el" href="namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6">MyLog::Error()</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a3f7fceadda2b13af52092701177669f0">TUNAEdge::rw_mutex_</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1demo_1_1TUNAEdge_a1381f71c6f6b97b7dfea100449fed59c_cgraph.png" border="0" usemap="#aclassmy__edge_1_1demo_1_1TUNAEdge_a1381f71c6f6b97b7dfea100449fed59c_cgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1demo_1_1TUNAEdge_a1381f71c6f6b97b7dfea100449fed59c_cgraph" id="aclassmy__edge_1_1demo_1_1TUNAEdge_a1381f71c6f6b97b7dfea100449fed59c_cgraph">
+<area shape="rect" title="向 Edge 添加任务。" alt="" coords="5,31,105,56"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a95eda853f106e39a3a44daa01155e188" title=" " alt="" coords="153,5,379,31"/>
+<area shape="poly" title=" " alt="" coords="105,35,147,30,147,35,106,40"/>
+<area shape="rect" href="namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6" title=" " alt="" coords="427,31,531,56"/>
+<area shape="poly" title=" " alt="" coords="105,41,413,41,413,46,105,46"/>
+<area shape="poly" title=" " alt="" coords="373,28,413,33,413,38,373,33"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a95eda853f106e39a3a44daa01155e188" name="a95eda853f106e39a3a44daa01155e188"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95eda853f106e39a3a44daa01155e188">&#9670;&#160;</a></span>AppendTaskToTargetTaskQueue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AppendTaskToTargetTaskQueue </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a> &amp;&#160;</td>
+          <td class="paramname"><em>device_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structmy__data_1_1Task.html">my_data::Task</a> &amp;&#160;</td>
+          <td class="paramname"><em>task</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a4f600ad4ee5566df049ec8213e99986b">TUNAEdge::edge_id_</a>, <a class="el" href="namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6">MyLog::Error()</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#aab5c8a55e8f1af292a2c4475e624c57f">TUNAEdge::queues_</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a3f7fceadda2b13af52092701177669f0">TUNAEdge::rw_mutex_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#ad6ccbe6aa525e1634eab750c2bb8d93b">TUNAEdge::AppendJsonTask()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a1381f71c6f6b97b7dfea100449fed59c">TUNAEdge::AppendTask()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1demo_1_1TUNAEdge_a95eda853f106e39a3a44daa01155e188_cgraph.png" border="0" usemap="#aclassmy__edge_1_1demo_1_1TUNAEdge_a95eda853f106e39a3a44daa01155e188_cgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1demo_1_1TUNAEdge_a95eda853f106e39a3a44daa01155e188_cgraph" id="aclassmy__edge_1_1demo_1_1TUNAEdge_a95eda853f106e39a3a44daa01155e188_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,231,31"/>
+<area shape="rect" href="namespaceMyLog.html#a756256e26ff9f6ad216c08e048acc5f6" title=" " alt="" coords="279,5,383,31"/>
+<area shape="poly" title=" " alt="" coords="231,15,265,15,265,21,231,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1demo_1_1TUNAEdge_a95eda853f106e39a3a44daa01155e188_icgraph.png" border="0" usemap="#aclassmy__edge_1_1demo_1_1TUNAEdge_a95eda853f106e39a3a44daa01155e188_icgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1demo_1_1TUNAEdge_a95eda853f106e39a3a44daa01155e188_icgraph" id="aclassmy__edge_1_1demo_1_1TUNAEdge_a95eda853f106e39a3a44daa01155e188_icgraph">
+<area shape="rect" title=" " alt="" coords="180,31,405,56"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#ad6ccbe6aa525e1634eab750c2bb8d93b" title="向 Edge 添加任务。" alt="" coords="5,5,132,31"/>
+<area shape="poly" title=" " alt="" coords="166,32,132,28,133,22,167,26"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a1381f71c6f6b97b7dfea100449fed59c" title="向 Edge 添加任务。" alt="" coords="19,55,119,80"/>
+<area shape="poly" title=" " alt="" coords="166,60,119,65,119,59,166,54"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="acdccf5b178dd52cd19d8af660e6d168b" name="acdccf5b178dd52cd19d8af660e6d168b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdccf5b178dd52cd19d8af660e6d168b">&#9670;&#160;</a></span>DumpInternalInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nlohmann::json DumpInternalInfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现了 <a class="el" href="classmy__edge_1_1IEdge.html#a2cbe3c7f548498eb15d911537896b376">IEdge</a>.</p>
+
+<p class="reference">引用了 <a class="el" href="structmy__edge_1_1MavVehicleStatus.html#a95a7a3c9dec5f98703b42898ccd417a1">MavVehicleStatus::armed</a>, <a class="el" href="structmy__edge_1_1MavVehicleStatus.html#a18472f6318b4979228d5264f23b8a88f">MavVehicleStatus::battery_voltage</a>, <a class="el" href="structmy__edge_1_1MavVehicleStatus.html#ab36823025f12a809217f7771125658c2">MavVehicleStatus::connected</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#af49c8df428c22b20a08d4a30bd03a87a">TUNAEdge::devices_</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a4f600ad4ee5566df049ec8213e99986b">TUNAEdge::edge_id_</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a8fe7946ebaf9caa2ba00335aa87c2376">TUNAEdge::edge_type_</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a6f2e808d95e8be1520f4dc1e7911fd28">TUNAEdge::estop_</a>, <a class="el" href="structmy__edge_1_1MavVehicleStatus.html#a78dc832d3a5b4cdba4c8259553d39387">MavVehicleStatus::flight_mode</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#aab5c8a55e8f1af292a2c4475e624c57f">TUNAEdge::queues_</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a0dc127e03572e3a176890ca61612ecbd">TUNAEdge::run_state_</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a3f7fceadda2b13af52092701177669f0">TUNAEdge::rw_mutex_</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a562130502f0dded66849b3b35dddd4f3">TUNAEdge::ToString()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a96f9ad4daae3ab474eac3d0e8b11fe0f">TUNAEdge::vehicle_</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a61c8f42943e4a184067a3d6e00410d38">TUNAEdge::version_</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1demo_1_1TUNAEdge_acdccf5b178dd52cd19d8af660e6d168b_cgraph.png" border="0" usemap="#aclassmy__edge_1_1demo_1_1TUNAEdge_acdccf5b178dd52cd19d8af660e6d168b_cgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1demo_1_1TUNAEdge_acdccf5b178dd52cd19d8af660e6d168b_cgraph" id="aclassmy__edge_1_1demo_1_1TUNAEdge_acdccf5b178dd52cd19d8af660e6d168b_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,141,31"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a562130502f0dded66849b3b35dddd4f3" title=" " alt="" coords="189,5,264,31"/>
+<area shape="poly" title=" " alt="" coords="142,15,175,15,175,21,142,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac66580e78dc7f12bc1d449ee4a4d0552" name="ac66580e78dc7f12bc1d449ee4a4d0552"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac66580e78dc7f12bc1d449ee4a4d0552">&#9670;&#160;</a></span>EdgeType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string EdgeType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取 Edge 类型 </p>
+<dl class="section return"><dt>返回</dt><dd>std::string </dd></dl>
+
+<p>实现了 <a class="el" href="classmy__edge_1_1IEdge.html#a3291f517b24bce7dfd0557f46a3eae1a">IEdge</a>.</p>
+
+</div>
+</div>
+<a id="acbb56ebb7a2b543aeedcf0c6a3716abe" name="acbb56ebb7a2b543aeedcf0c6a3716abe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbb56ebb7a2b543aeedcf0c6a3716abe">&#9670;&#160;</a></span>GetStatusSnapshot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmy__data_1_1EdgeStatus.html">my_data::EdgeStatus</a> GetStatusSnapshot </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取状态快照（EdgeStatus，补 queue_depth/pending/running） </p>
+
+<p>实现了 <a class="el" href="classmy__edge_1_1IEdge.html#addca2278689b784b5ee28ae266ec58b6">IEdge</a>.</p>
+
+<p class="reference">引用了 <a class="el" href="structmy__data_1_1EdgeStatus.html#a7b8fc8514b4a3ab879867ce4e8e3f867">EdgeStatus::boot_at_ms</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a75ea97b52b5523bf95ef90932a9a8913">TUNAEdge::boot_at_ms_</a>, <a class="el" href="namespacemy__data.html#ab741123951602d5912c8b5aba6bf3372ad8a942ef2b04672adfafef0ad817a407">my_data::Busy</a>, <a class="el" href="namespacemy__data.html#a30e0a55991505e8f6aed4feb61c131e4aaa95669cd5732a57e8f6467705f06642">my_data::Degraded</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a879f5747a0f337ee3d098ed2a3ec120e">EdgeStatus::devices</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#af49c8df428c22b20a08d4a30bd03a87a">TUNAEdge::devices_</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#af22da43be64b543c95019aedb667869f">EdgeStatus::edge_id</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a4f600ad4ee5566df049ec8213e99986b">TUNAEdge::edge_id_</a>, <a class="el" href="namespacemy__data.html#a30e0a55991505e8f6aed4feb61c131e4a30ed97dc28749ab04581aeb9febe8ea2">my_data::EStop</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a6f2e808d95e8be1520f4dc1e7911fd28">TUNAEdge::estop_</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a933cfe7fd6b47e6f196a06e7f16ba8f7">EdgeStatus::estop_active</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a9bcd7b8c4e79c5c073ee6423acd40496">TUNAEdge::estop_mu_</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#aa0af406c708fcc720d774864e27063b8">EdgeStatus::estop_reason</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#ad396b58abeb0b99c96df140e8dc525f3">TUNAEdge::estop_reason_</a>, <a class="el" href="namespacemy__data.html#a30e0a55991505e8f6aed4feb61c131e4a32b169f72b293ef80d35435e9894f8e2">my_data::Initializing</a>, <a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16ea32b169f72b293ef80d35435e9894f8e2">my_edge::Initializing</a>, <a class="el" href="MyLog_8h.html#a58669a9dee26041e1cd68f2e62214b0f">MYLOG_DEBUG</a>, <a class="el" href="structmy__data_1_1DeviceStatus.html#a570f70dac26e232386edfcdaa3549c6d">DeviceStatus::queue_depth</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#aab5c8a55e8f1af292a2c4475e624c57f">TUNAEdge::queues_</a>, <a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16eae7d31fc0602fb2ede144d18cdffd816b">my_edge::Ready</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#aff8572eb2424678f34d665b8b17aae32">EdgeStatus::run_state</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a0dc127e03572e3a176890ca61612ecbd">TUNAEdge::run_state_</a>, <a class="el" href="namespacemy__data.html#a30e0a55991505e8f6aed4feb61c131e4a5bda814c4aedb126839228f1a3d92f09">my_data::Running</a>, <a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16ea5bda814c4aedb126839228f1a3d92f09">my_edge::Running</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a3f7fceadda2b13af52092701177669f0">TUNAEdge::rw_mutex_</a>, <a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16ea7b7ecb39b9e110c2a31409a1672bad23">my_edge::Stopping</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a5d78ec5965940b9d384f2b448fd45ee8">EdgeStatus::tasks_pending_total</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a823b629498fc0cb094d3bc1d8c9320e3">EdgeStatus::tasks_running_total</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a96f9ad4daae3ab474eac3d0e8b11fe0f">TUNAEdge::vehicle_</a>, <a class="el" href="structmy__data_1_1EdgeStatus.html#a728b969e374aba4020e39aea7e02e64f">EdgeStatus::version</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a61c8f42943e4a184067a3d6e00410d38">TUNAEdge::version_</a> , 以及 <a class="el" href="structmy__data_1_1DeviceStatus.html#a80ffc9c37fe70d68ed7247de9e383269">DeviceStatus::work_state</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acf4df206592b39205ec28dc4272b70c4">TUNAEdge::StatusSnapshotLoop()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1demo_1_1TUNAEdge_acbb56ebb7a2b543aeedcf0c6a3716abe_icgraph.png" border="0" usemap="#aclassmy__edge_1_1demo_1_1TUNAEdge_acbb56ebb7a2b543aeedcf0c6a3716abe_icgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1demo_1_1TUNAEdge_acbb56ebb7a2b543aeedcf0c6a3716abe_icgraph" id="aclassmy__edge_1_1demo_1_1TUNAEdge_acbb56ebb7a2b543aeedcf0c6a3716abe_icgraph">
+<area shape="rect" title="获取状态快照（EdgeStatus，补 queue_depth/pending/running）" alt="" coords="556,13,703,38"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acf4df206592b39205ec28dc4272b70c4" title=" " alt="" coords="353,13,508,38"/>
+<area shape="poly" title=" " alt="" coords="542,28,508,28,508,23,542,23"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a97d1170c8d61790b8c6cb9af695b371c" title=" " alt="" coords="107,5,305,45"/>
+<area shape="poly" title=" " alt="" coords="339,28,305,28,305,23,339,23"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a46b15f1cef85897da0f2fed19f72ed4c" title="启动：启动所有 device/workflow" alt="" coords="5,13,59,38"/>
+<area shape="poly" title=" " alt="" coords="93,28,59,28,59,23,93,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a14a921badc0c0cfd1d63dee98f734b80" name="a14a921badc0c0cfd1d63dee98f734b80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14a921badc0c0cfd1d63dee98f734b80">&#9670;&#160;</a></span>Id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemy__data.html#aa97613f313f7fbbad8c368f2599e3f26">my_data::EdgeId</a> Id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取 Edge ID </p>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="namespacemy__data.html#aa97613f313f7fbbad8c368f2599e3f26" title="边缘执行器ID">my_data::EdgeId</a> </dd></dl>
+
+<p>实现了 <a class="el" href="classmy__edge_1_1IEdge.html#a951e7cb90a822e527ac15fe273b4972a">IEdge</a>.</p>
+
+</div>
+</div>
+<a id="aeaad4d1e08909ec413c6e934fb718dc7" name="aeaad4d1e08909ec413c6e934fb718dc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaad4d1e08909ec413c6e934fb718dc7">&#9670;&#160;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Init </td>
+          <td>(</td>
+          <td class="paramtype">const nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>cfg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>err</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>初始化：仅装配，不启动线程 </p>
+
+<p>实现了 <a class="el" href="classmy__edge_1_1IEdge.html#a318f0835a0611f2d747aa141e674af64">IEdge</a>.</p>
+
+<p class="reference">引用了 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a954eca40836570008806de5a41e5675a">TUNAEdge::allow_queue_when_estop_</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a75ea97b52b5523bf95ef90932a9a8913">TUNAEdge::boot_at_ms_</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#ab6d49423f76ea026d6eb25402274d258">TUNAEdge::cfg_</a>, <a class="el" href="classmy__device_1_1MyDevice.html#a1c77f692541f351b7078a92a7dc458a4">MyDevice::Create()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a75cc44d7c9b830c4eb9a6103c44e59ae">TUNAEdge::device_type_by_id_</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#af49c8df428c22b20a08d4a30bd03a87a">TUNAEdge::devices_</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a4f600ad4ee5566df049ec8213e99986b">TUNAEdge::edge_id_</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a8fe7946ebaf9caa2ba00335aa87c2376">TUNAEdge::edge_type_</a>, <a class="el" href="classmy__device_1_1MyDevice.html#a63f5b56942d205be905c74fdbcac1548">MyDevice::GetInstance()</a>, <a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16ea32b169f72b293ef80d35435e9894f8e2">my_edge::Initializing</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="namespacemy__data.html#a9313adf4c1d0935b3d9526e245a23403">my_data::NowMs()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#aab5c8a55e8f1af292a2c4475e624c57f">TUNAEdge::queues_</a>, <a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16eae7d31fc0602fb2ede144d18cdffd816b">my_edge::Ready</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a0dc127e03572e3a176890ca61612ecbd">TUNAEdge::run_state_</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a3f7fceadda2b13af52092701177669f0">TUNAEdge::rw_mutex_</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a562130502f0dded66849b3b35dddd4f3">TUNAEdge::ToString()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a96f9ad4daae3ab474eac3d0e8b11fe0f">TUNAEdge::vehicle_</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a61c8f42943e4a184067a3d6e00410d38">TUNAEdge::version_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a94b8fc2658982a8327c112703fede479">TUNAEdge::TUNAEdge()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1demo_1_1TUNAEdge_aeaad4d1e08909ec413c6e934fb718dc7_cgraph.png" border="0" usemap="#aclassmy__edge_1_1demo_1_1TUNAEdge_aeaad4d1e08909ec413c6e934fb718dc7_cgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1demo_1_1TUNAEdge_aeaad4d1e08909ec413c6e934fb718dc7_cgraph" id="aclassmy__edge_1_1demo_1_1TUNAEdge_aeaad4d1e08909ec413c6e934fb718dc7_cgraph">
+<area shape="rect" title="初始化：仅装配，不启动线程" alt="" coords="5,106,48,131"/>
+<area shape="rect" href="classmy__device_1_1MyDevice.html#a1c77f692541f351b7078a92a7dc458a4" title="创建具体设备实例" alt="" coords="96,5,263,45"/>
+<area shape="poly" title=" " alt="" coords="38,104,62,80,95,55,106,49,108,54,97,60,66,84,41,108"/>
+<area shape="rect" href="classmy__device_1_1MyDevice.html#a63f5b56942d205be905c74fdbcac1548" title=" " alt="" coords="96,69,263,109"/>
+<area shape="poly" title=" " alt="" coords="48,112,82,105,83,111,49,117"/>
+<area shape="rect" href="namespacemy__data.html#a9313adf4c1d0935b3d9526e245a23403" title="时间工具：获取当前毫秒时间戳" alt="" coords="112,134,247,159"/>
+<area shape="poly" title=" " alt="" coords="49,120,99,129,98,134,48,125"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a562130502f0dded66849b3b35dddd4f3" title=" " alt="" coords="142,183,217,209"/>
+<area shape="poly" title=" " alt="" coords="43,129,68,149,97,168,130,181,128,186,95,173,64,154,40,133"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1demo_1_1TUNAEdge_aeaad4d1e08909ec413c6e934fb718dc7_icgraph.png" border="0" usemap="#aclassmy__edge_1_1demo_1_1TUNAEdge_aeaad4d1e08909ec413c6e934fb718dc7_icgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1demo_1_1TUNAEdge_aeaad4d1e08909ec413c6e934fb718dc7_icgraph" id="aclassmy__edge_1_1demo_1_1TUNAEdge_aeaad4d1e08909ec413c6e934fb718dc7_icgraph">
+<area shape="rect" title="初始化：仅装配，不启动线程" alt="" coords="144,5,187,31"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a94b8fc2658982a8327c112703fede479" title=" " alt="" coords="5,5,96,31"/>
+<area shape="poly" title=" " alt="" coords="130,21,96,21,96,15,130,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a31b7d93ab879336b0a7b38da67eeed3f" name="a31b7d93ab879336b0a7b38da67eeed3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31b7d93ab879336b0a7b38da67eeed3f">&#9670;&#160;</a></span>MakeResult()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmy__edge_1_1SubmitResult.html">SubmitResult</a> MakeResult </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123">SubmitCode</a>&#160;</td>
+          <td class="paramname"><em>code</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structmy__data_1_1RawCommand.html">my_data::RawCommand</a> &amp;&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a> &amp;&#160;</td>
+          <td class="paramname"><em>device_id</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacemy__data.html#a1b9d3b04810d37cf4227a7e624359f04">my_data::TaskId</a> &amp;&#160;</td>
+          <td class="paramname"><em>task_id</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::int64_t&#160;</td>
+          <td class="paramname"><em>queue_size_after</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="structmy__edge_1_1SubmitResult.html#a8e917b709d37e81cc98952ee3eafe53a">SubmitResult::code</a>, <a class="el" href="structmy__data_1_1RawCommand.html#a472457d1112db62f4ba446013be35517">RawCommand::command_id</a>, <a class="el" href="structmy__edge_1_1SubmitResult.html#afd8b683aa30fbfd3583d9dde72c1a124">SubmitResult::command_id</a>, <a class="el" href="structmy__edge_1_1SubmitResult.html#a359b04c509e360ee3b29f70f8613f894">SubmitResult::device_id</a>, <a class="el" href="structmy__edge_1_1SubmitResult.html#a8e66bd7ab8e4d233e434794c9004724a">SubmitResult::edge_id</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a4f600ad4ee5566df049ec8213e99986b">TUNAEdge::edge_id_</a>, <a class="el" href="structmy__edge_1_1SubmitResult.html#a36bd74109f547f7f8198faf5a12d2879">SubmitResult::message</a>, <a class="el" href="structmy__edge_1_1SubmitResult.html#a2ed473ea97eaaa2af939fa3d7dbc583a">SubmitResult::queue_size_after</a> , 以及 <a class="el" href="structmy__edge_1_1SubmitResult.html#a76ae69131c1aab7d9450f4e7205174ef">SubmitResult::task_id</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">TUNAEdge::Submit()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1demo_1_1TUNAEdge_a31b7d93ab879336b0a7b38da67eeed3f_icgraph.png" border="0" usemap="#aclassmy__edge_1_1demo_1_1TUNAEdge_a31b7d93ab879336b0a7b38da67eeed3f_icgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1demo_1_1TUNAEdge_a31b7d93ab879336b0a7b38da67eeed3f_icgraph" id="aclassmy__edge_1_1demo_1_1TUNAEdge_a31b7d93ab879336b0a7b38da67eeed3f_icgraph">
+<area shape="rect" title=" " alt="" coords="121,5,220,31"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a0d90b8b5b262d714bf5378e4a6c54773" title="Submit：命令入口（Normalize 并入队）" alt="" coords="5,5,73,31"/>
+<area shape="poly" title=" " alt="" coords="107,21,74,21,74,15,107,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a930b466b41c7d75b7318e6ca5853b5c9" name="a930b466b41c7d75b7318e6ca5853b5c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a930b466b41c7d75b7318e6ca5853b5c9">&#9670;&#160;</a></span>SetEStop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetEStop </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>active</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>reason</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置紧急停止 </p>
+
+<p>实现了 <a class="el" href="classmy__edge_1_1IEdge.html#a40c608fbe6f7a113fc20b8f7f5e8758a">IEdge</a>.</p>
+
+<p class="reference">引用了 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a4f600ad4ee5566df049ec8213e99986b">TUNAEdge::edge_id_</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a6f2e808d95e8be1520f4dc1e7911fd28">TUNAEdge::estop_</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a9bcd7b8c4e79c5c073ee6423acd40496">TUNAEdge::estop_mu_</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#ad396b58abeb0b99c96df140e8dc525f3">TUNAEdge::estop_reason_</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a3f7fceadda2b13af52092701177669f0">TUNAEdge::rw_mutex_</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a96f9ad4daae3ab474eac3d0e8b11fe0f">TUNAEdge::vehicle_</a>.</p>
+
+</div>
+</div>
+<a id="a6b0f7d4b008896d9b742c7c14f29c2e7" name="a6b0f7d4b008896d9b742c7c14f29c2e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b0f7d4b008896d9b742c7c14f29c2e7">&#9670;&#160;</a></span>ShowAnalyzeInitArgs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ShowAnalyzeInitArgs </td>
+          <td>(</td>
+          <td class="paramtype">const nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>cfg</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>解释 Init 的入参并打印到日志（用于调试/前置检查） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cfg</td><td>Init 时接收的 JSON 配置（不会修改） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>实现了 <a class="el" href="classmy__edge_1_1IEdge.html#a7b2646cea46ea711c70b6332bbc779d4">IEdge</a>.</p>
+
+<p class="reference">引用了 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a4f600ad4ee5566df049ec8213e99986b">TUNAEdge::edge_id_</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a3f7fceadda2b13af52092701177669f0">TUNAEdge::rw_mutex_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a94b8fc2658982a8327c112703fede479">TUNAEdge::TUNAEdge()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1demo_1_1TUNAEdge_a6b0f7d4b008896d9b742c7c14f29c2e7_icgraph.png" border="0" usemap="#aclassmy__edge_1_1demo_1_1TUNAEdge_a6b0f7d4b008896d9b742c7c14f29c2e7_icgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1demo_1_1TUNAEdge_a6b0f7d4b008896d9b742c7c14f29c2e7_icgraph" id="aclassmy__edge_1_1demo_1_1TUNAEdge_a6b0f7d4b008896d9b742c7c14f29c2e7_icgraph">
+<area shape="rect" title="解释 Init 的入参并打印到日志（用于调试/前置检查）" alt="" coords="144,5,303,31"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a94b8fc2658982a8327c112703fede479" title=" " alt="" coords="5,5,96,31"/>
+<area shape="poly" title=" " alt="" coords="130,21,96,21,96,15,130,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a39b81cd3edfaba4190ff12d8c8b9d69d" name="a39b81cd3edfaba4190ff12d8c8b9d69d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39b81cd3edfaba4190ff12d8c8b9d69d">&#9670;&#160;</a></span>Shutdown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Shutdown </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>全局停机：Stop devices + Shutdown queues + Join </p>
+
+<p>实现了 <a class="el" href="classmy__edge_1_1IEdge.html#abe320d57c3dd6c601efaa6e3eeed73d1">IEdge</a>.</p>
+
+<p class="reference">引用了 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a75cc44d7c9b830c4eb9a6103c44e59ae">TUNAEdge::device_type_by_id_</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#af49c8df428c22b20a08d4a30bd03a87a">TUNAEdge::devices_</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a4f600ad4ee5566df049ec8213e99986b">TUNAEdge::edge_id_</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#aab5c8a55e8f1af292a2c4475e624c57f">TUNAEdge::queues_</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a0dc127e03572e3a176890ca61612ecbd">TUNAEdge::run_state_</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a3f7fceadda2b13af52092701177669f0">TUNAEdge::rw_mutex_</a>, <a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16eac23e2b09ebe6bf4cb5e2a9abe85c0be2">my_edge::Stopped</a>, <a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16ea7b7ecb39b9e110c2a31409a1672bad23">my_edge::Stopping</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a5108065e97bedefe5d5c5f0a26c5334c">TUNAEdge::StopStatusSnapshotThreadLocked()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a562130502f0dded66849b3b35dddd4f3">TUNAEdge::ToString()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a96f9ad4daae3ab474eac3d0e8b11fe0f">TUNAEdge::vehicle_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a589edaae153d663d5e5618a314bd8cfb">TUNAEdge::~TUNAEdge()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1demo_1_1TUNAEdge_a39b81cd3edfaba4190ff12d8c8b9d69d_cgraph.png" border="0" usemap="#aclassmy__edge_1_1demo_1_1TUNAEdge_a39b81cd3edfaba4190ff12d8c8b9d69d_cgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1demo_1_1TUNAEdge_a39b81cd3edfaba4190ff12d8c8b9d69d_cgraph" id="aclassmy__edge_1_1demo_1_1TUNAEdge_a39b81cd3edfaba4190ff12d8c8b9d69d_cgraph">
+<area shape="rect" title="全局停机：Stop devices + Shutdown queues + Join" alt="" coords="5,42,92,67"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a5108065e97bedefe5d5c5f0a26c5334c" title=" " alt="" coords="140,5,337,45"/>
+<area shape="poly" title=" " alt="" coords="92,45,126,40,127,45,92,51"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a562130502f0dded66849b3b35dddd4f3" title=" " alt="" coords="201,70,276,95"/>
+<area shape="poly" title=" " alt="" coords="92,58,188,73,187,78,92,64"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1demo_1_1TUNAEdge_a39b81cd3edfaba4190ff12d8c8b9d69d_icgraph.png" border="0" usemap="#aclassmy__edge_1_1demo_1_1TUNAEdge_a39b81cd3edfaba4190ff12d8c8b9d69d_icgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1demo_1_1TUNAEdge_a39b81cd3edfaba4190ff12d8c8b9d69d_icgraph" id="aclassmy__edge_1_1demo_1_1TUNAEdge_a39b81cd3edfaba4190ff12d8c8b9d69d_icgraph">
+<area shape="rect" title="全局停机：Stop devices + Shutdown queues + Join" alt="" coords="156,5,243,31"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a589edaae153d663d5e5618a314bd8cfb" title=" " alt="" coords="5,5,108,31"/>
+<area shape="poly" title=" " alt="" coords="143,21,108,21,108,15,143,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a46b15f1cef85897da0f2fed19f72ed4c" name="a46b15f1cef85897da0f2fed19f72ed4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46b15f1cef85897da0f2fed19f72ed4c">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Start </td>
+          <td>(</td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>err</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>启动：启动所有 device/workflow </p>
+
+<p>实现了 <a class="el" href="classmy__edge_1_1IEdge.html#a744bb0d3d651433606080b5b26d35e0c">IEdge</a>.</p>
+
+<p class="reference">引用了 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#ab6d49423f76ea026d6eb25402274d258">TUNAEdge::cfg_</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#af49c8df428c22b20a08d4a30bd03a87a">TUNAEdge::devices_</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a4f600ad4ee5566df049ec8213e99986b">TUNAEdge::edge_id_</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a6f2e808d95e8be1520f4dc1e7911fd28">TUNAEdge::estop_</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#aab5c8a55e8f1af292a2c4475e624c57f">TUNAEdge::queues_</a>, <a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16eae7d31fc0602fb2ede144d18cdffd816b">my_edge::Ready</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a0dc127e03572e3a176890ca61612ecbd">TUNAEdge::run_state_</a>, <a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16ea5bda814c4aedb126839228f1a3d92f09">my_edge::Running</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a3f7fceadda2b13af52092701177669f0">TUNAEdge::rw_mutex_</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a97d1170c8d61790b8c6cb9af695b371c">TUNAEdge::StartStatusSnapshotThreadLocked()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a562130502f0dded66849b3b35dddd4f3">TUNAEdge::ToString()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a96f9ad4daae3ab474eac3d0e8b11fe0f">TUNAEdge::vehicle_</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1demo_1_1TUNAEdge_a46b15f1cef85897da0f2fed19f72ed4c_cgraph.png" border="0" usemap="#aclassmy__edge_1_1demo_1_1TUNAEdge_a46b15f1cef85897da0f2fed19f72ed4c_cgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1demo_1_1TUNAEdge_a46b15f1cef85897da0f2fed19f72ed4c_cgraph" id="aclassmy__edge_1_1demo_1_1TUNAEdge_a46b15f1cef85897da0f2fed19f72ed4c_cgraph">
+<area shape="rect" title="启动：启动所有 device/workflow" alt="" coords="5,59,59,84"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a97d1170c8d61790b8c6cb9af695b371c" title=" " alt="" coords="107,22,305,62"/>
+<area shape="poly" title=" " alt="" coords="59,64,93,58,93,64,59,70"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a562130502f0dded66849b3b35dddd4f3" title=" " alt="" coords="169,87,243,112"/>
+<area shape="poly" title=" " alt="" coords="59,73,155,89,154,94,59,78"/>
+<area shape="rect" href="classmy__db_1_1MyDB.html#a6fdab88dc790c78b3bdc1d91cad600f0" title=" " alt="" coords="353,5,552,31"/>
+<area shape="poly" title=" " alt="" coords="305,30,339,26,340,32,306,35"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acf4df206592b39205ec28dc4272b70c4" title=" " alt="" coords="375,55,530,80"/>
+<area shape="poly" title=" " alt="" coords="306,50,362,55,361,61,305,55"/>
+<area shape="rect" href="classmy__db_1_1demo_1_1StatusRepository.html#a967b2d5f2133dbe3f28d84248d6a311a" title=" " alt="" coords="600,18,831,58"/>
+<area shape="poly" title=" " alt="" coords="530,56,586,50,587,55,531,61"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe" title="获取状态快照（EdgeStatus，补 queue_depth/pending/running）" alt="" coords="642,83,789,108"/>
+<area shape="poly" title=" " alt="" coords="531,73,629,83,628,89,530,78"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a97d1170c8d61790b8c6cb9af695b371c" name="a97d1170c8d61790b8c6cb9af695b371c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97d1170c8d61790b8c6cb9af695b371c">&#9670;&#160;</a></span>StartStatusSnapshotThreadLocked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StartStatusSnapshotThreadLocked </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a4f600ad4ee5566df049ec8213e99986b">TUNAEdge::edge_id_</a>, <a class="el" href="classmy__db_1_1MyDB.html#a6fdab88dc790c78b3bdc1d91cad600f0">MyDB::GetInstance()</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a7b39e91acd655a7ecfd4054ca42f2576">TUNAEdge::snapshot_stop_</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#ab4f0da63d92cd2ee7e2a7ad05c0e902b">TUNAEdge::snapshot_thread_</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a5e869474b6af6fa2dd365db02c0d0281">TUNAEdge::status_snapshot_enable_</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a9fe26c93b6e6e1f1f91a96b3154d5613">TUNAEdge::status_snapshot_interval_ms_</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acf4df206592b39205ec28dc4272b70c4">TUNAEdge::StatusSnapshotLoop()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a46b15f1cef85897da0f2fed19f72ed4c">TUNAEdge::Start()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1demo_1_1TUNAEdge_a97d1170c8d61790b8c6cb9af695b371c_cgraph.png" border="0" usemap="#aclassmy__edge_1_1demo_1_1TUNAEdge_a97d1170c8d61790b8c6cb9af695b371c_cgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1demo_1_1TUNAEdge_a97d1170c8d61790b8c6cb9af695b371c_cgraph" id="aclassmy__edge_1_1demo_1_1TUNAEdge_a97d1170c8d61790b8c6cb9af695b371c_cgraph">
+<area shape="rect" title=" " alt="" coords="5,23,204,63"/>
+<area shape="rect" href="classmy__db_1_1MyDB.html#a6fdab88dc790c78b3bdc1d91cad600f0" title=" " alt="" coords="252,5,451,31"/>
+<area shape="poly" title=" " alt="" coords="204,30,238,27,239,32,204,36"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acf4df206592b39205ec28dc4272b70c4" title=" " alt="" coords="274,55,429,80"/>
+<area shape="poly" title=" " alt="" coords="204,50,260,56,260,61,204,56"/>
+<area shape="rect" href="classmy__db_1_1demo_1_1StatusRepository.html#a967b2d5f2133dbe3f28d84248d6a311a" title=" " alt="" coords="499,18,729,58"/>
+<area shape="poly" title=" " alt="" coords="429,56,485,50,485,55,429,61"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe" title="获取状态快照（EdgeStatus，补 queue_depth/pending/running）" alt="" coords="541,83,687,108"/>
+<area shape="poly" title=" " alt="" coords="429,73,527,83,527,89,429,78"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1demo_1_1TUNAEdge_a97d1170c8d61790b8c6cb9af695b371c_icgraph.png" border="0" usemap="#aclassmy__edge_1_1demo_1_1TUNAEdge_a97d1170c8d61790b8c6cb9af695b371c_icgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1demo_1_1TUNAEdge_a97d1170c8d61790b8c6cb9af695b371c_icgraph" id="aclassmy__edge_1_1demo_1_1TUNAEdge_a97d1170c8d61790b8c6cb9af695b371c_icgraph">
+<area shape="rect" title=" " alt="" coords="107,5,305,45"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a46b15f1cef85897da0f2fed19f72ed4c" title="启动：启动所有 device/workflow" alt="" coords="5,13,59,38"/>
+<area shape="poly" title=" " alt="" coords="93,28,59,28,59,23,93,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="acf4df206592b39205ec28dc4272b70c4" name="acf4df206592b39205ec28dc4272b70c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf4df206592b39205ec28dc4272b70c4">&#9670;&#160;</a></span>StatusSnapshotLoop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StatusSnapshotLoop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="structmy__data_1_1EdgeStatus.html#a879f5747a0f337ee3d098ed2a3ec120e">EdgeStatus::devices</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a4f600ad4ee5566df049ec8213e99986b">TUNAEdge::edge_id_</a>, <a class="el" href="classmy__db_1_1demo_1_1StatusRepository.html#a967b2d5f2133dbe3f28d84248d6a311a">StatusRepository::GetInstance()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">TUNAEdge::GetStatusSnapshot()</a>, <a class="el" href="MyLog_8h.html#a58669a9dee26041e1cd68f2e62214b0f">MYLOG_DEBUG</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a7b39e91acd655a7ecfd4054ca42f2576">TUNAEdge::snapshot_stop_</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a9fe26c93b6e6e1f1f91a96b3154d5613">TUNAEdge::status_snapshot_interval_ms_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a97d1170c8d61790b8c6cb9af695b371c">TUNAEdge::StartStatusSnapshotThreadLocked()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1demo_1_1TUNAEdge_acf4df206592b39205ec28dc4272b70c4_cgraph.png" border="0" usemap="#aclassmy__edge_1_1demo_1_1TUNAEdge_acf4df206592b39205ec28dc4272b70c4_cgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1demo_1_1TUNAEdge_acf4df206592b39205ec28dc4272b70c4_cgraph" id="aclassmy__edge_1_1demo_1_1TUNAEdge_acf4df206592b39205ec28dc4272b70c4_cgraph">
+<area shape="rect" title=" " alt="" coords="5,42,160,67"/>
+<area shape="rect" href="classmy__db_1_1demo_1_1StatusRepository.html#a967b2d5f2133dbe3f28d84248d6a311a" title=" " alt="" coords="208,5,439,45"/>
+<area shape="poly" title=" " alt="" coords="160,43,194,38,195,44,161,48"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe" title="获取状态快照（EdgeStatus，补 queue_depth/pending/running）" alt="" coords="250,70,397,95"/>
+<area shape="poly" title=" " alt="" coords="161,61,237,70,236,75,160,66"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1demo_1_1TUNAEdge_acf4df206592b39205ec28dc4272b70c4_icgraph.png" border="0" usemap="#aclassmy__edge_1_1demo_1_1TUNAEdge_acf4df206592b39205ec28dc4272b70c4_icgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1demo_1_1TUNAEdge_acf4df206592b39205ec28dc4272b70c4_icgraph" id="aclassmy__edge_1_1demo_1_1TUNAEdge_acf4df206592b39205ec28dc4272b70c4_icgraph">
+<area shape="rect" title=" " alt="" coords="353,13,508,38"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a97d1170c8d61790b8c6cb9af695b371c" title=" " alt="" coords="107,5,305,45"/>
+<area shape="poly" title=" " alt="" coords="339,28,305,28,305,23,339,23"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a46b15f1cef85897da0f2fed19f72ed4c" title="启动：启动所有 device/workflow" alt="" coords="5,13,59,38"/>
+<area shape="poly" title=" " alt="" coords="93,28,59,28,59,23,93,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5108065e97bedefe5d5c5f0a26c5334c" name="a5108065e97bedefe5d5c5f0a26c5334c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5108065e97bedefe5d5c5f0a26c5334c">&#9670;&#160;</a></span>StopStatusSnapshotThreadLocked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StopStatusSnapshotThreadLocked </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a4f600ad4ee5566df049ec8213e99986b">TUNAEdge::edge_id_</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a7b39e91acd655a7ecfd4054ca42f2576">TUNAEdge::snapshot_stop_</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#ab4f0da63d92cd2ee7e2a7ad05c0e902b">TUNAEdge::snapshot_thread_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d">TUNAEdge::Shutdown()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1demo_1_1TUNAEdge_a5108065e97bedefe5d5c5f0a26c5334c_icgraph.png" border="0" usemap="#aclassmy__edge_1_1demo_1_1TUNAEdge_a5108065e97bedefe5d5c5f0a26c5334c_icgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1demo_1_1TUNAEdge_a5108065e97bedefe5d5c5f0a26c5334c_icgraph" id="aclassmy__edge_1_1demo_1_1TUNAEdge_a5108065e97bedefe5d5c5f0a26c5334c_icgraph">
+<area shape="rect" title=" " alt="" coords="291,5,488,45"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d" title="全局停机：Stop devices + Shutdown queues + Join" alt="" coords="156,13,243,38"/>
+<area shape="poly" title=" " alt="" coords="277,28,243,28,243,23,277,23"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a589edaae153d663d5e5618a314bd8cfb" title=" " alt="" coords="5,13,108,38"/>
+<area shape="poly" title=" " alt="" coords="143,28,108,28,108,23,143,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0d90b8b5b262d714bf5378e4a6c54773" name="a0d90b8b5b262d714bf5378e4a6c54773"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d90b8b5b262d714bf5378e4a6c54773">&#9670;&#160;</a></span>Submit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmy__edge_1_1SubmitResult.html">SubmitResult</a> Submit </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structmy__data_1_1RawCommand.html">my_data::RawCommand</a> &amp;&#160;</td>
+          <td class="paramname"><em>cmd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Submit：命令入口（Normalize 并入队） </p>
+
+<p>实现了 <a class="el" href="classmy__edge_1_1IEdge.html#a3712183223e5f485d82c12ba25933af6">IEdge</a>.</p>
+
+<p class="reference">引用了 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a954eca40836570008806de5a41e5675a">TUNAEdge::allow_queue_when_estop_</a>, <a class="el" href="structmy__data_1_1RawCommand.html#a472457d1112db62f4ba446013be35517">RawCommand::command_id</a>, <a class="el" href="classmy__control_1_1MyControl.html#aad117ef61f9bcaed5bc89f3a90d4d8c3">MyControl::CreateNormalizer()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a75cc44d7c9b830c4eb9a6103c44e59ae">TUNAEdge::device_type_by_id_</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a4f600ad4ee5566df049ec8213e99986b">TUNAEdge::edge_id_</a>, <a class="el" href="namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123a30ed97dc28749ab04581aeb9febe8ea2">my_edge::EStop</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a6f2e808d95e8be1520f4dc1e7911fd28">TUNAEdge::estop_</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a9bcd7b8c4e79c5c073ee6423acd40496">TUNAEdge::estop_mu_</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#ad396b58abeb0b99c96df140e8dc525f3">TUNAEdge::estop_reason_</a>, <a class="el" href="classmy__control_1_1MyControl.html#a867d8de756c913549ea1427caf29ee65">MyControl::GetInstance()</a>, <a class="el" href="namespacemy__data_1_1jsonutil.html#ae4d2199a0a0cd74b256332de45ea68a4">my_data::jsonutil::GetStringOr()</a>, <a class="el" href="namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123a8462b58246e70e5c83e5b939a9332cb5">my_edge::InternalError</a>, <a class="el" href="namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123ae01b8763e8076df4395e3fa649286e67">my_edge::InvalidCommand</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a31b7d93ab879336b0a7b38da67eeed3f">TUNAEdge::MakeResult()</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>, <a class="el" href="namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123ae457ff7a83d0a8681fa483f898788515">my_edge::NotRunning</a>, <a class="el" href="namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123aa60852f204ed8028c1c58808b746d115">my_edge::Ok</a>, <a class="el" href="structmy__data_1_1RawCommand.html#aa9b683d9bd3d648dea1fd050185b31b1">RawCommand::payload</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#aab5c8a55e8f1af292a2c4475e624c57f">TUNAEdge::queues_</a>, <a class="el" href="namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123abdf0d370094dbc12551f8bcb592eee60">my_edge::QueueShutdown</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a0dc127e03572e3a176890ca61612ecbd">TUNAEdge::run_state_</a>, <a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16ea5bda814c4aedb126839228f1a3d92f09">my_edge::Running</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a3f7fceadda2b13af52092701177669f0">TUNAEdge::rw_mutex_</a>, <a class="el" href="structmy__data_1_1RawCommand.html#a14ee39a9a59b08e6fad497e78e450f7e">RawCommand::source</a>, <a class="el" href="structmy__data_1_1Task.html#aa3e1e8eb26b010a643bd4a49d570662e">Task::task_id</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a562130502f0dded66849b3b35dddd4f3">TUNAEdge::ToString()</a> , 以及 <a class="el" href="namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123a594aff36300fd5882c438e822a84df0c">my_edge::UnknownDevice</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1demo_1_1TUNAEdge_a0d90b8b5b262d714bf5378e4a6c54773_cgraph.png" border="0" usemap="#aclassmy__edge_1_1demo_1_1TUNAEdge_a0d90b8b5b262d714bf5378e4a6c54773_cgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1demo_1_1TUNAEdge_a0d90b8b5b262d714bf5378e4a6c54773_cgraph" id="aclassmy__edge_1_1demo_1_1TUNAEdge_a0d90b8b5b262d714bf5378e4a6c54773_cgraph">
+<area shape="rect" title="Submit：命令入口（Normalize 并入队）" alt="" coords="5,141,73,166"/>
+<area shape="rect" href="classmy__control_1_1MyControl.html#aad117ef61f9bcaed5bc89f3a90d4d8c3" title=" " alt="" coords="121,5,292,45"/>
+<area shape="poly" title=" " alt="" coords="46,139,75,98,96,75,120,55,129,49,131,54,123,59,100,79,80,102,51,142"/>
+<area shape="rect" href="classmy__control_1_1MyControl.html#a867d8de756c913549ea1427caf29ee65" title=" " alt="" coords="121,69,292,109"/>
+<area shape="poly" title=" " alt="" coords="71,138,120,119,139,112,141,117,122,124,73,143"/>
+<area shape="rect" href="namespacemy__data_1_1jsonutil.html#ae4d2199a0a0cd74b256332de45ea68a4" title="从 json 中读取 string，key 不存在或为 null 则返回默认值" alt="" coords="135,133,278,173"/>
+<area shape="poly" title=" " alt="" coords="74,151,121,151,121,156,74,156"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a31b7d93ab879336b0a7b38da67eeed3f" title=" " alt="" coords="157,198,256,223"/>
+<area shape="poly" title=" " alt="" coords="72,164,122,183,149,191,147,197,120,188,70,169"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a562130502f0dded66849b3b35dddd4f3" title=" " alt="" coords="169,247,244,273"/>
+<area shape="poly" title=" " alt="" coords="52,165,81,198,123,232,157,247,155,252,120,237,78,202,48,168"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a562130502f0dded66849b3b35dddd4f3" name="a562130502f0dded66849b3b35dddd4f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a562130502f0dded66849b3b35dddd4f3">&#9670;&#160;</a></span>ToString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ToString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16e">RunState</a>&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16ea32b169f72b293ef80d35435e9894f8e2">my_edge::Initializing</a>, <a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16eae7d31fc0602fb2ede144d18cdffd816b">my_edge::Ready</a>, <a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16ea5bda814c4aedb126839228f1a3d92f09">my_edge::Running</a>, <a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16eac23e2b09ebe6bf4cb5e2a9abe85c0be2">my_edge::Stopped</a> , 以及 <a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16ea7b7ecb39b9e110c2a31409a1672bad23">my_edge::Stopping</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acdccf5b178dd52cd19d8af660e6d168b">TUNAEdge::DumpInternalInfo()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">TUNAEdge::Init()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d">TUNAEdge::Shutdown()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a46b15f1cef85897da0f2fed19f72ed4c">TUNAEdge::Start()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">TUNAEdge::Submit()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1demo_1_1TUNAEdge_a562130502f0dded66849b3b35dddd4f3_icgraph.png" border="0" usemap="#aclassmy__edge_1_1demo_1_1TUNAEdge_a562130502f0dded66849b3b35dddd4f3_icgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1demo_1_1TUNAEdge_a562130502f0dded66849b3b35dddd4f3_icgraph" id="aclassmy__edge_1_1demo_1_1TUNAEdge_a562130502f0dded66849b3b35dddd4f3_icgraph">
+<area shape="rect" title=" " alt="" coords="340,104,415,129"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acdccf5b178dd52cd19d8af660e6d168b" title=" " alt="" coords="156,5,292,31"/>
+<area shape="poly" title=" " alt="" coords="353,96,325,69,291,44,267,33,270,28,293,40,328,65,357,92"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#aeaad4d1e08909ec413c6e934fb718dc7" title="初始化：仅装配，不启动线程" alt="" coords="203,55,245,80"/>
+<area shape="poly" title=" " alt="" coords="326,103,245,76,246,71,328,98"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d" title="全局停机：Stop devices + Shutdown queues + Join" alt="" coords="181,104,267,129"/>
+<area shape="poly" title=" " alt="" coords="327,119,268,119,268,114,327,114"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a46b15f1cef85897da0f2fed19f72ed4c" title="启动：启动所有 device/workflow" alt="" coords="197,153,251,179"/>
+<area shape="poly" title=" " alt="" coords="328,135,252,160,250,155,326,130"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a0d90b8b5b262d714bf5378e4a6c54773" title="Submit：命令入口（Normalize 并入队）" alt="" coords="190,203,258,228"/>
+<area shape="poly" title=" " alt="" coords="356,141,328,167,293,192,259,208,257,203,291,188,324,163,353,137"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a94b8fc2658982a8327c112703fede479" title=" " alt="" coords="11,55,102,80"/>
+<area shape="poly" title=" " alt="" coords="189,70,102,70,102,65,189,65"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a589edaae153d663d5e5618a314bd8cfb" title=" " alt="" coords="5,104,108,129"/>
+<area shape="poly" title=" " alt="" coords="167,119,108,119,108,114,167,114"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">结构体成员变量说明</h2>
+<a id="a954eca40836570008806de5a41e5675a" name="a954eca40836570008806de5a41e5675a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a954eca40836570008806de5a41e5675a">&#9670;&#160;</a></span>allow_queue_when_estop_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool allow_queue_when_estop_ {false}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">TUNAEdge::Init()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">TUNAEdge::Submit()</a>.</p>
+
+</div>
+</div>
+<a id="a75ea97b52b5523bf95ef90932a9a8913" name="a75ea97b52b5523bf95ef90932a9a8913"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75ea97b52b5523bf95ef90932a9a8913">&#9670;&#160;</a></span>boot_at_ms_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::int64_t boot_at_ms_ {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">TUNAEdge::GetStatusSnapshot()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">TUNAEdge::Init()</a>.</p>
+
+</div>
+</div>
+<a id="ab6d49423f76ea026d6eb25402274d258" name="ab6d49423f76ea026d6eb25402274d258"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6d49423f76ea026d6eb25402274d258">&#9670;&#160;</a></span>cfg_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nlohmann::json cfg_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">TUNAEdge::Init()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a46b15f1cef85897da0f2fed19f72ed4c">TUNAEdge::Start()</a>.</p>
+
+</div>
+</div>
+<a id="a75cc44d7c9b830c4eb9a6103c44e59ae" name="a75cc44d7c9b830c4eb9a6103c44e59ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75cc44d7c9b830c4eb9a6103c44e59ae">&#9670;&#160;</a></span>device_type_by_id_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;std::string, std::string&gt; device_type_by_id_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">TUNAEdge::Init()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d">TUNAEdge::Shutdown()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">TUNAEdge::Submit()</a>.</p>
+
+</div>
+</div>
+<a id="af49c8df428c22b20a08d4a30bd03a87a" name="af49c8df428c22b20a08d4a30bd03a87a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af49c8df428c22b20a08d4a30bd03a87a">&#9670;&#160;</a></span>devices_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;<a class="el" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a>, std::unique_ptr&lt;<a class="el" href="classmy__device_1_1IDevice.html">my_device::IDevice</a>&gt; &gt; devices_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acdccf5b178dd52cd19d8af660e6d168b">TUNAEdge::DumpInternalInfo()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">TUNAEdge::GetStatusSnapshot()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">TUNAEdge::Init()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d">TUNAEdge::Shutdown()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a46b15f1cef85897da0f2fed19f72ed4c">TUNAEdge::Start()</a>.</p>
+
+</div>
+</div>
+<a id="a4f600ad4ee5566df049ec8213e99986b" name="a4f600ad4ee5566df049ec8213e99986b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f600ad4ee5566df049ec8213e99986b">&#9670;&#160;</a></span>edge_id_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemy__data.html#aa97613f313f7fbbad8c368f2599e3f26">my_data::EdgeId</a> edge_id_ {&quot;tuna-default&quot;}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#ad6ccbe6aa525e1634eab750c2bb8d93b">TUNAEdge::AppendJsonTask()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a1381f71c6f6b97b7dfea100449fed59c">TUNAEdge::AppendTask()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a95eda853f106e39a3a44daa01155e188">TUNAEdge::AppendTaskToTargetTaskQueue()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acdccf5b178dd52cd19d8af660e6d168b">TUNAEdge::DumpInternalInfo()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">TUNAEdge::GetStatusSnapshot()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">TUNAEdge::Init()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a31b7d93ab879336b0a7b38da67eeed3f">TUNAEdge::MakeResult()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a930b466b41c7d75b7318e6ca5853b5c9">TUNAEdge::SetEStop()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a6b0f7d4b008896d9b742c7c14f29c2e7">TUNAEdge::ShowAnalyzeInitArgs()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d">TUNAEdge::Shutdown()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a46b15f1cef85897da0f2fed19f72ed4c">TUNAEdge::Start()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a97d1170c8d61790b8c6cb9af695b371c">TUNAEdge::StartStatusSnapshotThreadLocked()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acf4df206592b39205ec28dc4272b70c4">TUNAEdge::StatusSnapshotLoop()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a5108065e97bedefe5d5c5f0a26c5334c">TUNAEdge::StopStatusSnapshotThreadLocked()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">TUNAEdge::Submit()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a9dd54b12e9b354f37d7b7e0905333dff">TUNAEdge::TUNAEdge()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a94b8fc2658982a8327c112703fede479">TUNAEdge::TUNAEdge()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a589edaae153d663d5e5618a314bd8cfb">TUNAEdge::~TUNAEdge()</a>.</p>
+
+</div>
+</div>
+<a id="a8fe7946ebaf9caa2ba00335aa87c2376" name="a8fe7946ebaf9caa2ba00335aa87c2376"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fe7946ebaf9caa2ba00335aa87c2376">&#9670;&#160;</a></span>edge_type_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string edge_type_ {&quot;tuna&quot;}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acdccf5b178dd52cd19d8af660e6d168b">TUNAEdge::DumpInternalInfo()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">TUNAEdge::Init()</a>.</p>
+
+</div>
+</div>
+<a id="a6f2e808d95e8be1520f4dc1e7911fd28" name="a6f2e808d95e8be1520f4dc1e7911fd28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f2e808d95e8be1520f4dc1e7911fd28">&#9670;&#160;</a></span>estop_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;bool&gt; estop_ {false}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acdccf5b178dd52cd19d8af660e6d168b">TUNAEdge::DumpInternalInfo()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">TUNAEdge::GetStatusSnapshot()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a930b466b41c7d75b7318e6ca5853b5c9">TUNAEdge::SetEStop()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a46b15f1cef85897da0f2fed19f72ed4c">TUNAEdge::Start()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">TUNAEdge::Submit()</a>.</p>
+
+</div>
+</div>
+<a id="a9bcd7b8c4e79c5c073ee6423acd40496" name="a9bcd7b8c4e79c5c073ee6423acd40496"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bcd7b8c4e79c5c073ee6423acd40496">&#9670;&#160;</a></span>estop_mu_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex estop_mu_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">TUNAEdge::GetStatusSnapshot()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a930b466b41c7d75b7318e6ca5853b5c9">TUNAEdge::SetEStop()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">TUNAEdge::Submit()</a>.</p>
+
+</div>
+</div>
+<a id="ad396b58abeb0b99c96df140e8dc525f3" name="ad396b58abeb0b99c96df140e8dc525f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad396b58abeb0b99c96df140e8dc525f3">&#9670;&#160;</a></span>estop_reason_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string estop_reason_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">TUNAEdge::GetStatusSnapshot()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a930b466b41c7d75b7318e6ca5853b5c9">TUNAEdge::SetEStop()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">TUNAEdge::Submit()</a>.</p>
+
+</div>
+</div>
+<a id="aab5c8a55e8f1af292a2c4475e624c57f" name="aab5c8a55e8f1af292a2c4475e624c57f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab5c8a55e8f1af292a2c4475e624c57f">&#9670;&#160;</a></span>queues_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;<a class="el" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a>, std::unique_ptr&lt;<a class="el" href="classmy__control_1_1TaskQueue.html">my_control::TaskQueue</a>&gt; &gt; queues_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a95eda853f106e39a3a44daa01155e188">TUNAEdge::AppendTaskToTargetTaskQueue()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acdccf5b178dd52cd19d8af660e6d168b">TUNAEdge::DumpInternalInfo()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">TUNAEdge::GetStatusSnapshot()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">TUNAEdge::Init()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d">TUNAEdge::Shutdown()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a46b15f1cef85897da0f2fed19f72ed4c">TUNAEdge::Start()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">TUNAEdge::Submit()</a>.</p>
+
+</div>
+</div>
+<a id="a0dc127e03572e3a176890ca61612ecbd" name="a0dc127e03572e3a176890ca61612ecbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dc127e03572e3a176890ca61612ecbd">&#9670;&#160;</a></span>run_state_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;<a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16e">RunState</a>&gt; run_state_ {<a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16ea32b169f72b293ef80d35435e9894f8e2">RunState::Initializing</a>}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acdccf5b178dd52cd19d8af660e6d168b">TUNAEdge::DumpInternalInfo()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">TUNAEdge::GetStatusSnapshot()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">TUNAEdge::Init()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d">TUNAEdge::Shutdown()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a46b15f1cef85897da0f2fed19f72ed4c">TUNAEdge::Start()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">TUNAEdge::Submit()</a>.</p>
+
+</div>
+</div>
+<a id="a3f7fceadda2b13af52092701177669f0" name="a3f7fceadda2b13af52092701177669f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f7fceadda2b13af52092701177669f0">&#9670;&#160;</a></span>rw_mutex_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_mutex rw_mutex_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#ad6ccbe6aa525e1634eab750c2bb8d93b">TUNAEdge::AppendJsonTask()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a1381f71c6f6b97b7dfea100449fed59c">TUNAEdge::AppendTask()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a95eda853f106e39a3a44daa01155e188">TUNAEdge::AppendTaskToTargetTaskQueue()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acdccf5b178dd52cd19d8af660e6d168b">TUNAEdge::DumpInternalInfo()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">TUNAEdge::GetStatusSnapshot()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">TUNAEdge::Init()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a930b466b41c7d75b7318e6ca5853b5c9">TUNAEdge::SetEStop()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a6b0f7d4b008896d9b742c7c14f29c2e7">TUNAEdge::ShowAnalyzeInitArgs()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d">TUNAEdge::Shutdown()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a46b15f1cef85897da0f2fed19f72ed4c">TUNAEdge::Start()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">TUNAEdge::Submit()</a>.</p>
+
+</div>
+</div>
+<a id="a7b39e91acd655a7ecfd4054ca42f2576" name="a7b39e91acd655a7ecfd4054ca42f2576"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b39e91acd655a7ecfd4054ca42f2576">&#9670;&#160;</a></span>snapshot_stop_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;bool&gt; snapshot_stop_ {false}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a97d1170c8d61790b8c6cb9af695b371c">TUNAEdge::StartStatusSnapshotThreadLocked()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acf4df206592b39205ec28dc4272b70c4">TUNAEdge::StatusSnapshotLoop()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a5108065e97bedefe5d5c5f0a26c5334c">TUNAEdge::StopStatusSnapshotThreadLocked()</a>.</p>
+
+</div>
+</div>
+<a id="ab4f0da63d92cd2ee7e2a7ad05c0e902b" name="ab4f0da63d92cd2ee7e2a7ad05c0e902b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4f0da63d92cd2ee7e2a7ad05c0e902b">&#9670;&#160;</a></span>snapshot_thread_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::thread snapshot_thread_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a97d1170c8d61790b8c6cb9af695b371c">TUNAEdge::StartStatusSnapshotThreadLocked()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a5108065e97bedefe5d5c5f0a26c5334c">TUNAEdge::StopStatusSnapshotThreadLocked()</a>.</p>
+
+</div>
+</div>
+<a id="a5e869474b6af6fa2dd365db02c0d0281" name="a5e869474b6af6fa2dd365db02c0d0281"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e869474b6af6fa2dd365db02c0d0281">&#9670;&#160;</a></span>status_snapshot_enable_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool status_snapshot_enable_ {false}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a97d1170c8d61790b8c6cb9af695b371c">TUNAEdge::StartStatusSnapshotThreadLocked()</a>.</p>
+
+</div>
+</div>
+<a id="a9fe26c93b6e6e1f1f91a96b3154d5613" name="a9fe26c93b6e6e1f1f91a96b3154d5613"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fe26c93b6e6e1f1f91a96b3154d5613">&#9670;&#160;</a></span>status_snapshot_interval_ms_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int status_snapshot_interval_ms_ {5000}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a97d1170c8d61790b8c6cb9af695b371c">TUNAEdge::StartStatusSnapshotThreadLocked()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acf4df206592b39205ec28dc4272b70c4">TUNAEdge::StatusSnapshotLoop()</a>.</p>
+
+</div>
+</div>
+<a id="a96f9ad4daae3ab474eac3d0e8b11fe0f" name="a96f9ad4daae3ab474eac3d0e8b11fe0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96f9ad4daae3ab474eac3d0e8b11fe0f">&#9670;&#160;</a></span>vehicle_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classmy__edge_1_1MyMavVehicle.html">MyMavVehicle</a>&gt; vehicle_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acdccf5b178dd52cd19d8af660e6d168b">TUNAEdge::DumpInternalInfo()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">TUNAEdge::GetStatusSnapshot()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">TUNAEdge::Init()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a930b466b41c7d75b7318e6ca5853b5c9">TUNAEdge::SetEStop()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d">TUNAEdge::Shutdown()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a46b15f1cef85897da0f2fed19f72ed4c">TUNAEdge::Start()</a>.</p>
+
+</div>
+</div>
+<a id="a61c8f42943e4a184067a3d6e00410d38" name="a61c8f42943e4a184067a3d6e00410d38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61c8f42943e4a184067a3d6e00410d38">&#9670;&#160;</a></span>version_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string version_ {&quot;0.0&quot;}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acdccf5b178dd52cd19d8af660e6d168b">TUNAEdge::DumpInternalInfo()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">TUNAEdge::GetStatusSnapshot()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">TUNAEdge::Init()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/util/my_edge/demo/<a class="el" href="TUNAEdge_8h_source.html">TUNAEdge.h</a></li>
+<li>src/util/my_edge/demo/<a class="el" href="TUNAEdge_8cpp.html">TUNAEdge.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

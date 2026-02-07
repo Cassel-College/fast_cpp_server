@@ -31,8 +31,9 @@ var searchData=
   ['_7esofthealthmonitormanager_28',['~SoftHealthMonitorManager',['../classSoftHealthMonitorManager.html#a2be274bcd23041d6c57916fc64fdb587',1,'SoftHealthMonitorManager']]],
   ['_7etaskqueue_29',['~TaskQueue',['../classmy__control_1_1TaskQueue.html#a59499d260cf14de9fb3bc4256ac889c8',1,'my_control::TaskQueue']]],
   ['_7ethreadsafebuffer_30',['~ThreadSafeBuffer',['../classtools_1_1ThreadSafeBuffer.html#a55aa12b545c080a86f993b06f51311df',1,'tools::ThreadSafeBuffer']]],
-  ['_7euuvdevice_31',['~UUVDevice',['../classmy__device_1_1demo_1_1UUVDevice.html#ab6c2f994d41932c6cd7222dcc3c67da0',1,'my_device::demo::UUVDevice']]],
-  ['_7euuvedge_32',['~UUVEdge',['../classmy__edge_1_1demo_1_1UUVEdge.html#aa8982df7c38aa98b570f85c45f51d8d8',1,'my_edge::demo::UUVEdge']]],
-  ['_7ewindsensordevice_33',['~WindSensorDevice',['../classmy__device_1_1demo_1_1WindSensorDevice.html#aa4f2ee22ff19317effb60e6df6cbcfef',1,'my_device::demo::WindSensorDevice']]],
-  ['_7eworkflow_34',['~Workflow',['../classmy__control_1_1demo_1_1Workflow.html#ab282c005f4ccf9a3c9b713e978d8f751',1,'my_control::demo::Workflow']]]
+  ['_7etunaedge_31',['~TUNAEdge',['../classmy__edge_1_1demo_1_1TUNAEdge.html#a589edaae153d663d5e5618a314bd8cfb',1,'my_edge::demo::TUNAEdge']]],
+  ['_7euuvdevice_32',['~UUVDevice',['../classmy__device_1_1demo_1_1UUVDevice.html#ab6c2f994d41932c6cd7222dcc3c67da0',1,'my_device::demo::UUVDevice']]],
+  ['_7euuvedge_33',['~UUVEdge',['../classmy__edge_1_1demo_1_1UUVEdge.html#aa8982df7c38aa98b570f85c45f51d8d8',1,'my_edge::demo::UUVEdge']]],
+  ['_7ewindsensordevice_34',['~WindSensorDevice',['../classmy__device_1_1demo_1_1WindSensorDevice.html#aa4f2ee22ff19317effb60e6df6cbcfef',1,'my_device::demo::WindSensorDevice']]],
+  ['_7eworkflow_35',['~Workflow',['../classmy__control_1_1demo_1_1Workflow.html#ab282c005f4ccf9a3c9b713e978d8f751',1,'my_control::demo::Workflow']]]
 ];

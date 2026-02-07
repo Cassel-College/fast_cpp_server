@@ -2,7 +2,7 @@ var searchData=
 [
   ['cached_5fstate_5f_0',['cached_state_',['../classmy__edge_1_1MyMavVehicle.html#adc36c45fd6b6c622dd21ec5b1ec4b12d',1,'my_edge::MyMavVehicle']]],
   ['capability_1',['capability',['../structmy__data_1_1Task.html#a586d4b3f6ee263311139695f7554f978',1,'my_data::Task']]],
-  ['cfg_5f_2',['cfg_',['../classmy__edge_1_1demo_1_1UUVEdge.html#ab6d49423f76ea026d6eb25402274d258',1,'my_edge::demo::UUVEdge::cfg_'],['../classmy__mqtt_1_1MqttService.html#ab6d49423f76ea026d6eb25402274d258',1,'my_mqtt::MqttService::cfg_'],['../classmy__db_1_1MyDB.html#a24453dde91ecf16ada18671e7985ed8a',1,'my_db::MyDB::cfg_']]],
+  ['cfg_5f_2',['cfg_',['../classmy__edge_1_1demo_1_1TUNAEdge.html#ab6d49423f76ea026d6eb25402274d258',1,'my_edge::demo::TUNAEdge::cfg_'],['../classmy__edge_1_1demo_1_1UUVEdge.html#ab6d49423f76ea026d6eb25402274d258',1,'my_edge::demo::UUVEdge::cfg_'],['../classmy__mqtt_1_1MqttService.html#ab6d49423f76ea026d6eb25402274d258',1,'my_mqtt::MqttService::cfg_'],['../classmy__db_1_1MyDB.html#a24453dde91ecf16ada18671e7985ed8a',1,'my_db::MyDB::cfg_']]],
   ['check_5fname_3',['check_name',['../structmy__doctor_1_1CheckItem.html#a41a35a40c87784811ce23d35950cd8d4',1,'my_doctor::CheckItem']]],
   ['check_5ftype_4',['check_type',['../structmy__doctor_1_1CheckItem.html#a3c803e8aa530e8d68fd5a796f8ca6467',1,'my_doctor::CheckItem']]],
   ['children_5',['children',['../structThreadTreeNode.html#a6a9c08669a23fb80d2f2018ca1e86f03',1,'ThreadTreeNode']]],
@@ -17,7 +17,7 @@ var searchData=
   ['config_5fdata_5f_14',['config_data_',['../classtools_1_1pipeline_1_1Pipeline.html#ab5e51e74ebaab2834d9c1385007fd446',1,'tools::pipeline::Pipeline']]],
   ['config_5finitialized_5f_15',['config_initialized_',['../classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#af12f78ccc8851d5ba4723d3ab6541ea5',1,'my_mqtt_broker_manager::MyMqttBrokerManager']]],
   ['conn_5fstate_16',['conn_state',['../structmy__data_1_1DeviceStatus.html#af821acee7e457efc9a0e768d1e938949',1,'my_data::DeviceStatus']]],
-  ['connected_17',['connected',['../structmy__edge_1_1VehicleStatus.html#ab36823025f12a809217f7771125658c2',1,'my_edge::VehicleStatus']]],
+  ['connected_17',['connected',['../structmy__edge_1_1MavVehicleStatus.html#ab36823025f12a809217f7771125658c2',1,'my_edge::MavVehicleStatus']]],
   ['connected_5f_18',['connected_',['../classtools_1_1SimpleTcpClient.html#a394f715193a382d9c59ec69143a3cc4d',1,'tools::SimpleTcpClient::connected_'],['../classmy__mqtt_1_1MqttService.html#a394f715193a382d9c59ec69143a3cc4d',1,'my_mqtt::MqttService::connected_']]],
   ['connection_5furl_5f_19',['connection_url_',['../classmy__edge_1_1MyMavVehicle.html#a5f42dc880e76a7f5997a2ad1d7a325e8',1,'my_edge::MyMavVehicle']]],
   ['connmutex_5f_20',['connMutex_',['../classtools_1_1SimpleTcpClient.html#ac669324da44bb5dd470e9bfc1f8b00b5',1,'tools::SimpleTcpClient']]],

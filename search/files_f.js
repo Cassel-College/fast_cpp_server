@@ -18,5 +18,7 @@ var searchData=
   ['timeutil_2eh_15',['TimeUtil.h',['../TimeUtil_8h.html',1,'']]],
   ['tunacontroller_2ecpp_16',['TunaController.cpp',['../TunaController_8cpp.html',1,'']]],
   ['tunacontroller_2eh_17',['TunaController.h',['../TunaController_8h.html',1,'']]],
-  ['types_2eh_18',['Types.h',['../Types_8h.html',1,'']]]
+  ['tunaedge_2ecpp_18',['TUNAEdge.cpp',['../TUNAEdge_8cpp.html',1,'']]],
+  ['tunaedge_2eh_19',['TUNAEdge.h',['../TUNAEdge_8h.html',1,'']]],
+  ['types_2eh_20',['Types.h',['../Types_8h.html',1,'']]]
 ];

@@ -11,5 +11,6 @@ var searchData=
   ['runloop_8',['RunLoop',['../classmy__control_1_1demo_1_1Workflow.html#a2037369e5ec6b779d3c3de24e2cbb614',1,'my_control::demo::Workflow']]],
   ['runprocess_9',['runProcess',['../classmy__script_1_1MyScriptManager.html#a33429c90320e6537ed5c7dbaa27eef66',1,'my_script::MyScriptManager']]],
   ['runpythonscript_10',['runPythonScript',['../classpy3_1_1MyPyEnvBot.html#a904aba98263b104b4e2afc0830443422',1,'py3::MyPyEnvBot']]],
-  ['runrestserver_11',['RunRestServer',['../namespacemy__api.html#a7709e79247abfc5516836522f85289a3',1,'my_api']]]
+  ['runrestserver_11',['RunRestServer',['../namespacemy__api.html#a7709e79247abfc5516836522f85289a3',1,'my_api']]],
+  ['runstatetostring_12',['RunStateToString',['../namespacemy__edge.html#a73a98adf458ded5bec93301b2541854e',1,'my_edge']]]
 ];

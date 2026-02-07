@@ -3,7 +3,7 @@ var searchData=
   ['handler_0',['handler',['../namespacemy__mqtt.html#a02e0f589c5b1c3c1789627e8cc4f0d5c',1,'my_mqtt::Handler'],['../structmy__mqtt_1_1Route.html#a57d71e19104af6fa1574d8267a940023',1,'my_mqtt::Route::handler']]],
   ['hasedge_1',['HasEdge',['../classmy__edge_1_1MyEdges.html#a854fe8569df85e2931fabfe24c288e82',1,'my_edge::MyEdges']]],
   ['haskey_2',['HasKey',['../classMyINIConfig.html#aff6a634c325aa4fdd26828f47811157f',1,'MyINIConfig']]],
-  ['heading_3',['heading',['../structmy__edge_1_1VehicleStatus.html#ac5682e48513a771560df50e3b213e61a',1,'my_edge::VehicleStatus::heading'],['../classmy__edge_1_1MyMavVehicle.html#ac5682e48513a771560df50e3b213e61a',1,'my_edge::MyMavVehicle::heading']]],
+  ['heading_3',['heading',['../structmy__edge_1_1MavVehicleStatus.html#ac5682e48513a771560df50e3b213e61a',1,'my_edge::MavVehicleStatus::heading'],['../classmy__edge_1_1MyMavVehicle.html#ac5682e48513a771560df50e3b213e61a',1,'my_edge::MyMavVehicle::heading']]],
   ['healthcheck_4',['healthcheck',['../classmy__control_1_1IControl.html#a70900d90f4931bca98078a6e0992c2d8',1,'my_control::IControl::HealthCheck()'],['../classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#a352df8c6647a119d688ea43a365a652b',1,'my_mqtt_broker_manager::MyMqttBrokerManager::HealthCheck()']]],
   ['healthsnapshot_5',['HealthSnapshot',['../classHealthSnapshot.html',1,'']]],
   ['heartbeat_5fdata_5f_6',['heartbeat_data_',['../classmy__heartbeat_1_1HeartbeatManager.html#a1996ae8f612adf12d0cf12f6d15916bc',1,'my_heartbeat::HeartbeatManager']]],

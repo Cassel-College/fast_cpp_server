@@ -10,5 +10,6 @@ var searchData=
   ['threadsafequeue_7',['ThreadSafeQueue',['../classtools_1_1thread__safe__queue_1_1ThreadSafeQueue.html',1,'tools::thread_safe_queue']]],
   ['threadsnapshot_8',['ThreadSnapshot',['../structThreadSnapshot.html',1,'']]],
   ['threadtreenode_9',['ThreadTreeNode',['../structThreadTreeNode.html',1,'']]],
-  ['tunacontroller_10',['TunaController',['../classmy__api_1_1tuna_1_1TunaController.html',1,'my_api::tuna']]]
+  ['tunacontroller_10',['TunaController',['../classmy__api_1_1tuna_1_1TunaController.html',1,'my_api::tuna']]],
+  ['tunaedge_11',['TUNAEdge',['../classmy__edge_1_1demo_1_1TUNAEdge.html',1,'my_edge::demo']]]
 ];
