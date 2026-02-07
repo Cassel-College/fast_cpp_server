@@ -14,10 +14,11 @@ var searchData=
   ['myedges_11',['MyEdges',['../classmy__edge_1_1MyEdges.html',1,'my_edge']]],
   ['myiniconfig_12',['MyINIConfig',['../classMyINIConfig.html',1,'']]],
   ['myjsonconfig_13',['MyJSONConfig',['../classMyJSONConfig.html',1,'']]],
-  ['mymqttbrokermanager_14',['MyMqttBrokerManager',['../classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html',1,'my_mqtt_broker_manager']]],
-  ['mypyenvbot_15',['MyPyEnvBot',['../classpy3_1_1MyPyEnvBot.html',1,'py3']]],
-  ['myscriptcontroller_16',['MyScriptController',['../classmy__api_1_1my__script__api_1_1MyScriptController.html',1,'my_api::my_script_api']]],
-  ['myscriptmanager_17',['MyScriptManager',['../classmy__script_1_1MyScriptManager.html',1,'my_script']]],
-  ['mysystemhealthymanager_18',['MySystemHealthyManager',['../classMySystemHealthy_1_1MySystemHealthyManager.html',1,'MySystemHealthy']]],
-  ['myyamlconfig_19',['MyYAMLConfig',['../classMyYAMLConfig.html',1,'']]]
+  ['mymavvehicle_14',['MyMavVehicle',['../classmy__edge_1_1MyMavVehicle.html',1,'my_edge']]],
+  ['mymqttbrokermanager_15',['MyMqttBrokerManager',['../classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html',1,'my_mqtt_broker_manager']]],
+  ['mypyenvbot_16',['MyPyEnvBot',['../classpy3_1_1MyPyEnvBot.html',1,'py3']]],
+  ['myscriptcontroller_17',['MyScriptController',['../classmy__api_1_1my__script__api_1_1MyScriptController.html',1,'my_api::my_script_api']]],
+  ['myscriptmanager_18',['MyScriptManager',['../classmy__script_1_1MyScriptManager.html',1,'my_script']]],
+  ['mysystemhealthymanager_19',['MySystemHealthyManager',['../classMySystemHealthy_1_1MySystemHealthyManager.html',1,'MySystemHealthy']]],
+  ['myyamlconfig_20',['MyYAMLConfig',['../classMyYAMLConfig.html',1,'']]]
 ];

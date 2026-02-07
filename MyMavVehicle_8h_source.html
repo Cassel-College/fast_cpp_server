@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_edge/MyMavVehicle.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_1c8e19e5f988aabcb1d6c4e45e28b8fb.html">my_edge</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">MyMavVehicle.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="MyMavVehicle_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;thread&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;atomic&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">// MAVSDK 头文件</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;mavsdk/mavsdk.h&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;mavsdk/plugins/action/action.h&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;mavsdk/plugins/telemetry/telemetry.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;mavsdk/plugins/manual_control/manual_control.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__edge.html">my_edge</a> {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">// 定义状态结构体</span></div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="structmy__edge_1_1VehicleStatus.html">   20</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structmy__edge_1_1VehicleStatus.html">VehicleStatus</a> {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="structmy__edge_1_1VehicleStatus.html#ab36823025f12a809217f7771125658c2">   21</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structmy__edge_1_1VehicleStatus.html#ab36823025f12a809217f7771125658c2">connected</a> = <span class="keyword">false</span>;          <span class="comment">// 是否在线（有心跳）</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="structmy__edge_1_1VehicleStatus.html#a95a7a3c9dec5f98703b42898ccd417a1">   22</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structmy__edge_1_1VehicleStatus.html#a95a7a3c9dec5f98703b42898ccd417a1">armed</a> = <span class="keyword">false</span>;              <span class="comment">// 是否解锁</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="structmy__edge_1_1VehicleStatus.html#a78dc832d3a5b4cdba4c8259553d39387">   23</a></span>    std::string <a class="code hl_variable" href="structmy__edge_1_1VehicleStatus.html#a78dc832d3a5b4cdba4c8259553d39387">flight_mode</a> = <span class="stringliteral">&quot;N/A&quot;</span>; <span class="comment">// 飞行模式</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="structmy__edge_1_1VehicleStatus.html#a18472f6318b4979228d5264f23b8a88f">   24</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structmy__edge_1_1VehicleStatus.html#a18472f6318b4979228d5264f23b8a88f">battery_voltage</a> = 0.0f;    <span class="comment">// 电压</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structmy__edge_1_1VehicleStatus.html#ac5682e48513a771560df50e3b213e61a">   25</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structmy__edge_1_1VehicleStatus.html#ac5682e48513a771560df50e3b213e61a">heading</a> = 0.0f;            <span class="comment">// 航向</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="structmy__edge_1_1VehicleStatus.html#a548377d71a58f89b983e54d17471f4f5">   26</a></span>    uint64_t <a class="code hl_variable" href="structmy__edge_1_1VehicleStatus.html#a548377d71a58f89b983e54d17471f4f5">system_id</a> = 0;          <span class="comment">// MAVLink 系统 ID</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>};</div>
+</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="};">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classmy__edge_1_1MyMavVehicle.html">   29</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__edge_1_1MyMavVehicle.html">MyMavVehicle</a> {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="classmy__edge_1_1MyMavVehicle.html">MyMavVehicle</a>(<span class="keyword">const</span> std::string&amp; name);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_function" href="classmy__edge_1_1MyMavVehicle.html#a1fbd2043069a5f13e6f8a9ba4475d63e">~MyMavVehicle</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__edge_1_1MyMavVehicle.html#a4ff7ac41c9316698125ec80d7ea2b66b">Init</a>(<span class="keyword">const</span> std::string&amp; connection_url);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__edge_1_1MyMavVehicle.html#a17a237457e57625296e6b24feb19c60a">Stop</a>();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="comment">// --------------------------------------------------------</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="comment">// 控制接口</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="comment">// --------------------------------------------------------</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="comment">// 获取当前完整状态</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <a class="code hl_struct" href="structmy__edge_1_1VehicleStatus.html">VehicleStatus</a> <a class="code hl_function" href="classmy__edge_1_1MyMavVehicle.html#a627a441886909c540866281ea724249d">GetStatus</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="comment">// 是否已连接（有心跳）</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__edge_1_1MyMavVehicle.html#ac766f50854b7401ea00f5e40d89c77f1">IsConnected</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="comment">// 解锁 (Arm)</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__edge_1_1MyMavVehicle.html#a175ff4a5a8b8a47819fddf10bf85f27d">Arm</a>();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="comment">// 上锁 (Disarm)</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__edge_1_1MyMavVehicle.html#a46da417199b1699ca65d6f8a32ea58e9">Disarm</a>();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="comment">// 切换模式 (STABILIZE, MANUAL, ALT_HOLD 等)</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__edge_1_1MyMavVehicle.html#aa3243e2c0d8a85f92d9bb4426e0be947">SetMode</a>(<span class="keyword">const</span> std::string&amp; mode_name);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__edge_1_1MyMavVehicle.html#aca8e97b2fc459d354958be726efd2f30">ManualControl</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> z, <span class="keywordtype">float</span> r);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="comment">// 内部逻辑</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__edge_1_1MyMavVehicle.html#aa89528c30ace77fff0f6511a88ceda90">MonitorThreadFunc</a>();                                   <span class="comment">// 监控链路状态</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__edge_1_1MyMavVehicle.html#ad5a3383c7b9fcb923c968438628bbcf0">OnNewSystem</a>(std::shared_ptr&lt;mavsdk::System&gt; system);   <span class="comment">// 发现新系统回调</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__edge_1_1MyMavVehicle.html#a1634a3fe2f578638aca3a4a768cfc7b5">InitPlugins</a>();                                         <span class="comment">// 初始化插件</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__edge_1_1MyMavVehicle.html#a268c267fbedbe9e90bc5e932f8327d02">CleanupSystem</a>();                                       <span class="comment">// 清理断开的系统资源</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="classmy__edge_1_1MyMavVehicle.html#a4d739cc5d335052eb9f5b2ca559b81d1">   86</a></span>    std::string <a class="code hl_variable" href="classmy__edge_1_1MyMavVehicle.html#a4d739cc5d335052eb9f5b2ca559b81d1">name_</a>;                                          <span class="comment">// 实例名称</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="classmy__edge_1_1MyMavVehicle.html#a5f42dc880e76a7f5997a2ad1d7a325e8">   87</a></span>    std::string <a class="code hl_variable" href="classmy__edge_1_1MyMavVehicle.html#a5f42dc880e76a7f5997a2ad1d7a325e8">connection_url_</a>;                                <span class="comment">// 连接地址</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="classmy__edge_1_1MyMavVehicle.html#a9962c1f242660acdaa10861725e0c003">   88</a></span>    mavsdk::Mavsdk <a class="code hl_variable" href="classmy__edge_1_1MyMavVehicle.html#a9962c1f242660acdaa10861725e0c003">mavsdk_</a>;                                     <span class="comment">// MAVSDK 核心对象 (每个实例独立拥有一个 Mavsdk 上下文)</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="classmy__edge_1_1MyMavVehicle.html#a3219bf403027657567a39f566c4407ab">   89</a></span>    std::shared_ptr&lt;mavsdk::System&gt; <a class="code hl_variable" href="classmy__edge_1_1MyMavVehicle.html#a3219bf403027657567a39f566c4407ab">system_</a>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="classmy__edge_1_1MyMavVehicle.html#af02ee30fdd3bc00d8bf6b555e0e96655">   90</a></span>    std::shared_ptr&lt;mavsdk::Action&gt; <a class="code hl_variable" href="classmy__edge_1_1MyMavVehicle.html#af02ee30fdd3bc00d8bf6b555e0e96655">action_</a>;                    <span class="comment">// 插件对象</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="classmy__edge_1_1MyMavVehicle.html#afce9fae3b05770a22e3c03ddc817761a">   91</a></span>    std::shared_ptr&lt;mavsdk::Telemetry&gt; <a class="code hl_variable" href="classmy__edge_1_1MyMavVehicle.html#afce9fae3b05770a22e3c03ddc817761a">telemetry_</a>;              <span class="comment">// 插件对象</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="classmy__edge_1_1MyMavVehicle.html#ac7863ab5535efb23002084c9bf3baad3">   92</a></span>    std::shared_ptr&lt;mavsdk::ManualControl&gt; <a class="code hl_variable" href="classmy__edge_1_1MyMavVehicle.html#ac7863ab5535efb23002084c9bf3baad3">manual_control_</a>;     <span class="comment">// 插件对象</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="classmy__edge_1_1MyMavVehicle.html#a959f692b1e60d0ee954a65f863065469">   93</a></span>    std::thread <a class="code hl_variable" href="classmy__edge_1_1MyMavVehicle.html#a959f692b1e60d0ee954a65f863065469">monitor_thread_</a>;                                <span class="comment">// 监控线程</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="classmy__edge_1_1MyMavVehicle.html#a0c41ab2c86e2124f2943f58e572ec68d">   94</a></span>    std::atomic&lt;bool&gt; <a class="code hl_variable" href="classmy__edge_1_1MyMavVehicle.html#a0c41ab2c86e2124f2943f58e572ec68d">should_exit_</a>{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="classmy__edge_1_1MyMavVehicle.html#a57173cebb6ff5a5567a76bfce31ef02c">   95</a></span>    <span class="keyword">mutable</span> std::mutex <a class="code hl_variable" href="classmy__edge_1_1MyMavVehicle.html#a57173cebb6ff5a5567a76bfce31ef02c">data_mutex_</a>;                             <span class="comment">// 保护状态数据的读写</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="comment">// 缓存的状态数据</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="classmy__edge_1_1MyMavVehicle.html#a95a7a3c9dec5f98703b42898ccd417a1">   98</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="classmy__edge_1_1MyMavVehicle.html#a95a7a3c9dec5f98703b42898ccd417a1">armed</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="classmy__edge_1_1MyMavVehicle.html#a6c71000b535e65812d96eee3386307c4">   99</a></span>        std::string <a class="code hl_variable" href="classmy__edge_1_1MyMavVehicle.html#a6c71000b535e65812d96eee3386307c4">mode</a> = <span class="stringliteral">&quot;UNKNOWN&quot;</span>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="classmy__edge_1_1MyMavVehicle.html#a47061fcae597f83f8a0a99d4b7b5a5c1">  100</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="classmy__edge_1_1MyMavVehicle.html#a47061fcae597f83f8a0a99d4b7b5a5c1">voltage</a> = 0.0f;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="classmy__edge_1_1MyMavVehicle.html#ac5682e48513a771560df50e3b213e61a">  101</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="classmy__edge_1_1MyMavVehicle.html#ac5682e48513a771560df50e3b213e61a">heading</a> = 0.0f;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="classmy__edge_1_1MyMavVehicle.html#a9764c4b6db8d861408740cc271424c87">  102</a></span>        uint64_t <a class="code hl_variable" href="classmy__edge_1_1MyMavVehicle.html#a9764c4b6db8d861408740cc271424c87">sys_id</a> = 0;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="classmy__edge_1_1MyMavVehicle.html#adc36c45fd6b6c622dd21ec5b1ec4b12d">  103</a></span>    } <a class="code hl_variable" href="classmy__edge_1_1MyMavVehicle.html#adc36c45fd6b6c622dd21ec5b1ec4b12d">cached_state_</a>;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>}; <span class="comment">// class MyMavVehicle</span></div>
+</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>} <span class="comment">// namespace my_edge</span></div>
+<div class="ttc" id="aclassmy__edge_1_1MyMavVehicle_html"><div class="ttname"><a href="classmy__edge_1_1MyMavVehicle.html">my_edge::MyMavVehicle</a></div><div class="ttdef"><b>Definition</b> MyMavVehicle.h:29</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyMavVehicle_html_a0c41ab2c86e2124f2943f58e572ec68d"><div class="ttname"><a href="classmy__edge_1_1MyMavVehicle.html#a0c41ab2c86e2124f2943f58e572ec68d">my_edge::MyMavVehicle::should_exit_</a></div><div class="ttdeci">std::atomic&lt; bool &gt; should_exit_</div><div class="ttdef"><b>Definition</b> MyMavVehicle.h:94</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyMavVehicle_html_a1634a3fe2f578638aca3a4a768cfc7b5"><div class="ttname"><a href="classmy__edge_1_1MyMavVehicle.html#a1634a3fe2f578638aca3a4a768cfc7b5">my_edge::MyMavVehicle::InitPlugins</a></div><div class="ttdeci">void InitPlugins()</div><div class="ttdef"><b>Definition</b> MyMavVehicle.cpp:75</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyMavVehicle_html_a175ff4a5a8b8a47819fddf10bf85f27d"><div class="ttname"><a href="classmy__edge_1_1MyMavVehicle.html#a175ff4a5a8b8a47819fddf10bf85f27d">my_edge::MyMavVehicle::Arm</a></div><div class="ttdeci">bool Arm()</div><div class="ttdef"><b>Definition</b> MyMavVehicle.cpp:197</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyMavVehicle_html_a17a237457e57625296e6b24feb19c60a"><div class="ttname"><a href="classmy__edge_1_1MyMavVehicle.html#a17a237457e57625296e6b24feb19c60a">my_edge::MyMavVehicle::Stop</a></div><div class="ttdeci">void Stop()</div><div class="ttdoc">停止连接和线程</div><div class="ttdef"><b>Definition</b> MyMavVehicle.cpp:57</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyMavVehicle_html_a1fbd2043069a5f13e6f8a9ba4475d63e"><div class="ttname"><a href="classmy__edge_1_1MyMavVehicle.html#a1fbd2043069a5f13e6f8a9ba4475d63e">my_edge::MyMavVehicle::~MyMavVehicle</a></div><div class="ttdeci">~MyMavVehicle()</div><div class="ttdef"><b>Definition</b> MyMavVehicle.cpp:20</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyMavVehicle_html_a268c267fbedbe9e90bc5e932f8327d02"><div class="ttname"><a href="classmy__edge_1_1MyMavVehicle.html#a268c267fbedbe9e90bc5e932f8327d02">my_edge::MyMavVehicle::CleanupSystem</a></div><div class="ttdeci">void CleanupSystem()</div><div class="ttdef"><b>Definition</b> MyMavVehicle.cpp:129</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyMavVehicle_html_a3219bf403027657567a39f566c4407ab"><div class="ttname"><a href="classmy__edge_1_1MyMavVehicle.html#a3219bf403027657567a39f566c4407ab">my_edge::MyMavVehicle::system_</a></div><div class="ttdeci">std::shared_ptr&lt; mavsdk::System &gt; system_</div><div class="ttdef"><b>Definition</b> MyMavVehicle.h:89</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyMavVehicle_html_a46da417199b1699ca65d6f8a32ea58e9"><div class="ttname"><a href="classmy__edge_1_1MyMavVehicle.html#a46da417199b1699ca65d6f8a32ea58e9">my_edge::MyMavVehicle::Disarm</a></div><div class="ttdeci">bool Disarm()</div><div class="ttdef"><b>Definition</b> MyMavVehicle.cpp:215</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyMavVehicle_html_a47061fcae597f83f8a0a99d4b7b5a5c1"><div class="ttname"><a href="classmy__edge_1_1MyMavVehicle.html#a47061fcae597f83f8a0a99d4b7b5a5c1">my_edge::MyMavVehicle::voltage</a></div><div class="ttdeci">float voltage</div><div class="ttdef"><b>Definition</b> MyMavVehicle.h:100</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyMavVehicle_html_a4d739cc5d335052eb9f5b2ca559b81d1"><div class="ttname"><a href="classmy__edge_1_1MyMavVehicle.html#a4d739cc5d335052eb9f5b2ca559b81d1">my_edge::MyMavVehicle::name_</a></div><div class="ttdeci">std::string name_</div><div class="ttdef"><b>Definition</b> MyMavVehicle.h:86</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyMavVehicle_html_a4ff7ac41c9316698125ec80d7ea2b66b"><div class="ttname"><a href="classmy__edge_1_1MyMavVehicle.html#a4ff7ac41c9316698125ec80d7ea2b66b">my_edge::MyMavVehicle::Init</a></div><div class="ttdeci">bool Init(const std::string &amp;connection_url)</div><div class="ttdoc">初始化并开始监听连接</div><div class="ttdef"><b>Definition</b> MyMavVehicle.cpp:24</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyMavVehicle_html_a57173cebb6ff5a5567a76bfce31ef02c"><div class="ttname"><a href="classmy__edge_1_1MyMavVehicle.html#a57173cebb6ff5a5567a76bfce31ef02c">my_edge::MyMavVehicle::data_mutex_</a></div><div class="ttdeci">std::mutex data_mutex_</div><div class="ttdef"><b>Definition</b> MyMavVehicle.h:95</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyMavVehicle_html_a5f42dc880e76a7f5997a2ad1d7a325e8"><div class="ttname"><a href="classmy__edge_1_1MyMavVehicle.html#a5f42dc880e76a7f5997a2ad1d7a325e8">my_edge::MyMavVehicle::connection_url_</a></div><div class="ttdeci">std::string connection_url_</div><div class="ttdef"><b>Definition</b> MyMavVehicle.h:87</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyMavVehicle_html_a627a441886909c540866281ea724249d"><div class="ttname"><a href="classmy__edge_1_1MyMavVehicle.html#a627a441886909c540866281ea724249d">my_edge::MyMavVehicle::GetStatus</a></div><div class="ttdeci">VehicleStatus GetStatus() const</div><div class="ttdef"><b>Definition</b> MyMavVehicle.cpp:180</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyMavVehicle_html_a6c71000b535e65812d96eee3386307c4"><div class="ttname"><a href="classmy__edge_1_1MyMavVehicle.html#a6c71000b535e65812d96eee3386307c4">my_edge::MyMavVehicle::mode</a></div><div class="ttdeci">std::string mode</div><div class="ttdef"><b>Definition</b> MyMavVehicle.h:99</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyMavVehicle_html_a959f692b1e60d0ee954a65f863065469"><div class="ttname"><a href="classmy__edge_1_1MyMavVehicle.html#a959f692b1e60d0ee954a65f863065469">my_edge::MyMavVehicle::monitor_thread_</a></div><div class="ttdeci">std::thread monitor_thread_</div><div class="ttdef"><b>Definition</b> MyMavVehicle.h:93</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyMavVehicle_html_a95a7a3c9dec5f98703b42898ccd417a1"><div class="ttname"><a href="classmy__edge_1_1MyMavVehicle.html#a95a7a3c9dec5f98703b42898ccd417a1">my_edge::MyMavVehicle::armed</a></div><div class="ttdeci">bool armed</div><div class="ttdef"><b>Definition</b> MyMavVehicle.h:98</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyMavVehicle_html_a9764c4b6db8d861408740cc271424c87"><div class="ttname"><a href="classmy__edge_1_1MyMavVehicle.html#a9764c4b6db8d861408740cc271424c87">my_edge::MyMavVehicle::sys_id</a></div><div class="ttdeci">uint64_t sys_id</div><div class="ttdef"><b>Definition</b> MyMavVehicle.h:102</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyMavVehicle_html_a9962c1f242660acdaa10861725e0c003"><div class="ttname"><a href="classmy__edge_1_1MyMavVehicle.html#a9962c1f242660acdaa10861725e0c003">my_edge::MyMavVehicle::mavsdk_</a></div><div class="ttdeci">mavsdk::Mavsdk mavsdk_</div><div class="ttdef"><b>Definition</b> MyMavVehicle.h:88</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyMavVehicle_html_aa3243e2c0d8a85f92d9bb4426e0be947"><div class="ttname"><a href="classmy__edge_1_1MyMavVehicle.html#aa3243e2c0d8a85f92d9bb4426e0be947">my_edge::MyMavVehicle::SetMode</a></div><div class="ttdeci">bool SetMode(const std::string &amp;mode_name)</div><div class="ttdef"><b>Definition</b> MyMavVehicle.cpp:228</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyMavVehicle_html_aa89528c30ace77fff0f6511a88ceda90"><div class="ttname"><a href="classmy__edge_1_1MyMavVehicle.html#aa89528c30ace77fff0f6511a88ceda90">my_edge::MyMavVehicle::MonitorThreadFunc</a></div><div class="ttdeci">void MonitorThreadFunc()</div><div class="ttdef"><b>Definition</b> MyMavVehicle.cpp:146</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyMavVehicle_html_ac5682e48513a771560df50e3b213e61a"><div class="ttname"><a href="classmy__edge_1_1MyMavVehicle.html#ac5682e48513a771560df50e3b213e61a">my_edge::MyMavVehicle::heading</a></div><div class="ttdeci">float heading</div><div class="ttdef"><b>Definition</b> MyMavVehicle.h:101</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyMavVehicle_html_ac766f50854b7401ea00f5e40d89c77f1"><div class="ttname"><a href="classmy__edge_1_1MyMavVehicle.html#ac766f50854b7401ea00f5e40d89c77f1">my_edge::MyMavVehicle::IsConnected</a></div><div class="ttdeci">bool IsConnected() const</div><div class="ttdef"><b>Definition</b> MyMavVehicle.cpp:192</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyMavVehicle_html_ac7863ab5535efb23002084c9bf3baad3"><div class="ttname"><a href="classmy__edge_1_1MyMavVehicle.html#ac7863ab5535efb23002084c9bf3baad3">my_edge::MyMavVehicle::manual_control_</a></div><div class="ttdeci">std::shared_ptr&lt; mavsdk::ManualControl &gt; manual_control_</div><div class="ttdef"><b>Definition</b> MyMavVehicle.h:92</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyMavVehicle_html_aca8e97b2fc459d354958be726efd2f30"><div class="ttname"><a href="classmy__edge_1_1MyMavVehicle.html#aca8e97b2fc459d354958be726efd2f30">my_edge::MyMavVehicle::ManualControl</a></div><div class="ttdeci">bool ManualControl(float x, float y, float z, float r)</div><div class="ttdoc">手动控制输入</div><div class="ttdef"><b>Definition</b> MyMavVehicle.cpp:307</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyMavVehicle_html_ad5a3383c7b9fcb923c968438628bbcf0"><div class="ttname"><a href="classmy__edge_1_1MyMavVehicle.html#ad5a3383c7b9fcb923c968438628bbcf0">my_edge::MyMavVehicle::OnNewSystem</a></div><div class="ttdeci">void OnNewSystem(std::shared_ptr&lt; mavsdk::System &gt; system)</div><div class="ttdef"><b>Definition</b> MyMavVehicle.cpp:65</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyMavVehicle_html_adc36c45fd6b6c622dd21ec5b1ec4b12d"><div class="ttname"><a href="classmy__edge_1_1MyMavVehicle.html#adc36c45fd6b6c622dd21ec5b1ec4b12d">my_edge::MyMavVehicle::cached_state_</a></div><div class="ttdeci">struct my_edge::MyMavVehicle::@0 cached_state_</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyMavVehicle_html_af02ee30fdd3bc00d8bf6b555e0e96655"><div class="ttname"><a href="classmy__edge_1_1MyMavVehicle.html#af02ee30fdd3bc00d8bf6b555e0e96655">my_edge::MyMavVehicle::action_</a></div><div class="ttdeci">std::shared_ptr&lt; mavsdk::Action &gt; action_</div><div class="ttdef"><b>Definition</b> MyMavVehicle.h:90</div></div>
+<div class="ttc" id="aclassmy__edge_1_1MyMavVehicle_html_afce9fae3b05770a22e3c03ddc817761a"><div class="ttname"><a href="classmy__edge_1_1MyMavVehicle.html#afce9fae3b05770a22e3c03ddc817761a">my_edge::MyMavVehicle::telemetry_</a></div><div class="ttdeci">std::shared_ptr&lt; mavsdk::Telemetry &gt; telemetry_</div><div class="ttdef"><b>Definition</b> MyMavVehicle.h:91</div></div>
+<div class="ttc" id="anamespacemy__edge_html"><div class="ttname"><a href="namespacemy__edge.html">my_edge</a></div><div class="ttdef"><b>Definition</b> UUVEdge.cpp:14</div></div>
+<div class="ttc" id="astructmy__edge_1_1VehicleStatus_html"><div class="ttname"><a href="structmy__edge_1_1VehicleStatus.html">my_edge::VehicleStatus</a></div><div class="ttdef"><b>Definition</b> MyMavVehicle.h:20</div></div>
+<div class="ttc" id="astructmy__edge_1_1VehicleStatus_html_a18472f6318b4979228d5264f23b8a88f"><div class="ttname"><a href="structmy__edge_1_1VehicleStatus.html#a18472f6318b4979228d5264f23b8a88f">my_edge::VehicleStatus::battery_voltage</a></div><div class="ttdeci">float battery_voltage</div><div class="ttdef"><b>Definition</b> MyMavVehicle.h:24</div></div>
+<div class="ttc" id="astructmy__edge_1_1VehicleStatus_html_a548377d71a58f89b983e54d17471f4f5"><div class="ttname"><a href="structmy__edge_1_1VehicleStatus.html#a548377d71a58f89b983e54d17471f4f5">my_edge::VehicleStatus::system_id</a></div><div class="ttdeci">uint64_t system_id</div><div class="ttdef"><b>Definition</b> MyMavVehicle.h:26</div></div>
+<div class="ttc" id="astructmy__edge_1_1VehicleStatus_html_a78dc832d3a5b4cdba4c8259553d39387"><div class="ttname"><a href="structmy__edge_1_1VehicleStatus.html#a78dc832d3a5b4cdba4c8259553d39387">my_edge::VehicleStatus::flight_mode</a></div><div class="ttdeci">std::string flight_mode</div><div class="ttdef"><b>Definition</b> MyMavVehicle.h:23</div></div>
+<div class="ttc" id="astructmy__edge_1_1VehicleStatus_html_a95a7a3c9dec5f98703b42898ccd417a1"><div class="ttname"><a href="structmy__edge_1_1VehicleStatus.html#a95a7a3c9dec5f98703b42898ccd417a1">my_edge::VehicleStatus::armed</a></div><div class="ttdeci">bool armed</div><div class="ttdef"><b>Definition</b> MyMavVehicle.h:22</div></div>
+<div class="ttc" id="astructmy__edge_1_1VehicleStatus_html_ab36823025f12a809217f7771125658c2"><div class="ttname"><a href="structmy__edge_1_1VehicleStatus.html#ab36823025f12a809217f7771125658c2">my_edge::VehicleStatus::connected</a></div><div class="ttdeci">bool connected</div><div class="ttdef"><b>Definition</b> MyMavVehicle.h:21</div></div>
+<div class="ttc" id="astructmy__edge_1_1VehicleStatus_html_ac5682e48513a771560df50e3b213e61a"><div class="ttname"><a href="structmy__edge_1_1VehicleStatus.html#ac5682e48513a771560df50e3b213e61a">my_edge::VehicleStatus::heading</a></div><div class="ttdeci">float heading</div><div class="ttdef"><b>Definition</b> MyMavVehicle.h:25</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

@@ -11,5 +11,6 @@ var searchData=
   ['appendtasktotargettaskqueue_8',['AppendTaskToTargetTaskQueue',['../classmy__edge_1_1demo_1_1UUVEdge.html#a6f682267f34851d53d23609c61bf1495',1,'my_edge::demo::UUVEdge']]],
   ['applypragmaslocked_9',['ApplyPragmasLocked',['../classmy__db_1_1MyDB.html#a3512ca05a590e1b9a200a189dc533304',1,'my_db::MyDB']]],
   ['archiveoldlogs_10',['archiveoldlogs',['../namespaceMyLog.html#a85f5b34dcd4f96710243f0b060b67507',1,'MyLog::ArchiveOldLogs(const std::string &amp;log_dir, const std::string &amp;archive_dir, std::vector&lt; std::string &gt; &amp;logInfos)'],['../namespaceMyLog.html#abe0fbbd4bf3486a6f4a1d9cf201a5a1a',1,'MyLog::ArchiveOldLogs(const std::string &amp;log_dir, const std::string &amp;archive_dir=&quot;archive&quot;)']]],
-  ['argumentparser_11',['ArgumentParser',['../classArgumentParser.html#af6ba7e87e356cd686874e43410a909c6',1,'ArgumentParser']]]
+  ['argumentparser_11',['ArgumentParser',['../classArgumentParser.html#af6ba7e87e356cd686874e43410a909c6',1,'ArgumentParser']]],
+  ['arm_12',['Arm',['../classmy__edge_1_1MyMavVehicle.html#a175ff4a5a8b8a47819fddf10bf85f27d',1,'my_edge::MyMavVehicle']]]
 ];

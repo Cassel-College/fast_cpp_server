@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/tools/example/mavsdk_utils.cpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_1563a38af0d3a5e4a6330d6d45e9792a.html">tools</a></li><li class="navelem"><a class="el" href="dir_dd39e31cc40b42a4efd39ee5728a8f98.html">example</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">mavsdk_utils.cpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="mavsdk__utils_8h_source.html">mavsdk_utils.h</a>&quot;</code><br />
+<code>#include &lt;mavsdk/mavsdk.h&gt;</code><br />
+<code>#include &lt;chrono&gt;</code><br />
+<code>#include &lt;thread&gt;</code><br />
+<code>#include &quot;<a class="el" href="MyLog_8h_source.html">MyLog.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+mavsdk_utils.cpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="mavsdk__utils_8cpp__incl.png" border="0" usemap="#asrc_2tools_2example_2mavsdk__utils_8cpp" alt=""/></div>
+<map name="asrc_2tools_2example_2mavsdk__utils_8cpp" id="asrc_2tools_2example_2mavsdk__utils_8cpp">
+<area shape="rect" title=" " alt="" coords="257,5,452,45"/>
+<area shape="rect" href="mavsdk__utils_8h.html" title=" " alt="" coords="9,93,130,119"/>
+<area shape="poly" title=" " alt="" coords="287,48,125,92,123,87,286,43"/>
+<area shape="rect" title=" " alt="" coords="154,93,297,119"/>
+<area shape="poly" title=" " alt="" coords="325,48,257,88,255,84,322,43"/>
+<area shape="rect" title=" " alt="" coords="321,93,388,119"/>
+<area shape="poly" title=" " alt="" coords="357,46,357,79,352,79,352,46"/>
+<area shape="rect" title=" " alt="" coords="412,93,476,119"/>
+<area shape="poly" title=" " alt="" coords="378,44,422,82,419,86,375,48"/>
+<area shape="rect" href="MyLog_8h.html" title=" " alt="" coords="500,93,577,119"/>
+<area shape="poly" title=" " alt="" coords="400,43,500,85,498,90,398,48"/>
+<area shape="rect" title=" " alt="" coords="5,174,72,199"/>
+<area shape="poly" title=" " alt="" coords="67,120,51,162,46,160,62,118"/>
+<area shape="rect" title=" " alt="" coords="96,174,155,199"/>
+<area shape="poly" title=" " alt="" coords="80,117,111,161,107,164,75,120"/>
+<area shape="poly" title=" " alt="" coords="501,119,488,121,398,134,326,140,256,148,167,169,161,171,159,166,166,164,255,143,326,135,397,129,488,116,499,114"/>
+<area shape="rect" title=" " alt="" coords="179,174,303,199"/>
+<area shape="poly" title=" " alt="" coords="500,120,298,173,297,168,499,115"/>
+<area shape="rect" title=" " alt="" coords="327,167,486,207"/>
+<area shape="poly" title=" " alt="" coords="521,121,452,162,449,157,518,117"/>
+<area shape="rect" title=" " alt="" coords="510,174,629,199"/>
+<area shape="poly" title=" " alt="" coords="546,118,562,160,557,162,541,120"/>
+<area shape="rect" title=" " alt="" coords="653,174,819,199"/>
+<area shape="poly" title=" " alt="" coords="568,116,696,166,694,171,566,121"/>
+<area shape="rect" title=" " alt="" coords="844,174,921,199"/>
+<area shape="poly" title=" " alt="" coords="578,111,693,131,833,164,842,167,841,172,831,169,692,136,577,116"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a723492e665f2b3432fc0cedf78abd334" id="r_a723492e665f2b3432fc0cedf78abd334"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mavsdk__utils_8cpp.html#a723492e665f2b3432fc0cedf78abd334">wait_mavsdk_heartbeat</a> (const std::string &amp;connection_url, uint8_t &amp;out_system_id, uint8_t &amp;out_component_id, int timeout_sec)</td></tr>
+<tr class="memdesc:a723492e665f2b3432fc0cedf78abd334"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for MAVLink heartbeat using MAVSDK  <br /></td></tr>
+<tr class="separator:a723492e665f2b3432fc0cedf78abd334"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a id="a723492e665f2b3432fc0cedf78abd334" name="a723492e665f2b3432fc0cedf78abd334"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a723492e665f2b3432fc0cedf78abd334">&#9670;&#160;</a></span>wait_mavsdk_heartbeat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool wait_mavsdk_heartbeat </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>connection_url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t &amp;&#160;</td>
+          <td class="paramname"><em>out_system_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t &amp;&#160;</td>
+          <td class="paramname"><em>out_component_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout_sec</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wait for MAVLink heartbeat using MAVSDK </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">connection_url</td><td>e.g. "udp://0.0.0.0:14550" </td></tr>
+    <tr><td class="paramname">out_system_id</td><td>returned MAVLink system id </td></tr>
+    <tr><td class="paramname">out_component_id</td><td>returned MAVLink component id </td></tr>
+    <tr><td class="paramname">timeout_sec</td><td>&lt;0: block forever; &gt;=0: timeout in seconds</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true if heartbeat received, false on timeout or error </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>
