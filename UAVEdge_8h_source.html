@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_edge/demo/UAVEdge.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_1c8e19e5f988aabcb1d6c4e45e28b8fb.html">my_edge</a></li><li class="navelem"><a class="el" href="dir_74d511317f4bb0e9f6b21511944b6120.html">demo</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">UAVEdge.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="UAVEdge_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;optional&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;nlohmann/json.hpp&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="BaseEdge_8h.html">BaseEdge.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="MyControl_8h.html">MyControl.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="MyLog_8h.html">MyLog.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__edge_1_1demo.html">my_edge::demo</a> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classmy__edge_1_1demo_1_1UAVEdge.html">   22</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__edge_1_1demo_1_1UAVEdge.html">UAVEdge</a> final : <span class="keyword">public</span> <a class="code hl_class" href="classmy__edge_1_1BaseEdge.html">my_edge::BaseEdge</a> {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <a class="code hl_function" href="classmy__edge_1_1demo_1_1UAVEdge.html#a582869863d6c93959af3188597ae5aab">UAVEdge</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  <span class="keyword">explicit</span> <a class="code hl_function" href="classmy__edge_1_1demo_1_1UAVEdge.html#a582869863d6c93959af3188597ae5aab">UAVEdge</a>(<span class="keyword">const</span> nlohmann::json&amp; cfg, std::string* err = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classmy__edge_1_1demo_1_1UAVEdge.html#ab288e34b3a7c8778e68e722fdd19be7e">   26</a></span>  <a class="code hl_function" href="classmy__edge_1_1demo_1_1UAVEdge.html#ab288e34b3a7c8778e68e722fdd19be7e">~UAVEdge</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  std::optional&lt;my_data::Task&gt; <a class="code hl_function" href="classmy__edge_1_1demo_1_1UAVEdge.html#a228c37d37865dc1a74a75aca3990e5d0">NormalizeCommandLocked</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structmy__data_1_1RawCommand.html">my_data::RawCommand</a>&amp; cmd,</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                                                      <span class="keyword">const</span> <a class="code hl_typedef" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a>&amp; device_id,</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                                                      <span class="keyword">const</span> std::string&amp; device_type,</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                                                      std::string* err) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__edge_1_1demo_1_1UAVEdge.html#ac2e56e9d381e77f7a3cd76ffec39718c">ExecuteSelfTaskLocked</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structmy__data_1_1Task.html">my_data::Task</a>&amp; task) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>};</div>
+</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>} <span class="comment">// namespace my_edge::demo</span></div>
+<div class="ttc" id="aBaseEdge_8h_html"><div class="ttname"><a href="BaseEdge_8h.html">BaseEdge.h</a></div></div>
+<div class="ttc" id="aMyControl_8h_html"><div class="ttname"><a href="MyControl_8h.html">MyControl.h</a></div></div>
+<div class="ttc" id="aMyLog_8h_html"><div class="ttname"><a href="MyLog_8h.html">MyLog.h</a></div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html">my_edge::BaseEdge</a></div><div class="ttdoc">BaseEdge：实现 IEdge 的通用骨架</div><div class="ttdef"><b>Definition</b> BaseEdge.h:36</div></div>
+<div class="ttc" id="aclassmy__edge_1_1demo_1_1UAVEdge_html"><div class="ttname"><a href="classmy__edge_1_1demo_1_1UAVEdge.html">my_edge::demo::UAVEdge</a></div><div class="ttdoc">UAVEdge：无人机边缘运行时（demo）</div><div class="ttdef"><b>Definition</b> UAVEdge.h:22</div></div>
+<div class="ttc" id="aclassmy__edge_1_1demo_1_1UAVEdge_html_a228c37d37865dc1a74a75aca3990e5d0"><div class="ttname"><a href="classmy__edge_1_1demo_1_1UAVEdge.html#a228c37d37865dc1a74a75aca3990e5d0">my_edge::demo::UAVEdge::NormalizeCommandLocked</a></div><div class="ttdeci">std::optional&lt; my_data::Task &gt; NormalizeCommandLocked(const my_data::RawCommand &amp;cmd, const my_data::DeviceId &amp;device_id, const std::string &amp;device_type, std::string *err) override</div><div class="ttdoc">Normalize：把 RawCommand 转成 Task</div><div class="ttdef"><b>Definition</b> UAVEdge.cpp:24</div></div>
+<div class="ttc" id="aclassmy__edge_1_1demo_1_1UAVEdge_html_a582869863d6c93959af3188597ae5aab"><div class="ttname"><a href="classmy__edge_1_1demo_1_1UAVEdge.html#a582869863d6c93959af3188597ae5aab">my_edge::demo::UAVEdge::UAVEdge</a></div><div class="ttdeci">UAVEdge()</div><div class="ttdef"><b>Definition</b> UAVEdge.cpp:10</div></div>
+<div class="ttc" id="aclassmy__edge_1_1demo_1_1UAVEdge_html_ab288e34b3a7c8778e68e722fdd19be7e"><div class="ttname"><a href="classmy__edge_1_1demo_1_1UAVEdge.html#ab288e34b3a7c8778e68e722fdd19be7e">my_edge::demo::UAVEdge::~UAVEdge</a></div><div class="ttdeci">~UAVEdge() override=default</div></div>
+<div class="ttc" id="aclassmy__edge_1_1demo_1_1UAVEdge_html_ac2e56e9d381e77f7a3cd76ffec39718c"><div class="ttname"><a href="classmy__edge_1_1demo_1_1UAVEdge.html#ac2e56e9d381e77f7a3cd76ffec39718c">my_edge::demo::UAVEdge::ExecuteSelfTaskLocked</a></div><div class="ttdeci">void ExecuteSelfTaskLocked(const my_data::Task &amp;task) override</div><div class="ttdoc">执行 self task（可扩展）</div><div class="ttdef"><b>Definition</b> UAVEdge.cpp:67</div></div>
+<div class="ttc" id="anamespacemy__data_html_a7f44417fe7bdfd39f515815285f3c8fd"><div class="ttname"><a href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a></div><div class="ttdeci">std::string DeviceId</div><div class="ttdoc">专业设备ID（按 device_id 一对一实例）</div><div class="ttdef"><b>Definition</b> Types.h:15</div></div>
+<div class="ttc" id="anamespacemy__edge_1_1demo_html"><div class="ttname"><a href="namespacemy__edge_1_1demo.html">my_edge::demo</a></div><div class="ttdef"><b>Definition</b> TUNAEdge.cpp:13</div></div>
+<div class="ttc" id="astructmy__data_1_1RawCommand_html"><div class="ttname"><a href="structmy__data_1_1RawCommand.html">my_data::RawCommand</a></div><div class="ttdoc">原始控制命令（接收层输入）</div><div class="ttdef"><b>Definition</b> RawCommand.h:15</div></div>
+<div class="ttc" id="astructmy__data_1_1Task_html"><div class="ttname"><a href="structmy__data_1_1Task.html">my_data::Task</a></div><div class="ttdoc">Task（内部统一任务）</div><div class="ttdef"><b>Definition</b> Task.h:27</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

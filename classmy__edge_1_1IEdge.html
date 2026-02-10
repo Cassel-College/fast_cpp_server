@@ -88,11 +88,15 @@ $(function() {
 <div class="dyncontent">
 <div class="center"><img src="classmy__edge_1_1IEdge__inherit__graph.png" border="0" usemap="#aIEdge_inherit__map" alt="Inheritance graph"/></div>
 <map name="aIEdge_inherit__map" id="aIEdge_inherit__map">
-<area shape="rect" title="Edge Runtime 接口（Init/Start 分离）" alt="" coords="76,5,135,31"/>
-<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html" title="TUNAEdge（第三版）" alt="" coords="5,79,96,104"/>
-<area shape="poly" title=" " alt="" coords="90,43,62,80,57,77,86,40"/>
-<area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html" title=" " alt="" coords="120,79,203,104"/>
-<area shape="poly" title=" " alt="" coords="125,40,154,77,150,80,121,43"/>
+<area shape="rect" title="Edge Runtime 接口（Init/Start 分离）" alt="" coords="133,5,191,31"/>
+<area shape="rect" href="classmy__edge_1_1BaseEdge.html" title="BaseEdge：实现 IEdge 的通用骨架" alt="" coords="5,79,92,104"/>
+<area shape="poly" title=" " alt="" coords="133,40,69,81,66,76,130,36"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1TUNAEdge.html" title=" " alt="" coords="117,79,207,104"/>
+<area shape="poly" title=" " alt="" coords="165,44,165,79,159,79,159,44"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html" title=" " alt="" coords="231,79,314,104"/>
+<area shape="poly" title=" " alt="" coords="193,36,256,76,253,81,190,40"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1UAVEdge.html" title="UAVEdge：无人机边缘运行时（demo）" alt="" coords="8,152,89,177"/>
+<area shape="poly" title=" " alt="" coords="51,118,51,152,46,152,46,118"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
 <table class="memberdecls">
@@ -198,7 +202,7 @@ Public 成员函数</h2></td></tr>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>如果成功添加任务则返回 true，否则返回 false。 </dd></dl>
 
-<p>在 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#ad6ccbe6aa525e1634eab750c2bb8d93b">TUNAEdge</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#ad6ccbe6aa525e1634eab750c2bb8d93b">UUVEdge</a> 内被实现.</p>
+<p>在 <a class="el" href="classmy__edge_1_1BaseEdge.html#ad6ccbe6aa525e1634eab750c2bb8d93b">BaseEdge</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#ad6ccbe6aa525e1634eab750c2bb8d93b">TUNAEdge</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#ad6ccbe6aa525e1634eab750c2bb8d93b">UUVEdge</a> 内被实现.</p>
 
 </div>
 </div>
@@ -235,7 +239,7 @@ Public 成员函数</h2></td></tr>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>如果成功添加任务则返回 true，否则返回 false。 </dd></dl>
 
-<p>在 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a1381f71c6f6b97b7dfea100449fed59c">TUNAEdge</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a1381f71c6f6b97b7dfea100449fed59c">UUVEdge</a> 内被实现.</p>
+<p>在 <a class="el" href="classmy__edge_1_1BaseEdge.html#a1381f71c6f6b97b7dfea100449fed59c">BaseEdge</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a1381f71c6f6b97b7dfea100449fed59c">TUNAEdge</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a1381f71c6f6b97b7dfea100449fed59c">UUVEdge</a> 内被实现.</p>
 
 </div>
 </div>
@@ -262,7 +266,7 @@ Public 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>在 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acdccf5b178dd52cd19d8af660e6d168b">TUNAEdge</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acdccf5b178dd52cd19d8af660e6d168b">UUVEdge</a> 内被实现.</p>
+<p>在 <a class="el" href="classmy__edge_1_1BaseEdge.html#acdccf5b178dd52cd19d8af660e6d168b">BaseEdge</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acdccf5b178dd52cd19d8af660e6d168b">TUNAEdge</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acdccf5b178dd52cd19d8af660e6d168b">UUVEdge</a> 内被实现.</p>
 
 </div>
 </div>
@@ -292,7 +296,7 @@ Public 成员函数</h2></td></tr>
 <p>获取 Edge 类型 </p>
 <dl class="section return"><dt>返回</dt><dd>std::string </dd></dl>
 
-<p>在 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#ac66580e78dc7f12bc1d449ee4a4d0552">TUNAEdge</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#ac66580e78dc7f12bc1d449ee4a4d0552">UUVEdge</a> 内被实现.</p>
+<p>在 <a class="el" href="classmy__edge_1_1BaseEdge.html#ac66580e78dc7f12bc1d449ee4a4d0552">BaseEdge</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#ac66580e78dc7f12bc1d449ee4a4d0552">TUNAEdge</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#ac66580e78dc7f12bc1d449ee4a4d0552">UUVEdge</a> 内被实现.</p>
 
 </div>
 </div>
@@ -321,7 +325,7 @@ Public 成员函数</h2></td></tr>
 
 <p>获取状态快照（EdgeStatus，补 queue_depth/pending/running） </p>
 
-<p>在 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">TUNAEdge</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">UUVEdge</a> 内被实现.</p>
+<p>在 <a class="el" href="classmy__edge_1_1BaseEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">BaseEdge</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">TUNAEdge</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">UUVEdge</a> 内被实现.</p>
 
 </div>
 </div>
@@ -351,7 +355,7 @@ Public 成员函数</h2></td></tr>
 <p>获取 Edge ID </p>
 <dl class="section return"><dt>返回</dt><dd><a class="el" href="namespacemy__data.html#aa97613f313f7fbbad8c368f2599e3f26" title="边缘执行器ID">my_data::EdgeId</a> </dd></dl>
 
-<p>在 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a14a921badc0c0cfd1d63dee98f734b80">TUNAEdge</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a14a921badc0c0cfd1d63dee98f734b80">UUVEdge</a> 内被实现.</p>
+<p>在 <a class="el" href="classmy__edge_1_1BaseEdge.html#a14a921badc0c0cfd1d63dee98f734b80">BaseEdge</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a14a921badc0c0cfd1d63dee98f734b80">TUNAEdge</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a14a921badc0c0cfd1d63dee98f734b80">UUVEdge</a> 内被实现.</p>
 
 </div>
 </div>
@@ -391,7 +395,7 @@ Public 成员函数</h2></td></tr>
 
 <p>初始化：仅装配，不启动线程 </p>
 
-<p>在 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">TUNAEdge</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">UUVEdge</a> 内被实现.</p>
+<p>在 <a class="el" href="classmy__edge_1_1BaseEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">BaseEdge</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">TUNAEdge</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">UUVEdge</a> 内被实现.</p>
 
 </div>
 </div>
@@ -431,7 +435,7 @@ Public 成员函数</h2></td></tr>
 
 <p>设置紧急停止 </p>
 
-<p>在 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a930b466b41c7d75b7318e6ca5853b5c9">TUNAEdge</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a930b466b41c7d75b7318e6ca5853b5c9">UUVEdge</a> 内被实现.</p>
+<p>在 <a class="el" href="classmy__edge_1_1BaseEdge.html#a930b466b41c7d75b7318e6ca5853b5c9">BaseEdge</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a930b466b41c7d75b7318e6ca5853b5c9">TUNAEdge</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a930b466b41c7d75b7318e6ca5853b5c9">UUVEdge</a> 内被实现.</p>
 
 </div>
 </div>
@@ -467,7 +471,7 @@ Public 成员函数</h2></td></tr>
   </dd>
 </dl>
 
-<p>在 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a6b0f7d4b008896d9b742c7c14f29c2e7">TUNAEdge</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a6b0f7d4b008896d9b742c7c14f29c2e7">UUVEdge</a> 内被实现.</p>
+<p>在 <a class="el" href="classmy__edge_1_1BaseEdge.html#a6b0f7d4b008896d9b742c7c14f29c2e7">BaseEdge</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a6b0f7d4b008896d9b742c7c14f29c2e7">TUNAEdge</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a6b0f7d4b008896d9b742c7c14f29c2e7">UUVEdge</a> 内被实现.</p>
 
 </div>
 </div>
@@ -496,7 +500,7 @@ Public 成员函数</h2></td></tr>
 
 <p>全局停机：Stop devices + Shutdown queues + Join </p>
 
-<p>在 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d">TUNAEdge</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d">UUVEdge</a> 内被实现.</p>
+<p>在 <a class="el" href="classmy__edge_1_1BaseEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d">BaseEdge</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d">TUNAEdge</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d">UUVEdge</a> 内被实现.</p>
 
 </div>
 </div>
@@ -526,7 +530,7 @@ Public 成员函数</h2></td></tr>
 
 <p>启动：启动所有 device/workflow </p>
 
-<p>在 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a46b15f1cef85897da0f2fed19f72ed4c">TUNAEdge</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a46b15f1cef85897da0f2fed19f72ed4c">UUVEdge</a> 内被实现.</p>
+<p>在 <a class="el" href="classmy__edge_1_1BaseEdge.html#a46b15f1cef85897da0f2fed19f72ed4c">BaseEdge</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a46b15f1cef85897da0f2fed19f72ed4c">TUNAEdge</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a46b15f1cef85897da0f2fed19f72ed4c">UUVEdge</a> 内被实现.</p>
 
 </div>
 </div>
@@ -556,7 +560,7 @@ Public 成员函数</h2></td></tr>
 
 <p>Submit：命令入口（Normalize 并入队） </p>
 
-<p>在 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">TUNAEdge</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">UUVEdge</a> 内被实现.</p>
+<p>在 <a class="el" href="classmy__edge_1_1BaseEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">BaseEdge</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">TUNAEdge</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">UUVEdge</a> 内被实现.</p>
 
 </div>
 </div>

@@ -1,0 +1,17 @@
+<map id="Start" name="Start">
+<area shape="rect" id="Node000001" title="启动：启动所有 device/workflow" alt="" coords="5,55,59,80"/>
+<area shape="rect" id="Node000002" href="$namespacemy__edge.html#a73a98adf458ded5bec93301b2541854e" title=" " alt="" coords="111,5,312,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="58,55,106,39,136,31,138,37,107,45,60,60"/>
+<area shape="rect" id="Node000003" href="$classmy__edge_1_1BaseEdge.html#aed0fd09c1eaf4807781901fe011b83b3" title=" " alt="" coords="107,55,316,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="59,65,93,65,93,70,59,70"/>
+<area shape="rect" id="Node000006" href="$classmy__edge_1_1BaseEdge.html#a2907381286bd73c462882f919ec4aa48" title=" " alt="" coords="110,105,313,131"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="60,74,107,90,141,99,140,105,106,95,58,79"/>
+<area shape="rect" id="Node000004" href="$classmy__edge_1_1BaseEdge.html#a36e415a8074f5f0d53b29fb5ba8d8b48" title=" " alt="" coords="364,55,483,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="316,65,350,65,350,70,316,70"/>
+<area shape="rect" id="Node000005" href="$classmy__control_1_1TaskQueue.html#abe619a353eeb51b30742195efb9b37cc" title="队列长度（线程安全）" alt="" coords="531,46,705,86"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="483,64,517,64,517,69,483,70"/>
+<area shape="rect" id="Node000007" href="$classmy__edge_1_1BaseEdge.html#a3539dc681f16841477a48b4e0c5d883e" title=" " alt="" coords="367,107,480,132"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="313,116,353,116,353,122,313,121"/>
+<area shape="rect" id="Node000008" href="$classmy__edge_1_1BaseEdge.html#afc617dc580a99ebe31ebc0e886906af3" title="心跳上报（snapshot thread 周期调用） 默认实现：只打日志。后续你可以接入 MQTT/HTTP 等上报。" alt="" coords="531,111,705,136"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="480,118,517,119,517,124,480,123"/>
+</map>

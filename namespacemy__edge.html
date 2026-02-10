@@ -85,6 +85,9 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1BaseEdge.html">BaseEdge</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">BaseEdge：实现 <a class="el" href="classmy__edge_1_1IEdge.html" title="Edge Runtime 接口（Init/Start 分离）">IEdge</a> 的通用骨架  <a href="classmy__edge_1_1BaseEdge.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1DuplicateEdgeException.html">DuplicateEdgeException</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">尝试添加具有重复 ID 的 Edge 时抛出的异常。  <a href="classmy__edge_1_1DuplicateEdgeException.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -249,27 +252,44 @@ $(function() {
 
 <p class="reference">引用了 <a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16ea32b169f72b293ef80d35435e9894f8e2">Initializing</a>, <a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16eae7d31fc0602fb2ede144d18cdffd816b">Ready</a>, <a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16ea5bda814c4aedb126839228f1a3d92f09">Running</a>, <a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16eac23e2b09ebe6bf4cb5e2a9abe85c0be2">Stopped</a> , 以及 <a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16ea7b7ecb39b9e110c2a31409a1672bad23">Stopping</a>.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acdccf5b178dd52cd19d8af660e6d168b">UUVEdge::DumpInternalInfo()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">UUVEdge::Init()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d">UUVEdge::Shutdown()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a46b15f1cef85897da0f2fed19f72ed4c">UUVEdge::Start()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">UUVEdge::Submit()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1BaseEdge.html#acdccf5b178dd52cd19d8af660e6d168b">BaseEdge::DumpInternalInfo()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acdccf5b178dd52cd19d8af660e6d168b">UUVEdge::DumpInternalInfo()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">UUVEdge::Init()</a>, <a class="el" href="classmy__edge_1_1BaseEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d">BaseEdge::Shutdown()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d">UUVEdge::Shutdown()</a>, <a class="el" href="classmy__edge_1_1BaseEdge.html#a46b15f1cef85897da0f2fed19f72ed4c">BaseEdge::Start()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a46b15f1cef85897da0f2fed19f72ed4c">UUVEdge::Start()</a>, <a class="el" href="classmy__edge_1_1BaseEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">BaseEdge::Submit()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">UUVEdge::Submit()</a>.</p>
 <div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemy__edge_a73a98adf458ded5bec93301b2541854e_icgraph.png" border="0" usemap="#anamespacemy__edge_a73a98adf458ded5bec93301b2541854e_icgraph" alt=""/></div>
 <map name="anamespacemy__edge_a73a98adf458ded5bec93301b2541854e_icgraph" id="anamespacemy__edge_a73a98adf458ded5bec93301b2541854e_icgraph">
-<area shape="rect" title=" " alt="" coords="493,141,627,166"/>
-<area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html#acdccf5b178dd52cd19d8af660e6d168b" title=" " alt="" coords="249,5,445,45"/>
-<area shape="poly" title=" " alt="" coords="535,133,495,96,444,60,419,48,421,43,447,55,498,91,539,129"/>
-<area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html#aeaad4d1e08909ec413c6e934fb718dc7" title="初始化：仅装配，不启动线程" alt="" coords="249,69,445,109"/>
-<area shape="poly" title=" " alt="" coords="503,139,414,112,415,107,505,134"/>
-<area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d" title="全局停机：Stop devices + Shutdown queues + Join" alt="" coords="249,133,445,173"/>
-<area shape="poly" title=" " alt="" coords="479,156,445,156,445,151,479,151"/>
-<area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html#a46b15f1cef85897da0f2fed19f72ed4c" title="启动：启动所有 device/workflow" alt="" coords="249,197,445,237"/>
-<area shape="poly" title=" " alt="" coords="505,173,415,200,414,195,503,168"/>
-<area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html#a0d90b8b5b262d714bf5378e4a6c54773" title="Submit：命令入口（Normalize 并入队）" alt="" coords="249,261,445,301"/>
-<area shape="poly" title=" " alt="" coords="539,178,498,215,447,252,421,264,419,259,444,247,495,211,535,174"/>
-<area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html#ab69eb9171ee3c27d2c7cc35879356f05" title=" " alt="" coords="5,69,201,109"/>
-<area shape="poly" title=" " alt="" coords="236,92,201,92,201,87,236,87"/>
-<area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html#aa8982df7c38aa98b570f85c45f51d8d8" title=" " alt="" coords="5,133,201,173"/>
-<area shape="poly" title=" " alt="" coords="236,156,201,156,201,151,236,151"/>
+<area shape="rect" title=" " alt="" coords="1247,255,1380,281"/>
+<area shape="rect" href="classmy__edge_1_1BaseEdge.html#acdccf5b178dd52cd19d8af660e6d168b" title=" " alt="" coords="1019,5,1182,45"/>
+<area shape="poly" title=" " alt="" coords="1302,243,1289,202,1267,153,1236,103,1197,59,1179,48,1182,43,1200,55,1241,99,1272,150,1294,200,1307,241"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html#acdccf5b178dd52cd19d8af660e6d168b" title=" " alt="" coords="1003,69,1199,109"/>
+<area shape="poly" title=" " alt="" coords="1295,245,1255,188,1228,157,1197,130,1165,112,1167,107,1200,126,1232,153,1259,184,1300,242"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html#a46b15f1cef85897da0f2fed19f72ed4c" title="启动：启动所有 device/workflow" alt="" coords="5,99,201,139"/>
+<area shape="poly" title=" " alt="" coords="1291,247,1251,208,1225,189,1198,174,1149,157,1107,146,1069,141,1033,140,956,145,858,149,611,149,391,143,202,130,202,125,391,137,611,144,858,144,955,140,1033,135,1069,136,1108,141,1151,152,1200,170,1228,185,1254,204,1295,243"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html#aeaad4d1e08909ec413c6e934fb718dc7" title="初始化：仅装配，不启动线程" alt="" coords="1003,184,1199,224"/>
+<area shape="poly" title=" " alt="" coords="1256,254,1167,227,1169,222,1258,249"/>
+<area shape="rect" href="classmy__edge_1_1BaseEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d" title="全局停机：Stop devices + Shutdown queues + Join" alt="" coords="1019,248,1182,288"/>
+<area shape="poly" title=" " alt="" coords="1233,271,1182,271,1182,265,1233,265"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d" title="全局停机：Stop devices + Shutdown queues + Join" alt="" coords="1003,312,1199,352"/>
+<area shape="poly" title=" " alt="" coords="1258,287,1169,314,1167,309,1256,282"/>
+<area shape="rect" href="classmy__edge_1_1BaseEdge.html#a46b15f1cef85897da0f2fed19f72ed4c" title="启动：启动所有 device/workflow" alt="" coords="1019,376,1182,416"/>
+<area shape="poly" title=" " alt="" coords="1292,293,1252,330,1200,366,1174,378,1172,374,1197,362,1248,326,1289,289"/>
+<area shape="rect" href="classmy__edge_1_1BaseEdge.html#a0d90b8b5b262d714bf5378e4a6c54773" title="Submit：命令入口（Normalize 并入队）" alt="" coords="1019,440,1182,480"/>
+<area shape="poly" title=" " alt="" coords="1303,295,1264,362,1235,398,1200,430,1180,442,1177,438,1197,426,1231,395,1259,359,1298,292"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html#a0d90b8b5b262d714bf5378e4a6c54773" title="Submit：命令入口（Normalize 并入队）" alt="" coords="1003,504,1199,544"/>
+<area shape="poly" title=" " alt="" coords="1308,295,1295,338,1274,391,1242,446,1223,472,1200,494,1182,506,1179,502,1197,490,1219,468,1238,443,1269,389,1290,336,1303,293"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html#a243ba6d464a484cfb249e7ad48279a36" title=" " alt="" coords="759,69,955,109"/>
+<area shape="poly" title=" " alt="" coords="989,92,955,92,955,87,989,87"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html#a36e415a8074f5f0d53b29fb5ba8d8b48" title=" " alt="" coords="515,69,711,109"/>
+<area shape="poly" title=" " alt="" coords="745,92,711,92,711,87,745,87"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html#aed0fd09c1eaf4807781901fe011b83b3" title=" " alt="" coords="249,69,467,109"/>
+<area shape="poly" title=" " alt="" coords="501,92,467,92,467,87,501,87"/>
+<area shape="poly" title=" " alt="" coords="236,106,202,110,201,105,235,101"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html#ab69eb9171ee3c27d2c7cc35879356f05" title=" " alt="" coords="759,184,955,224"/>
+<area shape="poly" title=" " alt="" coords="989,207,955,207,955,201,989,201"/>
+<area shape="rect" href="classmy__edge_1_1BaseEdge.html#ab0bd45edb5fbd918a3eab7c1a28896c0" title=" " alt="" coords="775,248,938,288"/>
+<area shape="poly" title=" " alt="" coords="1006,271,938,271,938,265,1006,265"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1UUVEdge.html#aa8982df7c38aa98b570f85c45f51d8d8" title=" " alt="" coords="759,312,955,352"/>
+<area shape="poly" title=" " alt="" coords="989,335,955,335,955,329,989,329"/>
 </map>
 </div>
 

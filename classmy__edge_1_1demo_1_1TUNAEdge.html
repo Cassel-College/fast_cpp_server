@@ -81,16 +81,13 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>TUNAEdge（第三版）  
- <a href="classmy__edge_1_1demo_1_1TUNAEdge.html#details">更多...</a></p>
-
 <p><code>#include &lt;<a class="el" href="TUNAEdge_8h_source.html">TUNAEdge.h</a>&gt;</code></p>
 <div class="dynheader">
 类 TUNAEdge 继承关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="classmy__edge_1_1demo_1_1TUNAEdge__inherit__graph.png" border="0" usemap="#aTUNAEdge_inherit__map" alt="Inheritance graph"/></div>
 <map name="aTUNAEdge_inherit__map" id="aTUNAEdge_inherit__map">
-<area shape="rect" title="TUNAEdge（第三版）" alt="" coords="5,79,96,104"/>
+<area shape="rect" title=" " alt="" coords="5,79,96,104"/>
 <area shape="rect" href="classmy__edge_1_1IEdge.html" title="Edge Runtime 接口（Init/Start 分离）" alt="" coords="21,5,80,31"/>
 <area shape="poly" title=" " alt="" coords="53,44,53,79,48,79,48,44"/>
 </map>
@@ -100,7 +97,7 @@ TUNAEdge 的协作图:</div>
 <div class="dyncontent">
 <div class="center"><img src="classmy__edge_1_1demo_1_1TUNAEdge__coll__graph.png" border="0" usemap="#aTUNAEdge_coll__map" alt="Collaboration graph"/></div>
 <map name="aTUNAEdge_coll__map" id="aTUNAEdge_coll__map">
-<area shape="rect" title="TUNAEdge（第三版）" alt="" coords="5,79,96,104"/>
+<area shape="rect" title=" " alt="" coords="5,79,96,104"/>
 <area shape="rect" href="classmy__edge_1_1IEdge.html" title="Edge Runtime 接口（Init/Start 分离）" alt="" coords="21,5,80,31"/>
 <area shape="poly" title=" " alt="" coords="53,44,53,79,48,79,48,44"/>
 </map>
@@ -206,17 +203,12 @@ Private 属性</h2></td></tr>
 <tr class="separator:a7b39e91acd655a7ecfd4054ca42f2576"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4f0da63d92cd2ee7e2a7ad05c0e902b" id="r_ab4f0da63d92cd2ee7e2a7ad05c0e902b"><td class="memItemLeft" align="right" valign="top">std::thread&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#ab4f0da63d92cd2ee7e2a7ad05c0e902b">snapshot_thread_</a></td></tr>
 <tr class="separator:ab4f0da63d92cd2ee7e2a7ad05c0e902b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a796679a9831a4a175f55ebe330443572" id="r_a796679a9831a4a175f55ebe330443572"><td class="memItemLeft" align="right" valign="top">std::thread&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a796679a9831a4a175f55ebe330443572">do_action_thread_</a></td></tr>
+<tr class="separator:a796679a9831a4a175f55ebe330443572"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96f9ad4daae3ab474eac3d0e8b11fe0f" id="r_a96f9ad4daae3ab474eac3d0e8b11fe0f"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classmy__edge_1_1MyMavVehicle.html">MyMavVehicle</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a96f9ad4daae3ab474eac3d0e8b11fe0f">vehicle_</a></td></tr>
 <tr class="separator:a96f9ad4daae3ab474eac3d0e8b11fe0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p>TUNAEdge（第三版） </p>
-<ul>
-<li>不再持有 persistent normalizers_by_type_</li>
-<li>在 Submit 时按需创建 normalizer（临时），使用后销毁</li>
-<li>其余成员与 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html">UUVEdge</a> 保持一致（设备、队列、snapshot、vehicle 等） </li>
-</ul>
-</div><h2 class="groupheader">构造及析构函数说明</h2>
+<h2 class="groupheader">构造及析构函数说明</h2>
 <a id="a9dd54b12e9b354f37d7b7e0905333dff" name="a9dd54b12e9b354f37d7b7e0905333dff"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9dd54b12e9b354f37d7b7e0905333dff">&#9670;&#160;</a></span>TUNAEdge() <span class="overload">[1/2]</span></h2>
 
@@ -583,6 +575,8 @@ Private 属性</h2></td></tr>
 
 <p>实现了 <a class="el" href="classmy__edge_1_1IEdge.html#a3291f517b24bce7dfd0557f46a3eae1a">IEdge</a>.</p>
 
+<p class="reference">引用了 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a8fe7946ebaf9caa2ba00335aa87c2376">TUNAEdge::edge_type_</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a3f7fceadda2b13af52092701177669f0">TUNAEdge::rw_mutex_</a>.</p>
+
 </div>
 </div>
 <a id="acbb56ebb7a2b543aeedcf0c6a3716abe" name="acbb56ebb7a2b543aeedcf0c6a3716abe"></a>
@@ -659,6 +653,8 @@ Private 属性</h2></td></tr>
 <dl class="section return"><dt>返回</dt><dd><a class="el" href="namespacemy__data.html#aa97613f313f7fbbad8c368f2599e3f26" title="边缘执行器ID">my_data::EdgeId</a> </dd></dl>
 
 <p>实现了 <a class="el" href="classmy__edge_1_1IEdge.html#a951e7cb90a822e527ac15fe273b4972a">IEdge</a>.</p>
+
+<p class="reference">引用了 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a4f600ad4ee5566df049ec8213e99986b">TUNAEdge::edge_id_</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a3f7fceadda2b13af52092701177669f0">TUNAEdge::rw_mutex_</a>.</p>
 
 </div>
 </div>
@@ -1377,6 +1373,28 @@ Private 属性</h2></td></tr>
 
 </div>
 </div>
+<a id="a796679a9831a4a175f55ebe330443572" name="a796679a9831a4a175f55ebe330443572"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a796679a9831a4a175f55ebe330443572">&#9670;&#160;</a></span>do_action_thread_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::thread do_action_thread_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a4f600ad4ee5566df049ec8213e99986b" name="a4f600ad4ee5566df049ec8213e99986b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4f600ad4ee5566df049ec8213e99986b">&#9670;&#160;</a></span>edge_id_</h2>
 
@@ -1397,7 +1415,7 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#ad6ccbe6aa525e1634eab750c2bb8d93b">TUNAEdge::AppendJsonTask()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a1381f71c6f6b97b7dfea100449fed59c">TUNAEdge::AppendTask()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a95eda853f106e39a3a44daa01155e188">TUNAEdge::AppendTaskToTargetTaskQueue()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acdccf5b178dd52cd19d8af660e6d168b">TUNAEdge::DumpInternalInfo()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">TUNAEdge::GetStatusSnapshot()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">TUNAEdge::Init()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a31b7d93ab879336b0a7b38da67eeed3f">TUNAEdge::MakeResult()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a930b466b41c7d75b7318e6ca5853b5c9">TUNAEdge::SetEStop()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a6b0f7d4b008896d9b742c7c14f29c2e7">TUNAEdge::ShowAnalyzeInitArgs()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d">TUNAEdge::Shutdown()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a46b15f1cef85897da0f2fed19f72ed4c">TUNAEdge::Start()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a97d1170c8d61790b8c6cb9af695b371c">TUNAEdge::StartStatusSnapshotThreadLocked()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acf4df206592b39205ec28dc4272b70c4">TUNAEdge::StatusSnapshotLoop()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a5108065e97bedefe5d5c5f0a26c5334c">TUNAEdge::StopStatusSnapshotThreadLocked()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">TUNAEdge::Submit()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a9dd54b12e9b354f37d7b7e0905333dff">TUNAEdge::TUNAEdge()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a94b8fc2658982a8327c112703fede479">TUNAEdge::TUNAEdge()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a589edaae153d663d5e5618a314bd8cfb">TUNAEdge::~TUNAEdge()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#ad6ccbe6aa525e1634eab750c2bb8d93b">TUNAEdge::AppendJsonTask()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a1381f71c6f6b97b7dfea100449fed59c">TUNAEdge::AppendTask()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a95eda853f106e39a3a44daa01155e188">TUNAEdge::AppendTaskToTargetTaskQueue()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acdccf5b178dd52cd19d8af660e6d168b">TUNAEdge::DumpInternalInfo()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">TUNAEdge::GetStatusSnapshot()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a14a921badc0c0cfd1d63dee98f734b80">TUNAEdge::Id()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">TUNAEdge::Init()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a31b7d93ab879336b0a7b38da67eeed3f">TUNAEdge::MakeResult()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a930b466b41c7d75b7318e6ca5853b5c9">TUNAEdge::SetEStop()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a6b0f7d4b008896d9b742c7c14f29c2e7">TUNAEdge::ShowAnalyzeInitArgs()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d">TUNAEdge::Shutdown()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a46b15f1cef85897da0f2fed19f72ed4c">TUNAEdge::Start()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a97d1170c8d61790b8c6cb9af695b371c">TUNAEdge::StartStatusSnapshotThreadLocked()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acf4df206592b39205ec28dc4272b70c4">TUNAEdge::StatusSnapshotLoop()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a5108065e97bedefe5d5c5f0a26c5334c">TUNAEdge::StopStatusSnapshotThreadLocked()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">TUNAEdge::Submit()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a9dd54b12e9b354f37d7b7e0905333dff">TUNAEdge::TUNAEdge()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a94b8fc2658982a8327c112703fede479">TUNAEdge::TUNAEdge()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a589edaae153d663d5e5618a314bd8cfb">TUNAEdge::~TUNAEdge()</a>.</p>
 
 </div>
 </div>
@@ -1421,7 +1439,7 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acdccf5b178dd52cd19d8af660e6d168b">TUNAEdge::DumpInternalInfo()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">TUNAEdge::Init()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acdccf5b178dd52cd19d8af660e6d168b">TUNAEdge::DumpInternalInfo()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#ac66580e78dc7f12bc1d449ee4a4d0552">TUNAEdge::EdgeType()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">TUNAEdge::Init()</a>.</p>
 
 </div>
 </div>
@@ -1565,7 +1583,7 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#ad6ccbe6aa525e1634eab750c2bb8d93b">TUNAEdge::AppendJsonTask()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a1381f71c6f6b97b7dfea100449fed59c">TUNAEdge::AppendTask()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a95eda853f106e39a3a44daa01155e188">TUNAEdge::AppendTaskToTargetTaskQueue()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acdccf5b178dd52cd19d8af660e6d168b">TUNAEdge::DumpInternalInfo()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">TUNAEdge::GetStatusSnapshot()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">TUNAEdge::Init()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a930b466b41c7d75b7318e6ca5853b5c9">TUNAEdge::SetEStop()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a6b0f7d4b008896d9b742c7c14f29c2e7">TUNAEdge::ShowAnalyzeInitArgs()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d">TUNAEdge::Shutdown()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a46b15f1cef85897da0f2fed19f72ed4c">TUNAEdge::Start()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">TUNAEdge::Submit()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#ad6ccbe6aa525e1634eab750c2bb8d93b">TUNAEdge::AppendJsonTask()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a1381f71c6f6b97b7dfea100449fed59c">TUNAEdge::AppendTask()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a95eda853f106e39a3a44daa01155e188">TUNAEdge::AppendTaskToTargetTaskQueue()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acdccf5b178dd52cd19d8af660e6d168b">TUNAEdge::DumpInternalInfo()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#ac66580e78dc7f12bc1d449ee4a4d0552">TUNAEdge::EdgeType()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">TUNAEdge::GetStatusSnapshot()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a14a921badc0c0cfd1d63dee98f734b80">TUNAEdge::Id()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">TUNAEdge::Init()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a930b466b41c7d75b7318e6ca5853b5c9">TUNAEdge::SetEStop()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a6b0f7d4b008896d9b742c7c14f29c2e7">TUNAEdge::ShowAnalyzeInitArgs()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d">TUNAEdge::Shutdown()</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a46b15f1cef85897da0f2fed19f72ed4c">TUNAEdge::Start()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">TUNAEdge::Submit()</a>.</p>
 
 </div>
 </div>

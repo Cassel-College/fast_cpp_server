@@ -2,7 +2,7 @@ var searchData=
 [
   ['main_0',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]],
   ['make_5fargv_1',['make_argv',['../namespacebash.html#aaa8a766997f41ec4be7e94a85d4e8877',1,'bash']]],
-  ['makeresult_2',['makeresult',['../classmy__edge_1_1demo_1_1UUVEdge.html#a81d4d98ed19966308bde4556e02ed6a6',1,'my_edge::demo::UUVEdge::MakeResult()'],['../classmy__edge_1_1demo_1_1TUNAEdge.html#a31b7d93ab879336b0a7b38da67eeed3f',1,'my_edge::demo::TUNAEdge::MakeResult()']]],
+  ['makeresult_2',['makeresult',['../classmy__edge_1_1demo_1_1TUNAEdge.html#a31b7d93ab879336b0a7b38da67eeed3f',1,'my_edge::demo::TUNAEdge::MakeResult()'],['../classmy__edge_1_1BaseEdge.html#a31b7d93ab879336b0a7b38da67eeed3f',1,'my_edge::BaseEdge::MakeResult()'],['../classmy__edge_1_1demo_1_1UUVEdge.html#a81d4d98ed19966308bde4556e02ed6a6',1,'my_edge::demo::UUVEdge::MakeResult()']]],
   ['manualcontrol_3',['ManualControl',['../classmy__edge_1_1MyMavVehicle.html#aca8e97b2fc459d354958be726efd2f30',1,'my_edge::MyMavVehicle']]],
   ['mapstatuscode_4',['mapStatusCode',['../classmy__api_1_1base_1_1BaseApiController.html#aff96a7fec1ed5270eaf4c7000f576bc5',1,'my_api::base::BaseApiController']]],
   ['matchtopicfilter_5',['MatchTopicFilter',['../classmy__mqtt_1_1MqttService.html#a5065132a307272381759ad4d0848b278',1,'my_mqtt::MqttService']]],
@@ -11,7 +11,7 @@ var searchData=
   ['monitorconnection_8',['monitorConnection',['../classtools_1_1SimpleTcpClient.html#a0b32b04537729e310e1f9f9c0a8fc7dc',1,'tools::SimpleTcpClient']]],
   ['monitorloop_9',['monitorloop',['../classDeviceOnlineMonitor.html#a70a4677f113e64393ea51d131e5b4391',1,'DeviceOnlineMonitor::monitorLoop()'],['../classSoftHealthMonitorManager.html#a70a4677f113e64393ea51d131e5b4391',1,'SoftHealthMonitorManager::monitorLoop()']]],
   ['monitorthreadfunc_10',['MonitorThreadFunc',['../classmy__edge_1_1MyMavVehicle.html#aa89528c30ace77fff0f6511a88ceda90',1,'my_edge::MyMavVehicle']]],
-  ['mqttservice_11',['mqttservice',['../classmy__mqtt_1_1MqttService.html#a67227f6c867b1291e22203a68a86a1dc',1,'my_mqtt::MqttService::MqttService(const MqttService &amp;)=delete'],['../classmy__mqtt_1_1MqttService.html#a2d0706855bb7061371abaca0b44c0916',1,'my_mqtt::MqttService::MqttService()=default']]],
+  ['mqttservice_11',['mqttservice',['../classmy__mqtt_1_1MqttService.html#a2d0706855bb7061371abaca0b44c0916',1,'my_mqtt::MqttService::MqttService()=default'],['../classmy__mqtt_1_1MqttService.html#a67227f6c867b1291e22203a68a86a1dc',1,'my_mqtt::MqttService::MqttService(const MqttService &amp;)=delete']]],
   ['mutex_12',['Mutex',['../classmy__db_1_1MyDB.html#a0c87ef9e9b5015da158d4f7692b7c26e',1,'my_db::MyDB']]],
   ['myapi_13',['myapi',['../classmy__api_1_1MyAPI.html#afeedb939f9a0f3c5a082f83ee6fb1238',1,'my_api::MyAPI::MyAPI()'],['../classmy__api_1_1MyAPI.html#a0c6ee101f7d115253d607250c38ec3d5',1,'my_api::MyAPI::MyAPI(const MyAPI &amp;)=delete']]],
   ['myconfig_14',['MyConfig',['../classMyConfig.html#a678cd6805d655e8b3159b5c90fc54e45',1,'MyConfig']]],

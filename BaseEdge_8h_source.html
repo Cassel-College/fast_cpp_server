@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_edge/BaseEdge.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_1c8e19e5f988aabcb1d6c4e45e28b8fb.html">my_edge</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">BaseEdge.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="BaseEdge_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;atomic&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;optional&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;shared_mutex&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;thread&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;nlohmann/json.hpp&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="IEdge_8h.html">IEdge.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="MyData_8h.html">MyData.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="MyLog_8h.html">MyLog.h</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="IDevice_8h.html">IDevice.h</a>&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="TaskQueue_8h.html">TaskQueue.h</a>&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__edge.html">my_edge</a> {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="};">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classmy__edge_1_1BaseEdge.html">   36</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__edge_1_1BaseEdge.html">BaseEdge</a> : <span class="keyword">public</span> <a class="code hl_class" href="classmy__edge_1_1IEdge.html">IEdge</a> {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <a class="code hl_function" href="classmy__edge_1_1BaseEdge.html#a561a658f01fec4da9beb9da607fb04c4">BaseEdge</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <span class="keyword">explicit</span> <a class="code hl_function" href="classmy__edge_1_1BaseEdge.html#a561a658f01fec4da9beb9da607fb04c4">BaseEdge</a>(std::string edge_type);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <a class="code hl_function" href="classmy__edge_1_1BaseEdge.html#ab0bd45edb5fbd918a3eab7c1a28896c0">~BaseEdge</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <span class="comment">// IEdge 实现</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__edge_1_1BaseEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">Init</a>(<span class="keyword">const</span> nlohmann::json&amp; cfg, std::string* err) <span class="keyword">override</span>;          <span class="comment">// 负责解析 cfg 和初始化成员变量，但不启动设备线程</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__edge_1_1BaseEdge.html#a46b15f1cef85897da0f2fed19f72ed4c">Start</a>(std::string* err) <span class="keyword">override</span>;                                    <span class="comment">// 负责启动设备线程、self action 线程和 snapshot 线程，切换 run_state 到 Running</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <a class="code hl_struct" href="structmy__edge_1_1SubmitResult.html">SubmitResult</a> <a class="code hl_function" href="classmy__edge_1_1BaseEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">Submit</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structmy__data_1_1RawCommand.html">my_data::RawCommand</a>&amp; cmd) <span class="keyword">override</span>;             <span class="comment">// 负责 run_state/estop/device_id 校验，调用 NormalizeCommandLocked 获取 Task，并分发到对应队列</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <a class="code hl_struct" href="structmy__data_1_1EdgeStatus.html">my_data::EdgeStatus</a> <a class="code hl_function" href="classmy__edge_1_1BaseEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">GetStatusSnapshot</a>() <span class="keyword">const override</span>;                   <span class="comment">// 负责收集基本状态信息（run_state、estop、队列长度等），并调用 ReportHeartbeatLocked 上报</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__edge_1_1BaseEdge.html#a930b466b41c7d75b7318e6ca5853b5c9">SetEStop</a>(<span class="keywordtype">bool</span> active, <span class="keyword">const</span> std::string&amp; reason) <span class="keyword">override</span>;           <span class="comment">// 负责设置 estop 状态和原因，并在日志中记录</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__edge_1_1BaseEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d">Shutdown</a>() <span class="keyword">override</span>;                                                 <span class="comment">// 负责停止设备线程、self action 线程和 snapshot 线程，清理资源，切换 run_state 到 Stopped</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <a class="code hl_typedef" href="namespacemy__data.html#aa97613f313f7fbbad8c368f2599e3f26">my_data::EdgeId</a> <a class="code hl_function" href="classmy__edge_1_1BaseEdge.html#a14a921badc0c0cfd1d63dee98f734b80">Id</a>() <span class="keyword">const override</span>;                                      <span class="comment">// 负责返回 edge_id        </span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  std::string <a class="code hl_function" href="classmy__edge_1_1BaseEdge.html#ac66580e78dc7f12bc1d449ee4a4d0552">EdgeType</a>() <span class="keyword">const override</span>;                                    <span class="comment">// 负责返回 edge_type</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__edge_1_1BaseEdge.html#a6b0f7d4b008896d9b742c7c14f29c2e7">ShowAnalyzeInitArgs</a>(<span class="keyword">const</span> nlohmann::json&amp; cfg) <span class="keyword">const override</span>;       <span class="comment">// 负责解析 Init 入参并记录到日志</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  nlohmann::json <a class="code hl_function" href="classmy__edge_1_1BaseEdge.html#acdccf5b178dd52cd19d8af660e6d168b">DumpInternalInfo</a>() <span class="keyword">const override</span>;                         <span class="comment">// 负责输出内部状态信息（受 rw_mutex_ 保护）</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__edge_1_1BaseEdge.html#ad6ccbe6aa525e1634eab750c2bb8d93b">AppendJsonTask</a>(<span class="keyword">const</span> nlohmann::json&amp; task) <span class="keyword">override</span>;                 <span class="comment">// 负责把 JSON 任务转换成 Task 并调用 AppendTask</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__edge_1_1BaseEdge.html#a1381f71c6f6b97b7dfea100449fed59c">AppendTask</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structmy__data_1_1Task.html">my_data::Task</a>&amp; task) <span class="keyword">override</span>;                      <span class="comment">// 负责把 Task 分发到对应队列（受 rw_mutex_ 保护）  </span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <span class="comment">// -------- 子类需要实现/可覆盖的钩子 --------</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classmy__edge_1_1BaseEdge.html#adbfe2b57adf0b0688e851299a878f1de">   65</a></span>  <span class="keyword">virtual</span> std::optional&lt;my_data::Task&gt; <a class="code hl_function" href="classmy__edge_1_1BaseEdge.html#adbfe2b57adf0b0688e851299a878f1de">NormalizeCommandLocked</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structmy__data_1_1RawCommand.html">my_data::RawCommand</a>&amp; cmd,</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                                                              <span class="keyword">const</span> <a class="code hl_typedef" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a>&amp; device_id,</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                                                              <span class="keyword">const</span> std::string&amp; device_type,</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                                                              std::string* err) = 0;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__edge_1_1BaseEdge.html#a8972a34497e692b1e6939cd6c0409b2f">ExecuteSelfTaskLocked</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structmy__data_1_1Task.html">my_data::Task</a>&amp; task);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__edge_1_1BaseEdge.html#afc617dc580a99ebe31ebc0e886906af3">ReportHeartbeatLocked</a>();</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  <span class="comment">// -------- 受 rw_mutex_ 保护的成员 --------</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="classmy__edge_1_1BaseEdge.html#a3f7fceadda2b13af52092701177669f0">   84</a></span>  <span class="keyword">mutable</span> std::shared_mutex <a class="code hl_variable" href="classmy__edge_1_1BaseEdge.html#a3f7fceadda2b13af52092701177669f0">rw_mutex_</a>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  <span class="comment">// 基本标识与配置</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="classmy__edge_1_1BaseEdge.html#a4f600ad4ee5566df049ec8213e99986b">   87</a></span>  <a class="code hl_typedef" href="namespacemy__data.html#aa97613f313f7fbbad8c368f2599e3f26">my_data::EdgeId</a> <a class="code hl_variable" href="classmy__edge_1_1BaseEdge.html#a4f600ad4ee5566df049ec8213e99986b">edge_id_</a>{<span class="stringliteral">&quot;edge-default&quot;</span>};</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="classmy__edge_1_1BaseEdge.html#a8fe7946ebaf9caa2ba00335aa87c2376">   88</a></span>  std::string <a class="code hl_variable" href="classmy__edge_1_1BaseEdge.html#a8fe7946ebaf9caa2ba00335aa87c2376">edge_type_</a>{<span class="stringliteral">&quot;base&quot;</span>};</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="classmy__edge_1_1BaseEdge.html#a61c8f42943e4a184067a3d6e00410d38">   89</a></span>  std::string <a class="code hl_variable" href="classmy__edge_1_1BaseEdge.html#a61c8f42943e4a184067a3d6e00410d38">version_</a>{<span class="stringliteral">&quot;0.0&quot;</span>};</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="classmy__edge_1_1BaseEdge.html#ab6d49423f76ea026d6eb25402274d258">   90</a></span>  nlohmann::json <a class="code hl_variable" href="classmy__edge_1_1BaseEdge.html#ab6d49423f76ea026d6eb25402274d258">cfg_</a>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="classmy__edge_1_1BaseEdge.html#a75ea97b52b5523bf95ef90932a9a8913">   91</a></span>  std::int64_t <a class="code hl_variable" href="classmy__edge_1_1BaseEdge.html#a75ea97b52b5523bf95ef90932a9a8913">boot_at_ms_</a>{0};</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  <span class="comment">// 运行状态</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="classmy__edge_1_1BaseEdge.html#a0dc127e03572e3a176890ca61612ecbd">   94</a></span>  std::atomic&lt;RunState&gt; <a class="code hl_variable" href="classmy__edge_1_1BaseEdge.html#a0dc127e03572e3a176890ca61612ecbd">run_state_</a>{<a class="code hl_enumvalue" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16ea32b169f72b293ef80d35435e9894f8e2">RunState::Initializing</a>};</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  <span class="comment">// EStop</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="classmy__edge_1_1BaseEdge.html#a6f2e808d95e8be1520f4dc1e7911fd28">   97</a></span>  std::atomic&lt;bool&gt; <a class="code hl_variable" href="classmy__edge_1_1BaseEdge.html#a6f2e808d95e8be1520f4dc1e7911fd28">estop_</a>{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="classmy__edge_1_1BaseEdge.html#a9bcd7b8c4e79c5c073ee6423acd40496">   98</a></span>  <span class="keyword">mutable</span> std::mutex <a class="code hl_variable" href="classmy__edge_1_1BaseEdge.html#a9bcd7b8c4e79c5c073ee6423acd40496">estop_mu_</a>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="classmy__edge_1_1BaseEdge.html#ad396b58abeb0b99c96df140e8dc525f3">   99</a></span>  std::string <a class="code hl_variable" href="classmy__edge_1_1BaseEdge.html#ad396b58abeb0b99c96df140e8dc525f3">estop_reason_</a>{};</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="classmy__edge_1_1BaseEdge.html#a954eca40836570008806de5a41e5675a">  100</a></span>  <span class="keywordtype">bool</span> <a class="code hl_variable" href="classmy__edge_1_1BaseEdge.html#a954eca40836570008806de5a41e5675a">allow_queue_when_estop_</a>{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <span class="comment">// device_id -&gt; type（包含 self）</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="classmy__edge_1_1BaseEdge.html#a5222e3e02d930f6a24bdc3f99791cade">  103</a></span>  std::unordered_map&lt;my_data::DeviceId, std::string&gt; <a class="code hl_variable" href="classmy__edge_1_1BaseEdge.html#a5222e3e02d930f6a24bdc3f99791cade">device_type_by_id_</a>;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  <span class="comment">// device_id -&gt; queue/device</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="classmy__edge_1_1BaseEdge.html#aab5c8a55e8f1af292a2c4475e624c57f">  106</a></span>  std::unordered_map&lt;my_data::DeviceId, std::unique_ptr&lt;my_control::TaskQueue&gt;&gt; <a class="code hl_variable" href="classmy__edge_1_1BaseEdge.html#aab5c8a55e8f1af292a2c4475e624c57f">queues_</a>;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="classmy__edge_1_1BaseEdge.html#af49c8df428c22b20a08d4a30bd03a87a">  107</a></span>  std::unordered_map&lt;my_data::DeviceId, std::unique_ptr&lt;my_device::IDevice&gt;&gt; <a class="code hl_variable" href="classmy__edge_1_1BaseEdge.html#af49c8df428c22b20a08d4a30bd03a87a">devices_</a>;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  <span class="comment">// -------- self action thread config/state --------</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="classmy__edge_1_1BaseEdge.html#a90d0a21ff412f0fb2e8c459c4c0c076e">  110</a></span>  <span class="keywordtype">bool</span> <a class="code hl_variable" href="classmy__edge_1_1BaseEdge.html#a90d0a21ff412f0fb2e8c459c4c0c076e">self_action_enable_</a>{<span class="keyword">true</span>};                <span class="comment">// 默认启用</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="classmy__edge_1_1BaseEdge.html#a29d8b9d1c6052a96c915a23b0a6af51d">  111</a></span>  std::string <a class="code hl_variable" href="classmy__edge_1_1BaseEdge.html#a29d8b9d1c6052a96c915a23b0a6af51d">self_device_id_</a>{<span class="stringliteral">&quot;self&quot;</span>};          <span class="comment">// edge 自己的 device_id</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="classmy__edge_1_1BaseEdge.html#a7613ef9a73f0064feee66554a9025801">  112</a></span>  std::atomic&lt;bool&gt; <a class="code hl_variable" href="classmy__edge_1_1BaseEdge.html#a7613ef9a73f0064feee66554a9025801">self_action_stop_</a>{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="classmy__edge_1_1BaseEdge.html#aaf32502f6b1fcfcf12da178036692f0a">  113</a></span>  std::thread <a class="code hl_variable" href="classmy__edge_1_1BaseEdge.html#aaf32502f6b1fcfcf12da178036692f0a">self_action_thread_</a>;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  <span class="comment">// -------- heartbeat/snapshot thread config/state --------</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="classmy__edge_1_1BaseEdge.html#a4c080d9e42d04d79e304a60a7973946d">  116</a></span>  <span class="keywordtype">bool</span> <a class="code hl_variable" href="classmy__edge_1_1BaseEdge.html#a4c080d9e42d04d79e304a60a7973946d">snapshot_enable_</a>{<span class="keyword">true</span>};                   <span class="comment">// 默认启用</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="classmy__edge_1_1BaseEdge.html#adb952854889fa700357ce2ad44e9e15d">  117</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="classmy__edge_1_1BaseEdge.html#adb952854889fa700357ce2ad44e9e15d">snapshot_interval_ms_</a>{2000};               <span class="comment">// 默认 2s 心跳</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="classmy__edge_1_1BaseEdge.html#a7b39e91acd655a7ecfd4054ca42f2576">  118</a></span>  std::atomic&lt;bool&gt; <a class="code hl_variable" href="classmy__edge_1_1BaseEdge.html#a7b39e91acd655a7ecfd4054ca42f2576">snapshot_stop_</a>{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="classmy__edge_1_1BaseEdge.html#ab4f0da63d92cd2ee7e2a7ad05c0e902b">  119</a></span>  std::thread <a class="code hl_variable" href="classmy__edge_1_1BaseEdge.html#ab4f0da63d92cd2ee7e2a7ad05c0e902b">snapshot_thread_</a>;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>  <span class="comment">// -------- 线程相关（锁内调用） --------</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__edge_1_1BaseEdge.html#aed0fd09c1eaf4807781901fe011b83b3">StartSelfActionThreadLocked</a>();</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__edge_1_1BaseEdge.html#a2603ab5129c706d80e5fe4a00b2ec5e6">StopSelfActionThreadLocked</a>();</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__edge_1_1BaseEdge.html#a36e415a8074f5f0d53b29fb5ba8d8b48">SelfActionLoop</a>();</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__edge_1_1BaseEdge.html#a2907381286bd73c462882f919ec4aa48">StartSnapshotThreadLocked</a>();</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__edge_1_1BaseEdge.html#a283bbdaaffbd00bb3f6f0b81a85fd818">StopSnapshotThreadLocked</a>();</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__edge_1_1BaseEdge.html#a3539dc681f16841477a48b4e0c5d883e">SnapshotLoop</a>();</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>  <span class="comment">// -------- 通用工具函数 --------</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>  <a class="code hl_struct" href="structmy__edge_1_1SubmitResult.html">SubmitResult</a> <a class="code hl_function" href="classmy__edge_1_1BaseEdge.html#a31b7d93ab879336b0a7b38da67eeed3f">MakeResult</a>(<a class="code hl_enumeration" href="namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123">SubmitCode</a> code,</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                          <span class="keyword">const</span> std::string&amp; msg,</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                          <span class="keyword">const</span> <a class="code hl_struct" href="structmy__data_1_1RawCommand.html">my_data::RawCommand</a>&amp; cmd,</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                          <span class="keyword">const</span> <a class="code hl_typedef" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a>&amp; device_id = <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>                          <span class="keyword">const</span> <a class="code hl_typedef" href="namespacemy__data.html#a1b9d3b04810d37cf4227a7e624359f04">my_data::TaskId</a>&amp; task_id = 0,</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                          std::int64_t queue_size_after = 0) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__edge_1_1BaseEdge.html#a71cafd555b81f054b3db0c0c59f11934">AppendTaskToQueueLocked</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a>&amp; device_id, <span class="keyword">const</span> <a class="code hl_struct" href="structmy__data_1_1Task.html">my_data::Task</a>&amp; task, std::string* err);</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>};</div>
+</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>} <span class="comment">// namespace my_edge</span></div>
+<div class="ttc" id="aIDevice_8h_html"><div class="ttname"><a href="IDevice_8h.html">IDevice.h</a></div></div>
+<div class="ttc" id="aIEdge_8h_html"><div class="ttname"><a href="IEdge_8h.html">IEdge.h</a></div></div>
+<div class="ttc" id="aMyData_8h_html"><div class="ttname"><a href="MyData_8h.html">MyData.h</a></div><div class="ttdoc">my_data 模块聚合头文件</div></div>
+<div class="ttc" id="aMyLog_8h_html"><div class="ttname"><a href="MyLog_8h.html">MyLog.h</a></div></div>
+<div class="ttc" id="aTaskQueue_8h_html"><div class="ttname"><a href="TaskQueue_8h.html">TaskQueue.h</a></div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html">my_edge::BaseEdge</a></div><div class="ttdoc">BaseEdge：实现 IEdge 的通用骨架</div><div class="ttdef"><b>Definition</b> BaseEdge.h:36</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_a0d90b8b5b262d714bf5378e4a6c54773"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">my_edge::BaseEdge::Submit</a></div><div class="ttdeci">SubmitResult Submit(const my_data::RawCommand &amp;cmd) override</div><div class="ttdoc">Submit：命令入口（Normalize 并入队）</div><div class="ttdef"><b>Definition</b> BaseEdge.cpp:152</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_a0dc127e03572e3a176890ca61612ecbd"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#a0dc127e03572e3a176890ca61612ecbd">my_edge::BaseEdge::run_state_</a></div><div class="ttdeci">std::atomic&lt; RunState &gt; run_state_</div><div class="ttdef"><b>Definition</b> BaseEdge.h:94</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_a1381f71c6f6b97b7dfea100449fed59c"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#a1381f71c6f6b97b7dfea100449fed59c">my_edge::BaseEdge::AppendTask</a></div><div class="ttdeci">bool AppendTask(const my_data::Task &amp;task) override</div><div class="ttdoc">向 Edge 添加任务。</div><div class="ttdef"><b>Definition</b> BaseEdge.cpp:384</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_a14a921badc0c0cfd1d63dee98f734b80"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#a14a921badc0c0cfd1d63dee98f734b80">my_edge::BaseEdge::Id</a></div><div class="ttdeci">my_data::EdgeId Id() const override</div><div class="ttdoc">获取 Edge ID</div><div class="ttdef"><b>Definition</b> BaseEdge.cpp:329</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_a2603ab5129c706d80e5fe4a00b2ec5e6"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#a2603ab5129c706d80e5fe4a00b2ec5e6">my_edge::BaseEdge::StopSelfActionThreadLocked</a></div><div class="ttdeci">void StopSelfActionThreadLocked()</div><div class="ttdef"><b>Definition</b> BaseEdge.cpp:452</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_a283bbdaaffbd00bb3f6f0b81a85fd818"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#a283bbdaaffbd00bb3f6f0b81a85fd818">my_edge::BaseEdge::StopSnapshotThreadLocked</a></div><div class="ttdeci">void StopSnapshotThreadLocked()</div><div class="ttdef"><b>Definition</b> BaseEdge.cpp:527</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_a2907381286bd73c462882f919ec4aa48"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#a2907381286bd73c462882f919ec4aa48">my_edge::BaseEdge::StartSnapshotThreadLocked</a></div><div class="ttdeci">void StartSnapshotThreadLocked()</div><div class="ttdef"><b>Definition</b> BaseEdge.cpp:513</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_a29d8b9d1c6052a96c915a23b0a6af51d"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#a29d8b9d1c6052a96c915a23b0a6af51d">my_edge::BaseEdge::self_device_id_</a></div><div class="ttdeci">std::string self_device_id_</div><div class="ttdef"><b>Definition</b> BaseEdge.h:111</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_a31b7d93ab879336b0a7b38da67eeed3f"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#a31b7d93ab879336b0a7b38da67eeed3f">my_edge::BaseEdge::MakeResult</a></div><div class="ttdeci">SubmitResult MakeResult(SubmitCode code, const std::string &amp;msg, const my_data::RawCommand &amp;cmd, const my_data::DeviceId &amp;device_id=&quot;&quot;, const my_data::TaskId &amp;task_id=0, std::int64_t queue_size_after=0) const</div><div class="ttdef"><b>Definition</b> BaseEdge.cpp:403</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_a3539dc681f16841477a48b4e0c5d883e"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#a3539dc681f16841477a48b4e0c5d883e">my_edge::BaseEdge::SnapshotLoop</a></div><div class="ttdeci">void SnapshotLoop()</div><div class="ttdef"><b>Definition</b> BaseEdge.cpp:536</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_a36e415a8074f5f0d53b29fb5ba8d8b48"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#a36e415a8074f5f0d53b29fb5ba8d8b48">my_edge::BaseEdge::SelfActionLoop</a></div><div class="ttdeci">void SelfActionLoop()</div><div class="ttdef"><b>Definition</b> BaseEdge.cpp:466</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_a39b81cd3edfaba4190ff12d8c8b9d69d"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d">my_edge::BaseEdge::Shutdown</a></div><div class="ttdeci">void Shutdown() override</div><div class="ttdoc">全局停机：Stop devices + Shutdown queues + Join</div><div class="ttdef"><b>Definition</b> BaseEdge.cpp:287</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_a3f7fceadda2b13af52092701177669f0"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#a3f7fceadda2b13af52092701177669f0">my_edge::BaseEdge::rw_mutex_</a></div><div class="ttdeci">std::shared_mutex rw_mutex_</div><div class="ttdef"><b>Definition</b> BaseEdge.h:84</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_a46b15f1cef85897da0f2fed19f72ed4c"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#a46b15f1cef85897da0f2fed19f72ed4c">my_edge::BaseEdge::Start</a></div><div class="ttdeci">bool Start(std::string *err) override</div><div class="ttdoc">启动：启动所有 device/workflow</div><div class="ttdef"><b>Definition</b> BaseEdge.cpp:108</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_a4c080d9e42d04d79e304a60a7973946d"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#a4c080d9e42d04d79e304a60a7973946d">my_edge::BaseEdge::snapshot_enable_</a></div><div class="ttdeci">bool snapshot_enable_</div><div class="ttdef"><b>Definition</b> BaseEdge.h:116</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_a4f600ad4ee5566df049ec8213e99986b"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#a4f600ad4ee5566df049ec8213e99986b">my_edge::BaseEdge::edge_id_</a></div><div class="ttdeci">my_data::EdgeId edge_id_</div><div class="ttdef"><b>Definition</b> BaseEdge.h:87</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_a5222e3e02d930f6a24bdc3f99791cade"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#a5222e3e02d930f6a24bdc3f99791cade">my_edge::BaseEdge::device_type_by_id_</a></div><div class="ttdeci">std::unordered_map&lt; my_data::DeviceId, std::string &gt; device_type_by_id_</div><div class="ttdef"><b>Definition</b> BaseEdge.h:103</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_a561a658f01fec4da9beb9da607fb04c4"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#a561a658f01fec4da9beb9da607fb04c4">my_edge::BaseEdge::BaseEdge</a></div><div class="ttdeci">BaseEdge()</div><div class="ttdef"><b>Definition</b> BaseEdge.cpp:13</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_a61c8f42943e4a184067a3d6e00410d38"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#a61c8f42943e4a184067a3d6e00410d38">my_edge::BaseEdge::version_</a></div><div class="ttdeci">std::string version_</div><div class="ttdef"><b>Definition</b> BaseEdge.h:89</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_a6b0f7d4b008896d9b742c7c14f29c2e7"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#a6b0f7d4b008896d9b742c7c14f29c2e7">my_edge::BaseEdge::ShowAnalyzeInitArgs</a></div><div class="ttdeci">void ShowAnalyzeInitArgs(const nlohmann::json &amp;cfg) const override</div><div class="ttdoc">解释 Init 的入参并打印到日志（用于调试/前置检查）</div><div class="ttdef"><b>Definition</b> BaseEdge.cpp:339</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_a6f2e808d95e8be1520f4dc1e7911fd28"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#a6f2e808d95e8be1520f4dc1e7911fd28">my_edge::BaseEdge::estop_</a></div><div class="ttdeci">std::atomic&lt; bool &gt; estop_</div><div class="ttdef"><b>Definition</b> BaseEdge.h:97</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_a71cafd555b81f054b3db0c0c59f11934"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#a71cafd555b81f054b3db0c0c59f11934">my_edge::BaseEdge::AppendTaskToQueueLocked</a></div><div class="ttdeci">bool AppendTaskToQueueLocked(const my_data::DeviceId &amp;device_id, const my_data::Task &amp;task, std::string *err)</div><div class="ttdef"><b>Definition</b> BaseEdge.cpp:420</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_a75ea97b52b5523bf95ef90932a9a8913"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#a75ea97b52b5523bf95ef90932a9a8913">my_edge::BaseEdge::boot_at_ms_</a></div><div class="ttdeci">std::int64_t boot_at_ms_</div><div class="ttdef"><b>Definition</b> BaseEdge.h:91</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_a7613ef9a73f0064feee66554a9025801"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#a7613ef9a73f0064feee66554a9025801">my_edge::BaseEdge::self_action_stop_</a></div><div class="ttdeci">std::atomic&lt; bool &gt; self_action_stop_</div><div class="ttdef"><b>Definition</b> BaseEdge.h:112</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_a7b39e91acd655a7ecfd4054ca42f2576"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#a7b39e91acd655a7ecfd4054ca42f2576">my_edge::BaseEdge::snapshot_stop_</a></div><div class="ttdeci">std::atomic&lt; bool &gt; snapshot_stop_</div><div class="ttdef"><b>Definition</b> BaseEdge.h:118</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_a8972a34497e692b1e6939cd6c0409b2f"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#a8972a34497e692b1e6939cd6c0409b2f">my_edge::BaseEdge::ExecuteSelfTaskLocked</a></div><div class="ttdeci">virtual void ExecuteSelfTaskLocked(const my_data::Task &amp;task)</div><div class="ttdoc">self task 执行入口（可由子类扩展） 默认实现会打印日志，并根据 capability/action 做少量内置动作。</div><div class="ttdef"><b>Definition</b> BaseEdge.cpp:503</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_a8fe7946ebaf9caa2ba00335aa87c2376"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#a8fe7946ebaf9caa2ba00335aa87c2376">my_edge::BaseEdge::edge_type_</a></div><div class="ttdeci">std::string edge_type_</div><div class="ttdef"><b>Definition</b> BaseEdge.h:88</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_a90d0a21ff412f0fb2e8c459c4c0c076e"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#a90d0a21ff412f0fb2e8c459c4c0c076e">my_edge::BaseEdge::self_action_enable_</a></div><div class="ttdeci">bool self_action_enable_</div><div class="ttdef"><b>Definition</b> BaseEdge.h:110</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_a930b466b41c7d75b7318e6ca5853b5c9"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#a930b466b41c7d75b7318e6ca5853b5c9">my_edge::BaseEdge::SetEStop</a></div><div class="ttdeci">void SetEStop(bool active, const std::string &amp;reason) override</div><div class="ttdoc">设置紧急停止</div><div class="ttdef"><b>Definition</b> BaseEdge.cpp:274</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_a954eca40836570008806de5a41e5675a"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#a954eca40836570008806de5a41e5675a">my_edge::BaseEdge::allow_queue_when_estop_</a></div><div class="ttdeci">bool allow_queue_when_estop_</div><div class="ttdef"><b>Definition</b> BaseEdge.h:100</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_a9bcd7b8c4e79c5c073ee6423acd40496"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#a9bcd7b8c4e79c5c073ee6423acd40496">my_edge::BaseEdge::estop_mu_</a></div><div class="ttdeci">std::mutex estop_mu_</div><div class="ttdef"><b>Definition</b> BaseEdge.h:98</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_aab5c8a55e8f1af292a2c4475e624c57f"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#aab5c8a55e8f1af292a2c4475e624c57f">my_edge::BaseEdge::queues_</a></div><div class="ttdeci">std::unordered_map&lt; my_data::DeviceId, std::unique_ptr&lt; my_control::TaskQueue &gt; &gt; queues_</div><div class="ttdef"><b>Definition</b> BaseEdge.h:106</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_aaf32502f6b1fcfcf12da178036692f0a"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#aaf32502f6b1fcfcf12da178036692f0a">my_edge::BaseEdge::self_action_thread_</a></div><div class="ttdeci">std::thread self_action_thread_</div><div class="ttdef"><b>Definition</b> BaseEdge.h:113</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_ab0bd45edb5fbd918a3eab7c1a28896c0"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#ab0bd45edb5fbd918a3eab7c1a28896c0">my_edge::BaseEdge::~BaseEdge</a></div><div class="ttdeci">~BaseEdge() override</div><div class="ttdef"><b>Definition</b> BaseEdge.cpp:21</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_ab4f0da63d92cd2ee7e2a7ad05c0e902b"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#ab4f0da63d92cd2ee7e2a7ad05c0e902b">my_edge::BaseEdge::snapshot_thread_</a></div><div class="ttdeci">std::thread snapshot_thread_</div><div class="ttdef"><b>Definition</b> BaseEdge.h:119</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_ab6d49423f76ea026d6eb25402274d258"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#ab6d49423f76ea026d6eb25402274d258">my_edge::BaseEdge::cfg_</a></div><div class="ttdeci">nlohmann::json cfg_</div><div class="ttdef"><b>Definition</b> BaseEdge.h:90</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_ac66580e78dc7f12bc1d449ee4a4d0552"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#ac66580e78dc7f12bc1d449ee4a4d0552">my_edge::BaseEdge::EdgeType</a></div><div class="ttdeci">std::string EdgeType() const override</div><div class="ttdoc">获取 Edge 类型</div><div class="ttdef"><b>Definition</b> BaseEdge.cpp:334</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_acbb56ebb7a2b543aeedcf0c6a3716abe"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#acbb56ebb7a2b543aeedcf0c6a3716abe">my_edge::BaseEdge::GetStatusSnapshot</a></div><div class="ttdeci">my_data::EdgeStatus GetStatusSnapshot() const override</div><div class="ttdoc">获取状态快照（EdgeStatus，补 queue_depth/pending/running）</div><div class="ttdef"><b>Definition</b> BaseEdge.cpp:221</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_acdccf5b178dd52cd19d8af660e6d168b"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#acdccf5b178dd52cd19d8af660e6d168b">my_edge::BaseEdge::DumpInternalInfo</a></div><div class="ttdeci">nlohmann::json DumpInternalInfo() const override</div><div class="ttdef"><b>Definition</b> BaseEdge.cpp:344</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_ad396b58abeb0b99c96df140e8dc525f3"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#ad396b58abeb0b99c96df140e8dc525f3">my_edge::BaseEdge::estop_reason_</a></div><div class="ttdeci">std::string estop_reason_</div><div class="ttdef"><b>Definition</b> BaseEdge.h:99</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_ad6ccbe6aa525e1634eab750c2bb8d93b"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#ad6ccbe6aa525e1634eab750c2bb8d93b">my_edge::BaseEdge::AppendJsonTask</a></div><div class="ttdeci">bool AppendJsonTask(const nlohmann::json &amp;task) override</div><div class="ttdoc">向 Edge 添加任务。</div><div class="ttdef"><b>Definition</b> BaseEdge.cpp:374</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_adb952854889fa700357ce2ad44e9e15d"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#adb952854889fa700357ce2ad44e9e15d">my_edge::BaseEdge::snapshot_interval_ms_</a></div><div class="ttdeci">int snapshot_interval_ms_</div><div class="ttdef"><b>Definition</b> BaseEdge.h:117</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_adbfe2b57adf0b0688e851299a878f1de"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#adbfe2b57adf0b0688e851299a878f1de">my_edge::BaseEdge::NormalizeCommandLocked</a></div><div class="ttdeci">virtual std::optional&lt; my_data::Task &gt; NormalizeCommandLocked(const my_data::RawCommand &amp;cmd, const my_data::DeviceId &amp;device_id, const std::string &amp;device_type, std::string *err)=0</div><div class="ttdoc">Normalize：把 RawCommand 转成 Task。 注意：BaseEdge 已做 run_state/estop/payload/device_id 校验，这里只负责“生成 task”。</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_aeaad4d1e08909ec413c6e934fb718dc7"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">my_edge::BaseEdge::Init</a></div><div class="ttdeci">bool Init(const nlohmann::json &amp;cfg, std::string *err) override</div><div class="ttdoc">初始化：仅装配，不启动线程</div><div class="ttdef"><b>Definition</b> BaseEdge.cpp:26</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_aed0fd09c1eaf4807781901fe011b83b3"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#aed0fd09c1eaf4807781901fe011b83b3">my_edge::BaseEdge::StartSelfActionThreadLocked</a></div><div class="ttdeci">void StartSelfActionThreadLocked()</div><div class="ttdef"><b>Definition</b> BaseEdge.cpp:438</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_af49c8df428c22b20a08d4a30bd03a87a"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#af49c8df428c22b20a08d4a30bd03a87a">my_edge::BaseEdge::devices_</a></div><div class="ttdeci">std::unordered_map&lt; my_data::DeviceId, std::unique_ptr&lt; my_device::IDevice &gt; &gt; devices_</div><div class="ttdef"><b>Definition</b> BaseEdge.h:107</div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html_afc617dc580a99ebe31ebc0e886906af3"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html#afc617dc580a99ebe31ebc0e886906af3">my_edge::BaseEdge::ReportHeartbeatLocked</a></div><div class="ttdeci">virtual void ReportHeartbeatLocked()</div><div class="ttdoc">心跳上报（snapshot thread 周期调用） 默认实现：只打日志。后续你可以接入 MQTT/HTTP 等上报。</div><div class="ttdef"><b>Definition</b> BaseEdge.cpp:555</div></div>
+<div class="ttc" id="aclassmy__edge_1_1IEdge_html"><div class="ttname"><a href="classmy__edge_1_1IEdge.html">my_edge::IEdge</a></div><div class="ttdoc">Edge Runtime 接口（Init/Start 分离）</div><div class="ttdef"><b>Definition</b> IEdge.h:98</div></div>
+<div class="ttc" id="anamespacemy__data_html_a1b9d3b04810d37cf4227a7e624359f04"><div class="ttname"><a href="namespacemy__data.html#a1b9d3b04810d37cf4227a7e624359f04">my_data::TaskId</a></div><div class="ttdeci">std::string TaskId</div><div class="ttdoc">Task ID</div><div class="ttdef"><b>Definition</b> Types.h:20</div></div>
+<div class="ttc" id="anamespacemy__data_html_a7f44417fe7bdfd39f515815285f3c8fd"><div class="ttname"><a href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a></div><div class="ttdeci">std::string DeviceId</div><div class="ttdoc">专业设备ID（按 device_id 一对一实例）</div><div class="ttdef"><b>Definition</b> Types.h:15</div></div>
+<div class="ttc" id="anamespacemy__data_html_aa97613f313f7fbbad8c368f2599e3f26"><div class="ttname"><a href="namespacemy__data.html#aa97613f313f7fbbad8c368f2599e3f26">my_data::EdgeId</a></div><div class="ttdeci">std::string EdgeId</div><div class="ttdoc">边缘执行器ID</div><div class="ttdef"><b>Definition</b> Types.h:10</div></div>
+<div class="ttc" id="anamespacemy__edge_html"><div class="ttname"><a href="namespacemy__edge.html">my_edge</a></div><div class="ttdef"><b>Definition</b> BaseEdge.cpp:8</div></div>
+<div class="ttc" id="anamespacemy__edge_html_a605c0c17413514783b3c6ce96188e123"><div class="ttname"><a href="namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123">my_edge::SubmitCode</a></div><div class="ttdeci">SubmitCode</div><div class="ttdoc">Submit 结果码：用于表达 Submit 的详细含义（替代 bool）</div><div class="ttdef"><b>Definition</b> IEdge.h:16</div></div>
+<div class="ttc" id="anamespacemy__edge_html_a86567c2b79a1ea4b5bc908d49665a16ea32b169f72b293ef80d35435e9894f8e2"><div class="ttname"><a href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16ea32b169f72b293ef80d35435e9894f8e2">my_edge::RunState::Initializing</a></div><div class="ttdeci">@ Initializing</div></div>
+<div class="ttc" id="astructmy__data_1_1EdgeStatus_html"><div class="ttname"><a href="structmy__data_1_1EdgeStatus.html">my_data::EdgeStatus</a></div><div class="ttdoc">Edge状态快照</div><div class="ttdef"><b>Definition</b> Status.h:51</div></div>
+<div class="ttc" id="astructmy__data_1_1RawCommand_html"><div class="ttname"><a href="structmy__data_1_1RawCommand.html">my_data::RawCommand</a></div><div class="ttdoc">原始控制命令（接收层输入）</div><div class="ttdef"><b>Definition</b> RawCommand.h:15</div></div>
+<div class="ttc" id="astructmy__data_1_1Task_html"><div class="ttname"><a href="structmy__data_1_1Task.html">my_data::Task</a></div><div class="ttdoc">Task（内部统一任务）</div><div class="ttdef"><b>Definition</b> Task.h:27</div></div>
+<div class="ttc" id="astructmy__edge_1_1SubmitResult_html"><div class="ttname"><a href="structmy__edge_1_1SubmitResult.html">my_edge::SubmitResult</a></div><div class="ttdoc">Submit 结构化返回</div><div class="ttdef"><b>Definition</b> IEdge.h:29</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>
