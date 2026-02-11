@@ -16,7 +16,7 @@ var searchData=
   ['children_5fpids_13',['children_pids',['../structProcessInfo.html#a1a4dfa775149aaf177ecdc921fc74fe9',1,'ProcessInfo']]],
   ['clean_5fsession_5f_14',['clean_session_',['../classmy__mqtt_1_1MqttService.html#a263d932e47de950862d8c4ecee7a80e1',1,'my_mqtt::MqttService']]],
   ['cleanupsystem_15',['CleanupSystem',['../classmy__edge_1_1MyMavVehicle.html#a268c267fbedbe9e90bc5e932f8327d02',1,'my_edge::MyMavVehicle']]],
-  ['clear_16',['clear',['../classmy__control_1_1TaskQueue.html#aa71d36872f416feaa853788a7a7a7ef8',1,'my_control::TaskQueue::Clear()'],['../classtools_1_1thread__safe__queue_1_1ThreadSafeQueue.html#ac8bb3912a3ce86b15842e79d0b421204',1,'tools::thread_safe_queue::ThreadSafeQueue::clear()']]],
+  ['clear_16',['clear',['../classtools_1_1thread__safe__queue_1_1ThreadSafeQueue.html#ac8bb3912a3ce86b15842e79d0b421204',1,'tools::thread_safe_queue::ThreadSafeQueue::clear()'],['../classmy__control_1_1TaskQueue.html#aa71d36872f416feaa853788a7a7a7ef8',1,'my_control::TaskQueue::Clear()']]],
   ['client_5fid_5f_17',['client_id_',['../classmy__mqtt_1_1MqttService.html#ab931e8e043d71fc6c5fe7b7be7572e4e',1,'my_mqtt::MqttService']]],
   ['close_18',['Close',['../classmy__db_1_1MyDB.html#a7f7a3199c392465d0767c6506c1af5b4',1,'my_db::MyDB']]],
   ['closesocket_19',['closeSocket',['../classtools_1_1SimpleTcpClient.html#ad40053a8165967407f6018538233aea1',1,'tools::SimpleTcpClient']]],

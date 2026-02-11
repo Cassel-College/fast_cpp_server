@@ -101,11 +101,15 @@ UAVEdge 的协作图:</div>
 <div class="dyncontent">
 <div class="center"><img src="classmy__edge_1_1demo_1_1UAVEdge__coll__graph.png" border="0" usemap="#aUAVEdge_coll__map" alt="Collaboration graph"/></div>
 <map name="aUAVEdge_coll__map" id="aUAVEdge_coll__map">
-<area shape="rect" title="UAVEdge：无人机边缘运行时（demo）" alt="" coords="8,152,89,177"/>
-<area shape="rect" href="classmy__edge_1_1BaseEdge.html" title="BaseEdge：实现 IEdge 的通用骨架" alt="" coords="5,79,92,104"/>
-<area shape="poly" title=" " alt="" coords="51,118,51,152,46,152,46,118"/>
-<area shape="rect" href="classmy__edge_1_1IEdge.html" title="Edge Runtime 接口（Init/Start 分离）" alt="" coords="19,5,78,31"/>
-<area shape="poly" title=" " alt="" coords="51,44,51,79,46,79,46,44"/>
+<area shape="rect" title="UAVEdge：无人机边缘运行时（demo）" alt="" coords="25,256,106,281"/>
+<area shape="rect" href="classmy__edge_1_1BaseEdge.html" title="BaseEdge：实现 IEdge 的通用骨架" alt="" coords="22,181,109,207"/>
+<area shape="poly" title=" " alt="" coords="68,221,68,256,63,256,63,221"/>
+<area shape="rect" href="classmy__edge_1_1IEdge.html" title="Edge Runtime 接口（Init/Start 分离）" alt="" coords="5,93,64,119"/>
+<area shape="poly" title=" " alt="" coords="46,131,64,180,59,182,41,132"/>
+<area shape="rect" href="structmy__data_1_1Task.html" title="Task（内部统一任务）" alt="" coords="88,93,139,119"/>
+<area shape="poly" title=" " alt="" coords="103,132,74,182,70,179,98,129"/>
+<area shape="rect" href="structmy__data_1_1TaskResult.html" title="Task 执行结果" alt="" coords="67,5,159,31"/>
+<area shape="poly" title=" " alt="" coords="116,45,116,93,111,93,111,45"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
 <table class="memberdecls">
@@ -168,9 +172,12 @@ Protected 成员函数</h2></td></tr>
 <tr class="memitem:a228c37d37865dc1a74a75aca3990e5d0" id="r_a228c37d37865dc1a74a75aca3990e5d0"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="structmy__data_1_1Task.html">my_data::Task</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1UAVEdge.html#a228c37d37865dc1a74a75aca3990e5d0">NormalizeCommandLocked</a> (const <a class="el" href="structmy__data_1_1RawCommand.html">my_data::RawCommand</a> &amp;cmd, const <a class="el" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a> &amp;device_id, const std::string &amp;device_type, std::string *err) override</td></tr>
 <tr class="memdesc:a228c37d37865dc1a74a75aca3990e5d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normalize：把 RawCommand 转成 Task  <br /></td></tr>
 <tr class="separator:a228c37d37865dc1a74a75aca3990e5d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2e56e9d381e77f7a3cd76ffec39718c" id="r_ac2e56e9d381e77f7a3cd76ffec39718c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1UAVEdge.html#ac2e56e9d381e77f7a3cd76ffec39718c">ExecuteSelfTaskLocked</a> (const <a class="el" href="structmy__data_1_1Task.html">my_data::Task</a> &amp;task) override</td></tr>
-<tr class="memdesc:ac2e56e9d381e77f7a3cd76ffec39718c"><td class="mdescLeft">&#160;</td><td class="mdescRight">执行 self task（可扩展）  <br /></td></tr>
-<tr class="separator:ac2e56e9d381e77f7a3cd76ffec39718c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68224839a9a2be877c921b17a10d5903" id="r_a68224839a9a2be877c921b17a10d5903"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1UAVEdge.html#a68224839a9a2be877c921b17a10d5903">ExecuteSelfTaskLocked</a> () override</td></tr>
+<tr class="memdesc:a68224839a9a2be877c921b17a10d5903"><td class="mdescLeft">&#160;</td><td class="mdescRight">执行 self task（可扩展）  <br /></td></tr>
+<tr class="separator:a68224839a9a2be877c921b17a10d5903"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a792fcbc0ced8f29fec6802a72bc7badc" id="r_a792fcbc0ced8f29fec6802a72bc7badc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1demo_1_1UAVEdge.html#a792fcbc0ced8f29fec6802a72bc7badc">ExecuteOtherTaskLocked</a> (const <a class="el" href="structmy__data_1_1Task.html">my_data::Task</a> &amp;task) override</td></tr>
+<tr class="memdesc:a792fcbc0ced8f29fec6802a72bc7badc"><td class="mdescLeft">&#160;</td><td class="mdescRight">self task 执行入口（可由子类扩展） 默认实现会打印日志，并根据 capability/action 做少量内置动作。  <br /></td></tr>
+<tr class="separator:a792fcbc0ced8f29fec6802a72bc7badc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classmy__edge_1_1BaseEdge"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classmy__edge_1_1BaseEdge')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="classmy__edge_1_1BaseEdge.html">BaseEdge</a></td></tr>
 <tr class="memitem:afc617dc580a99ebe31ebc0e886906af3 inherit pro_methods_classmy__edge_1_1BaseEdge" id="r_afc617dc580a99ebe31ebc0e886906af3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1BaseEdge.html#afc617dc580a99ebe31ebc0e886906af3">ReportHeartbeatLocked</a> ()</td></tr>
 <tr class="memdesc:afc617dc580a99ebe31ebc0e886906af3 inherit pro_methods_classmy__edge_1_1BaseEdge"><td class="mdescLeft">&#160;</td><td class="mdescRight">心跳上报（snapshot thread 周期调用） 默认实现：只打日志。后续你可以接入 MQTT/HTTP 等上报。  <br /></td></tr>
@@ -181,12 +188,21 @@ Protected 成员函数</h2></td></tr>
 <tr class="separator:a2603ab5129c706d80e5fe4a00b2ec5e6 inherit pro_methods_classmy__edge_1_1BaseEdge"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36e415a8074f5f0d53b29fb5ba8d8b48 inherit pro_methods_classmy__edge_1_1BaseEdge" id="r_a36e415a8074f5f0d53b29fb5ba8d8b48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1BaseEdge.html#a36e415a8074f5f0d53b29fb5ba8d8b48">SelfActionLoop</a> ()</td></tr>
 <tr class="separator:a36e415a8074f5f0d53b29fb5ba8d8b48 inherit pro_methods_classmy__edge_1_1BaseEdge"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3a7ce4dc1f53b35dac8f269f18f6e72 inherit pro_methods_classmy__edge_1_1BaseEdge" id="r_ab3a7ce4dc1f53b35dac8f269f18f6e72"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1BaseEdge.html#ab3a7ce4dc1f53b35dac8f269f18f6e72">FetchSelfTask</a> (<a class="el" href="structmy__data_1_1Task.html">my_data::Task</a> &amp;out, int timeout_ms=500)</td></tr>
+<tr class="memdesc:ab3a7ce4dc1f53b35dac8f269f18f6e72 inherit pro_methods_classmy__edge_1_1BaseEdge"><td class="mdescLeft">&#160;</td><td class="mdescRight">尝试从 self 队列中获取任务，带超时  <br /></td></tr>
+<tr class="separator:ab3a7ce4dc1f53b35dac8f269f18f6e72 inherit pro_methods_classmy__edge_1_1BaseEdge"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7db2839876206ff964ed6b240555e71e inherit pro_methods_classmy__edge_1_1BaseEdge" id="r_a7db2839876206ff964ed6b240555e71e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1BaseEdge.html#a7db2839876206ff964ed6b240555e71e">ExecuteOtherTask</a> (const <a class="el" href="structmy__data_1_1Task.html">my_data::Task</a> &amp;task)</td></tr>
+<tr class="separator:a7db2839876206ff964ed6b240555e71e inherit pro_methods_classmy__edge_1_1BaseEdge"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac099c2ba1e2f762e918be54e710ec574 inherit pro_methods_classmy__edge_1_1BaseEdge" id="r_ac099c2ba1e2f762e918be54e710ec574"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1BaseEdge.html#ac099c2ba1e2f762e918be54e710ec574">ExecuteSelfTask</a> ()</td></tr>
+<tr class="separator:ac099c2ba1e2f762e918be54e710ec574 inherit pro_methods_classmy__edge_1_1BaseEdge"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2907381286bd73c462882f919ec4aa48 inherit pro_methods_classmy__edge_1_1BaseEdge" id="r_a2907381286bd73c462882f919ec4aa48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1BaseEdge.html#a2907381286bd73c462882f919ec4aa48">StartSnapshotThreadLocked</a> ()</td></tr>
 <tr class="separator:a2907381286bd73c462882f919ec4aa48 inherit pro_methods_classmy__edge_1_1BaseEdge"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a283bbdaaffbd00bb3f6f0b81a85fd818 inherit pro_methods_classmy__edge_1_1BaseEdge" id="r_a283bbdaaffbd00bb3f6f0b81a85fd818"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1BaseEdge.html#a283bbdaaffbd00bb3f6f0b81a85fd818">StopSnapshotThreadLocked</a> ()</td></tr>
 <tr class="separator:a283bbdaaffbd00bb3f6f0b81a85fd818 inherit pro_methods_classmy__edge_1_1BaseEdge"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3539dc681f16841477a48b4e0c5d883e inherit pro_methods_classmy__edge_1_1BaseEdge" id="r_a3539dc681f16841477a48b4e0c5d883e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1BaseEdge.html#a3539dc681f16841477a48b4e0c5d883e">SnapshotLoop</a> ()</td></tr>
 <tr class="separator:a3539dc681f16841477a48b4e0c5d883e inherit pro_methods_classmy__edge_1_1BaseEdge"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bce8f79859c1f9c6de7e5e32565bda6 inherit pro_methods_classmy__edge_1_1BaseEdge" id="r_a3bce8f79859c1f9c6de7e5e32565bda6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1BaseEdge.html#a3bce8f79859c1f9c6de7e5e32565bda6">SayHelloAction</a> (const <a class="el" href="structmy__data_1_1Task.html">my_data::Task</a> &amp;task)</td></tr>
+<tr class="separator:a3bce8f79859c1f9c6de7e5e32565bda6 inherit pro_methods_classmy__edge_1_1BaseEdge"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31b7d93ab879336b0a7b38da67eeed3f inherit pro_methods_classmy__edge_1_1BaseEdge" id="r_a31b7d93ab879336b0a7b38da67eeed3f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmy__edge_1_1SubmitResult.html">SubmitResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1BaseEdge.html#a31b7d93ab879336b0a7b38da67eeed3f">MakeResult</a> (<a class="el" href="namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123">SubmitCode</a> code, const std::string &amp;msg, const <a class="el" href="structmy__data_1_1RawCommand.html">my_data::RawCommand</a> &amp;cmd, const <a class="el" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a> &amp;device_id=&quot;&quot;, const <a class="el" href="namespacemy__data.html#a1b9d3b04810d37cf4227a7e624359f04">my_data::TaskId</a> &amp;task_id=0, std::int64_t queue_size_after=0) const</td></tr>
 <tr class="separator:a31b7d93ab879336b0a7b38da67eeed3f inherit pro_methods_classmy__edge_1_1BaseEdge"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71cafd555b81f054b3db0c0c59f11934 inherit pro_methods_classmy__edge_1_1BaseEdge" id="r_a71cafd555b81f054b3db0c0c59f11934"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1BaseEdge.html#a71cafd555b81f054b3db0c0c59f11934">AppendTaskToQueueLocked</a> (const <a class="el" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a> &amp;device_id, const <a class="el" href="structmy__data_1_1Task.html">my_data::Task</a> &amp;task, std::string *err)</td></tr>
@@ -217,12 +233,16 @@ Protected 成员函数</h2></td></tr>
 <tr class="separator:ad396b58abeb0b99c96df140e8dc525f3 inherit pro_attribs_classmy__edge_1_1BaseEdge"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a954eca40836570008806de5a41e5675a inherit pro_attribs_classmy__edge_1_1BaseEdge" id="r_a954eca40836570008806de5a41e5675a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1BaseEdge.html#a954eca40836570008806de5a41e5675a">allow_queue_when_estop_</a> {false}</td></tr>
 <tr class="separator:a954eca40836570008806de5a41e5675a inherit pro_attribs_classmy__edge_1_1BaseEdge"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5222e3e02d930f6a24bdc3f99791cade inherit pro_attribs_classmy__edge_1_1BaseEdge" id="r_a5222e3e02d930f6a24bdc3f99791cade"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; <a class="el" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a>, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1BaseEdge.html#a5222e3e02d930f6a24bdc3f99791cade">device_type_by_id_</a></td></tr>
-<tr class="separator:a5222e3e02d930f6a24bdc3f99791cade inherit pro_attribs_classmy__edge_1_1BaseEdge"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab5c8a55e8f1af292a2c4475e624c57f inherit pro_attribs_classmy__edge_1_1BaseEdge" id="r_aab5c8a55e8f1af292a2c4475e624c57f"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; <a class="el" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a>, std::unique_ptr&lt; <a class="el" href="classmy__control_1_1TaskQueue.html">my_control::TaskQueue</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1BaseEdge.html#aab5c8a55e8f1af292a2c4475e624c57f">queues_</a></td></tr>
-<tr class="separator:aab5c8a55e8f1af292a2c4475e624c57f inherit pro_attribs_classmy__edge_1_1BaseEdge"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af49c8df428c22b20a08d4a30bd03a87a inherit pro_attribs_classmy__edge_1_1BaseEdge" id="r_af49c8df428c22b20a08d4a30bd03a87a"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; <a class="el" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a>, std::unique_ptr&lt; <a class="el" href="classmy__device_1_1IDevice.html">my_device::IDevice</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1BaseEdge.html#af49c8df428c22b20a08d4a30bd03a87a">devices_</a></td></tr>
-<tr class="separator:af49c8df428c22b20a08d4a30bd03a87a inherit pro_attribs_classmy__edge_1_1BaseEdge"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea33edcb0b648764c421490fdc26cfb6 inherit pro_attribs_classmy__edge_1_1BaseEdge" id="r_aea33edcb0b648764c421490fdc26cfb6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemy__edge.html#a66a24be81e7e2aabc841d9d943baba3c">DeviceID_Type___Mapping</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1BaseEdge.html#aea33edcb0b648764c421490fdc26cfb6">device_type_by_id_</a></td></tr>
+<tr class="separator:aea33edcb0b648764c421490fdc26cfb6 inherit pro_attribs_classmy__edge_1_1BaseEdge"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecb3b6981cac504076620645f549657e inherit pro_attribs_classmy__edge_1_1BaseEdge" id="r_aecb3b6981cac504076620645f549657e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemy__edge.html#a56de25da2b0b84aed5999da18334d7ac">DeviceID_Tasks__Mapping</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1BaseEdge.html#aecb3b6981cac504076620645f549657e">queues_</a></td></tr>
+<tr class="separator:aecb3b6981cac504076620645f549657e inherit pro_attribs_classmy__edge_1_1BaseEdge"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6221dec571e937d1a59e83f3a92a93a3 inherit pro_attribs_classmy__edge_1_1BaseEdge" id="r_a6221dec571e937d1a59e83f3a92a93a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemy__edge.html#ad54e4685344759c9783a8a5f6fbc08c3">DeviceID_Device_Mapping</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1BaseEdge.html#a6221dec571e937d1a59e83f3a92a93a3">devices_</a></td></tr>
+<tr class="separator:a6221dec571e937d1a59e83f3a92a93a3 inherit pro_attribs_classmy__edge_1_1BaseEdge"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15fe7349b47ad25a5746262b22761606 inherit pro_attribs_classmy__edge_1_1BaseEdge" id="r_a15fe7349b47ad25a5746262b22761606"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmy__data_1_1Task.html">my_data::Task</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1BaseEdge.html#a15fe7349b47ad25a5746262b22761606">self_task</a></td></tr>
+<tr class="separator:a15fe7349b47ad25a5746262b22761606 inherit pro_attribs_classmy__edge_1_1BaseEdge"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a858e11f6db236bc69114e2d11c6f7267 inherit pro_attribs_classmy__edge_1_1BaseEdge" id="r_a858e11f6db236bc69114e2d11c6f7267"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; <a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16e">RunState</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1BaseEdge.html#a858e11f6db236bc69114e2d11c6f7267">self_task_run_state_</a> {<a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16ea32b169f72b293ef80d35435e9894f8e2">RunState::Initializing</a>}</td></tr>
+<tr class="separator:a858e11f6db236bc69114e2d11c6f7267 inherit pro_attribs_classmy__edge_1_1BaseEdge"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90d0a21ff412f0fb2e8c459c4c0c076e inherit pro_attribs_classmy__edge_1_1BaseEdge" id="r_a90d0a21ff412f0fb2e8c459c4c0c076e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1BaseEdge.html#a90d0a21ff412f0fb2e8c459c4c0c076e">self_action_enable_</a> {true}</td></tr>
 <tr class="separator:a90d0a21ff412f0fb2e8c459c4c0c076e inherit pro_attribs_classmy__edge_1_1BaseEdge"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29d8b9d1c6052a96c915a23b0a6af51d inherit pro_attribs_classmy__edge_1_1BaseEdge" id="r_a29d8b9d1c6052a96c915a23b0a6af51d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1BaseEdge.html#a29d8b9d1c6052a96c915a23b0a6af51d">self_device_id_</a> {&quot;self&quot;}</td></tr>
@@ -349,8 +369,52 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">成员函数说明</h2>
-<a id="ac2e56e9d381e77f7a3cd76ffec39718c" name="ac2e56e9d381e77f7a3cd76ffec39718c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2e56e9d381e77f7a3cd76ffec39718c">&#9670;&#160;</a></span>ExecuteSelfTaskLocked()</h2>
+<a id="a792fcbc0ced8f29fec6802a72bc7badc" name="a792fcbc0ced8f29fec6802a72bc7badc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a792fcbc0ced8f29fec6802a72bc7badc">&#9670;&#160;</a></span>ExecuteOtherTaskLocked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ExecuteOtherTaskLocked </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structmy__data_1_1Task.html">my_data::Task</a> &amp;&#160;</td>
+          <td class="paramname"><em>task</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>self task 执行入口（可由子类扩展） 默认实现会打印日志，并根据 capability/action 做少量内置动作。 </p>
+
+<p>重载 <a class="el" href="classmy__edge_1_1BaseEdge.html#a9ccaf67b29f300f8a5e0e0690fd024c9">BaseEdge</a> .</p>
+
+<p class="reference">引用了 <a class="el" href="structmy__data_1_1Task.html#a057699cf114942bd42087102f39351f4">Task::action</a>, <a class="el" href="structmy__data_1_1Task.html#a586d4b3f6ee263311139695f7554f978">Task::capability</a>, <a class="el" href="classmy__edge_1_1BaseEdge.html#a4f600ad4ee5566df049ec8213e99986b">BaseEdge::edge_id_</a>, <a class="el" href="classmy__edge_1_1BaseEdge.html#a9ccaf67b29f300f8a5e0e0690fd024c9">BaseEdge::ExecuteOtherTaskLocked()</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="structmy__data_1_1Task.html#abc73548c91149865f3cd09a381cf9283">Task::params</a> , 以及 <a class="el" href="structmy__data_1_1Task.html#aa3e1e8eb26b010a643bd4a49d570662e">Task::task_id</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__edge_1_1demo_1_1UAVEdge_a792fcbc0ced8f29fec6802a72bc7badc_cgraph.png" border="0" usemap="#aclassmy__edge_1_1demo_1_1UAVEdge_a792fcbc0ced8f29fec6802a72bc7badc_cgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1demo_1_1UAVEdge_a792fcbc0ced8f29fec6802a72bc7badc_cgraph" id="aclassmy__edge_1_1demo_1_1UAVEdge_a792fcbc0ced8f29fec6802a72bc7badc_cgraph">
+<area shape="rect" title="self task 执行入口（可由子类扩展） 默认实现会打印日志，并根据 capability/action 做少量内置动作。" alt="" coords="5,13,188,38"/>
+<area shape="rect" href="classmy__edge_1_1BaseEdge.html#a9ccaf67b29f300f8a5e0e0690fd024c9" title="self task 执行入口（可由子类扩展） 默认实现会打印日志，并根据 capability/action 做少量内置动作。" alt="" coords="236,5,419,45"/>
+<area shape="poly" title=" " alt="" coords="188,23,222,23,222,28,188,28"/>
+<area shape="rect" href="classmy__edge_1_1BaseEdge.html#a3bce8f79859c1f9c6de7e5e32565bda6" title=" " alt="" coords="467,5,629,45"/>
+<area shape="poly" title=" " alt="" coords="419,23,453,23,453,28,419,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a68224839a9a2be877c921b17a10d5903" name="a68224839a9a2be877c921b17a10d5903"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68224839a9a2be877c921b17a10d5903">&#9670;&#160;</a></span>ExecuteSelfTaskLocked()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -361,8 +425,7 @@ Protected 成员函数</h2></td></tr>
         <tr>
           <td class="memname">void ExecuteSelfTaskLocked </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structmy__data_1_1Task.html">my_data::Task</a> &amp;&#160;</td>
-          <td class="paramname"><em>task</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -380,19 +443,19 @@ Protected 成员函数</h2></td></tr>
 <li>capability="edge", action="heartbeat_now"：触发一次立即心跳上报 </li>
 </ul>
 
-<p>重载 <a class="el" href="classmy__edge_1_1BaseEdge.html#a8972a34497e692b1e6939cd6c0409b2f">BaseEdge</a> .</p>
+<p>重载 <a class="el" href="classmy__edge_1_1BaseEdge.html#adcda9b09160406be52785906cad4d075">BaseEdge</a> .</p>
 
-<p class="reference">引用了 <a class="el" href="structmy__data_1_1Task.html#a057699cf114942bd42087102f39351f4">Task::action</a>, <a class="el" href="structmy__data_1_1Task.html#a586d4b3f6ee263311139695f7554f978">Task::capability</a>, <a class="el" href="classmy__edge_1_1BaseEdge.html#a4f600ad4ee5566df049ec8213e99986b">BaseEdge::edge_id_</a>, <a class="el" href="classmy__edge_1_1BaseEdge.html#a6f2e808d95e8be1520f4dc1e7911fd28">BaseEdge::estop_</a>, <a class="el" href="classmy__edge_1_1BaseEdge.html#a9bcd7b8c4e79c5c073ee6423acd40496">BaseEdge::estop_mu_</a>, <a class="el" href="classmy__edge_1_1BaseEdge.html#ad396b58abeb0b99c96df140e8dc525f3">BaseEdge::estop_reason_</a>, <a class="el" href="classmy__edge_1_1BaseEdge.html#a8972a34497e692b1e6939cd6c0409b2f">BaseEdge::ExecuteSelfTaskLocked()</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>, <a class="el" href="structmy__data_1_1Task.html#abc73548c91149865f3cd09a381cf9283">Task::params</a>, <a class="el" href="classmy__edge_1_1BaseEdge.html#afc617dc580a99ebe31ebc0e886906af3">BaseEdge::ReportHeartbeatLocked()</a> , 以及 <a class="el" href="structmy__data_1_1Task.html#aa3e1e8eb26b010a643bd4a49d570662e">Task::task_id</a>.</p>
+<p class="reference">引用了 <a class="el" href="structmy__data_1_1Task.html#a057699cf114942bd42087102f39351f4">Task::action</a>, <a class="el" href="structmy__data_1_1Task.html#a586d4b3f6ee263311139695f7554f978">Task::capability</a>, <a class="el" href="classmy__edge_1_1BaseEdge.html#a4f600ad4ee5566df049ec8213e99986b">BaseEdge::edge_id_</a>, <a class="el" href="classmy__edge_1_1BaseEdge.html#adcda9b09160406be52785906cad4d075">BaseEdge::ExecuteSelfTaskLocked()</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="structmy__data_1_1Task.html#abc73548c91149865f3cd09a381cf9283">Task::params</a>, <a class="el" href="classmy__edge_1_1BaseEdge.html#a15fe7349b47ad25a5746262b22761606">BaseEdge::self_task</a> , 以及 <a class="el" href="structmy__data_1_1Task.html#aa3e1e8eb26b010a643bd4a49d570662e">Task::task_id</a>.</p>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><img src="classmy__edge_1_1demo_1_1UAVEdge_ac2e56e9d381e77f7a3cd76ffec39718c_cgraph.png" border="0" usemap="#aclassmy__edge_1_1demo_1_1UAVEdge_ac2e56e9d381e77f7a3cd76ffec39718c_cgraph" alt=""/></div>
-<map name="aclassmy__edge_1_1demo_1_1UAVEdge_ac2e56e9d381e77f7a3cd76ffec39718c_cgraph" id="aclassmy__edge_1_1demo_1_1UAVEdge_ac2e56e9d381e77f7a3cd76ffec39718c_cgraph">
-<area shape="rect" title="执行 self task（可扩展）" alt="" coords="5,45,177,70"/>
-<area shape="rect" href="classmy__edge_1_1BaseEdge.html#a8972a34497e692b1e6939cd6c0409b2f" title="self task 执行入口（可由子类扩展） 默认实现会打印日志，并根据 capability/action 做少量内置动作。" alt="" coords="227,5,399,45"/>
-<area shape="poly" title=" " alt="" coords="177,42,213,37,214,42,178,48"/>
-<area shape="rect" href="classmy__edge_1_1BaseEdge.html#afc617dc580a99ebe31ebc0e886906af3" title="心跳上报（snapshot thread 周期调用） 默认实现：只打日志。后续你可以接入 MQTT/HTTP 等上报。" alt="" coords="225,69,400,109"/>
-<area shape="poly" title=" " alt="" coords="178,67,212,72,212,77,177,72"/>
+<div class="center"><img src="classmy__edge_1_1demo_1_1UAVEdge_a68224839a9a2be877c921b17a10d5903_cgraph.png" border="0" usemap="#aclassmy__edge_1_1demo_1_1UAVEdge_a68224839a9a2be877c921b17a10d5903_cgraph" alt=""/></div>
+<map name="aclassmy__edge_1_1demo_1_1UAVEdge_a68224839a9a2be877c921b17a10d5903_cgraph" id="aclassmy__edge_1_1demo_1_1UAVEdge_a68224839a9a2be877c921b17a10d5903_cgraph">
+<area shape="rect" title="执行 self task（可扩展）" alt="" coords="5,13,177,38"/>
+<area shape="rect" href="classmy__edge_1_1BaseEdge.html#adcda9b09160406be52785906cad4d075" title=" " alt="" coords="225,5,397,45"/>
+<area shape="poly" title=" " alt="" coords="178,23,212,23,212,28,178,28"/>
+<area shape="rect" href="classmy__edge_1_1BaseEdge.html#a3bce8f79859c1f9c6de7e5e32565bda6" title=" " alt="" coords="445,5,608,45"/>
+<area shape="poly" title=" " alt="" coords="398,23,432,23,432,28,398,28"/>
 </map>
 </div>
 

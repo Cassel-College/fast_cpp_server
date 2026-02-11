@@ -1,7 +1,17 @@
 <map id="StartSelfActionThreadLocked" name="StartSelfActionThreadLocked">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,13,215,38"/>
-<area shape="rect" id="Node000002" href="$classmy__edge_1_1BaseEdge.html#a36e415a8074f5f0d53b29fb5ba8d8b48" title=" " alt="" coords="263,13,381,38"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="215,23,249,23,249,28,215,28"/>
-<area shape="rect" id="Node000003" href="$classmy__control_1_1TaskQueue.html#abe619a353eeb51b30742195efb9b37cc" title="队列长度（线程安全）" alt="" coords="429,5,604,45"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="381,23,415,23,415,28,381,28"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,39,215,64"/>
+<area shape="rect" id="Node000002" href="$classmy__edge_1_1BaseEdge.html#a36e415a8074f5f0d53b29fb5ba8d8b48" title=" " alt="" coords="263,39,381,64"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="215,49,249,49,249,54,215,54"/>
+<area shape="rect" id="Node000003" href="$classmy__edge_1_1BaseEdge.html#ac099c2ba1e2f762e918be54e710ec574" title=" " alt="" coords="429,9,556,35"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="381,39,415,33,416,38,382,44"/>
+<area shape="rect" id="Node000006" href="$classmy__edge_1_1BaseEdge.html#ab3a7ce4dc1f53b35dac8f269f18f6e72" title="尝试从 self 队列中获取任务，带超时" alt="" coords="437,63,548,88"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="382,57,424,63,423,68,381,62"/>
+<area shape="rect" id="Node000004" href="$classmy__edge_1_1BaseEdge.html#adcda9b09160406be52785906cad4d075" title=" " alt="" coords="605,5,777,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="556,18,591,17,592,23,556,23"/>
+<area shape="rect" id="Node000005" href="$classmy__edge_1_1BaseEdge.html#a3bce8f79859c1f9c6de7e5e32565bda6" title=" " alt="" coords="827,5,948,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="777,15,813,15,813,21,777,21"/>
+<area shape="rect" id="Node000007" href="$classmy__control_1_1TaskQueue.html#a1438c61ff8693b71ae3ad71e2364d3d7" title="队列是否已关闭" alt="" coords="604,55,779,95"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="548,73,590,73,590,78,548,78"/>
+<area shape="rect" id="Node000008" href="$classmy__control_1_1TaskQueue.html#a50ceb1782d47e5d3b6ded5db4b2af239" title="阻塞出队" alt="" coords="604,119,779,159"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="534,86,617,113,615,118,532,91"/>
 </map>

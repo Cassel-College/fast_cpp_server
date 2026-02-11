@@ -1,11 +1,9 @@
 <map id="ReportHeartbeatLocked" name="ReportHeartbeatLocked">
-<area shape="rect" id="Node000001" title="心跳上报（snapshot thread 周期调用） 默认实现：只打日志。后续你可以接入 MQTT/HTTP 等上报。" alt="" coords="600,42,775,67"/>
-<area shape="rect" id="Node000002" href="$classmy__edge_1_1demo_1_1UAVEdge.html#ac2e56e9d381e77f7a3cd76ffec39718c" title="执行 self task（可扩展）" alt="" coords="357,5,552,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="586,45,552,40,552,35,587,39"/>
-<area shape="rect" id="Node000003" href="$classmy__edge_1_1BaseEdge.html#a3539dc681f16841477a48b4e0c5d883e" title=" " alt="" coords="398,70,511,95"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="587,69,512,79,511,73,586,64"/>
-<area shape="rect" id="Node000004" href="$classmy__edge_1_1BaseEdge.html#a2907381286bd73c462882f919ec4aa48" title=" " alt="" coords="107,70,309,95"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="384,85,310,85,310,80,384,80"/>
-<area shape="rect" id="Node000005" href="$classmy__edge_1_1BaseEdge.html#a46b15f1cef85897da0f2fed19f72ed4c" title="启动：启动所有 device/workflow" alt="" coords="5,70,59,95"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="93,85,59,85,59,80,93,80"/>
+<area shape="rect" id="Node000001" title="心跳上报（snapshot thread 周期调用） 默认实现：只打日志。后续你可以接入 MQTT/HTTP 等上报。" alt="" coords="519,5,693,31"/>
+<area shape="rect" id="Node000002" href="$classmy__edge_1_1BaseEdge.html#a3539dc681f16841477a48b4e0c5d883e" title=" " alt="" coords="357,5,471,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="505,21,471,21,471,15,505,15"/>
+<area shape="rect" id="Node000003" href="$classmy__edge_1_1BaseEdge.html#a2907381286bd73c462882f919ec4aa48" title=" " alt="" coords="107,5,309,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="344,21,309,21,309,15,344,15"/>
+<area shape="rect" id="Node000004" href="$classmy__edge_1_1BaseEdge.html#a46b15f1cef85897da0f2fed19f72ed4c" title="启动：启动所有 device/workflow" alt="" coords="5,5,59,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="93,21,59,21,59,15,93,15"/>
 </map>

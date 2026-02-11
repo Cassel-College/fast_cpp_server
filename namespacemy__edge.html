@@ -72,6 +72,7 @@ $(function() {
   <div class="summary">
 <a href="#namespaces">命名空间</a> &#124;
 <a href="#nested-classes">结构体</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
 <a href="#enum-members">枚举</a> &#124;
 <a href="#func-members">函数</a>  </div>
   <div class="headertitle"><div class="title">my_edge 命名空间参考</div></div>
@@ -111,6 +112,15 @@ $(function() {
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Submit 结构化返回  <a href="structmy__edge_1_1SubmitResult.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:a66a24be81e7e2aabc841d9d943baba3c" id="r_a66a24be81e7e2aabc841d9d943baba3c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__edge.html#a66a24be81e7e2aabc841d9d943baba3c">DeviceID_Type___Mapping</a> = std::unordered_map&lt; <a class="el" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a>, std::string &gt;</td></tr>
+<tr class="separator:a66a24be81e7e2aabc841d9d943baba3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56de25da2b0b84aed5999da18334d7ac" id="r_a56de25da2b0b84aed5999da18334d7ac"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__edge.html#a56de25da2b0b84aed5999da18334d7ac">DeviceID_Tasks__Mapping</a> = std::unordered_map&lt; <a class="el" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a>, std::unique_ptr&lt; <a class="el" href="classmy__control_1_1TaskQueue.html">my_control::TaskQueue</a> &gt; &gt;</td></tr>
+<tr class="separator:a56de25da2b0b84aed5999da18334d7ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad54e4685344759c9783a8a5f6fbc08c3" id="r_ad54e4685344759c9783a8a5f6fbc08c3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__edge.html#ad54e4685344759c9783a8a5f6fbc08c3">DeviceID_Device_Mapping</a> = std::unordered_map&lt; <a class="el" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a>, std::unique_ptr&lt; <a class="el" href="classmy__device_1_1IDevice.html">my_device::IDevice</a> &gt; &gt;</td></tr>
+<tr class="separator:ad54e4685344759c9783a8a5f6fbc08c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 枚举</h2></td></tr>
 <tr class="memitem:a605c0c17413514783b3c6ce96188e123" id="r_a605c0c17413514783b3c6ce96188e123"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123">SubmitCode</a> { <br />
@@ -133,6 +143,7 @@ $(function() {
 , <a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16ea7b7ecb39b9e110c2a31409a1672bad23">Stopping</a>
 , <br />
 &#160;&#160;<a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16eac23e2b09ebe6bf4cb5e2a9abe85c0be2">Stopped</a>
+, <a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16eacd3055e2a19ada567ed369a0eb7c683c">RunOver</a>
 <br />
  }</td></tr>
 <tr class="memdesc:a86567c2b79a1ea4b5bc908d49665a16e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Edge 运行状态（用于区分 Init/Start 阶段，以及运行中状态）  <a href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16e">更多...</a><br /></td></tr>
@@ -146,6 +157,49 @@ $(function() {
 <tr class="memitem:a73a98adf458ded5bec93301b2541854e" id="r_a73a98adf458ded5bec93301b2541854e"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__edge.html#a73a98adf458ded5bec93301b2541854e">RunStateToString</a> (<a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16e">RunState</a> s)</td></tr>
 <tr class="separator:a73a98adf458ded5bec93301b2541854e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="ad54e4685344759c9783a8a5f6fbc08c3" name="ad54e4685344759c9783a8a5f6fbc08c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad54e4685344759c9783a8a5f6fbc08c3">&#9670;&#160;</a></span>DeviceID_Device_Mapping</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacemy__edge.html#ad54e4685344759c9783a8a5f6fbc08c3">DeviceID_Device_Mapping</a> =  std::unordered_map&lt;<a class="el" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a>, std::unique_ptr&lt;<a class="el" href="classmy__device_1_1IDevice.html">my_device::IDevice</a>&gt; &gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a56de25da2b0b84aed5999da18334d7ac" name="a56de25da2b0b84aed5999da18334d7ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56de25da2b0b84aed5999da18334d7ac">&#9670;&#160;</a></span>DeviceID_Tasks__Mapping</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacemy__edge.html#a56de25da2b0b84aed5999da18334d7ac">DeviceID_Tasks__Mapping</a> =  std::unordered_map&lt;<a class="el" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a>, std::unique_ptr&lt;<a class="el" href="classmy__control_1_1TaskQueue.html">my_control::TaskQueue</a>&gt; &gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a66a24be81e7e2aabc841d9d943baba3c" name="a66a24be81e7e2aabc841d9d943baba3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66a24be81e7e2aabc841d9d943baba3c">&#9670;&#160;</a></span>DeviceID_Type___Mapping</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacemy__edge.html#a66a24be81e7e2aabc841d9d943baba3c">DeviceID_Type___Mapping</a> =  std::unordered_map&lt;<a class="el" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a>, std::string&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">枚举类型说明</h2>
 <a id="a86567c2b79a1ea4b5bc908d49665a16e" name="a86567c2b79a1ea4b5bc908d49665a16e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a86567c2b79a1ea4b5bc908d49665a16e">&#9670;&#160;</a></span>RunState</h2>
@@ -173,7 +227,8 @@ $(function() {
 <li>Ready: Init 完成，已准备好接受命令，但尚未 Start</li>
 <li>Running: 已 Start，正常运行中</li>
 <li>Stopping: 收到停止信号，正在停止中（拒绝新命令，等待设备/队列清理完成）</li>
-<li>Stopped: 已完全停止，所有设备/队列已清理完成 </li>
+<li>Stopped: 已完全停止，所有设备/队列已清理完成</li>
+<li>RunOver: 运行结束（用于特殊场景，如单次运行后退出） </li>
 </ul>
 <table class="fieldtable">
 <tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a86567c2b79a1ea4b5bc908d49665a16ea32b169f72b293ef80d35435e9894f8e2" name="a86567c2b79a1ea4b5bc908d49665a16ea32b169f72b293ef80d35435e9894f8e2"></a>Initializing&#160;</td><td class="fielddoc"></td></tr>
@@ -181,6 +236,7 @@ $(function() {
 <tr><td class="fieldname"><a id="a86567c2b79a1ea4b5bc908d49665a16ea5bda814c4aedb126839228f1a3d92f09" name="a86567c2b79a1ea4b5bc908d49665a16ea5bda814c4aedb126839228f1a3d92f09"></a>Running&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a86567c2b79a1ea4b5bc908d49665a16ea7b7ecb39b9e110c2a31409a1672bad23" name="a86567c2b79a1ea4b5bc908d49665a16ea7b7ecb39b9e110c2a31409a1672bad23"></a>Stopping&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a86567c2b79a1ea4b5bc908d49665a16eac23e2b09ebe6bf4cb5e2a9abe85c0be2" name="a86567c2b79a1ea4b5bc908d49665a16eac23e2b09ebe6bf4cb5e2a9abe85c0be2"></a>Stopped&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a86567c2b79a1ea4b5bc908d49665a16eacd3055e2a19ada567ed369a0eb7c683c" name="a86567c2b79a1ea4b5bc908d49665a16eacd3055e2a19ada567ed369a0eb7c683c"></a>RunOver&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -250,7 +306,7 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="reference">引用了 <a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16ea32b169f72b293ef80d35435e9894f8e2">Initializing</a>, <a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16eae7d31fc0602fb2ede144d18cdffd816b">Ready</a>, <a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16ea5bda814c4aedb126839228f1a3d92f09">Running</a>, <a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16eac23e2b09ebe6bf4cb5e2a9abe85c0be2">Stopped</a> , 以及 <a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16ea7b7ecb39b9e110c2a31409a1672bad23">Stopping</a>.</p>
+<p class="reference">引用了 <a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16ea32b169f72b293ef80d35435e9894f8e2">Initializing</a>, <a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16eae7d31fc0602fb2ede144d18cdffd816b">Ready</a>, <a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16ea5bda814c4aedb126839228f1a3d92f09">Running</a>, <a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16eacd3055e2a19ada567ed369a0eb7c683c">RunOver</a>, <a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16eac23e2b09ebe6bf4cb5e2a9abe85c0be2">Stopped</a> , 以及 <a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16ea7b7ecb39b9e110c2a31409a1672bad23">Stopping</a>.</p>
 
 <p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1BaseEdge.html#acdccf5b178dd52cd19d8af660e6d168b">BaseEdge::DumpInternalInfo()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#acdccf5b178dd52cd19d8af660e6d168b">UUVEdge::DumpInternalInfo()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#aeaad4d1e08909ec413c6e934fb718dc7">UUVEdge::Init()</a>, <a class="el" href="classmy__edge_1_1BaseEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d">BaseEdge::Shutdown()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a39b81cd3edfaba4190ff12d8c8b9d69d">UUVEdge::Shutdown()</a>, <a class="el" href="classmy__edge_1_1BaseEdge.html#a46b15f1cef85897da0f2fed19f72ed4c">BaseEdge::Start()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a46b15f1cef85897da0f2fed19f72ed4c">UUVEdge::Start()</a>, <a class="el" href="classmy__edge_1_1BaseEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">BaseEdge::Submit()</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a0d90b8b5b262d714bf5378e4a6c54773">UUVEdge::Submit()</a>.</p>
 <div class="dynheader">

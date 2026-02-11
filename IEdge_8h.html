@@ -76,6 +76,7 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">结构体</a> &#124;
 <a href="#namespaces">命名空间</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
 <a href="#enum-members">枚举</a> &#124;
 <a href="#func-members">函数</a>  </div>
   <div class="headertitle"><div class="title">IEdge.h 文件参考</div></div>
@@ -85,60 +86,96 @@ $(function() {
 <code>#include &lt;nlohmann/json.hpp&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &quot;<a class="el" href="MyData_8h_source.html">MyData.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="IDevice_8h_source.html">IDevice.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="TaskQueue_8h_source.html">TaskQueue.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="Task_8h_source.html">demo/Task.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 IEdge.h 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="IEdge_8h__incl.png" border="0" usemap="#asrc_2util_2my__edge_2IEdge_8h" alt=""/></div>
 <map name="asrc_2util_2my__edge_2IEdge_8h" id="asrc_2util_2my__edge_2IEdge_8h">
-<area shape="rect" title=" " alt="" coords="551,5,733,31"/>
-<area shape="rect" title=" " alt="" coords="409,79,483,104"/>
-<area shape="poly" title=" " alt="" coords="611,33,492,76,490,71,610,28"/>
-<area shape="rect" title=" " alt="" coords="569,299,715,324"/>
-<area shape="poly" title=" " alt="" coords="667,28,731,64,768,89,803,118,832,149,850,183,855,200,855,217,850,235,840,252,818,275,790,291,760,302,730,309,728,304,759,297,788,286,814,271,836,249,845,233,849,217,849,201,845,185,827,152,799,122,764,94,728,69,664,33"/>
-<area shape="rect" title=" " alt="" coords="723,372,782,397"/>
-<area shape="poly" title=" " alt="" coords="708,28,801,48,902,78,947,96,984,116,1009,138,1016,150,1018,163,1018,240,1011,274,994,303,967,327,935,345,899,359,862,370,796,382,795,377,861,365,897,354,932,340,964,322,989,300,1006,272,1013,239,1013,164,1011,152,1004,141,981,120,945,100,901,83,800,53,707,33"/>
-<area shape="rect" href="MyData_8h.html" title="my_data 模块聚合头文件" alt="" coords="507,79,593,104"/>
-<area shape="poly" title=" " alt="" coords="629,33,577,72,574,68,626,29"/>
-<area shape="rect" href="Task_8h.html" title=" " alt="" coords="590,152,694,177"/>
-<area shape="poly" title=" " alt="" coords="645,31,645,138,639,138,639,31"/>
-<area shape="rect" href="Types_8h.html" title=" " alt="" coords="183,299,295,324"/>
-<area shape="poly" title=" " alt="" coords="508,104,496,107,428,112,339,116,255,127,223,138,201,154,192,169,188,185,193,221,207,256,225,286,220,289,202,259,187,222,183,185,187,167,197,150,221,133,254,122,339,111,427,107,495,101,507,99"/>
-<area shape="rect" href="Error_8h.html" title=" " alt="" coords="791,299,896,324"/>
-<area shape="poly" title=" " alt="" coords="593,94,653,106,723,129,758,146,790,167,818,193,840,224,850,255,850,284,845,284,844,255,836,227,814,196,787,171,755,151,721,134,652,111,592,100"/>
-<area shape="rect" href="TaskResult_8h.html" title=" " alt="" coords="680,225,825,251"/>
-<area shape="poly" title=" " alt="" coords="594,98,651,116,681,131,708,150,732,180,747,211,742,214,727,183,704,154,678,136,649,121,592,103"/>
-<area shape="poly" title=" " alt="" coords="566,102,618,141,615,146,563,106"/>
-<area shape="rect" href="Status_8h.html" title=" " alt="" coords="293,225,409,251"/>
-<area shape="poly" title=" " alt="" coords="536,106,380,219,377,215,533,102"/>
-<area shape="rect" href="RawCommand_8h.html" title=" " alt="" coords="434,225,605,251"/>
-<area shape="poly" title=" " alt="" coords="550,105,527,213,522,212,545,104"/>
-<area shape="rect" href="TimeUtil_8h.html" title=" " alt="" coords="211,152,342,177"/>
-<area shape="poly" title=" " alt="" coords="508,106,335,151,333,146,507,101"/>
-<area shape="rect" href="IdUtil_8h.html" title=" " alt="" coords="5,152,116,177"/>
-<area shape="poly" title=" " alt="" coords="508,104,496,107,316,132,136,155,130,155,129,150,135,149,315,127,495,101,507,99"/>
-<area shape="poly" title=" " alt="" coords="296,320,308,321,710,375,709,381,307,327,295,325"/>
-<area shape="rect" title=" " alt="" coords="206,372,273,397"/>
-<area shape="poly" title=" " alt="" coords="242,324,242,358,237,358,237,324"/>
-<area shape="poly" title=" " alt="" coords="830,326,780,365,777,361,827,322"/>
-<area shape="poly" title=" " alt="" coords="736,253,673,293,670,289,733,248"/>
-<area shape="poly" title=" " alt="" coords="755,251,755,358,750,358,750,251"/>
-<area shape="poly" title=" " alt="" coords="680,251,309,301,308,296,679,246"/>
-<area shape="poly" title=" " alt="" coords="769,249,819,288,816,292,766,253"/>
-<area shape="poly" title=" " alt="" coords="645,178,645,285,639,285,639,178"/>
-<area shape="poly" title=" " alt="" coords="695,170,752,182,815,206,845,222,872,243,895,268,911,298,914,316,909,332,897,346,881,356,839,372,796,381,795,376,838,367,878,352,894,342,905,330,909,316,906,300,890,271,869,247,842,227,813,210,751,187,694,175"/>
-<area shape="poly" title=" " alt="" coords="590,172,512,178,421,189,339,205,306,215,284,227,271,240,261,255,248,286,243,284,256,252,267,236,280,223,304,211,337,200,421,183,511,172,590,166"/>
-<area shape="poly" title=" " alt="" coords="661,175,724,215,721,220,658,180"/>
-<area shape="poly" title=" " alt="" coords="399,248,583,293,581,298,397,253"/>
-<area shape="poly" title=" " alt="" coords="374,248,444,283,534,321,627,351,710,371,709,377,626,356,532,327,442,288,371,253"/>
-<area shape="poly" title=" " alt="" coords="335,253,271,293,268,289,332,248"/>
-<area shape="rect" title=" " alt="" coords="319,299,443,324"/>
-<area shape="poly" title=" " alt="" coords="359,250,373,285,368,287,354,252"/>
-<area shape="poly" title=" " alt="" coords="540,248,612,289,609,294,538,253"/>
-<area shape="poly" title=" " alt="" coords="524,250,535,286,545,305,558,322,594,346,634,362,674,372,710,378,709,383,673,378,632,367,591,350,555,326,540,308,530,288,519,252"/>
-<area shape="poly" title=" " alt="" coords="475,253,298,298,297,293,474,248"/>
-<area shape="poly" title=" " alt="" coords="268,179,252,200,239,226,235,256,237,285,232,285,230,256,234,225,247,197,264,176"/>
-<area shape="poly" title=" " alt="" coords="71,176,98,210,137,249,170,272,203,290,201,295,167,276,134,253,95,214,67,179"/>
+<area shape="rect" title=" " alt="" coords="978,5,1161,31"/>
+<area shape="rect" title=" " alt="" coords="484,79,559,104"/>
+<area shape="poly" title=" " alt="" coords="978,31,793,51,578,81,573,82,572,77,577,76,792,46,978,26"/>
+<area shape="rect" title=" " alt="" coords="787,460,933,485"/>
+<area shape="poly" title=" " alt="" coords="1072,31,1072,163,1072,320,1070,371,1062,392,1045,414,1023,432,999,446,948,463,946,458,997,441,1020,427,1041,410,1057,389,1064,370,1067,320,1067,163,1067,31"/>
+<area shape="rect" title=" " alt="" coords="831,533,889,559"/>
+<area shape="poly" title=" " alt="" coords="1161,20,1412,33,1719,59,1862,78,1980,101,2026,114,2061,129,2084,145,2092,163,2092,401,2089,413,2080,424,2049,444,1999,462,1935,477,1772,502,1579,520,1375,532,1181,540,904,547,904,542,1181,535,1375,527,1578,515,1772,496,1934,472,1998,456,2046,439,2077,420,2084,411,2087,400,2087,164,2080,148,2058,133,2024,119,1979,106,1861,83,1719,65,1411,39,1161,25"/>
+<area shape="rect" href="MyData_8h.html" title="my_data 模块聚合头文件" alt="" coords="633,225,719,251"/>
+<area shape="poly" title=" " alt="" coords="1050,33,710,221,708,216,1047,28"/>
+<area shape="rect" href="Task_8h.html" title=" " alt="" coords="440,306,544,331"/>
+<area shape="poly" title=" " alt="" coords="1039,33,920,81,768,148,703,181,623,228,566,265,519,300,516,295,563,260,620,223,701,177,766,144,918,76,1037,28"/>
+<area shape="rect" href="IDevice_8h.html" title=" " alt="" coords="1129,79,1212,104"/>
+<area shape="poly" title=" " alt="" coords="1087,28,1144,68,1141,73,1084,33"/>
+<area shape="rect" href="TaskQueue_8h.html" title=" " alt="" coords="1529,152,1634,177"/>
+<area shape="poly" title=" " alt="" coords="1111,28,1528,146,1527,151,1109,33"/>
+<area shape="rect" href="Types_8h.html" title=" " alt="" coords="261,460,373,485"/>
+<area shape="poly" title=" " alt="" coords="633,245,504,262,427,278,350,301,262,330,230,350,201,388,197,399,198,408,210,426,233,441,261,453,259,458,230,446,206,430,193,410,192,398,196,385,226,346,260,325,349,296,425,273,503,256,633,240"/>
+<area shape="rect" href="Error_8h.html" title=" " alt="" coords="579,460,685,485"/>
+<area shape="poly" title=" " alt="" coords="676,252,639,447,634,446,671,251"/>
+<area shape="rect" href="TaskResult_8h.html" title=" " alt="" coords="449,387,594,412"/>
+<area shape="poly" title=" " alt="" coords="665,253,615,301,543,378,539,374,611,297,661,249"/>
+<area shape="poly" title=" " alt="" coords="650,253,532,303,530,298,648,248"/>
+<area shape="rect" href="Status_8h.html" title=" " alt="" coords="915,387,1031,412"/>
+<area shape="poly" title=" " alt="" coords="699,248,941,378,938,382,696,253"/>
+<area shape="rect" href="RawCommand_8h.html" title=" " alt="" coords="669,387,840,412"/>
+<area shape="poly" title=" " alt="" coords="684,250,745,373,740,375,679,252"/>
+<area shape="rect" href="TimeUtil_8h.html" title=" " alt="" coords="5,387,136,412"/>
+<area shape="poly" title=" " alt="" coords="633,243,524,247,384,257,249,274,195,286,156,301,134,317,114,336,85,376,81,373,110,333,130,312,153,296,194,281,248,269,384,251,524,242,633,238"/>
+<area shape="rect" href="IdUtil_8h.html" title=" " alt="" coords="211,387,322,412"/>
+<area shape="poly" title=" " alt="" coords="634,248,538,267,483,282,429,301,354,340,294,380,291,376,351,336,427,296,481,277,537,262,633,243"/>
+<area shape="poly" title=" " alt="" coords="374,480,392,483,817,537,816,542,392,488,373,485"/>
+<area shape="rect" title=" " alt="" coords="284,533,351,559"/>
+<area shape="poly" title=" " alt="" coords="320,486,320,520,315,520,315,486"/>
+<area shape="poly" title=" " alt="" coords="669,483,818,529,817,534,668,488"/>
+<area shape="poly" title=" " alt="" coords="576,409,793,455,792,460,575,415"/>
+<area shape="poly" title=" " alt="" coords="527,411,540,448,552,467,568,483,587,493,613,503,680,518,818,538,817,543,679,524,612,508,585,498,565,487,548,470,536,450,522,413"/>
+<area shape="poly" title=" " alt="" coords="489,415,364,458,362,453,488,410"/>
+<area shape="poly" title=" " alt="" coords="541,410,604,450,601,455,538,414"/>
+<area shape="poly" title=" " alt="" coords="544,320,624,325,717,337,800,356,832,369,854,385,863,399,867,415,868,446,862,446,862,416,858,401,850,388,829,374,799,361,716,342,624,331,544,325"/>
+<area shape="poly" title=" " alt="" coords="478,334,460,349,444,368,435,390,435,400,438,411,458,440,480,457,541,483,615,508,690,524,761,535,817,540,817,545,760,540,689,530,613,513,539,488,477,462,454,443,434,413,430,401,430,389,440,366,457,345,474,330"/>
+<area shape="poly" title=" " alt="" coords="473,334,435,357,394,389,362,420,336,451,332,447,358,416,390,385,432,353,470,329"/>
+<area shape="poly" title=" " alt="" coords="499,331,515,373,510,375,494,332"/>
+<area shape="poly" title=" " alt="" coords="957,414,891,455,888,450,954,410"/>
+<area shape="poly" title=" " alt="" coords="974,413,966,448,959,468,947,487,924,511,898,529,895,524,921,507,943,484,954,466,961,446,969,412"/>
+<area shape="poly" title=" " alt="" coords="915,410,387,466,387,461,915,404"/>
+<area shape="rect" title=" " alt="" coords="1009,460,1133,485"/>
+<area shape="poly" title=" " alt="" coords="991,410,1045,449,1042,454,987,414"/>
+<area shape="poly" title=" " alt="" coords="773,410,833,450,830,455,770,414"/>
+<area shape="poly" title=" " alt="" coords="757,412,762,446,768,466,777,484,798,507,824,525,821,529,795,511,772,487,763,468,757,447,752,412"/>
+<area shape="poly" title=" " alt="" coords="685,415,388,463,387,457,684,409"/>
+<area shape="poly" title=" " alt="" coords="111,409,265,454,264,459,110,415"/>
+<area shape="poly" title=" " alt="" coords="277,411,303,447,299,450,273,414"/>
+<area shape="poly" title=" " alt="" coords="1166,105,1139,161,1127,198,1123,237,1123,320,1122,349,1118,372,1109,393,1090,414,1058,437,1022,453,984,464,948,471,947,465,983,459,1020,448,1055,432,1086,410,1104,390,1113,370,1117,348,1117,320,1117,237,1122,197,1134,159,1161,103"/>
+<area shape="poly" title=" " alt="" coords="1173,104,1173,237,1173,401,1171,448,1163,468,1146,487,1128,499,1102,509,1037,525,903,544,903,538,1036,520,1101,504,1125,494,1142,483,1158,465,1166,447,1168,401,1168,237,1168,104"/>
+<area shape="poly" title=" " alt="" coords="1132,107,729,224,728,219,1131,102"/>
+<area shape="rect" title=" " alt="" coords="1259,152,1325,177"/>
+<area shape="poly" title=" " alt="" coords="1192,102,1262,143,1259,147,1189,106"/>
+<area shape="rect" href="MyLog_8h.html" title=" " alt="" coords="1457,225,1535,251"/>
+<area shape="poly" title=" " alt="" coords="1180,103,1207,139,1226,159,1248,175,1297,198,1349,214,1400,225,1444,231,1443,236,1399,230,1348,220,1295,203,1245,180,1223,163,1203,143,1176,106"/>
+<area shape="poly" title=" " alt="" coords="1213,97,1516,149,1515,155,1212,102"/>
+<area shape="poly" title=" " alt="" coords="1458,247,1341,266,1286,282,1264,291,1250,301,1232,323,1224,345,1221,369,1222,393,1222,417,1220,441,1210,465,1191,487,1169,501,1139,512,1061,528,976,539,903,545,903,540,975,534,1060,523,1137,507,1167,496,1188,483,1206,462,1214,440,1217,417,1217,393,1216,369,1219,344,1228,320,1246,297,1262,286,1284,277,1340,261,1457,241"/>
+<area shape="rect" title=" " alt="" coords="1259,306,1383,331"/>
+<area shape="poly" title=" " alt="" coords="1472,253,1360,303,1358,298,1470,248"/>
+<area shape="rect" title=" " alt="" coords="1407,299,1566,339"/>
+<area shape="poly" title=" " alt="" coords="1497,251,1493,285,1488,285,1492,251"/>
+<area shape="rect" title=" " alt="" coords="1590,306,1709,331"/>
+<area shape="poly" title=" " alt="" coords="1520,248,1616,297,1613,302,1517,253"/>
+<area shape="rect" title=" " alt="" coords="1733,306,1899,331"/>
+<area shape="poly" title=" " alt="" coords="1536,246,1757,300,1755,305,1535,251"/>
+<area shape="rect" title=" " alt="" coords="1924,306,2001,331"/>
+<area shape="poly" title=" " alt="" coords="1535,244,1563,248,1661,260,1739,267,1815,276,1913,296,1923,299,1921,304,1911,301,1815,281,1738,272,1661,266,1562,253,1534,249"/>
+<area shape="poly" title=" " alt="" coords="1584,177,1589,213,1597,233,1610,249,1638,267,1672,280,1709,288,1748,291,1830,290,1908,283,1974,277,2020,279,2034,286,2038,299,2032,317,2015,340,1981,372,1933,400,1874,425,1806,447,1650,482,1476,508,1301,526,1138,538,904,547,903,541,1138,532,1301,521,1476,503,1649,477,1805,441,1872,420,1931,395,1977,368,2011,337,2027,314,2033,299,2030,290,2019,284,1974,282,1908,288,1830,295,1748,297,1708,293,1670,285,1636,272,1606,253,1592,235,1584,215,1579,178"/>
+<area shape="poly" title=" " alt="" coords="1528,173,733,235,732,230,1528,167"/>
+<area shape="poly" title=" " alt="" coords="1569,179,1522,219,1519,214,1566,175"/>
+<area shape="rect" title=" " alt="" coords="1890,225,2033,251"/>
+<area shape="poly" title=" " alt="" coords="1635,173,1887,220,1886,225,1634,178"/>
+<area shape="rect" title=" " alt="" coords="1619,225,1690,251"/>
+<area shape="poly" title=" " alt="" coords="1595,176,1635,214,1631,218,1592,180"/>
+<area shape="rect" title=" " alt="" coords="1714,225,1777,251"/>
+<area shape="poly" title=" " alt="" coords="1609,175,1707,217,1705,222,1607,180"/>
+<area shape="rect" title=" " alt="" coords="1801,225,1865,251"/>
+<area shape="poly" title=" " alt="" coords="1623,175,1788,221,1787,226,1621,180"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -201,6 +238,15 @@ IEdge.h 的引用(Include)关系图:</div>
 <tr class="memitem:namespacemy__edge" id="r_namespacemy__edge"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__edge.html">my_edge</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:a66a24be81e7e2aabc841d9d943baba3c" id="r_a66a24be81e7e2aabc841d9d943baba3c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__edge.html#a66a24be81e7e2aabc841d9d943baba3c">DeviceID_Type___Mapping</a> = std::unordered_map&lt; <a class="el" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a>, std::string &gt;</td></tr>
+<tr class="separator:a66a24be81e7e2aabc841d9d943baba3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56de25da2b0b84aed5999da18334d7ac" id="r_a56de25da2b0b84aed5999da18334d7ac"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__edge.html#a56de25da2b0b84aed5999da18334d7ac">DeviceID_Tasks__Mapping</a> = std::unordered_map&lt; <a class="el" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a>, std::unique_ptr&lt; <a class="el" href="classmy__control_1_1TaskQueue.html">my_control::TaskQueue</a> &gt; &gt;</td></tr>
+<tr class="separator:a56de25da2b0b84aed5999da18334d7ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad54e4685344759c9783a8a5f6fbc08c3" id="r_ad54e4685344759c9783a8a5f6fbc08c3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__edge.html#ad54e4685344759c9783a8a5f6fbc08c3">DeviceID_Device_Mapping</a> = std::unordered_map&lt; <a class="el" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a>, std::unique_ptr&lt; <a class="el" href="classmy__device_1_1IDevice.html">my_device::IDevice</a> &gt; &gt;</td></tr>
+<tr class="separator:ad54e4685344759c9783a8a5f6fbc08c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 枚举</h2></td></tr>
 <tr class="memitem:a605c0c17413514783b3c6ce96188e123" id="r_a605c0c17413514783b3c6ce96188e123"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123">SubmitCode</a> { <br />
@@ -223,6 +269,7 @@ IEdge.h 的引用(Include)关系图:</div>
 , <a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16ea7b7ecb39b9e110c2a31409a1672bad23">Stopping</a>
 , <br />
 &#160;&#160;<a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16eac23e2b09ebe6bf4cb5e2a9abe85c0be2">Stopped</a>
+, <a class="el" href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16eacd3055e2a19ada567ed369a0eb7c683c">RunOver</a>
 <br />
  }</td></tr>
 <tr class="memdesc:a86567c2b79a1ea4b5bc908d49665a16e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Edge 运行状态（用于区分 Init/Start 阶段，以及运行中状态）  <a href="namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16e">更多...</a><br /></td></tr>
