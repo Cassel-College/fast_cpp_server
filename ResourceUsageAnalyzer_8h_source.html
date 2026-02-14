@@ -81,7 +81,35 @@ $(document).ready(function() { init_codefold(0); });
   <div class="headertitle"><div class="title">ResourceUsageAnalyzer.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="ResourceUsageAnalyzer_8h.html">浏览该文件的文档.</a><div class="fragment"></div><!-- fragment --></div><!-- contents -->
+<a href="ResourceUsageAnalyzer_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// 资源使用分析器（计算 CPU%、IO 速率）</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// 将 prev snapshot 与 curr snapshot 做 diff，并把结果写回 curr snapshot（非破坏 prev）</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="SoftHealthSnapshot_8h.html">SoftHealthSnapshot.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceMySoftHealthy.html">MySoftHealthy</a> {</div>
+<div class="foldopen" id="foldopen00008" data-start="{" data-end="};">
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="classMySoftHealthy_1_1ResourceUsageAnalyzer.html">    8</a></span><span class="keyword">class </span><a class="code hl_class" href="classMySoftHealthy_1_1ResourceUsageAnalyzer.html">ResourceUsageAnalyzer</a> {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classMySoftHealthy_1_1ResourceUsageAnalyzer.html#afd2b9e41e2dce2970fd088890697c353">   10</a></span>  <a class="code hl_function" href="classMySoftHealthy_1_1ResourceUsageAnalyzer.html#afd2b9e41e2dce2970fd088890697c353">ResourceUsageAnalyzer</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classMySoftHealthy_1_1ResourceUsageAnalyzer.html#a6c52d0755cee071b9e542d0686927cca">   11</a></span>  <a class="code hl_function" href="classMySoftHealthy_1_1ResourceUsageAnalyzer.html#a6c52d0755cee071b9e542d0686927cca">~ResourceUsageAnalyzer</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  <span class="comment">// 计算差分并填充 curr（要求 prev 可能为空（首次采样））</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  <span class="comment">// interval_seconds 用于计算 io 速率（若需要）</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classMySoftHealthy_1_1ResourceUsageAnalyzer.html#a1e547ae0d6255b269b27556614ea9bce">compute_deltas</a>(<span class="keyword">const</span> std::shared_ptr&lt;SoftHealthSnapshot&gt;&amp; prev,</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>                      <span class="keyword">const</span> std::shared_ptr&lt;SoftHealthSnapshot&gt;&amp; curr,</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                      <span class="keywordtype">int</span> interval_seconds);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>};</div>
+</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>} <span class="comment">// namespace MySoftHealthy</span></div>
+<div class="ttc" id="aSoftHealthSnapshot_8h_html"><div class="ttname"><a href="SoftHealthSnapshot_8h.html">SoftHealthSnapshot.h</a></div></div>
+<div class="ttc" id="aclassMySoftHealthy_1_1ResourceUsageAnalyzer_html"><div class="ttname"><a href="classMySoftHealthy_1_1ResourceUsageAnalyzer.html">MySoftHealthy::ResourceUsageAnalyzer</a></div><div class="ttdef"><b>Definition</b> ResourceUsageAnalyzer.h:8</div></div>
+<div class="ttc" id="aclassMySoftHealthy_1_1ResourceUsageAnalyzer_html_a1e547ae0d6255b269b27556614ea9bce"><div class="ttname"><a href="classMySoftHealthy_1_1ResourceUsageAnalyzer.html#a1e547ae0d6255b269b27556614ea9bce">MySoftHealthy::ResourceUsageAnalyzer::compute_deltas</a></div><div class="ttdeci">void compute_deltas(const std::shared_ptr&lt; SoftHealthSnapshot &gt; &amp;prev, const std::shared_ptr&lt; SoftHealthSnapshot &gt; &amp;curr, int interval_seconds)</div><div class="ttdef"><b>Definition</b> ResourceUsageAnalyzer.cpp:11</div></div>
+<div class="ttc" id="aclassMySoftHealthy_1_1ResourceUsageAnalyzer_html_a6c52d0755cee071b9e542d0686927cca"><div class="ttname"><a href="classMySoftHealthy_1_1ResourceUsageAnalyzer.html#a6c52d0755cee071b9e542d0686927cca">MySoftHealthy::ResourceUsageAnalyzer::~ResourceUsageAnalyzer</a></div><div class="ttdeci">~ResourceUsageAnalyzer()=default</div></div>
+<div class="ttc" id="aclassMySoftHealthy_1_1ResourceUsageAnalyzer_html_afd2b9e41e2dce2970fd088890697c353"><div class="ttname"><a href="classMySoftHealthy_1_1ResourceUsageAnalyzer.html#afd2b9e41e2dce2970fd088890697c353">MySoftHealthy::ResourceUsageAnalyzer::ResourceUsageAnalyzer</a></div><div class="ttdeci">ResourceUsageAnalyzer()=default</div></div>
+<div class="ttc" id="anamespaceMySoftHealthy_html"><div class="ttname"><a href="namespaceMySoftHealthy.html">MySoftHealthy</a></div><div class="ttdef"><b>Definition</b> ProcessInfoCollector.cpp:17</div></div>
+</div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8

@@ -26,5 +26,6 @@ var searchData=
   ['my_5fscript_23',['my_script',['../namespacemy__script.html',1,'']]],
   ['my_5ftools_24',['my_tools',['../namespacemy__tools.html',1,'']]],
   ['mylog_25',['MyLog',['../namespaceMyLog.html',1,'']]],
-  ['mysystemhealthy_26',['MySystemHealthy',['../namespaceMySystemHealthy.html',1,'']]]
+  ['mysofthealthy_26',['MySoftHealthy',['../namespaceMySoftHealthy.html',1,'']]],
+  ['mysystemhealthy_27',['MySystemHealthy',['../namespaceMySystemHealthy.html',1,'']]]
 ];

@@ -73,9 +73,107 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#func-members">函数</a>  </div>
   <div class="headertitle"><div class="title">ThreadInfoCollector.cpp 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="ThreadInfoCollector_8h_source.html">ThreadInfoCollector.h</a>&quot;</code><br />
+<code>#include &lt;dirent.h&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;cctype&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;sys/types.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;sched.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="MyLog_8h_source.html">MyLog.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+ThreadInfoCollector.cpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="ThreadInfoCollector_8cpp__incl.png" border="0" usemap="#asrc_2util_2my__soft__healthy_2ThreadInfoCollector_8cpp" alt=""/></div>
+<map name="asrc_2util_2my__soft__healthy_2ThreadInfoCollector_8cpp" id="asrc_2util_2my__soft__healthy_2ThreadInfoCollector_8cpp">
+<area shape="rect" title=" " alt="" coords="972,5,1152,45"/>
+<area shape="rect" href="ThreadInfoCollector_8h.html" title=" " alt="" coords="292,93,453,119"/>
+<area shape="poly" title=" " alt="" coords="972,40,467,97,467,91,972,34"/>
+<area shape="rect" title=" " alt="" coords="605,255,679,280"/>
+<area shape="poly" title=" " alt="" coords="972,33,887,39,797,51,719,69,689,81,669,95,657,111,648,129,639,168,637,207,640,241,635,241,632,208,633,167,643,127,653,108,665,91,687,76,717,64,796,45,886,34,972,27"/>
+<area shape="rect" title=" " alt="" coords="679,93,751,119"/>
+<area shape="poly" title=" " alt="" coords="979,48,765,96,765,96,764,91,764,91,977,43"/>
+<area shape="rect" title=" " alt="" coords="776,93,849,119"/>
+<area shape="poly" title=" " alt="" coords="1003,48,863,92,861,87,1001,43"/>
+<area shape="rect" title=" " alt="" coords="874,93,959,119"/>
+<area shape="poly" title=" " alt="" coords="1028,48,951,89,949,84,1026,43"/>
+<area shape="rect" title=" " alt="" coords="984,93,1049,119"/>
+<area shape="poly" title=" " alt="" coords="1053,47,1033,83,1028,80,1049,44"/>
+<area shape="rect" title=" " alt="" coords="1074,93,1141,119"/>
+<area shape="poly" title=" " alt="" coords="1075,44,1096,80,1091,83,1071,47"/>
+<area shape="rect" title=" " alt="" coords="1165,93,1245,119"/>
+<area shape="poly" title=" " alt="" coords="1097,43,1173,84,1171,89,1095,48"/>
+<area shape="rect" title=" " alt="" coords="1269,93,1365,119"/>
+<area shape="poly" title=" " alt="" coords="1124,43,1267,87,1265,92,1122,48"/>
+<area shape="rect" title=" " alt="" coords="1389,93,1463,119"/>
+<area shape="poly" title=" " alt="" coords="1153,43,1376,90,1374,96,1152,48"/>
+<area shape="rect" title=" " alt="" coords="1487,93,1559,119"/>
+<area shape="poly" title=" " alt="" coords="1153,37,1299,59,1474,91,1473,96,1299,65,1152,42"/>
+<area shape="rect" href="MyLog_8h.html" title=" " alt="" coords="1583,93,1661,119"/>
+<area shape="poly" title=" " alt="" coords="1152,33,1341,56,1570,91,1569,96,1340,61,1152,39"/>
+<area shape="rect" href="SoftHealthSnapshot_8h.html" title=" " alt="" coords="173,174,335,199"/>
+<area shape="poly" title=" " alt="" coords="357,121,285,168,282,164,354,117"/>
+<area shape="rect" title=" " alt="" coords="5,255,129,280"/>
+<area shape="poly" title=" " alt="" coords="295,121,228,139,194,152,162,169,139,186,118,206,85,245,81,241,114,202,136,182,159,164,192,148,226,134,294,116"/>
+<area shape="rect" title=" " alt="" coords="336,255,399,280"/>
+<area shape="poly" title=" " alt="" coords="375,119,371,241,366,241,370,119"/>
+<area shape="rect" href="SoftHealthMonitorConfig_8h.html" title=" " alt="" coords="411,174,604,199"/>
+<area shape="poly" title=" " alt="" coords="394,117,477,165,474,169,391,121"/>
+<area shape="rect" title=" " alt="" coords="154,255,221,280"/>
+<area shape="poly" title=" " alt="" coords="246,201,208,246,204,243,242,198"/>
+<area shape="rect" title=" " alt="" coords="245,255,311,280"/>
+<area shape="poly" title=" " alt="" coords="260,199,273,240,268,242,255,200"/>
+<area shape="rect" title=" " alt="" coords="423,255,498,280"/>
+<area shape="poly" title=" " alt="" coords="285,197,419,247,417,252,283,202"/>
+<area shape="rect" title=" " alt="" coords="522,255,581,280"/>
+<area shape="poly" title=" " alt="" coords="299,197,510,252,508,257,298,202"/>
+<area shape="poly" title=" " alt="" coords="228,202,108,252,106,247,226,197"/>
+<area shape="poly" title=" " alt="" coords="272,197,341,245,338,249,269,202"/>
+<area shape="poly" title=" " alt="" coords="503,201,477,244,472,241,498,198"/>
+<area shape="poly" title=" " alt="" coords="516,198,540,241,536,244,512,201"/>
+<area shape="poly" title=" " alt="" coords="529,197,612,245,609,250,526,202"/>
+<area shape="poly" title=" " alt="" coords="1583,119,1572,121,1397,148,1221,169,1046,191,909,206,771,225,595,257,594,252,770,220,908,201,1045,186,1220,164,1396,142,1571,116,1582,114"/>
+<area shape="rect" title=" " alt="" coords="1232,174,1356,199"/>
+<area shape="poly" title=" " alt="" coords="1584,119,1369,169,1353,173,1351,168,1368,164,1583,114"/>
+<area shape="rect" title=" " alt="" coords="1380,167,1539,207"/>
+<area shape="poly" title=" " alt="" coords="1599,121,1512,163,1510,158,1597,116"/>
+<area shape="rect" title=" " alt="" coords="1563,174,1681,199"/>
+<area shape="poly" title=" " alt="" coords="1625,119,1625,160,1619,160,1619,119"/>
+<area shape="rect" title=" " alt="" coords="1705,174,1872,199"/>
+<area shape="poly" title=" " alt="" coords="1647,116,1753,166,1751,171,1645,121"/>
+<area shape="rect" title=" " alt="" coords="1897,174,1974,199"/>
+<area shape="poly" title=" " alt="" coords="1661,112,1763,133,1885,164,1894,167,1893,172,1884,169,1762,138,1660,117"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespaceMySoftHealthy" id="r_namespaceMySoftHealthy"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMySoftHealthy.html">MySoftHealthy</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a1a358e898d1e5b117e94954eb023f091" id="r_a1a358e898d1e5b117e94954eb023f091"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMySoftHealthy.html#a1a358e898d1e5b117e94954eb023f091">read_file_all</a> (const string &amp;path)</td></tr>
+<tr class="separator:a1a358e898d1e5b117e94954eb023f091"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8937f443000cf1f4fc537de0cc630d34" id="r_a8937f443000cf1f4fc537de0cc630d34"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMySoftHealthy.html#a8937f443000cf1f4fc537de0cc630d34">read_file_first_line</a> (const string &amp;path)</td></tr>
+<tr class="separator:a8937f443000cf1f4fc537de0cc630d34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5718feadf4db36522a5388f8cae92504" id="r_a5718feadf4db36522a5388f8cae92504"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMySoftHealthy.html#a5718feadf4db36522a5388f8cae92504">trim</a> (string s)</td></tr>
+<tr class="separator:a5718feadf4db36522a5388f8cae92504"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab68f2ba97c0f31a515af15f03ab7db64" id="r_ab68f2ba97c0f31a515af15f03ab7db64"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMySoftHealthy.html#ab68f2ba97c0f31a515af15f03ab7db64">policy_to_string</a> (int pol)</td></tr>
+<tr class="separator:ab68f2ba97c0f31a515af15f03ab7db64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c8234ae772df3ef5099228fe20e8cea" id="r_a1c8234ae772df3ef5099228fe20e8cea"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMySoftHealthy.html#a1c8234ae772df3ef5099228fe20e8cea">get_thread_policy_best_effort</a> (int tid)</td></tr>
+<tr class="separator:a1c8234ae772df3ef5099228fe20e8cea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

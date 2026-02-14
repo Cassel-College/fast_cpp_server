@@ -1,27 +1,29 @@
 <map id="Start" name="Start">
-<area shape="rect" id="Node000001" title="启动：启动所有 device/workflow" alt="" coords="5,63,59,88"/>
-<area shape="rect" id="Node000002" href="$namespacemy__edge.html#a73a98adf458ded5bec93301b2541854e" title=" " alt="" coords="111,13,312,39"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="58,64,106,49,141,39,142,45,107,54,60,69"/>
-<area shape="rect" id="Node000003" href="$classmy__edge_1_1BaseEdge.html#aed0fd09c1eaf4807781901fe011b83b3" title=" " alt="" coords="107,63,316,88"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="59,73,93,73,93,78,59,78"/>
-<area shape="rect" id="Node000011" href="$classmy__edge_1_1BaseEdge.html#a2907381286bd73c462882f919ec4aa48" title=" " alt="" coords="110,112,313,137"/>
-<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="60,82,107,98,138,106,136,111,106,103,58,87"/>
-<area shape="rect" id="Node000004" href="$classmy__edge_1_1BaseEdge.html#a36e415a8074f5f0d53b29fb5ba8d8b48" title=" " alt="" coords="364,63,483,88"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="316,73,350,73,350,78,316,78"/>
-<area shape="rect" id="Node000005" href="$classmy__edge_1_1BaseEdge.html#ac099c2ba1e2f762e918be54e710ec574" title=" " alt="" coords="555,9,681,35"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="470,60,557,36,559,41,471,65"/>
-<area shape="rect" id="Node000008" href="$classmy__edge_1_1BaseEdge.html#ab3a7ce4dc1f53b35dac8f269f18f6e72" title="尝试从 self 队列中获取任务，带超时" alt="" coords="563,63,673,88"/>
-<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="483,73,548,73,548,78,483,78"/>
-<area shape="rect" id="Node000006" href="$classmy__edge_1_1BaseEdge.html#adcda9b09160406be52785906cad4d075" title=" " alt="" coords="755,5,927,31"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="682,18,741,17,741,22,682,24"/>
-<area shape="rect" id="Node000007" href="$classmy__edge_1_1BaseEdge.html#a3bce8f79859c1f9c6de7e5e32565bda6" title=" " alt="" coords="976,5,1097,31"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="927,15,962,15,962,21,927,21"/>
-<area shape="rect" id="Node000009" href="$classmy__control_1_1TaskQueue.html#a1438c61ff8693b71ae3ad71e2364d3d7" title="队列是否已关闭" alt="" coords="753,55,928,95"/>
-<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="674,73,739,73,739,78,674,78"/>
-<area shape="rect" id="Node000010" href="$classmy__control_1_1TaskQueue.html#a50ceb1782d47e5d3b6ded5db4b2af239" title="阻塞出队" alt="" coords="753,119,928,159"/>
-<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="664,86,758,113,757,118,663,91"/>
-<area shape="rect" id="Node000012" href="$classmy__edge_1_1BaseEdge.html#a3539dc681f16841477a48b4e0c5d883e" title=" " alt="" coords="367,112,480,137"/>
-<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="313,122,353,122,353,127,313,127"/>
-<area shape="rect" id="Node000013" href="$classmy__edge_1_1BaseEdge.html#afc617dc580a99ebe31ebc0e886906af3" title="心跳上报（snapshot thread 周期调用） 默认实现：只打日志。后续你可以接入 MQTT/HTTP 等上报。" alt="" coords="531,112,705,137"/>
-<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="480,122,517,122,517,127,480,127"/>
+<area shape="rect" id="Node000001" title="启动：启动所有 device/workflow" alt="" coords="5,84,59,109"/>
+<area shape="rect" id="Node000002" href="$namespacemy__edge.html#a73a98adf458ded5bec93301b2541854e" title=" " alt="" coords="111,5,312,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="45,82,72,60,105,40,124,32,126,37,108,44,75,64,48,86"/>
+<area shape="rect" id="Node000003" href="$classmy__edge_1_1BaseEdge.html#aed0fd09c1eaf4807781901fe011b83b3" title=" " alt="" coords="107,55,316,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="59,90,120,80,121,85,59,95"/>
+<area shape="rect" id="Node000007" href="$classmy__edge_1_1BaseEdge.html#a1b46ebab15ecd67104610efa66dc72c3" title=" " alt="" coords="110,105,313,145"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="59,98,97,104,96,109,59,103"/>
+<area shape="rect" id="Node000012" href="$classmy__edge_1_1BaseEdge.html#a2907381286bd73c462882f919ec4aa48" title="启动 snapshot 线程（锁内调用）" alt="" coords="110,169,313,195"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="47,108,74,132,108,154,127,162,125,167,105,159,71,136,44,112"/>
+<area shape="rect" id="Node000004" href="$classmy__edge_1_1BaseEdge.html#a36e415a8074f5f0d53b29fb5ba8d8b48" title=" " alt="" coords="383,55,502,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="316,65,369,65,369,70,316,70"/>
+<area shape="rect" id="Node000005" href="$classmy__edge_1_1BaseEdge.html#ac099c2ba1e2f762e918be54e710ec574" title="执行 self 任务" alt="" coords="593,55,720,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="502,65,580,65,580,70,502,70"/>
+<area shape="rect" id="Node000006" href="$classmy__edge_1_1BaseEdge.html#adcda9b09160406be52785906cad4d075" title=" " alt="" coords="793,55,965,80"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="720,65,779,65,779,70,720,70"/>
+<area shape="rect" id="Node000008" href="$classmy__edge_1_1BaseEdge.html#a4d2f873f52e5150f868c5e0d2208c0ab" title=" " alt="" coords="364,112,521,137"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="313,122,350,122,350,127,313,127"/>
+<area shape="rect" id="Node000009" href="$classmy__edge_1_1BaseEdge.html#ab3a7ce4dc1f53b35dac8f269f18f6e72" title="从 self 队列获取任务" alt="" coords="601,112,712,137"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="521,122,588,122,588,127,521,127"/>
+<area shape="rect" id="Node000010" href="$classmy__control_1_1TaskQueue.html#a1438c61ff8693b71ae3ad71e2364d3d7" title="队列是否已关闭" alt="" coords="792,105,967,145"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="712,122,778,122,778,127,712,127"/>
+<area shape="rect" id="Node000011" href="$classmy__control_1_1TaskQueue.html#a50ceb1782d47e5d3b6ded5db4b2af239" title="阻塞出队" alt="" coords="792,169,967,209"/>
+<area shape="poly" id="edge10_Node000009_Node000011" title=" " alt="" coords="703,135,797,162,795,167,701,140"/>
+<area shape="rect" id="Node000013" href="$classmy__edge_1_1BaseEdge.html#a3539dc681f16841477a48b4e0c5d883e" title="snapshot 线程主循环" alt="" coords="386,169,499,195"/>
+<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="313,179,372,179,372,185,313,185"/>
+<area shape="rect" id="Node000014" href="$classmy__edge_1_1BaseEdge.html#afc617dc580a99ebe31ebc0e886906af3" title="心跳上报（snapshot thread 周期调用） 默认实现：只打日志。后续你可以接入 MQTT/HTTP 等上报。" alt="" coords="569,169,744,195"/>
+<area shape="poly" id="edge13_Node000013_Node000014" title=" " alt="" coords="500,179,555,179,555,185,500,185"/>
 </map>

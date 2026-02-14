@@ -133,6 +133,9 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a7b2646cea46ea711c70b6332bbc779d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cbe3c7f548498eb15d911537896b376" id="r_a2cbe3c7f548498eb15d911537896b376"><td class="memItemLeft" align="right" valign="top">virtual nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1IEdge.html#a2cbe3c7f548498eb15d911537896b376">DumpInternalInfo</a> () const =0</td></tr>
 <tr class="separator:a2cbe3c7f548498eb15d911537896b376"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69d1b0a9d431f89ee6311a8602fc13fe" id="r_a69d1b0a9d431f89ee6311a8602fc13fe"><td class="memItemLeft" align="right" valign="top">virtual nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1IEdge.html#a69d1b0a9d431f89ee6311a8602fc13fe">GetRunTimeStatusInfo</a> () const =0</td></tr>
+<tr class="memdesc:a69d1b0a9d431f89ee6311a8602fc13fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取运行时状态信息（供 DumpInternalInfo 调用）  <br /></td></tr>
+<tr class="separator:a69d1b0a9d431f89ee6311a8602fc13fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a440a5a618c768b291970886af4da128f" id="r_a440a5a618c768b291970886af4da128f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__edge_1_1IEdge.html#a440a5a618c768b291970886af4da128f">AppendJsonTask</a> (const nlohmann::json &amp;task)=0</td></tr>
 <tr class="memdesc:a440a5a618c768b291970886af4da128f"><td class="mdescLeft">&#160;</td><td class="mdescRight">向 Edge 添加任务。  <br /></td></tr>
 <tr class="separator:a440a5a618c768b291970886af4da128f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -297,6 +300,36 @@ Public 成员函数</h2></td></tr>
 <dl class="section return"><dt>返回</dt><dd>std::string </dd></dl>
 
 <p>在 <a class="el" href="classmy__edge_1_1BaseEdge.html#ac66580e78dc7f12bc1d449ee4a4d0552">BaseEdge</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#ac66580e78dc7f12bc1d449ee4a4d0552">TUNAEdge</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#ac66580e78dc7f12bc1d449ee4a4d0552">UUVEdge</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a69d1b0a9d431f89ee6311a8602fc13fe" name="a69d1b0a9d431f89ee6311a8602fc13fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69d1b0a9d431f89ee6311a8602fc13fe">&#9670;&#160;</a></span>GetRunTimeStatusInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual nlohmann::json GetRunTimeStatusInfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取运行时状态信息（供 DumpInternalInfo 调用） </p>
+<dl class="section return"><dt>返回</dt><dd>包含运行时状态信息的 JSON 对象。 </dd></dl>
+
+<p>在 <a class="el" href="classmy__edge_1_1BaseEdge.html#a3238251cac1e31f521700b80c203f679">BaseEdge</a>, <a class="el" href="classmy__edge_1_1demo_1_1TUNAEdge.html#a3238251cac1e31f521700b80c203f679">TUNAEdge</a> , 以及 <a class="el" href="classmy__edge_1_1demo_1_1UUVEdge.html#a3238251cac1e31f521700b80c203f679">UUVEdge</a> 内被实现.</p>
 
 </div>
 </div>

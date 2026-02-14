@@ -1,15 +1,7 @@
 <map id="SelfActionLoop" name="SelfActionLoop">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,39,124,64"/>
-<area shape="rect" id="Node000002" href="$classmy__edge_1_1BaseEdge.html#ac099c2ba1e2f762e918be54e710ec574" title=" " alt="" coords="172,9,299,35"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,39,158,33,159,38,125,44"/>
-<area shape="rect" id="Node000005" href="$classmy__edge_1_1BaseEdge.html#ab3a7ce4dc1f53b35dac8f269f18f6e72" title="尝试从 self 队列中获取任务，带超时" alt="" coords="180,63,291,88"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="125,57,167,63,166,68,124,62"/>
-<area shape="rect" id="Node000003" href="$classmy__edge_1_1BaseEdge.html#adcda9b09160406be52785906cad4d075" title=" " alt="" coords="348,5,520,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="299,18,334,17,334,23,299,23"/>
-<area shape="rect" id="Node000004" href="$classmy__edge_1_1BaseEdge.html#a3bce8f79859c1f9c6de7e5e32565bda6" title=" " alt="" coords="569,5,691,31"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="520,15,555,15,555,21,520,21"/>
-<area shape="rect" id="Node000006" href="$classmy__control_1_1TaskQueue.html#a1438c61ff8693b71ae3ad71e2364d3d7" title="队列是否已关闭" alt="" coords="347,55,521,95"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="291,73,333,73,333,78,291,78"/>
-<area shape="rect" id="Node000007" href="$classmy__control_1_1TaskQueue.html#a50ceb1782d47e5d3b6ded5db4b2af239" title="阻塞出队" alt="" coords="347,119,521,159"/>
-<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="277,86,359,113,358,118,275,91"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,124,31"/>
+<area shape="rect" id="Node000002" href="$classmy__edge_1_1BaseEdge.html#ac099c2ba1e2f762e918be54e710ec574" title="执行 self 任务" alt="" coords="172,5,299,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,15,158,15,158,21,124,21"/>
+<area shape="rect" id="Node000003" href="$classmy__edge_1_1BaseEdge.html#adcda9b09160406be52785906cad4d075" title=" " alt="" coords="347,5,519,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="299,15,333,15,333,21,299,21"/>
 </map>

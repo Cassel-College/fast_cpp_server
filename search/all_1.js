@@ -26,8 +26,8 @@ var searchData=
   ['broker_5frunning_5f_23',['broker_running_',['../classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#aab81986b027323c6a7d58e32b4383dd6',1,'my_mqtt_broker_manager::MyMqttBrokerManager']]],
   ['brokerprocessmanager_24',['BrokerProcessManager',['../classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#aabdce0bb152357814ce71c82fe92382a',1,'my_mqtt_broker_manager::MyMqttBrokerManager']]],
   ['buffer_5f_25',['buffer_',['../classtools_1_1ThreadSafeBuffer.html#a28b7d835357a513d86c8c436c24cc0e7',1,'tools::ThreadSafeBuffer::buffer_'],['../classtools_1_1SimpleTcpClient.html#a9fcab6aebd2ef14d2f3008fd25fc1ae5',1,'tools::SimpleTcpClient::buffer_']]],
-  ['buildheartbeat_26',['BuildHeartbeat',['../classmy__heartbeat_1_1HeartbeatManager.html#a7394f16ced4d39b120077258d26c2ed9',1,'my_heartbeat::HeartbeatManager']]],
-  ['buildthreadtree_27',['buildThreadTree',['../classHealthSnapshot.html#a72265d535f959df02f73b10c0c67d2d6',1,'HealthSnapshot']]],
+  ['build_5fpid_5fmaps_26',['build_pid_maps',['../classMySoftHealthy_1_1ProcessInfoCollector.html#a8126a1e731a5c84f580bf90dbcc025dd',1,'MySoftHealthy::ProcessInfoCollector']]],
+  ['buildheartbeat_27',['BuildHeartbeat',['../classmy__heartbeat_1_1HeartbeatManager.html#a7394f16ced4d39b120077258d26c2ed9',1,'my_heartbeat::HeartbeatManager']]],
   ['busy_28',['Busy',['../namespacemy__data.html#ab741123951602d5912c8b5aba6bf3372ad8a942ef2b04672adfafef0ad817a407',1,'my_data']]],
   ['busy_5ftimeout_5fms_29',['busy_timeout_ms',['../structmy__db_1_1DBConfig.html#a1d8584dda5609a17bb937aca1955b7f8',1,'my_db::DBConfig']]],
   ['buttons_30',['buttons',['../namespacebot.html#ab25f60de6d1c5f370231402aa1097c95',1,'bot']]]
