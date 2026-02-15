@@ -14,7 +14,7 @@ var searchData=
   ['isconnected_11',['IsConnected',['../classmy__edge_1_1MyMavVehicle.html#ac766f50854b7401ea00f5e40d89c77f1',1,'my_edge::MyMavVehicle']]],
   ['isempty_12',['IsEmpty',['../classmy__edge_1_1MyEdges.html#a8e12342fc420701fbffd97025421575a',1,'my_edge::MyEdges']]],
   ['isinitialized_13',['IsInitialized',['../classmy__db_1_1MyDB.html#a475d2bd8072f3c9df7b37581c4f1eca4',1,'my_db::MyDB']]],
-  ['isonline_14',['isonline',['../classDeviceOnlineMonitor.html#a1eceab28885f971892b9d4fc76e0e542',1,'DeviceOnlineMonitor::isOnline()'],['../classedge__manager_1_1EdgeDevice.html#a31c964d7df054a0c1e51af505286eb71',1,'edge_manager::EdgeDevice::IsOnline()']]],
+  ['isonline_14',['isonline',['../classedge__manager_1_1EdgeDevice.html#a31c964d7df054a0c1e51af505286eb71',1,'edge_manager::EdgeDevice::IsOnline()'],['../classDeviceOnlineMonitor.html#a1eceab28885f971892b9d4fc76e0e542',1,'DeviceOnlineMonitor::isOnline()']]],
   ['isportavailable_15',['isPortAvailable',['../namespacemy__tools.html#a1d4e056f3d82a7173a5537936792dce1',1,'my_tools']]],
   ['isprocessalive_16',['IsProcessAlive',['../classtools_1_1service__guard_1_1ServiceGuard.html#af04b9eb6da54da1b20e602e2780252ef',1,'tools::service_guard::ServiceGuard']]],
   ['isrunning_17',['isrunning',['../classmy__api_1_1MyAPI.html#ad201152b05beda61e51e3594ff07c8fe',1,'my_api::MyAPI::IsRunning()'],['../classmy__control_1_1demo_1_1Workflow.html#ad201152b05beda61e51e3594ff07c8fe',1,'my_control::demo::Workflow::IsRunning()'],['../classmy__mqtt_1_1MqttService.html#ad201152b05beda61e51e3594ff07c8fe',1,'my_mqtt::MqttService::IsRunning()'],['../classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#ad201152b05beda61e51e3594ff07c8fe',1,'my_mqtt_broker_manager::MyMqttBrokerManager::IsRunning()']]],

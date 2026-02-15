@@ -105,6 +105,10 @@ $(function() {
 <tr class="separator:a01aed5732bd2ef57fa379d24ca801a8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5dcb5ce95b02dd9b4fd019c54847303" id="r_ab5dcb5ce95b02dd9b4fd019c54847303"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMySoftHealthy.html#ab5dcb5ce95b02dd9b4fd019c54847303">trim</a> (std::string s)</td></tr>
 <tr class="separator:ab5dcb5ce95b02dd9b4fd019c54847303"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd599b8f2d3a3820e90969a020e60a32" id="r_acd599b8f2d3a3820e90969a020e60a32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMySoftHealthy.html#acd599b8f2d3a3820e90969a020e60a32">generateSampleConfigByJson</a> (const nlohmann::json &amp;j, <a class="el" href="structMySoftHealthy_1_1SoftHealthMonitorConfig.html">SoftHealthMonitorConfig</a> &amp;cfg)</td></tr>
+<tr class="separator:acd599b8f2d3a3820e90969a020e60a32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90d903cd421d42202826424e29ed37c7" id="r_a90d903cd421d42202826424e29ed37c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMySoftHealthy.html#a90d903cd421d42202826424e29ed37c7">ShowSoftHealthMonitorConfigAsJson</a> (const <a class="el" href="structMySoftHealthy_1_1SoftHealthMonitorConfig.html">SoftHealthMonitorConfig</a> &amp;cfg)</td></tr>
+<tr class="separator:a90d903cd421d42202826424e29ed37c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a87f65065bceefed0734c4d4a0d23b7" id="r_a4a87f65065bceefed0734c4d4a0d23b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMySoftHealthy.html#a4a87f65065bceefed0734c4d4a0d23b7">printSoftHealthSnapshotAsJson</a> (const <a class="el" href="structMySoftHealthy_1_1SoftHealthSnapshot.html">MySoftHealthy::SoftHealthSnapshot</a> &amp;snap)</td></tr>
 <tr class="separator:a4a87f65065bceefed0734c4d4a0d23b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6c3be20c293a0daacb297549ed1d19a" id="r_aa6c3be20c293a0daacb297549ed1d19a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceMySoftHealthy.html#aa6c3be20c293a0daacb297549ed1d19a">printSoftHealthSnapshotAsJsonZH</a> (const <a class="el" href="structMySoftHealthy_1_1SoftHealthSnapshot.html">MySoftHealthy::SoftHealthSnapshot</a> &amp;snap)</td></tr>
@@ -121,6 +125,54 @@ $(function() {
 <tr class="separator:a1c8234ae772df3ef5099228fe20e8cea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">函数说明</h2>
+<a id="acd599b8f2d3a3820e90969a020e60a32" name="acd599b8f2d3a3820e90969a020e60a32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd599b8f2d3a3820e90969a020e60a32">&#9670;&#160;</a></span>generateSampleConfigByJson()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void generateSampleConfigByJson </td>
+          <td>(</td>
+          <td class="paramtype">const nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>j</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structMySoftHealthy_1_1SoftHealthMonitorConfig.html">SoftHealthMonitorConfig</a> &amp;&#160;</td>
+          <td class="paramname"><em>cfg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="structMySoftHealthy_1_1SoftHealthMonitorConfig.html#af1a867ec6e82c49be5323c90466c9caf">SoftHealthMonitorConfig::include_ctx_switches</a>, <a class="el" href="structMySoftHealthy_1_1SoftHealthMonitorConfig.html#a96338880342e45d751c8e4b8a075c0d1">SoftHealthMonitorConfig::include_proc_io</a>, <a class="el" href="structMySoftHealthy_1_1SoftHealthMonitorConfig.html#a254fc7a17c629713db8b17fb62768ed1">SoftHealthMonitorConfig::include_thread_io</a>, <a class="el" href="structMySoftHealthy_1_1SoftHealthMonitorConfig.html#af3e040531592168243a527d28a3f3688">SoftHealthMonitorConfig::interval_seconds</a>, <a class="el" href="structMySoftHealthy_1_1SoftHealthMonitorConfig.html#a5fa92c0c346129c9c85b81796156502f">SoftHealthMonitorConfig::target_cmdline_regex</a>, <a class="el" href="structMySoftHealthy_1_1SoftHealthMonitorConfig.html#a4287b56628cb2ba8376ab202f60dc1c6">SoftHealthMonitorConfig::target_name</a>, <a class="el" href="structMySoftHealthy_1_1SoftHealthMonitorConfig.html#a1a9d84f8d100812fbbf8e81f579c0277">SoftHealthMonitorConfig::target_pid</a> , 以及 <a class="el" href="structMySoftHealthy_1_1SoftHealthMonitorConfig.html#aea2dd3f28d31dfee63dadc804bf5897c">SoftHealthMonitorConfig::threads_topn</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classtools_1_1pipeline_1_1Pipeline.html#a7be5aa429913e2ffa234506aa0fb343f">Pipeline::LaunchSoftHealthyMonitor()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespaceMySoftHealthy_acd599b8f2d3a3820e90969a020e60a32_icgraph.png" border="0" usemap="#anamespaceMySoftHealthy_acd599b8f2d3a3820e90969a020e60a32_icgraph" alt=""/></div>
+<map name="anamespaceMySoftHealthy_acd599b8f2d3a3820e90969a020e60a32_icgraph" id="anamespaceMySoftHealthy_acd599b8f2d3a3820e90969a020e60a32_icgraph">
+<area shape="rect" title=" " alt="" coords="804,13,1019,38"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a7be5aa429913e2ffa234506aa0fb343f" title=" " alt="" coords="553,5,756,45"/>
+<area shape="poly" title=" " alt="" coords="790,28,756,28,756,23,790,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="331,5,505,45"/>
+<area shape="poly" title=" " alt="" coords="540,28,505,28,505,23,540,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="108,5,283,45"/>
+<area shape="poly" title=" " alt="" coords="317,28,283,28,283,23,317,23"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,13,60,38"/>
+<area shape="poly" title=" " alt="" coords="95,28,60,28,60,23,95,23"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a1c8234ae772df3ef5099228fe20e8cea" name="a1c8234ae772df3ef5099228fe20e8cea"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1c8234ae772df3ef5099228fe20e8cea">&#9670;&#160;</a></span>get_thread_policy_best_effort()</h2>
 
@@ -260,22 +312,6 @@ $(function() {
 </div><div class="memdoc">
 
 <p class="reference">引用了 <a class="el" href="structMySoftHealthy_1_1HostSnapshot.html#a3f4d302bc535675f1c51e3bd9ef709e3">HostSnapshot::clk_tck</a>, <a class="el" href="structMySoftHealthy_1_1SoftHealthSnapshot.html#afe856b0443aec9cda982bb18d429b0cb">SoftHealthSnapshot::host</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="structMySoftHealthy_1_1HostSnapshot.html#aef05084b417fa1a2409c4b65295df5a6">HostSnapshot::num_cpus</a>, <a class="el" href="structMySoftHealthy_1_1SoftHealthSnapshot.html#a940f3cefa6ee5ad262e7e15d2ba7673e">SoftHealthSnapshot::processes</a>, <a class="el" href="structMySoftHealthy_1_1SoftHealthSnapshot.html#a5fa92c0c346129c9c85b81796156502f">SoftHealthSnapshot::target_cmdline_regex</a>, <a class="el" href="structMySoftHealthy_1_1SoftHealthSnapshot.html#a4287b56628cb2ba8376ab202f60dc1c6">SoftHealthSnapshot::target_name</a>, <a class="el" href="structMySoftHealthy_1_1SoftHealthSnapshot.html#a1a9d84f8d100812fbbf8e81f579c0277">SoftHealthSnapshot::target_pid</a>, <a class="el" href="structMySoftHealthy_1_1HostSnapshot.html#a59e84b4ac726420dcf81a63ea35dd546">HostSnapshot::total_cpu_jiffies</a> , 以及 <a class="el" href="structMySoftHealthy_1_1SoftHealthSnapshot.html#aa050a275b32c073d48ce898cefa3cc48">SoftHealthSnapshot::ts</a>.</p>
-
-<p class="reference">被这些函数引用 <a class="el" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668">Pipeline::LaunchRoBot()</a>.</p>
-<div class="dynheader">
-这是这个函数的调用关系图:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespaceMySoftHealthy_aa6c3be20c293a0daacb297549ed1d19a_icgraph.png" border="0" usemap="#anamespaceMySoftHealthy_aa6c3be20c293a0daacb297549ed1d19a_icgraph" alt=""/></div>
-<map name="anamespaceMySoftHealthy_aa6c3be20c293a0daacb297549ed1d19a_icgraph" id="anamespaceMySoftHealthy_aa6c3be20c293a0daacb297549ed1d19a_icgraph">
-<area shape="rect" title=" " alt="" coords="553,5,749,45"/>
-<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="331,5,505,45"/>
-<area shape="poly" title=" " alt="" coords="540,28,506,28,506,23,540,23"/>
-<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="108,5,283,45"/>
-<area shape="poly" title=" " alt="" coords="317,28,283,28,283,23,317,23"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,13,60,38"/>
-<area shape="poly" title=" " alt="" coords="95,28,60,28,60,23,95,23"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -441,6 +477,44 @@ $(function() {
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a90d903cd421d42202826424e29ed37c7" name="a90d903cd421d42202826424e29ed37c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90d903cd421d42202826424e29ed37c7">&#9670;&#160;</a></span>ShowSoftHealthMonitorConfigAsJson()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ShowSoftHealthMonitorConfigAsJson </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structMySoftHealthy_1_1SoftHealthMonitorConfig.html">SoftHealthMonitorConfig</a> &amp;&#160;</td>
+          <td class="paramname"><em>cfg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="structMySoftHealthy_1_1SoftHealthMonitorConfig.html#af1a867ec6e82c49be5323c90466c9caf">SoftHealthMonitorConfig::include_ctx_switches</a>, <a class="el" href="structMySoftHealthy_1_1SoftHealthMonitorConfig.html#a96338880342e45d751c8e4b8a075c0d1">SoftHealthMonitorConfig::include_proc_io</a>, <a class="el" href="structMySoftHealthy_1_1SoftHealthMonitorConfig.html#a254fc7a17c629713db8b17fb62768ed1">SoftHealthMonitorConfig::include_thread_io</a>, <a class="el" href="structMySoftHealthy_1_1SoftHealthMonitorConfig.html#af3e040531592168243a527d28a3f3688">SoftHealthMonitorConfig::interval_seconds</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="structMySoftHealthy_1_1SoftHealthMonitorConfig.html#a5fa92c0c346129c9c85b81796156502f">SoftHealthMonitorConfig::target_cmdline_regex</a>, <a class="el" href="structMySoftHealthy_1_1SoftHealthMonitorConfig.html#a4287b56628cb2ba8376ab202f60dc1c6">SoftHealthMonitorConfig::target_name</a>, <a class="el" href="structMySoftHealthy_1_1SoftHealthMonitorConfig.html#a1a9d84f8d100812fbbf8e81f579c0277">SoftHealthMonitorConfig::target_pid</a> , 以及 <a class="el" href="structMySoftHealthy_1_1SoftHealthMonitorConfig.html#aea2dd3f28d31dfee63dadc804bf5897c">SoftHealthMonitorConfig::threads_topn</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classtools_1_1pipeline_1_1Pipeline.html#a7be5aa429913e2ffa234506aa0fb343f">Pipeline::LaunchSoftHealthyMonitor()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespaceMySoftHealthy_a90d903cd421d42202826424e29ed37c7_icgraph.png" border="0" usemap="#anamespaceMySoftHealthy_a90d903cd421d42202826424e29ed37c7_icgraph" alt=""/></div>
+<map name="anamespaceMySoftHealthy_a90d903cd421d42202826424e29ed37c7_icgraph" id="anamespaceMySoftHealthy_a90d903cd421d42202826424e29ed37c7_icgraph">
+<area shape="rect" title=" " alt="" coords="804,5,1020,45"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a7be5aa429913e2ffa234506aa0fb343f" title=" " alt="" coords="553,5,756,45"/>
+<area shape="poly" title=" " alt="" coords="790,28,756,28,756,23,790,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="331,5,505,45"/>
+<area shape="poly" title=" " alt="" coords="540,28,505,28,505,23,540,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="108,5,283,45"/>
+<area shape="poly" title=" " alt="" coords="317,28,283,28,283,23,317,23"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,13,60,38"/>
+<area shape="poly" title=" " alt="" coords="95,28,60,28,60,23,95,23"/>
+</map>
+</div>
 
 </div>
 </div>

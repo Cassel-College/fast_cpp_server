@@ -5,6 +5,7 @@ var searchData=
   ['softhealthmonitorconfig_2',['SoftHealthMonitorConfig',['../structMySoftHealthy_1_1SoftHealthMonitorConfig.html',1,'MySoftHealthy']]],
   ['softhealthmonitormanager_3',['SoftHealthMonitorManager',['../classMySoftHealthy_1_1SoftHealthMonitorManager.html',1,'MySoftHealthy']]],
   ['softhealthsnapshot_4',['SoftHealthSnapshot',['../structMySoftHealthy_1_1SoftHealthSnapshot.html',1,'MySoftHealthy']]],
-  ['statusrepository_5',['StatusRepository',['../classmy__db_1_1demo_1_1StatusRepository.html',1,'my_db::demo']]],
-  ['submitresult_6',['SubmitResult',['../structmy__edge_1_1SubmitResult.html',1,'my_edge']]]
+  ['softhealthycontroller_5',['SoftHealthyController',['../classmy__api_1_1soft__healthy_1_1SoftHealthyController.html',1,'my_api::soft_healthy']]],
+  ['statusrepository_6',['StatusRepository',['../classmy__db_1_1demo_1_1StatusRepository.html',1,'my_db::demo']]],
+  ['submitresult_7',['SubmitResult',['../structmy__edge_1_1SubmitResult.html',1,'my_edge']]]
 ];

@@ -12,8 +12,10 @@ var searchData=
   ['softhealthmonitormanager_2eh_9',['SoftHealthMonitorManager.h',['../SoftHealthMonitorManager_8h.html',1,'']]],
   ['softhealthsnapshot_2ecpp_10',['SoftHealthSnapshot.cpp',['../SoftHealthSnapshot_8cpp.html',1,'']]],
   ['softhealthsnapshot_2eh_11',['SoftHealthSnapshot.h',['../SoftHealthSnapshot_8h.html',1,'']]],
-  ['status_2ecpp_12',['Status.cpp',['../Status_8cpp.html',1,'']]],
-  ['status_2eh_13',['Status.h',['../Status_8h.html',1,'']]],
-  ['statusrepository_2ecpp_14',['StatusRepository.cpp',['../StatusRepository_8cpp.html',1,'']]],
-  ['statusrepository_2eh_15',['StatusRepository.h',['../StatusRepository_8h.html',1,'']]]
+  ['softhealthycontroller_2ecpp_12',['SoftHealthyController.cpp',['../SoftHealthyController_8cpp.html',1,'']]],
+  ['softhealthycontroller_2eh_13',['SoftHealthyController.h',['../SoftHealthyController_8h.html',1,'']]],
+  ['status_2ecpp_14',['Status.cpp',['../Status_8cpp.html',1,'']]],
+  ['status_2eh_15',['Status.h',['../Status_8h.html',1,'']]],
+  ['statusrepository_2ecpp_16',['StatusRepository.cpp',['../StatusRepository_8cpp.html',1,'']]],
+  ['statusrepository_2eh_17',['StatusRepository.h',['../StatusRepository_8h.html',1,'']]]
 ];
