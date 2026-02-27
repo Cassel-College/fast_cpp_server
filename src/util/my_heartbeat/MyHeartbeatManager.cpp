@@ -23,10 +23,18 @@ HeartbeatManager& HeartbeatManager::GetInstance() {
     return inst;
 }
 
-void HeartbeatManager::SetPublisher(std::shared_ptr<my_mqtt::IMqttPublisher> publisher) {
+HeartbeatManager::HeartbeatManager() {
+    MYLOG_INFO("HeartbeatManager 开始构造");
+    SetPublisher();
+    MYLOG_INFO("HeartbeatManager 构造完成");
+}
+
+
+void HeartbeatManager::SetPublisher() {
     MYLOG_INFO("MQTT publisher ------------------> HeartbeatManager");
     std::lock_guard<std::mutex> lock(mutex_);
-    publisher_ = std::move(publisher);
+    my_mqtt::MqttService& mqtt_service = my_mqtt::MqttService::GetInstance();
+    publisher_ = std::move(mqtt_service.GetPublisher());
     if (!publisher_) {
         MYLOG_WARN("HeartbeatManager SetPublisher: publisher is null");
     } else {

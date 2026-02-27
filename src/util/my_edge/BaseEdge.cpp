@@ -48,7 +48,7 @@ bool BaseEdge::Init(const nlohmann::json& cfg, std::string* err) {
   queues_.clear();
   device_type_by_id_.clear();
 
-  MYLOG_INFO("[Edge:{}] Init 开始：edge_type={}, version={}, self_action_enable={}, snapshot_enable={}, interval_ms={}",
+  MYLOG_INFO("[Edge:{}] Init 开始: edge_type={}, version={}, self_action_enable={}, snapshot_enable={}, interval_ms={}",
              edge_id_, edge_type_, self_action_enable_ ? "true" : "false",
              snapshot_enable_ ? "true" : "false", snapshot_interval_ms_);
 
@@ -57,7 +57,7 @@ bool BaseEdge::Init(const nlohmann::json& cfg, std::string* err) {
     const std::string qname = "queue-" + self_device_id_;
     queues_[self_device_id_] = std::make_unique<my_control::TaskQueue>(qname);
     device_type_by_id_[self_device_id_] = "self";
-    MYLOG_INFO("[Edge:{}] 创建 self 队列成功：device_id={}, queue={}", edge_id_, self_device_id_, qname);
+    MYLOG_INFO("[Edge:{}] 创建 self 队列成功: device_id={}, queue={}", edge_id_, self_device_id_, qname);
   }
 
   // 2) devices 是可选的
@@ -70,7 +70,7 @@ bool BaseEdge::Init(const nlohmann::json& cfg, std::string* err) {
         std::string type = dcfg.value("type", "");
         if (device_id.empty() || type.empty()) {
           std::string e = "devices[" + std::to_string(idx) + "] 缺少 device_id/type";
-          MYLOG_ERROR("[Edge:{}] Init 失败：{}，item={}", edge_id_, e, dcfg.dump());
+          MYLOG_ERROR("[Edge:{}] Init 失败: {}，item={}", edge_id_, e, dcfg.dump());
           if (err) *err = e;
           continue; // 不直接 return false，让 Edge 仍能以 self 模式运行
         }
@@ -79,19 +79,19 @@ bool BaseEdge::Init(const nlohmann::json& cfg, std::string* err) {
 
         std::string qname = "queue-" + device_id;
         queues_[device_id] = std::make_unique<my_control::TaskQueue>(qname);
-        MYLOG_INFO("[Edge:{}] 创建队列：device_id={}, type={}, queue={}", edge_id_, device_id, type, qname);
+        MYLOG_INFO("[Edge:{}] 创建队列: device_id={}, type={}, queue={}", edge_id_, device_id, type, qname);
 
         auto dev = my_device::MyDevice::GetInstance().Create(type, dcfg, err);
         if (!dev) {
-          std::string e = "创建设备失败：device_id=" + device_id + ", type=" + type;
+          std::string e = "创建设备失败: device_id=" + device_id + ", type=" + type;
           MYLOG_ERROR("[Edge:{}] {}", edge_id_, e);
           if (err) *err = e;
           continue;
         }
         devices_[device_id] = std::move(dev);
-        MYLOG_INFO("[Edge:{}] 创建设备成功：device_id={}, type={}", edge_id_, device_id, type);
+        MYLOG_INFO("[Edge:{}] 创建设备成功: device_id={}, type={}", edge_id_, device_id, type);
       } catch (const std::exception& e) {
-        std::string emsg = std::string("Init 捕获异常：") + e.what();
+        std::string emsg = std::string("Init 捕获异常: ") + e.what();
         MYLOG_ERROR("[Edge:{}] {}", edge_id_, emsg);
         if (err) *err = emsg;
         continue;
@@ -105,7 +105,7 @@ bool BaseEdge::Init(const nlohmann::json& cfg, std::string* err) {
   RegisterSelfTaskHandler("say_hello", [this](const my_data::Task& task) {this->SayHelloAction(task); });
 
   run_state_ = RunState::Ready;
-  MYLOG_INFO("[Edge:{}] Init 完成：run_state=Ready，devices={}, queues={}",
+  MYLOG_INFO("[Edge:{}] Init 完成: run_state=Ready，devices={}, queues={}",
              edge_id_, devices_.size(), queues_.size());
   return true;
 }
@@ -114,13 +114,13 @@ bool BaseEdge::Start(std::string* err) {
   std::unique_lock<std::shared_mutex> lk(rw_mutex_);
 
   if (run_state_.load() != RunState::Ready) {
-    std::string e = "Start 被拒绝：当前 run_state=" + RunStateToString(run_state_.load());
+    std::string e = "Start 被拒绝: 当前 run_state=" + RunStateToString(run_state_.load());
     MYLOG_WARN("[Edge:{}] {}", edge_id_, e);
     if (err) *err = e;
     return false;
   }
 
-  MYLOG_INFO("[Edge:{}] Start 开始：devices={}", edge_id_, devices_.size());
+  MYLOG_INFO("[Edge:{}] Start 开始: devices={}", edge_id_, devices_.size());
 
   // 1) 启动 self task 监控线程
   StartSelfTaskMonitorThreadLocked();
@@ -135,7 +135,7 @@ bool BaseEdge::Start(std::string* err) {
   for (auto& [device_id, dev] : devices_) {
     auto qit = queues_.find(device_id);
     if (qit == queues_.end() || !qit->second) {
-      std::string e = "Start 失败：找不到 device_id=" + device_id + " 对应的队列";
+      std::string e = "Start 失败: 找不到 device_id=" + device_id + " 对应的队列";
       MYLOG_ERROR("[Edge:{}] {}", edge_id_, e);
       if (err) *err = e;
       return false;
@@ -143,24 +143,24 @@ bool BaseEdge::Start(std::string* err) {
 
     std::string dev_err;
     if (!dev->Start(*qit->second, &estop_, &dev_err)) {
-      std::string e = "device.Start 失败：device_id=" + device_id + ", err=" + dev_err;
+      std::string e = "device.Start 失败: device_id=" + device_id + ", err=" + dev_err;
       MYLOG_ERROR("[Edge:{}] {}", edge_id_, e);
       if (err) *err = e;
       return false;
     }
 
-    MYLOG_INFO("[Edge:{}] device.Start 成功：device_id={}, queue={}", edge_id_, device_id, qit->second->Name());
+    MYLOG_INFO("[Edge:{}] device.Start 成功: device_id={}, queue={}", edge_id_, device_id, qit->second->Name());
   }
 
   run_state_ = RunState::Running;
-  MYLOG_INFO("[Edge:{}] Start 成功：run_state=Running", edge_id_);
+  MYLOG_INFO("[Edge:{}] Start 成功: run_state=Running", edge_id_);
   return true;
 }
 
 SubmitResult BaseEdge::Submit(const my_data::RawCommand& cmd) {
   std::shared_lock<std::shared_mutex> lk(rw_mutex_);
 
-  MYLOG_INFO("[Edge:{}] Submit：command_id={}, source={}, payload={}",
+  MYLOG_INFO("[Edge:{}] Submit: command_id={}, source={}, payload={}",
              edge_id_, cmd.command_id, cmd.source, cmd.payload.dump());
 
   // 1) run_state
@@ -178,7 +178,7 @@ SubmitResult BaseEdge::Submit(const my_data::RawCommand& cmd) {
       reason = estop_reason_;
     }
     return MakeResult(SubmitCode::EStop,
-                      reason.empty() ? "estop 已激活" : ("estop 已激活：" + reason),
+                      reason.empty() ? "estop 已激活" : ("estop 已激活: " + reason),
                       cmd);
   }
 
@@ -205,7 +205,7 @@ SubmitResult BaseEdge::Submit(const my_data::RawCommand& cmd) {
   auto maybe_task = NormalizeCommandLocked(cmd, device_id, type, &nerr);
   if (!maybe_task.has_value()) {
     return MakeResult(SubmitCode::InvalidCommand,
-                      nerr.empty() ? "Normalize 失败" : ("Normalize 失败：" + nerr),
+                      nerr.empty() ? "Normalize 失败" : ("Normalize 失败: " + nerr),
                       cmd, device_id);
   }
   my_data::Task task = *maybe_task;
@@ -214,7 +214,7 @@ SubmitResult BaseEdge::Submit(const my_data::RawCommand& cmd) {
   std::string qerr;
   if (!AppendTaskToQueueLocked(device_id, task, &qerr)) {
     return MakeResult(SubmitCode::InternalError,
-                      qerr.empty() ? "入队失败" : ("入队失败：" + qerr),
+                      qerr.empty() ? "入队失败" : ("入队失败: " + qerr),
                       cmd, device_id, task.task_id);
   }
 
@@ -288,7 +288,7 @@ void BaseEdge::SetEStop(bool active, const std::string& reason) {
       estop_reason_ = reason;
     }
   }
-  MYLOG_WARN("[Edge:{}] SetEStop：active={}, reason={}",
+  MYLOG_WARN("[Edge:{}] SetEStop: active={}, reason={}",
              edge_id_, active ? "true" : "false", reason);
 }
 
@@ -298,7 +298,7 @@ void BaseEdge::Shutdown() {
   RunState rs = run_state_.load();
   if (rs == RunState::Stopped || rs == RunState::Stopping) return;
 
-  MYLOG_WARN("[Edge:{}] Shutdown 开始：run_state={}", edge_id_, RunStateToString(rs));
+  MYLOG_WARN("[Edge:{}] Shutdown 开始: run_state={}", edge_id_, RunStateToString(rs));
   run_state_ = RunState::Stopping;
 
   // 先停线程（避免线程访问被清理的 queues_/devices_）
@@ -308,21 +308,21 @@ void BaseEdge::Shutdown() {
   // stop devices
   for (auto& [device_id, dev] : devices_) {
     if (!dev) continue;
-    MYLOG_WARN("[Edge:{}] Shutdown：device.Stop device_id={}", edge_id_, device_id);
+    MYLOG_WARN("[Edge:{}] Shutdown: device.Stop device_id={}", edge_id_, device_id);
     dev->Stop();
   }
 
   // shutdown queues（包含 self）
   for (auto& [device_id, q] : queues_) {
     if (!q) continue;
-    MYLOG_WARN("[Edge:{}] Shutdown：queue.Shutdown device_id={}, queue={}", edge_id_, device_id, q->Name());
+    MYLOG_WARN("[Edge:{}] Shutdown: queue.Shutdown device_id={}, queue={}", edge_id_, device_id, q->Name());
     q->Shutdown();
   }
 
   // join devices
   for (auto& [device_id, dev] : devices_) {
     if (!dev) continue;
-    MYLOG_WARN("[Edge:{}] Shutdown：device.Join device_id={}", edge_id_, device_id);
+    MYLOG_WARN("[Edge:{}] Shutdown: device.Join device_id={}", edge_id_, device_id);
     dev->Join();
   }
 
@@ -331,7 +331,7 @@ void BaseEdge::Shutdown() {
   device_type_by_id_.clear();
 
   run_state_ = RunState::Stopped;
-  MYLOG_WARN("[Edge:{}] Shutdown 完成：run_state=Stopped", edge_id_);
+  MYLOG_WARN("[Edge:{}] Shutdown 完成: run_state=Stopped", edge_id_);
 }
 
 my_data::EdgeId BaseEdge::Id() const {
@@ -346,7 +346,7 @@ std::string BaseEdge::EdgeType() const {
 
 void BaseEdge::ShowAnalyzeInitArgs(const nlohmann::json& cfg) const {
   std::shared_lock<std::shared_mutex> lk(rw_mutex_);
-  MYLOG_INFO("[Edge:{}] ShowAnalyzeInitArgs：cfg={}", edge_id_, cfg.dump(4));
+  MYLOG_INFO("[Edge:{}] ShowAnalyzeInitArgs: cfg={}", edge_id_, cfg.dump(4));
 }
 
 nlohmann::json BaseEdge::DumpInternalInfo() const {
@@ -426,7 +426,7 @@ bool BaseEdge::AppendJsonTask(const nlohmann::json& taskj) {
     my_data::Task t = my_data::Task::fromJson(taskj);
     return AppendTask(t);
   } catch (const std::exception& e) {
-    MYLOG_ERROR("[Edge:{}] AppendJsonTask 异常：{}", edge_id_, e.what());
+    MYLOG_ERROR("[Edge:{}] AppendJsonTask 异常: {}", edge_id_, e.what());
     return false;
   }
 }
@@ -436,17 +436,17 @@ bool BaseEdge::AppendTask(const my_data::Task& task) {
 
   // 允许外部把 self task 直接 append 进来（你要求外部可下发 self）
   if (task.device_id.empty()) {
-    MYLOG_ERROR("[Edge:{}] AppendTask 失败：task.device_id 为空", edge_id_);
+    MYLOG_ERROR("[Edge:{}] AppendTask 失败: task.device_id 为空", edge_id_);
     return false;
   }
 
   std::string err;
   if (!AppendTaskToQueueLocked(task.device_id, task, &err)) {
-    MYLOG_ERROR("[Edge:{}] AppendTask 失败：{}", edge_id_, err);
+    MYLOG_ERROR("[Edge:{}] AppendTask 失败: {}", edge_id_, err);
     return false;
   }
 
-  MYLOG_INFO("[Edge:{}] AppendTask 成功：device_id={}, task_id={}", edge_id_, task.device_id, task.task_id);
+  MYLOG_INFO("[Edge:{}] AppendTask 成功: device_id={}, task_id={}", edge_id_, task.device_id, task.task_id);
   return true;
 }
 
@@ -502,7 +502,7 @@ void BaseEdge::StartSelfTaskMonitorThreadLocked() {
   MYLOG_INFO("[Edge:{}] 启动 self_task monitor 线程", edge_id_);
   self_task_monitor_boot_at_ms_ = std::chrono::duration_cast<std::chrono::milliseconds>(
       std::chrono::system_clock::now().time_since_epoch()).count();
-  MYLOG_INFO("[Edge:{}] self_task monitor 线程启动时间戳：{}", edge_id_, self_task_monitor_boot_at_ms_);
+  MYLOG_INFO("[Edge:{}] self_task monitor 线程启动时间戳: {}", edge_id_, self_task_monitor_boot_at_ms_);
   self_task_monitor_thread_ = std::thread(&BaseEdge::SelfTaskMonitorLoop, this);
 }
 
@@ -527,18 +527,18 @@ void BaseEdge::SelfTaskMonitorLoop() {
     int fetch_res = FetchSelfTask(task, wait_ms); // 1000ms 超时
 
     if (0 == fetch_res) { // No queue
-      MYLOG_ERROR("[Edge:{}] self_action：self 队列不存在，线程退出, fetch_res: {}", edge_id_, fetch_res);
+      MYLOG_ERROR("[Edge:{}] self_action: self 队列不存在，线程退出, fetch_res: {}", edge_id_, fetch_res);
       return;
     }
     if (3 == fetch_res) { // Queue shutdown
-      MYLOG_ERROR("[Edge:{}] self_action：self 队列已关闭，线程退出, fetch_res: {}", edge_id_, fetch_res);
+      MYLOG_ERROR("[Edge:{}] self_action: self 队列已关闭，线程退出, fetch_res: {}", edge_id_, fetch_res);
       break;
     }
     if (5 == fetch_res) { // already has tas
-      MYLOG_INFO("[Edge:{}] self_action：已有未执行任务，继续等待 {} ms, fetch_res: {}", edge_id_, wait_ms, fetch_res);
+      MYLOG_INFO("[Edge:{}] self_action: 已有未执行任务，继续等待 {} ms, fetch_res: {}", edge_id_, wait_ms, fetch_res);
     }
     if (2 == fetch_res) { // timeout, 无任务，继续循环
-      MYLOG_INFO("[Edge:{}] self_action：无任务，继续等待 {} ms, fetch_res: {}", edge_id_, wait_ms, fetch_res);
+      MYLOG_INFO("[Edge:{}] self_action: 无任务，继续等待 {} ms, fetch_res: {}", edge_id_, wait_ms, fetch_res);
 
     }
     // 其它错误码（4）则回到循环重试
@@ -567,7 +567,7 @@ void BaseEdge::StartSelfActionThreadLocked() {
   MYLOG_INFO("[Edge:{}] 启动 self_action 线程", edge_id_);
   self_action_boot_at_ms_ = std::chrono::duration_cast<std::chrono::milliseconds>(
       std::chrono::system_clock::now().time_since_epoch()).count();
-  MYLOG_INFO("[Edge:{}] self_action 线程启动时间戳：{}", edge_id_, self_action_boot_at_ms_);
+  MYLOG_INFO("[Edge:{}] self_action 线程启动时间戳: {}", edge_id_, self_action_boot_at_ms_);
   self_action_thread_ = std::thread(&BaseEdge::SelfActionLoop, this);
 }
 
@@ -599,7 +599,7 @@ void BaseEdge::SelfActionLoop() {
  * 
  * @param out 输出参数，获取到的任务
  * @param timeout_ms 超时时间，单位毫秒
- * @return int 状态码：0=无队列，1=成功，2=超时，3=队列已关闭，4=错误，5=已有任务未执行
+ * @return int 状态码: 0=无队列，1=成功，2=超时，3=队列已关闭，4=错误，5=已有任务未执行
  */
 int BaseEdge::FetchSelfTask(my_data::Task& out, int timeout_ms) {
   my_control::TaskQueue* q = nullptr;
@@ -619,21 +619,21 @@ int BaseEdge::FetchSelfTask(my_data::Task& out, int timeout_ms) {
     // 判断当前任务状态，避免重复 fetch
     RunState current_state = self_task_run_state_.load();
     if (current_state == RunState::Ready) {
-      MYLOG_WARN("[Edge:{}] FetchSelfTask：当前已有未执行任务，跳过本次 fetch", edge_id_);
+      MYLOG_WARN("[Edge:{}] FetchSelfTask: 当前已有未执行任务，跳过本次 fetch", edge_id_);
       return 5; // already has task
     }
     if (current_state == RunState::Running) {
-      MYLOG_WARN("[Edge:{}] FetchSelfTask：当前任务正在运行，开始本次 fetch", edge_id_);
+      MYLOG_WARN("[Edge:{}] FetchSelfTask: 当前任务正在运行，开始本次 fetch", edge_id_);
       return 5; // already has task
     }
     if (current_state == RunState::Initializing) {
-      MYLOG_INFO("[Edge:{}] FetchSelfTask：当前任务正在初始化，开始本次 fetch", edge_id_);
+      MYLOG_INFO("[Edge:{}] FetchSelfTask: 当前任务正在初始化，开始本次 fetch", edge_id_);
     }
     if (current_state == RunState::Stopping || current_state == RunState::Stopped) {
-      MYLOG_WARN("[Edge:{}] FetchSelfTask：当前处于停止状态，开始本次 fetch", edge_id_);
+      MYLOG_WARN("[Edge:{}] FetchSelfTask: 当前处于停止状态，开始本次 fetch", edge_id_);
     }
     if (current_state == RunState::RunOver) {
-      MYLOG_INFO("[Edge:{}] FetchSelfTask：当前处于运行结束状态, 开始本次 fetch", edge_id_);
+      MYLOG_INFO("[Edge:{}] FetchSelfTask: 当前处于运行结束状态, 开始本次 fetch", edge_id_);
     }
 
     ok = q->PopBlocking(out, timeout_ms);
@@ -650,7 +650,7 @@ int BaseEdge::FetchSelfTask(my_data::Task& out, int timeout_ms) {
     
     
   } catch (const std::exception& e) {
-    MYLOG_ERROR("[Edge:{}] FetchSelfTask 异常：{}", edge_id_, e.what());
+    MYLOG_ERROR("[Edge:{}] FetchSelfTask 异常: {}", edge_id_, e.what());
     return 4; // error
   }
 
@@ -693,10 +693,10 @@ void BaseEdge::ExecuteSelfTaskLocked() {
     // 标记任务已执行完毕
     std::unique_lock<std::shared_mutex> lk(rw_mutex_self_task_);
     this->self_task_run_state_.store(RunState::RunOver);
-    MYLOG_INFO("[Edge:{}] self task 执行完毕，标记为 RunOver：task_id={}, capability={}, action={}",
+    MYLOG_INFO("[Edge:{}] self task 执行完毕，标记为 RunOver: task_id={}, capability={}, action={}",
                edge_id_, this->self_task.task_id, this->self_task.capability, this->self_task.action);
   }
-  MYLOG_WARN("[Edge:{}] 未实现 self task 执行逻辑：capability={}, action={}", edge_id_, this->self_task.capability, this->self_task.action);
+  MYLOG_WARN("[Edge:{}] 未实现 self task 执行逻辑: capability={}, action={}", edge_id_, this->self_task.capability, this->self_task.action);
   return;
 }
 
@@ -706,23 +706,23 @@ void BaseEdge::ExecuteOtherTask(const my_data::Task& task) {
 }
 
 void BaseEdge::ExecuteOtherTaskLocked(const my_data::Task& task) {
-  MYLOG_INFO("[Edge:{}] 执行 self task：task_id={}, capability={}, action={}, params={}",
+  MYLOG_INFO("[Edge:{}] 执行 self task: task_id={}, capability={}, action={}, params={}",
              edge_id_, task.task_id, task.capability, task.action, task.params.dump(4));
   if ("say_hello" == task.action) {
     SayHelloAction(task);
     return;
   }
-  // 你可以在这里实现一些内置动作示例：
+  // 你可以在这里实现一些内置动作示例: 
   // - capability="edge", action="ping" => 立即上报一次心跳
   // - capability="edge", action="estop" => SetEStop(true,...)
   // - capability="edge", action="clear_estop" => SetEStop(false,...)
-  MYLOG_WARN("[Edge:{}] 未实现 self task 执行逻辑：capability={}, action={}", edge_id_, task.capability, task.action);
+  MYLOG_WARN("[Edge:{}] 未实现 self task 执行逻辑: capability={}, action={}", edge_id_, task.capability, task.action);
 }
 
 int BaseEdge::SayHelloAction(const my_data::Task& task) {
   if (RunState::Ready != this->self_task_run_state_.load() &&
       RunState::Initializing != this->self_task_run_state_.load()) {
-    MYLOG_WARN("SayHelloAction 被拒绝执行：当前 self_task_run_state={}",
+    MYLOG_WARN("SayHelloAction 被拒绝执行: 当前 self_task_run_state={}",
                RunStateToString(this->self_task_run_state_.load()));
     return -2; // rejected
   }
@@ -753,10 +753,10 @@ void BaseEdge::StartSnapshotThreadLocked() {
     return;
   }
   snapshot_stop_.store(false);
-  MYLOG_INFO("[Edge:{}] 启动 snapshot/心跳线程：interval_ms={}", edge_id_, snapshot_interval_ms_);
+  MYLOG_INFO("[Edge:{}] 启动 snapshot/心跳线程: interval_ms={}", edge_id_, snapshot_interval_ms_);
   snapshot_boot_at_ms_ = std::chrono::duration_cast<std::chrono::milliseconds>(
       std::chrono::system_clock::now().time_since_epoch()).count();
-  MYLOG_INFO("[Edge:{}] snapshot/心跳线程启动时间戳：{}", edge_id_, snapshot_boot_at_ms_);
+  MYLOG_INFO("[Edge:{}] snapshot/心跳线程启动时间戳: {}", edge_id_, snapshot_boot_at_ms_);
   snapshot_thread_ = std::thread(&BaseEdge::SnapshotLoop, this);
 
 }
@@ -792,7 +792,7 @@ void BaseEdge::SnapshotLoop() {
 void BaseEdge::ReportHeartbeatLocked() {
   // 默认只输出日志，后续你可以接入 MQTT/HTTP 上报
 //   my_data::EdgeStatus st = GetStatusSnapshot();
-//   MYLOG_INFO("[Edge:{}] 心跳：run_state={}, estop={}, pending_total={}, running_total={}",
+//   MYLOG_INFO("[Edge:{}] 心跳: run_state={}, estop={}, pending_total={}, running_total={}",
 //              edge_id_,
 //              st.run_state == my_data::EdgeRunState::Running ? "Running" :
 //              (st.run_state == my_data::EdgeRunState::EStop ? "EStop" : "Other"),

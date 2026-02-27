@@ -22,15 +22,15 @@
 namespace my_edge {
 
 /**
- * @brief BaseEdge：实现 IEdge 的通用骨架
+ * @brief BaseEdge: 实现 IEdge 的通用骨架
  *
- * 设计目标：
- * 1) Edge 自身具备执行能力：内置 self 队列 + self_action 线程
- * 2) device 是可选的：cfg.devices 可以为空/缺失
- * 3) 心跳/上报线程独立：snapshot_thread_ 负责心跳上报（也可扩展为状态上报）
+ * 设计目标: 
+ * 1) Edge 自身具备执行能力: 内置 self 队列 + self_action 线程
+ * 2) device 是可选的: cfg.devices 可以为空/缺失
+ * 3) 心跳/上报线程独立: snapshot_thread_ 负责心跳上报（也可扩展为状态上报）
  * 4) Submit/Init/Start/Shutdown 的并发与状态机统一
  *
- * 子类只需要关注差异点：
+ * 子类只需要关注差异点: 
  * - Normalize 策略（缓存/临时创建 normalizer 等）
  * - self task 执行策略（覆盖 ExecuteSelfTaskLocked）
  * - edge_type / 默认 edge_id / 扩展状态字段等
@@ -56,17 +56,17 @@ public:
   bool AppendJsonTask(const nlohmann::json& task) override;                 // 负责把 JSON 任务转换成 Task 并调用 AppendTask
   bool AppendTask(const my_data::Task& task) override;                      // 负责把 Task 分发到对应队列（受 rw_mutex_ 保护）  
 
-  // Self task 回调签名：task_id, capability, action, params（均为 string，按需修改）
+  // Self task 回调签名: task_id, capability, action, params（均为 string，按需修改）
   using SelfTaskHandler = std::function<void(const my_data::Task& task)>;
 
-  // 注册回调（线程安全）：action -> handler
+  // 注册回调（线程安全）: action -> handler
   void RegisterSelfTaskHandler(const std::string& action, SelfTaskHandler handler);
 protected:
   // -------- 子类需要实现/可覆盖的钩子 --------
 
   /**
-   * @brief Normalize：把 RawCommand 转成 Task。
-   * 注意：BaseEdge 已做 run_state/estop/payload/device_id 校验，这里只负责“生成 task”。
+   * @brief Normalize: 把 RawCommand 转成 Task。
+   * 注意: BaseEdge 已做 run_state/estop/payload/device_id 校验，这里只负责“生成 task”。
    *
    * @return 失败返回 nullopt，并在 err 中写入原因。
    */
@@ -84,7 +84,7 @@ protected:
 
   /**
    * @brief 心跳上报（snapshot thread 周期调用）
-   * 默认实现：只打日志。后续你可以接入 MQTT/HTTP 等上报。
+   * 默认实现: 只打日志。后续你可以接入 MQTT/HTTP 等上报。
    */
   virtual void ReportHeartbeatLocked();
 
@@ -134,7 +134,7 @@ protected:
    * @brief 从 self 队列获取任务
    * @param out 输出任务
    * @param timeout_ms 超时时间（毫秒）
-   * @return 状态码：0 = 没有队列（NoQueue），1 = 获取成功（OK），2 = 超时（Timeout），3 = 队列已关闭（Shutdown），4 = 错误（Error）5=已有任务未执行
+   * @return 状态码: 0 = 没有队列（NoQueue），1 = 获取成功（OK），2 = 超时（Timeout），3 = 队列已关闭（Shutdown），4 = 错误（Error）5=已有任务未执行
    */
   int FetchSelfTask(my_data::Task& out, int timeout_ms = 500);
 
@@ -169,7 +169,7 @@ protected:
   void SnapshotLoop();
 
   /**
-   * @brief 内置 self action 示例：打印 Hello
+   * @brief 内置 self action 示例: 打印 Hello
    * 
    * @param task 任务
    * @return int 状态码

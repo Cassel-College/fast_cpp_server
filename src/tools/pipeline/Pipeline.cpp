@@ -354,8 +354,8 @@ void Pipeline::LaunchMQTTComm(const nlohmann::json& args) {
     
 
     // 注入 publisher 适配器（heartbeat 只看到 IMqttPublisher）
-    my_heartbeat::HeartbeatManager::GetInstance().SetPublisher(mqtt_service.GetPublisher());
-    my_heartbeat::HeartbeatManager::GetInstance().SetPublisher(mqtt_service.GetPublisher());
+    // my_heartbeat::HeartbeatManager::GetInstance().SetPublisher(mqtt_service.GetPublisher());
+    // my_heartbeat::HeartbeatManager::GetInstance().SetPublisher(mqtt_service.GetPublisher());
 
     // 启动线程
     workers_.emplace_back(&my_mqtt::MqttService::Start, &mqtt_service);
