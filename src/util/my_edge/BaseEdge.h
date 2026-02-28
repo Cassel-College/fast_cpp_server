@@ -105,18 +105,23 @@ protected:
   DeviceID_Tasks__Mapping   queues_;                                        // device_id -> TaskQueue ptr
   DeviceID_Device_Mapping   devices_;                                       // device_id -> IDevice ptr
   std::string               self_device_id_{"self"};                        // edge 自己的 device_id
+  // -------------------------------- self task 相关 -----------------------------------------------------
   my_data::Task             self_task;                                      // 用于 self action 线程的临时任务存储
   std::atomic<bool>         self_task_executing_{false};                    // self task 执行状态
   mutable std::shared_mutex rw_mutex_self_task_;                            // 保护 self_task_
   std::atomic<RunState>     self_task_run_state_{RunState::Initializing};   // self task 执行状态
+  int                       self_task_execution_step_ms_{1000};             // self task 执行间隔时间戳（毫秒）
+  // ------------------------------- Submit 相关 ----------------------------------------------
   bool                      self_task_monitor_enable_{true};                // 启动监控Task 默认启用
-  std::atomic<bool>         self_task_monitor_stop_{false};                 // self_task_monitor 线程停止标志 
+  std::atomic<bool>         self_task_monitor_stop_{false};               // self_task_monitor 线程停止标志 
   std::thread               self_task_monitor_thread_;                      // self_task_monitor 线程 
   std::int64_t              self_task_monitor_boot_at_ms_{0};               // self_task_monitor 启动时间戳  
+  // ------------------------------- self action 线程相关 ----------------------------------------------
   bool                      self_action_enable_{true};                      // 启动执行Task 默认启用
   std::atomic<bool>         self_action_stop_{false};                       // self action 线程停止标志 
   std::thread               self_action_thread_;                            // self action 线程 
   std::int64_t              self_action_boot_at_ms_{0};                     // self action 启动时间戳
+  // -------------------------------- 心跳/上报相关 -----------------------------------------------------
   bool                      snapshot_enable_{true};                         // 默认启用
   int                       snapshot_interval_ms_{2000};                    // 默认 2s 心跳
   std::atomic<bool>         snapshot_stop_{false};                          // snapshot 线程停止标志

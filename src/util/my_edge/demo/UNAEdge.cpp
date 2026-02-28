@@ -1,5 +1,6 @@
 #include "UNAEdge.h"
 
+#include "CS-Y2536.pb.h"
 #include "JsonUtil.h"
 #include "MyData.h"
 #include "MyLog.h"
@@ -104,15 +105,51 @@ void UNAEdge::SendHeatbeatByMQTT() {
     if (pos != std::string::npos) {
         topic.replace(pos, std::string("{source}").length(), edge_id_);
     }
+    CSY2536::agent_to_centre_info_heartbeat_pb heartbeat;
+
+    heartbeat.set_agent_id(1);
+    heartbeat.set_agent_type(::CSY2536::AGENT_TYPE::AGENT_TYPE_UUV);
+    heartbeat.set_status(::CSY2536::AGENT_STATUS_TYPE::AGENT_STATUS_RESCUE_ACTIVE);
+    heartbeat.set_error_code(0);
+
+    CSY2536::Poses temp_pos;
+    temp_pos.set_pitch(45);
+    temp_pos.set_yaw(10);  
+    temp_pos.set_roll(1);
+    heartbeat.mutable_po()->CopyFrom(temp_pos);
+
+    heartbeat.set_battery(100);
+    heartbeat.set_endurance(3600);
+
+    CSY2536::Poses temp_po;
+    temp_po.set_pitch(45);
+    temp_po.set_yaw(10);
+    temp_po.set_roll(1);
+    heartbeat.mutable_po()->CopyFrom(temp_po);
+
+    std::string payload_mqtt;
+    if (!heartbeat.SerializeToString(&payload_mqtt)) {
+       MYLOG_ERROR("[Edge:{}] 序列化心跳失败", edge_id_);
+        return;
+    }
+
     nlohmann::json payload = {{"edge_id", edge_id_}, {"timestamp", std::time(nullptr)}};
-    my_mqtt::MqttService::GetInstance().GetPublisher()->Publish(topic, payload.dump(), qos_, retain_);
+    // my_mqtt::MqttService::GetInstance().GetPublisher()->Publish(topic, payload.dump(), qos_, retain_);
+    my_mqtt::MqttService::GetInstance().GetPublisher()->Publish(topic, payload_mqtt, qos_, retain_);
     MYLOG_INFO("[Edge:{}] 通过 MQTT 发布心跳: topic={}, payload={}", edge_id_, topic, payload.dump());
 }
 
 void UNAEdge::ReportHeartbeatLocked() {
-
-  // 再发送 MQTT 心跳
+  // 发送 MQTT 心跳
   SendHeatbeatByMQTT();
+}
+
+void UNAEdge::InitMQTTRoute() {
+    my_mqtt::MqttService& mqtt_service = my_mqtt::MqttService::GetInstance();
+    mqtt_service.AddRoute("yingji/to_agent/server_messages", [](const std::string& topic, const std::string& payload) {
+        MYLOG_INFO("MQTTComm 收到操作请求，Topic: {}, Payload: {}", topic, payload);
+        // 处理操作请求的逻辑
+    });
 }
 
 } // namespace my_edge::demo

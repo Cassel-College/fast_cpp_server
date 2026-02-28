@@ -57,8 +57,10 @@ protected:
     */
     void ExecuteSelfTaskLocked() override;
     void ExecuteOtherTaskLocked(const my_data::Task& task) override;
+    // void GenerateHeartbeatInfo();
     void SendHeatbeatByMQTT();
     void ReportHeartbeatLocked() override;
+    void InitMQTTRoute();
 
 private:
     // 内置 MyMavVehicle，用于与潜航器交互

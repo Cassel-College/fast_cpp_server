@@ -121,9 +121,9 @@ private:
     std::string                             password_;                  // 密码
     int                                     reconnect_min_sec_{2};      // 重连最小间隔秒数
     int                                     reconnect_max_sec_{32};     // 重连最大间隔秒数
-    std::atomic<bool>                       inited_{false};         // 是否已初始化
-    std::atomic<bool>                       running_{false};        // 是否正在运行
-    std::atomic<bool>                       connected_{false};      // 是否已连接
+    std::atomic<bool>                       inited_{false};           // 是否已初始化
+    std::atomic<bool>                       running_{false};          // 是否正在运行
+    std::atomic<bool>                       connected_{false};        // 是否已连接
     struct mosquitto*                       mosq_{nullptr};             // mosquitto 客户端句柄
     std::vector<Route>                      routes_;                    // 路由列表
     std::shared_ptr<PublisherAdapter>       publisher_adapter_;         // 发布者适配器
