@@ -21,6 +21,8 @@ RUN apt-get update && apt-get upgrade -y && \
     doxygen \
     graphviz \
     graphviz-dev \
+    libldap2-dev \
+    libsasl2-dev \
     python3.14 \
     python3-pip \
     libldap2-dev \

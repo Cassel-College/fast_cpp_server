@@ -22,7 +22,7 @@ public:
      * 
      * @param publisher 共享指针，指向已连接的 IMqttPublisher 实例
      */
-    void SetPublisher(std::shared_ptr<my_mqtt::IMqttPublisher> publisher);
+    void SetPublisher();
 
     /**
      * @brief Set the Mqtt Publish Config object
@@ -45,7 +45,7 @@ public:
     nlohmann::json GetInitConfig();
     
 private:
-    HeartbeatManager() = default;
+    HeartbeatManager();
     ~HeartbeatManager() { Stop(); }
 
     /**
@@ -79,8 +79,8 @@ private:
 private:
     std::atomic<bool> running_{false};                            // 线程运行状态
     std::thread worker_;                                            // 心跳工作线程
-    std::shared_ptr<my_mqtt::IMqttPublisher> publisher_{nullptr};   // MQTT 发布器
-    std::string topic_fmt_{"system/heartbeats/{source}"};         // 主题格式
+    std::shared_ptr<my_mqtt::IMqttPublisher> publisher_{nullptr};            // MQTT 发布器
+    std::string topic_fmt_{"system/heartbeats"};                    // 主题格式
     int qos_{1};                                                    // MQTT QoS 等级
     bool retain_{false};                                            // 是否保留消息
     uint64_t seq_{0};                                               // 心跳序列号

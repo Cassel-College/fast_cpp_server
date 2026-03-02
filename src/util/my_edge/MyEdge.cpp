@@ -3,6 +3,7 @@
 #include "demo/UUVEdge.h"
 #include "demo/TUNAEdge.h"
 #include "demo/UAVEdge.h"
+#include "demo/UNAEdge.h"
 namespace my_edge {
 
 MyEdge& MyEdge::GetInstance() {
@@ -71,6 +72,19 @@ std::unique_ptr<IEdge> MyEdge::Create(const std::string& type, const nlohmann::j
       return nullptr;
     }
   }
+
+  if ("una" == type || "UNA" == type) {
+    try {
+      return std::make_unique<my_edge::demo::UNAEdge>(cfg, err);
+    } catch (const std::exception& e) {
+      if (err) {
+        *err = std::string("Failed to create UNA edge: ") + e.what();
+      }
+      MYLOG_ERROR("[MyEdge] Create UNA edge failed: {}", e.what());
+      return nullptr;
+    }
+  }
+
   MYLOG_WARN("[MyEdge] Create with cfg: unknown type={}, return nullptr", type);
   return nullptr;
 }

@@ -71,7 +71,7 @@
                         "foreground": true
                     }
                 },
-                "model_name": "MQTTBroker1",
+                "model_name": "MQTTBroker",
                 "step_time_interval": 5
             },
             "1": {
@@ -98,13 +98,14 @@
             "3": {
                 "model_args": {
                     "interval_sec_": 10,
-                    "edge_number": 2,
+                    "edge_number": 1,
                     "edge_create_args": [
                         {
-                            "edge_type": "TUNA",
-                            "edge_id": "tuna_001",
-                            "name": "tuna_001",
+                            "edge_type": "UNA",
+                            "edge_id": "una_001",
+                            "name": "una_001",
                             "version": "0.1.0",
+                            "snapshot_interval_ms": 3000,
                             "allow_queue_when_estop": false,
                             "devices_count": 3,
                             "devices": []
@@ -180,7 +181,7 @@
                     "target_pid_": 0,
                     "target_cmdline_regex_": "sudo ./bin/fast_cpp_server -c /home/peng/Code/fast_cpp_server/config/config.ini"
                 },
-                "model_name": "soft_healthy_monitor"
+                "model_name": "soft_healthy_monitor_001"
             }
         }
     }

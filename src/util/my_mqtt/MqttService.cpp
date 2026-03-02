@@ -55,15 +55,14 @@ bool MqttService::Init(const nlohmann::json& cfg) {
         return true;
     }
 
-    cfg_ = cfg;
-
-    host_ = cfg_.value("host", std::string());
-    port_ = cfg_.value("port", 1883);
-    keepalive_ = cfg_.value("keepalive", 60);
-    client_id_ = cfg_.value("client_id", std::string());
-    clean_session_ = cfg_.value("clean_session", true);
-    username_ = cfg_.value("username", std::string());
-    password_ = cfg_.value("password", std::string());
+    cfg_            = cfg;
+    host_           = cfg_.value("host", std::string());
+    port_           = cfg_.value("port", 1883);
+    keepalive_      = cfg_.value("keepalive", 60);
+    client_id_      = cfg_.value("client_id", std::string());
+    clean_session_  = cfg_.value("clean_session", true);
+    username_       = cfg_.value("username", std::string());
+    password_       = cfg_.value("password", std::string());
 
     if (cfg_.contains("reconnect") && cfg_["reconnect"].is_object()) {
         reconnect_min_sec_ = cfg_["reconnect"].value("min_sec", reconnect_min_sec_);
@@ -141,7 +140,7 @@ bool MqttService::Start() {
         MYLOG_ERROR("mosquitto_loop_start failed: {}", mosquitto_strerror(rc));
         return false;
     }
-
+    running_.store(true);
     MYLOG_INFO("my_mqtt::MqttService started");
     return true;
 }
