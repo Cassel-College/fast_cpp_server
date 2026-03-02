@@ -15,6 +15,7 @@ UNAEdge::UNAEdge() : my_edge::BaseEdge("una") {
     MYLOG_INFO("[UNAEdge] 默认 MQTT 主题格式: {}", topic_fmt_);
     MYLOG_INFO("[UNAEdge] 默认 MQTT QoS: {}", qos_);
     MYLOG_INFO("[UNAEdge] 默认 MQTT retain: {}", retain_ ? "true" : "false");
+    InitMQTTRoute();
 }
 
 UNAEdge::UNAEdge(const nlohmann::json& cfg, std::string* err) : UNAEdge() {
@@ -145,11 +146,26 @@ void UNAEdge::ReportHeartbeatLocked() {
 }
 
 void UNAEdge::InitMQTTRoute() {
+    MYLOG_INFO("[Edge:{}] 初始化 MQTT 路由", edge_id_);
     my_mqtt::MqttService& mqtt_service = my_mqtt::MqttService::GetInstance();
+
     mqtt_service.AddRoute("yingji/to_agent/server_messages", [](const std::string& topic, const std::string& payload) {
         MYLOG_INFO("MQTTComm 收到操作请求，Topic: {}, Payload: {}", topic, payload);
         // 处理操作请求的逻辑
     });
+
+    mqtt_service.AddRoute("hello/a", [](const std::string& topic, const std::string& payload) {
+        MYLOG_INFO("MQTTComm 收到操作请求，Topic: {}, Payload: {}", topic, payload);
+        // 处理操作请求的逻辑
+    });
+
+    mqtt_service.AddRoute("hello/b", [](const std::string& topic, const std::string& payload) {
+        MYLOG_INFO("MQTTComm 收到操作请求，Topic: {}, Payload: {}", topic, payload);
+        // 处理操作请求的逻辑
+    });
+
+    MYLOG_INFO("[Edge:{}] MQTT 路由初始化完成", edge_id_);
+    return;
 }
 
 } // namespace my_edge::demo
