@@ -327,7 +327,7 @@ Private 属性</h2></td></tr>
 
 <p class="reference">引用了 <a class="el" href="classmy__mqtt_1_1MqttService.html#aeef4a7229a433a6ef6c6a8960b5fe413">MqttService::mtx_</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>, <a class="el" href="classmy__mqtt_1_1MqttService.html#a2e4c289e8b6bc28bf2ad4299476a9058">MqttService::routes_</a> , 以及 <a class="el" href="classmy__mqtt_1_1MqttService.html#aacbd416bcad6aed0748c09cf370602a7">MqttService::Subscribe()</a>.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="classtools_1_1pipeline_1_1Pipeline.html#ab7587a797e845df29793177ea59eed08">Pipeline::LaunchMQTTComm()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1UNAEdge.html#a8ae02442f67c4f84a09991f2d4b347c9">UNAEdge::InitMQTTRoute()</a> , 以及 <a class="el" href="classtools_1_1pipeline_1_1Pipeline.html#ab7587a797e845df29793177ea59eed08">Pipeline::LaunchMQTTComm()</a>.</p>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
@@ -343,15 +343,19 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="classmy__mqtt_1_1MqttService_a954c92b80afa6bab4284cbae327de6ad_icgraph.png" border="0" usemap="#aclassmy__mqtt_1_1MqttService_a954c92b80afa6bab4284cbae327de6ad_icgraph" alt=""/></div>
 <map name="aclassmy__mqtt_1_1MqttService_a954c92b80afa6bab4284cbae327de6ad_icgraph" id="aclassmy__mqtt_1_1MqttService_a954c92b80afa6bab4284cbae327de6ad_icgraph">
-<area shape="rect" title="添加路由，注册后自动订阅对应主题过滤器" alt="" coords="776,13,861,38"/>
-<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#ab7587a797e845df29793177ea59eed08" title=" " alt="" coords="553,5,728,45"/>
-<area shape="poly" title=" " alt="" coords="762,28,728,28,728,23,762,23"/>
-<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="331,5,505,45"/>
-<area shape="poly" title=" " alt="" coords="540,28,505,28,505,23,540,23"/>
-<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="108,5,283,45"/>
-<area shape="poly" title=" " alt="" coords="317,28,283,28,283,23,317,23"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,13,60,38"/>
-<area shape="poly" title=" " alt="" coords="95,28,60,28,60,23,95,23"/>
+<area shape="rect" title="添加路由，注册后自动订阅对应主题过滤器" alt="" coords="819,45,904,70"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1UNAEdge.html#a8ae02442f67c4f84a09991f2d4b347c9" title=" " alt="" coords="575,5,771,45"/>
+<area shape="poly" title=" " alt="" coords="805,51,770,45,771,39,805,45"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#ab7587a797e845df29793177ea59eed08" title=" " alt="" coords="585,69,760,109"/>
+<area shape="poly" title=" " alt="" coords="805,69,761,77,760,72,804,64"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1UNAEdge.html#a182be074ed2e98c86bbcc50a83173fce" title=" " alt="" coords="331,5,527,45"/>
+<area shape="poly" title=" " alt="" coords="561,28,527,28,527,23,561,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="341,69,516,109"/>
+<area shape="poly" title=" " alt="" coords="572,92,516,92,516,87,572,87"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="108,69,283,109"/>
+<area shape="poly" title=" " alt="" coords="327,92,283,92,283,87,327,87"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,77,60,102"/>
+<area shape="poly" title=" " alt="" coords="95,92,60,92,60,87,95,87"/>
 </map>
 </div>
 
@@ -473,21 +477,33 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="classtools_1_1pipeline_1_1Pipeline.html#ab7587a797e845df29793177ea59eed08">Pipeline::LaunchMQTTComm()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1UNAEdge.html#a8ae02442f67c4f84a09991f2d4b347c9">UNAEdge::InitMQTTRoute()</a>, <a class="el" href="classtools_1_1pipeline_1_1Pipeline.html#ab7587a797e845df29793177ea59eed08">Pipeline::LaunchMQTTComm()</a>, <a class="el" href="classmy__edge_1_1demo_1_1UNAEdge.html#ac97f3c62f3095194203713aefcc016c1">UNAEdge::SendHeatbeatByMQTT()</a> , 以及 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a46f8b0aaa9050992f25724ae2ac67068">HeartbeatManager::SetPublisher()</a>.</p>
 <div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="classmy__mqtt_1_1MqttService_a8a88459b535d228e294ae262f696ea4b_icgraph.png" border="0" usemap="#aclassmy__mqtt_1_1MqttService_a8a88459b535d228e294ae262f696ea4b_icgraph" alt=""/></div>
 <map name="aclassmy__mqtt_1_1MqttService_a8a88459b535d228e294ae262f696ea4b_icgraph" id="aclassmy__mqtt_1_1MqttService_a8a88459b535d228e294ae262f696ea4b_icgraph">
-<area shape="rect" title=" " alt="" coords="776,13,876,38"/>
-<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#ab7587a797e845df29793177ea59eed08" title=" " alt="" coords="553,5,728,45"/>
-<area shape="poly" title=" " alt="" coords="762,28,728,28,728,23,762,23"/>
-<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="331,5,505,45"/>
-<area shape="poly" title=" " alt="" coords="540,28,505,28,505,23,540,23"/>
-<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="108,5,283,45"/>
-<area shape="poly" title=" " alt="" coords="317,28,283,28,283,23,317,23"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,13,60,38"/>
-<area shape="poly" title=" " alt="" coords="95,28,60,28,60,23,95,23"/>
+<area shape="rect" title=" " alt="" coords="912,109,1012,134"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1UNAEdge.html#a8ae02442f67c4f84a09991f2d4b347c9" title=" " alt="" coords="645,5,841,45"/>
+<area shape="poly" title=" " alt="" coords="932,102,900,80,863,60,831,48,833,43,865,55,903,75,935,98"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#ab7587a797e845df29793177ea59eed08" title=" " alt="" coords="655,69,830,109"/>
+<area shape="poly" title=" " alt="" coords="898,115,830,105,831,99,898,109"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1UNAEdge.html#ac97f3c62f3095194203713aefcc016c1" title=" " alt="" coords="645,133,841,173"/>
+<area shape="poly" title=" " alt="" coords="899,133,841,142,840,136,898,128"/>
+<area shape="rect" href="classmy__heartbeat_1_1HeartbeatManager.html#a46f8b0aaa9050992f25724ae2ac67068" title="Set the Publisher object" alt="" coords="621,197,864,237"/>
+<area shape="poly" title=" " alt="" coords="935,145,903,167,865,188,833,200,831,195,863,183,900,163,932,140"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1UNAEdge.html#a182be074ed2e98c86bbcc50a83173fce" title=" " alt="" coords="354,5,550,45"/>
+<area shape="poly" title=" " alt="" coords="631,28,550,28,550,23,631,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="365,69,539,109"/>
+<area shape="poly" title=" " alt="" coords="642,92,539,92,539,87,642,87"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="108,69,283,109"/>
+<area shape="poly" title=" " alt="" coords="351,92,283,92,283,87,351,87"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,77,60,102"/>
+<area shape="poly" title=" " alt="" coords="95,92,60,92,60,87,95,87"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1UNAEdge.html#af8ac9b6240c9253809b2de40ab1c121c" title="心跳上报（snapshot thread 周期调用） 默认实现: 只打日志。后续你可以接入 MQTT/HTTP 等上报。" alt="" coords="354,133,550,173"/>
+<area shape="poly" title=" " alt="" coords="631,156,550,156,550,151,631,151"/>
+<area shape="rect" href="classmy__heartbeat_1_1HeartbeatManager.html#acc9c585e319edd36884e14172c830525" title=" " alt="" coords="331,197,573,237"/>
+<area shape="poly" title=" " alt="" coords="608,220,574,220,574,215,608,215"/>
 </map>
 </div>
 
@@ -513,21 +529,21 @@ Private 属性</h2></td></tr>
 
 <p class="reference">引用了 <a class="el" href="classmy__mqtt_1_1MqttService.html#aeef4a7229a433a6ef6c6a8960b5fe413">MqttService::mtx_</a> , 以及 <a class="el" href="classmy__mqtt_1_1MqttService.html#a54c38c765487f9ce11a8f061c68c5250">MqttService::publisher_adapter_</a>.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="classtools_1_1pipeline_1_1Pipeline.html#ab7587a797e845df29793177ea59eed08">Pipeline::LaunchMQTTComm()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="classmy__edge_1_1demo_1_1UNAEdge.html#ac97f3c62f3095194203713aefcc016c1">UNAEdge::SendHeatbeatByMQTT()</a> , 以及 <a class="el" href="classmy__heartbeat_1_1HeartbeatManager.html#a46f8b0aaa9050992f25724ae2ac67068">HeartbeatManager::SetPublisher()</a>.</p>
 <div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="classmy__mqtt_1_1MqttService_af25f6940f611ac24290e6c236d28f90e_icgraph.png" border="0" usemap="#aclassmy__mqtt_1_1MqttService_af25f6940f611ac24290e6c236d28f90e_icgraph" alt=""/></div>
 <map name="aclassmy__mqtt_1_1MqttService_af25f6940f611ac24290e6c236d28f90e_icgraph" id="aclassmy__mqtt_1_1MqttService_af25f6940f611ac24290e6c236d28f90e_icgraph">
-<area shape="rect" title="获取发布者接口，用于业务层注入" alt="" coords="776,13,881,38"/>
-<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#ab7587a797e845df29793177ea59eed08" title=" " alt="" coords="553,5,728,45"/>
-<area shape="poly" title=" " alt="" coords="762,28,728,28,728,23,762,23"/>
-<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="331,5,505,45"/>
-<area shape="poly" title=" " alt="" coords="540,28,505,28,505,23,540,23"/>
-<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="108,5,283,45"/>
-<area shape="poly" title=" " alt="" coords="317,28,283,28,283,23,317,23"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,13,60,38"/>
-<area shape="poly" title=" " alt="" coords="95,28,60,28,60,23,95,23"/>
+<area shape="rect" title="获取发布者接口，用于业务层注入" alt="" coords="587,45,692,70"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1UNAEdge.html#ac97f3c62f3095194203713aefcc016c1" title=" " alt="" coords="319,5,515,45"/>
+<area shape="poly" title=" " alt="" coords="573,51,515,42,516,37,574,45"/>
+<area shape="rect" href="classmy__heartbeat_1_1HeartbeatManager.html#a46f8b0aaa9050992f25724ae2ac67068" title="Set the Publisher object" alt="" coords="296,69,539,109"/>
+<area shape="poly" title=" " alt="" coords="574,69,539,74,538,69,573,64"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1UNAEdge.html#af8ac9b6240c9253809b2de40ab1c121c" title="心跳上报（snapshot thread 周期调用） 默认实现: 只打日志。后续你可以接入 MQTT/HTTP 等上报。" alt="" coords="29,5,225,45"/>
+<area shape="poly" title=" " alt="" coords="306,28,225,28,225,23,306,23"/>
+<area shape="rect" href="classmy__heartbeat_1_1HeartbeatManager.html#acc9c585e319edd36884e14172c830525" title=" " alt="" coords="5,69,248,109"/>
+<area shape="poly" title=" " alt="" coords="283,92,248,92,248,87,283,87"/>
 </map>
 </div>
 
@@ -1389,17 +1405,21 @@ false </dd></dl>
 <div class="dyncontent">
 <div class="center"><img src="classmy__mqtt_1_1MqttService_aacbd416bcad6aed0748c09cf370602a7_icgraph.png" border="0" usemap="#aclassmy__mqtt_1_1MqttService_aacbd416bcad6aed0748c09cf370602a7_icgraph" alt=""/></div>
 <map name="aclassmy__mqtt_1_1MqttService_aacbd416bcad6aed0748c09cf370602a7_icgraph" id="aclassmy__mqtt_1_1MqttService_aacbd416bcad6aed0748c09cf370602a7_icgraph">
-<area shape="rect" title="订阅主题" alt="" coords="909,13,995,38"/>
-<area shape="rect" href="classmy__mqtt_1_1MqttService.html#a954c92b80afa6bab4284cbae327de6ad" title="添加路由，注册后自动订阅对应主题过滤器" alt="" coords="776,13,861,38"/>
-<area shape="poly" title=" " alt="" coords="896,28,862,28,862,23,896,23"/>
-<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#ab7587a797e845df29793177ea59eed08" title=" " alt="" coords="553,5,728,45"/>
-<area shape="poly" title=" " alt="" coords="762,28,728,28,728,23,762,23"/>
-<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="331,5,505,45"/>
-<area shape="poly" title=" " alt="" coords="540,28,505,28,505,23,540,23"/>
-<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="108,5,283,45"/>
-<area shape="poly" title=" " alt="" coords="317,28,283,28,283,23,317,23"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,13,60,38"/>
-<area shape="poly" title=" " alt="" coords="95,28,60,28,60,23,95,23"/>
+<area shape="rect" title="订阅主题" alt="" coords="952,45,1037,70"/>
+<area shape="rect" href="classmy__mqtt_1_1MqttService.html#a954c92b80afa6bab4284cbae327de6ad" title="添加路由，注册后自动订阅对应主题过滤器" alt="" coords="819,45,904,70"/>
+<area shape="poly" title=" " alt="" coords="938,60,904,60,904,55,938,55"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1UNAEdge.html#a8ae02442f67c4f84a09991f2d4b347c9" title=" " alt="" coords="575,5,771,45"/>
+<area shape="poly" title=" " alt="" coords="805,51,770,45,771,39,805,45"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#ab7587a797e845df29793177ea59eed08" title=" " alt="" coords="585,69,760,109"/>
+<area shape="poly" title=" " alt="" coords="805,69,761,77,760,72,804,64"/>
+<area shape="rect" href="classmy__edge_1_1demo_1_1UNAEdge.html#a182be074ed2e98c86bbcc50a83173fce" title=" " alt="" coords="331,5,527,45"/>
+<area shape="poly" title=" " alt="" coords="561,28,527,28,527,23,561,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="341,69,516,109"/>
+<area shape="poly" title=" " alt="" coords="572,92,516,92,516,87,572,87"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="108,69,283,109"/>
+<area shape="poly" title=" " alt="" coords="327,92,283,92,283,87,327,87"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,77,60,102"/>
+<area shape="poly" title=" " alt="" coords="95,92,60,92,60,87,95,87"/>
 </map>
 </div>
 

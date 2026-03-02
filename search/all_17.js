@@ -37,8 +37,9 @@ var searchData=
   ['_7ethreadsafebuffer_34',['~ThreadSafeBuffer',['../classtools_1_1ThreadSafeBuffer.html#a55aa12b545c080a86f993b06f51311df',1,'tools::ThreadSafeBuffer']]],
   ['_7etunaedge_35',['~TUNAEdge',['../classmy__edge_1_1demo_1_1TUNAEdge.html#a589edaae153d663d5e5618a314bd8cfb',1,'my_edge::demo::TUNAEdge']]],
   ['_7euavedge_36',['~UAVEdge',['../classmy__edge_1_1demo_1_1UAVEdge.html#ab288e34b3a7c8778e68e722fdd19be7e',1,'my_edge::demo::UAVEdge']]],
-  ['_7euuvdevice_37',['~UUVDevice',['../classmy__device_1_1demo_1_1UUVDevice.html#ab6c2f994d41932c6cd7222dcc3c67da0',1,'my_device::demo::UUVDevice']]],
-  ['_7euuvedge_38',['~UUVEdge',['../classmy__edge_1_1demo_1_1UUVEdge.html#aa8982df7c38aa98b570f85c45f51d8d8',1,'my_edge::demo::UUVEdge']]],
-  ['_7ewindsensordevice_39',['~WindSensorDevice',['../classmy__device_1_1demo_1_1WindSensorDevice.html#aa4f2ee22ff19317effb60e6df6cbcfef',1,'my_device::demo::WindSensorDevice']]],
-  ['_7eworkflow_40',['~Workflow',['../classmy__control_1_1demo_1_1Workflow.html#ab282c005f4ccf9a3c9b713e978d8f751',1,'my_control::demo::Workflow']]]
+  ['_7eunaedge_37',['~UNAEdge',['../classmy__edge_1_1demo_1_1UNAEdge.html#a981db44d13a110de10e9cd738f3899bc',1,'my_edge::demo::UNAEdge']]],
+  ['_7euuvdevice_38',['~UUVDevice',['../classmy__device_1_1demo_1_1UUVDevice.html#ab6c2f994d41932c6cd7222dcc3c67da0',1,'my_device::demo::UUVDevice']]],
+  ['_7euuvedge_39',['~UUVEdge',['../classmy__edge_1_1demo_1_1UUVEdge.html#aa8982df7c38aa98b570f85c45f51d8d8',1,'my_edge::demo::UUVEdge']]],
+  ['_7ewindsensordevice_40',['~WindSensorDevice',['../classmy__device_1_1demo_1_1WindSensorDevice.html#aa4f2ee22ff19317effb60e6df6cbcfef',1,'my_device::demo::WindSensorDevice']]],
+  ['_7eworkflow_41',['~Workflow',['../classmy__control_1_1demo_1_1Workflow.html#ab282c005f4ccf9a3c9b713e978d8f751',1,'my_control::demo::Workflow']]]
 ];

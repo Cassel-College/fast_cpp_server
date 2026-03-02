@@ -4,7 +4,7 @@ var searchData=
   ['checkhealth_1',['checkHealth',['../classpy3_1_1MyPyEnvBot.html#ab7051fa49585f01472123ad64da47abe',1,'py3::MyPyEnvBot']]],
   ['checkpythonenvhealth_2',['checkPythonEnvHealth',['../classmy__script_1_1MyScriptManager.html#a86380f140c1c01bfe818c8a5ed2a27b9',1,'my_script::MyScriptManager']]],
   ['cleanupsystem_3',['CleanupSystem',['../classmy__edge_1_1MyMavVehicle.html#a268c267fbedbe9e90bc5e932f8327d02',1,'my_edge::MyMavVehicle']]],
-  ['clear_4',['clear',['../classmy__control_1_1TaskQueue.html#aa71d36872f416feaa853788a7a7a7ef8',1,'my_control::TaskQueue::Clear()'],['../classtools_1_1thread__safe__queue_1_1ThreadSafeQueue.html#ac8bb3912a3ce86b15842e79d0b421204',1,'tools::thread_safe_queue::ThreadSafeQueue::clear()']]],
+  ['clear_4',['clear',['../classtools_1_1thread__safe__queue_1_1ThreadSafeQueue.html#ac8bb3912a3ce86b15842e79d0b421204',1,'tools::thread_safe_queue::ThreadSafeQueue::clear()'],['../classmy__control_1_1TaskQueue.html#aa71d36872f416feaa853788a7a7a7ef8',1,'my_control::TaskQueue::Clear()']]],
   ['close_5',['Close',['../classmy__db_1_1MyDB.html#a7f7a3199c392465d0767c6506c1af5b4',1,'my_db::MyDB']]],
   ['closesocket_6',['closeSocket',['../classtools_1_1SimpleTcpClient.html#ad40053a8165967407f6018538233aea1',1,'tools::SimpleTcpClient']]],
   ['collect_5fprocesses_5fbasic_7',['collect_processes_basic',['../classMySoftHealthy_1_1ProcessInfoCollector.html#af0585e8d07e59daab4d48e5153ce63a6',1,'MySoftHealthy::ProcessInfoCollector']]],

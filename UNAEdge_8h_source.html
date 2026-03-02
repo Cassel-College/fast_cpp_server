@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_edge/demo/UNAEdge.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_1c8e19e5f988aabcb1d6c4e45e28b8fb.html">my_edge</a></li><li class="navelem"><a class="el" href="dir_74d511317f4bb0e9f6b21511944b6120.html">demo</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">UNAEdge.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="UNAEdge_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;optional&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;nlohmann/json.hpp&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="BaseEdge_8h.html">BaseEdge.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="MyMavVehicle_8h.html">MyMavVehicle.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="MyControl_8h.html">MyControl.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="MyLog_8h.html">MyLog.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="IMqttPublisher_8hpp.html">IMqttPublisher.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="MqttService_8hpp.html">MqttService.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;CS-Y2536.pb.h&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacemy__mqtt.html">my_mqtt</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__edge_1_1demo.html">my_edge::demo</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classmy__edge_1_1demo_1_1UNAEdge.html">   28</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__edge_1_1demo_1_1UNAEdge.html">UNAEdge</a> final : <span class="keyword">public</span> <a class="code hl_class" href="classmy__edge_1_1BaseEdge.html">my_edge::BaseEdge</a> {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <a class="code hl_function" href="classmy__edge_1_1demo_1_1UNAEdge.html#a182be074ed2e98c86bbcc50a83173fce">UNAEdge</a>();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">explicit</span> <a class="code hl_function" href="classmy__edge_1_1demo_1_1UNAEdge.html#a182be074ed2e98c86bbcc50a83173fce">UNAEdge</a>(<span class="keyword">const</span> nlohmann::json&amp; cfg, std::string* err = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classmy__edge_1_1demo_1_1UNAEdge.html#a981db44d13a110de10e9cd738f3899bc">   32</a></span>    <a class="code hl_function" href="classmy__edge_1_1demo_1_1UNAEdge.html#a981db44d13a110de10e9cd738f3899bc">~UNAEdge</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    std::optional&lt;my_data::Task&gt; <a class="code hl_function" href="classmy__edge_1_1demo_1_1UNAEdge.html#a228c37d37865dc1a74a75aca3990e5d0">NormalizeCommandLocked</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structmy__data_1_1RawCommand.html">my_data::RawCommand</a>&amp; cmd,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                                                        <span class="keyword">const</span> <a class="code hl_typedef" href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a>&amp; device_id,</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                                                        <span class="keyword">const</span> std::string&amp; device_type,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                                                        std::string* err) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__edge_1_1demo_1_1UNAEdge.html#a68224839a9a2be877c921b17a10d5903">ExecuteSelfTaskLocked</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__edge_1_1demo_1_1UNAEdge.html#a792fcbc0ced8f29fec6802a72bc7badc">ExecuteOtherTaskLocked</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structmy__data_1_1Task.html">my_data::Task</a>&amp; task) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="comment">// void GenerateHeartbeatInfo();</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__edge_1_1demo_1_1UNAEdge.html#ac97f3c62f3095194203713aefcc016c1">SendHeatbeatByMQTT</a>();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__edge_1_1demo_1_1UNAEdge.html#af8ac9b6240c9253809b2de40ab1c121c">ReportHeartbeatLocked</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__edge_1_1demo_1_1UNAEdge.html#a8ae02442f67c4f84a09991f2d4b347c9">InitMQTTRoute</a>();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="comment">// 内置 MyMavVehicle，用于与潜航器交互</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classmy__edge_1_1demo_1_1UNAEdge.html#a96f9ad4daae3ab474eac3d0e8b11fe0f">   67</a></span>    std::unique_ptr&lt;MyMavVehicle&gt; <a class="code hl_variable" href="classmy__edge_1_1demo_1_1UNAEdge.html#a96f9ad4daae3ab474eac3d0e8b11fe0f">vehicle_</a>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classmy__edge_1_1demo_1_1UNAEdge.html#a76bf6089d2ac8000735f4fb5cce4ed69">   68</a></span>    std::shared_ptr&lt;IMqttPublisher&gt; <a class="code hl_variable" href="classmy__edge_1_1demo_1_1UNAEdge.html#a76bf6089d2ac8000735f4fb5cce4ed69">publisher_</a>{<span class="keyword">nullptr</span>};            <span class="comment">// MQTT 发布器</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="classmy__edge_1_1demo_1_1UNAEdge.html#a2e3021a5d52d7ad647a9b391813e10fc">   69</a></span>    std::string <a class="code hl_variable" href="classmy__edge_1_1demo_1_1UNAEdge.html#a2e3021a5d52d7ad647a9b391813e10fc">topic_fmt_</a>{<span class="stringliteral">&quot;edge/heartbeats&quot;</span>};                    <span class="comment">// 主题格式</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classmy__edge_1_1demo_1_1UNAEdge.html#adc0ec38bec373e93ab56783cc58a37f0">   70</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="classmy__edge_1_1demo_1_1UNAEdge.html#adc0ec38bec373e93ab56783cc58a37f0">qos_</a>{1};                                                    <span class="comment">// MQTT QoS 等级</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classmy__edge_1_1demo_1_1UNAEdge.html#a712b2adecdd9082613a3eaab9bb638a2">   71</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="classmy__edge_1_1demo_1_1UNAEdge.html#a712b2adecdd9082613a3eaab9bb638a2">retain_</a>{<span class="keyword">false</span>};                                            <span class="comment">// 是否保留消息</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>};</div>
+</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>} <span class="comment">// namespace my_edge::demo</span></div>
+<div class="ttc" id="aBaseEdge_8h_html"><div class="ttname"><a href="BaseEdge_8h.html">BaseEdge.h</a></div></div>
+<div class="ttc" id="aIMqttPublisher_8hpp_html"><div class="ttname"><a href="IMqttPublisher_8hpp.html">IMqttPublisher.hpp</a></div></div>
+<div class="ttc" id="aMqttService_8hpp_html"><div class="ttname"><a href="MqttService_8hpp.html">MqttService.hpp</a></div></div>
+<div class="ttc" id="aMyControl_8h_html"><div class="ttname"><a href="MyControl_8h.html">MyControl.h</a></div></div>
+<div class="ttc" id="aMyLog_8h_html"><div class="ttname"><a href="MyLog_8h.html">MyLog.h</a></div></div>
+<div class="ttc" id="aMyMavVehicle_8h_html"><div class="ttname"><a href="MyMavVehicle_8h.html">MyMavVehicle.h</a></div></div>
+<div class="ttc" id="aclassmy__edge_1_1BaseEdge_html"><div class="ttname"><a href="classmy__edge_1_1BaseEdge.html">my_edge::BaseEdge</a></div><div class="ttdoc">BaseEdge: 实现 IEdge 的通用骨架</div><div class="ttdef"><b>Definition</b> BaseEdge.h:38</div></div>
+<div class="ttc" id="aclassmy__edge_1_1demo_1_1UNAEdge_html"><div class="ttname"><a href="classmy__edge_1_1demo_1_1UNAEdge.html">my_edge::demo::UNAEdge</a></div><div class="ttdoc">UNAEdge：潜航器边缘运行时（demo）</div><div class="ttdef"><b>Definition</b> UNAEdge.h:28</div></div>
+<div class="ttc" id="aclassmy__edge_1_1demo_1_1UNAEdge_html_a182be074ed2e98c86bbcc50a83173fce"><div class="ttname"><a href="classmy__edge_1_1demo_1_1UNAEdge.html#a182be074ed2e98c86bbcc50a83173fce">my_edge::demo::UNAEdge::UNAEdge</a></div><div class="ttdeci">UNAEdge()</div><div class="ttdef"><b>Definition</b> UNAEdge.cpp:12</div></div>
+<div class="ttc" id="aclassmy__edge_1_1demo_1_1UNAEdge_html_a228c37d37865dc1a74a75aca3990e5d0"><div class="ttname"><a href="classmy__edge_1_1demo_1_1UNAEdge.html#a228c37d37865dc1a74a75aca3990e5d0">my_edge::demo::UNAEdge::NormalizeCommandLocked</a></div><div class="ttdeci">std::optional&lt; my_data::Task &gt; NormalizeCommandLocked(const my_data::RawCommand &amp;cmd, const my_data::DeviceId &amp;device_id, const std::string &amp;device_type, std::string *err) override</div><div class="ttdoc">Normalize：把 RawCommand 转成 Task</div><div class="ttdef"><b>Definition</b> UNAEdge.cpp:30</div></div>
+<div class="ttc" id="aclassmy__edge_1_1demo_1_1UNAEdge_html_a2e3021a5d52d7ad647a9b391813e10fc"><div class="ttname"><a href="classmy__edge_1_1demo_1_1UNAEdge.html#a2e3021a5d52d7ad647a9b391813e10fc">my_edge::demo::UNAEdge::topic_fmt_</a></div><div class="ttdeci">std::string topic_fmt_</div><div class="ttdef"><b>Definition</b> UNAEdge.h:69</div></div>
+<div class="ttc" id="aclassmy__edge_1_1demo_1_1UNAEdge_html_a68224839a9a2be877c921b17a10d5903"><div class="ttname"><a href="classmy__edge_1_1demo_1_1UNAEdge.html#a68224839a9a2be877c921b17a10d5903">my_edge::demo::UNAEdge::ExecuteSelfTaskLocked</a></div><div class="ttdeci">void ExecuteSelfTaskLocked() override</div><div class="ttdoc">执行 self task（可扩展）</div><div class="ttdef"><b>Definition</b> UNAEdge.cpp:84</div></div>
+<div class="ttc" id="aclassmy__edge_1_1demo_1_1UNAEdge_html_a712b2adecdd9082613a3eaab9bb638a2"><div class="ttname"><a href="classmy__edge_1_1demo_1_1UNAEdge.html#a712b2adecdd9082613a3eaab9bb638a2">my_edge::demo::UNAEdge::retain_</a></div><div class="ttdeci">bool retain_</div><div class="ttdef"><b>Definition</b> UNAEdge.h:71</div></div>
+<div class="ttc" id="aclassmy__edge_1_1demo_1_1UNAEdge_html_a76bf6089d2ac8000735f4fb5cce4ed69"><div class="ttname"><a href="classmy__edge_1_1demo_1_1UNAEdge.html#a76bf6089d2ac8000735f4fb5cce4ed69">my_edge::demo::UNAEdge::publisher_</a></div><div class="ttdeci">std::shared_ptr&lt; IMqttPublisher &gt; publisher_</div><div class="ttdef"><b>Definition</b> UNAEdge.h:68</div></div>
+<div class="ttc" id="aclassmy__edge_1_1demo_1_1UNAEdge_html_a792fcbc0ced8f29fec6802a72bc7badc"><div class="ttname"><a href="classmy__edge_1_1demo_1_1UNAEdge.html#a792fcbc0ced8f29fec6802a72bc7badc">my_edge::demo::UNAEdge::ExecuteOtherTaskLocked</a></div><div class="ttdeci">void ExecuteOtherTaskLocked(const my_data::Task &amp;task) override</div><div class="ttdoc">self task 执行入口（可由子类扩展） 默认实现会打印日志，并根据 capability/action 做少量内置动作。</div><div class="ttdef"><b>Definition</b> UNAEdge.cpp:73</div></div>
+<div class="ttc" id="aclassmy__edge_1_1demo_1_1UNAEdge_html_a8ae02442f67c4f84a09991f2d4b347c9"><div class="ttname"><a href="classmy__edge_1_1demo_1_1UNAEdge.html#a8ae02442f67c4f84a09991f2d4b347c9">my_edge::demo::UNAEdge::InitMQTTRoute</a></div><div class="ttdeci">void InitMQTTRoute()</div><div class="ttdef"><b>Definition</b> UNAEdge.cpp:148</div></div>
+<div class="ttc" id="aclassmy__edge_1_1demo_1_1UNAEdge_html_a96f9ad4daae3ab474eac3d0e8b11fe0f"><div class="ttname"><a href="classmy__edge_1_1demo_1_1UNAEdge.html#a96f9ad4daae3ab474eac3d0e8b11fe0f">my_edge::demo::UNAEdge::vehicle_</a></div><div class="ttdeci">std::unique_ptr&lt; MyMavVehicle &gt; vehicle_</div><div class="ttdef"><b>Definition</b> UNAEdge.h:67</div></div>
+<div class="ttc" id="aclassmy__edge_1_1demo_1_1UNAEdge_html_a981db44d13a110de10e9cd738f3899bc"><div class="ttname"><a href="classmy__edge_1_1demo_1_1UNAEdge.html#a981db44d13a110de10e9cd738f3899bc">my_edge::demo::UNAEdge::~UNAEdge</a></div><div class="ttdeci">~UNAEdge() override=default</div></div>
+<div class="ttc" id="aclassmy__edge_1_1demo_1_1UNAEdge_html_ac97f3c62f3095194203713aefcc016c1"><div class="ttname"><a href="classmy__edge_1_1demo_1_1UNAEdge.html#ac97f3c62f3095194203713aefcc016c1">my_edge::demo::UNAEdge::SendHeatbeatByMQTT</a></div><div class="ttdeci">void SendHeatbeatByMQTT()</div><div class="ttdef"><b>Definition</b> UNAEdge.cpp:95</div></div>
+<div class="ttc" id="aclassmy__edge_1_1demo_1_1UNAEdge_html_adc0ec38bec373e93ab56783cc58a37f0"><div class="ttname"><a href="classmy__edge_1_1demo_1_1UNAEdge.html#adc0ec38bec373e93ab56783cc58a37f0">my_edge::demo::UNAEdge::qos_</a></div><div class="ttdeci">int qos_</div><div class="ttdef"><b>Definition</b> UNAEdge.h:70</div></div>
+<div class="ttc" id="aclassmy__edge_1_1demo_1_1UNAEdge_html_af8ac9b6240c9253809b2de40ab1c121c"><div class="ttname"><a href="classmy__edge_1_1demo_1_1UNAEdge.html#af8ac9b6240c9253809b2de40ab1c121c">my_edge::demo::UNAEdge::ReportHeartbeatLocked</a></div><div class="ttdeci">void ReportHeartbeatLocked() override</div><div class="ttdoc">心跳上报（snapshot thread 周期调用） 默认实现: 只打日志。后续你可以接入 MQTT/HTTP 等上报。</div><div class="ttdef"><b>Definition</b> UNAEdge.cpp:143</div></div>
+<div class="ttc" id="anamespacemy__data_html_a7f44417fe7bdfd39f515815285f3c8fd"><div class="ttname"><a href="namespacemy__data.html#a7f44417fe7bdfd39f515815285f3c8fd">my_data::DeviceId</a></div><div class="ttdeci">std::string DeviceId</div><div class="ttdoc">专业设备ID（按 device_id 一对一实例）</div><div class="ttdef"><b>Definition</b> Types.h:15</div></div>
+<div class="ttc" id="anamespacemy__edge_1_1demo_html"><div class="ttname"><a href="namespacemy__edge_1_1demo.html">my_edge::demo</a></div><div class="ttdef"><b>Definition</b> TUNAEdge.cpp:13</div></div>
+<div class="ttc" id="anamespacemy__mqtt_html"><div class="ttname"><a href="namespacemy__mqtt.html">my_mqtt</a></div><div class="ttdef"><b>Definition</b> IMqttPublisher.hpp:4</div></div>
+<div class="ttc" id="astructmy__data_1_1RawCommand_html"><div class="ttname"><a href="structmy__data_1_1RawCommand.html">my_data::RawCommand</a></div><div class="ttdoc">原始控制命令（接收层输入）</div><div class="ttdef"><b>Definition</b> RawCommand.h:15</div></div>
+<div class="ttc" id="astructmy__data_1_1Task_html"><div class="ttname"><a href="structmy__data_1_1Task.html">my_data::Task</a></div><div class="ttdoc">Task（内部统一任务）</div><div class="ttdef"><b>Definition</b> Task.h:27</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

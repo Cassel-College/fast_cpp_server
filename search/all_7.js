@@ -11,7 +11,7 @@ var searchData=
   ['heartbeatcontroller_2eh_8',['HeartBeatController.h',['../HeartBeatController_8h.html',1,'']]],
   ['heartbeatdto_9',['HeartbeatDto',['../classmy__api_1_1dto_1_1HeartbeatDto.html',1,'my_api::dto']]],
   ['heartbeatdto_2ehpp_10',['HeartbeatDto.hpp',['../HeartbeatDto_8hpp.html',1,'']]],
-  ['heartbeatmanager_11',['heartbeatmanager',['../classmy__heartbeat_1_1HeartbeatManager.html',1,'HeartbeatManager'],['../classmy__heartbeat_1_1HeartbeatManager.html#a9d1b10a740b6f228ef930c4306c3b0ee',1,'my_heartbeat::HeartbeatManager::HeartbeatManager()']]],
+  ['heartbeatmanager_11',['heartbeatmanager',['../classmy__heartbeat_1_1HeartbeatManager.html',1,'HeartbeatManager'],['../classmy__heartbeat_1_1HeartbeatManager.html#acc9c585e319edd36884e14172c830525',1,'my_heartbeat::HeartbeatManager::HeartbeatManager()']]],
   ['history_5fqueues_5f_12',['history_queues_',['../classmy__edge_1_1demo_1_1UUVEdge.html#a691631ea2ece717cb61fc98d8a0fffbb',1,'my_edge::demo::UUVEdge']]],
   ['host_13',['host',['../structMySoftHealthy_1_1SoftHealthSnapshot.html#afe856b0443aec9cda982bb18d429b0cb',1,'MySoftHealthy::SoftHealthSnapshot']]],
   ['host_5f_14',['host_',['../classmy__mqtt_1_1MqttService.html#ada0f95acb51c9a574d38befa858d78fa',1,'my_mqtt::MqttService::host_'],['../classDeviceOnlineMonitor.html#ada0f95acb51c9a574d38befa858d78fa',1,'DeviceOnlineMonitor::host_']]],

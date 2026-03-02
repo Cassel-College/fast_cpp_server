@@ -1,0 +1,9 @@
+<map id="ReportHeartbeatLocked" name="ReportHeartbeatLocked">
+<area shape="rect" id="Node000001" title="心跳上报（snapshot thread 周期调用） 默认实现: 只打日志。后续你可以接入 MQTT/HTTP 等上报。" alt="" coords="5,45,180,70"/>
+<area shape="rect" id="Node000002" href="$classmy__edge_1_1demo_1_1UNAEdge.html#ac97f3c62f3095194203713aefcc016c1" title=" " alt="" coords="228,45,397,70"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,55,214,55,214,60,181,60"/>
+<area shape="rect" id="Node000003" href="$classmy__mqtt_1_1MqttService.html#a8a88459b535d228e294ae262f696ea4b" title=" " alt="" coords="445,5,612,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="397,42,432,37,432,42,398,47"/>
+<area shape="rect" id="Node000004" href="$classmy__mqtt_1_1MqttService.html#af25f6940f611ac24290e6c236d28f90e" title="获取发布者接口，用于业务层注入" alt="" coords="445,69,612,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="398,67,432,72,432,78,397,73"/>
+</map>

@@ -14,7 +14,7 @@ var searchData=
   ['registerselftaskhandler_11',['RegisterSelfTaskHandler',['../classmy__edge_1_1BaseEdge.html#aeef48814b3b6bcf60495c29690c9fadd',1,'my_edge::BaseEdge']]],
   ['removeenv_12',['removeEnv',['../classpy3_1_1MyPyEnvBot.html#a9d480601c8513dea3f3e095336947945',1,'py3::MyPyEnvBot']]],
   ['removepythonenv_13',['removePythonEnv',['../classmy__script_1_1MyScriptManager.html#ada9dee6ff4a54e41bc466b52c47a3a28',1,'my_script::MyScriptManager']]],
-  ['reportheartbeatlocked_14',['ReportHeartbeatLocked',['../classmy__edge_1_1BaseEdge.html#afc617dc580a99ebe31ebc0e886906af3',1,'my_edge::BaseEdge']]],
+  ['reportheartbeatlocked_14',['reportheartbeatlocked',['../classmy__edge_1_1BaseEdge.html#afc617dc580a99ebe31ebc0e886906af3',1,'my_edge::BaseEdge::ReportHeartbeatLocked()'],['../classmy__edge_1_1demo_1_1UNAEdge.html#af8ac9b6240c9253809b2de40ab1c121c',1,'my_edge::demo::UNAEdge::ReportHeartbeatLocked()']]],
   ['resourceusageanalyzer_15',['ResourceUsageAnalyzer',['../classMySoftHealthy_1_1ResourceUsageAnalyzer.html#afd2b9e41e2dce2970fd088890697c353',1,'MySoftHealthy::ResourceUsageAnalyzer']]],
   ['runbash_16',['runbash',['../classmy__script_1_1MyScriptManager.html#a00a67c32aff10f65aa814f1d044c61b0',1,'my_script::MyScriptManager::runBash()'],['../classbash_1_1MyBashEnvBot.html#a6e397ca352da76ca41ade61383928220',1,'bash::MyBashEnvBot::runBash()']]],
   ['runcheck_17',['RunCheck',['../classmy__doctor_1_1MyDoctor.html#acb33a1db87ec803c19cac0b588546824',1,'my_doctor::MyDoctor']]],

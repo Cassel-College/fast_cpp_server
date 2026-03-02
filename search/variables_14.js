@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['vehicle_5f_0',['vehicle_',['../classmy__edge_1_1demo_1_1TUNAEdge.html#a96f9ad4daae3ab474eac3d0e8b11fe0f',1,'my_edge::demo::TUNAEdge']]],
+  ['vehicle_5f_0',['vehicle_',['../classmy__edge_1_1demo_1_1TUNAEdge.html#a96f9ad4daae3ab474eac3d0e8b11fe0f',1,'my_edge::demo::TUNAEdge::vehicle_'],['../classmy__edge_1_1demo_1_1UNAEdge.html#a96f9ad4daae3ab474eac3d0e8b11fe0f',1,'my_edge::demo::UNAEdge::vehicle_']]],
   ['version_1',['version',['../structmy__data_1_1EdgeStatus.html#a728b969e374aba4020e39aea7e02e64f',1,'my_data::EdgeStatus']]],
   ['version_5f_2',['version_',['../classmy__edge_1_1BaseEdge.html#a61c8f42943e4a184067a3d6e00410d38',1,'my_edge::BaseEdge::version_'],['../classmy__edge_1_1demo_1_1TUNAEdge.html#a61c8f42943e4a184067a3d6e00410d38',1,'my_edge::demo::TUNAEdge::version_'],['../classmy__edge_1_1demo_1_1UUVEdge.html#a61c8f42943e4a184067a3d6e00410d38',1,'my_edge::demo::UUVEdge::version_']]],
   ['vm_5frss_5fbytes_3',['vm_rss_bytes',['../structMySoftHealthy_1_1ProcessSnapshot.html#ab1b68ce1e28f5bb957980a71b240f3a7',1,'MySoftHealthy::ProcessSnapshot']]],
