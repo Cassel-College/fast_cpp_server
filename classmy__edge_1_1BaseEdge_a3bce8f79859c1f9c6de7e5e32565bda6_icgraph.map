@@ -1,17 +1,19 @@
 <map id="SayHelloAction" name="SayHelloAction">
-<area shape="rect" id="Node000001" title="内置 self action 示例: 打印 Hello" alt="" coords="480,159,601,184"/>
-<area shape="rect" id="Node000002" href="$classmy__edge_1_1BaseEdge.html#a9ccaf67b29f300f8a5e0e0690fd024c9" title="self task 执行入口（可由子类扩展） 默认实现会打印日志，并根据 capability/action 做少量内置动作。" alt="" coords="249,95,432,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="486,157,381,123,382,118,488,152"/>
-<area shape="rect" id="Node000006" href="$classmy__edge_1_1BaseEdge.html#aeaad4d1e08909ec413c6e934fb718dc7" title="初始化：仅装配，不启动线程" alt="" coords="319,191,362,216"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="467,186,363,203,362,197,466,181"/>
-<area shape="rect" id="Node000003" href="$classmy__edge_1_1BaseEdge.html#a7db2839876206ff964ed6b240555e71e" title="执行其他任务" alt="" coords="34,5,173,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="302,91,254,68,200,46,160,33,161,28,202,41,256,63,305,86"/>
-<area shape="rect" id="Node000004" href="$classmy__edge_1_1demo_1_1UAVEdge.html#a792fcbc0ced8f29fec6802a72bc7badc" title="self task 执行入口（可由子类扩展） 默认实现会打印日志，并根据 capability/action 做少量内置动作。" alt="" coords="6,55,201,95"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="235,96,200,91,201,86,236,91"/>
-<area shape="rect" id="Node000005" href="$classmy__edge_1_1demo_1_1UNAEdge.html#a792fcbc0ced8f29fec6802a72bc7badc" title="self task 执行入口（可由子类扩展） 默认实现会打印日志，并根据 capability/action 做少量内置动作。" alt="" coords="5,119,201,159"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="236,124,202,129,201,123,236,119"/>
-<area shape="rect" id="Node000007" href="$classmy__edge_1_1demo_1_1UAVEdge.html#afced8a30b1ff071e0c696747c277e3bb" title=" " alt="" coords="6,183,201,223"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="306,206,201,206,201,201,306,201"/>
-<area shape="rect" id="Node000008" href="$classmy__edge_1_1demo_1_1UNAEdge.html#af20008bebca2dc00463f6f3dcc7cd756" title=" " alt="" coords="5,247,201,287"/>
-<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="307,215,179,250,178,245,306,210"/>
+<area shape="rect" id="Node000001" title="内置 self action 示例: 打印 Hello" alt="" coords="724,159,845,184"/>
+<area shape="rect" id="Node000002" href="$classmy__edge_1_1BaseEdge.html#a9ccaf67b29f300f8a5e0e0690fd024c9" title="self task 执行入口（可由子类扩展） 默认实现会打印日志，并根据 capability/action 做少量内置动作。" alt="" coords="493,95,676,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="730,157,625,123,626,118,732,152"/>
+<area shape="rect" id="Node000006" href="$classmy__edge_1_1BaseEdge.html#aeaad4d1e08909ec413c6e934fb718dc7" title="初始化：仅装配，不启动线程" alt="" coords="563,191,606,216"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="711,186,607,203,606,197,710,181"/>
+<area shape="rect" id="Node000003" href="$classmy__edge_1_1BaseEdge.html#a7db2839876206ff964ed6b240555e71e" title="执行其他任务" alt="" coords="278,5,417,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="546,91,498,68,444,46,404,33,405,28,446,41,500,63,549,86"/>
+<area shape="rect" id="Node000004" href="$classmy__edge_1_1demo_1_1UAVEdge.html#a792fcbc0ced8f29fec6802a72bc7badc" title="self task 执行入口（可由子类扩展） 默认实现会打印日志，并根据 capability/action 做少量内置动作。" alt="" coords="250,55,445,95"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="479,96,444,91,445,86,480,91"/>
+<area shape="rect" id="Node000005" href="$classmy__edge_1_1demo_1_1UNAEdge.html#a792fcbc0ced8f29fec6802a72bc7badc" title="self task 执行入口（可由子类扩展） 默认实现会打印日志，并根据 capability/action 做少量内置动作。" alt="" coords="249,119,445,159"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="480,124,446,129,445,123,480,119"/>
+<area shape="rect" id="Node000007" href="$classmy__edge_1_1demo_1_1UNAEdge.html#aeaad4d1e08909ec413c6e934fb718dc7" title="初始化：仅装配，不启动线程" alt="" coords="249,183,445,223"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="550,206,446,206,446,201,550,201"/>
+<area shape="rect" id="Node000009" href="$classmy__edge_1_1demo_1_1UAVEdge.html#afced8a30b1ff071e0c696747c277e3bb" title=" " alt="" coords="250,247,445,287"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="551,215,423,250,422,245,550,210"/>
+<area shape="rect" id="Node000008" href="$classmy__edge_1_1demo_1_1UNAEdge.html#af20008bebca2dc00463f6f3dcc7cd756" title=" " alt="" coords="5,183,201,223"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="236,206,201,206,201,201,236,201"/>
 </map>
