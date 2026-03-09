@@ -60,7 +60,7 @@ namespace init_tools {
                 initFunc();
                 logInfos.emplace_back("[Config] " + name + " 配置加载成功");
                 std::cout << "[" << name << "] Config Loaded Successfully." << std::endl;
-                std::cout << showFunc() << std::endl;
+                // std::cout << showFunc() << std::endl;
                 return true;
             } catch (const std::exception& e) {
                 logInfos.emplace_back("[Config] " + name + " 配置加载失败: " + e.what());

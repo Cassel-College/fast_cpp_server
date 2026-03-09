@@ -4,6 +4,7 @@
 #include "JsonUtil.h"
 #include "MyData.h"
 #include "MyLog.h"
+#include <string>
 
 namespace my_edge::demo {
 
@@ -25,6 +26,33 @@ UNAEdge::UNAEdge(const nlohmann::json& cfg, std::string* err) : UNAEdge() {
   } else {
     MYLOG_INFO("[UNAEdge] 构造成功");
   }
+}
+
+bool UNAEdge::Init(const nlohmann::json& cfg, std::string* err) {
+  if (!my_edge::BaseEdge::Init(cfg, err)) {
+    return false;
+  }
+
+  try {
+    InitMyAbility();
+  } catch (const std::exception& e) {
+    run_state_.store(RunState::Initializing);
+    if (err) {
+      *err = std::string("UNAEdge 初始化自身能力失败: ") + e.what();
+    }
+    MYLOG_ERROR("[Edge:{}] UNAEdge 初始化自身能力失败: {}", edge_id_, e.what());
+    return false;
+  } catch (...) {
+    run_state_.store(RunState::Initializing);
+    if (err) {
+      *err = "UNAEdge 初始化自身能力失败: unknown error";
+    }
+    MYLOG_ERROR("[Edge:{}] UNAEdge 初始化自身能力失败: unknown error", edge_id_);
+    return false;
+  }
+
+  MYLOG_INFO("[Edge:{}] UNAEdge 自身能力初始化完成", edge_id_);
+  return true;
 }
 
 std::optional<my_data::Task> UNAEdge::NormalizeCommandLocked(const my_data::RawCommand& cmd,
@@ -70,6 +98,49 @@ std::optional<my_data::Task> UNAEdge::NormalizeCommandLocked(const my_data::RawC
   return t;
 }
 
+void UNAEdge::InitMyAbility() {
+    MYLOG_INFO("[Edge:{}] 初始化 UNAEdge 自身能力", edge_id_);
+    // 这里可以初始化一些 edge 自身的能力，例如：
+    // - 内置 MyMavVehicle 实例，用于与潜航器交互
+    // - 定时器，用于周期性上报心跳
+    // - MQTT 路由，用于接收特定主题的消息等
+
+    MYLOG_INFO("注册内置 能力 handler");
+    RegisterSelfTaskHandler("up", [this](const my_data::Task& task) {this->SelfUPAction(task); });
+    RegisterSelfTaskHandler("down", [this](const my_data::Task& task) {this->SelfDownAction(task); });
+    RegisterSelfTaskHandler("stop", [this](const my_data::Task& task) {this->SelfStopAction(task); });
+    RegisterSelfTaskHandler("estop", [this](const my_data::Task& task) {this->SelfEStopAction(task); });
+}
+
+// todo: 你可以在这里实现一些内置 self task 的处理逻辑，例如：
+void UNAEdge::SelfUPAction(const my_data::Task& task) {
+    MYLOG_INFO("[Edge:{}] 执行 SelfUPAction，task_id={}, params={}", edge_id_, task.task_id, task.params.dump());
+    int action_time = 5000; // 模拟一个需要 5 秒才能完成的动作
+    for (int i = 0; i < action_time / 1000; i++) {
+        MYLOG_INFO("[Edge:{}] SelfUPAction 执行中... {}/{} seconds", edge_id_, (i + 1), action_time / 1000);
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+    }
+    MYLOG_INFO("[Edge:{}] SelfUPAction 执行完成，耗时 {} ms", edge_id_, action_time);
+    return;
+}
+
+void UNAEdge::SelfDownAction(const my_data::Task& task) {
+    MYLOG_INFO("[Edge:{}] 执行 SelfDownAction，task_id={}, params={}", edge_id_, task.task_id, task.params.dump());
+    return;
+}
+
+void UNAEdge::SelfStopAction(const my_data::Task& task) {
+    MYLOG_INFO("[Edge:{}] 执行 SelfStopAction，task_id={}, params={}", edge_id_, task.task_id, task.params.dump());
+
+    return;
+}
+
+void UNAEdge::SelfEStopAction(const my_data::Task& task) {
+    MYLOG_INFO("[Edge:{}] 执行 SelfEStopAction，task_id={}, params={}", edge_id_, task.task_id, task.params.dump());
+
+    return;
+}
+
 void UNAEdge::ExecuteOtherTaskLocked(const my_data::Task& task) {
   // 先记录一条总日志，便于排查
   MYLOG_INFO("[Edge:{}] UNAEdge 执行 self task：task_id={}, capability={}, action={}, params={}",
@@ -82,14 +153,43 @@ void UNAEdge::ExecuteOtherTaskLocked(const my_data::Task& task) {
 }
 
 void UNAEdge::ExecuteSelfTaskLocked() {
-  // 先记录一条总日志，便于排查
-  MYLOG_INFO("[Edge:{}] UNAEdge 执行 self task：task_id={}, capability={}, action={}, params={}",
-             edge_id_, self_task.task_id, self_task.capability, self_task.action, self_task.params.dump());
+  std::this_thread::sleep_for(std::chrono::milliseconds(self_task_execution_step_ms_));
 
-  // 示例：实现一些内置 self task
+  const RunState current_state = self_task_run_state_.load();
+  if (current_state != RunState::Initializing && current_state != RunState::Ready) {
+    return;
+  }
 
-  // 未识别任务：交给 BaseEdge 默认实现（保持兼容）
-  my_edge::BaseEdge::ExecuteSelfTaskLocked();
+  my_data::Task current_task;
+  {
+    std::shared_lock<std::shared_mutex> lk(rw_mutex_self_task_);
+    current_task = self_task;
+  }
+
+  std::string thread_id_str = std::to_string(std::hash<std::thread::id>{}(std::this_thread::get_id()));
+  MYLOG_INFO("[Edge:{}] [Thread ID: {}] UNAEdge 准备执行 self task: task_id={}, capability={}, action={}, params={}",
+         edge_id_, thread_id_str, current_task.task_id, current_task.capability, current_task.action, current_task.params.dump());
+
+  if (current_task.action.empty()) {
+    const RunState final_state = FinishSelfTask(current_task);
+    MYLOG_WARN("[Edge:{}] [Thread ID: {}] self task action 为空，跳过执行: task_id={}, final_state={}",
+           edge_id_, thread_id_str, current_task.task_id, RunStateToString(final_state));
+    return;
+  }
+
+  const bool handled = TryInvokeSelfTaskHandler(current_task);
+  const RunState final_state = FinishSelfTask(current_task);
+
+  if (!handled) {
+    MYLOG_WARN("[Edge:{}] [Thread ID: {}] UNAEdge 未找到已注册 self task handler: task_id={}, capability={}, action={}, final_state={}",
+           edge_id_, thread_id_str, current_task.task_id, current_task.capability, current_task.action,
+           RunStateToString(final_state));
+    return;
+  }
+
+  MYLOG_INFO("[Edge:{}] [Thread ID: {}] UNAEdge self task 执行完成: task_id={}, capability={}, action={}, final_state={}",
+         edge_id_, thread_id_str, current_task.task_id, current_task.capability, current_task.action,
+         RunStateToString(final_state));
 }
 
 void UNAEdge::SendHeatbeatByMQTT() {

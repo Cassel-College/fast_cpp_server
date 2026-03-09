@@ -31,7 +31,8 @@ public:
     explicit UNAEdge(const nlohmann::json& cfg, std::string* err = nullptr);
     ~UNAEdge() override = default;
 
-    
+    bool Init(const nlohmann::json& cfg, std::string* err) override;
+    void InitMyAbility(); // 初始化 edge 自身能力
 protected:
     /**
     * @brief Normalize：把 RawCommand 转成 Task
@@ -61,6 +62,11 @@ protected:
     void SendHeatbeatByMQTT();
     void ReportHeartbeatLocked() override;
     void InitMQTTRoute();
+
+    void SelfUPAction(const my_data::Task& task);
+    void SelfDownAction(const my_data::Task& task);
+    void SelfStopAction(const my_data::Task& task);
+    void SelfEStopAction(const my_data::Task& task);
 
 private:
     // 内置 MyMavVehicle，用于与潜航器交互
