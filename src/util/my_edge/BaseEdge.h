@@ -62,6 +62,12 @@ public:
   // 注册回调（线程安全）: action -> handler
   void RegisterSelfTaskHandler(const std::string& action, SelfTaskHandler handler);
 protected:
+  // 按 action 查找并安全调用已注册的 self task handler
+  bool TryInvokeSelfTaskHandler(const my_data::Task& task);
+
+  // self task 执行收尾：除停止态外统一回收为 RunOver
+  RunState FinishSelfTask(const my_data::Task& task);
+
   // -------- 子类需要实现/可覆盖的钩子 --------
 
   /**
@@ -109,7 +115,7 @@ protected:
   my_data::Task             self_task;                                      // 用于 self action 线程的临时任务存储
   std::atomic<bool>         self_task_executing_{false};                    // self task 执行状态
   mutable std::shared_mutex rw_mutex_self_task_;                            // 保护 self_task_
-  std::atomic<RunState>     self_task_run_state_{RunState::Initializing};   // self task 执行状态
+  std::atomic<RunState>     self_task_run_state_{RunState::RunOver};        // self task 执行状态；默认空闲，无待执行任务
   int                       self_task_execution_step_ms_{1000};             // self task 执行间隔时间戳（毫秒）
   // ------------------------------- Submit 相关 ----------------------------------------------
   bool                      self_task_monitor_enable_{true};                // 启动监控Task 默认启用

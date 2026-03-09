@@ -29,6 +29,13 @@ bool BaseEdge::Init(const nlohmann::json& cfg, std::string* err) {
     std::unique_lock<std::shared_mutex> lk(rw_mutex_);
     run_state_ = RunState::Initializing;
 
+    {
+        std::unique_lock<std::shared_mutex> self_lk(rw_mutex_self_task_);
+        self_task = my_data::Task{};
+        self_task_run_state_.store(RunState::RunOver);
+        self_task_executing_.store(false);
+    }
+
     cfg_ = cfg;
     edge_id_ = cfg.value("edge_id", edge_id_);
     version_ = cfg.value("version", version_);
@@ -611,18 +618,20 @@ int BaseEdge::FetchSelfTask(my_data::Task& out, int timeout_ms) {
             MYLOG_WARN("[Edge:{}] FetchSelfTask: 当前已有未执行任务，跳过本次 fetch", edge_id_);
             return 5; // already has task
         }
-        if (current_state == RunState::Running) {
-            MYLOG_WARN("[Edge:{}] FetchSelfTask: 当前任务正在运行，开始本次 fetch", edge_id_);
+        if (current_state == RunState::Initializing) {
+            MYLOG_INFO("[Edge:{}] FetchSelfTask: 当前任务正在等待执行，跳过本次 fetch", edge_id_);
             return 5; // already has task
         }
-        if (current_state == RunState::Initializing) {
-            MYLOG_INFO("[Edge:{}] FetchSelfTask: 当前任务正在初始化，开始本次 fetch", edge_id_);
+        if (current_state == RunState::Running) {
+            MYLOG_WARN("[Edge:{}] FetchSelfTask: 当前任务正在运行，跳过本次 fetch", edge_id_);
+            return 5; // already has task
         }
         if (current_state == RunState::Stopping || current_state == RunState::Stopped) {
-            MYLOG_WARN("[Edge:{}] FetchSelfTask: 当前处于停止状态，开始本次 fetch", edge_id_);
+            MYLOG_WARN("[Edge:{}] FetchSelfTask: 当前处于停止状态，跳过本次 fetch", edge_id_);
+            return 5; // already has task or stopping
         }
         if (current_state == RunState::RunOver) {
-            MYLOG_INFO("[Edge:{}] FetchSelfTask: 当前处于运行结束状态, 开始本次 fetch", edge_id_);
+            MYLOG_INFO("[Edge:{}] FetchSelfTask: 当前无待执行 self task，开始本次 fetch", edge_id_);
         }
 
         {
@@ -666,6 +675,10 @@ int BaseEdge::FetchSelfTask(my_data::Task& out, int timeout_ms) {
 }
 
 void BaseEdge::ExecuteSelfTask() {
+    const RunState current_state = self_task_run_state_.load();
+    if (current_state != RunState::Initializing && current_state != RunState::Ready) {
+        return;
+    }
     ExecuteSelfTaskLocked();
 }
 
@@ -673,41 +686,25 @@ void BaseEdge::ExecuteSelfTaskLocked() {
     // 每个任务执行的时候都间隔1秒
     std::this_thread::sleep_for(std::chrono::milliseconds(self_task_execution_step_ms_)); // 退化行为，避免空转过快
     
-    if (self_task_run_state_.load() != RunState::Initializing) {
+    const RunState current_state = self_task_run_state_.load();
+    if (current_state != RunState::Initializing && current_state != RunState::Ready) {
         // 无新任务
         return;
     }
 
+    my_data::Task current_task;
     {
-        std::string action = this->self_task.action;
-        SelfTaskHandler handler;
-        {
-            std::lock_guard<std::mutex> lk(self_task_handlers_mutex_);
-            auto it = self_task_handlers_.find(action);
-            if (it != self_task_handlers_.end()) {
-                handler = it->second; // 拷贝回调对象到局部，随后在锁外调用
-            }
-        }
-        if (handler) {
-            MYLOG_INFO("[Edge:{}] -----------> Find {} call back.", edge_id_, action);
-            try {
-                handler(this->self_task);
-            } catch(...) {
-                MYLOG_ERROR("[Edge:{}] ExecuteSelfTaskLocked 执行 handler 异常: capability={}, action={}", 
-                    edge_id_, this->self_task.capability, this->self_task.action);
-            }
-        }
+        std::shared_lock<std::shared_mutex> lk(rw_mutex_self_task_);
+        current_task = self_task;
     }
 
-    {
-        // 标记任务已执行完毕
-        std::unique_lock<std::shared_mutex> lk(rw_mutex_self_task_);
-        this->self_task_run_state_.store(RunState::RunOver);
-        MYLOG_INFO("[Edge:{}] self task 执行完毕，标记为 RunOver: task_id={}, capability={}, action={}",
-                             edge_id_, this->self_task.task_id, this->self_task.capability, this->self_task.action);
+    const bool handled = TryInvokeSelfTaskHandler(current_task);
+    FinishSelfTask(current_task);
+
+    if (!handled) {
+        MYLOG_WARN("[Edge:{}] 未找到已注册 self task handler: task_id={}, capability={}, action={}",
+                   edge_id_, current_task.task_id, current_task.capability, current_task.action);
     }
-    MYLOG_WARN("[Edge:{}] 未实现 self task 执行逻辑: capability={}, action={}", edge_id_, this->self_task.capability, this->self_task.action);
-    return;
 }
 
 void BaseEdge::ExecuteOtherTask(const my_data::Task& task) {
@@ -809,6 +806,59 @@ void BaseEdge::ReportHeartbeatLocked() {
 //                            st.estop_active ? "true" : "false",
 //                            st.tasks_pending_total,
 //                            st.tasks_running_total);
+}
+
+bool BaseEdge::TryInvokeSelfTaskHandler(const my_data::Task& task) {
+    if (task.action.empty()) {
+        MYLOG_WARN("[Edge:{}] self task action 为空，拒绝执行: task_id={}, capability={}",
+                   edge_id_, task.task_id, task.capability);
+        return false;
+    }
+
+    SelfTaskHandler handler;
+    {
+        std::lock_guard<std::mutex> lk(self_task_handlers_mutex_);
+        auto it = self_task_handlers_.find(task.action);
+        if (it != self_task_handlers_.end()) {
+            handler = it->second;
+        }
+    }
+
+    if (!handler) {
+        return false;
+    }
+
+    MYLOG_INFO("[Edge:{}] 命中 self task handler: task_id={}, capability={}, action={}",
+               edge_id_, task.task_id, task.capability, task.action);
+    self_task_executing_.store(true);
+
+    try {
+        handler(task);
+        return true;
+    } catch (const std::exception& e) {
+        MYLOG_ERROR("[Edge:{}] self task handler 执行异常: task_id={}, capability={}, action={}, err={}",
+                    edge_id_, task.task_id, task.capability, task.action, e.what());
+    } catch (...) {
+        MYLOG_ERROR("[Edge:{}] self task handler 执行异常: task_id={}, capability={}, action={}, err=unknown",
+                    edge_id_, task.task_id, task.capability, task.action);
+    }
+
+    return false;
+}
+
+RunState BaseEdge::FinishSelfTask(const my_data::Task& task) {
+    std::unique_lock<std::shared_mutex> lk(rw_mutex_self_task_);
+
+    RunState final_state = self_task_run_state_.load();
+    if (final_state != RunState::Stopping && final_state != RunState::Stopped) {
+        final_state = RunState::RunOver;
+        self_task_run_state_.store(final_state);
+    }
+
+    self_task_executing_.store(false);
+    MYLOG_INFO("[Edge:{}] self task 执行收尾: task_id={}, capability={}, action={}, final_state={}",
+               edge_id_, task.task_id, task.capability, task.action, RunStateToString(final_state));
+    return final_state;
 }
 
 void BaseEdge::RegisterSelfTaskHandler(const std::string& action, SelfTaskHandler handler) {
