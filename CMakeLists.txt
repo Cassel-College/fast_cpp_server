@@ -15,6 +15,30 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+
+# 编译选项
+
+set(IS_KYLIN FALSE)
+
+if(EXISTS "/etc/os-release")
+    file(STRINGS "/etc/os-release" OS_RELEASE_LINES)
+    foreach(line IN LISTS OS_RELEASE_LINES)
+        if(line MATCHES "^(ID|NAME|PRETTY_NAME)=" AND line MATCHES "[Kk]ylin")
+            set(IS_KYLIN TRUE)
+            break()
+        endif()
+    endforeach()
+endif()
+
+message(STATUS "IS_KYLIN = ${IS_KYLIN}")
+if(IS_KYLIN)
+    message(STATUS "Kylin system detected, prefer system MAVSDK")
+    set(WITH_CAROTENE OFF)
+    set(ENABLE_NEON OFF)
+else()
+    message(STATUS "Non-Kylin system detected, using bundled MAVSDK")
+endif()
+
 # 全局禁用 warning
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -w")
 
@@ -105,7 +129,6 @@ target_link_libraries(${PROJECT_NAME} PRIVATE opencv_video)
 target_link_libraries(${PROJECT_NAME} PRIVATE opencv_videoio)
 target_link_libraries(${PROJECT_NAME} PRIVATE oatpp::oatpp)
 target_link_libraries(${PROJECT_NAME} PRIVATE oatpp::oatpp-swagger)
-target_link_libraries(${PROJECT_NAME} PRIVATE symengine)
 target_link_libraries(${PROJECT_NAME} PRIVATE sqlite3_static)
 
 # # 包含 Eigen 头文件

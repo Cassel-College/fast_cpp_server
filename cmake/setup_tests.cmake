@@ -35,7 +35,7 @@ target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE
     my_soft_healthy
     my_system_healthy
     my_mavsdk
-    symengine              # 修复 symengine/expression.h 找不到
+    # symengine              # 修复 symengine/expression.h 找不到
     opencv_core            # 修复 opencv2/opencv.hpp 找不到
     opencv_imgproc
     opencv_highgui
@@ -66,8 +66,8 @@ target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE
 target_include_directories(${TEST_PROGRAM_NAME} PRIVATE 
     ${THIRD_INCLUDE_DIRECTORIES}
     ${ALL_INCLUDE_DIRS}    # 使用我们在 src/CMakeLists.txt 中搜集的路径
-    ${PROJECT_BINARY_DIR}/external/symengine
-    ${PROJECT_BINARY_DIR}/external/symengine/symengine/utilities/teuchos
+    # ${PROJECT_BINARY_DIR}/external/symengine
+    # ${PROJECT_BINARY_DIR}/external/symengine/symengine/utilities/teuchos
 )
 
 include(GoogleTest)

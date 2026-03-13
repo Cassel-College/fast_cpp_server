@@ -15,7 +15,7 @@ include(cmake/deps/setup_mosquitto.cmake)
 include(cmake/deps/setup_libzmq.cmake)
 include(cmake/deps/setup_opencv.cmake)
 include(cmake/deps/setup_eigen.cmake)
-include(cmake/deps/setup_symengine.cmake)
+# include(cmake/deps/setup_symengine.cmake) // 暂无引用
 include(cmake/deps/setup_sqlite.cmake)
 include(cmake/deps/setup_mavsdk.cmake)
 

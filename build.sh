@@ -359,4 +359,13 @@ else
   echo "📁 Failed to create releases directory. ❌"
 fi
 
-./scripts/build_mavsdk_v3.sh
+# 判断系统是否为 Kylin
+if grep -qi "kylin" /etc/os-release; then
+    echo "Detected Kylin OS, skip building MAVSDK."
+    mkdir -p build
+    cp -r source/lib/mavsdk/arm/mavsdk_dist ./build/
+    echo "Prebuilt MAVSDK copied to build directory."
+else
+    echo "Non-Kylin system detected, building MAVSDK..."
+    ./scripts/build_mavsdk_v3.sh
+fi
