@@ -257,8 +257,16 @@ void InitializeLogger(BootstrapState& state, bool& logger_initialized) {
         true);
     AppendBootstrapLog(state, "[日志] 当前日志文件路径: " + state.paths.log_file_path, true);
 
-    MyLog::Init(state.paths.log_file_path, 1048576 * 5, 3, state.console_output);
-    logger_initialized = true;
+    try {
+        MyLog::Init(state.paths.log_file_path, 1048576 * 5, 3, state.console_output);
+        logger_initialized = true;
+    } catch (const std::exception& e) {
+        AppendBootstrapLog(
+            state,
+            std::string("[日志] 日志初始化异常，已回退到默认控制台日志: ") + e.what(),
+            true);
+        logger_initialized = false;
+    }
 }
 
 void DumpBootstrapLogs(const BootstrapState& state) {

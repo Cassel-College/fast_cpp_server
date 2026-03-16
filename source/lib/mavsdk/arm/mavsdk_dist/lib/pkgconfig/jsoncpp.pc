@@ -1,0 +1,11 @@
+prefix=/home/nvidia/liupeng/fast_cpp_server/external/mavsdk_v3/build/third_party/install
+exec_prefix=/home/nvidia/liupeng/fast_cpp_server/external/mavsdk_v3/build/third_party/install
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: jsoncpp
+Description: A C++ library for interacting with JSON
+Version: 1.9.6
+URL: https://github.com/open-source-parsers/jsoncpp
+Libs: -L${libdir} -ljsoncpp
+Cflags: -I${includedir}

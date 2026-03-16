@@ -267,6 +267,15 @@ else
   echo "⬇️ Failed to download SymEngine. ❌"
 fi
 
+# 下载 serial
+if [ -d "external/serial" ]; then
+  echo "⬇️ Directory 'external/serial' already exists. ✅"
+elif git clone https://github.com/wjwwood/serial.git external/serial; then
+  echo "⬇️ Successfully downloaded serial. ✅"
+else
+  echo "⬇️ Failed to download serial. ❌"
+fi
+
 # 定义统一的版本号，方便以后升级
 OATPP_VERSION="1.3.1"
 
@@ -359,4 +368,13 @@ else
   echo "📁 Failed to create releases directory. ❌"
 fi
 
-./scripts/build_mavsdk_v3.sh
+# 判断系统是否为 Kylin
+if grep -qi "kylin" /etc/os-release; then
+    echo "Detected Kylin OS, skip building MAVSDK."
+    mkdir -p build
+    cp -r source/lib/mavsdk/arm/mavsdk_dist ./build/
+    echo "Prebuilt MAVSDK copied to build directory."
+else
+    echo "Non-Kylin system detected, building MAVSDK..."
+    ./scripts/build_mavsdk_v3.sh
+fi

@@ -1,0 +1,56 @@
+include(CMakeFindDependencyMacro)
+
+if(NOT OFF)
+
+    if(NOT OFF)
+        find_dependency(CURL REQUIRED CONFIG)
+    endif()
+
+    find_dependency(Threads REQUIRED)
+    find_dependency(jsoncpp REQUIRED)
+    find_dependency(picosha2 REQUIRED)
+    find_dependency(tinyxml2 REQUIRED)
+    find_dependency(mav REQUIRED)
+    find_dependency(LibLZMA REQUIRED)
+    find_dependency(LibEvents REQUIRED)
+
+    if(OFF)
+        find_dependency(gRPC)
+    endif()
+endif()
+
+get_filename_component(MAVSDK_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+
+# Windows dual-config detection and selection
+get_filename_component(MAVSDK_ROOT_DIR "${MAVSDK_CMAKE_DIR}/../../.." ABSOLUTE)
+if(WIN32 AND EXISTS "${MAVSDK_ROOT_DIR}/Debug" AND EXISTS "${MAVSDK_ROOT_DIR}/Release")
+    # Windows dual-config: select Debug or Release based on CMAKE_BUILD_TYPE
+    set(MAVSDK_CONFIG "Release")  # Default to Release/RelWithDebInfo
+    if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+        set(MAVSDK_CONFIG "Debug")
+    endif()
+
+    set(MAVSDK_LIB_DIR "${MAVSDK_ROOT_DIR}/${MAVSDK_CONFIG}/lib")
+    set(MAVSDK_BIN_DIR "${MAVSDK_ROOT_DIR}/${MAVSDK_CONFIG}/bin")
+
+    # Determine library names with debug postfix
+    if(MAVSDK_CONFIG STREQUAL "Debug")
+        set(MAVSDK_LIB_NAME "mavsdkd")
+    else()
+        set(MAVSDK_LIB_NAME "mavsdk")
+    endif()
+
+    # Create imported target for Windows dual-config
+    # Manual target needed because libraries and headers have different relative paths
+    if(NOT TARGET MAVSDK::mavsdk)
+        add_library(MAVSDK::mavsdk SHARED IMPORTED)
+        set_target_properties(MAVSDK::mavsdk PROPERTIES
+            IMPORTED_LOCATION "${MAVSDK_BIN_DIR}/${MAVSDK_LIB_NAME}.dll"
+            IMPORTED_IMPLIB "${MAVSDK_LIB_DIR}/${MAVSDK_LIB_NAME}.lib"
+            INTERFACE_INCLUDE_DIRECTORIES "${MAVSDK_ROOT_DIR}/include;${MAVSDK_ROOT_DIR}/include/mavsdk"
+        )
+    endif()
+else()
+    # Traditional single-config behavior (Linux/macOS unchanged)
+    include("${MAVSDK_CMAKE_DIR}/MAVSDKTargets.cmake")
+endif()

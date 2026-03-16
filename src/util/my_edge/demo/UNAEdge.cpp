@@ -52,6 +52,11 @@ bool UNAEdge::Init(const nlohmann::json& cfg, std::string* err) {
   }
 
   MYLOG_INFO("[Edge:{}] UNAEdge 自身能力初始化完成", edge_id_);
+
+  // link MyMavVehicle
+  vehicle_ = std::make_unique<MyMavVehicle>("金枪鱼");
+  MYLOG_INFO("[Edge:{}] 内置 MyMavVehicle 实例创建完成", edge_id_);
+  vehicle_->Init("192.168.1.102");
   return true;
 }
 
@@ -241,8 +246,18 @@ void UNAEdge::SendHeatbeatByMQTT() {
 }
 
 void UNAEdge::ReportHeartbeatLocked() {
-  // 发送 MQTT 心跳
-  SendHeatbeatByMQTT();
+
+    // 获取MVlink状态
+    if (vehicle_) {
+        auto status = vehicle_->GetStatus();
+        MYLOG_INFO("[Edge:{}] MyMavVehicle 状态：armed={}, mode={}, battery_voltage={}V, heading={}°, connected={}",
+                   edge_id_, status.armed, status.flight_mode, status.battery_voltage, status.heading, status.connected);
+    } else {
+        MYLOG_WARN("[Edge:{}] MyMavVehicle 实例未初始化", edge_id_);
+    }
+
+    // 发送 MQTT 心跳
+    SendHeatbeatByMQTT();
 }
 
 void UNAEdge::InitMQTTRoute() {
