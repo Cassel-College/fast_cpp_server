@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_fly_control/FlyControlProtocol.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_f5c578bdcde1d27f65b76914db68bede.html">my_fly_control</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle"><div class="title">FlyControlProtocol.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;cstdint&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+FlyControlProtocol.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="FlyControlProtocol_8h__incl.png" border="0" usemap="#asrc_2util_2my__fly__control_2FlyControlProtocol_8h" alt=""/></div>
+<map name="asrc_2util_2my__fly__control_2FlyControlProtocol_8h" id="asrc_2util_2my__fly__control_2FlyControlProtocol_8h">
+<area shape="rect" title=" " alt="" coords="42,5,209,45"/>
+<area shape="rect" title=" " alt="" coords="5,93,72,119"/>
+<area shape="poly" title=" " alt="" coords="106,48,64,86,60,82,103,44"/>
+<area shape="rect" title=" " alt="" coords="96,93,155,119"/>
+<area shape="poly" title=" " alt="" coords="128,46,128,79,123,79,123,46"/>
+<area shape="rect" title=" " alt="" coords="179,93,242,119"/>
+<area shape="poly" title=" " alt="" coords="148,44,190,82,186,86,144,48"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="FlyControlProtocol_8h__dep__incl.png" border="0" usemap="#asrc_2util_2my__fly__control_2FlyControlProtocol_8hdep" alt=""/></div>
+<map name="asrc_2util_2my__fly__control_2FlyControlProtocol_8hdep" id="asrc_2util_2my__fly__control_2FlyControlProtocol_8hdep">
+<area shape="rect" title=" " alt="" coords="325,5,492,45"/>
+<area shape="rect" href="FlyControlCodec_8h.html" title=" " alt="" coords="325,93,492,133"/>
+<area shape="poly" title=" " alt="" coords="411,59,411,93,406,93,406,59"/>
+<area shape="rect" href="MyFlyControl_8h.html" title=" " alt="" coords="387,181,553,221"/>
+<area shape="poly" title=" " alt="" coords="465,50,488,69,506,92,511,116,508,141,498,163,487,182,482,180,493,161,503,139,506,116,501,94,484,72,462,55"/>
+<area shape="rect" href="FlyControlFrame_8h.html" title=" " alt="" coords="135,93,301,133"/>
+<area shape="poly" title=" " alt="" coords="355,53,261,96,259,91,353,49"/>
+<area shape="rect" href="FlyControlCodec_8cpp.html" title=" " alt="" coords="196,181,363,221"/>
+<area shape="poly" title=" " alt="" coords="370,144,309,183,306,179,367,139"/>
+<area shape="poly" title=" " alt="" coords="432,143,459,180,454,183,428,146"/>
+<area shape="rect" href="MyFlyControl_8cpp.html" title=" " alt="" coords="387,269,553,309"/>
+<area shape="poly" title=" " alt="" coords="473,235,473,269,467,269,467,235"/>
+<area shape="poly" title=" " alt="" coords="242,143,268,180,264,183,237,146"/>
+<area shape="poly" title=" " alt="" coords="287,135,416,179,414,184,285,140"/>
+<area shape="rect" href="FlyControlFrame_8cpp.html" title=" " alt="" coords="5,181,172,221"/>
+<area shape="poly" title=" " alt="" coords="179,144,119,183,116,179,176,139"/>
+</map>
+</div>
+</div>
+<p><a href="FlyControlProtocol_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfly__control_1_1FaultBits.html">FaultBits</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfly__control_1_1HeartbeatData.html">HeartbeatData</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfly__control_1_1GimbalControlData.html">GimbalControlData</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfly__control_1_1CommandReplyData.html">CommandReplyData</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfly__control_1_1SetDestinationData.html">SetDestinationData</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfly__control_1_1RoutePoint.html">RoutePoint</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfly__control_1_1SetRouteData.html">SetRouteData</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfly__control_1_1SetAngleData.html">SetAngleData</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfly__control_1_1SetSpeedData.html">SetSpeedData</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfly__control_1_1SetAltitudeData.html">SetAltitudeData</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfly__control_1_1PowerSwitchData.html">PowerSwitchData</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfly__control_1_1ParachuteData.html">ParachuteData</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfly__control_1_1ButtonCommandData.html">ButtonCommandData</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfly__control_1_1SetOriginReturnData.html">SetOriginReturnData</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfly__control_1_1GeofencePoint.html">GeofencePoint</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfly__control_1_1SetGeofenceData.html">SetGeofenceData</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfly__control_1_1SwitchModeData.html">SwitchModeData</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfly__control_1_1GuidanceData.html">GuidanceData</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfly__control_1_1GuidanceNewData.html">GuidanceNewData</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfly__control_1_1GimbalAngRateData.html">GimbalAngRateData</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfly__control_1_1GimbalAngleData.html">GimbalAngleData</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfly__control_1_1TargetStateData.html">TargetStateData</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfly__control_1_1ParsedFrame.html">ParsedFrame</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacefly__control" id="r_namespacefly__control"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html">fly_control</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:aea21c7f01395c8e22948261a517e2335" id="r_aea21c7f01395c8e22948261a517e2335"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#aea21c7f01395c8e22948261a517e2335">RunMode</a> : uint8_t { <a class="el" href="namespacefly__control.html#aea21c7f01395c8e22948261a517e2335a96df73c73f89d3f32dda223893f5f176">REAL_FLIGHT</a> = 0x00
+, <a class="el" href="namespacefly__control.html#aea21c7f01395c8e22948261a517e2335a64c71603ed31477ee4757ae9af42f7e9">SIMULATION</a> = 0x01
+ }</td></tr>
+<tr class="separator:aea21c7f01395c8e22948261a517e2335"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a036a62be3c9b39aaaa2f1f1ed2ddec85" id="r_a036a62be3c9b39aaaa2f1f1ed2ddec85"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#a036a62be3c9b39aaaa2f1f1ed2ddec85">FlightMode</a> : uint8_t { <a class="el" href="namespacefly__control.html#a036a62be3c9b39aaaa2f1f1ed2ddec85a75df1c0c6ff60ebb84682b9b342e7249">PRE_TAKEOFF</a> = 0x00
+, <a class="el" href="namespacefly__control.html#a036a62be3c9b39aaaa2f1f1ed2ddec85a26c51bff827d36c48d53be15cb37a185">POST_TAKEOFF</a> = 0x01
+, <a class="el" href="namespacefly__control.html#a036a62be3c9b39aaaa2f1f1ed2ddec85aa15d9df0779ae9bc96aebbf85ae2f85c">MISSION_READY</a> = 0x02
+, <a class="el" href="namespacefly__control.html#a036a62be3c9b39aaaa2f1f1ed2ddec85a1dce546c0157ae2cf1dbd24d0ac7fdfd">MISSION_RUNNING</a> = 0x03
+ }</td></tr>
+<tr class="separator:a036a62be3c9b39aaaa2f1f1ed2ddec85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a201c80e927ae9ae73dcc0b8b4f7ca1a7" id="r_a201c80e927ae9ae73dcc0b8b4f7ca1a7"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#a201c80e927ae9ae73dcc0b8b4f7ca1a7">FlightState</a> : uint8_t { <br />
+&#160;&#160;<a class="el" href="namespacefly__control.html#a201c80e927ae9ae73dcc0b8b4f7ca1a7aab8e30dd151a131f434b5f8620c5a397">LEVEL_FLIGHT</a> = 0x00
+, <a class="el" href="namespacefly__control.html#a201c80e927ae9ae73dcc0b8b4f7ca1a7ad311320d2843f09aa3b190f7f7c643d0">RETURN_HOME</a> = 0x01
+, <a class="el" href="namespacefly__control.html#a201c80e927ae9ae73dcc0b8b4f7ca1a7a48d80811ec81276fb3ee0df3944e7aee">ORBIT</a> = 0x02
+, <a class="el" href="namespacefly__control.html#a201c80e927ae9ae73dcc0b8b4f7ca1a7a84fb4bfe2188c39fc1714bb1ddff27c9">WAYPOINT</a> = 0x03
+, <br />
+&#160;&#160;<a class="el" href="namespacefly__control.html#a201c80e927ae9ae73dcc0b8b4f7ca1a7a603d3e49969654c3830aa0956881cb2c">CRUISE</a> = 0x04
+, <a class="el" href="namespacefly__control.html#a201c80e927ae9ae73dcc0b8b4f7ca1a7a8728801b2a11ad95c8ecf855bfd484e4">TRACKING</a> = 0x05
+, <a class="el" href="namespacefly__control.html#a201c80e927ae9ae73dcc0b8b4f7ca1a7a7ab0a1cfd85cc3da16cd3e3ad7448524">LANDING</a> = 0x06
+, <a class="el" href="namespacefly__control.html#a201c80e927ae9ae73dcc0b8b4f7ca1a7a8fabc74a4ed0781d663336cbf8c9c53d">TAKEOFF</a> = 0x07
+, <br />
+&#160;&#160;<a class="el" href="namespacefly__control.html#a201c80e927ae9ae73dcc0b8b4f7ca1a7a288c8815ede365ed62c269c42887dd45">DIVE_PULLUP</a> = 0x08
+, <a class="el" href="namespacefly__control.html#a201c80e927ae9ae73dcc0b8b4f7ca1a7ae6490f3976e3bbc0c283cdc144174a22">EMERGENCY_LAND</a> = 0x09
+, <a class="el" href="namespacefly__control.html#a201c80e927ae9ae73dcc0b8b4f7ca1a7aff3ee698629cf683717aa93df7fd4b17">FAST_DESCENT</a> = 0x0A
+, <a class="el" href="namespacefly__control.html#a201c80e927ae9ae73dcc0b8b4f7ca1a7acf7fcc47da5b45217657ccbacd6049ce">ORIGIN_LOITER</a> = 0x0B
+, <br />
+&#160;&#160;<a class="el" href="namespacefly__control.html#a201c80e927ae9ae73dcc0b8b4f7ca1a7a068b7d43a138d3011bdd40166948e201">TAKEOFF_LOCKED</a> = 0x10
+, <a class="el" href="namespacefly__control.html#a201c80e927ae9ae73dcc0b8b4f7ca1a7aec7845c0f4e74e8a7df4c8577efa90ff">TAKEOFF_UNLOCKED</a> = 0x11
+, <a class="el" href="namespacefly__control.html#a201c80e927ae9ae73dcc0b8b4f7ca1a7a2ae1aabd39d9dbdf5d37e488dd3e37f8">LAUNCHED</a> = 0x13
+, <a class="el" href="namespacefly__control.html#a201c80e927ae9ae73dcc0b8b4f7ca1a7a9c90eb3f9201a7df861d94e494aa9b0b">RECOVERY</a> = 0x20
+, <br />
+&#160;&#160;<a class="el" href="namespacefly__control.html#a201c80e927ae9ae73dcc0b8b4f7ca1a7aa0d8cf12b20ef82a68d29922e01c1cec">LEFT_CIRCLE</a> = 0x21
+, <a class="el" href="namespacefly__control.html#a201c80e927ae9ae73dcc0b8b4f7ca1a7a7dae92a72ebb7cb17dcaacf224a3a351">RIGHT_CIRCLE</a> = 0x22
+, <a class="el" href="namespacefly__control.html#a201c80e927ae9ae73dcc0b8b4f7ca1a7af871507de24e398da2415d37383cc384">TOUCHDOWN</a> = 0x30
+, <a class="el" href="namespacefly__control.html#a201c80e927ae9ae73dcc0b8b4f7ca1a7a817a48dc8d827e44e65e541ac472588d">MISSION_1</a> = 0xA0
+, <br />
+&#160;&#160;<a class="el" href="namespacefly__control.html#a201c80e927ae9ae73dcc0b8b4f7ca1a7a59e3b9213e8982843fc3aaacaecacd6d">MISSION_2</a> = 0xA1
+, <a class="el" href="namespacefly__control.html#a201c80e927ae9ae73dcc0b8b4f7ca1a7aa11ec3575aec2b49aaf5b61dae737561">MISSION_3</a> = 0xA2
+, <a class="el" href="namespacefly__control.html#a201c80e927ae9ae73dcc0b8b4f7ca1a7ab768f436be7443d860d0f248eb56d1eb">MISSION_4</a> = 0xA3
+<br />
+ }</td></tr>
+<tr class="separator:a201c80e927ae9ae73dcc0b8b4f7ca1a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f98d082be3006beddf366381f8878e4" id="r_a4f98d082be3006beddf366381f8878e4"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#a4f98d082be3006beddf366381f8878e4">AltitudeType</a> : uint8_t { <a class="el" href="namespacefly__control.html#a4f98d082be3006beddf366381f8878e4a1d2d3ecb9e838586939bb4e26a603666">MSL</a> = 0x00
+, <a class="el" href="namespacefly__control.html#a4f98d082be3006beddf366381f8878e4ac3cb497d8ec3c88b9024774b775358e2">RELATIVE</a> = 0x01
+ }</td></tr>
+<tr class="separator:a4f98d082be3006beddf366381f8878e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d5d271641d890f42bdfefaa891a2c6e" id="r_a8d5d271641d890f42bdfefaa891a2c6e"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#a8d5d271641d890f42bdfefaa891a2c6e">PowerSwitchCmd</a> : uint8_t { <a class="el" href="namespacefly__control.html#a8d5d271641d890f42bdfefaa891a2c6ea0bce859b7956440b683943012afd1e49">BATTERY_OFF</a> = 0x00
+, <a class="el" href="namespacefly__control.html#a8d5d271641d890f42bdfefaa891a2c6eac72d872d2ef43ad99135349e8c46942a">BATTERY_ON</a> = 0x01
+, <a class="el" href="namespacefly__control.html#a8d5d271641d890f42bdfefaa891a2c6ea24b918514b5ac30f2ad54c383d77e9c6">GIMBAL_OFF</a> = 0x02
+, <a class="el" href="namespacefly__control.html#a8d5d271641d890f42bdfefaa891a2c6eacf624240b4cfa5ff5343f98a455ca648">GIMBAL_ON</a> = 0x03
+ }</td></tr>
+<tr class="separator:a8d5d271641d890f42bdfefaa891a2c6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9877e4cb6fe10ca2f1d2f8b6127c838" id="r_aa9877e4cb6fe10ca2f1d2f8b6127c838"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#aa9877e4cb6fe10ca2f1d2f8b6127c838">ParachuteType</a> : uint8_t { <a class="el" href="namespacefly__control.html#aa9877e4cb6fe10ca2f1d2f8b6127c838a9c90eb3f9201a7df861d94e494aa9b0b">RECOVERY</a> = 0x00
+, <a class="el" href="namespacefly__control.html#aa9877e4cb6fe10ca2f1d2f8b6127c838ae35884a2445bc4ae2df52f188763273c">IMMEDIATE</a> = 0x01
+ }</td></tr>
+<tr class="separator:aa9877e4cb6fe10ca2f1d2f8b6127c838"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a888a767eb555b969cc2ca3866e8e8058" id="r_a888a767eb555b969cc2ca3866e8e8058"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#a888a767eb555b969cc2ca3866e8e8058">CoordPointType</a> : uint8_t { <a class="el" href="namespacefly__control.html#a888a767eb555b969cc2ca3866e8e8058a6d7b0f55d14f78a5611f7e00a2e3c2ec">ORIGIN</a> = 0x00
+, <a class="el" href="namespacefly__control.html#a888a767eb555b969cc2ca3866e8e8058ad311320d2843f09aa3b190f7f7c643d0">RETURN_HOME</a> = 0x01
+ }</td></tr>
+<tr class="separator:a888a767eb555b969cc2ca3866e8e8058"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:ab5c74560844e2c7dcc3ec576e60b018b" id="r_ab5c74560844e2c7dcc3ec576e60b018b"><td class="memItemLeft" align="right" valign="top">constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#ab5c74560844e2c7dcc3ec576e60b018b">FRAME_HEADER_0</a> = 0xEB</td></tr>
+<tr class="separator:ab5c74560844e2c7dcc3ec576e60b018b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f47a106b1ceb17f1da34409607fe782" id="r_a3f47a106b1ceb17f1da34409607fe782"><td class="memItemLeft" align="right" valign="top">constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#a3f47a106b1ceb17f1da34409607fe782">FRAME_HEADER_1</a> = 0x90</td></tr>
+<tr class="separator:a3f47a106b1ceb17f1da34409607fe782"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb72b0eb4fa3c10af2434d207d26e5b3" id="r_afb72b0eb4fa3c10af2434d207d26e5b3"><td class="memItemLeft" align="right" valign="top">constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#afb72b0eb4fa3c10af2434d207d26e5b3">FRAME_TAIL_0</a> = 0xED</td></tr>
+<tr class="separator:afb72b0eb4fa3c10af2434d207d26e5b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac655b4d9fb54069fb143b720b1550cf0" id="r_ac655b4d9fb54069fb143b720b1550cf0"><td class="memItemLeft" align="right" valign="top">constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#ac655b4d9fb54069fb143b720b1550cf0">FRAME_TAIL_1</a> = 0xDE</td></tr>
+<tr class="separator:ac655b4d9fb54069fb143b720b1550cf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3c4d6c28014b1076a4d32a26baffedf" id="r_ad3c4d6c28014b1076a4d32a26baffedf"><td class="memItemLeft" align="right" valign="top">constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#ad3c4d6c28014b1076a4d32a26baffedf">FRAME_HEADER_LEN</a> = 2</td></tr>
+<tr class="separator:ad3c4d6c28014b1076a4d32a26baffedf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6882805da2d38a061f39af0f0aba612a" id="r_a6882805da2d38a061f39af0f0aba612a"><td class="memItemLeft" align="right" valign="top">constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#a6882805da2d38a061f39af0f0aba612a">FRAME_TAIL_LEN</a> = 2</td></tr>
+<tr class="separator:a6882805da2d38a061f39af0f0aba612a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a154460e8603d75c7ee3496700589f561" id="r_a154460e8603d75c7ee3496700589f561"><td class="memItemLeft" align="right" valign="top">constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#a154460e8603d75c7ee3496700589f561">FRAME_CHECKSUM_LEN</a> = 1</td></tr>
+<tr class="separator:a154460e8603d75c7ee3496700589f561"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa53b7e77f3c11b09806fdf2264864c72" id="r_aa53b7e77f3c11b09806fdf2264864c72"><td class="memItemLeft" align="right" valign="top">constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#aa53b7e77f3c11b09806fdf2264864c72">FRAME_TYPE_HEARTBEAT</a> = 0x01</td></tr>
+<tr class="separator:aa53b7e77f3c11b09806fdf2264864c72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6300be0c6ee18a063e2366fe6bb3f47e" id="r_a6300be0c6ee18a063e2366fe6bb3f47e"><td class="memItemLeft" align="right" valign="top">constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#a6300be0c6ee18a063e2366fe6bb3f47e">FRAME_TYPE_SET_DESTINATION</a> = 0x02</td></tr>
+<tr class="separator:a6300be0c6ee18a063e2366fe6bb3f47e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57dee668add16c8a4347cacb08119492" id="r_a57dee668add16c8a4347cacb08119492"><td class="memItemLeft" align="right" valign="top">constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#a57dee668add16c8a4347cacb08119492">FRAME_TYPE_COMMAND</a> = 0x10</td></tr>
+<tr class="separator:a57dee668add16c8a4347cacb08119492"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07d7b4cd0fbbae47cc0bb0deae5af13e" id="r_a07d7b4cd0fbbae47cc0bb0deae5af13e"><td class="memItemLeft" align="right" valign="top">constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#a07d7b4cd0fbbae47cc0bb0deae5af13e">FRAME_TYPE_REPLY</a> = 0x20</td></tr>
+<tr class="separator:a07d7b4cd0fbbae47cc0bb0deae5af13e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a135cda22f65d256424cf6fa56b026417" id="r_a135cda22f65d256424cf6fa56b026417"><td class="memItemLeft" align="right" valign="top">constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#a135cda22f65d256424cf6fa56b026417">FRAME_TYPE_GIMBAL_CONTROL</a> = 0x30</td></tr>
+<tr class="separator:a135cda22f65d256424cf6fa56b026417"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9022ffb7747372119a48ab5b6c4405b3" id="r_a9022ffb7747372119a48ab5b6c4405b3"><td class="memItemLeft" align="right" valign="top">constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#a9022ffb7747372119a48ab5b6c4405b3">CMD_SET_DESTINATION</a> = 0x01</td></tr>
+<tr class="separator:a9022ffb7747372119a48ab5b6c4405b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7ef4dc061e7754ebc4f9fe49b0098f2" id="r_af7ef4dc061e7754ebc4f9fe49b0098f2"><td class="memItemLeft" align="right" valign="top">constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#af7ef4dc061e7754ebc4f9fe49b0098f2">CMD_SET_ROUTE</a> = 0x02</td></tr>
+<tr class="separator:af7ef4dc061e7754ebc4f9fe49b0098f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae345ba151be957afa3d267b4ea3ad78a" id="r_ae345ba151be957afa3d267b4ea3ad78a"><td class="memItemLeft" align="right" valign="top">constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#ae345ba151be957afa3d267b4ea3ad78a">CMD_SET_ANGLE</a> = 0x03</td></tr>
+<tr class="separator:ae345ba151be957afa3d267b4ea3ad78a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa413845888f895a3d2e26aefc741343a" id="r_aa413845888f895a3d2e26aefc741343a"><td class="memItemLeft" align="right" valign="top">constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#aa413845888f895a3d2e26aefc741343a">CMD_SET_SPEED</a> = 0x04</td></tr>
+<tr class="separator:aa413845888f895a3d2e26aefc741343a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbc7a055fe92caefe88ceb4049aa4126" id="r_acbc7a055fe92caefe88ceb4049aa4126"><td class="memItemLeft" align="right" valign="top">constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#acbc7a055fe92caefe88ceb4049aa4126">CMD_SET_ALTITUDE</a> = 0x05</td></tr>
+<tr class="separator:acbc7a055fe92caefe88ceb4049aa4126"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc9f3c8a5682f8277520b892bb65473d" id="r_afc9f3c8a5682f8277520b892bb65473d"><td class="memItemLeft" align="right" valign="top">constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#afc9f3c8a5682f8277520b892bb65473d">CMD_POWER_SWITCH</a> = 0x06</td></tr>
+<tr class="separator:afc9f3c8a5682f8277520b892bb65473d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a073eaaa56c0ea7e4163f629184a9267a" id="r_a073eaaa56c0ea7e4163f629184a9267a"><td class="memItemLeft" align="right" valign="top">constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#a073eaaa56c0ea7e4163f629184a9267a">CMD_PARACHUTE</a> = 0x07</td></tr>
+<tr class="separator:a073eaaa56c0ea7e4163f629184a9267a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acce8a82c1778ae34daeeabf6a452df54" id="r_acce8a82c1778ae34daeeabf6a452df54"><td class="memItemLeft" align="right" valign="top">constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#acce8a82c1778ae34daeeabf6a452df54">CMD_BUTTON</a> = 0x09</td></tr>
+<tr class="separator:acce8a82c1778ae34daeeabf6a452df54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a98b9fa415b743f82cf4b95f773fc34" id="r_a5a98b9fa415b743f82cf4b95f773fc34"><td class="memItemLeft" align="right" valign="top">constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#a5a98b9fa415b743f82cf4b95f773fc34">CMD_SET_ORIGIN_RETURN</a> = 0x0A</td></tr>
+<tr class="separator:a5a98b9fa415b743f82cf4b95f773fc34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62391adbbad2e608445105e87224806e" id="r_a62391adbbad2e608445105e87224806e"><td class="memItemLeft" align="right" valign="top">constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#a62391adbbad2e608445105e87224806e">CMD_SET_GEOFENCE</a> = 0x0B</td></tr>
+<tr class="separator:a62391adbbad2e608445105e87224806e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa639eb58bf5749e5cc058bcd07970828" id="r_aa639eb58bf5749e5cc058bcd07970828"><td class="memItemLeft" align="right" valign="top">constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#aa639eb58bf5749e5cc058bcd07970828">CMD_SWITCH_MODE</a> = 0x0C</td></tr>
+<tr class="separator:aa639eb58bf5749e5cc058bcd07970828"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20f558f86a80f8834d9d2f7496034e6a" id="r_a20f558f86a80f8834d9d2f7496034e6a"><td class="memItemLeft" align="right" valign="top">constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#a20f558f86a80f8834d9d2f7496034e6a">CMD_GUIDANCE</a> = 0x0D</td></tr>
+<tr class="separator:a20f558f86a80f8834d9d2f7496034e6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0fd98e1f038d5a64cfa7467619b6784" id="r_ad0fd98e1f038d5a64cfa7467619b6784"><td class="memItemLeft" align="right" valign="top">constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#ad0fd98e1f038d5a64cfa7467619b6784">CMD_GUIDANCE_NEW</a> = 0x0E</td></tr>
+<tr class="separator:ad0fd98e1f038d5a64cfa7467619b6784"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0f582f05f193218052e3a7aae6c54c1" id="r_af0f582f05f193218052e3a7aae6c54c1"><td class="memItemLeft" align="right" valign="top">constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#af0f582f05f193218052e3a7aae6c54c1">CMD_GIMBAL_ANG_RATE</a> = 0x0F</td></tr>
+<tr class="separator:af0f582f05f193218052e3a7aae6c54c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa05d627e8c7c0c43bc12540d716b8e11" id="r_aa05d627e8c7c0c43bc12540d716b8e11"><td class="memItemLeft" align="right" valign="top">constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#aa05d627e8c7c0c43bc12540d716b8e11">CMD_GIMBAL_ANGLE</a> = 0x10</td></tr>
+<tr class="separator:aa05d627e8c7c0c43bc12540d716b8e11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71ca48cf9eb96bcf34e26392470f3742" id="r_a71ca48cf9eb96bcf34e26392470f3742"><td class="memItemLeft" align="right" valign="top">constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#a71ca48cf9eb96bcf34e26392470f3742">CMD_TARGET_STATE</a> = 0x11</td></tr>
+<tr class="separator:a71ca48cf9eb96bcf34e26392470f3742"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a793181c3f18837d5bd6f8e2a3b582b2c" id="r_a793181c3f18837d5bd6f8e2a3b582b2c"><td class="memItemLeft" align="right" valign="top">constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#a793181c3f18837d5bd6f8e2a3b582b2c">HEARTBEAT_FRAME_LEN</a> = 89</td></tr>
+<tr class="separator:a793181c3f18837d5bd6f8e2a3b582b2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

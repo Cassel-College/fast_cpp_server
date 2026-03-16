@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_tools/MyBEHelper.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_222f75d460e07a5cd0325e16008607c5.html">my_tools</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">MyBEHelper.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="MyBEHelper_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;cstddef&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">// ---------------------------------------------</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// 大端编码/解码工具</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">// ---------------------------------------------</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceMyBEHelper.html">MyBEHelper</a> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">// 写入 uint8_t 大端</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespaceMyBEHelper.html#aad42f58226f5ddc1b1a3b8c679ad3b93">write_uint8</a>(std::vector&lt;uint8_t&gt;&amp; buf, uint8_t value);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">// 写入 uint16_t 大端</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespaceMyBEHelper.html#a44f75aae172fa6cae8a9aca06e53ad0c">write_uint16</a>(std::vector&lt;uint8_t&gt;&amp; buf, uint16_t value);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">// 写入 int16_t 大端</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespaceMyBEHelper.html#a269d396bdd8266845f0a67fe01f4a17d">write_int16</a>(std::vector&lt;uint8_t&gt;&amp; buf, int16_t value);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">// 写入 uint32_t 大端</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespaceMyBEHelper.html#a2a75bffd0379afff8a3cefcb0f83d047">write_uint32</a>(std::vector&lt;uint8_t&gt;&amp; buf, uint32_t value);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">// 写入 uint64_t 大端</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespaceMyBEHelper.html#a8b4df84d5088d659da65edef24388dfb">write_uint64</a>(std::vector&lt;uint8_t&gt;&amp; buf, uint64_t value);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">// 写入任意长度位域（高位在前），位数必须在 [1, 64] 范围内</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespaceMyBEHelper.html#a04299a4683d9640c3ad4d5a7e135d851">write_bits</a>(std::vector&lt;uint8_t&gt;&amp; buf, uint64_t value, <span class="keywordtype">int</span> bit_len);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">// 读取 uint8_t 大端，并推进 offset</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>uint8_t <a class="code hl_function" href="namespaceMyBEHelper.html#ace4e209762c0aa38e23ee5cd56559d0f">read_uint8</a>(<span class="keyword">const</span> std::vector&lt;uint8_t&gt;&amp; buf, <span class="keywordtype">size_t</span>&amp; offset);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">// 读取 uint16_t 大端，并推进 offset</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>uint16_t <a class="code hl_function" href="namespaceMyBEHelper.html#a89f3b0f7f7b9cd63de298d3ad2763c54">read_uint16</a>(<span class="keyword">const</span> std::vector&lt;uint8_t&gt;&amp; buf, <span class="keywordtype">size_t</span>&amp; offset);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">// 读取 int16_t 大端，并推进 offset</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>int16_t <a class="code hl_function" href="namespaceMyBEHelper.html#a9d8d9f369ab26846c4a42e3d5eb05c90">read_int16</a>(<span class="keyword">const</span> std::vector&lt;uint8_t&gt;&amp; buf, <span class="keywordtype">size_t</span>&amp; offset);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">// 读取 uint32_t 大端，并推进 offset</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>uint32_t <a class="code hl_function" href="namespaceMyBEHelper.html#ab4451e13ab80e08652de56b13ebee98a">read_uint32</a>(<span class="keyword">const</span> std::vector&lt;uint8_t&gt;&amp; buf, <span class="keywordtype">size_t</span>&amp; offset);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">// 读取 uint64_t 大端，并推进 offset</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>uint64_t <a class="code hl_function" href="namespaceMyBEHelper.html#a667c1abe794e00bc71bd284fa3075a5a">read_uint64</a>(<span class="keyword">const</span> std::vector&lt;uint8_t&gt;&amp; buf, <span class="keywordtype">size_t</span>&amp; offset);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">// 读取任意长度位域（高位在前），不推进 offset</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>uint64_t <a class="code hl_function" href="namespaceMyBEHelper.html#ae20f6db70eef596a71e1cba689204f78">read_bits</a>(<span class="keyword">const</span> std::vector&lt;uint8_t&gt;&amp; buf, <span class="keywordtype">size_t</span> offset, <span class="keywordtype">int</span> bit_len);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>} <span class="comment">// namespace MyBEHelper</span></div>
+<div class="ttc" id="anamespaceMyBEHelper_html"><div class="ttname"><a href="namespaceMyBEHelper.html">MyBEHelper</a></div><div class="ttdef"><b>Definition</b> MyBEHelper.cpp:21</div></div>
+<div class="ttc" id="anamespaceMyBEHelper_html_a04299a4683d9640c3ad4d5a7e135d851"><div class="ttname"><a href="namespaceMyBEHelper.html#a04299a4683d9640c3ad4d5a7e135d851">MyBEHelper::write_bits</a></div><div class="ttdeci">void write_bits(std::vector&lt; uint8_t &gt; &amp;buf, uint64_t value, int bit_len)</div><div class="ttdef"><b>Definition</b> MyBEHelper.cpp:55</div></div>
+<div class="ttc" id="anamespaceMyBEHelper_html_a269d396bdd8266845f0a67fe01f4a17d"><div class="ttname"><a href="namespaceMyBEHelper.html#a269d396bdd8266845f0a67fe01f4a17d">MyBEHelper::write_int16</a></div><div class="ttdeci">void write_int16(std::vector&lt; uint8_t &gt; &amp;buf, int16_t value)</div><div class="ttdef"><b>Definition</b> MyBEHelper.cpp:32</div></div>
+<div class="ttc" id="anamespaceMyBEHelper_html_a2a75bffd0379afff8a3cefcb0f83d047"><div class="ttname"><a href="namespaceMyBEHelper.html#a2a75bffd0379afff8a3cefcb0f83d047">MyBEHelper::write_uint32</a></div><div class="ttdeci">void write_uint32(std::vector&lt; uint8_t &gt; &amp;buf, uint32_t value)</div><div class="ttdef"><b>Definition</b> MyBEHelper.cpp:37</div></div>
+<div class="ttc" id="anamespaceMyBEHelper_html_a44f75aae172fa6cae8a9aca06e53ad0c"><div class="ttname"><a href="namespaceMyBEHelper.html#a44f75aae172fa6cae8a9aca06e53ad0c">MyBEHelper::write_uint16</a></div><div class="ttdeci">void write_uint16(std::vector&lt; uint8_t &gt; &amp;buf, uint16_t value)</div><div class="ttdef"><b>Definition</b> MyBEHelper.cpp:27</div></div>
+<div class="ttc" id="anamespaceMyBEHelper_html_a667c1abe794e00bc71bd284fa3075a5a"><div class="ttname"><a href="namespaceMyBEHelper.html#a667c1abe794e00bc71bd284fa3075a5a">MyBEHelper::read_uint64</a></div><div class="ttdeci">uint64_t read_uint64(const std::vector&lt; uint8_t &gt; &amp;buf, size_t &amp;offset)</div><div class="ttdef"><b>Definition</b> MyBEHelper.cpp:99</div></div>
+<div class="ttc" id="anamespaceMyBEHelper_html_a89f3b0f7f7b9cd63de298d3ad2763c54"><div class="ttname"><a href="namespaceMyBEHelper.html#a89f3b0f7f7b9cd63de298d3ad2763c54">MyBEHelper::read_uint16</a></div><div class="ttdeci">uint16_t read_uint16(const std::vector&lt; uint8_t &gt; &amp;buf, size_t &amp;offset)</div><div class="ttdef"><b>Definition</b> MyBEHelper.cpp:77</div></div>
+<div class="ttc" id="anamespaceMyBEHelper_html_a8b4df84d5088d659da65edef24388dfb"><div class="ttname"><a href="namespaceMyBEHelper.html#a8b4df84d5088d659da65edef24388dfb">MyBEHelper::write_uint64</a></div><div class="ttdeci">void write_uint64(std::vector&lt; uint8_t &gt; &amp;buf, uint64_t value)</div><div class="ttdef"><b>Definition</b> MyBEHelper.cpp:44</div></div>
+<div class="ttc" id="anamespaceMyBEHelper_html_a9d8d9f369ab26846c4a42e3d5eb05c90"><div class="ttname"><a href="namespaceMyBEHelper.html#a9d8d9f369ab26846c4a42e3d5eb05c90">MyBEHelper::read_int16</a></div><div class="ttdeci">int16_t read_int16(const std::vector&lt; uint8_t &gt; &amp;buf, size_t &amp;offset)</div><div class="ttdef"><b>Definition</b> MyBEHelper.cpp:85</div></div>
+<div class="ttc" id="anamespaceMyBEHelper_html_aad42f58226f5ddc1b1a3b8c679ad3b93"><div class="ttname"><a href="namespaceMyBEHelper.html#aad42f58226f5ddc1b1a3b8c679ad3b93">MyBEHelper::write_uint8</a></div><div class="ttdeci">void write_uint8(std::vector&lt; uint8_t &gt; &amp;buf, uint8_t value)</div><div class="ttdef"><b>Definition</b> MyBEHelper.cpp:23</div></div>
+<div class="ttc" id="anamespaceMyBEHelper_html_ab4451e13ab80e08652de56b13ebee98a"><div class="ttname"><a href="namespaceMyBEHelper.html#ab4451e13ab80e08652de56b13ebee98a">MyBEHelper::read_uint32</a></div><div class="ttdeci">uint32_t read_uint32(const std::vector&lt; uint8_t &gt; &amp;buf, size_t &amp;offset)</div><div class="ttdef"><b>Definition</b> MyBEHelper.cpp:89</div></div>
+<div class="ttc" id="anamespaceMyBEHelper_html_ace4e209762c0aa38e23ee5cd56559d0f"><div class="ttname"><a href="namespaceMyBEHelper.html#ace4e209762c0aa38e23ee5cd56559d0f">MyBEHelper::read_uint8</a></div><div class="ttdeci">uint8_t read_uint8(const std::vector&lt; uint8_t &gt; &amp;buf, size_t &amp;offset)</div><div class="ttdef"><b>Definition</b> MyBEHelper.cpp:70</div></div>
+<div class="ttc" id="anamespaceMyBEHelper_html_ae20f6db70eef596a71e1cba689204f78"><div class="ttname"><a href="namespaceMyBEHelper.html#ae20f6db70eef596a71e1cba689204f78">MyBEHelper::read_bits</a></div><div class="ttdeci">uint64_t read_bits(const std::vector&lt; uint8_t &gt; &amp;buf, size_t offset, int bit_len)</div><div class="ttdef"><b>Definition</b> MyBEHelper.cpp:113</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

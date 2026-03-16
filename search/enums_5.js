@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['taskstate_0',['TaskState',['../namespacemy__data.html#a724f9ce2351c125b3b7f6c7923822bce',1,'my_data']]]
+  ['parachutetype_0',['ParachuteType',['../namespacefly__control.html#aa9877e4cb6fe10ca2f1d2f8b6127c838',1,'fly_control']]],
+  ['powerswitchcmd_1',['PowerSwitchCmd',['../namespacefly__control.html#a8d5d271641d890f42bdfefaa891a2c6e',1,'fly_control']]]
 ];

@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_fly_control/FlyControlCodec.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_f5c578bdcde1d27f65b76914db68bede.html">my_fly_control</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">FlyControlCodec.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="FlyControlCodec_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="FlyControlProtocol_8h.html">FlyControlProtocol.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">// =============================================================================</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">// 协议编解码层</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">//</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">// 负责将协议数据结构与原始字节互相转换：</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//   - Encode*  将结构体编码为完整帧（可直接通过串口发送）</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">//   - Decode*  从 ParsedFrame 的 payload 中解码出结构体</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">// 所有多字节字段均使用小端编码（MyLEHelper）</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">// =============================================================================</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacefly__control.html">fly_control</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">// ===========================================================================</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">// 解码函数（帧载荷 → 数据结构）</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">// ===========================================================================</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">// 解码心跳帧载荷→HeartbeatData</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keywordtype">bool</span> <a class="code hl_function" href="namespacefly__control.html#a0d342591f8e1d17231362aa6005dafd8">DecodeHeartbeat</a>(<span class="keyword">const</span> std::vector&lt;uint8_t&gt;&amp; payload, HeartbeatData&amp; out);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">// 解码云台控制帧载荷→GimbalControlData</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keywordtype">bool</span> <a class="code hl_function" href="namespacefly__control.html#a1480d8b4dba003f6e21255c7e8ef158b">DecodeGimbalControl</a>(<span class="keyword">const</span> std::vector&lt;uint8_t&gt;&amp; payload, GimbalControlData&amp; out);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">// 解码指令回复帧载荷→CommandReplyData</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keywordtype">bool</span> <a class="code hl_function" href="namespacefly__control.html#a93c613dfb2dc3c6f44422ffedee6e15b">DecodeCommandReply</a>(<span class="keyword">const</span> std::vector&lt;uint8_t&gt;&amp; payload, CommandReplyData&amp; out);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">// ===========================================================================</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">// 编码函数（数据结构 → 完整帧字节序列）</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">// ===========================================================================</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">// 编码设置飞行目的地帧</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>std::vector&lt;uint8_t&gt; <a class="code hl_function" href="namespacefly__control.html#ab24681c848f9e543aa9d50523c2d4880">EncodeSetDestination</a>(uint8_t cnt, <span class="keyword">const</span> SetDestinationData&amp; data);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">// 编码设置飞行航线帧</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>std::vector&lt;uint8_t&gt; <a class="code hl_function" href="namespacefly__control.html#a9f105d1b6d152a60af8061d8a7de66ea">EncodeSetRoute</a>(uint8_t cnt, <span class="keyword">const</span> SetRouteData&amp; data);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">// 编码设置角度帧</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>std::vector&lt;uint8_t&gt; <a class="code hl_function" href="namespacefly__control.html#ab784ed1dbb8b9ad567da66f03dfb1bd3">EncodeSetAngle</a>(uint8_t cnt, <span class="keyword">const</span> SetAngleData&amp; data);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">// 编码设置速度帧</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>std::vector&lt;uint8_t&gt; <a class="code hl_function" href="namespacefly__control.html#a251fabddfb0ae97641ba137a57429e7f">EncodeSetSpeed</a>(uint8_t cnt, <span class="keyword">const</span> SetSpeedData&amp; data);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">// 编码设置高度帧</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>std::vector&lt;uint8_t&gt; <a class="code hl_function" href="namespacefly__control.html#a9c943722ad0c1ea89118ba0735e4ed53">EncodeSetAltitude</a>(uint8_t cnt, <span class="keyword">const</span> SetAltitudeData&amp; data);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">// 编码电源开关帧</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>std::vector&lt;uint8_t&gt; <a class="code hl_function" href="namespacefly__control.html#a5cb213e6a0dd9d023da40448755dc820">EncodePowerSwitch</a>(uint8_t cnt, <span class="keyword">const</span> PowerSwitchData&amp; data);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">// 编码开伞控制帧</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>std::vector&lt;uint8_t&gt; <a class="code hl_function" href="namespacefly__control.html#af045f60511487643c2c0a7f0f2c8513f">EncodeParachute</a>(uint8_t cnt, <span class="keyword">const</span> ParachuteData&amp; data);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">// 编码指令按钮帧</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>std::vector&lt;uint8_t&gt; <a class="code hl_function" href="namespacefly__control.html#a4830c57542df604e058c8e1b71b39055">EncodeButtonCommand</a>(uint8_t cnt, <span class="keyword">const</span> ButtonCommandData&amp; data);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">// 编码设置原点/返航点帧</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>std::vector&lt;uint8_t&gt; <a class="code hl_function" href="namespacefly__control.html#ae9cd0bc9c806d066731d22bc48c09e38">EncodeSetOriginReturn</a>(uint8_t cnt, <span class="keyword">const</span> SetOriginReturnData&amp; data);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">// 编码设置电子围栏帧</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>std::vector&lt;uint8_t&gt; <a class="code hl_function" href="namespacefly__control.html#a7f3c57ab3ee54141e1b9ffbaba177ac6">EncodeSetGeofence</a>(uint8_t cnt, <span class="keyword">const</span> SetGeofenceData&amp; data);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">// 编码切换运行模式帧</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>std::vector&lt;uint8_t&gt; <a class="code hl_function" href="namespacefly__control.html#a9a11c9df470a21421c48984e1fae42f8">EncodeSwitchMode</a>(uint8_t cnt, <span class="keyword">const</span> SwitchModeData&amp; data);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">// 编码末制导指令帧</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>std::vector&lt;uint8_t&gt; <a class="code hl_function" href="namespacefly__control.html#a2b36bd52d777f40c4ebd4646cba81283">EncodeGuidance</a>(uint8_t cnt, <span class="keyword">const</span> GuidanceData&amp; data);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">// 编码末制导指令新版帧</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>std::vector&lt;uint8_t&gt; <a class="code hl_function" href="namespacefly__control.html#a28333ba7630a3cdf74995d25c358e60f">EncodeGuidanceNew</a>(uint8_t cnt, <span class="keyword">const</span> GuidanceNewData&amp; data);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment">// 编码吊舱姿态-角速度模式帧</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>std::vector&lt;uint8_t&gt; <a class="code hl_function" href="namespacefly__control.html#aecfa33ffd4b667899b845c6329412e3f">EncodeGimbalAngRate</a>(uint8_t cnt, <span class="keyword">const</span> GimbalAngRateData&amp; data);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">// 编码吊舱姿态-角度模式帧</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>std::vector&lt;uint8_t&gt; <a class="code hl_function" href="namespacefly__control.html#ae53ea9ec46eb9f019c2dddc6df4a5cf8">EncodeGimbalAngle</a>(uint8_t cnt, <span class="keyword">const</span> GimbalAngleData&amp; data);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment">// 编码识别目标状态帧</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>std::vector&lt;uint8_t&gt; <a class="code hl_function" href="namespacefly__control.html#a5af2cad3543894444b5decdafe85d631">EncodeTargetState</a>(uint8_t cnt, <span class="keyword">const</span> TargetStateData&amp; data);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="comment">// ===========================================================================</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="comment">// 辅助函数</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="comment">// ===========================================================================</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment">// 获取指令类型的中文名称（用于日志）</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>std::string <a class="code hl_function" href="namespacefly__control.html#ac67b384fb5a5d88cea34ccd8d672dd89">GetCommandName</a>(uint8_t cmd_type);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="comment">// 获取帧类型的中文名称（用于日志）</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>std::string <a class="code hl_function" href="namespacefly__control.html#a65b8eb7f330a94c1ca59b1c96ef32cfc">GetFrameTypeName</a>(uint8_t frame_type);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>} <span class="comment">// namespace fly_control</span></div>
+<div class="ttc" id="aFlyControlProtocol_8h_html"><div class="ttname"><a href="FlyControlProtocol_8h.html">FlyControlProtocol.h</a></div></div>
+<div class="ttc" id="anamespacefly__control_html"><div class="ttname"><a href="namespacefly__control.html">fly_control</a></div><div class="ttdef"><b>Definition</b> FlyControlCodec.cpp:11</div></div>
+<div class="ttc" id="anamespacefly__control_html_a0d342591f8e1d17231362aa6005dafd8"><div class="ttname"><a href="namespacefly__control.html#a0d342591f8e1d17231362aa6005dafd8">fly_control::DecodeHeartbeat</a></div><div class="ttdeci">bool DecodeHeartbeat(const std::vector&lt; uint8_t &gt; &amp;payload, HeartbeatData &amp;out)</div><div class="ttdef"><b>Definition</b> FlyControlCodec.cpp:63</div></div>
+<div class="ttc" id="anamespacefly__control_html_a1480d8b4dba003f6e21255c7e8ef158b"><div class="ttname"><a href="namespacefly__control.html#a1480d8b4dba003f6e21255c7e8ef158b">fly_control::DecodeGimbalControl</a></div><div class="ttdeci">bool DecodeGimbalControl(const std::vector&lt; uint8_t &gt; &amp;payload, GimbalControlData &amp;out)</div><div class="ttdef"><b>Definition</b> FlyControlCodec.cpp:117</div></div>
+<div class="ttc" id="anamespacefly__control_html_a251fabddfb0ae97641ba137a57429e7f"><div class="ttname"><a href="namespacefly__control.html#a251fabddfb0ae97641ba137a57429e7f">fly_control::EncodeSetSpeed</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; EncodeSetSpeed(uint8_t cnt, const SetSpeedData &amp;data)</div><div class="ttdef"><b>Definition</b> FlyControlCodec.cpp:189</div></div>
+<div class="ttc" id="anamespacefly__control_html_a28333ba7630a3cdf74995d25c358e60f"><div class="ttname"><a href="namespacefly__control.html#a28333ba7630a3cdf74995d25c358e60f">fly_control::EncodeGuidanceNew</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; EncodeGuidanceNew(uint8_t cnt, const GuidanceNewData &amp;data)</div><div class="ttdef"><b>Definition</b> FlyControlCodec.cpp:294</div></div>
+<div class="ttc" id="anamespacefly__control_html_a2b36bd52d777f40c4ebd4646cba81283"><div class="ttname"><a href="namespacefly__control.html#a2b36bd52d777f40c4ebd4646cba81283">fly_control::EncodeGuidance</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; EncodeGuidance(uint8_t cnt, const GuidanceData &amp;data)</div><div class="ttdef"><b>Definition</b> FlyControlCodec.cpp:279</div></div>
+<div class="ttc" id="anamespacefly__control_html_a4830c57542df604e058c8e1b71b39055"><div class="ttname"><a href="namespacefly__control.html#a4830c57542df604e058c8e1b71b39055">fly_control::EncodeButtonCommand</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; EncodeButtonCommand(uint8_t cnt, const ButtonCommandData &amp;data)</div><div class="ttdef"><b>Definition</b> FlyControlCodec.cpp:230</div></div>
+<div class="ttc" id="anamespacefly__control_html_a5af2cad3543894444b5decdafe85d631"><div class="ttname"><a href="namespacefly__control.html#a5af2cad3543894444b5decdafe85d631">fly_control::EncodeTargetState</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; EncodeTargetState(uint8_t cnt, const TargetStateData &amp;data)</div><div class="ttdef"><b>Definition</b> FlyControlCodec.cpp:353</div></div>
+<div class="ttc" id="anamespacefly__control_html_a5cb213e6a0dd9d023da40448755dc820"><div class="ttname"><a href="namespacefly__control.html#a5cb213e6a0dd9d023da40448755dc820">fly_control::EncodePowerSwitch</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; EncodePowerSwitch(uint8_t cnt, const PowerSwitchData &amp;data)</div><div class="ttdef"><b>Definition</b> FlyControlCodec.cpp:210</div></div>
+<div class="ttc" id="anamespacefly__control_html_a65b8eb7f330a94c1ca59b1c96ef32cfc"><div class="ttname"><a href="namespacefly__control.html#a65b8eb7f330a94c1ca59b1c96ef32cfc">fly_control::GetFrameTypeName</a></div><div class="ttdeci">std::string GetFrameTypeName(uint8_t frame_type)</div><div class="ttdef"><b>Definition</b> FlyControlCodec.cpp:390</div></div>
+<div class="ttc" id="anamespacefly__control_html_a7f3c57ab3ee54141e1b9ffbaba177ac6"><div class="ttname"><a href="namespacefly__control.html#a7f3c57ab3ee54141e1b9ffbaba177ac6">fly_control::EncodeSetGeofence</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; EncodeSetGeofence(uint8_t cnt, const SetGeofenceData &amp;data)</div><div class="ttdef"><b>Definition</b> FlyControlCodec.cpp:253</div></div>
+<div class="ttc" id="anamespacefly__control_html_a93c613dfb2dc3c6f44422ffedee6e15b"><div class="ttname"><a href="namespacefly__control.html#a93c613dfb2dc3c6f44422ffedee6e15b">fly_control::DecodeCommandReply</a></div><div class="ttdeci">bool DecodeCommandReply(const std::vector&lt; uint8_t &gt; &amp;payload, CommandReplyData &amp;out)</div><div class="ttdef"><b>Definition</b> FlyControlCodec.cpp:132</div></div>
+<div class="ttc" id="anamespacefly__control_html_a9a11c9df470a21421c48984e1fae42f8"><div class="ttname"><a href="namespacefly__control.html#a9a11c9df470a21421c48984e1fae42f8">fly_control::EncodeSwitchMode</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; EncodeSwitchMode(uint8_t cnt, const SwitchModeData &amp;data)</div><div class="ttdef"><b>Definition</b> FlyControlCodec.cpp:269</div></div>
+<div class="ttc" id="anamespacefly__control_html_a9c943722ad0c1ea89118ba0735e4ed53"><div class="ttname"><a href="namespacefly__control.html#a9c943722ad0c1ea89118ba0735e4ed53">fly_control::EncodeSetAltitude</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; EncodeSetAltitude(uint8_t cnt, const SetAltitudeData &amp;data)</div><div class="ttdef"><b>Definition</b> FlyControlCodec.cpp:199</div></div>
+<div class="ttc" id="anamespacefly__control_html_a9f105d1b6d152a60af8061d8a7de66ea"><div class="ttname"><a href="namespacefly__control.html#a9f105d1b6d152a60af8061d8a7de66ea">fly_control::EncodeSetRoute</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; EncodeSetRoute(uint8_t cnt, const SetRouteData &amp;data)</div><div class="ttdef"><b>Definition</b> FlyControlCodec.cpp:161</div></div>
+<div class="ttc" id="anamespacefly__control_html_ab24681c848f9e543aa9d50523c2d4880"><div class="ttname"><a href="namespacefly__control.html#ab24681c848f9e543aa9d50523c2d4880">fly_control::EncodeSetDestination</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; EncodeSetDestination(uint8_t cnt, const SetDestinationData &amp;data)</div><div class="ttdef"><b>Definition</b> FlyControlCodec.cpp:149</div></div>
+<div class="ttc" id="anamespacefly__control_html_ab784ed1dbb8b9ad567da66f03dfb1bd3"><div class="ttname"><a href="namespacefly__control.html#ab784ed1dbb8b9ad567da66f03dfb1bd3">fly_control::EncodeSetAngle</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; EncodeSetAngle(uint8_t cnt, const SetAngleData &amp;data)</div><div class="ttdef"><b>Definition</b> FlyControlCodec.cpp:178</div></div>
+<div class="ttc" id="anamespacefly__control_html_ac67b384fb5a5d88cea34ccd8d672dd89"><div class="ttname"><a href="namespacefly__control.html#ac67b384fb5a5d88cea34ccd8d672dd89">fly_control::GetCommandName</a></div><div class="ttdeci">std::string GetCommandName(uint8_t cmd_type)</div><div class="ttdef"><b>Definition</b> FlyControlCodec.cpp:368</div></div>
+<div class="ttc" id="anamespacefly__control_html_ae53ea9ec46eb9f019c2dddc6df4a5cf8"><div class="ttname"><a href="namespacefly__control.html#ae53ea9ec46eb9f019c2dddc6df4a5cf8">fly_control::EncodeGimbalAngle</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; EncodeGimbalAngle(uint8_t cnt, const GimbalAngleData &amp;data)</div><div class="ttdef"><b>Definition</b> FlyControlCodec.cpp:340</div></div>
+<div class="ttc" id="anamespacefly__control_html_ae9cd0bc9c806d066731d22bc48c09e38"><div class="ttname"><a href="namespacefly__control.html#ae9cd0bc9c806d066731d22bc48c09e38">fly_control::EncodeSetOriginReturn</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; EncodeSetOriginReturn(uint8_t cnt, const SetOriginReturnData &amp;data)</div><div class="ttdef"><b>Definition</b> FlyControlCodec.cpp:240</div></div>
+<div class="ttc" id="anamespacefly__control_html_aecfa33ffd4b667899b845c6329412e3f"><div class="ttname"><a href="namespacefly__control.html#aecfa33ffd4b667899b845c6329412e3f">fly_control::EncodeGimbalAngRate</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; EncodeGimbalAngRate(uint8_t cnt, const GimbalAngRateData &amp;data)</div><div class="ttdef"><b>Definition</b> FlyControlCodec.cpp:324</div></div>
+<div class="ttc" id="anamespacefly__control_html_af045f60511487643c2c0a7f0f2c8513f"><div class="ttname"><a href="namespacefly__control.html#af045f60511487643c2c0a7f0f2c8513f">fly_control::EncodeParachute</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; EncodeParachute(uint8_t cnt, const ParachuteData &amp;data)</div><div class="ttdef"><b>Definition</b> FlyControlCodec.cpp:220</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

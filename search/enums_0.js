@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['checktype_0',['CheckType',['../namespacemy__doctor.html#a0522d6bb0c6399c4971af10467d11d04',1,'my_doctor']]]
+  ['altitudetype_0',['AltitudeType',['../namespacefly__control.html#a4f98d082be3006beddf366381f8878e4',1,'fly_control']]]
 ];

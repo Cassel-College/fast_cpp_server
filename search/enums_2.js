@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['edgerunstate_0',['EdgeRunState',['../namespacemy__data.html#a30e0a55991505e8f6aed4feb61c131e4',1,'my_data']]],
-  ['errorcode_1',['ErrorCode',['../namespacemy__data.html#a59e56af19e754a6aa26a612ebf91d05f',1,'my_data']]]
+  ['devicebusinessstatus_0',['DeviceBusinessStatus',['../namespaceedge__manager.html#a705af4082cd372cbec46518713ce86f2',1,'edge_manager']]],
+  ['deviceconnstate_1',['DeviceConnState',['../namespacemy__data.html#a69c46968483fe8b647c643ea0779baa3',1,'my_data']]],
+  ['deviceworkstate_2',['DeviceWorkState',['../namespacemy__data.html#ab741123951602d5912c8b5aba6bf3372',1,'my_data']]]
 ];

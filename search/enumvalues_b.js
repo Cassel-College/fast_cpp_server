@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['service_0',['SERVICE',['../namespacemy__doctor.html#a0522d6bb0c6399c4971af10467d11d04af9e81a746a286bbac225d69520d1e67a',1,'my_doctor']]],
-  ['stopped_1',['Stopped',['../namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16eac23e2b09ebe6bf4cb5e2a9abe85c0be2',1,'my_edge']]],
-  ['stopping_2',['Stopping',['../namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16ea7b7ecb39b9e110c2a31409a1672bad23',1,'my_edge']]],
-  ['succeeded_3',['Succeeded',['../namespacemy__data.html#a724f9ce2351c125b3b7f6c7923822bcea66d02c2f8a582446f8dd8752366002b5',1,'my_data']]]
+  ['pending_0',['Pending',['../namespacemy__data.html#a724f9ce2351c125b3b7f6c7923822bcea2d13df6f8b5e4c5af9f87e0dc39df69d',1,'my_data']]],
+  ['post_5ftakeoff_1',['POST_TAKEOFF',['../namespacefly__control.html#a036a62be3c9b39aaaa2f1f1ed2ddec85a26c51bff827d36c48d53be15cb37a185',1,'fly_control']]],
+  ['pre_5ftakeoff_2',['PRE_TAKEOFF',['../namespacefly__control.html#a036a62be3c9b39aaaa2f1f1ed2ddec85a75df1c0c6ff60ebb84682b9b342e7249',1,'fly_control']]]
 ];

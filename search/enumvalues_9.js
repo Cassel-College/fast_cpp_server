@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['queueshutdown_0',['QueueShutdown',['../namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123abdf0d370094dbc12551f8bcb592eee60',1,'my_edge']]]
+  ['notrunning_0',['NotRunning',['../namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123ae457ff7a83d0a8681fa483f898788515',1,'my_edge']]]
 ];

@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_fly_control/FlyControlCodec.cpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_f5c578bdcde1d27f65b76914db68bede.html">my_fly_control</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">FlyControlCodec.cpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="FlyControlCodec_8h_source.html">FlyControlCodec.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="FlyControlFrame_8h_source.html">FlyControlFrame.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="MyLEHelper_8h_source.html">MyLEHelper.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+FlyControlCodec.cpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="FlyControlCodec_8cpp__incl.png" border="0" usemap="#asrc_2util_2my__fly__control_2FlyControlCodec_8cpp" alt=""/></div>
+<map name="asrc_2util_2my__fly__control_2FlyControlCodec_8cpp" id="asrc_2util_2my__fly__control_2FlyControlCodec_8cpp">
+<area shape="rect" title=" " alt="" coords="299,5,466,45"/>
+<area shape="rect" href="FlyControlCodec_8h.html" title=" " alt="" coords="77,93,219,119"/>
+<area shape="poly" title=" " alt="" coords="327,48,196,92,194,87,326,43"/>
+<area shape="rect" href="FlyControlFrame_8h.html" title=" " alt="" coords="311,93,454,119"/>
+<area shape="poly" title=" " alt="" coords="385,46,385,79,380,79,380,46"/>
+<area shape="rect" href="MyLEHelper_8h.html" title=" " alt="" coords="510,93,621,119"/>
+<area shape="poly" title=" " alt="" coords="427,43,527,85,525,90,425,48"/>
+<area shape="rect" title=" " alt="" coords="127,240,193,265"/>
+<area shape="poly" title=" " alt="" coords="120,121,94,134,71,151,58,170,57,180,61,191,85,216,115,234,112,239,81,221,56,193,52,181,53,168,68,147,91,130,117,117"/>
+<area shape="rect" title=" " alt="" coords="5,240,64,265"/>
+<area shape="poly" title=" " alt="" coords="116,121,81,140,65,153,52,168,40,197,36,227,31,226,35,196,47,165,61,149,78,135,114,116"/>
+<area shape="rect" title=" " alt="" coords="326,240,389,265"/>
+<area shape="poly" title=" " alt="" coords="167,117,239,164,332,230,329,234,236,169,164,121"/>
+<area shape="rect" href="FlyControlProtocol_8h.html" title=" " alt="" coords="71,167,225,192"/>
+<area shape="poly" title=" " alt="" coords="151,119,151,153,145,153,145,119"/>
+<area shape="poly" title=" " alt="" coords="153,192,158,226,153,227,147,193"/>
+<area shape="poly" title=" " alt="" coords="131,194,66,235,63,230,128,190"/>
+<area shape="poly" title=" " alt="" coords="182,189,314,234,312,239,181,195"/>
+<area shape="poly" title=" " alt="" coords="366,121,191,235,188,230,363,117"/>
+<area shape="poly" title=" " alt="" coords="399,118,425,150,432,171,429,193,413,216,392,234,388,230,409,213,424,191,427,172,420,153,394,121"/>
+<area shape="poly" title=" " alt="" coords="346,121,200,165,198,160,344,116"/>
+<area shape="rect" title=" " alt="" coords="490,167,561,192"/>
+<area shape="poly" title=" " alt="" coords="407,116,491,158,489,163,404,121"/>
+<area shape="rect" title=" " alt="" coords="351,167,414,192"/>
+<area shape="poly" title=" " alt="" coords="385,119,385,153,380,153,380,119"/>
+<area shape="poly" title=" " alt="" coords="574,118,585,154,584,175,575,194,556,204,521,214,420,230,207,251,207,245,420,225,520,209,554,199,571,190,579,174,579,155,569,120"/>
+<area shape="poly" title=" " alt="" coords="583,117,601,132,617,151,626,172,625,183,619,194,605,206,583,216,526,232,461,244,403,250,402,245,460,238,524,227,581,211,602,201,615,190,620,182,620,173,613,154,597,136,580,121"/>
+<area shape="poly" title=" " alt="" coords="561,120,541,156,536,153,556,118"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacefly__control" id="r_namespacefly__control"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html">fly_control</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a0d342591f8e1d17231362aa6005dafd8" id="r_a0d342591f8e1d17231362aa6005dafd8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#a0d342591f8e1d17231362aa6005dafd8">DecodeHeartbeat</a> (const std::vector&lt; uint8_t &gt; &amp;payload, <a class="el" href="structfly__control_1_1HeartbeatData.html">HeartbeatData</a> &amp;out)</td></tr>
+<tr class="separator:a0d342591f8e1d17231362aa6005dafd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1480d8b4dba003f6e21255c7e8ef158b" id="r_a1480d8b4dba003f6e21255c7e8ef158b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#a1480d8b4dba003f6e21255c7e8ef158b">DecodeGimbalControl</a> (const std::vector&lt; uint8_t &gt; &amp;payload, <a class="el" href="structfly__control_1_1GimbalControlData.html">GimbalControlData</a> &amp;out)</td></tr>
+<tr class="separator:a1480d8b4dba003f6e21255c7e8ef158b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93c613dfb2dc3c6f44422ffedee6e15b" id="r_a93c613dfb2dc3c6f44422ffedee6e15b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#a93c613dfb2dc3c6f44422ffedee6e15b">DecodeCommandReply</a> (const std::vector&lt; uint8_t &gt; &amp;payload, <a class="el" href="structfly__control_1_1CommandReplyData.html">CommandReplyData</a> &amp;out)</td></tr>
+<tr class="separator:a93c613dfb2dc3c6f44422ffedee6e15b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab24681c848f9e543aa9d50523c2d4880" id="r_ab24681c848f9e543aa9d50523c2d4880"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#ab24681c848f9e543aa9d50523c2d4880">EncodeSetDestination</a> (uint8_t cnt, const <a class="el" href="structfly__control_1_1SetDestinationData.html">SetDestinationData</a> &amp;data)</td></tr>
+<tr class="separator:ab24681c848f9e543aa9d50523c2d4880"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f105d1b6d152a60af8061d8a7de66ea" id="r_a9f105d1b6d152a60af8061d8a7de66ea"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#a9f105d1b6d152a60af8061d8a7de66ea">EncodeSetRoute</a> (uint8_t cnt, const <a class="el" href="structfly__control_1_1SetRouteData.html">SetRouteData</a> &amp;data)</td></tr>
+<tr class="separator:a9f105d1b6d152a60af8061d8a7de66ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab784ed1dbb8b9ad567da66f03dfb1bd3" id="r_ab784ed1dbb8b9ad567da66f03dfb1bd3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#ab784ed1dbb8b9ad567da66f03dfb1bd3">EncodeSetAngle</a> (uint8_t cnt, const <a class="el" href="structfly__control_1_1SetAngleData.html">SetAngleData</a> &amp;data)</td></tr>
+<tr class="separator:ab784ed1dbb8b9ad567da66f03dfb1bd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a251fabddfb0ae97641ba137a57429e7f" id="r_a251fabddfb0ae97641ba137a57429e7f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#a251fabddfb0ae97641ba137a57429e7f">EncodeSetSpeed</a> (uint8_t cnt, const <a class="el" href="structfly__control_1_1SetSpeedData.html">SetSpeedData</a> &amp;data)</td></tr>
+<tr class="separator:a251fabddfb0ae97641ba137a57429e7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c943722ad0c1ea89118ba0735e4ed53" id="r_a9c943722ad0c1ea89118ba0735e4ed53"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#a9c943722ad0c1ea89118ba0735e4ed53">EncodeSetAltitude</a> (uint8_t cnt, const <a class="el" href="structfly__control_1_1SetAltitudeData.html">SetAltitudeData</a> &amp;data)</td></tr>
+<tr class="separator:a9c943722ad0c1ea89118ba0735e4ed53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cb213e6a0dd9d023da40448755dc820" id="r_a5cb213e6a0dd9d023da40448755dc820"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#a5cb213e6a0dd9d023da40448755dc820">EncodePowerSwitch</a> (uint8_t cnt, const <a class="el" href="structfly__control_1_1PowerSwitchData.html">PowerSwitchData</a> &amp;data)</td></tr>
+<tr class="separator:a5cb213e6a0dd9d023da40448755dc820"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af045f60511487643c2c0a7f0f2c8513f" id="r_af045f60511487643c2c0a7f0f2c8513f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#af045f60511487643c2c0a7f0f2c8513f">EncodeParachute</a> (uint8_t cnt, const <a class="el" href="structfly__control_1_1ParachuteData.html">ParachuteData</a> &amp;data)</td></tr>
+<tr class="separator:af045f60511487643c2c0a7f0f2c8513f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4830c57542df604e058c8e1b71b39055" id="r_a4830c57542df604e058c8e1b71b39055"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#a4830c57542df604e058c8e1b71b39055">EncodeButtonCommand</a> (uint8_t cnt, const <a class="el" href="structfly__control_1_1ButtonCommandData.html">ButtonCommandData</a> &amp;data)</td></tr>
+<tr class="separator:a4830c57542df604e058c8e1b71b39055"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9cd0bc9c806d066731d22bc48c09e38" id="r_ae9cd0bc9c806d066731d22bc48c09e38"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#ae9cd0bc9c806d066731d22bc48c09e38">EncodeSetOriginReturn</a> (uint8_t cnt, const <a class="el" href="structfly__control_1_1SetOriginReturnData.html">SetOriginReturnData</a> &amp;data)</td></tr>
+<tr class="separator:ae9cd0bc9c806d066731d22bc48c09e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f3c57ab3ee54141e1b9ffbaba177ac6" id="r_a7f3c57ab3ee54141e1b9ffbaba177ac6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#a7f3c57ab3ee54141e1b9ffbaba177ac6">EncodeSetGeofence</a> (uint8_t cnt, const <a class="el" href="structfly__control_1_1SetGeofenceData.html">SetGeofenceData</a> &amp;data)</td></tr>
+<tr class="separator:a7f3c57ab3ee54141e1b9ffbaba177ac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a11c9df470a21421c48984e1fae42f8" id="r_a9a11c9df470a21421c48984e1fae42f8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#a9a11c9df470a21421c48984e1fae42f8">EncodeSwitchMode</a> (uint8_t cnt, const <a class="el" href="structfly__control_1_1SwitchModeData.html">SwitchModeData</a> &amp;data)</td></tr>
+<tr class="separator:a9a11c9df470a21421c48984e1fae42f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b36bd52d777f40c4ebd4646cba81283" id="r_a2b36bd52d777f40c4ebd4646cba81283"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#a2b36bd52d777f40c4ebd4646cba81283">EncodeGuidance</a> (uint8_t cnt, const <a class="el" href="structfly__control_1_1GuidanceData.html">GuidanceData</a> &amp;data)</td></tr>
+<tr class="separator:a2b36bd52d777f40c4ebd4646cba81283"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28333ba7630a3cdf74995d25c358e60f" id="r_a28333ba7630a3cdf74995d25c358e60f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#a28333ba7630a3cdf74995d25c358e60f">EncodeGuidanceNew</a> (uint8_t cnt, const <a class="el" href="structfly__control_1_1GuidanceNewData.html">GuidanceNewData</a> &amp;data)</td></tr>
+<tr class="separator:a28333ba7630a3cdf74995d25c358e60f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecfa33ffd4b667899b845c6329412e3f" id="r_aecfa33ffd4b667899b845c6329412e3f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#aecfa33ffd4b667899b845c6329412e3f">EncodeGimbalAngRate</a> (uint8_t cnt, const <a class="el" href="structfly__control_1_1GimbalAngRateData.html">GimbalAngRateData</a> &amp;data)</td></tr>
+<tr class="separator:aecfa33ffd4b667899b845c6329412e3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae53ea9ec46eb9f019c2dddc6df4a5cf8" id="r_ae53ea9ec46eb9f019c2dddc6df4a5cf8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#ae53ea9ec46eb9f019c2dddc6df4a5cf8">EncodeGimbalAngle</a> (uint8_t cnt, const <a class="el" href="structfly__control_1_1GimbalAngleData.html">GimbalAngleData</a> &amp;data)</td></tr>
+<tr class="separator:ae53ea9ec46eb9f019c2dddc6df4a5cf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5af2cad3543894444b5decdafe85d631" id="r_a5af2cad3543894444b5decdafe85d631"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#a5af2cad3543894444b5decdafe85d631">EncodeTargetState</a> (uint8_t cnt, const <a class="el" href="structfly__control_1_1TargetStateData.html">TargetStateData</a> &amp;data)</td></tr>
+<tr class="separator:a5af2cad3543894444b5decdafe85d631"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac67b384fb5a5d88cea34ccd8d672dd89" id="r_ac67b384fb5a5d88cea34ccd8d672dd89"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#ac67b384fb5a5d88cea34ccd8d672dd89">GetCommandName</a> (uint8_t cmd_type)</td></tr>
+<tr class="separator:ac67b384fb5a5d88cea34ccd8d672dd89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65b8eb7f330a94c1ca59b1c96ef32cfc" id="r_a65b8eb7f330a94c1ca59b1c96ef32cfc"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefly__control.html#a65b8eb7f330a94c1ca59b1c96ef32cfc">GetFrameTypeName</a> (uint8_t frame_type)</td></tr>
+<tr class="separator:a65b8eb7f330a94c1ca59b1c96ef32cfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

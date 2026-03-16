@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['devicebusinessstatus_0',['DeviceBusinessStatus',['../namespaceedge__manager.html#a705af4082cd372cbec46518713ce86f2',1,'edge_manager']]],
-  ['deviceconnstate_1',['DeviceConnState',['../namespacemy__data.html#a69c46968483fe8b647c643ea0779baa3',1,'my_data']]],
-  ['deviceworkstate_2',['DeviceWorkState',['../namespacemy__data.html#ab741123951602d5912c8b5aba6bf3372',1,'my_data']]]
+  ['checktype_0',['CheckType',['../namespacemy__doctor.html#a0522d6bb0c6399c4971af10467d11d04',1,'my_doctor']]],
+  ['coordpointtype_1',['CoordPointType',['../namespacefly__control.html#a888a767eb555b969cc2ca3866e8e8058',1,'fly_control']]]
 ];

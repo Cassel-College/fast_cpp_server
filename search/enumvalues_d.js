@@ -1,5 +1,11 @@
 var searchData=
 [
-  ['unknown_0',['Unknown',['../namespacemy__data.html#a69c46968483fe8b647c643ea0779baa3a88183b946cc5f0e8c96b2e66e1c74a7e',1,'my_data']]],
-  ['unknowndevice_1',['unknowndevice',['../namespacemy__data.html#a59e56af19e754a6aa26a612ebf91d05fa594aff36300fd5882c438e822a84df0c',1,'my_data::UnknownDevice'],['../namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123a594aff36300fd5882c438e822a84df0c',1,'my_edge::UnknownDevice']]]
+  ['ready_0',['Ready',['../namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16eae7d31fc0602fb2ede144d18cdffd816b',1,'my_edge']]],
+  ['real_5fflight_1',['REAL_FLIGHT',['../namespacefly__control.html#aea21c7f01395c8e22948261a517e2335a96df73c73f89d3f32dda223893f5f176',1,'fly_control']]],
+  ['recovery_2',['recovery',['../namespacefly__control.html#a201c80e927ae9ae73dcc0b8b4f7ca1a7a9c90eb3f9201a7df861d94e494aa9b0b',1,'fly_control::RECOVERY'],['../namespacefly__control.html#aa9877e4cb6fe10ca2f1d2f8b6127c838a9c90eb3f9201a7df861d94e494aa9b0b',1,'fly_control::RECOVERY']]],
+  ['relative_3',['RELATIVE',['../namespacefly__control.html#a4f98d082be3006beddf366381f8878e4ac3cb497d8ec3c88b9024774b775358e2',1,'fly_control']]],
+  ['return_5fhome_4',['return_home',['../namespacefly__control.html#a201c80e927ae9ae73dcc0b8b4f7ca1a7ad311320d2843f09aa3b190f7f7c643d0',1,'fly_control::RETURN_HOME'],['../namespacefly__control.html#a888a767eb555b969cc2ca3866e8e8058ad311320d2843f09aa3b190f7f7c643d0',1,'fly_control::RETURN_HOME']]],
+  ['right_5fcircle_5',['RIGHT_CIRCLE',['../namespacefly__control.html#a201c80e927ae9ae73dcc0b8b4f7ca1a7a7dae92a72ebb7cb17dcaacf224a3a351',1,'fly_control']]],
+  ['running_6',['running',['../namespacemy__data.html#a30e0a55991505e8f6aed4feb61c131e4a5bda814c4aedb126839228f1a3d92f09',1,'my_data::Running'],['../namespacemy__data.html#a724f9ce2351c125b3b7f6c7923822bcea5bda814c4aedb126839228f1a3d92f09',1,'my_data::Running'],['../namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16ea5bda814c4aedb126839228f1a3d92f09',1,'my_edge::Running']]],
+  ['runover_7',['RunOver',['../namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16eacd3055e2a19ada567ed369a0eb7c683c',1,'my_edge']]]
 ];

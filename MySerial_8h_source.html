@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_serial/MySerial.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_60fa9d34ee4f6f01590c492846368cb8.html">my_serial</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">MySerial.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="MySerial_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;cstddef&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;nlohmann/json.hpp&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;serial/serial.h&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__serial.html">my_serial</a> {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structmy__serial_1_1SerialInitOptions.html">   15</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structmy__serial_1_1SerialInitOptions.html">SerialInitOptions</a> {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="structmy__serial_1_1SerialInitOptions.html#a0baa2a14fddc9486557407a0f5813b8f">   16</a></span>    std::string <a class="code hl_variable" href="structmy__serial_1_1SerialInitOptions.html#a0baa2a14fddc9486557407a0f5813b8f">port</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="structmy__serial_1_1SerialInitOptions.html#ac4f06ea26ed6bd7ae83b92d64ac10b78">   17</a></span>    uint32_t <a class="code hl_variable" href="structmy__serial_1_1SerialInitOptions.html#ac4f06ea26ed6bd7ae83b92d64ac10b78">baudrate</a>{9600};</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="structmy__serial_1_1SerialInitOptions.html#aca14dfa629015ee4cc42bd01d9933944">   18</a></span>    uint32_t <a class="code hl_variable" href="structmy__serial_1_1SerialInitOptions.html#aca14dfa629015ee4cc42bd01d9933944">timeout_ms</a>{1000};</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="structmy__serial_1_1SerialInitOptions.html#afa541dc1331a0367cd957b654f647a7c">   19</a></span>    uint32_t <a class="code hl_variable" href="structmy__serial_1_1SerialInitOptions.html#afa541dc1331a0367cd957b654f647a7c">inter_byte_timeout_ms</a>{0};</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="structmy__serial_1_1SerialInitOptions.html#a3729843177fdf32e621878af4a219d2f">   20</a></span>    uint32_t <a class="code hl_variable" href="structmy__serial_1_1SerialInitOptions.html#a3729843177fdf32e621878af4a219d2f">read_timeout_constant_ms</a>{1000};</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="structmy__serial_1_1SerialInitOptions.html#a2b196b3d9c728c6a9afa466d6caa8824">   21</a></span>    uint32_t <a class="code hl_variable" href="structmy__serial_1_1SerialInitOptions.html#a2b196b3d9c728c6a9afa466d6caa8824">read_timeout_multiplier_ms</a>{0};</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="structmy__serial_1_1SerialInitOptions.html#a3aab0c8f33f3907961ff29968384aeb6">   22</a></span>    uint32_t <a class="code hl_variable" href="structmy__serial_1_1SerialInitOptions.html#a3aab0c8f33f3907961ff29968384aeb6">write_timeout_constant_ms</a>{1000};</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="structmy__serial_1_1SerialInitOptions.html#a0a15022a96092a4e364a74302299a86d">   23</a></span>    uint32_t <a class="code hl_variable" href="structmy__serial_1_1SerialInitOptions.html#a0a15022a96092a4e364a74302299a86d">write_timeout_multiplier_ms</a>{0};</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="structmy__serial_1_1SerialInitOptions.html#ac537abc3b403825a59b02ff3de387887">   24</a></span>    std::string <a class="code hl_variable" href="structmy__serial_1_1SerialInitOptions.html#ac537abc3b403825a59b02ff3de387887">bytesize</a>{<span class="stringliteral">&quot;eightbits&quot;</span>};</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structmy__serial_1_1SerialInitOptions.html#a5d17fa73ed6a6289e46964c6b4d8e3e5">   25</a></span>    std::string <a class="code hl_variable" href="structmy__serial_1_1SerialInitOptions.html#a5d17fa73ed6a6289e46964c6b4d8e3e5">parity</a>{<span class="stringliteral">&quot;none&quot;</span>};</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="structmy__serial_1_1SerialInitOptions.html#a5d5e54f3c78499fdad0e52af70666cdd">   26</a></span>    std::string <a class="code hl_variable" href="structmy__serial_1_1SerialInitOptions.html#a5d5e54f3c78499fdad0e52af70666cdd">stopbits</a>{<span class="stringliteral">&quot;one&quot;</span>};</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="structmy__serial_1_1SerialInitOptions.html#ad426e7c707545e995d4eb4ce052aa1af">   27</a></span>    std::string <a class="code hl_variable" href="structmy__serial_1_1SerialInitOptions.html#ad426e7c707545e995d4eb4ce052aa1af">flowcontrol</a>{<span class="stringliteral">&quot;none&quot;</span>};</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structmy__serial_1_1SerialInitOptions.html#af3265ddaf74e9fcc6c328c9fe36216d1">   28</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structmy__serial_1_1SerialInitOptions.html#af3265ddaf74e9fcc6c328c9fe36216d1">auto_open</a>{<span class="keyword">true</span>};</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>};</div>
+</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="};">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="structmy__serial_1_1SerialPortSnapshot.html">   31</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structmy__serial_1_1SerialPortSnapshot.html">SerialPortSnapshot</a> {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="structmy__serial_1_1SerialPortSnapshot.html#aedeffc7d23da25d52b9a50045189fe2b">   32</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structmy__serial_1_1SerialPortSnapshot.html#aedeffc7d23da25d52b9a50045189fe2b">initialized</a>{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structmy__serial_1_1SerialPortSnapshot.html#a8c7e45250b1eb6821dd59fb2a9a016d7">   33</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structmy__serial_1_1SerialPortSnapshot.html#a8c7e45250b1eb6821dd59fb2a9a016d7">open</a>{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="structmy__serial_1_1SerialPortSnapshot.html#a0baa2a14fddc9486557407a0f5813b8f">   34</a></span>    std::string <a class="code hl_variable" href="structmy__serial_1_1SerialPortSnapshot.html#a0baa2a14fddc9486557407a0f5813b8f">port</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structmy__serial_1_1SerialPortSnapshot.html#ac4f06ea26ed6bd7ae83b92d64ac10b78">   35</a></span>    uint32_t <a class="code hl_variable" href="structmy__serial_1_1SerialPortSnapshot.html#ac4f06ea26ed6bd7ae83b92d64ac10b78">baudrate</a>{0};</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="structmy__serial_1_1SerialPortSnapshot.html#aca14dfa629015ee4cc42bd01d9933944">   36</a></span>    uint32_t <a class="code hl_variable" href="structmy__serial_1_1SerialPortSnapshot.html#aca14dfa629015ee4cc42bd01d9933944">timeout_ms</a>{0};</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="structmy__serial_1_1SerialPortSnapshot.html#afaed30f4d7333d869670fe20f94c4a19">   37</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structmy__serial_1_1SerialPortSnapshot.html#afaed30f4d7333d869670fe20f94c4a19">available_bytes</a>{0};</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="structmy__serial_1_1SerialPortSnapshot.html#ac537abc3b403825a59b02ff3de387887">   38</a></span>    std::string <a class="code hl_variable" href="structmy__serial_1_1SerialPortSnapshot.html#ac537abc3b403825a59b02ff3de387887">bytesize</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structmy__serial_1_1SerialPortSnapshot.html#a5d17fa73ed6a6289e46964c6b4d8e3e5">   39</a></span>    std::string <a class="code hl_variable" href="structmy__serial_1_1SerialPortSnapshot.html#a5d17fa73ed6a6289e46964c6b4d8e3e5">parity</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="structmy__serial_1_1SerialPortSnapshot.html#a5d5e54f3c78499fdad0e52af70666cdd">   40</a></span>    std::string <a class="code hl_variable" href="structmy__serial_1_1SerialPortSnapshot.html#a5d5e54f3c78499fdad0e52af70666cdd">stopbits</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="structmy__serial_1_1SerialPortSnapshot.html#ad426e7c707545e995d4eb4ce052aa1af">   41</a></span>    std::string <a class="code hl_variable" href="structmy__serial_1_1SerialPortSnapshot.html#ad426e7c707545e995d4eb4ce052aa1af">flowcontrol</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="structmy__serial_1_1SerialPortSnapshot.html#ad6976c458c4c2009292fa9a0a938e44e">   42</a></span>    std::string <a class="code hl_variable" href="structmy__serial_1_1SerialPortSnapshot.html#ad6976c458c4c2009292fa9a0a938e44e">last_error</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>};</div>
+</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="foldopen" id="foldopen00045" data-start="{" data-end="};">
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="structmy__serial_1_1SerialSelfCheckResult.html">   45</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structmy__serial_1_1SerialSelfCheckResult.html">SerialSelfCheckResult</a> {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="structmy__serial_1_1SerialSelfCheckResult.html#a7960f9c558f9ee2c3d4a8fdea096fb56">   46</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structmy__serial_1_1SerialSelfCheckResult.html#a7960f9c558f9ee2c3d4a8fdea096fb56">success</a>{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="structmy__serial_1_1SerialSelfCheckResult.html#a53b4b42e792f5971e98ae1f7814456f4">   47</a></span>    std::string <a class="code hl_variable" href="structmy__serial_1_1SerialSelfCheckResult.html#a53b4b42e792f5971e98ae1f7814456f4">summary</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="structmy__serial_1_1SerialSelfCheckResult.html#a8f750e7ee19c83668a05bdb50d03b623">   48</a></span>    nlohmann::json <a class="code hl_variable" href="structmy__serial_1_1SerialSelfCheckResult.html#a8f750e7ee19c83668a05bdb50d03b623">detail</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>};</div>
+</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="foldopen" id="foldopen00051" data-start="{" data-end="};">
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classmy__serial_1_1MySerial.html">   51</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__serial_1_1MySerial.html">MySerial</a> {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classmy__serial_1_1MySerial.html#a1cf7c5b16934eac609fc5ce6dbf8c76f">   53</a></span>    <a class="code hl_function" href="classmy__serial_1_1MySerial.html#a1cf7c5b16934eac609fc5ce6dbf8c76f">MySerial</a>();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <a class="code hl_function" href="classmy__serial_1_1MySerial.html#a4122b6e816a0b079f3b86e6ce282e0a3">~MySerial</a>();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__serial_1_1MySerial.html#aa0945f28ef057669b73101c9baf0acce">Init</a>(<span class="keyword">const</span> nlohmann::json&amp; cfg, std::string* err = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__serial_1_1MySerial.html#a1b5e8d1938b03f9c4ed998b010566aa0">Open</a>(std::string* err = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__serial_1_1MySerial.html#a7f7a3199c392465d0767c6506c1af5b4">Close</a>();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__serial_1_1MySerial.html#a1d904961859394313fe20f7f4d6fc784">IsOpen</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">size_t</span> <a class="code hl_function" href="classmy__serial_1_1MySerial.html#a0380935f1407739a0d229b4f9e475e8e">Write</a>(<span class="keyword">const</span> std::string&amp; data, std::string* err = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">size_t</span> <a class="code hl_function" href="classmy__serial_1_1MySerial.html#a0380935f1407739a0d229b4f9e475e8e">Write</a>(<span class="keyword">const</span> std::vector&lt;uint8_t&gt;&amp; data, std::string* err = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    std::string <a class="code hl_function" href="classmy__serial_1_1MySerial.html#aade36d8866978a15c0aa3139dcf9bc52">Read</a>(<span class="keywordtype">size_t</span> size, std::string* err = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    std::vector&lt;uint8_t&gt; <a class="code hl_function" href="classmy__serial_1_1MySerial.html#a32648ca68d036f6d6037aed7c5c6ed55">ReadBytes</a>(<span class="keywordtype">size_t</span> size, std::string* err = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    std::string <a class="code hl_function" href="classmy__serial_1_1MySerial.html#a4d8002cea46a6aee65767508dcd8f376">ReadLine</a>(<span class="keywordtype">size_t</span> max_size = 65536, <span class="keyword">const</span> std::string&amp; eol = <span class="stringliteral">&quot;\n&quot;</span>, std::string* err = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">size_t</span> <a class="code hl_function" href="classmy__serial_1_1MySerial.html#ad93f2a7aba47d485dd365aa5a6986ffd">Available</a>(std::string* err = <span class="keyword">nullptr</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    std::vector&lt;nlohmann::json&gt; <a class="code hl_function" href="classmy__serial_1_1MySerial.html#a34d764d0bb7231138682fd14c0bcffa5">ListAvailablePorts</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <a class="code hl_struct" href="structmy__serial_1_1SerialPortSnapshot.html">SerialPortSnapshot</a> <a class="code hl_function" href="classmy__serial_1_1MySerial.html#ab96eeb777f104510c0cbbfb49c3db6e7">GetSnapshot</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    nlohmann::json <a class="code hl_function" href="classmy__serial_1_1MySerial.html#ab7267b9c2f3827c1b8308d81baf6b91e">GetSnapshotJson</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <a class="code hl_struct" href="structmy__serial_1_1SerialSelfCheckResult.html">SerialSelfCheckResult</a> <a class="code hl_function" href="classmy__serial_1_1MySerial.html#a098fef471c4e6a0aa98f5b77be0e6ef4">SelfCheck</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <a class="code hl_struct" href="structmy__serial_1_1SerialSelfCheckResult.html">SerialSelfCheckResult</a> <a class="code hl_function" href="classmy__serial_1_1MySerial.html#ad6ac13417a40d39aeb08b00d14176d08">SelfTestLoopback</a>(<span class="keyword">const</span> std::string&amp; payload, <span class="keywordtype">size_t</span> read_size = 0);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keyword">static</span> <a class="code hl_struct" href="structmy__serial_1_1SerialInitOptions.html">SerialInitOptions</a> <a class="code hl_function" href="classmy__serial_1_1MySerial.html#a1d26b26c66f6fd2c4d5b0d30d27c216b">ParseOptions</a>(<span class="keyword">const</span> nlohmann::json&amp; cfg);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keyword">static</span> serial::bytesize_t <a class="code hl_function" href="classmy__serial_1_1MySerial.html#ae6399916958f0b2ff4a36e445dca7540">ParseBytesize</a>(<span class="keyword">const</span> std::string&amp; value);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keyword">static</span> serial::parity_t <a class="code hl_function" href="classmy__serial_1_1MySerial.html#a8396855e9be09e04c4485aff95e01607">ParseParity</a>(<span class="keyword">const</span> std::string&amp; value);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keyword">static</span> serial::stopbits_t <a class="code hl_function" href="classmy__serial_1_1MySerial.html#a4e85339cafdcc88dd5abde77a27691bb">ParseStopbits</a>(<span class="keyword">const</span> std::string&amp; value);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keyword">static</span> serial::flowcontrol_t <a class="code hl_function" href="classmy__serial_1_1MySerial.html#acf34bb24318bf35bd5a61ce0c4c41f37">ParseFlowcontrol</a>(<span class="keyword">const</span> std::string&amp; value);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keyword">static</span> std::string <a class="code hl_function" href="classmy__serial_1_1MySerial.html#a3565221436d1de8034032ffb000d621a">ToString</a>(serial::bytesize_t value);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keyword">static</span> std::string <a class="code hl_function" href="classmy__serial_1_1MySerial.html#a3565221436d1de8034032ffb000d621a">ToString</a>(serial::parity_t value);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keyword">static</span> std::string <a class="code hl_function" href="classmy__serial_1_1MySerial.html#a3565221436d1de8034032ffb000d621a">ToString</a>(serial::stopbits_t value);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keyword">static</span> std::string <a class="code hl_function" href="classmy__serial_1_1MySerial.html#a3565221436d1de8034032ffb000d621a">ToString</a>(serial::flowcontrol_t value);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="classmy__serial_1_1MySerial.html#a281b5ec791338d4378e22ef44a51b4a1">   87</a></span>    <span class="keyword">mutable</span> std::mutex <a class="code hl_variable" href="classmy__serial_1_1MySerial.html#a281b5ec791338d4378e22ef44a51b4a1">mutex_</a>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="classmy__serial_1_1MySerial.html#aef7436a220692b5b863db4e9d8b870a3">   88</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="classmy__serial_1_1MySerial.html#aef7436a220692b5b863db4e9d8b870a3">initialized_</a>{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="classmy__serial_1_1MySerial.html#a5fce746773fe42ce68f5aa756b09c38e">   89</a></span>    <span class="keyword">mutable</span> std::string <a class="code hl_variable" href="classmy__serial_1_1MySerial.html#a5fce746773fe42ce68f5aa756b09c38e">last_error_</a>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="classmy__serial_1_1MySerial.html#a23e6d257206c5411b049c16dba0c7e22">   90</a></span>    <a class="code hl_struct" href="structmy__serial_1_1SerialInitOptions.html">SerialInitOptions</a> <a class="code hl_variable" href="classmy__serial_1_1MySerial.html#a23e6d257206c5411b049c16dba0c7e22">options_</a>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="classmy__serial_1_1MySerial.html#a9b2b481a6ab0c34f371e7501b8a91a67">   91</a></span>    std::unique_ptr&lt;serial::Serial&gt; <a class="code hl_variable" href="classmy__serial_1_1MySerial.html#a9b2b481a6ab0c34f371e7501b8a91a67">serial_</a>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>};</div>
+</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>} <span class="comment">// namespace my_serial</span></div>
+<div class="ttc" id="aclassmy__serial_1_1MySerial_html"><div class="ttname"><a href="classmy__serial_1_1MySerial.html">my_serial::MySerial</a></div><div class="ttdef"><b>Definition</b> MySerial.h:51</div></div>
+<div class="ttc" id="aclassmy__serial_1_1MySerial_html_a0380935f1407739a0d229b4f9e475e8e"><div class="ttname"><a href="classmy__serial_1_1MySerial.html#a0380935f1407739a0d229b4f9e475e8e">my_serial::MySerial::Write</a></div><div class="ttdeci">size_t Write(const std::string &amp;data, std::string *err=nullptr)</div><div class="ttdef"><b>Definition</b> MySerial.cpp:124</div></div>
+<div class="ttc" id="aclassmy__serial_1_1MySerial_html_a098fef471c4e6a0aa98f5b77be0e6ef4"><div class="ttname"><a href="classmy__serial_1_1MySerial.html#a098fef471c4e6a0aa98f5b77be0e6ef4">my_serial::MySerial::SelfCheck</a></div><div class="ttdeci">SerialSelfCheckResult SelfCheck() const</div><div class="ttdef"><b>Definition</b> MySerial.cpp:276</div></div>
+<div class="ttc" id="aclassmy__serial_1_1MySerial_html_a1b5e8d1938b03f9c4ed998b010566aa0"><div class="ttname"><a href="classmy__serial_1_1MySerial.html#a1b5e8d1938b03f9c4ed998b010566aa0">my_serial::MySerial::Open</a></div><div class="ttdeci">bool Open(std::string *err=nullptr)</div><div class="ttdef"><b>Definition</b> MySerial.cpp:97</div></div>
+<div class="ttc" id="aclassmy__serial_1_1MySerial_html_a1cf7c5b16934eac609fc5ce6dbf8c76f"><div class="ttname"><a href="classmy__serial_1_1MySerial.html#a1cf7c5b16934eac609fc5ce6dbf8c76f">my_serial::MySerial::MySerial</a></div><div class="ttdeci">MySerial()</div></div>
+<div class="ttc" id="aclassmy__serial_1_1MySerial_html_a1d26b26c66f6fd2c4d5b0d30d27c216b"><div class="ttname"><a href="classmy__serial_1_1MySerial.html#a1d26b26c66f6fd2c4d5b0d30d27c216b">my_serial::MySerial::ParseOptions</a></div><div class="ttdeci">static SerialInitOptions ParseOptions(const nlohmann::json &amp;cfg)</div><div class="ttdef"><b>Definition</b> MySerial.cpp:342</div></div>
+<div class="ttc" id="aclassmy__serial_1_1MySerial_html_a1d904961859394313fe20f7f4d6fc784"><div class="ttname"><a href="classmy__serial_1_1MySerial.html#a1d904961859394313fe20f7f4d6fc784">my_serial::MySerial::IsOpen</a></div><div class="ttdeci">bool IsOpen() const</div><div class="ttdef"><b>Definition</b> MySerial.cpp:119</div></div>
+<div class="ttc" id="aclassmy__serial_1_1MySerial_html_a23e6d257206c5411b049c16dba0c7e22"><div class="ttname"><a href="classmy__serial_1_1MySerial.html#a23e6d257206c5411b049c16dba0c7e22">my_serial::MySerial::options_</a></div><div class="ttdeci">SerialInitOptions options_</div><div class="ttdef"><b>Definition</b> MySerial.h:90</div></div>
+<div class="ttc" id="aclassmy__serial_1_1MySerial_html_a281b5ec791338d4378e22ef44a51b4a1"><div class="ttname"><a href="classmy__serial_1_1MySerial.html#a281b5ec791338d4378e22ef44a51b4a1">my_serial::MySerial::mutex_</a></div><div class="ttdeci">std::mutex mutex_</div><div class="ttdef"><b>Definition</b> MySerial.h:87</div></div>
+<div class="ttc" id="aclassmy__serial_1_1MySerial_html_a32648ca68d036f6d6037aed7c5c6ed55"><div class="ttname"><a href="classmy__serial_1_1MySerial.html#a32648ca68d036f6d6037aed7c5c6ed55">my_serial::MySerial::ReadBytes</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; ReadBytes(size_t size, std::string *err=nullptr)</div><div class="ttdef"><b>Definition</b> MySerial.cpp:169</div></div>
+<div class="ttc" id="aclassmy__serial_1_1MySerial_html_a34d764d0bb7231138682fd14c0bcffa5"><div class="ttname"><a href="classmy__serial_1_1MySerial.html#a34d764d0bb7231138682fd14c0bcffa5">my_serial::MySerial::ListAvailablePorts</a></div><div class="ttdeci">std::vector&lt; nlohmann::json &gt; ListAvailablePorts() const</div><div class="ttdef"><b>Definition</b> MySerial.cpp:216</div></div>
+<div class="ttc" id="aclassmy__serial_1_1MySerial_html_a3565221436d1de8034032ffb000d621a"><div class="ttname"><a href="classmy__serial_1_1MySerial.html#a3565221436d1de8034032ffb000d621a">my_serial::MySerial::ToString</a></div><div class="ttdeci">static std::string ToString(serial::bytesize_t value)</div><div class="ttdef"><b>Definition</b> MySerial.cpp:403</div></div>
+<div class="ttc" id="aclassmy__serial_1_1MySerial_html_a4122b6e816a0b079f3b86e6ce282e0a3"><div class="ttname"><a href="classmy__serial_1_1MySerial.html#a4122b6e816a0b079f3b86e6ce282e0a3">my_serial::MySerial::~MySerial</a></div><div class="ttdeci">~MySerial()</div><div class="ttdef"><b>Definition</b> MySerial.cpp:59</div></div>
+<div class="ttc" id="aclassmy__serial_1_1MySerial_html_a4d8002cea46a6aee65767508dcd8f376"><div class="ttname"><a href="classmy__serial_1_1MySerial.html#a4d8002cea46a6aee65767508dcd8f376">my_serial::MySerial::ReadLine</a></div><div class="ttdeci">std::string ReadLine(size_t max_size=65536, const std::string &amp;eol=&quot;\n&quot;, std::string *err=nullptr)</div><div class="ttdef"><b>Definition</b> MySerial.cpp:186</div></div>
+<div class="ttc" id="aclassmy__serial_1_1MySerial_html_a4e85339cafdcc88dd5abde77a27691bb"><div class="ttname"><a href="classmy__serial_1_1MySerial.html#a4e85339cafdcc88dd5abde77a27691bb">my_serial::MySerial::ParseStopbits</a></div><div class="ttdeci">static serial::stopbits_t ParseStopbits(const std::string &amp;value)</div><div class="ttdef"><b>Definition</b> MySerial.cpp:387</div></div>
+<div class="ttc" id="aclassmy__serial_1_1MySerial_html_a5fce746773fe42ce68f5aa756b09c38e"><div class="ttname"><a href="classmy__serial_1_1MySerial.html#a5fce746773fe42ce68f5aa756b09c38e">my_serial::MySerial::last_error_</a></div><div class="ttdeci">std::string last_error_</div><div class="ttdef"><b>Definition</b> MySerial.h:89</div></div>
+<div class="ttc" id="aclassmy__serial_1_1MySerial_html_a7f7a3199c392465d0767c6506c1af5b4"><div class="ttname"><a href="classmy__serial_1_1MySerial.html#a7f7a3199c392465d0767c6506c1af5b4">my_serial::MySerial::Close</a></div><div class="ttdeci">void Close()</div><div class="ttdef"><b>Definition</b> MySerial.cpp:111</div></div>
+<div class="ttc" id="aclassmy__serial_1_1MySerial_html_a8396855e9be09e04c4485aff95e01607"><div class="ttname"><a href="classmy__serial_1_1MySerial.html#a8396855e9be09e04c4485aff95e01607">my_serial::MySerial::ParseParity</a></div><div class="ttdeci">static serial::parity_t ParseParity(const std::string &amp;value)</div><div class="ttdef"><b>Definition</b> MySerial.cpp:377</div></div>
+<div class="ttc" id="aclassmy__serial_1_1MySerial_html_a9b2b481a6ab0c34f371e7501b8a91a67"><div class="ttname"><a href="classmy__serial_1_1MySerial.html#a9b2b481a6ab0c34f371e7501b8a91a67">my_serial::MySerial::serial_</a></div><div class="ttdeci">std::unique_ptr&lt; serial::Serial &gt; serial_</div><div class="ttdef"><b>Definition</b> MySerial.h:91</div></div>
+<div class="ttc" id="aclassmy__serial_1_1MySerial_html_aa0945f28ef057669b73101c9baf0acce"><div class="ttname"><a href="classmy__serial_1_1MySerial.html#aa0945f28ef057669b73101c9baf0acce">my_serial::MySerial::Init</a></div><div class="ttdeci">bool Init(const nlohmann::json &amp;cfg, std::string *err=nullptr)</div><div class="ttdef"><b>Definition</b> MySerial.cpp:63</div></div>
+<div class="ttc" id="aclassmy__serial_1_1MySerial_html_aade36d8866978a15c0aa3139dcf9bc52"><div class="ttname"><a href="classmy__serial_1_1MySerial.html#aade36d8866978a15c0aa3139dcf9bc52">my_serial::MySerial::Read</a></div><div class="ttdeci">std::string Read(size_t size, std::string *err=nullptr)</div><div class="ttdef"><b>Definition</b> MySerial.cpp:154</div></div>
+<div class="ttc" id="aclassmy__serial_1_1MySerial_html_ab7267b9c2f3827c1b8308d81baf6b91e"><div class="ttname"><a href="classmy__serial_1_1MySerial.html#ab7267b9c2f3827c1b8308d81baf6b91e">my_serial::MySerial::GetSnapshotJson</a></div><div class="ttdeci">nlohmann::json GetSnapshotJson() const</div><div class="ttdef"><b>Definition</b> MySerial.cpp:259</div></div>
+<div class="ttc" id="aclassmy__serial_1_1MySerial_html_ab96eeb777f104510c0cbbfb49c3db6e7"><div class="ttname"><a href="classmy__serial_1_1MySerial.html#ab96eeb777f104510c0cbbfb49c3db6e7">my_serial::MySerial::GetSnapshot</a></div><div class="ttdeci">SerialPortSnapshot GetSnapshot() const</div><div class="ttdef"><b>Definition</b> MySerial.cpp:228</div></div>
+<div class="ttc" id="aclassmy__serial_1_1MySerial_html_acf34bb24318bf35bd5a61ce0c4c41f37"><div class="ttname"><a href="classmy__serial_1_1MySerial.html#acf34bb24318bf35bd5a61ce0c4c41f37">my_serial::MySerial::ParseFlowcontrol</a></div><div class="ttdeci">static serial::flowcontrol_t ParseFlowcontrol(const std::string &amp;value)</div><div class="ttdef"><b>Definition</b> MySerial.cpp:395</div></div>
+<div class="ttc" id="aclassmy__serial_1_1MySerial_html_ad6ac13417a40d39aeb08b00d14176d08"><div class="ttname"><a href="classmy__serial_1_1MySerial.html#ad6ac13417a40d39aeb08b00d14176d08">my_serial::MySerial::SelfTestLoopback</a></div><div class="ttdeci">SerialSelfCheckResult SelfTestLoopback(const std::string &amp;payload, size_t read_size=0)</div><div class="ttdef"><b>Definition</b> MySerial.cpp:310</div></div>
+<div class="ttc" id="aclassmy__serial_1_1MySerial_html_ad93f2a7aba47d485dd365aa5a6986ffd"><div class="ttname"><a href="classmy__serial_1_1MySerial.html#ad93f2a7aba47d485dd365aa5a6986ffd">my_serial::MySerial::Available</a></div><div class="ttdeci">size_t Available(std::string *err=nullptr) const</div><div class="ttdef"><b>Definition</b> MySerial.cpp:201</div></div>
+<div class="ttc" id="aclassmy__serial_1_1MySerial_html_ae6399916958f0b2ff4a36e445dca7540"><div class="ttname"><a href="classmy__serial_1_1MySerial.html#ae6399916958f0b2ff4a36e445dca7540">my_serial::MySerial::ParseBytesize</a></div><div class="ttdeci">static serial::bytesize_t ParseBytesize(const std::string &amp;value)</div><div class="ttdef"><b>Definition</b> MySerial.cpp:368</div></div>
+<div class="ttc" id="aclassmy__serial_1_1MySerial_html_aef7436a220692b5b863db4e9d8b870a3"><div class="ttname"><a href="classmy__serial_1_1MySerial.html#aef7436a220692b5b863db4e9d8b870a3">my_serial::MySerial::initialized_</a></div><div class="ttdeci">bool initialized_</div><div class="ttdef"><b>Definition</b> MySerial.h:88</div></div>
+<div class="ttc" id="anamespacemy__serial_html"><div class="ttname"><a href="namespacemy__serial.html">my_serial</a></div><div class="ttdef"><b>Definition</b> MySerial.cpp:9</div></div>
+<div class="ttc" id="astructmy__serial_1_1SerialInitOptions_html"><div class="ttname"><a href="structmy__serial_1_1SerialInitOptions.html">my_serial::SerialInitOptions</a></div><div class="ttdef"><b>Definition</b> MySerial.h:15</div></div>
+<div class="ttc" id="astructmy__serial_1_1SerialInitOptions_html_a0a15022a96092a4e364a74302299a86d"><div class="ttname"><a href="structmy__serial_1_1SerialInitOptions.html#a0a15022a96092a4e364a74302299a86d">my_serial::SerialInitOptions::write_timeout_multiplier_ms</a></div><div class="ttdeci">uint32_t write_timeout_multiplier_ms</div><div class="ttdef"><b>Definition</b> MySerial.h:23</div></div>
+<div class="ttc" id="astructmy__serial_1_1SerialInitOptions_html_a0baa2a14fddc9486557407a0f5813b8f"><div class="ttname"><a href="structmy__serial_1_1SerialInitOptions.html#a0baa2a14fddc9486557407a0f5813b8f">my_serial::SerialInitOptions::port</a></div><div class="ttdeci">std::string port</div><div class="ttdef"><b>Definition</b> MySerial.h:16</div></div>
+<div class="ttc" id="astructmy__serial_1_1SerialInitOptions_html_a2b196b3d9c728c6a9afa466d6caa8824"><div class="ttname"><a href="structmy__serial_1_1SerialInitOptions.html#a2b196b3d9c728c6a9afa466d6caa8824">my_serial::SerialInitOptions::read_timeout_multiplier_ms</a></div><div class="ttdeci">uint32_t read_timeout_multiplier_ms</div><div class="ttdef"><b>Definition</b> MySerial.h:21</div></div>
+<div class="ttc" id="astructmy__serial_1_1SerialInitOptions_html_a3729843177fdf32e621878af4a219d2f"><div class="ttname"><a href="structmy__serial_1_1SerialInitOptions.html#a3729843177fdf32e621878af4a219d2f">my_serial::SerialInitOptions::read_timeout_constant_ms</a></div><div class="ttdeci">uint32_t read_timeout_constant_ms</div><div class="ttdef"><b>Definition</b> MySerial.h:20</div></div>
+<div class="ttc" id="astructmy__serial_1_1SerialInitOptions_html_a3aab0c8f33f3907961ff29968384aeb6"><div class="ttname"><a href="structmy__serial_1_1SerialInitOptions.html#a3aab0c8f33f3907961ff29968384aeb6">my_serial::SerialInitOptions::write_timeout_constant_ms</a></div><div class="ttdeci">uint32_t write_timeout_constant_ms</div><div class="ttdef"><b>Definition</b> MySerial.h:22</div></div>
+<div class="ttc" id="astructmy__serial_1_1SerialInitOptions_html_a5d17fa73ed6a6289e46964c6b4d8e3e5"><div class="ttname"><a href="structmy__serial_1_1SerialInitOptions.html#a5d17fa73ed6a6289e46964c6b4d8e3e5">my_serial::SerialInitOptions::parity</a></div><div class="ttdeci">std::string parity</div><div class="ttdef"><b>Definition</b> MySerial.h:25</div></div>
+<div class="ttc" id="astructmy__serial_1_1SerialInitOptions_html_a5d5e54f3c78499fdad0e52af70666cdd"><div class="ttname"><a href="structmy__serial_1_1SerialInitOptions.html#a5d5e54f3c78499fdad0e52af70666cdd">my_serial::SerialInitOptions::stopbits</a></div><div class="ttdeci">std::string stopbits</div><div class="ttdef"><b>Definition</b> MySerial.h:26</div></div>
+<div class="ttc" id="astructmy__serial_1_1SerialInitOptions_html_ac4f06ea26ed6bd7ae83b92d64ac10b78"><div class="ttname"><a href="structmy__serial_1_1SerialInitOptions.html#ac4f06ea26ed6bd7ae83b92d64ac10b78">my_serial::SerialInitOptions::baudrate</a></div><div class="ttdeci">uint32_t baudrate</div><div class="ttdef"><b>Definition</b> MySerial.h:17</div></div>
+<div class="ttc" id="astructmy__serial_1_1SerialInitOptions_html_ac537abc3b403825a59b02ff3de387887"><div class="ttname"><a href="structmy__serial_1_1SerialInitOptions.html#ac537abc3b403825a59b02ff3de387887">my_serial::SerialInitOptions::bytesize</a></div><div class="ttdeci">std::string bytesize</div><div class="ttdef"><b>Definition</b> MySerial.h:24</div></div>
+<div class="ttc" id="astructmy__serial_1_1SerialInitOptions_html_aca14dfa629015ee4cc42bd01d9933944"><div class="ttname"><a href="structmy__serial_1_1SerialInitOptions.html#aca14dfa629015ee4cc42bd01d9933944">my_serial::SerialInitOptions::timeout_ms</a></div><div class="ttdeci">uint32_t timeout_ms</div><div class="ttdef"><b>Definition</b> MySerial.h:18</div></div>
+<div class="ttc" id="astructmy__serial_1_1SerialInitOptions_html_ad426e7c707545e995d4eb4ce052aa1af"><div class="ttname"><a href="structmy__serial_1_1SerialInitOptions.html#ad426e7c707545e995d4eb4ce052aa1af">my_serial::SerialInitOptions::flowcontrol</a></div><div class="ttdeci">std::string flowcontrol</div><div class="ttdef"><b>Definition</b> MySerial.h:27</div></div>
+<div class="ttc" id="astructmy__serial_1_1SerialInitOptions_html_af3265ddaf74e9fcc6c328c9fe36216d1"><div class="ttname"><a href="structmy__serial_1_1SerialInitOptions.html#af3265ddaf74e9fcc6c328c9fe36216d1">my_serial::SerialInitOptions::auto_open</a></div><div class="ttdeci">bool auto_open</div><div class="ttdef"><b>Definition</b> MySerial.h:28</div></div>
+<div class="ttc" id="astructmy__serial_1_1SerialInitOptions_html_afa541dc1331a0367cd957b654f647a7c"><div class="ttname"><a href="structmy__serial_1_1SerialInitOptions.html#afa541dc1331a0367cd957b654f647a7c">my_serial::SerialInitOptions::inter_byte_timeout_ms</a></div><div class="ttdeci">uint32_t inter_byte_timeout_ms</div><div class="ttdef"><b>Definition</b> MySerial.h:19</div></div>
+<div class="ttc" id="astructmy__serial_1_1SerialPortSnapshot_html"><div class="ttname"><a href="structmy__serial_1_1SerialPortSnapshot.html">my_serial::SerialPortSnapshot</a></div><div class="ttdef"><b>Definition</b> MySerial.h:31</div></div>
+<div class="ttc" id="astructmy__serial_1_1SerialPortSnapshot_html_a0baa2a14fddc9486557407a0f5813b8f"><div class="ttname"><a href="structmy__serial_1_1SerialPortSnapshot.html#a0baa2a14fddc9486557407a0f5813b8f">my_serial::SerialPortSnapshot::port</a></div><div class="ttdeci">std::string port</div><div class="ttdef"><b>Definition</b> MySerial.h:34</div></div>
+<div class="ttc" id="astructmy__serial_1_1SerialPortSnapshot_html_a5d17fa73ed6a6289e46964c6b4d8e3e5"><div class="ttname"><a href="structmy__serial_1_1SerialPortSnapshot.html#a5d17fa73ed6a6289e46964c6b4d8e3e5">my_serial::SerialPortSnapshot::parity</a></div><div class="ttdeci">std::string parity</div><div class="ttdef"><b>Definition</b> MySerial.h:39</div></div>
+<div class="ttc" id="astructmy__serial_1_1SerialPortSnapshot_html_a5d5e54f3c78499fdad0e52af70666cdd"><div class="ttname"><a href="structmy__serial_1_1SerialPortSnapshot.html#a5d5e54f3c78499fdad0e52af70666cdd">my_serial::SerialPortSnapshot::stopbits</a></div><div class="ttdeci">std::string stopbits</div><div class="ttdef"><b>Definition</b> MySerial.h:40</div></div>
+<div class="ttc" id="astructmy__serial_1_1SerialPortSnapshot_html_a8c7e45250b1eb6821dd59fb2a9a016d7"><div class="ttname"><a href="structmy__serial_1_1SerialPortSnapshot.html#a8c7e45250b1eb6821dd59fb2a9a016d7">my_serial::SerialPortSnapshot::open</a></div><div class="ttdeci">bool open</div><div class="ttdef"><b>Definition</b> MySerial.h:33</div></div>
+<div class="ttc" id="astructmy__serial_1_1SerialPortSnapshot_html_ac4f06ea26ed6bd7ae83b92d64ac10b78"><div class="ttname"><a href="structmy__serial_1_1SerialPortSnapshot.html#ac4f06ea26ed6bd7ae83b92d64ac10b78">my_serial::SerialPortSnapshot::baudrate</a></div><div class="ttdeci">uint32_t baudrate</div><div class="ttdef"><b>Definition</b> MySerial.h:35</div></div>
+<div class="ttc" id="astructmy__serial_1_1SerialPortSnapshot_html_ac537abc3b403825a59b02ff3de387887"><div class="ttname"><a href="structmy__serial_1_1SerialPortSnapshot.html#ac537abc3b403825a59b02ff3de387887">my_serial::SerialPortSnapshot::bytesize</a></div><div class="ttdeci">std::string bytesize</div><div class="ttdef"><b>Definition</b> MySerial.h:38</div></div>
+<div class="ttc" id="astructmy__serial_1_1SerialPortSnapshot_html_aca14dfa629015ee4cc42bd01d9933944"><div class="ttname"><a href="structmy__serial_1_1SerialPortSnapshot.html#aca14dfa629015ee4cc42bd01d9933944">my_serial::SerialPortSnapshot::timeout_ms</a></div><div class="ttdeci">uint32_t timeout_ms</div><div class="ttdef"><b>Definition</b> MySerial.h:36</div></div>
+<div class="ttc" id="astructmy__serial_1_1SerialPortSnapshot_html_ad426e7c707545e995d4eb4ce052aa1af"><div class="ttname"><a href="structmy__serial_1_1SerialPortSnapshot.html#ad426e7c707545e995d4eb4ce052aa1af">my_serial::SerialPortSnapshot::flowcontrol</a></div><div class="ttdeci">std::string flowcontrol</div><div class="ttdef"><b>Definition</b> MySerial.h:41</div></div>
+<div class="ttc" id="astructmy__serial_1_1SerialPortSnapshot_html_ad6976c458c4c2009292fa9a0a938e44e"><div class="ttname"><a href="structmy__serial_1_1SerialPortSnapshot.html#ad6976c458c4c2009292fa9a0a938e44e">my_serial::SerialPortSnapshot::last_error</a></div><div class="ttdeci">std::string last_error</div><div class="ttdef"><b>Definition</b> MySerial.h:42</div></div>
+<div class="ttc" id="astructmy__serial_1_1SerialPortSnapshot_html_aedeffc7d23da25d52b9a50045189fe2b"><div class="ttname"><a href="structmy__serial_1_1SerialPortSnapshot.html#aedeffc7d23da25d52b9a50045189fe2b">my_serial::SerialPortSnapshot::initialized</a></div><div class="ttdeci">bool initialized</div><div class="ttdef"><b>Definition</b> MySerial.h:32</div></div>
+<div class="ttc" id="astructmy__serial_1_1SerialPortSnapshot_html_afaed30f4d7333d869670fe20f94c4a19"><div class="ttname"><a href="structmy__serial_1_1SerialPortSnapshot.html#afaed30f4d7333d869670fe20f94c4a19">my_serial::SerialPortSnapshot::available_bytes</a></div><div class="ttdeci">size_t available_bytes</div><div class="ttdef"><b>Definition</b> MySerial.h:37</div></div>
+<div class="ttc" id="astructmy__serial_1_1SerialSelfCheckResult_html"><div class="ttname"><a href="structmy__serial_1_1SerialSelfCheckResult.html">my_serial::SerialSelfCheckResult</a></div><div class="ttdef"><b>Definition</b> MySerial.h:45</div></div>
+<div class="ttc" id="astructmy__serial_1_1SerialSelfCheckResult_html_a53b4b42e792f5971e98ae1f7814456f4"><div class="ttname"><a href="structmy__serial_1_1SerialSelfCheckResult.html#a53b4b42e792f5971e98ae1f7814456f4">my_serial::SerialSelfCheckResult::summary</a></div><div class="ttdeci">std::string summary</div><div class="ttdef"><b>Definition</b> MySerial.h:47</div></div>
+<div class="ttc" id="astructmy__serial_1_1SerialSelfCheckResult_html_a7960f9c558f9ee2c3d4a8fdea096fb56"><div class="ttname"><a href="structmy__serial_1_1SerialSelfCheckResult.html#a7960f9c558f9ee2c3d4a8fdea096fb56">my_serial::SerialSelfCheckResult::success</a></div><div class="ttdeci">bool success</div><div class="ttdef"><b>Definition</b> MySerial.h:46</div></div>
+<div class="ttc" id="astructmy__serial_1_1SerialSelfCheckResult_html_a8f750e7ee19c83668a05bdb50d03b623"><div class="ttname"><a href="structmy__serial_1_1SerialSelfCheckResult.html#a8f750e7ee19c83668a05bdb50d03b623">my_serial::SerialSelfCheckResult::detail</a></div><div class="ttdeci">nlohmann::json detail</div><div class="ttdef"><b>Definition</b> MySerial.h:48</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>
