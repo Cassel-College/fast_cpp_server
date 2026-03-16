@@ -1,0 +1,10 @@
+prefix=/home/cs/DockerRoot/fast_cpp_server/external/mavsdk_v3/build/third_party/install
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: TinyXML2
+Description: simple, small, C++ XML parser
+Version: 11.0.0
+Libs: -L${libdir} -ltinyxml2
+Cflags: -I${includedir}

@@ -1,0 +1,20 @@
+#
+# Author: Lasse Collin
+#
+# This file has been put into the public domain.
+# You can do whatever you want with this file.
+#
+
+prefix=/home/cs/DockerRoot/fast_cpp_server/external/mavsdk_v3/build/third_party/install
+exec_prefix=/home/cs/DockerRoot/fast_cpp_server/external/mavsdk_v3/build/third_party/install
+libdir=/home/cs/DockerRoot/fast_cpp_server/external/mavsdk_v3/build/third_party/install/lib
+includedir=/home/cs/DockerRoot/fast_cpp_server/external/mavsdk_v3/build/third_party/install/include
+
+Name: liblzma
+Description: General purpose data compression library
+URL: https://tukaani.org/xz/
+Version: 5.4.5
+Cflags: -I${includedir}
+Cflags.private: -DLZMA_API_STATIC
+Libs: -L${libdir} -llzma
+Libs.private:  
