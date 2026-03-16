@@ -267,6 +267,15 @@ else
   echo "⬇️ Failed to download SymEngine. ❌"
 fi
 
+# 下载 serial
+if [ -d "external/serial" ]; then
+  echo "⬇️ Directory 'external/serial' already exists. ✅"
+elif git clone https://github.com/wjwwood/serial.git external/serial; then
+  echo "⬇️ Successfully downloaded serial. ✅"
+else
+  echo "⬇️ Failed to download serial. ❌"
+fi
+
 # 定义统一的版本号，方便以后升级
 OATPP_VERSION="1.3.1"
 
