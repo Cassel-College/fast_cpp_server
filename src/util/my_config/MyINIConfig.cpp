@@ -1,19 +1,47 @@
 #include "MyINIConfig.h"
+#include <cctype>
 #include <fstream>
+#include <memory>
 #include <sstream>
 
-MyINIConfig* MyINIConfig::instance_ = nullptr;
+namespace {
+
+std::string TrimCopy(const std::string& value) {
+    std::size_t begin = 0;
+    while (begin < value.size() && std::isspace(static_cast<unsigned char>(value[begin])) != 0) {
+        ++begin;
+    }
+
+    std::size_t end = value.size();
+    while (end > begin && std::isspace(static_cast<unsigned char>(value[end - 1])) != 0) {
+        --end;
+    }
+
+    return value.substr(begin, end - begin);
+}
+
+} // namespace
+
+std::atomic<MyINIConfig*> MyINIConfig::instance_{nullptr};
 std::once_flag MyINIConfig::init_flag_;
 
 void MyINIConfig::Init(const std::string& path) {
     std::call_once(init_flag_, [&]() {
-        instance_ = new MyINIConfig();
-        instance_->Load(path);
+        std::unique_ptr<MyINIConfig> instance(new MyINIConfig());
+        instance->Load(path);
+        instance_.store(instance.release(), std::memory_order_release);
     });
 }
 
 MyINIConfig& MyINIConfig::GetInstance() {
-    return *instance_;
+    static MyINIConfig empty_instance;
+
+    MyINIConfig* instance = instance_.load(std::memory_order_acquire);
+    return instance != nullptr ? *instance : empty_instance;
+}
+
+bool MyINIConfig::IsInitialized() {
+    return instance_.load(std::memory_order_acquire) != nullptr;
 }
 
 bool MyINIConfig::Load(const std::string& path) {
@@ -22,10 +50,13 @@ bool MyINIConfig::Load(const std::string& path) {
 
     std::string line;
     while (std::getline(ifs, line)) {
-        if (line.empty() || line[0] == '#') continue;
-        auto pos = line.find('=');
+        const std::string trimmed_line = TrimCopy(line);
+        if (trimmed_line.empty() || trimmed_line[0] == '#' || trimmed_line[0] == ';') continue;
+
+        auto pos = trimmed_line.find('=');
         if (pos == std::string::npos) continue;
-        kv_[line.substr(0, pos)] = line.substr(pos + 1);
+
+        kv_[TrimCopy(trimmed_line.substr(0, pos))] = TrimCopy(trimmed_line.substr(pos + 1));
     }
     return true;
 }
