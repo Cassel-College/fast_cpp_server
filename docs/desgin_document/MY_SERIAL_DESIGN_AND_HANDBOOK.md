@@ -374,6 +374,8 @@ SerialSelfCheckResult SelfTestLoopback(const std::string& payload, size_t read_s
 
 ### 6.4 可选字符串枚举值
 
+> 兼容说明：除 `port` / `baudrate` / `bytesize` / `stopbits` / `flowcontrol` 外，当前也兼容 `device` / `baud_rate` / `data_bits` / `stop_bits` / `flow_control` 这组字段，便于直接接入现有设备配置。
+
 bytesize 支持：
 
 1. fivebits
