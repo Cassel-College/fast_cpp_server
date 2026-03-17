@@ -1,4 +1,5 @@
 #include "FlyControlFrame.h"
+#include "MyLog.h"
 
 #include <algorithm>
 #include <cstring>
@@ -69,6 +70,7 @@ void FrameParser::FeedData(const std::vector<uint8_t>& data) {
 
 void FrameParser::Reset() {
     buffer_.clear();
+    MYLOG_WARN("帧解析器已重置，缓冲区已清空");
 }
 
 size_t FrameParser::BufferSize() const {

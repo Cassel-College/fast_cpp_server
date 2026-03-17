@@ -1,7 +1,7 @@
 # MyFlyControl 飞控通信模块 — 设计文档与使用手册
 
-> 版本: 1.0  
-> 日期: 2026-03-16  
+> 版本: 1.1  
+> 日期: 2026-03-17  
 > 参考协议: 域控飞控通信协议v1.0_20260313
 
 ---
@@ -47,10 +47,15 @@ my_fly_control
 
 ## 2. 架构设计
 
-模块采用四层架构，自下而上：
+模块采用五层架构，自下而上：
 
 ```
 ┌─────────────────────────────────────┐
+│  管理层 (MyFlyControlManager)       │  ← 单例入口
+│  · GetInstance 全局唯一访问点        │
+│  · Init/Start/Stop/Shutdown         │
+│  · 生命周期守卫与实例重建           │
+├─────────────────────────────────────┤
 │  业务层 (MyFlyControl)              │  ← 对外接口
 │  · Init/Start/Stop 生命周期          │
 │  · SendSetRoute/GetLatestHeartbeat  │
@@ -118,6 +123,16 @@ my_fly_control
 - **状态缓存** — 维护最新心跳数据 `latest_hb_`，带 mutex 保护
 - **回调通知** — 支持注册心跳/回复/云台控制三种回调
 - **发送互斥** — 所有发送操作共享 `send_mutex_` 防止并发写串口
+
+### 3.4 管理层（MyFlyControlManager）
+
+**职责**：为应用层提供“单例风格”的统一入口，同时不破坏底层 `MyFlyControl` 的可实例化能力。
+
+**核心设计**：
+- **单例入口** — 通过 `GetInstance()` 提供进程内唯一访问点，便于业务层统一调用
+- **生命周期守卫** — 在 `Start()`、`Send*()` 前检查是否已经 `Init()`，给出更明确的错误信息
+- **安全重建** — `Shutdown()` 时停止旧对象并重建一个新的 `MyFlyControl`，清空旧回调和旧状态
+- **兼容扩展** — 上层若只需要一个飞控，使用 Manager；若后续需要多飞控，直接继续实例化 `MyFlyControl`
 
 ---
 
@@ -202,7 +217,25 @@ my_fly_control
 
 ## 6. 公共接口说明
 
-### 6.1 生命周期
+模块现在提供两套对外接口：
+
+- **MyFlyControlManager** — 推荐给应用层使用，单例入口更适合系统级调用
+- **MyFlyControl** — 推荐给库层或未来多飞控场景使用，保留多实例能力
+
+### 6.1 MyFlyControlManager 生命周期
+
+```cpp
+static MyFlyControlManager& GetInstance();
+
+bool Init(const nlohmann::json& cfg, std::string* err = nullptr);
+bool Start(std::string* err = nullptr);
+void Stop();
+void Shutdown();
+bool IsInitialized() const;
+bool IsRunning() const;
+```
+
+### 6.2 MyFlyControl 生命周期
 
 ```cpp
 // 初始化
@@ -218,7 +251,7 @@ void Stop();
 bool IsRunning() const;
 ```
 
-### 6.2 回调注册
+### 6.3 回调注册
 
 ```cpp
 void SetOnHeartbeat(HeartbeatCallback cb);       // 心跳更新
@@ -226,7 +259,9 @@ void SetOnCommandReply(CommandReplyCallback cb);  // 指令回复
 void SetOnGimbalControl(GimbalControlCallback cb);// 云台控制
 ```
 
-### 6.3 状态查询
+> 回调接口在 `MyFlyControlManager` 与 `MyFlyControl` 中保持一致，便于无缝切换。
+
+### 6.4 状态查询
 
 ```cpp
 HeartbeatData  GetLatestHeartbeat() const;      // 获取最新心跳
@@ -235,7 +270,7 @@ FaultBits      GetFaultBits() const;             // 故障位解析
 bool           HasHeartbeat() const;             // 是否收到过心跳
 ```
 
-### 6.4 发送指令
+### 6.5 发送指令
 
 ```cpp
 bool SendSetDestination(int32_t lon, int32_t lat, uint16_t alt, ...);
@@ -282,13 +317,71 @@ bool SendTargetState(const TargetStateData& data, ...);
 }
 ```
 
+也兼容设备侧常见写法：
+
+```json
+{
+    "device": "/dev/ttyS1",
+    "baud_rate": 115200,
+    "timeout_ms": 100,
+    "data_bits": 8,
+    "parity": "none",
+    "stop_bits": 1,
+    "flow_control": "none"
+}
+```
+
 > 飞控协议要求：1个起始位，8个数据位，1个停止位，无校验。上述配置与之匹配。
 
 ---
 
 ## 8. 使用示例
 
-### 8.1 基本使用
+### 8.1 推荐用法：通过管理器单例访问
+
+```cpp
+#include "MyFlyControlManager.h"
+
+using namespace fly_control;
+
+int main() {
+    auto& fc_mgr = MyFlyControlManager::GetInstance();
+
+    nlohmann::json cfg = {
+        {"port", "/dev/ttyS1"},
+        {"baudrate", 115200},
+        {"timeout_ms", 100},
+        {"auto_open", true}
+    };
+
+    std::string err;
+    if (!fc_mgr.Init(cfg, &err)) {
+        std::cerr << "初始化失败: " << err << std::endl;
+        return 1;
+    }
+
+    fc_mgr.SetOnHeartbeat([](const HeartbeatData& hb) {
+        printf("心跳: 星数=%d, 电量=%d%%\n", hb.satellite_count, hb.battery_percent);
+    });
+
+    if (!fc_mgr.Start(&err)) {
+        std::cerr << "启动失败: " << err << std::endl;
+        return 1;
+    }
+
+    fc_mgr.SendSetSpeed(2000);
+
+    if (fc_mgr.HasHeartbeat()) {
+        auto hb = fc_mgr.GetLatestHeartbeat();
+        printf("当前飞行状态=%u\n", hb.flight_state);
+    }
+
+    fc_mgr.Shutdown();
+    return 0;
+}
+```
+
+### 8.2 直接实例模式（高级用法）
 
 ```cpp
 #include "MyFlyControl.h"
@@ -356,7 +449,7 @@ int main() {
 }
 ```
 
-### 8.2 仅使用帧层和协议层（无需完整业务层）
+### 8.3 仅使用帧层和协议层（无需完整业务层）
 
 ```cpp
 #include "FlyControlFrame.h"
@@ -385,7 +478,7 @@ while (parser.PopFrame(pf)) {
 }
 ```
 
-### 8.3 故障信息解析
+### 8.4 故障信息解析
 
 ```cpp
 auto hb = fc.GetLatestHeartbeat();
@@ -445,6 +538,7 @@ target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE my_fly_control)
 |----------|----------|--------|----------|
 | `TestFlyControlFrame.cpp` | `FlyControlFrameTest` | 10 | 帧层：校验和、帧组装、拆帧、粘包、半包、脏数据 |
 | `TestFlyControlCodec.cpp` | `FlyControlCodecTest` | 13 | 编解码：心跳、各指令编解码回环、故障位、端到端 |
+| `TestMyFlyControlManager.cpp` | `MyFlyControlManagerTest` | 7 | 管理器：单例入口、生命周期守卫、Shutdown 重建 |
 
 ### 运行测试
 
@@ -543,10 +637,13 @@ src/util/my_fly_control/
 ├── FlyControlFrame.cpp         # 帧层实现（拆帧、组帧、校验）
 ├── FlyControlCodec.h           # 编解码层头文件
 ├── FlyControlCodec.cpp         # 编解码层实现
+├── MyFlyControlManager.h       # 管理层头文件（单例包装）
+├── MyFlyControlManager.cpp     # 管理层实现
 ├── MyFlyControl.h              # 业务层头文件
 └── MyFlyControl.cpp            # 业务层实现
 
 test/util/my_fly_control/
 ├── TestFlyControlFrame.cpp     # 帧层单元测试（10个）
-└── TestFlyControlCodec.cpp     # 编解码层单元测试（13个）
+├── TestFlyControlCodec.cpp     # 编解码层单元测试（13个）
+└── TestMyFlyControlManager.cpp # 管理层单元测试（7个）
 ```

@@ -22,7 +22,8 @@ MyFlyControl::~MyFlyControl() {
 bool MyFlyControl::Init(const nlohmann::json& cfg, std::string* err) {
     // 通过 MySerial 初始化串口
     if (!serial_.Init(cfg, err)) {
-        MYLOG_ERROR("飞控模块串口初始化失败");
+        MYLOG_ERROR("飞控模块串口初始化失败: {}",
+                    (err != nullptr && !err->empty()) ? *err : std::string("unknown error"));
         return false;
     }
     MYLOG_INFO("飞控模块串口初始化成功");
@@ -38,9 +39,12 @@ bool MyFlyControl::Start(std::string* err) {
     // 确保串口已打开
     if (!serial_.IsOpen()) {
         if (!serial_.Open(err)) {
-            MYLOG_ERROR("飞控模块串口打开失败");
+            MYLOG_ERROR("飞控模块串口打开失败: {}",
+                        (err != nullptr && !err->empty()) ? *err : std::string("unknown error"));
             return false;
         }
+    } else {
+        MYLOG_INFO("飞控模块串口已打开");
     }
 
     // 重置帧解析器

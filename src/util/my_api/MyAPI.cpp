@@ -4,6 +4,7 @@
 #include "controller/heartbeat_manager/HeartBeatController.h"
 #include "controller/script/ScriptController.h"
 #include "controller/soft_healthy/SoftHealthyController.h"
+#include "controller/fly_control/FlyControlController.h"
 
 #include "controller/demo/edges/EdgesController.hpp"
 #include "controller/demo/edge_manager/EdgeController.hpp"
@@ -21,18 +22,101 @@
 #include "oatpp/web/server/interceptor/RequestInterceptor.hpp"
 
 #include "BaseApiController.hpp"
-#include "oatpp/web/server/api/ApiController.hpp"
 #include "oatpp/core/macro/codegen.hpp"
 
 #include "MyINIConfig.h"
 #include "MyLog.h"
-#include <filesystem>
+#include <sys/stat.h>
 #include <vector>
 
 
 #include OATPP_CODEGEN_BEGIN(ApiController)
 
 namespace my_api {
+
+namespace {
+
+constexpr const char* kDefaultSwaggerResourceDir = "/home/cs/DockerRoot/fast_cpp_server/external/oatpp-swagger/res";
+
+class OatppEnvironmentGuard {
+public:
+    OatppEnvironmentGuard() {
+        oatpp::base::Environment::init();
+    }
+
+    ~OatppEnvironmentGuard() {
+        oatpp::base::Environment::destroy();
+    }
+};
+
+bool DirectoryExists(const std::string& directory) {
+    if (directory.empty()) {
+        return false;
+    }
+
+    struct stat info {};
+    return ::stat(directory.c_str(), &info) == 0 && S_ISDIR(info.st_mode);
+}
+
+std::string ResolveSwaggerResourceDir() {
+    const std::string default_dir = kDefaultSwaggerResourceDir;
+
+    if (!MyINIConfig::IsInitialized()) {
+        MYLOG_WARN("MyAPI: INI 配置尚未初始化，使用默认 Swagger 资源路径: {}", default_dir);
+        return default_dir;
+    }
+
+    try {
+        std::string configured_dir;
+        MyINIConfig::GetInstance().GetString("swagger_res_dir", "", configured_dir);
+
+        if (configured_dir.empty()) {
+            MYLOG_WARN("MyAPI: 配置项 swagger_res_dir 为空，使用默认路径: {}", default_dir);
+            return default_dir;
+        }
+
+        if (DirectoryExists(configured_dir)) {
+            MYLOG_INFO("MyAPI: 使用配置的 Swagger 资源路径: {}", configured_dir);
+            return configured_dir;
+        }
+
+        MYLOG_WARN("MyAPI: 配置的 swagger_res_dir 不存在或不是目录，使用默认路径: {}", default_dir);
+    } catch (const std::exception& e) {
+        MYLOG_WARN("MyAPI: 读取 swagger_res_dir 失败，使用默认路径: {}，error={}", default_dir, e.what());
+    } catch (...) {
+        MYLOG_WARN("MyAPI: 读取 swagger_res_dir 失败，使用默认路径: {}，error=unknown", default_dir);
+    }
+
+    return default_dir;
+}
+
+std::shared_ptr<oatpp::swagger::Resources> LoadSwaggerResources() {
+    const std::string default_dir = kDefaultSwaggerResourceDir;
+    const std::string selected_dir = ResolveSwaggerResourceDir();
+
+    try {
+        return oatpp::swagger::Resources::loadResources(selected_dir);
+    } catch (const std::exception& e) {
+        MYLOG_WARN("MyAPI: 加载 Swagger 资源失败，path={}, error={}", selected_dir, e.what());
+    } catch (...) {
+        MYLOG_WARN("MyAPI: 加载 Swagger 资源失败，path={}, error=unknown", selected_dir);
+    }
+
+    if (selected_dir != default_dir) {
+        try {
+            MYLOG_WARN("MyAPI: 尝试回退到默认 Swagger 资源路径: {}", default_dir);
+            return oatpp::swagger::Resources::loadResources(default_dir);
+        } catch (const std::exception& e) {
+            MYLOG_ERROR("MyAPI: 默认 Swagger 资源加载失败，path={}, error={}", default_dir, e.what());
+        } catch (...) {
+            MYLOG_ERROR("MyAPI: 默认 Swagger 资源加载失败，path={}, error=unknown", default_dir);
+        }
+    }
+
+    return nullptr;
+}
+
+} // namespace
 
 // --- 1. 定义 CORS 拦截器 ---
 class CorsInterceptor : public oatpp::web::server::interceptor::RequestInterceptor {
@@ -68,28 +152,11 @@ void MyAPI::Start(int port) {
 
 void MyAPI::ServerThread(int port) {
     MYLOG_INFO("MyAPI: 准备启动 REST 环境...");
-    oatpp::base::Environment::init();
+    OatppEnvironmentGuard environment_guard;
 
-    {
+    try {
         auto objectMapper = std::make_shared<oatpp::parser::json::mapping::ObjectMapper>();
-        std::string OATPP_SWAGGER_RES_PATH = "/home/cs/DockerRoot/fast_cpp_server/external/oatpp-swagger/res";
-        if (MyINIConfig::GetInstance().HasKey("swagger_res_dir")) {
-            std::string res_dir;
-            MyINIConfig::GetInstance().GetString("swagger_res_dir", "", res_dir);
-            if (res_dir.empty()) {
-                MYLOG_WARN("MyAPI: 配置项 swagger_res_dir 为空，使用默认路径: {}", OATPP_SWAGGER_RES_PATH);
-            }
-            // 判断路径是否存在
-            else {
-                if (std::filesystem::exists(res_dir)) {
-                    OATPP_SWAGGER_RES_PATH = res_dir;
-                    MYLOG_INFO("MyAPI: 使用配置的 Swagger 资源路径: {}", OATPP_SWAGGER_RES_PATH);
-                } else {
-                    MYLOG_WARN("MyAPI: 配置的 swagger_res_dir 路径不存在，使用默认路径: {}", OATPP_SWAGGER_RES_PATH);
-                }
-            }
-        }
-        auto swaggerResources = oatpp::swagger::Resources::loadResources(OATPP_SWAGGER_RES_PATH);
+        auto swaggerResources = LoadSwaggerResources();
 
         auto docInfo = oatpp::swagger::DocumentInfo::Builder()
             .setTitle("Fast C++ Server: API Server")
@@ -125,8 +192,16 @@ void MyAPI::ServerThread(int port) {
         router->addController(softHealthyController);
         docEndpoints.append(softHealthyController->getEndpoints());
 
-        auto swaggerController = oatpp::swagger::Controller::createShared(docEndpoints, docInfo, swaggerResources);
-        router->addController(swaggerController);
+        auto flyControlController = my_api::fly_control_api::FlyControlController::createShared(std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper));
+        router->addController(flyControlController);
+        docEndpoints.append(flyControlController->getEndpoints());
+
+        if (swaggerResources != nullptr) {
+            auto swaggerController = oatpp::swagger::Controller::createShared(docEndpoints, docInfo, swaggerResources);
+            router->addController(swaggerController);
+        } else {
+            MYLOG_WARN("MyAPI: Swagger 资源不可用，跳过 Swagger Controller 注册");
+        }
         // docEndpoints.append(swaggerController->getEndpoints());
 
         // using MyobjectMapper = oatpp::data::mapping::ObjectMapper;
@@ -163,9 +238,13 @@ void MyAPI::ServerThread(int port) {
 
         MYLOG_INFO("MyAPI: REST Server 已就绪: http://127.0.0.1:{}/swagger/ui", port);
         server.run([this](){ return is_running_.load(); }); 
+    } catch (const std::exception& e) {
+        MYLOG_ERROR("MyAPI: REST 线程启动失败: {}", e.what());
+    } catch (...) {
+        MYLOG_ERROR("MyAPI: REST 线程启动失败: unknown exception");
     }
 
-    oatpp::base::Environment::destroy();
+    is_running_.store(false);
 }
 
 void MyAPI::Stop() {

@@ -1,4 +1,5 @@
 #pragma once
+#include <atomic>
 #include <string>
 #include <map>
 #include <mutex>
@@ -7,6 +8,7 @@ class MyINIConfig {
 public:
     static void Init(const std::string& config_file_path);
     static MyINIConfig& GetInstance();
+    static bool IsInitialized();
 
     bool HasKey(const std::string& key) const;
     bool GetString(const std::string& key, const std::string& def, std::string& out) const;
@@ -20,7 +22,7 @@ private:
     MyINIConfig() = default;
     bool Load(const std::string& path);
 
-    static MyINIConfig* instance_;
+    static std::atomic<MyINIConfig*> instance_;
     static std::once_flag init_flag_;
 
     std::map<std::string, std::string> kv_;
