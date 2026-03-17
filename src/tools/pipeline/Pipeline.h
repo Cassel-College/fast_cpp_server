@@ -50,7 +50,8 @@ private:
     void LaunchMyMqttBroker(const nlohmann::json& args);
     void LaunchMQTTComm(const nlohmann::json& args);
     void LaunchSoftHealthyMonitor(const nlohmann::json& args);
-
+    void LaunchFlyControl(const nlohmann::json& args);
+    
     nlohmann::json config_data_;
     std::atomic<bool> is_running_;
     std::vector<std::thread> workers_;
