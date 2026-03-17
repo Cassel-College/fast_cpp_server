@@ -54,7 +54,9 @@ public:
     // -----------------------------------------------------------------------
 
     // 使用 JSON 配置初始化（包含串口配置）
-    // 配置示例：{ "port": "/dev/ttyS1", "baudrate": 115200, "timeout_ms": 100 }
+    // 兼容两套字段：
+    //   1. { "port": "/dev/ttyS1", "baudrate": 115200, "timeout_ms": 100 }
+    //   2. { "device": "/dev/ttyS1", "baud_rate": 115200, "data_bits": 8, "stop_bits": 1, "flow_control": "none" }
     bool Init(const nlohmann::json& cfg, std::string* err = nullptr);
 
     // 启动后台接收线程
