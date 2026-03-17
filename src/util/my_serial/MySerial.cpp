@@ -2,6 +2,7 @@
 
 #include <algorithm>
 #include <cctype>
+#include <limits>
 #include <stdexcept>
 
 #include "MyLog.h"
@@ -15,6 +16,102 @@ std::string NormalizeToken(const std::string& value) {
     std::transform(normalized.begin(), normalized.end(), normalized.begin(),
                    [](unsigned char ch) { return static_cast<char>(std::tolower(ch)); });
     return normalized;
+}
+
+std::string SafeJsonDump(const nlohmann::json& value) {
+    try {
+        return value.dump();
+    } catch (const std::exception& ex) {
+        return std::string("<json dump failed: ") + ex.what() + ">";
+    } catch (...) {
+        return "<json dump failed: unknown exception>";
+    }
+}
+
+std::string JsonValueToToken(const nlohmann::json& value, const char* field_name) {
+    if (value.is_string()) {
+        return NormalizeToken(value.get<std::string>());
+    }
+    if (value.is_number_unsigned()) {
+        return std::to_string(value.get<std::uint64_t>());
+    }
+    if (value.is_number_integer()) {
+        return std::to_string(value.get<std::int64_t>());
+    }
+    if (value.is_number_float()) {
+        return NormalizeToken(value.dump());
+    }
+    throw std::invalid_argument(std::string("serial config field '") + field_name + "' must be a string or number");
+}
+
+std::string GetRequiredPortValue(const nlohmann::json& cfg) {
+    for (const char* key : {"port", "device"}) {
+        if (!cfg.contains(key) || cfg.at(key).is_null()) {
+            continue;
+        }
+
+        if (!cfg.at(key).is_string()) {
+            throw std::invalid_argument(std::string("serial config field '") + key + "' must be a string");
+        }
+
+        const std::string port = cfg.at(key).get<std::string>();
+        if (!port.empty()) {
+            return port;
+        }
+    }
+
+    throw std::invalid_argument("serial config missing non-empty field: port/device");
+}
+
+uint32_t GetUint32Value(const nlohmann::json& cfg,
+                       std::initializer_list<const char*> keys,
+                       uint32_t default_value) {
+    for (const char* key : keys) {
+        if (!cfg.contains(key) || cfg.at(key).is_null()) {
+            continue;
+        }
+
+        const auto& value = cfg.at(key);
+        if (value.is_number_unsigned()) {
+            const auto parsed = value.get<std::uint64_t>();
+            if (parsed > static_cast<std::uint64_t>(std::numeric_limits<uint32_t>::max())) {
+                throw std::invalid_argument(std::string("serial config field '") + key + "' is out of uint32 range");
+            }
+            return static_cast<uint32_t>(parsed);
+        }
+
+        if (value.is_number_integer()) {
+            const auto parsed = value.get<std::int64_t>();
+            if (parsed < 0 || parsed > static_cast<std::int64_t>(std::numeric_limits<uint32_t>::max())) {
+                throw std::invalid_argument(std::string("serial config field '") + key + "' is out of uint32 range");
+            }
+            return static_cast<uint32_t>(parsed);
+        }
+
+        if (value.is_string()) {
+            const auto parsed = std::stoull(value.get<std::string>());
+            if (parsed > static_cast<unsigned long long>(std::numeric_limits<uint32_t>::max())) {
+                throw std::invalid_argument(std::string("serial config field '") + key + "' is out of uint32 range");
+            }
+            return static_cast<uint32_t>(parsed);
+        }
+
+        throw std::invalid_argument(std::string("serial config field '") + key + "' must be an unsigned integer");
+    }
+
+    return default_value;
+}
+
+std::string GetTokenValue(const nlohmann::json& cfg,
+                          std::initializer_list<const char*> keys,
+                          const std::string& default_value) {
+    for (const char* key : keys) {
+        if (!cfg.contains(key) || cfg.at(key).is_null()) {
+            continue;
+        }
+        return JsonValueToToken(cfg.at(key), key);
+    }
+    return NormalizeToken(default_value);
 }
 
 serial::Timeout BuildTimeout(const SerialInitOptions& options) {
@@ -63,35 +160,129 @@ MySerial::~MySerial() {
 bool MySerial::Init(const nlohmann::json& cfg, std::string* err) {
     std::lock_guard<std::mutex> lock(mutex_);
 
-    return ExecuteWithError(err, last_error_, [this, &cfg]() {
+    const std::string cfg_dump = SafeJsonDump(cfg);
+    const bool had_previous_serial = static_cast<bool>(serial_);
+    const bool previous_open = serial_ && serial_->isOpen();
+    const std::string previous_port = options_.port;
+
+    SerialInitOptions parsed_options;
+    bool options_parsed = false;
+    std::string current_step = "start";
+
+    try {
+        MYLOG_INFO("[MySerial] Begin Init, cfg={}", cfg.dump(4));
+
         if (serial_ && serial_->isOpen()) {
+            current_step = "close previous port";
+            MYLOG_WARN("[MySerial] Closing previously opened port before re-init: {}", options_.port);
             serial_->close();
         }
 
         initialized_ = false;
-        options_ = ParseOptions(cfg);
 
-        serial_ = std::make_unique<serial::Serial>();
-        serial_->setPort(options_.port);
-        serial_->setBaudrate(options_.baudrate);
+        current_step = "parse config";
+        parsed_options = ParseOptions(cfg);
+        options_parsed = true;
+        MYLOG_INFO(
+            "[MySerial] Parsed config: port={}, baudrate={}, timeout_ms={}, auto_open={}, bytesize={}, parity={}, stopbits={}, flowcontrol={}, inter_byte_timeout_ms={}, read_timeout_constant_ms={}, read_timeout_multiplier_ms={}, write_timeout_constant_ms={}, write_timeout_multiplier_ms={}",
+            parsed_options.port,
+            parsed_options.baudrate,
+            parsed_options.timeout_ms,
+            parsed_options.auto_open ? "true" : "false",
+            parsed_options.bytesize,
+            parsed_options.parity,
+            parsed_options.stopbits,
+            parsed_options.flowcontrol,
+            parsed_options.inter_byte_timeout_ms,
+            parsed_options.read_timeout_constant_ms,
+            parsed_options.read_timeout_multiplier_ms,
+            parsed_options.write_timeout_constant_ms,
+            parsed_options.write_timeout_multiplier_ms);
 
-        serial::Timeout timeout = BuildTimeout(options_);
-        serial_->setTimeout(timeout);
-        serial_->setBytesize(ParseBytesize(options_.bytesize));
-        serial_->setParity(ParseParity(options_.parity));
-        serial_->setStopbits(ParseStopbits(options_.stopbits));
-        serial_->setFlowcontrol(ParseFlowcontrol(options_.flowcontrol));
+        current_step = "create serial instance";
+        auto new_serial = std::make_unique<serial::Serial>();
+        MYLOG_INFO("[MySerial] serial::Serial instance created, preparing low-level configuration");
 
-        MYLOG_INFO("[MySerial] Init success: port={}, baudrate={}, auto_open={}",
-                   options_.port, options_.baudrate, options_.auto_open ? "true" : "false");
+        current_step = "apply basic port settings";
+        new_serial->setPort(parsed_options.port);
+        new_serial->setBaudrate(parsed_options.baudrate);
 
-        if (options_.auto_open) {
-            serial_->open();
-            MYLOG_INFO("[MySerial] Port opened during Init: {}", options_.port);
+        current_step = "apply timeout settings";
+        serial::Timeout timeout = BuildTimeout(parsed_options);
+        new_serial->setTimeout(timeout);
+
+        current_step = "apply line settings";
+        new_serial->setBytesize(ParseBytesize(parsed_options.bytesize));
+        new_serial->setParity(ParseParity(parsed_options.parity));
+        new_serial->setStopbits(ParseStopbits(parsed_options.stopbits));
+        new_serial->setFlowcontrol(ParseFlowcontrol(parsed_options.flowcontrol));
+
+        if (parsed_options.auto_open) {
+            current_step = "auto open port";
+            MYLOG_INFO("[MySerial] auto_open=true, trying to open port: {}", parsed_options.port);
+            new_serial->open();
+            MYLOG_INFO("[MySerial] Port opened during Init: {}", parsed_options.port);
+        } else {
+            MYLOG_INFO("[MySerial] auto_open=false, skip opening port during Init: {}", parsed_options.port);
         }
 
+        current_step = "commit initialized state";
+        serial_ = std::move(new_serial);
+        options_ = parsed_options;
         initialized_ = true;
-    });
+        last_error_.clear();
+
+        if (err != nullptr) {
+            err->clear();
+        }
+
+        MYLOG_INFO("[MySerial] Init success: port={}, baudrate={}, auto_open={}, initialized=true",
+                   options_.port,
+                   options_.baudrate,
+                   options_.auto_open ? "true" : "false");
+        return true;
+    } catch (const std::exception& ex) {
+        initialized_ = false;
+        serial_.reset();
+        options_ = SerialInitOptions{};
+        last_error_ = ex.what();
+        if (err != nullptr) {
+            *err = last_error_;
+        }
+
+        MYLOG_ERROR(
+            "[MySerial] Init failed at step='{}', error='{}', cfg={}, had_previous_serial={}, previous_open={}, previous_port={}, parsed_ok={}, parsed_port={}, parsed_baudrate={}, parsed_auto_open={}",
+            current_step,
+            ex.what(),
+            cfg_dump,
+            had_previous_serial ? "true" : "false",
+            previous_open ? "true" : "false",
+            previous_port.empty() ? "<empty>" : previous_port,
+            options_parsed ? "true" : "false",
+            options_parsed ? parsed_options.port : std::string("<unparsed>"),
+            options_parsed ? std::to_string(parsed_options.baudrate) : std::string("<unparsed>"),
+            options_parsed ? (parsed_options.auto_open ? "true" : "false") : std::string("<unparsed>"));
+        return false;
+    } catch (...) {
+        initialized_ = false;
+        serial_.reset();
+        options_ = SerialInitOptions{};
+        last_error_ = "unknown exception";
+        if (err != nullptr) {
+            *err = last_error_;
+        }
+
+        MYLOG_ERROR(
+            "[MySerial] Init failed at step='{}' with unknown exception, cfg={}, had_previous_serial={}, previous_open={}, previous_port={}, parsed_ok={}, parsed_port={}",
+            current_step,
+            cfg_dump,
+            had_previous_serial ? "true" : "false",
+            previous_open ? "true" : "false",
+            previous_port.empty() ? "<empty>" : previous_port,
+            options_parsed ? "true" : "false",
+            options_parsed ? parsed_options.port : std::string("<unparsed>"));
+        return false;
+    }
 }
 
 bool MySerial::Open(std::string* err) {
@@ -345,22 +536,18 @@ SerialInitOptions MySerial::ParseOptions(const nlohmann::json& cfg) {
     }
 
     SerialInitOptions options;
-    options.port = cfg.value("port", std::string());
-    if (options.port.empty()) {
-        throw std::invalid_argument("serial config missing non-empty field: port");
-    }
-
-    options.baudrate = cfg.value("baudrate", options.baudrate);
-    options.timeout_ms = cfg.value("timeout_ms", options.timeout_ms);
-    options.inter_byte_timeout_ms = cfg.value("inter_byte_timeout_ms", options.inter_byte_timeout_ms);
-    options.read_timeout_constant_ms = cfg.value("read_timeout_constant_ms", options.timeout_ms);
-    options.read_timeout_multiplier_ms = cfg.value("read_timeout_multiplier_ms", options.read_timeout_multiplier_ms);
-    options.write_timeout_constant_ms = cfg.value("write_timeout_constant_ms", options.timeout_ms);
-    options.write_timeout_multiplier_ms = cfg.value("write_timeout_multiplier_ms", options.write_timeout_multiplier_ms);
-    options.bytesize = NormalizeToken(cfg.value("bytesize", options.bytesize));
-    options.parity = NormalizeToken(cfg.value("parity", options.parity));
-    options.stopbits = NormalizeToken(cfg.value("stopbits", options.stopbits));
-    options.flowcontrol = NormalizeToken(cfg.value("flowcontrol", options.flowcontrol));
+    options.port = GetRequiredPortValue(cfg);
+    options.baudrate = GetUint32Value(cfg, {"baudrate", "baud_rate"}, options.baudrate);
+    options.timeout_ms = GetUint32Value(cfg, {"timeout_ms"}, options.timeout_ms);
+    options.inter_byte_timeout_ms = GetUint32Value(cfg, {"inter_byte_timeout_ms"}, options.inter_byte_timeout_ms);
+    options.read_timeout_constant_ms = GetUint32Value(cfg, {"read_timeout_constant_ms"}, options.timeout_ms);
+    options.read_timeout_multiplier_ms = GetUint32Value(cfg, {"read_timeout_multiplier_ms"}, options.read_timeout_multiplier_ms);
+    options.write_timeout_constant_ms = GetUint32Value(cfg, {"write_timeout_constant_ms"}, options.timeout_ms);
+    options.write_timeout_multiplier_ms = GetUint32Value(cfg, {"write_timeout_multiplier_ms"}, options.write_timeout_multiplier_ms);
+    options.bytesize = ToString(ParseBytesize(GetTokenValue(cfg, {"bytesize", "data_bits"}, options.bytesize)));
+    options.parity = ToString(ParseParity(GetTokenValue(cfg, {"parity"}, options.parity)));
+    options.stopbits = ToString(ParseStopbits(GetTokenValue(cfg, {"stopbits", "stop_bits"}, options.stopbits)));
+    options.flowcontrol = ToString(ParseFlowcontrol(GetTokenValue(cfg, {"flowcontrol", "flow_control"}, options.flowcontrol)));
     options.auto_open = cfg.value("auto_open", options.auto_open);
     return options;
 }
