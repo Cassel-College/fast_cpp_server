@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_api/controller/fly_control/FlyControlController.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_f1ee40842c724b3bf8a04800f5f521a7.html">my_api</a></li><li class="navelem"><a class="el" href="dir_6ef159f9932051522d309704773cf407.html">controller</a></li><li class="navelem"><a class="el" href="dir_fdbd4f83742e3ce46f81330c34f8bc22.html">fly_control</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">FlyControlController.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="FlyControlController_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="BaseApiController_8hpp.html">BaseApiController.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;oatpp/core/macro/codegen.hpp&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;oatpp/web/server/api/ApiController.hpp&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__api_1_1fly__control__api.html">my_api::fly_control_api</a> {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include OATPP_CODEGEN_BEGIN(ApiController)</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classmy__api_1_1fly__control__api_1_1FlyControlController.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__api_1_1fly__control__api_1_1FlyControlController.html">FlyControlController</a> : <span class="keyword">public</span> <a class="code hl_class" href="classmy__api_1_1base_1_1BaseApiController.html">base::BaseApiController</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="classmy__api_1_1fly__control__api_1_1FlyControlController.html">FlyControlController</a>(<span class="keyword">const</span> std::shared_ptr&lt;ObjectMapper&gt;&amp; objectMapper);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">static</span> std::shared_ptr&lt;FlyControlController&gt; <a class="code hl_function" href="classmy__api_1_1fly__control__api_1_1FlyControlController.html#ac8edf5e0129425043ea2d38b8cae8cb8">createShared</a>(<span class="keyword">const</span> std::shared_ptr&lt;ObjectMapper&gt;&amp; objectMapper);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="}">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classmy__api_1_1fly__control__api_1_1FlyControlController.html#a3eeea3e02f105d0ba140607f5f18ad5b">   17</a></span>    <a class="code hl_function" href="classmy__api_1_1fly__control__api_1_1FlyControlController.html#a3eeea3e02f105d0ba140607f5f18ad5b">ENDPOINT_INFO</a>(getFlyControlOnline) {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        info-&gt;summary = <span class="stringliteral">&quot;飞控 API 在线检查&quot;</span>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        info-&gt;description = <span class="stringliteral">&quot;检查飞控 API 控制器是否可访问。&quot;</span>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_200, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    }</div>
+</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classmy__api_1_1fly__control__api_1_1FlyControlController.html#a82f7bb86c68ad639ed2a7d0e50d2af31">   22</a></span>    <a class="code hl_function" href="classmy__api_1_1fly__control__api_1_1FlyControlController.html#a82f7bb86c68ad639ed2a7d0e50d2af31">ENDPOINT</a>(<span class="stringliteral">&quot;GET&quot;</span>, <span class="stringliteral">&quot;/v1/flycontrol/online&quot;</span>, getFlyControlOnline);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="}">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classmy__api_1_1fly__control__api_1_1FlyControlController.html#aa802c3290984798960eb83dd4d842860">   24</a></span>    <a class="code hl_function" href="classmy__api_1_1fly__control__api_1_1FlyControlController.html#aa802c3290984798960eb83dd4d842860">ENDPOINT_INFO</a>(getFlyControlStatus) {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        info-&gt;summary = <span class="stringliteral">&quot;获取飞控状态与数据&quot;</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        info-&gt;description = <span class="stringliteral">&quot;返回飞控管理器初始化状态、运行状态、是否收到心跳，以及最近一次飞控心跳数据。&quot;</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_200, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
+</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classmy__api_1_1fly__control__api_1_1FlyControlController.html#a20323519c2e81207307927e8b31b51c2">   29</a></span>    <a class="code hl_function" href="classmy__api_1_1fly__control__api_1_1FlyControlController.html#a20323519c2e81207307927e8b31b51c2">ENDPOINT</a>(<span class="stringliteral">&quot;GET&quot;</span>, <span class="stringliteral">&quot;/v1/flycontrol/status&quot;</span>, getFlyControlStatus);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classmy__api_1_1fly__control__api_1_1FlyControlController.html#af8bac1c475f3833afd1ffa23aee0796a">   31</a></span>    <a class="code hl_function" href="classmy__api_1_1fly__control__api_1_1FlyControlController.html#af8bac1c475f3833afd1ffa23aee0796a">ENDPOINT_INFO</a>(getFlyControlHeartbeatData) {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        info-&gt;summary = <span class="stringliteral">&quot;获取最新飞控心跳 JSON&quot;</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        info-&gt;description = <span class="stringliteral">&quot;返回最新飞控心跳数据。若尚未收到心跳，会返回 has_heartbeat=false。&quot;</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_200, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    }</div>
+</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classmy__api_1_1fly__control__api_1_1FlyControlController.html#a139ad9e0ba695fb3abcdb11f6f3e3f27">   36</a></span>    <a class="code hl_function" href="classmy__api_1_1fly__control__api_1_1FlyControlController.html#a139ad9e0ba695fb3abcdb11f6f3e3f27">ENDPOINT</a>(<span class="stringliteral">&quot;GET&quot;</span>, <span class="stringliteral">&quot;/v1/flycontrol/getHeartbeatJsonData&quot;</span>, getFlyControlHeartbeatData);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>};</div>
+</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#include OATPP_CODEGEN_END(ApiController)</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>} <span class="comment">// namespace my_api::fly_control_api</span></div>
+<div class="ttc" id="aBaseApiController_8hpp_html"><div class="ttname"><a href="BaseApiController_8hpp.html">BaseApiController.hpp</a></div></div>
+<div class="ttc" id="aclassmy__api_1_1base_1_1BaseApiController_html"><div class="ttname"><a href="classmy__api_1_1base_1_1BaseApiController.html">my_api::base::BaseApiController</a></div><div class="ttdef"><b>Definition</b> BaseApiController.hpp:13</div></div>
+<div class="ttc" id="aclassmy__api_1_1fly__control__api_1_1FlyControlController_html"><div class="ttname"><a href="classmy__api_1_1fly__control__api_1_1FlyControlController.html">my_api::fly_control_api::FlyControlController</a></div><div class="ttdef"><b>Definition</b> FlyControlController.h:11</div></div>
+<div class="ttc" id="aclassmy__api_1_1fly__control__api_1_1FlyControlController_html_a139ad9e0ba695fb3abcdb11f6f3e3f27"><div class="ttname"><a href="classmy__api_1_1fly__control__api_1_1FlyControlController.html#a139ad9e0ba695fb3abcdb11f6f3e3f27">my_api::fly_control_api::FlyControlController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;GET&quot;, &quot;/v1/flycontrol/getHeartbeatJsonData&quot;, getFlyControlHeartbeatData)</div></div>
+<div class="ttc" id="aclassmy__api_1_1fly__control__api_1_1FlyControlController_html_a20323519c2e81207307927e8b31b51c2"><div class="ttname"><a href="classmy__api_1_1fly__control__api_1_1FlyControlController.html#a20323519c2e81207307927e8b31b51c2">my_api::fly_control_api::FlyControlController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;GET&quot;, &quot;/v1/flycontrol/status&quot;, getFlyControlStatus)</div></div>
+<div class="ttc" id="aclassmy__api_1_1fly__control__api_1_1FlyControlController_html_a3eeea3e02f105d0ba140607f5f18ad5b"><div class="ttname"><a href="classmy__api_1_1fly__control__api_1_1FlyControlController.html#a3eeea3e02f105d0ba140607f5f18ad5b">my_api::fly_control_api::FlyControlController::ENDPOINT_INFO</a></div><div class="ttdeci">ENDPOINT_INFO(getFlyControlOnline)</div><div class="ttdef"><b>Definition</b> FlyControlController.h:17</div></div>
+<div class="ttc" id="aclassmy__api_1_1fly__control__api_1_1FlyControlController_html_a82f7bb86c68ad639ed2a7d0e50d2af31"><div class="ttname"><a href="classmy__api_1_1fly__control__api_1_1FlyControlController.html#a82f7bb86c68ad639ed2a7d0e50d2af31">my_api::fly_control_api::FlyControlController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;GET&quot;, &quot;/v1/flycontrol/online&quot;, getFlyControlOnline)</div></div>
+<div class="ttc" id="aclassmy__api_1_1fly__control__api_1_1FlyControlController_html_aa802c3290984798960eb83dd4d842860"><div class="ttname"><a href="classmy__api_1_1fly__control__api_1_1FlyControlController.html#aa802c3290984798960eb83dd4d842860">my_api::fly_control_api::FlyControlController::ENDPOINT_INFO</a></div><div class="ttdeci">ENDPOINT_INFO(getFlyControlStatus)</div><div class="ttdef"><b>Definition</b> FlyControlController.h:24</div></div>
+<div class="ttc" id="aclassmy__api_1_1fly__control__api_1_1FlyControlController_html_ac8edf5e0129425043ea2d38b8cae8cb8"><div class="ttname"><a href="classmy__api_1_1fly__control__api_1_1FlyControlController.html#ac8edf5e0129425043ea2d38b8cae8cb8">my_api::fly_control_api::FlyControlController::createShared</a></div><div class="ttdeci">static std::shared_ptr&lt; FlyControlController &gt; createShared(const std::shared_ptr&lt; ObjectMapper &gt; &amp;objectMapper)</div><div class="ttdef"><b>Definition</b> FlyControlController.cpp:51</div></div>
+<div class="ttc" id="aclassmy__api_1_1fly__control__api_1_1FlyControlController_html_af8bac1c475f3833afd1ffa23aee0796a"><div class="ttname"><a href="classmy__api_1_1fly__control__api_1_1FlyControlController.html#af8bac1c475f3833afd1ffa23aee0796a">my_api::fly_control_api::FlyControlController::ENDPOINT_INFO</a></div><div class="ttdeci">ENDPOINT_INFO(getFlyControlHeartbeatData)</div><div class="ttdef"><b>Definition</b> FlyControlController.h:31</div></div>
+<div class="ttc" id="anamespacemy__api_1_1fly__control__api_html"><div class="ttname"><a href="namespacemy__api_1_1fly__control__api.html">my_api::fly_control_api</a></div><div class="ttdef"><b>Definition</b> FlyControlController.cpp:6</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

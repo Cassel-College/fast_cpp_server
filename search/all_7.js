@@ -4,7 +4,7 @@ var searchData=
   ['handler_1',['handler',['../namespacemy__mqtt.html#a02e0f589c5b1c3c1789627e8cc4f0d5c',1,'my_mqtt::Handler'],['../structmy__mqtt_1_1Route.html#a57d71e19104af6fa1574d8267a940023',1,'my_mqtt::Route::handler']]],
   ['has_5fhb_5f_2',['has_hb_',['../classfly__control_1_1MyFlyControl.html#a52413a39ddabf06b30aa1441f7bb3b9a',1,'fly_control::MyFlyControl']]],
   ['hasedge_3',['HasEdge',['../classmy__edge_1_1MyEdges.html#a854fe8569df85e2931fabfe24c288e82',1,'my_edge::MyEdges']]],
-  ['hasheartbeat_4',['HasHeartbeat',['../classfly__control_1_1MyFlyControl.html#a9c513abc7b4f8b42ad47df017f1b28a2',1,'fly_control::MyFlyControl']]],
+  ['hasheartbeat_4',['hasheartbeat',['../classfly__control_1_1MyFlyControl.html#a9c513abc7b4f8b42ad47df017f1b28a2',1,'fly_control::MyFlyControl::HasHeartbeat()'],['../classfly__control_1_1MyFlyControlManager.html#a9c513abc7b4f8b42ad47df017f1b28a2',1,'fly_control::MyFlyControlManager::HasHeartbeat()']]],
   ['haskey_5',['HasKey',['../classMyINIConfig.html#aff6a634c325aa4fdd26828f47811157f',1,'MyINIConfig']]],
   ['hb_5fmutex_5f_6',['hb_mutex_',['../classfly__control_1_1MyFlyControl.html#adba3dcdec530d7b246d42bd8279483ed',1,'fly_control::MyFlyControl']]],
   ['heading_7',['heading',['../classmy__edge_1_1MyMavVehicle.html#ac5682e48513a771560df50e3b213e61a',1,'my_edge::MyMavVehicle::heading'],['../structmy__edge_1_1MavVehicleStatus.html#ac5682e48513a771560df50e3b213e61a',1,'my_edge::MavVehicleStatus::heading']]],

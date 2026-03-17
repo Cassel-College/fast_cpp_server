@@ -23,13 +23,14 @@ var searchData=
   ['myedgemanager_20',['MyEdgeManager',['../classedge__manager_1_1MyEdgeManager.html#a57b546fa3dde8c753e8145838f440116',1,'edge_manager::MyEdgeManager']]],
   ['myedges_21',['myedges',['../classmy__edge_1_1MyEdges.html#a755cae61f47bc697cb8a005b8f736a7c',1,'my_edge::MyEdges::MyEdges(const MyEdges &amp;)=delete'],['../classmy__edge_1_1MyEdges.html#af70cc1d4dfff09fb5fa79aa3eaf9c82a',1,'my_edge::MyEdges::MyEdges()=default']]],
   ['myflycontrol_22',['MyFlyControl',['../classfly__control_1_1MyFlyControl.html#a941d136c5beb95080f2b8714e5247c11',1,'fly_control::MyFlyControl']]],
-  ['myiniconfig_23',['MyINIConfig',['../classMyINIConfig.html#a32fddfe19cf7b2fe08489d3278b742af',1,'MyINIConfig']]],
-  ['myjsonconfig_24',['MyJSONConfig',['../classMyJSONConfig.html#a1dd192bb829c3c041b29da6d11360595',1,'MyJSONConfig']]],
-  ['mymavvehicle_25',['MyMavVehicle',['../classmy__edge_1_1MyMavVehicle.html#ab700ef3c9cb00c71da8d7933acfe4176',1,'my_edge::MyMavVehicle']]],
-  ['mymqttbrokermanager_26',['MyMqttBrokerManager',['../classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#af1cdeea2f9db7ffdf0852207c87f1283',1,'my_mqtt_broker_manager::MyMqttBrokerManager']]],
-  ['myscriptcontroller_27',['MyScriptController',['../classmy__api_1_1my__script__api_1_1MyScriptController.html#a4148fcd0ebc0ca6136f7d9b72aacf0b3',1,'my_api::my_script_api::MyScriptController']]],
-  ['myscriptmanager_28',['myscriptmanager',['../classmy__script_1_1MyScriptManager.html#ad8d861dbdbea41b7a3606a7f55cb37e5',1,'my_script::MyScriptManager::MyScriptManager()'],['../classmy__script_1_1MyScriptManager.html#a1ea123f80730663fbb928d5368bfd5d8',1,'my_script::MyScriptManager::MyScriptManager(const MyScriptManager &amp;)=delete']]],
-  ['myserial_29',['MySerial',['../classmy__serial_1_1MySerial.html#a1cf7c5b16934eac609fc5ce6dbf8c76f',1,'my_serial::MySerial']]],
-  ['mysystemhealthymanager_30',['MySystemHealthyManager',['../classMySystemHealthy_1_1MySystemHealthyManager.html#a476947e3d41da37fe3c6d7ce9d668cc8',1,'MySystemHealthy::MySystemHealthyManager']]],
-  ['myyamlconfig_31',['MyYAMLConfig',['../classMyYAMLConfig.html#aaba4bb4d685230dd3a74990721264d05',1,'MyYAMLConfig']]]
+  ['myflycontrolmanager_23',['myflycontrolmanager',['../classfly__control_1_1MyFlyControlManager.html#a920a1ab69a1696ca6f420f3cde22c8dd',1,'fly_control::MyFlyControlManager::MyFlyControlManager(const MyFlyControlManager &amp;)=delete'],['../classfly__control_1_1MyFlyControlManager.html#ae845191cf275f36f0d9989c0665f513e',1,'fly_control::MyFlyControlManager::MyFlyControlManager()']]],
+  ['myiniconfig_24',['MyINIConfig',['../classMyINIConfig.html#a32fddfe19cf7b2fe08489d3278b742af',1,'MyINIConfig']]],
+  ['myjsonconfig_25',['MyJSONConfig',['../classMyJSONConfig.html#a1dd192bb829c3c041b29da6d11360595',1,'MyJSONConfig']]],
+  ['mymavvehicle_26',['MyMavVehicle',['../classmy__edge_1_1MyMavVehicle.html#ab700ef3c9cb00c71da8d7933acfe4176',1,'my_edge::MyMavVehicle']]],
+  ['mymqttbrokermanager_27',['MyMqttBrokerManager',['../classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#af1cdeea2f9db7ffdf0852207c87f1283',1,'my_mqtt_broker_manager::MyMqttBrokerManager']]],
+  ['myscriptcontroller_28',['MyScriptController',['../classmy__api_1_1my__script__api_1_1MyScriptController.html#a4148fcd0ebc0ca6136f7d9b72aacf0b3',1,'my_api::my_script_api::MyScriptController']]],
+  ['myscriptmanager_29',['myscriptmanager',['../classmy__script_1_1MyScriptManager.html#ad8d861dbdbea41b7a3606a7f55cb37e5',1,'my_script::MyScriptManager::MyScriptManager()'],['../classmy__script_1_1MyScriptManager.html#a1ea123f80730663fbb928d5368bfd5d8',1,'my_script::MyScriptManager::MyScriptManager(const MyScriptManager &amp;)=delete']]],
+  ['myserial_30',['MySerial',['../classmy__serial_1_1MySerial.html#a1cf7c5b16934eac609fc5ce6dbf8c76f',1,'my_serial::MySerial']]],
+  ['mysystemhealthymanager_31',['MySystemHealthyManager',['../classMySystemHealthy_1_1MySystemHealthyManager.html#a476947e3d41da37fe3c6d7ce9d668cc8',1,'MySystemHealthy::MySystemHealthyManager']]],
+  ['myyamlconfig_32',['MyYAMLConfig',['../classMyYAMLConfig.html#aaba4bb4d685230dd3a74990721264d05',1,'MyYAMLConfig']]]
 ];

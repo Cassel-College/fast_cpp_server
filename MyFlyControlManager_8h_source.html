@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_fly_control/MyFlyControlManager.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_f5c578bdcde1d27f65b76914db68bede.html">my_fly_control</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">MyFlyControlManager.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="MyFlyControlManager_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;nlohmann/json.hpp&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="MyFlyControl_8h.html">MyFlyControl.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">// =============================================================================</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// MyFlyControlManager — 飞控管理器（单例包装层）</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">//</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">// 设计目的：</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">//   1. 为上层业务提供全局唯一入口，避免在业务代码中到处传递 MyFlyControl 对象</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">//   2. 保留 MyFlyControl 自身的可实例化能力，不把底层通信对象强行改造成单例</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">//   3. 提供统一的生命周期管理：Init / Start / Stop / Shutdown</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">//   4. 在 Shutdown 时重建底层对象，清空旧回调和旧状态，方便重初始化与测试</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">//</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">// 使用建议：</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">//   - 应用层优先使用 MyFlyControlManager::GetInstance()</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">//   - 若未来存在多飞控、多串口、多实例需求，直接继续使用 MyFlyControl 即可</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">// =============================================================================</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacefly__control.html">fly_control</a> {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classfly__control_1_1MyFlyControlManager.html">   28</a></span><span class="keyword">class </span><a class="code hl_class" href="classfly__control_1_1MyFlyControlManager.html">MyFlyControlManager</a> {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment">// 获取管理器单例</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">static</span> <a class="code hl_class" href="classfly__control_1_1MyFlyControlManager.html">MyFlyControlManager</a>&amp; <a class="code hl_function" href="classfly__control_1_1MyFlyControlManager.html#af7f5d1c4ba1e300fa172520b23f311d5">GetInstance</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classfly__control_1_1MyFlyControlManager.html#a920a1ab69a1696ca6f420f3cde22c8dd">   33</a></span>    <a class="code hl_function" href="classfly__control_1_1MyFlyControlManager.html#a920a1ab69a1696ca6f420f3cde22c8dd">MyFlyControlManager</a>(<span class="keyword">const</span> <a class="code hl_class" href="classfly__control_1_1MyFlyControlManager.html">MyFlyControlManager</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classfly__control_1_1MyFlyControlManager.html#a3a2a1af6075ff0fac64ca21e4b97fdd1">   34</a></span>    <a class="code hl_class" href="classfly__control_1_1MyFlyControlManager.html">MyFlyControlManager</a>&amp; <a class="code hl_function" href="classfly__control_1_1MyFlyControlManager.html#a3a2a1af6075ff0fac64ca21e4b97fdd1">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classfly__control_1_1MyFlyControlManager.html">MyFlyControlManager</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="comment">// -----------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="comment">// 生命周期管理</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="comment">// -----------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="comment">// 初始化底层飞控对象</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classfly__control_1_1MyFlyControlManager.html#aa0945f28ef057669b73101c9baf0acce">Init</a>(<span class="keyword">const</span> nlohmann::json&amp; cfg, std::string* err = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="comment">// 启动底层飞控对象的接收线程</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classfly__control_1_1MyFlyControlManager.html#aaa026fa3d78ab4300f384dfa50212a2f">Start</a>(std::string* err = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="comment">// 停止底层飞控对象</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classfly__control_1_1MyFlyControlManager.html#a17a237457e57625296e6b24feb19c60a">Stop</a>();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="comment">// 完整关闭管理器，并重建一个全新的底层飞控对象</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classfly__control_1_1MyFlyControlManager.html#ac5f038c2b480cf9ef5e19e3eba8dbaf9">Shutdown</a>();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="comment">// 是否已经完成成功初始化</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classfly__control_1_1MyFlyControlManager.html#a475d2bd8072f3c9df7b37581c4f1eca4">IsInitialized</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="comment">// 是否正在运行</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classfly__control_1_1MyFlyControlManager.html#ad201152b05beda61e51e3594ff07c8fe">IsRunning</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="comment">// -----------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="comment">// 回调注册</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="comment">// -----------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classfly__control_1_1MyFlyControlManager.html#a8c0be653382e75f0c32b46ebc7e7a9f6">SetOnHeartbeat</a>(<a class="code hl_typedef" href="namespacefly__control.html#af71abba518af4cff12d6a42e4d5a98b9">HeartbeatCallback</a> cb);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classfly__control_1_1MyFlyControlManager.html#ab41b042f2e0bf7d26e22a5a9ee885bfa">SetOnCommandReply</a>(<a class="code hl_typedef" href="namespacefly__control.html#ad91c5f606db2e010abbe7fc28b89ca13">CommandReplyCallback</a> cb);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classfly__control_1_1MyFlyControlManager.html#ac979d36d841918a4ac6a3980b89044ff">SetOnGimbalControl</a>(<a class="code hl_typedef" href="namespacefly__control.html#afe3612e82a5e5ba7aa43f5a633270cb3">GimbalControlCallback</a> cb);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="comment">// -----------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="comment">// 状态查询</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="comment">// -----------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <a class="code hl_struct" href="structfly__control_1_1HeartbeatData.html">HeartbeatData</a> <a class="code hl_function" href="classfly__control_1_1MyFlyControlManager.html#ae4cd0445d97ce59d1155940edb5f5671">GetLatestHeartbeat</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    nlohmann::json <a class="code hl_function" href="classfly__control_1_1MyFlyControlManager.html#a4217f69bcf1a32846d2f043eb6bba79d">GetLatestHeartbeatJson</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <a class="code hl_struct" href="structfly__control_1_1FaultBits.html">FaultBits</a> <a class="code hl_function" href="classfly__control_1_1MyFlyControlManager.html#a284bc9083e96c77b79374ca531cbe9fe">GetFaultBits</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classfly__control_1_1MyFlyControlManager.html#a9c513abc7b4f8b42ad47df017f1b28a2">HasHeartbeat</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="comment">// -----------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="comment">// 指令发送（对 MyFlyControl 的统一转发）</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="comment">// -----------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classfly__control_1_1MyFlyControlManager.html#a21d1a0d1204cba505ebe5ff489f4d70c">SendSetDestination</a>(int32_t lon, int32_t lat, uint16_t alt, std::string* err = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classfly__control_1_1MyFlyControlManager.html#ab414d26342218c206e8e8033b6271504">SendSetRoute</a>(<span class="keyword">const</span> std::vector&lt;RoutePoint&gt;&amp; points, std::string* err = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classfly__control_1_1MyFlyControlManager.html#a3891bdac9cabaa5e3e19d737c916d79a">SendSetAngle</a>(int16_t pitch, uint16_t yaw, std::string* err = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classfly__control_1_1MyFlyControlManager.html#a408a6e9de96d5efcf349b40b6c5abdcc">SendSetSpeed</a>(uint16_t speed, std::string* err = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classfly__control_1_1MyFlyControlManager.html#a167465d40856c9f07698562517b55cce">SendSetAltitude</a>(uint8_t alt_type, uint16_t altitude, std::string* err = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classfly__control_1_1MyFlyControlManager.html#a1aacfb712a84793da4c4275b833b005a">SendPowerSwitch</a>(uint8_t command, std::string* err = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classfly__control_1_1MyFlyControlManager.html#a5cbf33753fa38ba62154fe51b88a857b">SendParachute</a>(uint8_t parachute_type, std::string* err = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classfly__control_1_1MyFlyControlManager.html#a2559f5da6fdef68e0454faaab2becb91">SendButtonCommand</a>(uint8_t button, std::string* err = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classfly__control_1_1MyFlyControlManager.html#a1f30065abd4599d747de51c149bdeabe">SendSetOriginReturn</a>(uint8_t point_type, int32_t lon, int32_t lat,</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                             uint16_t alt, std::string* err = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classfly__control_1_1MyFlyControlManager.html#a3e29089f197c1b8e1da1d1bb05c72232">SendSetGeofence</a>(<span class="keyword">const</span> std::vector&lt;GeofencePoint&gt;&amp; points, std::string* err = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classfly__control_1_1MyFlyControlManager.html#a80d90d4c31c00f0f4260bf904645792b">SendSwitchMode</a>(uint8_t mode, std::string* err = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classfly__control_1_1MyFlyControlManager.html#ac481183a052aac47a24573af1aa8771d">SendGuidance</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structfly__control_1_1GuidanceData.html">GuidanceData</a>&amp; data, std::string* err = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classfly__control_1_1MyFlyControlManager.html#a2c51fee0216d228ae743a90efa9113bb">SendGuidanceNew</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structfly__control_1_1GuidanceNewData.html">GuidanceNewData</a>&amp; data, std::string* err = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classfly__control_1_1MyFlyControlManager.html#a6661f78f81c32189a9b0e21670fae2a7">SendGimbalAngRate</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structfly__control_1_1GimbalAngRateData.html">GimbalAngRateData</a>&amp; data, std::string* err = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classfly__control_1_1MyFlyControlManager.html#a9a95dc4a28375f54347060d07ab8f36c">SendGimbalAngle</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structfly__control_1_1GimbalAngleData.html">GimbalAngleData</a>&amp; data, std::string* err = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classfly__control_1_1MyFlyControlManager.html#a6dcfc71934530f1afa76fcd8f9f6f8e8">SendTargetState</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structfly__control_1_1TargetStateData.html">TargetStateData</a>&amp; data, std::string* err = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <a class="code hl_function" href="classfly__control_1_1MyFlyControlManager.html#ae845191cf275f36f0d9989c0665f513e">MyFlyControlManager</a>();</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <a class="code hl_function" href="classfly__control_1_1MyFlyControlManager.html#a77e92393ba486e867cb7e21f4be3d4e1">~MyFlyControlManager</a>();</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="comment">// 获取当前底层飞控对象快照，保证调用期间对象生命周期有效</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    std::shared_ptr&lt;MyFlyControl&gt; <a class="code hl_function" href="classfly__control_1_1MyFlyControlManager.html#af0908d53506a34c701c1cda9d1989f9c">GetControllerSnapshot</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="comment">// 获取已经完成初始化的底层飞控对象；若尚未初始化则返回空指针并填充错误信息</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    std::shared_ptr&lt;MyFlyControl&gt; <a class="code hl_function" href="classfly__control_1_1MyFlyControlManager.html#af39e755865bc267ea5054a4b8263c1e1">GetInitializedController</a>(std::string* err) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="classfly__control_1_1MyFlyControlManager.html#a281b5ec791338d4378e22ef44a51b4a1">  108</a></span>    <span class="keyword">mutable</span> std::mutex            <a class="code hl_variable" href="classfly__control_1_1MyFlyControlManager.html#a281b5ec791338d4378e22ef44a51b4a1">mutex_</a>;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="classfly__control_1_1MyFlyControlManager.html#a92c9adb57c0352ce2f28d387080a5e11">  109</a></span>    std::shared_ptr&lt;MyFlyControl&gt; <a class="code hl_variable" href="classfly__control_1_1MyFlyControlManager.html#a92c9adb57c0352ce2f28d387080a5e11">controller_</a>;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="classfly__control_1_1MyFlyControlManager.html#aef7436a220692b5b863db4e9d8b870a3">  110</a></span>    <span class="keywordtype">bool</span>                          <a class="code hl_variable" href="classfly__control_1_1MyFlyControlManager.html#aef7436a220692b5b863db4e9d8b870a3">initialized_</a>{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>};</div>
+</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>} <span class="comment">// namespace fly_control</span></div>
+<div class="ttc" id="aMyFlyControl_8h_html"><div class="ttname"><a href="MyFlyControl_8h.html">MyFlyControl.h</a></div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html">fly_control::MyFlyControlManager</a></div><div class="ttdef"><b>Definition</b> MyFlyControlManager.h:28</div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html_a167465d40856c9f07698562517b55cce"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html#a167465d40856c9f07698562517b55cce">fly_control::MyFlyControlManager::SendSetAltitude</a></div><div class="ttdeci">bool SendSetAltitude(uint8_t alt_type, uint16_t altitude, std::string *err=nullptr)</div><div class="ttdef"><b>Definition</b> MyFlyControlManager.cpp:156</div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html_a17a237457e57625296e6b24feb19c60a"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html#a17a237457e57625296e6b24feb19c60a">fly_control::MyFlyControlManager::Stop</a></div><div class="ttdeci">void Stop()</div><div class="ttdef"><b>Definition</b> MyFlyControlManager.cpp:63</div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html_a1aacfb712a84793da4c4275b833b005a"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html#a1aacfb712a84793da4c4275b833b005a">fly_control::MyFlyControlManager::SendPowerSwitch</a></div><div class="ttdeci">bool SendPowerSwitch(uint8_t command, std::string *err=nullptr)</div><div class="ttdef"><b>Definition</b> MyFlyControlManager.cpp:162</div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html_a1f30065abd4599d747de51c149bdeabe"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html#a1f30065abd4599d747de51c149bdeabe">fly_control::MyFlyControlManager::SendSetOriginReturn</a></div><div class="ttdeci">bool SendSetOriginReturn(uint8_t point_type, int32_t lon, int32_t lat, uint16_t alt, std::string *err=nullptr)</div><div class="ttdef"><b>Definition</b> MyFlyControlManager.cpp:177</div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html_a21d1a0d1204cba505ebe5ff489f4d70c"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html#a21d1a0d1204cba505ebe5ff489f4d70c">fly_control::MyFlyControlManager::SendSetDestination</a></div><div class="ttdeci">bool SendSetDestination(int32_t lon, int32_t lat, uint16_t alt, std::string *err=nullptr)</div><div class="ttdef"><b>Definition</b> MyFlyControlManager.cpp:135</div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html_a2559f5da6fdef68e0454faaab2becb91"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html#a2559f5da6fdef68e0454faaab2becb91">fly_control::MyFlyControlManager::SendButtonCommand</a></div><div class="ttdeci">bool SendButtonCommand(uint8_t button, std::string *err=nullptr)</div><div class="ttdef"><b>Definition</b> MyFlyControlManager.cpp:172</div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html_a281b5ec791338d4378e22ef44a51b4a1"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html#a281b5ec791338d4378e22ef44a51b4a1">fly_control::MyFlyControlManager::mutex_</a></div><div class="ttdeci">std::mutex mutex_</div><div class="ttdef"><b>Definition</b> MyFlyControlManager.h:108</div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html_a284bc9083e96c77b79374ca531cbe9fe"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html#a284bc9083e96c77b79374ca531cbe9fe">fly_control::MyFlyControlManager::GetFaultBits</a></div><div class="ttdeci">FaultBits GetFaultBits() const</div><div class="ttdef"><b>Definition</b> MyFlyControlManager.cpp:125</div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html_a2c51fee0216d228ae743a90efa9113bb"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html#a2c51fee0216d228ae743a90efa9113bb">fly_control::MyFlyControlManager::SendGuidanceNew</a></div><div class="ttdeci">bool SendGuidanceNew(const GuidanceNewData &amp;data, std::string *err=nullptr)</div><div class="ttdef"><b>Definition</b> MyFlyControlManager.cpp:199</div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html_a3891bdac9cabaa5e3e19d737c916d79a"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html#a3891bdac9cabaa5e3e19d737c916d79a">fly_control::MyFlyControlManager::SendSetAngle</a></div><div class="ttdeci">bool SendSetAngle(int16_t pitch, uint16_t yaw, std::string *err=nullptr)</div><div class="ttdef"><b>Definition</b> MyFlyControlManager.cpp:146</div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html_a3a2a1af6075ff0fac64ca21e4b97fdd1"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html#a3a2a1af6075ff0fac64ca21e4b97fdd1">fly_control::MyFlyControlManager::operator=</a></div><div class="ttdeci">MyFlyControlManager &amp; operator=(const MyFlyControlManager &amp;)=delete</div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html_a3e29089f197c1b8e1da1d1bb05c72232"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html#a3e29089f197c1b8e1da1d1bb05c72232">fly_control::MyFlyControlManager::SendSetGeofence</a></div><div class="ttdeci">bool SendSetGeofence(const std::vector&lt; GeofencePoint &gt; &amp;points, std::string *err=nullptr)</div><div class="ttdef"><b>Definition</b> MyFlyControlManager.cpp:183</div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html_a408a6e9de96d5efcf349b40b6c5abdcc"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html#a408a6e9de96d5efcf349b40b6c5abdcc">fly_control::MyFlyControlManager::SendSetSpeed</a></div><div class="ttdeci">bool SendSetSpeed(uint16_t speed, std::string *err=nullptr)</div><div class="ttdef"><b>Definition</b> MyFlyControlManager.cpp:151</div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html_a4217f69bcf1a32846d2f043eb6bba79d"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html#a4217f69bcf1a32846d2f043eb6bba79d">fly_control::MyFlyControlManager::GetLatestHeartbeatJson</a></div><div class="ttdeci">nlohmann::json GetLatestHeartbeatJson() const</div><div class="ttdef"><b>Definition</b> MyFlyControlManager.cpp:120</div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html_a475d2bd8072f3c9df7b37581c4f1eca4"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html#a475d2bd8072f3c9df7b37581c4f1eca4">fly_control::MyFlyControlManager::IsInitialized</a></div><div class="ttdeci">bool IsInitialized() const</div><div class="ttdef"><b>Definition</b> MyFlyControlManager.cpp:84</div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html_a5cbf33753fa38ba62154fe51b88a857b"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html#a5cbf33753fa38ba62154fe51b88a857b">fly_control::MyFlyControlManager::SendParachute</a></div><div class="ttdeci">bool SendParachute(uint8_t parachute_type, std::string *err=nullptr)</div><div class="ttdef"><b>Definition</b> MyFlyControlManager.cpp:167</div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html_a6661f78f81c32189a9b0e21670fae2a7"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html#a6661f78f81c32189a9b0e21670fae2a7">fly_control::MyFlyControlManager::SendGimbalAngRate</a></div><div class="ttdeci">bool SendGimbalAngRate(const GimbalAngRateData &amp;data, std::string *err=nullptr)</div><div class="ttdef"><b>Definition</b> MyFlyControlManager.cpp:204</div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html_a6dcfc71934530f1afa76fcd8f9f6f8e8"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html#a6dcfc71934530f1afa76fcd8f9f6f8e8">fly_control::MyFlyControlManager::SendTargetState</a></div><div class="ttdeci">bool SendTargetState(const TargetStateData &amp;data, std::string *err=nullptr)</div><div class="ttdef"><b>Definition</b> MyFlyControlManager.cpp:214</div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html_a77e92393ba486e867cb7e21f4be3d4e1"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html#a77e92393ba486e867cb7e21f4be3d4e1">fly_control::MyFlyControlManager::~MyFlyControlManager</a></div><div class="ttdeci">~MyFlyControlManager()</div><div class="ttdef"><b>Definition</b> MyFlyControlManager.cpp:8</div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html_a80d90d4c31c00f0f4260bf904645792b"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html#a80d90d4c31c00f0f4260bf904645792b">fly_control::MyFlyControlManager::SendSwitchMode</a></div><div class="ttdeci">bool SendSwitchMode(uint8_t mode, std::string *err=nullptr)</div><div class="ttdef"><b>Definition</b> MyFlyControlManager.cpp:189</div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html_a8c0be653382e75f0c32b46ebc7e7a9f6"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html#a8c0be653382e75f0c32b46ebc7e7a9f6">fly_control::MyFlyControlManager::SetOnHeartbeat</a></div><div class="ttdeci">void SetOnHeartbeat(HeartbeatCallback cb)</div><div class="ttdef"><b>Definition</b> MyFlyControlManager.cpp:94</div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html_a920a1ab69a1696ca6f420f3cde22c8dd"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html#a920a1ab69a1696ca6f420f3cde22c8dd">fly_control::MyFlyControlManager::MyFlyControlManager</a></div><div class="ttdeci">MyFlyControlManager(const MyFlyControlManager &amp;)=delete</div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html_a92c9adb57c0352ce2f28d387080a5e11"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html#a92c9adb57c0352ce2f28d387080a5e11">fly_control::MyFlyControlManager::controller_</a></div><div class="ttdeci">std::shared_ptr&lt; MyFlyControl &gt; controller_</div><div class="ttdef"><b>Definition</b> MyFlyControlManager.h:109</div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html_a9a95dc4a28375f54347060d07ab8f36c"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html#a9a95dc4a28375f54347060d07ab8f36c">fly_control::MyFlyControlManager::SendGimbalAngle</a></div><div class="ttdeci">bool SendGimbalAngle(const GimbalAngleData &amp;data, std::string *err=nullptr)</div><div class="ttdef"><b>Definition</b> MyFlyControlManager.cpp:209</div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html_a9c513abc7b4f8b42ad47df017f1b28a2"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html#a9c513abc7b4f8b42ad47df017f1b28a2">fly_control::MyFlyControlManager::HasHeartbeat</a></div><div class="ttdeci">bool HasHeartbeat() const</div><div class="ttdef"><b>Definition</b> MyFlyControlManager.cpp:130</div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html_aa0945f28ef057669b73101c9baf0acce"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html#aa0945f28ef057669b73101c9baf0acce">fly_control::MyFlyControlManager::Init</a></div><div class="ttdeci">bool Init(const nlohmann::json &amp;cfg, std::string *err=nullptr)</div><div class="ttdef"><b>Definition</b> MyFlyControlManager.cpp:26</div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html_aaa026fa3d78ab4300f384dfa50212a2f"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html#aaa026fa3d78ab4300f384dfa50212a2f">fly_control::MyFlyControlManager::Start</a></div><div class="ttdeci">bool Start(std::string *err=nullptr)</div><div class="ttdef"><b>Definition</b> MyFlyControlManager.cpp:55</div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html_ab414d26342218c206e8e8033b6271504"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html#ab414d26342218c206e8e8033b6271504">fly_control::MyFlyControlManager::SendSetRoute</a></div><div class="ttdeci">bool SendSetRoute(const std::vector&lt; RoutePoint &gt; &amp;points, std::string *err=nullptr)</div><div class="ttdef"><b>Definition</b> MyFlyControlManager.cpp:141</div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html_ab41b042f2e0bf7d26e22a5a9ee885bfa"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html#ab41b042f2e0bf7d26e22a5a9ee885bfa">fly_control::MyFlyControlManager::SetOnCommandReply</a></div><div class="ttdeci">void SetOnCommandReply(CommandReplyCallback cb)</div><div class="ttdef"><b>Definition</b> MyFlyControlManager.cpp:101</div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html_ac481183a052aac47a24573af1aa8771d"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html#ac481183a052aac47a24573af1aa8771d">fly_control::MyFlyControlManager::SendGuidance</a></div><div class="ttdeci">bool SendGuidance(const GuidanceData &amp;data, std::string *err=nullptr)</div><div class="ttdef"><b>Definition</b> MyFlyControlManager.cpp:194</div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html_ac5f038c2b480cf9ef5e19e3eba8dbaf9"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html#ac5f038c2b480cf9ef5e19e3eba8dbaf9">fly_control::MyFlyControlManager::Shutdown</a></div><div class="ttdeci">void Shutdown()</div><div class="ttdef"><b>Definition</b> MyFlyControlManager.cpp:70</div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html_ac979d36d841918a4ac6a3980b89044ff"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html#ac979d36d841918a4ac6a3980b89044ff">fly_control::MyFlyControlManager::SetOnGimbalControl</a></div><div class="ttdeci">void SetOnGimbalControl(GimbalControlCallback cb)</div><div class="ttdef"><b>Definition</b> MyFlyControlManager.cpp:108</div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html_ad201152b05beda61e51e3594ff07c8fe"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html#ad201152b05beda61e51e3594ff07c8fe">fly_control::MyFlyControlManager::IsRunning</a></div><div class="ttdeci">bool IsRunning() const</div><div class="ttdef"><b>Definition</b> MyFlyControlManager.cpp:89</div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html_ae4cd0445d97ce59d1155940edb5f5671"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html#ae4cd0445d97ce59d1155940edb5f5671">fly_control::MyFlyControlManager::GetLatestHeartbeat</a></div><div class="ttdeci">HeartbeatData GetLatestHeartbeat() const</div><div class="ttdef"><b>Definition</b> MyFlyControlManager.cpp:115</div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html_ae845191cf275f36f0d9989c0665f513e"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html#ae845191cf275f36f0d9989c0665f513e">fly_control::MyFlyControlManager::MyFlyControlManager</a></div><div class="ttdeci">MyFlyControlManager()</div><div class="ttdef"><b>Definition</b> MyFlyControlManager.cpp:5</div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html_aef7436a220692b5b863db4e9d8b870a3"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html#aef7436a220692b5b863db4e9d8b870a3">fly_control::MyFlyControlManager::initialized_</a></div><div class="ttdeci">bool initialized_</div><div class="ttdef"><b>Definition</b> MyFlyControlManager.h:110</div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html_af0908d53506a34c701c1cda9d1989f9c"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html#af0908d53506a34c701c1cda9d1989f9c">fly_control::MyFlyControlManager::GetControllerSnapshot</a></div><div class="ttdeci">std::shared_ptr&lt; MyFlyControl &gt; GetControllerSnapshot() const</div><div class="ttdef"><b>Definition</b> MyFlyControlManager.cpp:219</div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html_af39e755865bc267ea5054a4b8263c1e1"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html#af39e755865bc267ea5054a4b8263c1e1">fly_control::MyFlyControlManager::GetInitializedController</a></div><div class="ttdeci">std::shared_ptr&lt; MyFlyControl &gt; GetInitializedController(std::string *err) const</div><div class="ttdef"><b>Definition</b> MyFlyControlManager.cpp:224</div></div>
+<div class="ttc" id="aclassfly__control_1_1MyFlyControlManager_html_af7f5d1c4ba1e300fa172520b23f311d5"><div class="ttname"><a href="classfly__control_1_1MyFlyControlManager.html#af7f5d1c4ba1e300fa172520b23f311d5">fly_control::MyFlyControlManager::GetInstance</a></div><div class="ttdeci">static MyFlyControlManager &amp; GetInstance()</div><div class="ttdef"><b>Definition</b> MyFlyControlManager.cpp:21</div></div>
+<div class="ttc" id="anamespacefly__control_html"><div class="ttname"><a href="namespacefly__control.html">fly_control</a></div><div class="ttdef"><b>Definition</b> FlyControlCodec.cpp:11</div></div>
+<div class="ttc" id="anamespacefly__control_html_ad91c5f606db2e010abbe7fc28b89ca13"><div class="ttname"><a href="namespacefly__control.html#ad91c5f606db2e010abbe7fc28b89ca13">fly_control::CommandReplyCallback</a></div><div class="ttdeci">std::function&lt; void(const CommandReplyData &amp;)&gt; CommandReplyCallback</div><div class="ttdef"><b>Definition</b> MyFlyControl.h:44</div></div>
+<div class="ttc" id="anamespacefly__control_html_af71abba518af4cff12d6a42e4d5a98b9"><div class="ttname"><a href="namespacefly__control.html#af71abba518af4cff12d6a42e4d5a98b9">fly_control::HeartbeatCallback</a></div><div class="ttdeci">std::function&lt; void(const HeartbeatData &amp;)&gt; HeartbeatCallback</div><div class="ttdef"><b>Definition</b> MyFlyControl.h:43</div></div>
+<div class="ttc" id="anamespacefly__control_html_afe3612e82a5e5ba7aa43f5a633270cb3"><div class="ttname"><a href="namespacefly__control.html#afe3612e82a5e5ba7aa43f5a633270cb3">fly_control::GimbalControlCallback</a></div><div class="ttdeci">std::function&lt; void(const GimbalControlData &amp;)&gt; GimbalControlCallback</div><div class="ttdef"><b>Definition</b> MyFlyControl.h:45</div></div>
+<div class="ttc" id="astructfly__control_1_1FaultBits_html"><div class="ttname"><a href="structfly__control_1_1FaultBits.html">fly_control::FaultBits</a></div><div class="ttdef"><b>Definition</b> FlyControlProtocol.h:111</div></div>
+<div class="ttc" id="astructfly__control_1_1GimbalAngRateData_html"><div class="ttname"><a href="structfly__control_1_1GimbalAngRateData.html">fly_control::GimbalAngRateData</a></div><div class="ttdef"><b>Definition</b> FlyControlProtocol.h:360</div></div>
+<div class="ttc" id="astructfly__control_1_1GimbalAngleData_html"><div class="ttname"><a href="structfly__control_1_1GimbalAngleData.html">fly_control::GimbalAngleData</a></div><div class="ttdef"><b>Definition</b> FlyControlProtocol.h:372</div></div>
+<div class="ttc" id="astructfly__control_1_1GuidanceData_html"><div class="ttname"><a href="structfly__control_1_1GuidanceData.html">fly_control::GuidanceData</a></div><div class="ttdef"><b>Definition</b> FlyControlProtocol.h:323</div></div>
+<div class="ttc" id="astructfly__control_1_1GuidanceNewData_html"><div class="ttname"><a href="structfly__control_1_1GuidanceNewData.html">fly_control::GuidanceNewData</a></div><div class="ttdef"><b>Definition</b> FlyControlProtocol.h:334</div></div>
+<div class="ttc" id="astructfly__control_1_1HeartbeatData_html"><div class="ttname"><a href="structfly__control_1_1HeartbeatData.html">fly_control::HeartbeatData</a></div><div class="ttdef"><b>Definition</b> FlyControlProtocol.h:174</div></div>
+<div class="ttc" id="astructfly__control_1_1TargetStateData_html"><div class="ttname"><a href="structfly__control_1_1TargetStateData.html">fly_control::TargetStateData</a></div><div class="ttdef"><b>Definition</b> FlyControlProtocol.h:381</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>
