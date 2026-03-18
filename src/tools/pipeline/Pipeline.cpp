@@ -502,13 +502,27 @@ void Pipeline::LaunchSoftHealthyMonitor(const nlohmann::json& args) {
 void Pipeline::LaunchFlyControl(const nlohmann::json& args) {
     MYLOG_INFO("启动 FlyControl 模块");
     MYLOG_INFO("FlyControl 模块参数: {}", args.dump(4));
+
+    constexpr int kMaxRetries = 10;
+    constexpr int kRetryIntervalSeconds = 3;
+
     std::string err;
     try {
         auto& manager = fly_control::MyFlyControlManager::GetInstance();
-        if (!manager.Init(args, &err)) {
-            MYLOG_ERROR("FlyControl 模块初始化失败: {}", err.empty() ? std::string("unknown error") : err);
-            return;
+
+        for (int attempt = 1; attempt <= kMaxRetries; ++attempt) {
+            err.clear();
+            if (manager.Init(args, &err)) {
+                break;
+            }
+            if (attempt == kMaxRetries) {
+                MYLOG_ERROR("FlyControl 模块初始化失败（已重试 {} 次）: {}", kMaxRetries, err.empty() ? std::string("unknown error") : err);
+                return;
+            }
+            MYLOG_WARN("FlyControl 模块初始化失败（第 {}/{} 次），{}秒后重试: {}", attempt, kMaxRetries, kRetryIntervalSeconds, err);
+            std::this_thread::sleep_for(std::chrono::seconds(kRetryIntervalSeconds));
         }
+
         if (!manager.Start(&err)) {
             MYLOG_ERROR("FlyControl 模块启动失败: {}", err.empty() ? std::string("unknown error") : err);
             return;
