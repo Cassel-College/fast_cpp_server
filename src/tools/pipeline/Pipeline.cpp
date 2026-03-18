@@ -107,10 +107,17 @@ void Pipeline::LaunchRoBot() {
                 }
 
                 std::string model_name = node_body.at("model_name").get<std::string>();
+                bool enable = node_body.value("enable", true);
                 const auto& model_args = node_body.value("model_args", nlohmann::json::object());
                 int temp_step_time_interval = node_body.value("step_time_interval", step_time_interval);
                 if (temp_step_time_interval > 0) {
                     step_time_interval = temp_step_time_interval;
+                }
+
+                if (!enable) {
+                    MYLOG_WARN("* Arg: {}, Value: {}", "节点[" + node_index + ": " + model_name + "]已禁用", "跳过此节点的启动");
+                    MYLOG_INFO("------------------------------------------------------------");
+                    continue;
                 }
 
                 MYLOG_WARN("* Arg: {}, Value: {}", "节点分发开始", "正在启动节点[" + node_index + "] 模块名称 >>> " + model_name + " <<<");
@@ -193,6 +200,12 @@ void Pipeline::Start() {
             // MYLOG_INFO("* Arg: {}, Value: {}", item.key(), item.value().dump());
             MYLOG_INFO("* Arg: {}, Value: {}", "节点序号", node_index);
             MYLOG_INFO("* Arg: {}, Value: {}", "节点名称", it.value().value("model_name", "未知模型"));
+            bool enable = it.value().value("enable", true);
+            if (!enable) {
+                MYLOG_INFO("* Arg: {}, Value: {}", "节点状态", "已禁用");
+            } else {
+                MYLOG_INFO("* Arg: {}, Value: {}", "节点状态", "已启用");
+            }
             MYLOG_INFO("===================================================");
         }
         MYLOG_INFO("------------------------------------------------------------(启动节点列表结束)");
