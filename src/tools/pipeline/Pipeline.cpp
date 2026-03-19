@@ -12,6 +12,7 @@
 #include "SoftHealthMonitorConfig.h"
 #include "MyAPI.h"
 #include "MyFlyControlManager.h"
+#include "pod_manager.h"
 #include "MyLog.h"
 #include "MyTools.h"
 
@@ -133,6 +134,7 @@ void Pipeline::LaunchRoBot() {
                 else if (model_name == "MQTTBroker") { LaunchMyMqttBroker(model_args); success_count++;}
                 else if (model_name == "soft_healthy_monitor") { LaunchSoftHealthyMonitor(model_args); success_count++;}
                 else if (model_name == "fly_control") { LaunchFlyControl(model_args); success_count++;}
+                else if (model_name == "pod") { LaunchPodManager(model_args); success_count++;}
                 else { MYLOG_INFO("* Arg: {}, Value: {}", "节点[" + node_index + "]警告", "未知的模型名称: " + model_name);}
                 
                 MYLOG_INFO("* Arg: {}, Value: {}", "节点分发完成", "节点[" + node_index + "] 已成功加入监听列表");
@@ -543,6 +545,23 @@ void Pipeline::LaunchFlyControl(const nlohmann::json& args) {
         MYLOG_INFO("成功启动 FlyControl 模块");
     } catch (const std::exception& e) {
         MYLOG_ERROR("启动 FlyControl 模块时捕获异常: {}", e.what());
+    }
+}
+
+void Pipeline::LaunchPodManager(const nlohmann::json& args) {
+    const std::string module_name = "吊舱管理模块(PodManager)";
+    MYLOG_INFO("===== 开始启动模块: {} =====", module_name);
+    MYLOG_INFO("PodManager 模块参数: {}", args.dump(4));
+
+    try {
+        auto& manager = PodModule::PodManager::GetInstance();
+        if (!manager.Init(args)) {
+            MYLOG_ERROR("* 模块: {}, 状态: {}", module_name, "初始化失败");
+            return;
+        }
+        MYLOG_INFO("* 模块: {}, 状态: {}, 吊舱数量: {}", module_name, "初始化成功", manager.size());
+    } catch (const std::exception& e) {
+        MYLOG_ERROR("* 模块: {}, 捕获异常: {}", module_name, e.what());
     }
 }
 

@@ -38,6 +38,7 @@ if (BUILD_MY_POD)
     add_library(my_pod STATIC ${MY_POD_SOURCES})
     target_include_directories(my_pod PUBLIC ${MY_POD_INCLUDE_DIRECTORIES})
     target_link_libraries(my_pod PUBLIC mylog)
+    target_link_libraries(my_pod PUBLIC nlohmann_json::nlohmann_json)
 
     print_colored_message("Building my_pod library over." COLOR yellow)
     print_colored_message("------------------------------" COLOR magenta)

@@ -9,9 +9,9 @@ namespace PodModule {
 
 std::string podVendorToString(PodVendor vendor) {
     switch (vendor) {
-        case PodVendor::DJI:     return "大疆";
-        case PodVendor::PINLING: return "品凌";
-        default:                 return "未知厂商";
+        case PodVendor::DJI:     return "DJI";
+        case PodVendor::PINLING: return "PINLING";
+        default:                 return "UNKNOWN";
     }
 }
 

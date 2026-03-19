@@ -15,9 +15,9 @@ using namespace PodModule;
 // ============ PodTypes 测试 ============
 
 TEST(PodTypesTest, PodVendorToString) {
-    EXPECT_EQ(podVendorToString(PodVendor::DJI), "大疆");
-    EXPECT_EQ(podVendorToString(PodVendor::PINLING), "品凌");
-    EXPECT_EQ(podVendorToString(PodVendor::UNKNOWN), "未知厂商");
+    EXPECT_EQ(podVendorToString(PodVendor::DJI), "DJI");
+    EXPECT_EQ(podVendorToString(PodVendor::PINLING), "PINLING");
+    EXPECT_EQ(podVendorToString(PodVendor::UNKNOWN), "UNKNOWN");
 }
 
 TEST(PodTypesTest, PodStateToString) {
