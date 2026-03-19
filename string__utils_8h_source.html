@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_pod/utils/string_utils.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_0ac9cdf986d1682a7cf7479045e196ae.html">my_pod</a></li><li class="navelem"><a class="el" href="dir_c2a4e77af161c8c18ef4cdc8fdc0d9bb.html">utils</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">string_utils.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="string__utils_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePodModule.html">PodModule</a> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span>StringUtils {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>std::string <a class="code hl_function" href="namespacePodModule_1_1StringUtils.html#a598863dd912a94c53ac9c85f6cff136e">format</a>(<span class="keyword">const</span> std::string&amp; fmt, <span class="keyword">const</span> std::string&amp; arg);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>std::string <a class="code hl_function" href="namespacePodModule_1_1StringUtils.html#a4b2f5edebd06a64f39644e82ef36dcce">bytesToHex</a>(<span class="keyword">const</span> std::vector&lt;uint8_t&gt;&amp; data);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>std::string <a class="code hl_function" href="namespacePodModule_1_1StringUtils.html#a5a01f705cc7b4a7317a57f6bf41aef25">trim</a>(<span class="keyword">const</span> std::string&amp; str);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>} <span class="comment">// namespace StringUtils</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>} <span class="comment">// namespace PodModule</span></div>
+<div class="ttc" id="anamespacePodModule_1_1StringUtils_html_a4b2f5edebd06a64f39644e82ef36dcce"><div class="ttname"><a href="namespacePodModule_1_1StringUtils.html#a4b2f5edebd06a64f39644e82ef36dcce">PodModule::StringUtils::bytesToHex</a></div><div class="ttdeci">std::string bytesToHex(const std::vector&lt; uint8_t &gt; &amp;data)</div><div class="ttdoc">将字节数组转为十六进制字符串</div><div class="ttdef"><b>Definition</b> string_utils.cpp:23</div></div>
+<div class="ttc" id="anamespacePodModule_1_1StringUtils_html_a598863dd912a94c53ac9c85f6cff136e"><div class="ttname"><a href="namespacePodModule_1_1StringUtils.html#a598863dd912a94c53ac9c85f6cff136e">PodModule::StringUtils::format</a></div><div class="ttdeci">std::string format(const std::string &amp;fmt, const std::string &amp;arg)</div><div class="ttdoc">字符串格式化（简易版）</div><div class="ttdef"><b>Definition</b> string_utils.cpp:14</div></div>
+<div class="ttc" id="anamespacePodModule_1_1StringUtils_html_a5a01f705cc7b4a7317a57f6bf41aef25"><div class="ttname"><a href="namespacePodModule_1_1StringUtils.html#a5a01f705cc7b4a7317a57f6bf41aef25">PodModule::StringUtils::trim</a></div><div class="ttdeci">std::string trim(const std::string &amp;str)</div><div class="ttdoc">去除字符串前后空格</div><div class="ttdef"><b>Definition</b> string_utils.cpp:35</div></div>
+<div class="ttc" id="anamespacePodModule_html"><div class="ttname"><a href="namespacePodModule.html">PodModule</a></div><div class="ttdef"><b>Definition</b> base_capability.cpp:9</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

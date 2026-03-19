@@ -1,0 +1,304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: IStreamCapability类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacePodModule.html">PodModule</a></li><li class="navelem"><a class="el" href="classPodModule_1_1IStreamCapability.html">IStreamCapability</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a>  </div>
+  <div class="headertitle"><div class="title">IStreamCapability类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>流媒体能力接口  
+ <a href="classPodModule_1_1IStreamCapability.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="i__stream__capability_8h_source.html">i_stream_capability.h</a>&gt;</code></p>
+<div class="dynheader">
+类 IStreamCapability 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPodModule_1_1IStreamCapability__inherit__graph.png" border="0" usemap="#aIStreamCapability_inherit__map" alt="Inheritance graph"/></div>
+<map name="aIStreamCapability_inherit__map" id="aIStreamCapability_inherit__map">
+<area shape="rect" title="流媒体能力接口" alt="" coords="107,79,246,104"/>
+<area shape="rect" href="classPodModule_1_1BaseStreamCapability.html" title="基础流媒体能力" alt="" coords="93,152,260,177"/>
+<area shape="poly" title=" " alt="" coords="179,118,179,152,174,152,174,118"/>
+<area shape="rect" href="classPodModule_1_1ICapability.html" title="能力基础接口" alt="" coords="131,5,223,31"/>
+<area shape="poly" title=" " alt="" coords="179,44,179,79,174,79,174,44"/>
+<area shape="rect" href="classPodModule_1_1DjiStreamCapability.html" title=" " alt="" coords="5,225,159,251"/>
+<area shape="poly" title=" " alt="" coords="152,188,99,227,96,223,149,183"/>
+<area shape="rect" href="classPodModule_1_1PinlingStreamCapability.html" title=" " alt="" coords="183,225,362,251"/>
+<area shape="poly" title=" " alt="" coords="205,183,259,223,255,227,202,188"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+IStreamCapability 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPodModule_1_1IStreamCapability__coll__graph.png" border="0" usemap="#aIStreamCapability_coll__map" alt="Collaboration graph"/></div>
+<map name="aIStreamCapability_coll__map" id="aIStreamCapability_coll__map">
+<area shape="rect" title="流媒体能力接口" alt="" coords="5,79,144,104"/>
+<area shape="rect" href="classPodModule_1_1ICapability.html" title="能力基础接口" alt="" coords="29,5,121,31"/>
+<area shape="poly" title=" " alt="" coords="77,44,77,79,72,79,72,44"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a027852b989320a37e8c34e57d50ebb52" id="r_a027852b989320a37e8c34e57d50ebb52"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1IStreamCapability.html#a027852b989320a37e8c34e57d50ebb52">~IStreamCapability</a> () override=default</td></tr>
+<tr class="separator:a027852b989320a37e8c34e57d50ebb52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a375f5413376d7138f57f3c1ea3f13eef" id="r_a375f5413376d7138f57f3c1ea3f13eef"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structPodModule_1_1PodResult.html">PodResult</a>&lt; <a class="el" href="structPodModule_1_1StreamInfo.html">StreamInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1IStreamCapability.html#a375f5413376d7138f57f3c1ea3f13eef">startStream</a> (<a class="el" href="namespacePodModule.html#afae02e5487fb32d2a4642695c4740838">StreamType</a> type=<a class="el" href="namespacePodModule.html#afae02e5487fb32d2a4642695c4740838a9f00094456f649db4d6e16a8e4823e8f">StreamType::RTSP</a>)=0</td></tr>
+<tr class="memdesc:a375f5413376d7138f57f3c1ea3f13eef"><td class="mdescLeft">&#160;</td><td class="mdescRight">启动拉流  <br /></td></tr>
+<tr class="separator:a375f5413376d7138f57f3c1ea3f13eef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d8f1869819770f4b7a51d7746a99ce4" id="r_a0d8f1869819770f4b7a51d7746a99ce4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structPodModule_1_1PodResult.html">PodResult</a>&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1IStreamCapability.html#a0d8f1869819770f4b7a51d7746a99ce4">stopStream</a> ()=0</td></tr>
+<tr class="memdesc:a0d8f1869819770f4b7a51d7746a99ce4"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止拉流  <br /></td></tr>
+<tr class="separator:a0d8f1869819770f4b7a51d7746a99ce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab60e6d0c54aeebd9c251123746954fbd" id="r_ab60e6d0c54aeebd9c251123746954fbd"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structPodModule_1_1PodResult.html">PodResult</a>&lt; <a class="el" href="structPodModule_1_1StreamInfo.html">StreamInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1IStreamCapability.html#ab60e6d0c54aeebd9c251123746954fbd">getStreamInfo</a> ()=0</td></tr>
+<tr class="memdesc:ab60e6d0c54aeebd9c251123746954fbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前流信息  <br /></td></tr>
+<tr class="separator:ab60e6d0c54aeebd9c251123746954fbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3a81249f156a9546c208e3bc5583599" id="r_ac3a81249f156a9546c208e3bc5583599"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1IStreamCapability.html#ac3a81249f156a9546c208e3bc5583599">isStreaming</a> () const =0</td></tr>
+<tr class="memdesc:ac3a81249f156a9546c208e3bc5583599"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否正在拉流  <br /></td></tr>
+<tr class="separator:ac3a81249f156a9546c208e3bc5583599"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classPodModule_1_1ICapability"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classPodModule_1_1ICapability')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classPodModule_1_1ICapability.html">ICapability</a></td></tr>
+<tr class="memitem:a1456d4a2e1fac93734dab5a0aca9d16f inherit pub_methods_classPodModule_1_1ICapability" id="r_a1456d4a2e1fac93734dab5a0aca9d16f"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1ICapability.html#a1456d4a2e1fac93734dab5a0aca9d16f">~ICapability</a> ()=default</td></tr>
+<tr class="separator:a1456d4a2e1fac93734dab5a0aca9d16f inherit pub_methods_classPodModule_1_1ICapability"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92c57bc4438090b10f268889504569b4 inherit pub_methods_classPodModule_1_1ICapability" id="r_a92c57bc4438090b10f268889504569b4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccc">CapabilityType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1ICapability.html#a92c57bc4438090b10f268889504569b4">getType</a> () const =0</td></tr>
+<tr class="memdesc:a92c57bc4438090b10f268889504569b4 inherit pub_methods_classPodModule_1_1ICapability"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取能力类型  <br /></td></tr>
+<tr class="separator:a92c57bc4438090b10f268889504569b4 inherit pub_methods_classPodModule_1_1ICapability"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa64d851b233285f68b743639618a0810 inherit pub_methods_classPodModule_1_1ICapability" id="r_aa64d851b233285f68b743639618a0810"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1ICapability.html#aa64d851b233285f68b743639618a0810">getName</a> () const =0</td></tr>
+<tr class="memdesc:aa64d851b233285f68b743639618a0810 inherit pub_methods_classPodModule_1_1ICapability"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取能力名称（中文）  <br /></td></tr>
+<tr class="separator:aa64d851b233285f68b743639618a0810 inherit pub_methods_classPodModule_1_1ICapability"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42b0cc968ca2168a79512c01cad06bc1 inherit pub_methods_classPodModule_1_1ICapability" id="r_a42b0cc968ca2168a79512c01cad06bc1"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structPodModule_1_1PodResult.html">PodResult</a>&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1ICapability.html#a42b0cc968ca2168a79512c01cad06bc1">initialize</a> ()=0</td></tr>
+<tr class="memdesc:a42b0cc968ca2168a79512c01cad06bc1 inherit pub_methods_classPodModule_1_1ICapability"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化能力  <br /></td></tr>
+<tr class="separator:a42b0cc968ca2168a79512c01cad06bc1 inherit pub_methods_classPodModule_1_1ICapability"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e42d7b722fbaa21697387878794d1f0 inherit pub_methods_classPodModule_1_1ICapability" id="r_a8e42d7b722fbaa21697387878794d1f0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1ICapability.html#a8e42d7b722fbaa21697387878794d1f0">attachPod</a> (<a class="el" href="classPodModule_1_1IPod.html">IPod</a> *pod)=0</td></tr>
+<tr class="memdesc:a8e42d7b722fbaa21697387878794d1f0 inherit pub_methods_classPodModule_1_1ICapability"><td class="mdescLeft">&#160;</td><td class="mdescRight">关联 Pod 设备  <br /></td></tr>
+<tr class="separator:a8e42d7b722fbaa21697387878794d1f0 inherit pub_methods_classPodModule_1_1ICapability"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98c29ee65189574e518ced03d2c4c406 inherit pub_methods_classPodModule_1_1ICapability" id="r_a98c29ee65189574e518ced03d2c4c406"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1ICapability.html#a98c29ee65189574e518ced03d2c4c406">attachSession</a> (std::shared_ptr&lt; <a class="el" href="classPodModule_1_1ISession.html">ISession</a> &gt; session)=0</td></tr>
+<tr class="memdesc:a98c29ee65189574e518ced03d2c4c406 inherit pub_methods_classPodModule_1_1ICapability"><td class="mdescLeft">&#160;</td><td class="mdescRight">关联 Session 会话  <br /></td></tr>
+<tr class="separator:a98c29ee65189574e518ced03d2c4c406 inherit pub_methods_classPodModule_1_1ICapability"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>流媒体能力接口 </p>
+<p>提供视频流的拉取、停止和状态查询功能。 </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a027852b989320a37e8c34e57d50ebb52" name="a027852b989320a37e8c34e57d50ebb52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a027852b989320a37e8c34e57d50ebb52">&#9670;&#160;</a></span>~IStreamCapability()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classPodModule_1_1IStreamCapability.html">IStreamCapability</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="ab60e6d0c54aeebd9c251123746954fbd" name="ab60e6d0c54aeebd9c251123746954fbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab60e6d0c54aeebd9c251123746954fbd">&#9670;&#160;</a></span>getStreamInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structPodModule_1_1PodResult.html">PodResult</a>&lt; <a class="el" href="structPodModule_1_1StreamInfo.html">StreamInfo</a> &gt; getStreamInfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取当前流信息 </p>
+
+<p>在 <a class="el" href="classPodModule_1_1BaseStreamCapability.html#ae02be63a83d33b3675221339aadec616">BaseStreamCapability</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="ac3a81249f156a9546c208e3bc5583599" name="ac3a81249f156a9546c208e3bc5583599"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3a81249f156a9546c208e3bc5583599">&#9670;&#160;</a></span>isStreaming()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool isStreaming </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>是否正在拉流 </p>
+
+<p>在 <a class="el" href="classPodModule_1_1BaseStreamCapability.html#a63b1562271abf7dc877498f00941f4ad">BaseStreamCapability</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a375f5413376d7138f57f3c1ea3f13eef" name="a375f5413376d7138f57f3c1ea3f13eef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a375f5413376d7138f57f3c1ea3f13eef">&#9670;&#160;</a></span>startStream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structPodModule_1_1PodResult.html">PodResult</a>&lt; <a class="el" href="structPodModule_1_1StreamInfo.html">StreamInfo</a> &gt; startStream </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacePodModule.html#afae02e5487fb32d2a4642695c4740838">StreamType</a>&#160;</td>
+          <td class="paramname"><em>type</em> = <code><a class="el" href="namespacePodModule.html#afae02e5487fb32d2a4642695c4740838a9f00094456f649db4d6e16a8e4823e8f">StreamType::RTSP</a></code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>启动拉流 </p>
+
+<p>在 <a class="el" href="classPodModule_1_1BaseStreamCapability.html#a87e06165fc700834eef4fbc8fefe13ff">BaseStreamCapability</a>, <a class="el" href="classPodModule_1_1DjiStreamCapability.html#a87e06165fc700834eef4fbc8fefe13ff">DjiStreamCapability</a> , 以及 <a class="el" href="classPodModule_1_1PinlingStreamCapability.html#a87e06165fc700834eef4fbc8fefe13ff">PinlingStreamCapability</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a0d8f1869819770f4b7a51d7746a99ce4" name="a0d8f1869819770f4b7a51d7746a99ce4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d8f1869819770f4b7a51d7746a99ce4">&#9670;&#160;</a></span>stopStream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structPodModule_1_1PodResult.html">PodResult</a>&lt; void &gt; stopStream </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>停止拉流 </p>
+
+<p>在 <a class="el" href="classPodModule_1_1BaseStreamCapability.html#a551e80d9a1695e34ba256f205996ae1d">BaseStreamCapability</a>, <a class="el" href="classPodModule_1_1DjiStreamCapability.html#a551e80d9a1695e34ba256f205996ae1d">DjiStreamCapability</a> , 以及 <a class="el" href="classPodModule_1_1PinlingStreamCapability.html#a551e80d9a1695e34ba256f205996ae1d">PinlingStreamCapability</a> 内被实现.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/util/my_pod/capability/interface/<a class="el" href="i__stream__capability_8h_source.html">i_stream_capability.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

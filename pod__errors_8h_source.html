@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_pod/common/pod_errors.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_0ac9cdf986d1682a7cf7479045e196ae.html">my_pod</a></li><li class="navelem"><a class="el" href="dir_1e439a19c281e63e1e6875b396a0af17.html">common</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">pod_errors.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="pod__errors_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePodModule.html">PodModule</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="namespacePodModule.html#aad194976af5612d4469559348e94c7be">   16</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="namespacePodModule.html#aad194976af5612d4469559348e94c7be">PodErrorCode</a> : int32_t {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <a class="code hl_enumvalue" href="namespacePodModule.html#aad194976af5612d4469559348e94c7bead0749aaba8b833466dfcbb0428e4f89c">SUCCESS</a>                 = 0,        <span class="comment">// 成功</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <a class="code hl_enumvalue" href="namespacePodModule.html#aad194976af5612d4469559348e94c7bea9a10f345b0f755d461a8673a5e9ef6b4">UNKNOWN_ERROR</a>           = -1,       <span class="comment">// 未知错误</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_enumvalue" href="namespacePodModule.html#aad194976af5612d4469559348e94c7bea042ec2cfe6c78a6a49b3a6555302947c">CONNECTION_FAILED</a>       = -100,     <span class="comment">// 连接失败</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <a class="code hl_enumvalue" href="namespacePodModule.html#aad194976af5612d4469559348e94c7bead094d5806cc309e317fd3420bbd30fb5">CONNECTION_TIMEOUT</a>      = -101,     <span class="comment">// 连接超时</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_enumvalue" href="namespacePodModule.html#aad194976af5612d4469559348e94c7bea76a89dd85825b6f0a6c7092a4dddc44b">ALREADY_CONNECTED</a>       = -102,     <span class="comment">// 已连接</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_enumvalue" href="namespacePodModule.html#aad194976af5612d4469559348e94c7bead91be9b5ceb9fe0af02b9b02413eccf8">NOT_CONNECTED</a>           = -103,     <span class="comment">// 未连接</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_enumvalue" href="namespacePodModule.html#aad194976af5612d4469559348e94c7bea4a74aa1a5f9da8db364d21e42e778857">DISCONNECT_FAILED</a>       = -104,     <span class="comment">// 断开失败</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_enumvalue" href="namespacePodModule.html#aad194976af5612d4469559348e94c7bea901d3c35eb85dbfad6f6b8ce01308ac2">SESSION_ERROR</a>           = -200,     <span class="comment">// 会话错误</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_enumvalue" href="namespacePodModule.html#aad194976af5612d4469559348e94c7bea552ca91cb073f92b0c408643551760dd">SESSION_NOT_INITIALIZED</a> = -201,     <span class="comment">// 会话未初始化</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_enumvalue" href="namespacePodModule.html#aad194976af5612d4469559348e94c7beabec3e440b384c3231fd5d882a04e4344">SEND_FAILED</a>             = -202,     <span class="comment">// 发送失败</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_enumvalue" href="namespacePodModule.html#aad194976af5612d4469559348e94c7bea1a6888ceaf65c4f67643c4e257a7158e">RECEIVE_FAILED</a>          = -203,     <span class="comment">// 接收失败</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_enumvalue" href="namespacePodModule.html#aad194976af5612d4469559348e94c7bea84e0f083a546e31c22ed6984e7798f11">CAPABILITY_NOT_FOUND</a>    = -300,     <span class="comment">// 能力未找到</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_enumvalue" href="namespacePodModule.html#aad194976af5612d4469559348e94c7bea692249528aa903e466da34abe796aebe">CAPABILITY_NOT_SUPPORTED</a>= -301,     <span class="comment">// 能力不支持</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <a class="code hl_enumvalue" href="namespacePodModule.html#aad194976af5612d4469559348e94c7bea0c1fabd74acba83be4e2157dc361e3b9">CAPABILITY_INIT_FAILED</a>  = -302,     <span class="comment">// 能力初始化失败</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_enumvalue" href="namespacePodModule.html#aad194976af5612d4469559348e94c7bea742a23309414561517ea0a6717d83967">PTZ_CONTROL_FAILED</a>      = -400,     <span class="comment">// 云台控制失败</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_enumvalue" href="namespacePodModule.html#aad194976af5612d4469559348e94c7beae359f5c83f91b907a92648306182b09a">LASER_MEASURE_FAILED</a>    = -500,     <span class="comment">// 激光测距失败</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_enumvalue" href="namespacePodModule.html#aad194976af5612d4469559348e94c7bea0c61f5cffad85e680167fcf0414ddd17">STREAM_START_FAILED</a>     = -600,     <span class="comment">// 拉流启动失败</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_enumvalue" href="namespacePodModule.html#aad194976af5612d4469559348e94c7bead9a6074a60e439eee645e3593bd41f42">STREAM_STOP_FAILED</a>      = -601,     <span class="comment">// 拉流停止失败</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <a class="code hl_enumvalue" href="namespacePodModule.html#aad194976af5612d4469559348e94c7bea70ed87a15bc292983193acf6ccc5115a">IMAGE_CAPTURE_FAILED</a>    = -700,     <span class="comment">// 图像抓拍失败</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_enumvalue" href="namespacePodModule.html#aad194976af5612d4469559348e94c7bea56fdf59be1d50c8133196aa5afa194bf">CENTER_MEASURE_FAILED</a>   = -800,     <span class="comment">// 中心测量失败</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_enumvalue" href="namespacePodModule.html#aad194976af5612d4469559348e94c7beace9abcd77c31a8211923555febb7de01">POD_NOT_FOUND</a>           = -900,     <span class="comment">// 吊舱未找到</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <a class="code hl_enumvalue" href="namespacePodModule.html#aad194976af5612d4469559348e94c7bea86f071afc2d95478ce5dbcf885252fcd">POD_ALREADY_EXISTS</a>      = -901,     <span class="comment">// 吊舱已存在</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>};</div>
+</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>std::string <a class="code hl_function" href="namespacePodModule.html#ac5031773bc35b8d035f66bbb9eddf78b">podErrorCodeToString</a>(<a class="code hl_enumeration" href="namespacePodModule.html#aad194976af5612d4469559348e94c7be">PodErrorCode</a> code);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>} <span class="comment">// namespace PodModule</span></div>
+<div class="ttc" id="anamespacePodModule_html"><div class="ttname"><a href="namespacePodModule.html">PodModule</a></div><div class="ttdef"><b>Definition</b> base_capability.cpp:9</div></div>
+<div class="ttc" id="anamespacePodModule_html_aad194976af5612d4469559348e94c7be"><div class="ttname"><a href="namespacePodModule.html#aad194976af5612d4469559348e94c7be">PodModule::PodErrorCode</a></div><div class="ttdeci">PodErrorCode</div><div class="ttdoc">吊舱错误码枚举</div><div class="ttdef"><b>Definition</b> pod_errors.h:16</div></div>
+<div class="ttc" id="anamespacePodModule_html_aad194976af5612d4469559348e94c7bea042ec2cfe6c78a6a49b3a6555302947c"><div class="ttname"><a href="namespacePodModule.html#aad194976af5612d4469559348e94c7bea042ec2cfe6c78a6a49b3a6555302947c">PodModule::PodErrorCode::CONNECTION_FAILED</a></div><div class="ttdeci">@ CONNECTION_FAILED</div></div>
+<div class="ttc" id="anamespacePodModule_html_aad194976af5612d4469559348e94c7bea0c1fabd74acba83be4e2157dc361e3b9"><div class="ttname"><a href="namespacePodModule.html#aad194976af5612d4469559348e94c7bea0c1fabd74acba83be4e2157dc361e3b9">PodModule::PodErrorCode::CAPABILITY_INIT_FAILED</a></div><div class="ttdeci">@ CAPABILITY_INIT_FAILED</div></div>
+<div class="ttc" id="anamespacePodModule_html_aad194976af5612d4469559348e94c7bea0c61f5cffad85e680167fcf0414ddd17"><div class="ttname"><a href="namespacePodModule.html#aad194976af5612d4469559348e94c7bea0c61f5cffad85e680167fcf0414ddd17">PodModule::PodErrorCode::STREAM_START_FAILED</a></div><div class="ttdeci">@ STREAM_START_FAILED</div></div>
+<div class="ttc" id="anamespacePodModule_html_aad194976af5612d4469559348e94c7bea1a6888ceaf65c4f67643c4e257a7158e"><div class="ttname"><a href="namespacePodModule.html#aad194976af5612d4469559348e94c7bea1a6888ceaf65c4f67643c4e257a7158e">PodModule::PodErrorCode::RECEIVE_FAILED</a></div><div class="ttdeci">@ RECEIVE_FAILED</div></div>
+<div class="ttc" id="anamespacePodModule_html_aad194976af5612d4469559348e94c7bea4a74aa1a5f9da8db364d21e42e778857"><div class="ttname"><a href="namespacePodModule.html#aad194976af5612d4469559348e94c7bea4a74aa1a5f9da8db364d21e42e778857">PodModule::PodErrorCode::DISCONNECT_FAILED</a></div><div class="ttdeci">@ DISCONNECT_FAILED</div></div>
+<div class="ttc" id="anamespacePodModule_html_aad194976af5612d4469559348e94c7bea552ca91cb073f92b0c408643551760dd"><div class="ttname"><a href="namespacePodModule.html#aad194976af5612d4469559348e94c7bea552ca91cb073f92b0c408643551760dd">PodModule::PodErrorCode::SESSION_NOT_INITIALIZED</a></div><div class="ttdeci">@ SESSION_NOT_INITIALIZED</div></div>
+<div class="ttc" id="anamespacePodModule_html_aad194976af5612d4469559348e94c7bea56fdf59be1d50c8133196aa5afa194bf"><div class="ttname"><a href="namespacePodModule.html#aad194976af5612d4469559348e94c7bea56fdf59be1d50c8133196aa5afa194bf">PodModule::PodErrorCode::CENTER_MEASURE_FAILED</a></div><div class="ttdeci">@ CENTER_MEASURE_FAILED</div></div>
+<div class="ttc" id="anamespacePodModule_html_aad194976af5612d4469559348e94c7bea692249528aa903e466da34abe796aebe"><div class="ttname"><a href="namespacePodModule.html#aad194976af5612d4469559348e94c7bea692249528aa903e466da34abe796aebe">PodModule::PodErrorCode::CAPABILITY_NOT_SUPPORTED</a></div><div class="ttdeci">@ CAPABILITY_NOT_SUPPORTED</div></div>
+<div class="ttc" id="anamespacePodModule_html_aad194976af5612d4469559348e94c7bea70ed87a15bc292983193acf6ccc5115a"><div class="ttname"><a href="namespacePodModule.html#aad194976af5612d4469559348e94c7bea70ed87a15bc292983193acf6ccc5115a">PodModule::PodErrorCode::IMAGE_CAPTURE_FAILED</a></div><div class="ttdeci">@ IMAGE_CAPTURE_FAILED</div></div>
+<div class="ttc" id="anamespacePodModule_html_aad194976af5612d4469559348e94c7bea742a23309414561517ea0a6717d83967"><div class="ttname"><a href="namespacePodModule.html#aad194976af5612d4469559348e94c7bea742a23309414561517ea0a6717d83967">PodModule::PodErrorCode::PTZ_CONTROL_FAILED</a></div><div class="ttdeci">@ PTZ_CONTROL_FAILED</div></div>
+<div class="ttc" id="anamespacePodModule_html_aad194976af5612d4469559348e94c7bea76a89dd85825b6f0a6c7092a4dddc44b"><div class="ttname"><a href="namespacePodModule.html#aad194976af5612d4469559348e94c7bea76a89dd85825b6f0a6c7092a4dddc44b">PodModule::PodErrorCode::ALREADY_CONNECTED</a></div><div class="ttdeci">@ ALREADY_CONNECTED</div></div>
+<div class="ttc" id="anamespacePodModule_html_aad194976af5612d4469559348e94c7bea84e0f083a546e31c22ed6984e7798f11"><div class="ttname"><a href="namespacePodModule.html#aad194976af5612d4469559348e94c7bea84e0f083a546e31c22ed6984e7798f11">PodModule::PodErrorCode::CAPABILITY_NOT_FOUND</a></div><div class="ttdeci">@ CAPABILITY_NOT_FOUND</div></div>
+<div class="ttc" id="anamespacePodModule_html_aad194976af5612d4469559348e94c7bea86f071afc2d95478ce5dbcf885252fcd"><div class="ttname"><a href="namespacePodModule.html#aad194976af5612d4469559348e94c7bea86f071afc2d95478ce5dbcf885252fcd">PodModule::PodErrorCode::POD_ALREADY_EXISTS</a></div><div class="ttdeci">@ POD_ALREADY_EXISTS</div></div>
+<div class="ttc" id="anamespacePodModule_html_aad194976af5612d4469559348e94c7bea901d3c35eb85dbfad6f6b8ce01308ac2"><div class="ttname"><a href="namespacePodModule.html#aad194976af5612d4469559348e94c7bea901d3c35eb85dbfad6f6b8ce01308ac2">PodModule::PodErrorCode::SESSION_ERROR</a></div><div class="ttdeci">@ SESSION_ERROR</div></div>
+<div class="ttc" id="anamespacePodModule_html_aad194976af5612d4469559348e94c7bea9a10f345b0f755d461a8673a5e9ef6b4"><div class="ttname"><a href="namespacePodModule.html#aad194976af5612d4469559348e94c7bea9a10f345b0f755d461a8673a5e9ef6b4">PodModule::PodErrorCode::UNKNOWN_ERROR</a></div><div class="ttdeci">@ UNKNOWN_ERROR</div></div>
+<div class="ttc" id="anamespacePodModule_html_aad194976af5612d4469559348e94c7beabec3e440b384c3231fd5d882a04e4344"><div class="ttname"><a href="namespacePodModule.html#aad194976af5612d4469559348e94c7beabec3e440b384c3231fd5d882a04e4344">PodModule::PodErrorCode::SEND_FAILED</a></div><div class="ttdeci">@ SEND_FAILED</div></div>
+<div class="ttc" id="anamespacePodModule_html_aad194976af5612d4469559348e94c7beace9abcd77c31a8211923555febb7de01"><div class="ttname"><a href="namespacePodModule.html#aad194976af5612d4469559348e94c7beace9abcd77c31a8211923555febb7de01">PodModule::PodErrorCode::POD_NOT_FOUND</a></div><div class="ttdeci">@ POD_NOT_FOUND</div></div>
+<div class="ttc" id="anamespacePodModule_html_aad194976af5612d4469559348e94c7bead0749aaba8b833466dfcbb0428e4f89c"><div class="ttname"><a href="namespacePodModule.html#aad194976af5612d4469559348e94c7bead0749aaba8b833466dfcbb0428e4f89c">PodModule::PodErrorCode::SUCCESS</a></div><div class="ttdeci">@ SUCCESS</div></div>
+<div class="ttc" id="anamespacePodModule_html_aad194976af5612d4469559348e94c7bead094d5806cc309e317fd3420bbd30fb5"><div class="ttname"><a href="namespacePodModule.html#aad194976af5612d4469559348e94c7bead094d5806cc309e317fd3420bbd30fb5">PodModule::PodErrorCode::CONNECTION_TIMEOUT</a></div><div class="ttdeci">@ CONNECTION_TIMEOUT</div></div>
+<div class="ttc" id="anamespacePodModule_html_aad194976af5612d4469559348e94c7bead91be9b5ceb9fe0af02b9b02413eccf8"><div class="ttname"><a href="namespacePodModule.html#aad194976af5612d4469559348e94c7bead91be9b5ceb9fe0af02b9b02413eccf8">PodModule::PodErrorCode::NOT_CONNECTED</a></div><div class="ttdeci">@ NOT_CONNECTED</div></div>
+<div class="ttc" id="anamespacePodModule_html_aad194976af5612d4469559348e94c7bead9a6074a60e439eee645e3593bd41f42"><div class="ttname"><a href="namespacePodModule.html#aad194976af5612d4469559348e94c7bead9a6074a60e439eee645e3593bd41f42">PodModule::PodErrorCode::STREAM_STOP_FAILED</a></div><div class="ttdeci">@ STREAM_STOP_FAILED</div></div>
+<div class="ttc" id="anamespacePodModule_html_aad194976af5612d4469559348e94c7beae359f5c83f91b907a92648306182b09a"><div class="ttname"><a href="namespacePodModule.html#aad194976af5612d4469559348e94c7beae359f5c83f91b907a92648306182b09a">PodModule::PodErrorCode::LASER_MEASURE_FAILED</a></div><div class="ttdeci">@ LASER_MEASURE_FAILED</div></div>
+<div class="ttc" id="anamespacePodModule_html_ac5031773bc35b8d035f66bbb9eddf78b"><div class="ttname"><a href="namespacePodModule.html#ac5031773bc35b8d035f66bbb9eddf78b">PodModule::podErrorCodeToString</a></div><div class="ttdeci">std::string podErrorCodeToString(PodErrorCode code)</div><div class="ttdoc">将错误码转为中文描述</div><div class="ttdef"><b>Definition</b> pod_errors.cpp:10</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

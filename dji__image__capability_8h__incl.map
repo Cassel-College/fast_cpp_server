@@ -1,0 +1,47 @@
+<map id="src/util/my_pod/capability/dji/dji_image_capability.h" name="src/util/my_pod/capability/dji/dji_image_capability.h">
+<area shape="rect" id="Node000001" title="大疆图像抓拍能力" alt="" coords="387,5,578,45"/>
+<area shape="rect" id="Node000002" href="$base__image__capability_8h.html" title="基础图像抓拍能力" alt="" coords="409,93,557,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="485,46,485,79,480,79,480,46"/>
+<area shape="rect" id="Node000003" href="$base__capability_8h.html" title="能力基础实现类" alt="" coords="333,189,467,214"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="466,135,423,180,419,177,462,132"/>
+<area shape="rect" id="Node000014" href="$i__image__capability_8h.html" title="图像抓拍能力接口" alt="" coords="491,181,639,221"/>
+<area shape="poly" id="edge21_Node000002_Node000014" title=" " alt="" coords="503,132,539,169,536,173,499,135"/>
+<area shape="rect" id="Node000004" href="$i__capability_8h.html" title="能力基础接口定义" alt="" coords="181,277,363,302"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="384,216,302,271,299,267,381,212"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="233,357,311,383"/>
+<area shape="poly" id="edge20_Node000003_Node000011" title=" " alt="" coords="403,214,398,259,390,286,377,311,351,336,320,354,317,349,347,332,373,308,385,284,393,258,397,214"/>
+<area shape="rect" id="Node000012" href="$i__session_8h.html" title="会话接口定义" alt="" coords="480,269,637,309"/>
+<area shape="poly" id="edge15_Node000003_Node000012" title=" " alt="" coords="423,212,513,260,511,265,420,217"/>
+<area shape="rect" id="Node000005" href="$capability__types_8h.html" title="能力类型枚举定义" alt="" coords="5,431,176,471"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="255,304,219,329,179,359,117,422,113,418,176,355,216,324,252,300"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="341,519,400,544"/>
+<area shape="poly" id="edge13_Node000004_Node000006" title=" " alt="" coords="260,304,245,319,231,338,222,360,224,382,246,422,276,458,310,487,341,509,338,513,306,491,272,462,241,425,219,383,217,359,226,336,241,316,256,300"/>
+<area shape="rect" id="Node000008" href="$pod__result_8h.html" title="吊舱模块统一结果封装" alt="" coords="335,357,521,383"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="296,300,394,349,392,354,293,304"/>
+<area shape="poly" id="edge14_Node000004_Node000011" title=" " alt="" coords="275,302,275,343,269,343,269,302"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="158,468,329,516,327,521,157,473"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="576,519,643,544"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="177,462,563,520,562,526,176,468"/>
+<area shape="poly" id="edge11_Node000008_Node000006" title=" " alt="" coords="378,385,339,403,322,416,309,432,303,450,309,470,323,491,342,509,339,513,319,495,304,472,298,450,304,429,319,412,336,398,376,380"/>
+<area shape="rect" id="Node000009" href="$pod__errors_8h.html" title="吊舱模块错误码定义" alt="" coords="319,438,422,463"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="422,384,389,428,385,425,417,381"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="447,438,521,463"/>
+<area shape="poly" id="edge12_Node000008_Node000010" title=" " alt="" coords="438,381,470,425,466,428,434,384"/>
+<area shape="poly" id="edge9_Node000009_Node000006" title=" " alt="" coords="373,464,373,505,368,505,368,464"/>
+<area shape="poly" id="edge10_Node000009_Node000007" title=" " alt="" coords="406,461,564,512,562,517,405,466"/>
+<area shape="poly" id="edge17_Node000012_Node000006" title=" " alt="" coords="564,309,567,343,566,386,557,431,548,453,535,472,509,496,478,512,445,523,415,529,414,524,444,518,476,507,506,492,531,469,543,450,552,430,561,385,562,343,559,310"/>
+<area shape="poly" id="edge19_Node000012_Node000007" title=" " alt="" coords="567,309,580,357,608,505,603,506,575,358,562,310"/>
+<area shape="poly" id="edge16_Node000012_Node000008" title=" " alt="" coords="528,312,460,352,458,348,526,307"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="647,438,710,463"/>
+<area shape="poly" id="edge18_Node000012_Node000013" title=" " alt="" coords="584,308,630,356,653,391,670,424,666,427,648,394,626,359,580,311"/>
+<area shape="poly" id="edge22_Node000014_Node000004" title=" " alt="" coords="502,224,325,275,324,270,500,219"/>
+<area shape="rect" id="Node000015" href="$pod__models_8h.html" title="吊舱模块数据模型定义" alt="" coords="697,357,895,383"/>
+<area shape="poly" id="edge23_Node000014_Node000015" title=" " alt="" coords="593,219,771,347,768,352,590,224"/>
+<area shape="poly" id="edge27_Node000015_Node000006" title=" " alt="" coords="793,384,769,428,749,453,724,473,699,484,665,494,580,511,414,529,413,524,579,505,664,489,697,479,721,468,745,449,764,425,789,382"/>
+<area shape="poly" id="edge28_Node000015_Node000007" title=" " alt="" coords="836,380,872,399,888,413,901,429,909,451,907,462,901,472,884,486,859,497,794,513,721,524,656,530,656,525,721,519,793,508,858,492,881,481,897,469,902,460,904,452,896,432,884,416,869,403,834,385"/>
+<area shape="poly" id="edge29_Node000015_Node000013" title=" " alt="" coords="780,385,709,432,706,428,777,381"/>
+<area shape="rect" id="Node000016" href="$pod__types_8h.html" title="吊舱模块基础类型定义" alt="" coords="785,438,887,463"/>
+<area shape="poly" id="edge24_Node000015_Node000016" title=" " alt="" coords="804,382,826,425,822,427,800,384"/>
+<area shape="poly" id="edge25_Node000016_Node000006" title=" " alt="" coords="798,466,767,473,570,507,414,528,413,523,569,502,766,468,796,461"/>
+<area shape="poly" id="edge26_Node000016_Node000007" title=" " alt="" coords="804,466,656,517,654,512,802,461"/>
+</map>

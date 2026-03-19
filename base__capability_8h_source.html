@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_pod/capability/base/base_capability.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_0ac9cdf986d1682a7cf7479045e196ae.html">my_pod</a></li><li class="navelem"><a class="el" href="dir_0f1455ad6ed080eaddf4b20a628868e8.html">capability</a></li><li class="navelem"><a class="el" href="dir_1a39276a72bd9506e7236c8fad93e845.html">base</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">base_capability.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="base__capability_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;../interface/i_capability.h&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;../../session/interface/i_session.h&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePodModule.html">PodModule</a> {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">// 前向声明</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">class </span>IPod;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classPodModule_1_1BaseCapability.html">   26</a></span><span class="keyword">class </span><a class="code hl_class" href="classPodModule_1_1BaseCapability.html">BaseCapability</a> : <span class="keyword">virtual</span> <span class="keyword">public</span> <a class="code hl_class" href="classPodModule_1_1ICapability.html">ICapability</a> {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_function" href="classPodModule_1_1BaseCapability.html#adfc46d07831f9961cf81583a4e1c8615">BaseCapability</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_function" href="classPodModule_1_1BaseCapability.html#a2af9ef3c8907e6e7a15e83148c1c798f">~BaseCapability</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="comment">// --- ICapability 接口默认实现 ---</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_enumeration" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccc">CapabilityType</a> <a class="code hl_function" href="classPodModule_1_1BaseCapability.html#ad8118005444e19a47ecda3235a5d429d">getType</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    std::string <a class="code hl_function" href="classPodModule_1_1BaseCapability.html#a28d79a02e17b0c3ba87749b82b6af17b">getName</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_struct" href="structPodModule_1_1PodResult.html">PodResult&lt;void&gt;</a> <a class="code hl_function" href="classPodModule_1_1BaseCapability.html#a20fa7f9f4589043bbde9891ff30da611">initialize</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPodModule_1_1BaseCapability.html#ac7f79ab98eff556367b183016e89253c">attachPod</a>(<a class="code hl_class" href="classPodModule_1_1IPod.html">IPod</a>* pod) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classPodModule_1_1BaseCapability.html#a765a25fa06bd650b3c886c4c09699df1">attachSession</a>(std::shared_ptr&lt;ISession&gt; session) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <a class="code hl_class" href="classPodModule_1_1IPod.html">IPod</a>* <a class="code hl_function" href="classPodModule_1_1BaseCapability.html#ade71a69b5c3556653fb337536c18b2dc">getPod</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    std::shared_ptr&lt;ISession&gt; <a class="code hl_function" href="classPodModule_1_1BaseCapability.html#a68d2579b2a870875ee8e9089babc897f">getSession</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classPodModule_1_1BaseCapability.html#ad631b6179cf4a961ab4de78a5e9cecd8">isSessionReady</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">virtual</span> std::string <a class="code hl_function" href="classPodModule_1_1BaseCapability.html#ab3acb19739169b246df806a3fef134d3">logPrefix</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classPodModule_1_1BaseCapability.html#a308c13a849095c17f15868d7b26f800f">   51</a></span>    <a class="code hl_class" href="classPodModule_1_1IPod.html">IPod</a>*                    <a class="code hl_variable" href="classPodModule_1_1BaseCapability.html#a308c13a849095c17f15868d7b26f800f">pod_</a> = <span class="keyword">nullptr</span>;     <span class="comment">// 关联的 Pod 设备</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classPodModule_1_1BaseCapability.html#a5221aa557d678e3e12f18fbd2973bd20">   52</a></span>    std::shared_ptr&lt;ISession&gt; <a class="code hl_variable" href="classPodModule_1_1BaseCapability.html#a5221aa557d678e3e12f18fbd2973bd20">session_</a>;           <span class="comment">// 关联的会话</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>};</div>
+</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>} <span class="comment">// namespace PodModule</span></div>
+<div class="ttc" id="aclassPodModule_1_1BaseCapability_html"><div class="ttname"><a href="classPodModule_1_1BaseCapability.html">PodModule::BaseCapability</a></div><div class="ttdoc">能力基础实现类</div><div class="ttdef"><b>Definition</b> base_capability.h:26</div></div>
+<div class="ttc" id="aclassPodModule_1_1BaseCapability_html_a20fa7f9f4589043bbde9891ff30da611"><div class="ttname"><a href="classPodModule_1_1BaseCapability.html#a20fa7f9f4589043bbde9891ff30da611">PodModule::BaseCapability::initialize</a></div><div class="ttdeci">PodResult&lt; void &gt; initialize() override</div><div class="ttdoc">初始化能力</div><div class="ttdef"><b>Definition</b> base_capability.cpp:27</div></div>
+<div class="ttc" id="aclassPodModule_1_1BaseCapability_html_a28d79a02e17b0c3ba87749b82b6af17b"><div class="ttname"><a href="classPodModule_1_1BaseCapability.html#a28d79a02e17b0c3ba87749b82b6af17b">PodModule::BaseCapability::getName</a></div><div class="ttdeci">std::string getName() const override</div><div class="ttdoc">获取能力名称（中文）</div><div class="ttdef"><b>Definition</b> base_capability.cpp:23</div></div>
+<div class="ttc" id="aclassPodModule_1_1BaseCapability_html_a2af9ef3c8907e6e7a15e83148c1c798f"><div class="ttname"><a href="classPodModule_1_1BaseCapability.html#a2af9ef3c8907e6e7a15e83148c1c798f">PodModule::BaseCapability::~BaseCapability</a></div><div class="ttdeci">~BaseCapability() override</div><div class="ttdef"><b>Definition</b> base_capability.cpp:15</div></div>
+<div class="ttc" id="aclassPodModule_1_1BaseCapability_html_a308c13a849095c17f15868d7b26f800f"><div class="ttname"><a href="classPodModule_1_1BaseCapability.html#a308c13a849095c17f15868d7b26f800f">PodModule::BaseCapability::pod_</a></div><div class="ttdeci">IPod * pod_</div><div class="ttdef"><b>Definition</b> base_capability.h:51</div></div>
+<div class="ttc" id="aclassPodModule_1_1BaseCapability_html_a5221aa557d678e3e12f18fbd2973bd20"><div class="ttname"><a href="classPodModule_1_1BaseCapability.html#a5221aa557d678e3e12f18fbd2973bd20">PodModule::BaseCapability::session_</a></div><div class="ttdeci">std::shared_ptr&lt; ISession &gt; session_</div><div class="ttdef"><b>Definition</b> base_capability.h:52</div></div>
+<div class="ttc" id="aclassPodModule_1_1BaseCapability_html_a68d2579b2a870875ee8e9089babc897f"><div class="ttname"><a href="classPodModule_1_1BaseCapability.html#a68d2579b2a870875ee8e9089babc897f">PodModule::BaseCapability::getSession</a></div><div class="ttdeci">std::shared_ptr&lt; ISession &gt; getSession() const</div><div class="ttdoc">获取关联的 Session</div><div class="ttdef"><b>Definition</b> base_capability.cpp:52</div></div>
+<div class="ttc" id="aclassPodModule_1_1BaseCapability_html_a765a25fa06bd650b3c886c4c09699df1"><div class="ttname"><a href="classPodModule_1_1BaseCapability.html#a765a25fa06bd650b3c886c4c09699df1">PodModule::BaseCapability::attachSession</a></div><div class="ttdeci">void attachSession(std::shared_ptr&lt; ISession &gt; session) override</div><div class="ttdoc">关联 Session 会话</div><div class="ttdef"><b>Definition</b> base_capability.cpp:43</div></div>
+<div class="ttc" id="aclassPodModule_1_1BaseCapability_html_ab3acb19739169b246df806a3fef134d3"><div class="ttname"><a href="classPodModule_1_1BaseCapability.html#ab3acb19739169b246df806a3fef134d3">PodModule::BaseCapability::logPrefix</a></div><div class="ttdeci">virtual std::string logPrefix() const</div><div class="ttdoc">能力日志前缀（子类可覆盖）</div><div class="ttdef"><b>Definition</b> base_capability.cpp:60</div></div>
+<div class="ttc" id="aclassPodModule_1_1BaseCapability_html_ac7f79ab98eff556367b183016e89253c"><div class="ttname"><a href="classPodModule_1_1BaseCapability.html#ac7f79ab98eff556367b183016e89253c">PodModule::BaseCapability::attachPod</a></div><div class="ttdeci">void attachPod(IPod *pod) override</div><div class="ttdoc">关联 Pod 设备</div><div class="ttdef"><b>Definition</b> base_capability.cpp:38</div></div>
+<div class="ttc" id="aclassPodModule_1_1BaseCapability_html_ad631b6179cf4a961ab4de78a5e9cecd8"><div class="ttname"><a href="classPodModule_1_1BaseCapability.html#ad631b6179cf4a961ab4de78a5e9cecd8">PodModule::BaseCapability::isSessionReady</a></div><div class="ttdeci">bool isSessionReady() const</div><div class="ttdoc">检查 Session 是否可用</div><div class="ttdef"><b>Definition</b> base_capability.cpp:56</div></div>
+<div class="ttc" id="aclassPodModule_1_1BaseCapability_html_ad8118005444e19a47ecda3235a5d429d"><div class="ttname"><a href="classPodModule_1_1BaseCapability.html#ad8118005444e19a47ecda3235a5d429d">PodModule::BaseCapability::getType</a></div><div class="ttdeci">CapabilityType getType() const override</div><div class="ttdoc">获取能力类型</div><div class="ttdef"><b>Definition</b> base_capability.cpp:19</div></div>
+<div class="ttc" id="aclassPodModule_1_1BaseCapability_html_ade71a69b5c3556653fb337536c18b2dc"><div class="ttname"><a href="classPodModule_1_1BaseCapability.html#ade71a69b5c3556653fb337536c18b2dc">PodModule::BaseCapability::getPod</a></div><div class="ttdeci">IPod * getPod() const</div><div class="ttdoc">获取关联的 Pod 指针</div><div class="ttdef"><b>Definition</b> base_capability.cpp:48</div></div>
+<div class="ttc" id="aclassPodModule_1_1BaseCapability_html_adfc46d07831f9961cf81583a4e1c8615"><div class="ttname"><a href="classPodModule_1_1BaseCapability.html#adfc46d07831f9961cf81583a4e1c8615">PodModule::BaseCapability::BaseCapability</a></div><div class="ttdeci">BaseCapability()</div><div class="ttdef"><b>Definition</b> base_capability.cpp:11</div></div>
+<div class="ttc" id="aclassPodModule_1_1ICapability_html"><div class="ttname"><a href="classPodModule_1_1ICapability.html">PodModule::ICapability</a></div><div class="ttdoc">能力基础接口</div><div class="ttdef"><b>Definition</b> i_capability.h:27</div></div>
+<div class="ttc" id="aclassPodModule_1_1IPod_html"><div class="ttname"><a href="classPodModule_1_1IPod.html">PodModule::IPod</a></div><div class="ttdoc">吊舱统一抽象接口</div><div class="ttdef"><b>Definition</b> i_pod.h:34</div></div>
+<div class="ttc" id="anamespacePodModule_html"><div class="ttname"><a href="namespacePodModule.html">PodModule</a></div><div class="ttdef"><b>Definition</b> base_capability.cpp:9</div></div>
+<div class="ttc" id="anamespacePodModule_html_a58ed7bf409187110b791ef5b23109ccc"><div class="ttname"><a href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccc">PodModule::CapabilityType</a></div><div class="ttdeci">CapabilityType</div><div class="ttdoc">能力类型枚举</div><div class="ttdef"><b>Definition</b> capability_types.h:20</div></div>
+<div class="ttc" id="astructPodModule_1_1PodResult_html"><div class="ttname"><a href="structPodModule_1_1PodResult.html">PodModule::PodResult</a></div><div class="ttdoc">统一操作结果模板</div><div class="ttdef"><b>Definition</b> pod_result.h:22</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

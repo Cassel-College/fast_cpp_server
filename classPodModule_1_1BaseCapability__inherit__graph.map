@@ -1,0 +1,47 @@
+<map id="BaseCapability" name="BaseCapability">
+<area shape="rect" id="Node000001" title="能力基础实现类" alt="" coords="145,327,265,352"/>
+<area shape="rect" id="Node000003" href="$classPodModule_1_1BaseCenterMeasureCapability.html" title="基础中心点测量能力" alt="" coords="313,55,532,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="213,312,250,231,278,183,311,139,353,103,394,78,397,82,356,108,315,142,282,186,255,233,218,314"/>
+<area shape="rect" id="Node000006" href="$classPodModule_1_1BaseHeartbeatCapability.html" title="基础心跳检测能力" alt="" coords="330,153,515,179"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="227,314,312,237,399,177,402,181,315,241,231,318"/>
+<area shape="rect" id="Node000009" href="$classPodModule_1_1BaseImageCapability.html" title="基础图像抓拍能力" alt="" coords="342,252,503,277"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="255,320,384,275,386,280,257,325"/>
+<area shape="rect" id="Node000012" href="$classPodModule_1_1BaseLaserCapability.html" title="基础激光测距能力" alt="" coords="345,327,500,352"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="279,337,345,337,345,342,279,342"/>
+<area shape="rect" id="Node000015" href="$classPodModule_1_1BasePtzCapability.html" title="基础云台控制能力" alt="" coords="353,400,493,425"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="258,354,385,397,383,402,256,359"/>
+<area shape="rect" id="Node000018" href="$classPodModule_1_1BaseStatusCapability.html" title="基础状态查询能力" alt="" coords="342,499,503,524"/>
+<area shape="poly" id="edge17_Node000001_Node000018" title=" " alt="" coords="231,360,315,436,402,496,399,501,312,440,227,364"/>
+<area shape="rect" id="Node000021" href="$classPodModule_1_1BaseStreamCapability.html" title="基础流媒体能力" alt="" coords="339,597,506,623"/>
+<area shape="poly" id="edge20_Node000001_Node000021" title=" " alt="" coords="218,364,255,445,282,492,315,535,356,570,397,595,394,599,353,574,311,538,278,495,250,447,214,366"/>
+<area shape="rect" id="Node000002" href="$classPodModule_1_1ICapability.html" title="能力基础接口" alt="" coords="5,327,97,352"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,337,145,337,145,342,111,342"/>
+<area shape="rect" id="Node000004" href="$classPodModule_1_1DjiCenterMeasureCapability.html" title=" " alt="" coords="593,5,798,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="507,50,624,28,625,33,508,55"/>
+<area shape="rect" id="Node000005" href="$classPodModule_1_1PinlingCenterMeasureCapability.html" title=" " alt="" coords="580,55,811,80"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="546,65,580,65,580,70,546,70"/>
+<area shape="rect" id="Node000007" href="$classPodModule_1_1DjiHeartbeatCapability.html" title=" " alt="" coords="610,104,781,129"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="507,148,624,127,625,132,508,153"/>
+<area shape="rect" id="Node000008" href="$classPodModule_1_1PinlingHeartbeatCapability.html" title=" " alt="" coords="597,153,794,179"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="529,163,596,163,596,169,529,169"/>
+<area shape="rect" id="Node000010" href="$classPodModule_1_1DjiImageCapability.html" title=" " alt="" coords="622,203,769,228"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="507,247,624,225,625,231,508,252"/>
+<area shape="rect" id="Node000011" href="$classPodModule_1_1PinlingImageCapability.html" title=" " alt="" coords="609,252,782,277"/>
+<area shape="poly" id="edge10_Node000009_Node000011" title=" " alt="" coords="517,262,608,262,608,267,517,267"/>
+<area shape="rect" id="Node000013" href="$classPodModule_1_1DjiLaserCapability.html" title=" " alt="" coords="625,301,766,327"/>
+<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="514,328,624,318,625,323,514,334"/>
+<area shape="rect" id="Node000014" href="$classPodModule_1_1PinlingLaserCapability.html" title=" " alt="" coords="612,351,779,376"/>
+<area shape="poly" id="edge13_Node000012_Node000014" title=" " alt="" coords="514,345,612,353,612,359,513,350"/>
+<area shape="rect" id="Node000016" href="$classPodModule_1_1DjiPtzCapability.html" title=" " alt="" coords="632,400,759,425"/>
+<area shape="poly" id="edge15_Node000015_Node000016" title=" " alt="" coords="506,410,632,410,632,415,506,415"/>
+<area shape="rect" id="Node000017" href="$classPodModule_1_1PinlingPtzCapability.html" title=" " alt="" coords="619,449,771,475"/>
+<area shape="poly" id="edge16_Node000015_Node000017" title=" " alt="" coords="507,425,625,447,624,452,506,430"/>
+<area shape="rect" id="Node000019" href="$classPodModule_1_1DjiStatusCapability.html" title=" " alt="" coords="622,499,769,524"/>
+<area shape="poly" id="edge18_Node000018_Node000019" title=" " alt="" coords="517,509,622,509,622,514,517,514"/>
+<area shape="rect" id="Node000020" href="$classPodModule_1_1PinlingStatusCapability.html" title=" " alt="" coords="609,548,782,573"/>
+<area shape="poly" id="edge19_Node000018_Node000020" title=" " alt="" coords="508,524,625,545,624,551,507,529"/>
+<area shape="rect" id="Node000022" href="$classPodModule_1_1DjiStreamCapability.html" title=" " alt="" coords="619,597,772,623"/>
+<area shape="poly" id="edge21_Node000021_Node000022" title=" " alt="" coords="520,607,618,607,618,613,520,613"/>
+<area shape="rect" id="Node000023" href="$classPodModule_1_1PinlingStreamCapability.html" title=" " alt="" coords="606,647,785,672"/>
+<area shape="poly" id="edge22_Node000021_Node000023" title=" " alt="" coords="508,623,625,644,624,649,507,628"/>
+</map>

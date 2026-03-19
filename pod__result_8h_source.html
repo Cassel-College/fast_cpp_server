@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_pod/common/pod_result.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_0ac9cdf986d1682a7cf7479045e196ae.html">my_pod</a></li><li class="navelem"><a class="el" href="dir_1e439a19c281e63e1e6875b396a0af17.html">common</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">pod_result.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="pod__result_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="pod__errors_8h.html">pod_errors.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;optional&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePodModule.html">PodModule</a> {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T = <span class="keywordtype">void</span>&gt;</div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="structPodModule_1_1PodResult.html">   22</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structPodModule_1_1PodResult.html">PodResult</a> {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="structPodModule_1_1PodResult.html#add65945513de772ebae1e801a0d57057">   23</a></span>    <a class="code hl_enumeration" href="namespacePodModule.html#aad194976af5612d4469559348e94c7be">PodErrorCode</a>    <a class="code hl_variable" href="structPodModule_1_1PodResult.html#add65945513de772ebae1e801a0d57057">code</a> = <a class="code hl_enumvalue" href="namespacePodModule.html#aad194976af5612d4469559348e94c7bead0749aaba8b833466dfcbb0428e4f89c">PodErrorCode::SUCCESS</a>;   <span class="comment">// 错误码</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="structPodModule_1_1PodResult.html#a36bd74109f547f7f8198faf5a12d2879">   24</a></span>    std::string     <a class="code hl_variable" href="structPodModule_1_1PodResult.html#a36bd74109f547f7f8198faf5a12d2879">message</a>;                         <span class="comment">// 描述信息</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structPodModule_1_1PodResult.html#ab8ccf0b4bf03c77452de44495fbe3f9a">   25</a></span>    std::optional&lt;T&gt; <a class="code hl_variable" href="structPodModule_1_1PodResult.html#ab8ccf0b4bf03c77452de44495fbe3f9a">data</a>;                           <span class="comment">// 返回数据</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structPodModule_1_1PodResult.html#aab3a958f977b886cb41db5ff8d6e96bf">   28</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="structPodModule_1_1PodResult.html#aab3a958f977b886cb41db5ff8d6e96bf">isSuccess</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="structPodModule_1_1PodResult.html#add65945513de772ebae1e801a0d57057">code</a> == <a class="code hl_enumvalue" href="namespacePodModule.html#aad194976af5612d4469559348e94c7bead0749aaba8b833466dfcbb0428e4f89c">PodErrorCode::SUCCESS</a>; }</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="structPodModule_1_1PodResult.html#a918797a1c16d0fee3c376ad68e215966">   31</a></span>    <span class="keyword">static</span> <a class="code hl_struct" href="structPodModule_1_1PodResult.html">PodResult</a> <a class="code hl_function" href="structPodModule_1_1PodResult.html#a918797a1c16d0fee3c376ad68e215966">success</a>(<span class="keyword">const</span> T&amp; value, <span class="keyword">const</span> std::string&amp; msg = <span class="stringliteral">&quot;成功&quot;</span>) {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">return</span> <a class="code hl_struct" href="structPodModule_1_1PodResult.html">PodResult</a>{<a class="code hl_enumvalue" href="namespacePodModule.html#aad194976af5612d4469559348e94c7bead0749aaba8b833466dfcbb0428e4f89c">PodErrorCode::SUCCESS</a>, msg, value};</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
+</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="structPodModule_1_1PodResult.html#a75d0d7de7479e2554413141d9bd4974d">   36</a></span>    <span class="keyword">static</span> <a class="code hl_struct" href="structPodModule_1_1PodResult.html">PodResult</a> <a class="code hl_function" href="structPodModule_1_1PodResult.html#a75d0d7de7479e2554413141d9bd4974d">fail</a>(<a class="code hl_enumeration" href="namespacePodModule.html#aad194976af5612d4469559348e94c7be">PodErrorCode</a> err, <span class="keyword">const</span> std::string&amp; msg = <span class="stringliteral">&quot;&quot;</span>) {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        std::string desc = msg.empty() ? <a class="code hl_function" href="namespacePodModule.html#ac5031773bc35b8d035f66bbb9eddf78b">podErrorCodeToString</a>(err) : msg;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordflow">return</span> <a class="code hl_struct" href="structPodModule_1_1PodResult.html">PodResult</a>{err, desc, std::nullopt};</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    }</div>
+</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>};</div>
+</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="foldopen" id="foldopen00046" data-start="{" data-end="};">
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="structPodModule_1_1PodResult_3_01void_01_4.html">   46</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structPodModule_1_1PodResult.html">PodResult</a>&lt;void&gt; {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="structPodModule_1_1PodResult_3_01void_01_4.html#add65945513de772ebae1e801a0d57057">   47</a></span>    <a class="code hl_enumeration" href="namespacePodModule.html#aad194976af5612d4469559348e94c7be">PodErrorCode</a> <a class="code hl_variable" href="structPodModule_1_1PodResult.html#add65945513de772ebae1e801a0d57057">code</a> = <a class="code hl_enumvalue" href="namespacePodModule.html#aad194976af5612d4469559348e94c7bead0749aaba8b833466dfcbb0428e4f89c">PodErrorCode::SUCCESS</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="structPodModule_1_1PodResult_3_01void_01_4.html#a36bd74109f547f7f8198faf5a12d2879">   48</a></span>    std::string  <a class="code hl_variable" href="structPodModule_1_1PodResult_3_01void_01_4.html#a36bd74109f547f7f8198faf5a12d2879">message</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="structPodModule_1_1PodResult_3_01void_01_4.html#aab3a958f977b886cb41db5ff8d6e96bf">   50</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="structPodModule_1_1PodResult_3_01void_01_4.html#aab3a958f977b886cb41db5ff8d6e96bf">isSuccess</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="structPodModule_1_1PodResult.html#add65945513de772ebae1e801a0d57057">code</a> == <a class="code hl_enumvalue" href="namespacePodModule.html#aad194976af5612d4469559348e94c7bead0749aaba8b833466dfcbb0428e4f89c">PodErrorCode::SUCCESS</a>; }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="}">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="structPodModule_1_1PodResult_3_01void_01_4.html#ac904a7e9248d1ea9ec0a76533d8009c9">   52</a></span>    <span class="keyword">static</span> <a class="code hl_struct" href="structPodModule_1_1PodResult.html">PodResult</a> <a class="code hl_function" href="structPodModule_1_1PodResult_3_01void_01_4.html#ac904a7e9248d1ea9ec0a76533d8009c9">success</a>(<span class="keyword">const</span> std::string&amp; msg = <span class="stringliteral">&quot;成功&quot;</span>) {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordflow">return</span> <a class="code hl_struct" href="structPodModule_1_1PodResult.html">PodResult</a>{<a class="code hl_enumvalue" href="namespacePodModule.html#aad194976af5612d4469559348e94c7bead0749aaba8b833466dfcbb0428e4f89c">PodErrorCode::SUCCESS</a>, msg};</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    }</div>
+</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="foldopen" id="foldopen00056" data-start="{" data-end="}">
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="structPodModule_1_1PodResult_3_01void_01_4.html#a75d0d7de7479e2554413141d9bd4974d">   56</a></span>    <span class="keyword">static</span> <a class="code hl_struct" href="structPodModule_1_1PodResult.html">PodResult</a> <a class="code hl_function" href="structPodModule_1_1PodResult_3_01void_01_4.html#a75d0d7de7479e2554413141d9bd4974d">fail</a>(<a class="code hl_enumeration" href="namespacePodModule.html#aad194976af5612d4469559348e94c7be">PodErrorCode</a> err, <span class="keyword">const</span> std::string&amp; msg = <span class="stringliteral">&quot;&quot;</span>) {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        std::string desc = msg.empty() ? <a class="code hl_function" href="namespacePodModule.html#ac5031773bc35b8d035f66bbb9eddf78b">podErrorCodeToString</a>(err) : msg;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordflow">return</span> <a class="code hl_struct" href="structPodModule_1_1PodResult.html">PodResult</a>{err, desc};</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    }</div>
+</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>};</div>
+</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>} <span class="comment">// namespace PodModule</span></div>
+<div class="ttc" id="anamespacePodModule_html"><div class="ttname"><a href="namespacePodModule.html">PodModule</a></div><div class="ttdef"><b>Definition</b> base_capability.cpp:9</div></div>
+<div class="ttc" id="anamespacePodModule_html_aad194976af5612d4469559348e94c7be"><div class="ttname"><a href="namespacePodModule.html#aad194976af5612d4469559348e94c7be">PodModule::PodErrorCode</a></div><div class="ttdeci">PodErrorCode</div><div class="ttdoc">吊舱错误码枚举</div><div class="ttdef"><b>Definition</b> pod_errors.h:16</div></div>
+<div class="ttc" id="anamespacePodModule_html_aad194976af5612d4469559348e94c7bead0749aaba8b833466dfcbb0428e4f89c"><div class="ttname"><a href="namespacePodModule.html#aad194976af5612d4469559348e94c7bead0749aaba8b833466dfcbb0428e4f89c">PodModule::PodErrorCode::SUCCESS</a></div><div class="ttdeci">@ SUCCESS</div></div>
+<div class="ttc" id="anamespacePodModule_html_ac5031773bc35b8d035f66bbb9eddf78b"><div class="ttname"><a href="namespacePodModule.html#ac5031773bc35b8d035f66bbb9eddf78b">PodModule::podErrorCodeToString</a></div><div class="ttdeci">std::string podErrorCodeToString(PodErrorCode code)</div><div class="ttdoc">将错误码转为中文描述</div><div class="ttdef"><b>Definition</b> pod_errors.cpp:10</div></div>
+<div class="ttc" id="apod__errors_8h_html"><div class="ttname"><a href="pod__errors_8h.html">pod_errors.h</a></div><div class="ttdoc">吊舱模块错误码定义</div></div>
+<div class="ttc" id="astructPodModule_1_1PodResult_3_01void_01_4_html_a36bd74109f547f7f8198faf5a12d2879"><div class="ttname"><a href="structPodModule_1_1PodResult_3_01void_01_4.html#a36bd74109f547f7f8198faf5a12d2879">PodModule::PodResult&lt; void &gt;::message</a></div><div class="ttdeci">std::string message</div><div class="ttdef"><b>Definition</b> pod_result.h:48</div></div>
+<div class="ttc" id="astructPodModule_1_1PodResult_3_01void_01_4_html_a75d0d7de7479e2554413141d9bd4974d"><div class="ttname"><a href="structPodModule_1_1PodResult_3_01void_01_4.html#a75d0d7de7479e2554413141d9bd4974d">PodModule::PodResult&lt; void &gt;::fail</a></div><div class="ttdeci">static PodResult fail(PodErrorCode err, const std::string &amp;msg=&quot;&quot;)</div><div class="ttdef"><b>Definition</b> pod_result.h:56</div></div>
+<div class="ttc" id="astructPodModule_1_1PodResult_3_01void_01_4_html_aab3a958f977b886cb41db5ff8d6e96bf"><div class="ttname"><a href="structPodModule_1_1PodResult_3_01void_01_4.html#aab3a958f977b886cb41db5ff8d6e96bf">PodModule::PodResult&lt; void &gt;::isSuccess</a></div><div class="ttdeci">bool isSuccess() const</div><div class="ttdef"><b>Definition</b> pod_result.h:50</div></div>
+<div class="ttc" id="astructPodModule_1_1PodResult_3_01void_01_4_html_ac904a7e9248d1ea9ec0a76533d8009c9"><div class="ttname"><a href="structPodModule_1_1PodResult_3_01void_01_4.html#ac904a7e9248d1ea9ec0a76533d8009c9">PodModule::PodResult&lt; void &gt;::success</a></div><div class="ttdeci">static PodResult success(const std::string &amp;msg=&quot;成功&quot;)</div><div class="ttdef"><b>Definition</b> pod_result.h:52</div></div>
+<div class="ttc" id="astructPodModule_1_1PodResult_html"><div class="ttname"><a href="structPodModule_1_1PodResult.html">PodModule::PodResult</a></div><div class="ttdoc">统一操作结果模板</div><div class="ttdef"><b>Definition</b> pod_result.h:22</div></div>
+<div class="ttc" id="astructPodModule_1_1PodResult_html_a36bd74109f547f7f8198faf5a12d2879"><div class="ttname"><a href="structPodModule_1_1PodResult.html#a36bd74109f547f7f8198faf5a12d2879">PodModule::PodResult::message</a></div><div class="ttdeci">std::string message</div><div class="ttdef"><b>Definition</b> pod_result.h:24</div></div>
+<div class="ttc" id="astructPodModule_1_1PodResult_html_a75d0d7de7479e2554413141d9bd4974d"><div class="ttname"><a href="structPodModule_1_1PodResult.html#a75d0d7de7479e2554413141d9bd4974d">PodModule::PodResult::fail</a></div><div class="ttdeci">static PodResult fail(PodErrorCode err, const std::string &amp;msg=&quot;&quot;)</div><div class="ttdoc">构造失败结果</div><div class="ttdef"><b>Definition</b> pod_result.h:36</div></div>
+<div class="ttc" id="astructPodModule_1_1PodResult_html_a918797a1c16d0fee3c376ad68e215966"><div class="ttname"><a href="structPodModule_1_1PodResult.html#a918797a1c16d0fee3c376ad68e215966">PodModule::PodResult::success</a></div><div class="ttdeci">static PodResult success(const T &amp;value, const std::string &amp;msg=&quot;成功&quot;)</div><div class="ttdoc">构造成功结果</div><div class="ttdef"><b>Definition</b> pod_result.h:31</div></div>
+<div class="ttc" id="astructPodModule_1_1PodResult_html_aab3a958f977b886cb41db5ff8d6e96bf"><div class="ttname"><a href="structPodModule_1_1PodResult.html#aab3a958f977b886cb41db5ff8d6e96bf">PodModule::PodResult::isSuccess</a></div><div class="ttdeci">bool isSuccess() const</div><div class="ttdoc">判断操作是否成功</div><div class="ttdef"><b>Definition</b> pod_result.h:28</div></div>
+<div class="ttc" id="astructPodModule_1_1PodResult_html_ab8ccf0b4bf03c77452de44495fbe3f9a"><div class="ttname"><a href="structPodModule_1_1PodResult.html#ab8ccf0b4bf03c77452de44495fbe3f9a">PodModule::PodResult::data</a></div><div class="ttdeci">std::optional&lt; T &gt; data</div><div class="ttdef"><b>Definition</b> pod_result.h:25</div></div>
+<div class="ttc" id="astructPodModule_1_1PodResult_html_add65945513de772ebae1e801a0d57057"><div class="ttname"><a href="structPodModule_1_1PodResult.html#add65945513de772ebae1e801a0d57057">PodModule::PodResult::code</a></div><div class="ttdeci">PodErrorCode code</div><div class="ttdef"><b>Definition</b> pod_result.h:23</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

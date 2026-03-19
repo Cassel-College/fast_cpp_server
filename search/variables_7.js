@@ -6,7 +6,10 @@ var searchData=
   ['heading_3',['heading',['../structmy__edge_1_1MavVehicleStatus.html#ac5682e48513a771560df50e3b213e61a',1,'my_edge::MavVehicleStatus::heading'],['../classmy__edge_1_1MyMavVehicle.html#ac5682e48513a771560df50e3b213e61a',1,'my_edge::MyMavVehicle::heading']]],
   ['heartbeat_5fdata_5f_4',['heartbeat_data_',['../classmy__heartbeat_1_1HeartbeatManager.html#a1996ae8f612adf12d0cf12f6d15916bc',1,'my_heartbeat::HeartbeatManager']]],
   ['heartbeat_5fframe_5flen_5',['HEARTBEAT_FRAME_LEN',['../namespacefly__control.html#a793181c3f18837d5bd6f8e2a3b582b2c',1,'fly_control']]],
-  ['history_5fqueues_5f_6',['history_queues_',['../classmy__edge_1_1demo_1_1UUVEdge.html#a691631ea2ece717cb61fc98d8a0fffbb',1,'my_edge::demo::UUVEdge']]],
-  ['host_7',['host',['../structMySoftHealthy_1_1SoftHealthSnapshot.html#afe856b0443aec9cda982bb18d429b0cb',1,'MySoftHealthy::SoftHealthSnapshot']]],
-  ['host_5f_8',['host_',['../classmy__mqtt_1_1MqttService.html#ada0f95acb51c9a574d38befa858d78fa',1,'my_mqtt::MqttService::host_'],['../classDeviceOnlineMonitor.html#ada0f95acb51c9a574d38befa858d78fa',1,'DeviceOnlineMonitor::host_']]]
+  ['heartbeat_5finterval_5fms_5f_6',['heartbeat_interval_ms_',['../classPodModule_1_1BaseHeartbeatCapability.html#ae5e1d49e49716e1601fc9dfa6347183f',1,'PodModule::BaseHeartbeatCapability']]],
+  ['heartbeat_5frunning_5f_7',['heartbeat_running_',['../classPodModule_1_1BaseHeartbeatCapability.html#a3dc2f94c3e804258638f263d8caf501f',1,'PodModule::BaseHeartbeatCapability']]],
+  ['height_8',['height',['../structPodModule_1_1StreamInfo.html#ad12fc34ce789bce6c8a05d8a17138534',1,'PodModule::StreamInfo::height'],['../structPodModule_1_1ImageFrame.html#ad12fc34ce789bce6c8a05d8a17138534',1,'PodModule::ImageFrame::height']]],
+  ['history_5fqueues_5f_9',['history_queues_',['../classmy__edge_1_1demo_1_1UUVEdge.html#a691631ea2ece717cb61fc98d8a0fffbb',1,'my_edge::demo::UUVEdge']]],
+  ['host_10',['host',['../structMySoftHealthy_1_1SoftHealthSnapshot.html#afe856b0443aec9cda982bb18d429b0cb',1,'MySoftHealthy::SoftHealthSnapshot']]],
+  ['host_5f_11',['host_',['../classmy__mqtt_1_1MqttService.html#ada0f95acb51c9a574d38befa858d78fa',1,'my_mqtt::MqttService::host_'],['../classDeviceOnlineMonitor.html#ada0f95acb51c9a574d38befa858d78fa',1,'DeviceOnlineMonitor::host_'],['../classPodModule_1_1BaseSession.html#ada0f95acb51c9a574d38befa858d78fa',1,'PodModule::BaseSession::host_']]]
 ];

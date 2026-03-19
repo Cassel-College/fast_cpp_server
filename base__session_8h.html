@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_pod/session/base/base_session.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_0ac9cdf986d1682a7cf7479045e196ae.html">my_pod</a></li><li class="navelem"><a class="el" href="dir_be5f471cfb31219fe7f7f9b9e79d0495.html">session</a></li><li class="navelem"><a class="el" href="dir_70d1276b7f4e3a5b6fc39086f3e4c024.html">base</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#namespaces">命名空间</a>  </div>
+  <div class="headertitle"><div class="title">base_session.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>基础会话实现  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="i__session_8h_source.html">../interface/i_session.h</a>&quot;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;mutex&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+base_session.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="base__session_8h__incl.png" border="0" usemap="#asrc_2util_2my__pod_2session_2base_2base__session_8h" alt=""/></div>
+<map name="asrc_2util_2my__pod_2session_2base_2base__session_8h" id="asrc_2util_2my__pod_2session_2base_2base__session_8h">
+<area shape="rect" title="基础会话实现" alt="" coords="62,5,237,45"/>
+<area shape="rect" href="i__session_8h.html" title="会话接口定义" alt="" coords="65,93,233,119"/>
+<area shape="poly" title=" " alt="" coords="152,46,152,79,147,79,147,46"/>
+<area shape="rect" title=" " alt="" coords="5,313,64,339"/>
+<area shape="poly" title=" " alt="" coords="113,48,82,68,55,95,29,137,18,174,17,214,23,265,30,300,25,301,17,266,12,215,13,173,25,134,51,92,79,64,110,43"/>
+<area shape="rect" title=" " alt="" coords="257,93,321,119"/>
+<area shape="poly" title=" " alt="" coords="184,43,258,84,255,89,182,48"/>
+<area shape="rect" href="pod__result_8h.html" title="吊舱模块统一结果封装" alt="" coords="56,167,243,192"/>
+<area shape="poly" title=" " alt="" coords="152,119,152,153,147,153,147,119"/>
+<area shape="poly" title=" " alt="" coords="111,121,75,140,59,152,46,168,33,201,28,237,28,271,32,300,27,300,23,271,22,236,28,199,42,165,55,149,72,135,109,116"/>
+<area shape="rect" title=" " alt="" coords="209,313,276,339"/>
+<area shape="poly" title=" " alt="" coords="179,116,214,134,254,161,290,196,304,216,315,239,318,253,314,266,298,290,277,308,274,304,294,286,310,264,312,253,309,241,299,219,286,199,250,165,211,139,176,121"/>
+<area shape="rect" title=" " alt="" coords="375,167,438,192"/>
+<area shape="poly" title=" " alt="" coords="191,116,362,163,361,168,190,121"/>
+<area shape="rect" href="pod__errors_8h.html" title="吊舱模块错误码定义" alt="" coords="98,240,201,265"/>
+<area shape="poly" title=" " alt="" coords="152,192,152,226,147,226,147,192"/>
+<area shape="poly" title=" " alt="" coords="136,194,112,215,87,242,66,272,49,302,44,300,61,270,83,238,108,212,133,190"/>
+<area shape="rect" title=" " alt="" coords="225,240,300,265"/>
+<area shape="poly" title=" " alt="" coords="169,190,234,230,231,235,166,194"/>
+<area shape="poly" title=" " alt="" coords="132,268,66,308,64,304,130,263"/>
+<area shape="poly" title=" " alt="" coords="166,263,218,303,215,307,163,267"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="base__session_8h__dep__incl.png" border="0" usemap="#asrc_2util_2my__pod_2session_2base_2base__session_8hdep" alt=""/></div>
+<map name="asrc_2util_2my__pod_2session_2base_2base__session_8hdep" id="asrc_2util_2my__pod_2session_2base_2base__session_8hdep">
+<area shape="rect" title="基础会话实现" alt="" coords="204,5,379,45"/>
+<area shape="rect" href="base__session_8cpp.html" title="基础会话实现" alt="" coords="5,93,180,133"/>
+<area shape="poly" title=" " alt="" coords="236,53,137,96,135,91,234,48"/>
+<area shape="rect" href="dji__session_8h.html" title="大疆吊舱会话实现" alt="" coords="204,93,379,133"/>
+<area shape="poly" title=" " alt="" coords="294,59,294,93,289,93,289,59"/>
+<area shape="rect" href="pinling__session_8h.html" title="品凌吊舱会话实现" alt="" coords="403,93,590,133"/>
+<area shape="poly" title=" " alt="" coords="350,48,453,91,451,96,348,53"/>
+<area shape="rect" href="dji__pod_8cpp.html" title="大疆吊舱实现" alt="" coords="31,181,181,221"/>
+<area shape="poly" title=" " alt="" coords="239,142,148,184,145,179,237,137"/>
+<area shape="rect" href="dji__session_8cpp.html" title="大疆吊舱会话实现" alt="" coords="205,181,380,221"/>
+<area shape="poly" title=" " alt="" coords="295,147,295,181,290,181,289,147"/>
+<area shape="rect" href="pinling__pod_8cpp.html" title="品凌吊舱实现" alt="" coords="407,181,583,221"/>
+<area shape="poly" title=" " alt="" coords="499,147,498,181,493,181,493,147"/>
+<area shape="rect" href="pinling__session_8cpp.html" title="品凌吊舱会话实现" alt="" coords="608,181,809,221"/>
+<area shape="poly" title=" " alt="" coords="557,136,663,179,661,184,555,141"/>
+</map>
+</div>
+</div>
+<p><a href="base__session_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BaseSession.html">BaseSession</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">基础会话类  <a href="classPodModule_1_1BaseSession.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacePodModule" id="r_namespacePodModule"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePodModule.html">PodModule</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>基础会话实现 </p>
+<p>提供 ISession 的基础实现，包含通用的连接状态管理和日志。 厂商会话继承此类并实现具体通信逻辑。 </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

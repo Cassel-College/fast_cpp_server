@@ -1,0 +1,729 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: BaseHeartbeatCapability类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacePodModule.html">PodModule</a></li><li class="navelem"><a class="el" href="classPodModule_1_1BaseHeartbeatCapability.html">BaseHeartbeatCapability</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-attribs">Protected 属性</a>  </div>
+  <div class="headertitle"><div class="title">BaseHeartbeatCapability类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>基础心跳检测能力  
+ <a href="classPodModule_1_1BaseHeartbeatCapability.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="base__heartbeat__capability_8h_source.html">base_heartbeat_capability.h</a>&gt;</code></p>
+<div class="dynheader">
+类 BaseHeartbeatCapability 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPodModule_1_1BaseHeartbeatCapability__inherit__graph.png" border="0" usemap="#aBaseHeartbeatCapability_inherit__map" alt="Inheritance graph"/></div>
+<map name="aBaseHeartbeatCapability_inherit__map" id="aBaseHeartbeatCapability_inherit__map">
+<area shape="rect" title="基础心跳检测能力" alt="" coords="102,152,287,177"/>
+<area shape="rect" href="classPodModule_1_1DjiHeartbeatCapability.html" title=" " alt="" coords="5,225,176,251"/>
+<area shape="poly" title=" " alt="" coords="168,187,109,227,106,223,165,183"/>
+<area shape="rect" href="classPodModule_1_1PinlingHeartbeatCapability.html" title=" " alt="" coords="200,225,397,251"/>
+<area shape="poly" title=" " alt="" coords="224,183,283,223,280,227,221,187"/>
+<area shape="rect" href="classPodModule_1_1BaseCapability.html" title="能力基础实现类" alt="" coords="53,79,173,104"/>
+<area shape="poly" title=" " alt="" coords="138,111,183,150,180,154,135,115"/>
+<area shape="rect" href="classPodModule_1_1ICapability.html" title="能力基础接口" alt="" coords="149,5,241,31"/>
+<area shape="poly" title=" " alt="" coords="173,42,128,80,125,76,170,38"/>
+<area shape="rect" href="classPodModule_1_1IHeartbeatCapability.html" title="心跳检测能力接口" alt="" coords="197,79,355,104"/>
+<area shape="poly" title=" " alt="" coords="220,38,264,76,261,80,216,42"/>
+<area shape="poly" title=" " alt="" coords="254,115,210,154,206,150,251,111"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+BaseHeartbeatCapability 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPodModule_1_1BaseHeartbeatCapability__coll__graph.png" border="0" usemap="#aBaseHeartbeatCapability_coll__map" alt="Collaboration graph"/></div>
+<map name="aBaseHeartbeatCapability_coll__map" id="aBaseHeartbeatCapability_coll__map">
+<area shape="rect" title="基础心跳检测能力" alt="" coords="87,168,273,193"/>
+<area shape="rect" href="classPodModule_1_1BaseCapability.html" title="能力基础实现类" alt="" coords="187,93,307,119"/>
+<area shape="poly" title=" " alt="" coords="229,131,193,169,189,166,225,127"/>
+<area shape="rect" href="classPodModule_1_1ICapability.html" title="能力基础接口" alt="" coords="89,5,181,31"/>
+<area shape="poly" title=" " alt="" coords="163,37,233,91,230,95,159,41"/>
+<area shape="rect" href="classPodModule_1_1IHeartbeatCapability.html" title="心跳检测能力接口" alt="" coords="5,93,163,119"/>
+<area shape="poly" title=" " alt="" coords="123,44,93,94,89,91,119,41"/>
+<area shape="rect" href="classPodModule_1_1IPod.html" title="吊舱统一抽象接口" alt="" coords="221,5,272,31"/>
+<area shape="poly" title=" " alt="" coords="249,45,249,93,244,93,244,45"/>
+<area shape="poly" title=" " alt="" coords="112,125,166,165,163,170,109,129"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a049570186bffc9bae86b89ba768d19e7" id="r_a049570186bffc9bae86b89ba768d19e7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BaseHeartbeatCapability.html#a049570186bffc9bae86b89ba768d19e7">BaseHeartbeatCapability</a> ()</td></tr>
+<tr class="separator:a049570186bffc9bae86b89ba768d19e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ccc1ddf1ff974f9e40757dfce7dbd76" id="r_a5ccc1ddf1ff974f9e40757dfce7dbd76"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BaseHeartbeatCapability.html#a5ccc1ddf1ff974f9e40757dfce7dbd76">~BaseHeartbeatCapability</a> () override</td></tr>
+<tr class="separator:a5ccc1ddf1ff974f9e40757dfce7dbd76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8118005444e19a47ecda3235a5d429d" id="r_ad8118005444e19a47ecda3235a5d429d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccc">CapabilityType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BaseHeartbeatCapability.html#ad8118005444e19a47ecda3235a5d429d">getType</a> () const override</td></tr>
+<tr class="memdesc:ad8118005444e19a47ecda3235a5d429d"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取能力类型  <br /></td></tr>
+<tr class="separator:ad8118005444e19a47ecda3235a5d429d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28d79a02e17b0c3ba87749b82b6af17b" id="r_a28d79a02e17b0c3ba87749b82b6af17b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BaseHeartbeatCapability.html#a28d79a02e17b0c3ba87749b82b6af17b">getName</a> () const override</td></tr>
+<tr class="memdesc:a28d79a02e17b0c3ba87749b82b6af17b"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取能力名称（中文）  <br /></td></tr>
+<tr class="separator:a28d79a02e17b0c3ba87749b82b6af17b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20fa7f9f4589043bbde9891ff30da611" id="r_a20fa7f9f4589043bbde9891ff30da611"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structPodModule_1_1PodResult.html">PodResult</a>&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BaseHeartbeatCapability.html#a20fa7f9f4589043bbde9891ff30da611">initialize</a> () override</td></tr>
+<tr class="memdesc:a20fa7f9f4589043bbde9891ff30da611"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化能力  <br /></td></tr>
+<tr class="separator:a20fa7f9f4589043bbde9891ff30da611"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7f79ab98eff556367b183016e89253c" id="r_ac7f79ab98eff556367b183016e89253c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BaseHeartbeatCapability.html#ac7f79ab98eff556367b183016e89253c">attachPod</a> (<a class="el" href="classPodModule_1_1IPod.html">IPod</a> *pod) override</td></tr>
+<tr class="memdesc:ac7f79ab98eff556367b183016e89253c"><td class="mdescLeft">&#160;</td><td class="mdescRight">关联 Pod 设备  <br /></td></tr>
+<tr class="separator:ac7f79ab98eff556367b183016e89253c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a765a25fa06bd650b3c886c4c09699df1" id="r_a765a25fa06bd650b3c886c4c09699df1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BaseHeartbeatCapability.html#a765a25fa06bd650b3c886c4c09699df1">attachSession</a> (std::shared_ptr&lt; <a class="el" href="classPodModule_1_1ISession.html">ISession</a> &gt; session) override</td></tr>
+<tr class="memdesc:a765a25fa06bd650b3c886c4c09699df1"><td class="mdescLeft">&#160;</td><td class="mdescRight">关联 Session 会话  <br /></td></tr>
+<tr class="separator:a765a25fa06bd650b3c886c4c09699df1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94e3101348c450c6e2270b52bc70f04d" id="r_a94e3101348c450c6e2270b52bc70f04d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structPodModule_1_1PodResult.html">PodResult</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BaseHeartbeatCapability.html#a94e3101348c450c6e2270b52bc70f04d">sendHeartbeat</a> () override</td></tr>
+<tr class="memdesc:a94e3101348c450c6e2270b52bc70f04d"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送一次心跳并检测设备是否存活  <br /></td></tr>
+<tr class="separator:a94e3101348c450c6e2270b52bc70f04d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06d4ea84139e861d5614ea66f357b315" id="r_a06d4ea84139e861d5614ea66f357b315"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structPodModule_1_1PodResult.html">PodResult</a>&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BaseHeartbeatCapability.html#a06d4ea84139e861d5614ea66f357b315">startHeartbeat</a> (uint32_t interval_ms=1000) override</td></tr>
+<tr class="memdesc:a06d4ea84139e861d5614ea66f357b315"><td class="mdescLeft">&#160;</td><td class="mdescRight">启动自动心跳检测  <br /></td></tr>
+<tr class="separator:a06d4ea84139e861d5614ea66f357b315"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba84b122f7c137605b3547e62d0bc14f" id="r_aba84b122f7c137605b3547e62d0bc14f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structPodModule_1_1PodResult.html">PodResult</a>&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BaseHeartbeatCapability.html#aba84b122f7c137605b3547e62d0bc14f">stopHeartbeat</a> () override</td></tr>
+<tr class="memdesc:aba84b122f7c137605b3547e62d0bc14f"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止自动心跳检测  <br /></td></tr>
+<tr class="separator:aba84b122f7c137605b3547e62d0bc14f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a940ca26bdddb799b448968bb2086e8e7" id="r_a940ca26bdddb799b448968bb2086e8e7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BaseHeartbeatCapability.html#a940ca26bdddb799b448968bb2086e8e7">isAlive</a> () const override</td></tr>
+<tr class="memdesc:a940ca26bdddb799b448968bb2086e8e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取设备是否在线  <br /></td></tr>
+<tr class="separator:a940ca26bdddb799b448968bb2086e8e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classPodModule_1_1BaseCapability"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classPodModule_1_1BaseCapability')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classPodModule_1_1BaseCapability.html">BaseCapability</a></td></tr>
+<tr class="memitem:adfc46d07831f9961cf81583a4e1c8615 inherit pub_methods_classPodModule_1_1BaseCapability" id="r_adfc46d07831f9961cf81583a4e1c8615"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BaseCapability.html#adfc46d07831f9961cf81583a4e1c8615">BaseCapability</a> ()</td></tr>
+<tr class="separator:adfc46d07831f9961cf81583a4e1c8615 inherit pub_methods_classPodModule_1_1BaseCapability"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2af9ef3c8907e6e7a15e83148c1c798f inherit pub_methods_classPodModule_1_1BaseCapability" id="r_a2af9ef3c8907e6e7a15e83148c1c798f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BaseCapability.html#a2af9ef3c8907e6e7a15e83148c1c798f">~BaseCapability</a> () override</td></tr>
+<tr class="separator:a2af9ef3c8907e6e7a15e83148c1c798f inherit pub_methods_classPodModule_1_1BaseCapability"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classPodModule_1_1ICapability"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classPodModule_1_1ICapability')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classPodModule_1_1ICapability.html">ICapability</a></td></tr>
+<tr class="memitem:a1456d4a2e1fac93734dab5a0aca9d16f inherit pub_methods_classPodModule_1_1ICapability" id="r_a1456d4a2e1fac93734dab5a0aca9d16f"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1ICapability.html#a1456d4a2e1fac93734dab5a0aca9d16f">~ICapability</a> ()=default</td></tr>
+<tr class="separator:a1456d4a2e1fac93734dab5a0aca9d16f inherit pub_methods_classPodModule_1_1ICapability"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classPodModule_1_1IHeartbeatCapability"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classPodModule_1_1IHeartbeatCapability')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classPodModule_1_1IHeartbeatCapability.html">IHeartbeatCapability</a></td></tr>
+<tr class="memitem:a2f0f17481ac64fda64d1d5bc42be044a inherit pub_methods_classPodModule_1_1IHeartbeatCapability" id="r_a2f0f17481ac64fda64d1d5bc42be044a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1IHeartbeatCapability.html#a2f0f17481ac64fda64d1d5bc42be044a">~IHeartbeatCapability</a> () override=default</td></tr>
+<tr class="separator:a2f0f17481ac64fda64d1d5bc42be044a inherit pub_methods_classPodModule_1_1IHeartbeatCapability"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:affc2611ca062af2118d326df282cdf60" id="r_affc2611ca062af2118d326df282cdf60"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BaseHeartbeatCapability.html#affc2611ca062af2118d326df282cdf60">alive_</a> {false}</td></tr>
+<tr class="separator:affc2611ca062af2118d326df282cdf60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dc2f94c3e804258638f263d8caf501f" id="r_a3dc2f94c3e804258638f263d8caf501f"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BaseHeartbeatCapability.html#a3dc2f94c3e804258638f263d8caf501f">heartbeat_running_</a> {false}</td></tr>
+<tr class="separator:a3dc2f94c3e804258638f263d8caf501f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5e1d49e49716e1601fc9dfa6347183f" id="r_ae5e1d49e49716e1601fc9dfa6347183f"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BaseHeartbeatCapability.html#ae5e1d49e49716e1601fc9dfa6347183f">heartbeat_interval_ms_</a> = 1000</td></tr>
+<tr class="separator:ae5e1d49e49716e1601fc9dfa6347183f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classPodModule_1_1BaseCapability"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classPodModule_1_1BaseCapability')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="classPodModule_1_1BaseCapability.html">BaseCapability</a></td></tr>
+<tr class="memitem:a308c13a849095c17f15868d7b26f800f inherit pro_attribs_classPodModule_1_1BaseCapability" id="r_a308c13a849095c17f15868d7b26f800f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPodModule_1_1IPod.html">IPod</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BaseCapability.html#a308c13a849095c17f15868d7b26f800f">pod_</a> = nullptr</td></tr>
+<tr class="separator:a308c13a849095c17f15868d7b26f800f inherit pro_attribs_classPodModule_1_1BaseCapability"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5221aa557d678e3e12f18fbd2973bd20 inherit pro_attribs_classPodModule_1_1BaseCapability" id="r_a5221aa557d678e3e12f18fbd2973bd20"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classPodModule_1_1ISession.html">ISession</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BaseCapability.html#a5221aa557d678e3e12f18fbd2973bd20">session_</a></td></tr>
+<tr class="separator:a5221aa557d678e3e12f18fbd2973bd20 inherit pro_attribs_classPodModule_1_1BaseCapability"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_methods_classPodModule_1_1BaseCapability"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classPodModule_1_1BaseCapability')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="classPodModule_1_1BaseCapability.html">BaseCapability</a></td></tr>
+<tr class="memitem:ade71a69b5c3556653fb337536c18b2dc inherit pro_methods_classPodModule_1_1BaseCapability" id="r_ade71a69b5c3556653fb337536c18b2dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPodModule_1_1IPod.html">IPod</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BaseCapability.html#ade71a69b5c3556653fb337536c18b2dc">getPod</a> () const</td></tr>
+<tr class="memdesc:ade71a69b5c3556653fb337536c18b2dc inherit pro_methods_classPodModule_1_1BaseCapability"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取关联的 Pod 指针  <br /></td></tr>
+<tr class="separator:ade71a69b5c3556653fb337536c18b2dc inherit pro_methods_classPodModule_1_1BaseCapability"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68d2579b2a870875ee8e9089babc897f inherit pro_methods_classPodModule_1_1BaseCapability" id="r_a68d2579b2a870875ee8e9089babc897f"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classPodModule_1_1ISession.html">ISession</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BaseCapability.html#a68d2579b2a870875ee8e9089babc897f">getSession</a> () const</td></tr>
+<tr class="memdesc:a68d2579b2a870875ee8e9089babc897f inherit pro_methods_classPodModule_1_1BaseCapability"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取关联的 Session  <br /></td></tr>
+<tr class="separator:a68d2579b2a870875ee8e9089babc897f inherit pro_methods_classPodModule_1_1BaseCapability"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad631b6179cf4a961ab4de78a5e9cecd8 inherit pro_methods_classPodModule_1_1BaseCapability" id="r_ad631b6179cf4a961ab4de78a5e9cecd8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BaseCapability.html#ad631b6179cf4a961ab4de78a5e9cecd8">isSessionReady</a> () const</td></tr>
+<tr class="memdesc:ad631b6179cf4a961ab4de78a5e9cecd8 inherit pro_methods_classPodModule_1_1BaseCapability"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查 Session 是否可用  <br /></td></tr>
+<tr class="separator:ad631b6179cf4a961ab4de78a5e9cecd8 inherit pro_methods_classPodModule_1_1BaseCapability"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3acb19739169b246df806a3fef134d3 inherit pro_methods_classPodModule_1_1BaseCapability" id="r_ab3acb19739169b246df806a3fef134d3"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BaseCapability.html#ab3acb19739169b246df806a3fef134d3">logPrefix</a> () const</td></tr>
+<tr class="memdesc:ab3acb19739169b246df806a3fef134d3 inherit pro_methods_classPodModule_1_1BaseCapability"><td class="mdescLeft">&#160;</td><td class="mdescRight">能力日志前缀（子类可覆盖）  <br /></td></tr>
+<tr class="separator:ab3acb19739169b246df806a3fef134d3 inherit pro_methods_classPodModule_1_1BaseCapability"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>基础心跳检测能力 </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a049570186bffc9bae86b89ba768d19e7" name="a049570186bffc9bae86b89ba768d19e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a049570186bffc9bae86b89ba768d19e7">&#9670;&#160;</a></span>BaseHeartbeatCapability()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPodModule_1_1BaseHeartbeatCapability.html">BaseHeartbeatCapability</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="MyLog_8h.html#a58669a9dee26041e1cd68f2e62214b0f">MYLOG_DEBUG</a>.</p>
+
+</div>
+</div>
+<a id="a5ccc1ddf1ff974f9e40757dfce7dbd76" name="a5ccc1ddf1ff974f9e40757dfce7dbd76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ccc1ddf1ff974f9e40757dfce7dbd76">&#9670;&#160;</a></span>~BaseHeartbeatCapability()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classPodModule_1_1BaseHeartbeatCapability.html">BaseHeartbeatCapability</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classPodModule_1_1BaseHeartbeatCapability.html#a3dc2f94c3e804258638f263d8caf501f">BaseHeartbeatCapability::heartbeat_running_</a>, <a class="el" href="MyLog_8h.html#a58669a9dee26041e1cd68f2e62214b0f">MYLOG_DEBUG</a> , 以及 <a class="el" href="classPodModule_1_1BaseHeartbeatCapability.html#aba84b122f7c137605b3547e62d0bc14f">BaseHeartbeatCapability::stopHeartbeat()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPodModule_1_1BaseHeartbeatCapability_a5ccc1ddf1ff974f9e40757dfce7dbd76_cgraph.png" border="0" usemap="#aclassPodModule_1_1BaseHeartbeatCapability_a5ccc1ddf1ff974f9e40757dfce7dbd76_cgraph" alt=""/></div>
+<map name="aclassPodModule_1_1BaseHeartbeatCapability_a5ccc1ddf1ff974f9e40757dfce7dbd76_cgraph" id="aclassPodModule_1_1BaseHeartbeatCapability_a5ccc1ddf1ff974f9e40757dfce7dbd76_cgraph">
+<area shape="rect" title=" " alt="" coords="5,45,201,70"/>
+<area shape="rect" href="classPodModule_1_1BaseHeartbeatCapability.html#aba84b122f7c137605b3547e62d0bc14f" title="停止自动心跳检测" alt="" coords="249,45,364,70"/>
+<area shape="poly" title=" " alt="" coords="201,55,235,55,235,60,201,60"/>
+<area shape="rect" href="classPodModule_1_1BaseCapability.html#ab3acb19739169b246df806a3fef134d3" title="能力日志前缀（子类可覆盖）" alt="" coords="412,5,612,45"/>
+<area shape="poly" title=" " alt="" coords="364,46,398,40,399,46,365,51"/>
+<area shape="rect" href="structPodModule_1_1PodResult.html#a918797a1c16d0fee3c376ad68e215966" title="构造成功结果" alt="" coords="429,69,595,109"/>
+<area shape="poly" title=" " alt="" coords="365,64,416,72,415,77,364,69"/>
+<area shape="rect" href="classPodModule_1_1BaseCapability.html#a28d79a02e17b0c3ba87749b82b6af17b" title="获取能力名称（中文）" alt="" coords="660,5,860,45"/>
+<area shape="poly" title=" " alt="" coords="612,23,646,23,646,28,612,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="ac7f79ab98eff556367b183016e89253c" name="ac7f79ab98eff556367b183016e89253c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7f79ab98eff556367b183016e89253c">&#9670;&#160;</a></span>attachPod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void attachPod </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPodModule_1_1IPod.html">IPod</a> *&#160;</td>
+          <td class="paramname"><em>pod</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>关联 Pod 设备 </p>
+
+<p>重载 <a class="el" href="classPodModule_1_1BaseCapability.html#ac7f79ab98eff556367b183016e89253c">BaseCapability</a> .</p>
+
+<p class="reference">引用了 <a class="el" href="classPodModule_1_1BaseCapability.html#ac7f79ab98eff556367b183016e89253c">BaseCapability::attachPod()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPodModule_1_1BaseHeartbeatCapability_ac7f79ab98eff556367b183016e89253c_cgraph.png" border="0" usemap="#aclassPodModule_1_1BaseHeartbeatCapability_ac7f79ab98eff556367b183016e89253c_cgraph" alt=""/></div>
+<map name="aclassPodModule_1_1BaseHeartbeatCapability_ac7f79ab98eff556367b183016e89253c_cgraph" id="aclassPodModule_1_1BaseHeartbeatCapability_ac7f79ab98eff556367b183016e89253c_cgraph">
+<area shape="rect" title="关联 Pod 设备" alt="" coords="5,13,92,38"/>
+<area shape="rect" href="classPodModule_1_1BaseCapability.html#ac7f79ab98eff556367b183016e89253c" title="关联 Pod 设备" alt="" coords="140,5,340,45"/>
+<area shape="poly" title=" " alt="" coords="92,23,126,23,126,28,92,28"/>
+<area shape="rect" href="classPodModule_1_1BaseCapability.html#ab3acb19739169b246df806a3fef134d3" title="能力日志前缀（子类可覆盖）" alt="" coords="388,5,588,45"/>
+<area shape="poly" title=" " alt="" coords="340,23,374,23,374,28,340,28"/>
+<area shape="rect" href="classPodModule_1_1BaseCapability.html#a28d79a02e17b0c3ba87749b82b6af17b" title="获取能力名称（中文）" alt="" coords="636,5,836,45"/>
+<area shape="poly" title=" " alt="" coords="588,23,622,23,622,28,588,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a765a25fa06bd650b3c886c4c09699df1" name="a765a25fa06bd650b3c886c4c09699df1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a765a25fa06bd650b3c886c4c09699df1">&#9670;&#160;</a></span>attachSession()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void attachSession </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classPodModule_1_1ISession.html">ISession</a> &gt;&#160;</td>
+          <td class="paramname"><em>session</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>关联 Session 会话 </p>
+
+<p>重载 <a class="el" href="classPodModule_1_1BaseCapability.html#a765a25fa06bd650b3c886c4c09699df1">BaseCapability</a> .</p>
+
+<p class="reference">引用了 <a class="el" href="classPodModule_1_1BaseCapability.html#a765a25fa06bd650b3c886c4c09699df1">BaseCapability::attachSession()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPodModule_1_1BaseHeartbeatCapability_a765a25fa06bd650b3c886c4c09699df1_cgraph.png" border="0" usemap="#aclassPodModule_1_1BaseHeartbeatCapability_a765a25fa06bd650b3c886c4c09699df1_cgraph" alt=""/></div>
+<map name="aclassPodModule_1_1BaseHeartbeatCapability_a765a25fa06bd650b3c886c4c09699df1_cgraph" id="aclassPodModule_1_1BaseHeartbeatCapability_a765a25fa06bd650b3c886c4c09699df1_cgraph">
+<area shape="rect" title="关联 Session 会话" alt="" coords="5,13,119,38"/>
+<area shape="rect" href="classPodModule_1_1BaseCapability.html#a765a25fa06bd650b3c886c4c09699df1" title="关联 Session 会话" alt="" coords="167,5,367,45"/>
+<area shape="poly" title=" " alt="" coords="119,23,153,23,153,28,119,28"/>
+<area shape="rect" href="classPodModule_1_1BaseCapability.html#ab3acb19739169b246df806a3fef134d3" title="能力日志前缀（子类可覆盖）" alt="" coords="415,5,615,45"/>
+<area shape="poly" title=" " alt="" coords="367,23,401,23,401,28,367,28"/>
+<area shape="rect" href="classPodModule_1_1BaseCapability.html#a28d79a02e17b0c3ba87749b82b6af17b" title="获取能力名称（中文）" alt="" coords="663,5,863,45"/>
+<area shape="poly" title=" " alt="" coords="615,23,649,23,649,28,615,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a28d79a02e17b0c3ba87749b82b6af17b" name="a28d79a02e17b0c3ba87749b82b6af17b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28d79a02e17b0c3ba87749b82b6af17b">&#9670;&#160;</a></span>getName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string getName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取能力名称（中文） </p>
+
+<p>重载 <a class="el" href="classPodModule_1_1BaseCapability.html#a28d79a02e17b0c3ba87749b82b6af17b">BaseCapability</a> .</p>
+
+</div>
+</div>
+<a id="ad8118005444e19a47ecda3235a5d429d" name="ad8118005444e19a47ecda3235a5d429d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8118005444e19a47ecda3235a5d429d">&#9670;&#160;</a></span>getType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccc">CapabilityType</a> getType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取能力类型 </p>
+
+<p>重载 <a class="el" href="classPodModule_1_1BaseCapability.html#ad8118005444e19a47ecda3235a5d429d">BaseCapability</a> .</p>
+
+<p class="reference">引用了 <a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccca0d895a0a05a7cce9b2c0c8bb252f78cc">PodModule::HEARTBEAT</a>.</p>
+
+</div>
+</div>
+<a id="a20fa7f9f4589043bbde9891ff30da611" name="a20fa7f9f4589043bbde9891ff30da611"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20fa7f9f4589043bbde9891ff30da611">&#9670;&#160;</a></span>initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structPodModule_1_1PodResult.html">PodResult</a>&lt; void &gt; initialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>初始化能力 </p>
+
+<p>重载 <a class="el" href="classPodModule_1_1BaseCapability.html#a20fa7f9f4589043bbde9891ff30da611">BaseCapability</a> .</p>
+
+<p class="reference">引用了 <a class="el" href="classPodModule_1_1BaseCapability.html#a20fa7f9f4589043bbde9891ff30da611">BaseCapability::initialize()</a>, <a class="el" href="classPodModule_1_1BaseCapability.html#ab3acb19739169b246df806a3fef134d3">BaseCapability::logPrefix()</a> , 以及 <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPodModule_1_1BaseHeartbeatCapability_a20fa7f9f4589043bbde9891ff30da611_cgraph.png" border="0" usemap="#aclassPodModule_1_1BaseHeartbeatCapability_a20fa7f9f4589043bbde9891ff30da611_cgraph" alt=""/></div>
+<map name="aclassPodModule_1_1BaseHeartbeatCapability_a20fa7f9f4589043bbde9891ff30da611_cgraph" id="aclassPodModule_1_1BaseHeartbeatCapability_a20fa7f9f4589043bbde9891ff30da611_cgraph">
+<area shape="rect" title="初始化能力" alt="" coords="5,42,84,67"/>
+<area shape="rect" href="classPodModule_1_1BaseCapability.html#a20fa7f9f4589043bbde9891ff30da611" title="初始化能力" alt="" coords="132,63,332,103"/>
+<area shape="poly" title=" " alt="" coords="85,58,119,63,118,68,84,63"/>
+<area shape="rect" href="classPodModule_1_1BaseCapability.html#ab3acb19739169b246df806a3fef134d3" title="能力日志前缀（子类可覆盖）" alt="" coords="380,5,580,45"/>
+<area shape="poly" title=" " alt="" coords="84,49,366,30,367,36,84,55"/>
+<area shape="poly" title=" " alt="" coords="319,60,379,46,380,51,320,65"/>
+<area shape="rect" href="structPodModule_1_1PodResult.html#a918797a1c16d0fee3c376ad68e215966" title="构造成功结果" alt="" coords="397,69,563,109"/>
+<area shape="poly" title=" " alt="" coords="332,83,383,84,383,89,332,88"/>
+<area shape="rect" href="classPodModule_1_1BaseCapability.html#a28d79a02e17b0c3ba87749b82b6af17b" title="获取能力名称（中文）" alt="" coords="628,5,828,45"/>
+<area shape="poly" title=" " alt="" coords="580,23,614,23,614,28,580,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a940ca26bdddb799b448968bb2086e8e7" name="a940ca26bdddb799b448968bb2086e8e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a940ca26bdddb799b448968bb2086e8e7">&#9670;&#160;</a></span>isAlive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isAlive </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取设备是否在线 </p>
+
+<p>实现了 <a class="el" href="classPodModule_1_1IHeartbeatCapability.html#a06fd5ec0396bb93cd71332f282a9646d">IHeartbeatCapability</a>.</p>
+
+<p class="reference">引用了 <a class="el" href="classPodModule_1_1BaseHeartbeatCapability.html#affc2611ca062af2118d326df282cdf60">BaseHeartbeatCapability::alive_</a>.</p>
+
+</div>
+</div>
+<a id="a94e3101348c450c6e2270b52bc70f04d" name="a94e3101348c450c6e2270b52bc70f04d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94e3101348c450c6e2270b52bc70f04d">&#9670;&#160;</a></span>sendHeartbeat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structPodModule_1_1PodResult.html">PodResult</a>&lt; bool &gt; sendHeartbeat </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>发送一次心跳并检测设备是否存活 </p>
+
+<p>实现了 <a class="el" href="classPodModule_1_1IHeartbeatCapability.html#a10ac1a50c2463f3370fc56697ef0febc">IHeartbeatCapability</a>.</p>
+
+<p>被 <a class="el" href="classPodModule_1_1DjiHeartbeatCapability.html#a94e3101348c450c6e2270b52bc70f04d">DjiHeartbeatCapability</a> , 以及 <a class="el" href="classPodModule_1_1PinlingHeartbeatCapability.html#a94e3101348c450c6e2270b52bc70f04d">PinlingHeartbeatCapability</a> 重载.</p>
+
+<p class="reference">引用了 <a class="el" href="classPodModule_1_1BaseHeartbeatCapability.html#affc2611ca062af2118d326df282cdf60">BaseHeartbeatCapability::alive_</a>, <a class="el" href="classPodModule_1_1BaseCapability.html#ab3acb19739169b246df806a3fef134d3">BaseCapability::logPrefix()</a>, <a class="el" href="MyLog_8h.html#a58669a9dee26041e1cd68f2e62214b0f">MYLOG_DEBUG</a> , 以及 <a class="el" href="structPodModule_1_1PodResult.html#a918797a1c16d0fee3c376ad68e215966">PodResult&lt; T &gt;::success()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPodModule_1_1BaseHeartbeatCapability_a94e3101348c450c6e2270b52bc70f04d_cgraph.png" border="0" usemap="#aclassPodModule_1_1BaseHeartbeatCapability_a94e3101348c450c6e2270b52bc70f04d_cgraph" alt=""/></div>
+<map name="aclassPodModule_1_1BaseHeartbeatCapability_a94e3101348c450c6e2270b52bc70f04d_cgraph" id="aclassPodModule_1_1BaseHeartbeatCapability_a94e3101348c450c6e2270b52bc70f04d_cgraph">
+<area shape="rect" title="发送一次心跳并检测设备是否存活" alt="" coords="5,45,124,70"/>
+<area shape="rect" href="classPodModule_1_1BaseCapability.html#ab3acb19739169b246df806a3fef134d3" title="能力日志前缀（子类可覆盖）" alt="" coords="172,5,372,45"/>
+<area shape="poly" title=" " alt="" coords="124,46,158,40,159,46,125,51"/>
+<area shape="rect" href="structPodModule_1_1PodResult.html#a918797a1c16d0fee3c376ad68e215966" title="构造成功结果" alt="" coords="189,69,355,109"/>
+<area shape="poly" title=" " alt="" coords="125,64,176,72,175,77,124,69"/>
+<area shape="rect" href="classPodModule_1_1BaseCapability.html#a28d79a02e17b0c3ba87749b82b6af17b" title="获取能力名称（中文）" alt="" coords="420,5,620,45"/>
+<area shape="poly" title=" " alt="" coords="372,23,406,23,406,28,372,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a06d4ea84139e861d5614ea66f357b315" name="a06d4ea84139e861d5614ea66f357b315"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06d4ea84139e861d5614ea66f357b315">&#9670;&#160;</a></span>startHeartbeat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structPodModule_1_1PodResult.html">PodResult</a>&lt; void &gt; startHeartbeat </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>interval_ms</em> = <code>1000</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>启动自动心跳检测 </p>
+
+<p>实现了 <a class="el" href="classPodModule_1_1IHeartbeatCapability.html#ab43776679bc16659ed94ab7d8fb2bab5">IHeartbeatCapability</a>.</p>
+
+<p class="reference">引用了 <a class="el" href="classPodModule_1_1BaseHeartbeatCapability.html#ae5e1d49e49716e1601fc9dfa6347183f">BaseHeartbeatCapability::heartbeat_interval_ms_</a>, <a class="el" href="classPodModule_1_1BaseHeartbeatCapability.html#a3dc2f94c3e804258638f263d8caf501f">BaseHeartbeatCapability::heartbeat_running_</a>, <a class="el" href="classPodModule_1_1BaseCapability.html#ab3acb19739169b246df806a3fef134d3">BaseCapability::logPrefix()</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a> , 以及 <a class="el" href="structPodModule_1_1PodResult.html#a918797a1c16d0fee3c376ad68e215966">PodResult&lt; T &gt;::success()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPodModule_1_1BaseHeartbeatCapability_a06d4ea84139e861d5614ea66f357b315_cgraph.png" border="0" usemap="#aclassPodModule_1_1BaseHeartbeatCapability_a06d4ea84139e861d5614ea66f357b315_cgraph" alt=""/></div>
+<map name="aclassPodModule_1_1BaseHeartbeatCapability_a06d4ea84139e861d5614ea66f357b315_cgraph" id="aclassPodModule_1_1BaseHeartbeatCapability_a06d4ea84139e861d5614ea66f357b315_cgraph">
+<area shape="rect" title="启动自动心跳检测" alt="" coords="5,45,123,70"/>
+<area shape="rect" href="classPodModule_1_1BaseCapability.html#ab3acb19739169b246df806a3fef134d3" title="能力日志前缀（子类可覆盖）" alt="" coords="171,5,371,45"/>
+<area shape="poly" title=" " alt="" coords="122,46,157,40,157,46,123,51"/>
+<area shape="rect" href="structPodModule_1_1PodResult.html#a918797a1c16d0fee3c376ad68e215966" title="构造成功结果" alt="" coords="187,69,354,109"/>
+<area shape="poly" title=" " alt="" coords="123,64,174,72,174,77,122,69"/>
+<area shape="rect" href="classPodModule_1_1BaseCapability.html#a28d79a02e17b0c3ba87749b82b6af17b" title="获取能力名称（中文）" alt="" coords="419,5,619,45"/>
+<area shape="poly" title=" " alt="" coords="371,23,405,23,405,28,371,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aba84b122f7c137605b3547e62d0bc14f" name="aba84b122f7c137605b3547e62d0bc14f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba84b122f7c137605b3547e62d0bc14f">&#9670;&#160;</a></span>stopHeartbeat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structPodModule_1_1PodResult.html">PodResult</a>&lt; void &gt; stopHeartbeat </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>停止自动心跳检测 </p>
+
+<p>实现了 <a class="el" href="classPodModule_1_1IHeartbeatCapability.html#a2dd8e95029b323244d218d5c8bfb4b78">IHeartbeatCapability</a>.</p>
+
+<p class="reference">引用了 <a class="el" href="classPodModule_1_1BaseHeartbeatCapability.html#a3dc2f94c3e804258638f263d8caf501f">BaseHeartbeatCapability::heartbeat_running_</a>, <a class="el" href="classPodModule_1_1BaseCapability.html#ab3acb19739169b246df806a3fef134d3">BaseCapability::logPrefix()</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a> , 以及 <a class="el" href="structPodModule_1_1PodResult.html#a918797a1c16d0fee3c376ad68e215966">PodResult&lt; T &gt;::success()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classPodModule_1_1BaseHeartbeatCapability.html#a5ccc1ddf1ff974f9e40757dfce7dbd76">BaseHeartbeatCapability::~BaseHeartbeatCapability()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPodModule_1_1BaseHeartbeatCapability_aba84b122f7c137605b3547e62d0bc14f_cgraph.png" border="0" usemap="#aclassPodModule_1_1BaseHeartbeatCapability_aba84b122f7c137605b3547e62d0bc14f_cgraph" alt=""/></div>
+<map name="aclassPodModule_1_1BaseHeartbeatCapability_aba84b122f7c137605b3547e62d0bc14f_cgraph" id="aclassPodModule_1_1BaseHeartbeatCapability_aba84b122f7c137605b3547e62d0bc14f_cgraph">
+<area shape="rect" title="停止自动心跳检测" alt="" coords="5,45,120,70"/>
+<area shape="rect" href="classPodModule_1_1BaseCapability.html#ab3acb19739169b246df806a3fef134d3" title="能力日志前缀（子类可覆盖）" alt="" coords="168,5,368,45"/>
+<area shape="poly" title=" " alt="" coords="120,46,154,40,155,46,121,51"/>
+<area shape="rect" href="structPodModule_1_1PodResult.html#a918797a1c16d0fee3c376ad68e215966" title="构造成功结果" alt="" coords="185,69,351,109"/>
+<area shape="poly" title=" " alt="" coords="121,64,172,72,171,77,120,69"/>
+<area shape="rect" href="classPodModule_1_1BaseCapability.html#a28d79a02e17b0c3ba87749b82b6af17b" title="获取能力名称（中文）" alt="" coords="416,5,616,45"/>
+<area shape="poly" title=" " alt="" coords="368,23,402,23,402,28,368,28"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPodModule_1_1BaseHeartbeatCapability_aba84b122f7c137605b3547e62d0bc14f_icgraph.png" border="0" usemap="#aclassPodModule_1_1BaseHeartbeatCapability_aba84b122f7c137605b3547e62d0bc14f_icgraph" alt=""/></div>
+<map name="aclassPodModule_1_1BaseHeartbeatCapability_aba84b122f7c137605b3547e62d0bc14f_icgraph" id="aclassPodModule_1_1BaseHeartbeatCapability_aba84b122f7c137605b3547e62d0bc14f_icgraph">
+<area shape="rect" title="停止自动心跳检测" alt="" coords="249,5,364,31"/>
+<area shape="rect" href="classPodModule_1_1BaseHeartbeatCapability.html#a5ccc1ddf1ff974f9e40757dfce7dbd76" title=" " alt="" coords="5,5,201,31"/>
+<area shape="poly" title=" " alt="" coords="235,21,202,21,202,15,235,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">结构体成员变量说明</h2>
+<a id="affc2611ca062af2118d326df282cdf60" name="affc2611ca062af2118d326df282cdf60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affc2611ca062af2118d326df282cdf60">&#9670;&#160;</a></span>alive_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;bool&gt; alive_ {false}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classPodModule_1_1BaseHeartbeatCapability.html#a940ca26bdddb799b448968bb2086e8e7">BaseHeartbeatCapability::isAlive()</a>, <a class="el" href="classPodModule_1_1BaseHeartbeatCapability.html#a94e3101348c450c6e2270b52bc70f04d">BaseHeartbeatCapability::sendHeartbeat()</a>, <a class="el" href="classPodModule_1_1DjiHeartbeatCapability.html#a94e3101348c450c6e2270b52bc70f04d">DjiHeartbeatCapability::sendHeartbeat()</a> , 以及 <a class="el" href="classPodModule_1_1PinlingHeartbeatCapability.html#a94e3101348c450c6e2270b52bc70f04d">PinlingHeartbeatCapability::sendHeartbeat()</a>.</p>
+
+</div>
+</div>
+<a id="ae5e1d49e49716e1601fc9dfa6347183f" name="ae5e1d49e49716e1601fc9dfa6347183f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5e1d49e49716e1601fc9dfa6347183f">&#9670;&#160;</a></span>heartbeat_interval_ms_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t heartbeat_interval_ms_ = 1000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classPodModule_1_1BaseHeartbeatCapability.html#a06d4ea84139e861d5614ea66f357b315">BaseHeartbeatCapability::startHeartbeat()</a>.</p>
+
+</div>
+</div>
+<a id="a3dc2f94c3e804258638f263d8caf501f" name="a3dc2f94c3e804258638f263d8caf501f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dc2f94c3e804258638f263d8caf501f">&#9670;&#160;</a></span>heartbeat_running_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;bool&gt; heartbeat_running_ {false}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classPodModule_1_1BaseHeartbeatCapability.html#a06d4ea84139e861d5614ea66f357b315">BaseHeartbeatCapability::startHeartbeat()</a>, <a class="el" href="classPodModule_1_1BaseHeartbeatCapability.html#aba84b122f7c137605b3547e62d0bc14f">BaseHeartbeatCapability::stopHeartbeat()</a> , 以及 <a class="el" href="classPodModule_1_1BaseHeartbeatCapability.html#a5ccc1ddf1ff974f9e40757dfce7dbd76">BaseHeartbeatCapability::~BaseHeartbeatCapability()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/util/my_pod/capability/base/<a class="el" href="base__heartbeat__capability_8h_source.html">base_heartbeat_capability.h</a></li>
+<li>src/util/my_pod/capability/base/<a class="el" href="base__heartbeat__capability_8cpp.html">base_heartbeat_capability.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

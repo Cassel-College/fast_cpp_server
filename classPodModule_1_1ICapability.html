@@ -1,0 +1,366 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: ICapability类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacePodModule.html">PodModule</a></li><li class="navelem"><a class="el" href="classPodModule_1_1ICapability.html">ICapability</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a>  </div>
+  <div class="headertitle"><div class="title">ICapability类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>能力基础接口  
+ <a href="classPodModule_1_1ICapability.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="i__capability_8h_source.html">i_capability.h</a>&gt;</code></p>
+<div class="dynheader">
+类 ICapability 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPodModule_1_1ICapability__inherit__graph.png" border="0" usemap="#aICapability_inherit__map" alt="Inheritance graph"/></div>
+<map name="aICapability_inherit__map" id="aICapability_inherit__map">
+<area shape="rect" title="能力基础接口" alt="" coords="5,327,97,352"/>
+<area shape="rect" href="classPodModule_1_1BaseCapability.html" title="能力基础实现类" alt="" coords="181,301,301,327"/>
+<area shape="poly" title=" " alt="" coords="110,329,180,319,181,325,111,334"/>
+<area shape="rect" href="classPodModule_1_1ICenterMeasureCapability.html" title="中心点测量能力接口" alt="" coords="145,116,336,141"/>
+<area shape="poly" title=" " alt="" coords="60,313,91,247,115,209,144,176,172,155,203,139,205,144,175,159,147,180,119,213,96,249,64,315"/>
+<area shape="rect" href="classPodModule_1_1IHeartbeatCapability.html" title="心跳检测能力接口" alt="" coords="162,191,319,216"/>
+<area shape="poly" title=" " alt="" coords="68,314,100,275,144,237,193,214,195,218,147,242,104,279,72,317"/>
+<area shape="rect" href="classPodModule_1_1IImageCapability.html" title="图像抓拍能力接口" alt="" coords="174,252,307,277"/>
+<area shape="poly" title=" " alt="" coords="83,317,144,286,179,275,181,280,146,291,86,322"/>
+<area shape="rect" href="classPodModule_1_1ILaserCapability.html" title="激光测距能力接口" alt="" coords="177,351,304,376"/>
+<area shape="poly" title=" " alt="" coords="111,344,177,353,177,358,110,349"/>
+<area shape="rect" href="classPodModule_1_1IPtzCapability.html" title="云台控制能力接口" alt="" coords="185,400,297,425"/>
+<area shape="poly" title=" " alt="" coords="87,356,146,385,185,397,184,403,144,390,85,361"/>
+<area shape="rect" href="classPodModule_1_1IStatusCapability.html" title="状态查询能力接口" alt="" coords="174,461,307,487"/>
+<area shape="poly" title=" " alt="" coords="72,362,105,399,147,434,197,459,195,464,144,439,101,402,68,365"/>
+<area shape="rect" href="classPodModule_1_1IStreamCapability.html" title="流媒体能力接口" alt="" coords="171,560,310,585"/>
+<area shape="poly" title=" " alt="" coords="66,364,99,427,122,463,147,496,185,531,221,558,218,562,181,535,143,500,117,466,94,429,62,366"/>
+<area shape="rect" href="classPodModule_1_1BaseCenterMeasureCapability.html" title="基础中心点测量能力" alt="" coords="384,92,603,117"/>
+<area shape="poly" title=" " alt="" coords="312,300,334,287,347,272,354,258,359,229,364,198,370,181,382,164,417,135,456,115,458,120,420,139,386,168,375,184,369,199,365,230,359,260,351,275,338,291,315,305"/>
+<area shape="rect" href="classPodModule_1_1BaseHeartbeatCapability.html" title="基础心跳检测能力" alt="" coords="401,179,586,204"/>
+<area shape="poly" title=" " alt="" coords="313,297,335,286,349,275,358,263,368,250,382,237,418,217,453,202,455,207,420,222,386,241,372,254,363,266,353,279,337,291,315,301"/>
+<area shape="rect" href="classPodModule_1_1BaseImageCapability.html" title="基础图像抓拍能力" alt="" coords="413,252,574,277"/>
+<area shape="poly" title=" " alt="" coords="314,297,427,275,428,280,315,302"/>
+<area shape="rect" href="classPodModule_1_1BaseLaserCapability.html" title="基础激光测距能力" alt="" coords="416,325,571,351"/>
+<area shape="poly" title=" " alt="" coords="315,318,416,328,415,333,315,324"/>
+<area shape="rect" href="classPodModule_1_1BasePtzCapability.html" title="基础云台控制能力" alt="" coords="423,400,563,425"/>
+<area shape="poly" title=" " alt="" coords="314,328,337,336,385,360,466,398,463,402,383,364,335,340,312,333"/>
+<area shape="rect" href="classPodModule_1_1BaseStatusCapability.html" title="基础状态查询能力" alt="" coords="413,473,574,499"/>
+<area shape="poly" title=" " alt="" coords="315,323,338,336,350,348,357,361,364,385,370,410,386,435,415,456,448,471,446,476,413,461,382,439,365,412,359,387,352,363,345,351,334,340,312,327"/>
+<area shape="rect" href="classPodModule_1_1BaseStreamCapability.html" title="基础流媒体能力" alt="" coords="410,573,577,599"/>
+<area shape="poly" title=" " alt="" coords="316,322,338,336,355,357,364,379,367,420,368,463,374,485,386,508,403,528,424,545,465,571,463,575,421,550,400,532,382,512,369,487,363,464,361,421,358,380,350,360,334,340,313,326"/>
+<area shape="rect" href="classPodModule_1_1DjiCenterMeasureCapability.html" title=" " alt="" coords="663,5,869,31"/>
+<area shape="poly" title=" " alt="" coords="534,84,588,61,650,39,694,28,696,33,651,45,590,66,536,89"/>
+<area shape="rect" href="classPodModule_1_1PinlingCenterMeasureCapability.html" title=" " alt="" coords="651,55,881,80"/>
+<area shape="poly" title=" " alt="" coords="599,88,672,77,673,83,600,93"/>
+<area shape="rect" href="classPodModule_1_1DjiHeartbeatCapability.html" title=" " alt="" coords="681,104,851,129"/>
+<area shape="poly" title=" " alt="" coords="542,172,650,138,697,127,699,132,651,143,544,177"/>
+<area shape="rect" href="classPodModule_1_1PinlingHeartbeatCapability.html" title=" " alt="" coords="667,153,865,179"/>
+<area shape="poly" title=" " alt="" coords="599,179,667,173,667,178,600,184"/>
+<area shape="rect" href="classPodModule_1_1DjiImageCapability.html" title=" " alt="" coords="693,203,839,228"/>
+<area shape="poly" title=" " alt="" coords="577,247,694,225,695,231,578,252"/>
+<area shape="rect" href="classPodModule_1_1PinlingImageCapability.html" title=" " alt="" coords="679,252,853,277"/>
+<area shape="poly" title=" " alt="" coords="588,262,679,262,679,267,588,267"/>
+<area shape="rect" href="classPodModule_1_1DjiLaserCapability.html" title=" " alt="" coords="695,301,837,327"/>
+<area shape="poly" title=" " alt="" coords="584,327,695,318,695,323,585,333"/>
+<area shape="rect" href="classPodModule_1_1PinlingLaserCapability.html" title=" " alt="" coords="683,351,849,376"/>
+<area shape="poly" title=" " alt="" coords="585,344,683,353,682,358,584,349"/>
+<area shape="rect" href="classPodModule_1_1DjiPtzCapability.html" title=" " alt="" coords="703,400,829,425"/>
+<area shape="poly" title=" " alt="" coords="577,410,702,410,702,415,577,415"/>
+<area shape="rect" href="classPodModule_1_1PinlingPtzCapability.html" title=" " alt="" coords="690,449,842,475"/>
+<area shape="poly" title=" " alt="" coords="578,425,696,447,695,452,577,430"/>
+<area shape="rect" href="classPodModule_1_1DjiStatusCapability.html" title=" " alt="" coords="693,499,839,524"/>
+<area shape="poly" title=" " alt="" coords="588,492,693,502,692,507,587,497"/>
+<area shape="rect" href="classPodModule_1_1PinlingStatusCapability.html" title=" " alt="" coords="679,548,853,573"/>
+<area shape="poly" title=" " alt="" coords="545,500,651,533,704,545,702,551,650,538,544,506"/>
+<area shape="rect" href="classPodModule_1_1DjiStreamCapability.html" title=" " alt="" coords="689,597,843,623"/>
+<area shape="poly" title=" " alt="" coords="591,592,689,601,689,606,590,597"/>
+<area shape="rect" href="classPodModule_1_1PinlingStreamCapability.html" title=" " alt="" coords="677,647,855,672"/>
+<area shape="poly" title=" " alt="" coords="545,601,651,633,699,644,698,649,650,638,544,606"/>
+<area shape="poly" title=" " alt="" coords="349,116,383,112,384,118,350,121"/>
+<area shape="poly" title=" " alt="" coords="333,196,400,193,401,198,333,202"/>
+<area shape="poly" title=" " alt="" coords="321,262,413,262,413,267,321,267"/>
+<area shape="poly" title=" " alt="" coords="318,353,415,343,416,348,318,358"/>
+<area shape="poly" title=" " alt="" coords="310,410,423,410,423,415,310,415"/>
+<area shape="poly" title=" " alt="" coords="321,475,413,480,412,485,321,480"/>
+<area shape="poly" title=" " alt="" coords="324,574,410,579,410,584,324,580"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a1456d4a2e1fac93734dab5a0aca9d16f" id="r_a1456d4a2e1fac93734dab5a0aca9d16f"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1ICapability.html#a1456d4a2e1fac93734dab5a0aca9d16f">~ICapability</a> ()=default</td></tr>
+<tr class="separator:a1456d4a2e1fac93734dab5a0aca9d16f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92c57bc4438090b10f268889504569b4" id="r_a92c57bc4438090b10f268889504569b4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccc">CapabilityType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1ICapability.html#a92c57bc4438090b10f268889504569b4">getType</a> () const =0</td></tr>
+<tr class="memdesc:a92c57bc4438090b10f268889504569b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取能力类型  <br /></td></tr>
+<tr class="separator:a92c57bc4438090b10f268889504569b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa64d851b233285f68b743639618a0810" id="r_aa64d851b233285f68b743639618a0810"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1ICapability.html#aa64d851b233285f68b743639618a0810">getName</a> () const =0</td></tr>
+<tr class="memdesc:aa64d851b233285f68b743639618a0810"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取能力名称（中文）  <br /></td></tr>
+<tr class="separator:aa64d851b233285f68b743639618a0810"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42b0cc968ca2168a79512c01cad06bc1" id="r_a42b0cc968ca2168a79512c01cad06bc1"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structPodModule_1_1PodResult.html">PodResult</a>&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1ICapability.html#a42b0cc968ca2168a79512c01cad06bc1">initialize</a> ()=0</td></tr>
+<tr class="memdesc:a42b0cc968ca2168a79512c01cad06bc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化能力  <br /></td></tr>
+<tr class="separator:a42b0cc968ca2168a79512c01cad06bc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e42d7b722fbaa21697387878794d1f0" id="r_a8e42d7b722fbaa21697387878794d1f0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1ICapability.html#a8e42d7b722fbaa21697387878794d1f0">attachPod</a> (<a class="el" href="classPodModule_1_1IPod.html">IPod</a> *pod)=0</td></tr>
+<tr class="memdesc:a8e42d7b722fbaa21697387878794d1f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">关联 Pod 设备  <br /></td></tr>
+<tr class="separator:a8e42d7b722fbaa21697387878794d1f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98c29ee65189574e518ced03d2c4c406" id="r_a98c29ee65189574e518ced03d2c4c406"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1ICapability.html#a98c29ee65189574e518ced03d2c4c406">attachSession</a> (std::shared_ptr&lt; <a class="el" href="classPodModule_1_1ISession.html">ISession</a> &gt; session)=0</td></tr>
+<tr class="memdesc:a98c29ee65189574e518ced03d2c4c406"><td class="mdescLeft">&#160;</td><td class="mdescRight">关联 Session 会话  <br /></td></tr>
+<tr class="separator:a98c29ee65189574e518ced03d2c4c406"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>能力基础接口 </p>
+<p>所有具体能力接口（如 IPtzCapability、ILaserCapability）都继承自此接口。 </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a1456d4a2e1fac93734dab5a0aca9d16f" name="a1456d4a2e1fac93734dab5a0aca9d16f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1456d4a2e1fac93734dab5a0aca9d16f">&#9670;&#160;</a></span>~ICapability()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ~<a class="el" href="classPodModule_1_1ICapability.html">ICapability</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a8e42d7b722fbaa21697387878794d1f0" name="a8e42d7b722fbaa21697387878794d1f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e42d7b722fbaa21697387878794d1f0">&#9670;&#160;</a></span>attachPod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void attachPod </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classPodModule_1_1IPod.html">IPod</a> *&#160;</td>
+          <td class="paramname"><em>pod</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>关联 Pod 设备 </p>
+
+<p>在 <a class="el" href="classPodModule_1_1BaseCapability.html#ac7f79ab98eff556367b183016e89253c">BaseCapability</a>, <a class="el" href="classPodModule_1_1BaseCenterMeasureCapability.html#ac7f79ab98eff556367b183016e89253c">BaseCenterMeasureCapability</a>, <a class="el" href="classPodModule_1_1BaseHeartbeatCapability.html#ac7f79ab98eff556367b183016e89253c">BaseHeartbeatCapability</a>, <a class="el" href="classPodModule_1_1BaseImageCapability.html#ac7f79ab98eff556367b183016e89253c">BaseImageCapability</a>, <a class="el" href="classPodModule_1_1BaseLaserCapability.html#ac7f79ab98eff556367b183016e89253c">BaseLaserCapability</a>, <a class="el" href="classPodModule_1_1BasePtzCapability.html#ac7f79ab98eff556367b183016e89253c">BasePtzCapability</a>, <a class="el" href="classPodModule_1_1BaseStatusCapability.html#ac7f79ab98eff556367b183016e89253c">BaseStatusCapability</a> , 以及 <a class="el" href="classPodModule_1_1BaseStreamCapability.html#ac7f79ab98eff556367b183016e89253c">BaseStreamCapability</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a98c29ee65189574e518ced03d2c4c406" name="a98c29ee65189574e518ced03d2c4c406"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98c29ee65189574e518ced03d2c4c406">&#9670;&#160;</a></span>attachSession()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void attachSession </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classPodModule_1_1ISession.html">ISession</a> &gt;&#160;</td>
+          <td class="paramname"><em>session</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>关联 Session 会话 </p>
+
+<p>在 <a class="el" href="classPodModule_1_1BaseCapability.html#a765a25fa06bd650b3c886c4c09699df1">BaseCapability</a>, <a class="el" href="classPodModule_1_1BaseCenterMeasureCapability.html#a765a25fa06bd650b3c886c4c09699df1">BaseCenterMeasureCapability</a>, <a class="el" href="classPodModule_1_1BaseHeartbeatCapability.html#a765a25fa06bd650b3c886c4c09699df1">BaseHeartbeatCapability</a>, <a class="el" href="classPodModule_1_1BaseImageCapability.html#a765a25fa06bd650b3c886c4c09699df1">BaseImageCapability</a>, <a class="el" href="classPodModule_1_1BaseLaserCapability.html#a765a25fa06bd650b3c886c4c09699df1">BaseLaserCapability</a>, <a class="el" href="classPodModule_1_1BasePtzCapability.html#a765a25fa06bd650b3c886c4c09699df1">BasePtzCapability</a>, <a class="el" href="classPodModule_1_1BaseStatusCapability.html#a765a25fa06bd650b3c886c4c09699df1">BaseStatusCapability</a> , 以及 <a class="el" href="classPodModule_1_1BaseStreamCapability.html#a765a25fa06bd650b3c886c4c09699df1">BaseStreamCapability</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="aa64d851b233285f68b743639618a0810" name="aa64d851b233285f68b743639618a0810"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa64d851b233285f68b743639618a0810">&#9670;&#160;</a></span>getName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string getName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取能力名称（中文） </p>
+
+<p>在 <a class="el" href="classPodModule_1_1BaseCapability.html#a28d79a02e17b0c3ba87749b82b6af17b">BaseCapability</a>, <a class="el" href="classPodModule_1_1BaseCenterMeasureCapability.html#a28d79a02e17b0c3ba87749b82b6af17b">BaseCenterMeasureCapability</a>, <a class="el" href="classPodModule_1_1BaseHeartbeatCapability.html#a28d79a02e17b0c3ba87749b82b6af17b">BaseHeartbeatCapability</a>, <a class="el" href="classPodModule_1_1BaseImageCapability.html#a28d79a02e17b0c3ba87749b82b6af17b">BaseImageCapability</a>, <a class="el" href="classPodModule_1_1BaseLaserCapability.html#a28d79a02e17b0c3ba87749b82b6af17b">BaseLaserCapability</a>, <a class="el" href="classPodModule_1_1BasePtzCapability.html#a28d79a02e17b0c3ba87749b82b6af17b">BasePtzCapability</a>, <a class="el" href="classPodModule_1_1BaseStatusCapability.html#a28d79a02e17b0c3ba87749b82b6af17b">BaseStatusCapability</a> , 以及 <a class="el" href="classPodModule_1_1BaseStreamCapability.html#a28d79a02e17b0c3ba87749b82b6af17b">BaseStreamCapability</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a92c57bc4438090b10f268889504569b4" name="a92c57bc4438090b10f268889504569b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92c57bc4438090b10f268889504569b4">&#9670;&#160;</a></span>getType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccc">CapabilityType</a> getType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取能力类型 </p>
+
+<p>在 <a class="el" href="classPodModule_1_1BaseCapability.html#ad8118005444e19a47ecda3235a5d429d">BaseCapability</a>, <a class="el" href="classPodModule_1_1BaseCenterMeasureCapability.html#ad8118005444e19a47ecda3235a5d429d">BaseCenterMeasureCapability</a>, <a class="el" href="classPodModule_1_1BaseHeartbeatCapability.html#ad8118005444e19a47ecda3235a5d429d">BaseHeartbeatCapability</a>, <a class="el" href="classPodModule_1_1BaseImageCapability.html#ad8118005444e19a47ecda3235a5d429d">BaseImageCapability</a>, <a class="el" href="classPodModule_1_1BaseLaserCapability.html#ad8118005444e19a47ecda3235a5d429d">BaseLaserCapability</a>, <a class="el" href="classPodModule_1_1BasePtzCapability.html#ad8118005444e19a47ecda3235a5d429d">BasePtzCapability</a>, <a class="el" href="classPodModule_1_1BaseStatusCapability.html#ad8118005444e19a47ecda3235a5d429d">BaseStatusCapability</a> , 以及 <a class="el" href="classPodModule_1_1BaseStreamCapability.html#ad8118005444e19a47ecda3235a5d429d">BaseStreamCapability</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a42b0cc968ca2168a79512c01cad06bc1" name="a42b0cc968ca2168a79512c01cad06bc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42b0cc968ca2168a79512c01cad06bc1">&#9670;&#160;</a></span>initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structPodModule_1_1PodResult.html">PodResult</a>&lt; void &gt; initialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>初始化能力 </p>
+
+<p>在 <a class="el" href="classPodModule_1_1BaseCapability.html#a20fa7f9f4589043bbde9891ff30da611">BaseCapability</a>, <a class="el" href="classPodModule_1_1BaseCenterMeasureCapability.html#a20fa7f9f4589043bbde9891ff30da611">BaseCenterMeasureCapability</a>, <a class="el" href="classPodModule_1_1BaseHeartbeatCapability.html#a20fa7f9f4589043bbde9891ff30da611">BaseHeartbeatCapability</a>, <a class="el" href="classPodModule_1_1BaseImageCapability.html#a20fa7f9f4589043bbde9891ff30da611">BaseImageCapability</a>, <a class="el" href="classPodModule_1_1BaseLaserCapability.html#a20fa7f9f4589043bbde9891ff30da611">BaseLaserCapability</a>, <a class="el" href="classPodModule_1_1BasePtzCapability.html#a20fa7f9f4589043bbde9891ff30da611">BasePtzCapability</a>, <a class="el" href="classPodModule_1_1BaseStatusCapability.html#a20fa7f9f4589043bbde9891ff30da611">BaseStatusCapability</a> , 以及 <a class="el" href="classPodModule_1_1BaseStreamCapability.html#a20fa7f9f4589043bbde9891ff30da611">BaseStreamCapability</a> 内被实现.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/util/my_pod/capability/interface/<a class="el" href="i__capability_8h_source.html">i_capability.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

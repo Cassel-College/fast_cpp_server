@@ -106,6 +106,7 @@ var menudata={children:[
 {text:"v",url:"functions_v.html#index_v"},
 {text:"w",url:"functions_w.html#index_w"},
 {text:"y",url:"functions_y.html#index_y"},
+{text:"z",url:"functions_z.html#index_z"},
 {text:"~",url:"functions_~.html#index__7E"}]},
 {text:"函数",url:"functions_func.html",children:[
 {text:"a",url:"functions_func.html#index_a"},
@@ -153,7 +154,8 @@ var menudata={children:[
 {text:"u",url:"functions_vars_u.html#index_u"},
 {text:"v",url:"functions_vars_v.html#index_v"},
 {text:"w",url:"functions_vars_w.html#index_w"},
-{text:"y",url:"functions_vars_y.html#index_y"}]},
+{text:"y",url:"functions_vars_y.html#index_y"},
+{text:"z",url:"functions_vars_z.html#index_z"}]},
 {text:"类型定义",url:"functions_type.html"}]}]},
 {text:"文件",url:"files.html",children:[
 {text:"文件列表",url:"files.html"},

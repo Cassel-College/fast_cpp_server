@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_pod/session/interface/i_session.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_0ac9cdf986d1682a7cf7479045e196ae.html">my_pod</a></li><li class="navelem"><a class="el" href="dir_be5f471cfb31219fe7f7f9b9e79d0495.html">session</a></li><li class="navelem"><a class="el" href="dir_ca2e39a30d327b649aa469e9ff2d3c39.html">interface</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#namespaces">命名空间</a>  </div>
+  <div class="headertitle"><div class="title">i_session.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>会话接口定义  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="pod__result_8h_source.html">../../common/pod_result.h</a>&quot;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;cstdint&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+i_session.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="i__session_8h__incl.png" border="0" usemap="#asrc_2util_2my__pod_2session_2interface_2i__session_8h" alt=""/></div>
+<map name="asrc_2util_2my__pod_2session_2interface_2i__session_8h" id="asrc_2util_2my__pod_2session_2interface_2i__session_8h">
+<area shape="rect" title="会话接口定义" alt="" coords="158,5,333,45"/>
+<area shape="rect" href="pod__result_8h.html" title="吊舱模块统一结果封装" alt="" coords="59,93,245,119"/>
+<area shape="poly" title=" " alt="" coords="224,48,178,86,175,82,221,44"/>
+<area shape="rect" title=" " alt="" coords="5,240,64,265"/>
+<area shape="poly" title=" " alt="" coords="159,37,128,45,98,57,71,73,49,95,33,127,27,162,27,197,32,226,26,227,22,197,21,162,28,125,45,92,68,69,96,52,126,40,157,32"/>
+<area shape="rect" title=" " alt="" coords="184,240,251,265"/>
+<area shape="poly" title=" " alt="" coords="260,45,276,74,291,111,297,152,295,173,289,193,273,216,252,234,248,230,269,213,284,191,290,172,292,153,286,113,272,76,256,47"/>
+<area shape="rect" title=" " alt="" coords="350,93,413,119"/>
+<area shape="poly" title=" " alt="" coords="279,43,351,84,348,89,277,48"/>
+<area shape="rect" href="pod__errors_8h.html" title="吊舱模块错误码定义" alt="" coords="73,167,175,192"/>
+<area shape="poly" title=" " alt="" coords="150,120,136,155,131,153,145,118"/>
+<area shape="poly" title=" " alt="" coords="126,121,92,140,62,168,47,197,40,227,35,226,42,195,58,165,89,136,123,116"/>
+<area shape="rect" title=" " alt="" coords="200,167,275,192"/>
+<area shape="poly" title=" " alt="" coords="167,117,215,156,211,160,164,121"/>
+<area shape="poly" title=" " alt="" coords="111,194,62,233,58,229,108,190"/>
+<area shape="poly" title=" " alt="" coords="141,190,193,229,190,234,137,194"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="i__session_8h__dep__incl.png" border="0" usemap="#asrc_2util_2my__pod_2session_2interface_2i__session_8hdep" alt=""/></div>
+<map name="asrc_2util_2my__pod_2session_2interface_2i__session_8hdep" id="asrc_2util_2my__pod_2session_2interface_2i__session_8hdep">
+<area shape="rect" title="会话接口定义" alt="" coords="5471,5,5646,45"/>
+<area shape="rect" href="base__capability_8h.html" title="能力基础实现类" alt="" coords="2665,93,2855,133"/>
+<area shape="poly" title=" " alt="" coords="5457,32,2856,112,2856,106,5457,27"/>
+<area shape="rect" href="base__pod_8h.html" title="基础吊舱实现" alt="" coords="5311,189,5462,229"/>
+<area shape="poly" title=" " alt="" coords="5520,55,5473,95,5431,145,5400,190,5396,187,5427,142,5469,91,5517,51"/>
+<area shape="rect" href="i__pod_8h.html" title="吊舱统一抽象接口" alt="" coords="5483,93,5634,133"/>
+<area shape="poly" title=" " alt="" coords="5561,59,5561,93,5556,93,5556,59"/>
+<area shape="rect" href="base__session_8h.html" title="基础会话实现" alt="" coords="6018,189,6193,229"/>
+<area shape="poly" title=" " alt="" coords="5596,52,5699,131,5757,149,5841,166,6018,194,6018,199,5840,172,5756,154,5696,136,5593,56"/>
+<area shape="rect" href="i__session_8cpp.html" title="会话接口实现（纯虚接口，此文件预留扩展）" alt="" coords="5710,93,5885,133"/>
+<area shape="poly" title=" " alt="" coords="5625,48,5746,91,5744,96,5623,53"/>
+<area shape="rect" href="base__capability_8cpp.html" title="能力基础实现类" alt="" coords="2665,189,2855,229"/>
+<area shape="poly" title=" " alt="" coords="2763,147,2763,189,2757,189,2757,147"/>
+<area shape="rect" href="base__center__measure__capability_8h.html" title="基础中心点测量能力" alt="" coords="3669,181,3873,236"/>
+<area shape="poly" title=" " alt="" coords="2870,122,3669,195,3668,201,2869,127"/>
+<area shape="rect" href="base__heartbeat__capability_8h.html" title="基础心跳检测能力" alt="" coords="4239,189,4481,229"/>
+<area shape="poly" title=" " alt="" coords="2869,118,4238,198,4238,203,2869,124"/>
+<area shape="rect" href="base__image__capability_8h.html" title="基础图像抓拍能力" alt="" coords="2996,189,3217,229"/>
+<area shape="poly" title=" " alt="" coords="2844,134,3037,186,3036,191,2843,139"/>
+<area shape="rect" href="base__laser__capability_8h.html" title="基础激光测距能力" alt="" coords="366,189,578,229"/>
+<area shape="poly" title=" " alt="" coords="2651,122,578,206,578,200,2651,116"/>
+<area shape="rect" href="base__ptz__capability_8h.html" title="基础云台控制能力" alt="" coords="1192,189,1392,229"/>
+<area shape="poly" title=" " alt="" coords="2651,124,1392,204,1392,198,2651,119"/>
+<area shape="rect" href="base__status__capability_8h.html" title="基础状态查询能力" alt="" coords="1915,189,2135,229"/>
+<area shape="poly" title=" " alt="" coords="2651,131,2136,196,2136,191,2651,126"/>
+<area shape="rect" href="base__stream__capability_8h.html" title="基础流媒体能力" alt="" coords="2384,189,2611,229"/>
+<area shape="poly" title=" " alt="" coords="2695,140,2551,191,2550,186,2693,135"/>
+<area shape="rect" href="base__center__measure__capability_8cpp.html" title="基础中心点测量能力实现" alt="" coords="3787,284,3991,339"/>
+<area shape="poly" title=" " alt="" coords="3814,243,3860,282,3857,286,3810,247"/>
+<area shape="rect" href="dji__center__measure__capability_8h.html" title="大疆中心点测量能力" alt="" coords="3573,284,3763,339"/>
+<area shape="poly" title=" " alt="" coords="3736,248,3697,286,3693,282,3732,244"/>
+<area shape="rect" href="pinling__center__measure__capability_8h.html" title="品凌中心点测量能力" alt="" coords="4254,284,4445,339"/>
+<area shape="poly" title=" " alt="" coords="3887,223,4055,248,4242,281,4254,284,4253,289,4241,287,4054,254,3886,228"/>
+<area shape="rect" href="dji__pod_8cpp.html" title="大疆吊舱实现" alt="" coords="2633,387,2783,427"/>
+<area shape="poly" title=" " alt="" coords="3559,341,3391,360,3173,378,2784,404,2784,398,3173,373,3390,355,3559,336"/>
+<area shape="rect" href="pinling__pod_8cpp.html" title="品凌吊舱实现" alt="" coords="3077,387,3253,427"/>
+<area shape="poly" title=" " alt="" coords="4241,341,4099,360,3955,375,3675,394,3432,404,3253,408,3253,402,3432,399,3675,389,3954,369,4098,355,4240,336"/>
+<area shape="rect" href="base__heartbeat__capability_8cpp.html" title="基础心跳检测能力实现" alt="" coords="4469,291,4728,331"/>
+<area shape="poly" title=" " alt="" coords="4418,232,4555,289,4553,294,4416,237"/>
+<area shape="rect" href="dji__heartbeat__capability_8h.html" title="大疆心跳检测能力" alt="" coords="4016,291,4229,331"/>
+<area shape="poly" title=" " alt="" coords="4304,237,4168,294,4166,289,4302,232"/>
+<area shape="rect" href="pinling__heartbeat__capability_8h.html" title="品凌心跳检测能力" alt="" coords="4753,284,4943,339"/>
+<area shape="poly" title=" " alt="" coords="4476,229,4741,281,4753,284,4752,289,4739,287,4475,234"/>
+<area shape="poly" title=" " alt="" coords="4032,337,4003,341,3861,358,3741,369,3535,378,3329,380,3065,389,2784,404,2783,399,3065,384,3329,375,3535,373,3740,364,3860,353,4002,336,4031,331"/>
+<area shape="poly" title=" " alt="" coords="4739,341,4597,356,4414,368,3985,387,3561,400,3254,407,3254,401,3561,395,3984,382,4414,363,4596,350,4739,336"/>
+<area shape="rect" href="base__image__capability_8cpp.html" title="基础图像抓拍能力实现" alt="" coords="3313,291,3549,331"/>
+<area shape="poly" title=" " alt="" coords="3181,230,3371,289,3369,294,3179,235"/>
+<area shape="rect" href="dji__image__capability_8h.html" title="大疆图像抓拍能力" alt="" coords="2613,291,2803,331"/>
+<area shape="poly" title=" " alt="" coords="3019,235,2783,294,2782,289,3018,229"/>
+<area shape="rect" href="pinling__image__capability_8h.html" title="品凌图像抓拍能力" alt="" coords="3042,291,3289,331"/>
+<area shape="poly" title=" " alt="" coords="3127,239,3157,290,3152,293,3122,242"/>
+<area shape="poly" title=" " alt="" coords="2711,345,2711,387,2705,387,2705,345"/>
+<area shape="poly" title=" " alt="" coords="3168,345,3168,387,3163,387,3163,345"/>
+<area shape="rect" href="base__laser__capability_8cpp.html" title="基础激光测距能力实现" alt="" coords="5,291,232,331"/>
+<area shape="poly" title=" " alt="" coords="394,235,186,294,184,289,392,230"/>
+<area shape="rect" href="dji__laser__capability_8h.html" title="大疆激光测距能力" alt="" coords="257,291,447,331"/>
+<area shape="poly" title=" " alt="" coords="440,240,376,293,373,289,437,236"/>
+<area shape="rect" href="pinling__laser__capability_8h.html" title="品凌激光测距能力" alt="" coords="471,291,710,331"/>
+<area shape="poly" title=" " alt="" coords="507,236,570,289,567,293,503,240"/>
+<area shape="poly" title=" " alt="" coords="434,332,459,336,663,356,933,371,1247,383,1580,391,2210,400,2632,403,2632,408,2210,405,1580,396,1247,388,933,376,662,361,458,341,433,337"/>
+<area shape="poly" title=" " alt="" coords="687,331,722,336,923,352,1174,362,1757,373,2341,376,2795,384,3077,398,3077,403,2795,389,2341,382,1757,378,1174,368,923,357,721,341,686,336"/>
+<area shape="rect" href="base__ptz__capability_8cpp.html" title="基础云台控制能力实现" alt="" coords="734,291,949,331"/>
+<area shape="poly" title=" " alt="" coords="1195,234,926,294,925,289,1194,229"/>
+<area shape="rect" href="dji__ptz__capability_8h.html" title="大疆云台控制能力" alt="" coords="973,291,1163,331"/>
+<area shape="poly" title=" " alt="" coords="1239,237,1111,294,1109,289,1237,232"/>
+<area shape="rect" href="pinling__ptz__capability_8h.html" title="品凌云台控制能力" alt="" coords="1403,291,1629,331"/>
+<area shape="poly" title=" " alt="" coords="1347,232,1475,289,1473,294,1345,237"/>
+<area shape="poly" title=" " alt="" coords="1150,332,1175,336,1309,350,1486,363,1911,382,2332,395,2633,401,2632,407,2332,400,1910,387,1485,368,1308,356,1174,341,1149,337"/>
+<area shape="poly" title=" " alt="" coords="1610,331,1642,336,1816,355,1964,367,2095,373,2217,375,2470,375,2795,384,3077,398,3077,403,2795,389,2470,381,2217,380,2095,378,1964,372,1816,360,1641,341,1609,337"/>
+<area shape="rect" href="base__status__capability_8cpp.html" title="基础状态查询能力实现" alt="" coords="1653,291,1888,331"/>
+<area shape="poly" title=" " alt="" coords="1966,236,1819,294,1817,289,1964,231"/>
+<area shape="rect" href="dji__status__capability_8h.html" title="大疆状态查询能力" alt="" coords="1187,291,1378,331"/>
+<area shape="poly" title=" " alt="" coords="1902,223,1665,247,1527,265,1391,287,1356,294,1354,289,1390,281,1527,260,1664,242,1902,217"/>
+<area shape="rect" href="pinling__status__capability_8h.html" title="品凌状态查询能力" alt="" coords="2133,284,2323,339"/>
+<area shape="poly" title=" " alt="" coords="2077,232,2176,282,2174,286,2074,237"/>
+<area shape="poly" title=" " alt="" coords="1366,332,1391,336,1504,349,1653,360,2012,379,2633,401,2632,406,2011,384,1653,365,1503,354,1390,341,1365,337"/>
+<area shape="poly" title=" " alt="" coords="2338,336,2496,354,2701,372,3077,397,3077,403,2701,377,2496,360,2337,342"/>
+<area shape="rect" href="base__stream__capability_8cpp.html" title="基础流媒体能力实现" alt="" coords="2347,291,2589,331"/>
+<area shape="poly" title=" " alt="" coords="2491,242,2476,292,2471,291,2485,241"/>
+<area shape="rect" href="dji__stream__capability_8h.html" title="大疆流媒体能力" alt="" coords="1913,291,2109,331"/>
+<area shape="poly" title=" " alt="" coords="2384,234,2121,287,2088,294,2087,289,2119,281,2382,229"/>
+<area shape="rect" href="pinling__stream__capability_8h.html" title="品凌流媒体能力" alt="" coords="2827,284,3018,339"/>
+<area shape="poly" title=" " alt="" coords="2592,229,2815,281,2828,284,2827,290,2814,287,2591,234"/>
+<area shape="poly" title=" " alt="" coords="2098,332,2120,336,2262,358,2403,375,2633,397,2632,402,2402,380,2261,363,2120,341,2097,337"/>
+<area shape="poly" title=" " alt="" coords="3005,341,3117,384,3115,389,3003,346"/>
+<area shape="rect" href="base__pod_8cpp.html" title="基础吊舱实现" alt="" coords="5142,291,5293,331"/>
+<area shape="poly" title=" " alt="" coords="5345,238,5250,294,5248,289,5342,233"/>
+<area shape="rect" href="dji__pod_8h.html" title="大疆吊舱实现" alt="" coords="4967,291,5118,331"/>
+<area shape="poly" title=" " alt="" coords="5308,235,5130,287,5105,294,5104,289,5129,281,5307,230"/>
+<area shape="rect" href="pinling__pod_8h.html" title="品凌吊舱实现" alt="" coords="5317,291,5478,331"/>
+<area shape="poly" title=" " alt="" coords="5393,242,5398,291,5393,292,5387,242"/>
+<area shape="poly" title=" " alt="" coords="4975,337,4955,341,4772,361,4544,374,4285,381,4012,384,3479,384,3250,385,3065,389,2784,403,2783,398,3065,384,3250,380,3479,379,4012,378,4285,376,4543,369,4771,356,4954,336,4974,332"/>
+<area shape="rect" href="pod__manager_8cpp.html" title="吊舱管理器实现" alt="" coords="5305,387,5489,427"/>
+<area shape="poly" title=" " alt="" coords="5117,333,5130,336,5319,384,5317,389,5129,341,5116,338"/>
+<area shape="poly" title=" " alt="" coords="5326,337,5304,341,5114,362,4862,378,4570,390,4258,398,3665,406,3253,408,3253,403,3665,401,4258,392,4569,384,4862,372,5114,357,5304,336,5325,332"/>
+<area shape="poly" title=" " alt="" coords="5400,345,5400,387,5395,387,5395,345"/>
+<area shape="poly" title=" " alt="" coords="5513,142,5423,191,5420,186,5511,137"/>
+<area shape="rect" href="pod__manager_8h.html" title="吊舱管理器（单例）" alt="" coords="5487,189,5671,229"/>
+<area shape="poly" title=" " alt="" coords="5568,146,5577,188,5572,189,5563,147"/>
+<area shape="rect" href="i__pod_8cpp.html" title="吊舱接口实现（纯虚接口，此文件预留）" alt="" coords="5695,189,5846,229"/>
+<area shape="poly" title=" " alt="" coords="5615,136,5729,186,5727,191,5613,141"/>
+<area shape="poly" title=" " alt="" coords="5667,229,5791,262,5858,282,5867,297,5870,312,5867,326,5858,340,5833,359,5797,374,5752,386,5701,394,5591,405,5490,408,5490,403,5591,399,5700,389,5751,380,5795,369,5831,355,5854,337,5862,324,5865,312,5862,299,5854,286,5789,267,5666,235"/>
+<area shape="rect" href="Pipeline_8cpp.html" title=" " alt="" coords="5503,291,5636,331"/>
+<area shape="poly" title=" " alt="" coords="5578,242,5574,292,5568,291,5573,242"/>
+<area shape="rect" href="PodController_8cpp.html" title=" " alt="" coords="5660,291,5844,331"/>
+<area shape="poly" title=" " alt="" coords="5624,233,5721,289,5718,294,5622,238"/>
+<area shape="rect" href="base__session_8cpp.html" title="基础会话实现" alt="" coords="6118,291,6293,331"/>
+<area shape="poly" title=" " alt="" coords="6135,236,6188,289,6185,293,6132,240"/>
+<area shape="rect" href="dji__session_8h.html" title="大疆吊舱会话实现" alt="" coords="5919,291,6094,331"/>
+<area shape="poly" title=" " alt="" coords="6079,241,6027,293,6023,289,6075,237"/>
+<area shape="rect" href="pinling__session_8h.html" title="品凌吊舱会话实现" alt="" coords="6317,291,6504,331"/>
+<area shape="poly" title=" " alt="" coords="6176,230,6354,289,6353,294,6174,235"/>
+<area shape="poly" title=" " alt="" coords="5906,335,5856,341,5584,359,5247,370,4865,376,4462,379,3676,381,3338,383,3065,389,2784,403,2783,398,3065,384,3338,378,3676,376,4462,374,4865,371,5247,365,5584,354,5856,336,5905,330"/>
+<area shape="rect" href="dji__session_8cpp.html" title="大疆吊舱会话实现" alt="" coords="5919,387,6094,427"/>
+<area shape="poly" title=" " alt="" coords="6009,345,6009,387,6004,387,6004,345"/>
+<area shape="poly" title=" " alt="" coords="6331,337,6306,341,6105,356,5765,368,4843,388,3888,401,3254,407,3254,402,3888,396,4843,383,5765,363,6105,350,6305,336,6330,332"/>
+<area shape="rect" href="pinling__session_8cpp.html" title="品凌吊舱会话实现" alt="" coords="6310,387,6511,427"/>
+<area shape="poly" title=" " alt="" coords="6413,345,6413,387,6408,387,6408,345"/>
+</map>
+</div>
+</div>
+<p><a href="i__session_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1ISession.html">ISession</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">会话接口  <a href="classPodModule_1_1ISession.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacePodModule" id="r_namespacePodModule"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePodModule.html">PodModule</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>会话接口定义 </p>
+<p>定义吊舱底层通信会话的统一抽象接口。 所有厂商会话实现必须继承此接口。 </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

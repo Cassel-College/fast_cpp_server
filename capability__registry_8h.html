@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_pod/registry/capability_registry.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_0ac9cdf986d1682a7cf7479045e196ae.html">my_pod</a></li><li class="navelem"><a class="el" href="dir_9d8f3881eb03ce883e01ded2e10474c3.html">registry</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#namespaces">命名空间</a>  </div>
+  <div class="headertitle"><div class="title">capability_registry.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>能力注册表  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="capability__types_8h_source.html">../common/capability_types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="i__capability_8h_source.html">../capability/interface/i_capability.h</a>&quot;</code><br />
+<code>#include &lt;unordered_map&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+capability_registry.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="capability__registry_8h__incl.png" border="0" usemap="#asrc_2util_2my__pod_2registry_2capability__registry_8h" alt=""/></div>
+<map name="asrc_2util_2my__pod_2registry_2capability__registry_8h" id="asrc_2util_2my__pod_2registry_2capability__registry_8h">
+<area shape="rect" title="能力注册表" alt="" coords="421,5,597,45"/>
+<area shape="rect" href="capability__types_8h.html" title="能力类型枚举定义" alt="" coords="5,255,164,295"/>
+<area shape="poly" title=" " alt="" coords="428,48,364,68,301,96,266,116,242,135,188,183,116,247,113,243,184,179,238,131,263,112,298,91,363,63,427,43"/>
+<area shape="rect" href="i__capability_8h.html" title="能力基础接口定义" alt="" coords="311,93,471,133"/>
+<area shape="poly" title=" " alt="" coords="484,48,430,87,427,83,481,43"/>
+<area shape="rect" title=" " alt="" coords="515,181,593,207"/>
+<area shape="poly" title=" " alt="" coords="516,45,538,133,548,167,543,169,533,134,510,46"/>
+<area shape="rect" title=" " alt="" coords="547,101,671,126"/>
+<area shape="poly" title=" " alt="" coords="533,44,586,89,583,93,529,48"/>
+<area shape="rect" title=" " alt="" coords="695,101,757,126"/>
+<area shape="poly" title=" " alt="" coords="561,43,684,91,689,93,687,98,682,96,559,48"/>
+<area shape="rect" title=" " alt="" coords="254,343,313,368"/>
+<area shape="poly" title=" " alt="" coords="133,292,243,335,241,340,131,297"/>
+<area shape="rect" title=" " alt="" coords="130,343,197,368"/>
+<area shape="poly" title=" " alt="" coords="106,293,144,331,140,335,102,297"/>
+<area shape="poly" title=" " alt="" coords="342,136,234,184,176,216,125,249,122,244,173,212,231,179,340,131"/>
+<area shape="poly" title=" " alt="" coords="413,132,431,154,446,180,460,212,469,240,469,267,455,296,428,322,395,339,360,350,327,355,326,350,359,344,393,334,425,318,451,293,464,266,464,240,455,214,441,183,426,157,409,136"/>
+<area shape="rect" href="pod__result_8h.html" title="吊舱模块统一结果封装" alt="" coords="245,181,431,207"/>
+<area shape="poly" title=" " alt="" coords="381,135,356,171,352,168,376,132"/>
+<area shape="poly" title=" " alt="" coords="431,131,519,173,517,178,429,136"/>
+<area shape="poly" title=" " alt="" coords="337,208,294,331,289,329,332,206"/>
+<area shape="rect" href="pod__errors_8h.html" title="吊舱模块错误码定义" alt="" coords="188,262,291,287"/>
+<area shape="poly" title=" " alt="" coords="325,209,266,255,263,251,322,205"/>
+<area shape="rect" title=" " alt="" coords="366,262,441,287"/>
+<area shape="poly" title=" " alt="" coords="350,205,387,249,383,253,346,209"/>
+<area shape="poly" title=" " alt="" coords="248,286,272,329,268,332,244,289"/>
+<area shape="poly" title=" " alt="" coords="230,289,186,335,182,331,226,286"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="capability__registry_8h__dep__incl.png" border="0" usemap="#asrc_2util_2my__pod_2registry_2capability__registry_8hdep" alt=""/></div>
+<map name="asrc_2util_2my__pod_2registry_2capability__registry_8hdep" id="asrc_2util_2my__pod_2registry_2capability__registry_8hdep">
+<area shape="rect" title="能力注册表" alt="" coords="261,5,437,45"/>
+<area shape="rect" href="base__pod_8h.html" title="基础吊舱实现" alt="" coords="180,93,331,133"/>
+<area shape="poly" title=" " alt="" coords="320,57,278,95,274,91,316,53"/>
+<area shape="rect" href="capability__registry_8cpp.html" title="能力注册表实现" alt="" coords="355,93,531,133"/>
+<area shape="poly" title=" " alt="" coords="382,53,424,91,421,95,378,57"/>
+<area shape="rect" href="base__pod_8cpp.html" title="基础吊舱实现" alt="" coords="5,181,156,221"/>
+<area shape="poly" title=" " alt="" coords="206,142,120,184,118,179,204,137"/>
+<area shape="rect" href="dji__pod_8h.html" title="大疆吊舱实现" alt="" coords="180,181,331,221"/>
+<area shape="poly" title=" " alt="" coords="258,147,258,181,253,181,253,147"/>
+<area shape="rect" href="pinling__pod_8h.html" title="品凌吊舱实现" alt="" coords="355,181,516,221"/>
+<area shape="poly" title=" " alt="" coords="308,137,397,179,395,184,306,142"/>
+<area shape="rect" href="pod__manager_8cpp.html" title="吊舱管理器实现" alt="" coords="253,269,437,309"/>
+<area shape="poly" title=" " alt="" coords="287,229,327,267,323,271,283,233"/>
+<area shape="rect" href="dji__pod_8cpp.html" title="大疆吊舱实现" alt="" coords="77,269,228,309"/>
+<area shape="poly" title=" " alt="" coords="224,232,177,271,174,267,220,228"/>
+<area shape="poly" title=" " alt="" coords="407,233,367,271,363,267,404,229"/>
+<area shape="rect" href="pinling__pod_8cpp.html" title="品凌吊舱实现" alt="" coords="461,269,637,309"/>
+<area shape="poly" title=" " alt="" coords="473,228,525,267,522,271,470,232"/>
+</map>
+</div>
+</div>
+<p><a href="capability__registry_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1CapabilityRegistry.html">CapabilityRegistry</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">能力注册表  <a href="classPodModule_1_1CapabilityRegistry.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacePodModule" id="r_namespacePodModule"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePodModule.html">PodModule</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>能力注册表 </p>
+<p>管理吊舱设备注册的所有能力，提供注册、查询、枚举等功能。 每个 BasePod 实例持有一个 CapabilityRegistry。 </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_api/controller/pod/PodController.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_f1ee40842c724b3bf8a04800f5f521a7.html">my_api</a></li><li class="navelem"><a class="el" href="dir_6ef159f9932051522d309704773cf407.html">controller</a></li><li class="navelem"><a class="el" href="dir_113658f916b8f1f506f76cf42b3ff143.html">pod</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">PodController.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="PodController_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="BaseApiController_8hpp.html">BaseApiController.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;oatpp/core/macro/codegen.hpp&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;oatpp/web/server/api/ApiController.hpp&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__api_1_1pod__api.html">my_api::pod_api</a> {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include OATPP_CODEGEN_BEGIN(ApiController)</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classmy__api_1_1pod__api_1_1PodController.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__api_1_1pod__api_1_1PodController.html">PodController</a> : <span class="keyword">public</span> <a class="code hl_class" href="classmy__api_1_1base_1_1BaseApiController.html">base::BaseApiController</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="classmy__api_1_1pod__api_1_1PodController.html">PodController</a>(<span class="keyword">const</span> std::shared_ptr&lt;ObjectMapper&gt;&amp; objectMapper);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">static</span> std::shared_ptr&lt;PodController&gt; <a class="code hl_function" href="classmy__api_1_1pod__api_1_1PodController.html#a916adb8234b407369e5ff10ca1ca9ced">createShared</a>(<span class="keyword">const</span> std::shared_ptr&lt;ObjectMapper&gt;&amp; objectMapper);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="comment">// ==================== 查询类接口 ====================</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="}">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classmy__api_1_1pod__api_1_1PodController.html#a27fa8508a2dbf7e083c46f41015e87c8">   19</a></span>    <a class="code hl_function" href="classmy__api_1_1pod__api_1_1PodController.html#a27fa8508a2dbf7e083c46f41015e87c8">ENDPOINT_INFO</a>(getPodOnline) {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        info-&gt;summary = <span class="stringliteral">&quot;吊舱模块在线检查&quot;</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        info-&gt;description = <span class="stringliteral">&quot;检查吊舱管理模块是否已初始化并可用。&quot;</span>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_200, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    }</div>
+</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classmy__api_1_1pod__api_1_1PodController.html#ad46a36933830dac4f3b907231c420a3f">   24</a></span>    <a class="code hl_function" href="classmy__api_1_1pod__api_1_1PodController.html#ad46a36933830dac4f3b907231c420a3f">ENDPOINT</a>(<span class="stringliteral">&quot;GET&quot;</span>, <span class="stringliteral">&quot;/v1/pod/online&quot;</span>, getPodOnline);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="}">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classmy__api_1_1pod__api_1_1PodController.html#ad7954211baadd219f665aa41e79ea014">   26</a></span>    <a class="code hl_function" href="classmy__api_1_1pod__api_1_1PodController.html#ad7954211baadd219f665aa41e79ea014">ENDPOINT_INFO</a>(getPodStatus) {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        info-&gt;summary = <span class="stringliteral">&quot;获取所有吊舱状态&quot;</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        info-&gt;description = <span class="stringliteral">&quot;返回所有已注册吊舱的状态摘要，包括连接状态、能力列表等。&quot;</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_200, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    }</div>
+</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classmy__api_1_1pod__api_1_1PodController.html#a7ee0624f06abe8c8caae698e2445c06f">   31</a></span>    <a class="code hl_function" href="classmy__api_1_1pod__api_1_1PodController.html#a7ee0624f06abe8c8caae698e2445c06f">ENDPOINT</a>(<span class="stringliteral">&quot;GET&quot;</span>, <span class="stringliteral">&quot;/v1/pod/status&quot;</span>, getPodStatus);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="}">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classmy__api_1_1pod__api_1_1PodController.html#a2b8d617aabef3b1a077aa6d1212ba4f1">   33</a></span>    <a class="code hl_function" href="classmy__api_1_1pod__api_1_1PodController.html#a2b8d617aabef3b1a077aa6d1212ba4f1">ENDPOINT_INFO</a>(getPodDetail) {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        info-&gt;summary = <span class="stringliteral">&quot;获取指定吊舱详情&quot;</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        info-&gt;description = <span class="stringliteral">&quot;根据 body 中的 pod_id 获取单个吊舱的详细信息和能力列表。&quot;</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_200, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_404, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    }</div>
+</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classmy__api_1_1pod__api_1_1PodController.html#ae0252db2f92a0e871c3dee2f4b875e14">   39</a></span>    <a class="code hl_function" href="classmy__api_1_1pod__api_1_1PodController.html#ae0252db2f92a0e871c3dee2f4b875e14">ENDPOINT</a>(<span class="stringliteral">&quot;POST&quot;</span>, <span class="stringliteral">&quot;/v1/pod/detail&quot;</span>, getPodDetail, BODY_STRING(oatpp::String, body));</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classmy__api_1_1pod__api_1_1PodController.html#aeb3517d012f954eb7a28d7b88e58fc49">   41</a></span>    <a class="code hl_function" href="classmy__api_1_1pod__api_1_1PodController.html#aeb3517d012f954eb7a28d7b88e58fc49">ENDPOINT_INFO</a>(getPodConfig) {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        info-&gt;summary = <span class="stringliteral">&quot;获取吊舱模块初始化配置&quot;</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        info-&gt;description = <span class="stringliteral">&quot;返回吊舱管理器初始化时使用的 JSON 配置。&quot;</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_200, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
+</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classmy__api_1_1pod__api_1_1PodController.html#afad995b2591ecaa0b0c9d25586f479f4">   46</a></span>    <a class="code hl_function" href="classmy__api_1_1pod__api_1_1PodController.html#afad995b2591ecaa0b0c9d25586f479f4">ENDPOINT</a>(<span class="stringliteral">&quot;GET&quot;</span>, <span class="stringliteral">&quot;/v1/pod/config&quot;</span>, getPodConfig);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="comment">// ==================== 控制类接口 ====================</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classmy__api_1_1pod__api_1_1PodController.html#ac6af3c6385d6d194b5e738ee98d714b7">   50</a></span>    <a class="code hl_function" href="classmy__api_1_1pod__api_1_1PodController.html#ac6af3c6385d6d194b5e738ee98d714b7">ENDPOINT_INFO</a>(connectPod) {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        info-&gt;summary = <span class="stringliteral">&quot;连接指定吊舱&quot;</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        info-&gt;description = <span class="stringliteral">&quot;通过 body 中的 pod_id 对吊舱发起连接。&quot;</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_200, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_404, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
+</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classmy__api_1_1pod__api_1_1PodController.html#a846a0192b65b06b6a6d394f0cdde0c95">   56</a></span>    <a class="code hl_function" href="classmy__api_1_1pod__api_1_1PodController.html#a846a0192b65b06b6a6d394f0cdde0c95">ENDPOINT</a>(<span class="stringliteral">&quot;POST&quot;</span>, <span class="stringliteral">&quot;/v1/pod/connect&quot;</span>, connectPod, BODY_STRING(oatpp::String, body));</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="foldopen" id="foldopen00058" data-start="{" data-end="}">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classmy__api_1_1pod__api_1_1PodController.html#a2775a596c84425c467c1862f4b65cc0a">   58</a></span>    <a class="code hl_function" href="classmy__api_1_1pod__api_1_1PodController.html#a2775a596c84425c467c1862f4b65cc0a">ENDPOINT_INFO</a>(disconnectPod) {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        info-&gt;summary = <span class="stringliteral">&quot;断开指定吊舱&quot;</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        info-&gt;description = <span class="stringliteral">&quot;通过 body 中的 pod_id 对吊舱执行断开操作。&quot;</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_200, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_404, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    }</div>
+</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classmy__api_1_1pod__api_1_1PodController.html#ae40b930efd68c2806fd6bdd57124114a">   64</a></span>    <a class="code hl_function" href="classmy__api_1_1pod__api_1_1PodController.html#ae40b930efd68c2806fd6bdd57124114a">ENDPOINT</a>(<span class="stringliteral">&quot;POST&quot;</span>, <span class="stringliteral">&quot;/v1/pod/disconnect&quot;</span>, disconnectPod, BODY_STRING(oatpp::String, body));</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="foldopen" id="foldopen00066" data-start="{" data-end="}">
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classmy__api_1_1pod__api_1_1PodController.html#a99449244bf634c8b4692824326520cf0">   66</a></span>    <a class="code hl_function" href="classmy__api_1_1pod__api_1_1PodController.html#a99449244bf634c8b4692824326520cf0">ENDPOINT_INFO</a>(listPodIds) {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        info-&gt;summary = <span class="stringliteral">&quot;列出所有吊舱ID&quot;</span>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        info-&gt;description = <span class="stringliteral">&quot;返回当前已注册的所有吊舱 ID 列表。&quot;</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_200, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    }</div>
+</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classmy__api_1_1pod__api_1_1PodController.html#a609e87de8386f6c89c1f7c3e50301493">   71</a></span>    <a class="code hl_function" href="classmy__api_1_1pod__api_1_1PodController.html#a609e87de8386f6c89c1f7c3e50301493">ENDPOINT</a>(<span class="stringliteral">&quot;GET&quot;</span>, <span class="stringliteral">&quot;/v1/pod/list&quot;</span>, listPodIds);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>};</div>
+</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">#include OATPP_CODEGEN_END(ApiController)</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>} <span class="comment">// namespace my_api::pod_api</span></div>
+<div class="ttc" id="aBaseApiController_8hpp_html"><div class="ttname"><a href="BaseApiController_8hpp.html">BaseApiController.hpp</a></div></div>
+<div class="ttc" id="aclassmy__api_1_1base_1_1BaseApiController_html"><div class="ttname"><a href="classmy__api_1_1base_1_1BaseApiController.html">my_api::base::BaseApiController</a></div><div class="ttdef"><b>Definition</b> BaseApiController.hpp:13</div></div>
+<div class="ttc" id="aclassmy__api_1_1pod__api_1_1PodController_html"><div class="ttname"><a href="classmy__api_1_1pod__api_1_1PodController.html">my_api::pod_api::PodController</a></div><div class="ttdef"><b>Definition</b> PodController.h:11</div></div>
+<div class="ttc" id="aclassmy__api_1_1pod__api_1_1PodController_html_a2775a596c84425c467c1862f4b65cc0a"><div class="ttname"><a href="classmy__api_1_1pod__api_1_1PodController.html#a2775a596c84425c467c1862f4b65cc0a">my_api::pod_api::PodController::ENDPOINT_INFO</a></div><div class="ttdeci">ENDPOINT_INFO(disconnectPod)</div><div class="ttdef"><b>Definition</b> PodController.h:58</div></div>
+<div class="ttc" id="aclassmy__api_1_1pod__api_1_1PodController_html_a27fa8508a2dbf7e083c46f41015e87c8"><div class="ttname"><a href="classmy__api_1_1pod__api_1_1PodController.html#a27fa8508a2dbf7e083c46f41015e87c8">my_api::pod_api::PodController::ENDPOINT_INFO</a></div><div class="ttdeci">ENDPOINT_INFO(getPodOnline)</div><div class="ttdef"><b>Definition</b> PodController.h:19</div></div>
+<div class="ttc" id="aclassmy__api_1_1pod__api_1_1PodController_html_a2b8d617aabef3b1a077aa6d1212ba4f1"><div class="ttname"><a href="classmy__api_1_1pod__api_1_1PodController.html#a2b8d617aabef3b1a077aa6d1212ba4f1">my_api::pod_api::PodController::ENDPOINT_INFO</a></div><div class="ttdeci">ENDPOINT_INFO(getPodDetail)</div><div class="ttdef"><b>Definition</b> PodController.h:33</div></div>
+<div class="ttc" id="aclassmy__api_1_1pod__api_1_1PodController_html_a609e87de8386f6c89c1f7c3e50301493"><div class="ttname"><a href="classmy__api_1_1pod__api_1_1PodController.html#a609e87de8386f6c89c1f7c3e50301493">my_api::pod_api::PodController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;GET&quot;, &quot;/v1/pod/list&quot;, listPodIds)</div></div>
+<div class="ttc" id="aclassmy__api_1_1pod__api_1_1PodController_html_a7ee0624f06abe8c8caae698e2445c06f"><div class="ttname"><a href="classmy__api_1_1pod__api_1_1PodController.html#a7ee0624f06abe8c8caae698e2445c06f">my_api::pod_api::PodController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;GET&quot;, &quot;/v1/pod/status&quot;, getPodStatus)</div></div>
+<div class="ttc" id="aclassmy__api_1_1pod__api_1_1PodController_html_a846a0192b65b06b6a6d394f0cdde0c95"><div class="ttname"><a href="classmy__api_1_1pod__api_1_1PodController.html#a846a0192b65b06b6a6d394f0cdde0c95">my_api::pod_api::PodController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;POST&quot;, &quot;/v1/pod/connect&quot;, connectPod, BODY_STRING(oatpp::String, body))</div></div>
+<div class="ttc" id="aclassmy__api_1_1pod__api_1_1PodController_html_a916adb8234b407369e5ff10ca1ca9ced"><div class="ttname"><a href="classmy__api_1_1pod__api_1_1PodController.html#a916adb8234b407369e5ff10ca1ca9ced">my_api::pod_api::PodController::createShared</a></div><div class="ttdeci">static std::shared_ptr&lt; PodController &gt; createShared(const std::shared_ptr&lt; ObjectMapper &gt; &amp;objectMapper)</div><div class="ttdef"><b>Definition</b> PodController.cpp:13</div></div>
+<div class="ttc" id="aclassmy__api_1_1pod__api_1_1PodController_html_a99449244bf634c8b4692824326520cf0"><div class="ttname"><a href="classmy__api_1_1pod__api_1_1PodController.html#a99449244bf634c8b4692824326520cf0">my_api::pod_api::PodController::ENDPOINT_INFO</a></div><div class="ttdeci">ENDPOINT_INFO(listPodIds)</div><div class="ttdef"><b>Definition</b> PodController.h:66</div></div>
+<div class="ttc" id="aclassmy__api_1_1pod__api_1_1PodController_html_ac6af3c6385d6d194b5e738ee98d714b7"><div class="ttname"><a href="classmy__api_1_1pod__api_1_1PodController.html#ac6af3c6385d6d194b5e738ee98d714b7">my_api::pod_api::PodController::ENDPOINT_INFO</a></div><div class="ttdeci">ENDPOINT_INFO(connectPod)</div><div class="ttdef"><b>Definition</b> PodController.h:50</div></div>
+<div class="ttc" id="aclassmy__api_1_1pod__api_1_1PodController_html_ad46a36933830dac4f3b907231c420a3f"><div class="ttname"><a href="classmy__api_1_1pod__api_1_1PodController.html#ad46a36933830dac4f3b907231c420a3f">my_api::pod_api::PodController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;GET&quot;, &quot;/v1/pod/online&quot;, getPodOnline)</div></div>
+<div class="ttc" id="aclassmy__api_1_1pod__api_1_1PodController_html_ad7954211baadd219f665aa41e79ea014"><div class="ttname"><a href="classmy__api_1_1pod__api_1_1PodController.html#ad7954211baadd219f665aa41e79ea014">my_api::pod_api::PodController::ENDPOINT_INFO</a></div><div class="ttdeci">ENDPOINT_INFO(getPodStatus)</div><div class="ttdef"><b>Definition</b> PodController.h:26</div></div>
+<div class="ttc" id="aclassmy__api_1_1pod__api_1_1PodController_html_ae0252db2f92a0e871c3dee2f4b875e14"><div class="ttname"><a href="classmy__api_1_1pod__api_1_1PodController.html#ae0252db2f92a0e871c3dee2f4b875e14">my_api::pod_api::PodController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;POST&quot;, &quot;/v1/pod/detail&quot;, getPodDetail, BODY_STRING(oatpp::String, body))</div></div>
+<div class="ttc" id="aclassmy__api_1_1pod__api_1_1PodController_html_ae40b930efd68c2806fd6bdd57124114a"><div class="ttname"><a href="classmy__api_1_1pod__api_1_1PodController.html#ae40b930efd68c2806fd6bdd57124114a">my_api::pod_api::PodController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;POST&quot;, &quot;/v1/pod/disconnect&quot;, disconnectPod, BODY_STRING(oatpp::String, body))</div></div>
+<div class="ttc" id="aclassmy__api_1_1pod__api_1_1PodController_html_aeb3517d012f954eb7a28d7b88e58fc49"><div class="ttname"><a href="classmy__api_1_1pod__api_1_1PodController.html#aeb3517d012f954eb7a28d7b88e58fc49">my_api::pod_api::PodController::ENDPOINT_INFO</a></div><div class="ttdeci">ENDPOINT_INFO(getPodConfig)</div><div class="ttdef"><b>Definition</b> PodController.h:41</div></div>
+<div class="ttc" id="aclassmy__api_1_1pod__api_1_1PodController_html_afad995b2591ecaa0b0c9d25586f479f4"><div class="ttname"><a href="classmy__api_1_1pod__api_1_1PodController.html#afad995b2591ecaa0b0c9d25586f479f4">my_api::pod_api::PodController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;GET&quot;, &quot;/v1/pod/config&quot;, getPodConfig)</div></div>
+<div class="ttc" id="anamespacemy__api_1_1pod__api_html"><div class="ttname"><a href="namespacemy__api_1_1pod__api.html">my_api::pod_api</a></div><div class="ttdef"><b>Definition</b> PodController.cpp:6</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

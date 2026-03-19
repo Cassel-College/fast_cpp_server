@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_pod/common/capability_types.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_0ac9cdf986d1682a7cf7479045e196ae.html">my_pod</a></li><li class="navelem"><a class="el" href="dir_1e439a19c281e63e1e6875b396a0af17.html">common</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">capability_types.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="capability__types_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacePodModule.html">PodModule</a> {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccc">   20</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccc">CapabilityType</a> : uint16_t {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_enumvalue" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccca696b031073e74bf2cb98e5ef201d4aa3">UNKNOWN</a>          = 0,    <span class="comment">// 未知能力</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_enumvalue" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccca5f241c8c8f985b3c51e05d39cf030f4c">STATUS</a>           = 1,    <span class="comment">// 状态查询能力</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_enumvalue" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccca0d895a0a05a7cce9b2c0c8bb252f78cc">HEARTBEAT</a>        = 2,    <span class="comment">// 心跳检测能力</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_enumvalue" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccca6116d57d4e3fff7fac50f9b0c1358af1">PTZ</a>              = 3,    <span class="comment">// 云台控制能力（Pan-Tilt-Zoom）</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_enumvalue" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109cccad97026430a9e5d1a0c48ef2cad3755b1">LASER</a>            = 4,    <span class="comment">// 激光测距能力</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_enumvalue" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccca2f05998d2a71cdc19b7109549bbe2646">STREAM</a>           = 5,    <span class="comment">// 流媒体能力</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_enumvalue" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccca23a12f67f614b5518c7f1c2465bf95e3">IMAGE</a>            = 6,    <span class="comment">// 图像抓拍能力</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_enumvalue" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109cccae91aa59305dc9e90e3089961dddfb12b">CENTER_MEASURE</a>   = 7,    <span class="comment">// 中心点测量能力</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>};</div>
+</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>std::string <a class="code hl_function" href="namespacePodModule.html#a407f5139be30ed89772f4f52f8b33ce1">capabilityTypeToString</a>(<a class="code hl_enumeration" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccc">CapabilityType</a> type);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>} <span class="comment">// namespace PodModule</span></div>
+<div class="ttc" id="anamespacePodModule_html"><div class="ttname"><a href="namespacePodModule.html">PodModule</a></div><div class="ttdef"><b>Definition</b> base_capability.cpp:9</div></div>
+<div class="ttc" id="anamespacePodModule_html_a407f5139be30ed89772f4f52f8b33ce1"><div class="ttname"><a href="namespacePodModule.html#a407f5139be30ed89772f4f52f8b33ce1">PodModule::capabilityTypeToString</a></div><div class="ttdeci">std::string capabilityTypeToString(CapabilityType type)</div><div class="ttdoc">将能力类型枚举转为中文字符串</div><div class="ttdef"><b>Definition</b> capability_types.cpp:10</div></div>
+<div class="ttc" id="anamespacePodModule_html_a58ed7bf409187110b791ef5b23109ccc"><div class="ttname"><a href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccc">PodModule::CapabilityType</a></div><div class="ttdeci">CapabilityType</div><div class="ttdoc">能力类型枚举</div><div class="ttdef"><b>Definition</b> capability_types.h:20</div></div>
+<div class="ttc" id="anamespacePodModule_html_a58ed7bf409187110b791ef5b23109ccca0d895a0a05a7cce9b2c0c8bb252f78cc"><div class="ttname"><a href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccca0d895a0a05a7cce9b2c0c8bb252f78cc">PodModule::CapabilityType::HEARTBEAT</a></div><div class="ttdeci">@ HEARTBEAT</div></div>
+<div class="ttc" id="anamespacePodModule_html_a58ed7bf409187110b791ef5b23109ccca23a12f67f614b5518c7f1c2465bf95e3"><div class="ttname"><a href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccca23a12f67f614b5518c7f1c2465bf95e3">PodModule::CapabilityType::IMAGE</a></div><div class="ttdeci">@ IMAGE</div></div>
+<div class="ttc" id="anamespacePodModule_html_a58ed7bf409187110b791ef5b23109ccca2f05998d2a71cdc19b7109549bbe2646"><div class="ttname"><a href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccca2f05998d2a71cdc19b7109549bbe2646">PodModule::CapabilityType::STREAM</a></div><div class="ttdeci">@ STREAM</div></div>
+<div class="ttc" id="anamespacePodModule_html_a58ed7bf409187110b791ef5b23109ccca5f241c8c8f985b3c51e05d39cf030f4c"><div class="ttname"><a href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccca5f241c8c8f985b3c51e05d39cf030f4c">PodModule::CapabilityType::STATUS</a></div><div class="ttdeci">@ STATUS</div></div>
+<div class="ttc" id="anamespacePodModule_html_a58ed7bf409187110b791ef5b23109ccca6116d57d4e3fff7fac50f9b0c1358af1"><div class="ttname"><a href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccca6116d57d4e3fff7fac50f9b0c1358af1">PodModule::CapabilityType::PTZ</a></div><div class="ttdeci">@ PTZ</div></div>
+<div class="ttc" id="anamespacePodModule_html_a58ed7bf409187110b791ef5b23109ccca696b031073e74bf2cb98e5ef201d4aa3"><div class="ttname"><a href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccca696b031073e74bf2cb98e5ef201d4aa3">PodModule::CapabilityType::UNKNOWN</a></div><div class="ttdeci">@ UNKNOWN</div></div>
+<div class="ttc" id="anamespacePodModule_html_a58ed7bf409187110b791ef5b23109cccad97026430a9e5d1a0c48ef2cad3755b1"><div class="ttname"><a href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109cccad97026430a9e5d1a0c48ef2cad3755b1">PodModule::CapabilityType::LASER</a></div><div class="ttdeci">@ LASER</div></div>
+<div class="ttc" id="anamespacePodModule_html_a58ed7bf409187110b791ef5b23109cccae91aa59305dc9e90e3089961dddfb12b"><div class="ttname"><a href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109cccae91aa59305dc9e90e3089961dddfb12b">PodModule::CapabilityType::CENTER_MEASURE</a></div><div class="ttdeci">@ CENTER_MEASURE</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

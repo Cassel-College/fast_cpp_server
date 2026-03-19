@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['cancelled_0',['Cancelled',['../namespacemy__data.html#a724f9ce2351c125b3b7f6c7923822bceaa149e85a44aeec9140e92733d9ed694e',1,'my_data']]],
-  ['collecting_1',['COLLECTING',['../namespaceedge__manager.html#a705af4082cd372cbec46518713ce86f2a279d7651aba75af46949322315dd5045',1,'edge_manager']]],
-  ['command_2',['COMMAND',['../namespacemy__doctor.html#a0522d6bb0c6399c4971af10467d11d04a26097a57f572fe88a7cdf80543422cb1',1,'my_doctor']]],
-  ['cruise_3',['CRUISE',['../namespacefly__control.html#a201c80e927ae9ae73dcc0b8b4f7ca1a7a603d3e49969654c3830aa0956881cb2c',1,'fly_control']]]
+  ['battery_5foff_0',['BATTERY_OFF',['../namespacefly__control.html#a8d5d271641d890f42bdfefaa891a2c6ea0bce859b7956440b683943012afd1e49',1,'fly_control']]],
+  ['battery_5fon_1',['BATTERY_ON',['../namespacefly__control.html#a8d5d271641d890f42bdfefaa891a2c6eac72d872d2ef43ad99135349e8c46942a',1,'fly_control']]],
+  ['busy_2',['Busy',['../namespacemy__data.html#ab741123951602d5912c8b5aba6bf3372ad8a942ef2b04672adfafef0ad817a407',1,'my_data']]]
 ];

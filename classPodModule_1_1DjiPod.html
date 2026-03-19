@@ -1,0 +1,341 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: DjiPod类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacePodModule.html">PodModule</a></li><li class="navelem"><a class="el" href="classPodModule_1_1DjiPod.html">DjiPod</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a>  </div>
+  <div class="headertitle"><div class="title">DjiPod类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="dji__pod_8h_source.html">dji_pod.h</a>&gt;</code></p>
+<div class="dynheader">
+类 DjiPod 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPodModule_1_1DjiPod__inherit__graph.png" border="0" usemap="#aDjiPod_inherit__map" alt="Inheritance graph"/></div>
+<map name="aDjiPod_inherit__map" id="aDjiPod_inherit__map">
+<area shape="rect" title=" " alt="" coords="13,152,77,177"/>
+<area shape="rect" href="classPodModule_1_1BasePod.html" title=" " alt="" coords="5,79,84,104"/>
+<area shape="poly" title=" " alt="" coords="47,118,47,152,42,152,42,118"/>
+<area shape="rect" href="classPodModule_1_1IPod.html" title="吊舱统一抽象接口" alt="" coords="19,5,70,31"/>
+<area shape="poly" title=" " alt="" coords="47,44,47,79,42,79,42,44"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+DjiPod 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPodModule_1_1DjiPod__coll__graph.png" border="0" usemap="#aDjiPod_coll__map" alt="Collaboration graph"/></div>
+<map name="aDjiPod_coll__map" id="aDjiPod_coll__map">
+<area shape="rect" title=" " alt="" coords="84,168,148,193"/>
+<area shape="rect" href="classPodModule_1_1BasePod.html" title=" " alt="" coords="77,93,155,119"/>
+<area shape="poly" title=" " alt="" coords="119,133,119,168,113,168,113,133"/>
+<area shape="rect" href="classPodModule_1_1IPod.html" title="吊舱统一抽象接口" alt="" coords="5,5,56,31"/>
+<area shape="poly" title=" " alt="" coords="54,39,106,91,102,95,50,43"/>
+<area shape="rect" href="structPodModule_1_1PodInfo.html" title="吊舱设备基础信息" alt="" coords="81,5,151,31"/>
+<area shape="poly" title=" " alt="" coords="119,45,119,93,113,93,113,45"/>
+<area shape="rect" href="classPodModule_1_1CapabilityRegistry.html" title="能力注册表" alt="" coords="175,5,318,31"/>
+<area shape="poly" title=" " alt="" coords="227,43,191,72,145,96,143,91,188,67,223,39"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ab4ab2e4fed35ce508d14961f9400297f" id="r_ab4ab2e4fed35ce508d14961f9400297f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1DjiPod.html#ab4ab2e4fed35ce508d14961f9400297f">DjiPod</a> (const <a class="el" href="structPodModule_1_1PodInfo.html">PodInfo</a> &amp;info)</td></tr>
+<tr class="memdesc:ab4ab2e4fed35ce508d14961f9400297f"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造大疆吊舱  <br /></td></tr>
+<tr class="separator:ab4ab2e4fed35ce508d14961f9400297f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f0570d311a078c10b11ab5baa5f1aff" id="r_a3f0570d311a078c10b11ab5baa5f1aff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1DjiPod.html#a3f0570d311a078c10b11ab5baa5f1aff">~DjiPod</a> () override</td></tr>
+<tr class="separator:a3f0570d311a078c10b11ab5baa5f1aff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a226f8a514521d997b196fb2392e3a869" id="r_a226f8a514521d997b196fb2392e3a869"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structPodModule_1_1PodResult.html">PodResult</a>&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1DjiPod.html#a226f8a514521d997b196fb2392e3a869">initializeCapabilities</a> () override</td></tr>
+<tr class="memdesc:a226f8a514521d997b196fb2392e3a869"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化大疆能力装配  <br /></td></tr>
+<tr class="separator:a226f8a514521d997b196fb2392e3a869"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classPodModule_1_1BasePod"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classPodModule_1_1BasePod')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classPodModule_1_1BasePod.html">BasePod</a></td></tr>
+<tr class="memitem:a1b3ba6c720cafe2780757a81608a7b3d inherit pub_methods_classPodModule_1_1BasePod" id="r_a1b3ba6c720cafe2780757a81608a7b3d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BasePod.html#a1b3ba6c720cafe2780757a81608a7b3d">BasePod</a> (const <a class="el" href="structPodModule_1_1PodInfo.html">PodInfo</a> &amp;info)</td></tr>
+<tr class="memdesc:a1b3ba6c720cafe2780757a81608a7b3d inherit pub_methods_classPodModule_1_1BasePod"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造 <a class="el" href="classPodModule_1_1BasePod.html">BasePod</a>  <br /></td></tr>
+<tr class="separator:a1b3ba6c720cafe2780757a81608a7b3d inherit pub_methods_classPodModule_1_1BasePod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30c6eafc5c6d371082e71ed673473320 inherit pub_methods_classPodModule_1_1BasePod" id="r_a30c6eafc5c6d371082e71ed673473320"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BasePod.html#a30c6eafc5c6d371082e71ed673473320">~BasePod</a> () override</td></tr>
+<tr class="separator:a30c6eafc5c6d371082e71ed673473320 inherit pub_methods_classPodModule_1_1BasePod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72d01b472cfe88c342ecdbb673f73330 inherit pub_methods_classPodModule_1_1BasePod" id="r_a72d01b472cfe88c342ecdbb673f73330"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structPodModule_1_1PodInfo.html">PodInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BasePod.html#a72d01b472cfe88c342ecdbb673f73330">getPodInfo</a> () const override</td></tr>
+<tr class="memdesc:a72d01b472cfe88c342ecdbb673f73330 inherit pub_methods_classPodModule_1_1BasePod"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取设备信息  <br /></td></tr>
+<tr class="separator:a72d01b472cfe88c342ecdbb673f73330 inherit pub_methods_classPodModule_1_1BasePod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70c03852a8abad6873063b76a500396a inherit pub_methods_classPodModule_1_1BasePod" id="r_a70c03852a8abad6873063b76a500396a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BasePod.html#a70c03852a8abad6873063b76a500396a">getPodId</a> () const override</td></tr>
+<tr class="memdesc:a70c03852a8abad6873063b76a500396a inherit pub_methods_classPodModule_1_1BasePod"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取设备唯一标识  <br /></td></tr>
+<tr class="separator:a70c03852a8abad6873063b76a500396a inherit pub_methods_classPodModule_1_1BasePod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77d2042529c762f0e23b3c0a987a99cf inherit pub_methods_classPodModule_1_1BasePod" id="r_a77d2042529c762f0e23b3c0a987a99cf"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BasePod.html#a77d2042529c762f0e23b3c0a987a99cf">getPodName</a> () const override</td></tr>
+<tr class="memdesc:a77d2042529c762f0e23b3c0a987a99cf inherit pub_methods_classPodModule_1_1BasePod"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取设备名称  <br /></td></tr>
+<tr class="separator:a77d2042529c762f0e23b3c0a987a99cf inherit pub_methods_classPodModule_1_1BasePod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67831711be1e27807c549631dee2b806 inherit pub_methods_classPodModule_1_1BasePod" id="r_a67831711be1e27807c549631dee2b806"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacePodModule.html#a5d041db549a1caf2163e3c74deeb776b">PodVendor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BasePod.html#a67831711be1e27807c549631dee2b806">getVendor</a> () const override</td></tr>
+<tr class="memdesc:a67831711be1e27807c549631dee2b806 inherit pub_methods_classPodModule_1_1BasePod"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取厂商  <br /></td></tr>
+<tr class="separator:a67831711be1e27807c549631dee2b806 inherit pub_methods_classPodModule_1_1BasePod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0adeddfb634847b397d070f347bfa22 inherit pub_methods_classPodModule_1_1BasePod" id="r_af0adeddfb634847b397d070f347bfa22"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structPodModule_1_1PodResult.html">PodResult</a>&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BasePod.html#af0adeddfb634847b397d070f347bfa22">connect</a> () override</td></tr>
+<tr class="memdesc:af0adeddfb634847b397d070f347bfa22 inherit pub_methods_classPodModule_1_1BasePod"><td class="mdescLeft">&#160;</td><td class="mdescRight">连接设备  <br /></td></tr>
+<tr class="separator:af0adeddfb634847b397d070f347bfa22 inherit pub_methods_classPodModule_1_1BasePod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a404558c623f1e9686ac0d34501bf890b inherit pub_methods_classPodModule_1_1BasePod" id="r_a404558c623f1e9686ac0d34501bf890b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structPodModule_1_1PodResult.html">PodResult</a>&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BasePod.html#a404558c623f1e9686ac0d34501bf890b">disconnect</a> () override</td></tr>
+<tr class="memdesc:a404558c623f1e9686ac0d34501bf890b inherit pub_methods_classPodModule_1_1BasePod"><td class="mdescLeft">&#160;</td><td class="mdescRight">断开设备  <br /></td></tr>
+<tr class="separator:a404558c623f1e9686ac0d34501bf890b inherit pub_methods_classPodModule_1_1BasePod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13cdcbb84b8f5bf0b9125ef8d0ce41c2 inherit pub_methods_classPodModule_1_1BasePod" id="r_a13cdcbb84b8f5bf0b9125ef8d0ce41c2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BasePod.html#a13cdcbb84b8f5bf0b9125ef8d0ce41c2">isConnected</a> () const override</td></tr>
+<tr class="memdesc:a13cdcbb84b8f5bf0b9125ef8d0ce41c2 inherit pub_methods_classPodModule_1_1BasePod"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断是否已连接  <br /></td></tr>
+<tr class="separator:a13cdcbb84b8f5bf0b9125ef8d0ce41c2 inherit pub_methods_classPodModule_1_1BasePod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1aad1ab8c837f450c37541e091e9e11a inherit pub_methods_classPodModule_1_1BasePod" id="r_a1aad1ab8c837f450c37541e091e9e11a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacePodModule.html#aea5b7c69300d8f8fd12fc5e5b6265af9">PodState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BasePod.html#a1aad1ab8c837f450c37541e091e9e11a">getState</a> () const override</td></tr>
+<tr class="memdesc:a1aad1ab8c837f450c37541e091e9e11a inherit pub_methods_classPodModule_1_1BasePod"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取设备当前状态  <br /></td></tr>
+<tr class="separator:a1aad1ab8c837f450c37541e091e9e11a inherit pub_methods_classPodModule_1_1BasePod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3adfbba87b1b123bcd5d57294251359 inherit pub_methods_classPodModule_1_1BasePod" id="r_aa3adfbba87b1b123bcd5d57294251359"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BasePod.html#aa3adfbba87b1b123bcd5d57294251359">registerCapability</a> (<a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccc">CapabilityType</a> type, std::shared_ptr&lt; <a class="el" href="classPodModule_1_1ICapability.html">ICapability</a> &gt; capability) override</td></tr>
+<tr class="memdesc:aa3adfbba87b1b123bcd5d57294251359 inherit pub_methods_classPodModule_1_1BasePod"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册一个能力  <br /></td></tr>
+<tr class="separator:aa3adfbba87b1b123bcd5d57294251359 inherit pub_methods_classPodModule_1_1BasePod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7957603c4b5361d636590c9a3477ba21 inherit pub_methods_classPodModule_1_1BasePod" id="r_a7957603c4b5361d636590c9a3477ba21"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classPodModule_1_1ICapability.html">ICapability</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BasePod.html#a7957603c4b5361d636590c9a3477ba21">getCapability</a> (<a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccc">CapabilityType</a> type) const override</td></tr>
+<tr class="memdesc:a7957603c4b5361d636590c9a3477ba21 inherit pub_methods_classPodModule_1_1BasePod"><td class="mdescLeft">&#160;</td><td class="mdescRight">查询某类型能力  <br /></td></tr>
+<tr class="separator:a7957603c4b5361d636590c9a3477ba21 inherit pub_methods_classPodModule_1_1BasePod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17c8c1cfa38549d33c04435409e38231 inherit pub_methods_classPodModule_1_1BasePod" id="r_a17c8c1cfa38549d33c04435409e38231"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BasePod.html#a17c8c1cfa38549d33c04435409e38231">hasCapability</a> (<a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccc">CapabilityType</a> type) const override</td></tr>
+<tr class="memdesc:a17c8c1cfa38549d33c04435409e38231 inherit pub_methods_classPodModule_1_1BasePod"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断是否拥有某能力  <br /></td></tr>
+<tr class="separator:a17c8c1cfa38549d33c04435409e38231 inherit pub_methods_classPodModule_1_1BasePod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23406133f5370defda48a4f384682ca5 inherit pub_methods_classPodModule_1_1BasePod" id="r_a23406133f5370defda48a4f384682ca5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccc">CapabilityType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BasePod.html#a23406133f5370defda48a4f384682ca5">listCapabilities</a> () const override</td></tr>
+<tr class="memdesc:a23406133f5370defda48a4f384682ca5 inherit pub_methods_classPodModule_1_1BasePod"><td class="mdescLeft">&#160;</td><td class="mdescRight">列出所有已注册能力类型  <br /></td></tr>
+<tr class="separator:a23406133f5370defda48a4f384682ca5 inherit pub_methods_classPodModule_1_1BasePod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdb951033e211def2a3a6f3999db158c inherit pub_methods_classPodModule_1_1BasePod" id="r_afdb951033e211def2a3a6f3999db158c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BasePod.html#afdb951033e211def2a3a6f3999db158c">setSession</a> (std::shared_ptr&lt; <a class="el" href="classPodModule_1_1ISession.html">ISession</a> &gt; session) override</td></tr>
+<tr class="memdesc:afdb951033e211def2a3a6f3999db158c inherit pub_methods_classPodModule_1_1BasePod"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置会话  <br /></td></tr>
+<tr class="separator:afdb951033e211def2a3a6f3999db158c inherit pub_methods_classPodModule_1_1BasePod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e6d17b80a208905ffcfe3a372cd2c1c inherit pub_methods_classPodModule_1_1BasePod" id="r_a3e6d17b80a208905ffcfe3a372cd2c1c"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classPodModule_1_1ISession.html">ISession</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BasePod.html#a3e6d17b80a208905ffcfe3a372cd2c1c">getSession</a> () const override</td></tr>
+<tr class="memdesc:a3e6d17b80a208905ffcfe3a372cd2c1c inherit pub_methods_classPodModule_1_1BasePod"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取会话  <br /></td></tr>
+<tr class="separator:a3e6d17b80a208905ffcfe3a372cd2c1c inherit pub_methods_classPodModule_1_1BasePod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classPodModule_1_1IPod"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classPodModule_1_1IPod')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classPodModule_1_1IPod.html">IPod</a></td></tr>
+<tr class="memitem:a1c402be41369a23658ef25b63d33e0e3 inherit pub_methods_classPodModule_1_1IPod" id="r_a1c402be41369a23658ef25b63d33e0e3"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1IPod.html#a1c402be41369a23658ef25b63d33e0e3">~IPod</a> ()=default</td></tr>
+<tr class="separator:a1c402be41369a23658ef25b63d33e0e3 inherit pub_methods_classPodModule_1_1IPod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b4de9361e7c1e82bb3dd9e603191bcd inherit pub_methods_classPodModule_1_1IPod" id="r_a6b4de9361e7c1e82bb3dd9e603191bcd"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a6b4de9361e7c1e82bb3dd9e603191bcd inherit pub_methods_classPodModule_1_1IPod"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classPodModule_1_1IPod.html#a6b4de9361e7c1e82bb3dd9e603191bcd">getCapabilityAs</a> (<a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccc">CapabilityType</a> type) const</td></tr>
+<tr class="memdesc:a6b4de9361e7c1e82bb3dd9e603191bcd inherit pub_methods_classPodModule_1_1IPod"><td class="mdescLeft">&#160;</td><td class="mdescRight">模板方式查询具体能力接口  <br /></td></tr>
+<tr class="separator:a6b4de9361e7c1e82bb3dd9e603191bcd inherit pub_methods_classPodModule_1_1IPod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_methods_classPodModule_1_1BasePod"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classPodModule_1_1BasePod')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="classPodModule_1_1BasePod.html">BasePod</a></td></tr>
+<tr class="memitem:a978db00c887fe94cd401aa4d06c5d789 inherit pro_methods_classPodModule_1_1BasePod" id="r_a978db00c887fe94cd401aa4d06c5d789"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BasePod.html#a978db00c887fe94cd401aa4d06c5d789">setState</a> (<a class="el" href="namespacePodModule.html#aea5b7c69300d8f8fd12fc5e5b6265af9">PodState</a> state)</td></tr>
+<tr class="memdesc:a978db00c887fe94cd401aa4d06c5d789 inherit pro_methods_classPodModule_1_1BasePod"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置设备状态  <br /></td></tr>
+<tr class="separator:a978db00c887fe94cd401aa4d06c5d789 inherit pro_methods_classPodModule_1_1BasePod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af469166fbb78b5c5053ca57b06997ecf inherit pro_methods_classPodModule_1_1BasePod" id="r_af469166fbb78b5c5053ca57b06997ecf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BasePod.html#af469166fbb78b5c5053ca57b06997ecf">addCapability</a> (<a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccc">CapabilityType</a> type, std::shared_ptr&lt; <a class="el" href="classPodModule_1_1ICapability.html">ICapability</a> &gt; capability)</td></tr>
+<tr class="memdesc:af469166fbb78b5c5053ca57b06997ecf inherit pro_methods_classPodModule_1_1BasePod"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册并装配一个能力  <br /></td></tr>
+<tr class="separator:af469166fbb78b5c5053ca57b06997ecf inherit pro_methods_classPodModule_1_1BasePod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classPodModule_1_1BasePod"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classPodModule_1_1BasePod')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="classPodModule_1_1BasePod.html">BasePod</a></td></tr>
+<tr class="memitem:a5877b1264e97e5efb415a36981cb7683 inherit pro_attribs_classPodModule_1_1BasePod" id="r_a5877b1264e97e5efb415a36981cb7683"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structPodModule_1_1PodInfo.html">PodInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BasePod.html#a5877b1264e97e5efb415a36981cb7683">pod_info_</a></td></tr>
+<tr class="separator:a5877b1264e97e5efb415a36981cb7683 inherit pro_attribs_classPodModule_1_1BasePod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06f96b422f784e77100af55334ace6d2 inherit pro_attribs_classPodModule_1_1BasePod" id="r_a06f96b422f784e77100af55334ace6d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacePodModule.html#aea5b7c69300d8f8fd12fc5e5b6265af9">PodState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BasePod.html#a06f96b422f784e77100af55334ace6d2">state_</a> = <a class="el" href="namespacePodModule.html#aea5b7c69300d8f8fd12fc5e5b6265af9a99c8ce56e7ab246445d3b134724428f3">PodState::DISCONNECTED</a></td></tr>
+<tr class="separator:a06f96b422f784e77100af55334ace6d2 inherit pro_attribs_classPodModule_1_1BasePod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5221aa557d678e3e12f18fbd2973bd20 inherit pro_attribs_classPodModule_1_1BasePod" id="r_a5221aa557d678e3e12f18fbd2973bd20"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classPodModule_1_1ISession.html">ISession</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BasePod.html#a5221aa557d678e3e12f18fbd2973bd20">session_</a></td></tr>
+<tr class="separator:a5221aa557d678e3e12f18fbd2973bd20 inherit pro_attribs_classPodModule_1_1BasePod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73aa1b8faec652c33e8b4aa1982429bc inherit pro_attribs_classPodModule_1_1BasePod" id="r_a73aa1b8faec652c33e8b4aa1982429bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPodModule_1_1CapabilityRegistry.html">CapabilityRegistry</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BasePod.html#a73aa1b8faec652c33e8b4aa1982429bc">capability_registry_</a></td></tr>
+<tr class="separator:a73aa1b8faec652c33e8b4aa1982429bc inherit pro_attribs_classPodModule_1_1BasePod"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="ab4ab2e4fed35ce508d14961f9400297f" name="ab4ab2e4fed35ce508d14961f9400297f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4ab2e4fed35ce508d14961f9400297f">&#9670;&#160;</a></span>DjiPod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPodModule_1_1DjiPod.html">DjiPod</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structPodModule_1_1PodInfo.html">PodInfo</a> &amp;&#160;</td>
+          <td class="paramname"><em>info</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构造大疆吊舱 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">info</td><td>设备基础信息 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">引用了 <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="structPodModule_1_1PodInfo.html#a4d49ef0e01c5aecd32309c20d370a451">PodInfo::pod_id</a> , 以及 <a class="el" href="classPodModule_1_1BasePod.html#afdb951033e211def2a3a6f3999db158c">BasePod::setSession()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPodModule_1_1DjiPod_ab4ab2e4fed35ce508d14961f9400297f_cgraph.png" border="0" usemap="#aclassPodModule_1_1DjiPod_ab4ab2e4fed35ce508d14961f9400297f_cgraph" alt=""/></div>
+<map name="aclassPodModule_1_1DjiPod_ab4ab2e4fed35ce508d14961f9400297f_cgraph" id="aclassPodModule_1_1DjiPod_ab4ab2e4fed35ce508d14961f9400297f_cgraph">
+<area shape="rect" title="构造大疆吊舱" alt="" coords="5,13,69,38"/>
+<area shape="rect" href="classPodModule_1_1BasePod.html#afdb951033e211def2a3a6f3999db158c" title="设置会话" alt="" coords="117,5,276,45"/>
+<area shape="poly" title=" " alt="" coords="70,23,104,23,104,28,70,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3f0570d311a078c10b11ab5baa5f1aff" name="a3f0570d311a078c10b11ab5baa5f1aff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f0570d311a078c10b11ab5baa5f1aff">&#9670;&#160;</a></span>~DjiPod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classPodModule_1_1DjiPod.html">DjiPod</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="structPodModule_1_1PodInfo.html#a4d49ef0e01c5aecd32309c20d370a451">PodInfo::pod_id</a> , 以及 <a class="el" href="classPodModule_1_1BasePod.html#a5877b1264e97e5efb415a36981cb7683">BasePod::pod_info_</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a226f8a514521d997b196fb2392e3a869" name="a226f8a514521d997b196fb2392e3a869"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a226f8a514521d997b196fb2392e3a869">&#9670;&#160;</a></span>initializeCapabilities()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structPodModule_1_1PodResult.html">PodResult</a>&lt; void &gt; initializeCapabilities </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>初始化大疆能力装配 </p>
+<p>创建并注册大疆支持的所有能力：</p><ul>
+<li>状态查询</li>
+<li>心跳检测</li>
+<li>云台控制</li>
+<li>激光测距</li>
+<li>流媒体</li>
+<li>图像抓拍</li>
+<li>中心点测量 </li>
+</ul>
+
+<p>重载 <a class="el" href="classPodModule_1_1BasePod.html#a226f8a514521d997b196fb2392e3a869">BasePod</a> .</p>
+
+<p class="reference">引用了 <a class="el" href="classPodModule_1_1BasePod.html#af469166fbb78b5c5053ca57b06997ecf">BasePod::addCapability()</a>, <a class="el" href="classPodModule_1_1BasePod.html#a73aa1b8faec652c33e8b4aa1982429bc">BasePod::capability_registry_</a>, <a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109cccae91aa59305dc9e90e3089961dddfb12b">PodModule::CENTER_MEASURE</a>, <a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccca0d895a0a05a7cce9b2c0c8bb252f78cc">PodModule::HEARTBEAT</a>, <a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccca23a12f67f614b5518c7f1c2465bf95e3">PodModule::IMAGE</a>, <a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109cccad97026430a9e5d1a0c48ef2cad3755b1">PodModule::LASER</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="structPodModule_1_1PodInfo.html#a4d49ef0e01c5aecd32309c20d370a451">PodInfo::pod_id</a>, <a class="el" href="classPodModule_1_1BasePod.html#a5877b1264e97e5efb415a36981cb7683">BasePod::pod_info_</a>, <a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccca6116d57d4e3fff7fac50f9b0c1358af1">PodModule::PTZ</a>, <a class="el" href="classPodModule_1_1CapabilityRegistry.html#a259cb5a711406a8c3e5d937eb9350cca">CapabilityRegistry::size()</a>, <a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccca5f241c8c8f985b3c51e05d39cf030f4c">PodModule::STATUS</a>, <a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccca2f05998d2a71cdc19b7109549bbe2646">PodModule::STREAM</a> , 以及 <a class="el" href="structPodModule_1_1PodResult.html#a918797a1c16d0fee3c376ad68e215966">PodResult&lt; T &gt;::success()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPodModule_1_1DjiPod_a226f8a514521d997b196fb2392e3a869_cgraph.png" border="0" usemap="#aclassPodModule_1_1DjiPod_a226f8a514521d997b196fb2392e3a869_cgraph" alt=""/></div>
+<map name="aclassPodModule_1_1DjiPod_a226f8a514521d997b196fb2392e3a869_cgraph" id="aclassPodModule_1_1DjiPod_a226f8a514521d997b196fb2392e3a869_cgraph">
+<area shape="rect" title="初始化大疆能力装配" alt="" coords="5,77,160,102"/>
+<area shape="rect" href="classPodModule_1_1BasePod.html#af469166fbb78b5c5053ca57b06997ecf" title="注册并装配一个能力" alt="" coords="240,5,399,45"/>
+<area shape="poly" title=" " alt="" coords="130,74,231,46,232,52,131,79"/>
+<area shape="rect" href="classPodModule_1_1CapabilityRegistry.html#a259cb5a711406a8c3e5d937eb9350cca" title="获取已注册能力数量" alt="" coords="208,69,431,109"/>
+<area shape="poly" title=" " alt="" coords="161,87,194,87,194,92,161,92"/>
+<area shape="rect" href="structPodModule_1_1PodResult.html#a918797a1c16d0fee3c376ad68e215966" title="构造成功结果" alt="" coords="236,133,403,173"/>
+<area shape="poly" title=" " alt="" coords="131,100,232,127,231,132,130,105"/>
+<area shape="rect" href="namespacePodModule.html#a407f5139be30ed89772f4f52f8b33ce1" title="将能力类型枚举转为中文字符串" alt="" coords="749,7,945,47"/>
+<area shape="poly" title=" " alt="" coords="399,21,479,20,701,20,736,21,736,26,701,25,479,25,399,26"/>
+<area shape="rect" href="classPodModule_1_1CapabilityRegistry.html#a0f676d239a1be3f60f0b483c4c9bf8d5" title="注册一个能力" alt="" coords="479,35,701,75"/>
+<area shape="poly" title=" " alt="" coords="399,31,465,38,464,44,399,37"/>
+<area shape="poly" title=" " alt="" coords="701,40,736,36,736,41,702,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/util/my_pod/pod/dji/<a class="el" href="dji__pod_8h_source.html">dji_pod.h</a></li>
+<li>src/util/my_pod/pod/dji/<a class="el" href="dji__pod_8cpp.html">dji_pod.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>
