@@ -1,13 +1,61 @@
 #include "MyFlyControl.h"
 #include "MyLog.h"
 
+#include <algorithm>
 #include <chrono>
+#include <iomanip>
+#include <sstream>
 
 // =============================================================================
 // MyFlyControl 业务层实现
 // =============================================================================
 
 namespace fly_control {
+
+namespace {
+
+std::string BytesToHexString(const std::vector<uint8_t>& data, size_t max_bytes = 96) {
+    if (data.empty()) {
+        return "<empty>";
+    }
+
+    std::ostringstream oss;
+    oss << std::hex << std::uppercase << std::setfill('0');
+
+    const size_t limit = std::min(data.size(), max_bytes);
+    for (size_t i = 0; i < limit; ++i) {
+        if (i != 0) {
+            oss << ' ';
+        }
+        oss << std::setw(2) << static_cast<int>(data[i]);
+    }
+
+    if (data.size() > limit) {
+        oss << " ...( +" << (data.size() - limit) << " bytes)";
+    }
+
+    return oss.str();
+}
+
+void LogSerialSnapshot(const std::string& prefix,
+                       const my_serial::SerialPortSnapshot& snapshot) {
+    MYLOG_INFO(
+        "{} initialized={}, open={}, port={}, baudrate={}, timeout_ms={}, bytesize={}, parity={}, stopbits={}, flowcontrol={}, available_bytes={}, last_error={}",
+        prefix,
+        snapshot.initialized ? "true" : "false",
+        snapshot.open ? "true" : "false",
+        snapshot.port.empty() ? std::string("<empty>") : snapshot.port,
+        snapshot.baudrate,
+        snapshot.timeout_ms,
+        snapshot.bytesize.empty() ? std::string("<empty>") : snapshot.bytesize,
+        snapshot.parity.empty() ? std::string("<empty>") : snapshot.parity,
+        snapshot.stopbits.empty() ? std::string("<empty>") : snapshot.stopbits,
+        snapshot.flowcontrol.empty() ? std::string("<empty>") : snapshot.flowcontrol,
+        snapshot.available_bytes,
+        snapshot.last_error.empty() ? std::string("<none>") : snapshot.last_error);
+}
+
+} // namespace
 
 MyFlyControl::MyFlyControl() = default;
 
@@ -26,7 +74,7 @@ bool MyFlyControl::Init(const nlohmann::json& cfg, std::string* err) {
                     (err != nullptr && !err->empty()) ? *err : std::string("unknown error"));
         return false;
     }
-    MYLOG_INFO("飞控模块串口初始化成功");
+    LogSerialSnapshot("飞控模块串口初始化成功，串口快照:", serial_.GetSnapshot());
     return true;
 }
 
@@ -47,8 +95,11 @@ bool MyFlyControl::Start(std::string* err) {
         MYLOG_INFO("飞控模块串口已打开");
     }
 
+    LogSerialSnapshot("飞控模块启动前串口快照:", serial_.GetSnapshot());
+
     // 重置帧解析器
     parser_.Reset();
+    MYLOG_INFO("飞控模块帧解析器已重置");
 
     // 启动接收线程
     running_.store(true);
@@ -270,36 +321,98 @@ bool MyFlyControl::SendTargetState(const TargetStateData& data, std::string* err
 // =============================================================================
 
 void MyFlyControl::ReceiveLoop() {
-    MYLOG_INFO("飞控接收线程启动");
+    LogSerialSnapshot("飞控接收线程启动，当前串口状态:", serial_.GetSnapshot());
     constexpr size_t READ_BUF_SIZE = 256;
+    size_t read_count = 0;
+    size_t empty_read_count = 0;
+    size_t total_bytes = 0;
 
     while (running_.load()) {
         // 从串口读取数据
         std::string err;
         auto bytes = serial_.ReadBytes(READ_BUF_SIZE, &err);
+        ++read_count;
+
+        if (!err.empty()) {
+            MYLOG_WARN("飞控串口读取失败: read_count={}, err={}", read_count, err);
+            std::this_thread::sleep_for(std::chrono::milliseconds(5));
+            continue;
+        }
 
         if (bytes.empty()) {
+            ++empty_read_count;
+            if (empty_read_count == 1 || empty_read_count % 5 == 0) {
+                const auto snapshot = serial_.GetSnapshot();
+                MYLOG_INFO(
+                    "飞控串口暂未读到数据: read_count={}, empty_read_count={}, parser_buffer_pending={}, port={}, available_bytes={}",
+                    read_count,
+                    empty_read_count,
+                    parser_.BufferSize(),
+                    snapshot.port.empty() ? std::string("<empty>") : snapshot.port,
+                    snapshot.available_bytes);
+            }
             // 无数据可读，短暂休眠避免 CPU 空转
             std::this_thread::sleep_for(std::chrono::milliseconds(5));
             continue;
         }
 
+        empty_read_count = 0;
+        total_bytes += bytes.size();
+
+        const size_t parser_buffer_before = parser_.BufferSize();
+        MYLOG_INFO(
+            "飞控串口收到原始数据: read_count={}, bytes={}, total_bytes={}, parser_buffer_before={}, hex={}",
+            read_count,
+            bytes.size(),
+            total_bytes,
+            parser_buffer_before,
+            BytesToHexString(bytes));
+
         // 喂入帧解析器
         parser_.FeedData(bytes);
+        MYLOG_INFO("飞控帧解析器已喂入数据: parser_buffer_after_feed={}", parser_.BufferSize());
 
         // 尝试取出所有可用帧
         ParsedFrame frame;
+        size_t parsed_frame_count = 0;
         while (parser_.PopFrame(frame)) {
+            ++parsed_frame_count;
+            MYLOG_INFO(
+                "飞控帧解析结果: index={}, cnt={}, frame_type=0x{:02X}({}), payload_len={}, checksum=0x{:02X}, valid={}",
+                parsed_frame_count,
+                frame.cnt,
+                frame.frame_type,
+                GetFrameTypeName(frame.frame_type),
+                frame.payload.size(),
+                frame.checksum,
+                frame.valid ? "true" : "false");
+
             if (!frame.valid) {
-                MYLOG_WARN("收到校验和不通过的帧, 帧类型=0x{:02X}, 丢弃",
-                           frame.frame_type);
+                MYLOG_WARN(
+                    "收到校验和不通过的帧, 帧类型=0x{:02X}, cnt={}, payload_len={}, payload_hex={}, 丢弃",
+                    frame.frame_type,
+                    frame.cnt,
+                    frame.payload.size(),
+                    BytesToHexString(frame.payload));
                 continue;
             }
             HandleFrame(frame);
         }
+
+        if (parsed_frame_count == 0) {
+            MYLOG_INFO("当前读取批次尚未拼出完整帧: parser_buffer_remaining={}", parser_.BufferSize());
+        } else {
+            MYLOG_INFO(
+                "当前读取批次拆帧完成: parsed_frame_count={}, parser_buffer_remaining={}",
+                parsed_frame_count,
+                parser_.BufferSize());
+        }
     }
 
-    MYLOG_INFO("飞控接收线程退出");
+    MYLOG_INFO("飞控接收线程退出: read_count={}, total_bytes={}, parser_buffer_remaining={}",
+               read_count,
+               total_bytes,
+               parser_.BufferSize());
 }
 
 void MyFlyControl::HandleFrame(const ParsedFrame& frame) {
@@ -308,12 +421,34 @@ void MyFlyControl::HandleFrame(const ParsedFrame& frame) {
             HeartbeatData hb;
             hb.cnt = frame.cnt;
             if (DecodeHeartbeat(frame.payload, hb)) {
+                MYLOG_INFO(
+                    "收到飞控心跳: cnt={}, aircraft_id={}, run_mode=0x{:02X}, satellites={}, lon={:.7f}, lat={:.7f}, altitude={:.1f}m, relative_alt={:.1f}m, flight_mode=0x{:02X}, flight_state=0x{:02X}, battery={}%, fault_info=0x{:04X}",
+                    hb.cnt,
+                    hb.aircraft_id,
+                    hb.run_mode,
+                    hb.satellite_count,
+                    static_cast<double>(hb.longitude) * 1e-7,
+                    static_cast<double>(hb.latitude) * 1e-7,
+                    static_cast<double>(hb.altitude) * 0.1,
+                    static_cast<double>(hb.relative_alt) * 0.1,
+                    hb.flight_mode,
+                    hb.flight_state,
+                    hb.battery_percent,
+                    hb.fault_info);
+
                 // 更新最新心跳数据
+                bool first_heartbeat = false;
                 {
                     std::lock_guard<std::mutex> lock(hb_mutex_);
                     latest_hb_ = hb;
+                    first_heartbeat = !has_hb_;
                     has_hb_ = true;
                 }
+
+                if (first_heartbeat) {
+                    MYLOG_INFO("首次收到飞控心跳，串口联调链路已打通");
+                }
+
                 // 触发回调
                 std::lock_guard<std::mutex> lock(cb_mutex_);
                 if (on_heartbeat_) {
@@ -345,6 +480,11 @@ void MyFlyControl::HandleFrame(const ParsedFrame& frame) {
             GimbalControlData gimbal;
             gimbal.cnt = frame.cnt;
             if (DecodeGimbalControl(frame.payload, gimbal)) {
+                MYLOG_INFO("收到云台控制: cnt={}, enable={}, pitch_angle={}, yaw_angle={}",
+                           gimbal.cnt,
+                           gimbal.enable,
+                           gimbal.pitch_angle,
+                           gimbal.yaw_angle);
                 std::lock_guard<std::mutex> lock(cb_mutex_);
                 if (on_gimbal_) {
                     on_gimbal_(gimbal);
@@ -363,7 +503,16 @@ void MyFlyControl::HandleFrame(const ParsedFrame& frame) {
 
 bool MyFlyControl::SendRawData(const std::vector<uint8_t>& data, std::string* err) {
     std::lock_guard<std::mutex> lock(send_mutex_);
+    MYLOG_INFO("飞控串口发送原始数据: bytes={}, hex={}", data.size(), BytesToHexString(data));
     size_t written = serial_.Write(data, err);
+    if (written != data.size()) {
+        MYLOG_WARN("飞控串口发送字节数不匹配: expected={}, actual={}, err={}",
+                   data.size(),
+                   written,
+                   (err != nullptr && !err->empty()) ? *err : std::string("unknown error"));
+    } else {
+        MYLOG_INFO("飞控串口发送完成: written={}", written);
+    }
     return written == data.size();
 }
 

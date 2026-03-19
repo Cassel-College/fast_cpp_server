@@ -368,7 +368,7 @@ std::vector<uint8_t> MySerial::ReadBytes(size_t size, std::string* err) {
             throw std::runtime_error("Serial port is not open");
         }
         result.resize(size);
-        const size_t read_size = serial_->read(result, size);
+        const size_t read_size = serial_->read(result.data(), size);
         result.resize(read_size);
     });
     return result;

@@ -5,6 +5,7 @@
 #include "controller/script/ScriptController.h"
 #include "controller/soft_healthy/SoftHealthyController.h"
 #include "controller/fly_control/FlyControlController.h"
+#include "controller/pod/PodController.h"
 
 #include "controller/demo/edges/EdgesController.hpp"
 #include "controller/demo/edge_manager/EdgeController.hpp"
@@ -195,6 +196,10 @@ void MyAPI::ServerThread(int port) {
         auto flyControlController = my_api::fly_control_api::FlyControlController::createShared(std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper));
         router->addController(flyControlController);
         docEndpoints.append(flyControlController->getEndpoints());
+
+        auto podController = my_api::pod_api::PodController::createShared(std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper));
+        router->addController(podController);
+        docEndpoints.append(podController->getEndpoints());
 
         if (swaggerResources != nullptr) {
             auto swaggerController = oatpp::swagger::Controller::createShared(docEndpoints, docInfo, swaggerResources);

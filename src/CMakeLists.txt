@@ -44,6 +44,7 @@ set(BUILD_MY_TOOLS                          ON CACHE BOOL "Build my_tools librar
 set(BUILD_MY_MATH                           ON CACHE BOOL "Build my_math library")
 set(BUILD_MY_SERIAL                         ON CACHE BOOL "Build my_serial library")
 set(BUILD_MY_FLY_CONTROL                    ON CACHE BOOL "Build my_fly_control library")
+set(BUILD_MY_POD                            ON CACHE BOOL "Build my_pod library")
 
 add_subdirectory(util/my_log)
 add_subdirectory(util/my_config)
@@ -71,6 +72,7 @@ add_subdirectory(util/my_math)
 add_subdirectory(util/my_tools)
 add_subdirectory(util/my_serial)
 add_subdirectory(util/my_fly_control)
+add_subdirectory(util/my_pod)
 add_subdirectory(util/my_api)
 
 # 创建静态库 mylib
