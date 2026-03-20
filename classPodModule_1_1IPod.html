@@ -151,6 +151,21 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:aa47acf0e1f6aa48fb33ee73551b11149" id="r_aa47acf0e1f6aa48fb33ee73551b11149"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structPodModule_1_1PodResult.html">PodResult</a>&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1IPod.html#aa47acf0e1f6aa48fb33ee73551b11149">initializeCapabilities</a> ()=0</td></tr>
 <tr class="memdesc:aa47acf0e1f6aa48fb33ee73551b11149"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化能力装配  <br /></td></tr>
 <tr class="separator:aa47acf0e1f6aa48fb33ee73551b11149"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd9819ebdbcbb60eaa53d3c41e0d747f" id="r_afd9819ebdbcbb60eaa53d3c41e0d747f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1IPod.html#afd9819ebdbcbb60eaa53d3c41e0d747f">setEnabledCapabilities</a> (const std::set&lt; <a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccc">CapabilityType</a> &gt; &amp;enabled)=0</td></tr>
+<tr class="memdesc:afd9819ebdbcbb60eaa53d3c41e0d747f"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置允许启用的能力集合（空集合=全部允许）  <br /></td></tr>
+<tr class="separator:afd9819ebdbcbb60eaa53d3c41e0d747f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a298ecc0e0fc79f57f2643bd0d80c17aa" id="r_a298ecc0e0fc79f57f2643bd0d80c17aa"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structPodModule_1_1PodRuntimeStatus.html">PodRuntimeStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1IPod.html#a298ecc0e0fc79f57f2643bd0d80c17aa">getRuntimeStatus</a> () const =0</td></tr>
+<tr class="memdesc:a298ecc0e0fc79f57f2643bd0d80c17aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取运行时状态快照  <br /></td></tr>
+<tr class="separator:a298ecc0e0fc79f57f2643bd0d80c17aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6eeeda29906b360eed126655033f822c" id="r_a6eeeda29906b360eed126655033f822c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1IPod.html#a6eeeda29906b360eed126655033f822c">startMonitor</a> (const <a class="el" href="structPodModule_1_1PodMonitorConfig.html">PodMonitorConfig</a> &amp;config={})=0</td></tr>
+<tr class="memdesc:a6eeeda29906b360eed126655033f822c"><td class="mdescLeft">&#160;</td><td class="mdescRight">启动后台监控线程  <br /></td></tr>
+<tr class="separator:a6eeeda29906b360eed126655033f822c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc9d29e6155337bfcc9d18cec93c3a87" id="r_adc9d29e6155337bfcc9d18cec93c3a87"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1IPod.html#adc9d29e6155337bfcc9d18cec93c3a87">stopMonitor</a> ()=0</td></tr>
+<tr class="memdesc:adc9d29e6155337bfcc9d18cec93c3a87"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止后台监控线程  <br /></td></tr>
+<tr class="separator:adc9d29e6155337bfcc9d18cec93c3a87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04746d2d179188d67b30172deac63d81" id="r_a04746d2d179188d67b30172deac63d81"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1IPod.html#a04746d2d179188d67b30172deac63d81">isMonitorRunning</a> () const =0</td></tr>
+<tr class="memdesc:a04746d2d179188d67b30172deac63d81"><td class="mdescLeft">&#160;</td><td class="mdescRight">监控线程是否运行中  <br /></td></tr>
+<tr class="separator:a04746d2d179188d67b30172deac63d81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>吊舱统一抽象接口 </p>
@@ -281,9 +296,26 @@ Public 成员函数</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="classPodModule_1_1IPod_af45e36f920fe32ab0f9efa6d7b398e75_icgraph.png" border="0" usemap="#aclassPodModule_1_1IPod_af45e36f920fe32ab0f9efa6d7b398e75_icgraph" alt=""/></div>
 <map name="aclassPodModule_1_1IPod_af45e36f920fe32ab0f9efa6d7b398e75_icgraph" id="aclassPodModule_1_1IPod_af45e36f920fe32ab0f9efa6d7b398e75_icgraph">
-<area shape="rect" title="查询某类型能力" alt="" coords="179,5,288,31"/>
-<area shape="rect" href="classPodModule_1_1IPod.html#a6b4de9361e7c1e82bb3dd9e603191bcd" title="模板方式查询具体能力接口" alt="" coords="5,5,131,31"/>
-<area shape="poly" title=" " alt="" coords="165,21,131,21,131,15,165,15"/>
+<area shape="rect" title="查询某类型能力" alt="" coords="1057,109,1167,134"/>
+<area shape="rect" href="classPodModule_1_1IPod.html#a6b4de9361e7c1e82bb3dd9e603191bcd" title="模板方式查询具体能力接口" alt="" coords="884,109,1009,134"/>
+<area shape="poly" title=" " alt="" coords="1043,124,1010,124,1010,119,1043,119"/>
+<area shape="rect" href="classPodModule_1_1PodMonitor.html#a869baf763ba33280ac3882e3ce1a26bc" title="轮询激光数据" alt="" coords="660,5,836,45"/>
+<area shape="poly" title=" " alt="" coords="913,103,835,60,807,48,809,43,837,55,915,99"/>
+<area shape="rect" href="classPodModule_1_1PodMonitor.html#a7b53c96d2816df4d9535bfc6119c4dbd" title="轮询云台姿态" alt="" coords="660,69,836,109"/>
+<area shape="poly" title=" " alt="" coords="870,112,836,106,837,101,871,106"/>
+<area shape="rect" href="classPodModule_1_1PodMonitor.html#a6574eac20d48a2e77aa01d9b5138c7c3" title="轮询状态/在线检测" alt="" coords="660,133,836,173"/>
+<area shape="poly" title=" " alt="" coords="871,136,837,142,836,137,870,131"/>
+<area shape="rect" href="classPodModule_1_1PodMonitor.html#ac0160d94ae5471a300570532e9bc9d77" title="轮询流媒体状态" alt="" coords="660,197,836,237"/>
+<area shape="poly" title=" " alt="" coords="915,144,837,188,809,200,807,195,835,183,913,139"/>
+<area shape="rect" href="classPodModule_1_1PodMonitor.html#a70a4677f113e64393ea51d131e5b4391" title="监控主循环" alt="" coords="436,101,612,141"/>
+<area shape="poly" title=" " alt="" coords="678,53,661,60,567,103,564,99,659,55,676,48"/>
+<area shape="rect" href="classPodModule_1_1PodMonitor.html#a129c26163c525a99f830b51e59f84328" title="启动监控线程" alt="" coords="212,101,388,141"/>
+<area shape="poly" title=" " alt="" coords="422,124,388,124,388,119,422,119"/>
+<area shape="rect" href="classPodModule_1_1BasePod.html#af3103563b484b524aff6134350a2b8a3" title="启动后台监控线程" alt="" coords="5,101,164,141"/>
+<area shape="poly" title=" " alt="" coords="198,124,164,124,164,119,198,119"/>
+<area shape="poly" title=" " alt="" coords="647,106,613,111,612,106,646,101"/>
+<area shape="poly" title=" " alt="" coords="646,141,612,137,613,131,647,136"/>
+<area shape="poly" title=" " alt="" coords="676,195,659,188,564,144,567,139,661,183,678,190"/>
 </map>
 </div>
 
@@ -319,6 +351,8 @@ template&lt;typename T &gt; </div>
 <p>使用方式： auto ptz = pod-&gt;getCapabilityAs&lt;IPtzCapability&gt;(CapabilityType::PTZ); </p>
 
 <p class="reference">引用了 <a class="el" href="classPodModule_1_1IPod.html#af45e36f920fe32ab0f9efa6d7b398e75">IPod::getCapability()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classPodModule_1_1PodMonitor.html#a869baf763ba33280ac3882e3ce1a26bc">PodMonitor::pollLaser()</a>, <a class="el" href="classPodModule_1_1PodMonitor.html#a7b53c96d2816df4d9535bfc6119c4dbd">PodMonitor::pollPtz()</a>, <a class="el" href="classPodModule_1_1PodMonitor.html#a6574eac20d48a2e77aa01d9b5138c7c3">PodMonitor::pollStatus()</a> , 以及 <a class="el" href="classPodModule_1_1PodMonitor.html#ac0160d94ae5471a300570532e9bc9d77">PodMonitor::pollStream()</a>.</p>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
@@ -327,6 +361,31 @@ template&lt;typename T &gt; </div>
 <area shape="rect" title="模板方式查询具体能力接口" alt="" coords="5,5,131,31"/>
 <area shape="rect" href="classPodModule_1_1IPod.html#af45e36f920fe32ab0f9efa6d7b398e75" title="查询某类型能力" alt="" coords="179,5,288,31"/>
 <area shape="poly" title=" " alt="" coords="131,15,165,15,165,21,131,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPodModule_1_1IPod_a6b4de9361e7c1e82bb3dd9e603191bcd_icgraph.png" border="0" usemap="#aclassPodModule_1_1IPod_a6b4de9361e7c1e82bb3dd9e603191bcd_icgraph" alt=""/></div>
+<map name="aclassPodModule_1_1IPod_a6b4de9361e7c1e82bb3dd9e603191bcd_icgraph" id="aclassPodModule_1_1IPod_a6b4de9361e7c1e82bb3dd9e603191bcd_icgraph">
+<area shape="rect" title="模板方式查询具体能力接口" alt="" coords="884,109,1009,134"/>
+<area shape="rect" href="classPodModule_1_1PodMonitor.html#a869baf763ba33280ac3882e3ce1a26bc" title="轮询激光数据" alt="" coords="660,5,836,45"/>
+<area shape="poly" title=" " alt="" coords="913,103,835,60,807,48,809,43,837,55,915,99"/>
+<area shape="rect" href="classPodModule_1_1PodMonitor.html#a7b53c96d2816df4d9535bfc6119c4dbd" title="轮询云台姿态" alt="" coords="660,69,836,109"/>
+<area shape="poly" title=" " alt="" coords="870,112,836,106,837,101,871,106"/>
+<area shape="rect" href="classPodModule_1_1PodMonitor.html#a6574eac20d48a2e77aa01d9b5138c7c3" title="轮询状态/在线检测" alt="" coords="660,133,836,173"/>
+<area shape="poly" title=" " alt="" coords="871,136,837,142,836,137,870,131"/>
+<area shape="rect" href="classPodModule_1_1PodMonitor.html#ac0160d94ae5471a300570532e9bc9d77" title="轮询流媒体状态" alt="" coords="660,197,836,237"/>
+<area shape="poly" title=" " alt="" coords="915,144,837,188,809,200,807,195,835,183,913,139"/>
+<area shape="rect" href="classPodModule_1_1PodMonitor.html#a70a4677f113e64393ea51d131e5b4391" title="监控主循环" alt="" coords="436,101,612,141"/>
+<area shape="poly" title=" " alt="" coords="678,53,661,60,567,103,564,99,659,55,676,48"/>
+<area shape="rect" href="classPodModule_1_1PodMonitor.html#a129c26163c525a99f830b51e59f84328" title="启动监控线程" alt="" coords="212,101,388,141"/>
+<area shape="poly" title=" " alt="" coords="422,124,388,124,388,119,422,119"/>
+<area shape="rect" href="classPodModule_1_1BasePod.html#af3103563b484b524aff6134350a2b8a3" title="启动后台监控线程" alt="" coords="5,101,164,141"/>
+<area shape="poly" title=" " alt="" coords="198,124,164,124,164,119,198,119"/>
+<area shape="poly" title=" " alt="" coords="647,106,613,111,612,106,646,101"/>
+<area shape="poly" title=" " alt="" coords="646,141,612,137,613,131,647,136"/>
+<area shape="poly" title=" " alt="" coords="676,195,659,188,564,144,567,139,661,183,678,190"/>
 </map>
 </div>
 
@@ -358,6 +417,23 @@ template&lt;typename T &gt; </div>
 <p>获取设备唯一标识 </p>
 
 <p>在 <a class="el" href="classPodModule_1_1BasePod.html#a70c03852a8abad6873063b76a500396a">BasePod</a> 内被实现.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classPodModule_1_1PodMonitor.html#a70a4677f113e64393ea51d131e5b4391">PodMonitor::monitorLoop()</a> , 以及 <a class="el" href="classPodModule_1_1PodMonitor.html#a129c26163c525a99f830b51e59f84328">PodMonitor::start()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPodModule_1_1IPod_a938322efd17e75d281ab6c7fad8f0e9a_icgraph.png" border="0" usemap="#aclassPodModule_1_1IPod_a938322efd17e75d281ab6c7fad8f0e9a_icgraph" alt=""/></div>
+<map name="aclassPodModule_1_1IPod_a938322efd17e75d281ab6c7fad8f0e9a_icgraph" id="aclassPodModule_1_1IPod_a938322efd17e75d281ab6c7fad8f0e9a_icgraph">
+<area shape="rect" title="获取设备唯一标识" alt="" coords="660,42,739,67"/>
+<area shape="rect" href="classPodModule_1_1PodMonitor.html#a70a4677f113e64393ea51d131e5b4391" title="监控主循环" alt="" coords="436,5,612,45"/>
+<area shape="poly" title=" " alt="" coords="646,49,612,43,613,37,647,43"/>
+<area shape="rect" href="classPodModule_1_1PodMonitor.html#a129c26163c525a99f830b51e59f84328" title="启动监控线程" alt="" coords="212,35,388,75"/>
+<area shape="poly" title=" " alt="" coords="647,59,612,60,436,60,388,59,388,54,436,55,612,55,646,54"/>
+<area shape="poly" title=" " alt="" coords="423,41,389,46,388,40,422,36"/>
+<area shape="rect" href="classPodModule_1_1BasePod.html#af3103563b484b524aff6134350a2b8a3" title="启动后台监控线程" alt="" coords="5,35,164,75"/>
+<area shape="poly" title=" " alt="" coords="198,57,164,57,164,52,198,52"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -416,6 +492,36 @@ template&lt;typename T &gt; </div>
 <p>获取设备名称 </p>
 
 <p>在 <a class="el" href="classPodModule_1_1BasePod.html#a77d2042529c762f0e23b3c0a987a99cf">BasePod</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a298ecc0e0fc79f57f2643bd0d80c17aa" name="a298ecc0e0fc79f57f2643bd0d80c17aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a298ecc0e0fc79f57f2643bd0d80c17aa">&#9670;&#160;</a></span>getRuntimeStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structPodModule_1_1PodRuntimeStatus.html">PodRuntimeStatus</a> getRuntimeStatus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取运行时状态快照 </p>
+<p>返回由 <a class="el" href="classPodModule_1_1PodMonitor.html">PodMonitor</a> 后台线程聚合的各能力数据， 包括在线状态（滑动窗口判定）、云台姿态、激光、流媒体等。 未启动监控时返回默认值。 </p>
+
+<p>在 <a class="el" href="classPodModule_1_1BasePod.html#a81706b9121236bbfa8b62a124fec6098">BasePod</a> 内被实现.</p>
 
 </div>
 </div>
@@ -607,6 +713,35 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="a04746d2d179188d67b30172deac63d81" name="a04746d2d179188d67b30172deac63d81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04746d2d179188d67b30172deac63d81">&#9670;&#160;</a></span>isMonitorRunning()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool isMonitorRunning </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>监控线程是否运行中 </p>
+
+<p>在 <a class="el" href="classPodModule_1_1BasePod.html#af004188e4a930f47dd8721bf647ba87e">BasePod</a> 内被实现.</p>
+
+</div>
+</div>
 <a id="a2001c57239a59641f404cb580b0ed09b" name="a2001c57239a59641f404cb580b0ed09b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2001c57239a59641f404cb580b0ed09b">&#9670;&#160;</a></span>listCapabilities()</h2>
 
@@ -676,6 +811,36 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="afd9819ebdbcbb60eaa53d3c41e0d747f" name="afd9819ebdbcbb60eaa53d3c41e0d747f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd9819ebdbcbb60eaa53d3c41e0d747f">&#9670;&#160;</a></span>setEnabledCapabilities()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void setEnabledCapabilities </td>
+          <td>(</td>
+          <td class="paramtype">const std::set&lt; <a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccc">CapabilityType</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>enabled</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置允许启用的能力集合（空集合=全部允许） </p>
+
+<p>在 <a class="el" href="classPodModule_1_1BasePod.html#a6901beb3cfdc6d38a5d589ad6f99bed7">BasePod</a> 内被实现.</p>
+
+</div>
+</div>
 <a id="aae473138c077ce9abd8eaf00c2efc17d" name="aae473138c077ce9abd8eaf00c2efc17d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aae473138c077ce9abd8eaf00c2efc17d">&#9670;&#160;</a></span>setSession()</h2>
 
@@ -703,6 +868,65 @@ template&lt;typename T &gt; </div>
 <p>设置会话 </p>
 
 <p>在 <a class="el" href="classPodModule_1_1BasePod.html#afdb951033e211def2a3a6f3999db158c">BasePod</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="a6eeeda29906b360eed126655033f822c" name="a6eeeda29906b360eed126655033f822c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6eeeda29906b360eed126655033f822c">&#9670;&#160;</a></span>startMonitor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void startMonitor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structPodModule_1_1PodMonitorConfig.html">PodMonitorConfig</a> &amp;&#160;</td>
+          <td class="paramname"><em>config</em> = <code>{}</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>启动后台监控线程 </p>
+
+<p>在 <a class="el" href="classPodModule_1_1BasePod.html#af3103563b484b524aff6134350a2b8a3">BasePod</a> 内被实现.</p>
+
+</div>
+</div>
+<a id="adc9d29e6155337bfcc9d18cec93c3a87" name="adc9d29e6155337bfcc9d18cec93c3a87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc9d29e6155337bfcc9d18cec93c3a87">&#9670;&#160;</a></span>stopMonitor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void stopMonitor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>停止后台监控线程 </p>
+
+<p>在 <a class="el" href="classPodModule_1_1BasePod.html#ac1786f46e296fc759f8a5eefa5412c0e">BasePod</a> 内被实现.</p>
 
 </div>
 </div>

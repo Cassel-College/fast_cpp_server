@@ -262,19 +262,32 @@ Public 成员函数</h2></td></tr>
 
 <p>重载 <a class="el" href="classPodModule_1_1BaseStatusCapability.html#a6a8f20810fd5219b07d5c7cc053d87c0">BaseStatusCapability</a> .</p>
 
-<p class="reference">引用了 <a class="el" href="classPodModule_1_1BaseStatusCapability.html#a2d3a1395e3a0c387d590e117ed852b62">BaseStatusCapability::cached_status_</a>, <a class="el" href="namespacePodModule.html#aea5b7c69300d8f8fd12fc5e5b6265af9aa5afd6edd5336d91316964e493936858">PodModule::CONNECTED</a>, <a class="el" href="classPodModule_1_1BaseCapability.html#ab3acb19739169b246df806a3fef134d3">BaseCapability::logPrefix()</a>, <a class="el" href="MyLog_8h.html#a58669a9dee26041e1cd68f2e62214b0f">MYLOG_DEBUG</a>, <a class="el" href="structPodModule_1_1PodStatus.html#ad1e1e77f94265890ce4c9ff0e73eb860">PodStatus::state</a>, <a class="el" href="structPodModule_1_1PodResult.html#a918797a1c16d0fee3c376ad68e215966">PodResult&lt; T &gt;::success()</a>, <a class="el" href="structPodModule_1_1PodStatus.html#ab4b11c8d9c758430960896bc3fe82ead">PodStatus::temperature</a> , 以及 <a class="el" href="structPodModule_1_1PodStatus.html#ad3c64efcaba662da1a2f4393d00584e9">PodStatus::voltage</a>.</p>
+<p class="reference">引用了 <a class="el" href="classPodModule_1_1BaseStatusCapability.html#a2d3a1395e3a0c387d590e117ed852b62">BaseStatusCapability::cached_status_</a>, <a class="el" href="namespacePodModule.html#aea5b7c69300d8f8fd12fc5e5b6265af9aa5afd6edd5336d91316964e493936858">PodModule::CONNECTED</a>, <a class="el" href="structPodModule_1_1PodResult.html#a75d0d7de7479e2554413141d9bd4974d">PodResult&lt; T &gt;::fail()</a>, <a class="el" href="classPodModule_1_1BaseCapability.html#ab3acb19739169b246df806a3fef134d3">BaseCapability::logPrefix()</a>, <a class="el" href="MyLog_8h.html#a58669a9dee26041e1cd68f2e62214b0f">MYLOG_DEBUG</a>, <a class="el" href="classPodModule_1_1PinlingStatusCapability.html#a4db09892dabcf5a5e58efca23b517376">PinlingStatusCapability::refreshStatus()</a>, <a class="el" href="structPodModule_1_1PodStatus.html#ad1e1e77f94265890ce4c9ff0e73eb860">PodStatus::state</a> , 以及 <a class="el" href="structPodModule_1_1PodResult.html#a918797a1c16d0fee3c376ad68e215966">PodResult&lt; T &gt;::success()</a>.</p>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
 <div class="center"><img src="classPodModule_1_1PinlingStatusCapability_a6a8f20810fd5219b07d5c7cc053d87c0_cgraph.png" border="0" usemap="#aclassPodModule_1_1PinlingStatusCapability_a6a8f20810fd5219b07d5c7cc053d87c0_cgraph" alt=""/></div>
 <map name="aclassPodModule_1_1PinlingStatusCapability_a6a8f20810fd5219b07d5c7cc053d87c0_cgraph" id="aclassPodModule_1_1PinlingStatusCapability_a6a8f20810fd5219b07d5c7cc053d87c0_cgraph">
-<area shape="rect" title="获取设备当前状态" alt="" coords="5,45,89,70"/>
-<area shape="rect" href="classPodModule_1_1BaseCapability.html#ab3acb19739169b246df806a3fef134d3" title="能力日志前缀（子类可覆盖）" alt="" coords="137,5,337,45"/>
-<area shape="poly" title=" " alt="" coords="89,48,123,42,124,47,90,53"/>
-<area shape="rect" href="structPodModule_1_1PodResult.html#a918797a1c16d0fee3c376ad68e215966" title="构造成功结果" alt="" coords="154,69,321,109"/>
-<area shape="poly" title=" " alt="" coords="90,62,141,70,140,76,89,67"/>
-<area shape="rect" href="classPodModule_1_1BaseCapability.html#a28d79a02e17b0c3ba87749b82b6af17b" title="获取能力名称（中文）" alt="" coords="385,5,585,45"/>
-<area shape="poly" title=" " alt="" coords="337,23,372,23,372,28,337,28"/>
+<area shape="rect" title="获取设备当前状态" alt="" coords="5,113,89,138"/>
+<area shape="rect" href="structPodModule_1_1PodResult.html#a75d0d7de7479e2554413141d9bd4974d" title="构造失败结果" alt="" coords="313,5,479,45"/>
+<area shape="poly" title=" " alt="" coords="79,110,137,89,298,45,300,50,138,95,81,115"/>
+<area shape="rect" href="classPodModule_1_1BaseCapability.html#ab3acb19739169b246df806a3fef134d3" title="能力日志前缀（子类可覆盖）" alt="" coords="296,69,496,109"/>
+<area shape="poly" title=" " alt="" coords="89,118,282,98,283,104,90,124"/>
+<area shape="rect" href="classPodModule_1_1PinlingStatusCapability.html#a4db09892dabcf5a5e58efca23b517376" title="刷新状态缓存" alt="" coords="137,138,247,163"/>
+<area shape="poly" title=" " alt="" coords="90,130,124,136,124,141,89,135"/>
+<area shape="rect" href="structPodModule_1_1PodResult.html#a918797a1c16d0fee3c376ad68e215966" title="构造成功结果" alt="" coords="313,261,479,301"/>
+<area shape="poly" title=" " alt="" coords="72,136,167,188,296,247,315,254,314,259,294,252,165,192,69,140"/>
+<area shape="rect" href="namespacePodModule.html#ac5031773bc35b8d035f66bbb9eddf78b" title="将错误码转为中文描述" alt="" coords="545,5,749,45"/>
+<area shape="poly" title=" " alt="" coords="479,23,532,23,532,28,479,28"/>
+<area shape="rect" href="classPodModule_1_1BaseCapability.html#a28d79a02e17b0c3ba87749b82b6af17b" title="获取能力名称（中文）" alt="" coords="547,69,747,109"/>
+<area shape="poly" title=" " alt="" coords="496,87,534,87,534,92,496,92"/>
+<area shape="poly" title=" " alt="" coords="202,136,240,97,265,74,293,55,306,48,308,53,296,60,268,79,243,100,206,140"/>
+<area shape="poly" title=" " alt="" coords="234,135,315,111,317,116,236,141"/>
+<area shape="rect" href="classPodModule_1_1BaseCapability.html#ade71a69b5c3556653fb337536c18b2dc" title="获取关联的 Pod 指针" alt="" coords="296,197,496,237"/>
+<area shape="poly" title=" " alt="" coords="231,161,296,183,319,190,317,195,294,188,229,166"/>
+<area shape="rect" href="classmy__tools_1_1ping__tools_1_1PingFuncBySystem.html#a4ec03bc5ebb5f6f195a1214f1dcd9d09" title=" " alt="" coords="295,133,497,173"/>
+<area shape="poly" title=" " alt="" coords="247,149,281,149,281,154,247,154"/>
+<area shape="poly" title=" " alt="" coords="205,162,242,204,268,227,296,247,308,253,305,258,293,252,265,231,239,207,201,165"/>
 </map>
 </div>
 
@@ -307,19 +320,39 @@ Public 成员函数</h2></td></tr>
 
 <p>重载 <a class="el" href="classPodModule_1_1BaseStatusCapability.html#a4db09892dabcf5a5e58efca23b517376">BaseStatusCapability</a> .</p>
 
-<p class="reference">引用了 <a class="el" href="classPodModule_1_1BaseCapability.html#ab3acb19739169b246df806a3fef134d3">BaseCapability::logPrefix()</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a> , 以及 <a class="el" href="structPodModule_1_1PodResult.html#a918797a1c16d0fee3c376ad68e215966">PodResult&lt; T &gt;::success()</a>.</p>
+<p class="reference">引用了 <a class="el" href="classPodModule_1_1BaseStatusCapability.html#a2d3a1395e3a0c387d590e117ed852b62">BaseStatusCapability::cached_status_</a>, <a class="el" href="namespacePodModule.html#aad194976af5612d4469559348e94c7bea0c1fabd74acba83be4e2157dc361e3b9">PodModule::CAPABILITY_INIT_FAILED</a>, <a class="el" href="namespacePodModule.html#aea5b7c69300d8f8fd12fc5e5b6265af9aa5afd6edd5336d91316964e493936858">PodModule::CONNECTED</a>, <a class="el" href="namespacePodModule.html#aea5b7c69300d8f8fd12fc5e5b6265af9a99c8ce56e7ab246445d3b134724428f3">PodModule::DISCONNECTED</a>, <a class="el" href="namespacePodModule.html#aea5b7c69300d8f8fd12fc5e5b6265af9abb1ca97ec761fc37101737ba0aa2e7c5">PodModule::ERROR</a>, <a class="el" href="structPodModule_1_1PodStatus.html#ace0d044631da205139feca9936d836db">PodStatus::error_msg</a>, <a class="el" href="structPodModule_1_1PodResult.html#a75d0d7de7479e2554413141d9bd4974d">PodResult&lt; T &gt;::fail()</a>, <a class="el" href="classPodModule_1_1BaseCapability.html#ade71a69b5c3556653fb337536c18b2dc">BaseCapability::getPod()</a>, <a class="el" href="classPodModule_1_1BaseCapability.html#ab3acb19739169b246df806a3fef134d3">BaseCapability::logPrefix()</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="classmy__tools_1_1ping__tools_1_1PingFuncBySystem.html#a4ec03bc5ebb5f6f195a1214f1dcd9d09">PingFuncBySystem::PingIP()</a>, <a class="el" href="structPodModule_1_1PodStatus.html#ad1e1e77f94265890ce4c9ff0e73eb860">PodStatus::state</a>, <a class="el" href="structPodModule_1_1PodResult.html#a918797a1c16d0fee3c376ad68e215966">PodResult&lt; T &gt;::success()</a>, <a class="el" href="structPodModule_1_1PodStatus.html#ab4b11c8d9c758430960896bc3fe82ead">PodStatus::temperature</a>, <a class="el" href="namespacePodModule.html#aad194976af5612d4469559348e94c7bea9a10f345b0f755d461a8673a5e9ef6b4">PodModule::UNKNOWN_ERROR</a>, <a class="el" href="structPodModule_1_1PodStatus.html#a39fd1b880b7c928c8b33d7841dd08e06">PodStatus::uptime_ms</a> , 以及 <a class="el" href="structPodModule_1_1PodStatus.html#ad3c64efcaba662da1a2f4393d00584e9">PodStatus::voltage</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classPodModule_1_1PinlingStatusCapability.html#a6a8f20810fd5219b07d5c7cc053d87c0">PinlingStatusCapability::getStatus()</a>.</p>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
 <div class="center"><img src="classPodModule_1_1PinlingStatusCapability_a4db09892dabcf5a5e58efca23b517376_cgraph.png" border="0" usemap="#aclassPodModule_1_1PinlingStatusCapability_a4db09892dabcf5a5e58efca23b517376_cgraph" alt=""/></div>
 <map name="aclassPodModule_1_1PinlingStatusCapability_a4db09892dabcf5a5e58efca23b517376_cgraph" id="aclassPodModule_1_1PinlingStatusCapability_a4db09892dabcf5a5e58efca23b517376_cgraph">
-<area shape="rect" title="刷新状态缓存" alt="" coords="5,45,115,70"/>
-<area shape="rect" href="classPodModule_1_1BaseCapability.html#ab3acb19739169b246df806a3fef134d3" title="能力日志前缀（子类可覆盖）" alt="" coords="163,5,363,45"/>
-<area shape="poly" title=" " alt="" coords="115,46,149,41,149,46,115,51"/>
-<area shape="rect" href="structPodModule_1_1PodResult.html#a918797a1c16d0fee3c376ad68e215966" title="构造成功结果" alt="" coords="179,69,346,109"/>
-<area shape="poly" title=" " alt="" coords="115,63,166,71,165,77,115,69"/>
-<area shape="rect" href="classPodModule_1_1BaseCapability.html#a28d79a02e17b0c3ba87749b82b6af17b" title="获取能力名称（中文）" alt="" coords="411,5,611,45"/>
-<area shape="poly" title=" " alt="" coords="363,23,397,23,397,28,363,28"/>
+<area shape="rect" title="刷新状态缓存" alt="" coords="5,141,115,166"/>
+<area shape="rect" href="structPodModule_1_1PodResult.html#a75d0d7de7479e2554413141d9bd4974d" title="构造失败结果" alt="" coords="181,5,347,45"/>
+<area shape="poly" title=" " alt="" coords="70,138,107,98,133,75,161,55,174,48,176,53,164,60,136,79,111,101,74,142"/>
+<area shape="rect" href="classPodModule_1_1BaseCapability.html#ade71a69b5c3556653fb337536c18b2dc" title="获取关联的 Pod 指针" alt="" coords="164,69,364,109"/>
+<area shape="poly" title=" " alt="" coords="101,138,186,111,187,116,102,143"/>
+<area shape="rect" href="classPodModule_1_1BaseCapability.html#ab3acb19739169b246df806a3fef134d3" title="能力日志前缀（子类可覆盖）" alt="" coords="164,133,364,173"/>
+<area shape="poly" title=" " alt="" coords="115,151,150,151,150,156,115,156"/>
+<area shape="rect" href="classmy__tools_1_1ping__tools_1_1PingFuncBySystem.html#a4ec03bc5ebb5f6f195a1214f1dcd9d09" title=" " alt="" coords="163,197,365,237"/>
+<area shape="poly" title=" " alt="" coords="102,164,187,191,186,196,101,169"/>
+<area shape="rect" href="structPodModule_1_1PodResult.html#a918797a1c16d0fee3c376ad68e215966" title="构造成功结果" alt="" coords="181,261,347,301"/>
+<area shape="poly" title=" " alt="" coords="74,165,111,205,136,228,164,247,176,254,174,258,161,252,133,232,107,209,70,168"/>
+<area shape="rect" href="namespacePodModule.html#ac5031773bc35b8d035f66bbb9eddf78b" title="将错误码转为中文描述" alt="" coords="413,5,617,45"/>
+<area shape="poly" title=" " alt="" coords="347,23,400,23,400,28,347,28"/>
+<area shape="rect" href="classPodModule_1_1BaseCapability.html#a28d79a02e17b0c3ba87749b82b6af17b" title="获取能力名称（中文）" alt="" coords="415,133,615,173"/>
+<area shape="poly" title=" " alt="" coords="364,151,402,151,402,156,364,156"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPodModule_1_1PinlingStatusCapability_a4db09892dabcf5a5e58efca23b517376_icgraph.png" border="0" usemap="#aclassPodModule_1_1PinlingStatusCapability_a4db09892dabcf5a5e58efca23b517376_icgraph" alt=""/></div>
+<map name="aclassPodModule_1_1PinlingStatusCapability_a4db09892dabcf5a5e58efca23b517376_icgraph" id="aclassPodModule_1_1PinlingStatusCapability_a4db09892dabcf5a5e58efca23b517376_icgraph">
+<area shape="rect" title="刷新状态缓存" alt="" coords="137,5,247,31"/>
+<area shape="rect" href="classPodModule_1_1PinlingStatusCapability.html#a6a8f20810fd5219b07d5c7cc053d87c0" title="获取设备当前状态" alt="" coords="5,5,89,31"/>
+<area shape="poly" title=" " alt="" coords="124,21,90,21,90,15,124,15"/>
 </map>
 </div>
 

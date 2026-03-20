@@ -50,6 +50,7 @@ var searchData=
   ['attitude_5fexceed_47',['attitude_exceed',['../structfly__control_1_1FaultBits.html#a319b4958e680bef1c8f70d291199e487',1,'fly_control::FaultBits']]],
   ['auto_5fmigrate_48',['auto_migrate',['../structmy__db_1_1DBConfig.html#a7eb218eaaabf6cb49629351664a04241',1,'my_db::DBConfig']]],
   ['auto_5fopen_49',['auto_open',['../structmy__serial_1_1SerialInitOptions.html#af3265ddaf74e9fcc6c328c9fe36216d1',1,'my_serial::SerialInitOptions']]],
-  ['available_50',['Available',['../classmy__serial_1_1MySerial.html#ad93f2a7aba47d485dd365aa5a6986ffd',1,'my_serial::MySerial']]],
-  ['available_5fbytes_51',['available_bytes',['../structmy__serial_1_1SerialPortSnapshot.html#afaed30f4d7333d869670fe20f94c4a19',1,'my_serial::SerialPortSnapshot']]]
+  ['auto_5fstart_50',['auto_start',['../structPodModule_1_1PodMonitorConfig.html#ac63ee1dd752d0adede9cffbe750b39da',1,'PodModule::PodMonitorConfig']]],
+  ['available_51',['Available',['../classmy__serial_1_1MySerial.html#ad93f2a7aba47d485dd365aa5a6986ffd',1,'my_serial::MySerial']]],
+  ['available_5fbytes_52',['available_bytes',['../structmy__serial_1_1SerialPortSnapshot.html#afaed30f4d7333d869670fe20f94c4a19',1,'my_serial::SerialPortSnapshot']]]
 ];

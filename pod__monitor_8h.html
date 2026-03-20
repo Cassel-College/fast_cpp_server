@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_pod/monitor/pod_monitor.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_0ac9cdf986d1682a7cf7479045e196ae.html">my_pod</a></li><li class="navelem"><a class="el" href="dir_e6316bd46d969b1bcbcee0d4bca5d8b2.html">monitor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#namespaces">命名空间</a>  </div>
+  <div class="headertitle"><div class="title">pod_monitor.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>吊舱后台监控器  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="pod__models_8h_source.html">../common/pod_models.h</a>&quot;</code><br />
+<code>#include &lt;thread&gt;</code><br />
+<code>#include &lt;atomic&gt;</code><br />
+<code>#include &lt;mutex&gt;</code><br />
+<code>#include &lt;deque&gt;</code><br />
+<code>#include &lt;cstdint&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+pod_monitor.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="pod__monitor_8h__incl.png" border="0" usemap="#asrc_2util_2my__pod_2monitor_2pod__monitor_8h" alt=""/></div>
+<map name="asrc_2util_2my__pod_2monitor_2pod__monitor_8h" id="asrc_2util_2my__pod_2monitor_2pod__monitor_8h">
+<area shape="rect" title="吊舱后台监控器" alt="" coords="330,5,507,45"/>
+<area shape="rect" href="pod__models_8h.html" title="吊舱模块数据模型定义" alt="" coords="73,93,260,119"/>
+<area shape="poly" title=" " alt="" coords="359,48,217,92,216,87,358,43"/>
+<area shape="rect" title=" " alt="" coords="133,240,200,265"/>
+<area shape="poly" title=" " alt="" coords="389,48,360,69,333,95,317,121,309,145,300,168,282,194,249,219,214,237,212,232,246,215,278,190,296,166,304,143,312,119,329,92,356,65,386,43"/>
+<area shape="rect" title=" " alt="" coords="343,93,407,119"/>
+<area shape="poly" title=" " alt="" coords="410,47,390,83,386,80,406,44"/>
+<area shape="rect" title=" " alt="" coords="431,93,497,119"/>
+<area shape="poly" title=" " alt="" coords="432,44,453,80,448,83,427,47"/>
+<area shape="rect" title=" " alt="" coords="521,93,585,119"/>
+<area shape="poly" title=" " alt="" coords="452,43,523,84,520,89,450,48"/>
+<area shape="rect" title=" " alt="" coords="610,93,673,119"/>
+<area shape="poly" title=" " alt="" coords="473,43,598,87,596,92,471,48"/>
+<area shape="rect" href="pod__types_8h.html" title="吊舱模块基础类型定义" alt="" coords="28,167,129,192"/>
+<area shape="poly" title=" " alt="" coords="154,121,105,160,102,156,151,117"/>
+<area shape="rect" title=" " alt="" coords="5,240,64,265"/>
+<area shape="poly" title=" " alt="" coords="92,121,51,139,33,152,18,168,13,182,13,197,23,227,18,229,8,198,8,181,14,165,29,148,48,134,90,116"/>
+<area shape="poly" title=" " alt="" coords="169,119,169,226,164,226,164,119"/>
+<area shape="rect" title=" " alt="" coords="205,167,267,192"/>
+<area shape="poly" title=" " alt="" coords="180,117,217,155,213,159,176,121"/>
+<area shape="poly" title=" " alt="" coords="74,194,51,230,47,227,69,191"/>
+<area shape="poly" title=" " alt="" coords="94,190,143,229,140,233,91,194"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="pod__monitor_8h__dep__incl.png" border="0" usemap="#asrc_2util_2my__pod_2monitor_2pod__monitor_8hdep" alt=""/></div>
+<map name="asrc_2util_2my__pod_2monitor_2pod__monitor_8hdep" id="asrc_2util_2my__pod_2monitor_2pod__monitor_8hdep">
+<area shape="rect" title="吊舱后台监控器" alt="" coords="99,5,276,45"/>
+<area shape="rect" href="pod__monitor_8cpp.html" title="吊舱后台监控器实现" alt="" coords="5,93,183,133"/>
+<area shape="poly" title=" " alt="" coords="158,57,116,95,113,91,155,53"/>
+<area shape="rect" href="base__pod_8h.html" title="基础吊舱实现" alt="" coords="207,93,357,133"/>
+<area shape="poly" title=" " alt="" coords="220,53,263,91,259,95,217,57"/>
+<area shape="rect" href="base__pod_8cpp.html" title="基础吊舱实现" alt="" coords="32,181,183,221"/>
+<area shape="poly" title=" " alt="" coords="233,142,147,184,144,179,230,137"/>
+<area shape="rect" href="dji__pod_8h.html" title="大疆吊舱实现" alt="" coords="207,181,357,221"/>
+<area shape="poly" title=" " alt="" coords="285,147,285,181,279,181,279,147"/>
+<area shape="rect" href="pinling__pod_8h.html" title="品凌吊舱实现" alt="" coords="381,181,543,221"/>
+<area shape="poly" title=" " alt="" coords="335,137,424,179,421,184,332,142"/>
+<area shape="rect" href="pod__manager_8cpp.html" title="吊舱管理器实现" alt="" coords="279,269,463,309"/>
+<area shape="poly" title=" " alt="" coords="314,229,353,267,350,271,310,233"/>
+<area shape="rect" href="dji__pod_8cpp.html" title="大疆吊舱实现" alt="" coords="104,269,255,309"/>
+<area shape="poly" title=" " alt="" coords="250,232,204,271,200,267,247,228"/>
+<area shape="poly" title=" " alt="" coords="434,233,393,271,390,267,430,229"/>
+<area shape="rect" href="pinling__pod_8cpp.html" title="PINLING吊舱实现" alt="" coords="487,269,663,309"/>
+<area shape="poly" title=" " alt="" coords="499,228,552,267,549,271,496,232"/>
+</map>
+</div>
+</div>
+<p><a href="pod__monitor_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1PodMonitor.html">PodMonitor</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacePodModule" id="r_namespacePodModule"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePodModule.html">PodModule</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>吊舱后台监控器 </p>
+<p>PodMonitor 在独立线程中定期轮询各项能力模块，将采集结果 聚合到 PodRuntimeStatus 数据对象中。外部读取时直接获取 快照，无需实时查询设备。</p>
+<p>设计要点：</p><ul>
+<li>轮询顺序：依次按 状态→云台→激光→流媒体 执行</li>
+<li>在线判定：使用滑动窗口，需连续多次检测以确定最终状态</li>
+<li>错误隔离：每个能力的轮询均用 try-catch 保护， 单个能力异常不影响其余能力和主循环</li>
+<li>可中断关闭：主循环睡眠分片，确保 stop() 快速返回 </li>
+</ul>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

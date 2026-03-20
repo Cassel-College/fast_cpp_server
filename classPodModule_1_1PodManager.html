@@ -77,6 +77,7 @@ $(function() {
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
 <a href="#pri-attribs">Private 属性</a>  </div>
   <div class="headertitle"><div class="title">PodManager类 参考</div></div>
 </div><!--header-->
@@ -154,6 +155,15 @@ Private 成员函数</h2></td></tr>
 <tr class="memitem:afb41348ed19fbba75f98f6988983ff3e" id="r_afb41348ed19fbba75f98f6988983ff3e"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classPodModule_1_1IPod.html">IPod</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1PodManager.html#afb41348ed19fbba75f98f6988983ff3e">createPod</a> (const std::string &amp;pod_id, const nlohmann::json &amp;pod_cfg)</td></tr>
 <tr class="memdesc:afb41348ed19fbba75f98f6988983ff3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据厂商类型和配置创建 Pod 实例  <br /></td></tr>
 <tr class="separator:afb41348ed19fbba75f98f6988983ff3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:a84569fd1a706d024052954a4968521dc" id="r_a84569fd1a706d024052954a4968521dc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structPodModule_1_1PodMonitorConfig.html">PodMonitorConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1PodManager.html#a84569fd1a706d024052954a4968521dc">parseMonitorConfig</a> (const nlohmann::json &amp;pod_cfg)</td></tr>
+<tr class="memdesc:a84569fd1a706d024052954a4968521dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">从 JSON 解析 PodMonitorConfig，缺失字段用默认值  <br /></td></tr>
+<tr class="separator:a84569fd1a706d024052954a4968521dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb2d0537824815e61ef86dd8c5c0f70b" id="r_adb2d0537824815e61ef86dd8c5c0f70b"><td class="memItemLeft" align="right" valign="top">static std::set&lt; <a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccc">CapabilityType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1PodManager.html#adb2d0537824815e61ef86dd8c5c0f70b">parseEnabledCapabilities</a> (const nlohmann::json &amp;pod_cfg)</td></tr>
+<tr class="memdesc:adb2d0537824815e61ef86dd8c5c0f70b"><td class="mdescLeft">&#160;</td><td class="mdescRight">从 JSON 解析 capability 启用列表  <br /></td></tr>
+<tr class="separator:adb2d0537824815e61ef86dd8c5c0f70b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private 属性</h2></td></tr>
@@ -611,21 +621,27 @@ Private 属性</h2></td></tr>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>是否初始化成功 </dd></dl>
 
-<p class="reference">引用了 <a class="el" href="classPodModule_1_1PodManager.html#afb41348ed19fbba75f98f6988983ff3e">PodManager::createPod()</a>, <a class="el" href="classPodModule_1_1PodManager.html#a2f33e27b7aaf30da7b6f21577e577f07">PodManager::init_config_</a>, <a class="el" href="classPodModule_1_1PodManager.html#a68b6f7d46f60c7bc8cf0a269d76c120f">PodManager::initialized_</a>, <a class="el" href="classPodModule_1_1PodManager.html#a281b5ec791338d4378e22ef44a51b4a1">PodManager::mutex_</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>, <a class="el" href="namespacePodModule.html#a3b20cf0b6bf9f1582a17fda39225480c">PodModule::podVendorToString()</a>, <a class="el" href="classPodModule_1_1PodRegistry.html#ab59991ca38aea8338986ad206c52b5c3">PodRegistry::registerPod()</a>, <a class="el" href="classPodModule_1_1PodManager.html#aece5b25dfed54a0e9c4491d1fa84bc4e">PodManager::registry_</a> , 以及 <a class="el" href="classPodModule_1_1PodRegistry.html#a259cb5a711406a8c3e5d937eb9350cca">PodRegistry::size()</a>.</p>
+<p class="reference">引用了 <a class="el" href="classPodModule_1_1PodManager.html#afb41348ed19fbba75f98f6988983ff3e">PodManager::createPod()</a>, <a class="el" href="classPodModule_1_1PodManager.html#a2f33e27b7aaf30da7b6f21577e577f07">PodManager::init_config_</a>, <a class="el" href="classPodModule_1_1PodManager.html#a68b6f7d46f60c7bc8cf0a269d76c120f">PodManager::initialized_</a>, <a class="el" href="classPodModule_1_1PodManager.html#a281b5ec791338d4378e22ef44a51b4a1">PodManager::mutex_</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>, <a class="el" href="classPodModule_1_1PodManager.html#adb2d0537824815e61ef86dd8c5c0f70b">PodManager::parseEnabledCapabilities()</a>, <a class="el" href="classPodModule_1_1PodManager.html#a84569fd1a706d024052954a4968521dc">PodManager::parseMonitorConfig()</a>, <a class="el" href="namespacePodModule.html#a3b20cf0b6bf9f1582a17fda39225480c">PodModule::podVendorToString()</a>, <a class="el" href="classPodModule_1_1PodRegistry.html#ab59991ca38aea8338986ad206c52b5c3">PodRegistry::registerPod()</a>, <a class="el" href="classPodModule_1_1PodManager.html#aece5b25dfed54a0e9c4491d1fa84bc4e">PodManager::registry_</a> , 以及 <a class="el" href="classPodModule_1_1PodRegistry.html#a259cb5a711406a8c3e5d937eb9350cca">PodRegistry::size()</a>.</p>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
 <div class="center"><img src="classPodModule_1_1PodManager_adecc6bee0d3c06c97c3ddc058952ee1f_cgraph.png" border="0" usemap="#aclassPodModule_1_1PodManager_adecc6bee0d3c06c97c3ddc058952ee1f_cgraph" alt=""/></div>
 <map name="aclassPodModule_1_1PodManager_adecc6bee0d3c06c97c3ddc058952ee1f_cgraph" id="aclassPodModule_1_1PodManager_adecc6bee0d3c06c97c3ddc058952ee1f_cgraph">
-<area shape="rect" title="从 JSON 配置初始化吊舱管理器" alt="" coords="5,84,48,109"/>
+<area shape="rect" title="从 JSON 配置初始化吊舱管理器" alt="" coords="5,129,48,155"/>
 <area shape="rect" href="classPodModule_1_1PodManager.html#afb41348ed19fbba75f98f6988983ff3e" title="根据厂商类型和配置创建 Pod 实例" alt="" coords="164,5,251,31"/>
-<area shape="poly" title=" " alt="" coords="39,82,63,60,95,40,150,22,151,28,97,44,66,64,42,86"/>
-<area shape="rect" href="namespacePodModule.html#a3b20cf0b6bf9f1582a17fda39225480c" title="将厂商枚举转为中文字符串" alt="" coords="96,55,319,80"/>
-<area shape="poly" title=" " alt="" coords="48,91,115,80,116,85,49,96"/>
-<area shape="rect" href="classPodModule_1_1PodRegistry.html#ab59991ca38aea8338986ad206c52b5c3" title="注册一个 Pod" alt="" coords="117,105,297,145"/>
-<area shape="poly" title=" " alt="" coords="48,97,104,106,103,111,48,102"/>
-<area shape="rect" href="classPodModule_1_1PodRegistry.html#a259cb5a711406a8c3e5d937eb9350cca" title="获取注册数量" alt="" coords="117,169,297,209"/>
-<area shape="poly" title=" " alt="" coords="41,108,66,131,97,154,111,161,108,166,95,159,62,136,37,111"/>
+<area shape="poly" title=" " alt="" coords="31,128,53,84,72,60,95,40,121,27,150,19,151,24,123,32,97,44,76,64,58,87,35,130"/>
+<area shape="rect" href="classPodModule_1_1PodManager.html#adb2d0537824815e61ef86dd8c5c0f70b" title="从 JSON 解析 capability 启用列表" alt="" coords="114,55,301,80"/>
+<area shape="poly" title=" " alt="" coords="40,127,64,107,95,89,114,82,115,87,97,94,67,112,43,131"/>
+<area shape="rect" href="classPodModule_1_1PodManager.html#a84569fd1a706d024052954a4968521dc" title="从 JSON 解析 PodMonitorConfig，缺失字段用默认值" alt="" coords="133,104,282,129"/>
+<area shape="poly" title=" " alt="" coords="48,137,119,126,119,132,48,142"/>
+<area shape="rect" href="namespacePodModule.html#a3b20cf0b6bf9f1582a17fda39225480c" title="将厂商枚举转为中文字符串" alt="" coords="96,153,319,179"/>
+<area shape="poly" title=" " alt="" coords="48,142,99,149,98,154,48,147"/>
+<area shape="rect" href="classPodModule_1_1PodRegistry.html#ab59991ca38aea8338986ad206c52b5c3" title="注册一个 Pod" alt="" coords="117,203,297,243"/>
+<area shape="poly" title=" " alt="" coords="45,153,69,171,97,188,117,196,114,201,95,192,66,175,42,157"/>
+<area shape="rect" href="classPodModule_1_1PodRegistry.html#a259cb5a711406a8c3e5d937eb9350cca" title="获取注册数量" alt="" coords="117,267,297,307"/>
+<area shape="poly" title=" " alt="" coords="35,154,57,203,75,230,98,253,106,259,103,264,94,257,70,233,52,205,30,156"/>
+<area shape="rect" href="namespacePodModule.html#affb6bad2036f3e8024e1bb8289f7f757" title="从字符串解析能力类型" alt="" coords="367,47,563,87"/>
+<area shape="poly" title=" " alt="" coords="301,65,353,65,353,70,301,70"/>
 </map>
 </div>
 
@@ -746,6 +762,100 @@ Private 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="adb2d0537824815e61ef86dd8c5c0f70b" name="adb2d0537824815e61ef86dd8c5c0f70b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb2d0537824815e61ef86dd8c5c0f70b">&#9670;&#160;</a></span>parseEnabledCapabilities()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::set&lt; <a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccc">CapabilityType</a> &gt; parseEnabledCapabilities </td>
+          <td>(</td>
+          <td class="paramtype">const nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>pod_cfg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从 JSON 解析 capability 启用列表 </p>
+
+<p class="reference">引用了 <a class="el" href="namespacePodModule.html#affb6bad2036f3e8024e1bb8289f7f757">PodModule::capabilityTypeFromString()</a>, <a class="el" href="MyLog_8h.html#a58669a9dee26041e1cd68f2e62214b0f">MYLOG_DEBUG</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a> , 以及 <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classPodModule_1_1PodManager.html#adecc6bee0d3c06c97c3ddc058952ee1f">PodManager::Init()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPodModule_1_1PodManager_adb2d0537824815e61ef86dd8c5c0f70b_cgraph.png" border="0" usemap="#aclassPodModule_1_1PodManager_adb2d0537824815e61ef86dd8c5c0f70b_cgraph" alt=""/></div>
+<map name="aclassPodModule_1_1PodManager_adb2d0537824815e61ef86dd8c5c0f70b_cgraph" id="aclassPodModule_1_1PodManager_adb2d0537824815e61ef86dd8c5c0f70b_cgraph">
+<area shape="rect" title="从 JSON 解析 capability 启用列表" alt="" coords="5,13,192,38"/>
+<area shape="rect" href="namespacePodModule.html#affb6bad2036f3e8024e1bb8289f7f757" title="从字符串解析能力类型" alt="" coords="240,5,436,45"/>
+<area shape="poly" title=" " alt="" coords="192,23,226,23,226,28,192,28"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPodModule_1_1PodManager_adb2d0537824815e61ef86dd8c5c0f70b_icgraph.png" border="0" usemap="#aclassPodModule_1_1PodManager_adb2d0537824815e61ef86dd8c5c0f70b_icgraph" alt=""/></div>
+<map name="aclassPodModule_1_1PodManager_adb2d0537824815e61ef86dd8c5c0f70b_icgraph" id="aclassPodModule_1_1PodManager_adb2d0537824815e61ef86dd8c5c0f70b_icgraph">
+<area shape="rect" title="从 JSON 解析 capability 启用列表" alt="" coords="96,5,283,31"/>
+<area shape="rect" href="classPodModule_1_1PodManager.html#adecc6bee0d3c06c97c3ddc058952ee1f" title="从 JSON 配置初始化吊舱管理器" alt="" coords="5,5,48,31"/>
+<area shape="poly" title=" " alt="" coords="82,21,48,21,48,15,82,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a84569fd1a706d024052954a4968521dc" name="a84569fd1a706d024052954a4968521dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84569fd1a706d024052954a4968521dc">&#9670;&#160;</a></span>parseMonitorConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structPodModule_1_1PodMonitorConfig.html">PodMonitorConfig</a> parseMonitorConfig </td>
+          <td>(</td>
+          <td class="paramtype">const nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>pod_cfg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从 JSON 解析 PodMonitorConfig，缺失字段用默认值 </p>
+
+<p class="reference">引用了 <a class="el" href="structPodModule_1_1PodMonitorConfig.html#ac63ee1dd752d0adede9cffbe750b39da">PodMonitorConfig::auto_start</a>, <a class="el" href="structPodModule_1_1PodMonitorConfig.html#afa8105569ada583e598608e173366074">PodMonitorConfig::enable_laser_poll</a>, <a class="el" href="structPodModule_1_1PodMonitorConfig.html#a37839e513334b60819efa9ce085584ed">PodMonitorConfig::enable_ptz_poll</a>, <a class="el" href="structPodModule_1_1PodMonitorConfig.html#ad676cbd1d8584389b143f5f4d5a6c8bf">PodMonitorConfig::enable_status_poll</a>, <a class="el" href="structPodModule_1_1PodMonitorConfig.html#a978e90c0f82d4d528ec723de6173bc80">PodMonitorConfig::enable_stream_poll</a>, <a class="el" href="structPodModule_1_1PodMonitorConfig.html#a306fe3c12559a41ceb5591b092af1ae6">PodMonitorConfig::laser_interval_ms</a>, <a class="el" href="structPodModule_1_1PodMonitorConfig.html#a13295dd3b34fdb85fafc19934a4dd55e">PodMonitorConfig::online_threshold</a>, <a class="el" href="structPodModule_1_1PodMonitorConfig.html#a94b082e7c017905b15ab9f5cd99fb9e5">PodMonitorConfig::online_window_size</a>, <a class="el" href="structPodModule_1_1PodMonitorConfig.html#a5324dd52b7d7741b74efc68714246279">PodMonitorConfig::poll_interval_ms</a>, <a class="el" href="structPodModule_1_1PodMonitorConfig.html#a1c9a1068308786342bc60abaf948066f">PodMonitorConfig::ptz_interval_ms</a>, <a class="el" href="structPodModule_1_1PodMonitorConfig.html#ab9a1777076e3b17bc266a8f3061bd16d">PodMonitorConfig::status_interval_ms</a> , 以及 <a class="el" href="structPodModule_1_1PodMonitorConfig.html#a50d3416111e9855b0793805c01dca081">PodMonitorConfig::stream_interval_ms</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classPodModule_1_1PodManager.html#adecc6bee0d3c06c97c3ddc058952ee1f">PodManager::Init()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPodModule_1_1PodManager_a84569fd1a706d024052954a4968521dc_icgraph.png" border="0" usemap="#aclassPodModule_1_1PodManager_a84569fd1a706d024052954a4968521dc_icgraph" alt=""/></div>
+<map name="aclassPodModule_1_1PodManager_a84569fd1a706d024052954a4968521dc_icgraph" id="aclassPodModule_1_1PodManager_a84569fd1a706d024052954a4968521dc_icgraph">
+<area shape="rect" title="从 JSON 解析 PodMonitorConfig，缺失字段用默认值" alt="" coords="96,5,245,31"/>
+<area shape="rect" href="classPodModule_1_1PodManager.html#adecc6bee0d3c06c97c3ddc058952ee1f" title="从 JSON 配置初始化吊舱管理器" alt="" coords="5,5,48,31"/>
+<area shape="poly" title=" " alt="" coords="82,21,48,21,48,15,82,15"/>
+</map>
+</div>
 
 </div>
 </div>

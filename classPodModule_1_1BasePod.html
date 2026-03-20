@@ -101,13 +101,28 @@ BasePod 的协作图:</div>
 <div class="dyncontent">
 <div class="center"><img src="classPodModule_1_1BasePod__coll__graph.png" border="0" usemap="#aBasePod_coll__map" alt="Collaboration graph"/></div>
 <map name="aBasePod_coll__map" id="aBasePod_coll__map">
-<area shape="rect" title=" " alt="" coords="77,93,155,119"/>
-<area shape="rect" href="classPodModule_1_1IPod.html" title="吊舱统一抽象接口" alt="" coords="5,5,56,31"/>
-<area shape="poly" title=" " alt="" coords="54,39,106,91,102,95,50,43"/>
-<area shape="rect" href="structPodModule_1_1PodInfo.html" title="吊舱设备基础信息" alt="" coords="81,5,151,31"/>
-<area shape="poly" title=" " alt="" coords="119,45,119,93,113,93,113,45"/>
-<area shape="rect" href="classPodModule_1_1CapabilityRegistry.html" title="能力注册表" alt="" coords="175,5,318,31"/>
-<area shape="poly" title=" " alt="" coords="227,43,191,72,145,96,143,91,188,67,223,39"/>
+<area shape="rect" title=" " alt="" coords="154,269,233,295"/>
+<area shape="rect" href="classPodModule_1_1IPod.html" title="吊舱统一抽象接口" alt="" coords="5,93,56,119"/>
+<area shape="poly" title=" " alt="" coords="39,131,53,168,75,205,96,225,120,242,166,267,163,272,117,247,93,229,71,208,48,170,34,133"/>
+<area shape="rect" href="classPodModule_1_1PodMonitor.html" title=" " alt="" coords="85,181,181,207"/>
+<area shape="poly" title=" " alt="" coords="57,126,121,179,117,183,54,130"/>
+<area shape="rect" href="structPodModule_1_1PodInfo.html" title="吊舱设备基础信息" alt="" coords="206,181,277,207"/>
+<area shape="poly" title=" " alt="" coords="231,220,202,270,198,267,226,217"/>
+<area shape="rect" href="classPodModule_1_1CapabilityRegistry.html" title="能力注册表" alt="" coords="301,181,443,207"/>
+<area shape="poly" title=" " alt="" coords="346,217,295,248,233,272,231,267,292,243,344,212"/>
+<area shape="poly" title=" " alt="" coords="138,220,148,244,159,257,173,267,170,271,156,261,143,247,133,222"/>
+<area shape="rect" href="structPodModule_1_1PodMonitorConfig.html" title="PodMonitor 轮询配置" alt="" coords="81,93,218,119"/>
+<area shape="poly" title=" " alt="" coords="147,133,138,181,133,180,142,132"/>
+<area shape="rect" href="structPodModule_1_1PodRuntimeStatus.html" title="吊舱运行时状态聚合数据" alt="" coords="242,93,385,119"/>
+<area shape="poly" title=" " alt="" coords="278,127,159,183,157,179,276,122"/>
+<area shape="rect" href="structPodModule_1_1PodStatus.html" title="吊舱实时状态" alt="" coords="110,5,197,31"/>
+<area shape="poly" title=" " alt="" coords="164,42,171,56,182,67,210,80,252,91,251,96,208,85,178,71,167,59,159,45"/>
+<area shape="rect" href="structPodModule_1_1PTZPose.html" title="云台姿态（PTZ）" alt="" coords="221,5,299,31"/>
+<area shape="poly" title=" " alt="" coords="263,44,270,68,281,81,294,91,291,95,277,85,266,71,258,45"/>
+<area shape="rect" href="structPodModule_1_1LaserInfo.html" title="激光测距信息" alt="" coords="324,5,407,31"/>
+<area shape="poly" title=" " alt="" coords="353,44,323,94,318,91,349,41"/>
+<area shape="rect" href="structPodModule_1_1StreamInfo.html" title="流媒体信息" alt="" coords="431,5,526,31"/>
+<area shape="poly" title=" " alt="" coords="458,42,417,72,358,96,356,91,415,67,455,38"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
 <table class="memberdecls">
@@ -163,6 +178,21 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a226f8a514521d997b196fb2392e3a869" id="r_a226f8a514521d997b196fb2392e3a869"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structPodModule_1_1PodResult.html">PodResult</a>&lt; void &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BasePod.html#a226f8a514521d997b196fb2392e3a869">initializeCapabilities</a> () override</td></tr>
 <tr class="memdesc:a226f8a514521d997b196fb2392e3a869"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化能力装配  <br /></td></tr>
 <tr class="separator:a226f8a514521d997b196fb2392e3a869"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6901beb3cfdc6d38a5d589ad6f99bed7" id="r_a6901beb3cfdc6d38a5d589ad6f99bed7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BasePod.html#a6901beb3cfdc6d38a5d589ad6f99bed7">setEnabledCapabilities</a> (const std::set&lt; <a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccc">CapabilityType</a> &gt; &amp;enabled) override</td></tr>
+<tr class="memdesc:a6901beb3cfdc6d38a5d589ad6f99bed7"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置允许启用的能力集合（空集合=全部允许）  <br /></td></tr>
+<tr class="separator:a6901beb3cfdc6d38a5d589ad6f99bed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81706b9121236bbfa8b62a124fec6098" id="r_a81706b9121236bbfa8b62a124fec6098"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structPodModule_1_1PodRuntimeStatus.html">PodRuntimeStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BasePod.html#a81706b9121236bbfa8b62a124fec6098">getRuntimeStatus</a> () const override</td></tr>
+<tr class="memdesc:a81706b9121236bbfa8b62a124fec6098"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取运行时状态快照  <br /></td></tr>
+<tr class="separator:a81706b9121236bbfa8b62a124fec6098"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3103563b484b524aff6134350a2b8a3" id="r_af3103563b484b524aff6134350a2b8a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BasePod.html#af3103563b484b524aff6134350a2b8a3">startMonitor</a> (const <a class="el" href="structPodModule_1_1PodMonitorConfig.html">PodMonitorConfig</a> &amp;config={}) override</td></tr>
+<tr class="memdesc:af3103563b484b524aff6134350a2b8a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">启动后台监控线程  <br /></td></tr>
+<tr class="separator:af3103563b484b524aff6134350a2b8a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1786f46e296fc759f8a5eefa5412c0e" id="r_ac1786f46e296fc759f8a5eefa5412c0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BasePod.html#ac1786f46e296fc759f8a5eefa5412c0e">stopMonitor</a> () override</td></tr>
+<tr class="memdesc:ac1786f46e296fc759f8a5eefa5412c0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止后台监控线程  <br /></td></tr>
+<tr class="separator:ac1786f46e296fc759f8a5eefa5412c0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af004188e4a930f47dd8721bf647ba87e" id="r_af004188e4a930f47dd8721bf647ba87e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BasePod.html#af004188e4a930f47dd8721bf647ba87e">isMonitorRunning</a> () const override</td></tr>
+<tr class="memdesc:af004188e4a930f47dd8721bf647ba87e"><td class="mdescLeft">&#160;</td><td class="mdescRight">监控线程是否运行中  <br /></td></tr>
+<tr class="separator:af004188e4a930f47dd8721bf647ba87e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classPodModule_1_1IPod"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classPodModule_1_1IPod')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classPodModule_1_1IPod.html">IPod</a></td></tr>
 <tr class="memitem:a1c402be41369a23658ef25b63d33e0e3 inherit pub_methods_classPodModule_1_1IPod" id="r_a1c402be41369a23658ef25b63d33e0e3"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1IPod.html#a1c402be41369a23658ef25b63d33e0e3">~IPod</a> ()=default</td></tr>
 <tr class="separator:a1c402be41369a23658ef25b63d33e0e3 inherit pub_methods_classPodModule_1_1IPod"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -179,6 +209,9 @@ Protected 成员函数</h2></td></tr>
 <tr class="memitem:af469166fbb78b5c5053ca57b06997ecf" id="r_af469166fbb78b5c5053ca57b06997ecf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BasePod.html#af469166fbb78b5c5053ca57b06997ecf">addCapability</a> (<a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccc">CapabilityType</a> type, std::shared_ptr&lt; <a class="el" href="classPodModule_1_1ICapability.html">ICapability</a> &gt; capability)</td></tr>
 <tr class="memdesc:af469166fbb78b5c5053ca57b06997ecf"><td class="mdescLeft">&#160;</td><td class="mdescRight">注册并装配一个能力  <br /></td></tr>
 <tr class="separator:af469166fbb78b5c5053ca57b06997ecf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad766c8b7078240222b90ea752d6650a1" id="r_ad766c8b7078240222b90ea752d6650a1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BasePod.html#ad766c8b7078240222b90ea752d6650a1">isCapabilityEnabled</a> (<a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccc">CapabilityType</a> type) const</td></tr>
+<tr class="memdesc:ad766c8b7078240222b90ea752d6650a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查某能力是否被配置为启用  <br /></td></tr>
+<tr class="separator:ad766c8b7078240222b90ea752d6650a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected 属性</h2></td></tr>
@@ -190,6 +223,10 @@ Protected 属性</h2></td></tr>
 <tr class="separator:a5221aa557d678e3e12f18fbd2973bd20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73aa1b8faec652c33e8b4aa1982429bc" id="r_a73aa1b8faec652c33e8b4aa1982429bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPodModule_1_1CapabilityRegistry.html">CapabilityRegistry</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BasePod.html#a73aa1b8faec652c33e8b4aa1982429bc">capability_registry_</a></td></tr>
 <tr class="separator:a73aa1b8faec652c33e8b4aa1982429bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae5e80f53c708156237ecb30dd286b1d" id="r_aae5e80f53c708156237ecb30dd286b1d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPodModule_1_1PodMonitor.html">PodMonitor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BasePod.html#aae5e80f53c708156237ecb30dd286b1d">monitor_</a></td></tr>
+<tr class="separator:aae5e80f53c708156237ecb30dd286b1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ed9c2e2570b1feb1dd00b627dec08cd" id="r_a0ed9c2e2570b1feb1dd00b627dec08cd"><td class="memItemLeft" align="right" valign="top">std::set&lt; <a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccc">CapabilityType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1BasePod.html#a0ed9c2e2570b1feb1dd00b627dec08cd">enabled_capabilities_</a></td></tr>
+<tr class="separator:a0ed9c2e2570b1feb1dd00b627dec08cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">构造及析构函数说明</h2>
 <a id="a1b3ba6c720cafe2780757a81608a7b3d" name="a1b3ba6c720cafe2780757a81608a7b3d"></a>
@@ -261,7 +298,17 @@ Protected 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">引用了 <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="structPodModule_1_1PodInfo.html#a4d49ef0e01c5aecd32309c20d370a451">PodInfo::pod_id</a> , 以及 <a class="el" href="classPodModule_1_1BasePod.html#a5877b1264e97e5efb415a36981cb7683">BasePod::pod_info_</a>.</p>
+<p class="reference">引用了 <a class="el" href="classPodModule_1_1BasePod.html#aae5e80f53c708156237ecb30dd286b1d">BasePod::monitor_</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="structPodModule_1_1PodInfo.html#a4d49ef0e01c5aecd32309c20d370a451">PodInfo::pod_id</a>, <a class="el" href="classPodModule_1_1BasePod.html#a5877b1264e97e5efb415a36981cb7683">BasePod::pod_info_</a> , 以及 <a class="el" href="classPodModule_1_1PodMonitor.html#a8c528baf37154d347366083f0f816846">PodMonitor::stop()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPodModule_1_1BasePod_a30c6eafc5c6d371082e71ed673473320_cgraph.png" border="0" usemap="#aclassPodModule_1_1BasePod_a30c6eafc5c6d371082e71ed673473320_cgraph" alt=""/></div>
+<map name="aclassPodModule_1_1BasePod_a30c6eafc5c6d371082e71ed673473320_cgraph" id="aclassPodModule_1_1BasePod_a30c6eafc5c6d371082e71ed673473320_cgraph">
+<area shape="rect" title=" " alt="" coords="5,13,95,38"/>
+<area shape="rect" href="classPodModule_1_1PodMonitor.html#a8c528baf37154d347366083f0f816846" title="停止监控线程（阻塞至线程退出）" alt="" coords="143,5,319,45"/>
+<area shape="poly" title=" " alt="" coords="95,23,129,23,129,28,95,28"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -303,7 +350,7 @@ Protected 属性</h2></td></tr>
 <p>注册并装配一个能力 </p>
 <p>自动完成 attachPod 和 attachSession 绑定。 厂商 Pod 在 <a class="el" href="classPodModule_1_1BasePod.html#a226f8a514521d997b196fb2392e3a869" title="初始化能力装配">initializeCapabilities()</a> 中调用此方法。 </p>
 
-<p class="reference">引用了 <a class="el" href="classPodModule_1_1BasePod.html#a73aa1b8faec652c33e8b4aa1982429bc">BasePod::capability_registry_</a>, <a class="el" href="namespacePodModule.html#a407f5139be30ed89772f4f52f8b33ce1">PodModule::capabilityTypeToString()</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>, <a class="el" href="structPodModule_1_1PodInfo.html#a4d49ef0e01c5aecd32309c20d370a451">PodInfo::pod_id</a>, <a class="el" href="classPodModule_1_1BasePod.html#a5877b1264e97e5efb415a36981cb7683">BasePod::pod_info_</a>, <a class="el" href="classPodModule_1_1CapabilityRegistry.html#a0f676d239a1be3f60f0b483c4c9bf8d5">CapabilityRegistry::registerCapability()</a> , 以及 <a class="el" href="classPodModule_1_1BasePod.html#a5221aa557d678e3e12f18fbd2973bd20">BasePod::session_</a>.</p>
+<p class="reference">引用了 <a class="el" href="classPodModule_1_1BasePod.html#a73aa1b8faec652c33e8b4aa1982429bc">BasePod::capability_registry_</a>, <a class="el" href="namespacePodModule.html#a407f5139be30ed89772f4f52f8b33ce1">PodModule::capabilityTypeToString()</a>, <a class="el" href="classPodModule_1_1BasePod.html#ad766c8b7078240222b90ea752d6650a1">BasePod::isCapabilityEnabled()</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>, <a class="el" href="structPodModule_1_1PodInfo.html#a4d49ef0e01c5aecd32309c20d370a451">PodInfo::pod_id</a>, <a class="el" href="classPodModule_1_1BasePod.html#a5877b1264e97e5efb415a36981cb7683">BasePod::pod_info_</a>, <a class="el" href="classPodModule_1_1CapabilityRegistry.html#a0f676d239a1be3f60f0b483c4c9bf8d5">CapabilityRegistry::registerCapability()</a> , 以及 <a class="el" href="classPodModule_1_1BasePod.html#a5221aa557d678e3e12f18fbd2973bd20">BasePod::session_</a>.</p>
 
 <p class="reference">被这些函数引用 <a class="el" href="classPodModule_1_1DjiPod.html#a226f8a514521d997b196fb2392e3a869">DjiPod::initializeCapabilities()</a> , 以及 <a class="el" href="classPodModule_1_1PinlingPod.html#a226f8a514521d997b196fb2392e3a869">PinlingPod::initializeCapabilities()</a>.</p>
 <div class="dynheader">
@@ -311,12 +358,14 @@ Protected 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="classPodModule_1_1BasePod_af469166fbb78b5c5053ca57b06997ecf_cgraph.png" border="0" usemap="#aclassPodModule_1_1BasePod_af469166fbb78b5c5053ca57b06997ecf_cgraph" alt=""/></div>
 <map name="aclassPodModule_1_1BasePod_af469166fbb78b5c5053ca57b06997ecf_cgraph" id="aclassPodModule_1_1BasePod_af469166fbb78b5c5053ca57b06997ecf_cgraph">
-<area shape="rect" title="注册并装配一个能力" alt="" coords="5,13,117,38"/>
-<area shape="rect" href="namespacePodModule.html#a407f5139be30ed89772f4f52f8b33ce1" title="将能力类型枚举转为中文字符串" alt="" coords="436,5,632,45"/>
-<area shape="poly" title=" " alt="" coords="117,20,165,19,388,19,422,19,422,25,388,24,165,24,118,25"/>
-<area shape="rect" href="classPodModule_1_1CapabilityRegistry.html#a0f676d239a1be3f60f0b483c4c9bf8d5" title="注册一个能力" alt="" coords="165,33,388,73"/>
-<area shape="poly" title=" " alt="" coords="118,30,152,34,151,40,117,35"/>
-<area shape="poly" title=" " alt="" coords="388,39,422,35,423,40,389,44"/>
+<area shape="rect" title="注册并装配一个能力" alt="" coords="5,26,117,52"/>
+<area shape="rect" href="namespacePodModule.html#a407f5139be30ed89772f4f52f8b33ce1" title="将能力类型枚举转为中文字符串" alt="" coords="436,23,632,63"/>
+<area shape="poly" title=" " alt="" coords="104,24,165,11,277,3,388,11,436,18,435,23,388,16,277,8,166,16,105,29"/>
+<area shape="rect" href="classPodModule_1_1BasePod.html#ad766c8b7078240222b90ea752d6650a1" title="检查某能力是否被配置为启用" alt="" coords="201,26,352,52"/>
+<area shape="poly" title=" " alt="" coords="117,36,187,36,187,42,117,42"/>
+<area shape="rect" href="classPodModule_1_1CapabilityRegistry.html#a0f676d239a1be3f60f0b483c4c9bf8d5" title="注册一个能力" alt="" coords="165,76,388,116"/>
+<area shape="poly" title=" " alt="" coords="111,49,189,70,187,76,109,54"/>
+<area shape="poly" title=" " alt="" coords="373,74,423,63,424,69,374,79"/>
 </map>
 </div>
 <div class="dynheader">
@@ -565,6 +614,48 @@ Protected 属性</h2></td></tr>
 
 </div>
 </div>
+<a id="a81706b9121236bbfa8b62a124fec6098" name="a81706b9121236bbfa8b62a124fec6098"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81706b9121236bbfa8b62a124fec6098">&#9670;&#160;</a></span>getRuntimeStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structPodModule_1_1PodRuntimeStatus.html">PodRuntimeStatus</a> getRuntimeStatus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取运行时状态快照 </p>
+<p>返回由 <a class="el" href="classPodModule_1_1PodMonitor.html">PodMonitor</a> 后台线程聚合的各能力数据， 包括在线状态（滑动窗口判定）、云台姿态、激光、流媒体等。 未启动监控时返回默认值。 </p>
+
+<p>实现了 <a class="el" href="classPodModule_1_1IPod.html#a298ecc0e0fc79f57f2643bd0d80c17aa">IPod</a>.</p>
+
+<p class="reference">引用了 <a class="el" href="classPodModule_1_1PodMonitor.html#a2953ac977a5a468a00d0c0c6e9b14b0b">PodMonitor::getRuntimeStatus()</a> , 以及 <a class="el" href="classPodModule_1_1BasePod.html#aae5e80f53c708156237ecb30dd286b1d">BasePod::monitor_</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPodModule_1_1BasePod_a81706b9121236bbfa8b62a124fec6098_cgraph.png" border="0" usemap="#aclassPodModule_1_1BasePod_a81706b9121236bbfa8b62a124fec6098_cgraph" alt=""/></div>
+<map name="aclassPodModule_1_1BasePod_a81706b9121236bbfa8b62a124fec6098_cgraph" id="aclassPodModule_1_1BasePod_a81706b9121236bbfa8b62a124fec6098_cgraph">
+<area shape="rect" title="获取运行时状态快照" alt="" coords="5,13,144,38"/>
+<area shape="rect" href="classPodModule_1_1PodMonitor.html#a2953ac977a5a468a00d0c0c6e9b14b0b" title="获取运行时状态快照（线程安全）" alt="" coords="192,5,368,45"/>
+<area shape="poly" title=" " alt="" coords="144,23,178,23,178,28,144,28"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a3e6d17b80a208905ffcfe3a372cd2c1c" name="a3e6d17b80a208905ffcfe3a372cd2c1c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3e6d17b80a208905ffcfe3a372cd2c1c">&#9670;&#160;</a></span>getSession()</h2>
 
@@ -744,6 +835,52 @@ Protected 属性</h2></td></tr>
 
 </div>
 </div>
+<a id="ad766c8b7078240222b90ea752d6650a1" name="ad766c8b7078240222b90ea752d6650a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad766c8b7078240222b90ea752d6650a1">&#9670;&#160;</a></span>isCapabilityEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isCapabilityEnabled </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccc">CapabilityType</a>&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>检查某能力是否被配置为启用 </p>
+
+<p class="reference">引用了 <a class="el" href="classPodModule_1_1BasePod.html#a0ed9c2e2570b1feb1dd00b627dec08cd">BasePod::enabled_capabilities_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classPodModule_1_1BasePod.html#af469166fbb78b5c5053ca57b06997ecf">BasePod::addCapability()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPodModule_1_1BasePod_ad766c8b7078240222b90ea752d6650a1_icgraph.png" border="0" usemap="#aclassPodModule_1_1BasePod_ad766c8b7078240222b90ea752d6650a1_icgraph" alt=""/></div>
+<map name="aclassPodModule_1_1BasePod_ad766c8b7078240222b90ea752d6650a1_icgraph" id="aclassPodModule_1_1BasePod_ad766c8b7078240222b90ea752d6650a1_icgraph">
+<area shape="rect" title="检查某能力是否被配置为启用" alt="" coords="384,45,535,70"/>
+<area shape="rect" href="classPodModule_1_1BasePod.html#af469166fbb78b5c5053ca57b06997ecf" title="注册并装配一个能力" alt="" coords="224,45,336,70"/>
+<area shape="poly" title=" " alt="" coords="370,60,336,60,336,55,370,55"/>
+<area shape="rect" href="classPodModule_1_1DjiPod.html#a226f8a514521d997b196fb2392e3a869" title="初始化大疆能力装配" alt="" coords="13,5,168,45"/>
+<area shape="poly" title=" " alt="" coords="210,48,168,41,168,36,211,43"/>
+<area shape="rect" href="classPodModule_1_1PinlingPod.html#a226f8a514521d997b196fb2392e3a869" title="初始化品凌能力装配" alt="" coords="5,69,176,109"/>
+<area shape="poly" title=" " alt="" coords="211,72,176,78,176,72,210,66"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a13cdcbb84b8f5bf0b9125ef8d0ce41c2" name="a13cdcbb84b8f5bf0b9125ef8d0ce41c2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a13cdcbb84b8f5bf0b9125ef8d0ce41c2">&#9670;&#160;</a></span>isConnected()</h2>
 
@@ -772,6 +909,47 @@ Protected 属性</h2></td></tr>
 <p>实现了 <a class="el" href="classPodModule_1_1IPod.html#aafb02d80043c14a6b87fbaa8cfaf3e84">IPod</a>.</p>
 
 <p class="reference">引用了 <a class="el" href="namespacePodModule.html#aea5b7c69300d8f8fd12fc5e5b6265af9aa5afd6edd5336d91316964e493936858">PodModule::CONNECTED</a> , 以及 <a class="el" href="classPodModule_1_1BasePod.html#a06f96b422f784e77100af55334ace6d2">BasePod::state_</a>.</p>
+
+</div>
+</div>
+<a id="af004188e4a930f47dd8721bf647ba87e" name="af004188e4a930f47dd8721bf647ba87e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af004188e4a930f47dd8721bf647ba87e">&#9670;&#160;</a></span>isMonitorRunning()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isMonitorRunning </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>监控线程是否运行中 </p>
+
+<p>实现了 <a class="el" href="classPodModule_1_1IPod.html#a04746d2d179188d67b30172deac63d81">IPod</a>.</p>
+
+<p class="reference">引用了 <a class="el" href="classPodModule_1_1PodMonitor.html#ad619b8b51adc7874204abd71080cd90e">PodMonitor::isRunning()</a> , 以及 <a class="el" href="classPodModule_1_1BasePod.html#aae5e80f53c708156237ecb30dd286b1d">BasePod::monitor_</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPodModule_1_1BasePod_af004188e4a930f47dd8721bf647ba87e_cgraph.png" border="0" usemap="#aclassPodModule_1_1BasePod_af004188e4a930f47dd8721bf647ba87e_cgraph" alt=""/></div>
+<map name="aclassPodModule_1_1BasePod_af004188e4a930f47dd8721bf647ba87e_cgraph" id="aclassPodModule_1_1BasePod_af004188e4a930f47dd8721bf647ba87e_cgraph">
+<area shape="rect" title="监控线程是否运行中" alt="" coords="5,13,141,38"/>
+<area shape="rect" href="classPodModule_1_1PodMonitor.html#ad619b8b51adc7874204abd71080cd90e" title="是否正在运行" alt="" coords="189,5,365,45"/>
+<area shape="poly" title=" " alt="" coords="142,23,176,23,176,28,142,28"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -867,6 +1045,38 @@ Protected 属性</h2></td></tr>
 <area shape="poly" title=" " alt="" coords="415,23,449,23,449,28,415,28"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a6901beb3cfdc6d38a5d589ad6f99bed7" name="a6901beb3cfdc6d38a5d589ad6f99bed7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6901beb3cfdc6d38a5d589ad6f99bed7">&#9670;&#160;</a></span>setEnabledCapabilities()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setEnabledCapabilities </td>
+          <td>(</td>
+          <td class="paramtype">const std::set&lt; <a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccc">CapabilityType</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>enabled</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置允许启用的能力集合（空集合=全部允许） </p>
+
+<p>实现了 <a class="el" href="classPodModule_1_1IPod.html#afd9819ebdbcbb60eaa53d3c41e0d747f">IPod</a>.</p>
+
+<p class="reference">引用了 <a class="el" href="classPodModule_1_1BasePod.html#a0ed9c2e2570b1feb1dd00b627dec08cd">BasePod::enabled_capabilities_</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="structPodModule_1_1PodInfo.html#a4d49ef0e01c5aecd32309c20d370a451">PodInfo::pod_id</a> , 以及 <a class="el" href="classPodModule_1_1BasePod.html#a5877b1264e97e5efb415a36981cb7683">BasePod::pod_info_</a>.</p>
 
 </div>
 </div>
@@ -970,6 +1180,125 @@ Protected 属性</h2></td></tr>
 
 </div>
 </div>
+<a id="af3103563b484b524aff6134350a2b8a3" name="af3103563b484b524aff6134350a2b8a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3103563b484b524aff6134350a2b8a3">&#9670;&#160;</a></span>startMonitor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void startMonitor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structPodModule_1_1PodMonitorConfig.html">PodMonitorConfig</a> &amp;&#160;</td>
+          <td class="paramname"><em>config</em> = <code>{}</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>启动后台监控线程 </p>
+
+<p>实现了 <a class="el" href="classPodModule_1_1IPod.html#a6eeeda29906b360eed126655033f822c">IPod</a>.</p>
+
+<p class="reference">引用了 <a class="el" href="classPodModule_1_1BasePod.html#aae5e80f53c708156237ecb30dd286b1d">BasePod::monitor_</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="structPodModule_1_1PodInfo.html#a4d49ef0e01c5aecd32309c20d370a451">PodInfo::pod_id</a>, <a class="el" href="classPodModule_1_1BasePod.html#a5877b1264e97e5efb415a36981cb7683">BasePod::pod_info_</a> , 以及 <a class="el" href="classPodModule_1_1PodMonitor.html#a129c26163c525a99f830b51e59f84328">PodMonitor::start()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPodModule_1_1BasePod_af3103563b484b524aff6134350a2b8a3_cgraph.png" border="0" usemap="#aclassPodModule_1_1BasePod_af3103563b484b524aff6134350a2b8a3_cgraph" alt=""/></div>
+<map name="aclassPodModule_1_1BasePod_af3103563b484b524aff6134350a2b8a3_cgraph" id="aclassPodModule_1_1BasePod_af3103563b484b524aff6134350a2b8a3_cgraph">
+<area shape="rect" title="启动后台监控线程" alt="" coords="5,142,108,167"/>
+<area shape="rect" href="classPodModule_1_1PodMonitor.html#a129c26163c525a99f830b51e59f84328" title="启动监控线程" alt="" coords="156,135,332,175"/>
+<area shape="poly" title=" " alt="" coords="108,152,142,152,142,157,108,157"/>
+<area shape="rect" href="classPodModule_1_1IPod.html#a938322efd17e75d281ab6c7fad8f0e9a" title="获取设备唯一标识" alt="" coords="604,49,799,74"/>
+<area shape="poly" title=" " alt="" coords="332,134,624,74,625,79,333,139"/>
+<area shape="rect" href="classPodModule_1_1PodMonitor.html#a70a4677f113e64393ea51d131e5b4391" title="监控主循环" alt="" coords="380,163,556,203"/>
+<area shape="poly" title=" " alt="" coords="333,163,367,167,366,173,332,168"/>
+<area shape="poly" title=" " alt="" coords="490,160,540,122,603,84,624,76,626,81,605,89,543,126,494,165"/>
+<area shape="rect" href="classPodModule_1_1PodMonitor.html#a42a1cd3b79aba9bcdf28313155977327" title="获取当前时间戳（毫秒，steady_clock）" alt="" coords="879,248,1055,288"/>
+<area shape="poly" title=" " alt="" coords="549,200,605,212,741,235,866,253,865,258,740,241,603,217,548,205"/>
+<area shape="rect" href="classPodModule_1_1PodMonitor.html#a869baf763ba33280ac3882e3ce1a26bc" title="轮询激光数据" alt="" coords="613,341,789,381"/>
+<area shape="poly" title=" " alt="" coords="485,201,533,263,567,297,605,327,615,333,613,338,603,332,564,301,529,267,481,204"/>
+<area shape="rect" href="classPodModule_1_1PodMonitor.html#a7b53c96d2816df4d9535bfc6119c4dbd" title="轮询云台姿态" alt="" coords="613,277,789,317"/>
+<area shape="poly" title=" " alt="" coords="504,201,605,256,635,270,633,275,603,261,501,205"/>
+<area shape="rect" href="classPodModule_1_1PodMonitor.html#a6574eac20d48a2e77aa01d9b5138c7c3" title="轮询状态/在线检测" alt="" coords="613,99,789,139"/>
+<area shape="poly" title=" " alt="" coords="541,160,614,140,615,145,542,165"/>
+<area shape="rect" href="classPodModule_1_1PodMonitor.html#ac0160d94ae5471a300570532e9bc9d77" title="轮询流媒体状态" alt="" coords="613,163,789,203"/>
+<area shape="poly" title=" " alt="" coords="557,180,599,180,599,185,557,185"/>
+<area shape="poly" title=" " alt="" coords="769,339,797,327,821,312,845,298,865,290,867,295,848,302,824,317,800,332,771,344"/>
+<area shape="rect" href="classPodModule_1_1IPod.html#a6b4de9361e7c1e82bb3dd9e603191bcd" title="模板方式查询具体能力接口" alt="" coords="847,198,1088,223"/>
+<area shape="poly" title=" " alt="" coords="779,339,797,327,813,305,819,281,826,257,833,245,845,234,855,227,858,232,848,238,837,249,831,259,825,283,818,307,801,331,782,343"/>
+<area shape="rect" href="classPodModule_1_1ILaserCapability.html#abb1501513ffd78098c4b7126aecde912" title="执行一次激光测距" alt="" coords="864,376,1071,416"/>
+<area shape="poly" title=" " alt="" coords="790,370,851,378,850,383,789,375"/>
+<area shape="rect" href="classPodModule_1_1IPod.html#af45e36f920fe32ab0f9efa6d7b398e75" title="查询某类型能力" alt="" coords="1136,198,1361,223"/>
+<area shape="poly" title=" " alt="" coords="1088,208,1122,208,1122,213,1088,213"/>
+<area shape="poly" title=" " alt="" coords="789,285,865,277,866,282,790,290"/>
+<area shape="poly" title=" " alt="" coords="743,275,792,253,846,233,881,224,882,229,847,239,794,258,745,280"/>
+<area shape="rect" href="classPodModule_1_1IPtzCapability.html#ae9114bdb0c5ffb5222a92c3fd77dff05" title="获取当前云台姿态" alt="" coords="871,312,1063,352"/>
+<area shape="poly" title=" " alt="" coords="790,306,858,315,857,320,789,311"/>
+<area shape="poly" title=" " alt="" coords="782,137,800,149,818,171,825,193,832,214,848,234,868,246,866,251,845,238,827,217,820,195,813,173,797,153,779,141"/>
+<area shape="poly" title=" " alt="" coords="772,136,800,148,824,166,848,183,872,192,870,197,845,188,821,171,797,153,770,141"/>
+<area shape="rect" href="classPodModule_1_1IStatusCapability.html#a6bfa2b7a4cb00aa552f28b98371930fa" title="刷新状态缓存" alt="" coords="861,5,1074,45"/>
+<area shape="poly" title=" " alt="" coords="765,96,797,83,821,69,846,55,867,47,868,52,848,60,824,73,800,88,767,101"/>
+<area shape="rect" href="classPodModule_1_1PodMonitor.html#af83c997f346dafb1ee6fe6335961a324" title="更新在线判定滑动窗口" alt="" coords="879,69,1055,109"/>
+<area shape="poly" title=" " alt="" coords="789,106,865,98,866,103,790,112"/>
+<area shape="poly" title=" " alt="" coords="754,200,848,233,874,242,873,247,846,239,752,205"/>
+<area shape="poly" title=" " alt="" coords="790,189,833,194,833,199,789,195"/>
+<area shape="rect" href="classPodModule_1_1IStreamCapability.html#ab60e6d0c54aeebd9c251123746954fbd" title="获取当前流信息" alt="" coords="858,133,1077,173"/>
+<area shape="poly" title=" " alt="" coords="789,170,844,164,845,170,790,176"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac1786f46e296fc759f8a5eefa5412c0e" name="ac1786f46e296fc759f8a5eefa5412c0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1786f46e296fc759f8a5eefa5412c0e">&#9670;&#160;</a></span>stopMonitor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stopMonitor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>停止后台监控线程 </p>
+
+<p>实现了 <a class="el" href="classPodModule_1_1IPod.html#adc9d29e6155337bfcc9d18cec93c3a87">IPod</a>.</p>
+
+<p class="reference">引用了 <a class="el" href="classPodModule_1_1BasePod.html#aae5e80f53c708156237ecb30dd286b1d">BasePod::monitor_</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="structPodModule_1_1PodInfo.html#a4d49ef0e01c5aecd32309c20d370a451">PodInfo::pod_id</a>, <a class="el" href="classPodModule_1_1BasePod.html#a5877b1264e97e5efb415a36981cb7683">BasePod::pod_info_</a> , 以及 <a class="el" href="classPodModule_1_1PodMonitor.html#a8c528baf37154d347366083f0f816846">PodMonitor::stop()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPodModule_1_1BasePod_ac1786f46e296fc759f8a5eefa5412c0e_cgraph.png" border="0" usemap="#aclassPodModule_1_1BasePod_ac1786f46e296fc759f8a5eefa5412c0e_cgraph" alt=""/></div>
+<map name="aclassPodModule_1_1BasePod_ac1786f46e296fc759f8a5eefa5412c0e_cgraph" id="aclassPodModule_1_1BasePod_ac1786f46e296fc759f8a5eefa5412c0e_cgraph">
+<area shape="rect" title="停止后台监控线程" alt="" coords="5,13,105,38"/>
+<area shape="rect" href="classPodModule_1_1PodMonitor.html#a8c528baf37154d347366083f0f816846" title="停止监控线程（阻塞至线程退出）" alt="" coords="153,5,329,45"/>
+<area shape="poly" title=" " alt="" coords="106,23,140,23,140,28,106,28"/>
+</map>
+</div>
+
+</div>
+</div>
 <h2 class="groupheader">结构体成员变量说明</h2>
 <a id="a73aa1b8faec652c33e8b4aa1982429bc" name="a73aa1b8faec652c33e8b4aa1982429bc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a73aa1b8faec652c33e8b4aa1982429bc">&#9670;&#160;</a></span>capability_registry_</h2>
@@ -995,6 +1324,54 @@ Protected 属性</h2></td></tr>
 
 </div>
 </div>
+<a id="a0ed9c2e2570b1feb1dd00b627dec08cd" name="a0ed9c2e2570b1feb1dd00b627dec08cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ed9c2e2570b1feb1dd00b627dec08cd">&#9670;&#160;</a></span>enabled_capabilities_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::set&lt;<a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccc">CapabilityType</a>&gt; enabled_capabilities_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classPodModule_1_1BasePod.html#ad766c8b7078240222b90ea752d6650a1">BasePod::isCapabilityEnabled()</a> , 以及 <a class="el" href="classPodModule_1_1BasePod.html#a6901beb3cfdc6d38a5d589ad6f99bed7">BasePod::setEnabledCapabilities()</a>.</p>
+
+</div>
+</div>
+<a id="aae5e80f53c708156237ecb30dd286b1d" name="aae5e80f53c708156237ecb30dd286b1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae5e80f53c708156237ecb30dd286b1d">&#9670;&#160;</a></span>monitor_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPodModule_1_1PodMonitor.html">PodMonitor</a> monitor_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classPodModule_1_1BasePod.html#a81706b9121236bbfa8b62a124fec6098">BasePod::getRuntimeStatus()</a>, <a class="el" href="classPodModule_1_1BasePod.html#af004188e4a930f47dd8721bf647ba87e">BasePod::isMonitorRunning()</a>, <a class="el" href="classPodModule_1_1BasePod.html#af3103563b484b524aff6134350a2b8a3">BasePod::startMonitor()</a>, <a class="el" href="classPodModule_1_1BasePod.html#ac1786f46e296fc759f8a5eefa5412c0e">BasePod::stopMonitor()</a> , 以及 <a class="el" href="classPodModule_1_1BasePod.html#a30c6eafc5c6d371082e71ed673473320">BasePod::~BasePod()</a>.</p>
+
+</div>
+</div>
 <a id="a5877b1264e97e5efb415a36981cb7683" name="a5877b1264e97e5efb415a36981cb7683"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5877b1264e97e5efb415a36981cb7683">&#9670;&#160;</a></span>pod_info_</h2>
 
@@ -1015,7 +1392,7 @@ Protected 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="classPodModule_1_1BasePod.html#af469166fbb78b5c5053ca57b06997ecf">BasePod::addCapability()</a>, <a class="el" href="classPodModule_1_1BasePod.html#af0adeddfb634847b397d070f347bfa22">BasePod::connect()</a>, <a class="el" href="classPodModule_1_1BasePod.html#a404558c623f1e9686ac0d34501bf890b">BasePod::disconnect()</a>, <a class="el" href="classPodModule_1_1BasePod.html#a70c03852a8abad6873063b76a500396a">BasePod::getPodId()</a>, <a class="el" href="classPodModule_1_1BasePod.html#a72d01b472cfe88c342ecdbb673f73330">BasePod::getPodInfo()</a>, <a class="el" href="classPodModule_1_1BasePod.html#a77d2042529c762f0e23b3c0a987a99cf">BasePod::getPodName()</a>, <a class="el" href="classPodModule_1_1BasePod.html#a67831711be1e27807c549631dee2b806">BasePod::getVendor()</a>, <a class="el" href="classPodModule_1_1BasePod.html#a226f8a514521d997b196fb2392e3a869">BasePod::initializeCapabilities()</a>, <a class="el" href="classPodModule_1_1DjiPod.html#a226f8a514521d997b196fb2392e3a869">DjiPod::initializeCapabilities()</a>, <a class="el" href="classPodModule_1_1PinlingPod.html#a226f8a514521d997b196fb2392e3a869">PinlingPod::initializeCapabilities()</a>, <a class="el" href="classPodModule_1_1BasePod.html#afdb951033e211def2a3a6f3999db158c">BasePod::setSession()</a>, <a class="el" href="classPodModule_1_1BasePod.html#a978db00c887fe94cd401aa4d06c5d789">BasePod::setState()</a>, <a class="el" href="classPodModule_1_1BasePod.html#a30c6eafc5c6d371082e71ed673473320">BasePod::~BasePod()</a>, <a class="el" href="classPodModule_1_1DjiPod.html#a3f0570d311a078c10b11ab5baa5f1aff">DjiPod::~DjiPod()</a> , 以及 <a class="el" href="classPodModule_1_1PinlingPod.html#a90c7bc20958008f8f43661ae09c916a3">PinlingPod::~PinlingPod()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="classPodModule_1_1BasePod.html#af469166fbb78b5c5053ca57b06997ecf">BasePod::addCapability()</a>, <a class="el" href="classPodModule_1_1BasePod.html#af0adeddfb634847b397d070f347bfa22">BasePod::connect()</a>, <a class="el" href="classPodModule_1_1BasePod.html#a404558c623f1e9686ac0d34501bf890b">BasePod::disconnect()</a>, <a class="el" href="classPodModule_1_1BasePod.html#a70c03852a8abad6873063b76a500396a">BasePod::getPodId()</a>, <a class="el" href="classPodModule_1_1BasePod.html#a72d01b472cfe88c342ecdbb673f73330">BasePod::getPodInfo()</a>, <a class="el" href="classPodModule_1_1BasePod.html#a77d2042529c762f0e23b3c0a987a99cf">BasePod::getPodName()</a>, <a class="el" href="classPodModule_1_1BasePod.html#a67831711be1e27807c549631dee2b806">BasePod::getVendor()</a>, <a class="el" href="classPodModule_1_1BasePod.html#a226f8a514521d997b196fb2392e3a869">BasePod::initializeCapabilities()</a>, <a class="el" href="classPodModule_1_1DjiPod.html#a226f8a514521d997b196fb2392e3a869">DjiPod::initializeCapabilities()</a>, <a class="el" href="classPodModule_1_1PinlingPod.html#a226f8a514521d997b196fb2392e3a869">PinlingPod::initializeCapabilities()</a>, <a class="el" href="classPodModule_1_1BasePod.html#a6901beb3cfdc6d38a5d589ad6f99bed7">BasePod::setEnabledCapabilities()</a>, <a class="el" href="classPodModule_1_1BasePod.html#afdb951033e211def2a3a6f3999db158c">BasePod::setSession()</a>, <a class="el" href="classPodModule_1_1BasePod.html#a978db00c887fe94cd401aa4d06c5d789">BasePod::setState()</a>, <a class="el" href="classPodModule_1_1BasePod.html#af3103563b484b524aff6134350a2b8a3">BasePod::startMonitor()</a>, <a class="el" href="classPodModule_1_1BasePod.html#ac1786f46e296fc759f8a5eefa5412c0e">BasePod::stopMonitor()</a>, <a class="el" href="classPodModule_1_1BasePod.html#a30c6eafc5c6d371082e71ed673473320">BasePod::~BasePod()</a>, <a class="el" href="classPodModule_1_1DjiPod.html#a3f0570d311a078c10b11ab5baa5f1aff">DjiPod::~DjiPod()</a> , 以及 <a class="el" href="classPodModule_1_1PinlingPod.html#a90c7bc20958008f8f43661ae09c916a3">PinlingPod::~PinlingPod()</a>.</p>
 
 </div>
 </div>

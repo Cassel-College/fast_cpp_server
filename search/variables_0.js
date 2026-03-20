@@ -26,5 +26,6 @@ var searchData=
   ['attitude_5fexceed_23',['attitude_exceed',['../structfly__control_1_1FaultBits.html#a319b4958e680bef1c8f70d291199e487',1,'fly_control::FaultBits']]],
   ['auto_5fmigrate_24',['auto_migrate',['../structmy__db_1_1DBConfig.html#a7eb218eaaabf6cb49629351664a04241',1,'my_db::DBConfig']]],
   ['auto_5fopen_25',['auto_open',['../structmy__serial_1_1SerialInitOptions.html#af3265ddaf74e9fcc6c328c9fe36216d1',1,'my_serial::SerialInitOptions']]],
-  ['available_5fbytes_26',['available_bytes',['../structmy__serial_1_1SerialPortSnapshot.html#afaed30f4d7333d869670fe20f94c4a19',1,'my_serial::SerialPortSnapshot']]]
+  ['auto_5fstart_26',['auto_start',['../structPodModule_1_1PodMonitorConfig.html#ac63ee1dd752d0adede9cffbe750b39da',1,'PodModule::PodMonitorConfig']]],
+  ['available_5fbytes_27',['available_bytes',['../structmy__serial_1_1SerialPortSnapshot.html#afaed30f4d7333d869670fe20f94c4a19',1,'my_serial::SerialPortSnapshot']]]
 ];

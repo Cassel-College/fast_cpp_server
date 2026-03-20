@@ -209,6 +209,11 @@ $(function() {
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1PodManager.html">PodManager</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">吊舱管理器（单例模式）  <a href="classPodModule_1_1PodManager.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1PodMonitor.html">PodMonitor</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPodModule_1_1PodMonitorConfig.html">PodMonitorConfig</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPodModule_1_1PodMonitor.html">PodMonitor</a> 轮询配置  <a href="structPodModule_1_1PodMonitorConfig.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1PodRegistry.html">PodRegistry</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">吊舱注册表  <a href="classPodModule_1_1PodRegistry.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -217,6 +222,9 @@ $(function() {
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPodModule_1_1PodResult_3_01void_01_4.html">PodResult&lt; void &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">void 特化：无返回数据的操作结果  <a href="structPodModule_1_1PodResult_3_01void_01_4.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPodModule_1_1PodRuntimeStatus.html">PodRuntimeStatus</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">吊舱运行时状态聚合数据  <a href="structPodModule_1_1PodRuntimeStatus.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1PodScheduler.html">PodScheduler</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">吊舱调度器（骨架）  <a href="classPodModule_1_1PodScheduler.html#details">更多...</a><br /></td></tr>
@@ -325,6 +333,12 @@ $(function() {
 <tr class="memitem:a407f5139be30ed89772f4f52f8b33ce1" id="r_a407f5139be30ed89772f4f52f8b33ce1"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePodModule.html#a407f5139be30ed89772f4f52f8b33ce1">capabilityTypeToString</a> (<a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccc">CapabilityType</a> type)</td></tr>
 <tr class="memdesc:a407f5139be30ed89772f4f52f8b33ce1"><td class="mdescLeft">&#160;</td><td class="mdescRight">将能力类型枚举转为中文字符串  <br /></td></tr>
 <tr class="separator:a407f5139be30ed89772f4f52f8b33ce1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a251c7c66af4c0925d563354a200bda19" id="r_a251c7c66af4c0925d563354a200bda19"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePodModule.html#a251c7c66af4c0925d563354a200bda19">capabilityTypeToKey</a> (<a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccc">CapabilityType</a> type)</td></tr>
+<tr class="memdesc:a251c7c66af4c0925d563354a200bda19"><td class="mdescLeft">&#160;</td><td class="mdescRight">将能力类型枚举转为稳定英文标识  <br /></td></tr>
+<tr class="separator:a251c7c66af4c0925d563354a200bda19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affb6bad2036f3e8024e1bb8289f7f757" id="r_affb6bad2036f3e8024e1bb8289f7f757"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePodModule.html#affb6bad2036f3e8024e1bb8289f7f757">capabilityTypeFromString</a> (const std::string &amp;value, <a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccc">CapabilityType</a> &amp;type)</td></tr>
+<tr class="memdesc:affb6bad2036f3e8024e1bb8289f7f757"><td class="mdescLeft">&#160;</td><td class="mdescRight">从字符串解析能力类型  <br /></td></tr>
+<tr class="separator:affb6bad2036f3e8024e1bb8289f7f757"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5031773bc35b8d035f66bbb9eddf78b" id="r_ac5031773bc35b8d035f66bbb9eddf78b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacePodModule.html#ac5031773bc35b8d035f66bbb9eddf78b">podErrorCodeToString</a> (<a class="el" href="namespacePodModule.html#aad194976af5612d4469559348e94c7be">PodErrorCode</a> code)</td></tr>
 <tr class="memdesc:ac5031773bc35b8d035f66bbb9eddf78b"><td class="mdescLeft">&#160;</td><td class="mdescRight">将错误码转为中文描述  <br /></td></tr>
 <tr class="separator:ac5031773bc35b8d035f66bbb9eddf78b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -560,6 +574,82 @@ $(function() {
 </div>
 </div>
 <h2 class="groupheader">函数说明</h2>
+<a id="affb6bad2036f3e8024e1bb8289f7f757" name="affb6bad2036f3e8024e1bb8289f7f757"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affb6bad2036f3e8024e1bb8289f7f757">&#9670;&#160;</a></span>capabilityTypeFromString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool capabilityTypeFromString </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccc">CapabilityType</a> &amp;&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>从字符串解析能力类型 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>支持英文标识、枚举名和中文名称 </td></tr>
+    <tr><td class="paramname">type</td><td>输出能力类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>解析成功返回 true </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109cccae91aa59305dc9e90e3089961dddfb12b">CENTER_MEASURE</a>, <a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccca0d895a0a05a7cce9b2c0c8bb252f78cc">HEARTBEAT</a>, <a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccca23a12f67f614b5518c7f1c2465bf95e3">IMAGE</a>, <a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109cccad97026430a9e5d1a0c48ef2cad3755b1">LASER</a>, <a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccca6116d57d4e3fff7fac50f9b0c1358af1">PTZ</a>, <a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccca5f241c8c8f985b3c51e05d39cf030f4c">STATUS</a> , 以及 <a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccca2f05998d2a71cdc19b7109549bbe2646">STREAM</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classPodModule_1_1PodManager.html#adb2d0537824815e61ef86dd8c5c0f70b">PodManager::parseEnabledCapabilities()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacePodModule_affb6bad2036f3e8024e1bb8289f7f757_icgraph.png" border="0" usemap="#anamespacePodModule_affb6bad2036f3e8024e1bb8289f7f757_icgraph" alt=""/></div>
+<map name="anamespacePodModule_affb6bad2036f3e8024e1bb8289f7f757_icgraph" id="anamespacePodModule_affb6bad2036f3e8024e1bb8289f7f757_icgraph">
+<area shape="rect" title="从字符串解析能力类型" alt="" coords="479,13,665,38"/>
+<area shape="rect" href="classPodModule_1_1PodManager.html#adb2d0537824815e61ef86dd8c5c0f70b" title="从 JSON 解析 capability 启用列表" alt="" coords="236,5,431,45"/>
+<area shape="poly" title=" " alt="" coords="465,28,431,28,431,23,465,23"/>
+<area shape="rect" href="classPodModule_1_1PodManager.html#adecc6bee0d3c06c97c3ddc058952ee1f" title="从 JSON 配置初始化吊舱管理器" alt="" coords="5,5,188,45"/>
+<area shape="poly" title=" " alt="" coords="222,28,188,28,188,23,222,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a251c7c66af4c0925d563354a200bda19" name="a251c7c66af4c0925d563354a200bda19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a251c7c66af4c0925d563354a200bda19">&#9670;&#160;</a></span>capabilityTypeToKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string capabilityTypeToKey </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccc">CapabilityType</a>&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将能力类型枚举转为稳定英文标识 </p>
+
+<p class="reference">引用了 <a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109cccae91aa59305dc9e90e3089961dddfb12b">CENTER_MEASURE</a>, <a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccca0d895a0a05a7cce9b2c0c8bb252f78cc">HEARTBEAT</a>, <a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccca23a12f67f614b5518c7f1c2465bf95e3">IMAGE</a>, <a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109cccad97026430a9e5d1a0c48ef2cad3755b1">LASER</a>, <a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccca6116d57d4e3fff7fac50f9b0c1358af1">PTZ</a>, <a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccca5f241c8c8f985b3c51e05d39cf030f4c">STATUS</a> , 以及 <a class="el" href="namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccca2f05998d2a71cdc19b7109549bbe2646">STREAM</a>.</p>
+
+</div>
+</div>
 <a id="a407f5139be30ed89772f4f52f8b33ce1" name="a407f5139be30ed89772f4f52f8b33ce1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a407f5139be30ed89772f4f52f8b33ce1">&#9670;&#160;</a></span>capabilityTypeToString()</h2>
 
@@ -633,43 +723,48 @@ $(function() {
 <div class="dyncontent">
 <div class="center"><img src="namespacePodModule_ac5031773bc35b8d035f66bbb9eddf78b_icgraph.png" border="0" usemap="#anamespacePodModule_ac5031773bc35b8d035f66bbb9eddf78b_icgraph" alt=""/></div>
 <map name="anamespacePodModule_ac5031773bc35b8d035f66bbb9eddf78b_icgraph" id="anamespacePodModule_ac5031773bc35b8d035f66bbb9eddf78b_icgraph">
-<area shape="rect" title="将错误码转为中文描述" alt="" coords="809,429,972,454"/>
-<area shape="rect" href="structPodModule_1_1PodResult.html#a75d0d7de7479e2554413141d9bd4974d" title="构造失败结果" alt="" coords="595,389,761,429"/>
-<area shape="poly" title=" " alt="" coords="795,430,761,424,762,419,796,424"/>
-<area shape="rect" href="structPodModule_1_1PodResult_3_01void_01_4.html#a75d0d7de7479e2554413141d9bd4974d" title=" " alt="" coords="595,453,761,493"/>
-<area shape="poly" title=" " alt="" coords="796,458,762,463,761,458,795,453"/>
+<area shape="rect" title="将错误码转为中文描述" alt="" coords="809,486,972,511"/>
+<area shape="rect" href="structPodModule_1_1PodResult.html#a75d0d7de7479e2554413141d9bd4974d" title="构造失败结果" alt="" coords="595,447,761,487"/>
+<area shape="poly" title=" " alt="" coords="795,487,761,482,762,477,796,482"/>
+<area shape="rect" href="structPodModule_1_1PodResult_3_01void_01_4.html#a75d0d7de7479e2554413141d9bd4974d" title=" " alt="" coords="595,511,761,551"/>
+<area shape="poly" title=" " alt="" coords="796,516,762,521,761,516,795,510"/>
 <area shape="rect" href="classPodModule_1_1PodManager.html#ac4319fbc249e87a1e54d4c6a4b0a50df" title="添加一个吊舱" alt="" coords="332,5,515,45"/>
-<area shape="poly" title=" " alt="" coords="672,376,662,309,641,223,625,178,603,135,577,95,545,59,514,41,516,36,548,55,581,91,608,132,629,176,646,222,667,308,677,375"/>
+<area shape="poly" title=" " alt="" coords="674,433,668,356,649,255,632,202,610,150,581,102,545,59,513,40,516,35,548,55,586,98,615,148,637,200,654,254,673,356,679,433"/>
 <area shape="rect" href="classPodModule_1_1BasePod.html#af0adeddfb634847b397d070f347bfa22" title="连接设备" alt="" coords="344,69,503,109"/>
-<area shape="poly" title=" " alt="" coords="669,376,656,321,632,252,596,183,572,151,545,123,525,110,502,101,504,97,527,106,548,119,577,147,600,180,637,250,661,319,674,375"/>
+<area shape="poly" title=" " alt="" coords="671,433,662,368,640,284,624,240,603,197,577,158,545,123,525,110,502,101,504,96,528,105,548,119,581,154,607,195,629,238,645,282,667,367,677,433"/>
 <area shape="rect" href="classPodModule_1_1BaseSession.html#aa11149640c3a454d6ac22e0024636a42" title="建立与设备的连接" alt="" coords="331,133,515,173"/>
-<area shape="poly" title=" " alt="" coords="664,377,648,334,622,282,588,231,568,208,545,188,514,171,517,166,548,183,572,204,593,228,627,280,652,332,669,375"/>
+<area shape="poly" title=" " alt="" coords="668,434,655,379,631,313,595,245,572,214,545,187,514,170,517,165,548,183,576,211,600,242,636,311,660,378,673,433"/>
 <area shape="rect" href="classPodModule_1_1PodManager.html#acc4a66d789f1fa2a08496f37bb1e54c6" title="连接指定吊舱" alt="" coords="332,197,515,237"/>
-<area shape="poly" title=" " alt="" coords="657,379,612,314,581,280,545,252,514,236,516,232,548,247,584,276,616,310,661,376"/>
+<area shape="poly" title=" " alt="" coords="663,434,646,392,621,342,588,293,545,251,514,235,516,230,548,247,592,290,626,340,651,390,668,432"/>
 <area shape="rect" href="classPodModule_1_1BasePod.html#a404558c623f1e9686ac0d34501bf890b" title="断开设备" alt="" coords="344,261,503,301"/>
-<area shape="poly" title=" " alt="" coords="643,382,598,347,546,316,502,300,504,295,548,311,601,343,646,378"/>
+<area shape="poly" title=" " alt="" coords="656,436,610,374,580,342,545,316,502,297,504,292,548,311,583,338,615,371,660,433"/>
 <area shape="rect" href="classPodModule_1_1BaseSession.html#a404558c623f1e9686ac0d34501bf890b" title="断开与设备的连接" alt="" coords="331,325,515,365"/>
-<area shape="poly" title=" " alt="" coords="584,388,503,368,504,363,585,383"/>
+<area shape="poly" title=" " alt="" coords="640,440,597,409,546,380,515,368,517,363,548,375,599,404,644,436"/>
 <area shape="rect" href="classPodModule_1_1PodManager.html#acdcbeafb788832debc76556201d1d53d" title="断开指定吊舱" alt="" coords="332,389,515,429"/>
-<area shape="poly" title=" " alt="" coords="581,412,515,412,515,407,581,407"/>
-<area shape="rect" href="classPodModule_1_1BaseLaserCapability.html#aadc88853154d883f393920da9b8c0913" title="执行一次激光测距" alt="" coords="306,453,541,493"/>
-<area shape="poly" title=" " alt="" coords="585,435,504,456,503,451,584,430"/>
-<area shape="rect" href="classPodModule_1_1DjiLaserCapability.html#aadc88853154d883f393920da9b8c0913" title="执行一次激光测距" alt="" coords="313,517,534,557"/>
-<area shape="poly" title=" " alt="" coords="604,438,596,443,582,459,573,475,565,492,548,507,526,519,524,515,545,503,561,488,569,473,577,456,593,439,601,434"/>
-<area shape="rect" href="classPodModule_1_1PinlingLaserCapability.html#aadc88853154d883f393920da9b8c0913" title="执行一次激光测距" alt="" coords="300,581,547,621"/>
-<area shape="poly" title=" " alt="" coords="601,439,597,443,585,459,578,475,574,507,570,539,562,555,548,571,532,583,529,579,545,567,558,552,565,537,569,506,573,473,580,456,593,440,597,435"/>
-<area shape="rect" href="classPodModule_1_1PodManager.html#a94e4653f0149ca21f04de05274f5b83e" title="移除一个吊舱" alt="" coords="332,645,515,685"/>
-<area shape="poly" title=" " alt="" coords="600,440,597,443,581,467,574,491,575,539,576,563,575,587,566,611,549,635,533,647,516,656,513,651,530,643,545,631,562,609,569,586,571,563,569,539,569,490,576,465,593,440,596,436"/>
-<area shape="rect" href="classPodModule_1_1BaseSession.html#ae0ecc153fd1c2c2e5bca49c26e766eab" title="发送请求数据" alt="" coords="331,709,515,749"/>
-<area shape="poly" title=" " alt="" coords="600,440,597,443,577,475,570,507,570,539,575,571,580,602,580,634,571,667,549,699,534,711,517,720,515,716,531,707,545,696,566,665,574,634,574,603,570,571,565,539,564,507,572,473,593,440,596,436"/>
-<area shape="rect" href="classPodModule_1_1BaseStreamCapability.html#a551e80d9a1695e34ba256f205996ae1d" title="停止拉流" alt="" coords="300,773,547,813"/>
-<area shape="poly" title=" " alt="" coords="599,440,597,443,583,464,573,484,565,524,568,563,576,603,583,642,585,682,575,722,564,743,549,763,535,775,531,771,545,760,560,740,570,721,579,682,578,643,570,604,563,564,560,524,568,482,578,461,593,440,595,437"/>
+<area shape="poly" title=" " alt="" coords="581,448,512,432,513,427,582,442"/>
+<area shape="rect" href="classPodModule_1_1PinlingStatusCapability.html#a6a8f20810fd5219b07d5c7cc053d87c0" title="获取设备当前状态" alt="" coords="35,571,222,611"/>
+<area shape="poly" title=" " alt="" coords="581,464,518,464,446,468,373,478,301,495,260,511,220,531,157,573,154,568,218,526,257,506,299,489,372,472,446,463,517,459,581,459"/>
+<area shape="rect" href="classPodModule_1_1BaseLaserCapability.html#aadc88853154d883f393920da9b8c0913" title="执行一次激光测距" alt="" coords="306,504,541,544"/>
+<area shape="poly" title=" " alt="" coords="582,491,513,507,512,501,581,486"/>
+<area shape="rect" href="classPodModule_1_1DjiLaserCapability.html#aadc88853154d883f393920da9b8c0913" title="执行一次激光测距" alt="" coords="313,568,534,608"/>
+<area shape="poly" title=" " alt="" coords="604,496,596,501,582,515,573,529,564,544,548,558,525,570,522,565,545,554,560,541,569,527,578,512,593,497,601,491"/>
+<area shape="rect" href="classPodModule_1_1PinlingLaserCapability.html#aadc88853154d883f393920da9b8c0913" title="执行一次激光测距" alt="" coords="300,632,547,672"/>
+<area shape="poly" title=" " alt="" coords="601,497,597,500,585,515,578,530,574,561,569,591,562,607,548,622,531,634,528,630,545,618,557,604,564,590,569,560,573,529,580,513,593,497,597,493"/>
+<area shape="rect" href="classPodModule_1_1PinlingStatusCapability.html#a4db09892dabcf5a5e58efca23b517376" title="刷新状态缓存" alt="" coords="330,696,517,736"/>
+<area shape="poly" title=" " alt="" coords="600,497,597,500,581,524,574,546,575,593,576,616,574,639,566,663,548,686,519,706,516,701,545,682,561,660,569,638,571,616,569,593,569,546,576,521,593,497,596,494"/>
+<area shape="rect" href="classPodModule_1_1PodManager.html#a94e4653f0149ca21f04de05274f5b83e" title="移除一个吊舱" alt="" coords="332,760,515,800"/>
+<area shape="poly" title=" " alt="" coords="600,497,597,500,577,532,570,563,571,594,575,625,579,656,579,687,570,718,549,750,534,762,516,771,514,766,531,758,545,746,565,716,574,686,574,656,570,625,565,594,565,562,573,530,593,497,596,494"/>
+<area shape="rect" href="classPodModule_1_1BaseSession.html#ae0ecc153fd1c2c2e5bca49c26e766eab" title="发送请求数据" alt="" coords="331,824,515,864"/>
+<area shape="poly" title=" " alt="" coords="599,498,597,500,583,520,574,540,566,579,568,618,576,657,583,696,584,735,575,774,564,794,549,814,534,826,517,835,514,831,531,822,545,810,560,791,570,772,579,734,577,696,570,658,563,619,561,579,569,539,578,518,593,497,595,494"/>
+<area shape="rect" href="classPodModule_1_1BaseStreamCapability.html#a551e80d9a1695e34ba256f205996ae1d" title="停止拉流" alt="" coords="300,888,547,928"/>
+<area shape="poly" title=" " alt="" coords="599,497,597,500,581,525,570,549,564,573,562,596,566,643,576,689,586,736,589,782,586,806,579,830,567,854,549,878,535,890,532,886,545,874,562,851,574,828,581,805,584,782,581,736,571,690,561,644,556,596,559,572,565,547,576,522,593,497,595,494"/>
 <area shape="rect" href="classPodModule_1_1BaseSession.html#a036b23a445923f97ef68c9d542d4e76d" title=" " alt="" coords="37,325,221,365"/>
 <area shape="poly" title=" " alt="" coords="318,348,221,348,221,343,318,343"/>
-<area shape="rect" href="classPodModule_1_1BaseSession.html#ad5a46d08487109f9d260fa447e9f5a50" title="发送请求并等待响应（请求&#45;应答模式）" alt="" coords="37,709,221,749"/>
-<area shape="poly" title=" " alt="" coords="318,732,221,732,221,727,318,727"/>
-<area shape="rect" href="classPodModule_1_1BaseStreamCapability.html#aa33081145fc1809e2ee579b84b8e23ba" title=" " alt="" coords="5,773,252,813"/>
-<area shape="poly" title=" " alt="" coords="286,796,252,796,252,791,286,791"/>
+<area shape="poly" title=" " alt="" coords="320,694,299,686,223,650,160,613,163,609,225,645,301,682,322,689"/>
+<area shape="rect" href="classPodModule_1_1BaseSession.html#ad5a46d08487109f9d260fa447e9f5a50" title="发送请求并等待响应（请求&#45;应答模式）" alt="" coords="37,824,221,864"/>
+<area shape="poly" title=" " alt="" coords="318,847,221,847,221,841,318,841"/>
+<area shape="rect" href="classPodModule_1_1BaseStreamCapability.html#aa33081145fc1809e2ee579b84b8e23ba" title=" " alt="" coords="5,888,252,928"/>
+<area shape="poly" title=" " alt="" coords="286,911,252,911,252,905,286,905"/>
 </map>
 </div>
 
