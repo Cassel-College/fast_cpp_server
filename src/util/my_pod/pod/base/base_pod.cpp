@@ -14,6 +14,8 @@ BasePod::BasePod(const PodInfo& info) : pod_info_(info) {
 }
 
 BasePod::~BasePod() {
+    // 确保监控线程在成员析构前停止，避免悬空指针
+    monitor_.stop();
     MYLOG_INFO("[吊舱] BasePod 析构: {}", pod_info_.pod_id);
 }
 
@@ -141,6 +143,13 @@ bool BasePod::addCapability(CapabilityType type, std::shared_ptr<ICapability> ca
         return false;
     }
 
+    // 检查能力是否被配置为启用
+    if (!isCapabilityEnabled(type)) {
+        MYLOG_INFO("[吊舱] {} 能力 {} 未启用，跳过注册",
+                    pod_info_.pod_id, capabilityTypeToString(type));
+        return false;
+    }
+
     // 自动关联 Pod 和 Session
     capability->attachPod(this);
     if (session_) {
@@ -156,6 +165,37 @@ bool BasePod::addCapability(CapabilityType type, std::shared_ptr<ICapability> ca
 
     // 注册到注册表
     return capability_registry_.registerCapability(type, capability);
+}
+
+void BasePod::setEnabledCapabilities(const std::set<CapabilityType>& enabled) {
+    enabled_capabilities_ = enabled;
+    MYLOG_INFO("[吊舱] {} 设置启用能力: {} 个", pod_info_.pod_id, enabled.size());
+}
+
+bool BasePod::isCapabilityEnabled(CapabilityType type) const {
+    // 空集合表示全部允许（向后兼容）
+    if (enabled_capabilities_.empty()) return true;
+    return enabled_capabilities_.count(type) > 0;
+}
+
+// ==================== 后台监控 ====================
+
+PodRuntimeStatus BasePod::getRuntimeStatus() const {
+    return monitor_.getRuntimeStatus();
+}
+
+void BasePod::startMonitor(const PodMonitorConfig& config) {
+    MYLOG_INFO("[吊舱] {} 启动后台监控", pod_info_.pod_id);
+    monitor_.start(this, config);
+}
+
+void BasePod::stopMonitor() {
+    MYLOG_INFO("[吊舱] {} 停止后台监控", pod_info_.pod_id);
+    monitor_.stop();
+}
+
+bool BasePod::isMonitorRunning() const {
+    return monitor_.isRunning();
 }
 
 } // namespace PodModule

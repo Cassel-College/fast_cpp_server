@@ -33,4 +33,17 @@ enum class CapabilityType : uint16_t {
  */
 std::string capabilityTypeToString(CapabilityType type);
 
+/**
+ * @brief 将能力类型枚举转为稳定英文标识
+ */
+std::string capabilityTypeToKey(CapabilityType type);
+
+/**
+ * @brief 从字符串解析能力类型
+ * @param value 支持英文标识、枚举名和中文名称
+ * @param type 输出能力类型
+ * @return 解析成功返回 true
+ */
+bool capabilityTypeFromString(const std::string& value, CapabilityType& type);
+
 } // namespace PodModule

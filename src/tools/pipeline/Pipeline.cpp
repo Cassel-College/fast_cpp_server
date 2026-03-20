@@ -560,6 +560,7 @@ void Pipeline::LaunchPodManager(const nlohmann::json& args) {
             return;
         }
         MYLOG_INFO("* 模块: {}, 状态: {}, 吊舱数量: {}", module_name, "初始化成功", manager.size());
+        // manager.Start();
     } catch (const std::exception& e) {
         MYLOG_ERROR("* 模块: {}, 捕获异常: {}", module_name, e.what());
     }
