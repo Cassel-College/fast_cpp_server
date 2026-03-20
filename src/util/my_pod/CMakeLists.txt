@@ -25,6 +25,7 @@ if (BUILD_MY_POD)
         ${PROJECT_SOURCE_DIR}/src/util/my_pod/session/pinling
         ${PROJECT_SOURCE_DIR}/src/util/my_pod/registry
         ${PROJECT_SOURCE_DIR}/src/util/my_pod/manager
+        ${PROJECT_SOURCE_DIR}/src/util/my_pod/monitor
         ${PROJECT_SOURCE_DIR}/src/util/my_pod/utils
     )
 
@@ -38,6 +39,7 @@ if (BUILD_MY_POD)
     add_library(my_pod STATIC ${MY_POD_SOURCES})
     target_include_directories(my_pod PUBLIC ${MY_POD_INCLUDE_DIRECTORIES})
     target_link_libraries(my_pod PUBLIC mylog)
+    target_link_libraries(my_pod PUBLIC my_tools)
     target_link_libraries(my_pod PUBLIC nlohmann_json::nlohmann_json)
 
     print_colored_message("Building my_pod library over." COLOR yellow)

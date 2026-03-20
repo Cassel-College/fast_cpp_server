@@ -18,7 +18,7 @@ namespace PodModule {
 enum class PodVendor : uint8_t {
     UNKNOWN = 0,    // 未知厂商
     DJI     = 1,    // 大疆
-    PINLING = 2,    // 品凌
+    PINLING = 2,    // PINLING
 };
 
 /**

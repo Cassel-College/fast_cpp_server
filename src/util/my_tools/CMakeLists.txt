@@ -19,6 +19,7 @@ if (BUILD_MY_TOOLS)
     target_include_directories(my_tools PUBLIC ${MY_TOOLS_INCLUDE_DIRECTORIES})
 
     target_link_libraries(my_tools PUBLIC pthread)
+    target_link_libraries(my_tools PUBLIC cpr::cpr)
     target_link_libraries(my_tools PUBLIC mylog)
     target_link_libraries(my_tools PUBLIC myconfig)
 

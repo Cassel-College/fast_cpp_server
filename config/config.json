@@ -16,16 +16,29 @@
             "c": 1
         }
     },
-    "pipeline3": {
+    "pipeline1": {
         "execute_node_number": 1,
         "executes": {
-            "0": {
+            "1": {
                 "model_args": {
-                    "target_name": "fast_cpp_server",
-                    "target_pid_": 0,
-                    "target_cmdline_regex_": "sudo ./bin/fast_cpp_server -c /home/peng/Code/fast_cpp_server/config/config.ini"
+                    "id": "serial0",
+                    "enabled": true,
+                    "device": "/dev/ttyUSB0",
+                    "baud_rate": 115200,
+                    "data_bits": 8,
+                    "stop_bits": 1,
+                    "parity": "none",
+                    "flow_control": "none",
+                    "read_mode": "blocking",
+                    "timeout_ms": 1000,
+                    "vmin": 0,
+                    "vtime": 10,
+                    "raw_mode": true,
+                    "dtr_rts": "auto",
+                    "mtu": 512,
+                    "description": "飞控串口，连接外设飞控，用于模块间消息通信"
                 },
-                "model_name": "soft_healthy_monitor"
+                "model_name": "fly_control"
             }
         }
     },
@@ -72,6 +85,7 @@
                     }
                 },
                 "model_name": "MQTTBroker",
+                "enable": false,
                 "step_time_interval": 5
             },
             "1": {
@@ -85,6 +99,7 @@
                    "reconnect": { "min_sec":2, "max_sec":32 }
                  },
                 "model_name": "mqtt_comm",
+                "enable": false,
                 "step_time_interval": 5
             },
             "2": {
@@ -93,6 +108,7 @@
                     "simple_json4log": true
                 },
                 "model_name": "heartbeat",
+                "enable": false,
                 "step_time_interval": 2
             },
             "3": {
@@ -167,21 +183,103 @@
                         }
                     ]
                 },
-                "model_name": "edge"
+                "model_name": "edge",
+                "enable": false
             },
             "4": {
-                "model_args": {
-                    "port": 9999
-                },
-                "model_name": "rest_api"
-            },
-            "5": {
                  "model_args": {
                     "target_name": "fast_cpp_server",
                     "target_pid_": 0,
                     "target_cmdline_regex_": "sudo ./bin/fast_cpp_server -c /home/peng/Code/fast_cpp_server/config/config.ini"
                 },
-                "model_name": "soft_healthy_monitor_001"
+                "model_name": "soft_healthy_monitor",
+                "enable": false
+            },
+            "5": {
+                "model_args": {
+                    "id": "serial0",
+                    "enabled": true,
+                    "device": "/dev/ttyUSB0",
+                    "baud_rate": 115200,
+                    "data_bits": 8,
+                    "stop_bits": 1,
+                    "parity": "none",
+                    "flow_control": "none",
+                    "read_mode": "blocking",
+                    "timeout_ms": 1000,
+                    "vmin": 0,
+                    "vtime": 10,
+                    "raw_mode": true,
+                    "dtr_rts": "auto",
+                    "mtu": 512,
+                    "description": "飞控串口，连接外设飞控，用于模块间消息通信"
+                },
+                "model_name": "fly_control",
+                "enable": false
+            },
+            "6": {
+                "model_args": {
+                    "pod_count": 1,
+                    "pod_args": {
+                        "pod_001": {
+                            "name": "pinling_pod_001",
+                            "type": "pinling",
+                            "ip": "192.168.2.119",
+                            "port": 2000,
+                            "rtsp_url": "rtsp://192.168.2.119",
+                            "monitor": {
+                                "poll_interval_ms": 500,
+                                "status_interval_ms": 3000,
+                                "ptz_interval_ms": 1000,
+                                "online_window_size": 5,
+                                "online_threshold": 3,
+                                "enable_laser_poll": true,
+                                "auto_start": true
+                            },
+                            "capability": {
+                                "STATUS": {
+                                    "open": "enable",
+                                    "description": "吊舱状态监测，定期获取吊舱状态信息，如在线状态、云台位置、激光状态等，并发布到MQTT主题"
+                                },
+                                "HEARTBEAT": {
+                                    "open": "enable",
+                                    "description": "吊舱心跳检测，定期发送心跳信号以确保吊舱在线"
+                                },
+                                "PTZ": {
+                                    "open": "enable",
+                                    "description": "吊舱云台控制能力（Pan-Tilt-Zoom）"
+                                },
+                                "LASER": {
+                                    "open": "unable",
+                                    "description": "吊舱激光测距能力"
+                                },
+                                "STREAM": {
+                                    "open": "unable",
+                                    "description": "吊舱流媒体能力"
+                                },
+                                "IMAGE": {
+                                    "open": "unable",
+                                    "description": "吊舱图像处理能力"
+                                },
+                                "CENTER_MEASURE": {
+                                    "open": "unable",
+                                    "description": "吊舱中心测量能力"
+                                }
+                            },
+                            "description": "PINLING吊舱,提供视频流和云台控制"
+                        }
+                    }
+                },
+                "model_name": "pod",
+                "enable": true,
+                "step_time_interval": 2
+            },
+            "7": {
+                "model_args": {
+                    "port": 9999
+                },
+                "model_name": "rest_api",
+                "enable": true
             }
         }
     }

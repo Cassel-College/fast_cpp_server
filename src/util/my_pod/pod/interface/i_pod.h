@@ -17,6 +17,7 @@
 #include <string>
 #include <memory>
 #include <vector>
+#include <set>
 
 namespace PodModule {
 
@@ -106,6 +107,31 @@ public:
      * 由厂商 Pod 覆盖实现，负责创建并注册该厂商支持的所有能力。
      */
     virtual PodResult<void> initializeCapabilities() = 0;
+
+    // ==================== 能力启用配置 ====================
+
+    /** @brief 设置允许启用的能力集合（空集合=全部允许） */
+    virtual void setEnabledCapabilities(const std::set<CapabilityType>& enabled) = 0;
+
+    // ==================== 后台监控 ====================
+
+    /**
+     * @brief 获取运行时状态快照
+     * 
+     * 返回由 PodMonitor 后台线程聚合的各能力数据，
+     * 包括在线状态（滑动窗口判定）、云台姿态、激光、流媒体等。
+     * 未启动监控时返回默认值。
+     */
+    virtual PodRuntimeStatus getRuntimeStatus() const = 0;
+
+    /** @brief 启动后台监控线程 */
+    virtual void startMonitor(const PodMonitorConfig& config = {}) = 0;
+
+    /** @brief 停止后台监控线程 */
+    virtual void stopMonitor() = 0;
+
+    /** @brief 监控线程是否运行中 */
+    virtual bool isMonitorRunning() const = 0;
 };
 
 } // namespace PodModule

@@ -10,9 +10,8 @@
 #include "capability/interface/i_ptz_capability.h"
 #include "capability/interface/i_heartbeat_capability.h"
 #include "capability/interface/i_laser_capability.h"
-#include "capability/interface/i_stream_capability.h"
-#include "capability/interface/i_image_capability.h"
-#include "capability/interface/i_center_measure_capability.h"
+#include <thread>
+#include <chrono>
 
 using namespace PodModule;
 
@@ -95,6 +94,20 @@ protected:
     }
 };
 
+namespace {
+
+std::shared_ptr<PinlingPod> createPinlingPodWithIp(const std::string& ip_address) {
+    PodInfo info;
+    info.pod_id = "pinling_status_test";
+    info.pod_name = "品凌状态测试吊舱";
+    info.vendor = PodVendor::PINLING;
+    info.ip_address = ip_address;
+    info.port = 9090;
+    return std::make_shared<PinlingPod>(info);
+}
+
+} // namespace
+
 TEST_F(PinlingPodTest, BasicInfo) {
     EXPECT_EQ(pod_->getPodId(), "pinling_test_001");
     EXPECT_EQ(pod_->getPodInfo().vendor, PodVendor::PINLING);
@@ -121,4 +134,165 @@ TEST_F(PinlingPodTest, CapabilityTypeCast) {
 
     auto ptz = pod_->getCapabilityAs<IPtzCapability>(CapabilityType::PTZ);
     ASSERT_NE(ptz, nullptr);
+}
+
+TEST(PinlingStatusCapabilityTest, ReportsConnectedWhenIpReachable) {
+    auto pod = createPinlingPodWithIp("127.0.0.1");
+    ASSERT_TRUE(pod->initializeCapabilities().isSuccess());
+
+    auto status = pod->getCapabilityAs<IStatusCapability>(CapabilityType::STATUS);
+    ASSERT_NE(status, nullptr);
+
+    auto status_result = status->getStatus();
+    ASSERT_TRUE(status_result.isSuccess());
+    ASSERT_TRUE(status_result.data.has_value());
+    EXPECT_EQ(status_result.data->state, PodState::CONNECTED);
+    EXPECT_TRUE(status_result.data->error_msg.empty());
+}
+
+TEST(PinlingStatusCapabilityTest, ReportsDisconnectedWhenIpUnreachable) {
+    auto pod = createPinlingPodWithIp("203.0.113.1");
+    ASSERT_TRUE(pod->initializeCapabilities().isSuccess());
+
+    auto status = pod->getCapabilityAs<IStatusCapability>(CapabilityType::STATUS);
+    ASSERT_NE(status, nullptr);
+
+    auto status_result = status->getStatus();
+    ASSERT_TRUE(status_result.isSuccess());
+    ASSERT_TRUE(status_result.data.has_value());
+    EXPECT_EQ(status_result.data->state, PodState::DISCONNECTED);
+    EXPECT_FALSE(status_result.data->error_msg.empty());
+}
+
+// ============ 能力启用配置测试 ============
+
+TEST(CapabilityEnableTest, OnlyRegistersEnabledCapabilities) {
+    auto pod = createPinlingPodWithIp("127.0.0.1");
+
+    // 只启用 STATUS 和 PTZ
+    std::set<CapabilityType> enabled = {CapabilityType::STATUS, CapabilityType::PTZ};
+    pod->setEnabledCapabilities(enabled);
+    pod->initializeCapabilities();
+
+    // 启用的能力应存在
+    EXPECT_TRUE(pod->hasCapability(CapabilityType::STATUS));
+    EXPECT_TRUE(pod->hasCapability(CapabilityType::PTZ));
+
+    // 未启用的能力不应注册
+    EXPECT_FALSE(pod->hasCapability(CapabilityType::HEARTBEAT));
+    EXPECT_FALSE(pod->hasCapability(CapabilityType::LASER));
+    EXPECT_FALSE(pod->hasCapability(CapabilityType::STREAM));
+    EXPECT_FALSE(pod->hasCapability(CapabilityType::IMAGE));
+    EXPECT_FALSE(pod->hasCapability(CapabilityType::CENTER_MEASURE));
+
+    // 只有 2 个能力
+    EXPECT_EQ(pod->listCapabilities().size(), 2u);
+}
+
+TEST(CapabilityEnableTest, EmptySetAllowsAllCapabilities) {
+    auto pod = createPinlingPodWithIp("127.0.0.1");
+
+    // 空集合 = 全部允许（向后兼容）
+    pod->setEnabledCapabilities({});
+    pod->initializeCapabilities();
+
+    EXPECT_EQ(pod->listCapabilities().size(), 7u);
+}
+
+// ============ PodMonitor 测试 ============
+
+TEST(PodMonitorTest, DefaultRuntimeStatusIsOffline) {
+    auto pod = createPinlingPodWithIp("127.0.0.1");
+    ASSERT_TRUE(pod->initializeCapabilities().isSuccess());
+
+    // 未启动监控时，运行时状态为默认值
+    auto rt = pod->getRuntimeStatus();
+    EXPECT_FALSE(rt.is_online);
+    EXPECT_EQ(rt.pod_status.state, PodState::DISCONNECTED);
+    EXPECT_EQ(rt.last_update_ms, 0u);
+}
+
+TEST(PodMonitorTest, StartAndStopMonitor) {
+    auto pod = createPinlingPodWithIp("127.0.0.1");
+    ASSERT_TRUE(pod->initializeCapabilities().isSuccess());
+
+    EXPECT_FALSE(pod->isMonitorRunning());
+
+    PodMonitorConfig cfg;
+    cfg.poll_interval_ms = 200;
+    cfg.status_interval_ms = 100;
+    pod->startMonitor(cfg);
+    EXPECT_TRUE(pod->isMonitorRunning());
+
+    pod->stopMonitor();
+    EXPECT_FALSE(pod->isMonitorRunning());
+}
+
+TEST(PodMonitorTest, MonitorDetectsOnlineAfterPolling) {
+    auto pod = createPinlingPodWithIp("127.0.0.1");
+    ASSERT_TRUE(pod->initializeCapabilities().isSuccess());
+
+    PodMonitorConfig cfg;
+    cfg.poll_interval_ms   = 200;
+    cfg.status_interval_ms = 200;
+    cfg.online_window_size = 2;
+    cfg.online_threshold   = 2;
+    cfg.enable_ptz_poll    = false;
+    cfg.enable_laser_poll  = false;
+    cfg.enable_stream_poll = false;
+
+    pod->startMonitor(cfg);
+
+    // 等待足够轮次让滑动窗口填满（2次成功 ping 127.0.0.1）
+    std::this_thread::sleep_for(std::chrono::milliseconds(1500));
+
+    auto rt = pod->getRuntimeStatus();
+    EXPECT_TRUE(rt.is_online);
+    EXPECT_EQ(rt.pod_status.state, PodState::CONNECTED);
+    EXPECT_GT(rt.last_update_ms, 0u);
+
+    pod->stopMonitor();
+}
+
+TEST(PodMonitorTest, MonitorDetectsOfflineForUnreachableIp) {
+    auto pod = createPinlingPodWithIp("203.0.113.1");
+    ASSERT_TRUE(pod->initializeCapabilities().isSuccess());
+
+    PodMonitorConfig cfg;
+    cfg.poll_interval_ms   = 200;
+    cfg.status_interval_ms = 200;
+    cfg.online_window_size = 2;
+    cfg.online_threshold   = 2;
+    cfg.enable_ptz_poll    = false;
+    cfg.enable_laser_poll  = false;
+    cfg.enable_stream_poll = false;
+
+    pod->startMonitor(cfg);
+
+    // 等待至少 2 轮 ping（不可达 IP ~1s/次）
+    std::this_thread::sleep_for(std::chrono::milliseconds(3000));
+
+    auto rt = pod->getRuntimeStatus();
+    EXPECT_FALSE(rt.is_online);
+    EXPECT_EQ(rt.pod_status.state, PodState::DISCONNECTED);
+
+    pod->stopMonitor();
+}
+
+TEST(PodMonitorTest, DestructorStopsMonitorGracefully) {
+    // Pod 析构时 PodMonitor 应自动停止，不崩溃
+    {
+        auto pod = createPinlingPodWithIp("127.0.0.1");
+        pod->initializeCapabilities();
+
+        PodMonitorConfig cfg;
+        cfg.poll_interval_ms   = 200;
+        cfg.status_interval_ms = 200;
+        pod->startMonitor(cfg);
+
+        std::this_thread::sleep_for(std::chrono::milliseconds(500));
+        // pod 超出作用域，析构时自动 stop
+    }
+    // 到达这里说明没有崩溃/死锁
+    SUCCEED();
 }

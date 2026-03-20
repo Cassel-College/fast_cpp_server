@@ -134,3 +134,24 @@ TEST(CapabilityTypesTest, CapabilityTypeToString) {
     EXPECT_EQ(capabilityTypeToString(CapabilityType::IMAGE), "图像抓拍");
     EXPECT_EQ(capabilityTypeToString(CapabilityType::CENTER_MEASURE), "中心点测量");
 }
+
+TEST(CapabilityTypesTest, CapabilityTypeToKey) {
+    EXPECT_EQ(capabilityTypeToKey(CapabilityType::STATUS), "STATUS");
+    EXPECT_EQ(capabilityTypeToKey(CapabilityType::PTZ), "PTZ");
+    EXPECT_EQ(capabilityTypeToKey(CapabilityType::CENTER_MEASURE), "CENTER_MEASURE");
+}
+
+TEST(CapabilityTypesTest, CapabilityTypeFromString) {
+    CapabilityType type = CapabilityType::UNKNOWN;
+
+    EXPECT_TRUE(capabilityTypeFromString("PTZ", type));
+    EXPECT_EQ(type, CapabilityType::PTZ);
+
+    EXPECT_TRUE(capabilityTypeFromString("center_measure", type));
+    EXPECT_EQ(type, CapabilityType::CENTER_MEASURE);
+
+    EXPECT_TRUE(capabilityTypeFromString("流媒体", type));
+    EXPECT_EQ(type, CapabilityType::STREAM);
+
+    EXPECT_FALSE(capabilityTypeFromString("not_supported", type));
+}

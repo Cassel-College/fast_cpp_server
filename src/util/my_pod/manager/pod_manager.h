@@ -11,12 +11,14 @@
 #include "../registry/pod_registry.h"
 #include "../pod/interface/i_pod.h"
 #include "../common/pod_result.h"
+#include "../common/capability_types.h"
 #include <nlohmann/json.hpp>
 #include <memory>
 #include <string>
 #include <vector>
 #include <mutex>
 #include <atomic>
+#include <set>
 
 namespace PodModule {
 
@@ -112,6 +114,12 @@ private:
 
     /** @brief 根据厂商类型和配置创建 Pod 实例 */
     std::shared_ptr<IPod> createPod(const std::string& pod_id, const nlohmann::json& pod_cfg);
+
+    /** @brief 从 JSON 解析 PodMonitorConfig，缺失字段用默认值 */
+    static PodMonitorConfig parseMonitorConfig(const nlohmann::json& pod_cfg);
+
+    /** @brief 从 JSON 解析 capability 启用列表 */
+    static std::set<CapabilityType> parseEnabledCapabilities(const nlohmann::json& pod_cfg);
 
     PodRegistry registry_;
     nlohmann::json init_config_;

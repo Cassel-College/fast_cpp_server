@@ -1,6 +1,7 @@
 #pragma once
 
 #include "BaseApiController.hpp"
+#include "dto/pod/PodDto.hpp"
 #include "oatpp/core/macro/codegen.hpp"
 #include "oatpp/web/server/api/ApiController.hpp"
 
@@ -33,10 +34,20 @@ public:
     ENDPOINT_INFO(getPodDetail) {
         info->summary = "获取指定吊舱详情";
         info->description = "根据 body 中的 pod_id 获取单个吊舱的详细信息和能力列表。";
+        info->addConsumes<oatpp::Object<my_api::dto::PodIdDto>>("application/json");
         info->addResponse<oatpp::String>(Status::CODE_200, "application/json");
         info->addResponse<oatpp::String>(Status::CODE_404, "application/json");
     }
-    ENDPOINT("POST", "/v1/pod/detail", getPodDetail, BODY_STRING(oatpp::String, body));
+    ENDPOINT("POST", "/v1/pod/detail", getPodDetail, BODY_DTO(oatpp::Object<my_api::dto::PodIdDto>, podDto));
+
+    ENDPOINT_INFO(getPodCapability) {
+        info->summary = "查询指定吊舱能力";
+        info->description = "根据 body 中的 pod_id 和 capability_type 查询指定吊舱是否支持某项能力。";
+        info->addConsumes<oatpp::Object<my_api::dto::PodCapabilityQueryDto>>("application/json");
+        info->addResponse<oatpp::String>(Status::CODE_200, "application/json");
+        info->addResponse<oatpp::String>(Status::CODE_404, "application/json");
+    }
+    ENDPOINT("POST", "/v1/pod/capability", getPodCapability, BODY_DTO(oatpp::Object<my_api::dto::PodCapabilityQueryDto>, queryDto));
 
     ENDPOINT_INFO(getPodConfig) {
         info->summary = "获取吊舱模块初始化配置";
@@ -50,18 +61,20 @@ public:
     ENDPOINT_INFO(connectPod) {
         info->summary = "连接指定吊舱";
         info->description = "通过 body 中的 pod_id 对吊舱发起连接。";
+        info->addConsumes<oatpp::Object<my_api::dto::PodIdDto>>("application/json");
         info->addResponse<oatpp::String>(Status::CODE_200, "application/json");
         info->addResponse<oatpp::String>(Status::CODE_404, "application/json");
     }
-    ENDPOINT("POST", "/v1/pod/connect", connectPod, BODY_STRING(oatpp::String, body));
+    ENDPOINT("POST", "/v1/pod/connect", connectPod, BODY_DTO(oatpp::Object<my_api::dto::PodIdDto>, podDto));
 
     ENDPOINT_INFO(disconnectPod) {
         info->summary = "断开指定吊舱";
         info->description = "通过 body 中的 pod_id 对吊舱执行断开操作。";
+        info->addConsumes<oatpp::Object<my_api::dto::PodIdDto>>("application/json");
         info->addResponse<oatpp::String>(Status::CODE_200, "application/json");
         info->addResponse<oatpp::String>(Status::CODE_404, "application/json");
     }
-    ENDPOINT("POST", "/v1/pod/disconnect", disconnectPod, BODY_STRING(oatpp::String, body));
+    ENDPOINT("POST", "/v1/pod/disconnect", disconnectPod, BODY_DTO(oatpp::Object<my_api::dto::PodIdDto>, podDto));
 
     ENDPOINT_INFO(listPodIds) {
         info->summary = "列出所有吊舱ID";

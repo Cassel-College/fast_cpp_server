@@ -1,6 +1,6 @@
 /**
  * @file pinling_pod.cpp
- * @brief 品凌吊舱实现
+ * @brief PINLING吊舱实现
  */
 
 #include "pinling_pod.h"
@@ -17,18 +17,18 @@
 namespace PodModule {
 
 PinlingPod::PinlingPod(const PodInfo& info) : BasePod(info) {
-    MYLOG_INFO("[品凌吊舱] PinlingPod 构造: {}", info.pod_id);
-    // 初始化品凌 Session
+    MYLOG_INFO("[PINLING吊舱] PinlingPod 构造: {}", info.pod_id);
+    // 初始化PINLING Session
     auto session = std::make_shared<PinlingSession>();
     setSession(session);
 }
 
 PinlingPod::~PinlingPod() {
-    MYLOG_INFO("[品凌吊舱] PinlingPod 析构: {}", pod_info_.pod_id);
+    MYLOG_INFO("[PINLING吊舱] PinlingPod 析构: {}", pod_info_.pod_id);
 }
 
 PodResult<void> PinlingPod::initializeCapabilities() {
-    MYLOG_INFO("[品凌吊舱] {} 开始装配品凌能力", pod_info_.pod_id);
+    MYLOG_INFO("[PINLING吊舱] {} 开始装配PINLING能力", pod_info_.pod_id);
 
     // 注册状态查询能力
     addCapability(CapabilityType::STATUS,
@@ -58,9 +58,9 @@ PodResult<void> PinlingPod::initializeCapabilities() {
     addCapability(CapabilityType::CENTER_MEASURE,
                   std::make_shared<PinlingCenterMeasureCapability>());
 
-    MYLOG_INFO("[品凌吊舱] {} 能力装配完成，共 {} 个能力",
+    MYLOG_INFO("[PINLING吊舱] {} 能力装配完成，共 {} 个能力",
                pod_info_.pod_id, capability_registry_.size());
-    return PodResult<void>::success("品凌能力装配完成");
+    return PodResult<void>::success("PINLING能力装配完成");
 }
 
 } // namespace PodModule

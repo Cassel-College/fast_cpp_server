@@ -7,7 +7,6 @@ list(REMOVE_ITEM SOURCES ${PROJECT_SOURCE_DIR}/src/main.cpp)
 file(GLOB_RECURSE MYLIB_SOURCES
     ${PROJECT_SOURCE_DIR}/src/tools/simple_tcp_client/*.cpp
     ${PROJECT_SOURCE_DIR}/src/tools/thread_safe_buffer/*.cpp
-    ${PROJECT_SOURCE_DIR}/src/tools/ping_tools/*.cpp
     ${PROJECT_SOURCE_DIR}/src/tools/example/*.cpp
     ${PROJECT_SOURCE_DIR}/src/tools/thread_safe_queue/*.cpp
     ${PROJECT_SOURCE_DIR}/src/tools/service_guard/*.cpp
@@ -81,7 +80,6 @@ add_library(mylib STATIC ${MYLIB_SOURCES})
 set(MYLIB_INCLUDE_DIRECTORIES
     ${PROJECT_SOURCE_DIR}/src/tools/simple_tcp_client
     ${PROJECT_SOURCE_DIR}/src/tools/thread_safe_buffer
-    ${PROJECT_SOURCE_DIR}/src/tools/ping_tools
     ${PROJECT_SOURCE_DIR}/src/tools/example
     ${PROJECT_SOURCE_DIR}/src/tools/thread_safe_queue
     ${PROJECT_SOURCE_DIR}/src/tools/service_guard
@@ -136,7 +134,6 @@ target_link_libraries(mylib PUBLIC my_serial)
 target_link_libraries(mylib PUBLIC my_fly_control)
 target_link_libraries(mylib PUBLIC myproto)
 target_link_libraries(mylib PUBLIC my_mavsdk)
-target_link_libraries(mylib PUBLIC cpr::cpr)
 target_link_libraries(mylib PUBLIC libzmq)
 target_link_libraries(mylib PUBLIC pthread)
 target_link_libraries(mylib PRIVATE my_soft_healthy)

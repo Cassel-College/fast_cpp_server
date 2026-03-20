@@ -19,7 +19,9 @@
 #include "../interface/i_pod.h"
 #include "../../registry/capability_registry.h"
 #include "../../session/interface/i_session.h"
+#include "../../monitor/pod_monitor.h"
 #include <memory>
+#include <set>
 
 namespace PodModule {
 
@@ -54,6 +56,17 @@ public:
 
     PodResult<void> initializeCapabilities() override;
 
+    // ==================== 能力启用配置 ====================
+
+    void setEnabledCapabilities(const std::set<CapabilityType>& enabled) override;
+
+    // ==================== 后台监控 ====================
+
+    PodRuntimeStatus getRuntimeStatus() const override;
+    void startMonitor(const PodMonitorConfig& config = {}) override;
+    void stopMonitor() override;
+    bool isMonitorRunning() const override;
+
 protected:
     /** @brief 设置设备状态 */
     void setState(PodState state);
@@ -66,10 +79,15 @@ protected:
      */
     bool addCapability(CapabilityType type, std::shared_ptr<ICapability> capability);
 
-    PodInfo             pod_info_;           // 设备基础信息
-    PodState            state_ = PodState::DISCONNECTED;  // 当前设备状态
-    std::shared_ptr<ISession> session_;      // 会话对象
-    CapabilityRegistry  capability_registry_; // 能力注册表
+    /** @brief 检查某能力是否被配置为启用 */
+    bool isCapabilityEnabled(CapabilityType type) const;
+
+    PodInfo             pod_info_;                          // 设备基础信息
+    PodState            state_ = PodState::DISCONNECTED;    // 当前设备状态
+    std::shared_ptr<ISession> session_;                     // 会话对象
+    CapabilityRegistry  capability_registry_;               // 能力注册表
+    PodMonitor          monitor_;                           // 后台监控器
+    std::set<CapabilityType> enabled_capabilities_;         // 配置启用的能力集合（空=全部）
 };
 
 } // namespace PodModule
