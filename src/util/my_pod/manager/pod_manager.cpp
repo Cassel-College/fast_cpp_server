@@ -43,10 +43,16 @@ bool PodManager::Init(const nlohmann::json& config) {
 
         auto pod = createPod(pod_id, pod_cfg);
         if (pod) {
-            // 解析能力启用配置，设置后再装配能力
-            auto enabled_caps = parseEnabledCapabilities(pod_cfg);
-            pod->setEnabledCapabilities(enabled_caps);
-            pod->initializeCapabilities();
+            // 传递各能力的配置（含 init_args 等）
+            if (pod_cfg.contains("capability") && pod_cfg["capability"].is_object()) {
+                pod->setCapabilityConfigs(pod_cfg["capability"]);
+            }
+
+            // 连接吊舱（包括 SDK 初始化）
+            auto connect_result = pod->connect();
+            if (!connect_result.isSuccess()) {
+                MYLOG_WARN("[吊舱管理器] 吊舱连接失败: {} - {}", pod_id, connect_result.message);
+            }
 
             // 解析监控配置并按需自动启动
             auto monitor_cfg = parseMonitorConfig(pod_cfg);
@@ -174,6 +180,28 @@ PodResult<void> PodManager::disconnectPod(const std::string& pod_id) {
     return pod->disconnect();
 }
 
+void PodManager::ResetForTest() {
+    std::lock_guard<std::mutex> lock(mutex_);
+
+    auto pods = registry_.listPods();
+    for (const auto& pod : pods) {
+        if (!pod) {
+            continue;
+        }
+        if (pod->isMonitorRunning()) {
+            pod->stopMonitor();
+        }
+        if (pod->isConnected()) {
+            pod->disconnect();
+        }
+    }
+
+    registry_.clear();
+    init_config_.clear();
+    initialized_.store(false);
+    MYLOG_INFO("[吊舱管理器] ResetForTest 完成，已清空所有吊舱实例");
+}
+
 PodMonitorConfig PodManager::parseMonitorConfig(const nlohmann::json& pod_cfg) {
     PodMonitorConfig cfg;  // 所有字段已有默认值
 
@@ -215,37 +243,6 @@ PodMonitorConfig PodManager::parseMonitorConfig(const nlohmann::json& pod_cfg) {
     return cfg;
 }
 
-std::set<CapabilityType> PodManager::parseEnabledCapabilities(const nlohmann::json& pod_cfg) {
-    std::set<CapabilityType> enabled;
-
-    if (!pod_cfg.contains("capability") || !pod_cfg["capability"].is_object()) {
-        // 无 capability 配置，返回空集合 → BasePod 视为全部允许
-        return enabled;
-    }
-
-    const auto& caps = pod_cfg["capability"];
-    for (auto it = caps.begin(); it != caps.end(); ++it) {
-        const std::string& key = it.key();
-        const auto& val = it.value();
-
-        if (!val.is_object()) continue;
-
-        std::string open_val = val.value("open", "");
-        if (open_val != "enable") continue;
-
-        CapabilityType type;
-        if (capabilityTypeFromString(key, type)) {
-            enabled.insert(type);
-            MYLOG_DEBUG("[吊舱管理器] 能力 {} 已启用", key);
-        } else {
-            MYLOG_WARN("[吊舱管理器] 未识别的能力类型: {}", key);
-        }
-    }
-
-    MYLOG_INFO("[吊舱管理器] 从配置解析到 {} 个启用能力", enabled.size());
-    return enabled;
-}
-
 nlohmann::json PodManager::GetStatusSnapshot() const {
     std::lock_guard<std::mutex> lock(mutex_);
     nlohmann::json result = nlohmann::json::array();
@@ -270,12 +267,6 @@ nlohmann::json PodManager::GetStatusSnapshot() const {
             item["last_update_ms"] = rt.last_update_ms;
         }
 
-        // 列出已注册能力
-        nlohmann::json caps = nlohmann::json::array();
-        for (auto ct : pod->listCapabilities()) {
-            caps.push_back(capabilityTypeToString(ct));
-        }
-        item["capabilities"] = caps;
         result.push_back(item);
     }
     return result;

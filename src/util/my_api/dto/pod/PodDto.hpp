@@ -13,11 +13,13 @@ class PodIdDto : public oatpp::DTO {
     DTO_FIELD(String, pod_id);
 };
 
-class PodCapabilityQueryDto : public oatpp::DTO {
-    DTO_INIT(PodCapabilityQueryDto, DTO)
+class PodPtzPoseDto : public oatpp::DTO {
+    DTO_INIT(PodPtzPoseDto, DTO)
 
-    DTO_FIELD(String, pod_id);
-    DTO_FIELD(Any, capability_type);
+    DTO_FIELD(Float64, yaw);
+    DTO_FIELD(Float64, pitch);
+    DTO_FIELD(Float64, roll);
+    DTO_FIELD(Float64, zoom);
 };
 
 #include OATPP_CODEGEN_END(DTO)

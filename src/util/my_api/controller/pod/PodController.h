@@ -26,28 +26,19 @@ public:
 
     ENDPOINT_INFO(getPodStatus) {
         info->summary = "获取所有吊舱状态";
-        info->description = "返回所有已注册吊舱的状态摘要，包括连接状态、能力列表等。";
+        info->description = "返回所有已注册吊舱的状态摘要，包括连接状态、在线状态等。";
         info->addResponse<oatpp::String>(Status::CODE_200, "application/json");
     }
     ENDPOINT("GET", "/v1/pod/status", getPodStatus);
 
     ENDPOINT_INFO(getPodDetail) {
         info->summary = "获取指定吊舱详情";
-        info->description = "根据 body 中的 pod_id 获取单个吊舱的详细信息和能力列表。";
+        info->description = "根据 body 中的 pod_id 获取单个吊舱的详细信息。";
         info->addConsumes<oatpp::Object<my_api::dto::PodIdDto>>("application/json");
         info->addResponse<oatpp::String>(Status::CODE_200, "application/json");
         info->addResponse<oatpp::String>(Status::CODE_404, "application/json");
     }
     ENDPOINT("POST", "/v1/pod/detail", getPodDetail, BODY_DTO(oatpp::Object<my_api::dto::PodIdDto>, podDto));
-
-    ENDPOINT_INFO(getPodCapability) {
-        info->summary = "查询指定吊舱能力";
-        info->description = "根据 body 中的 pod_id 和 capability_type 查询指定吊舱是否支持某项能力。";
-        info->addConsumes<oatpp::Object<my_api::dto::PodCapabilityQueryDto>>("application/json");
-        info->addResponse<oatpp::String>(Status::CODE_200, "application/json");
-        info->addResponse<oatpp::String>(Status::CODE_404, "application/json");
-    }
-    ENDPOINT("POST", "/v1/pod/capability", getPodCapability, BODY_DTO(oatpp::Object<my_api::dto::PodCapabilityQueryDto>, queryDto));
 
     ENDPOINT_INFO(getPodConfig) {
         info->summary = "获取吊舱模块初始化配置";
@@ -55,6 +46,14 @@ public:
         info->addResponse<oatpp::String>(Status::CODE_200, "application/json");
     }
     ENDPOINT("GET", "/v1/pod/config", getPodConfig);
+
+    ENDPOINT_INFO(getPodPtzPose) {
+        info->summary = "获取指定吊舱云台姿态";
+        info->description = "通过路径参数中的 pod_id 获取指定吊舱当前云台姿态。";
+        info->addResponse<oatpp::String>(Status::CODE_200, "application/json");
+        info->addResponse<oatpp::String>(Status::CODE_404, "application/json");
+    }
+    ENDPOINT("GET", "/v1/pod/{pod_id}/ptz/pose", getPodPtzPose, PATH(String, pod_id));
 
     // ==================== 控制类接口 ====================
 
@@ -75,6 +74,17 @@ public:
         info->addResponse<oatpp::String>(Status::CODE_404, "application/json");
     }
     ENDPOINT("POST", "/v1/pod/disconnect", disconnectPod, BODY_DTO(oatpp::Object<my_api::dto::PodIdDto>, podDto));
+
+    ENDPOINT_INFO(setPodPtzPose) {
+        info->summary = "控制指定吊舱云台姿态";
+        info->description = "通过路径参数中的 pod_id 路由到指定吊舱，并使用 body 中的姿态参数控制云台。";
+        info->addConsumes<oatpp::Object<my_api::dto::PodPtzPoseDto>>("application/json");
+        info->addResponse<oatpp::String>(Status::CODE_200, "application/json");
+        info->addResponse<oatpp::String>(Status::CODE_404, "application/json");
+    }
+    ENDPOINT("POST", "/v1/pod/{pod_id}/ptz/pose", setPodPtzPose,
+             PATH(String, pod_id),
+             BODY_DTO(oatpp::Object<my_api::dto::PodPtzPoseDto>, poseDto));
 
     ENDPOINT_INFO(listPodIds) {
         info->summary = "列出所有吊舱ID";

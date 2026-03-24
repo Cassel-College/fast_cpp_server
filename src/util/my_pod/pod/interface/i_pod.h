@@ -3,135 +3,104 @@
 /**
  * @file i_pod.h
  * @brief 吊舱统一抽象接口
- * 
+ *
  * 定义所有吊舱设备的统一抽象接口。
- * BasePod 和厂商 Pod 都必须实现此接口。
+ * 所有能力方法（状态、心跳、PTZ、激光、流媒体、图像、中心测量）
+ * 直接作为 Pod 的虚方法，由 BasePod 提供默认占位实现，
+ * 厂商 Pod（DjiPod、PinlingPod）按需覆盖。
  */
 
 #include "../../common/pod_types.h"
 #include "../../common/pod_models.h"
 #include "../../common/pod_result.h"
 #include "../../common/capability_types.h"
-#include "../../capability/interface/i_capability.h"
 #include "../../session/interface/i_session.h"
+#include <nlohmann/json.hpp>
 #include <string>
 #include <memory>
-#include <vector>
-#include <set>
 
 namespace PodModule {
 
-/**
- * @brief 吊舱统一抽象接口
- * 
- * 所有吊舱设备的顶层接口，定义：
- * - 设备基础信息获取
- * - 连接/断开管理
- * - 状态查询
- * - 能力注册与查询
- * - Session 管理
- * - 能力装配入口
- */
 class IPod {
 public:
     virtual ~IPod() = default;
 
     // ==================== 设备基础信息 ====================
 
-    /** @brief 获取设备信息 */
     virtual PodInfo getPodInfo() const = 0;
-
-    /** @brief 获取设备唯一标识 */
     virtual std::string getPodId() const = 0;
-
-    /** @brief 获取设备名称 */
     virtual std::string getPodName() const = 0;
-
-    /** @brief 获取厂商 */
     virtual PodVendor getVendor() const = 0;
 
     // ==================== 连接管理 ====================
 
-    /** @brief 连接设备 */
     virtual PodResult<void> connect() = 0;
-
-    /** @brief 断开设备 */
     virtual PodResult<void> disconnect() = 0;
-
-    /** @brief 判断是否已连接 */
     virtual bool isConnected() const = 0;
-
-    /** @brief 获取设备当前状态 */
     virtual PodState getState() const = 0;
-
-    // ==================== 能力管理 ====================
-
-    /** @brief 注册一个能力 */
-    virtual bool registerCapability(CapabilityType type, std::shared_ptr<ICapability> capability) = 0;
-
-    /** @brief 查询某类型能力 */
-    virtual std::shared_ptr<ICapability> getCapability(CapabilityType type) const = 0;
-
-    /**
-     * @brief 模板方式查询具体能力接口
-     * 
-     * 使用方式：
-     *   auto ptz = pod->getCapabilityAs<IPtzCapability>(CapabilityType::PTZ);
-     */
-    template<typename T>
-    std::shared_ptr<T> getCapabilityAs(CapabilityType type) const {
-        auto cap = getCapability(type);
-        if (!cap) return nullptr;
-        return std::dynamic_pointer_cast<T>(cap);
-    }
-
-    /** @brief 判断是否拥有某能力 */
-    virtual bool hasCapability(CapabilityType type) const = 0;
-
-    /** @brief 列出所有已注册能力类型 */
-    virtual std::vector<CapabilityType> listCapabilities() const = 0;
 
     // ==================== Session 管理 ====================
 
-    /** @brief 设置会话 */
     virtual void setSession(std::shared_ptr<ISession> session) = 0;
-
-    /** @brief 获取会话 */
     virtual std::shared_ptr<ISession> getSession() const = 0;
 
-    // ==================== 初始化 ====================
+    // ==================== 配置 ====================
 
-    /**
-     * @brief 初始化能力装配
-     * 
-     * 由厂商 Pod 覆盖实现，负责创建并注册该厂商支持的所有能力。
-     */
-    virtual PodResult<void> initializeCapabilities() = 0;
-
-    // ==================== 能力启用配置 ====================
-
-    /** @brief 设置允许启用的能力集合（空集合=全部允许） */
-    virtual void setEnabledCapabilities(const std::set<CapabilityType>& enabled) = 0;
+    virtual void setCapabilityConfigs(const nlohmann::json& capability_section) = 0;
+    virtual nlohmann::json getCapabilityConfig(CapabilityType type) const = 0;
 
     // ==================== 后台监控 ====================
 
-    /**
-     * @brief 获取运行时状态快照
-     * 
-     * 返回由 PodMonitor 后台线程聚合的各能力数据，
-     * 包括在线状态（滑动窗口判定）、云台姿态、激光、流媒体等。
-     * 未启动监控时返回默认值。
-     */
     virtual PodRuntimeStatus getRuntimeStatus() const = 0;
-
-    /** @brief 启动后台监控线程 */
     virtual void startMonitor(const PodMonitorConfig& config = {}) = 0;
-
-    /** @brief 停止后台监控线程 */
     virtual void stopMonitor() = 0;
-
-    /** @brief 监控线程是否运行中 */
     virtual bool isMonitorRunning() const = 0;
+
+    // ==================== 状态查询 ====================
+
+    virtual PodResult<PodStatus> getDeviceStatus() = 0;
+    virtual PodResult<void> refreshDeviceStatus() = 0;
+
+    // ==================== 心跳检测 ====================
+
+    virtual PodResult<bool> sendHeartbeat() = 0;
+    virtual PodResult<void> startHeartbeat(uint32_t interval_ms = 1000) = 0;
+    virtual PodResult<void> stopHeartbeat() = 0;
+    virtual bool isAlive() const = 0;
+
+    // ==================== 云台控制（PTZ） ====================
+
+    virtual PodResult<PTZPose> getPose() = 0;
+    virtual PodResult<void> setPose(const PTZPose& pose) = 0;
+    virtual PodResult<void> controlSpeed(const PTZCommand& cmd) = 0;
+    virtual PodResult<void> stopPtz() = 0;
+    virtual PodResult<void> goHome() = 0;
+
+    // ==================== 激光测距 ====================
+
+    virtual PodResult<LaserInfo> laserMeasure() = 0;
+    virtual PodResult<void> enableLaser() = 0;
+    virtual PodResult<void> disableLaser() = 0;
+    virtual bool isLaserEnabled() const = 0;
+
+    // ==================== 流媒体 ====================
+
+    virtual PodResult<StreamInfo> startStream(StreamType type = StreamType::RTSP) = 0;
+    virtual PodResult<void> stopStream() = 0;
+    virtual PodResult<StreamInfo> getStreamInfo() = 0;
+    virtual bool isStreaming() const = 0;
+
+    // ==================== 图像抓拍 ====================
+
+    virtual PodResult<ImageFrame> captureImage() = 0;
+    virtual PodResult<std::string> saveImage(const std::string& path) = 0;
+
+    // ==================== 中心点测量 ====================
+
+    virtual PodResult<CenterMeasurementResult> centerMeasure() = 0;
+    virtual PodResult<void> startContinuousMeasure(uint32_t interval_ms = 500) = 0;
+    virtual PodResult<void> stopContinuousMeasure() = 0;
+    virtual PodResult<CenterMeasurementResult> getLastMeasureResult() = 0;
 };
 
 } // namespace PodModule

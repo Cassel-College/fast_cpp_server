@@ -18,6 +18,7 @@ include(cmake/deps/setup_eigen.cmake)
 # include(cmake/deps/setup_symengine.cmake) // 暂无引用
 include(cmake/deps/setup_sqlite.cmake)
 include(cmake/deps/setup_mavsdk.cmake)
+include(cmake/deps/setup_viewlink.cmake)
 include(cmake/deps/setup_serial.cmake) # 使用 serial 库
 
 # 将手机到的头文件路径暴露给父级

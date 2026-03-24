@@ -370,11 +370,54 @@ fi
 
 # 判断系统是否为 Kylin
 if grep -qi "kylin" /etc/os-release; then
-    echo "Detected Kylin OS, skip building MAVSDK."
-    mkdir -p build
+  echo "Detected Kylin OS, prefer system MAVSDK or prebuilt dist."
+  mkdir -p build
+  if [ -d "build/mavsdk_dist" ]; then
+    echo "📁 build/mavsdk_dist already exists, skipping copy. ✅"
+  else
     cp -r source/lib/mavsdk/arm/mavsdk_dist ./build/
-    echo "Prebuilt MAVSDK copied to build directory."
+    echo "Prebuilt MAVSDK copied to build directory. ✅"
+  fi
 else
-    echo "Non-Kylin system detected, building MAVSDK..."
+  echo "Non-Kylin system detected."
+  # 如果 build/mavsdk_dist 已经存在，则跳过耗时的构建步骤
+  if [ -d "build/mavsdk_dist" ]; then
+    echo "📁 build/mavsdk_dist already exists, skipping MAVSDK build. ✅"
+  else
+    echo "Building MAVSDK..."
     ./scripts/build_mavsdk_v3.sh
+  fi
+fi
+
+# ========== ViewLink SDK 预编译库复制 ==========
+echo "========================================="
+echo "  ViewLink SDK dist setup"
+echo "========================================="
+
+VIEWLINK_SRC="source/lib/ViewLink-SDK"
+VIEWLINK_DST="build/viewlink_dist"
+
+if [ -d "${VIEWLINK_DST}" ]; then
+    echo "📁 ViewLink dist already exists, skipping. ✅"
+else
+    mkdir -p "${VIEWLINK_DST}/include"
+    mkdir -p "${VIEWLINK_DST}/lib"
+
+    # 复制头文件
+    cp "${VIEWLINK_SRC}/inc/ViewLink.h" "${VIEWLINK_DST}/include/"
+    echo "📄 ViewLink header copied. ✅"
+
+    # 根据架构复制对应的静态库
+    ARCH=$(uname -m)
+    if [ "${ARCH}" = "aarch64" ]; then
+        cp "${VIEWLINK_SRC}/lib/linux-aarch64/libViewLink.a" "${VIEWLINK_DST}/lib/"
+        echo "📦 ViewLink aarch64 library copied. ✅"
+    elif [ "${ARCH}" = "x86_64" ]; then
+        cp "${VIEWLINK_SRC}/lib/linux-x86_64/libViewLink.a" "${VIEWLINK_DST}/lib/"
+        echo "📦 ViewLink x86_64 library copied. ✅"
+    else
+        echo "⚠️  Unsupported architecture: ${ARCH}, ViewLink library not copied. ❌"
+    fi
+
+    echo "📁 ViewLink dist created at ${VIEWLINK_DST}. ✅"
 fi
