@@ -11,14 +11,12 @@
 #include "../registry/pod_registry.h"
 #include "../pod/interface/i_pod.h"
 #include "../common/pod_result.h"
-#include "../common/capability_types.h"
 #include <nlohmann/json.hpp>
 #include <memory>
 #include <string>
 #include <vector>
 #include <mutex>
 #include <atomic>
-#include <set>
 
 namespace PodModule {
 
@@ -108,6 +106,13 @@ public:
      */
     PodResult<void> disconnectPod(const std::string& pod_id);
 
+    /**
+     * @brief 仅用于单元测试：清空当前管理器状态
+     *
+     * 会停止监控、断开连接、清空注册表，并允许再次 Init。
+     */
+    void ResetForTest();
+
 private:
     PodManager();
     ~PodManager();
@@ -117,9 +122,6 @@ private:
 
     /** @brief 从 JSON 解析 PodMonitorConfig，缺失字段用默认值 */
     static PodMonitorConfig parseMonitorConfig(const nlohmann::json& pod_cfg);
-
-    /** @brief 从 JSON 解析 capability 启用列表 */
-    static std::set<CapabilityType> parseEnabledCapabilities(const nlohmann::json& pod_cfg);
 
     PodRegistry registry_;
     nlohmann::json init_config_;

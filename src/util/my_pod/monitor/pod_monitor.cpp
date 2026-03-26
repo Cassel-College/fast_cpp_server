@@ -5,10 +5,7 @@
 
 #include "pod_monitor.h"
 #include "../pod/interface/i_pod.h"
-#include "../capability/interface/i_status_capability.h"
-#include "../capability/interface/i_ptz_capability.h"
-#include "../capability/interface/i_laser_capability.h"
-#include "../capability/interface/i_stream_capability.h"
+#include "../common/pod_types.h"
 #include "MyLog.h"
 #include <chrono>
 #include <algorithm>
@@ -154,31 +151,33 @@ void PodMonitor::monitorLoop() {
 
 void PodMonitor::pollStatus() {
     try {
-        auto cap = pod_->getCapabilityAs<IStatusCapability>(CapabilityType::STATUS);
-        if (!cap) return;
-
-        // 先刷新，再读取
-        cap->refreshStatus();
-        auto result = cap->getStatus();
+        pod_->refreshDeviceStatus();
+        auto result = pod_->getDeviceStatus();
 
         bool ping_ok = false;
         if (result.isSuccess() && result.data.has_value()) {
             ping_ok = (result.data->state == PodState::CONNECTED);
         }
 
-        // 更新滑动窗口（内部会更新 is_online）
         updateOnlineWindow(ping_ok);
 
-        // 写入运行时状态
         std::lock_guard<std::mutex> lk(status_mutex_);
         if (result.isSuccess() && result.data.has_value()) {
             runtime_status_.pod_status = result.data.value();
         }
-        // 用滑动窗口结果覆盖 state
         runtime_status_.pod_status.state = runtime_status_.is_online
             ? PodState::CONNECTED : PodState::DISCONNECTED;
         runtime_status_.online_update_ms = nowMs();
         runtime_status_.last_update_ms   = runtime_status_.online_update_ms;
+
+        MYLOG_INFO("[PodMonitor] [{}] 状态: online={}, state={}, temp={:.1f}℃, voltage={:.1f}V{}",
+                   pod_->getPodId(),
+                   runtime_status_.is_online ? "true" : "false",
+                   podStateToString(runtime_status_.pod_status.state),
+                   runtime_status_.pod_status.temperature,
+                   runtime_status_.pod_status.voltage,
+                   runtime_status_.pod_status.error_msg.empty()
+                       ? "" : ", err=" + runtime_status_.pod_status.error_msg);
 
     } catch (const std::exception& e) {
         MYLOG_ERROR("[PodMonitor] 状态轮询异常: {}", e.what());
@@ -190,16 +189,27 @@ void PodMonitor::pollStatus() {
 }
 
 void PodMonitor::pollPtz() {
-    try {
-        auto cap = pod_->getCapabilityAs<IPtzCapability>(CapabilityType::PTZ);
-        if (!cap) return;
+    {
+        std::lock_guard<std::mutex> lk(status_mutex_);
+        if (!runtime_status_.is_online) {
+            return;
+        }
+    }
 
-        auto result = cap->getPose();
+    try {
+        auto result = pod_->getPose();
         if (result.isSuccess() && result.data.has_value()) {
             std::lock_guard<std::mutex> lk(status_mutex_);
             runtime_status_.ptz_pose       = result.data.value();
             runtime_status_.ptz_update_ms  = nowMs();
             runtime_status_.last_update_ms = runtime_status_.ptz_update_ms;
+
+            const auto& p = runtime_status_.ptz_pose;
+            MYLOG_INFO("[PodMonitor] [{}] 云台: yaw={:.2f}, pitch={:.2f}, roll={:.2f}, zoom={:.2f}",
+                       pod_->getPodId(), p.yaw, p.pitch, p.roll, p.zoom);
+        } else {
+            MYLOG_WARN("[PodMonitor] [{}] 云台轮询失败: {}",
+                       pod_->getPodId(), result.message);
         }
     } catch (const std::exception& e) {
         MYLOG_ERROR("[PodMonitor] 云台轮询异常: {}", e.what());
@@ -209,16 +219,27 @@ void PodMonitor::pollPtz() {
 }
 
 void PodMonitor::pollLaser() {
-    try {
-        auto cap = pod_->getCapabilityAs<ILaserCapability>(CapabilityType::LASER);
-        if (!cap) return;
+    {
+        std::lock_guard<std::mutex> lk(status_mutex_);
+        if (!runtime_status_.is_online) {
+            return;
+        }
+    }
 
-        auto result = cap->measure();
+    try {
+        auto result = pod_->laserMeasure();
         if (result.isSuccess() && result.data.has_value()) {
             std::lock_guard<std::mutex> lk(status_mutex_);
             runtime_status_.laser_info      = result.data.value();
             runtime_status_.laser_update_ms = nowMs();
             runtime_status_.last_update_ms  = runtime_status_.laser_update_ms;
+
+            const auto& l = runtime_status_.laser_info;
+            MYLOG_INFO("[PodMonitor] [{}] 激光: valid={}, dist={:.1f}m, lat={:.6f}, lon={:.6f}, alt={:.1f}m",
+                       pod_->getPodId(), l.is_valid ? "true" : "false",
+                       l.distance, l.latitude, l.longitude, l.altitude);
+        } else {
+            MYLOG_WARN("[PodMonitor] [{}] 激光轮询失败: {}", pod_->getPodId(), result.message);
         }
     } catch (const std::exception& e) {
         MYLOG_ERROR("[PodMonitor] 激光轮询异常: {}", e.what());
@@ -229,15 +250,21 @@ void PodMonitor::pollLaser() {
 
 void PodMonitor::pollStream() {
     try {
-        auto cap = pod_->getCapabilityAs<IStreamCapability>(CapabilityType::STREAM);
-        if (!cap) return;
-
-        auto result = cap->getStreamInfo();
+        auto result = pod_->getStreamInfo();
         if (result.isSuccess() && result.data.has_value()) {
             std::lock_guard<std::mutex> lk(status_mutex_);
             runtime_status_.stream_info      = result.data.value();
             runtime_status_.stream_update_ms = nowMs();
             runtime_status_.last_update_ms   = runtime_status_.stream_update_ms;
+
+            const auto& s = runtime_status_.stream_info;
+            MYLOG_INFO("[PodMonitor] [{}] 流媒体: active={}, type={}, url={}, {}x{}@{}fps",
+                       pod_->getPodId(), s.is_active ? "true" : "false",
+                       streamTypeToString(s.type), s.url,
+                       s.width, s.height, s.fps);
+        } else {
+            MYLOG_WARN("[PodMonitor] [{}] 流媒体轮询失败: {}",
+                       pod_->getPodId(), result.message);
         }
     } catch (const std::exception& e) {
         MYLOG_ERROR("[PodMonitor] 流媒体轮询异常: {}", e.what());

@@ -233,7 +233,6 @@
                                 "ptz_interval_ms": 1000,
                                 "online_window_size": 5,
                                 "online_threshold": 3,
-                                "enable_laser_poll": true,
                                 "auto_start": true
                             },
                             "capability": {
@@ -247,7 +246,12 @@
                                 },
                                 "PTZ": {
                                     "open": "enable",
-                                    "description": "吊舱云台控制能力（Pan-Tilt-Zoom）"
+                                    "description": "吊舱云台控制能力（Pan-Tilt-Zoom）",
+                                    "init_args": {
+                                        "link_type": "tcp",
+                                        "ip": "192.168.2.119",
+                                        "port": 2000
+                                    }
                                 },
                                 "LASER": {
                                     "open": "unable",

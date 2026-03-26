@@ -15,10 +15,6 @@ if (BUILD_MY_POD)
         ${PROJECT_SOURCE_DIR}/src/util/my_pod/pod/base
         ${PROJECT_SOURCE_DIR}/src/util/my_pod/pod/dji
         ${PROJECT_SOURCE_DIR}/src/util/my_pod/pod/pinling
-        ${PROJECT_SOURCE_DIR}/src/util/my_pod/capability/interface
-        ${PROJECT_SOURCE_DIR}/src/util/my_pod/capability/base
-        ${PROJECT_SOURCE_DIR}/src/util/my_pod/capability/dji
-        ${PROJECT_SOURCE_DIR}/src/util/my_pod/capability/pinling
         ${PROJECT_SOURCE_DIR}/src/util/my_pod/session/interface
         ${PROJECT_SOURCE_DIR}/src/util/my_pod/session/base
         ${PROJECT_SOURCE_DIR}/src/util/my_pod/session/dji
@@ -41,7 +37,7 @@ if (BUILD_MY_POD)
     target_link_libraries(my_pod PUBLIC mylog)
     target_link_libraries(my_pod PUBLIC my_tools)
     target_link_libraries(my_pod PUBLIC nlohmann_json::nlohmann_json)
-
+    target_link_libraries(my_pod PUBLIC my_viewlink)
     print_colored_message("Building my_pod library over." COLOR yellow)
     print_colored_message("------------------------------" COLOR magenta)
 else()

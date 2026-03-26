@@ -43,10 +43,18 @@ bool PodManager::Init(const nlohmann::json& config) {
 
         auto pod = createPod(pod_id, pod_cfg);
         if (pod) {
-            // 解析能力启用配置，设置后再装配能力
-            auto enabled_caps = parseEnabledCapabilities(pod_cfg);
-            pod->setEnabledCapabilities(enabled_caps);
-            pod->initializeCapabilities();
+            // 统一走 Pod::Init，把完整配置注入、能力配置缓存和运行态复位收敛到同一入口。
+            auto init_result = pod->Init(pod_cfg);
+            if (!init_result.isSuccess()) {
+                MYLOG_ERROR("[吊舱管理器] 吊舱初始化失败: {} - {}", pod_id, init_result.message);
+                continue;
+            }
+
+            // 连接吊舱（包括 SDK 初始化）
+            auto connect_result = pod->connect();
+            if (!connect_result.isSuccess()) {
+                MYLOG_WARN("[吊舱管理器] 吊舱连接失败: {} - {}", pod_id, connect_result.message);
+            }
 
             // 解析监控配置并按需自动启动
             auto monitor_cfg = parseMonitorConfig(pod_cfg);
@@ -80,8 +88,11 @@ std::shared_ptr<IPod> PodManager::createPod(const std::string& pod_id, const nlo
     PodInfo info;
     info.pod_id     = pod_id;
     info.pod_name   = name;
+    info.model      = pod_cfg.value("model", "");
+    info.firmware_ver = pod_cfg.value("firmware_ver", "");
     info.ip_address = ip;
     info.port       = port;
+    info.raw_config = pod_cfg;
 
     if (type == "dji") {
         info.vendor = PodVendor::DJI;
@@ -174,20 +185,54 @@ PodResult<void> PodManager::disconnectPod(const std::string& pod_id) {
     return pod->disconnect();
 }
 
+void PodManager::ResetForTest() {
+    std::lock_guard<std::mutex> lock(mutex_);
+
+    auto pods = registry_.listPods();
+    for (const auto& pod : pods) {
+        if (!pod) {
+            continue;
+        }
+        if (pod->isMonitorRunning()) {
+            pod->stopMonitor();
+        }
+        if (pod->isConnected()) {
+            pod->disconnect();
+        }
+    }
+
+    registry_.clear();
+    init_config_.clear();
+    initialized_.store(false);
+    MYLOG_INFO("[吊舱管理器] ResetForTest 完成，已清空所有吊舱实例");
+}
+
 PodMonitorConfig PodManager::parseMonitorConfig(const nlohmann::json& pod_cfg) {
     PodMonitorConfig cfg;  // 所有字段已有默认值
+    const bool has_capability_config = pod_cfg.contains("capability") && pod_cfg["capability"].is_object();
+
+    bool status_enabled_by_capability = false;
+    bool ptz_enabled_by_capability = false;
+    bool laser_enabled_by_capability = false;
+    bool stream_enabled_by_capability = false;
 
     // 先从 capability 节点推导轮询开关：只轮询已启用的能力
-    if (pod_cfg.contains("capability") && pod_cfg["capability"].is_object()) {
+    if (has_capability_config) {
         auto isOpen = [&](const std::string& key) -> bool {
             if (!pod_cfg["capability"].contains(key)) return false;
             const auto& cap = pod_cfg["capability"][key];
             return cap.is_object() && cap.value("open", "") == "enable";
         };
-        cfg.enable_status_poll = isOpen("STATUS");
-        cfg.enable_ptz_poll    = isOpen("PTZ");
-        cfg.enable_laser_poll  = isOpen("LASER");
-        cfg.enable_stream_poll = isOpen("STREAM");
+
+        status_enabled_by_capability = isOpen("STATUS");
+        ptz_enabled_by_capability = isOpen("PTZ");
+        laser_enabled_by_capability = isOpen("LASER");
+        stream_enabled_by_capability = isOpen("STREAM");
+
+        cfg.enable_status_poll = status_enabled_by_capability;
+        cfg.enable_ptz_poll    = ptz_enabled_by_capability;
+        cfg.enable_laser_poll  = laser_enabled_by_capability;
+        cfg.enable_stream_poll = stream_enabled_by_capability;
     }
 
     // monitor 节点可进一步覆盖上面的推导结果
@@ -203,47 +248,41 @@ PodMonitorConfig PodManager::parseMonitorConfig(const nlohmann::json& pod_cfg) {
         if (m.contains("online_window_size")) cfg.online_window_size = m["online_window_size"].get<uint32_t>();
         if (m.contains("online_threshold"))   cfg.online_threshold   = m["online_threshold"].get<uint32_t>();
 
-        // monitor 节点的显式开关优先级最高，覆盖 capability 推导结果
-        if (m.contains("enable_status_poll")) cfg.enable_status_poll = m["enable_status_poll"].get<bool>();
-        if (m.contains("enable_ptz_poll"))    cfg.enable_ptz_poll    = m["enable_ptz_poll"].get<bool>();
-        if (m.contains("enable_laser_poll"))  cfg.enable_laser_poll  = m["enable_laser_poll"].get<bool>();
-        if (m.contains("enable_stream_poll")) cfg.enable_stream_poll = m["enable_stream_poll"].get<bool>();
+        // monitor 节点只能进一步收紧轮询，不允许反向打开 capability 中未启用的能力。
+        auto applyMonitorSwitch = [&](const char* key,
+                                      bool capability_enabled,
+                                      bool& target) {
+            if (!m.contains(key)) {
+                return;
+            }
+
+            const bool requested = m[key].get<bool>();
+            if (has_capability_config) {
+                target = capability_enabled && requested;
+                if (requested && !capability_enabled) {
+                    MYLOG_WARN("[吊舱管理器] monitor.{}=true 被 capability 限制忽略：capability 未启用",
+                               key);
+                }
+                return;
+            }
+
+            target = requested;
+        };
+
+        applyMonitorSwitch("enable_status_poll", status_enabled_by_capability, cfg.enable_status_poll);
+        applyMonitorSwitch("enable_ptz_poll", ptz_enabled_by_capability, cfg.enable_ptz_poll);
+        applyMonitorSwitch("enable_stream_poll", stream_enabled_by_capability, cfg.enable_stream_poll);
+
+        // 激光轮询开关只保留 capability.LASER 这一处配置源。
+        // 旧版 monitor.enable_laser_poll 属于重复配置，保留字段只会制造冲突，因此直接忽略。
+        if (m.contains("enable_laser_poll")) {
+            MYLOG_WARN("[吊舱管理器] monitor.enable_laser_poll 已废弃并被忽略，请改用 capability.LASER.open 控制激光轮询");
+        }
 
         if (m.contains("auto_start"))         cfg.auto_start         = m["auto_start"].get<bool>();
     }
 
     return cfg;
-}
-
-std::set<CapabilityType> PodManager::parseEnabledCapabilities(const nlohmann::json& pod_cfg) {
-    std::set<CapabilityType> enabled;
-
-    if (!pod_cfg.contains("capability") || !pod_cfg["capability"].is_object()) {
-        // 无 capability 配置，返回空集合 → BasePod 视为全部允许
-        return enabled;
-    }
-
-    const auto& caps = pod_cfg["capability"];
-    for (auto it = caps.begin(); it != caps.end(); ++it) {
-        const std::string& key = it.key();
-        const auto& val = it.value();
-
-        if (!val.is_object()) continue;
-
-        std::string open_val = val.value("open", "");
-        if (open_val != "enable") continue;
-
-        CapabilityType type;
-        if (capabilityTypeFromString(key, type)) {
-            enabled.insert(type);
-            MYLOG_DEBUG("[吊舱管理器] 能力 {} 已启用", key);
-        } else {
-            MYLOG_WARN("[吊舱管理器] 未识别的能力类型: {}", key);
-        }
-    }
-
-    MYLOG_INFO("[吊舱管理器] 从配置解析到 {} 个启用能力", enabled.size());
-    return enabled;
 }
 
 nlohmann::json PodManager::GetStatusSnapshot() const {
@@ -270,12 +309,6 @@ nlohmann::json PodManager::GetStatusSnapshot() const {
             item["last_update_ms"] = rt.last_update_ms;
         }
 
-        // 列出已注册能力
-        nlohmann::json caps = nlohmann::json::array();
-        for (auto ct : pod->listCapabilities()) {
-            caps.push_back(capabilityTypeToString(ct));
-        }
-        item["capabilities"] = caps;
         result.push_back(item);
     }
     return result;
