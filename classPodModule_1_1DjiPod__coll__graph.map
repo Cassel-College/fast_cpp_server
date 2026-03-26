@@ -1,26 +1,30 @@
 <map id="DjiPod" name="DjiPod">
-<area shape="rect" id="Node000001" title=" " alt="" coords="161,344,225,369"/>
-<area shape="rect" id="Node000002" href="$classPodModule_1_1BasePod.html" title=" " alt="" coords="154,269,233,295"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="196,309,196,344,191,344,191,309"/>
-<area shape="rect" id="Node000003" href="$classPodModule_1_1IPod.html" title="吊舱统一抽象接口" alt="" coords="5,93,56,119"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="39,131,53,168,75,205,96,225,120,242,166,267,163,272,117,247,93,229,71,208,48,170,34,133"/>
-<area shape="rect" id="Node000006" href="$classPodModule_1_1PodMonitor.html" title=" " alt="" coords="85,181,181,207"/>
-<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="57,126,121,179,117,183,54,130"/>
-<area shape="rect" id="Node000004" href="$structPodModule_1_1PodInfo.html" title="吊舱设备基础信息" alt="" coords="206,181,277,207"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="231,220,202,270,198,267,226,217"/>
-<area shape="rect" id="Node000005" href="$classPodModule_1_1CapabilityRegistry.html" title="能力注册表" alt="" coords="301,181,443,207"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="346,217,295,248,233,272,231,267,292,243,344,212"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="138,220,148,244,159,257,173,267,170,271,156,261,143,247,133,222"/>
-<area shape="rect" id="Node000007" href="$structPodModule_1_1PodMonitorConfig.html" title="PodMonitor 轮询配置" alt="" coords="81,93,218,119"/>
-<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="147,133,138,181,133,180,142,132"/>
-<area shape="rect" id="Node000008" href="$structPodModule_1_1PodRuntimeStatus.html" title="吊舱运行时状态聚合数据" alt="" coords="242,93,385,119"/>
-<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="278,127,159,183,157,179,276,122"/>
-<area shape="rect" id="Node000009" href="$structPodModule_1_1PodStatus.html" title="吊舱实时状态" alt="" coords="110,5,197,31"/>
-<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="164,42,171,56,182,67,210,80,252,91,251,96,208,85,178,71,167,59,159,45"/>
-<area shape="rect" id="Node000010" href="$structPodModule_1_1PTZPose.html" title="云台姿态（PTZ）" alt="" coords="221,5,299,31"/>
-<area shape="poly" id="edge10_Node000008_Node000010" title=" " alt="" coords="263,44,270,68,281,81,294,91,291,95,277,85,266,71,258,45"/>
-<area shape="rect" id="Node000011" href="$structPodModule_1_1LaserInfo.html" title="激光测距信息" alt="" coords="324,5,407,31"/>
-<area shape="poly" id="edge11_Node000008_Node000011" title=" " alt="" coords="353,44,323,94,318,91,349,41"/>
-<area shape="rect" id="Node000012" href="$structPodModule_1_1StreamInfo.html" title="流媒体信息" alt="" coords="431,5,526,31"/>
-<area shape="poly" id="edge12_Node000008_Node000012" title=" " alt="" coords="458,42,417,72,358,96,356,91,415,67,455,38"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="584,344,648,369"/>
+<area shape="rect" id="Node000002" href="$classPodModule_1_1BasePod.html" title=" " alt="" coords="577,269,655,295"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="619,309,619,344,613,344,613,309"/>
+<area shape="rect" id="Node000003" href="$classPodModule_1_1IPod.html" title=" " alt="" coords="239,93,289,119"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="287,126,333,165,392,204,440,227,490,245,577,270,576,275,488,250,438,232,389,209,330,170,284,130"/>
+<area shape="rect" id="Node000005" href="$classPodModule_1_1PodMonitor.html" title=" " alt="" coords="403,181,499,207"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="302,122,426,179,424,183,300,127"/>
+<area shape="rect" id="Node000004" href="$structPodModule_1_1PodInfo.html" title="吊舱设备基础信息" alt="" coords="818,181,889,207"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="837,219,820,235,800,248,763,262,725,272,656,282,655,277,724,267,761,257,797,243,817,230,833,215"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="486,211,595,267,592,271,484,215"/>
+<area shape="rect" id="Node000006" href="$structPodModule_1_1PodMonitorConfig.html" title="PodMonitor 轮询配置" alt="" coords="481,93,618,119"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="548,134,535,159,517,174,497,184,495,179,514,169,531,156,543,131"/>
+<area shape="rect" id="Node000007" href="$structPodModule_1_1PodRuntimeStatus.html" title="吊舱运行时状态聚合数据" alt="" coords="314,93,457,119"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="404,128,444,179,439,182,400,131"/>
+<area shape="rect" id="Node000008" href="$structPodModule_1_1PodStatus.html" title="吊舱实时状态" alt="" coords="362,5,449,31"/>
+<area shape="poly" id="edge12_Node000002_Node000008" title=" " alt="" coords="463,26,541,40,590,52,616,68,632,92,637,129,634,180,621,270,615,269,629,180,631,129,627,94,612,72,588,57,540,45,462,31"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="402,45,391,93,385,92,397,43"/>
+<area shape="rect" id="Node000009" href="$structPodModule_1_1PTZPose.html" title="云台姿态（PTZ）" alt="" coords="27,5,106,31"/>
+<area shape="poly" id="edge13_Node000002_Node000009" title=" " alt="" coords="49,43,30,68,14,97,8,128,10,142,17,156,32,172,54,187,113,212,189,233,274,249,446,268,576,277,576,282,445,274,273,254,188,238,112,217,51,191,29,176,12,159,5,144,3,128,9,95,26,65,44,40"/>
+<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="116,32,233,67,332,91,331,96,231,72,114,37"/>
+<area shape="rect" id="Node000010" href="$structPodModule_1_1LaserInfo.html" title="激光测距信息" alt="" coords="213,5,296,31"/>
+<area shape="poly" id="edge14_Node000002_Node000010" title=" " alt="" coords="207,38,179,57,150,81,127,105,119,117,116,129,118,142,126,156,156,181,204,203,264,222,331,238,469,261,577,274,576,280,468,267,330,243,263,227,202,208,153,185,122,159,113,143,111,129,115,115,122,102,147,77,176,53,204,34"/>
+<area shape="poly" id="edge10_Node000007_Node000010" title=" " alt="" coords="280,37,321,67,363,91,360,95,318,72,277,41"/>
+<area shape="rect" id="Node000011" href="$structPodModule_1_1StreamInfo.html" title="流媒体信息" alt="" coords="499,5,594,31"/>
+<area shape="poly" id="edge15_Node000002_Node000011" title=" " alt="" coords="609,26,643,36,676,52,704,71,724,89,740,111,753,142,757,164,752,185,741,205,724,222,684,251,645,272,642,267,681,247,721,218,736,202,747,184,752,164,748,143,735,114,720,93,701,75,673,57,641,41,607,31"/>
+<area shape="poly" id="edge11_Node000007_Node000011" title=" " alt="" coords="524,42,480,72,423,96,421,91,477,67,521,37"/>
+<area shape="rect" id="Node000012" href="$structPodModule_1_1CenterMeasurementResult.html" title="中心点测量结果" alt="" coords="913,181,1109,207"/>
+<area shape="poly" id="edge16_Node000002_Node000012" title=" " alt="" coords="977,215,937,233,893,248,828,262,763,272,656,282,655,276,763,267,827,257,891,243,935,228,975,210"/>
 </map>

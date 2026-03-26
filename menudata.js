@@ -37,6 +37,7 @@ var menudata={children:[
 {text:"g",url:"namespacemembers.html#index_g"},
 {text:"h",url:"namespacemembers.html#index_h"},
 {text:"i",url:"namespacemembers.html#index_i"},
+{text:"k",url:"namespacemembers.html#index_k"},
 {text:"l",url:"namespacemembers.html#index_l"},
 {text:"m",url:"namespacemembers.html#index_m"},
 {text:"n",url:"namespacemembers.html#index_n"},
@@ -72,6 +73,7 @@ var menudata={children:[
 {text:"f",url:"namespacemembers_vars.html#index_f"},
 {text:"g",url:"namespacemembers_vars.html#index_g"},
 {text:"h",url:"namespacemembers_vars.html#index_h"},
+{text:"k",url:"namespacemembers_vars.html#index_k"},
 {text:"l",url:"namespacemembers_vars.html#index_l"},
 {text:"m",url:"namespacemembers_vars.html#index_m"}]},
 {text:"类型定义",url:"namespacemembers_type.html"},
@@ -129,7 +131,9 @@ var menudata={children:[
 {text:"s",url:"functions_func_s.html#index_s"},
 {text:"t",url:"functions_func_t.html#index_t"},
 {text:"u",url:"functions_func_u.html#index_u"},
+{text:"v",url:"functions_func_v.html#index_v"},
 {text:"w",url:"functions_func_w.html#index_w"},
+{text:"z",url:"functions_func_z.html#index_z"},
 {text:"~",url:"functions_func_~.html#index__7E"}]},
 {text:"变量",url:"functions_vars.html",children:[
 {text:"a",url:"functions_vars.html#index_a"},
@@ -162,5 +166,6 @@ var menudata={children:[
 {text:"全局定义",url:"globals.html",children:[
 {text:"全部",url:"globals.html"},
 {text:"函数",url:"globals_func.html"},
+{text:"变量",url:"globals_vars.html"},
 {text:"类型定义",url:"globals_type.html"},
 {text:"宏定义",url:"globals_defs.html"}]}]}]}

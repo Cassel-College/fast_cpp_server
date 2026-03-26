@@ -1,36 +1,39 @@
 <map id="monitorLoop" name="monitorLoop">
-<area shape="rect" id="Node000001" title="监控主循环" alt="" coords="5,134,109,159"/>
-<area shape="rect" id="Node000002" href="$classPodModule_1_1IPod.html#a938322efd17e75d281ab6c7fad8f0e9a" title="获取设备唯一标识" alt="" coords="157,9,352,34"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="65,132,101,88,127,64,156,43,169,37,171,41,159,48,130,68,105,92,69,136"/>
-<area shape="rect" id="Node000003" href="$classPodModule_1_1PodMonitor.html#a42a1cd3b79aba9bcdf28313155977327" title="获取当前时间戳（毫秒，steady_clock）" alt="" coords="487,134,555,159"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="110,144,473,144,473,149,110,149"/>
-<area shape="rect" id="Node000004" href="$classPodModule_1_1PodMonitor.html#a869baf763ba33280ac3882e3ce1a26bc" title="轮询激光数据" alt="" coords="214,159,295,185"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="110,151,201,162,200,168,109,156"/>
-<area shape="rect" id="Node000008" href="$classPodModule_1_1PodMonitor.html#a7b53c96d2816df4d9535bfc6119c4dbd" title="轮询云台姿态" alt="" coords="221,58,288,83"/>
-<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="85,131,156,100,207,82,209,87,158,105,87,136"/>
-<area shape="rect" id="Node000010" href="$classPodModule_1_1PodMonitor.html#a6574eac20d48a2e77aa01d9b5138c7c3" title="轮询状态/在线检测" alt="" coords="211,258,298,283"/>
-<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="70,158,106,200,131,223,159,243,199,259,197,264,156,248,127,227,102,204,66,161"/>
-<area shape="rect" id="Node000013" href="$classPodModule_1_1PodMonitor.html#ac0160d94ae5471a300570532e9bc9d77" title="轮询流媒体状态" alt="" coords="208,209,301,234"/>
-<area shape="poly" id="edge17_Node000001_Node000013" title=" " alt="" coords="82,157,158,194,195,205,194,210,156,198,80,162"/>
-<area shape="poly" id="edge7_Node000004_Node000003" title=" " alt="" coords="295,166,473,148,473,154,296,171"/>
-<area shape="rect" id="Node000005" href="$classPodModule_1_1IPod.html#a6b4de9361e7c1e82bb3dd9e603191bcd" title="模板方式查询具体能力接口" alt="" coords="400,183,641,209"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="296,173,386,181,386,187,295,178"/>
-<area shape="rect" id="Node000007" href="$classPodModule_1_1ILaserCapability.html#abb1501513ffd78098c4b7126aecde912" title="执行一次激光测距" alt="" coords="417,69,624,109"/>
-<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="289,157,399,119,427,111,429,116,401,124,291,162"/>
-<area shape="rect" id="Node000006" href="$classPodModule_1_1IPod.html#af45e36f920fe32ab0f9efa6d7b398e75" title="查询某类型能力" alt="" coords="689,183,915,209"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="641,193,675,193,675,199,641,199"/>
-<area shape="poly" id="edge11_Node000008_Node000003" title=" " alt="" coords="289,78,353,100,401,119,474,136,473,141,399,124,351,105,287,83"/>
-<area shape="poly" id="edge9_Node000008_Node000005" title=" " alt="" coords="272,82,326,125,363,148,401,168,425,177,424,182,399,173,360,153,323,129,269,86"/>
-<area shape="rect" id="Node000009" href="$classPodModule_1_1IPtzCapability.html#ae9114bdb0c5ffb5222a92c3fd77dff05" title="获取当前云台姿态" alt="" coords="425,5,617,45"/>
-<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="288,62,410,41,411,47,289,68"/>
-<area shape="poly" id="edge14_Node000010_Node000003" title=" " alt="" coords="297,264,325,256,350,243,366,226,373,207,381,187,398,168,434,152,472,145,473,150,436,157,402,173,385,190,378,209,371,228,354,247,327,261,299,269"/>
-<area shape="poly" id="edge13_Node000010_Node000005" title=" " alt="" coords="297,259,351,243,375,231,399,219,431,209,432,214,401,224,377,236,353,248,299,264"/>
-<area shape="rect" id="Node000011" href="$classPodModule_1_1IStatusCapability.html#a6bfa2b7a4cb00aa552f28b98371930fa" title="刷新状态缓存" alt="" coords="414,348,627,388"/>
-<area shape="poly" id="edge15_Node000010_Node000011" title=" " alt="" coords="282,281,336,307,401,333,425,341,423,347,399,339,334,312,280,286"/>
-<area shape="rect" id="Node000012" href="$classPodModule_1_1PodMonitor.html#af83c997f346dafb1ee6fe6335961a324" title="更新在线判定滑动窗口" alt="" coords="440,298,601,323"/>
-<area shape="poly" id="edge16_Node000010_Node000012" title=" " alt="" coords="299,274,427,294,426,299,298,280"/>
-<area shape="poly" id="edge20_Node000013_Node000003" title=" " alt="" coords="301,209,351,194,375,181,399,168,472,150,474,155,401,173,377,185,353,198,302,214"/>
-<area shape="poly" id="edge18_Node000013_Node000005" title=" " alt="" coords="302,214,386,206,387,211,302,220"/>
-<area shape="rect" id="Node000014" href="$classPodModule_1_1IStreamCapability.html#ab60e6d0c54aeebd9c251123746954fbd" title="获取当前流信息" alt="" coords="411,233,630,273"/>
-<area shape="poly" id="edge19_Node000013_Node000014" title=" " alt="" coords="302,224,398,236,397,241,302,230"/>
+<area shape="rect" id="Node000001" title="监控主循环" alt="" coords="5,131,109,156"/>
+<area shape="rect" id="Node000002" href="$classPodModule_1_1IPod.html#a938322efd17e75d281ab6c7fad8f0e9a" title=" " alt="" coords="317,55,511,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="64,129,99,83,126,59,156,41,189,35,235,36,337,50,336,55,235,41,190,40,158,46,129,63,103,87,69,132"/>
+<area shape="rect" id="Node000003" href="$classPodModule_1_1PodMonitor.html#a42a1cd3b79aba9bcdf28313155977327" title="获取当前时间戳（毫秒，steady_clock）" alt="" coords="380,153,448,179"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="110,144,366,160,366,166,109,149"/>
+<area shape="rect" id="Node000004" href="$classPodModule_1_1PodMonitor.html#a869baf763ba33280ac3882e3ce1a26bc" title="轮询激光数据" alt="" coords="163,105,245,131"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="109,132,149,125,150,130,110,137"/>
+<area shape="rect" id="Node000006" href="$classPodModule_1_1PodMonitor.html#a7b53c96d2816df4d9535bfc6119c4dbd" title="轮询云台姿态" alt="" coords="171,56,237,81"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="83,128,165,85,167,90,85,133"/>
+<area shape="rect" id="Node000008" href="$classPodModule_1_1PodMonitor.html#a6574eac20d48a2e77aa01d9b5138c7c3" title="轮询状态/在线检测" alt="" coords="161,209,247,235"/>
+<area shape="poly" id="edge11_Node000001_Node000008" title=" " alt="" coords="84,154,169,200,166,205,81,159"/>
+<area shape="rect" id="Node000013" href="$classPodModule_1_1PodMonitor.html#ac0160d94ae5471a300570532e9bc9d77" title="轮询流媒体状态" alt="" coords="157,259,251,284"/>
+<area shape="poly" id="edge18_Node000001_Node000013" title=" " alt="" coords="71,155,108,197,159,244,167,249,163,254,156,248,104,201,67,158"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="244,104,298,89,334,80,336,86,299,94,245,109"/>
+<area shape="poly" id="edge6_Node000004_Node000003" title=" " alt="" coords="245,125,299,138,367,153,366,158,298,143,244,130"/>
+<area shape="rect" id="Node000005" href="$classPodModule_1_1IPod.html#a6123c7cad376dd5acafa58f435399f2b" title=" " alt="" coords="301,104,527,129"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="245,115,287,115,287,120,245,120"/>
+<area shape="poly" id="edge8_Node000006_Node000002" title=" " alt="" coords="238,66,302,65,302,71,238,71"/>
+<area shape="poly" id="edge10_Node000006_Node000003" title=" " alt="" coords="234,79,252,91,267,104,276,116,285,128,300,138,333,152,367,159,366,164,331,157,297,143,282,132,272,120,263,107,249,95,231,84"/>
+<area shape="rect" id="Node000007" href="$classPodModule_1_1IPod.html#ae9114bdb0c5ffb5222a92c3fd77dff05" title=" " alt="" coords="319,5,509,31"/>
+<area shape="poly" id="edge9_Node000006_Node000007" title=" " alt="" coords="237,56,298,39,334,31,336,36,299,45,238,61"/>
+<area shape="poly" id="edge13_Node000008_Node000002" title=" " alt="" coords="211,208,251,143,276,110,297,89,308,83,310,88,300,93,280,114,256,146,215,210"/>
+<area shape="poly" id="edge14_Node000008_Node000003" title=" " alt="" coords="241,207,298,189,365,173,367,178,299,194,242,212"/>
+<area shape="rect" id="Node000009" href="$classPodModule_1_1IPod.html#a1be2ac91119854a737f72948fb27e4f0" title=" " alt="" coords="312,318,516,358"/>
+<area shape="poly" id="edge12_Node000008_Node000009" title=" " alt="" coords="235,233,252,244,267,260,276,275,285,289,300,303,313,310,310,314,297,307,281,292,272,278,263,263,249,248,232,237"/>
+<area shape="rect" id="Node000010" href="$namespacePodModule.html#a3dc0ff504c70f838a6342d7947b08cc3" title="将设备状态枚举转为中文字符串" alt="" coords="308,383,520,408"/>
+<area shape="poly" id="edge15_Node000008_Node000010" title=" " alt="" coords="238,233,253,244,265,261,271,278,275,310,280,340,288,354,300,368,308,374,305,378,297,372,283,357,275,341,270,311,266,279,260,264,249,248,235,237"/>
+<area shape="rect" id="Node000011" href="$classPodModule_1_1IPod.html#a171da520222532d1aa61c9ea14e2cfd7" title=" " alt="" coords="322,203,506,243"/>
+<area shape="poly" id="edge16_Node000008_Node000011" title=" " alt="" coords="248,220,309,220,309,225,248,225"/>
+<area shape="rect" id="Node000012" href="$classPodModule_1_1PodMonitor.html#af83c997f346dafb1ee6fe6335961a324" title="更新在线判定滑动窗口" alt="" coords="333,268,495,293"/>
+<area shape="poly" id="edge17_Node000008_Node000012" title=" " alt="" coords="239,232,299,253,336,262,335,268,298,258,237,237"/>
+<area shape="poly" id="edge19_Node000013_Node000002" title=" " alt="" coords="234,256,249,244,261,224,267,205,269,166,273,127,281,108,297,89,303,85,306,89,301,93,285,111,278,129,274,166,272,206,266,226,253,248,238,260"/>
+<area shape="poly" id="edge21_Node000013_Node000003" title=" " alt="" coords="230,256,249,244,263,230,271,216,281,202,297,189,331,175,366,167,367,172,333,180,300,194,285,206,276,219,267,233,252,248,233,261"/>
+<area shape="rect" id="Node000014" href="$classPodModule_1_1IPod.html#ab60e6d0c54aeebd9c251123746954fbd" title=" " alt="" coords="299,432,529,457"/>
+<area shape="poly" id="edge20_Node000013_Node000014" title=" " alt="" coords="212,283,223,311,241,348,267,386,300,417,312,424,309,429,297,421,263,389,237,351,218,314,207,285"/>
+<area shape="rect" id="Node000015" href="$namespacePodModule.html#a3c97703dd67e7cce4fb0078debdb07c9" title="将流类型枚举转为字符串" alt="" coords="299,481,529,507"/>
+<area shape="poly" id="edge22_Node000013_Node000015" title=" " alt="" coords="210,284,218,321,235,371,261,424,279,448,300,468,307,473,304,477,297,472,275,451,257,427,230,373,213,322,205,285"/>
 </map>

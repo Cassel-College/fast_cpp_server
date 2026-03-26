@@ -9,7 +9,7 @@ var searchData=
   ['enable_5fptz_5fpoll_6',['enable_ptz_poll',['../structPodModule_1_1PodMonitorConfig.html#a37839e513334b60819efa9ce085584ed',1,'PodModule::PodMonitorConfig']]],
   ['enable_5fstatus_5fpoll_7',['enable_status_poll',['../structPodModule_1_1PodMonitorConfig.html#ad676cbd1d8584389b143f5f4d5a6c8bf',1,'PodModule::PodMonitorConfig']]],
   ['enable_5fstream_5fpoll_8',['enable_stream_poll',['../structPodModule_1_1PodMonitorConfig.html#a978e90c0f82d4d528ec723de6173bc80',1,'PodModule::PodMonitorConfig']]],
-  ['enabled_5fcapabilities_5f_9',['enabled_capabilities_',['../classPodModule_1_1BasePod.html#a0ed9c2e2570b1feb1dd00b627dec08cd',1,'PodModule::BasePod']]],
+  ['eo_5fdigital_5fzoom_9',['eo_digital_zoom',['../structviewlink_1_1TelemetrySnapshot.html#a6c43e55b9777386a7add2e9da4cafa08',1,'viewlink::TelemetrySnapshot']]],
   ['error_5fmsg_10',['error_msg',['../structPodModule_1_1PodStatus.html#ace0d044631da205139feca9936d836db',1,'PodModule::PodStatus']]],
   ['estop_5f_11',['estop_',['../classmy__edge_1_1BaseEdge.html#a6f2e808d95e8be1520f4dc1e7911fd28',1,'my_edge::BaseEdge::estop_'],['../classmy__edge_1_1demo_1_1UUVEdge.html#a6f2e808d95e8be1520f4dc1e7911fd28',1,'my_edge::demo::UUVEdge::estop_'],['../classmy__edge_1_1demo_1_1TUNAEdge.html#a6f2e808d95e8be1520f4dc1e7911fd28',1,'my_edge::demo::TUNAEdge::estop_']]],
   ['estop_5factive_12',['estop_active',['../structmy__data_1_1EdgeStatus.html#a933cfe7fd6b47e6f196a06e7f16ba8f7',1,'my_data::EdgeStatus']]],

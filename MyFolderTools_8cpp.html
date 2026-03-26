@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_tools/MyFolderTools.cpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_222f75d460e07a5cd0325e16008607c5.html">my_tools</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">命名空间</a>  </div>
+  <div class="headertitle"><div class="title">MyFolderTools.cpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="MyFolderTools_8h_source.html">MyFolderTools.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="MyLog_8h_source.html">MyLog.h</a>&quot;</code><br />
+<code>#include &lt;cerrno&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
+<code>#include &lt;dirent.h&gt;</code><br />
+<code>#include &lt;filesystem&gt;</code><br />
+<code>#include &lt;sys/stat.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+MyFolderTools.cpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="MyFolderTools_8cpp__incl.png" border="0" usemap="#asrc_2util_2my__tools_2MyFolderTools_8cpp" alt=""/></div>
+<map name="asrc_2util_2my__tools_2MyFolderTools_8cpp" id="asrc_2util_2my__tools_2MyFolderTools_8cpp">
+<area shape="rect" title=" " alt="" coords="449,5,644,45"/>
+<area shape="rect" href="MyFolderTools_8h.html" title=" " alt="" coords="49,93,175,119"/>
+<area shape="poly" title=" " alt="" coords="450,47,190,93,189,88,449,42"/>
+<area shape="rect" href="MyLog_8h.html" title=" " alt="" coords="277,93,355,119"/>
+<area shape="poly" title=" " alt="" coords="492,48,364,91,362,86,491,43"/>
+<area shape="rect" title=" " alt="" coords="379,93,442,119"/>
+<area shape="poly" title=" " alt="" coords="515,48,444,89,441,84,513,43"/>
+<area shape="rect" title=" " alt="" coords="467,93,533,119"/>
+<area shape="poly" title=" " alt="" coords="538,47,516,83,512,80,533,44"/>
+<area shape="rect" title=" " alt="" coords="557,93,629,119"/>
+<area shape="poly" title=" " alt="" coords="560,44,582,80,577,83,556,47"/>
+<area shape="rect" title=" " alt="" coords="653,93,744,119"/>
+<area shape="poly" title=" " alt="" coords="584,43,665,84,662,89,582,48"/>
+<area shape="rect" title=" " alt="" coords="768,93,853,119"/>
+<area shape="poly" title=" " alt="" coords="611,43,760,87,758,92,609,48"/>
+<area shape="rect" title=" " alt="" coords="877,93,952,119"/>
+<area shape="poly" title=" " alt="" coords="639,43,864,90,863,96,638,48"/>
+<area shape="rect" title=" " alt="" coords="5,174,64,199"/>
+<area shape="poly" title=" " alt="" coords="102,121,58,166,54,162,99,117"/>
+<area shape="poly" title=" " alt="" coords="278,117,185,138,77,169,71,171,69,166,75,164,184,133,277,112"/>
+<area shape="rect" title=" " alt="" coords="89,174,213,199"/>
+<area shape="poly" title=" " alt="" coords="293,121,188,171,186,166,291,116"/>
+<area shape="rect" title=" " alt="" coords="237,167,395,207"/>
+<area shape="poly" title=" " alt="" coords="319,119,319,153,313,153,313,119"/>
+<area shape="rect" title=" " alt="" coords="419,174,538,199"/>
+<area shape="poly" title=" " alt="" coords="341,116,444,166,442,171,339,121"/>
+<area shape="rect" title=" " alt="" coords="562,174,729,199"/>
+<area shape="poly" title=" " alt="" coords="356,114,585,168,583,173,354,119"/>
+<area shape="rect" title=" " alt="" coords="753,174,831,199"/>
+<area shape="poly" title=" " alt="" coords="356,114,368,116,473,130,556,136,638,144,742,164,752,167,751,172,741,169,637,149,555,141,473,135,368,121,355,119"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacemy__tools" id="r_namespacemy__tools"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__tools.html">my_tools</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

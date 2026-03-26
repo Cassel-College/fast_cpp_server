@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['yaw_0',['yaw',['../structfly__control_1_1HeartbeatData.html#a05209206c748bf62c46f18458c162d03',1,'fly_control::HeartbeatData::yaw'],['../structfly__control_1_1SetAngleData.html#a05209206c748bf62c46f18458c162d03',1,'fly_control::SetAngleData::yaw'],['../structPodModule_1_1PTZPose.html#a21cd490f6191f66678f55b4c242a10cf',1,'PodModule::PTZPose::yaw']]],
+  ['yaw_0',['yaw',['../structfly__control_1_1HeartbeatData.html#a05209206c748bf62c46f18458c162d03',1,'fly_control::HeartbeatData::yaw'],['../structfly__control_1_1SetAngleData.html#a05209206c748bf62c46f18458c162d03',1,'fly_control::SetAngleData::yaw'],['../structPodModule_1_1PTZPose.html#a21cd490f6191f66678f55b4c242a10cf',1,'PodModule::PTZPose::yaw'],['../structviewlink_1_1Attitude.html#a21cd490f6191f66678f55b4c242a10cf',1,'viewlink::Attitude::yaw']]],
   ['yaw_5fang_5frate_1',['yaw_ang_rate',['../structfly__control_1_1GimbalAngleData.html#a42d220eaed03940dc3dbc40f58063a6c',1,'fly_control::GimbalAngleData']]],
   ['yaw_5fangle_2',['yaw_angle',['../structfly__control_1_1GimbalControlData.html#ab8a6a0f2a78ea3c2b47ef6c0e6f89d55',1,'fly_control::GimbalControlData']]],
   ['yaw_5faxis_5fangle_3',['yaw_axis_angle',['../structfly__control_1_1TargetStateData.html#a7590b45741ea9ef15fc542a8ba8e7268',1,'fly_control::TargetStateData']]],

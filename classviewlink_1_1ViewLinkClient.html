@@ -1,0 +1,1727 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: ViewLinkClient类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceviewlink.html">viewlink</a></li><li class="navelem"><a class="el" href="classviewlink_1_1ViewLinkClient.html">ViewLinkClient</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a>  </div>
+  <div class="headertitle"><div class="title">ViewLinkClient类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="ViewLinkClient_8h_source.html">ViewLinkClient.h</a>&gt;</code></p>
+<div class="dynheader">
+ViewLinkClient 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classviewlink_1_1ViewLinkClient__coll__graph.png" border="0" usemap="#aViewLinkClient_coll__map" alt="Collaboration graph"/></div>
+<map name="aViewLinkClient_coll__map" id="aViewLinkClient_coll__map">
+<area shape="rect" title=" " alt="" coords="183,181,302,207"/>
+<area shape="rect" href="structviewlink_1_1TelemetrySnapshot.html" title="遥测快照" alt="" coords="5,93,152,119"/>
+<area shape="poly" title=" " alt="" coords="109,124,163,155,215,179,213,184,160,160,106,128"/>
+<area shape="rect" href="structviewlink_1_1Attitude.html" title="云台姿态 (yaw/pitch/roll)" alt="" coords="41,5,116,31"/>
+<area shape="poly" title=" " alt="" coords="81,45,81,93,76,93,76,45"/>
+<area shape="rect" href="structviewlink_1_1DeviceModelInfo.html" title="设备型号信息" alt="" coords="177,93,309,119"/>
+<area shape="poly" title=" " alt="" coords="245,133,245,181,240,181,240,133"/>
+<area shape="rect" href="structviewlink_1_1DeviceConfigInfo.html" title="设备配置信息" alt="" coords="333,93,467,119"/>
+<area shape="poly" title=" " alt="" coords="378,130,335,160,280,184,277,179,332,155,375,125"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:ad6d793f37ab4f2ac25dcba0940556c30" id="r_ad6d793f37ab4f2ac25dcba0940556c30"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#ad6d793f37ab4f2ac25dcba0940556c30">TelemetryCallback</a> = std::function&lt; void(const <a class="el" href="structviewlink_1_1TelemetrySnapshot.html">TelemetrySnapshot</a> &amp;)&gt;</td></tr>
+<tr class="memdesc:ad6d793f37ab4f2ac25dcba0940556c30"><td class="mdescLeft">&#160;</td><td class="mdescRight">遥测数据回调类型 (可选, 每次收到新遥测时被调用)  <br /></td></tr>
+<tr class="separator:ad6d793f37ab4f2ac25dcba0940556c30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:adec91a711a0b6bf817e062323d2fae59" id="r_adec91a711a0b6bf817e062323d2fae59"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#adec91a711a0b6bf817e062323d2fae59">ViewLinkClient</a> ()</td></tr>
+<tr class="separator:adec91a711a0b6bf817e062323d2fae59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42f9a677c95a3e5a22195031fbe2e507" id="r_a42f9a677c95a3e5a22195031fbe2e507"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a42f9a677c95a3e5a22195031fbe2e507">~ViewLinkClient</a> ()</td></tr>
+<tr class="separator:a42f9a677c95a3e5a22195031fbe2e507"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf256b48e71d70249e8dafee4ab55e68" id="r_aaf256b48e71d70249e8dafee4ab55e68"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#aaf256b48e71d70249e8dafee4ab55e68">ViewLinkClient</a> (const <a class="el" href="classviewlink_1_1ViewLinkClient.html">ViewLinkClient</a> &amp;)=delete</td></tr>
+<tr class="separator:aaf256b48e71d70249e8dafee4ab55e68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7091e40756adddba7fde9adc5c485c4c" id="r_a7091e40756adddba7fde9adc5c485c4c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classviewlink_1_1ViewLinkClient.html">ViewLinkClient</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a7091e40756adddba7fde9adc5c485c4c">operator=</a> (const <a class="el" href="classviewlink_1_1ViewLinkClient.html">ViewLinkClient</a> &amp;)=delete</td></tr>
+<tr class="separator:a7091e40756adddba7fde9adc5c485c4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98b1050f09da390896f964fb7a892391" id="r_a98b1050f09da390896f964fb7a892391"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a98b1050f09da390896f964fb7a892391">Initialize</a> ()</td></tr>
+<tr class="memdesc:a98b1050f09da390896f964fb7a892391"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化 SDK (自动创建 VLKLog 目录)  <br /></td></tr>
+<tr class="separator:a98b1050f09da390896f964fb7a892391"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5f038c2b480cf9ef5e19e3eba8dbaf9" id="r_ac5f038c2b480cf9ef5e19e3eba8dbaf9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#ac5f038c2b480cf9ef5e19e3eba8dbaf9">Shutdown</a> ()</td></tr>
+<tr class="memdesc:ac5f038c2b480cf9ef5e19e3eba8dbaf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">关闭 SDK 及后台线程  <br /></td></tr>
+<tr class="separator:ac5f038c2b480cf9ef5e19e3eba8dbaf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a475d2bd8072f3c9df7b37581c4f1eca4" id="r_a475d2bd8072f3c9df7b37581c4f1eca4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a475d2bd8072f3c9df7b37581c4f1eca4">IsInitialized</a> () const</td></tr>
+<tr class="memdesc:a475d2bd8072f3c9df7b37581c4f1eca4"><td class="mdescLeft">&#160;</td><td class="mdescRight">SDK 是否已初始化  <br /></td></tr>
+<tr class="separator:a475d2bd8072f3c9df7b37581c4f1eca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b3eb14a929a043b4f09b0c8de5a189f" id="r_a5b3eb14a929a043b4f09b0c8de5a189f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a5b3eb14a929a043b4f09b0c8de5a189f">Connect</a> (const <a class="el" href="structviewlink_1_1ConnectionConfig.html">ConnectionConfig</a> &amp;config)</td></tr>
+<tr class="memdesc:a5b3eb14a929a043b4f09b0c8de5a189f"><td class="mdescLeft">&#160;</td><td class="mdescRight">发起连接 (TCP 或 Serial)  <br /></td></tr>
+<tr class="separator:a5b3eb14a929a043b4f09b0c8de5a189f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65d18fa17ec0238d7e72f6c8f5c880b6" id="r_a65d18fa17ec0238d7e72f6c8f5c880b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a65d18fa17ec0238d7e72f6c8f5c880b6">Disconnect</a> ()</td></tr>
+<tr class="memdesc:a65d18fa17ec0238d7e72f6c8f5c880b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">主动断开  <br /></td></tr>
+<tr class="separator:a65d18fa17ec0238d7e72f6c8f5c880b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6eac2276488602350d65f868d3a8a7c3" id="r_a6eac2276488602350d65f868d3a8a7c3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a6eac2276488602350d65f868d3a8a7c3">WaitForConnection</a> (std::chrono::milliseconds timeout)</td></tr>
+<tr class="memdesc:a6eac2276488602350d65f868d3a8a7c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">阻塞等待连接建立, 超时返回 false  <br /></td></tr>
+<tr class="separator:a6eac2276488602350d65f868d3a8a7c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac142894f52dc2381b21963ce0e4e5551" id="r_ac142894f52dc2381b21963ce0e4e5551"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#ac142894f52dc2381b21963ce0e4e5551">WaitForTelemetry</a> (std::chrono::milliseconds timeout)</td></tr>
+<tr class="memdesc:ac142894f52dc2381b21963ce0e4e5551"><td class="mdescLeft">&#160;</td><td class="mdescRight">阻塞等待首次遥测数据到达  <br /></td></tr>
+<tr class="separator:ac142894f52dc2381b21963ce0e4e5551"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac766f50854b7401ea00f5e40d89c77f1" id="r_ac766f50854b7401ea00f5e40d89c77f1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#ac766f50854b7401ea00f5e40d89c77f1">IsConnected</a> () const</td></tr>
+<tr class="separator:ac766f50854b7401ea00f5e40d89c77f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3745e0506c3cdf9702fa786bdf24b93f" id="r_a3745e0506c3cdf9702fa786bdf24b93f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a3745e0506c3cdf9702fa786bdf24b93f">IsTcpConnected</a> () const</td></tr>
+<tr class="separator:a3745e0506c3cdf9702fa786bdf24b93f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78071e25ea9956a27bc8cf8bccf7b316" id="r_a78071e25ea9956a27bc8cf8bccf7b316"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a78071e25ea9956a27bc8cf8bccf7b316">IsSerialConnected</a> () const</td></tr>
+<tr class="separator:a78071e25ea9956a27bc8cf8bccf7b316"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7abb6d963053c0494d644bfef2b2c02" id="r_ab7abb6d963053c0494d644bfef2b2c02"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#ab7abb6d963053c0494d644bfef2b2c02">GetConnectionTypeName</a> () const</td></tr>
+<tr class="separator:ab7abb6d963053c0494d644bfef2b2c02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03cc7ca8a387f09cf6609096a010c856" id="r_a03cc7ca8a387f09cf6609096a010c856"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structviewlink_1_1Attitude.html">Attitude</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a03cc7ca8a387f09cf6609096a010c856">GetAttitude</a> () const</td></tr>
+<tr class="memdesc:a03cc7ca8a387f09cf6609096a010c856"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前姿态 (yaw/pitch/roll)  <br /></td></tr>
+<tr class="separator:a03cc7ca8a387f09cf6609096a010c856"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95f785a59196f817b903bceda5cfa450" id="r_a95f785a59196f817b903bceda5cfa450"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structviewlink_1_1TelemetrySnapshot.html">TelemetrySnapshot</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a95f785a59196f817b903bceda5cfa450">GetTelemetry</a> () const</td></tr>
+<tr class="memdesc:a95f785a59196f817b903bceda5cfa450"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取完整遥测快照  <br /></td></tr>
+<tr class="separator:a95f785a59196f817b903bceda5cfa450"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83737d1330ba456e882db9dc3dbb1196" id="r_a83737d1330ba456e882db9dc3dbb1196"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a83737d1330ba456e882db9dc3dbb1196">HasTelemetry</a> () const</td></tr>
+<tr class="memdesc:a83737d1330ba456e882db9dc3dbb1196"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否已收到过遥测数据  <br /></td></tr>
+<tr class="separator:a83737d1330ba456e882db9dc3dbb1196"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0b2c9644dd276e6f6bddc0ed2e79cc0" id="r_ae0b2c9644dd276e6f6bddc0ed2e79cc0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structviewlink_1_1DeviceModelInfo.html">DeviceModelInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#ae0b2c9644dd276e6f6bddc0ed2e79cc0">GetModelInfo</a> () const</td></tr>
+<tr class="memdesc:ae0b2c9644dd276e6f6bddc0ed2e79cc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取设备型号信息  <br /></td></tr>
+<tr class="separator:ae0b2c9644dd276e6f6bddc0ed2e79cc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a039b893df35a5053fb55ee38e3b0cf4a" id="r_a039b893df35a5053fb55ee38e3b0cf4a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structviewlink_1_1DeviceConfigInfo.html">DeviceConfigInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a039b893df35a5053fb55ee38e3b0cf4a">GetConfigInfo</a> () const</td></tr>
+<tr class="memdesc:a039b893df35a5053fb55ee38e3b0cf4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取设备配置信息  <br /></td></tr>
+<tr class="separator:a039b893df35a5053fb55ee38e3b0cf4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a922103fa75d9b3684f05e34abb4919" id="r_a7a922103fa75d9b3684f05e34abb4919"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a7a922103fa75d9b3684f05e34abb4919">HasModelInfo</a> () const</td></tr>
+<tr class="separator:a7a922103fa75d9b3684f05e34abb4919"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89fb266e7efdf1701db7ab63a41db0bc" id="r_a89fb266e7efdf1701db7ab63a41db0bc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a89fb266e7efdf1701db7ab63a41db0bc">HasConfigInfo</a> () const</td></tr>
+<tr class="separator:a89fb266e7efdf1701db7ab63a41db0bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f222cc505302281cd411d7e4169cd9c" id="r_a0f222cc505302281cd411d7e4169cd9c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a0f222cc505302281cd411d7e4169cd9c">SetTelemetryCallback</a> (<a class="el" href="classviewlink_1_1ViewLinkClient.html#ad6d793f37ab4f2ac25dcba0940556c30">TelemetryCallback</a> cb)</td></tr>
+<tr class="memdesc:a0f222cc505302281cd411d7e4169cd9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置遥测回调 (可选, 线程安全)  <br /></td></tr>
+<tr class="separator:a0f222cc505302281cd411d7e4169cd9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b06801132721c28a42363fb69ad9175" id="r_a4b06801132721c28a42363fb69ad9175"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a4b06801132721c28a42363fb69ad9175">Move</a> (short horizontal_speed, short vertical_speed)</td></tr>
+<tr class="memdesc:a4b06801132721c28a42363fb69ad9175"><td class="mdescLeft">&#160;</td><td class="mdescRight">以指定速度移动 (单位: 0.01°/s, 例如 1000 = 10°/s)  <br /></td></tr>
+<tr class="separator:a4b06801132721c28a42363fb69ad9175"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a092f7ee43c71c53354778d102842a70b" id="r_a092f7ee43c71c53354778d102842a70b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a092f7ee43c71c53354778d102842a70b">StopMove</a> ()</td></tr>
+<tr class="memdesc:a092f7ee43c71c53354778d102842a70b"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止移动  <br /></td></tr>
+<tr class="separator:a092f7ee43c71c53354778d102842a70b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76455a367cf9352f94489866243e3dfd" id="r_a76455a367cf9352f94489866243e3dfd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a76455a367cf9352f94489866243e3dfd">Home</a> ()</td></tr>
+<tr class="memdesc:a76455a367cf9352f94489866243e3dfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">回到初始位置  <br /></td></tr>
+<tr class="separator:a76455a367cf9352f94489866243e3dfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae452badea956168f61ab1a8020ef6776" id="r_ae452badea956168f61ab1a8020ef6776"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#ae452badea956168f61ab1a8020ef6776">TurnTo</a> (double yaw, double pitch)</td></tr>
+<tr class="memdesc:ae452badea956168f61ab1a8020ef6776"><td class="mdescLeft">&#160;</td><td class="mdescRight">转到指定 yaw/pitch (度)  <br /></td></tr>
+<tr class="separator:ae452badea956168f61ab1a8020ef6776"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a730b1ddf9ff00701fc0baea0fcd14c59" id="r_a730b1ddf9ff00701fc0baea0fcd14c59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a730b1ddf9ff00701fc0baea0fcd14c59">ZoomIn</a> (short speed)</td></tr>
+<tr class="separator:a730b1ddf9ff00701fc0baea0fcd14c59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17cdb895182d8a129dab691808494488" id="r_a17cdb895182d8a129dab691808494488"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a17cdb895182d8a129dab691808494488">ZoomOut</a> (short speed)</td></tr>
+<tr class="separator:a17cdb895182d8a129dab691808494488"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40d0bab0d4a741360eeb8280ac2092ff" id="r_a40d0bab0d4a741360eeb8280ac2092ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a40d0bab0d4a741360eeb8280ac2092ff">StopZoom</a> ()</td></tr>
+<tr class="separator:a40d0bab0d4a741360eeb8280ac2092ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaea4a7b0f3f52b281b9d333cdf51423e" id="r_aaea4a7b0f3f52b281b9d333cdf51423e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#aaea4a7b0f3f52b281b9d333cdf51423e">ZoomTo</a> (float magnification)</td></tr>
+<tr class="memdesc:aaea4a7b0f3f52b281b9d333cdf51423e"><td class="mdescLeft">&#160;</td><td class="mdescRight">变焦到指定倍率  <br /></td></tr>
+<tr class="separator:aaea4a7b0f3f52b281b9d333cdf51423e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72b3bbfdca6c44ce4b800421d8cff1a7" id="r_a72b3bbfdca6c44ce4b800421d8cff1a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a72b3bbfdca6c44ce4b800421d8cff1a7">FocusIn</a> (short speed)</td></tr>
+<tr class="separator:a72b3bbfdca6c44ce4b800421d8cff1a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4ee55d0922be074c568413dddf35536" id="r_af4ee55d0922be074c568413dddf35536"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#af4ee55d0922be074c568413dddf35536">FocusOut</a> (short speed)</td></tr>
+<tr class="separator:af4ee55d0922be074c568413dddf35536"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a248362a7e6e5addf34e8c920359e336b" id="r_a248362a7e6e5addf34e8c920359e336b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a248362a7e6e5addf34e8c920359e336b">StopFocus</a> ()</td></tr>
+<tr class="separator:a248362a7e6e5addf34e8c920359e336b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f6a992333baa23bb2afca6f18ea0d5b" id="r_a4f6a992333baa23bb2afca6f18ea0d5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a4f6a992333baa23bb2afca6f18ea0d5b">SetFocusMode</a> (int mode)</td></tr>
+<tr class="separator:a4f6a992333baa23bb2afca6f18ea0d5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a20ddcc8a3afe5208b9e2cdcb5e75c9" id="r_a0a20ddcc8a3afe5208b9e2cdcb5e75c9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a0a20ddcc8a3afe5208b9e2cdcb5e75c9">GetFocusMode</a> () const</td></tr>
+<tr class="separator:a0a20ddcc8a3afe5208b9e2cdcb5e75c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae70f2df1af1031d2bb638e7b55b19040" id="r_ae70f2df1af1031d2bb638e7b55b19040"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#ae70f2df1af1031d2bb638e7b55b19040">StartTracking</a> (int x, int y, int video_width, int video_height)</td></tr>
+<tr class="separator:ae70f2df1af1031d2bb638e7b55b19040"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ab86005816b8463a9be996d228bbc98" id="r_a4ab86005816b8463a9be996d228bbc98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a4ab86005816b8463a9be996d228bbc98">StopTracking</a> ()</td></tr>
+<tr class="separator:a4ab86005816b8463a9be996d228bbc98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab3575e179ad2e994069be87377aac67" id="r_aab3575e179ad2e994069be87377aac67"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#aab3575e179ad2e994069be87377aac67">IsTracking</a> () const</td></tr>
+<tr class="separator:aab3575e179ad2e994069be87377aac67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35ab1e3ba0600c16dccb6626a4d6708a" id="r_a35ab1e3ba0600c16dccb6626a4d6708a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a35ab1e3ba0600c16dccb6626a4d6708a">SwitchMotor</a> (bool on)</td></tr>
+<tr class="separator:a35ab1e3ba0600c16dccb6626a4d6708a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7ee1e24a6e65fe8f31c0f9a839c373c" id="r_ac7ee1e24a6e65fe8f31c0f9a839c373c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#ac7ee1e24a6e65fe8f31c0f9a839c373c">IsMotorOn</a> () const</td></tr>
+<tr class="separator:ac7ee1e24a6e65fe8f31c0f9a839c373c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46c68f0a7e4764462f0655934ac1eade" id="r_a46c68f0a7e4764462f0655934ac1eade"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a46c68f0a7e4764462f0655934ac1eade">SetFollowMode</a> (bool enable)</td></tr>
+<tr class="separator:a46c68f0a7e4764462f0655934ac1eade"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b1b16924ac2ca85fdee58db204ac3a5" id="r_a3b1b16924ac2ca85fdee58db204ac3a5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a3b1b16924ac2ca85fdee58db204ac3a5">IsFollowMode</a> () const</td></tr>
+<tr class="separator:a3b1b16924ac2ca85fdee58db204ac3a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7441e872b2f9ad98972b7029359a8ca" id="r_ac7441e872b2f9ad98972b7029359a8ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#ac7441e872b2f9ad98972b7029359a8ca">Photograph</a> ()</td></tr>
+<tr class="separator:ac7441e872b2f9ad98972b7029359a8ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a727d1738bb0547f0f6b5034ace7c5507" id="r_a727d1738bb0547f0f6b5034ace7c5507"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a727d1738bb0547f0f6b5034ace7c5507">SwitchRecord</a> (bool on)</td></tr>
+<tr class="separator:a727d1738bb0547f0f6b5034ace7c5507"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad17bfc84f286bbbd830e958b01f8f930" id="r_ad17bfc84f286bbbd830e958b01f8f930"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#ad17bfc84f286bbbd830e958b01f8f930">IsRecording</a> () const</td></tr>
+<tr class="separator:ad17bfc84f286bbbd830e958b01f8f930"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c7818a603388bf4a615e9074a293a8f" id="r_a0c7818a603388bf4a615e9074a293a8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a0c7818a603388bf4a615e9074a293a8f">SwitchLaser</a> (bool on)</td></tr>
+<tr class="separator:a0c7818a603388bf4a615e9074a293a8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96b59a14049168dcae7f8174dca5a0c8" id="r_a96b59a14049168dcae7f8174dca5a0c8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a96b59a14049168dcae7f8174dca5a0c8">GetSdkVersion</a> () const</td></tr>
+<tr class="separator:a96b59a14049168dcae7f8174dca5a0c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:a2e0db83b523c1bc6434d1ff4265b1c60" id="r_a2e0db83b523c1bc6434d1ff4265b1c60"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a2e0db83b523c1bc6434d1ff4265b1c60">OnConnectionStatus</a> (int status, const char *msg, int len, void *user)</td></tr>
+<tr class="separator:a2e0db83b523c1bc6434d1ff4265b1c60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cdb6e391cd2878d3c10b9b16456d63d" id="r_a8cdb6e391cd2878d3c10b9b16456d63d"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a8cdb6e391cd2878d3c10b9b16456d63d">OnDeviceStatus</a> (int type, const char *buf, int len, void *user)</td></tr>
+<tr class="separator:a8cdb6e391cd2878d3c10b9b16456d63d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a281b5ec791338d4378e22ef44a51b4a1" id="r_a281b5ec791338d4378e22ef44a51b4a1"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a281b5ec791338d4378e22ef44a51b4a1">mutex_</a></td></tr>
+<tr class="separator:a281b5ec791338d4378e22ef44a51b4a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad047562b3ab7f59fac5292557aa35f38" id="r_ad047562b3ab7f59fac5292557aa35f38"><td class="memItemLeft" align="right" valign="top">std::condition_variable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#ad047562b3ab7f59fac5292557aa35f38">connection_cv_</a></td></tr>
+<tr class="separator:ad047562b3ab7f59fac5292557aa35f38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add0d7956321e41877cdba73845f3bd48" id="r_add0d7956321e41877cdba73845f3bd48"><td class="memItemLeft" align="right" valign="top">std::condition_variable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#add0d7956321e41877cdba73845f3bd48">telemetry_cv_</a></td></tr>
+<tr class="separator:add0d7956321e41877cdba73845f3bd48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a850c586f1793a0ba624baf481ba1aa87" id="r_a850c586f1793a0ba624baf481ba1aa87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structviewlink_1_1TelemetrySnapshot.html">TelemetrySnapshot</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a850c586f1793a0ba624baf481ba1aa87">telemetry_</a></td></tr>
+<tr class="separator:a850c586f1793a0ba624baf481ba1aa87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cda2973ebdb59acbe0ebbbf4df8c716" id="r_a2cda2973ebdb59acbe0ebbbf4df8c716"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structviewlink_1_1DeviceModelInfo.html">DeviceModelInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a2cda2973ebdb59acbe0ebbbf4df8c716">model_info_</a></td></tr>
+<tr class="separator:a2cda2973ebdb59acbe0ebbbf4df8c716"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cabba6beac5c12dfe7c04653faabec8" id="r_a8cabba6beac5c12dfe7c04653faabec8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structviewlink_1_1DeviceConfigInfo.html">DeviceConfigInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a8cabba6beac5c12dfe7c04653faabec8">config_info_</a></td></tr>
+<tr class="separator:a8cabba6beac5c12dfe7c04653faabec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51990e64a540cc992b6d9fe53c3fedb1" id="r_a51990e64a540cc992b6d9fe53c3fedb1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classviewlink_1_1ViewLinkClient.html#ad6d793f37ab4f2ac25dcba0940556c30">TelemetryCallback</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a51990e64a540cc992b6d9fe53c3fedb1">telemetry_cb_</a></td></tr>
+<tr class="separator:a51990e64a540cc992b6d9fe53c3fedb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a394f715193a382d9c59ec69143a3cc4d" id="r_a394f715193a382d9c59ec69143a3cc4d"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a394f715193a382d9c59ec69143a3cc4d">connected_</a> {false}</td></tr>
+<tr class="separator:a394f715193a382d9c59ec69143a3cc4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac163446d85e1601c33726a122707d7eb" id="r_ac163446d85e1601c33726a122707d7eb"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#ac163446d85e1601c33726a122707d7eb">tcp_connected_</a> {false}</td></tr>
+<tr class="separator:ac163446d85e1601c33726a122707d7eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a4a2455f5bb908b31a63f364cfa6828" id="r_a1a4a2455f5bb908b31a63f364cfa6828"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#a1a4a2455f5bb908b31a63f364cfa6828">serial_connected_</a> {false}</td></tr>
+<tr class="separator:a1a4a2455f5bb908b31a63f364cfa6828"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef7436a220692b5b863db4e9d8b870a3" id="r_aef7436a220692b5b863db4e9d8b870a3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classviewlink_1_1ViewLinkClient.html#aef7436a220692b5b863db4e9d8b870a3">initialized_</a> = false</td></tr>
+<tr class="separator:aef7436a220692b5b863db4e9d8b870a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">成员类型定义说明</h2>
+<a id="ad6d793f37ab4f2ac25dcba0940556c30" name="ad6d793f37ab4f2ac25dcba0940556c30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6d793f37ab4f2ac25dcba0940556c30">&#9670;&#160;</a></span>TelemetryCallback</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classviewlink_1_1ViewLinkClient.html#ad6d793f37ab4f2ac25dcba0940556c30">TelemetryCallback</a> =  std::function&lt;void(const <a class="el" href="structviewlink_1_1TelemetrySnapshot.html">TelemetrySnapshot</a>&amp;)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>遥测数据回调类型 (可选, 每次收到新遥测时被调用) </p>
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="adec91a711a0b6bf817e062323d2fae59" name="adec91a711a0b6bf817e062323d2fae59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adec91a711a0b6bf817e062323d2fae59">&#9670;&#160;</a></span>ViewLinkClient() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classviewlink_1_1ViewLinkClient.html">ViewLinkClient</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a42f9a677c95a3e5a22195031fbe2e507" name="a42f9a677c95a3e5a22195031fbe2e507"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42f9a677c95a3e5a22195031fbe2e507">&#9670;&#160;</a></span>~ViewLinkClient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classviewlink_1_1ViewLinkClient.html">ViewLinkClient</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classviewlink_1_1ViewLinkClient.html#ac5f038c2b480cf9ef5e19e3eba8dbaf9">ViewLinkClient::Shutdown()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classviewlink_1_1ViewLinkClient_a42f9a677c95a3e5a22195031fbe2e507_cgraph.png" border="0" usemap="#aclassviewlink_1_1ViewLinkClient_a42f9a677c95a3e5a22195031fbe2e507_cgraph" alt=""/></div>
+<map name="aclassviewlink_1_1ViewLinkClient_a42f9a677c95a3e5a22195031fbe2e507_cgraph" id="aclassviewlink_1_1ViewLinkClient_a42f9a677c95a3e5a22195031fbe2e507_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,136,31"/>
+<area shape="rect" href="classviewlink_1_1ViewLinkClient.html#ac5f038c2b480cf9ef5e19e3eba8dbaf9" title="关闭 SDK 及后台线程" alt="" coords="184,5,271,31"/>
+<area shape="poly" title=" " alt="" coords="136,15,170,15,170,21,136,21"/>
+<area shape="rect" href="classviewlink_1_1ViewLinkClient.html#a65d18fa17ec0238d7e72f6c8f5c880b6" title="主动断开" alt="" coords="319,5,413,31"/>
+<area shape="poly" title=" " alt="" coords="271,15,305,15,305,21,271,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aaf256b48e71d70249e8dafee4ab55e68" name="aaf256b48e71d70249e8dafee4ab55e68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf256b48e71d70249e8dafee4ab55e68">&#9670;&#160;</a></span>ViewLinkClient() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classviewlink_1_1ViewLinkClient.html">ViewLinkClient</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classviewlink_1_1ViewLinkClient.html">ViewLinkClient</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a5b3eb14a929a043b4f09b0c8de5a189f" name="a5b3eb14a929a043b4f09b0c8de5a189f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b3eb14a929a043b4f09b0c8de5a189f">&#9670;&#160;</a></span>Connect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Connect </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structviewlink_1_1ConnectionConfig.html">ConnectionConfig</a> &amp;&#160;</td>
+          <td class="paramname"><em>config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>发起连接 (TCP 或 Serial) </p>
+
+<p class="reference">引用了 <a class="el" href="structviewlink_1_1ConnectionConfig.html#a784e73e1ce3f90fbcbb0a78d72a053ff">ConnectionConfig::baud_rate</a>, <a class="el" href="structviewlink_1_1ConnectionConfig.html#a319b95015f17a3dc8b4b43a65c541571">ConnectionConfig::ip</a>, <a class="el" href="classviewlink_1_1ViewLinkClient.html#a2e0db83b523c1bc6434d1ff4265b1c60">ViewLinkClient::OnConnectionStatus()</a>, <a class="el" href="structviewlink_1_1ConnectionConfig.html#a63c89c04d1feae07ca35558055155ffb">ConnectionConfig::port</a>, <a class="el" href="structviewlink_1_1ConnectionConfig.html#ad97c093fce8f98b8a6436884d2b0d1c3">ConnectionConfig::serial_port</a>, <a class="el" href="namespaceviewlink.html#aa1f0e2efd52935fd01bfece0fbead81fa30b7fdeebc36988717d0e274cc2e7520">viewlink::Tcp</a> , 以及 <a class="el" href="structviewlink_1_1ConnectionConfig.html#af3bf347167ee6a7479a90b69d13f9b08">ConnectionConfig::type</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classviewlink_1_1ViewLinkClient_a5b3eb14a929a043b4f09b0c8de5a189f_cgraph.png" border="0" usemap="#aclassviewlink_1_1ViewLinkClient_a5b3eb14a929a043b4f09b0c8de5a189f_cgraph" alt=""/></div>
+<map name="aclassviewlink_1_1ViewLinkClient_a5b3eb14a929a043b4f09b0c8de5a189f_cgraph" id="aclassviewlink_1_1ViewLinkClient_a5b3eb14a929a043b4f09b0c8de5a189f_cgraph">
+<area shape="rect" title="发起连接 (TCP 或 Serial)" alt="" coords="5,5,80,31"/>
+<area shape="rect" href="classviewlink_1_1ViewLinkClient.html#a2e0db83b523c1bc6434d1ff4265b1c60" title=" " alt="" coords="128,5,283,31"/>
+<area shape="poly" title=" " alt="" coords="80,15,114,15,114,21,80,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a65d18fa17ec0238d7e72f6c8f5c880b6" name="a65d18fa17ec0238d7e72f6c8f5c880b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65d18fa17ec0238d7e72f6c8f5c880b6">&#9670;&#160;</a></span>Disconnect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Disconnect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>主动断开 </p>
+
+<p class="reference">引用了 <a class="el" href="classviewlink_1_1ViewLinkClient.html#a394f715193a382d9c59ec69143a3cc4d">ViewLinkClient::connected_</a>, <a class="el" href="classviewlink_1_1ViewLinkClient.html#a1a4a2455f5bb908b31a63f364cfa6828">ViewLinkClient::serial_connected_</a> , 以及 <a class="el" href="classviewlink_1_1ViewLinkClient.html#ac163446d85e1601c33726a122707d7eb">ViewLinkClient::tcp_connected_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classviewlink_1_1ViewLinkClient.html#ac5f038c2b480cf9ef5e19e3eba8dbaf9">ViewLinkClient::Shutdown()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classviewlink_1_1ViewLinkClient_a65d18fa17ec0238d7e72f6c8f5c880b6_icgraph.png" border="0" usemap="#aclassviewlink_1_1ViewLinkClient_a65d18fa17ec0238d7e72f6c8f5c880b6_icgraph" alt=""/></div>
+<map name="aclassviewlink_1_1ViewLinkClient_a65d18fa17ec0238d7e72f6c8f5c880b6_icgraph" id="aclassviewlink_1_1ViewLinkClient_a65d18fa17ec0238d7e72f6c8f5c880b6_icgraph">
+<area shape="rect" title="主动断开" alt="" coords="319,5,413,31"/>
+<area shape="rect" href="classviewlink_1_1ViewLinkClient.html#ac5f038c2b480cf9ef5e19e3eba8dbaf9" title="关闭 SDK 及后台线程" alt="" coords="184,5,271,31"/>
+<area shape="poly" title=" " alt="" coords="305,21,271,21,271,15,305,15"/>
+<area shape="rect" href="classviewlink_1_1ViewLinkClient.html#a42f9a677c95a3e5a22195031fbe2e507" title=" " alt="" coords="5,5,136,31"/>
+<area shape="poly" title=" " alt="" coords="170,21,137,21,137,15,170,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a72b3bbfdca6c44ce4b800421d8cff1a7" name="a72b3bbfdca6c44ce4b800421d8cff1a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72b3bbfdca6c44ce4b800421d8cff1a7">&#9670;&#160;</a></span>FocusIn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FocusIn </td>
+          <td>(</td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>speed</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af4ee55d0922be074c568413dddf35536" name="af4ee55d0922be074c568413dddf35536"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4ee55d0922be074c568413dddf35536">&#9670;&#160;</a></span>FocusOut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FocusOut </td>
+          <td>(</td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>speed</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a03cc7ca8a387f09cf6609096a010c856" name="a03cc7ca8a387f09cf6609096a010c856"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03cc7ca8a387f09cf6609096a010c856">&#9670;&#160;</a></span>GetAttitude()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structviewlink_1_1Attitude.html">Attitude</a> GetAttitude </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取当前姿态 (yaw/pitch/roll) </p>
+
+<p class="reference">引用了 <a class="el" href="structviewlink_1_1TelemetrySnapshot.html#a2d9f460feb54b94e97605a6c866fa61b">TelemetrySnapshot::attitude</a>, <a class="el" href="classviewlink_1_1ViewLinkClient.html#a281b5ec791338d4378e22ef44a51b4a1">ViewLinkClient::mutex_</a> , 以及 <a class="el" href="classviewlink_1_1ViewLinkClient.html#a850c586f1793a0ba624baf481ba1aa87">ViewLinkClient::telemetry_</a>.</p>
+
+</div>
+</div>
+<a id="a039b893df35a5053fb55ee38e3b0cf4a" name="a039b893df35a5053fb55ee38e3b0cf4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a039b893df35a5053fb55ee38e3b0cf4a">&#9670;&#160;</a></span>GetConfigInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structviewlink_1_1DeviceConfigInfo.html">DeviceConfigInfo</a> GetConfigInfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取设备配置信息 </p>
+
+<p class="reference">引用了 <a class="el" href="classviewlink_1_1ViewLinkClient.html#a8cabba6beac5c12dfe7c04653faabec8">ViewLinkClient::config_info_</a> , 以及 <a class="el" href="classviewlink_1_1ViewLinkClient.html#a281b5ec791338d4378e22ef44a51b4a1">ViewLinkClient::mutex_</a>.</p>
+
+</div>
+</div>
+<a id="ab7abb6d963053c0494d644bfef2b2c02" name="ab7abb6d963053c0494d644bfef2b2c02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7abb6d963053c0494d644bfef2b2c02">&#9670;&#160;</a></span>GetConnectionTypeName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GetConnectionTypeName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classviewlink_1_1ViewLinkClient.html#a1a4a2455f5bb908b31a63f364cfa6828">ViewLinkClient::serial_connected_</a> , 以及 <a class="el" href="classviewlink_1_1ViewLinkClient.html#ac163446d85e1601c33726a122707d7eb">ViewLinkClient::tcp_connected_</a>.</p>
+
+</div>
+</div>
+<a id="a0a20ddcc8a3afe5208b9e2cdcb5e75c9" name="a0a20ddcc8a3afe5208b9e2cdcb5e75c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a20ddcc8a3afe5208b9e2cdcb5e75c9">&#9670;&#160;</a></span>GetFocusMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetFocusMode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae0b2c9644dd276e6f6bddc0ed2e79cc0" name="ae0b2c9644dd276e6f6bddc0ed2e79cc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0b2c9644dd276e6f6bddc0ed2e79cc0">&#9670;&#160;</a></span>GetModelInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structviewlink_1_1DeviceModelInfo.html">DeviceModelInfo</a> GetModelInfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取设备型号信息 </p>
+
+<p class="reference">引用了 <a class="el" href="classviewlink_1_1ViewLinkClient.html#a2cda2973ebdb59acbe0ebbbf4df8c716">ViewLinkClient::model_info_</a> , 以及 <a class="el" href="classviewlink_1_1ViewLinkClient.html#a281b5ec791338d4378e22ef44a51b4a1">ViewLinkClient::mutex_</a>.</p>
+
+</div>
+</div>
+<a id="a96b59a14049168dcae7f8174dca5a0c8" name="a96b59a14049168dcae7f8174dca5a0c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96b59a14049168dcae7f8174dca5a0c8">&#9670;&#160;</a></span>GetSdkVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GetSdkVersion </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a95f785a59196f817b903bceda5cfa450" name="a95f785a59196f817b903bceda5cfa450"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95f785a59196f817b903bceda5cfa450">&#9670;&#160;</a></span>GetTelemetry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structviewlink_1_1TelemetrySnapshot.html">TelemetrySnapshot</a> GetTelemetry </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取完整遥测快照 </p>
+
+<p class="reference">引用了 <a class="el" href="classviewlink_1_1ViewLinkClient.html#a281b5ec791338d4378e22ef44a51b4a1">ViewLinkClient::mutex_</a> , 以及 <a class="el" href="classviewlink_1_1ViewLinkClient.html#a850c586f1793a0ba624baf481ba1aa87">ViewLinkClient::telemetry_</a>.</p>
+
+</div>
+</div>
+<a id="a89fb266e7efdf1701db7ab63a41db0bc" name="a89fb266e7efdf1701db7ab63a41db0bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89fb266e7efdf1701db7ab63a41db0bc">&#9670;&#160;</a></span>HasConfigInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool HasConfigInfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classviewlink_1_1ViewLinkClient.html#a8cabba6beac5c12dfe7c04653faabec8">ViewLinkClient::config_info_</a>, <a class="el" href="classviewlink_1_1ViewLinkClient.html#a281b5ec791338d4378e22ef44a51b4a1">ViewLinkClient::mutex_</a> , 以及 <a class="el" href="structviewlink_1_1DeviceConfigInfo.html#a28e3c179a86f337095088b3ca02a2b2a">DeviceConfigInfo::valid</a>.</p>
+
+</div>
+</div>
+<a id="a7a922103fa75d9b3684f05e34abb4919" name="a7a922103fa75d9b3684f05e34abb4919"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a922103fa75d9b3684f05e34abb4919">&#9670;&#160;</a></span>HasModelInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool HasModelInfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classviewlink_1_1ViewLinkClient.html#a2cda2973ebdb59acbe0ebbbf4df8c716">ViewLinkClient::model_info_</a>, <a class="el" href="classviewlink_1_1ViewLinkClient.html#a281b5ec791338d4378e22ef44a51b4a1">ViewLinkClient::mutex_</a> , 以及 <a class="el" href="structviewlink_1_1DeviceModelInfo.html#a28e3c179a86f337095088b3ca02a2b2a">DeviceModelInfo::valid</a>.</p>
+
+</div>
+</div>
+<a id="a83737d1330ba456e882db9dc3dbb1196" name="a83737d1330ba456e882db9dc3dbb1196"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83737d1330ba456e882db9dc3dbb1196">&#9670;&#160;</a></span>HasTelemetry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool HasTelemetry </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>是否已收到过遥测数据 </p>
+
+<p class="reference">引用了 <a class="el" href="classviewlink_1_1ViewLinkClient.html#a281b5ec791338d4378e22ef44a51b4a1">ViewLinkClient::mutex_</a>, <a class="el" href="classviewlink_1_1ViewLinkClient.html#a850c586f1793a0ba624baf481ba1aa87">ViewLinkClient::telemetry_</a> , 以及 <a class="el" href="structviewlink_1_1TelemetrySnapshot.html#a28e3c179a86f337095088b3ca02a2b2a">TelemetrySnapshot::valid</a>.</p>
+
+</div>
+</div>
+<a id="a76455a367cf9352f94489866243e3dfd" name="a76455a367cf9352f94489866243e3dfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76455a367cf9352f94489866243e3dfd">&#9670;&#160;</a></span>Home()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Home </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>回到初始位置 </p>
+
+</div>
+</div>
+<a id="a98b1050f09da390896f964fb7a892391" name="a98b1050f09da390896f964fb7a892391"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98b1050f09da390896f964fb7a892391">&#9670;&#160;</a></span>Initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Initialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初始化 SDK (自动创建 VLKLog 目录) </p>
+
+<p class="reference">引用了 <a class="el" href="classviewlink_1_1ViewLinkClient.html#aef7436a220692b5b863db4e9d8b870a3">ViewLinkClient::initialized_</a> , 以及 <a class="el" href="classviewlink_1_1ViewLinkClient.html#a8cdb6e391cd2878d3c10b9b16456d63d">ViewLinkClient::OnDeviceStatus()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classviewlink_1_1ViewLinkClient_a98b1050f09da390896f964fb7a892391_cgraph.png" border="0" usemap="#aclassviewlink_1_1ViewLinkClient_a98b1050f09da390896f964fb7a892391_cgraph" alt=""/></div>
+<map name="aclassviewlink_1_1ViewLinkClient_a98b1050f09da390896f964fb7a892391_cgraph" id="aclassviewlink_1_1ViewLinkClient_a98b1050f09da390896f964fb7a892391_cgraph">
+<area shape="rect" title="初始化 SDK (自动创建 VLKLog 目录)" alt="" coords="5,5,84,31"/>
+<area shape="rect" href="classviewlink_1_1ViewLinkClient.html#a8cdb6e391cd2878d3c10b9b16456d63d" title=" " alt="" coords="132,5,259,31"/>
+<area shape="poly" title=" " alt="" coords="84,15,118,15,118,21,84,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac766f50854b7401ea00f5e40d89c77f1" name="ac766f50854b7401ea00f5e40d89c77f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac766f50854b7401ea00f5e40d89c77f1">&#9670;&#160;</a></span>IsConnected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsConnected </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classviewlink_1_1ViewLinkClient.html#a394f715193a382d9c59ec69143a3cc4d">ViewLinkClient::connected_</a>.</p>
+
+</div>
+</div>
+<a id="a3b1b16924ac2ca85fdee58db204ac3a5" name="a3b1b16924ac2ca85fdee58db204ac3a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b1b16924ac2ca85fdee58db204ac3a5">&#9670;&#160;</a></span>IsFollowMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsFollowMode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a475d2bd8072f3c9df7b37581c4f1eca4" name="a475d2bd8072f3c9df7b37581c4f1eca4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a475d2bd8072f3c9df7b37581c4f1eca4">&#9670;&#160;</a></span>IsInitialized()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsInitialized </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>SDK 是否已初始化 </p>
+
+<p class="reference">引用了 <a class="el" href="classviewlink_1_1ViewLinkClient.html#aef7436a220692b5b863db4e9d8b870a3">ViewLinkClient::initialized_</a>.</p>
+
+</div>
+</div>
+<a id="ac7ee1e24a6e65fe8f31c0f9a839c373c" name="ac7ee1e24a6e65fe8f31c0f9a839c373c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7ee1e24a6e65fe8f31c0f9a839c373c">&#9670;&#160;</a></span>IsMotorOn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsMotorOn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad17bfc84f286bbbd830e958b01f8f930" name="ad17bfc84f286bbbd830e958b01f8f930"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad17bfc84f286bbbd830e958b01f8f930">&#9670;&#160;</a></span>IsRecording()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsRecording </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a78071e25ea9956a27bc8cf8bccf7b316" name="a78071e25ea9956a27bc8cf8bccf7b316"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78071e25ea9956a27bc8cf8bccf7b316">&#9670;&#160;</a></span>IsSerialConnected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsSerialConnected </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classviewlink_1_1ViewLinkClient.html#a1a4a2455f5bb908b31a63f364cfa6828">ViewLinkClient::serial_connected_</a>.</p>
+
+</div>
+</div>
+<a id="a3745e0506c3cdf9702fa786bdf24b93f" name="a3745e0506c3cdf9702fa786bdf24b93f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3745e0506c3cdf9702fa786bdf24b93f">&#9670;&#160;</a></span>IsTcpConnected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsTcpConnected </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classviewlink_1_1ViewLinkClient.html#ac163446d85e1601c33726a122707d7eb">ViewLinkClient::tcp_connected_</a>.</p>
+
+</div>
+</div>
+<a id="aab3575e179ad2e994069be87377aac67" name="aab3575e179ad2e994069be87377aac67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab3575e179ad2e994069be87377aac67">&#9670;&#160;</a></span>IsTracking()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsTracking </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4b06801132721c28a42363fb69ad9175" name="a4b06801132721c28a42363fb69ad9175"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b06801132721c28a42363fb69ad9175">&#9670;&#160;</a></span>Move()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Move </td>
+          <td>(</td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>horizontal_speed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>vertical_speed</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>以指定速度移动 (单位: 0.01°/s, 例如 1000 = 10°/s) </p>
+
+</div>
+</div>
+<a id="a2e0db83b523c1bc6434d1ff4265b1c60" name="a2e0db83b523c1bc6434d1ff4265b1c60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e0db83b523c1bc6434d1ff4265b1c60">&#9670;&#160;</a></span>OnConnectionStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int OnConnectionStatus </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>status</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>user</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classviewlink_1_1ViewLinkClient.html#ac163446d85e1601c33726a122707d7eb">ViewLinkClient::tcp_connected_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classviewlink_1_1ViewLinkClient.html#a5b3eb14a929a043b4f09b0c8de5a189f">ViewLinkClient::Connect()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classviewlink_1_1ViewLinkClient_a2e0db83b523c1bc6434d1ff4265b1c60_icgraph.png" border="0" usemap="#aclassviewlink_1_1ViewLinkClient_a2e0db83b523c1bc6434d1ff4265b1c60_icgraph" alt=""/></div>
+<map name="aclassviewlink_1_1ViewLinkClient_a2e0db83b523c1bc6434d1ff4265b1c60_icgraph" id="aclassviewlink_1_1ViewLinkClient_a2e0db83b523c1bc6434d1ff4265b1c60_icgraph">
+<area shape="rect" title=" " alt="" coords="128,5,283,31"/>
+<area shape="rect" href="classviewlink_1_1ViewLinkClient.html#a5b3eb14a929a043b4f09b0c8de5a189f" title="发起连接 (TCP 或 Serial)" alt="" coords="5,5,80,31"/>
+<area shape="poly" title=" " alt="" coords="114,21,80,21,80,15,114,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8cdb6e391cd2878d3c10b9b16456d63d" name="a8cdb6e391cd2878d3c10b9b16456d63d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cdb6e391cd2878d3c10b9b16456d63d">&#9670;&#160;</a></span>OnDeviceStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int OnDeviceStatus </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>user</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classviewlink_1_1ViewLinkClient.html#a98b1050f09da390896f964fb7a892391">ViewLinkClient::Initialize()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classviewlink_1_1ViewLinkClient_a8cdb6e391cd2878d3c10b9b16456d63d_icgraph.png" border="0" usemap="#aclassviewlink_1_1ViewLinkClient_a8cdb6e391cd2878d3c10b9b16456d63d_icgraph" alt=""/></div>
+<map name="aclassviewlink_1_1ViewLinkClient_a8cdb6e391cd2878d3c10b9b16456d63d_icgraph" id="aclassviewlink_1_1ViewLinkClient_a8cdb6e391cd2878d3c10b9b16456d63d_icgraph">
+<area shape="rect" title=" " alt="" coords="132,5,259,31"/>
+<area shape="rect" href="classviewlink_1_1ViewLinkClient.html#a98b1050f09da390896f964fb7a892391" title="初始化 SDK (自动创建 VLKLog 目录)" alt="" coords="5,5,84,31"/>
+<area shape="poly" title=" " alt="" coords="118,21,84,21,84,15,118,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7091e40756adddba7fde9adc5c485c4c" name="a7091e40756adddba7fde9adc5c485c4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7091e40756adddba7fde9adc5c485c4c">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classviewlink_1_1ViewLinkClient.html">ViewLinkClient</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classviewlink_1_1ViewLinkClient.html">ViewLinkClient</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac7441e872b2f9ad98972b7029359a8ca" name="ac7441e872b2f9ad98972b7029359a8ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7441e872b2f9ad98972b7029359a8ca">&#9670;&#160;</a></span>Photograph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Photograph </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4f6a992333baa23bb2afca6f18ea0d5b" name="a4f6a992333baa23bb2afca6f18ea0d5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f6a992333baa23bb2afca6f18ea0d5b">&#9670;&#160;</a></span>SetFocusMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetFocusMode </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a46c68f0a7e4764462f0655934ac1eade" name="a46c68f0a7e4764462f0655934ac1eade"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46c68f0a7e4764462f0655934ac1eade">&#9670;&#160;</a></span>SetFollowMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetFollowMode </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0f222cc505302281cd411d7e4169cd9c" name="a0f222cc505302281cd411d7e4169cd9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f222cc505302281cd411d7e4169cd9c">&#9670;&#160;</a></span>SetTelemetryCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetTelemetryCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classviewlink_1_1ViewLinkClient.html#ad6d793f37ab4f2ac25dcba0940556c30">TelemetryCallback</a>&#160;</td>
+          <td class="paramname"><em>cb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置遥测回调 (可选, 线程安全) </p>
+
+<p class="reference">引用了 <a class="el" href="classviewlink_1_1ViewLinkClient.html#a281b5ec791338d4378e22ef44a51b4a1">ViewLinkClient::mutex_</a> , 以及 <a class="el" href="classviewlink_1_1ViewLinkClient.html#a51990e64a540cc992b6d9fe53c3fedb1">ViewLinkClient::telemetry_cb_</a>.</p>
+
+</div>
+</div>
+<a id="ac5f038c2b480cf9ef5e19e3eba8dbaf9" name="ac5f038c2b480cf9ef5e19e3eba8dbaf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5f038c2b480cf9ef5e19e3eba8dbaf9">&#9670;&#160;</a></span>Shutdown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Shutdown </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>关闭 SDK 及后台线程 </p>
+
+<p class="reference">引用了 <a class="el" href="classviewlink_1_1ViewLinkClient.html#a8cabba6beac5c12dfe7c04653faabec8">ViewLinkClient::config_info_</a>, <a class="el" href="classviewlink_1_1ViewLinkClient.html#a394f715193a382d9c59ec69143a3cc4d">ViewLinkClient::connected_</a>, <a class="el" href="classviewlink_1_1ViewLinkClient.html#a65d18fa17ec0238d7e72f6c8f5c880b6">ViewLinkClient::Disconnect()</a>, <a class="el" href="classviewlink_1_1ViewLinkClient.html#aef7436a220692b5b863db4e9d8b870a3">ViewLinkClient::initialized_</a>, <a class="el" href="classviewlink_1_1ViewLinkClient.html#a2cda2973ebdb59acbe0ebbbf4df8c716">ViewLinkClient::model_info_</a>, <a class="el" href="classviewlink_1_1ViewLinkClient.html#a281b5ec791338d4378e22ef44a51b4a1">ViewLinkClient::mutex_</a>, <a class="el" href="classviewlink_1_1ViewLinkClient.html#a1a4a2455f5bb908b31a63f364cfa6828">ViewLinkClient::serial_connected_</a>, <a class="el" href="classviewlink_1_1ViewLinkClient.html#ac163446d85e1601c33726a122707d7eb">ViewLinkClient::tcp_connected_</a> , 以及 <a class="el" href="classviewlink_1_1ViewLinkClient.html#a850c586f1793a0ba624baf481ba1aa87">ViewLinkClient::telemetry_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classviewlink_1_1ViewLinkClient.html#a42f9a677c95a3e5a22195031fbe2e507">ViewLinkClient::~ViewLinkClient()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classviewlink_1_1ViewLinkClient_ac5f038c2b480cf9ef5e19e3eba8dbaf9_cgraph.png" border="0" usemap="#aclassviewlink_1_1ViewLinkClient_ac5f038c2b480cf9ef5e19e3eba8dbaf9_cgraph" alt=""/></div>
+<map name="aclassviewlink_1_1ViewLinkClient_ac5f038c2b480cf9ef5e19e3eba8dbaf9_cgraph" id="aclassviewlink_1_1ViewLinkClient_ac5f038c2b480cf9ef5e19e3eba8dbaf9_cgraph">
+<area shape="rect" title="关闭 SDK 及后台线程" alt="" coords="5,5,92,31"/>
+<area shape="rect" href="classviewlink_1_1ViewLinkClient.html#a65d18fa17ec0238d7e72f6c8f5c880b6" title="主动断开" alt="" coords="140,5,235,31"/>
+<area shape="poly" title=" " alt="" coords="92,15,127,15,127,21,92,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classviewlink_1_1ViewLinkClient_ac5f038c2b480cf9ef5e19e3eba8dbaf9_icgraph.png" border="0" usemap="#aclassviewlink_1_1ViewLinkClient_ac5f038c2b480cf9ef5e19e3eba8dbaf9_icgraph" alt=""/></div>
+<map name="aclassviewlink_1_1ViewLinkClient_ac5f038c2b480cf9ef5e19e3eba8dbaf9_icgraph" id="aclassviewlink_1_1ViewLinkClient_ac5f038c2b480cf9ef5e19e3eba8dbaf9_icgraph">
+<area shape="rect" title="关闭 SDK 及后台线程" alt="" coords="184,5,271,31"/>
+<area shape="rect" href="classviewlink_1_1ViewLinkClient.html#a42f9a677c95a3e5a22195031fbe2e507" title=" " alt="" coords="5,5,136,31"/>
+<area shape="poly" title=" " alt="" coords="170,21,137,21,137,15,170,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae70f2df1af1031d2bb638e7b55b19040" name="ae70f2df1af1031d2bb638e7b55b19040"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae70f2df1af1031d2bb638e7b55b19040">&#9670;&#160;</a></span>StartTracking()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StartTracking </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>video_width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>video_height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a248362a7e6e5addf34e8c920359e336b" name="a248362a7e6e5addf34e8c920359e336b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a248362a7e6e5addf34e8c920359e336b">&#9670;&#160;</a></span>StopFocus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StopFocus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a092f7ee43c71c53354778d102842a70b" name="a092f7ee43c71c53354778d102842a70b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a092f7ee43c71c53354778d102842a70b">&#9670;&#160;</a></span>StopMove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StopMove </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>停止移动 </p>
+
+</div>
+</div>
+<a id="a4ab86005816b8463a9be996d228bbc98" name="a4ab86005816b8463a9be996d228bbc98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ab86005816b8463a9be996d228bbc98">&#9670;&#160;</a></span>StopTracking()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StopTracking </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a40d0bab0d4a741360eeb8280ac2092ff" name="a40d0bab0d4a741360eeb8280ac2092ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40d0bab0d4a741360eeb8280ac2092ff">&#9670;&#160;</a></span>StopZoom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StopZoom </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0c7818a603388bf4a615e9074a293a8f" name="a0c7818a603388bf4a615e9074a293a8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c7818a603388bf4a615e9074a293a8f">&#9670;&#160;</a></span>SwitchLaser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SwitchLaser </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>on</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a35ab1e3ba0600c16dccb6626a4d6708a" name="a35ab1e3ba0600c16dccb6626a4d6708a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35ab1e3ba0600c16dccb6626a4d6708a">&#9670;&#160;</a></span>SwitchMotor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SwitchMotor </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>on</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a727d1738bb0547f0f6b5034ace7c5507" name="a727d1738bb0547f0f6b5034ace7c5507"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a727d1738bb0547f0f6b5034ace7c5507">&#9670;&#160;</a></span>SwitchRecord()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SwitchRecord </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>on</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae452badea956168f61ab1a8020ef6776" name="ae452badea956168f61ab1a8020ef6776"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae452badea956168f61ab1a8020ef6776">&#9670;&#160;</a></span>TurnTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TurnTo </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>yaw</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>pitch</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>转到指定 yaw/pitch (度) </p>
+
+</div>
+</div>
+<a id="a6eac2276488602350d65f868d3a8a7c3" name="a6eac2276488602350d65f868d3a8a7c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6eac2276488602350d65f868d3a8a7c3">&#9670;&#160;</a></span>WaitForConnection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WaitForConnection </td>
+          <td>(</td>
+          <td class="paramtype">std::chrono::milliseconds&#160;</td>
+          <td class="paramname"><em>timeout</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>阻塞等待连接建立, 超时返回 false </p>
+
+<p class="reference">引用了 <a class="el" href="classviewlink_1_1ViewLinkClient.html#a394f715193a382d9c59ec69143a3cc4d">ViewLinkClient::connected_</a>, <a class="el" href="classviewlink_1_1ViewLinkClient.html#ad047562b3ab7f59fac5292557aa35f38">ViewLinkClient::connection_cv_</a> , 以及 <a class="el" href="classviewlink_1_1ViewLinkClient.html#a281b5ec791338d4378e22ef44a51b4a1">ViewLinkClient::mutex_</a>.</p>
+
+</div>
+</div>
+<a id="ac142894f52dc2381b21963ce0e4e5551" name="ac142894f52dc2381b21963ce0e4e5551"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac142894f52dc2381b21963ce0e4e5551">&#9670;&#160;</a></span>WaitForTelemetry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WaitForTelemetry </td>
+          <td>(</td>
+          <td class="paramtype">std::chrono::milliseconds&#160;</td>
+          <td class="paramname"><em>timeout</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>阻塞等待首次遥测数据到达 </p>
+
+<p class="reference">引用了 <a class="el" href="classviewlink_1_1ViewLinkClient.html#a281b5ec791338d4378e22ef44a51b4a1">ViewLinkClient::mutex_</a>, <a class="el" href="classviewlink_1_1ViewLinkClient.html#a850c586f1793a0ba624baf481ba1aa87">ViewLinkClient::telemetry_</a>, <a class="el" href="classviewlink_1_1ViewLinkClient.html#add0d7956321e41877cdba73845f3bd48">ViewLinkClient::telemetry_cv_</a> , 以及 <a class="el" href="structviewlink_1_1TelemetrySnapshot.html#a28e3c179a86f337095088b3ca02a2b2a">TelemetrySnapshot::valid</a>.</p>
+
+</div>
+</div>
+<a id="a730b1ddf9ff00701fc0baea0fcd14c59" name="a730b1ddf9ff00701fc0baea0fcd14c59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a730b1ddf9ff00701fc0baea0fcd14c59">&#9670;&#160;</a></span>ZoomIn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ZoomIn </td>
+          <td>(</td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>speed</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a17cdb895182d8a129dab691808494488" name="a17cdb895182d8a129dab691808494488"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17cdb895182d8a129dab691808494488">&#9670;&#160;</a></span>ZoomOut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ZoomOut </td>
+          <td>(</td>
+          <td class="paramtype">short&#160;</td>
+          <td class="paramname"><em>speed</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaea4a7b0f3f52b281b9d333cdf51423e" name="aaea4a7b0f3f52b281b9d333cdf51423e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaea4a7b0f3f52b281b9d333cdf51423e">&#9670;&#160;</a></span>ZoomTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ZoomTo </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>magnification</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>变焦到指定倍率 </p>
+
+</div>
+</div>
+<h2 class="groupheader">结构体成员变量说明</h2>
+<a id="a8cabba6beac5c12dfe7c04653faabec8" name="a8cabba6beac5c12dfe7c04653faabec8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cabba6beac5c12dfe7c04653faabec8">&#9670;&#160;</a></span>config_info_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structviewlink_1_1DeviceConfigInfo.html">DeviceConfigInfo</a> config_info_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classviewlink_1_1ViewLinkClient.html#a039b893df35a5053fb55ee38e3b0cf4a">ViewLinkClient::GetConfigInfo()</a>, <a class="el" href="classviewlink_1_1ViewLinkClient.html#a89fb266e7efdf1701db7ab63a41db0bc">ViewLinkClient::HasConfigInfo()</a> , 以及 <a class="el" href="classviewlink_1_1ViewLinkClient.html#ac5f038c2b480cf9ef5e19e3eba8dbaf9">ViewLinkClient::Shutdown()</a>.</p>
+
+</div>
+</div>
+<a id="a394f715193a382d9c59ec69143a3cc4d" name="a394f715193a382d9c59ec69143a3cc4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a394f715193a382d9c59ec69143a3cc4d">&#9670;&#160;</a></span>connected_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;bool&gt; connected_ {false}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classviewlink_1_1ViewLinkClient.html#a65d18fa17ec0238d7e72f6c8f5c880b6">ViewLinkClient::Disconnect()</a>, <a class="el" href="classviewlink_1_1ViewLinkClient.html#ac766f50854b7401ea00f5e40d89c77f1">ViewLinkClient::IsConnected()</a>, <a class="el" href="classviewlink_1_1ViewLinkClient.html#ac5f038c2b480cf9ef5e19e3eba8dbaf9">ViewLinkClient::Shutdown()</a> , 以及 <a class="el" href="classviewlink_1_1ViewLinkClient.html#a6eac2276488602350d65f868d3a8a7c3">ViewLinkClient::WaitForConnection()</a>.</p>
+
+</div>
+</div>
+<a id="ad047562b3ab7f59fac5292557aa35f38" name="ad047562b3ab7f59fac5292557aa35f38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad047562b3ab7f59fac5292557aa35f38">&#9670;&#160;</a></span>connection_cv_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::condition_variable connection_cv_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classviewlink_1_1ViewLinkClient.html#a6eac2276488602350d65f868d3a8a7c3">ViewLinkClient::WaitForConnection()</a>.</p>
+
+</div>
+</div>
+<a id="aef7436a220692b5b863db4e9d8b870a3" name="aef7436a220692b5b863db4e9d8b870a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef7436a220692b5b863db4e9d8b870a3">&#9670;&#160;</a></span>initialized_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool initialized_ = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classviewlink_1_1ViewLinkClient.html#a98b1050f09da390896f964fb7a892391">ViewLinkClient::Initialize()</a>, <a class="el" href="classviewlink_1_1ViewLinkClient.html#a475d2bd8072f3c9df7b37581c4f1eca4">ViewLinkClient::IsInitialized()</a> , 以及 <a class="el" href="classviewlink_1_1ViewLinkClient.html#ac5f038c2b480cf9ef5e19e3eba8dbaf9">ViewLinkClient::Shutdown()</a>.</p>
+
+</div>
+</div>
+<a id="a2cda2973ebdb59acbe0ebbbf4df8c716" name="a2cda2973ebdb59acbe0ebbbf4df8c716"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cda2973ebdb59acbe0ebbbf4df8c716">&#9670;&#160;</a></span>model_info_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structviewlink_1_1DeviceModelInfo.html">DeviceModelInfo</a> model_info_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classviewlink_1_1ViewLinkClient.html#ae0b2c9644dd276e6f6bddc0ed2e79cc0">ViewLinkClient::GetModelInfo()</a>, <a class="el" href="classviewlink_1_1ViewLinkClient.html#a7a922103fa75d9b3684f05e34abb4919">ViewLinkClient::HasModelInfo()</a> , 以及 <a class="el" href="classviewlink_1_1ViewLinkClient.html#ac5f038c2b480cf9ef5e19e3eba8dbaf9">ViewLinkClient::Shutdown()</a>.</p>
+
+</div>
+</div>
+<a id="a281b5ec791338d4378e22ef44a51b4a1" name="a281b5ec791338d4378e22ef44a51b4a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a281b5ec791338d4378e22ef44a51b4a1">&#9670;&#160;</a></span>mutex_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex mutex_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classviewlink_1_1ViewLinkClient.html#a03cc7ca8a387f09cf6609096a010c856">ViewLinkClient::GetAttitude()</a>, <a class="el" href="classviewlink_1_1ViewLinkClient.html#a039b893df35a5053fb55ee38e3b0cf4a">ViewLinkClient::GetConfigInfo()</a>, <a class="el" href="classviewlink_1_1ViewLinkClient.html#ae0b2c9644dd276e6f6bddc0ed2e79cc0">ViewLinkClient::GetModelInfo()</a>, <a class="el" href="classviewlink_1_1ViewLinkClient.html#a95f785a59196f817b903bceda5cfa450">ViewLinkClient::GetTelemetry()</a>, <a class="el" href="classviewlink_1_1ViewLinkClient.html#a89fb266e7efdf1701db7ab63a41db0bc">ViewLinkClient::HasConfigInfo()</a>, <a class="el" href="classviewlink_1_1ViewLinkClient.html#a7a922103fa75d9b3684f05e34abb4919">ViewLinkClient::HasModelInfo()</a>, <a class="el" href="classviewlink_1_1ViewLinkClient.html#a83737d1330ba456e882db9dc3dbb1196">ViewLinkClient::HasTelemetry()</a>, <a class="el" href="classviewlink_1_1ViewLinkClient.html#a0f222cc505302281cd411d7e4169cd9c">ViewLinkClient::SetTelemetryCallback()</a>, <a class="el" href="classviewlink_1_1ViewLinkClient.html#ac5f038c2b480cf9ef5e19e3eba8dbaf9">ViewLinkClient::Shutdown()</a>, <a class="el" href="classviewlink_1_1ViewLinkClient.html#a6eac2276488602350d65f868d3a8a7c3">ViewLinkClient::WaitForConnection()</a> , 以及 <a class="el" href="classviewlink_1_1ViewLinkClient.html#ac142894f52dc2381b21963ce0e4e5551">ViewLinkClient::WaitForTelemetry()</a>.</p>
+
+</div>
+</div>
+<a id="a1a4a2455f5bb908b31a63f364cfa6828" name="a1a4a2455f5bb908b31a63f364cfa6828"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a4a2455f5bb908b31a63f364cfa6828">&#9670;&#160;</a></span>serial_connected_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;bool&gt; serial_connected_ {false}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classviewlink_1_1ViewLinkClient.html#a65d18fa17ec0238d7e72f6c8f5c880b6">ViewLinkClient::Disconnect()</a>, <a class="el" href="classviewlink_1_1ViewLinkClient.html#ab7abb6d963053c0494d644bfef2b2c02">ViewLinkClient::GetConnectionTypeName()</a>, <a class="el" href="classviewlink_1_1ViewLinkClient.html#a78071e25ea9956a27bc8cf8bccf7b316">ViewLinkClient::IsSerialConnected()</a> , 以及 <a class="el" href="classviewlink_1_1ViewLinkClient.html#ac5f038c2b480cf9ef5e19e3eba8dbaf9">ViewLinkClient::Shutdown()</a>.</p>
+
+</div>
+</div>
+<a id="ac163446d85e1601c33726a122707d7eb" name="ac163446d85e1601c33726a122707d7eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac163446d85e1601c33726a122707d7eb">&#9670;&#160;</a></span>tcp_connected_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;bool&gt; tcp_connected_ {false}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classviewlink_1_1ViewLinkClient.html#a65d18fa17ec0238d7e72f6c8f5c880b6">ViewLinkClient::Disconnect()</a>, <a class="el" href="classviewlink_1_1ViewLinkClient.html#ab7abb6d963053c0494d644bfef2b2c02">ViewLinkClient::GetConnectionTypeName()</a>, <a class="el" href="classviewlink_1_1ViewLinkClient.html#a3745e0506c3cdf9702fa786bdf24b93f">ViewLinkClient::IsTcpConnected()</a>, <a class="el" href="classviewlink_1_1ViewLinkClient.html#a2e0db83b523c1bc6434d1ff4265b1c60">ViewLinkClient::OnConnectionStatus()</a> , 以及 <a class="el" href="classviewlink_1_1ViewLinkClient.html#ac5f038c2b480cf9ef5e19e3eba8dbaf9">ViewLinkClient::Shutdown()</a>.</p>
+
+</div>
+</div>
+<a id="a850c586f1793a0ba624baf481ba1aa87" name="a850c586f1793a0ba624baf481ba1aa87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a850c586f1793a0ba624baf481ba1aa87">&#9670;&#160;</a></span>telemetry_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structviewlink_1_1TelemetrySnapshot.html">TelemetrySnapshot</a> telemetry_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classviewlink_1_1ViewLinkClient.html#a03cc7ca8a387f09cf6609096a010c856">ViewLinkClient::GetAttitude()</a>, <a class="el" href="classviewlink_1_1ViewLinkClient.html#a95f785a59196f817b903bceda5cfa450">ViewLinkClient::GetTelemetry()</a>, <a class="el" href="classviewlink_1_1ViewLinkClient.html#a83737d1330ba456e882db9dc3dbb1196">ViewLinkClient::HasTelemetry()</a>, <a class="el" href="classviewlink_1_1ViewLinkClient.html#ac5f038c2b480cf9ef5e19e3eba8dbaf9">ViewLinkClient::Shutdown()</a> , 以及 <a class="el" href="classviewlink_1_1ViewLinkClient.html#ac142894f52dc2381b21963ce0e4e5551">ViewLinkClient::WaitForTelemetry()</a>.</p>
+
+</div>
+</div>
+<a id="a51990e64a540cc992b6d9fe53c3fedb1" name="a51990e64a540cc992b6d9fe53c3fedb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51990e64a540cc992b6d9fe53c3fedb1">&#9670;&#160;</a></span>telemetry_cb_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classviewlink_1_1ViewLinkClient.html#ad6d793f37ab4f2ac25dcba0940556c30">TelemetryCallback</a> telemetry_cb_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classviewlink_1_1ViewLinkClient.html#a0f222cc505302281cd411d7e4169cd9c">ViewLinkClient::SetTelemetryCallback()</a>.</p>
+
+</div>
+</div>
+<a id="add0d7956321e41877cdba73845f3bd48" name="add0d7956321e41877cdba73845f3bd48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add0d7956321e41877cdba73845f3bd48">&#9670;&#160;</a></span>telemetry_cv_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::condition_variable telemetry_cv_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classviewlink_1_1ViewLinkClient.html#ac142894f52dc2381b21963ce0e4e5551">ViewLinkClient::WaitForTelemetry()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/util/my_pod/pod/pinling/<a class="el" href="ViewLinkClient_8h_source.html">ViewLinkClient.h</a></li>
+<li>src/util/my_pod/pod/pinling/<a class="el" href="ViewLinkClient_8cpp.html">ViewLinkClient.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

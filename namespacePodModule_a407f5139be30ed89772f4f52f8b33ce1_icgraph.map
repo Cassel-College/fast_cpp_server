@@ -1,18 +1,42 @@
 <map id="capabilityTypeToString" name="capabilityTypeToString">
-<area shape="rect" id="Node000001" title="将能力类型枚举转为中文字符串" alt="" coords="701,105,869,130"/>
-<area shape="rect" id="Node000002" href="$classPodModule_1_1BasePod.html#af469166fbb78b5c5053ca57b06997ecf" title="注册并装配一个能力" alt="" coords="224,37,383,77"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="752,100,707,75,653,56,582,45,511,41,443,43,383,49,383,43,442,38,511,36,583,40,654,51,709,70,755,95"/>
-<area shape="rect" id="Node000005" href="$classPodModule_1_1PodManager.html#a0c0831a43937d4fc5d8021fddff23ef2" title="获取所有吊舱的状态快照（JSON） 供 API 层调用，返回全部吊舱的摘要信息" alt="" coords="451,65,633,105"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="687,107,633,100,634,95,688,102"/>
-<area shape="rect" id="Node000006" href="$classPodModule_1_1CapabilityRegistry.html#a0f676d239a1be3f60f0b483c4c9bf8d5" title="注册一个能力" alt="" coords="431,129,653,169"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="688,133,654,137,653,132,687,128"/>
-<area shape="rect" id="Node000008" href="$classPodModule_1_1CapabilityRegistry.html#a8fc07a9ebfbec0d92d6bb7ac4642c1fc" title="注销一个能力" alt="" coords="431,193,653,233"/>
-<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="750,139,654,184,620,196,618,191,652,179,748,134"/>
-<area shape="rect" id="Node000003" href="$classPodModule_1_1DjiPod.html#a226f8a514521d997b196fb2392e3a869" title="初始化大疆能力装配" alt="" coords="13,5,168,45"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="210,46,168,40,169,34,211,41"/>
-<area shape="rect" id="Node000004" href="$classPodModule_1_1PinlingPod.html#a226f8a514521d997b196fb2392e3a869" title="初始化品凌能力装配" alt="" coords="5,69,176,109"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="211,74,177,79,176,74,210,69"/>
-<area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="452,128,430,120,341,80,344,75,432,115,454,123"/>
-<area shape="rect" id="Node000007" href="$classPodModule_1_1BasePod.html#aa3adfbba87b1b123bcd5d57294251359" title="注册一个能力" alt="" coords="224,129,383,169"/>
-<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="417,152,383,152,383,147,417,147"/>
+<area shape="rect" id="Node000001" title="将能力类型枚举转为中文字符串" alt="" coords="1301,207,1469,233"/>
+<area shape="rect" id="Node000002" href="$classPodModule_1_1BasePod.html#aad98e12fec9129cc8dff91230ae03a4e" title=" " alt="" coords="1095,200,1253,240"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1288,223,1253,223,1253,217,1288,217"/>
+<area shape="rect" id="Node000003" href="$classPodModule_1_1PinlingPod.html#a9cbd0f6253f0dde4613ed450b8954be1" title=" " alt="" coords="661,143,832,183"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1088,199,1046,191,935,176,832,169,832,163,935,171,1047,185,1089,194"/>
+<area shape="rect" id="Node000016" href="$classPodModule_1_1BasePod.html#a397749dd5fcab090c66bd82c6330fee0" title=" " alt="" coords="880,200,1047,240"/>
+<area shape="poly" id="edge15_Node000002_Node000016" title=" " alt="" coords="1081,223,1047,223,1047,217,1081,217"/>
+<area shape="rect" id="Node000018" href="$classPodModule_1_1BasePod.html#ad766c8b7078240222b90ea752d6650a1" title=" " alt="" coords="884,264,1043,304"/>
+<area shape="poly" id="edge18_Node000002_Node000018" title=" " alt="" coords="1095,247,1030,267,1029,261,1094,242"/>
+<area shape="rect" id="Node000004" href="$classPodModule_1_1PinlingPod.html#af0adeddfb634847b397d070f347bfa22" title=" " alt="" coords="443,171,613,211"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="648,178,614,182,613,177,648,173"/>
+<area shape="rect" id="Node000005" href="$classPodModule_1_1PinlingPod.html#a0d8babf49667252a12c3e11f9de56205" title=" " alt="" coords="443,261,613,301"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="676,191,663,197,560,263,557,259,660,192,674,186"/>
+<area shape="rect" id="Node000006" href="$classPodModule_1_1PinlingPod.html#ae4186e1685d1a38644da15d910821921" title=" " alt="" coords="224,5,395,45"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="474,256,456,241,440,224,427,201,421,179,419,138,415,99,407,79,393,59,378,47,382,43,397,56,412,77,420,98,424,138,426,178,432,199,445,221,460,238,477,252"/>
+<area shape="rect" id="Node000007" href="$classPodModule_1_1PinlingPod.html#a4106edc9433c36301492a64e5d60c6f2" title=" " alt="" coords="224,69,395,109"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="476,256,441,224,424,197,418,171,411,147,393,123,377,112,380,107,397,119,415,145,423,170,429,195,445,221,480,252"/>
+<area shape="rect" id="Node000008" href="$classPodModule_1_1PinlingPod.html#afbebb5743d3c1b52596cb85c6f04fd0f" title=" " alt="" coords="224,133,395,173"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="484,256,441,225,418,205,393,188,369,176,371,171,396,183,421,201,444,221,487,251"/>
+<area shape="rect" id="Node000009" href="$classPodModule_1_1PinlingPod.html#abcefdbe4843d063087eb398cc3b7182e" title=" " alt="" coords="224,197,395,237"/>
+<area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="445,260,377,240,379,235,447,255"/>
+<area shape="rect" id="Node000011" href="$classPodModule_1_1PinlingPod.html#a3798776d5b1dd4e4c040da2810b5588b" title=" " alt="" coords="224,261,395,301"/>
+<area shape="poly" id="edge10_Node000005_Node000011" title=" " alt="" coords="429,284,395,284,395,279,429,279"/>
+<area shape="rect" id="Node000012" href="$classPodModule_1_1PinlingPod.html#a560e64dfb16a719c50ba1d8aaddb5666" title=" " alt="" coords="224,325,395,365"/>
+<area shape="poly" id="edge11_Node000005_Node000012" title=" " alt="" coords="447,308,379,328,377,323,445,303"/>
+<area shape="rect" id="Node000013" href="$classPodModule_1_1PinlingPod.html#aaf734353b0b2290ad9327f42ffc8c440" title=" " alt="" coords="224,389,395,429"/>
+<area shape="poly" id="edge12_Node000005_Node000013" title=" " alt="" coords="494,312,449,346,396,380,371,392,368,387,393,375,446,342,491,308"/>
+<area shape="rect" id="Node000014" href="$classPodModule_1_1PinlingPod.html#a021164473cd820317950fa10edfde784" title=" " alt="" coords="224,453,395,493"/>
+<area shape="poly" id="edge13_Node000005_Node000014" title=" " alt="" coords="510,315,463,379,432,413,396,444,376,455,373,451,393,439,428,410,459,376,506,311"/>
+<area shape="rect" id="Node000015" href="$classPodModule_1_1PinlingPod.html#ae32acf46e60c98c395e95c01b5b46d05" title=" " alt="" coords="224,517,395,557"/>
+<area shape="poly" id="edge14_Node000005_Node000015" title=" " alt="" coords="518,316,500,359,474,410,439,462,396,507,378,519,375,515,393,503,435,459,469,407,495,357,513,314"/>
+<area shape="rect" id="Node000010" href="$classPodModule_1_1PinlingPod.html#ad3bf252d845d3e418ed4982220b05353" title=" " alt="" coords="5,197,176,237"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="210,220,176,220,176,215,210,215"/>
+<area shape="poly" id="edge16_Node000016_Node000003" title=" " alt="" coords="874,199,822,185,823,180,875,194"/>
+<area shape="rect" id="Node000017" href="$classPodModule_1_1PinlingPod.html#ac3c74a39ea55ea21acaf25990c51f857" title="子类初始化扩展点" alt="" coords="661,207,832,247"/>
+<area shape="poly" id="edge17_Node000016_Node000017" title=" " alt="" coords="867,226,832,227,832,221,866,220"/>
+<area shape="poly" id="edge20_Node000018_Node000003" title=" " alt="" coords="886,259,878,254,863,239,854,225,845,211,830,197,810,185,813,180,834,193,849,207,858,222,867,236,882,250,889,255"/>
+<area shape="poly" id="edge19_Node000018_Node000004" title=" " alt="" coords="870,288,769,282,714,274,661,261,605,239,559,213,561,208,608,234,662,256,715,268,769,276,871,283"/>
+<area shape="poly" id="edge21_Node000018_Node000005" title=" " alt="" coords="871,301,832,305,747,310,661,305,613,300,614,294,662,300,747,304,832,300,870,296"/>
+<area shape="poly" id="edge22_Node000018_Node000017" title=" " alt="" coords="874,263,822,249,823,244,875,258"/>
 </map>

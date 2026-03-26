@@ -1,40 +1,82 @@
 <map id="fail" name="fail">
-<area shape="rect" id="Node000001" title="构造失败结果" alt="" coords="595,454,637,479"/>
-<area shape="rect" id="Node000002" href="$classPodModule_1_1PodManager.html#ac4319fbc249e87a1e54d4c6a4b0a50df" title="添加一个吊舱" alt="" coords="332,5,515,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="611,440,607,354,596,240,576,130,562,88,545,59,530,47,514,38,516,34,533,43,549,56,567,86,581,129,601,239,612,353,617,440"/>
-<area shape="rect" id="Node000003" href="$classPodModule_1_1BasePod.html#af0adeddfb634847b397d070f347bfa22" title="连接设备" alt="" coords="344,69,503,109"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="610,441,604,367,592,272,572,181,559,147,545,123,525,108,502,99,504,94,528,104,549,120,564,144,577,180,597,271,609,366,616,440"/>
-<area shape="rect" id="Node000004" href="$classPodModule_1_1BaseSession.html#aa11149640c3a454d6ac22e0024636a42" title="建立与设备的连接" alt="" coords="331,133,515,173"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="609,441,587,304,568,233,557,205,545,187,531,176,514,168,517,163,534,171,549,184,562,203,573,231,592,302,614,440"/>
-<area shape="rect" id="Node000005" href="$classPodModule_1_1PodManager.html#acc4a66d789f1fa2a08496f37bb1e54c6" title="连接指定吊舱" alt="" coords="332,197,515,237"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="612,440,608,399,597,348,577,296,563,272,545,251,513,232,516,227,548,247,567,269,582,293,602,346,613,398,617,440"/>
-<area shape="rect" id="Node000006" href="$classPodModule_1_1BasePod.html#a404558c623f1e9686ac0d34501bf890b" title="断开设备" alt="" coords="344,261,503,301"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="608,441,600,411,588,377,570,344,545,315,525,302,502,293,504,288,527,298,548,311,574,341,593,375,605,410,613,440"/>
-<area shape="rect" id="Node000007" href="$classPodModule_1_1BaseSession.html#a404558c623f1e9686ac0d34501bf890b" title="断开与设备的连接" alt="" coords="331,325,515,365"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="599,443,577,410,545,380,514,364,517,359,548,375,581,406,604,440"/>
-<area shape="rect" id="Node000009" href="$classPodModule_1_1PodManager.html#acdcbeafb788832debc76556201d1d53d" title="断开指定吊舱" alt="" coords="332,389,515,429"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="581,459,490,432,492,427,582,454"/>
-<area shape="rect" id="Node000010" href="$classPodModule_1_1PinlingStatusCapability.html#a6a8f20810fd5219b07d5c7cc053d87c0" title="获取设备当前状态" alt="" coords="35,571,222,611"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="581,467,526,466,456,468,378,477,301,495,260,511,221,531,157,573,154,568,218,527,258,506,299,489,377,472,455,463,526,461,581,462"/>
-<area shape="rect" id="Node000011" href="$classPodModule_1_1BaseLaserCapability.html#aadc88853154d883f393920da9b8c0913" title="执行一次激光测距" alt="" coords="306,504,541,544"/>
-<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="582,479,492,507,490,501,581,474"/>
-<area shape="rect" id="Node000012" href="$classPodModule_1_1DjiLaserCapability.html#aadc88853154d883f393920da9b8c0913" title="执行一次激光测距" alt="" coords="313,568,534,608"/>
-<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="604,493,581,527,548,558,526,570,523,566,545,554,577,524,599,490"/>
-<area shape="rect" id="Node000013" href="$classPodModule_1_1PinlingLaserCapability.html#aadc88853154d883f393920da9b8c0913" title="执行一次激光测距" alt="" coords="300,632,547,672"/>
-<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="613,494,605,524,593,558,574,593,548,622,531,634,528,630,545,618,570,590,588,556,600,522,608,492"/>
-<area shape="rect" id="Node000014" href="$classPodModule_1_1PinlingStatusCapability.html#a4db09892dabcf5a5e58efca23b517376" title="刷新状态缓存" alt="" coords="330,696,517,736"/>
-<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="617,493,613,535,602,587,582,640,567,664,548,686,518,705,515,701,545,682,563,661,577,638,597,586,608,535,612,493"/>
-<area shape="rect" id="Node000015" href="$classPodModule_1_1PodManager.html#a94e4653f0149ca21f04de05274f5b83e" title="移除一个吊舱" alt="" coords="332,760,515,800"/>
-<area shape="poly" id="edge15_Node000001_Node000015" title=" " alt="" coords="614,493,592,631,573,702,562,730,549,750,533,762,516,771,514,766,530,758,545,746,557,728,568,701,587,630,609,493"/>
-<area shape="rect" id="Node000016" href="$classPodModule_1_1BaseSession.html#ae0ecc153fd1c2c2e5bca49c26e766eab" title="发送请求数据" alt="" coords="331,824,515,864"/>
-<area shape="poly" id="edge16_Node000001_Node000016" title=" " alt="" coords="616,493,609,567,597,663,577,753,564,789,549,814,534,826,517,835,514,830,531,822,545,810,559,787,572,752,592,662,604,567,610,493"/>
-<area shape="rect" id="Node000018" href="$classPodModule_1_1BaseStreamCapability.html#a551e80d9a1695e34ba256f205996ae1d" title="停止拉流" alt="" coords="300,888,547,928"/>
-<area shape="poly" id="edge18_Node000001_Node000018" title=" " alt="" coords="617,494,612,580,601,695,581,805,567,848,549,878,535,890,531,886,545,874,562,846,576,803,596,694,607,580,611,493"/>
-<area shape="rect" id="Node000008" href="$classPodModule_1_1BaseSession.html#a036b23a445923f97ef68c9d542d4e76d" title=" " alt="" coords="37,325,221,365"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="318,348,221,348,221,343,318,343"/>
-<area shape="poly" id="edge14_Node000014_Node000010" title=" " alt="" coords="320,694,299,686,223,650,160,613,163,609,225,645,301,682,322,689"/>
-<area shape="rect" id="Node000017" href="$classPodModule_1_1BaseSession.html#ad5a46d08487109f9d260fa447e9f5a50" title="发送请求并等待响应（请求&#45;应答模式）" alt="" coords="37,824,221,864"/>
-<area shape="poly" id="edge17_Node000016_Node000017" title=" " alt="" coords="318,847,221,847,221,841,318,841"/>
-<area shape="rect" id="Node000019" href="$classPodModule_1_1BaseStreamCapability.html#aa33081145fc1809e2ee579b84b8e23ba" title=" " alt="" coords="5,888,252,928"/>
-<area shape="poly" id="edge19_Node000018_Node000019" title=" " alt="" coords="286,911,252,911,252,905,286,905"/>
+<area shape="rect" id="Node000001" title="构造失败结果" alt="" coords="1125,730,1168,755"/>
+<area shape="rect" id="Node000002" href="$classPodModule_1_1PodManager.html#ac4319fbc249e87a1e54d4c6a4b0a50df" title="添加一个吊舱" alt="" coords="894,5,1077,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1142,716,1135,572,1121,366,1101,172,1089,103,1075,65,1055,47,1058,43,1080,63,1094,102,1106,171,1126,366,1140,572,1147,716"/>
+<area shape="rect" id="Node000003" href="$classPodModule_1_1BasePod.html#af0adeddfb634847b397d070f347bfa22" title=" " alt="" coords="674,345,833,385"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="1142,716,1138,637,1127,534,1118,483,1107,437,1093,400,1075,377,1048,358,1017,345,984,337,950,334,882,337,822,348,821,343,882,331,950,328,985,332,1019,340,1050,353,1079,373,1097,398,1112,435,1123,481,1132,533,1143,636,1147,716"/>
+<area shape="rect" id="Node000005" href="$classPodModule_1_1BaseSession.html#aa11149640c3a454d6ac22e0024636a42" title="建立与设备的连接" alt="" coords="893,120,1077,160"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="1143,716,1141,602,1133,442,1125,361,1113,285,1096,223,1075,180,1054,162,1058,158,1079,177,1101,221,1118,284,1130,360,1138,442,1147,602,1148,716"/>
+<area shape="rect" id="Node000006" href="$classPodModule_1_1PinlingPod.html#a9cbd0f6253f0dde4613ed450b8954be1" title=" " alt="" coords="668,428,839,468"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="1139,716,1116,596,1098,536,1087,513,1076,498,1059,488,1037,479,976,466,906,458,839,453,839,448,907,452,977,461,1038,474,1062,483,1079,494,1092,510,1103,534,1121,595,1144,715"/>
+<area shape="rect" id="Node000007" href="$classPodModule_1_1PinlingPod.html#a0d8babf49667252a12c3e11f9de56205" title=" " alt="" coords="443,488,613,528"/>
+<area shape="poly" id="edge27_Node000001_Node000007" title=" " alt="" coords="1142,717,1138,678,1128,632,1108,586,1093,566,1076,549,1042,532,994,519,935,510,870,505,733,502,614,506,613,500,733,497,870,500,936,505,995,514,1044,527,1079,544,1097,562,1112,583,1133,630,1143,677,1147,716"/>
+<area shape="rect" id="Node000008" href="$classPodModule_1_1PinlingPod.html#ae4186e1685d1a38644da15d910821921" title=" " alt="" coords="224,104,395,144"/>
+<area shape="poly" id="edge21_Node000001_Node000008" title=" " alt="" coords="1142,716,1136,579,1124,385,1104,205,1091,142,1083,122,1075,110,1054,95,1026,84,954,69,865,64,766,66,663,74,563,86,395,111,394,106,562,80,663,69,766,61,865,59,955,64,1028,79,1057,91,1079,106,1088,119,1096,141,1109,204,1129,384,1142,578,1147,716"/>
+<area shape="rect" id="Node000009" href="$classPodModule_1_1PinlingPod.html#a4106edc9433c36301492a64e5d60c6f2" title=" " alt="" coords="224,208,395,248"/>
+<area shape="poly" id="edge29_Node000001_Node000009" title=" " alt="" coords="1143,716,1142,614,1135,475,1126,405,1114,342,1097,291,1087,272,1076,258,1054,243,1027,230,954,212,866,202,767,199,664,200,563,206,395,221,394,215,563,200,663,195,767,193,866,197,955,207,1028,225,1057,238,1079,254,1091,269,1102,289,1119,341,1132,404,1140,475,1148,614,1148,716"/>
+<area shape="rect" id="Node000010" href="$classPodModule_1_1PinlingPod.html#afbebb5743d3c1b52596cb85c6f04fd0f" title=" " alt="" coords="224,303,395,343"/>
+<area shape="poly" id="edge30_Node000001_Node000010" title=" " alt="" coords="1143,716,1141,622,1132,495,1124,431,1112,374,1096,328,1075,298,1054,284,1026,272,954,258,865,254,766,258,663,268,563,281,395,309,394,303,562,275,663,262,766,253,865,249,954,253,1028,267,1057,279,1079,294,1101,325,1117,372,1129,430,1138,494,1146,622,1148,716"/>
+<area shape="rect" id="Node000011" href="$classPodModule_1_1PinlingPod.html#abcefdbe4843d063087eb398cc3b7182e" title=" " alt="" coords="224,428,395,468"/>
+<area shape="poly" id="edge37_Node000001_Node000011" title=" " alt="" coords="1142,716,1140,629,1130,513,1121,456,1110,404,1095,363,1075,337,1053,322,1024,311,951,298,864,296,770,304,674,317,583,336,504,355,444,374,388,401,341,430,338,425,385,396,442,370,503,350,582,330,673,312,769,298,864,291,952,292,1025,305,1055,317,1079,333,1099,361,1115,403,1127,455,1135,513,1145,628,1148,716"/>
+<area shape="rect" id="Node000012" href="$classPodModule_1_1PinlingPod.html#ad3bf252d845d3e418ed4982220b05353" title=" " alt="" coords="5,645,176,685"/>
+<area shape="poly" id="edge28_Node000001_Node000012" title=" " alt="" coords="1140,770,1119,817,1101,841,1079,860,1035,883,996,896,960,901,924,901,848,892,755,885,527,885,437,882,367,870,301,845,223,802,185,776,152,744,104,687,108,684,156,741,189,772,225,798,304,840,369,865,438,877,527,880,755,880,849,887,924,896,959,896,995,891,1033,878,1076,855,1097,837,1114,814,1135,767"/>
+<area shape="rect" id="Node000013" href="$classPodModule_1_1PinlingPod.html#a3798776d5b1dd4e4c040da2810b5588b" title=" " alt="" coords="224,492,395,532"/>
+<area shape="poly" id="edge41_Node000001_Node000013" title=" " alt="" coords="1133,719,1111,679,1095,659,1076,644,991,597,915,570,845,558,775,555,626,559,540,556,442,543,394,533,395,528,443,537,541,550,626,554,775,550,845,553,917,565,994,592,1079,639,1099,656,1115,676,1138,716"/>
+<area shape="rect" id="Node000014" href="$classPodModule_1_1PinlingPod.html#a560e64dfb16a719c50ba1d8aaddb5666" title=" " alt="" coords="224,556,395,596"/>
+<area shape="poly" id="edge42_Node000001_Node000014" title=" " alt="" coords="1125,721,1103,698,1076,680,1038,668,971,655,783,629,395,587,395,581,784,624,972,650,1039,663,1078,675,1107,694,1129,717"/>
+<area shape="rect" id="Node000015" href="$classPodModule_1_1PinlingPod.html#aaf734353b0b2290ad9327f42ffc8c440" title=" " alt="" coords="224,620,395,660"/>
+<area shape="poly" id="edge44_Node000001_Node000015" title=" " alt="" coords="1112,729,1077,716,984,695,888,678,699,656,528,645,395,642,395,637,528,640,699,651,889,673,985,690,1078,711,1114,724"/>
+<area shape="rect" id="Node000016" href="$classPodModule_1_1PinlingPod.html#a021164473cd820317950fa10edfde784" title=" " alt="" coords="224,684,395,724"/>
+<area shape="poly" id="edge45_Node000001_Node000016" title=" " alt="" coords="1111,742,1077,739,696,719,395,709,395,703,696,713,1078,733,1112,736"/>
+<area shape="rect" id="Node000017" href="$classPodModule_1_1PinlingPod.html#ae32acf46e60c98c395e95c01b5b46d05" title=" " alt="" coords="224,748,395,788"/>
+<area shape="poly" id="edge46_Node000001_Node000017" title=" " alt="" coords="1112,746,395,768,395,763,1111,741"/>
+<area shape="rect" id="Node000018" href="$classPodModule_1_1PodManager.html#acc4a66d789f1fa2a08496f37bb1e54c6" title="连接指定吊舱" alt="" coords="894,805,1077,845"/>
+<area shape="poly" id="edge18_Node000001_Node000018" title=" " alt="" coords="1117,765,1079,789,1039,808,1037,803,1076,784,1115,761"/>
+<area shape="rect" id="Node000019" href="$classPodModule_1_1PinlingPod.html#a19120b619e9bf6e220d769c34307b413" title=" " alt="" coords="900,387,1071,427"/>
+<area shape="poly" id="edge19_Node000001_Node000019" title=" " alt="" coords="1140,717,1117,572,1098,497,1087,467,1075,447,1053,429,1056,425,1079,444,1092,465,1104,495,1123,571,1145,716"/>
+<area shape="rect" id="Node000020" href="$classPodModule_1_1BasePod.html#a404558c623f1e9686ac0d34501bf890b" title=" " alt="" coords="906,920,1065,960"/>
+<area shape="poly" id="edge22_Node000001_Node000020" title=" " alt="" coords="1143,770,1122,835,1104,871,1079,903,1053,922,1049,918,1075,899,1100,868,1117,833,1138,768"/>
+<area shape="rect" id="Node000022" href="$classPodModule_1_1BaseSession.html#a404558c623f1e9686ac0d34501bf890b" title="断开与设备的连接" alt="" coords="893,984,1077,1024"/>
+<area shape="poly" id="edge24_Node000001_Node000022" title=" " alt="" coords="1148,770,1144,813,1133,868,1113,924,1098,950,1079,974,1064,986,1061,982,1075,970,1094,947,1108,922,1128,866,1138,813,1142,769"/>
+<area shape="rect" id="Node000024" href="$classPodModule_1_1PodManager.html#acdcbeafb788832debc76556201d1d53d" title="断开指定吊舱" alt="" coords="894,1048,1077,1088"/>
+<area shape="poly" id="edge26_Node000001_Node000024" title=" " alt="" coords="1145,769,1123,912,1104,987,1092,1017,1079,1038,1065,1050,1061,1046,1075,1034,1088,1015,1099,986,1118,911,1140,769"/>
+<area shape="rect" id="Node000025" href="$classPodModule_1_1BasePod.html#a46d617e0b42d46a1ebe7356896b81d42" title="使用完整的 pod 配置初始化当前实例" alt="" coords="906,1112,1065,1152"/>
+<area shape="poly" id="edge31_Node000001_Node000025" title=" " alt="" coords="1146,769,1140,845,1127,944,1108,1038,1095,1076,1079,1102,1066,1114,1062,1110,1075,1098,1090,1073,1103,1037,1122,943,1135,845,1141,769"/>
+<area shape="rect" id="Node000027" href="$classPodModule_1_1BasePod.html#a82a400670b3fcfcbe0fc9999e44b9cf8" title=" " alt="" coords="906,1176,1065,1216"/>
+<area shape="poly" id="edge33_Node000001_Node000027" title=" " alt="" coords="1147,769,1142,857,1131,975,1111,1089,1097,1134,1079,1166,1066,1178,1062,1174,1075,1162,1092,1132,1106,1088,1126,974,1137,857,1142,769"/>
+<area shape="rect" id="Node000028" href="$classPodModule_1_1DjiPod.html#a82a400670b3fcfcbe0fc9999e44b9cf8" title=" " alt="" coords="909,1240,1061,1280"/>
+<area shape="poly" id="edge34_Node000001_Node000028" title=" " alt="" coords="1148,769,1145,869,1135,1006,1127,1076,1115,1140,1099,1193,1079,1230,1063,1244,1060,1240,1075,1226,1094,1191,1110,1138,1121,1075,1130,1006,1140,869,1142,769"/>
+<area shape="rect" id="Node000029" href="$classPodModule_1_1PinlingPod.html#a82a400670b3fcfcbe0fc9999e44b9cf8" title=" " alt="" coords="900,1304,1071,1344"/>
+<area shape="poly" id="edge35_Node000001_Node000029" title=" " alt="" coords="1148,769,1147,881,1139,1037,1131,1117,1118,1190,1102,1251,1079,1294,1066,1306,1063,1302,1075,1290,1097,1249,1113,1189,1125,1116,1134,1036,1142,880,1143,769"/>
+<area shape="rect" id="Node000030" href="$classPodModule_1_1PinlingPod.html#ac3c74a39ea55ea21acaf25990c51f857" title="子类初始化扩展点" alt="" coords="900,1368,1071,1408"/>
+<area shape="poly" id="edge36_Node000001_Node000030" title=" " alt="" coords="1147,769,1139,901,1125,1087,1105,1261,1093,1323,1080,1357,1066,1370,1063,1366,1075,1355,1088,1321,1100,1260,1120,1086,1134,901,1141,769"/>
+<area shape="rect" id="Node000031" href="$classPodModule_1_1PodManager.html#a94e4653f0149ca21f04de05274f5b83e" title="移除一个吊舱" alt="" coords="894,1432,1077,1472"/>
+<area shape="poly" id="edge38_Node000001_Node000031" title=" " alt="" coords="1147,769,1140,914,1127,1120,1107,1313,1094,1383,1080,1421,1066,1434,1063,1430,1075,1419,1089,1381,1102,1313,1122,1119,1135,913,1142,769"/>
+<area shape="rect" id="Node000032" href="$classPodModule_1_1BaseSession.html#ae0ecc153fd1c2c2e5bca49c26e766eab" title="发送请求数据" alt="" coords="893,1496,1077,1536"/>
+<area shape="poly" id="edge39_Node000001_Node000032" title=" " alt="" coords="1147,769,1141,926,1129,1152,1109,1366,1096,1443,1088,1469,1079,1486,1067,1498,1063,1494,1075,1482,1083,1467,1090,1441,1104,1365,1124,1152,1136,926,1142,769"/>
+<area shape="rect" id="Node000034" href="$classPodModule_1_1BasePod.html#a551e80d9a1695e34ba256f205996ae1d" title=" " alt="" coords="906,1560,1065,1600"/>
+<area shape="poly" id="edge43_Node000001_Node000034" title=" " alt="" coords="1147,769,1143,937,1131,1184,1122,1309,1111,1419,1097,1502,1089,1531,1079,1550,1067,1562,1063,1558,1075,1546,1084,1529,1091,1501,1105,1418,1117,1308,1126,1184,1137,937,1142,769"/>
+<area shape="rect" id="Node000004" href="$classPodModule_1_1PinlingPod.html#af0adeddfb634847b397d070f347bfa22" title=" " alt="" coords="443,384,613,424"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="661,384,614,392,613,387,660,379"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="654,431,613,423,614,418,655,426"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="665,474,605,490,603,485,664,469"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="481,482,459,462,440,437,425,403,417,372,416,316,415,260,408,230,392,197,369,169,342,146,345,142,373,165,397,195,413,229,420,260,421,316,422,372,430,402,445,435,463,458,485,478"/>
+<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="483,482,460,461,440,438,429,417,422,398,417,363,411,329,404,312,393,292,371,269,345,250,349,246,374,265,397,289,409,309,416,328,422,362,427,397,434,415,445,434,464,458,487,478"/>
+<area shape="poly" id="edge10_Node000007_Node000010" title=" " alt="" coords="491,481,441,438,332,345,336,341,444,434,494,477"/>
+<area shape="poly" id="edge11_Node000007_Node000011" title=" " alt="" coords="440,487,382,471,384,466,442,482"/>
+<area shape="poly" id="edge13_Node000007_Node000013" title=" " alt="" coords="429,512,395,513,395,508,429,507"/>
+<area shape="poly" id="edge14_Node000007_Node000014" title=" " alt="" coords="451,535,375,559,373,553,449,530"/>
+<area shape="poly" id="edge15_Node000007_Node000015" title=" " alt="" coords="496,539,450,575,396,610,371,622,369,617,393,606,447,571,492,535"/>
+<area shape="poly" id="edge16_Node000007_Node000016" title=" " alt="" coords="510,541,464,608,432,643,396,674,376,686,373,682,393,670,428,639,460,604,506,538"/>
+<area shape="poly" id="edge17_Node000007_Node000017" title=" " alt="" coords="518,542,501,585,475,638,440,691,396,738,378,750,375,746,393,734,436,688,470,635,496,583,513,540"/>
+<area shape="poly" id="edge12_Node000011_Node000012" title=" " alt="" coords="233,477,226,482,184,522,149,567,122,611,104,646,99,644,118,609,145,564,180,518,222,478,230,473"/>
+<area shape="poly" id="edge20_Node000019_Node000006" title=" " alt="" coords="887,427,839,435,838,430,886,422"/>
+<area shape="rect" id="Node000021" href="$classPodModule_1_1PinlingPod.html#a404558c623f1e9686ac0d34501bf890b" title=" " alt="" coords="668,920,839,960"/>
+<area shape="poly" id="edge23_Node000020_Node000021" title=" " alt="" coords="892,943,839,943,839,937,892,937"/>
+<area shape="rect" id="Node000023" href="$classPodModule_1_1BaseSession.html#a036b23a445923f97ef68c9d542d4e76d" title=" " alt="" coords="661,984,845,1024"/>
+<area shape="poly" id="edge25_Node000022_Node000023" title=" " alt="" coords="879,1007,846,1007,846,1001,879,1001"/>
+<area shape="rect" id="Node000026" href="$classPodModule_1_1PinlingPod.html#a46d617e0b42d46a1ebe7356896b81d42" title="品凌吊舱初始化入口" alt="" coords="668,1112,839,1152"/>
+<area shape="poly" id="edge32_Node000025_Node000026" title=" " alt="" coords="892,1135,839,1135,839,1129,892,1129"/>
+<area shape="rect" id="Node000033" href="$classPodModule_1_1BaseSession.html#ad5a46d08487109f9d260fa447e9f5a50" title="发送请求并等待响应（请求&#45;应答模式）" alt="" coords="661,1496,845,1536"/>
+<area shape="poly" id="edge40_Node000032_Node000033" title=" " alt="" coords="879,1519,846,1519,846,1513,879,1513"/>
 </map>

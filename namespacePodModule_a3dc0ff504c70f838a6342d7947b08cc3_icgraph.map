@@ -1,11 +1,13 @@
 <map id="podStateToString" name="podStateToString">
-<area shape="rect" id="Node000001" title="将设备状态枚举转为中文字符串" alt="" coords="443,45,575,70"/>
-<area shape="rect" id="Node000002" href="$classPodModule_1_1PodManager.html#a0c0831a43937d4fc5d8021fddff23ef2" title="获取所有吊舱的状态快照（JSON） 供 API 层调用，返回全部吊舱的摘要信息" alt="" coords="212,5,395,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="429,48,395,42,395,37,430,42"/>
-<area shape="rect" id="Node000003" href="$classPodModule_1_1BasePod.html#a978db00c887fe94cd401aa4d06c5d789" title="设置设备状态" alt="" coords="224,69,383,109"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="430,72,383,80,383,74,429,67"/>
-<area shape="rect" id="Node000004" href="$classPodModule_1_1BasePod.html#af0adeddfb634847b397d070f347bfa22" title="连接设备" alt="" coords="5,37,164,77"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="210,78,164,72,165,66,211,73"/>
-<area shape="rect" id="Node000005" href="$classPodModule_1_1BasePod.html#a404558c623f1e9686ac0d34501bf890b" title="断开设备" alt="" coords="5,101,164,141"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="211,106,165,112,164,107,210,100"/>
+<area shape="rect" id="Node000001" title="将设备状态枚举转为中文字符串" alt="" coords="891,45,1023,70"/>
+<area shape="rect" id="Node000002" href="$classPodModule_1_1PodManager.html#a0c0831a43937d4fc5d8021fddff23ef2" title="获取所有吊舱的状态快照（JSON） 供 API 层调用，返回全部吊舱的摘要信息" alt="" coords="660,5,843,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="877,48,843,42,843,37,878,42"/>
+<area shape="rect" id="Node000003" href="$classPodModule_1_1PodMonitor.html#a6574eac20d48a2e77aa01d9b5138c7c3" title="轮询状态/在线检测" alt="" coords="663,69,839,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="878,72,840,78,839,73,877,67"/>
+<area shape="rect" id="Node000004" href="$classPodModule_1_1PodMonitor.html#a70a4677f113e64393ea51d131e5b4391" title="监控主循环" alt="" coords="436,69,612,109"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="650,92,612,92,612,87,650,87"/>
+<area shape="rect" id="Node000005" href="$classPodModule_1_1PodMonitor.html#a129c26163c525a99f830b51e59f84328" title="启动监控线程" alt="" coords="212,69,388,109"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="422,92,388,92,388,87,422,87"/>
+<area shape="rect" id="Node000006" href="$classPodModule_1_1BasePod.html#af3103563b484b524aff6134350a2b8a3" title=" " alt="" coords="5,69,164,109"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="198,92,164,92,164,87,198,87"/>
 </map>

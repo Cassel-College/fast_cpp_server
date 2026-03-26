@@ -83,86 +83,71 @@ $(function() {
 <p>基础吊舱实现  
 <a href="#details">更多...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="i__pod_8h_source.html">../interface/i_pod.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="capability__registry_8h_source.html">../../registry/capability_registry.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="i__session_8h_source.html">../../session/interface/i_session.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="pod__monitor_8h_source.html">../../monitor/pod_monitor.h</a>&quot;</code><br />
 <code>#include &lt;memory&gt;</code><br />
-<code>#include &lt;set&gt;</code><br />
+<code>#include &lt;atomic&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 base_pod.h 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="base__pod_8h__incl.png" border="0" usemap="#asrc_2util_2my__pod_2pod_2base_2base__pod_8h" alt=""/></div>
 <map name="asrc_2util_2my__pod_2pod_2base_2base__pod_8h" id="asrc_2util_2my__pod_2pod_2base_2base__pod_8h">
-<area shape="rect" title="基础吊舱实现" alt="" coords="646,5,796,45"/>
-<area shape="rect" href="i__pod_8h.html" title="吊舱统一抽象接口" alt="" coords="435,101,578,126"/>
-<area shape="poly" title=" " alt="" coords="675,48,548,98,546,93,673,43"/>
-<area shape="rect" title=" " alt="" coords="702,277,780,302"/>
-<area shape="poly" title=" " alt="" coords="791,43,842,63,894,92,940,130,959,154,974,180,980,207,973,226,955,240,930,248,866,259,799,272,789,275,788,270,798,267,865,254,928,243,953,235,969,223,975,207,969,182,955,157,936,134,891,96,839,68,789,48"/>
-<area shape="rect" href="i__session_8h.html" title="会话接口定义" alt="" coords="64,181,221,221"/>
-<area shape="poly" title=" " alt="" coords="646,43,540,65,423,96,302,137,199,178,197,173,301,132,422,91,538,60,645,38"/>
-<area shape="rect" title=" " alt="" coords="645,189,688,214"/>
-<area shape="poly" title=" " alt="" coords="711,47,689,94,678,137,671,176,666,175,672,136,684,92,707,45"/>
-<area shape="rect" href="capability__registry_8h.html" title="能力注册表" alt="" coords="699,93,863,133"/>
-<area shape="poly" title=" " alt="" coords="736,44,762,81,758,84,732,47"/>
-<area shape="rect" href="pod__monitor_8h.html" title="吊舱后台监控器" alt="" coords="1270,101,1465,126"/>
-<area shape="poly" title=" " alt="" coords="797,34,1268,96,1268,101,796,39"/>
-<area shape="rect" href="pod__types_8h.html" title="吊舱模块基础类型定义" alt="" coords="700,357,886,383"/>
-<area shape="poly" title=" " alt="" coords="511,126,520,161,538,211,565,263,583,287,604,307,649,334,698,351,696,356,646,339,601,311,579,290,561,266,533,213,515,163,506,127"/>
-<area shape="rect" title=" " alt="" coords="328,431,386,456"/>
-<area shape="poly" title=" " alt="" coords="435,117,331,120,213,130,157,138,108,150,68,165,41,183,23,208,12,234,8,261,11,287,20,312,35,337,56,360,81,380,109,397,139,411,202,429,263,437,314,440,314,446,262,443,201,434,137,416,106,402,78,385,52,364,31,340,15,315,6,288,3,261,7,233,18,206,38,179,65,160,106,145,156,133,212,124,331,115,435,112"/>
-<area shape="rect" href="pod__models_8h.html" title="吊舱模块数据模型定义" alt="" coords="1063,189,1262,214"/>
-<area shape="poly" title=" " alt="" coords="578,121,1062,184,1061,190,577,127"/>
-<area shape="rect" title=" " alt="" coords="615,277,678,302"/>
-<area shape="poly" title=" " alt="" coords="517,124,591,220,629,264,625,268,587,223,513,128"/>
-<area shape="rect" href="pod__result_8h.html" title="吊舱模块统一结果封装" alt="" coords="57,277,244,302"/>
-<area shape="poly" title=" " alt="" coords="435,117,333,120,218,130,164,138,117,150,79,165,54,183,47,194,47,205,51,217,60,228,85,250,115,268,112,272,82,254,56,232,47,219,42,206,42,193,50,180,76,160,115,145,163,133,218,124,333,115,435,112"/>
-<area shape="rect" href="capability__types_8h.html" title="能力类型枚举定义" alt="" coords="369,269,540,309"/>
-<area shape="poly" title=" " alt="" coords="435,118,395,123,354,135,316,154,286,183,279,196,279,208,283,219,292,229,322,248,360,263,358,268,320,252,289,233,279,222,273,209,274,195,281,180,313,150,352,130,394,118,434,112"/>
-<area shape="rect" href="i__capability_8h.html" title="能力基础接口定义" alt="" coords="296,181,468,221"/>
-<area shape="poly" title=" " alt="" coords="491,128,423,175,420,171,488,124"/>
-<area shape="poly" title=" " alt="" coords="523,124,591,179,635,219,709,268,706,272,631,223,587,183,519,128"/>
-<area shape="poly" title=" " alt="" coords="458,129,235,181,234,176,457,123"/>
-<area shape="poly" title=" " alt="" coords="529,124,634,180,631,184,527,129"/>
-<area shape="poly" title=" " alt="" coords="723,385,400,438,400,432,722,380"/>
-<area shape="rect" title=" " alt="" coords="694,431,761,456"/>
-<area shape="poly" title=" " alt="" coords="784,385,749,422,745,419,780,381"/>
-<area shape="poly" title=" " alt="" coords="1138,217,832,354,830,349,1136,212"/>
-<area shape="poly" title=" " alt="" coords="1123,217,930,272,861,293,792,312,741,321,697,324,621,325,548,331,507,342,459,360,413,389,378,422,374,418,410,385,457,355,505,337,547,326,621,320,697,319,741,315,791,307,860,288,928,267,1121,211"/>
-<area shape="poly" title=" " alt="" coords="1150,216,1049,293,977,341,899,385,836,412,775,432,774,427,834,407,897,380,974,337,1046,289,1147,212"/>
-<area shape="poly" title=" " alt="" coords="1063,216,858,242,761,257,691,272,683,274,682,269,690,267,760,252,858,237,1062,211"/>
-<area shape="poly" title=" " alt="" coords="153,302,158,341,165,362,178,381,208,405,244,421,280,431,314,437,313,442,279,436,242,426,205,409,174,384,160,365,152,342,148,303"/>
-<area shape="rect" href="pod__errors_8h.html" title="吊舱模块错误码定义" alt="" coords="471,357,574,383"/>
-<area shape="poly" title=" " alt="" coords="205,299,458,352,457,358,204,305"/>
-<area shape="rect" title=" " alt="" coords="188,357,262,383"/>
-<area shape="poly" title=" " alt="" coords="163,300,207,346,203,349,159,304"/>
-<area shape="poly" title=" " alt="" coords="497,385,397,428,395,423,495,380"/>
-<area shape="poly" title=" " alt="" coords="556,380,682,424,681,429,554,385"/>
-<area shape="poly" title=" " alt="" coords="444,311,374,420,369,418,440,308"/>
-<area shape="poly" title=" " alt="" coords="521,307,576,327,632,355,674,386,709,418,705,422,671,390,629,360,574,332,519,312"/>
-<area shape="poly" title=" " alt="" coords="376,222,360,270,355,310,353,350,357,417,352,417,348,350,349,309,354,269,371,221"/>
-<area shape="poly" title=" " alt="" coords="332,224,195,274,193,269,330,219"/>
-<area shape="poly" title=" " alt="" coords="400,220,432,257,428,261,396,223"/>
-<area shape="poly" title=" " alt="" coords="469,216,575,238,690,267,700,270,698,275,688,272,574,243,468,221"/>
-<area shape="poly" title=" " alt="" coords="99,224,70,244,47,271,41,289,47,308,71,341,100,368,135,389,173,406,249,427,314,437,313,442,248,433,171,411,133,394,97,372,67,344,43,311,36,289,43,268,66,240,96,219"/>
-<area shape="poly" title=" " alt="" coords="175,219,256,263,358,307,421,323,472,329,523,336,586,355,699,421,696,426,584,360,522,341,471,335,420,329,356,312,254,268,172,224"/>
-<area shape="poly" title=" " alt="" coords="222,212,552,267,602,276,601,281,551,272,221,217"/>
-<area shape="poly" title=" " alt="" coords="147,221,151,263,145,263,141,222"/>
-<area shape="poly" title=" " alt="" coords="781,134,769,177,759,201,746,223,717,251,685,272,682,268,713,247,742,220,755,198,764,175,775,133"/>
-<area shape="poly" title=" " alt="" coords="774,135,746,180,725,203,701,224,666,243,629,259,554,279,552,274,627,254,664,239,698,219,721,200,741,176,769,132"/>
-<area shape="poly" title=" " alt="" coords="699,135,482,181,481,176,698,130"/>
-<area shape="poly" title=" " alt="" coords="862,131,904,146,939,166,952,178,959,192,959,207,951,223,935,241,918,252,884,261,845,263,799,272,790,275,788,270,798,267,844,258,883,256,916,247,932,237,947,220,954,206,953,193,947,181,936,170,902,151,860,136"/>
-<area shape="rect" title=" " alt="" coords="814,189,938,214"/>
-<area shape="poly" title=" " alt="" coords="804,132,854,177,850,181,800,136"/>
-<area shape="poly" title=" " alt="" coords="1362,128,1328,173,1303,199,1276,223,1212,267,1144,305,1073,338,1003,366,873,409,775,435,774,429,872,404,1001,361,1071,333,1141,300,1209,262,1273,219,1300,196,1324,169,1358,125"/>
-<area shape="poly" title=" " alt="" coords="1341,129,1204,186,1202,181,1339,124"/>
-<area shape="rect" title=" " alt="" coords="1336,189,1400,214"/>
-<area shape="poly" title=" " alt="" coords="1370,126,1370,174,1365,174,1365,126"/>
-<area shape="rect" title=" " alt="" coords="1424,189,1490,214"/>
-<area shape="poly" title=" " alt="" coords="1382,124,1436,177,1433,181,1378,128"/>
-<area shape="rect" title=" " alt="" coords="1514,189,1578,214"/>
-<area shape="poly" title=" " alt="" coords="1393,124,1511,180,1509,185,1391,129"/>
-<area shape="rect" title=" " alt="" coords="1603,189,1666,214"/>
-<area shape="poly" title=" " alt="" coords="1411,123,1495,147,1591,179,1597,181,1595,186,1589,184,1494,153,1410,129"/>
+<area shape="rect" title="基础吊舱实现" alt="" coords="529,5,679,45"/>
+<area shape="rect" href="i__pod_8h.html" title="吊舱统一抽象接口" alt="" coords="406,93,549,119"/>
+<area shape="poly" title=" " alt="" coords="575,48,509,88,506,84,572,43"/>
+<area shape="rect" href="i__session_8h.html" title="会话接口定义" alt="" coords="143,167,300,207"/>
+<area shape="poly" title=" " alt="" coords="534,48,466,69,394,96,326,129,265,162,263,157,323,124,392,91,464,64,533,43"/>
+<area shape="rect" title=" " alt="" coords="565,174,643,199"/>
+<area shape="poly" title=" " alt="" coords="607,45,607,160,601,160,601,45"/>
+<area shape="rect" href="pod__monitor_8h.html" title="吊舱后台监控器" alt="" coords="911,93,1105,119"/>
+<area shape="poly" title=" " alt="" coords="680,39,936,88,935,93,679,44"/>
+<area shape="rect" title=" " alt="" coords="1203,174,1269,199"/>
+<area shape="poly" title=" " alt="" coords="679,29,916,51,1034,69,1082,79,1118,91,1148,106,1175,125,1218,162,1214,166,1171,129,1145,111,1116,96,1081,84,1033,74,915,56,679,34"/>
+<area shape="rect" href="pod__types_8h.html" title="吊舱模块基础类型定义" alt="" coords="577,335,764,361"/>
+<area shape="poly" title=" " alt="" coords="479,119,478,150,482,192,493,238,502,259,515,278,533,295,553,309,598,329,595,334,550,314,529,299,511,282,498,262,488,239,476,193,473,150,474,119"/>
+<area shape="rect" title=" " alt="" coords="277,416,336,441"/>
+<area shape="poly" title=" " alt="" coords="406,111,345,116,275,126,201,143,132,169,97,186,72,202,52,224,33,256,18,287,9,314,11,339,26,366,41,378,65,389,129,405,200,416,264,422,263,427,200,421,128,411,63,394,38,383,22,370,6,341,4,313,13,285,28,253,48,221,69,198,95,181,129,164,200,138,274,120,344,110,406,106"/>
+<area shape="rect" href="pod__models_8h.html" title="吊舱模块数据模型定义" alt="" coords="666,174,865,199"/>
+<area shape="poly" title=" " alt="" coords="520,116,711,168,709,173,518,121"/>
+<area shape="rect" title=" " alt="" coords="525,255,672,280"/>
+<area shape="poly" title=" " alt="" coords="488,117,583,242,579,245,484,120"/>
+<area shape="rect" href="pod__result_8h.html" title="吊舱模块统一结果封装" alt="" coords="115,255,301,280"/>
+<area shape="poly" title=" " alt="" coords="460,121,313,209,241,250,239,246,311,204,457,117"/>
+<area shape="rect" href="capability__types_8h.html" title="能力类型枚举定义" alt="" coords="383,328,553,368"/>
+<area shape="poly" title=" " alt="" coords="475,120,461,167,458,206,458,246,465,314,460,314,453,246,452,206,456,166,470,118"/>
+<area shape="poly" title=" " alt="" coords="441,121,297,165,295,160,439,116"/>
+<area shape="poly" title=" " alt="" coords="497,117,575,164,572,169,495,121"/>
+<area shape="poly" title=" " alt="" coords="618,363,350,421,349,416,617,358"/>
+<area shape="rect" title=" " alt="" coords="536,416,603,441"/>
+<area shape="poly" title=" " alt="" coords="657,363,597,409,594,405,654,359"/>
+<area shape="poly" title=" " alt="" coords="761,201,687,325,682,322,756,198"/>
+<area shape="poly" title=" " alt="" coords="773,198,786,231,797,277,800,301,798,326,791,349,778,370,755,382,714,392,594,409,350,428,350,422,594,403,713,387,753,377,774,366,786,347,793,325,794,302,792,278,781,233,768,200"/>
+<area shape="poly" title=" " alt="" coords="781,198,804,222,822,254,834,286,841,314,838,341,822,370,808,381,788,391,734,407,673,419,617,426,616,420,672,413,733,402,786,386,805,377,818,366,833,339,835,314,829,288,817,256,799,225,777,201"/>
+<area shape="poly" title=" " alt="" coords="742,202,636,251,634,246,740,197"/>
+<area shape="rect" title=" " alt="" coords="326,255,389,280"/>
+<area shape="poly" title=" " alt="" coords="706,202,403,260,402,255,705,197"/>
+<area shape="poly" title=" " alt="" coords="213,280,223,320,245,367,262,388,282,406,278,409,258,391,240,369,218,322,207,281"/>
+<area shape="rect" href="pod__errors_8h.html" title="吊舱模块错误码定义" alt="" coords="255,335,358,361"/>
+<area shape="poly" title=" " alt="" coords="224,278,283,325,280,329,221,282"/>
+<area shape="rect" title=" " alt="" coords="105,335,180,361"/>
+<area shape="poly" title=" " alt="" coords="200,282,163,326,159,323,196,278"/>
+<area shape="poly" title=" " alt="" coords="309,361,309,402,304,402,304,361"/>
+<area shape="poly" title=" " alt="" coords="346,358,523,411,522,416,344,363"/>
+<area shape="poly" title=" " alt="" coords="430,370,344,412,341,408,428,366"/>
+<area shape="poly" title=" " alt="" coords="494,366,545,405,541,409,491,370"/>
+<area shape="poly" title=" " alt="" coords="143,201,92,221,70,236,51,256,35,285,29,312,34,339,51,366,65,377,85,387,142,403,206,414,263,421,263,426,205,420,141,408,83,392,62,382,47,370,29,340,24,312,30,283,47,253,66,232,90,216,141,196"/>
+<area shape="poly" title=" " alt="" coords="166,209,132,229,105,256,87,286,77,313,79,339,95,366,116,377,157,387,276,403,522,422,522,428,275,409,155,392,114,382,91,370,74,341,72,312,82,284,100,253,129,224,164,204"/>
+<area shape="poly" title=" " alt="" coords="255,204,327,245,324,250,252,209"/>
+<area shape="poly" title=" " alt="" coords="221,207,215,242,210,241,215,206"/>
+<area shape="poly" title=" " alt="" coords="1069,116,1109,134,1127,148,1142,165,1150,187,1142,208,1119,242,1092,271,1062,298,1029,322,957,360,881,388,804,407,732,420,616,429,616,424,731,414,803,402,879,383,955,355,1026,317,1059,294,1089,268,1115,238,1138,205,1144,187,1138,168,1124,152,1106,139,1066,121"/>
+<area shape="poly" title=" " alt="" coords="973,121,815,172,813,167,972,116"/>
+<area shape="rect" title=" " alt="" coords="888,174,952,199"/>
+<area shape="poly" title=" " alt="" coords="997,121,945,167,941,163,993,117"/>
+<area shape="poly" title=" " alt="" coords="1043,116,1185,164,1192,167,1191,172,1183,169,1041,121"/>
+<area shape="rect" title=" " alt="" coords="976,174,1040,199"/>
+<area shape="poly" title=" " alt="" coords="1011,119,1011,160,1005,160,1005,119"/>
+<area shape="rect" title=" " alt="" coords="1065,174,1127,199"/>
+<area shape="poly" title=" " alt="" coords="1023,117,1075,163,1071,167,1019,121"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -182,7 +167,7 @@ base_pod.h 的引用(Include)关系图:</div>
 <area shape="rect" href="dji__pod_8cpp.html" title="大疆吊舱实现" alt="" coords="77,181,228,221"/>
 <area shape="poly" title=" " alt="" coords="224,144,177,183,174,179,220,140"/>
 <area shape="poly" title=" " alt="" coords="407,145,367,183,363,179,404,141"/>
-<area shape="rect" href="pinling__pod_8cpp.html" title="PINLING吊舱实现" alt="" coords="461,181,637,221"/>
+<area shape="rect" href="pinling__pod_8cpp.html" title="品凌吊舱实现" alt="" coords="461,181,637,221"/>
 <area shape="poly" title=" " alt="" coords="473,140,525,179,522,183,470,144"/>
 </map>
 </div>
@@ -201,16 +186,15 @@ base_pod.h 的引用(Include)关系图:</div>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>基础吊舱实现 </p>
-<p>BasePod 是所有厂商 Pod 的基类，作为"轻量设备壳对象"：</p><ul>
+<p>BasePod 是所有厂商 Pod 的基类：</p><ul>
 <li>保存设备元信息（PodInfo）</li>
 <li>保存当前设备状态（PodState）</li>
 <li>持有 Session 会话对象</li>
-<li>持有 CapabilityRegistry 能力注册表</li>
+<li>提供统一 Init 生命周期，集中完成配置注入与运行态复位</li>
 <li>提供基础 connect / disconnect 逻辑</li>
-<li>提供能力注册 / 获取</li>
-<li>提供初始化装配逻辑框架</li>
+<li>为所有能力方法提供默认占位实现</li>
+<li>厂商 Pod 按需覆盖具体能力方法 </li>
 </ul>
-<p>不做大而全业务实现——PTZ、测距、拉流等都在 Capability 层。 </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
