@@ -6,6 +6,7 @@
 #include "controller/soft_healthy/SoftHealthyController.h"
 #include "controller/fly_control/FlyControlController.h"
 #include "controller/pod/PodController.h"
+#include "controller/mediamtx_monitor/MediamtxMonitorController.h"
 
 #include "controller/demo/edges/EdgesController.hpp"
 #include "controller/demo/edge_manager/EdgeController.hpp"
@@ -200,6 +201,10 @@ void MyAPI::ServerThread(int port) {
         auto podController = my_api::pod_api::PodController::createShared(std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper));
         router->addController(podController);
         docEndpoints.append(podController->getEndpoints());
+
+        auto mediamtxController = my_api::mediamtx_monitor_api::MediamtxMonitorController::createShared(std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper));
+        router->addController(mediamtxController);
+        docEndpoints.append(mediamtxController->getEndpoints());
 
         if (swaggerResources != nullptr) {
             auto swaggerController = oatpp::swagger::Controller::createShared(docEndpoints, docInfo, swaggerResources);

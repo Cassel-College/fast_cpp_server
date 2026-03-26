@@ -258,8 +258,23 @@
                                     "description": "吊舱激光测距能力"
                                 },
                                 "STREAM": {
-                                    "open": "unable",
-                                    "description": "吊舱流媒体能力"
+                                    "open": "enable",
+                                    "description": "吊舱流媒体能力",
+                                    "init_args": {
+                                        "mediamtx_enable": true,
+                                        "mediamtx_bin_path": "/home/cs/DockerRoot/fast_cpp_server/source/soft/mediamtx/ubuntu_x86/mediamtx",
+                                        "check_ip": "192.168.2.119",
+                                        "yaml_file_name": "mediamtx.yaml",
+                                        "mediamtx_json_config": {
+                                            "rtspAddress": ":8555",
+                                            "paths": {
+                                                "live": {
+                                                    "source": "rtsp://192.168.2.119",
+                                                    "sourceOnDemand": true
+                                                }
+                                            }
+                                        }
+                                    }
                                 },
                                 "IMAGE": {
                                     "open": "unable",
@@ -275,10 +290,29 @@
                     }
                 },
                 "model_name": "pod",
-                "enable": true,
+                "enable": false,
                 "step_time_interval": 2
             },
             "7": {
+                "model_args": {
+                    "mediamtx_enable": true,
+                    "mediamtx_bin_path": "/home/cs/DockerRoot/fast_cpp_server/source/soft/mediamtx/ubuntu_x86/mediamtx",
+                    "check_ip": "192.168.2.119",
+                    "yaml_file_name": "mediamtx.yaml",
+                    "mediamtx_json_config": {
+                        "rtspAddress": "8555",
+                        "paths": {
+                            "live": {
+                                "source": "rtsp://192.168.2.119",
+                                "sourceOnDemand": true
+                            }
+                        }
+                    }
+                },
+                "model_name": "mediamtx_monitor",
+                "enable": true
+            },
+            "8": {
                 "model_args": {
                     "port": 9999
                 },
