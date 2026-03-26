@@ -44,6 +44,7 @@ set(BUILD_MY_MATH                           ON CACHE BOOL "Build my_math library
 set(BUILD_MY_SERIAL                         ON CACHE BOOL "Build my_serial library")
 set(BUILD_MY_FLY_CONTROL                    ON CACHE BOOL "Build my_fly_control library")
 set(BUILD_MY_POD                            ON CACHE BOOL "Build my_pod library")
+set(BUILD_MY_MEDIAMTX_MONITOR               ON CACHE BOOL "Build my_mediamtx_monitor library")
 
 add_subdirectory(util/my_log)
 add_subdirectory(util/my_config)
@@ -72,6 +73,7 @@ add_subdirectory(util/my_tools)
 add_subdirectory(util/my_serial)
 add_subdirectory(util/my_fly_control)
 add_subdirectory(util/my_pod)
+add_subdirectory(util/my_mediamtx_monitor)
 add_subdirectory(util/my_api)
 
 # 创建静态库 mylib
@@ -132,6 +134,7 @@ target_link_libraries(mylib PUBLIC my_mqtt)
 target_link_libraries(mylib PUBLIC my_mqtt_broker_manager)
 target_link_libraries(mylib PUBLIC my_serial)
 target_link_libraries(mylib PUBLIC my_fly_control)
+target_link_libraries(mylib PUBLIC my_mediamtx_monitor)
 target_link_libraries(mylib PUBLIC myproto)
 target_link_libraries(mylib PUBLIC my_mavsdk)
 target_link_libraries(mylib PUBLIC libzmq)

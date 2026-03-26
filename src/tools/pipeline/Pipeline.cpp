@@ -13,6 +13,7 @@
 #include "MyAPI.h"
 #include "MyFlyControlManager.h"
 #include "pod_manager.h"
+#include "RtspRelayMonitorManager.h"
 #include "MyLog.h"
 #include "MyTools.h"
 
@@ -135,6 +136,7 @@ void Pipeline::LaunchRoBot() {
                 else if (model_name == "soft_healthy_monitor") { LaunchSoftHealthyMonitor(model_args); success_count++;}
                 else if (model_name == "fly_control") { LaunchFlyControl(model_args); success_count++;}
                 else if (model_name == "pod") { LaunchPodManager(model_args); success_count++;}
+                else if (model_name == "mediamtx_monitor") { LaunchMediamtxMonitor(model_args); success_count++;}
                 else { MYLOG_INFO("* Arg: {}, Value: {}", "节点[" + node_index + "]警告", "未知的模型名称: " + model_name);}
                 
                 MYLOG_INFO("* Arg: {}, Value: {}", "节点分发完成", "节点[" + node_index + "] 已成功加入监听列表");
@@ -563,6 +565,22 @@ void Pipeline::LaunchPodManager(const nlohmann::json& args) {
         // manager.Start();
     } catch (const std::exception& e) {
         MYLOG_ERROR("* 模块: {}, 捕获异常: {}", module_name, e.what());
+    }
+}
+
+void Pipeline::LaunchMediamtxMonitor(const nlohmann::json& args) {
+    MYLOG_INFO("启动 MediaMTX Monitor 模块");
+    MYLOG_INFO("MediaMTX Monitor 模块参数: {}", args.dump(4));
+    try {
+        auto& manager = my_mediamtx_monitor::RtspRelayMonitorManager::GetInstance();
+        if (!manager.Init(args)) {
+            MYLOG_ERROR("MediaMTX Monitor 模块初始化失败");
+            return;
+        }
+        manager.Start();
+        MYLOG_INFO("成功启动 MediaMTX Monitor 模块");
+    } catch (const std::exception& e) {
+        MYLOG_ERROR("启动 MediaMTX Monitor 模块时捕获异常: {}", e.what());
     }
 }
 
