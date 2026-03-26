@@ -9,6 +9,7 @@
  */
 
 #include "pod_types.h"
+#include <nlohmann/json.hpp>
 #include <string>
 #include <cstdint>
 #include <vector>
@@ -26,6 +27,7 @@ struct PodInfo {
     std::string firmware_ver;                   // 固件版本
     std::string ip_address;                     // IP地址
     uint16_t    port = 0;                       // 端口号
+    nlohmann::json raw_config;                  // 完整吊舱配置
 };
 
 /**

@@ -25,6 +25,18 @@ class IPod {
 public:
     virtual ~IPod() = default;
 
+    // ==================== 生命周期 ====================
+
+    /**
+     * @brief 使用完整配置初始化 Pod 实例
+     *
+     * 约定：
+     * - 构造函数只负责创建对象本身，不做重型初始化决策
+     * - Init 负责接收并落盘完整配置，准备运行期状态
+     * - connect 仅负责真正建立通信链路，不再承担配置解析职责
+     */
+    virtual PodResult<void> Init(const nlohmann::json& pod_config) = 0;
+
     // ==================== 设备基础信息 ====================
 
     virtual PodInfo getPodInfo() const = 0;

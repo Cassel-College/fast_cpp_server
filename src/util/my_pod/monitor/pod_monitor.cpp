@@ -189,6 +189,13 @@ void PodMonitor::pollStatus() {
 }
 
 void PodMonitor::pollPtz() {
+    {
+        std::lock_guard<std::mutex> lk(status_mutex_);
+        if (!runtime_status_.is_online) {
+            return;
+        }
+    }
+
     try {
         auto result = pod_->getPose();
         if (result.isSuccess() && result.data.has_value()) {
@@ -212,6 +219,13 @@ void PodMonitor::pollPtz() {
 }
 
 void PodMonitor::pollLaser() {
+    {
+        std::lock_guard<std::mutex> lk(status_mutex_);
+        if (!runtime_status_.is_online) {
+            return;
+        }
+    }
+
     try {
         auto result = pod_->laserMeasure();
         if (result.isSuccess() && result.data.has_value()) {
@@ -225,8 +239,7 @@ void PodMonitor::pollLaser() {
                        pod_->getPodId(), l.is_valid ? "true" : "false",
                        l.distance, l.latitude, l.longitude, l.altitude);
         } else {
-            MYLOG_WARN("[PodMonitor] [{}] 激光轮询失败: {}",
-                       pod_->getPodId(), result.message);
+            MYLOG_WARN("[PodMonitor] [{}] 激光轮询失败: {}", pod_->getPodId(), result.message);
         }
     } catch (const std::exception& e) {
         MYLOG_ERROR("[PodMonitor] 激光轮询异常: {}", e.what());

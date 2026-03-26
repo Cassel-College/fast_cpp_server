@@ -25,6 +25,18 @@ public:
     explicit PinlingPod(const PodInfo& info);
     ~PinlingPod() override;
 
+    // ==================== 生命周期 ====================
+
+    /**
+     * @brief 品凌吊舱初始化入口
+     *
+     * 在 BasePod::Init 的通用初始化之上，补充品凌特有的运行态准备：
+     * - 确保 PinlingSession 已就绪
+     * - 复位 ViewLink SDK 相关状态
+     * - 在真正 connect 之前，提前校验 PTZ init_args / IP / 端口
+     */
+    PodResult<void> Init(const nlohmann::json& pod_config) override;
+
     // ==================== 连接管理 ====================
 
     PodResult<void> connect() override;
@@ -79,9 +91,21 @@ public:
     PodResult<void> stopZoom();
     void setTelemetryCallback(TelemetryCallback cb);
 
+    // ==================== 其他品凌特有能力方法占位 ====================
+    // 初始化之前一定要删除日志文件夹，避免权限问题导致 SDK 无法写日志而连接失败。
+    bool deleteSdkLogDirBeforConnect();
+
+protected:
+    PodResult<void> onInit(const nlohmann::json& pod_config) override;
+
 private:
+    PodResult<void> ensureSdkConnection(const char* trigger);
+
     std::unique_ptr<viewlink::ViewLinkClient> vlk_client_;
     std::atomic<bool> sdk_connected_{false};
+    std::atomic<bool> sdk_reconnect_enabled_{false};
+    std::atomic<bool> reconnecting_{false};
+    std::atomic<uint64_t> last_reconnect_attempt_ms_{0};
     TelemetryCallback telemetry_cb_;
     std::mutex telemetry_mutex_;
 };

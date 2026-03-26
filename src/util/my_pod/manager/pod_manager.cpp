@@ -43,9 +43,11 @@ bool PodManager::Init(const nlohmann::json& config) {
 
         auto pod = createPod(pod_id, pod_cfg);
         if (pod) {
-            // 传递各能力的配置（含 init_args 等）
-            if (pod_cfg.contains("capability") && pod_cfg["capability"].is_object()) {
-                pod->setCapabilityConfigs(pod_cfg["capability"]);
+            // 统一走 Pod::Init，把完整配置注入、能力配置缓存和运行态复位收敛到同一入口。
+            auto init_result = pod->Init(pod_cfg);
+            if (!init_result.isSuccess()) {
+                MYLOG_ERROR("[吊舱管理器] 吊舱初始化失败: {} - {}", pod_id, init_result.message);
+                continue;
             }
 
             // 连接吊舱（包括 SDK 初始化）
@@ -86,8 +88,11 @@ std::shared_ptr<IPod> PodManager::createPod(const std::string& pod_id, const nlo
     PodInfo info;
     info.pod_id     = pod_id;
     info.pod_name   = name;
+    info.model      = pod_cfg.value("model", "");
+    info.firmware_ver = pod_cfg.value("firmware_ver", "");
     info.ip_address = ip;
     info.port       = port;
+    info.raw_config = pod_cfg;
 
     if (type == "dji") {
         info.vendor = PodVendor::DJI;
@@ -204,18 +209,30 @@ void PodManager::ResetForTest() {
 
 PodMonitorConfig PodManager::parseMonitorConfig(const nlohmann::json& pod_cfg) {
     PodMonitorConfig cfg;  // 所有字段已有默认值
+    const bool has_capability_config = pod_cfg.contains("capability") && pod_cfg["capability"].is_object();
+
+    bool status_enabled_by_capability = false;
+    bool ptz_enabled_by_capability = false;
+    bool laser_enabled_by_capability = false;
+    bool stream_enabled_by_capability = false;
 
     // 先从 capability 节点推导轮询开关：只轮询已启用的能力
-    if (pod_cfg.contains("capability") && pod_cfg["capability"].is_object()) {
+    if (has_capability_config) {
         auto isOpen = [&](const std::string& key) -> bool {
             if (!pod_cfg["capability"].contains(key)) return false;
             const auto& cap = pod_cfg["capability"][key];
             return cap.is_object() && cap.value("open", "") == "enable";
         };
-        cfg.enable_status_poll = isOpen("STATUS");
-        cfg.enable_ptz_poll    = isOpen("PTZ");
-        cfg.enable_laser_poll  = isOpen("LASER");
-        cfg.enable_stream_poll = isOpen("STREAM");
+
+        status_enabled_by_capability = isOpen("STATUS");
+        ptz_enabled_by_capability = isOpen("PTZ");
+        laser_enabled_by_capability = isOpen("LASER");
+        stream_enabled_by_capability = isOpen("STREAM");
+
+        cfg.enable_status_poll = status_enabled_by_capability;
+        cfg.enable_ptz_poll    = ptz_enabled_by_capability;
+        cfg.enable_laser_poll  = laser_enabled_by_capability;
+        cfg.enable_stream_poll = stream_enabled_by_capability;
     }
 
     // monitor 节点可进一步覆盖上面的推导结果
@@ -231,11 +248,36 @@ PodMonitorConfig PodManager::parseMonitorConfig(const nlohmann::json& pod_cfg) {
         if (m.contains("online_window_size")) cfg.online_window_size = m["online_window_size"].get<uint32_t>();
         if (m.contains("online_threshold"))   cfg.online_threshold   = m["online_threshold"].get<uint32_t>();
 
-        // monitor 节点的显式开关优先级最高，覆盖 capability 推导结果
-        if (m.contains("enable_status_poll")) cfg.enable_status_poll = m["enable_status_poll"].get<bool>();
-        if (m.contains("enable_ptz_poll"))    cfg.enable_ptz_poll    = m["enable_ptz_poll"].get<bool>();
-        if (m.contains("enable_laser_poll"))  cfg.enable_laser_poll  = m["enable_laser_poll"].get<bool>();
-        if (m.contains("enable_stream_poll")) cfg.enable_stream_poll = m["enable_stream_poll"].get<bool>();
+        // monitor 节点只能进一步收紧轮询，不允许反向打开 capability 中未启用的能力。
+        auto applyMonitorSwitch = [&](const char* key,
+                                      bool capability_enabled,
+                                      bool& target) {
+            if (!m.contains(key)) {
+                return;
+            }
+
+            const bool requested = m[key].get<bool>();
+            if (has_capability_config) {
+                target = capability_enabled && requested;
+                if (requested && !capability_enabled) {
+                    MYLOG_WARN("[吊舱管理器] monitor.{}=true 被 capability 限制忽略：capability 未启用",
+                               key);
+                }
+                return;
+            }
+
+            target = requested;
+        };
+
+        applyMonitorSwitch("enable_status_poll", status_enabled_by_capability, cfg.enable_status_poll);
+        applyMonitorSwitch("enable_ptz_poll", ptz_enabled_by_capability, cfg.enable_ptz_poll);
+        applyMonitorSwitch("enable_stream_poll", stream_enabled_by_capability, cfg.enable_stream_poll);
+
+        // 激光轮询开关只保留 capability.LASER 这一处配置源。
+        // 旧版 monitor.enable_laser_poll 属于重复配置，保留字段只会制造冲突，因此直接忽略。
+        if (m.contains("enable_laser_poll")) {
+            MYLOG_WARN("[吊舱管理器] monitor.enable_laser_poll 已废弃并被忽略，请改用 capability.LASER.open 控制激光轮询");
+        }
 
         if (m.contains("auto_start"))         cfg.auto_start         = m["auto_start"].get<bool>();
     }
