@@ -19,7 +19,7 @@
  *     "check_ip": "192.168.2.119",
  *     "yaml_file_name": "mediamtx.yaml",
  *     "mediamtx_json_config": {
- *         "rtspAddress": ":8555",
+ *         "rtspAddress": "8555",
  *         "paths": {
  *             "live": {
  *                 "source": "rtsp://192.168.2.119",
@@ -172,7 +172,7 @@ private:
     bool GenerateYAML();
 
     /**
-     * @brief 解析配置中的 RTSP 源地址与端口
+    * @brief 解析配置中的 RTSP 源地址与监听端口
      * @return true 解析成功；false 缺少必要字段
      */
     bool ParseConfig();
@@ -182,12 +182,13 @@ private:
     nlohmann::json json_config_;               ///< 原始 JSON 配置
     nlohmann::json mediamtx_json_config_;      ///< MediaMTX 专属 JSON 配置段
     std::string yaml_content_;                 ///< 生成的 YAML 字符串
+    std::string local_ip_;                     ///< 本机 IP 地址（Init 时收集）
     std::string yaml_file_name_ = "mediamtx.yaml"; ///< YAML 文件名
     std::string yaml_file_abs_path_;           ///< YAML 文件绝对路径
 
     std::string mediamtx_bin_ = "./mediamtx";  ///< MediaMTX 可执行文件路径
     std::string check_ip_;                     ///< RTSP 源探测 IP
-    int check_port_ = 554;                     ///< RTSP 源探测端口（默认 554）
+    int check_port_ = 2000;                    ///< RTSP 源探测端口（默认 2000）
     int rtsp_listen_port_ = 8555;              ///< MediaMTX 监听端口
     int monitor_interval_sec_ = 5;             ///< 监控轮询间隔（秒）
 

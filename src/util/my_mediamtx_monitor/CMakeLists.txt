@@ -21,6 +21,7 @@ if (BUILD_MY_MEDIAMTX_MONITOR)
     target_link_libraries(my_mediamtx_monitor PUBLIC pthread)
     target_link_libraries(my_mediamtx_monitor PUBLIC nlohmann_json::nlohmann_json)
     target_link_libraries(my_mediamtx_monitor PUBLIC mylog)
+    target_link_libraries(my_mediamtx_monitor PUBLIC my_tools)
 
     print_colored_message("Building my_mediamtx_monitor library over." COLOR yellow)
     print_colored_message("------------------------------" COLOR magenta)

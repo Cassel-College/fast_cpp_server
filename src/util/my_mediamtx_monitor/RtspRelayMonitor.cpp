@@ -11,12 +11,12 @@
 
 #include "RtspRelayMonitor.h"
 
-#include <fstream>
 #include <sstream>
-#include <filesystem>
 #include <chrono>
 #include <cstring>
 #include <cerrno>
+
+#include "MyFileTools.h"
 
 // Linux 系统头文件
 #include <sys/socket.h>
@@ -28,6 +28,9 @@
 #include <fcntl.h>
 
 #include "MyLog.h"
+#include "MyIPTools.h"
+#include "PingTools.h"
+#include "MyStartDir.h"
 
 namespace my_mediamtx_monitor {
 
@@ -75,6 +78,18 @@ bool RtspRelayMonitor::Init(const nlohmann::json& json_config) {
         return false;
     }
 
+    local_ip_ = my_tools::MyIPTools::GetLocalIPv4();
+    std::string root_path = my_tools::MyStartDir().getStartDir();
+    if (root_path.empty()) {
+        MYLOG_ERROR("[RtspRelayMonitor] 启动目录为空，无法生成 YAML 文件路径");
+        return false;
+    }
+    if (yaml_file_name_.empty()) {
+        MYLOG_ERROR("[RtspRelayMonitor] yaml_file_name 为空，无法生成 YAML 文件路径");
+        return false;
+    }
+    yaml_file_abs_path_ = root_path + "/" + yaml_file_name_;
+
     // ---- 生成 YAML 文件 ----
     if (!GenerateYAML()) {
         MYLOG_ERROR("[RtspRelayMonitor] YAML 文件生成失败，初始化终止");
@@ -109,16 +124,18 @@ bool RtspRelayMonitor::Init(const nlohmann::json& json_config) {
 
     // 本机信息
     nlohmann::json local;
-    local["rtsp_listen_port"]    = rtsp_listen_port_;
-    local["rtsp_listen_address"] = mediamtx_json_config_.value("rtspAddress", ":" + std::to_string(rtsp_listen_port_));
-    local["mediamtx_bin"]        = mediamtx_bin_;
-    local["yaml_file"]           = yaml_file_abs_path_;
-    info_["local"] = local;
+    local["rtsp_listen_port"]       = rtsp_listen_port_;
+    local["rtsp_listen_address"]    = local_ip_ + ":" + std::to_string(rtsp_listen_port_);
+    local["mediamtx_bin"]           = mediamtx_bin_;
+    local["yaml_file"]              = yaml_file_abs_path_;
+    info_["local"]                  = local;
+    
+
 
     // 拉流方式
     nlohmann::json pull;
     pull["protocol"]            = "RTSP";
-    pull["relay_url"]           = "rtsp://<local_ip>:" + std::to_string(rtsp_listen_port_) + "/live";
+    pull["relay_url"]           = "rtsp://" + local_ip_ + ":" + std::to_string(rtsp_listen_port_) + "/live";
     pull["description"]         = "通过 RTSP 协议从本机转发端口拉取视频流";
     info_["pull_method"] = pull;
 
@@ -192,17 +209,13 @@ bool RtspRelayMonitor::ParseConfig() {
         }
         mediamtx_json_config_ = json_config_["mediamtx_json_config"];
 
-        // 8) 从 mediamtx_json_config 提取监听端口（如 ":8555" → 8555）
+        // 8) 从 mediamtx_json_config 提取监听端口（仅接受纯端口字符串，如 "8555"）
         if (mediamtx_json_config_.contains("rtspAddress") && mediamtx_json_config_["rtspAddress"].is_string()) {
             std::string addr = mediamtx_json_config_["rtspAddress"].get<std::string>();
-            // 格式 ":PORT" 或 "IP:PORT"
-            auto pos = addr.rfind(':');
-            if (pos != std::string::npos) {
-                try {
-                    rtsp_listen_port_ = std::stoi(addr.substr(pos + 1));
-                } catch (...) {
-                    MYLOG_WARN("[RtspRelayMonitor] 解析 rtspAddress '{}' 端口失败，使用默认 {}", addr, rtsp_listen_port_);
-                }
+            try {
+                rtsp_listen_port_ = std::stoi(addr);
+            } catch (...) {
+                MYLOG_WARN("[RtspRelayMonitor] 解析 rtspAddress '{}' 端口失败，使用默认 {}", addr, rtsp_listen_port_);
             }
         }
 
@@ -266,24 +279,25 @@ bool RtspRelayMonitor::GenerateYAML() {
         yaml_content_ = JsonToYaml(mediamtx_json_config_);
         MYLOG_INFO("[RtspRelayMonitor] 生成的 YAML 内容:\n{}", yaml_content_);
 
-        // 确定绝对路径（基于当前工作目录）
-        std::filesystem::path yaml_path = std::filesystem::current_path() / yaml_file_name_;
-        yaml_file_abs_path_ = yaml_path.string();
-
-        // 如果文件已存在则删除（保证配置最新）
-        if (std::filesystem::exists(yaml_path)) {
-            std::filesystem::remove(yaml_path);
-            MYLOG_INFO("[RtspRelayMonitor] 已删除旧 YAML 文件: {}", yaml_file_abs_path_);
-        }
-
-        // 写入文件
-        std::ofstream ofs(yaml_file_abs_path_);
-        if (!ofs.is_open()) {
-            MYLOG_ERROR("[RtspRelayMonitor] 无法打开文件进行写入: {}", yaml_file_abs_path_);
+        if (yaml_file_abs_path_.empty()) {
+            MYLOG_ERROR("[RtspRelayMonitor] YAML 文件路径为空，无法写入");
             return false;
         }
-        ofs << yaml_content_;
-        ofs.close();
+
+        // 如果文件已存在则删除（使用 MyFileTools）
+        if (my_tools::MyFileTools::Exists(yaml_file_abs_path_)) {
+            if (my_tools::MyFileTools::DeleteFile(yaml_file_abs_path_)) {
+                MYLOG_INFO("[RtspRelayMonitor] 已删除旧 YAML 文件: {}", yaml_file_abs_path_);
+            } else {
+                MYLOG_WARN("[RtspRelayMonitor] 删除旧 YAML 文件失败: {}", yaml_file_abs_path_);
+            }
+        }
+
+        // 写入文件（使用 MyFileTools 覆盖写入）
+        if (!my_tools::MyFileTools::WriteText(yaml_file_abs_path_, yaml_content_)) {
+            MYLOG_ERROR("[RtspRelayMonitor] 无法写入 YAML 文件: {}", yaml_file_abs_path_);
+            return false;
+        }
 
         MYLOG_INFO("[RtspRelayMonitor] YAML 文件已写入: {}", yaml_file_abs_path_);
         return true;
@@ -391,39 +405,14 @@ void RtspRelayMonitor::MonitorLoop() {
 // ============================================================================
 
 bool RtspRelayMonitor::CheckRtspSource() {
-    // 创建非阻塞 TCP socket
-    int sock = ::socket(AF_INET, SOCK_STREAM, 0);
-    if (sock < 0) {
-        MYLOG_ERROR("[RtspRelayMonitor] 创建探测 socket 失败: {}", std::strerror(errno));
-        return false;
-    }
-
-    // 设置连接超时（2 秒）
-    struct timeval tv;
-    tv.tv_sec = 2;
-    tv.tv_usec = 0;
-    setsockopt(sock, SOL_SOCKET, SO_SNDTIMEO, &tv, sizeof(tv));
-
-    struct sockaddr_in addr{};
-    addr.sin_family = AF_INET;
-    addr.sin_port = htons(static_cast<uint16_t>(check_port_));
-
-    if (::inet_pton(AF_INET, check_ip_.c_str(), &addr.sin_addr) <= 0) {
-        MYLOG_ERROR("[RtspRelayMonitor] 无效的 IP 地址: {}", check_ip_);
-        ::close(sock);
-        return false;
-    }
-
-    int ret = ::connect(sock, reinterpret_cast<struct sockaddr*>(&addr), sizeof(addr));
-    ::close(sock);
-
-    if (ret == 0) {
-        MYLOG_DEBUG("[RtspRelayMonitor] RTSP 源 {}:{} 可达", check_ip_, check_port_);
+    // const bool reachable = my_tools::ping_tools::PingFuncBySystem::PingIPBySocket(check_ip_, check_port_, 2);
+    const bool reachable = my_tools::ping_tools::PingFuncBySystem::PingIP(check_ip_, 1, 2);
+    if (reachable) {
+        MYLOG_DEBUG("[RtspRelayMonitor] RTSP 源 {}可达", check_ip_);
         return true;
-    } else {
-        MYLOG_DEBUG("[RtspRelayMonitor] RTSP 源 {}:{} 不可达: {}", check_ip_, check_port_, std::strerror(errno));
-        return false;
     }
+    MYLOG_DEBUG("[RtspRelayMonitor] RTSP 源 {}不可达", check_ip_);
+    return false;
 }
 
 // ============================================================================
@@ -455,47 +444,55 @@ bool RtspRelayMonitor::CheckProcessAlive() {
 // ============================================================================
 
 bool RtspRelayMonitor::StartRelayProcess() {
-    // 前置检查：端口是否可用
-    if (!IsPortAvailable(rtsp_listen_port_)) {
-        MYLOG_WARN("[RtspRelayMonitor] 端口 {} 已被占用，暂不启动 MediaMTX", rtsp_listen_port_);
-        return false;
-    }
-
-    // 检查 YAML 文件是否存在
-    if (!std::filesystem::exists(yaml_file_abs_path_)) {
-        MYLOG_ERROR("[RtspRelayMonitor] YAML 配置文件不存在: {}", yaml_file_abs_path_);
-        return false;
-    }
-
-    MYLOG_INFO("[RtspRelayMonitor] 启动 MediaMTX: {} {}", mediamtx_bin_, yaml_file_abs_path_);
-
-    pid_t pid = ::fork();
-    if (pid < 0) {
-        MYLOG_ERROR("[RtspRelayMonitor] fork 失败: {}", std::strerror(errno));
-        return false;
-    }
-
-    if (pid == 0) {
-        // ---- 子进程 ----
-        // 重定向 stdout/stderr 到 /dev/null（MediaMTX 日志由其自身管理）
-        int devnull = ::open("/dev/null", O_WRONLY);
-        if (devnull >= 0) {
-            ::dup2(devnull, STDOUT_FILENO);
-            ::dup2(devnull, STDERR_FILENO);
-            ::close(devnull);
+    try {
+        // 前置检查：端口是否可用
+        if (!IsPortAvailable(rtsp_listen_port_)) {
+            MYLOG_WARN("[RtspRelayMonitor] 端口 {} 已被占用，暂不启动 MediaMTX", rtsp_listen_port_);
+            return false;
         }
 
-        // exec 替换为 MediaMTX 进程
-        ::execlp(mediamtx_bin_.c_str(), "mediamtx", yaml_file_abs_path_.c_str(), nullptr);
+        // 检查 YAML 文件是否存在
+        if (!my_tools::MyFileTools::Exists(yaml_file_abs_path_)) {
+            MYLOG_ERROR("[RtspRelayMonitor] YAML 配置文件不存在: {}", yaml_file_abs_path_);
+            return false;
+        }
 
-        // execlp 失败时退出子进程
-        _exit(127);
+        MYLOG_INFO("[RtspRelayMonitor] 启动 MediaMTX: {} {}", mediamtx_bin_, yaml_file_abs_path_);
+
+        pid_t pid = ::fork();
+        if (pid < 0) {
+            MYLOG_ERROR("[RtspRelayMonitor] fork 失败: {}", std::strerror(errno));
+            return false;
+        }
+
+        if (pid == 0) {
+            // ---- 子进程 ----
+            // 重定向 stdout/stderr 到 /dev/null（MediaMTX 日志由其自身管理）
+            int devnull = ::open("/dev/null", O_WRONLY);
+            if (devnull >= 0) {
+                ::dup2(devnull, STDOUT_FILENO);
+                ::dup2(devnull, STDERR_FILENO);
+                ::close(devnull);
+            }
+
+            // exec 替换为 MediaMTX 进程
+            ::execlp(mediamtx_bin_.c_str(), "mediamtx", yaml_file_abs_path_.c_str(), nullptr);
+
+            // execlp 失败时退出子进程
+            _exit(127);
+        }
+
+        // ---- 父进程 ----
+        relay_pid_ = pid;
+        MYLOG_INFO("[RtspRelayMonitor] MediaMTX 子进程已创建，PID={}", relay_pid_);
+        return true;
+    } catch (const std::exception& e) {
+        MYLOG_ERROR("[RtspRelayMonitor] StartRelayProcess 异常: {}", e.what());
+        return false;
+    } catch (...) {
+        MYLOG_ERROR("[RtspRelayMonitor] StartRelayProcess 未知异常");
+        return false;
     }
-
-    // ---- 父进程 ----
-    relay_pid_ = pid;
-    MYLOG_INFO("[RtspRelayMonitor] MediaMTX 子进程已创建，PID={}", relay_pid_);
-    return true;
 }
 
 // ============================================================================

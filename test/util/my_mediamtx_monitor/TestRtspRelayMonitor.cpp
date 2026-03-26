@@ -43,7 +43,7 @@ static json MakeValidConfig() {
         {"yaml_file_name", "test_mediamtx.yaml"},
         {"monitor_interval_sec", 1},
         {"mediamtx_json_config", {
-            {"rtspAddress", ":8555"},
+            {"rtspAddress", "8555"},
             {"paths", {
                 {"live", {
                     {"source", "rtsp://127.0.0.1"},
@@ -152,7 +152,7 @@ TEST_F(JsonToYamlTest, IndentIncreases) {
 TEST_F(JsonToYamlTest, MediamtxConfigConversion) {
     // 真实 MediaMTX 配置片段
     json j = {
-        {"rtspAddress", ":8555"},
+        {"rtspAddress", "8555"},
         {"paths", {
             {"live", {
                 {"source", "rtsp://192.168.2.119"},
@@ -161,7 +161,7 @@ TEST_F(JsonToYamlTest, MediamtxConfigConversion) {
         }}
     };
     std::string yaml = JsonToYaml(j);
-    EXPECT_NE(yaml.find("rtspAddress: \":8555\""), std::string::npos);
+    EXPECT_NE(yaml.find("rtspAddress: \"8555\""), std::string::npos);
     EXPECT_NE(yaml.find("paths:"), std::string::npos);
     EXPECT_NE(yaml.find("source: \"rtsp://192.168.2.119\""), std::string::npos);
     EXPECT_NE(yaml.find("sourceOnDemand: yes"), std::string::npos);
@@ -304,13 +304,13 @@ TEST_F(OptionalParamsTest, CustomCheckPort) {
     EXPECT_EQ(hb["check_port"].get<int>(), 8554);
 }
 
-TEST_F(OptionalParamsTest, DefaultCheckPort554) {
+TEST_F(OptionalParamsTest, DefaultCheckPort2000) {
     RtspRelayMonitor monitor;
     json cfg = MakeValidConfig();
     cfg.erase("check_port");
     EXPECT_TRUE(monitor.Init(cfg));
     auto hb = monitor.GetHeartbeat();
-    EXPECT_EQ(hb["check_port"].get<int>(), 554);
+    EXPECT_EQ(hb["check_port"].get<int>(), 2000);
 }
 
 TEST_F(OptionalParamsTest, CustomYamlFileName) {
@@ -333,16 +333,16 @@ TEST_F(OptionalParamsTest, MonitorIntervalClampedToMin1) {
 TEST_F(OptionalParamsTest, RtspListenPortParsedFromAddress) {
     RtspRelayMonitor monitor;
     json cfg = MakeValidConfig();
-    cfg["mediamtx_json_config"]["rtspAddress"] = ":9999";
+    cfg["mediamtx_json_config"]["rtspAddress"] = "9999";
     EXPECT_TRUE(monitor.Init(cfg));
     auto hb = monitor.GetHeartbeat();
     EXPECT_EQ(hb["rtsp_listen_port"].get<int>(), 9999);
 }
 
-TEST_F(OptionalParamsTest, RtspAddressWithIpAndPort) {
+TEST_F(OptionalParamsTest, RtspAddressPlainPortString) {
     RtspRelayMonitor monitor;
     json cfg = MakeValidConfig();
-    cfg["mediamtx_json_config"]["rtspAddress"] = "0.0.0.0:7777";
+    cfg["mediamtx_json_config"]["rtspAddress"] = "7777";
     EXPECT_TRUE(monitor.Init(cfg));
     auto hb = monitor.GetHeartbeat();
     EXPECT_EQ(hb["rtsp_listen_port"].get<int>(), 7777);
@@ -351,7 +351,7 @@ TEST_F(OptionalParamsTest, RtspAddressWithIpAndPort) {
 TEST_F(OptionalParamsTest, RtspAddressInvalidPortUsesDefault) {
     RtspRelayMonitor monitor;
     json cfg = MakeValidConfig();
-    cfg["mediamtx_json_config"]["rtspAddress"] = ":abc";
+    cfg["mediamtx_json_config"]["rtspAddress"] = "abc";
     EXPECT_TRUE(monitor.Init(cfg));
     auto hb = monitor.GetHeartbeat();
     // 解析失败，使用默认 8555
@@ -407,7 +407,7 @@ TEST_F(YamlGenerationTest, OldFileDeletedBeforeRewrite) {
     {
         RtspRelayMonitor m;
         json cfg = MakeValidConfig();
-        cfg["mediamtx_json_config"]["rtspAddress"] = ":1234";
+        cfg["mediamtx_json_config"]["rtspAddress"] = "1234";
         ASSERT_TRUE(m.Init(cfg));
     }
 
@@ -415,7 +415,7 @@ TEST_F(YamlGenerationTest, OldFileDeletedBeforeRewrite) {
     std::ifstream ifs(path);
     std::string content((std::istreambuf_iterator<char>(ifs)), std::istreambuf_iterator<char>());
     // 确认是新内容
-    EXPECT_NE(content.find(":1234"), std::string::npos);
+    EXPECT_NE(content.find("\"1234\""), std::string::npos);
 }
 
 // ============================================================================
@@ -662,7 +662,7 @@ TEST_F(EdgeCaseTest, MinimalValidConfig) {
     json cfg = {
         {"check_ip", "10.0.0.1"},
         {"mediamtx_json_config", {
-            {"rtspAddress", ":8555"}
+            {"rtspAddress", "8555"}
         }}
     };
     EXPECT_TRUE(monitor.Init(cfg));

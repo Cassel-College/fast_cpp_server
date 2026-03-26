@@ -61,6 +61,10 @@ public:
         return "http://127.0.0.1:" + std::to_string(port_);
     }
 
+    int port() const {
+        return port_;
+    }
+
 private:
     void serveOnce() const {
         sockaddr_in client_addr{};
@@ -133,5 +137,21 @@ TEST(PingBySystemTest, ReturnsTrueForLoopbackIp) {
 
 TEST(PingBySystemTest, ReturnsFalseForUnreachableDocumentationIp) {
     const bool result = my_tools::ping_tools::PingFuncBySystem::PingIP("203.0.113.1");
+    EXPECT_FALSE(result);
+}
+
+TEST(PingBySystemSocketTest, ReturnsTrueForListeningLoopbackPort) {
+    LocalHttpServer server(200);
+    const bool result = my_tools::ping_tools::PingFuncBySystem::PingIPBySocket("127.0.0.1", server.port(), 1);
+    EXPECT_TRUE(result);
+}
+
+TEST(PingBySystemSocketTest, ReturnsFalseForInvalidIp) {
+    const bool result = my_tools::ping_tools::PingFuncBySystem::PingIPBySocket("invalid-ip", 80, 1);
+    EXPECT_FALSE(result);
+}
+
+TEST(PingBySystemSocketTest, ReturnsFalseForInvalidPort) {
+    const bool result = my_tools::ping_tools::PingFuncBySystem::PingIPBySocket("127.0.0.1", 0, 1);
     EXPECT_FALSE(result);
 }
