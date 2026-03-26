@@ -2,6 +2,8 @@
 
 #include "pod_manager.h"
 #include "MyLog.h"
+#include <algorithm>
+#include <cctype>
 
 namespace {
 
@@ -30,6 +32,98 @@ bool getRequiredPodId(const oatpp::String& pod_id_field,
     }
 
     return true;
+}
+
+bool ensureManagerReady(std::string& error) {
+    auto& manager = PodModule::PodManager::GetInstance();
+    if (!manager.IsInitialized()) {
+        error = "吊舱管理器未初始化";
+        return false;
+    }
+    return true;
+}
+
+std::shared_ptr<PodModule::IPod> getExistingPod(const std::string& pod_id, std::string& error) {
+    auto& manager = PodModule::PodManager::GetInstance();
+    auto pod = manager.getPod(pod_id);
+    if (!pod) {
+        error = "吊舱不存在: " + pod_id;
+    }
+    return pod;
+}
+
+nlohmann::json buildPodErrorDetails(PodModule::PodErrorCode code, const std::string& pod_id) {
+    nlohmann::json details;
+    details["pod_id"] = pod_id;
+    details["pod_error_code"] = static_cast<int>(code);
+    details["pod_error_name"] = PodModule::podErrorCodeToString(code);
+    return details;
+}
+
+int mapPodErrorToHttpStatus(PodModule::PodErrorCode code) {
+    switch (code) {
+        case PodModule::PodErrorCode::POD_NOT_FOUND:
+            return 404;
+        case PodModule::PodErrorCode::NOT_CONNECTED:
+        case PodModule::PodErrorCode::CONNECTION_FAILED:
+        case PodModule::PodErrorCode::CONNECTION_TIMEOUT:
+            return 503;
+        case PodModule::PodErrorCode::PTZ_CONTROL_FAILED:
+        case PodModule::PodErrorCode::CAPABILITY_NOT_SUPPORTED:
+            return 400;
+        default:
+            return 400;
+    }
+}
+
+bool parsePtzAction(const oatpp::String& action_field,
+                    int32_t step_value,
+                    char& action,
+                    PodModule::PTZCommand& cmd,
+                    bool& go_home,
+                    std::string& error) {
+    if (!action_field) {
+        error = "缺少字符串参数 action";
+        return false;
+    }
+
+    std::string action_text = trimCopy(action_field->c_str());
+    std::transform(action_text.begin(), action_text.end(), action_text.begin(),
+                   [](unsigned char ch) { return static_cast<char>(std::tolower(ch)); });
+    if (action_text.size() != 1) {
+        error = "参数 action 必须是单字符: w/s/a/d/h";
+        return false;
+    }
+
+    if (step_value <= 0) {
+        error = "参数 step 必须大于 0";
+        return false;
+    }
+
+    action = action_text.front();
+    go_home = false;
+    cmd = PodModule::PTZCommand{};
+
+    switch (action) {
+        case 'w':
+            cmd.pitch_speed = static_cast<double>(step_value);
+            return true;
+        case 's':
+            cmd.pitch_speed = -static_cast<double>(step_value);
+            return true;
+        case 'a':
+            cmd.yaw_speed = -static_cast<double>(step_value);
+            return true;
+        case 'd':
+            cmd.yaw_speed = static_cast<double>(step_value);
+            return true;
+        case 'h':
+            go_home = true;
+            return true;
+        default:
+            error = "不支持的 action，必须是 w/s/a/d/h";
+            return false;
+    }
 }
 
 } // namespace
@@ -107,28 +201,35 @@ MyAPIResponsePtr PodController::getPodConfig() {
     return jsonOk(manager.GetInitConfig(), "pod config retrieved");
 }
 
-MyAPIResponsePtr PodController::getPodPtzPose(const oatpp::String& pod_id_path) {
+MyAPIResponsePtr PodController::getPodPtzPose(
+    const oatpp::Object<my_api::dto::PodPtzPoseQueryDto>& poseQueryDto) {
+    if (!poseQueryDto) {
+        return jsonError(400, "请求体不能为空");
+    }
+
     std::string error;
     std::string pod_id;
-    if (!getRequiredPodId(pod_id_path, pod_id, error)) {
+    if (!getRequiredPodId(poseQueryDto->pod_id, pod_id, error)) {
         return jsonError(400, error);
     }
 
-    MYLOG_INFO("[API] Pod GET ptz pose: {}", pod_id);
+    MYLOG_INFO("[API] Pod POST ptz pose: {}", pod_id);
 
-    auto& manager = PodModule::PodManager::GetInstance();
-    if (!manager.IsInitialized()) {
-        return jsonError(503, "吊舱管理器未初始化");
+    if (!ensureManagerReady(error)) {
+        return jsonError(503, error);
     }
 
-    auto pod = manager.getPod(pod_id);
+    auto pod = getExistingPod(pod_id, error);
     if (!pod) {
-        return jsonError(404, "吊舱不存在: " + pod_id);
+        return jsonError(404, error);
     }
 
     auto result = pod->getPose();
     if (!result.isSuccess() || !result.data.has_value()) {
-        return jsonError(400, result.message.empty() ? "获取吊舱云台姿态失败" : result.message);
+        return jsonError(
+            mapPodErrorToHttpStatus(result.code),
+            result.message.empty() ? "获取吊舱云台姿态失败" : result.message,
+            buildPodErrorDetails(result.code, pod_id));
     }
 
     const auto& pose = result.data.value();
@@ -183,53 +284,60 @@ MyAPIResponsePtr PodController::disconnectPod(const oatpp::Object<my_api::dto::P
     return jsonError(400, result.message);
 }
 
-MyAPIResponsePtr PodController::setPodPtzPose(
-    const oatpp::String& pod_id_path,
-    const oatpp::Object<my_api::dto::PodPtzPoseDto>& poseDto) {
-    if (!poseDto) {
+MyAPIResponsePtr PodController::controlPodPtz(
+    const oatpp::Object<my_api::dto::PodPtzControlDto>& controlDto) {
+    if (!controlDto) {
         return jsonError(400, "请求体不能为空");
     }
 
     std::string error;
     std::string pod_id;
-    if (!getRequiredPodId(pod_id_path, pod_id, error)) {
+    if (!getRequiredPodId(controlDto->pod_id, pod_id, error)) {
         return jsonError(400, error);
     }
 
-    MYLOG_INFO("[API] Pod POST ptz pose: {}", pod_id);
-
-    auto& manager = PodModule::PodManager::GetInstance();
-    if (!manager.IsInitialized()) {
-        return jsonError(503, "吊舱管理器未初始化");
+    if (!ensureManagerReady(error)) {
+        return jsonError(503, error);
     }
 
-    auto pod = manager.getPod(pod_id);
+    auto pod = getExistingPod(pod_id, error);
     if (!pod) {
-        return jsonError(404, "吊舱不存在: " + pod_id);
+        return jsonError(404, error);
     }
 
-    PodModule::PTZPose target_pose;
-    target_pose.yaw = poseDto->yaw ? poseDto->yaw.getValue(0.0) : 0.0;
-    target_pose.pitch = poseDto->pitch ? poseDto->pitch.getValue(0.0) : 0.0;
-    target_pose.roll = poseDto->roll ? poseDto->roll.getValue(0.0) : 0.0;
-    target_pose.zoom = poseDto->zoom ? poseDto->zoom.getValue(1.0) : 1.0;
+    const int32_t step = controlDto->step ? controlDto->step.getValue(10) : 10;
+    char action = '\0';
+    bool go_home = false;
+    PodModule::PTZCommand command;
+    if (!parsePtzAction(controlDto->action, step, action, command, go_home, error)) {
+        return jsonError(400, error);
+    }
 
-    auto result = pod->setPose(target_pose);
+    MYLOG_INFO("[API] Pod POST ptz control: pod_id={}, action={}, step={}", pod_id, action, step);
+
+    auto result = go_home ? pod->goHome() : pod->controlSpeed(command);
     if (!result.isSuccess()) {
-        return jsonError(400, result.message.empty() ? "控制吊舱云台姿态失败" : result.message);
+        return jsonError(
+            mapPodErrorToHttpStatus(result.code),
+            result.message.empty() ? "吊舱 PTZ 控制失败" : result.message,
+            buildPodErrorDetails(result.code, pod_id));
     }
 
     nlohmann::json data;
     data["pod_id"] = pod_id;
-    data["target_pose"] = {
-        {"yaw", target_pose.yaw},
-        {"pitch", target_pose.pitch},
-        {"roll", target_pose.roll},
-        {"zoom", target_pose.zoom}
-    };
+    data["action"] = std::string(1, action);
+    data["step"] = step;
+    data["mode"] = go_home ? "home" : "speed";
+    if (!go_home) {
+        data["command"] = {
+            {"yaw_speed", command.yaw_speed},
+            {"pitch_speed", command.pitch_speed},
+            {"zoom_speed", command.zoom_speed}
+        };
+    }
     data["connected"] = pod->isConnected();
     data["state"] = PodModule::podStateToString(pod->getState());
-    return jsonOk(data, "吊舱云台姿态控制指令下发成功");
+    return jsonOk(data, go_home ? "吊舱回中指令下发成功" : "吊舱 PTZ 控制指令下发成功");
 }
 
 MyAPIResponsePtr PodController::listPodIds() {

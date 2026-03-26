@@ -49,11 +49,14 @@ public:
 
     ENDPOINT_INFO(getPodPtzPose) {
         info->summary = "获取指定吊舱云台姿态";
-        info->description = "通过路径参数中的 pod_id 获取指定吊舱当前云台姿态。";
+        info->description = "通过 JSON Body 中的 pod_id 获取指定吊舱当前云台姿态。";
+        info->addConsumes<oatpp::Object<my_api::dto::PodPtzPoseQueryDto>>("application/json");
         info->addResponse<oatpp::String>(Status::CODE_200, "application/json");
         info->addResponse<oatpp::String>(Status::CODE_404, "application/json");
+        info->addResponse<oatpp::String>(Status::CODE_503, "application/json");
     }
-    ENDPOINT("GET", "/v1/pod/{pod_id}/ptz/pose", getPodPtzPose, PATH(String, pod_id));
+    ENDPOINT("POST", "/v1/pod/ptz/pose", getPodPtzPose,
+             BODY_DTO(oatpp::Object<my_api::dto::PodPtzPoseQueryDto>, poseQueryDto));
 
     // ==================== 控制类接口 ====================
 
@@ -75,16 +78,17 @@ public:
     }
     ENDPOINT("POST", "/v1/pod/disconnect", disconnectPod, BODY_DTO(oatpp::Object<my_api::dto::PodIdDto>, podDto));
 
-    ENDPOINT_INFO(setPodPtzPose) {
-        info->summary = "控制指定吊舱云台姿态";
-        info->description = "通过路径参数中的 pod_id 路由到指定吊舱，并使用 body 中的姿态参数控制云台。";
-        info->addConsumes<oatpp::Object<my_api::dto::PodPtzPoseDto>>("application/json");
+    ENDPOINT_INFO(controlPodPtz) {
+        info->summary = "发送吊舱 PTZ 控制指令";
+        info->description = "通过 JSON Body 中的 pod_id、action、step 发送 wsadh 模式云台控制指令。";
+        info->addConsumes<oatpp::Object<my_api::dto::PodPtzControlDto>>("application/json");
         info->addResponse<oatpp::String>(Status::CODE_200, "application/json");
+        info->addResponse<oatpp::String>(Status::CODE_400, "application/json");
         info->addResponse<oatpp::String>(Status::CODE_404, "application/json");
+        info->addResponse<oatpp::String>(Status::CODE_503, "application/json");
     }
-    ENDPOINT("POST", "/v1/pod/{pod_id}/ptz/pose", setPodPtzPose,
-             PATH(String, pod_id),
-             BODY_DTO(oatpp::Object<my_api::dto::PodPtzPoseDto>, poseDto));
+    ENDPOINT("POST", "/v1/pod/ptz/control", controlPodPtz,
+             BODY_DTO(oatpp::Object<my_api::dto::PodPtzControlDto>, controlDto));
 
     ENDPOINT_INFO(listPodIds) {
         info->summary = "列出所有吊舱ID";

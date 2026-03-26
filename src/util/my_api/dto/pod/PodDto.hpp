@@ -13,9 +13,24 @@ class PodIdDto : public oatpp::DTO {
     DTO_FIELD(String, pod_id);
 };
 
+class PodPtzPoseQueryDto : public oatpp::DTO {
+    DTO_INIT(PodPtzPoseQueryDto, DTO)
+
+    DTO_FIELD(String, pod_id);
+};
+
+class PodPtzControlDto : public oatpp::DTO {
+    DTO_INIT(PodPtzControlDto, DTO)
+
+    DTO_FIELD(String, pod_id);
+    DTO_FIELD(String, action);
+    DTO_FIELD(Int32, step);
+};
+
 class PodPtzPoseDto : public oatpp::DTO {
     DTO_INIT(PodPtzPoseDto, DTO)
 
+    DTO_FIELD(String, pod_id);
     DTO_FIELD(Float64, yaw);
     DTO_FIELD(Float64, pitch);
     DTO_FIELD(Float64, roll);
