@@ -1,26 +1,8 @@
 var searchData=
 [
-  ['laser_5fdistance_0',['laser_distance',['../structviewlink_1_1TelemetrySnapshot.html#a0b8db87590bbe06353f7dbe0a2e69f82',1,'viewlink::TelemetrySnapshot']]],
-  ['laser_5fenabled_5f_1',['laser_enabled_',['../classPodModule_1_1BasePod.html#ad6899fd2ac10f08927c1655863f58355',1,'PodModule::BasePod']]],
-  ['laser_5finfo_2',['laser_info',['../structPodModule_1_1PodRuntimeStatus.html#ac9a84758e7cc115b7340bae6fb5c88bd',1,'PodModule::PodRuntimeStatus']]],
-  ['laser_5finterval_5fms_3',['laser_interval_ms',['../structPodModule_1_1PodMonitorConfig.html#a306fe3c12559a41ceb5591b092af1ae6',1,'PodModule::PodMonitorConfig']]],
-  ['laser_5frange_4',['laser_range',['../structfly__control_1_1GuidanceNewData.html#a9d81a398158105d74f796c0553fc3c2a',1,'fly_control::GuidanceNewData::laser_range'],['../structfly__control_1_1GimbalAngRateData.html#a9d81a398158105d74f796c0553fc3c2a',1,'fly_control::GimbalAngRateData::laser_range']]],
-  ['laser_5fupdate_5fms_5',['laser_update_ms',['../structPodModule_1_1PodRuntimeStatus.html#a93cb7dd8e358326d59602772d7dbb10e',1,'PodModule::PodRuntimeStatus']]],
-  ['last_5fcenter_5fresult_5f_6',['last_center_result_',['../classPodModule_1_1BasePod.html#a6cd436d892f483e183b5e2877ddf1c0e',1,'PodModule::BasePod']]],
-  ['last_5ferror_7',['last_error',['../structmy__data_1_1DeviceStatus.html#ad6976c458c4c2009292fa9a0a938e44e',1,'my_data::DeviceStatus::last_error'],['../structmy__serial_1_1SerialPortSnapshot.html#ad6976c458c4c2009292fa9a0a938e44e',1,'my_serial::SerialPortSnapshot::last_error']]],
-  ['last_5ferror_5f_8',['last_error_',['../classmy__serial_1_1MySerial.html#a5fce746773fe42ce68f5aa756b09c38e',1,'my_serial::MySerial']]],
-  ['last_5fheartbeat_5fat_5fms_9',['last_heartbeat_at_ms',['../structmy__data_1_1EdgeStatus.html#a6e32979639bef9048e9ff1afbdb19859',1,'my_data::EdgeStatus']]],
-  ['last_5flaser_5fmeasurement_5f_10',['last_laser_measurement_',['../classPodModule_1_1BasePod.html#ae881a6fc550160d32bdd30fccb3adf4f',1,'PodModule::BasePod']]],
-  ['last_5freconnect_5fattempt_5fms_5f_11',['last_reconnect_attempt_ms_',['../classPodModule_1_1PinlingPod.html#a12683523defe60cc2bd62c8be46fa3c5',1,'PodModule::PinlingPod']]],
-  ['last_5fseen_5fat_5fms_12',['last_seen_at_ms',['../structmy__data_1_1DeviceStatus.html#ad1f973f56df6185040bd96ef12911bf9',1,'my_data::DeviceStatus']]],
-  ['last_5ftask_5fat_5fms_13',['last_task_at_ms',['../structmy__data_1_1DeviceStatus.html#adef2c57c01aebddd44f7913264efc06f',1,'my_data::DeviceStatus']]],
-  ['last_5fupdate_5fms_14',['last_update_ms',['../structPodModule_1_1PodRuntimeStatus.html#a5113e9221ec9841b5fc60d9c5e0b6677',1,'PodModule::PodRuntimeStatus']]],
-  ['latest_5fhb_5f_15',['latest_hb_',['../classfly__control_1_1MyFlyControl.html#a9bb7e79d638284f6f06be830a7bf0d3d',1,'fly_control::MyFlyControl']]],
-  ['latitude_16',['latitude',['../structfly__control_1_1HeartbeatData.html#ad2a7363ca4d97bbf55432296fb1a448b',1,'fly_control::HeartbeatData::latitude'],['../structPodModule_1_1CenterMeasurementResult.html#a76714bdbc5c536fa77dfb14533ff82a9',1,'PodModule::CenterMeasurementResult::latitude'],['../structPodModule_1_1LaserInfo.html#a76714bdbc5c536fa77dfb14533ff82a9',1,'PodModule::LaserInfo::latitude'],['../structfly__control_1_1GeofencePoint.html#ad2a7363ca4d97bbf55432296fb1a448b',1,'fly_control::GeofencePoint::latitude'],['../structfly__control_1_1SetOriginReturnData.html#ad2a7363ca4d97bbf55432296fb1a448b',1,'fly_control::SetOriginReturnData::latitude'],['../structfly__control_1_1RoutePoint.html#ad2a7363ca4d97bbf55432296fb1a448b',1,'fly_control::RoutePoint::latitude'],['../structfly__control_1_1SetDestinationData.html#ad2a7363ca4d97bbf55432296fb1a448b',1,'fly_control::SetDestinationData::latitude']]],
-  ['link_5flost_17',['link_lost',['../structfly__control_1_1FaultBits.html#ae005f60928f935cb8063397e9d5003f7',1,'fly_control::FaultBits']]],
-  ['link_5ftype_18',['link_type',['../pinling__pod_8cpp.html#a6b36dd32245b82f9ad2c68faf8f661f5',1,'pinling_pod.cpp']]],
-  ['listeners_5f_19',['listeners_',['../classPodModule_1_1PodEventDispatcher.html#a1734eca11c1f2562158361cf9435120d',1,'PodModule::PodEventDispatcher']]],
-  ['logger_20',['logger',['../namespaceMyLog.html#accdc73450b7a41e30a69fca53a8f2232',1,'MyLog']]],
-  ['longitude_21',['longitude',['../structfly__control_1_1HeartbeatData.html#affaa89c8c5bcaf3f03054d63bb6629b1',1,'fly_control::HeartbeatData::longitude'],['../structfly__control_1_1SetDestinationData.html#affaa89c8c5bcaf3f03054d63bb6629b1',1,'fly_control::SetDestinationData::longitude'],['../structfly__control_1_1RoutePoint.html#affaa89c8c5bcaf3f03054d63bb6629b1',1,'fly_control::RoutePoint::longitude'],['../structfly__control_1_1SetOriginReturnData.html#affaa89c8c5bcaf3f03054d63bb6629b1',1,'fly_control::SetOriginReturnData::longitude'],['../structfly__control_1_1GeofencePoint.html#affaa89c8c5bcaf3f03054d63bb6629b1',1,'fly_control::GeofencePoint::longitude'],['../structPodModule_1_1LaserInfo.html#ac155e35fdeebafc89723a51520fb9fe6',1,'PodModule::LaserInfo::longitude'],['../structPodModule_1_1CenterMeasurementResult.html#ac155e35fdeebafc89723a51520fb9fe6',1,'PodModule::CenterMeasurementResult::longitude']]],
-  ['longopt_22',['longOpt',['../structArgumentParser_1_1Option.html#a2c9b501963b98d0a2614f69d5118671f',1,'ArgumentParser::Option']]]
+  ['keepalive_5f_0',['keepalive_',['../classmy__mqtt_1_1MqttService.html#a87c5b6eba7602daa9b3f5b69a1b6ac66',1,'my_mqtt::MqttService']]],
+  ['kmaxretrycount_1',['kMaxRetryCount',['../namespacePodModule.html#a838bda99a1dd7262d465c378acf83eee',1,'PodModule']]],
+  ['kreconnectcooldownms_2',['kReconnectCooldownMs',['../namespacePodModule.html#a289b4326ded427029f61f36766d4c4eb',1,'PodModule']]],
+  ['kretryintervalms_3',['kRetryIntervalMs',['../namespacePodModule.html#a844bece0778aa3f2816e81be91b786f2',1,'PodModule']]],
+  ['kv_5f_4',['kv_',['../classMyINIConfig.html#a421e575af8a12e4b513d2c8a7a5eec59',1,'MyINIConfig']]]
 ];

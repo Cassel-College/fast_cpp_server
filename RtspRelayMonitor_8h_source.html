@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_mediamtx_monitor/RtspRelayMonitor.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_9d4f728460ea36c9f4fb61d4d98dff33.html">my_mediamtx_monitor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">RtspRelayMonitor.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="RtspRelayMonitor_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &lt;thread&gt;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &lt;atomic&gt;</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#include &lt;nlohmann/json.hpp&gt;</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__mediamtx__monitor.html">my_mediamtx_monitor</a> {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="foldopen" id="foldopen00045" data-start="{" data-end="};">
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="namespacemy__mediamtx__monitor.html#a8338ab9f5ccfbbbf89a4bafb81decd25">   45</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="namespacemy__mediamtx__monitor.html#a8338ab9f5ccfbbbf89a4bafb81decd25">RtspRelayState</a> {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_enumvalue" href="namespacemy__mediamtx__monitor.html#a8338ab9f5ccfbbbf89a4bafb81decd25a09d4d696b4e935115b9313e3c412509a">STOPPED</a>,       </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <a class="code hl_enumvalue" href="namespacemy__mediamtx__monitor.html#a8338ab9f5ccfbbbf89a4bafb81decd25a034312d8adc8099c1c6f53aaff745e26">STARTING</a>,      </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_enumvalue" href="namespacemy__mediamtx__monitor.html#a8338ab9f5ccfbbbf89a4bafb81decd25a43491564ebcfd38568918efbd6e840fd">RUNNING</a>,       </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_enumvalue" href="namespacemy__mediamtx__monitor.html#a8338ab9f5ccfbbbf89a4bafb81decd25a11ae15bd64b32f24f8efb813f17e507f">SOURCE_LOST</a>,   </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <a class="code hl_enumvalue" href="namespacemy__mediamtx__monitor.html#a8338ab9f5ccfbbbf89a4bafb81decd25abb1ca97ec761fc37101737ba0aa2e7c5">ERROR</a>          </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>};</div>
+</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="namespacemy__mediamtx__monitor.html#a8db56ccb63c1112d9b2c3a84140d4648">RtspRelayStateToString</a>(<a class="code hl_enumeration" href="namespacemy__mediamtx__monitor.html#a8338ab9f5ccfbbbf89a4bafb81decd25">RtspRelayState</a> state);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>std::string <a class="code hl_function" href="namespacemy__mediamtx__monitor.html#a37e3c599e6e04d003bbc4563cbfa4db7">JsonToYaml</a>(<span class="keyword">const</span> nlohmann::json&amp; j, <span class="keywordtype">int</span> indent = 0);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="foldopen" id="foldopen00075" data-start="{" data-end="};">
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html">   75</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html">RtspRelayMonitor</a> {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <a class="code hl_function" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#afe03ffd27b15ed13c0b1ee05de473ea7">RtspRelayMonitor</a>();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <a class="code hl_function" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a52677c0fa07a87fe23e4c4410ef98adf">~RtspRelayMonitor</a>();</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="comment">// ======================== 禁止拷贝与移动 ========================</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a90e0b5864f4950ad6331b2d50a6f3031">   81</a></span>    <a class="code hl_function" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a90e0b5864f4950ad6331b2d50a6f3031">RtspRelayMonitor</a>(<span class="keyword">const</span> <a class="code hl_class" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html">RtspRelayMonitor</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a87fb5aa58373c03f50056808d51193e6">   82</a></span>    <a class="code hl_class" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html">RtspRelayMonitor</a>&amp; <a class="code hl_function" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a87fb5aa58373c03f50056808d51193e6">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html">RtspRelayMonitor</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#af51266922393cbce13f6c55273b4a50d">Init</a>(<span class="keyword">const</span> nlohmann::json&amp; json_config);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a07aaf1227e4d645f15e0a964f54ef291">Start</a>();</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a17a237457e57625296e6b24feb19c60a">Stop</a>();</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <a class="code hl_enumeration" href="namespacemy__mediamtx__monitor.html#a8338ab9f5ccfbbbf89a4bafb81decd25">RtspRelayState</a> <a class="code hl_function" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#ae34c976223a82e6b3fd41da1de8d97c0">GetState</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    nlohmann::json <a class="code hl_function" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a227a4ddc497d4955792267c970c8d482">GetHeartbeat</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    nlohmann::json <a class="code hl_function" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#ac36353e594510c7ffac27361f2aec608">GetInfo</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="comment">/* ======================= 核心线程 ======================= */</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a113223b951492e271c7bd457470b66f4">MonitorLoop</a>();</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="comment">/* ======================= 功能函数 ======================= */</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a0a03702b1efe4e0fa601f31a183f511b">CheckRtspSource</a>();</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#aee0ce71cb6af29204bd58f6048cad2c8">CheckProcessAlive</a>();</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a473243a9d359fb4cc8b84be76aa324b9">StartRelayProcess</a>();</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#acd92254967f2d0f4dc3f52943d192d1d">StopRelayProcess</a>();</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a0cfc9a7b487d98f0bfededa1ab35ad78">IsPortAvailable</a>(<span class="keywordtype">int</span> <a class="code hl_variable" href="pinling__pod_8cpp.html#a8e0798404bf2cf5dabb84c5ba9a4f236">port</a>);</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a6e6193f487b3aa9294d0701924ae9011">GenerateYAML</a>();</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a26f7b9519d7a71eeec7b9859d33b1294">ParseConfig</a>();</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    <span class="comment">/* ======================= 配置字段 ======================= */</span></div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno"><a class="line" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a91cacd94ae5a550d959c48fe1ba46922">  182</a></span>    nlohmann::json <a class="code hl_variable" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a91cacd94ae5a550d959c48fe1ba46922">json_config_</a>;               </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno"><a class="line" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#acd50b9be659e75858d246f61f34fbbb8">  183</a></span>    nlohmann::json <a class="code hl_variable" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#acd50b9be659e75858d246f61f34fbbb8">mediamtx_json_config_</a>;      </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a2b65f95eb687f168b881fba8931b3f32">  184</a></span>    std::string <a class="code hl_variable" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a2b65f95eb687f168b881fba8931b3f32">yaml_content_</a>;                 </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#adfc249d53f2f935c690f5bf527d841a8">  185</a></span>    std::string <a class="code hl_variable" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#adfc249d53f2f935c690f5bf527d841a8">local_ip_</a>;                     </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno"><a class="line" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a07b3114c344490905ec698b59fe8dea0">  186</a></span>    std::string <a class="code hl_variable" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a07b3114c344490905ec698b59fe8dea0">yaml_file_name_</a> = <span class="stringliteral">&quot;mediamtx.yaml&quot;</span>; </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno"><a class="line" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#abb18c42293fc19b76285507f357f5fc8">  187</a></span>    std::string <a class="code hl_variable" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#abb18c42293fc19b76285507f357f5fc8">yaml_file_abs_path_</a>;           </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#aeb41d1a9516bf476eebd6ca6dc347e51">  189</a></span>    std::string <a class="code hl_variable" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#aeb41d1a9516bf476eebd6ca6dc347e51">mediamtx_bin_</a> = <span class="stringliteral">&quot;./mediamtx&quot;</span>;  </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno"><a class="line" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a87d68107395ff05173e49ef5c9b9c0ce">  190</a></span>    std::string <a class="code hl_variable" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a87d68107395ff05173e49ef5c9b9c0ce">check_ip_</a>;                     </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno"><a class="line" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#ad5dce33884bd0aa1bc8fcae2ceedcfba">  191</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#ad5dce33884bd0aa1bc8fcae2ceedcfba">check_port_</a> = 2000;                    </div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno"><a class="line" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a6df5807de52b52983376d25a6150bab8">  192</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a6df5807de52b52983376d25a6150bab8">rtsp_listen_port_</a> = 8555;              </div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno"><a class="line" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a4f1991ad71e7a2f8b97aebab5d755c45">  193</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a4f1991ad71e7a2f8b97aebab5d755c45">monitor_interval_sec_</a> = 5;             </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <span class="comment">/* ======================= 运行状态 ======================= */</span></div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno"><a class="line" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a0af2228338bdfe124f580c884207bd3d">  197</a></span>    std::atomic&lt;bool&gt; <a class="code hl_variable" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a0af2228338bdfe124f580c884207bd3d">enable_</a>{<span class="keyword">false</span>};          </div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno"><a class="line" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#aa9620a15c76ada2388bf678e373a6463">  198</a></span>    std::atomic&lt;bool&gt; <a class="code hl_variable" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#aa9620a15c76ada2388bf678e373a6463">running_</a>{<span class="keyword">false</span>};         </div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno"><a class="line" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#af12f78ccc8851d5ba4723d3ab6541ea5">  199</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#af12f78ccc8851d5ba4723d3ab6541ea5">config_initialized_</a> = <span class="keyword">false</span>;          </div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    <span class="comment">/* ======================= 进程管理 ======================= */</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno"><a class="line" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a3f40e4dcd00942624b1e1d12e442c1c3">  203</a></span>    pid_t <a class="code hl_variable" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a3f40e4dcd00942624b1e1d12e442c1c3">relay_pid_</a>{-1};                      </div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    <span class="comment">/* ======================= 线程与同步 ======================= */</span></div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno"><a class="line" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a959f692b1e60d0ee954a65f863065469">  207</a></span>    std::thread <a class="code hl_variable" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a959f692b1e60d0ee954a65f863065469">monitor_thread_</a>;               </div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno"><a class="line" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a281b5ec791338d4378e22ef44a51b4a1">  208</a></span>    <span class="keyword">mutable</span> std::mutex <a class="code hl_variable" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a281b5ec791338d4378e22ef44a51b4a1">mutex_</a>;                 </div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    <span class="comment">/* ======================= 状态机 ======================= */</span></div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno"><a class="line" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#adcf56cfe8c4efe13375918fb0d2f6a32">  212</a></span>    <a class="code hl_enumeration" href="namespacemy__mediamtx__monitor.html#a8338ab9f5ccfbbbf89a4bafb81decd25">RtspRelayState</a> <a class="code hl_variable" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#adcf56cfe8c4efe13375918fb0d2f6a32">state_</a> = <a class="code hl_enumvalue" href="namespacemy__mediamtx__monitor.html#a8338ab9f5ccfbbbf89a4bafb81decd25a09d4d696b4e935115b9313e3c412509a">RtspRelayState::STOPPED</a>; </div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span> </div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    <span class="comment">/* ======================= 基本信息 ======================= */</span></div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno"><a class="line" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#aa363dc6b0a5f544017c8697c19bf4f36">  216</a></span>    nlohmann::json <a class="code hl_variable" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#aa363dc6b0a5f544017c8697c19bf4f36">info_</a>;                      </div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>};</div>
+</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>} <span class="comment">// namespace my_mediamtx_monitor</span></div>
+<div class="ttc" id="aclassmy__mediamtx__monitor_1_1RtspRelayMonitor_html"><div class="ttname"><a href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html">my_mediamtx_monitor::RtspRelayMonitor</a></div><div class="ttdoc">RTSP 转发守护类</div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.h:75</div></div>
+<div class="ttc" id="aclassmy__mediamtx__monitor_1_1RtspRelayMonitor_html_a07aaf1227e4d645f15e0a964f54ef291"><div class="ttname"><a href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a07aaf1227e4d645f15e0a964f54ef291">my_mediamtx_monitor::RtspRelayMonitor::Start</a></div><div class="ttdeci">void Start()</div><div class="ttdoc">启动监控线程</div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.cpp:315</div></div>
+<div class="ttc" id="aclassmy__mediamtx__monitor_1_1RtspRelayMonitor_html_a07b3114c344490905ec698b59fe8dea0"><div class="ttname"><a href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a07b3114c344490905ec698b59fe8dea0">my_mediamtx_monitor::RtspRelayMonitor::yaml_file_name_</a></div><div class="ttdeci">std::string yaml_file_name_</div><div class="ttdoc">YAML 文件名</div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.h:186</div></div>
+<div class="ttc" id="aclassmy__mediamtx__monitor_1_1RtspRelayMonitor_html_a0a03702b1efe4e0fa601f31a183f511b"><div class="ttname"><a href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a0a03702b1efe4e0fa601f31a183f511b">my_mediamtx_monitor::RtspRelayMonitor::CheckRtspSource</a></div><div class="ttdeci">bool CheckRtspSource()</div><div class="ttdoc">检测 RTSP 源是否可达（TCP socket 连接 check_ip:rtsp_port）</div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.cpp:407</div></div>
+<div class="ttc" id="aclassmy__mediamtx__monitor_1_1RtspRelayMonitor_html_a0af2228338bdfe124f580c884207bd3d"><div class="ttname"><a href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a0af2228338bdfe124f580c884207bd3d">my_mediamtx_monitor::RtspRelayMonitor::enable_</a></div><div class="ttdeci">std::atomic&lt; bool &gt; enable_</div><div class="ttdoc">是否启用转发</div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.h:197</div></div>
+<div class="ttc" id="aclassmy__mediamtx__monitor_1_1RtspRelayMonitor_html_a0cfc9a7b487d98f0bfededa1ab35ad78"><div class="ttname"><a href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a0cfc9a7b487d98f0bfededa1ab35ad78">my_mediamtx_monitor::RtspRelayMonitor::IsPortAvailable</a></div><div class="ttdeci">bool IsPortAvailable(int port)</div><div class="ttdoc">检测指定端口是否可用（未被占用）</div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.cpp:545</div></div>
+<div class="ttc" id="aclassmy__mediamtx__monitor_1_1RtspRelayMonitor_html_a113223b951492e271c7bd457470b66f4"><div class="ttname"><a href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a113223b951492e271c7bd457470b66f4">my_mediamtx_monitor::RtspRelayMonitor::MonitorLoop</a></div><div class="ttdeci">void MonitorLoop()</div><div class="ttdoc">监控主循环</div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.cpp:358</div></div>
+<div class="ttc" id="aclassmy__mediamtx__monitor_1_1RtspRelayMonitor_html_a17a237457e57625296e6b24feb19c60a"><div class="ttname"><a href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a17a237457e57625296e6b24feb19c60a">my_mediamtx_monitor::RtspRelayMonitor::Stop</a></div><div class="ttdeci">void Stop()</div><div class="ttdoc">停止监控线程并终止 MediaMTX 进程</div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.cpp:331</div></div>
+<div class="ttc" id="aclassmy__mediamtx__monitor_1_1RtspRelayMonitor_html_a227a4ddc497d4955792267c970c8d482"><div class="ttname"><a href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a227a4ddc497d4955792267c970c8d482">my_mediamtx_monitor::RtspRelayMonitor::GetHeartbeat</a></div><div class="ttdeci">nlohmann::json GetHeartbeat() const</div><div class="ttdoc">获取心跳 / 运行状态信息（JSON 格式）</div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.cpp:579</div></div>
+<div class="ttc" id="aclassmy__mediamtx__monitor_1_1RtspRelayMonitor_html_a26f7b9519d7a71eeec7b9859d33b1294"><div class="ttname"><a href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a26f7b9519d7a71eeec7b9859d33b1294">my_mediamtx_monitor::RtspRelayMonitor::ParseConfig</a></div><div class="ttdeci">bool ParseConfig()</div><div class="ttdoc">解析配置中的 RTSP 源地址与监听端口</div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.cpp:166</div></div>
+<div class="ttc" id="aclassmy__mediamtx__monitor_1_1RtspRelayMonitor_html_a281b5ec791338d4378e22ef44a51b4a1"><div class="ttname"><a href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a281b5ec791338d4378e22ef44a51b4a1">my_mediamtx_monitor::RtspRelayMonitor::mutex_</a></div><div class="ttdeci">std::mutex mutex_</div><div class="ttdoc">保护共享状态的互斥锁</div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.h:208</div></div>
+<div class="ttc" id="aclassmy__mediamtx__monitor_1_1RtspRelayMonitor_html_a2b65f95eb687f168b881fba8931b3f32"><div class="ttname"><a href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a2b65f95eb687f168b881fba8931b3f32">my_mediamtx_monitor::RtspRelayMonitor::yaml_content_</a></div><div class="ttdeci">std::string yaml_content_</div><div class="ttdoc">生成的 YAML 字符串</div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.h:184</div></div>
+<div class="ttc" id="aclassmy__mediamtx__monitor_1_1RtspRelayMonitor_html_a3f40e4dcd00942624b1e1d12e442c1c3"><div class="ttname"><a href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a3f40e4dcd00942624b1e1d12e442c1c3">my_mediamtx_monitor::RtspRelayMonitor::relay_pid_</a></div><div class="ttdeci">pid_t relay_pid_</div><div class="ttdoc">MediaMTX 子进程 PID</div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.h:203</div></div>
+<div class="ttc" id="aclassmy__mediamtx__monitor_1_1RtspRelayMonitor_html_a473243a9d359fb4cc8b84be76aa324b9"><div class="ttname"><a href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a473243a9d359fb4cc8b84be76aa324b9">my_mediamtx_monitor::RtspRelayMonitor::StartRelayProcess</a></div><div class="ttdeci">bool StartRelayProcess()</div><div class="ttdoc">启动 MediaMTX 转发进程（fork + exec）</div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.cpp:446</div></div>
+<div class="ttc" id="aclassmy__mediamtx__monitor_1_1RtspRelayMonitor_html_a4f1991ad71e7a2f8b97aebab5d755c45"><div class="ttname"><a href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a4f1991ad71e7a2f8b97aebab5d755c45">my_mediamtx_monitor::RtspRelayMonitor::monitor_interval_sec_</a></div><div class="ttdeci">int monitor_interval_sec_</div><div class="ttdoc">监控轮询间隔（秒）</div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.h:193</div></div>
+<div class="ttc" id="aclassmy__mediamtx__monitor_1_1RtspRelayMonitor_html_a52677c0fa07a87fe23e4c4410ef98adf"><div class="ttname"><a href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a52677c0fa07a87fe23e4c4410ef98adf">my_mediamtx_monitor::RtspRelayMonitor::~RtspRelayMonitor</a></div><div class="ttdeci">~RtspRelayMonitor()</div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.cpp:60</div></div>
+<div class="ttc" id="aclassmy__mediamtx__monitor_1_1RtspRelayMonitor_html_a6df5807de52b52983376d25a6150bab8"><div class="ttname"><a href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a6df5807de52b52983376d25a6150bab8">my_mediamtx_monitor::RtspRelayMonitor::rtsp_listen_port_</a></div><div class="ttdeci">int rtsp_listen_port_</div><div class="ttdoc">MediaMTX 监听端口</div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.h:192</div></div>
+<div class="ttc" id="aclassmy__mediamtx__monitor_1_1RtspRelayMonitor_html_a6e6193f487b3aa9294d0701924ae9011"><div class="ttname"><a href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a6e6193f487b3aa9294d0701924ae9011">my_mediamtx_monitor::RtspRelayMonitor::GenerateYAML</a></div><div class="ttdeci">bool GenerateYAML()</div><div class="ttdoc">从 JSON 配置生成 MediaMTX YAML 文件</div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.cpp:276</div></div>
+<div class="ttc" id="aclassmy__mediamtx__monitor_1_1RtspRelayMonitor_html_a87d68107395ff05173e49ef5c9b9c0ce"><div class="ttname"><a href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a87d68107395ff05173e49ef5c9b9c0ce">my_mediamtx_monitor::RtspRelayMonitor::check_ip_</a></div><div class="ttdeci">std::string check_ip_</div><div class="ttdoc">RTSP 源探测 IP</div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.h:190</div></div>
+<div class="ttc" id="aclassmy__mediamtx__monitor_1_1RtspRelayMonitor_html_a87fb5aa58373c03f50056808d51193e6"><div class="ttname"><a href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a87fb5aa58373c03f50056808d51193e6">my_mediamtx_monitor::RtspRelayMonitor::operator=</a></div><div class="ttdeci">RtspRelayMonitor &amp; operator=(const RtspRelayMonitor &amp;)=delete</div></div>
+<div class="ttc" id="aclassmy__mediamtx__monitor_1_1RtspRelayMonitor_html_a90e0b5864f4950ad6331b2d50a6f3031"><div class="ttname"><a href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a90e0b5864f4950ad6331b2d50a6f3031">my_mediamtx_monitor::RtspRelayMonitor::RtspRelayMonitor</a></div><div class="ttdeci">RtspRelayMonitor(const RtspRelayMonitor &amp;)=delete</div></div>
+<div class="ttc" id="aclassmy__mediamtx__monitor_1_1RtspRelayMonitor_html_a91cacd94ae5a550d959c48fe1ba46922"><div class="ttname"><a href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a91cacd94ae5a550d959c48fe1ba46922">my_mediamtx_monitor::RtspRelayMonitor::json_config_</a></div><div class="ttdeci">nlohmann::json json_config_</div><div class="ttdoc">原始 JSON 配置</div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.h:182</div></div>
+<div class="ttc" id="aclassmy__mediamtx__monitor_1_1RtspRelayMonitor_html_a959f692b1e60d0ee954a65f863065469"><div class="ttname"><a href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a959f692b1e60d0ee954a65f863065469">my_mediamtx_monitor::RtspRelayMonitor::monitor_thread_</a></div><div class="ttdeci">std::thread monitor_thread_</div><div class="ttdoc">监控线程</div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.h:207</div></div>
+<div class="ttc" id="aclassmy__mediamtx__monitor_1_1RtspRelayMonitor_html_aa363dc6b0a5f544017c8697c19bf4f36"><div class="ttname"><a href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#aa363dc6b0a5f544017c8697c19bf4f36">my_mediamtx_monitor::RtspRelayMonitor::info_</a></div><div class="ttdeci">nlohmann::json info_</div><div class="ttdoc">Init 时收集的转发代理基本信息</div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.h:216</div></div>
+<div class="ttc" id="aclassmy__mediamtx__monitor_1_1RtspRelayMonitor_html_aa9620a15c76ada2388bf678e373a6463"><div class="ttname"><a href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#aa9620a15c76ada2388bf678e373a6463">my_mediamtx_monitor::RtspRelayMonitor::running_</a></div><div class="ttdeci">std::atomic&lt; bool &gt; running_</div><div class="ttdoc">监控线程运行标志</div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.h:198</div></div>
+<div class="ttc" id="aclassmy__mediamtx__monitor_1_1RtspRelayMonitor_html_abb18c42293fc19b76285507f357f5fc8"><div class="ttname"><a href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#abb18c42293fc19b76285507f357f5fc8">my_mediamtx_monitor::RtspRelayMonitor::yaml_file_abs_path_</a></div><div class="ttdeci">std::string yaml_file_abs_path_</div><div class="ttdoc">YAML 文件绝对路径</div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.h:187</div></div>
+<div class="ttc" id="aclassmy__mediamtx__monitor_1_1RtspRelayMonitor_html_ac36353e594510c7ffac27361f2aec608"><div class="ttname"><a href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#ac36353e594510c7ffac27361f2aec608">my_mediamtx_monitor::RtspRelayMonitor::GetInfo</a></div><div class="ttdeci">nlohmann::json GetInfo() const</div><div class="ttdoc">获取转发代理基本信息（在 Init 时收集）</div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.cpp:593</div></div>
+<div class="ttc" id="aclassmy__mediamtx__monitor_1_1RtspRelayMonitor_html_acd50b9be659e75858d246f61f34fbbb8"><div class="ttname"><a href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#acd50b9be659e75858d246f61f34fbbb8">my_mediamtx_monitor::RtspRelayMonitor::mediamtx_json_config_</a></div><div class="ttdeci">nlohmann::json mediamtx_json_config_</div><div class="ttdoc">MediaMTX 专属 JSON 配置段</div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.h:183</div></div>
+<div class="ttc" id="aclassmy__mediamtx__monitor_1_1RtspRelayMonitor_html_acd92254967f2d0f4dc3f52943d192d1d"><div class="ttname"><a href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#acd92254967f2d0f4dc3f52943d192d1d">my_mediamtx_monitor::RtspRelayMonitor::StopRelayProcess</a></div><div class="ttdeci">void StopRelayProcess()</div><div class="ttdoc">停止 MediaMTX 转发进程（SIGTERM → SIGKILL → waitpid）</div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.cpp:502</div></div>
+<div class="ttc" id="aclassmy__mediamtx__monitor_1_1RtspRelayMonitor_html_ad5dce33884bd0aa1bc8fcae2ceedcfba"><div class="ttname"><a href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#ad5dce33884bd0aa1bc8fcae2ceedcfba">my_mediamtx_monitor::RtspRelayMonitor::check_port_</a></div><div class="ttdeci">int check_port_</div><div class="ttdoc">RTSP 源探测端口（默认 2000）</div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.h:191</div></div>
+<div class="ttc" id="aclassmy__mediamtx__monitor_1_1RtspRelayMonitor_html_adcf56cfe8c4efe13375918fb0d2f6a32"><div class="ttname"><a href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#adcf56cfe8c4efe13375918fb0d2f6a32">my_mediamtx_monitor::RtspRelayMonitor::state_</a></div><div class="ttdeci">RtspRelayState state_</div><div class="ttdoc">当前状态</div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.h:212</div></div>
+<div class="ttc" id="aclassmy__mediamtx__monitor_1_1RtspRelayMonitor_html_adfc249d53f2f935c690f5bf527d841a8"><div class="ttname"><a href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#adfc249d53f2f935c690f5bf527d841a8">my_mediamtx_monitor::RtspRelayMonitor::local_ip_</a></div><div class="ttdeci">std::string local_ip_</div><div class="ttdoc">本机 IP 地址（Init 时收集）</div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.h:185</div></div>
+<div class="ttc" id="aclassmy__mediamtx__monitor_1_1RtspRelayMonitor_html_ae34c976223a82e6b3fd41da1de8d97c0"><div class="ttname"><a href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#ae34c976223a82e6b3fd41da1de8d97c0">my_mediamtx_monitor::RtspRelayMonitor::GetState</a></div><div class="ttdeci">RtspRelayState GetState() const</div><div class="ttdoc">获取当前状态</div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.cpp:575</div></div>
+<div class="ttc" id="aclassmy__mediamtx__monitor_1_1RtspRelayMonitor_html_aeb41d1a9516bf476eebd6ca6dc347e51"><div class="ttname"><a href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#aeb41d1a9516bf476eebd6ca6dc347e51">my_mediamtx_monitor::RtspRelayMonitor::mediamtx_bin_</a></div><div class="ttdeci">std::string mediamtx_bin_</div><div class="ttdoc">MediaMTX 可执行文件路径</div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.h:189</div></div>
+<div class="ttc" id="aclassmy__mediamtx__monitor_1_1RtspRelayMonitor_html_aee0ce71cb6af29204bd58f6048cad2c8"><div class="ttname"><a href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#aee0ce71cb6af29204bd58f6048cad2c8">my_mediamtx_monitor::RtspRelayMonitor::CheckProcessAlive</a></div><div class="ttdeci">bool CheckProcessAlive()</div><div class="ttdoc">检测 MediaMTX 子进程是否仍存活</div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.cpp:422</div></div>
+<div class="ttc" id="aclassmy__mediamtx__monitor_1_1RtspRelayMonitor_html_af12f78ccc8851d5ba4723d3ab6541ea5"><div class="ttname"><a href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#af12f78ccc8851d5ba4723d3ab6541ea5">my_mediamtx_monitor::RtspRelayMonitor::config_initialized_</a></div><div class="ttdeci">bool config_initialized_</div><div class="ttdoc">配置是否已成功初始化</div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.h:199</div></div>
+<div class="ttc" id="aclassmy__mediamtx__monitor_1_1RtspRelayMonitor_html_af51266922393cbce13f6c55273b4a50d"><div class="ttname"><a href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#af51266922393cbce13f6c55273b4a50d">my_mediamtx_monitor::RtspRelayMonitor::Init</a></div><div class="ttdeci">bool Init(const nlohmann::json &amp;json_config)</div><div class="ttdoc">初始化模块</div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.cpp:69</div></div>
+<div class="ttc" id="aclassmy__mediamtx__monitor_1_1RtspRelayMonitor_html_afe03ffd27b15ed13c0b1ee05de473ea7"><div class="ttname"><a href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#afe03ffd27b15ed13c0b1ee05de473ea7">my_mediamtx_monitor::RtspRelayMonitor::RtspRelayMonitor</a></div><div class="ttdeci">RtspRelayMonitor()</div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.cpp:56</div></div>
+<div class="ttc" id="anamespacemy__mediamtx__monitor_html"><div class="ttname"><a href="namespacemy__mediamtx__monitor.html">my_mediamtx_monitor</a></div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.cpp:35</div></div>
+<div class="ttc" id="anamespacemy__mediamtx__monitor_html_a37e3c599e6e04d003bbc4563cbfa4db7"><div class="ttname"><a href="namespacemy__mediamtx__monitor.html#a37e3c599e6e04d003bbc4563cbfa4db7">my_mediamtx_monitor::JsonToYaml</a></div><div class="ttdeci">std::string JsonToYaml(const nlohmann::json &amp;j, int indent)</div><div class="ttdoc">递归地将 nlohmann::json 转为 YAML 格式字符串</div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.cpp:242</div></div>
+<div class="ttc" id="anamespacemy__mediamtx__monitor_html_a8338ab9f5ccfbbbf89a4bafb81decd25"><div class="ttname"><a href="namespacemy__mediamtx__monitor.html#a8338ab9f5ccfbbbf89a4bafb81decd25">my_mediamtx_monitor::RtspRelayState</a></div><div class="ttdeci">RtspRelayState</div><div class="ttdoc">RTSP 转发状态枚举</div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.h:45</div></div>
+<div class="ttc" id="anamespacemy__mediamtx__monitor_html_a8338ab9f5ccfbbbf89a4bafb81decd25a034312d8adc8099c1c6f53aaff745e26"><div class="ttname"><a href="namespacemy__mediamtx__monitor.html#a8338ab9f5ccfbbbf89a4bafb81decd25a034312d8adc8099c1c6f53aaff745e26">my_mediamtx_monitor::RtspRelayState::STARTING</a></div><div class="ttdeci">@ STARTING</div><div class="ttdoc">MediaMTX 启动中</div></div>
+<div class="ttc" id="anamespacemy__mediamtx__monitor_html_a8338ab9f5ccfbbbf89a4bafb81decd25a09d4d696b4e935115b9313e3c412509a"><div class="ttname"><a href="namespacemy__mediamtx__monitor.html#a8338ab9f5ccfbbbf89a4bafb81decd25a09d4d696b4e935115b9313e3c412509a">my_mediamtx_monitor::RtspRelayState::STOPPED</a></div><div class="ttdeci">@ STOPPED</div><div class="ttdoc">未运行 / 未启用</div></div>
+<div class="ttc" id="anamespacemy__mediamtx__monitor_html_a8338ab9f5ccfbbbf89a4bafb81decd25a11ae15bd64b32f24f8efb813f17e507f"><div class="ttname"><a href="namespacemy__mediamtx__monitor.html#a8338ab9f5ccfbbbf89a4bafb81decd25a11ae15bd64b32f24f8efb813f17e507f">my_mediamtx_monitor::RtspRelayState::SOURCE_LOST</a></div><div class="ttdeci">@ SOURCE_LOST</div><div class="ttdoc">RTSP 源不可达</div></div>
+<div class="ttc" id="anamespacemy__mediamtx__monitor_html_a8338ab9f5ccfbbbf89a4bafb81decd25a43491564ebcfd38568918efbd6e840fd"><div class="ttname"><a href="namespacemy__mediamtx__monitor.html#a8338ab9f5ccfbbbf89a4bafb81decd25a43491564ebcfd38568918efbd6e840fd">my_mediamtx_monitor::RtspRelayState::RUNNING</a></div><div class="ttdeci">@ RUNNING</div><div class="ttdoc">正常转发中</div></div>
+<div class="ttc" id="anamespacemy__mediamtx__monitor_html_a8338ab9f5ccfbbbf89a4bafb81decd25abb1ca97ec761fc37101737ba0aa2e7c5"><div class="ttname"><a href="namespacemy__mediamtx__monitor.html#a8338ab9f5ccfbbbf89a4bafb81decd25abb1ca97ec761fc37101737ba0aa2e7c5">my_mediamtx_monitor::RtspRelayState::ERROR</a></div><div class="ttdeci">@ ERROR</div><div class="ttdoc">异常</div></div>
+<div class="ttc" id="anamespacemy__mediamtx__monitor_html_a8db56ccb63c1112d9b2c3a84140d4648"><div class="ttname"><a href="namespacemy__mediamtx__monitor.html#a8db56ccb63c1112d9b2c3a84140d4648">my_mediamtx_monitor::RtspRelayStateToString</a></div><div class="ttdeci">const char * RtspRelayStateToString(RtspRelayState state)</div><div class="ttdoc">状态枚举转可读字符串</div><div class="ttdef"><b>Definition</b> RtspRelayMonitor.cpp:41</div></div>
+<div class="ttc" id="apinling__pod_8cpp_html_a8e0798404bf2cf5dabb84c5ba9a4f236"><div class="ttname"><a href="pinling__pod_8cpp.html#a8e0798404bf2cf5dabb84c5ba9a4f236">port</a></div><div class="ttdeci">uint16_t port</div><div class="ttdef"><b>Definition</b> pinling_pod.cpp:28</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

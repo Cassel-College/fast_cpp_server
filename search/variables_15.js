@@ -1,14 +1,22 @@
 var searchData=
 [
-  ['wal_0',['wal',['../structmy__db_1_1DBConfig.html#a3aed9e714cc3f09649cc16e2d20fbcd1',1,'my_db::DBConfig']]],
-  ['wchar_1',['wchar',['../structMySoftHealthy_1_1ThreadSnapshot.html#aa280598aa222048df68aa2fe6844f686',1,'MySoftHealthy::ThreadSnapshot']]],
-  ['width_2',['width',['../structPodModule_1_1StreamInfo.html#a2474a5474cbff19523a51eb1de01cda4',1,'PodModule::StreamInfo::width'],['../structPodModule_1_1ImageFrame.html#a2474a5474cbff19523a51eb1de01cda4',1,'PodModule::ImageFrame::width']]],
-  ['work_5fstate_3',['work_state',['../structmy__data_1_1DeviceStatus.html#a80ffc9c37fe70d68ed7247de9e383269',1,'my_data::DeviceStatus']]],
-  ['worker_5f_4',['worker_',['../classmy__control_1_1demo_1_1Workflow.html#a2d17662c59ba51130a35fdaa8567db74',1,'my_control::demo::Workflow::worker_'],['../classmy__heartbeat_1_1HeartbeatManager.html#a2d17662c59ba51130a35fdaa8567db74',1,'my_heartbeat::HeartbeatManager::worker_'],['../classMySoftHealthy_1_1SoftHealthMonitorManager.html#a2d17662c59ba51130a35fdaa8567db74',1,'MySoftHealthy::SoftHealthMonitorManager::worker_'],['../classMySystemHealthy_1_1MySystemHealthyManager.html#a2d17662c59ba51130a35fdaa8567db74',1,'MySystemHealthy::MySystemHealthyManager::worker_']]],
-  ['worker_5fthread_5f_5',['worker_thread_',['../classedge__manager_1_1EdgeDevice.html#ac5c49ac83bdcb28312ddab6d57afccc8',1,'edge_manager::EdgeDevice']]],
-  ['workers_5f_6',['workers_',['../classtools_1_1pipeline_1_1Pipeline.html#a6933018f22fd80cacc1f94d97a2fc2e5',1,'tools::pipeline::Pipeline']]],
-  ['workflow_5f_7',['workflow_',['../classmy__device_1_1demo_1_1DepthSensorDevice.html#a4253f83181fa594dd93e5e00074e136a',1,'my_device::demo::DepthSensorDevice::workflow_'],['../classmy__device_1_1demo_1_1FlowSensorDevice.html#a4253f83181fa594dd93e5e00074e136a',1,'my_device::demo::FlowSensorDevice::workflow_'],['../classmy__device_1_1demo_1_1UUVDevice.html#a4253f83181fa594dd93e5e00074e136a',1,'my_device::demo::UUVDevice::workflow_'],['../classmy__device_1_1demo_1_1WindSensorDevice.html#a4253f83181fa594dd93e5e00074e136a',1,'my_device::demo::WindSensorDevice::workflow_']]],
-  ['write_5fbytes_8',['write_bytes',['../structMySoftHealthy_1_1ThreadSnapshot.html#aec1a449cfa3773ffa968e558c5045cee',1,'MySoftHealthy::ThreadSnapshot']]],
-  ['write_5ftimeout_5fconstant_5fms_9',['write_timeout_constant_ms',['../structmy__serial_1_1SerialInitOptions.html#a3aab0c8f33f3907961ff29968384aeb6',1,'my_serial::SerialInitOptions']]],
-  ['write_5ftimeout_5fmultiplier_5fms_10',['write_timeout_multiplier_ms',['../structmy__serial_1_1SerialInitOptions.html#a0a15022a96092a4e364a74302299a86d',1,'my_serial::SerialInitOptions']]]
+  ['valid_0',['valid',['../structviewlink_1_1Attitude.html#a28e3c179a86f337095088b3ca02a2b2a',1,'viewlink::Attitude::valid'],['../structviewlink_1_1TelemetrySnapshot.html#a28e3c179a86f337095088b3ca02a2b2a',1,'viewlink::TelemetrySnapshot::valid'],['../structviewlink_1_1DeviceModelInfo.html#a28e3c179a86f337095088b3ca02a2b2a',1,'viewlink::DeviceModelInfo::valid'],['../structviewlink_1_1DeviceConfigInfo.html#a28e3c179a86f337095088b3ca02a2b2a',1,'viewlink::DeviceConfigInfo::valid'],['../structfly__control_1_1ParsedFrame.html#a28e3c179a86f337095088b3ca02a2b2a',1,'fly_control::ParsedFrame::valid']]],
+  ['vehicle_5f_1',['vehicle_',['../classmy__edge_1_1demo_1_1TUNAEdge.html#a96f9ad4daae3ab474eac3d0e8b11fe0f',1,'my_edge::demo::TUNAEdge::vehicle_'],['../classmy__edge_1_1demo_1_1UNAEdge.html#a96f9ad4daae3ab474eac3d0e8b11fe0f',1,'my_edge::demo::UNAEdge::vehicle_']]],
+  ['velocity_5fx_2',['velocity_x',['../structfly__control_1_1HeartbeatData.html#a8361d77d5bc3e4a8973af0e17b701d98',1,'fly_control::HeartbeatData']]],
+  ['velocity_5fy_3',['velocity_y',['../structfly__control_1_1HeartbeatData.html#a5906e26f66dd2a6949408513966f5c34',1,'fly_control::HeartbeatData']]],
+  ['velocity_5fz_4',['velocity_z',['../structfly__control_1_1HeartbeatData.html#a81702f3ce89636698542ac5f14bb0abb',1,'fly_control::HeartbeatData']]],
+  ['vendor_5',['vendor',['../structPodModule_1_1PodInfo.html#ab0aad3e7d7837e3d991ada9ec049793f',1,'PodModule::PodInfo']]],
+  ['version_6',['version',['../structmy__data_1_1EdgeStatus.html#a728b969e374aba4020e39aea7e02e64f',1,'my_data::EdgeStatus']]],
+  ['version_5f_7',['version_',['../classmy__edge_1_1demo_1_1UUVEdge.html#a61c8f42943e4a184067a3d6e00410d38',1,'my_edge::demo::UUVEdge::version_'],['../classmy__edge_1_1demo_1_1TUNAEdge.html#a61c8f42943e4a184067a3d6e00410d38',1,'my_edge::demo::TUNAEdge::version_'],['../classmy__edge_1_1BaseEdge.html#a61c8f42943e4a184067a3d6e00410d38',1,'my_edge::BaseEdge::version_']]],
+  ['version_5fno_8',['version_no',['../structviewlink_1_1DeviceConfigInfo.html#adc8ebe54732dd9f48ae2b2cb61ea7759',1,'viewlink::DeviceConfigInfo']]],
+  ['vertical_5ffov_9',['vertical_fov',['../structviewlink_1_1TelemetrySnapshot.html#a3ce0aee0e8753b8ff21fac299ffda961',1,'viewlink::TelemetrySnapshot']]],
+  ['vlk_5fclient_5f_10',['vlk_client_',['../classPodModule_1_1PinlingPod.html#a779697108a6088aa53056aa1898617b5',1,'PodModule::PinlingPod']]],
+  ['vm_5frss_5fbytes_11',['vm_rss_bytes',['../structMySoftHealthy_1_1ProcessSnapshot.html#ab1b68ce1e28f5bb957980a71b240f3a7',1,'MySoftHealthy::ProcessSnapshot']]],
+  ['vm_5fsize_5fbytes_12',['vm_size_bytes',['../structMySoftHealthy_1_1ProcessSnapshot.html#ab314e8b6c5792c2baf783ed5d0ec7e5a',1,'MySoftHealthy::ProcessSnapshot']]],
+  ['voltage_13',['voltage',['../classmy__edge_1_1MyMavVehicle.html#a47061fcae597f83f8a0a99d4b7b5a5c1',1,'my_edge::MyMavVehicle::voltage'],['../structPodModule_1_1PodStatus.html#ad3c64efcaba662da1a2f4393d00584e9',1,'PodModule::PodStatus::voltage']]],
+  ['voltage_5ftoo_5flow_14',['voltage_too_low',['../structfly__control_1_1FaultBits.html#a6f00f6cd624b67b3118a2939cd25a50b',1,'fly_control::FaultBits']]],
+  ['voluntary_5fctxt_5fswitches_15',['voluntary_ctxt_switches',['../structMySoftHealthy_1_1ThreadSnapshot.html#a33b2d47b9107d91e6079c1af3a042624',1,'MySoftHealthy::ThreadSnapshot::voluntary_ctxt_switches'],['../structMySoftHealthy_1_1ProcessSnapshot.html#a33b2d47b9107d91e6079c1af3a042624',1,'MySoftHealthy::ProcessSnapshot::voluntary_ctxt_switches']]],
+  ['vx_5fbase_5f_16',['vx_base_',['../classmy__control_1_1demo_1_1WindSensorDevice.html#acbfdb20227fce9e151664e2a67e107b0',1,'my_control::demo::WindSensorDevice']]],
+  ['vy_5fbase_5f_17',['vy_base_',['../classmy__control_1_1demo_1_1WindSensorDevice.html#ae8bcd7c6bd1f72fcf1867c283dee2377',1,'my_control::demo::WindSensorDevice']]],
+  ['vz_5fbase_5f_18',['vz_base_',['../classmy__control_1_1demo_1_1WindSensorDevice.html#afc7431bd98d2afee27b3a28e1be12ddc',1,'my_control::demo::WindSensorDevice']]]
 ];

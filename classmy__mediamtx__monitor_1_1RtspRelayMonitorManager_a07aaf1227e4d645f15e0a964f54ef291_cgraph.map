@@ -1,0 +1,21 @@
+<map id="Start" name="Start">
+<area shape="rect" id="Node000001" title="启动监控线程" alt="" coords="5,139,59,164"/>
+<area shape="rect" id="Node000002" href="$classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a07aaf1227e4d645f15e0a964f54ef291" title="启动监控线程" alt="" coords="107,131,292,171"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="59,149,93,149,93,154,59,154"/>
+<area shape="rect" id="Node000003" href="$classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a113223b951492e271c7bd457470b66f4" title="监控主循环" alt="" coords="340,124,515,179"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="292,149,326,149,326,154,292,154"/>
+<area shape="rect" id="Node000004" href="$classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#aee0ce71cb6af29204bd58f6048cad2c8" title="检测 MediaMTX 子进程是否仍存活" alt="" coords="563,5,737,60"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="471,121,561,69,572,64,574,68,564,74,473,126"/>
+<area shape="rect" id="Node000005" href="$classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a0a03702b1efe4e0fa601f31a183f511b" title="检测 RTSP 源是否可达（TCP socket 连接 check_ip:rtsp_port）" alt="" coords="563,84,737,139"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="515,133,549,127,550,132,515,138"/>
+<area shape="rect" id="Node000007" href="$classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a473243a9d359fb4cc8b84be76aa324b9" title="启动 MediaMTX 转发进程（fork + exec）" alt="" coords="563,163,737,217"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="515,164,550,170,549,175,515,169"/>
+<area shape="rect" id="Node000010" href="$classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#acd92254967f2d0f4dc3f52943d192d1d" title="停止 MediaMTX 转发进程（SIGTERM → SIGKILL → waitpid）" alt="" coords="563,241,737,296"/>
+<area shape="poly" id="edge9_Node000003_Node000010" title=" " alt="" coords="474,176,564,228,574,233,572,238,561,232,471,181"/>
+<area shape="rect" id="Node000006" href="$classmy__tools_1_1ping__tools_1_1PingFuncBySystem.html#a4ec03bc5ebb5f6f195a1214f1dcd9d09" title=" " alt="" coords="785,91,988,131"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="738,109,771,109,771,114,738,114"/>
+<area shape="rect" id="Node000008" href="$classmy__tools_1_1MyFileTools.html#a4364a161efbf4a4d6ebbaadfd67a4c5d" title="判断指定文件是否存在且为普通文件" alt="" coords="803,163,970,203"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="738,185,789,183,790,189,738,190"/>
+<area shape="rect" id="Node000009" href="$classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a0cfc9a7b487d98f0bfededa1ab35ad78" title="检测指定端口是否可用（未被占用）" alt="" coords="799,228,974,283"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="739,212,787,225,785,230,737,217"/>
+</map>

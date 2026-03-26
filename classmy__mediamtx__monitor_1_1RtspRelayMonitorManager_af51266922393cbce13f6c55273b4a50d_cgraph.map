@@ -1,0 +1,22 @@
+<map id="Init" name="Init">
+<area shape="rect" id="Node000001" title="初始化监控模块" alt="" coords="5,225,48,250"/>
+<area shape="rect" id="Node000002" href="$classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#af51266922393cbce13f6c55273b4a50d" title="初始化模块" alt="" coords="96,217,271,257"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="48,235,82,235,82,240,48,240"/>
+<area shape="rect" id="Node000003" href="$classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a6e6193f487b3aa9294d0701924ae9011" title="从 JSON 配置生成 MediaMTX YAML 文件" alt="" coords="319,106,493,161"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="225,215,318,171,332,164,334,169,320,176,227,220"/>
+<area shape="rect" id="Node000008" href="$classmy__tools_1_1MyIPTools.html#a5431b34c27076659b1dcfe5c43786343" title="获取本机 IPv4 地址" alt="" coords="329,185,483,225"/>
+<area shape="poly" id="edge8_Node000002_Node000008" title=" " alt="" coords="271,222,315,216,316,221,271,227"/>
+<area shape="rect" id="Node000009" href="$classmy__tools_1_1MyStartDir.html#a879188bcd17806c01932401812ebf533" title=" " alt="" coords="326,249,486,289"/>
+<area shape="poly" id="edge9_Node000002_Node000009" title=" " alt="" coords="271,247,313,253,312,259,271,253"/>
+<area shape="rect" id="Node000010" href="$classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a26f7b9519d7a71eeec7b9859d33b1294" title="解析配置中的 RTSP 源地址与监听端口" alt="" coords="319,314,493,369"/>
+<area shape="poly" id="edge10_Node000002_Node000010" title=" " alt="" coords="227,255,320,299,334,306,332,311,318,304,225,260"/>
+<area shape="rect" id="Node000004" href="$classmy__tools_1_1MyFileTools.html#a440735a7d8fefe96b1a43ba7e166783d" title="删除指定文件" alt="" coords="545,5,712,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="450,103,540,55,556,48,558,53,543,60,453,108"/>
+<area shape="rect" id="Node000005" href="$classmy__tools_1_1MyFileTools.html#a4364a161efbf4a4d6ebbaadfd67a4c5d" title="判断指定文件是否存在且为普通文件" alt="" coords="545,69,712,109"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="493,113,532,106,533,111,494,119"/>
+<area shape="rect" id="Node000006" href="$namespacemy__mediamtx__monitor.html#a37e3c599e6e04d003bbc4563cbfa4db7" title="递归地将 nlohmann::json 转为 YAML 格式字符串" alt="" coords="541,157,716,197"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="494,148,528,155,527,160,493,153"/>
+<area shape="rect" id="Node000007" href="$classmy__tools_1_1MyFileTools.html#a6a582ccb7156fd79f3b11efa67732202" title="以覆盖方式写入文本" alt="" coords="545,221,712,261"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="471,158,495,171,519,190,543,207,555,213,553,218,540,212,516,194,492,176,469,163"/>
+<area shape="poly" id="edge6_Node000006_Node000006" title=" " alt="" coords="587,158,585,148,591,138,606,133,629,131,655,134,669,141,666,146,653,139,629,136,607,138,595,143,590,149,592,156"/>
+</map>

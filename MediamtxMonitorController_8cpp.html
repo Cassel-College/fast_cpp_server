@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_api/controller/mediamtx_monitor/MediamtxMonitorController.cpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_f1ee40842c724b3bf8a04800f5f521a7.html">my_api</a></li><li class="navelem"><a class="el" href="dir_6ef159f9932051522d309704773cf407.html">controller</a></li><li class="navelem"><a class="el" href="dir_49243f7936d210174f970b33a9aeff50.html">mediamtx_monitor</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">命名空间</a>  </div>
+  <div class="headertitle"><div class="title">MediamtxMonitorController.cpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="MediamtxMonitorController_8h_source.html">MediamtxMonitorController.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="RtspRelayMonitorManager_8h_source.html">RtspRelayMonitorManager.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="BaseApiController_8hpp_source.html">BaseApiController.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="MyLog_8h_source.html">MyLog.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+MediamtxMonitorController.cpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="MediamtxMonitorController_8cpp__incl.png" border="0" usemap="#asrc_2util_2my__api_2controller_2mediamtx__monitor_2MediamtxMonitorController_8cpp" alt=""/></div>
+<map name="asrc_2util_2my__api_2controller_2mediamtx__monitor_2MediamtxMonitorController_8cpp" id="asrc_2util_2my__api_2controller_2mediamtx__monitor_2MediamtxMonitorController_8cpp">
+<area shape="rect" title=" " alt="" coords="357,5,628,60"/>
+<area shape="rect" href="MediamtxMonitorController_8h.html" title=" " alt="" coords="134,108,347,133"/>
+<area shape="poly" title=" " alt="" coords="417,63,288,106,287,101,415,58"/>
+<area shape="rect" href="BaseApiController_8hpp.html" title=" " alt="" coords="339,189,505,214"/>
+<area shape="poly" title=" " alt="" coords="477,61,450,109,438,143,429,176,424,174,433,142,445,107,472,59"/>
+<area shape="rect" href="RtspRelayMonitorManager_8h.html" title="RTSP 转发守护模块 —— 单例管理器" alt="" coords="460,108,667,133"/>
+<area shape="poly" title=" " alt="" coords="516,58,547,96,543,99,512,62"/>
+<area shape="rect" href="MyLog_8h.html" title=" " alt="" coords="930,108,1007,133"/>
+<area shape="poly" title=" " alt="" coords="629,56,917,107,916,113,628,61"/>
+<area shape="poly" title=" " alt="" coords="268,131,384,181,382,186,266,136"/>
+<area shape="rect" title=" " alt="" coords="5,269,164,309"/>
+<area shape="poly" title=" " alt="" coords="156,136,114,153,96,166,82,183,74,200,71,218,76,256,71,256,66,218,69,198,77,180,93,162,112,149,154,131"/>
+<area shape="rect" title=" " alt="" coords="92,189,315,214"/>
+<area shape="poly" title=" " alt="" coords="238,135,217,177,212,175,233,132"/>
+<area shape="poly" title=" " alt="" coords="378,217,172,269,171,263,376,212"/>
+<area shape="rect" title=" " alt="" coords="218,277,378,302"/>
+<area shape="poly" title=" " alt="" coords="407,216,327,271,324,267,404,212"/>
+<area shape="rect" title=" " alt="" coords="402,277,549,302"/>
+<area shape="poly" title=" " alt="" coords="431,213,463,263,459,266,427,216"/>
+<area shape="poly" title=" " alt="" coords="561,135,519,223,493,266,488,264,514,220,556,133"/>
+<area shape="rect" href="RtspRelayMonitor_8h.html" title="RTSP 转发守护模块" alt="" coords="581,189,730,214"/>
+<area shape="poly" title=" " alt="" coords="579,131,633,178,630,182,575,136"/>
+<area shape="poly" title=" " alt="" coords="632,217,513,273,511,268,630,212"/>
+<area shape="rect" title=" " alt="" coords="839,277,898,302"/>
+<area shape="poly" title=" " alt="" coords="688,212,828,267,832,269,830,274,826,272,686,217"/>
+<area shape="rect" title=" " alt="" coords="573,277,637,302"/>
+<area shape="poly" title=" " alt="" coords="651,216,621,266,616,263,646,213"/>
+<area shape="rect" title=" " alt="" coords="661,277,727,302"/>
+<area shape="poly" title=" " alt="" coords="663,213,685,263,681,265,658,215"/>
+<area shape="rect" title=" " alt="" coords="751,277,815,302"/>
+<area shape="poly" title=" " alt="" coords="674,212,756,267,753,271,671,216"/>
+<area shape="poly" title=" " alt="" coords="950,136,922,155,898,183,880,224,873,263,868,262,875,222,893,180,919,152,947,131"/>
+<area shape="rect" title=" " alt="" coords="907,189,1031,214"/>
+<area shape="poly" title=" " alt="" coords="971,134,971,175,966,175,966,134"/>
+<area shape="rect" title=" " alt="" coords="1055,181,1213,221"/>
+<area shape="poly" title=" " alt="" coords="994,131,1083,173,1080,178,992,136"/>
+<area shape="rect" title=" " alt="" coords="1237,189,1356,214"/>
+<area shape="poly" title=" " alt="" coords="1008,128,1227,179,1242,183,1241,188,1225,184,1007,133"/>
+<area shape="rect" title=" " alt="" coords="1380,189,1547,214"/>
+<area shape="poly" title=" " alt="" coords="1008,124,1166,147,1369,179,1395,183,1394,189,1368,184,1165,152,1007,130"/>
+<area shape="rect" title=" " alt="" coords="754,189,831,214"/>
+<area shape="poly" title=" " alt="" coords="944,136,832,186,829,181,942,131"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacemy__api" id="r_namespacemy__api"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__api.html">my_api</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacemy__api_1_1mediamtx__monitor__api" id="r_namespacemy__api_1_1mediamtx__monitor__api"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__api_1_1mediamtx__monitor__api.html">my_api::mediamtx_monitor_api</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>
