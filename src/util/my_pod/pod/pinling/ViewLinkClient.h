@@ -188,8 +188,6 @@ private:
     static int OnConnectionStatus(int status, const char* msg, int len, void* user);
     static int OnDeviceStatus(int type, const char* buf, int len, void* user);
 
-    void EnsureLogDirectory();
-
     // ------------ 数据成员 -------------------------------------------------
     mutable std::mutex      mutex_;
     std::condition_variable connection_cv_;

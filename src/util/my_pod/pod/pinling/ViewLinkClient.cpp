@@ -27,8 +27,6 @@ void ViewLinkClient::Initialize()
 {
     if (initialized_) return;
 
-    EnsureLogDirectory();
-
     int ret = VLK_Init();
     if (ret != VLK_ERROR_NO_ERROR) {
         throw std::runtime_error("VLK_Init failed, error: " + std::to_string(ret));
@@ -365,18 +363,6 @@ int ViewLinkClient::OnDeviceStatus(int type, const char* buf, int /*len*/, void*
     }
 
     return 0;
-}
-
-// ---------------------------------------------------------------------------
-// 辅助
-// ---------------------------------------------------------------------------
-
-void ViewLinkClient::EnsureLogDirectory()
-{
-    struct stat st;
-    if (stat("VLKLog", &st) != 0) {
-        mkdir("VLKLog", 0755);
-    }
 }
 
 }  // namespace viewlink

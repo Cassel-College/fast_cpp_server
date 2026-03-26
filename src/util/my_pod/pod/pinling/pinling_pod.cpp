@@ -687,7 +687,7 @@ bool PinlingPod::deleteSdkLogDirBeforConnect() {
         MYLOG_INFO("当前工作目录: {}", current_dir);
         MYLOG_INFO("检查当前目录下是否存在 SDK 日志文件夹...");
         std::string target_log_dir_name = "VLKLog";
-        if (my_tools::MyFolderTools::HasFolder(current_dir, target_log_dir_name)) {
+        if (my_tools::MyFolderTools::HasFolderV1(current_dir, target_log_dir_name)) {
             log_dir = current_dir + "/" + target_log_dir_name;
             MYLOG_INFO("找到 SDK 日志文件夹: {}", log_dir);
             findLogDir = true;
@@ -698,18 +698,18 @@ bool PinlingPod::deleteSdkLogDirBeforConnect() {
         MYLOG_ERROR("获取当前工作目录失败: {}", e.what());
     }
     if (findLogDir) {
-        if (std::filesystem::exists(log_dir)) {
-            try {
-                std::filesystem::remove_all(log_dir);
-                MYLOG_INFO("[PINLING吊舱] {} SDK 日志文件夹已删除: {}", pod_info_.pod_id, log_dir);
+        MYLOG_INFO("[PINLING吊舱] {} 尝试删除 SDK 日志文件夹: {}", pod_info_.pod_id, log_dir);
+        try {
+            bool delete_status = my_tools::MyFolderTools::DeleteFolderByPathV1(log_dir);
+            if (delete_status) {
+                MYLOG_INFO("[PINLING吊舱] {} SDK 日志文件夹删除成功: {}", pod_info_.pod_id, log_dir);
                 deleteStatus = true;
-            } catch (const std::filesystem::filesystem_error& e) {
-                MYLOG_ERROR("[PINLING吊舱] {} 删除 SDK 日志文件夹失败: {}, 错误信息: {}",
-                            pod_info_.pod_id, log_dir, e.what());
+            } else {
+                MYLOG_WARN("[PINLING吊舱] {} SDK 日志文件夹删除失败（可能不存在或权限不足）: {}",
+                           pod_info_.pod_id, log_dir);
             }
-        } else {
-            MYLOG_INFO("[PINLING吊舱] {} SDK 日志文件夹不存在，无需删除: {}", pod_info_.pod_id, log_dir);
-            deleteStatus = true;
+        } catch (const std::exception& e) {
+            MYLOG_ERROR("[PINLING吊舱] {} 删除 SDK 日志文件夹失败: {}, 错误信息: {}", pod_info_.pod_id, log_dir, e.what());
         }
     } else {
         MYLOG_ERROR("[PINLING吊舱] {} 未找到 SDK 日志文件夹，无法删除: {}",

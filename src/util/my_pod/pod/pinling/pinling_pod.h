@@ -94,6 +94,7 @@ public:
     // ==================== 其他品凌特有能力方法占位 ====================
     // 初始化之前一定要删除日志文件夹，避免权限问题导致 SDK 无法写日志而连接失败。
     bool deleteSdkLogDirBeforConnect();
+    
 
 protected:
     PodResult<void> onInit(const nlohmann::json& pod_config) override;
