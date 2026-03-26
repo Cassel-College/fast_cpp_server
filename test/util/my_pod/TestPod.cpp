@@ -100,6 +100,58 @@ TEST_F(PinlingPodTest, BasicInfo) {
     EXPECT_EQ(pod_->getState(), PodState::DISCONNECTED);
 }
 
+TEST_F(PinlingPodTest, InitSucceedsAndStoresCompleteConfig) {
+    nlohmann::json config = {
+        {"name", "初始化后的品凌吊舱"},
+        {"type", "pinling"},
+        {"ip", "10.10.10.20"},
+        {"port", 2100},
+        {"capability", {
+            {"PTZ", {
+                {"open", "enable"},
+                {"init_args", {
+                    {"link_type", "tcp"},
+                    {"ip", "10.10.10.21"},
+                    {"port", 2200}
+                }}
+            }}
+        }}
+    };
+
+    auto result = pod_->Init(config);
+    ASSERT_TRUE(result.isSuccess());
+    EXPECT_NE(pod_->getSession(), nullptr);
+
+    auto info = pod_->getPodInfo();
+    EXPECT_EQ(info.pod_name, "初始化后的品凌吊舱");
+    EXPECT_EQ(info.ip_address, "10.10.10.20");
+    EXPECT_EQ(info.port, 2100);
+    ASSERT_TRUE(info.raw_config.contains("capability"));
+    EXPECT_EQ(info.raw_config["capability"]["PTZ"]["init_args"]["port"].get<int>(), 2200);
+}
+
+TEST(PinlingInitTest, InitFailsWhenPtzEnabledButConnectionParamsMissing) {
+    PodInfo info;
+    info.pod_id = "pinling_init_invalid";
+    info.pod_name = "无效初始化品凌";
+    info.vendor = PodVendor::PINLING;
+
+    auto pod = std::make_shared<PinlingPod>(info);
+    nlohmann::json config = {
+        {"name", "无效初始化品凌"},
+        {"type", "pinling"},
+        {"capability", {
+            {"PTZ", {
+                {"open", "enable"}
+            }}
+        }}
+    };
+
+    auto result = pod->Init(config);
+    EXPECT_FALSE(result.isSuccess());
+    EXPECT_EQ(result.code, PodErrorCode::UNKNOWN_ERROR);
+}
+
 TEST_F(PinlingPodTest, PtzMethodsFailWhenNotConnected) {
     auto pose = pod_->getPose();
     EXPECT_FALSE(pose.isSuccess());

@@ -87,7 +87,6 @@ TEST(PodManagerTest, BuildPinlingPodFromJsonAndPrintOnlineAndPoseForTenSeconds) 
                     {"ptz_interval_ms", 1000},
                     {"online_window_size", 5},
                     {"online_threshold", 3},
-                    {"enable_laser_poll", true},
                     {"auto_start", true}
                 }},
                 {"capability", {
