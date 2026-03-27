@@ -56,6 +56,7 @@ include(CPack)
 set(CONFIG_DIRECTORIES      ${PROJECT_SOURCE_DIR}/config)
 set(SERVICE_DIRECTORIES     ${PROJECT_SOURCE_DIR}/service)
 set(SCRIPT_DIRECTORIES      ${PROJECT_SOURCE_DIR}/scripts)
+set(SOURCE_DIRECTORIES      ${PROJECT_SOURCE_DIR}/source)
 set(SWAGGER_RES_DIR         ${CMAKE_SOURCE_DIR}/external/oatpp-swagger/res)
 set(MQTT_ETC_DIR            ${PROJECT_SOURCE_DIR}/external/mosquitto/etc)
 
@@ -86,6 +87,25 @@ install(PROGRAMS ${SCRIPT_DIRECTORIES}/uninstall-user.sh   DESTINATION .)
 install(PROGRAMS ${SCRIPT_DIRECTORIES}/start-system.sh     DESTINATION .)
 install(PROGRAMS ${SCRIPT_DIRECTORIES}/install-system.sh   DESTINATION .)
 install(PROGRAMS ${SCRIPT_DIRECTORIES}/uninstall-system.sh DESTINATION .)
+
+# 6.5 根据系统架构安装 MediaMTX
+if(CMAKE_SYSTEM_PROCESSOR MATCHES "x86_64")
+    set(MEDIAMTX_EXECUTABLE ${SOURCE_DIRECTORIES}/soft/mediamtx/ubuntu_x86/mediamtx)
+    message(STATUS "Detected x86_64 architecture. MediaMTX executable set to: ${MEDIAMTX_EXECUTABLE}")
+elseif(CMAKE_SYSTEM_PROCESSOR MATCHES "aarch64" OR CMAKE_SYSTEM_PROCESSOR MATCHES "arm")
+    set(MEDIAMTX_EXECUTABLE ${SOURCE_DIRECTORIES}/soft/mediamtx/ubuntu_arm/mediamtx)
+    message(STATUS "Detected ARM architecture. MediaMTX executable set to: ${MEDIAMTX_EXECUTABLE}")
+else()
+    message(WARNING "Unsupported processor: ${CMAKE_SYSTEM_PROCESSOR}. MediaMTX will not be installed.")
+    set(MEDIAMTX_EXECUTABLE "")
+endif()
+
+if(MEDIAMTX_EXECUTABLE AND EXISTS ${MEDIAMTX_EXECUTABLE})
+    install(PROGRAMS ${MEDIAMTX_EXECUTABLE} DESTINATION bin)
+    print_colored_message("CPACK: Installing MediaMTX for ${CMAKE_SYSTEM_PROCESSOR}." COLOR green)
+else()
+    print_colored_message("CPACK: MediaMTX executable not found or architecture not supported. Skipping installation." COLOR yellow)
+endif()
 
 
 print_colored_message("------------------------------------------------" COLOR magenta)
