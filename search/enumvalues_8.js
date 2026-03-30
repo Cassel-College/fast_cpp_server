@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['idle_0',['idle',['../namespacemy__data.html#ab741123951602d5912c8b5aba6bf3372ae599161956d626eda4cb0a5ffb85271c',1,'my_data::Idle'],['../namespaceedge__manager.html#a705af4082cd372cbec46518713ce86f2aa5daf7f2ebbba4975d61dab1c40188c7',1,'edge_manager::IDLE']]],
+  ['idle_0',['Idle',['../namespacemy__data.html#ab741123951602d5912c8b5aba6bf3372ae599161956d626eda4cb0a5ffb85271c',1,'my_data']]],
   ['image_1',['IMAGE',['../namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccca23a12f67f614b5518c7f1c2465bf95e3',1,'PodModule']]],
   ['image_5fcapture_5ffailed_2',['IMAGE_CAPTURE_FAILED',['../namespacePodModule.html#aad194976af5612d4469559348e94c7bea70ed87a15bc292983193acf6ccc5115a',1,'PodModule']]],
   ['immediate_3',['IMMEDIATE',['../namespacefly__control.html#aa9877e4cb6fe10ca2f1d2f8b6127c838ae35884a2445bc4ae2df52f188763273c',1,'fly_control']]],

@@ -2,7 +2,7 @@ var searchData=
 [
   ['handleframe_0',['HandleFrame',['../classfly__control_1_1MyFlyControl.html#aa29db590e638f2466e9851f18c61f492',1,'fly_control::MyFlyControl']]],
   ['hasconfiginfo_1',['HasConfigInfo',['../classviewlink_1_1ViewLinkClient.html#a89fb266e7efdf1701db7ab63a41db0bc',1,'viewlink::ViewLinkClient']]],
-  ['hasedge_2',['HasEdge',['../classmy__edge_1_1MyEdges.html#a854fe8569df85e2931fabfe24c288e82',1,'my_edge::MyEdges']]],
+  ['hasedge_2',['HasEdge',['../classmy__edge_1_1MyEdgeManager.html#a854fe8569df85e2931fabfe24c288e82',1,'my_edge::MyEdgeManager']]],
   ['hasfolderv1_3',['HasFolderV1',['../classmy__tools_1_1MyFolderTools.html#a9da1adb7ffeb9e168581dc8497fe1ddf',1,'my_tools::MyFolderTools']]],
   ['hasfolderv2_4',['HasFolderV2',['../classmy__tools_1_1MyFolderTools.html#a109f9139c35da272ac1e21f7322d23b6',1,'my_tools::MyFolderTools']]],
   ['hasheartbeat_5',['hasheartbeat',['../classfly__control_1_1MyFlyControl.html#a9c513abc7b4f8b42ad47df017f1b28a2',1,'fly_control::MyFlyControl::HasHeartbeat()'],['../classfly__control_1_1MyFlyControlManager.html#a9c513abc7b4f8b42ad47df017f1b28a2',1,'fly_control::MyFlyControlManager::HasHeartbeat()']]],

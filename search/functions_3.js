@@ -4,7 +4,7 @@ var searchData=
   ['decodecommandreply_1',['DecodeCommandReply',['../namespacefly__control.html#a93c613dfb2dc3c6f44422ffedee6e15b',1,'fly_control']]],
   ['decodegimbalcontrol_2',['DecodeGimbalControl',['../namespacefly__control.html#a1480d8b4dba003f6e21255c7e8ef158b',1,'fly_control']]],
   ['decodeheartbeat_3',['DecodeHeartbeat',['../namespacefly__control.html#a0d342591f8e1d17231362aa6005dafd8',1,'fly_control']]],
-  ['deleteedgebyid_4',['deleteEdgeById',['../classmy__edge_1_1MyEdges.html#a2d69d51d4a07eab449efe3ff895ce4af',1,'my_edge::MyEdges']]],
+  ['deleteedgebyid_4',['deleteEdgeById',['../classmy__edge_1_1MyEdgeManager.html#a2d69d51d4a07eab449efe3ff895ce4af',1,'my_edge::MyEdgeManager']]],
   ['deletefile_5',['DeleteFile',['../classmy__tools_1_1MyFileTools.html#a440735a7d8fefe96b1a43ba7e166783d',1,'my_tools::MyFileTools']]],
   ['deletefolderbypathv1_6',['DeleteFolderByPathV1',['../classmy__tools_1_1MyFolderTools.html#a8ddc394bd4c86b71ade26a03acf7a9b2',1,'my_tools::MyFolderTools']]],
   ['deletefolderbypathv2_7',['DeleteFolderByPathV2',['../classmy__tools_1_1MyFolderTools.html#ae76a9a7b7b8ef3fceebe1be6c910eb11',1,'my_tools::MyFolderTools']]],

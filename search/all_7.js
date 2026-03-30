@@ -5,7 +5,7 @@ var searchData=
   ['has_5fhb_5f_2',['has_hb_',['../classfly__control_1_1MyFlyControl.html#a52413a39ddabf06b30aa1441f7bb3b9a',1,'fly_control::MyFlyControl']]],
   ['has_5finit_5fargs_3',['has_init_args',['../pinling__pod_8cpp.html#a6fbd414507a34ef224d767fd180028c4',1,'pinling_pod.cpp']]],
   ['hasconfiginfo_4',['HasConfigInfo',['../classviewlink_1_1ViewLinkClient.html#a89fb266e7efdf1701db7ab63a41db0bc',1,'viewlink::ViewLinkClient']]],
-  ['hasedge_5',['HasEdge',['../classmy__edge_1_1MyEdges.html#a854fe8569df85e2931fabfe24c288e82',1,'my_edge::MyEdges']]],
+  ['hasedge_5',['HasEdge',['../classmy__edge_1_1MyEdgeManager.html#a854fe8569df85e2931fabfe24c288e82',1,'my_edge::MyEdgeManager']]],
   ['hasfolderv1_6',['HasFolderV1',['../classmy__tools_1_1MyFolderTools.html#a9da1adb7ffeb9e168581dc8497fe1ddf',1,'my_tools::MyFolderTools']]],
   ['hasfolderv2_7',['HasFolderV2',['../classmy__tools_1_1MyFolderTools.html#a109f9139c35da272ac1e21f7322d23b6',1,'my_tools::MyFolderTools']]],
   ['hasheartbeat_8',['hasheartbeat',['../classfly__control_1_1MyFlyControl.html#a9c513abc7b4f8b42ad47df017f1b28a2',1,'fly_control::MyFlyControl::HasHeartbeat()'],['../classfly__control_1_1MyFlyControlManager.html#a9c513abc7b4f8b42ad47df017f1b28a2',1,'fly_control::MyFlyControlManager::HasHeartbeat()']]],
