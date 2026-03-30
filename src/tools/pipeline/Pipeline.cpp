@@ -1,14 +1,11 @@
 #include "Pipeline.h"
 #include "MyHeartbeatManager.h"
-#include "MyEdgeManager.h"
-#include "EdgeDevice.h"
 #include "IEdge.h"
-#include "MyEdges.h"
+#include "MyEdgeManager.h"
 #include "MyEdge.h"
 #include "MyMqttBrokerManager.h"
 #include "MqttService.hpp"
 #include "SoftHealthMonitorManager.h"
-#include "SoftHealthSnapshot.h"
 #include "SoftHealthMonitorConfig.h"
 #include "MyAPI.h"
 #include "MyFlyControlManager.h"
@@ -262,20 +259,17 @@ void Pipeline::LaunchEdgeMonitor(const nlohmann::json& args) {
     MYLOG_INFO("===== 开始启动模块: {} =====", module_name);
 
     try {
-        // 1. 获取业务单例
-        auto& em = edge_manager::MyEdgeManager::GetInstance();
-
-        // 2. 初始化配置 (带保护)
+        // 1. 初始化配置 (带保护)
         if (args.is_null() || args.empty()) {
             MYLOG_ERROR("* 模块: {}, 错误: {}", module_name, "配置参数为空, 执行默认设置");
         }
         
         LogArg(module_name + " - 初始参数", args.dump());
-        em.Init(args);
 
-        // 3. 启动线程 (不使用匿名函数/Lambda)
-        // 使用成员函数指针：&类名::函数名, 实例地址
-        workers_.emplace_back(&edge_manager::MyEdgeManager::StartAll, &em);
+        // 2. 启动线程，让已有的 my_edge::MyEdgeManager 负责启动全部 edge
+        workers_.emplace_back([]() {
+            ::my_edge::MyEdgeManager::GetInstance().startAllEdges();
+        });
 
         MYLOG_INFO("* 模块: {}, 状态: {}", module_name, "线程已成功创建并加入管理列表");
 
@@ -472,13 +466,13 @@ void Pipeline::LaunchEdge(const nlohmann::json& args) {
             MYLOG_INFO("成功启动 Edge 设备 ID: {}", i);
             MYLOG_INFO("获取数据快照: {}", edge_device->GetStatusSnapshot().toString());
             MYLOG_INFO("内部信息: {}", edge_device->DumpInternalInfo().dump(4));
-            my_edge::MyEdges::GetInstance().appendEdge(std::move(edge_device));
+            my_edge::MyEdgeManager::GetInstance().appendEdge(std::move(edge_device));
         }
     } catch (const std::exception& e) {
         MYLOG_ERROR("启动 Edge 模块时捕获异常: {}", e.what());
     }
     MYLOG_INFO("Edge 模块设备创建流程完成，正在启动所有 Edge 设备...");
-    ::my_edge::MyEdges::GetInstance().startAllEdges();
+    ::my_edge::MyEdgeManager::GetInstance().startAllEdges();
     MYLOG_INFO("所有 Edge 设备已启动");
 }
 

@@ -1,21 +1,21 @@
-#include "MyEdges.h"
+#include "MyEdgeManager.h"
 #include "MyLog.h"
 #include "demo/Task.h"
 #include <algorithm>
 
 namespace my_edge {
 
-MyEdges& MyEdges::GetInstance() {
+MyEdgeManager& MyEdgeManager::GetInstance() {
     try {
-        static MyEdges instance;
+        static MyEdgeManager instance;
         return instance;
     } catch (const std::exception& e) {
-        MYLOG_ERROR("获取 MyEdges 单例实例时发生异常: " + std::string(e.what()));
+        MYLOG_ERROR("获取 MyEdgeManager 单例实例时发生异常: " + std::string(e.what()));
         throw;  // 重新抛出
     }
 }
 
-bool MyEdges::appendEdge(std::unique_ptr<IEdge> edge_ptr) {
+bool MyEdgeManager::appendEdge(std::unique_ptr<IEdge> edge_ptr) {
     try {
         if (!edge_ptr) {
             MYLOG_ERROR("尝试添加空 Edge 指针。");
@@ -41,7 +41,7 @@ bool MyEdges::appendEdge(std::unique_ptr<IEdge> edge_ptr) {
     }
 }
 
-const std::vector<const IEdge*>& MyEdges::getEdges() const {
+const std::vector<const IEdge*>& MyEdgeManager::getEdges() const {
     try {
         static thread_local std::vector<const IEdge*> temp_ptrs;
         temp_ptrs.clear();
@@ -57,7 +57,7 @@ const std::vector<const IEdge*>& MyEdges::getEdges() const {
     }
 }
 
-const std::vector<std::string>& MyEdges::getEdgeIds() const {
+const std::vector<std::string>& MyEdgeManager::getEdgeIds() const {
     try {
         static thread_local std::vector<std::string> temp_ids;
         temp_ids.clear();
@@ -73,7 +73,7 @@ const std::vector<std::string>& MyEdges::getEdgeIds() const {
     }
 }
 
-bool MyEdges::deleteEdgeById(const std::string& edge_id) {
+bool MyEdgeManager::deleteEdgeById(const std::string& edge_id) {
     try {
         std::lock_guard<std::mutex> lock(mutex_);
         auto it = edges_.find(edge_id);
@@ -90,7 +90,7 @@ bool MyEdges::deleteEdgeById(const std::string& edge_id) {
     }
 }
 
-bool MyEdges::startAllEdges() {
+bool MyEdgeManager::startAllEdges() {
     try {
         std::lock_guard<std::mutex> lock(mutex_);
         bool all_success = true;
@@ -115,7 +115,7 @@ bool MyEdges::startAllEdges() {
     }
 }
 
-const std::unique_ptr<IEdge>& MyEdges::getEdgeById(const std::string& edge_id) const {
+const std::unique_ptr<IEdge>& MyEdgeManager::getEdgeById(const std::string& edge_id) const {
     try {
         std::lock_guard<std::mutex> lock(mutex_);
         auto it = edges_.find(edge_id);
@@ -131,7 +131,7 @@ const std::unique_ptr<IEdge>& MyEdges::getEdgeById(const std::string& edge_id) c
     return nullptr;  // 永远不会到达
 }
 
-nlohmann::json MyEdges::GetHeartbeatInfo() const {
+nlohmann::json MyEdgeManager::GetHeartbeatInfo() const {
     nlohmann::json heartbeat_info = nlohmann::json::object();
     try {
         std::lock_guard<std::mutex> lock(mutex_);
@@ -144,7 +144,7 @@ nlohmann::json MyEdges::GetHeartbeatInfo() const {
     return heartbeat_info;
 }
 
-bool MyEdges::HasEdge(const std::string& edge_id) const {
+bool MyEdgeManager::HasEdge(const std::string& edge_id) const {
     try {
         std::lock_guard<std::mutex> lock(mutex_);
         return edges_.find(edge_id) != edges_.end();
@@ -154,7 +154,7 @@ bool MyEdges::HasEdge(const std::string& edge_id) const {
     }
 }
 
-bool MyEdges::IsEmpty() const {
+bool MyEdgeManager::IsEmpty() const {
     try {
         std::lock_guard<std::mutex> lock(mutex_);
         return edges_.empty();
@@ -164,7 +164,7 @@ bool MyEdges::IsEmpty() const {
     }
 }
 
-bool MyEdges::SelectEdgeByIdDoAction(const std::string& edge_id, const nlohmann::json& action) const {
+bool MyEdgeManager::SelectEdgeByIdDoAction(const std::string& edge_id, const nlohmann::json& action) const {
     try {
         std::lock_guard<std::mutex> lock(mutex_);
         auto it = edges_.find(edge_id);
@@ -181,7 +181,7 @@ bool MyEdges::SelectEdgeByIdDoAction(const std::string& edge_id, const nlohmann:
     }
 }
 
-bool MyEdges::appendTaskToEdgeById(const std::string& edge_id, const nlohmann::json& task) const {
+bool MyEdgeManager::appendTaskToEdgeById(const std::string& edge_id, const nlohmann::json& task) const {
     MYLOG_INFO("尝试向 ID 为 '{}' 的 Edge 添加任务: {}", edge_id, task.dump(4));
     try {
         std::lock_guard<std::mutex> lock(mutex_);
@@ -201,7 +201,7 @@ bool MyEdges::appendTaskToEdgeById(const std::string& edge_id, const nlohmann::j
     }
 }
 
-bool MyEdges::appendTaskToEdgeByIdV2(const std::string& edge_id, const my_data::Task& task) const {
+bool MyEdgeManager::appendTaskToEdgeByIdV2(const std::string& edge_id, const my_data::Task& task) const {
     MYLOG_INFO("尝试向 ID 为 '{}' 的 Edge 添加任务: {}", edge_id, task.toString());
     try {
         std::lock_guard<std::mutex> lock(mutex_);
@@ -221,7 +221,7 @@ bool MyEdges::appendTaskToEdgeByIdV2(const std::string& edge_id, const my_data::
     }
 }
 
-bool MyEdges::setESTOP(const std::string& edge_id, bool estop) const {
+bool MyEdgeManager::setESTOP(const std::string& edge_id, bool estop) const {
     try {
         std::lock_guard<std::mutex> lock(mutex_);
         auto it = edges_.find(edge_id);
@@ -238,7 +238,7 @@ bool MyEdges::setESTOP(const std::string& edge_id, bool estop) const {
     }
 }
 
-bool MyEdges::setAllEdgesESTOP(bool estop) const {
+bool MyEdgeManager::setAllEdgesESTOP(bool estop) const {
     try {
         std::lock_guard<std::mutex> lock(mutex_);
         bool all_success = true;
@@ -262,7 +262,7 @@ bool MyEdges::setAllEdgesESTOP(bool estop) const {
     }
 }
 
-bool MyEdges::getEdgeOnlineStatus(const std::string& edge_id) const {
+bool MyEdgeManager::getEdgeOnlineStatus(const std::string& edge_id) const {
     try {
         std::lock_guard<std::mutex> lock(mutex_);
         auto it = edges_.find(edge_id);
@@ -279,7 +279,7 @@ bool MyEdges::getEdgeOnlineStatus(const std::string& edge_id) const {
     }
 }
 
-bool MyEdges::getAllEdgesOnlineStatus(std::unordered_map<std::string, bool>& status_map) const {
+bool MyEdgeManager::getAllEdgesOnlineStatus(std::unordered_map<std::string, bool>& status_map) const {
     try {
         std::lock_guard<std::mutex> lock(mutex_);
         for (const auto& pair : edges_) {
@@ -293,7 +293,7 @@ bool MyEdges::getAllEdgesOnlineStatus(std::unordered_map<std::string, bool>& sta
 }
  
 
-bool MyEdges::getOnlineEdges(std::vector<std::string>& online_edges) const {
+bool MyEdgeManager::getOnlineEdges(std::vector<std::string>& online_edges) const {
     MYLOG_INFO("获取在线 Edges 列表...");
     try {
         std::lock_guard<std::mutex> lock(mutex_);
@@ -312,7 +312,7 @@ bool MyEdges::getOnlineEdges(std::vector<std::string>& online_edges) const {
     }
 }
 
-bool MyEdges::getEdgeTaskStatus(const std::string& edge_id, nlohmann::json& task_status) const {
+bool MyEdgeManager::getEdgeTaskStatus(const std::string& edge_id, nlohmann::json& task_status) const {
     try {
         std::lock_guard<std::mutex> lock(mutex_);
         auto it = edges_.find(edge_id);
@@ -328,7 +328,7 @@ bool MyEdges::getEdgeTaskStatus(const std::string& edge_id, nlohmann::json& task
     }
 }
 
-bool MyEdges::getEdgeHistoryTaskStatus(const std::string& edge_id, nlohmann::json& history_task_status) const {
+bool MyEdgeManager::getEdgeHistoryTaskStatus(const std::string& edge_id, nlohmann::json& history_task_status) const {
     try {
         std::lock_guard<std::mutex> lock(mutex_);
         auto it = edges_.find(edge_id);
@@ -344,7 +344,7 @@ bool MyEdges::getEdgeHistoryTaskStatus(const std::string& edge_id, nlohmann::jso
     }
 }
 
-bool MyEdges::getEdgeInternalDumpInfo(const std::string& edge_id, nlohmann::json& dump_info) const {
+bool MyEdgeManager::getEdgeInternalDumpInfo(const std::string& edge_id, nlohmann::json& dump_info) const {
     bool foundStatus = false;
     try {
         std::lock_guard<std::mutex> lock(mutex_);
@@ -363,7 +363,7 @@ bool MyEdges::getEdgeInternalDumpInfo(const std::string& edge_id, nlohmann::json
     return foundStatus;
 }
 
-bool MyEdges::getEdgeRunTimeStatusInfo(const std::string& edge_id, nlohmann::json& status_info) const {
+bool MyEdgeManager::getEdgeRunTimeStatusInfo(const std::string& edge_id, nlohmann::json& status_info) const {
     bool foundStatus = false;
     try {
         std::lock_guard<std::mutex> lock(mutex_);

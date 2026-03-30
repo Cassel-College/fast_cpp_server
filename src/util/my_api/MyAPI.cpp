@@ -9,7 +9,6 @@
 #include "controller/mediamtx_monitor/MediamtxMonitorController.h"
 
 #include "controller/demo/edges/EdgesController.hpp"
-#include "controller/demo/edge_manager/EdgeController.hpp"
 #include "controller/demo/tuna/TunaController.h"
 
 // #include "oatpp/json/ObjectMapper.hpp" 
@@ -170,10 +169,6 @@ void MyAPI::ServerThread(int port) {
         auto router = oatpp::web::server::HttpRouter::createShared();
         auto docEndpoints = oatpp::web::server::api::Endpoints();
 
-        auto edgeController = my_api::edge_manager::EdgeController::createShared(std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper));
-        router->addController(edgeController);
-        docEndpoints.append(edgeController->getEndpoints());
-
         auto heartbeatController = my_api::heartbeat::HeartBeatController::createShared(std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper));
         router->addController(heartbeatController);
         docEndpoints.append(heartbeatController->getEndpoints());
@@ -215,7 +210,6 @@ void MyAPI::ServerThread(int port) {
         // docEndpoints.append(swaggerController->getEndpoints());
 
         // using MyobjectMapper = oatpp::data::mapping::ObjectMapper;
-        // auto edgeController = my_api::edge_manager::EdgeController::createShared(std::static_pointer_cast<MyobjectMapper>(objectMapper));
         // auto heartbeatController = my_api::heartbeat::HeartBeatController::createShared(std::static_pointer_cast<MyobjectMapper>(objectMapper));
         // auto edgesController = my_api::edge::EdgesController::createShared(std::static_pointer_cast<MyobjectMapper>(objectMapper));
         // auto scriptController = my_api::my_script_api::MyScriptController::createShared(std::static_pointer_cast<MyobjectMapper>(objectMapper));

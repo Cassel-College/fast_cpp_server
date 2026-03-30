@@ -1,7 +1,6 @@
 #include "BaseApiController.hpp"
 #include "MyLog.h"
 #include "MyEdgeManager.h"
-#include "MyEdges.h"
 #include "EdgesController.hpp"
 #include "dto/demo/EdgeStatusDto.hpp"
 #include "dto/demo/TaskDto.hpp"
@@ -31,19 +30,18 @@ EdgesController::createShared(
 MyAPIResponsePtr EdgesController::getEdgesStatus() {
     MYLOG_INFO("[API] 收到请求: GET /v1/edges/status");
 
-    auto status_list =
-        edge_manager::MyEdgeManager::GetInstance().ShowEdgesStatus();
+    auto status_map = ::my_edge::MyEdgeManager::GetInstance().GetHeartbeatInfo();
 
     auto result =
         oatpp::Vector<oatpp::Object<my_api::dto::EdgeStatusDto>>::createShared();
 
-    for (const auto& item : status_list) {
+    for (const auto& item : status_map.items()) {
         auto dto = my_api::dto::EdgeStatusDto::createShared();
-        dto->name = item.value("name", "").c_str();
-        dto->ip = item.value("ip", "").c_str();
-        dto->online = item.value("online", false);
-        dto->biz_status = item.value("biz_status", "").c_str();
-        dto->thread_id = item.value("thread_id", "").c_str();
+        dto->name = item.key().c_str();
+        dto->ip = item.value().value("ip", "").c_str();
+        dto->online = item.value().value("online", false);
+        dto->biz_status = item.value().value("biz_status", "").c_str();
+        dto->thread_id = item.value().value("thread_id", "").c_str();
         result->push_back(dto);
     }
 
@@ -53,7 +51,7 @@ MyAPIResponsePtr EdgesController::getEdgesStatus() {
 MyAPIResponsePtr EdgesController::startAllEdges() {
     MYLOG_INFO("[API] 收到请求: POST /v1/edges/startAllEdges");
 
-    ::my_edge::MyEdges::GetInstance().startAllEdges();
+    ::my_edge::MyEdgeManager::GetInstance().startAllEdges();
 
     return ok("All edge devices started successfully.");
 }
@@ -113,8 +111,8 @@ MyAPIResponsePtr EdgesController::appendTaskToEdgeById(const oatpp::Object<my_ap
         MYLOG_INFO("构造 my_data::Task 对象成功: {}", task.toString());
         
         // 6) 将任务传给业务层（示例调用）；业务层返回 bool 或可扩展为错误信息结构
-        // bool ok = my_edge::MyEdges::GetInstance().appendTaskToEdgeById(edgeId, params);
-        bool ok = my_edge::MyEdges::GetInstance().appendTaskToEdgeByIdV2(edgeId, task);
+        // bool ok = my_edge::MyEdgeManager::GetInstance().appendTaskToEdgeById(edgeId, params);
+        bool ok = my_edge::MyEdgeManager::GetInstance().appendTaskToEdgeByIdV2(edgeId, task);
 
         if (!ok) {
             MYLOG_ERROR("AppendTaskToEdgeById 业务执行失败, edgeId={}", edgeId);
@@ -142,7 +140,7 @@ MyAPIResponsePtr EdgesController::getOnlineEdges() {
     MYLOG_INFO("[API] 收到请求: GET /v1/edges/getOnlineEdges");
 
     std::vector<std::string> online_edges;
-    my_edge::MyEdges::GetInstance().getOnlineEdges(online_edges);
+    my_edge::MyEdgeManager::GetInstance().getOnlineEdges(online_edges);
 
     auto result = oatpp::Vector<oatpp::String>::createShared();
     for (const auto& edge_id : online_edges) {
@@ -168,7 +166,7 @@ MyAPIResponsePtr EdgesController::getTargetEdgeDumpInternalInfo(
     }
 
     nlohmann::json dump_info;
-    bool found = my_edge::MyEdges::GetInstance().getEdgeInternalDumpInfo(edgeId, dump_info);
+    bool found = my_edge::MyEdgeManager::GetInstance().getEdgeInternalDumpInfo(edgeId, dump_info);
     if (!found) {
         MYLOG_WARN("Edge ID '{}' 未找到，无法获取内部信息 Dump", edgeId);
         return jsonError(404, "edge not found");
@@ -195,7 +193,7 @@ MyAPIResponsePtr EdgesController::getTargetEdgeRunTimeStatusInfo (
     }
 
     nlohmann::json status_info;
-    bool found = my_edge::MyEdges::GetInstance().getEdgeRunTimeStatusInfo(edgeId, status_info);
+    bool found = my_edge::MyEdgeManager::GetInstance().getEdgeRunTimeStatusInfo(edgeId, status_info);
     if (!found) {
         MYLOG_WARN("Edge ID '{}' 未找到，无法获取运行时状态信息", edgeId);
         return jsonError(404, "edge not found");

@@ -421,3 +421,8 @@ else
 
     echo "📁 ViewLink dist created at ${VIEWLINK_DST}. ✅"
 fi
+
+
+./scripts/download_mediamtx.sh
+
+
