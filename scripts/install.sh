@@ -138,6 +138,44 @@ need_sudo_or_die() {
   fi
 }
 
+# ========================= 通用工具函数 =========================
+
+# ensure_writable_dir: 确保指定目录存在且具有合理的写权限
+# 参数: $1 — 目录路径
+# 逻辑:
+#   - 目录已存在且可写 -> 跳过
+#   - 目录已存在但不可写 -> 修复权限
+#   - 目录不存在 -> 创建并设置权限
+ensure_writable_dir() {
+  local dir_path="$1"
+
+  if [ -z "${dir_path}" ]; then
+    log_line warn "ensure_writable_dir: 传入的路径为空，跳过"
+    return 0
+  fi
+
+  # 移除末尾斜杠方便日志显示 (不影响功能)
+  dir_path="${dir_path%/}"
+
+  if [ -d "${dir_path}" ]; then
+    # 目录已存在，检查写权限
+    if [ -w "${dir_path}" ]; then
+      log_line info "  -> 目录已存在且可写，跳过: ${dir_path}"
+      return 0
+    else
+      log_line warn "  -> 目录已存在但不可写，修复权限: ${dir_path}"
+      run_cmd "${SUPER} chmod 755 ${dir_path}"
+      log_line ok "  -> 权限已修复: ${dir_path}"
+    fi
+  else
+    # 目录不存在，创建
+    log_line info "  -> 目录不存在，创建: ${dir_path}"
+    run_cmd "${SUPER} mkdir -p ${dir_path}"
+    run_cmd "${SUPER} chmod 755 ${dir_path}"
+    log_line ok "  -> 目录已创建: ${dir_path}"
+  fi
+}
+
 # ========================= 路径定义 (依赖 INSTALL_ROOT) =========================
 setup_paths() {
   # --- AppDir 内部路径 ---
@@ -372,6 +410,35 @@ patch_config_ini() {
   fi
 }
 
+# Step 5.5: 确保应用程序日志目录存在
+# 从已安装的 config.ini 中读取 logger_dir，确保该目录存在且可写
+# 这样程序启动时不会因为日志目录不存在而失败
+ensure_app_log_dir() {
+  log_line info "[Step 5.5] 确保应用程序日志目录存在..."
+
+  local config_file="${CONFIG_DIR}/config.ini"
+  local app_log_dir=""
+
+  # 从 config.ini 中提取 logger_dir 的值
+  if [ -f "${config_file}" ]; then
+    # 匹配 'logger_dir=...' (非注释行, 非 default_ 前缀)
+    app_log_dir=$(grep -E '^logger_dir=' "${config_file}" | tail -1 | cut -d'=' -f2- | xargs)
+  fi
+
+  if [ -n "${app_log_dir}" ]; then
+    log_line info "  -> 从 config.ini 读取到 logger_dir: ${app_log_dir}"
+    ensure_writable_dir "${app_log_dir}"
+  else
+    log_line warn "  -> 未在 config.ini 中找到 logger_dir，使用默认: ${LOG_DIR}"
+    ensure_writable_dir "${LOG_DIR}"
+  fi
+
+  # 同时确保安装脚本自身的日志目录也存在
+  ensure_writable_dir "${LOG_DIR}"
+
+  log_line ok "应用程序日志目录检查完成"
+}
+
 # Step 6: 安装资源文件 (swagger-res 等)
 install_resources() {
   log_line info "[Step 6] 安装资源文件到 ${SHARE_DIR}/ ..."
@@ -550,6 +617,7 @@ main() {
   install_binaries           # Step 3
   install_libraries          # Step 4
   install_configs            # Step 5
+  ensure_app_log_dir         # Step 5.5
   install_resources          # Step 6
   create_symlinks            # Step 7
   install_systemd_service    # Step 8
