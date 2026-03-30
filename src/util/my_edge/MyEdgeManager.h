@@ -29,18 +29,18 @@ public:
 };
 
 /**
- * @brief MyEdges - 企业级单例 IEdge 实例管理器。
+ * @brief MyEdgeManager - 企业级单例 IEdge 实例管理器。
  * 
  * 此类提供线程安全的操作，用于管理 IEdge 对象的集合。
  * 使用 std::unique_ptr 进行独占所有权，使用 std::unordered_map 进行高效查找。
  */
-class MyEdges {
+class MyEdgeManager {
 public:
     /**
      * @brief 获取单例实例。
-     * @return 单例 MyEdges 实例的引用。
+     * @return 单例 MyEdgeManager 实例的引用。
      */
-    static MyEdges& GetInstance();
+    static MyEdgeManager& GetInstance();
 
     /**
      * @brief 将 Edge 实例添加到集合中。
@@ -192,10 +192,10 @@ public:
     bool appendTaskToEdgeByIdV2(const std::string& edge_id, const my_data::Task& task) const;
 
 private:
-    MyEdges() = default;
-    ~MyEdges() = default;  // 析构函数，用于必要清理
-    MyEdges(const MyEdges&) = delete;
-    MyEdges& operator=(const MyEdges&) = delete;
+    MyEdgeManager() = default;
+    ~MyEdgeManager() = default;  // 析构函数，用于必要清理
+    MyEdgeManager(const MyEdgeManager&) = delete;
+    MyEdgeManager& operator=(const MyEdgeManager&) = delete;
 
     mutable std::mutex mutex_;  // 用于线程安全
     std::unordered_map<std::string, std::unique_ptr<IEdge>> edges_;  // 以 ID 为键的高效存储

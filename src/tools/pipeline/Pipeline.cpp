@@ -1,7 +1,7 @@
 #include "Pipeline.h"
 #include "MyHeartbeatManager.h"
 #include "IEdge.h"
-#include "MyEdges.h"
+#include "MyEdgeManager.h"
 #include "MyEdge.h"
 #include "MyMqttBrokerManager.h"
 #include "MqttService.hpp"
@@ -266,9 +266,9 @@ void Pipeline::LaunchEdgeMonitor(const nlohmann::json& args) {
         
         LogArg(module_name + " - 初始参数", args.dump());
 
-        // 2. 启动线程，让已有的 my_edge::MyEdges 负责启动全部 edge
+        // 2. 启动线程，让已有的 my_edge::MyEdgeManager 负责启动全部 edge
         workers_.emplace_back([]() {
-            ::my_edge::MyEdges::GetInstance().startAllEdges();
+            ::my_edge::MyEdgeManager::GetInstance().startAllEdges();
         });
 
         MYLOG_INFO("* 模块: {}, 状态: {}", module_name, "线程已成功创建并加入管理列表");
@@ -466,13 +466,13 @@ void Pipeline::LaunchEdge(const nlohmann::json& args) {
             MYLOG_INFO("成功启动 Edge 设备 ID: {}", i);
             MYLOG_INFO("获取数据快照: {}", edge_device->GetStatusSnapshot().toString());
             MYLOG_INFO("内部信息: {}", edge_device->DumpInternalInfo().dump(4));
-            my_edge::MyEdges::GetInstance().appendEdge(std::move(edge_device));
+            my_edge::MyEdgeManager::GetInstance().appendEdge(std::move(edge_device));
         }
     } catch (const std::exception& e) {
         MYLOG_ERROR("启动 Edge 模块时捕获异常: {}", e.what());
     }
     MYLOG_INFO("Edge 模块设备创建流程完成，正在启动所有 Edge 设备...");
-    ::my_edge::MyEdges::GetInstance().startAllEdges();
+    ::my_edge::MyEdgeManager::GetInstance().startAllEdges();
     MYLOG_INFO("所有 Edge 设备已启动");
 }
 

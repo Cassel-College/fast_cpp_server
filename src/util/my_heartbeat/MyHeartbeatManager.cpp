@@ -6,7 +6,7 @@
 #include <random>
 
 #include "MyLog.h"
-#include "MyEdges.h"
+#include "MyEdgeManager.h"
 #include "MqttService.hpp"
 
 
@@ -142,7 +142,7 @@ void HeartbeatManager::BuildHeartbeat() {
     hb["extra"] = config_.value("extra", nlohmann::json::object());
 
     if (true) {
-        heartbeat_data_["edge_summary"] = my_edge::MyEdges::GetInstance().GetHeartbeatInfo();
+        heartbeat_data_["edge_summary"] = my_edge::MyEdgeManager::GetInstance().GetHeartbeatInfo();
     }
     // finally update heartbeat_data_ with lock
     {
