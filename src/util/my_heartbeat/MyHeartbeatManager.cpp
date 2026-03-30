@@ -1,6 +1,5 @@
 #include "MyHeartbeatManager.h"
 #include <unistd.h>
-#include <iostream>
 #include <ctime>
 #include <mutex>
 #include <chrono>
@@ -8,15 +7,10 @@
 
 #include "MyLog.h"
 #include "MyEdges.h"
-#include "MyEdgeManager.h"
 #include "MqttService.hpp"
-#include "test.pb.h"
 
 
 namespace my_heartbeat {
-
-using namespace edge_manager;
-using namespace MyProto;
 
 HeartbeatManager& HeartbeatManager::GetInstance() {
     static HeartbeatManager inst;
@@ -149,9 +143,6 @@ void HeartbeatManager::BuildHeartbeat() {
 
     if (true) {
         heartbeat_data_["edge_summary"] = my_edge::MyEdges::GetInstance().GetHeartbeatInfo();
-    }
-    if (false) {
-        heartbeat_data_["edge_managed_devices"] = ::edge_manager::MyEdgeManager::GetInstance().ShowEdgesStatus();
     }
     // finally update heartbeat_data_ with lock
     {

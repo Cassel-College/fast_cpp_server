@@ -26,7 +26,6 @@ target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE
     my_doctor
     my_mqtt
     my_edge
-    my_edge_manager
     my_control
     my_device
     my_data

@@ -1,6 +1,5 @@
 #include "BaseApiController.hpp"
 #include "MyLog.h"
-#include "MyEdgeManager.h"
 #include "MyEdges.h"
 #include "EdgesController.hpp"
 #include "dto/demo/EdgeStatusDto.hpp"
@@ -31,19 +30,18 @@ EdgesController::createShared(
 MyAPIResponsePtr EdgesController::getEdgesStatus() {
     MYLOG_INFO("[API] 收到请求: GET /v1/edges/status");
 
-    auto status_list =
-        edge_manager::MyEdgeManager::GetInstance().ShowEdgesStatus();
+    auto status_map = ::my_edge::MyEdges::GetInstance().GetHeartbeatInfo();
 
     auto result =
         oatpp::Vector<oatpp::Object<my_api::dto::EdgeStatusDto>>::createShared();
 
-    for (const auto& item : status_list) {
+    for (const auto& item : status_map.items()) {
         auto dto = my_api::dto::EdgeStatusDto::createShared();
-        dto->name = item.value("name", "").c_str();
-        dto->ip = item.value("ip", "").c_str();
-        dto->online = item.value("online", false);
-        dto->biz_status = item.value("biz_status", "").c_str();
-        dto->thread_id = item.value("thread_id", "").c_str();
+        dto->name = item.key().c_str();
+        dto->ip = item.value().value("ip", "").c_str();
+        dto->online = item.value().value("online", false);
+        dto->biz_status = item.value().value("biz_status", "").c_str();
+        dto->thread_id = item.value().value("thread_id", "").c_str();
         result->push_back(dto);
     }
 
