@@ -78,15 +78,8 @@ install(DIRECTORY ${CMAKE_BINARY_DIR}/lib/
 install(DIRECTORY ${SWAGGER_RES_DIR} DESTINATION swagger-res)
 
 # 6.4 脚本 (使用 PROGRAMS 确保执行权限)
-install(PROGRAMS ${SCRIPT_DIRECTORIES}/start.sh            DESTINATION .)
 install(PROGRAMS ${SCRIPT_DIRECTORIES}/install.sh          DESTINATION .)
 install(PROGRAMS ${SCRIPT_DIRECTORIES}/uninstall.sh        DESTINATION .)
-install(PROGRAMS ${SCRIPT_DIRECTORIES}/start-user.sh       DESTINATION .)
-install(PROGRAMS ${SCRIPT_DIRECTORIES}/install-user.sh     DESTINATION .)
-install(PROGRAMS ${SCRIPT_DIRECTORIES}/uninstall-user.sh   DESTINATION .)
-install(PROGRAMS ${SCRIPT_DIRECTORIES}/start-system.sh     DESTINATION .)
-install(PROGRAMS ${SCRIPT_DIRECTORIES}/install-system.sh   DESTINATION .)
-install(PROGRAMS ${SCRIPT_DIRECTORIES}/uninstall-system.sh DESTINATION .)
 
 # 6.5 根据系统架构安装 MediaMTX
 if(CMAKE_SYSTEM_PROCESSOR MATCHES "x86_64")
