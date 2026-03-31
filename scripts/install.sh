@@ -190,7 +190,8 @@ setup_paths() {
   SYMLINK_PATH="/usr/local/bin/${PROGRAM_NAME}"          # 主程序软链接
   SYSTEMD_SERVICE_PATH="/etc/systemd/system/${SERVICE_NAME}"
   LOG_DIR="/var/log/${PROGRAM_NAME}"                     # 标准化日志目录
-
+  TEMP_DIR="/tmp/${PROGRAM_NAME}"                        # 临时文件目录
+  
   # --- 安装脚本日志 ---
   TS="$(date '+%Y%m%d_%H%M%S')"
   LOG_FILE="${LOG_DIR}/install_${TS}.log"
@@ -215,6 +216,7 @@ print_plan() {
   log_line info "SYMLINK_PATH:     ${SYMLINK_PATH}"
   log_line info "SYSTEMD SERVICE:  ${SYSTEMD_SERVICE_PATH}"
   log_line info "LOG_DIR:          ${LOG_DIR}"
+  log_line info "TEMP_DIR:         ${TEMP_DIR}"
   log_line info "=============================================="
 }
 
@@ -382,11 +384,13 @@ patch_config_ini() {
   local real_config_dir="${CONFIG_DIR}"
   local real_swagger_dir="${SHARE_DIR}/swagger-res/res"
   local real_logger_dir="${LOG_DIR}/"
+  local real_temp_dir="${TEMP_DIR}/"
 
   log_line info "  -> 替换 config.ini 中的路径占位符..."
   log_line info "     __CONFIG_DIR__      => ${real_config_dir}"
   log_line info "     __SWAGGER_RES_DIR__ => ${real_swagger_dir}"
   log_line info "     __LOGGER_DIR__      => ${real_logger_dir}"
+  log_line info "     __TEMP_DIR__        => ${real_temp_dir}"
 
   # 对主配置文件做替换 (首次安装时该文件刚拷贝过去，含占位符)
   if [ -f "${config_file}" ]; then
@@ -395,6 +399,7 @@ patch_config_ini() {
       -e 's|__CONFIG_DIR__|${real_config_dir}|g' \
       -e 's|__SWAGGER_RES_DIR__|${real_swagger_dir}|g' \
       -e 's|__LOGGER_DIR__|${real_logger_dir}|g' \
+      -e 's|__TEMP_DIR__|${real_temp_dir}|g' \
       ${config_file}"
     log_line info "  -> 已替换: ${config_file}"
   fi
@@ -405,6 +410,7 @@ patch_config_ini() {
       -e 's|__CONFIG_DIR__|${real_config_dir}|g' \
       -e 's|__SWAGGER_RES_DIR__|${real_swagger_dir}|g' \
       -e 's|__LOGGER_DIR__|${real_logger_dir}|g' \
+      -e 's|__TEMP_DIR__|${real_temp_dir}|g' \
       ${config_new}"
     log_line info "  -> 已替换: ${config_new}"
   fi
@@ -438,6 +444,31 @@ ensure_app_log_dir() {
 
   log_line ok "应用程序日志目录检查完成"
 }
+
+# Step 5.6: 确保应用程序临时目录存在
+ensure_app_temp_dir() {
+  log_line info "[Step 5.6] 确保应用程序临时目录存在..."
+
+  local config_file="${CONFIG_DIR}/config.ini"
+  local app_temp_dir=""
+
+  # 从 config.ini 中提取 temp_dir 的值
+  if [ -f "${config_file}" ]; then
+    # 匹配 'temp_dir=...' (非注释行, 非 default_ 前缀)
+    app_temp_dir=$(grep -E '^temp_dir=' "${config_file}" | tail -1 | cut -d'=' -f2- | xargs)
+  fi
+
+  if [ -n "${app_temp_dir}" ]; then
+    log_line info "  -> 从 config.ini 读取到 temp_dir: ${app_temp_dir}"
+    ensure_writable_dir "${app_temp_dir}"
+  else
+    log_line warn "  -> 未在 config.ini 中找到 temp_dir，使用默认: ${TEMP_DIR}"
+    ensure_writable_dir "${TEMP_DIR}"
+  fi
+
+  log_line ok "应用程序临时目录检查完成"
+}
+
 
 # Step 6: 安装资源文件 (swagger-res 等)
 install_resources() {
@@ -589,6 +620,7 @@ print_summary() {
   log_line info "库文件:           ${LIB_DIR}/"
   log_line info "配置文件:         ${CONFIG_DIR}/"
   log_line info "日志目录:         ${LOG_DIR}/"
+  log_line info "临时目录:         ${TEMP_DIR}/"
   log_line info "systemd service:  ${SYSTEMD_SERVICE_PATH}"
   log_line info "----------------------------------------------"
   log_line info "管理命令:"
@@ -618,6 +650,7 @@ main() {
   install_libraries          # Step 4
   install_configs            # Step 5
   ensure_app_log_dir         # Step 5.5
+  ensure_app_temp_dir        # Step 5.6
   install_resources          # Step 6
   create_symlinks            # Step 7
   install_systemd_service    # Step 8
