@@ -30,6 +30,7 @@ target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE
     my_device
     my_data
     my_db
+    my_cache
     my_script
     my_soft_healthy
     my_system_healthy
