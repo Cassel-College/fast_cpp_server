@@ -20,23 +20,24 @@ std::mutex MyCacheProvider::mutex_;
 // MyCacheProvider 接口实现
 // ============================================================================
 
-CacheResult<void> MyCacheProvider::Init(const std::string& root_path) {
-    MYLOG_INFO("[MyCacheProvider] Init 被调用，路径：{}", root_path);
+CacheResult<void> MyCacheProvider::Init(const std::string& config_json) {
+    MYLOG_INFO("[MyCacheProvider] Init 被调用，配置 JSON：{}", config_json);
 
     std::lock_guard lock(mutex_);
 
     // 如果已经初始化过且实例有效，直接返回成功
-    if (initialized_flag_.load() && instance_ && instance_->Status()) {
+    if (initialized_flag_.load() && instance_ && instance_->Status() == CacheStatus::Running) {
         MYLOG_WARN("[MyCacheProvider] 已经初始化过，忽略重复调用");
         return CacheResult<void>::Success();
     }
 
-    // 创建新实例
-    instance_ = std::make_unique<MyCache>(root_path);
-    if (!instance_->Status()) {
-        MYLOG_ERROR("[MyCacheProvider] MyCache 初始化失败，路径：{}", root_path);
+    // 创建新实例并调用 Init
+    instance_ = std::make_unique<MyCache>();
+    auto result = instance_->Init(config_json);
+    if (!result.Ok()) {
+        MYLOG_ERROR("[MyCacheProvider] MyCache 初始化失败");
         instance_.reset();
-        return CacheResult<void>::Fail(CacheErrorCode::CreateDirFailed);
+        return result;
     }
 
     initialized_flag_.store(true);
@@ -46,7 +47,7 @@ CacheResult<void> MyCacheProvider::Init(const std::string& root_path) {
 
 CacheResult<MyCache*> MyCacheProvider::Get() {
     std::lock_guard lock(mutex_);
-    if (!initialized_flag_.load() || !instance_ || !instance_->Status()) {
+    if (!initialized_flag_.load() || !instance_ || instance_->Status() != CacheStatus::Running) {
         MYLOG_WARN("[MyCacheProvider] Get() 调用时模块未初始化");
         return CacheResult<MyCache*>::Fail(CacheErrorCode::NotInitialized, nullptr);
     }

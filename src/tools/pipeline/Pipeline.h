@@ -53,6 +53,7 @@ private:
     void LaunchFlyControl(const nlohmann::json& args);
     void LaunchPodManager(const nlohmann::json& args);
     void LaunchMediamtxMonitor(const nlohmann::json& args);
+    void LaunchFileCache(const nlohmann::json& args);
     
     nlohmann::json config_data_;
     std::atomic<bool> is_running_;

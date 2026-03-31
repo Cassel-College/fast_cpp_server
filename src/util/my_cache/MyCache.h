@@ -6,7 +6,9 @@
  *
  * 功能概述：
  *   - 管理本地文件系统中的一个缓存目录
+ *   - 默认构造，通过 Init(JSON) 传入配置后启动
  *   - 后台线程定期扫描目录，维护内存文件索引，使 Exists 查询达到 O(1) 复杂度
+ *   - 支持配置最大文件大小、最长保留时间
  *   - 所有操作均防止路径穿越攻击
  *   - MyCacheProvider 提供线程安全的单例包装
  *
@@ -23,7 +25,7 @@
 #include <shared_mutex>
 #include <string>
 #include <thread>
-#include <unordered_set>
+#include <unordered_map>
 #include <vector>
 
 namespace my_cache {
@@ -39,14 +41,21 @@ namespace my_cache {
  *   1. 管理 root_path 下的文件存取
  *   2. 后台线程每 5 秒扫描一次目录，维护内存文件索引
  *   3. 所有公开接口均做路径穿越校验
+ *   4. 可根据配置进行文件大小限制和过期清理
+ *
+ * 使用流程：
+ *   MyCache cache;
+ *   auto r = cache.Init(R"({"root_path":"/data/cache","max_file_size":10485760})");
  */
 class MyCache {
 public:
     /**
-     * @brief 构造函数
-     * @param root_path 缓存根目录路径，不存在时自动创建
+     * @brief 默认构造函数，不执行任何初始化
+     *
+     * 构造后 Status() 返回 CacheStatus::NotInitialized，
+     * 必须调用 Init() 后才能使用其他接口。
      */
-    explicit MyCache(const std::string& root_path);
+    MyCache();
 
     /// 析构函数，停止后台扫描线程
     ~MyCache();
@@ -57,19 +66,33 @@ public:
     MyCache(MyCache&&) = delete;
     MyCache& operator=(MyCache&&) = delete;
 
+    // ---- 初始化 ----
+
+    /**
+     * @brief 初始化缓存模块
+     *
+     * @param config_json JSON 格式的配置字符串，字段说明：
+     *   - root_path (string, 必填): 缓存根目录路径，不存在时自动创建
+     *   - max_file_size (uint64, 可选): 单个文件最大大小（字节），0 或缺省表示不限制
+     *   - max_retention_seconds (int64, 可选): 文件最长保留时间（秒），0 或缺省表示不限制，-1 表示永久有效
+     *
+     * @return CacheResult<void> 初始化结果
+     */
+    CacheResult<void> Init(const std::string& config_json);
+
     // ---- 公共接口 ----
 
     /**
-     * @brief 查询模块是否初始化成功
-     * @return true 表示 root_path 有效且后台线程运行中
+     * @brief 查询模块运行状态
+     * @return CacheStatus 枚举值
      */
-    bool Status() const;
+    CacheStatus Status() const;
 
     /**
      * @brief 保存文件到缓存目录
      * @param name 文件相对路径名（如 "a/b.txt"），支持子目录
      * @param data 文件二进制内容
-     * @return CacheResult<void>
+     * @return CacheResult<void>，若超出 max_file_size 返回 FileTooLarge
      */
     CacheResult<void> SaveFile(const std::string& name,
                                const std::vector<uint8_t>& data);
@@ -100,6 +123,17 @@ public:
      */
     std::string GetRootPath() const;
 
+    /**
+     * @brief 获取当前配置（只读）
+     */
+    const CacheConfig& GetConfig() const;
+
+    /**
+     * @brief 获取缓存中所有文件的元信息列表
+     * @return CacheResult<std::vector<FileInfo>> 成功时 value 为文件元信息列表
+     */
+    CacheResult<std::vector<FileInfo>> GetAllFileList();
+
 private:
     // ---- 路径安全验证 ----
 
@@ -117,16 +151,20 @@ private:
     /// 后台线程入口函数
     void ScanThreadFunc();
 
-    /// 执行一次目录扫描，更新内存索引
+    /// 执行一次目录扫描，更新内存索引（含文件元信息）
     void RefreshIndex();
 
+    /// 清理过期文件（仅当 max_retention_seconds > 0 时生效）
+    void CleanExpiredFiles();
+
 private:
+    CacheConfig config_;                       // 配置信息
     std::filesystem::path root_path_;          // 缓存根目录（规范化后的绝对路径）
-    std::atomic<bool> initialized_{false};     // 初始化是否成功
+    std::atomic<CacheStatus> status_{CacheStatus::NotInitialized}; // 模块状态
     std::atomic<bool> running_{false};         // 后台线程运行标记
 
     mutable std::shared_mutex index_mutex_;    // 保护文件索引的读写锁
-    std::unordered_set<std::string> file_index_; // 内存文件索引（相对路径集合）
+    std::unordered_map<std::string, FileInfo> file_index_; // 内存文件索引（相对路径→元信息）
 
     std::thread scan_thread_;                  // 后台扫描线程
     std::mutex cv_mutex_;                      // 条件变量互斥锁

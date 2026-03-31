@@ -314,6 +314,15 @@
             },
             "8": {
                 "model_args": {
+                    "root_path": "",
+                    "max_file_size": 2000,
+                    "max_retention_seconds": -1
+                },
+                "model_name": "file_cache",
+                "enable": true
+            },
+            "9": {
+                "model_args": {
                     "port": 9999
                 },
                 "model_name": "rest_api",

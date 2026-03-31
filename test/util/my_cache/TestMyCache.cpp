@@ -3,12 +3,16 @@
  * @brief MyCache 模块单元测试
  *
  * 测试覆盖：
- *   - 基础初始化与状态查询
+ *   - 基础初始化与状态查询（含 CacheStatus 枚举）
+ *   - JSON 配置解析（root_path / max_file_size / max_retention_seconds）
  *   - 文件保存、查询、获取路径、删除的完整生命周期
+ *   - GetAllFileList 文件列表与元信息
  *   - 路径穿越攻击防护
  *   - 空文件名等非法输入
  *   - 子目录文件操作
  *   - 后台线程索引同步
+ *   - 文件大小限制
+ *   - 过期文件清理
  *   - MyCacheProvider 单例包装器
  *   - 错误码转换
  *   - 边界条件：空数据、大文件名等
@@ -21,11 +25,14 @@
 #include <chrono>
 #include <vector>
 #include <string>
+#include <algorithm>
 
 #include "MyCache.h"
 #include "MyCacheProvider.h"
+#include <nlohmann/json.hpp>
 
 using namespace my_cache;
+using json = nlohmann::json;
 
 // ============================================================================
 // 测试辅助：为每个测试创建临时目录，测试结束后清理
@@ -50,21 +57,40 @@ std::vector<uint8_t> ToBytes(const std::string& s) {
     return {s.begin(), s.end()};
 }
 
+/// 构造 JSON 配置字符串
+std::string MakeConfig(const std::string& dir,
+                       uint64_t max_file_size = 0,
+                       int64_t max_retention_seconds = 0) {
+    json j;
+    j["root_path"] = dir;
+    if (max_file_size > 0) j["max_file_size"] = max_file_size;
+    if (max_retention_seconds != 0) j["max_retention_seconds"] = max_retention_seconds;
+    return j.dump();
+}
+
 }  // namespace
 
 // ============================================================================
 // 基础功能测试
 // ============================================================================
 
-/// 测试：构造函数自动创建不存在的目录，Status() 返回 true
-TEST(MyCache_Basic, InitCreatesDirectoryAndStatusOk) {
+/// 测试：默认构造后 Status 为 NotInitialized
+TEST(MyCache_Basic, DefaultConstructorNotInitialized) {
+    MyCache cache;
+    EXPECT_EQ(cache.Status(), CacheStatus::NotInitialized);
+}
+
+/// 测试：Init 自动创建不存在的目录，Status() 返回 Running
+TEST(MyCache_Basic, InitCreatesDirectoryAndStatusRunning) {
     auto dir = MakeTestDir("init");
     {
-        MyCache cache(dir);
+        MyCache cache;
+        auto r = cache.Init(MakeConfig(dir));
+        EXPECT_TRUE(r.Ok());
         // 目录应该被创建
         EXPECT_TRUE(std::filesystem::exists(dir));
-        // Status 应该返回 true
-        EXPECT_TRUE(cache.Status());
+        // Status 应该返回 Running
+        EXPECT_EQ(cache.Status(), CacheStatus::Running);
     }
     CleanupDir(dir);
 }
@@ -74,9 +100,10 @@ TEST(MyCache_Basic, InitWithExistingDirectory) {
     auto dir = MakeTestDir("existing");
     std::filesystem::create_directories(dir);
     {
-        MyCache cache(dir);
-        EXPECT_TRUE(cache.Status());
-        EXPECT_TRUE(std::filesystem::exists(dir));
+        MyCache cache;
+        auto r = cache.Init(MakeConfig(dir));
+        EXPECT_TRUE(r.Ok());
+        EXPECT_EQ(cache.Status(), CacheStatus::Running);
     }
     CleanupDir(dir);
 }
@@ -85,12 +112,60 @@ TEST(MyCache_Basic, InitWithExistingDirectory) {
 TEST(MyCache_Basic, GetRootPathReturnsCanonicalPath) {
     auto dir = MakeTestDir("rootpath");
     {
-        MyCache cache(dir);
-        EXPECT_TRUE(cache.Status());
-        // 规范化路径应该是绝对路径
+        MyCache cache;
+        cache.Init(MakeConfig(dir));
+        EXPECT_EQ(cache.Status(), CacheStatus::Running);
         auto root = cache.GetRootPath();
         EXPECT_FALSE(root.empty());
         EXPECT_TRUE(std::filesystem::path(root).is_absolute());
+    }
+    CleanupDir(dir);
+}
+
+/// 测试：无效 JSON 返回 InvalidArgument，Status 为 Error
+TEST(MyCache_Basic, InitWithInvalidJsonReturnsError) {
+    MyCache cache;
+    auto r = cache.Init("not valid json");
+    EXPECT_FALSE(r.Ok());
+    EXPECT_EQ(r.code, CacheErrorCode::InvalidArgument);
+    EXPECT_EQ(cache.Status(), CacheStatus::Error);
+}
+
+/// 测试：JSON 缺少 root_path 返回 InvalidArgument
+TEST(MyCache_Basic, InitWithoutRootPathReturnsError) {
+    MyCache cache;
+    auto r = cache.Init(R"({"max_file_size": 100})");
+    EXPECT_FALSE(r.Ok());
+    EXPECT_EQ(r.code, CacheErrorCode::InvalidArgument);
+    EXPECT_EQ(cache.Status(), CacheStatus::Error);
+}
+
+/// 测试：GetConfig 返回解析后的配置
+TEST(MyCache_Basic, GetConfigReturnsCorrectValues) {
+    auto dir = MakeTestDir("getconfig");
+    {
+        MyCache cache;
+        auto r = cache.Init(MakeConfig(dir, 1024, 3600));
+        ASSERT_TRUE(r.Ok());
+        const auto& cfg = cache.GetConfig();
+        EXPECT_EQ(cfg.root_path, dir);
+        EXPECT_EQ(cfg.max_file_size, 1024u);
+        EXPECT_EQ(cfg.max_retention_seconds, 3600);
+    }
+    CleanupDir(dir);
+}
+
+/// 测试：重复 Init 被忽略
+TEST(MyCache_Basic, DuplicateInitIgnored) {
+    auto dir = MakeTestDir("dup_init");
+    {
+        MyCache cache;
+        auto r1 = cache.Init(MakeConfig(dir));
+        EXPECT_TRUE(r1.Ok());
+        // 再次 Init 应成功但被忽略
+        auto r2 = cache.Init(MakeConfig(dir));
+        EXPECT_TRUE(r2.Ok());
+        EXPECT_EQ(cache.Status(), CacheStatus::Running);
     }
     CleanupDir(dir);
 }
@@ -103,8 +178,9 @@ TEST(MyCache_Basic, GetRootPathReturnsCanonicalPath) {
 TEST(MyCache_SaveFile, SaveCreatesFileOnDisk) {
     auto dir = MakeTestDir("save");
     {
-        MyCache cache(dir);
-        ASSERT_TRUE(cache.Status());
+        MyCache cache;
+        cache.Init(MakeConfig(dir));
+        ASSERT_EQ(cache.Status(), CacheStatus::Running);
 
         auto data = ToBytes("hello world");
         auto result = cache.SaveFile("test.txt", data);
@@ -127,8 +203,9 @@ TEST(MyCache_SaveFile, SaveCreatesFileOnDisk) {
 TEST(MyCache_SaveFile, SaveEmptyData) {
     auto dir = MakeTestDir("save_empty");
     {
-        MyCache cache(dir);
-        ASSERT_TRUE(cache.Status());
+        MyCache cache;
+        cache.Init(MakeConfig(dir));
+        ASSERT_EQ(cache.Status(), CacheStatus::Running);
 
         std::vector<uint8_t> empty_data;
         auto result = cache.SaveFile("empty.bin", empty_data);
@@ -145,8 +222,9 @@ TEST(MyCache_SaveFile, SaveEmptyData) {
 TEST(MyCache_SaveFile, SaveOverwritesExistingFile) {
     auto dir = MakeTestDir("overwrite");
     {
-        MyCache cache(dir);
-        ASSERT_TRUE(cache.Status());
+        MyCache cache;
+        cache.Init(MakeConfig(dir));
+        ASSERT_EQ(cache.Status(), CacheStatus::Running);
 
         auto result1 = cache.SaveFile("f.dat", ToBytes("version1"));
         EXPECT_TRUE(result1.Ok());
@@ -168,14 +246,78 @@ TEST(MyCache_SaveFile, SaveOverwritesExistingFile) {
 TEST(MyCache_SaveFile, SaveInSubdirectory) {
     auto dir = MakeTestDir("subdir_save");
     {
-        MyCache cache(dir);
-        ASSERT_TRUE(cache.Status());
+        MyCache cache;
+        cache.Init(MakeConfig(dir));
+        ASSERT_EQ(cache.Status(), CacheStatus::Running);
 
         auto result = cache.SaveFile("sub/dir/file.txt", ToBytes("nested"));
         EXPECT_TRUE(result.Ok());
 
         auto full = std::filesystem::path(dir) / "sub" / "dir" / "file.txt";
         EXPECT_TRUE(std::filesystem::exists(full));
+    }
+    CleanupDir(dir);
+}
+
+/// 测试：超过 max_file_size 返回 FileTooLarge
+TEST(MyCache_SaveFile, FileTooLargeRejected) {
+    auto dir = MakeTestDir("toolarge");
+    {
+        MyCache cache;
+        cache.Init(MakeConfig(dir, 10));  // max_file_size = 10 bytes
+        ASSERT_EQ(cache.Status(), CacheStatus::Running);
+
+        // 小于限制 → 成功
+        auto r1 = cache.SaveFile("small.txt", ToBytes("12345"));
+        EXPECT_TRUE(r1.Ok());
+
+        // 恰好等于限制 → 成功
+        auto r2 = cache.SaveFile("exact.txt", ToBytes("1234567890"));
+        EXPECT_TRUE(r2.Ok());
+
+        // 超过限制 → 失败
+        auto r3 = cache.SaveFile("big.txt", ToBytes("12345678901"));
+        EXPECT_FALSE(r3.Ok());
+        EXPECT_EQ(r3.code, CacheErrorCode::FileTooLarge);
+
+        // 确保文件没有被创建
+        EXPECT_FALSE(cache.Exists("big.txt").value);
+    }
+    CleanupDir(dir);
+}
+
+/// 测试：max_file_size = 0 不限制
+TEST(MyCache_SaveFile, NoSizeLimitWhenZero) {
+    auto dir = MakeTestDir("nosizelimit");
+    {
+        MyCache cache;
+        cache.Init(MakeConfig(dir, 0));  // 不限制
+        ASSERT_EQ(cache.Status(), CacheStatus::Running);
+
+        std::vector<uint8_t> big_data(100000, 0x42);
+        auto r = cache.SaveFile("big.bin", big_data);
+        EXPECT_TRUE(r.Ok());
+    }
+    CleanupDir(dir);
+}
+
+/// 测试：max_retention_seconds = -1 表示文件永久有效
+TEST(MyCache_SaveFile, NegativeRetentionMeansPermanent) {
+    auto dir = MakeTestDir("perm_retention");
+    {
+        MyCache cache;
+        cache.Init(MakeConfig(dir, 0, -1));
+        ASSERT_EQ(cache.Status(), CacheStatus::Running);
+        EXPECT_EQ(cache.GetConfig().max_retention_seconds, -1);
+
+        // 保存文件
+        auto r = cache.SaveFile("permanent.txt", ToBytes("永久保留"));
+        EXPECT_TRUE(r.Ok());
+
+        // 文件应该存在且不会被清理
+        auto exists = cache.Exists("permanent.txt");
+        EXPECT_TRUE(exists.Ok());
+        EXPECT_TRUE(exists.value);
     }
     CleanupDir(dir);
 }
@@ -188,8 +330,9 @@ TEST(MyCache_SaveFile, SaveInSubdirectory) {
 TEST(MyCache_Exists, ExistsAfterSave) {
     auto dir = MakeTestDir("exists_save");
     {
-        MyCache cache(dir);
-        ASSERT_TRUE(cache.Status());
+        MyCache cache;
+        cache.Init(MakeConfig(dir));
+        ASSERT_EQ(cache.Status(), CacheStatus::Running);
 
         // 保存前不存在
         auto r1 = cache.Exists("check.txt");
@@ -209,8 +352,9 @@ TEST(MyCache_Exists, ExistsAfterSave) {
 TEST(MyCache_Exists, ExistsAfterDelete) {
     auto dir = MakeTestDir("exists_delete");
     {
-        MyCache cache(dir);
-        ASSERT_TRUE(cache.Status());
+        MyCache cache;
+        cache.Init(MakeConfig(dir));
+        ASSERT_EQ(cache.Status(), CacheStatus::Running);
 
         cache.SaveFile("del.txt", ToBytes("data"));
         EXPECT_TRUE(cache.Exists("del.txt").value);
@@ -229,8 +373,9 @@ TEST(MyCache_Exists, ExistsAfterDelete) {
 TEST(MyCache_DeleteFile, DeleteRemovesFile) {
     auto dir = MakeTestDir("delete");
     {
-        MyCache cache(dir);
-        ASSERT_TRUE(cache.Status());
+        MyCache cache;
+        cache.Init(MakeConfig(dir));
+        ASSERT_EQ(cache.Status(), CacheStatus::Running);
 
         cache.SaveFile("to_delete.txt", ToBytes("bye"));
         auto full = std::filesystem::path(dir) / "to_delete.txt";
@@ -247,8 +392,9 @@ TEST(MyCache_DeleteFile, DeleteRemovesFile) {
 TEST(MyCache_DeleteFile, DeleteNonExistentReturnsFileNotFound) {
     auto dir = MakeTestDir("delete_nf");
     {
-        MyCache cache(dir);
-        ASSERT_TRUE(cache.Status());
+        MyCache cache;
+        cache.Init(MakeConfig(dir));
+        ASSERT_EQ(cache.Status(), CacheStatus::Running);
 
         auto result = cache.DeleteFile("no_such_file.txt");
         EXPECT_FALSE(result.Ok());
@@ -265,8 +411,9 @@ TEST(MyCache_DeleteFile, DeleteNonExistentReturnsFileNotFound) {
 TEST(MyCache_GetFullPath, ReturnsCorrectAbsolutePath) {
     auto dir = MakeTestDir("fullpath");
     {
-        MyCache cache(dir);
-        ASSERT_TRUE(cache.Status());
+        MyCache cache;
+        cache.Init(MakeConfig(dir));
+        ASSERT_EQ(cache.Status(), CacheStatus::Running);
 
         auto result = cache.GetFullPath("some/file.txt");
         EXPECT_TRUE(result.Ok());
@@ -282,6 +429,76 @@ TEST(MyCache_GetFullPath, ReturnsCorrectAbsolutePath) {
 }
 
 // ============================================================================
+// GetAllFileList 测试
+// ============================================================================
+
+/// 测试：空目录返回空列表
+TEST(MyCache_GetAllFileList, EmptyDirectoryReturnsEmptyList) {
+    auto dir = MakeTestDir("list_empty");
+    {
+        MyCache cache;
+        cache.Init(MakeConfig(dir));
+        ASSERT_EQ(cache.Status(), CacheStatus::Running);
+
+        auto r = cache.GetAllFileList();
+        EXPECT_TRUE(r.Ok());
+        EXPECT_TRUE(r.value.empty());
+    }
+    CleanupDir(dir);
+}
+
+/// 测试：保存文件后 GetAllFileList 返回正确的元信息
+TEST(MyCache_GetAllFileList, ReturnsCorrectFileInfo) {
+    auto dir = MakeTestDir("list_info");
+    {
+        MyCache cache;
+        cache.Init(MakeConfig(dir));
+        ASSERT_EQ(cache.Status(), CacheStatus::Running);
+
+        cache.SaveFile("hello.txt", ToBytes("hello world!"));
+        cache.SaveFile("data.bin", ToBytes("binary data"));
+        cache.SaveFile("sub/photo.jpg", ToBytes("fake jpg"));
+
+        auto r = cache.GetAllFileList();
+        EXPECT_TRUE(r.Ok());
+        EXPECT_EQ(r.value.size(), 3u);
+
+        // 检查每个文件都在列表中
+        auto find_by_name = [&](const std::string& name) -> const FileInfo* {
+            for (const auto& fi : r.value) {
+                if (fi.name == name) return &fi;
+            }
+            return nullptr;
+        };
+
+        auto* f1 = find_by_name("hello.txt");
+        ASSERT_NE(f1, nullptr);
+        EXPECT_EQ(f1->size, 12u);
+        EXPECT_EQ(f1->type, "txt");
+        EXPECT_FALSE(f1->modified_at.empty());
+
+        auto* f2 = find_by_name("data.bin");
+        ASSERT_NE(f2, nullptr);
+        EXPECT_EQ(f2->size, 11u);
+        EXPECT_EQ(f2->type, "bin");
+
+        auto* f3 = find_by_name("sub/photo.jpg");
+        ASSERT_NE(f3, nullptr);
+        EXPECT_EQ(f3->size, 8u);
+        EXPECT_EQ(f3->type, "jpg");
+    }
+    CleanupDir(dir);
+}
+
+/// 测试：未初始化时 GetAllFileList 返回 NotInitialized
+TEST(MyCache_GetAllFileList, NotInitializedReturnsError) {
+    MyCache cache;
+    auto r = cache.GetAllFileList();
+    EXPECT_FALSE(r.Ok());
+    EXPECT_EQ(r.code, CacheErrorCode::NotInitialized);
+}
+
+// ============================================================================
 // 路径穿越攻击防护测试
 // ============================================================================
 
@@ -289,8 +506,9 @@ TEST(MyCache_GetFullPath, ReturnsCorrectAbsolutePath) {
 TEST(MyCache_Security, PathTraversalWithDotDot) {
     auto dir = MakeTestDir("traversal1");
     {
-        MyCache cache(dir);
-        ASSERT_TRUE(cache.Status());
+        MyCache cache;
+        cache.Init(MakeConfig(dir));
+        ASSERT_EQ(cache.Status(), CacheStatus::Running);
 
         // 尝试路径穿越
         auto r1 = cache.SaveFile("../etc/passwd", ToBytes("hack"));
@@ -316,15 +534,12 @@ TEST(MyCache_Security, PathTraversalWithDotDot) {
 TEST(MyCache_Security, PathTraversalWithAbsolutePath) {
     auto dir = MakeTestDir("traversal2");
     {
-        MyCache cache(dir);
-        ASSERT_TRUE(cache.Status());
+        MyCache cache;
+        cache.Init(MakeConfig(dir));
+        ASSERT_EQ(cache.Status(), CacheStatus::Running);
 
-        // 绝对路径拼接后不在 root_path 范围内
         auto r = cache.SaveFile("/etc/passwd", ToBytes("hack"));
-        // 这取决于实现：/etc/passwd 拼接到 root_path 后
-        // weakly_canonical 可能会解析为 root_path/etc/passwd
-        // 只要结果在 root_path 内就应该是安全的
-        // 但 "/etc/passwd" 作为名字也可能被 path operator/ 处理
+        // 取决于实现，只要不写到 root_path 外面就安全
     }
     CleanupDir(dir);
 }
@@ -333,8 +548,9 @@ TEST(MyCache_Security, PathTraversalWithAbsolutePath) {
 TEST(MyCache_Security, PathTraversalHidden) {
     auto dir = MakeTestDir("traversal3");
     {
-        MyCache cache(dir);
-        ASSERT_TRUE(cache.Status());
+        MyCache cache;
+        cache.Init(MakeConfig(dir));
+        ASSERT_EQ(cache.Status(), CacheStatus::Running);
 
         auto r = cache.SaveFile("foo/../../etc/passwd", ToBytes("hack"));
         EXPECT_FALSE(r.Ok());
@@ -347,8 +563,9 @@ TEST(MyCache_Security, PathTraversalHidden) {
 TEST(MyCache_Security, PathTraversalPureDotDot) {
     auto dir = MakeTestDir("traversal4");
     {
-        MyCache cache(dir);
-        ASSERT_TRUE(cache.Status());
+        MyCache cache;
+        cache.Init(MakeConfig(dir));
+        ASSERT_EQ(cache.Status(), CacheStatus::Running);
 
         auto r = cache.SaveFile("..", ToBytes("hack"));
         EXPECT_FALSE(r.Ok());
@@ -367,8 +584,9 @@ TEST(MyCache_Security, PathTraversalPureDotDot) {
 TEST(MyCache_Invalid, EmptyName) {
     auto dir = MakeTestDir("invalid_empty");
     {
-        MyCache cache(dir);
-        ASSERT_TRUE(cache.Status());
+        MyCache cache;
+        cache.Init(MakeConfig(dir));
+        ASSERT_EQ(cache.Status(), CacheStatus::Running);
 
         auto r1 = cache.SaveFile("", ToBytes("data"));
         EXPECT_EQ(r1.code, CacheErrorCode::InvalidArgument);
@@ -393,8 +611,9 @@ TEST(MyCache_Invalid, EmptyName) {
 TEST(MyCache_BackgroundScan, DetectsExternallyCreatedFile) {
     auto dir = MakeTestDir("bg_scan");
     {
-        MyCache cache(dir);
-        ASSERT_TRUE(cache.Status());
+        MyCache cache;
+        cache.Init(MakeConfig(dir));
+        ASSERT_EQ(cache.Status(), CacheStatus::Running);
 
         // 初始状态文件不存在
         EXPECT_FALSE(cache.Exists("external.txt").value);
@@ -420,8 +639,9 @@ TEST(MyCache_BackgroundScan, DetectsExternallyCreatedFile) {
 TEST(MyCache_BackgroundScan, DetectsExternallyDeletedFile) {
     auto dir = MakeTestDir("bg_scan_del");
     {
-        MyCache cache(dir);
-        ASSERT_TRUE(cache.Status());
+        MyCache cache;
+        cache.Init(MakeConfig(dir));
+        ASSERT_EQ(cache.Status(), CacheStatus::Running);
 
         // 通过 MyCache 保存文件
         cache.SaveFile("will_vanish.txt", ToBytes("temp"));
@@ -453,13 +673,13 @@ TEST(MyCacheProvider_Basic, InitAndGet) {
         // 先销毁可能残留的实例
         MyCacheProvider::Destroy();
 
-        auto init_result = MyCacheProvider::Init(dir);
+        auto init_result = MyCacheProvider::Init(MakeConfig(dir));
         EXPECT_TRUE(init_result.Ok());
 
         auto get_result = MyCacheProvider::Get();
         EXPECT_TRUE(get_result.Ok());
         EXPECT_NE(get_result.value, nullptr);
-        EXPECT_TRUE(get_result.value->Status());
+        EXPECT_EQ(get_result.value->Status(), CacheStatus::Running);
 
         // 通过 Provider 获取的实例正常工作
         get_result.value->SaveFile("provider_test.txt", ToBytes("via provider"));
@@ -484,7 +704,7 @@ TEST(MyCacheProvider_Basic, GetAfterDestroyReturnsError) {
     auto dir = MakeTestDir("provider_destroy");
     {
         MyCacheProvider::Destroy();
-        MyCacheProvider::Init(dir);
+        MyCacheProvider::Init(MakeConfig(dir));
         auto r1 = MyCacheProvider::Get();
         EXPECT_TRUE(r1.Ok());
 
@@ -498,7 +718,7 @@ TEST(MyCacheProvider_Basic, GetAfterDestroyReturnsError) {
 }
 
 // ============================================================================
-// CacheErrorCode 工具函数测试
+// CacheErrorCode / CacheStatus 工具函数测试
 // ============================================================================
 
 /// 测试：错误码转字符串
@@ -511,6 +731,14 @@ TEST(MyCache_ErrorCode, ToStringCoversAllCodes) {
     EXPECT_STREQ(CacheErrorCodeToString(CacheErrorCode::IoError), "IoError");
     EXPECT_STREQ(CacheErrorCodeToString(CacheErrorCode::InvalidArgument), "InvalidArgument");
     EXPECT_STREQ(CacheErrorCodeToString(CacheErrorCode::CreateDirFailed), "CreateDirFailed");
+    EXPECT_STREQ(CacheErrorCodeToString(CacheErrorCode::FileTooLarge), "FileTooLarge");
+}
+
+/// 测试：状态码转字符串
+TEST(MyCache_CacheStatus, StatusToString) {
+    EXPECT_STREQ(CacheStatusToString(CacheStatus::NotInitialized), "NotInitialized");
+    EXPECT_STREQ(CacheStatusToString(CacheStatus::Running), "Running");
+    EXPECT_STREQ(CacheStatusToString(CacheStatus::Error), "Error");
 }
 
 // ============================================================================
@@ -553,8 +781,9 @@ TEST(MyCache_CacheResult, BoolFailWithDefault) {
 TEST(MyCache_Subdirectory, DeepNestedOperations) {
     auto dir = MakeTestDir("deep");
     {
-        MyCache cache(dir);
-        ASSERT_TRUE(cache.Status());
+        MyCache cache;
+        cache.Init(MakeConfig(dir));
+        ASSERT_EQ(cache.Status(), CacheStatus::Running);
 
         std::string deep_name = "a/b/c/d/e/file.dat";
         auto data = ToBytes("deep nested data");
@@ -588,8 +817,9 @@ TEST(MyCache_Subdirectory, DeepNestedOperations) {
 TEST(MyCache_MultiFile, BatchSaveAndQuery) {
     auto dir = MakeTestDir("batch");
     {
-        MyCache cache(dir);
-        ASSERT_TRUE(cache.Status());
+        MyCache cache;
+        cache.Init(MakeConfig(dir));
+        ASSERT_EQ(cache.Status(), CacheStatus::Running);
 
         constexpr int kFileCount = 50;
         for (int i = 0; i < kFileCount; ++i) {
@@ -626,8 +856,9 @@ TEST(MyCache_InitWithFiles, IndexBuiltOnInit) {
     }
 
     {
-        MyCache cache(dir);
-        ASSERT_TRUE(cache.Status());
+        MyCache cache;
+        cache.Init(MakeConfig(dir));
+        ASSERT_EQ(cache.Status(), CacheStatus::Running);
 
         // 构造时首次扫描应该已经发现这些文件
         auto r1 = cache.Exists("pre1.txt");
@@ -637,6 +868,11 @@ TEST(MyCache_InitWithFiles, IndexBuiltOnInit) {
         auto r2 = cache.Exists("sub/pre2.txt");
         EXPECT_TRUE(r2.Ok());
         EXPECT_TRUE(r2.value);
+
+        // GetAllFileList 也应该包含这些文件
+        auto list = cache.GetAllFileList();
+        EXPECT_TRUE(list.Ok());
+        EXPECT_EQ(list.value.size(), 2u);
     }
     CleanupDir(dir);
 }

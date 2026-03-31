@@ -5,15 +5,74 @@
  * @brief my_cache 模块公共类型定义
  *
  * 包含：
+ *   - CacheStatus 模块状态枚举
+ *   - CacheConfig 配置结构体（由 Init 的 JSON 参数解析得到）
+ *   - FileInfo 文件元信息结构体
  *   - CacheErrorCode 错误码枚举
  *   - CacheErrorCodeToString 错误码转字符串
  *   - CacheResult<T> 通用返回值包装类
  */
 
+#include <cstdint>
 #include <string>
 #include <utility>
+#include <vector>
 
 namespace my_cache {
+
+// ============================================================================
+// 模块状态枚举
+// ============================================================================
+
+/**
+ * @brief 缓存模块运行状态
+ */
+enum class CacheStatus {
+    NotInitialized = 0,  // 尚未初始化（构造后默认状态）
+    Running,             // 正常运行中
+    Error,               // 初始化失败
+};
+
+/**
+ * @brief 将状态码转为可读字符串
+ */
+const char* CacheStatusToString(CacheStatus status);
+
+// ============================================================================
+// 配置结构体
+// ============================================================================
+
+/**
+ * @brief 缓存模块配置（由 Init 时的 JSON 解析得到）
+ *
+ * JSON 示例：
+ * @code{.json}
+ * {
+ *     "root_path": "/data/cache",
+ *     "max_file_size": 104857600,
+ *     "max_retention_seconds": 86400
+ * }
+ * @endcode
+ */
+struct CacheConfig {
+    std::string root_path;                  ///< 缓存根目录路径（必填）
+    uint64_t max_file_size = 0;             ///< 单个文件最大大小（字节），0 表示不限制
+    int64_t max_retention_seconds = 0;      ///< 文件最长保留时间（秒），0 表示不限制，-1 表示永久有效
+};
+
+// ============================================================================
+// 文件元信息
+// ============================================================================
+
+/**
+ * @brief 文件元信息结构体
+ */
+struct FileInfo {
+    std::string name;          ///< 相对路径名（如 "sub/file.txt"）
+    uint64_t size = 0;         ///< 文件大小（字节）
+    std::string type;          ///< 文件扩展名（如 "txt"、"bin"，无扩展名为空）
+    std::string modified_at;   ///< 最后修改时间（ISO 8601 格式，如 "2026-03-31T14:30:00"）
+};
 
 // ============================================================================
 // 错误码枚举
@@ -31,6 +90,7 @@ enum class CacheErrorCode {
     IoError,             // 文件读写错误
     InvalidArgument,     // 参数非法（如文件名为空）
     CreateDirFailed,     // 创建目录失败
+    FileTooLarge,        // 文件超过最大大小限制
 };
 
 /**

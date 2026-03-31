@@ -6,13 +6,62 @@
 #include "MyCache.h"
 #include "MyLog.h"
 
+#include <nlohmann/json.hpp>
+#include <ctime>
 #include <fstream>
+
+using json = nlohmann::json;
 
 namespace my_cache {
 
 // ============================================================================
-// 错误码转字符串
+// 工具函数（文件内部）
 // ============================================================================
+
+namespace {
+
+/// 将 filesystem::file_time_type 转为 ISO 8601 字符串
+std::string FormatFileTime(const std::filesystem::file_time_type& ftime) {
+    auto sctp = std::chrono::time_point_cast<std::chrono::system_clock::duration>(
+        ftime - std::filesystem::file_time_type::clock::now()
+             + std::chrono::system_clock::now()
+    );
+    std::time_t t = std::chrono::system_clock::to_time_t(sctp);
+    std::tm tm{};
+    localtime_r(&t, &tm);
+    char buf[32];
+    std::strftime(buf, sizeof(buf), "%Y-%m-%dT%H:%M:%S", &tm);
+    return buf;
+}
+
+/// 提取文件扩展名（不含 '.'），如 "txt"、"bin"，无扩展名返回空
+std::string GetFileExtension(const std::string& name) {
+    auto pos = name.rfind('.');
+    if (pos == std::string::npos || pos == name.size() - 1) return "";
+    // 确保不是目录分隔符后面的点（如 ".hidden" 算无扩展名）
+    auto slash_pos = name.rfind('/');
+    if (slash_pos != std::string::npos && pos < slash_pos) return "";
+    // 检查文件名部分是否以点开头且没有其他点
+    std::string basename = (slash_pos != std::string::npos) ? name.substr(slash_pos + 1) : name;
+    auto dot_pos = basename.rfind('.');
+    if (dot_pos == 0 && basename.find('.', 1) == std::string::npos) return "";
+    return name.substr(pos + 1);
+}
+
+}  // namespace
+
+// ============================================================================
+// 状态码/错误码转字符串
+// ============================================================================
+
+const char* CacheStatusToString(CacheStatus status) {
+    switch (status) {
+        case CacheStatus::NotInitialized: return "NotInitialized";
+        case CacheStatus::Running:        return "Running";
+        case CacheStatus::Error:          return "Error";
+        default:                          return "Unknown";
+    }
+}
 
 const char* CacheErrorCodeToString(CacheErrorCode code) {
     switch (code) {
@@ -24,6 +73,7 @@ const char* CacheErrorCodeToString(CacheErrorCode code) {
         case CacheErrorCode::IoError:          return "IoError";
         case CacheErrorCode::InvalidArgument:  return "InvalidArgument";
         case CacheErrorCode::CreateDirFailed:  return "CreateDirFailed";
+        case CacheErrorCode::FileTooLarge:     return "FileTooLarge";
         default:                               return "Unknown";
     }
 }
@@ -32,51 +82,8 @@ const char* CacheErrorCodeToString(CacheErrorCode code) {
 // MyCache 实现
 // ============================================================================
 
-MyCache::MyCache(const std::string& root_path) {
-    MYLOG_INFO("[MyCache] 开始初始化，根目录：{}", root_path);
-
-    // 对传入路径进行规范化处理
-    std::error_code ec;
-    std::filesystem::path p = std::filesystem::absolute(root_path, ec);
-    if (ec) {
-        MYLOG_ERROR("[MyCache] 无法获取绝对路径：{}, 错误：{}", root_path, ec.message());
-        return;
-    }
-
-    // 如果目录不存在，尝试创建
-    if (!std::filesystem::exists(p, ec)) {
-        MYLOG_WARN("[MyCache] 目录不存在，尝试创建：{}", p.string());
-        if (!std::filesystem::create_directories(p, ec) || ec) {
-            MYLOG_ERROR("[MyCache] 创建目录失败：{}, 错误：{}", p.string(), ec.message());
-            return;
-        }
-        MYLOG_INFO("[MyCache] 目录创建成功：{}", p.string());
-    }
-
-    // 确保路径是目录
-    if (!std::filesystem::is_directory(p, ec)) {
-        MYLOG_ERROR("[MyCache] 路径不是目录：{}", p.string());
-        return;
-    }
-
-    // 获取规范化的绝对路径（解析符号链接等）
-    root_path_ = std::filesystem::canonical(p, ec);
-    if (ec) {
-        MYLOG_ERROR("[MyCache] 规范化路径失败：{}, 错误：{}", p.string(), ec.message());
-        return;
-    }
-
-    MYLOG_INFO("[MyCache] 规范化根目录：{}", root_path_.string());
-
-    // 首次扫描建立索引
-    RefreshIndex();
-
-    // 启动后台扫描线程
-    initialized_.store(true);
-    running_.store(true);
-    scan_thread_ = std::thread(&MyCache::ScanThreadFunc, this);
-
-    MYLOG_INFO("[MyCache] 初始化完成，后台扫描线程已启动，扫描间隔 {} 秒", kScanIntervalSec);
+MyCache::MyCache() {
+    MYLOG_DEBUG("[MyCache] 默认构造，等待 Init() 调用");
 }
 
 MyCache::~MyCache() {
@@ -94,12 +101,106 @@ MyCache::~MyCache() {
     MYLOG_INFO("[MyCache] 析构完成");
 }
 
-bool MyCache::Status() const {
-    return initialized_.load();
+// ============================================================================
+// Init
+// ============================================================================
+
+CacheResult<void> MyCache::Init(const std::string& config_json) {
+    MYLOG_INFO("[MyCache] Init 被调用，配置 JSON：{}", config_json);
+
+    // 防止重复初始化
+    if (status_.load() == CacheStatus::Running) {
+        MYLOG_WARN("[MyCache] 已经初始化过，忽略重复调用");
+        return CacheResult<void>::Success();
+    }
+
+    // 1. 解析 JSON 配置
+    json jcfg;
+    try {
+        jcfg = json::parse(config_json);
+    } catch (const json::parse_error& e) {
+        MYLOG_ERROR("[MyCache] JSON 解析失败：{}", e.what());
+        status_.store(CacheStatus::Error);
+        return CacheResult<void>::Fail(CacheErrorCode::InvalidArgument);
+    }
+    
+    // 2. 提取配置项
+    if (!jcfg.contains("root_path") || !jcfg["root_path"].is_string()) {
+        MYLOG_ERROR("[MyCache] JSON 缺少必填字段 root_path 或类型错误");
+        status_.store(CacheStatus::Error);
+        return CacheResult<void>::Fail(CacheErrorCode::InvalidArgument);
+    }
+    config_.root_path = jcfg["root_path"].get<std::string>();
+
+    if (jcfg.contains("max_file_size") && jcfg["max_file_size"].is_number_unsigned()) {
+        config_.max_file_size = jcfg["max_file_size"].get<uint64_t>();
+    }
+    if (jcfg.contains("max_retention_seconds") && jcfg["max_retention_seconds"].is_number()) {
+        config_.max_retention_seconds = jcfg["max_retention_seconds"].get<int64_t>();
+    }
+
+    MYLOG_INFO("[MyCache] 配置解析完成：root_path={}, max_file_size={}, max_retention_seconds={}",
+               config_.root_path, config_.max_file_size, config_.max_retention_seconds);
+
+    // 3. 对传入路径进行规范化处理
+    std::error_code ec;
+    std::filesystem::path p = std::filesystem::absolute(config_.root_path, ec);
+    if (ec) {
+        MYLOG_ERROR("[MyCache] 无法获取绝对路径：{}, 错误：{}", config_.root_path, ec.message());
+        status_.store(CacheStatus::Error);
+        return CacheResult<void>::Fail(CacheErrorCode::InvalidArgument);
+    }
+
+    // 如果目录不存在，尝试创建
+    if (!std::filesystem::exists(p, ec)) {
+        MYLOG_WARN("[MyCache] 目录不存在，尝试创建：{}", p.string());
+        if (!std::filesystem::create_directories(p, ec) || ec) {
+            MYLOG_ERROR("[MyCache] 创建目录失败：{}, 错误：{}", p.string(), ec.message());
+            status_.store(CacheStatus::Error);
+            return CacheResult<void>::Fail(CacheErrorCode::CreateDirFailed);
+        }
+        MYLOG_INFO("[MyCache] 目录创建成功：{}", p.string());
+    }
+
+    // 确保路径是目录
+    if (!std::filesystem::is_directory(p, ec)) {
+        MYLOG_ERROR("[MyCache] 路径不是目录：{}", p.string());
+        status_.store(CacheStatus::Error);
+        return CacheResult<void>::Fail(CacheErrorCode::InvalidArgument);
+    }
+
+    // 获取规范化的绝对路径（解析符号链接等）
+    root_path_ = std::filesystem::canonical(p, ec);
+    if (ec) {
+        MYLOG_ERROR("[MyCache] 规范化路径失败：{}, 错误：{}", p.string(), ec.message());
+        status_.store(CacheStatus::Error);
+        return CacheResult<void>::Fail(CacheErrorCode::InvalidArgument);
+    }
+
+    MYLOG_INFO("[MyCache] 规范化根目录：{}", root_path_.string());
+
+    // 4. 首次扫描建立索引
+    RefreshIndex();
+
+    // 5. 启动后台扫描线程
+    status_.store(CacheStatus::Running);
+    running_.store(true);
+    scan_thread_ = std::thread(&MyCache::ScanThreadFunc, this);
+
+    MYLOG_INFO("[MyCache] 初始化完成，后台扫描线程已启动，扫描间隔 {} 秒", kScanIntervalSec);
+    return CacheResult<void>::Success();
+}
+
+CacheStatus MyCache::Status() const {
+    return status_.load();
 }
 
 std::string MyCache::GetRootPath() const {
     return root_path_.string();
+}
+
+const CacheConfig& MyCache::GetConfig() const {
+    return config_;
 }
 
 // ============================================================================
@@ -115,7 +216,7 @@ CacheErrorCode MyCache::ValidatePath(const std::string& name,
     }
 
     // 检查模块是否已初始化
-    if (!initialized_.load()) {
+    if (status_.load() != CacheStatus::Running) {
         MYLOG_WARN("[MyCache] 模块尚未初始化");
         return CacheErrorCode::NotInitialized;
     }
@@ -168,6 +269,13 @@ CacheResult<void> MyCache::SaveFile(const std::string& name,
         return CacheResult<void>::Fail(code);
     }
 
+    // 检查文件大小限制
+    if (config_.max_file_size > 0 && data.size() > config_.max_file_size) {
+        MYLOG_WARN("[MyCache] 文件超过大小限制：name={}, 大小={} 字节, 限制={} 字节",
+                   name, data.size(), config_.max_file_size);
+        return CacheResult<void>::Fail(CacheErrorCode::FileTooLarge);
+    }
+
     // 确保父目录存在
     std::error_code ec;
     auto parent = full_path.parent_path();
@@ -210,8 +318,14 @@ CacheResult<void> MyCache::SaveFile(const std::string& name,
 
     // 立即更新内存索引
     {
+        FileInfo info;
+        info.name = name;
+        info.size = data.size();
+        info.type = GetFileExtension(name);
+        info.modified_at = FormatFileTime(std::filesystem::last_write_time(full_path, ec));
+
         std::unique_lock lock(index_mutex_);
-        file_index_.insert(name);
+        file_index_[name] = std::move(info);
     }
 
     MYLOG_INFO("[MyCache] 文件保存成功：{}, 大小={} 字节", name, data.size());
@@ -282,6 +396,27 @@ CacheResult<bool> MyCache::Exists(const std::string& name) {
     }
 }
 
+CacheResult<std::vector<FileInfo>> MyCache::GetAllFileList() {
+    MYLOG_DEBUG("[MyCache] GetAllFileList 请求");
+
+    if (status_.load() != CacheStatus::Running) {
+        MYLOG_WARN("[MyCache] GetAllFileList 调用时模块未初始化");
+        return CacheResult<std::vector<FileInfo>>::Fail(CacheErrorCode::NotInitialized);
+    }
+
+    std::vector<FileInfo> result;
+    {
+        std::shared_lock lock(index_mutex_);
+        result.reserve(file_index_.size());
+        for (const auto& [key, info] : file_index_) {
+            result.push_back(info);
+        }
+    }
+
+    MYLOG_DEBUG("[MyCache] GetAllFileList 返回 {} 个文件", result.size());
+    return CacheResult<std::vector<FileInfo>>::Success(std::move(result));
+}
+
 // ============================================================================
 // 后台扫描线程
 // ============================================================================
@@ -304,6 +439,9 @@ void MyCache::ScanThreadFunc() {
 
         // 执行一次目录扫描
         RefreshIndex();
+
+        // 清理过期文件
+        CleanExpiredFiles();
     }
 
     MYLOG_INFO("[MyCache] 后台扫描线程退出");
@@ -312,16 +450,10 @@ void MyCache::ScanThreadFunc() {
 void MyCache::RefreshIndex() {
     MYLOG_DEBUG("[MyCache] 开始扫描目录：{}", root_path_.string());
 
-    std::unordered_set<std::string> new_index;
+    std::unordered_map<std::string, FileInfo> new_index;
     std::error_code ec;
 
     // 递归遍历缓存目录下的所有常规文件
-    auto iter = std::filesystem::recursive_directory_iterator(root_path_, ec);
-    if (ec) {
-        MYLOG_ERROR("[MyCache] 遍历目录失败：{}, 错误：{}", root_path_.string(), ec.message());
-        return;
-    }
-
     for (auto it = std::filesystem::recursive_directory_iterator(root_path_, ec);
          it != std::filesystem::recursive_directory_iterator(); it.increment(ec)) {
         if (ec) {
@@ -333,9 +465,24 @@ void MyCache::RefreshIndex() {
         if (it->is_regular_file(ec) && !ec) {
             // 计算相对于 root_path_ 的相对路径作为索引 key
             auto rel = std::filesystem::relative(it->path(), root_path_, ec);
+            if (ec) continue;
+
+            std::string rel_str = rel.string();
+            FileInfo info;
+            info.name = rel_str;
+            info.size = it->file_size(ec);
+            if (ec) { info.size = 0; ec.clear(); }
+            info.type = GetFileExtension(rel_str);
+
+            auto ftime = it->last_write_time(ec);
             if (!ec) {
-                new_index.insert(rel.string());
+                info.modified_at = FormatFileTime(ftime);
+            } else {
+                info.modified_at = "";
+                ec.clear();
             }
+
+            new_index[rel_str] = std::move(info);
         }
     }
 
@@ -346,6 +493,56 @@ void MyCache::RefreshIndex() {
     }
 
     MYLOG_DEBUG("[MyCache] 扫描完成，索引文件数量：{}", file_index_.size());
+}
+
+void MyCache::CleanExpiredFiles() {
+    if (config_.max_retention_seconds <= 0) {
+        return;  // 未配置过期策略
+    }
+
+    MYLOG_DEBUG("[MyCache] 开始清理过期文件（保留时间 {} 秒）", config_.max_retention_seconds);
+
+    auto now = std::chrono::system_clock::now();
+    std::vector<std::string> expired_names;
+
+    // 在读锁下收集过期文件（不在锁内做删除操作）
+    {
+        std::shared_lock lock(index_mutex_);
+        for (const auto& [name, info] : file_index_) {
+            std::error_code ec;
+            auto full_path = root_path_ / name;
+            auto ftime = std::filesystem::last_write_time(full_path, ec);
+            if (ec) continue;
+
+            // 将 file_time_type 转为 system_clock
+            auto sctp = std::chrono::time_point_cast<std::chrono::system_clock::duration>(
+                ftime - std::filesystem::file_time_type::clock::now()
+                     + std::chrono::system_clock::now()
+            );
+
+            auto age = std::chrono::duration_cast<std::chrono::seconds>(now - sctp).count();
+            if (age > config_.max_retention_seconds) {
+                expired_names.push_back(name);
+            }
+        }
+    }
+
+    // 删除过期文件
+    for (const auto& name : expired_names) {
+        std::error_code ec;
+        auto full_path = root_path_ / name;
+        if (std::filesystem::remove(full_path, ec) && !ec) {
+            MYLOG_INFO("[MyCache] 过期文件已清理：{}", name);
+            std::unique_lock lock(index_mutex_);
+            file_index_.erase(name);
+        } else {
+            MYLOG_WARN("[MyCache] 清理过期文件失败：{}, 错误：{}", name, ec.message());
+        }
+    }
+
+    if (!expired_names.empty()) {
+        MYLOG_INFO("[MyCache] 过期清理完成，共清理 {} 个文件", expired_names.size());
+    }
 }
 
 }  // namespace my_cache
