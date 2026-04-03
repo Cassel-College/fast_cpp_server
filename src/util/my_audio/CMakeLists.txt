@@ -1,3 +1,5 @@
+    # 打印当前平台架构，便于调试依赖选择
+    message(STATUS "[my_audio] CMAKE_SYSTEM_PROCESSOR = ${CMAKE_SYSTEM_PROCESSOR}")
 cmake_minimum_required(VERSION 3.10)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
@@ -33,12 +35,11 @@ if (BUILD_MY_AUDIO)
     set(MY_AUDIO_INCLUDE_DIRECTORIES
         ${PROJECT_SOURCE_DIR}/src/util/my_audio
         ${PROJECT_SOURCE_DIR}/src/util/my_audio/NAudioCore
-        # ${PROJECT_SOURCE_DIR}/source/lib/NAudio/x86/include
         ${PROJECT_SOURCE_DIR}/build/lib/NAudio/include
     )
 
     # ========================================================================
-    # 源文件收集（排除原始 Demo 文件）
+    # 源文件收集
     # ========================================================================
     file(GLOB_RECURSE MY_AUDIO_SOURCES
         ${PROJECT_SOURCE_DIR}/src/util/my_audio/*.cpp
@@ -69,18 +70,54 @@ if (BUILD_MY_AUDIO)
     # 链接 NAudio SDK 及其运行时依赖
     # 使用 --no-as-needed 确保 ffmpeg 库成为可执行文件的直接依赖（NEEDED），
     # 因为 libNAudioServer.so 的 RUNPATH 是 "./"，无法在运行时找到同目录的 ffmpeg 库
-    target_link_libraries(my_audio PUBLIC
-        ${NAUDIO_LIB_DIR}/libNAudioServer.so
-        -Wl,--no-as-needed
-        ${NAUDIO_LIB_DIR}/libavcodec.so.58
-        ${NAUDIO_LIB_DIR}/libavformat.so.58
-        ${NAUDIO_LIB_DIR}/libavfilter.so.7
-        ${NAUDIO_LIB_DIR}/libavutil.so.56
-        ${NAUDIO_LIB_DIR}/libswresample.so.3
-        ${NAUDIO_LIB_DIR}/libmp3lame.so.0
-        ${NAUDIO_LIB_DIR}/libmsc.so
-        -Wl,--as-needed
-    )
+
+    # ================= 平台自动选择依赖库 =================
+    if(CMAKE_SYSTEM_PROCESSOR MATCHES "x86_64" OR CMAKE_SYSTEM_PROCESSOR MATCHES "amd64")
+        # x86_64 平台，包含 libmsc.so、libavdevice.so.58、libswscale.so.5
+        target_link_libraries(my_audio PUBLIC
+            ${NAUDIO_LIB_DIR}/libNAudioServer.so
+            -Wl,--no-as-needed
+            ${NAUDIO_LIB_DIR}/libavcodec.so.58
+            ${NAUDIO_LIB_DIR}/libavformat.so.58
+            ${NAUDIO_LIB_DIR}/libavfilter.so.7
+            ${NAUDIO_LIB_DIR}/libavutil.so.56
+            ${NAUDIO_LIB_DIR}/libswresample.so.3
+            ${NAUDIO_LIB_DIR}/libmp3lame.so.0
+            ${NAUDIO_LIB_DIR}/libmsc.so
+            ${NAUDIO_LIB_DIR}/libavdevice.so.58
+            ${NAUDIO_LIB_DIR}/libswscale.so.5
+            -Wl,--as-needed
+        )
+    elseif(CMAKE_SYSTEM_PROCESSOR MATCHES "aarch64" OR CMAKE_SYSTEM_PROCESSOR MATCHES "arm")
+        # arm64/arm 平台，部分依赖可能缺失
+        target_link_libraries(my_audio PUBLIC
+            ${NAUDIO_LIB_DIR}/libNAudioServer.so
+            -Wl,--no-as-needed
+            ${NAUDIO_LIB_DIR}/libavcodec.so.58
+            ${NAUDIO_LIB_DIR}/libavdevice.so.58
+            ${NAUDIO_LIB_DIR}/libavfilter.so.7
+            ${NAUDIO_LIB_DIR}/libavformat.so.58
+            ${NAUDIO_LIB_DIR}/libavutil.so.56
+            ${NAUDIO_LIB_DIR}/libmp3lame.so.0
+            ${NAUDIO_LIB_DIR}/libswresample.so.3
+            ${NAUDIO_LIB_DIR}/libswscale.so.5
+            -Wl,--as-needed
+        )
+    else()
+        message(WARNING "未知平台: ${CMAKE_SYSTEM_PROCESSOR}，请手动调整依赖库列表！")
+        target_link_libraries(my_audio PUBLIC
+            ${NAUDIO_LIB_DIR}/libNAudioServer.so
+            -Wl,--no-as-needed
+            ${NAUDIO_LIB_DIR}/libavcodec.so.58
+            ${NAUDIO_LIB_DIR}/libavformat.so.58
+            ${NAUDIO_LIB_DIR}/libavfilter.so.7
+            ${NAUDIO_LIB_DIR}/libavutil.so.56
+            ${NAUDIO_LIB_DIR}/libswresample.so.3
+            ${NAUDIO_LIB_DIR}/libmp3lame.so.0
+            ${NAUDIO_LIB_DIR}/libmsc.so
+            -Wl,--as-needed
+        )
+    endif()
 
     # 设置 RPATH，确保运行时能找到这些动态库
     set_target_properties(my_audio PROPERTIES
