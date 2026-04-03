@@ -18,7 +18,6 @@
 
 // 供集成测试使用
 #include "MyCache.h"
-#include "MyCacheProvider.h"
 #include "CacheTypes.h"
 #include <nlohmann/json.hpp>
 
@@ -269,6 +268,43 @@ TEST(FileApi_Integration, ListFilesReturnsCorrectMetadata) {
     CleanupDir(dir);
 }
 
+/// 测试 list 接口对应的目录筛选行为
+TEST(FileApi_Integration, ListFilesCanBeScopedToFolder) {
+    auto dir = MakeTestDir("list_scoped");
+    {
+        MyCache cache;
+        cache.Init(MakeConfig(dir));
+        ASSERT_EQ(cache.Status(), CacheStatus::Running);
+
+        cache.SaveFile("images/a.jpg", {0x01});
+        cache.SaveFile("images/b.jpg", {0x02});
+        cache.SaveFile("docs/readme.txt", {0x03});
+
+        auto list_result = cache.GetFileList("images");
+        ASSERT_TRUE(list_result.Ok());
+        ASSERT_EQ(list_result.value.size(), 2u);
+        EXPECT_EQ(list_result.value[0].name, "images/a.jpg");
+        EXPECT_EQ(list_result.value[1].name, "images/b.jpg");
+    }
+    CleanupDir(dir);
+}
+
+/// 测试创建子目录接口对应的安全行为
+TEST(FileApi_Integration, CreateFolderRejectsOutsideRoot) {
+    auto dir = MakeTestDir("create_folder_safe");
+    {
+        MyCache cache;
+        cache.Init(MakeConfig(dir));
+        ASSERT_EQ(cache.Status(), CacheStatus::Running);
+
+        auto create_result = cache.CreateSubdirectory("../outside", "new_name");
+        EXPECT_FALSE(create_result.Ok());
+        EXPECT_EQ(create_result.code, CacheErrorCode::PathTraversal);
+        EXPECT_EQ(CacheErrorToHttpCode(create_result.code), 403);
+    }
+    CleanupDir(dir);
+}
+
 /// 测试 FileTooLarge 映射到 413
 TEST(FileApi_Integration, FileTooLargeMapsTo413) {
     auto dir = MakeTestDir("toolarge413");
@@ -337,3 +373,4 @@ TEST(FileApi_Integration, NegativeRetentionInConfig) {
     }
     CleanupDir(dir);
 }
+

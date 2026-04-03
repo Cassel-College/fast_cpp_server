@@ -7,6 +7,7 @@
 #include "MyLog.h"
 
 #include <nlohmann/json.hpp>
+#include <algorithm>
 #include <ctime>
 #include <fstream>
 
@@ -46,6 +47,26 @@ std::string GetFileExtension(const std::string& name) {
     auto dot_pos = basename.rfind('.');
     if (dot_pos == 0 && basename.find('.', 1) == std::string::npos) return "";
     return name.substr(pos + 1);
+}
+
+bool IsPathInsideRoot(const std::filesystem::path& root_path,
+                      const std::filesystem::path& resolved_path) {
+    const std::string root_string = root_path.string();
+    const std::string root_prefix = root_string + "/";
+    const std::string resolved_string = resolved_path.string();
+
+    return resolved_string == root_string ||
+           resolved_string.rfind(root_prefix, 0) == 0;
+}
+
+std::string ToRelativeUnixPath(const std::filesystem::path& root_path,
+                               const std::filesystem::path& target_path) {
+    std::error_code ec;
+    auto relative_path = std::filesystem::relative(target_path, root_path, ec);
+    if (ec) {
+        return target_path.filename().string();
+    }
+    return relative_path.generic_string();
 }
 
 }  // namespace
@@ -133,7 +154,7 @@ CacheResult<void> MyCache::Init(const std::string& config_json) {
     config_.root_path = jcfg["root_path"].get<std::string>();
 
     if (jcfg.contains("max_file_size") && jcfg["max_file_size"].is_number_unsigned()) {
-        config_.max_file_size = jcfg["max_file_size"].get<uint64_t>();
+        config_.max_file_size = jcfg["max_file_size"].get<uint64_t>() * 1024 * 1024; // 支持以 MB 为单位输入
     }
     if (jcfg.contains("max_retention_seconds") && jcfg["max_retention_seconds"].is_number()) {
         config_.max_retention_seconds = jcfg["max_retention_seconds"].get<int64_t>();
@@ -231,22 +252,64 @@ CacheErrorCode MyCache::ValidatePath(const std::string& name,
         return CacheErrorCode::InvalidArgument;
     }
 
-    // 核心安全检查：确保解析后的路径以 root_path_ 为前缀
-    // 使用字符串前缀匹配，确保不会穿越到 root_path_ 之外
-    std::string root_str = root_path_.string() + "/";
-    std::string resolved_str = resolved.string();
-
-    // 如果 resolved 恰好等于 root_path_ 本身（用户传了 "." 或 ""），也应拒绝
-    if (resolved_str != root_path_.string() &&
-        resolved_str.substr(0, root_str.size()) != root_str) {
+    // 核心安全检查：确保解析后的路径位于 root_path_ 范围内
+    if (!IsPathInsideRoot(root_path_, resolved)) {
         MYLOG_ERROR("[MyCache] 路径穿越攻击被阻止！请求路径：{}, 解析后：{}, 根目录：{}",
-                    name, resolved_str, root_path_.string());
+                    name, resolved.string(), root_path_.string());
         return CacheErrorCode::PathTraversal;
     }
 
     // 额外检查：resolved 不应恰好等于 root_path_（用户不应操作根目录本身）
-    if (resolved_str == root_path_.string()) {
+    if (resolved == root_path_) {
         MYLOG_WARN("[MyCache] 不允许操作根目录本身：{}", name);
+        return CacheErrorCode::InvalidArgument;
+    }
+
+    full_path = resolved;
+    return CacheErrorCode::Ok;
+}
+
+CacheErrorCode MyCache::ValidateDirectoryPath(const std::string& folder_path,
+                                              std::filesystem::path& full_path,
+                                              bool allow_root) const {
+    if (status_.load() != CacheStatus::Running) {
+        MYLOG_WARN("[MyCache] 模块尚未初始化");
+        return CacheErrorCode::NotInitialized;
+    }
+
+    if (folder_path.find('\0') != std::string::npos) {
+        MYLOG_WARN("[MyCache] 目录路径包含非法空字符");
+        return CacheErrorCode::InvalidArgument;
+    }
+
+    if (folder_path.find('\\') != std::string::npos) {
+        MYLOG_WARN("[MyCache] 目录路径不允许包含反斜杠：{}", folder_path);
+        return CacheErrorCode::InvalidArgument;
+    }
+
+    if (folder_path.empty() || folder_path == ".") {
+        full_path = root_path_;
+        return CacheErrorCode::Ok;
+    }
+
+    std::filesystem::path raw_path(folder_path);
+    std::filesystem::path candidate = raw_path.is_absolute() ? raw_path : (root_path_ / raw_path);
+
+    std::error_code ec;
+    std::filesystem::path resolved = std::filesystem::weakly_canonical(candidate, ec);
+    if (ec) {
+        MYLOG_WARN("[MyCache] 目录路径解析失败：{}, 错误：{}", candidate.string(), ec.message());
+        return CacheErrorCode::InvalidArgument;
+    }
+
+    if (!IsPathInsideRoot(root_path_, resolved)) {
+        MYLOG_ERROR("[MyCache] 目录路径越界访问被阻止！请求路径：{}, 解析后：{}, 根目录：{}",
+                    folder_path, resolved.string(), root_path_.string());
+        return CacheErrorCode::PathTraversal;
+    }
+
+    if (!allow_root && resolved == root_path_) {
+        MYLOG_WARN("[MyCache] 不允许直接操作根目录本身：{}", folder_path);
         return CacheErrorCode::InvalidArgument;
     }
 
@@ -399,22 +462,131 @@ CacheResult<bool> MyCache::Exists(const std::string& name) {
 CacheResult<std::vector<FileInfo>> MyCache::GetAllFileList() {
     MYLOG_DEBUG("[MyCache] GetAllFileList 请求");
 
-    if (status_.load() != CacheStatus::Running) {
-        MYLOG_WARN("[MyCache] GetAllFileList 调用时模块未初始化");
-        return CacheResult<std::vector<FileInfo>>::Fail(CacheErrorCode::NotInitialized);
+    return GetFileList("");
+}
+
+CacheResult<std::vector<FileInfo>> MyCache::GetFileList(const std::string& folder_path) {
+    MYLOG_DEBUG("[MyCache] GetFileList 请求：folder_path={}", folder_path);
+
+    std::filesystem::path target_path;
+    auto code = ValidateDirectoryPath(folder_path, target_path, true);
+    if (code != CacheErrorCode::Ok) {
+        MYLOG_WARN("[MyCache] GetFileList 路径校验失败：folder_path={}, 错误码={}",
+                   folder_path, CacheErrorCodeToString(code));
+        return CacheResult<std::vector<FileInfo>>::Fail(code);
+    }
+
+    std::error_code ec;
+    if (!std::filesystem::exists(target_path, ec)) {
+        MYLOG_WARN("[MyCache] 查询目录不存在：{}", target_path.string());
+        return CacheResult<std::vector<FileInfo>>::Fail(CacheErrorCode::FileNotFound);
+    }
+    if (!std::filesystem::is_directory(target_path, ec) || ec) {
+        MYLOG_WARN("[MyCache] 查询路径不是目录：{}", target_path.string());
+        return CacheResult<std::vector<FileInfo>>::Fail(CacheErrorCode::InvalidArgument);
     }
 
     std::vector<FileInfo> result;
-    {
-        std::shared_lock lock(index_mutex_);
-        result.reserve(file_index_.size());
-        for (const auto& [key, info] : file_index_) {
-            result.push_back(info);
+    for (auto it = std::filesystem::recursive_directory_iterator(target_path, ec);
+         it != std::filesystem::recursive_directory_iterator(); it.increment(ec)) {
+        if (ec) {
+            MYLOG_WARN("[MyCache] 遍历目录失败：{}, 错误：{}", target_path.string(), ec.message());
+            ec.clear();
+            continue;
         }
+
+        if (!it->is_regular_file(ec) || ec) {
+            ec.clear();
+            continue;
+        }
+
+        FileInfo info;
+        info.name = ToRelativeUnixPath(root_path_, it->path());
+        info.size = it->file_size(ec);
+        if (ec) {
+            info.size = 0;
+            ec.clear();
+        }
+        info.type = GetFileExtension(info.name);
+
+        auto ftime = it->last_write_time(ec);
+        if (!ec) {
+            info.modified_at = FormatFileTime(ftime);
+        } else {
+            ec.clear();
+        }
+
+        result.push_back(std::move(info));
     }
 
-    MYLOG_DEBUG("[MyCache] GetAllFileList 返回 {} 个文件", result.size());
+    std::sort(result.begin(), result.end(), [](const FileInfo& lhs, const FileInfo& rhs) {
+        return lhs.name < rhs.name;
+    });
+
+    MYLOG_DEBUG("[MyCache] GetFileList 返回 {} 个文件", result.size());
     return CacheResult<std::vector<FileInfo>>::Success(std::move(result));
+}
+
+CacheResult<std::string> MyCache::CreateSubdirectory(const std::string& folder_path,
+                                                     const std::string& new_folder_name) {
+    MYLOG_INFO("[MyCache] CreateSubdirectory 请求：folder_path={}, new_folder_name={}",
+               folder_path, new_folder_name);
+
+    std::filesystem::path parent_path;
+    auto code = ValidateDirectoryPath(folder_path, parent_path, true);
+    if (code != CacheErrorCode::Ok) {
+        return CacheResult<std::string>::Fail(code);
+    }
+
+    if (new_folder_name.empty()) {
+        MYLOG_WARN("[MyCache] 新目录名为空");
+        return CacheResult<std::string>::Fail(CacheErrorCode::InvalidArgument);
+    }
+
+    if (new_folder_name.find('\0') != std::string::npos ||
+        new_folder_name.find('\\') != std::string::npos ||
+        new_folder_name.find('/') != std::string::npos ||
+        new_folder_name == "." || new_folder_name == "..") {
+        MYLOG_WARN("[MyCache] 新目录名非法：{}", new_folder_name);
+        return CacheResult<std::string>::Fail(CacheErrorCode::InvalidArgument);
+    }
+
+    std::error_code ec;
+    if (!std::filesystem::exists(parent_path, ec)) {
+        MYLOG_WARN("[MyCache] 父目录不存在：{}", parent_path.string());
+        return CacheResult<std::string>::Fail(CacheErrorCode::FileNotFound);
+    }
+
+    if (!std::filesystem::is_directory(parent_path, ec) || ec) {
+        MYLOG_WARN("[MyCache] 父路径不是目录：{}", parent_path.string());
+        return CacheResult<std::string>::Fail(CacheErrorCode::InvalidArgument);
+    }
+
+    auto new_folder_path = parent_path / new_folder_name;
+    auto resolved_new_folder = std::filesystem::weakly_canonical(new_folder_path, ec);
+    if (ec) {
+        MYLOG_WARN("[MyCache] 新目录路径解析失败：{}, 错误：{}", new_folder_path.string(), ec.message());
+        return CacheResult<std::string>::Fail(CacheErrorCode::InvalidArgument);
+    }
+
+    if (!IsPathInsideRoot(root_path_, resolved_new_folder)) {
+        MYLOG_ERROR("[MyCache] 新目录越界访问被阻止：{}", resolved_new_folder.string());
+        return CacheResult<std::string>::Fail(CacheErrorCode::PathTraversal);
+    }
+
+    if (std::filesystem::exists(resolved_new_folder, ec)) {
+        MYLOG_WARN("[MyCache] 新目录已存在：{}", resolved_new_folder.string());
+        return CacheResult<std::string>::Fail(CacheErrorCode::FileAlreadyExists);
+    }
+
+    if (!std::filesystem::create_directory(resolved_new_folder, ec) || ec) {
+        MYLOG_ERROR("[MyCache] 创建新目录失败：{}, 错误：{}",
+                    resolved_new_folder.string(), ec.message());
+        return CacheResult<std::string>::Fail(CacheErrorCode::CreateDirFailed);
+    }
+
+    MYLOG_INFO("[MyCache] 创建新目录成功：{}", resolved_new_folder.string());
+    return CacheResult<std::string>::Success(resolved_new_folder.string());
 }
 
 // ============================================================================

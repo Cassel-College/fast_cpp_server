@@ -134,6 +134,22 @@ public:
      */
     CacheResult<std::vector<FileInfo>> GetAllFileList();
 
+    /**
+     * @brief 获取指定目录下的文件元信息列表
+     * @param folder_path 目标目录，支持空字符串（表示缓存根目录）、相对路径或位于缓存根目录内的绝对路径
+     * @return CacheResult<std::vector<FileInfo>> 成功时 value 为文件元信息列表
+     */
+    CacheResult<std::vector<FileInfo>> GetFileList(const std::string& folder_path = "");
+
+    /**
+     * @brief 在指定目录下创建子目录
+     * @param folder_path 父目录，支持空字符串（表示缓存根目录）、相对路径或位于缓存根目录内的绝对路径
+     * @param new_folder_name 新目录名，仅允许单层目录名
+     * @return CacheResult<std::string> 成功时 value 为新目录的绝对路径
+     */
+    CacheResult<std::string> CreateSubdirectory(const std::string& folder_path,
+                                                const std::string& new_folder_name);
+
 private:
     // ---- 路径安全验证 ----
 
@@ -145,6 +161,17 @@ private:
      */
     CacheErrorCode ValidatePath(const std::string& name,
                                 std::filesystem::path& full_path) const;
+
+    /**
+     * @brief 校验目录路径是否位于 root_path 范围内，支持相对/绝对路径
+     * @param folder_path 用户传入的目录路径，空字符串表示根目录
+     * @param[out] full_path 输出经过规范化处理的目录完整路径
+     * @param allow_root 是否允许根目录本身
+     * @return CacheErrorCode::Ok 表示安全
+     */
+    CacheErrorCode ValidateDirectoryPath(const std::string& folder_path,
+                                         std::filesystem::path& full_path,
+                                         bool allow_root = true) const;
 
     // ---- 后台扫描线程 ----
 
