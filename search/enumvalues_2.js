@@ -11,5 +11,6 @@ var searchData=
   ['connecting_8',['CONNECTING',['../namespacePodModule.html#aea5b7c69300d8f8fd12fc5e5b6265af9a9a14f95e151eec641316e7c784ce832d',1,'PodModule']]],
   ['connection_5ffailed_9',['CONNECTION_FAILED',['../namespacePodModule.html#aad194976af5612d4469559348e94c7bea042ec2cfe6c78a6a49b3a6555302947c',1,'PodModule']]],
   ['connection_5ftimeout_10',['CONNECTION_TIMEOUT',['../namespacePodModule.html#aad194976af5612d4469559348e94c7bead094d5806cc309e317fd3420bbd30fb5',1,'PodModule']]],
-  ['cruise_11',['CRUISE',['../namespacefly__control.html#a201c80e927ae9ae73dcc0b8b4f7ca1a7a603d3e49969654c3830aa0956881cb2c',1,'fly_control']]]
+  ['createdirfailed_11',['CreateDirFailed',['../namespacemy__cache.html#a074618e9168bea10311e1e960344b9ceacf73468ba4dfdfb19102be6dfe4f4bc2',1,'my_cache']]],
+  ['cruise_12',['CRUISE',['../namespacefly__control.html#a201c80e927ae9ae73dcc0b8b4f7ca1a7a603d3e49969654c3830aa0956881cb2c',1,'fly_control']]]
 ];

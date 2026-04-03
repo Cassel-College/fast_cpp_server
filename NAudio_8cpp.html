@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_audio/NAudio.cpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_62a3ed15368c4c4f11596a0d2c7db172.html">my_audio</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">命名空间</a>  </div>
+  <div class="headertitle"><div class="title">NAudio.cpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>扬声器框架 —— NAudio 厂商适配层实现  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="NAudio_8h_source.html">NAudio.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="MyLog_8h_source.html">MyLog.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="PingTools_8h_source.html">PingTools.h</a>&quot;</code><br />
+<code>#include &lt;chrono&gt;</code><br />
+<code>#include &lt;nlohmann/json.hpp&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+NAudio.cpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="NAudio_8cpp__incl.png" border="0" usemap="#asrc_2util_2my__audio_2NAudio_8cpp" alt=""/></div>
+<map name="asrc_2util_2my__audio_2NAudio_8cpp" id="asrc_2util_2my__audio_2NAudio_8cpp">
+<area shape="rect" title="扬声器框架 —— NAudio 厂商适配层实现" alt="" coords="1340,5,1552,31"/>
+<area shape="rect" href="NAudio_8h.html" title="扬声器框架 —— NAudio 厂商适配层" alt="" coords="553,79,635,104"/>
+<area shape="poly" title=" " alt="" coords="1340,31,649,88,648,83,1340,25"/>
+<area shape="rect" title=" " alt="" coords="1251,240,1398,265"/>
+<area shape="poly" title=" " alt="" coords="1465,29,1488,49,1507,78,1510,91,1507,105,1491,154,1478,173,1458,194,1421,220,1381,238,1379,233,1418,215,1455,190,1474,170,1486,152,1502,103,1505,91,1502,80,1484,53,1461,33"/>
+<area shape="rect" href="MyLog_8h.html" title=" " alt="" coords="1122,79,1199,104"/>
+<area shape="poly" title=" " alt="" coords="1401,33,1213,80,1212,75,1400,28"/>
+<area shape="rect" href="PingTools_8h.html" title=" " alt="" coords="1399,79,1493,104"/>
+<area shape="poly" title=" " alt="" coords="1449,31,1449,65,1443,65,1443,31"/>
+<area shape="rect" title=" " alt="" coords="1569,79,1635,104"/>
+<area shape="poly" title=" " alt="" coords="1472,28,1565,70,1563,75,1470,33"/>
+<area shape="rect" href="BaseAudio_8h.html" title="扬声器框架 —— 音频设备基类" alt="" coords="435,159,537,185"/>
+<area shape="poly" title=" " alt="" coords="580,106,515,153,512,149,577,102"/>
+<area shape="rect" href="NAudioCore_8h.html" title="NAudio 厂商 SDK 核心封装层" alt="" coords="218,159,410,185"/>
+<area shape="poly" title=" " alt="" coords="554,107,369,158,367,153,553,101"/>
+<area shape="rect" title=" " alt="" coords="562,159,626,185"/>
+<area shape="poly" title=" " alt="" coords="597,104,597,145,591,145,591,104"/>
+<area shape="rect" title=" " alt="" coords="650,159,727,185"/>
+<area shape="poly" title=" " alt="" coords="610,102,666,148,662,152,606,106"/>
+<area shape="rect" title=" " alt="" coords="962,240,1021,265"/>
+<area shape="poly" title=" " alt="" coords="522,182,551,189,662,210,774,226,948,245,948,250,773,231,661,215,549,195,521,187"/>
+<area shape="rect" title=" " alt="" coords="370,240,437,265"/>
+<area shape="poly" title=" " alt="" coords="476,187,427,232,424,229,472,183"/>
+<area shape="rect" title=" " alt="" coords="461,240,525,265"/>
+<area shape="poly" title=" " alt="" coords="490,185,493,226,488,226,484,185"/>
+<area shape="poly" title=" " alt="" coords="521,182,550,189,688,207,878,222,1238,244,1237,250,877,228,688,212,550,195,520,187"/>
+<area shape="poly" title=" " alt="" coords="376,182,422,189,723,224,948,245,948,250,722,230,422,195,375,187"/>
+<area shape="poly" title=" " alt="" coords="329,183,382,229,378,233,325,187"/>
+<area shape="poly" title=" " alt="" coords="341,182,455,232,453,237,339,187"/>
+<area shape="rect" title=" " alt="" coords="283,240,345,265"/>
+<area shape="poly" title=" " alt="" coords="317,185,317,226,311,226,311,185"/>
+<area shape="rect" title=" " alt="" coords="5,240,92,265"/>
+<area shape="poly" title=" " alt="" coords="276,187,101,239,100,234,275,182"/>
+<area shape="rect" title=" " alt="" coords="116,240,259,265"/>
+<area shape="poly" title=" " alt="" coords="297,187,219,235,216,230,294,183"/>
+<area shape="poly" title=" " alt="" coords="1200,92,1275,101,1356,118,1388,130,1410,147,1416,157,1418,169,1414,181,1405,194,1386,205,1350,214,1248,230,1035,251,1034,246,1247,225,1349,209,1384,200,1402,190,1409,179,1412,168,1411,159,1406,151,1385,135,1354,123,1274,106,1199,98"/>
+<area shape="poly" title=" " alt="" coords="1122,98,955,115,847,132,740,155,730,157,728,152,739,149,846,127,954,110,1122,93"/>
+<area shape="rect" title=" " alt="" coords="1268,159,1392,185"/>
+<area shape="poly" title=" " alt="" coords="1186,102,1294,151,1292,156,1184,106"/>
+<area shape="rect" title=" " alt="" coords="752,152,911,192"/>
+<area shape="poly" title=" " alt="" coords="1122,105,924,151,923,146,1121,99"/>
+<area shape="rect" title=" " alt="" coords="935,159,1053,185"/>
+<area shape="poly" title=" " alt="" coords="1138,106,1032,156,1030,151,1135,102"/>
+<area shape="rect" title=" " alt="" coords="1077,159,1244,185"/>
+<area shape="poly" title=" " alt="" coords="1163,104,1163,145,1158,145,1158,104"/>
+<area shape="poly" title=" " alt="" coords="1451,104,1451,147,1445,172,1430,194,1409,204,1371,214,1261,230,1035,251,1035,246,1260,225,1369,209,1407,199,1427,190,1440,170,1446,147,1445,104"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacemy__audio" id="r_namespacemy__audio"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__audio.html">my_audio</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>扬声器框架 —— NAudio 厂商适配层实现 </p>
+<p>实现 BaseAudio 接口，通过 NAudioCore 调用厂商 SDK。 </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

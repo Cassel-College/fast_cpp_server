@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_audio/NAudioCore/NAudioCore.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_62a3ed15368c4c4f11596a0d2c7db172.html">my_audio</a></li><li class="navelem"><a class="el" href="dir_8514b4f7183e80cbece7c6be6eb9cb5b.html">NAudioCore</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">NAudioCore.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="NAudioCore_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;atomic&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">// NAudio 厂商 SDK 头文件</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;NAudioServerLib.h&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__audio.html">my_audio</a> {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">// ============================================================================</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">// 回调类型定义</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">// ============================================================================</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="namespacemy__audio.html#a43a421f6a260db0aa4f7f65364754c41">   33</a></span><span class="keyword">using </span><a class="code hl_typedef" href="namespacemy__audio.html#a43a421f6a260db0aa4f7f65364754c41">DeviceStatusCallback</a> = std::function&lt;void(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> devno, <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> status)&gt;;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="namespacemy__audio.html#a2417665993456020063f8c1e0056577f">   41</a></span><span class="keyword">using </span><a class="code hl_typedef" href="namespacemy__audio.html#a2417665993456020063f8c1e0056577f">PlayStatusCallback</a> = std::function&lt;void(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> scene, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> inst, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> status)&gt;;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">// ============================================================================</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">// NAudioCore 类</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">// ============================================================================</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="foldopen" id="foldopen00053" data-start="{" data-end="};">
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classmy__audio_1_1NAudioCore.html">   53</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__audio_1_1NAudioCore.html">NAudioCore</a> {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <a class="code hl_function" href="classmy__audio_1_1NAudioCore.html#a7729f71f550437812fea953d887faf6a">NAudioCore</a>();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <a class="code hl_function" href="classmy__audio_1_1NAudioCore.html#a6b2f3550b83e567a28d58f3deb5caf7a">~NAudioCore</a>();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="comment">// 禁止拷贝</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classmy__audio_1_1NAudioCore.html#a03bd49410d556c20b8f730ad336da123">   59</a></span>    <a class="code hl_function" href="classmy__audio_1_1NAudioCore.html#a03bd49410d556c20b8f730ad336da123">NAudioCore</a>(<span class="keyword">const</span> <a class="code hl_class" href="classmy__audio_1_1NAudioCore.html">NAudioCore</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classmy__audio_1_1NAudioCore.html#a4829dc45b17d2922cbac527be711c03d">   60</a></span>    <a class="code hl_class" href="classmy__audio_1_1NAudioCore.html">NAudioCore</a>&amp; <a class="code hl_function" href="classmy__audio_1_1NAudioCore.html#a4829dc45b17d2922cbac527be711c03d">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classmy__audio_1_1NAudioCore.html">NAudioCore</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="comment">// ========================================================================</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="comment">// 服务生命周期</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="comment">// ========================================================================</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__audio_1_1NAudioCore.html#a55d9d2cfce4fdf8a0e6bcf8b041b518b">StartServer</a>(<span class="keyword">const</span> std::string&amp; server_ip, <span class="keywordtype">int</span> <a class="code hl_variable" href="pinling__pod_8cpp.html#a8e0798404bf2cf5dabb84c5ba9a4f236">port</a>);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__audio_1_1NAudioCore.html#a11e32f1ea456d6aa6011f9a739fc7c0f">StopServer</a>();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="classmy__audio_1_1NAudioCore.html#ad201152b05beda61e51e3594ff07c8fe">   82</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__audio_1_1NAudioCore.html#ad201152b05beda61e51e3594ff07c8fe">IsRunning</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classmy__audio_1_1NAudioCore.html#aa9620a15c76ada2388bf678e373a6463">running_</a>.load(); }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="comment">// ========================================================================</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="comment">// 设备管理</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="comment">// ========================================================================</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    std::vector&lt;unsigned int&gt; <a class="code hl_function" href="classmy__audio_1_1NAudioCore.html#a2f134b12213f318bd59d746d8637390c">GetOnlineDevices</a>();</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code hl_function" href="classmy__audio_1_1NAudioCore.html#a7203fdcec534e561ce552113a3acb473">GetDeviceStatus</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> devno);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classmy__audio_1_1NAudioCore.html#a1e8f6643bc3ea08339dc087412517c07">GetDeviceVolume</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> devno);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__audio_1_1NAudioCore.html#a382e52ac58051d1cac3201f4cf40e22b">SetDeviceVolume</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> devno, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> volume);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    std::string <a class="code hl_function" href="classmy__audio_1_1NAudioCore.html#a9439aeb634cf60f3f94ba513c40174e2">GetDeviceVersion</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> devno);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    std::string <a class="code hl_function" href="classmy__audio_1_1NAudioCore.html#a26371f9ffcf6211bfd37595a2ed55d31">GetDeviceName</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> devno);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="comment">// ========================================================================</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="comment">// 音频播放</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="comment">// ========================================================================</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__audio_1_1NAudioCore.html#af04fa4ce72e215d37994d0f475eb3842">PlayFileOnDevice</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> devno, <span class="keyword">const</span> std::string&amp; filepath,</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>                          <span class="keywordtype">int</span> volume = 80, <span class="keywordtype">int</span> priority = 10);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__audio_1_1NAudioCore.html#ab00de6307db207f4ea31c7a51062f1d4">StopPlay</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> scene = SCENE_PLAY_AUDIOFILE,</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> inst = PLAY_INST1);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__audio_1_1NAudioCore.html#af6a5fc9c2b12a4574d73c12dd7d18276">GetPlayInfo</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> scene, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> inst, _play_info&amp; playinfo);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <span class="comment">// ========================================================================</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <span class="comment">// 回调设置</span></div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <span class="comment">// ========================================================================</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__audio_1_1NAudioCore.html#ae58e583ed4c0e151b06036f1519d9df8">SetDeviceStatusCallback</a>(<a class="code hl_typedef" href="namespacemy__audio.html#a43a421f6a260db0aa4f7f65364754c41">DeviceStatusCallback</a> cb);</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__audio_1_1NAudioCore.html#a7a551d45e3c8c38b9b53dfef437c8f55">SetPlayStatusCallback</a>(<a class="code hl_typedef" href="namespacemy__audio.html#a2417665993456020063f8c1e0056577f">PlayStatusCallback</a> cb);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__audio_1_1NAudioCore.html#a5c0793bec48dab7a775fc43439d4856b">SetHeartbeatTimeout</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> timeout_sec = 10);</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="comment">// SDK 回调的静态分发函数（C 接口要求函数指针）</span></div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__audio_1_1NAudioCore.html#a7b8a54a783f2102fc2bdca659d37a41f">OnDeviceStatusChange</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> devno, <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> status);</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__audio_1_1NAudioCore.html#a5502172ad4a49c660dfd5753cc24abb8">OnPlayStatusChange</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> scene, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> inst, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> status);</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno"><a class="line" href="classmy__audio_1_1NAudioCore.html#aa9620a15c76ada2388bf678e373a6463">  188</a></span>    std::atomic&lt;bool&gt;     <a class="code hl_variable" href="classmy__audio_1_1NAudioCore.html#aa9620a15c76ada2388bf678e373a6463">running_</a>{<span class="keyword">false</span>};       </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="classmy__audio_1_1NAudioCore.html#a281b5ec791338d4378e22ef44a51b4a1">  189</a></span>    <span class="keyword">mutable</span> std::mutex    <a class="code hl_variable" href="classmy__audio_1_1NAudioCore.html#a281b5ec791338d4378e22ef44a51b4a1">mutex_</a>;                </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    <span class="comment">// 本实例的回调（通过静态 instance 指针分发）</span></div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno"><a class="line" href="classmy__audio_1_1NAudioCore.html#ae716cfe0cee501ee1fe6e13948bb3d8f">  192</a></span>    <a class="code hl_typedef" href="namespacemy__audio.html#a43a421f6a260db0aa4f7f65364754c41">DeviceStatusCallback</a>  <a class="code hl_variable" href="classmy__audio_1_1NAudioCore.html#ae716cfe0cee501ee1fe6e13948bb3d8f">device_status_cb_</a>;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno"><a class="line" href="classmy__audio_1_1NAudioCore.html#afc5be267f151dd2ec3badffaa6a564bd">  193</a></span>    <a class="code hl_typedef" href="namespacemy__audio.html#a2417665993456020063f8c1e0056577f">PlayStatusCallback</a>    <a class="code hl_variable" href="classmy__audio_1_1NAudioCore.html#afc5be267f151dd2ec3badffaa6a564bd">play_status_cb_</a>;</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <span class="comment">// 静态实例指针，用于 C 回调分发到本对象</span></div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno"><a class="line" href="classmy__audio_1_1NAudioCore.html#ab02518cfbc8e98c0d175fa29913d4f64">  196</a></span>    <span class="keyword">static</span> <a class="code hl_class" href="classmy__audio_1_1NAudioCore.html">NAudioCore</a>*    <a class="code hl_variable" href="classmy__audio_1_1NAudioCore.html#ab02518cfbc8e98c0d175fa29913d4f64">instance_</a>;</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno"><a class="line" href="classmy__audio_1_1NAudioCore.html#aea26801cd23a0222905a0579e1eeb093">  197</a></span>    <span class="keyword">static</span> std::mutex     <a class="code hl_variable" href="classmy__audio_1_1NAudioCore.html#aea26801cd23a0222905a0579e1eeb093">instance_mutex_</a>;</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>};</div>
+</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>} <span class="comment">// namespace my_audio</span></div>
+<div class="ttc" id="aclassmy__audio_1_1NAudioCore_html"><div class="ttname"><a href="classmy__audio_1_1NAudioCore.html">my_audio::NAudioCore</a></div><div class="ttdoc">NAudio SDK 核心封装类</div><div class="ttdef"><b>Definition</b> NAudioCore.h:53</div></div>
+<div class="ttc" id="aclassmy__audio_1_1NAudioCore_html_a03bd49410d556c20b8f730ad336da123"><div class="ttname"><a href="classmy__audio_1_1NAudioCore.html#a03bd49410d556c20b8f730ad336da123">my_audio::NAudioCore::NAudioCore</a></div><div class="ttdeci">NAudioCore(const NAudioCore &amp;)=delete</div></div>
+<div class="ttc" id="aclassmy__audio_1_1NAudioCore_html_a11e32f1ea456d6aa6011f9a739fc7c0f"><div class="ttname"><a href="classmy__audio_1_1NAudioCore.html#a11e32f1ea456d6aa6011f9a739fc7c0f">my_audio::NAudioCore::StopServer</a></div><div class="ttdeci">void StopServer()</div><div class="ttdoc">停止 NAudio 音频服务</div><div class="ttdef"><b>Definition</b> NAudioCore.cpp:76</div></div>
+<div class="ttc" id="aclassmy__audio_1_1NAudioCore_html_a1e8f6643bc3ea08339dc087412517c07"><div class="ttname"><a href="classmy__audio_1_1NAudioCore.html#a1e8f6643bc3ea08339dc087412517c07">my_audio::NAudioCore::GetDeviceVolume</a></div><div class="ttdeci">int GetDeviceVolume(unsigned int devno)</div><div class="ttdoc">获取设备音量</div><div class="ttdef"><b>Definition</b> NAudioCore.cpp:112</div></div>
+<div class="ttc" id="aclassmy__audio_1_1NAudioCore_html_a26371f9ffcf6211bfd37595a2ed55d31"><div class="ttname"><a href="classmy__audio_1_1NAudioCore.html#a26371f9ffcf6211bfd37595a2ed55d31">my_audio::NAudioCore::GetDeviceName</a></div><div class="ttdeci">std::string GetDeviceName(unsigned int devno)</div><div class="ttdoc">获取设备名称</div><div class="ttdef"><b>Definition</b> NAudioCore.cpp:142</div></div>
+<div class="ttc" id="aclassmy__audio_1_1NAudioCore_html_a281b5ec791338d4378e22ef44a51b4a1"><div class="ttname"><a href="classmy__audio_1_1NAudioCore.html#a281b5ec791338d4378e22ef44a51b4a1">my_audio::NAudioCore::mutex_</a></div><div class="ttdeci">std::mutex mutex_</div><div class="ttdoc">通用锁</div><div class="ttdef"><b>Definition</b> NAudioCore.h:189</div></div>
+<div class="ttc" id="aclassmy__audio_1_1NAudioCore_html_a2f134b12213f318bd59d746d8637390c"><div class="ttname"><a href="classmy__audio_1_1NAudioCore.html#a2f134b12213f318bd59d746d8637390c">my_audio::NAudioCore::GetOnlineDevices</a></div><div class="ttdeci">std::vector&lt; unsigned int &gt; GetOnlineDevices()</div><div class="ttdoc">获取在线设备列表</div><div class="ttdef"><b>Definition</b> NAudioCore.cpp:91</div></div>
+<div class="ttc" id="aclassmy__audio_1_1NAudioCore_html_a382e52ac58051d1cac3201f4cf40e22b"><div class="ttname"><a href="classmy__audio_1_1NAudioCore.html#a382e52ac58051d1cac3201f4cf40e22b">my_audio::NAudioCore::SetDeviceVolume</a></div><div class="ttdeci">bool SetDeviceVolume(unsigned int devno, unsigned char volume)</div><div class="ttdoc">设置设备音量</div><div class="ttdef"><b>Definition</b> NAudioCore.cpp:122</div></div>
+<div class="ttc" id="aclassmy__audio_1_1NAudioCore_html_a4829dc45b17d2922cbac527be711c03d"><div class="ttname"><a href="classmy__audio_1_1NAudioCore.html#a4829dc45b17d2922cbac527be711c03d">my_audio::NAudioCore::operator=</a></div><div class="ttdeci">NAudioCore &amp; operator=(const NAudioCore &amp;)=delete</div></div>
+<div class="ttc" id="aclassmy__audio_1_1NAudioCore_html_a5502172ad4a49c660dfd5753cc24abb8"><div class="ttname"><a href="classmy__audio_1_1NAudioCore.html#a5502172ad4a49c660dfd5753cc24abb8">my_audio::NAudioCore::OnPlayStatusChange</a></div><div class="ttdeci">static void OnPlayStatusChange(unsigned char scene, unsigned char inst, unsigned int status)</div><div class="ttdef"><b>Definition</b> NAudioCore.cpp:232</div></div>
+<div class="ttc" id="aclassmy__audio_1_1NAudioCore_html_a55d9d2cfce4fdf8a0e6bcf8b041b518b"><div class="ttname"><a href="classmy__audio_1_1NAudioCore.html#a55d9d2cfce4fdf8a0e6bcf8b041b518b">my_audio::NAudioCore::StartServer</a></div><div class="ttdeci">bool StartServer(const std::string &amp;server_ip, int port)</div><div class="ttdoc">启动 NAudio 音频服务</div><div class="ttdef"><b>Definition</b> NAudioCore.cpp:45</div></div>
+<div class="ttc" id="aclassmy__audio_1_1NAudioCore_html_a5c0793bec48dab7a775fc43439d4856b"><div class="ttname"><a href="classmy__audio_1_1NAudioCore.html#a5c0793bec48dab7a775fc43439d4856b">my_audio::NAudioCore::SetHeartbeatTimeout</a></div><div class="ttdeci">void SetHeartbeatTimeout(unsigned int timeout_sec=10)</div><div class="ttdoc">设置心跳超时时间</div><div class="ttdef"><b>Definition</b> NAudioCore.cpp:216</div></div>
+<div class="ttc" id="aclassmy__audio_1_1NAudioCore_html_a6b2f3550b83e567a28d58f3deb5caf7a"><div class="ttname"><a href="classmy__audio_1_1NAudioCore.html#a6b2f3550b83e567a28d58f3deb5caf7a">my_audio::NAudioCore::~NAudioCore</a></div><div class="ttdeci">~NAudioCore()</div><div class="ttdef"><b>Definition</b> NAudioCore.cpp:30</div></div>
+<div class="ttc" id="aclassmy__audio_1_1NAudioCore_html_a7203fdcec534e561ce552113a3acb473"><div class="ttname"><a href="classmy__audio_1_1NAudioCore.html#a7203fdcec534e561ce552113a3acb473">my_audio::NAudioCore::GetDeviceStatus</a></div><div class="ttdeci">unsigned short GetDeviceStatus(unsigned int devno)</div><div class="ttdoc">获取设备状态</div><div class="ttdef"><b>Definition</b> NAudioCore.cpp:102</div></div>
+<div class="ttc" id="aclassmy__audio_1_1NAudioCore_html_a7729f71f550437812fea953d887faf6a"><div class="ttname"><a href="classmy__audio_1_1NAudioCore.html#a7729f71f550437812fea953d887faf6a">my_audio::NAudioCore::NAudioCore</a></div><div class="ttdeci">NAudioCore()</div><div class="ttdef"><b>Definition</b> NAudioCore.cpp:24</div></div>
+<div class="ttc" id="aclassmy__audio_1_1NAudioCore_html_a7a551d45e3c8c38b9b53dfef437c8f55"><div class="ttname"><a href="classmy__audio_1_1NAudioCore.html#a7a551d45e3c8c38b9b53dfef437c8f55">my_audio::NAudioCore::SetPlayStatusCallback</a></div><div class="ttdeci">void SetPlayStatusCallback(PlayStatusCallback cb)</div><div class="ttdoc">设置播放状态变更回调</div><div class="ttdef"><b>Definition</b> NAudioCore.cpp:211</div></div>
+<div class="ttc" id="aclassmy__audio_1_1NAudioCore_html_a7b8a54a783f2102fc2bdca659d37a41f"><div class="ttname"><a href="classmy__audio_1_1NAudioCore.html#a7b8a54a783f2102fc2bdca659d37a41f">my_audio::NAudioCore::OnDeviceStatusChange</a></div><div class="ttdeci">static void OnDeviceStatusChange(unsigned int devno, unsigned short status)</div><div class="ttdef"><b>Definition</b> NAudioCore.cpp:225</div></div>
+<div class="ttc" id="aclassmy__audio_1_1NAudioCore_html_a9439aeb634cf60f3f94ba513c40174e2"><div class="ttname"><a href="classmy__audio_1_1NAudioCore.html#a9439aeb634cf60f3f94ba513c40174e2">my_audio::NAudioCore::GetDeviceVersion</a></div><div class="ttdeci">std::string GetDeviceVersion(unsigned int devno)</div><div class="ttdoc">获取设备固件版本</div><div class="ttdef"><b>Definition</b> NAudioCore.cpp:132</div></div>
+<div class="ttc" id="aclassmy__audio_1_1NAudioCore_html_aa9620a15c76ada2388bf678e373a6463"><div class="ttname"><a href="classmy__audio_1_1NAudioCore.html#aa9620a15c76ada2388bf678e373a6463">my_audio::NAudioCore::running_</a></div><div class="ttdeci">std::atomic&lt; bool &gt; running_</div><div class="ttdoc">服务运行标志</div><div class="ttdef"><b>Definition</b> NAudioCore.h:188</div></div>
+<div class="ttc" id="aclassmy__audio_1_1NAudioCore_html_ab00de6307db207f4ea31c7a51062f1d4"><div class="ttname"><a href="classmy__audio_1_1NAudioCore.html#ab00de6307db207f4ea31c7a51062f1d4">my_audio::NAudioCore::StopPlay</a></div><div class="ttdeci">bool StopPlay(unsigned char scene=SCENE_PLAY_AUDIOFILE, unsigned char inst=PLAY_INST1)</div><div class="ttdoc">停止指定场景和实例的播放</div><div class="ttdef"><b>Definition</b> NAudioCore.cpp:187</div></div>
+<div class="ttc" id="aclassmy__audio_1_1NAudioCore_html_ab02518cfbc8e98c0d175fa29913d4f64"><div class="ttname"><a href="classmy__audio_1_1NAudioCore.html#ab02518cfbc8e98c0d175fa29913d4f64">my_audio::NAudioCore::instance_</a></div><div class="ttdeci">static NAudioCore * instance_</div><div class="ttdef"><b>Definition</b> NAudioCore.h:196</div></div>
+<div class="ttc" id="aclassmy__audio_1_1NAudioCore_html_ad201152b05beda61e51e3594ff07c8fe"><div class="ttname"><a href="classmy__audio_1_1NAudioCore.html#ad201152b05beda61e51e3594ff07c8fe">my_audio::NAudioCore::IsRunning</a></div><div class="ttdeci">bool IsRunning() const</div><div class="ttdoc">服务是否正在运行</div><div class="ttdef"><b>Definition</b> NAudioCore.h:82</div></div>
+<div class="ttc" id="aclassmy__audio_1_1NAudioCore_html_ae58e583ed4c0e151b06036f1519d9df8"><div class="ttname"><a href="classmy__audio_1_1NAudioCore.html#ae58e583ed4c0e151b06036f1519d9df8">my_audio::NAudioCore::SetDeviceStatusCallback</a></div><div class="ttdeci">void SetDeviceStatusCallback(DeviceStatusCallback cb)</div><div class="ttdoc">设置设备状态变更回调（上层由 NAudio 注册）</div><div class="ttdef"><b>Definition</b> NAudioCore.cpp:206</div></div>
+<div class="ttc" id="aclassmy__audio_1_1NAudioCore_html_ae716cfe0cee501ee1fe6e13948bb3d8f"><div class="ttname"><a href="classmy__audio_1_1NAudioCore.html#ae716cfe0cee501ee1fe6e13948bb3d8f">my_audio::NAudioCore::device_status_cb_</a></div><div class="ttdeci">DeviceStatusCallback device_status_cb_</div><div class="ttdef"><b>Definition</b> NAudioCore.h:192</div></div>
+<div class="ttc" id="aclassmy__audio_1_1NAudioCore_html_aea26801cd23a0222905a0579e1eeb093"><div class="ttname"><a href="classmy__audio_1_1NAudioCore.html#aea26801cd23a0222905a0579e1eeb093">my_audio::NAudioCore::instance_mutex_</a></div><div class="ttdeci">static std::mutex instance_mutex_</div><div class="ttdef"><b>Definition</b> NAudioCore.h:197</div></div>
+<div class="ttc" id="aclassmy__audio_1_1NAudioCore_html_af04fa4ce72e215d37994d0f475eb3842"><div class="ttname"><a href="classmy__audio_1_1NAudioCore.html#af04fa4ce72e215d37994d0f475eb3842">my_audio::NAudioCore::PlayFileOnDevice</a></div><div class="ttdeci">bool PlayFileOnDevice(unsigned int devno, const std::string &amp;filepath, int volume=80, int priority=10)</div><div class="ttdoc">播放音频文件到指定设备</div><div class="ttdef"><b>Definition</b> NAudioCore.cpp:155</div></div>
+<div class="ttc" id="aclassmy__audio_1_1NAudioCore_html_af6a5fc9c2b12a4574d73c12dd7d18276"><div class="ttname"><a href="classmy__audio_1_1NAudioCore.html#af6a5fc9c2b12a4574d73c12dd7d18276">my_audio::NAudioCore::GetPlayInfo</a></div><div class="ttdeci">bool GetPlayInfo(unsigned char scene, unsigned char inst, _play_info &amp;playinfo)</div><div class="ttdoc">获取播放信息</div><div class="ttdef"><b>Definition</b> NAudioCore.cpp:197</div></div>
+<div class="ttc" id="aclassmy__audio_1_1NAudioCore_html_afc5be267f151dd2ec3badffaa6a564bd"><div class="ttname"><a href="classmy__audio_1_1NAudioCore.html#afc5be267f151dd2ec3badffaa6a564bd">my_audio::NAudioCore::play_status_cb_</a></div><div class="ttdeci">PlayStatusCallback play_status_cb_</div><div class="ttdef"><b>Definition</b> NAudioCore.h:193</div></div>
+<div class="ttc" id="anamespacemy__audio_html"><div class="ttname"><a href="namespacemy__audio.html">my_audio</a></div><div class="ttdef"><b>Definition</b> BaseAudio.cpp:11</div></div>
+<div class="ttc" id="anamespacemy__audio_html_a2417665993456020063f8c1e0056577f"><div class="ttname"><a href="namespacemy__audio.html#a2417665993456020063f8c1e0056577f">my_audio::PlayStatusCallback</a></div><div class="ttdeci">std::function&lt; void(unsigned char scene, unsigned char inst, unsigned int status)&gt; PlayStatusCallback</div><div class="ttdoc">播放状态变更回调</div><div class="ttdef"><b>Definition</b> NAudioCore.h:41</div></div>
+<div class="ttc" id="anamespacemy__audio_html_a43a421f6a260db0aa4f7f65364754c41"><div class="ttname"><a href="namespacemy__audio.html#a43a421f6a260db0aa4f7f65364754c41">my_audio::DeviceStatusCallback</a></div><div class="ttdeci">std::function&lt; void(unsigned int devno, unsigned short status)&gt; DeviceStatusCallback</div><div class="ttdoc">设备状态变更回调</div><div class="ttdef"><b>Definition</b> NAudioCore.h:33</div></div>
+<div class="ttc" id="apinling__pod_8cpp_html_a8e0798404bf2cf5dabb84c5ba9a4f236"><div class="ttname"><a href="pinling__pod_8cpp.html#a8e0798404bf2cf5dabb84c5ba9a4f236">port</a></div><div class="ttdeci">uint16_t port</div><div class="ttdef"><b>Definition</b> pinling_pod.cpp:28</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

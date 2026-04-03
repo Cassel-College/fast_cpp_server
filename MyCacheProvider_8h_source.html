@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_cache/MyCacheProvider.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_a451bf1a465bac099258316f07a9b989.html">my_cache</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">MyCacheProvider.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="MyCacheProvider_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="MyCache_8h.html">MyCache.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;atomic&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__cache.html">my_cache</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classmy__cache_1_1MyCacheProvider.html">   28</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__cache_1_1MyCacheProvider.html">MyCacheProvider</a> {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">static</span> <a class="code hl_struct" href="structmy__cache_1_1CacheResult.html">CacheResult&lt;void&gt;</a> <a class="code hl_function" href="classmy__cache_1_1MyCacheProvider.html#a6950bff697ac47c218ff9042c3158ad8">Init</a>(<span class="keyword">const</span> std::string&amp; config_json);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">static</span> <a class="code hl_struct" href="structmy__cache_1_1CacheResult.html">CacheResult&lt;MyCache*&gt;</a> <a class="code hl_function" href="classmy__cache_1_1MyCacheProvider.html#ac024704570fe0455f4ac88a9ffec39b9">Get</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__cache_1_1MyCacheProvider.html#ac919a991060ede6983343719401686de">Destroy</a>();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="comment">// 禁止实例化</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classmy__cache_1_1MyCacheProvider.html#a7e8d6504823799cafbea1cf20a81c624">   49</a></span>    <a class="code hl_function" href="classmy__cache_1_1MyCacheProvider.html#a7e8d6504823799cafbea1cf20a81c624">MyCacheProvider</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classmy__cache_1_1MyCacheProvider.html#a866520adaba6710c808dd72c1dffbcab">   50</a></span>    <a class="code hl_function" href="classmy__cache_1_1MyCacheProvider.html#a866520adaba6710c808dd72c1dffbcab">~MyCacheProvider</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classmy__cache_1_1MyCacheProvider.html#a8c3e52abcfe3a78941bca3c87c255736">   53</a></span>    <span class="keyword">static</span> std::atomic&lt;bool&gt; <a class="code hl_variable" href="classmy__cache_1_1MyCacheProvider.html#a8c3e52abcfe3a78941bca3c87c255736">initialized_flag_</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classmy__cache_1_1MyCacheProvider.html#a8510b1ae608ff01530ce984cffc695eb">   54</a></span>    <span class="keyword">static</span> std::unique_ptr&lt;MyCache&gt; <a class="code hl_variable" href="classmy__cache_1_1MyCacheProvider.html#a8510b1ae608ff01530ce984cffc695eb">instance_</a>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classmy__cache_1_1MyCacheProvider.html#a281b5ec791338d4378e22ef44a51b4a1">   55</a></span>    <span class="keyword">static</span> std::mutex <a class="code hl_variable" href="classmy__cache_1_1MyCacheProvider.html#a281b5ec791338d4378e22ef44a51b4a1">mutex_</a>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>};</div>
+</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}  <span class="comment">// namespace my_cache</span></div>
+<div class="ttc" id="aMyCache_8h_html"><div class="ttname"><a href="MyCache_8h.html">MyCache.h</a></div><div class="ttdoc">本地文件缓存管理模块</div></div>
+<div class="ttc" id="aclassmy__cache_1_1MyCacheProvider_html"><div class="ttname"><a href="classmy__cache_1_1MyCacheProvider.html">my_cache::MyCacheProvider</a></div><div class="ttdoc">MyCache 的单例包装器，提供线程安全的显式初始化</div><div class="ttdef"><b>Definition</b> MyCacheProvider.h:28</div></div>
+<div class="ttc" id="aclassmy__cache_1_1MyCacheProvider_html_a281b5ec791338d4378e22ef44a51b4a1"><div class="ttname"><a href="classmy__cache_1_1MyCacheProvider.html#a281b5ec791338d4378e22ef44a51b4a1">my_cache::MyCacheProvider::mutex_</a></div><div class="ttdeci">static std::mutex mutex_</div><div class="ttdef"><b>Definition</b> MyCacheProvider.h:55</div></div>
+<div class="ttc" id="aclassmy__cache_1_1MyCacheProvider_html_a6950bff697ac47c218ff9042c3158ad8"><div class="ttname"><a href="classmy__cache_1_1MyCacheProvider.html#a6950bff697ac47c218ff9042c3158ad8">my_cache::MyCacheProvider::Init</a></div><div class="ttdeci">static CacheResult&lt; void &gt; Init(const std::string &amp;config_json)</div><div class="ttdoc">初始化单例（线程安全，仅首次调用生效）</div><div class="ttdef"><b>Definition</b> MyCacheProvider.cpp:23</div></div>
+<div class="ttc" id="aclassmy__cache_1_1MyCacheProvider_html_a7e8d6504823799cafbea1cf20a81c624"><div class="ttname"><a href="classmy__cache_1_1MyCacheProvider.html#a7e8d6504823799cafbea1cf20a81c624">my_cache::MyCacheProvider::MyCacheProvider</a></div><div class="ttdeci">MyCacheProvider()=delete</div></div>
+<div class="ttc" id="aclassmy__cache_1_1MyCacheProvider_html_a8510b1ae608ff01530ce984cffc695eb"><div class="ttname"><a href="classmy__cache_1_1MyCacheProvider.html#a8510b1ae608ff01530ce984cffc695eb">my_cache::MyCacheProvider::instance_</a></div><div class="ttdeci">static std::unique_ptr&lt; MyCache &gt; instance_</div><div class="ttdef"><b>Definition</b> MyCacheProvider.h:54</div></div>
+<div class="ttc" id="aclassmy__cache_1_1MyCacheProvider_html_a866520adaba6710c808dd72c1dffbcab"><div class="ttname"><a href="classmy__cache_1_1MyCacheProvider.html#a866520adaba6710c808dd72c1dffbcab">my_cache::MyCacheProvider::~MyCacheProvider</a></div><div class="ttdeci">~MyCacheProvider()=delete</div></div>
+<div class="ttc" id="aclassmy__cache_1_1MyCacheProvider_html_a8c3e52abcfe3a78941bca3c87c255736"><div class="ttname"><a href="classmy__cache_1_1MyCacheProvider.html#a8c3e52abcfe3a78941bca3c87c255736">my_cache::MyCacheProvider::initialized_flag_</a></div><div class="ttdeci">static std::atomic&lt; bool &gt; initialized_flag_</div><div class="ttdef"><b>Definition</b> MyCacheProvider.h:53</div></div>
+<div class="ttc" id="aclassmy__cache_1_1MyCacheProvider_html_ac024704570fe0455f4ac88a9ffec39b9"><div class="ttname"><a href="classmy__cache_1_1MyCacheProvider.html#ac024704570fe0455f4ac88a9ffec39b9">my_cache::MyCacheProvider::Get</a></div><div class="ttdeci">static CacheResult&lt; MyCache * &gt; Get()</div><div class="ttdoc">获取 MyCache 实例</div><div class="ttdef"><b>Definition</b> MyCacheProvider.cpp:48</div></div>
+<div class="ttc" id="aclassmy__cache_1_1MyCacheProvider_html_ac919a991060ede6983343719401686de"><div class="ttname"><a href="classmy__cache_1_1MyCacheProvider.html#ac919a991060ede6983343719401686de">my_cache::MyCacheProvider::Destroy</a></div><div class="ttdeci">static void Destroy()</div><div class="ttdoc">销毁单例实例（主要用于测试）</div><div class="ttdef"><b>Definition</b> MyCacheProvider.cpp:57</div></div>
+<div class="ttc" id="anamespacemy__cache_html"><div class="ttname"><a href="namespacemy__cache.html">my_cache</a></div><div class="ttdef"><b>Definition</b> CacheTypes.h:21</div></div>
+<div class="ttc" id="astructmy__cache_1_1CacheResult_html"><div class="ttname"><a href="structmy__cache_1_1CacheResult.html">my_cache::CacheResult</a></div><div class="ttdoc">通用返回值类型，包含错误码和可选的数据</div><div class="ttdef"><b>Definition</b> CacheTypes.h:110</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

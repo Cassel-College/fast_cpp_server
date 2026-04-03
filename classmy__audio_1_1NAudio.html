@@ -1,0 +1,1042 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: NAudio类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacemy__audio.html">my_audio</a></li><li class="navelem"><a class="el" href="classmy__audio_1_1NAudio.html">NAudio</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a>  </div>
+  <div class="headertitle"><div class="title">NAudio类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><a class="el" href="classmy__audio_1_1NAudio.html" title="NAudio 厂商适配类">NAudio</a> 厂商适配类  
+ <a href="classmy__audio_1_1NAudio.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="NAudio_8h_source.html">NAudio.h</a>&gt;</code></p>
+<div class="dynheader">
+类 NAudio 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__audio_1_1NAudio__inherit__graph.png" border="0" usemap="#aNAudio_inherit__map" alt="Inheritance graph"/></div>
+<map name="aNAudio_inherit__map" id="aNAudio_inherit__map">
+<area shape="rect" title="NAudio 厂商适配类" alt="" coords="16,79,85,104"/>
+<area shape="rect" href="classmy__audio_1_1BaseAudio.html" title="音频设备纯虚基类" alt="" coords="5,5,96,31"/>
+<area shape="poly" title=" " alt="" coords="53,44,53,79,48,79,48,44"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+NAudio 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__audio_1_1NAudio__coll__graph.png" border="0" usemap="#aNAudio_coll__map" alt="Collaboration graph"/></div>
+<map name="aNAudio_coll__map" id="aNAudio_coll__map">
+<area shape="rect" title="NAudio 厂商适配类" alt="" coords="136,93,205,119"/>
+<area shape="rect" href="classmy__audio_1_1BaseAudio.html" title="音频设备纯虚基类" alt="" coords="5,5,96,31"/>
+<area shape="poly" title=" " alt="" coords="80,37,156,91,153,95,77,41"/>
+<area shape="rect" href="structmy__audio_1_1AudioConfig.html" title="音频设备初始化配置" alt="" coords="121,5,221,31"/>
+<area shape="poly" title=" " alt="" coords="173,45,173,93,168,93,168,45"/>
+<area shape="rect" href="structmy__audio_1_1AudioInfo.html" title="音频设备描述信息（型号、固件版本等）" alt="" coords="245,5,329,31"/>
+<area shape="poly" title=" " alt="" coords="265,42,228,71,192,95,189,91,225,67,262,38"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aadbe1721fddd191c50abe94e17327ac2" id="r_aadbe1721fddd191c50abe94e17327ac2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1NAudio.html#aadbe1721fddd191c50abe94e17327ac2">NAudio</a> ()</td></tr>
+<tr class="separator:aadbe1721fddd191c50abe94e17327ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d677561e8d5adeb242c26bdc0cd9947" id="r_a0d677561e8d5adeb242c26bdc0cd9947"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1NAudio.html#a0d677561e8d5adeb242c26bdc0cd9947">~NAudio</a> () override</td></tr>
+<tr class="separator:a0d677561e8d5adeb242c26bdc0cd9947"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa992a1bdfa7991f3fdd85d3e0ac5daf" id="r_aaa992a1bdfa7991f3fdd85d3e0ac5daf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1NAudio.html#aaa992a1bdfa7991f3fdd85d3e0ac5daf">Init</a> (const std::string &amp;json_config) override</td></tr>
+<tr class="memdesc:aaa992a1bdfa7991f3fdd85d3e0ac5daf"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化设备  <br /></td></tr>
+<tr class="separator:aaa992a1bdfa7991f3fdd85d3e0ac5daf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada2b3d6496f3a89b9e669a3a41937c74" id="r_ada2b3d6496f3a89b9e669a3a41937c74"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1NAudio.html#ada2b3d6496f3a89b9e669a3a41937c74">Start</a> () override</td></tr>
+<tr class="memdesc:ada2b3d6496f3a89b9e669a3a41937c74"><td class="mdescLeft">&#160;</td><td class="mdescRight">启动设备（开始监听/服务）  <br /></td></tr>
+<tr class="separator:ada2b3d6496f3a89b9e669a3a41937c74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74dd70d04651ca81c9e3ca9eb5218e56" id="r_a74dd70d04651ca81c9e3ca9eb5218e56"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1NAudio.html#a74dd70d04651ca81c9e3ca9eb5218e56">Stop</a> () override</td></tr>
+<tr class="memdesc:a74dd70d04651ca81c9e3ca9eb5218e56"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止设备  <br /></td></tr>
+<tr class="separator:a74dd70d04651ca81c9e3ca9eb5218e56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad44c609d3883f0e30667fa39605d3a24" id="r_ad44c609d3883f0e30667fa39605d3a24"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemy__audio.html#a29fe721c7ad1269a9fb39ce5a134ce35">AudioStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1NAudio.html#ad44c609d3883f0e30667fa39605d3a24">Status</a> () override</td></tr>
+<tr class="memdesc:ad44c609d3883f0e30667fa39605d3a24"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前设备状态  <br /></td></tr>
+<tr class="separator:ad44c609d3883f0e30667fa39605d3a24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16ed24759e7261ebfa77b6d327bca674" id="r_a16ed24759e7261ebfa77b6d327bca674"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmy__audio_1_1AudioConfig.html">AudioConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1NAudio.html#a16ed24759e7261ebfa77b6d327bca674">Config</a> () override</td></tr>
+<tr class="memdesc:a16ed24759e7261ebfa77b6d327bca674"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取初始化配置  <br /></td></tr>
+<tr class="separator:a16ed24759e7261ebfa77b6d327bca674"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e9b98ad1811b0ad0457d22d917c2082" id="r_a3e9b98ad1811b0ad0457d22d917c2082"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmy__audio_1_1AudioInfo.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1NAudio.html#a3e9b98ad1811b0ad0457d22d917c2082">Info</a> () override</td></tr>
+<tr class="memdesc:a3e9b98ad1811b0ad0457d22d917c2082"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取设备描述信息（型号、固件版本等）  <br /></td></tr>
+<tr class="separator:a3e9b98ad1811b0ad0457d22d917c2082"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a805850d9cb596d9448cdf317aa46f424" id="r_a805850d9cb596d9448cdf317aa46f424"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1NAudio.html#a805850d9cb596d9448cdf317aa46f424">PlayFile</a> (const std::string &amp;path) override</td></tr>
+<tr class="memdesc:a805850d9cb596d9448cdf317aa46f424"><td class="mdescLeft">&#160;</td><td class="mdescRight">播放指定路径的音频文件  <br /></td></tr>
+<tr class="separator:a805850d9cb596d9448cdf317aa46f424"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b2b5e88ba4e4b553c876b8610b597d0" id="r_a8b2b5e88ba4e4b553c876b8610b597d0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1NAudio.html#a8b2b5e88ba4e4b553c876b8610b597d0">SetVolume</a> (int volume=50) override</td></tr>
+<tr class="memdesc:a8b2b5e88ba4e4b553c876b8610b597d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置音量  <br /></td></tr>
+<tr class="separator:a8b2b5e88ba4e4b553c876b8610b597d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa931fe199306c627c1bb55f17849eaca" id="r_aa931fe199306c627c1bb55f17849eaca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1NAudio.html#aa931fe199306c627c1bb55f17849eaca">CheckSelf</a> () override</td></tr>
+<tr class="memdesc:aa931fe199306c627c1bb55f17849eaca"><td class="mdescLeft">&#160;</td><td class="mdescRight">设备自检  <br /></td></tr>
+<tr class="separator:aa931fe199306c627c1bb55f17849eaca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a057d4fe699068de168eac7e31d417def" id="r_a057d4fe699068de168eac7e31d417def"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1NAudio.html#a057d4fe699068de168eac7e31d417def">AudioLoop</a> () override</td></tr>
+<tr class="memdesc:a057d4fe699068de168eac7e31d417def"><td class="mdescLeft">&#160;</td><td class="mdescRight">心跳与属性定时更新循环  <br /></td></tr>
+<tr class="separator:a057d4fe699068de168eac7e31d417def"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classmy__audio_1_1BaseAudio"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmy__audio_1_1BaseAudio')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classmy__audio_1_1BaseAudio.html">BaseAudio</a></td></tr>
+<tr class="memitem:aa42ee05aed559a37275d07d4301544da inherit pub_methods_classmy__audio_1_1BaseAudio" id="r_aa42ee05aed559a37275d07d4301544da"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1BaseAudio.html#aa42ee05aed559a37275d07d4301544da">BaseAudio</a> ()=default</td></tr>
+<tr class="separator:aa42ee05aed559a37275d07d4301544da inherit pub_methods_classmy__audio_1_1BaseAudio"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ddf7d187f9cffd00297b8d7dc3e682e inherit pub_methods_classmy__audio_1_1BaseAudio" id="r_a0ddf7d187f9cffd00297b8d7dc3e682e"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1BaseAudio.html#a0ddf7d187f9cffd00297b8d7dc3e682e">~BaseAudio</a> ()=default</td></tr>
+<tr class="separator:a0ddf7d187f9cffd00297b8d7dc3e682e inherit pub_methods_classmy__audio_1_1BaseAudio"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab07df5352afbe6eda31db4f432370f59 inherit pub_methods_classmy__audio_1_1BaseAudio" id="r_ab07df5352afbe6eda31db4f432370f59"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1BaseAudio.html#ab07df5352afbe6eda31db4f432370f59">BaseAudio</a> (const <a class="el" href="classmy__audio_1_1BaseAudio.html">BaseAudio</a> &amp;)=delete</td></tr>
+<tr class="separator:ab07df5352afbe6eda31db4f432370f59 inherit pub_methods_classmy__audio_1_1BaseAudio"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59f5eb5f0037ffa9fb5e445abaa52cf2 inherit pub_methods_classmy__audio_1_1BaseAudio" id="r_a59f5eb5f0037ffa9fb5e445abaa52cf2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmy__audio_1_1BaseAudio.html">BaseAudio</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1BaseAudio.html#a59f5eb5f0037ffa9fb5e445abaa52cf2">operator=</a> (const <a class="el" href="classmy__audio_1_1BaseAudio.html">BaseAudio</a> &amp;)=delete</td></tr>
+<tr class="separator:a59f5eb5f0037ffa9fb5e445abaa52cf2 inherit pub_methods_classmy__audio_1_1BaseAudio"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8379d52d98f77683a56099b48a709100 inherit pub_methods_classmy__audio_1_1BaseAudio" id="r_a8379d52d98f77683a56099b48a709100"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1BaseAudio.html#a8379d52d98f77683a56099b48a709100">GetDeviceId</a> () const</td></tr>
+<tr class="memdesc:a8379d52d98f77683a56099b48a709100 inherit pub_methods_classmy__audio_1_1BaseAudio"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取设备 ID  <br /></td></tr>
+<tr class="separator:a8379d52d98f77683a56099b48a709100 inherit pub_methods_classmy__audio_1_1BaseAudio"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a98946a64f3893b085f650932c9dfee inherit pub_methods_classmy__audio_1_1BaseAudio" id="r_a9a98946a64f3893b085f650932c9dfee"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1BaseAudio.html#a9a98946a64f3893b085f650932c9dfee">GetName</a> () const</td></tr>
+<tr class="memdesc:a9a98946a64f3893b085f650932c9dfee inherit pub_methods_classmy__audio_1_1BaseAudio"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取设备名称  <br /></td></tr>
+<tr class="separator:a9a98946a64f3893b085f650932c9dfee inherit pub_methods_classmy__audio_1_1BaseAudio"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86e2cd555151a19bbb8aa59585bd0736 inherit pub_methods_classmy__audio_1_1BaseAudio" id="r_a86e2cd555151a19bbb8aa59585bd0736"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1BaseAudio.html#a86e2cd555151a19bbb8aa59585bd0736">RequestStop</a> ()</td></tr>
+<tr class="memdesc:a86e2cd555151a19bbb8aa59585bd0736 inherit pub_methods_classmy__audio_1_1BaseAudio"><td class="mdescLeft">&#160;</td><td class="mdescRight">请求停止 AudioLoop  <br /></td></tr>
+<tr class="separator:a86e2cd555151a19bbb8aa59585bd0736 inherit pub_methods_classmy__audio_1_1BaseAudio"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a562a51e3dc1a2ffc5146417bd0818e86 inherit pub_methods_classmy__audio_1_1BaseAudio" id="r_a562a51e3dc1a2ffc5146417bd0818e86"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1BaseAudio.html#a562a51e3dc1a2ffc5146417bd0818e86">IsStopRequested</a> () const</td></tr>
+<tr class="memdesc:a562a51e3dc1a2ffc5146417bd0818e86 inherit pub_methods_classmy__audio_1_1BaseAudio"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查是否已请求停止  <br /></td></tr>
+<tr class="separator:a562a51e3dc1a2ffc5146417bd0818e86 inherit pub_methods_classmy__audio_1_1BaseAudio"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:ab06fd23f33a98e652cf3f1c05bc9ba3e" id="r_ab06fd23f33a98e652cf3f1c05bc9ba3e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemy__audio.html#a29fe721c7ad1269a9fb39ce5a134ce35">AudioStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1NAudio.html#ab06fd23f33a98e652cf3f1c05bc9ba3e">ConvertDeviceStatus</a> (unsigned short sdk_status)</td></tr>
+<tr class="memdesc:ab06fd23f33a98e652cf3f1c05bc9ba3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">将 <a class="el" href="classmy__audio_1_1NAudio.html" title="NAudio 厂商适配类">NAudio</a> SDK 设备状态码转为 AudioStatus  <br /></td></tr>
+<tr class="separator:ab06fd23f33a98e652cf3f1c05bc9ba3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90cebc54edd75177deae1c45702c5856" id="r_a90cebc54edd75177deae1c45702c5856"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1NAudio.html#a90cebc54edd75177deae1c45702c5856">OnDeviceStatusChanged</a> (unsigned int devno, unsigned short status)</td></tr>
+<tr class="memdesc:a90cebc54edd75177deae1c45702c5856"><td class="mdescLeft">&#160;</td><td class="mdescRight">SDK 设备状态回调处理  <br /></td></tr>
+<tr class="separator:a90cebc54edd75177deae1c45702c5856"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac351e54ba0129b0bd47b386d2db0efc0" id="r_ac351e54ba0129b0bd47b386d2db0efc0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1NAudio.html#ac351e54ba0129b0bd47b386d2db0efc0">OnPlayStatusChanged</a> (unsigned char scene, unsigned char inst, unsigned int status)</td></tr>
+<tr class="memdesc:ac351e54ba0129b0bd47b386d2db0efc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">SDK 播放状态回调处理  <br /></td></tr>
+<tr class="separator:ac351e54ba0129b0bd47b386d2db0efc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a9159fa43c01bfc0928ba9c29501e7be4" id="r_a9159fa43c01bfc0928ba9c29501e7be4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmy__audio_1_1AudioConfig.html">AudioConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1NAudio.html#a9159fa43c01bfc0928ba9c29501e7be4">config_</a></td></tr>
+<tr class="memdesc:a9159fa43c01bfc0928ba9c29501e7be4"><td class="mdescLeft">&#160;</td><td class="mdescRight">设备配置  <br /></td></tr>
+<tr class="separator:a9159fa43c01bfc0928ba9c29501e7be4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbede0c60dabd33bb06bddb572c4e483" id="r_afbede0c60dabd33bb06bddb572c4e483"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmy__audio_1_1AudioInfo.html">AudioInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1NAudio.html#afbede0c60dabd33bb06bddb572c4e483">info_</a></td></tr>
+<tr class="memdesc:afbede0c60dabd33bb06bddb572c4e483"><td class="mdescLeft">&#160;</td><td class="mdescRight">设备信息  <br /></td></tr>
+<tr class="separator:afbede0c60dabd33bb06bddb572c4e483"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e562a32ee2bfba0f84cab925f97c024" id="r_a2e562a32ee2bfba0f84cab925f97c024"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classmy__audio_1_1NAudioCore.html">NAudioCore</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1NAudio.html#a2e562a32ee2bfba0f84cab925f97c024">core_</a></td></tr>
+<tr class="memdesc:a2e562a32ee2bfba0f84cab925f97c024"><td class="mdescLeft">&#160;</td><td class="mdescRight">SDK 核心封装  <br /></td></tr>
+<tr class="separator:a2e562a32ee2bfba0f84cab925f97c024"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad76b0f1b37037cf86462a9b8a16b901c" id="r_ad76b0f1b37037cf86462a9b8a16b901c"><td class="memItemLeft" align="right" valign="top">std::thread&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1NAudio.html#ad76b0f1b37037cf86462a9b8a16b901c">loop_thread_</a></td></tr>
+<tr class="memdesc:ad76b0f1b37037cf86462a9b8a16b901c"><td class="mdescLeft">&#160;</td><td class="mdescRight">AudioLoop 线程  <br /></td></tr>
+<tr class="separator:ad76b0f1b37037cf86462a9b8a16b901c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e1ccbf2f237596517cdeba2efe85144" id="r_a2e1ccbf2f237596517cdeba2efe85144"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1NAudio.html#a2e1ccbf2f237596517cdeba2efe85144">sdk_devno_</a> {0}</td></tr>
+<tr class="memdesc:a2e1ccbf2f237596517cdeba2efe85144"><td class="mdescLeft">&#160;</td><td class="mdescRight">SDK 内部设备编号  <br /></td></tr>
+<tr class="separator:a2e1ccbf2f237596517cdeba2efe85144"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_attribs_classmy__audio_1_1BaseAudio"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classmy__audio_1_1BaseAudio')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="classmy__audio_1_1BaseAudio.html">BaseAudio</a></td></tr>
+<tr class="memitem:ac20b54de6901f04361fcbb0d2befb4bd inherit pro_attribs_classmy__audio_1_1BaseAudio" id="r_ac20b54de6901f04361fcbb0d2befb4bd"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1BaseAudio.html#ac20b54de6901f04361fcbb0d2befb4bd">device_id_</a></td></tr>
+<tr class="memdesc:ac20b54de6901f04361fcbb0d2befb4bd inherit pro_attribs_classmy__audio_1_1BaseAudio"><td class="mdescLeft">&#160;</td><td class="mdescRight">设备唯一标识  <br /></td></tr>
+<tr class="separator:ac20b54de6901f04361fcbb0d2befb4bd inherit pro_attribs_classmy__audio_1_1BaseAudio"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d739cc5d335052eb9f5b2ca559b81d1 inherit pro_attribs_classmy__audio_1_1BaseAudio" id="r_a4d739cc5d335052eb9f5b2ca559b81d1"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1BaseAudio.html#a4d739cc5d335052eb9f5b2ca559b81d1">name_</a></td></tr>
+<tr class="memdesc:a4d739cc5d335052eb9f5b2ca559b81d1 inherit pro_attribs_classmy__audio_1_1BaseAudio"><td class="mdescLeft">&#160;</td><td class="mdescRight">设备名称  <br /></td></tr>
+<tr class="separator:a4d739cc5d335052eb9f5b2ca559b81d1 inherit pro_attribs_classmy__audio_1_1BaseAudio"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e26f1289835a8cbf2adb7af4263cd8f inherit pro_attribs_classmy__audio_1_1BaseAudio" id="r_a4e26f1289835a8cbf2adb7af4263cd8f"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1BaseAudio.html#a4e26f1289835a8cbf2adb7af4263cd8f">volume_</a> {50}</td></tr>
+<tr class="memdesc:a4e26f1289835a8cbf2adb7af4263cd8f inherit pro_attribs_classmy__audio_1_1BaseAudio"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前音量  <br /></td></tr>
+<tr class="separator:a4e26f1289835a8cbf2adb7af4263cd8f inherit pro_attribs_classmy__audio_1_1BaseAudio"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bbf506d6b035ed1f8348071a21c385b inherit pro_attribs_classmy__audio_1_1BaseAudio" id="r_a1bbf506d6b035ed1f8348071a21c385b"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; <a class="el" href="namespacemy__audio.html#a29fe721c7ad1269a9fb39ce5a134ce35">AudioStatus</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1BaseAudio.html#a1bbf506d6b035ed1f8348071a21c385b">status_</a> {<a class="el" href="namespacemy__audio.html#a29fe721c7ad1269a9fb39ce5a134ce35a8d9da4bc0e49a50e09ac9f7e56789d39">AudioStatus::Offline</a>}</td></tr>
+<tr class="memdesc:a1bbf506d6b035ed1f8348071a21c385b inherit pro_attribs_classmy__audio_1_1BaseAudio"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前状态  <br /></td></tr>
+<tr class="separator:a1bbf506d6b035ed1f8348071a21c385b inherit pro_attribs_classmy__audio_1_1BaseAudio"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a961de3dcb0b666365f51228dd50f7dbf inherit pro_attribs_classmy__audio_1_1BaseAudio" id="r_a961de3dcb0b666365f51228dd50f7dbf"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1BaseAudio.html#a961de3dcb0b666365f51228dd50f7dbf">stop_flag_</a> {false}</td></tr>
+<tr class="memdesc:a961de3dcb0b666365f51228dd50f7dbf inherit pro_attribs_classmy__audio_1_1BaseAudio"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止标志  <br /></td></tr>
+<tr class="separator:a961de3dcb0b666365f51228dd50f7dbf inherit pro_attribs_classmy__audio_1_1BaseAudio"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a281b5ec791338d4378e22ef44a51b4a1 inherit pro_attribs_classmy__audio_1_1BaseAudio" id="r_a281b5ec791338d4378e22ef44a51b4a1"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1BaseAudio.html#a281b5ec791338d4378e22ef44a51b4a1">mutex_</a></td></tr>
+<tr class="memdesc:a281b5ec791338d4378e22ef44a51b4a1 inherit pro_attribs_classmy__audio_1_1BaseAudio"><td class="mdescLeft">&#160;</td><td class="mdescRight">通用互斥锁  <br /></td></tr>
+<tr class="separator:a281b5ec791338d4378e22ef44a51b4a1 inherit pro_attribs_classmy__audio_1_1BaseAudio"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p><a class="el" href="classmy__audio_1_1NAudio.html" title="NAudio 厂商适配类">NAudio</a> 厂商适配类 </p>
+<p>实现 <a class="el" href="classmy__audio_1_1BaseAudio.html" title="音频设备纯虚基类">BaseAudio</a> 定义的全部纯虚接口， 通过内嵌 <a class="el" href="classmy__audio_1_1NAudioCore.html" title="NAudio SDK 核心封装类">NAudioCore</a> 完成与厂商 SDK 的交互。 </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="aadbe1721fddd191c50abe94e17327ac2" name="aadbe1721fddd191c50abe94e17327ac2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadbe1721fddd191c50abe94e17327ac2">&#9670;&#160;</a></span>NAudio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmy__audio_1_1NAudio.html">NAudio</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>.</p>
+
+</div>
+</div>
+<a id="a0d677561e8d5adeb242c26bdc0cd9947" name="a0d677561e8d5adeb242c26bdc0cd9947"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d677561e8d5adeb242c26bdc0cd9947">&#9670;&#160;</a></span>~NAudio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classmy__audio_1_1NAudio.html">NAudio</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classmy__audio_1_1BaseAudio.html#ac20b54de6901f04361fcbb0d2befb4bd">BaseAudio::device_id_</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a> , 以及 <a class="el" href="classmy__audio_1_1NAudio.html#a74dd70d04651ca81c9e3ca9eb5218e56">NAudio::Stop()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__audio_1_1NAudio_a0d677561e8d5adeb242c26bdc0cd9947_cgraph.png" border="0" usemap="#aclassmy__audio_1_1NAudio_a0d677561e8d5adeb242c26bdc0cd9947_cgraph" alt=""/></div>
+<map name="aclassmy__audio_1_1NAudio_a0d677561e8d5adeb242c26bdc0cd9947_cgraph" id="aclassmy__audio_1_1NAudio_a0d677561e8d5adeb242c26bdc0cd9947_cgraph">
+<area shape="rect" title=" " alt="" coords="5,13,85,38"/>
+<area shape="rect" href="classmy__audio_1_1NAudio.html#a74dd70d04651ca81c9e3ca9eb5218e56" title="停止设备" alt="" coords="133,13,184,38"/>
+<area shape="poly" title=" " alt="" coords="85,23,120,23,120,28,85,28"/>
+<area shape="rect" href="classmy__audio_1_1BaseAudio.html#a86e2cd555151a19bbb8aa59585bd0736" title="请求停止 AudioLoop" alt="" coords="232,5,395,45"/>
+<area shape="poly" title=" " alt="" coords="184,23,218,23,218,28,184,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a057d4fe699068de168eac7e31d417def" name="a057d4fe699068de168eac7e31d417def"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a057d4fe699068de168eac7e31d417def">&#9670;&#160;</a></span>AudioLoop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AudioLoop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>心跳与属性定时更新循环 </p>
+<p>此方法应在独立线程中运行，定期更新设备状态和属性。 当 <a class="el" href="classmy__audio_1_1BaseAudio.html#a562a51e3dc1a2ffc5146417bd0818e86" title="检查是否已请求停止">IsStopRequested()</a> 返回 true 时应退出循环。 </p>
+
+<p>实现了 <a class="el" href="classmy__audio_1_1BaseAudio.html#ab2b22fef0e815a3fcce036f3c78dee64">BaseAudio</a>.</p>
+
+<p class="reference">引用了 <a class="el" href="namespacemy__audio.html#a575581505008bf7f98d0190faeaeab56">my_audio::AudioStatusToString()</a>, <a class="el" href="classmy__audio_1_1NAudio.html#a9159fa43c01bfc0928ba9c29501e7be4">NAudio::config_</a>, <a class="el" href="classmy__audio_1_1NAudio.html#ab06fd23f33a98e652cf3f1c05bc9ba3e">NAudio::ConvertDeviceStatus()</a>, <a class="el" href="classmy__audio_1_1NAudio.html#a2e562a32ee2bfba0f84cab925f97c024">NAudio::core_</a>, <a class="el" href="structmy__audio_1_1AudioConfig.html#a3b996bca312901428b6166e9fb20f4fb">AudioConfig::device_id</a>, <a class="el" href="structmy__audio_1_1AudioInfo.html#aac346f47bfad521c22d0f466ab063ad4">AudioInfo::firmware_version</a>, <a class="el" href="classmy__audio_1_1NAudio.html#afbede0c60dabd33bb06bddb572c4e483">NAudio::info_</a>, <a class="el" href="structmy__audio_1_1AudioConfig.html#a319b95015f17a3dc8b4b43a65c541571">AudioConfig::ip</a>, <a class="el" href="structmy__audio_1_1AudioInfo.html#aca9b66ec9c270c6f640d79e700fdd37a">AudioInfo::ip_ping_status</a>, <a class="el" href="classmy__audio_1_1BaseAudio.html#a562a51e3dc1a2ffc5146417bd0818e86">BaseAudio::IsStopRequested()</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="structmy__audio_1_1AudioConfig.html#a9b45b3e13bd9167aab02e17e08916231">AudioConfig::name</a>, <a class="el" href="classmy__tools_1_1ping__tools_1_1PingFuncBySystem.html#a4ec03bc5ebb5f6f195a1214f1dcd9d09">PingFuncBySystem::PingIP()</a>, <a class="el" href="classmy__audio_1_1NAudio.html#a2e1ccbf2f237596517cdeba2efe85144">NAudio::sdk_devno_</a>, <a class="el" href="classmy__audio_1_1BaseAudio.html#a1bbf506d6b035ed1f8348071a21c385b">BaseAudio::status_</a> , 以及 <a class="el" href="classmy__audio_1_1BaseAudio.html#a4e26f1289835a8cbf2adb7af4263cd8f">BaseAudio::volume_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__audio_1_1NAudio.html#ada2b3d6496f3a89b9e669a3a41937c74">NAudio::Start()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__audio_1_1NAudio_a057d4fe699068de168eac7e31d417def_cgraph.png" border="0" usemap="#aclassmy__audio_1_1NAudio_a057d4fe699068de168eac7e31d417def_cgraph" alt=""/></div>
+<map name="aclassmy__audio_1_1NAudio_a057d4fe699068de168eac7e31d417def_cgraph" id="aclassmy__audio_1_1NAudio_a057d4fe699068de168eac7e31d417def_cgraph">
+<area shape="rect" title="心跳与属性定时更新循环" alt="" coords="5,84,96,109"/>
+<area shape="rect" href="namespacemy__audio.html#a575581505008bf7f98d0190faeaeab56" title="将 AudioStatus 转为可读中文字符串" alt="" coords="144,5,368,31"/>
+<area shape="poly" title=" " alt="" coords="68,82,102,60,143,40,166,32,168,37,145,44,104,65,71,86"/>
+<area shape="rect" href="classmy__audio_1_1NAudio.html#ab06fd23f33a98e652cf3f1c05bc9ba3e" title="将 NAudio SDK 设备状态码转为 AudioStatus" alt="" coords="177,55,335,80"/>
+<area shape="poly" title=" " alt="" coords="96,88,163,78,163,83,97,93"/>
+<area shape="rect" href="classmy__audio_1_1BaseAudio.html#a562a51e3dc1a2ffc5146417bd0818e86" title="检查是否已请求停止" alt="" coords="175,105,337,145"/>
+<area shape="poly" title=" " alt="" coords="97,100,161,109,160,114,96,105"/>
+<area shape="rect" href="classmy__tools_1_1ping__tools_1_1PingFuncBySystem.html#a4ec03bc5ebb5f6f195a1214f1dcd9d09" title=" " alt="" coords="155,169,357,209"/>
+<area shape="poly" title=" " alt="" coords="70,108,104,131,145,154,163,162,161,167,143,159,101,136,67,112"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__audio_1_1NAudio_a057d4fe699068de168eac7e31d417def_icgraph.png" border="0" usemap="#aclassmy__audio_1_1NAudio_a057d4fe699068de168eac7e31d417def_icgraph" alt=""/></div>
+<map name="aclassmy__audio_1_1NAudio_a057d4fe699068de168eac7e31d417def_icgraph" id="aclassmy__audio_1_1NAudio_a057d4fe699068de168eac7e31d417def_icgraph">
+<area shape="rect" title="心跳与属性定时更新循环" alt="" coords="107,5,197,31"/>
+<area shape="rect" href="classmy__audio_1_1NAudio.html#ada2b3d6496f3a89b9e669a3a41937c74" title="启动设备（开始监听/服务）" alt="" coords="5,5,59,31"/>
+<area shape="poly" title=" " alt="" coords="93,21,59,21,59,15,93,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa931fe199306c627c1bb55f17849eaca" name="aa931fe199306c627c1bb55f17849eaca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa931fe199306c627c1bb55f17849eaca">&#9670;&#160;</a></span>CheckSelf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CheckSelf </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设备自检 </p>
+<dl class="section return"><dt>返回</dt><dd>true 自检通过 </dd></dl>
+
+<p>实现了 <a class="el" href="classmy__audio_1_1BaseAudio.html#aae323303e16d405cca8cc92e2770f1ff">BaseAudio</a>.</p>
+
+<p class="reference">引用了 <a class="el" href="classmy__audio_1_1NAudio.html#a9159fa43c01bfc0928ba9c29501e7be4">NAudio::config_</a>, <a class="el" href="classmy__audio_1_1NAudio.html#a2e562a32ee2bfba0f84cab925f97c024">NAudio::core_</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>, <a class="el" href="structmy__audio_1_1AudioConfig.html#a9b45b3e13bd9167aab02e17e08916231">AudioConfig::name</a>, <a class="el" href="namespacemy__audio.html#a29fe721c7ad1269a9fb39ce5a134ce35a8d9da4bc0e49a50e09ac9f7e56789d39">my_audio::Offline</a>, <a class="el" href="classmy__audio_1_1NAudio.html#a2e1ccbf2f237596517cdeba2efe85144">NAudio::sdk_devno_</a> , 以及 <a class="el" href="classmy__audio_1_1BaseAudio.html#a1bbf506d6b035ed1f8348071a21c385b">BaseAudio::status_</a>.</p>
+
+</div>
+</div>
+<a id="a16ed24759e7261ebfa77b6d327bca674" name="a16ed24759e7261ebfa77b6d327bca674"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16ed24759e7261ebfa77b6d327bca674">&#9670;&#160;</a></span>Config()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmy__audio_1_1AudioConfig.html">AudioConfig</a> Config </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取初始化配置 </p>
+
+<p>实现了 <a class="el" href="classmy__audio_1_1BaseAudio.html#a50c20422f03eec1103a3f5bab8b737ff">BaseAudio</a>.</p>
+
+<p class="reference">引用了 <a class="el" href="classmy__audio_1_1NAudio.html#a9159fa43c01bfc0928ba9c29501e7be4">NAudio::config_</a>.</p>
+
+</div>
+</div>
+<a id="ab06fd23f33a98e652cf3f1c05bc9ba3e" name="ab06fd23f33a98e652cf3f1c05bc9ba3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab06fd23f33a98e652cf3f1c05bc9ba3e">&#9670;&#160;</a></span>ConvertDeviceStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemy__audio.html#a29fe721c7ad1269a9fb39ce5a134ce35">AudioStatus</a> ConvertDeviceStatus </td>
+          <td>(</td>
+          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramname"><em>sdk_status</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>将 <a class="el" href="classmy__audio_1_1NAudio.html" title="NAudio 厂商适配类">NAudio</a> SDK 设备状态码转为 AudioStatus </p>
+
+<p class="reference">引用了 <a class="el" href="namespacemy__audio.html#a29fe721c7ad1269a9fb39ce5a134ce35a902b0d55fddef6f8d651fe1035b7d4bd">my_audio::Error</a>, <a class="el" href="namespacemy__audio.html#a29fe721c7ad1269a9fb39ce5a134ce35ae599161956d626eda4cb0a5ffb85271c">my_audio::Idle</a>, <a class="el" href="namespacemy__audio.html#a29fe721c7ad1269a9fb39ce5a134ce35a8d9da4bc0e49a50e09ac9f7e56789d39">my_audio::Offline</a> , 以及 <a class="el" href="namespacemy__audio.html#a29fe721c7ad1269a9fb39ce5a134ce35a829eadc8e29caab50cc26bc6a451a1f1">my_audio::Working</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__audio_1_1NAudio.html#a057d4fe699068de168eac7e31d417def">NAudio::AudioLoop()</a> , 以及 <a class="el" href="classmy__audio_1_1NAudio.html#a90cebc54edd75177deae1c45702c5856">NAudio::OnDeviceStatusChanged()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__audio_1_1NAudio_ab06fd23f33a98e652cf3f1c05bc9ba3e_icgraph.png" border="0" usemap="#aclassmy__audio_1_1NAudio_ab06fd23f33a98e652cf3f1c05bc9ba3e_icgraph" alt=""/></div>
+<map name="aclassmy__audio_1_1NAudio_ab06fd23f33a98e652cf3f1c05bc9ba3e_icgraph" id="aclassmy__audio_1_1NAudio_ab06fd23f33a98e652cf3f1c05bc9ba3e_icgraph">
+<area shape="rect" title="将 NAudio SDK 设备状态码转为 AudioStatus" alt="" coords="337,31,496,56"/>
+<area shape="rect" href="classmy__audio_1_1NAudio.html#a057d4fe699068de168eac7e31d417def" title="心跳与属性定时更新循环" alt="" coords="153,5,243,31"/>
+<area shape="poly" title=" " alt="" coords="323,35,243,26,244,21,324,30"/>
+<area shape="rect" href="classmy__audio_1_1NAudio.html#a90cebc54edd75177deae1c45702c5856" title="SDK 设备状态回调处理" alt="" coords="107,55,289,80"/>
+<area shape="poly" title=" " alt="" coords="324,56,290,60,289,55,323,51"/>
+<area shape="rect" href="classmy__audio_1_1NAudio.html#ada2b3d6496f3a89b9e669a3a41937c74" title="启动设备（开始监听/服务）" alt="" coords="5,5,59,31"/>
+<area shape="poly" title=" " alt="" coords="139,21,59,21,59,15,139,15"/>
+<area shape="rect" href="classmy__audio_1_1NAudio.html#aaa992a1bdfa7991f3fdd85d3e0ac5daf" title="初始化设备" alt="" coords="11,55,53,80"/>
+<area shape="poly" title=" " alt="" coords="93,70,54,70,54,65,93,65"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3e9b98ad1811b0ad0457d22d917c2082" name="a3e9b98ad1811b0ad0457d22d917c2082"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e9b98ad1811b0ad0457d22d917c2082">&#9670;&#160;</a></span>Info()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmy__audio_1_1AudioInfo.html">AudioInfo</a> Info </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取设备描述信息（型号、固件版本等） </p>
+
+<p>实现了 <a class="el" href="classmy__audio_1_1BaseAudio.html#ac1b4e875ec2d8e8df06de671612604de">BaseAudio</a>.</p>
+
+<p class="reference">引用了 <a class="el" href="classmy__audio_1_1NAudio.html#afbede0c60dabd33bb06bddb572c4e483">NAudio::info_</a>.</p>
+
+</div>
+</div>
+<a id="aaa992a1bdfa7991f3fdd85d3e0ac5daf" name="aaa992a1bdfa7991f3fdd85d3e0ac5daf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa992a1bdfa7991f3fdd85d3e0ac5daf">&#9670;&#160;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Init </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>json_config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>初始化设备 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">json_config</td><td>JSON 格式的配置字符串 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true 初始化成功 </dd></dl>
+
+<p>实现了 <a class="el" href="classmy__audio_1_1BaseAudio.html#a00d5a4b281cd4a2b600ddd52f8515173">BaseAudio</a>.</p>
+
+<p class="reference">引用了 <a class="el" href="classmy__audio_1_1NAudio.html#a9159fa43c01bfc0928ba9c29501e7be4">NAudio::config_</a>, <a class="el" href="classmy__audio_1_1NAudio.html#a2e562a32ee2bfba0f84cab925f97c024">NAudio::core_</a>, <a class="el" href="structmy__audio_1_1AudioConfig.html#af53b8a8aa3d2118bfe1caaed4893440e">AudioConfig::default_volume</a>, <a class="el" href="structmy__audio_1_1AudioConfig.html#a3b996bca312901428b6166e9fb20f4fb">AudioConfig::device_id</a>, <a class="el" href="classmy__audio_1_1BaseAudio.html#ac20b54de6901f04361fcbb0d2befb4bd">BaseAudio::device_id_</a>, <a class="el" href="namespacemy__audio.html#a29fe721c7ad1269a9fb39ce5a134ce35a902b0d55fddef6f8d651fe1035b7d4bd">my_audio::Error</a>, <a class="el" href="structmy__audio_1_1AudioConfig.html#a6e801804c0ffc5be3b3830dcda193acd">AudioConfig::FromJson()</a>, <a class="el" href="classmy__audio_1_1NAudio.html#afbede0c60dabd33bb06bddb572c4e483">NAudio::info_</a>, <a class="el" href="structmy__audio_1_1AudioConfig.html#a319b95015f17a3dc8b4b43a65c541571">AudioConfig::ip</a>, <a class="el" href="structmy__audio_1_1AudioInfo.html#aca9b66ec9c270c6f640d79e700fdd37a">AudioInfo::ip_ping_status</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="structmy__audio_1_1AudioConfig.html#a9b45b3e13bd9167aab02e17e08916231">AudioConfig::name</a>, <a class="el" href="classmy__audio_1_1BaseAudio.html#a4d739cc5d335052eb9f5b2ca559b81d1">BaseAudio::name_</a>, <a class="el" href="namespacemy__audio.html#a29fe721c7ad1269a9fb39ce5a134ce35a8d9da4bc0e49a50e09ac9f7e56789d39">my_audio::Offline</a>, <a class="el" href="classmy__audio_1_1NAudio.html#a90cebc54edd75177deae1c45702c5856">NAudio::OnDeviceStatusChanged()</a>, <a class="el" href="classmy__audio_1_1NAudio.html#ac351e54ba0129b0bd47b386d2db0efc0">NAudio::OnPlayStatusChanged()</a>, <a class="el" href="structmy__audio_1_1AudioConfig.html#a63c89c04d1feae07ca35558055155ffb">AudioConfig::port</a>, <a class="el" href="classmy__audio_1_1NAudio.html#a2e1ccbf2f237596517cdeba2efe85144">NAudio::sdk_devno_</a>, <a class="el" href="classmy__audio_1_1BaseAudio.html#a1bbf506d6b035ed1f8348071a21c385b">BaseAudio::status_</a> , 以及 <a class="el" href="classmy__audio_1_1BaseAudio.html#a4e26f1289835a8cbf2adb7af4263cd8f">BaseAudio::volume_</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__audio_1_1NAudio_aaa992a1bdfa7991f3fdd85d3e0ac5daf_cgraph.png" border="0" usemap="#aclassmy__audio_1_1NAudio_aaa992a1bdfa7991f3fdd85d3e0ac5daf_cgraph" alt=""/></div>
+<map name="aclassmy__audio_1_1NAudio_aaa992a1bdfa7991f3fdd85d3e0ac5daf_cgraph" id="aclassmy__audio_1_1NAudio_aaa992a1bdfa7991f3fdd85d3e0ac5daf_cgraph">
+<area shape="rect" title="初始化设备" alt="" coords="5,70,48,95"/>
+<area shape="rect" href="structmy__audio_1_1AudioConfig.html#a6e801804c0ffc5be3b3830dcda193acd" title="从 JSON 对象解析配置" alt="" coords="101,5,273,45"/>
+<area shape="poly" title=" " alt="" coords="47,73,95,55,116,47,118,52,97,60,49,78"/>
+<area shape="rect" href="classmy__audio_1_1NAudio.html#a90cebc54edd75177deae1c45702c5856" title="SDK 设备状态回调处理" alt="" coords="96,70,279,95"/>
+<area shape="poly" title=" " alt="" coords="48,80,83,80,83,85,48,85"/>
+<area shape="rect" href="classmy__audio_1_1NAudio.html#ac351e54ba0129b0bd47b386d2db0efc0" title="SDK 播放状态回调处理" alt="" coords="104,119,271,145"/>
+<area shape="poly" title=" " alt="" coords="49,88,97,104,127,113,125,118,95,109,47,93"/>
+<area shape="rect" href="classmy__audio_1_1NAudio.html#ab06fd23f33a98e652cf3f1c05bc9ba3e" title="将 NAudio SDK 设备状态码转为 AudioStatus" alt="" coords="327,70,485,95"/>
+<area shape="poly" title=" " alt="" coords="279,80,313,80,313,85,279,85"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a90cebc54edd75177deae1c45702c5856" name="a90cebc54edd75177deae1c45702c5856"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90cebc54edd75177deae1c45702c5856">&#9670;&#160;</a></span>OnDeviceStatusChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OnDeviceStatusChanged </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>devno</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>SDK 设备状态回调处理 </p>
+
+<p class="reference">引用了 <a class="el" href="classmy__audio_1_1NAudio.html#ab06fd23f33a98e652cf3f1c05bc9ba3e">NAudio::ConvertDeviceStatus()</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="classmy__audio_1_1NAudio.html#a2e1ccbf2f237596517cdeba2efe85144">NAudio::sdk_devno_</a> , 以及 <a class="el" href="classmy__audio_1_1BaseAudio.html#a1bbf506d6b035ed1f8348071a21c385b">BaseAudio::status_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__audio_1_1NAudio.html#aaa992a1bdfa7991f3fdd85d3e0ac5daf">NAudio::Init()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__audio_1_1NAudio_a90cebc54edd75177deae1c45702c5856_cgraph.png" border="0" usemap="#aclassmy__audio_1_1NAudio_a90cebc54edd75177deae1c45702c5856_cgraph" alt=""/></div>
+<map name="aclassmy__audio_1_1NAudio_a90cebc54edd75177deae1c45702c5856_cgraph" id="aclassmy__audio_1_1NAudio_a90cebc54edd75177deae1c45702c5856_cgraph">
+<area shape="rect" title="SDK 设备状态回调处理" alt="" coords="5,5,188,31"/>
+<area shape="rect" href="classmy__audio_1_1NAudio.html#ab06fd23f33a98e652cf3f1c05bc9ba3e" title="将 NAudio SDK 设备状态码转为 AudioStatus" alt="" coords="236,5,395,31"/>
+<area shape="poly" title=" " alt="" coords="188,15,222,15,222,21,188,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__audio_1_1NAudio_a90cebc54edd75177deae1c45702c5856_icgraph.png" border="0" usemap="#aclassmy__audio_1_1NAudio_a90cebc54edd75177deae1c45702c5856_icgraph" alt=""/></div>
+<map name="aclassmy__audio_1_1NAudio_a90cebc54edd75177deae1c45702c5856_icgraph" id="aclassmy__audio_1_1NAudio_a90cebc54edd75177deae1c45702c5856_icgraph">
+<area shape="rect" title="SDK 设备状态回调处理" alt="" coords="96,5,279,31"/>
+<area shape="rect" href="classmy__audio_1_1NAudio.html#aaa992a1bdfa7991f3fdd85d3e0ac5daf" title="初始化设备" alt="" coords="5,5,48,31"/>
+<area shape="poly" title=" " alt="" coords="82,21,48,21,48,15,82,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac351e54ba0129b0bd47b386d2db0efc0" name="ac351e54ba0129b0bd47b386d2db0efc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac351e54ba0129b0bd47b386d2db0efc0">&#9670;&#160;</a></span>OnPlayStatusChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OnPlayStatusChanged </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>scene</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>inst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>SDK 播放状态回调处理 </p>
+
+<p class="reference">引用了 <a class="el" href="classmy__audio_1_1NAudio.html#a9159fa43c01bfc0928ba9c29501e7be4">NAudio::config_</a>, <a class="el" href="namespacemy__audio.html#a29fe721c7ad1269a9fb39ce5a134ce35ae599161956d626eda4cb0a5ffb85271c">my_audio::Idle</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="structmy__audio_1_1AudioConfig.html#a9b45b3e13bd9167aab02e17e08916231">AudioConfig::name</a>, <a class="el" href="classmy__audio_1_1BaseAudio.html#a1bbf506d6b035ed1f8348071a21c385b">BaseAudio::status_</a> , 以及 <a class="el" href="namespacemy__audio.html#a29fe721c7ad1269a9fb39ce5a134ce35a829eadc8e29caab50cc26bc6a451a1f1">my_audio::Working</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__audio_1_1NAudio.html#aaa992a1bdfa7991f3fdd85d3e0ac5daf">NAudio::Init()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__audio_1_1NAudio_ac351e54ba0129b0bd47b386d2db0efc0_icgraph.png" border="0" usemap="#aclassmy__audio_1_1NAudio_ac351e54ba0129b0bd47b386d2db0efc0_icgraph" alt=""/></div>
+<map name="aclassmy__audio_1_1NAudio_ac351e54ba0129b0bd47b386d2db0efc0_icgraph" id="aclassmy__audio_1_1NAudio_ac351e54ba0129b0bd47b386d2db0efc0_icgraph">
+<area shape="rect" title="SDK 播放状态回调处理" alt="" coords="96,5,263,31"/>
+<area shape="rect" href="classmy__audio_1_1NAudio.html#aaa992a1bdfa7991f3fdd85d3e0ac5daf" title="初始化设备" alt="" coords="5,5,48,31"/>
+<area shape="poly" title=" " alt="" coords="82,21,48,21,48,15,82,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a805850d9cb596d9448cdf317aa46f424" name="a805850d9cb596d9448cdf317aa46f424"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a805850d9cb596d9448cdf317aa46f424">&#9670;&#160;</a></span>PlayFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PlayFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>播放指定路径的音频文件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>音频文件路径 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true 播放命令发送成功 </dd></dl>
+
+<p>实现了 <a class="el" href="classmy__audio_1_1BaseAudio.html#a17e48046b5296c886318c8e3120d8c1f">BaseAudio</a>.</p>
+
+<p class="reference">引用了 <a class="el" href="namespacemy__audio.html#a575581505008bf7f98d0190faeaeab56">my_audio::AudioStatusToString()</a>, <a class="el" href="classmy__audio_1_1NAudio.html#a9159fa43c01bfc0928ba9c29501e7be4">NAudio::config_</a>, <a class="el" href="classmy__audio_1_1NAudio.html#a2e562a32ee2bfba0f84cab925f97c024">NAudio::core_</a>, <a class="el" href="namespacemy__audio.html#a29fe721c7ad1269a9fb39ce5a134ce35a902b0d55fddef6f8d651fe1035b7d4bd">my_audio::Error</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>, <a class="el" href="structmy__audio_1_1AudioConfig.html#a9b45b3e13bd9167aab02e17e08916231">AudioConfig::name</a>, <a class="el" href="namespacemy__audio.html#a29fe721c7ad1269a9fb39ce5a134ce35a8d9da4bc0e49a50e09ac9f7e56789d39">my_audio::Offline</a>, <a class="el" href="classmy__audio_1_1NAudio.html#a2e1ccbf2f237596517cdeba2efe85144">NAudio::sdk_devno_</a>, <a class="el" href="classmy__audio_1_1BaseAudio.html#a1bbf506d6b035ed1f8348071a21c385b">BaseAudio::status_</a>, <a class="el" href="classmy__audio_1_1BaseAudio.html#a4e26f1289835a8cbf2adb7af4263cd8f">BaseAudio::volume_</a> , 以及 <a class="el" href="namespacemy__audio.html#a29fe721c7ad1269a9fb39ce5a134ce35a829eadc8e29caab50cc26bc6a451a1f1">my_audio::Working</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__audio_1_1NAudio_a805850d9cb596d9448cdf317aa46f424_cgraph.png" border="0" usemap="#aclassmy__audio_1_1NAudio_a805850d9cb596d9448cdf317aa46f424_cgraph" alt=""/></div>
+<map name="aclassmy__audio_1_1NAudio_a805850d9cb596d9448cdf317aa46f424_cgraph" id="aclassmy__audio_1_1NAudio_a805850d9cb596d9448cdf317aa46f424_cgraph">
+<area shape="rect" title="播放指定路径的音频文件" alt="" coords="5,5,79,31"/>
+<area shape="rect" href="namespacemy__audio.html#a575581505008bf7f98d0190faeaeab56" title="将 AudioStatus 转为可读中文字符串" alt="" coords="127,5,351,31"/>
+<area shape="poly" title=" " alt="" coords="79,15,113,15,113,21,79,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8b2b5e88ba4e4b553c876b8610b597d0" name="a8b2b5e88ba4e4b553c876b8610b597d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b2b5e88ba4e4b553c876b8610b597d0">&#9670;&#160;</a></span>SetVolume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SetVolume </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>volume</em> = <code>50</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置音量 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">volume</td><td>音量值（0-100），默认 50 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true 设置成功 </dd></dl>
+
+<p>实现了 <a class="el" href="classmy__audio_1_1BaseAudio.html#abc429a2ff8496605d6bff36e94795e74">BaseAudio</a>.</p>
+
+<p class="reference">引用了 <a class="el" href="classmy__audio_1_1NAudio.html#a9159fa43c01bfc0928ba9c29501e7be4">NAudio::config_</a>, <a class="el" href="classmy__audio_1_1NAudio.html#a2e562a32ee2bfba0f84cab925f97c024">NAudio::core_</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="structmy__audio_1_1AudioConfig.html#a9b45b3e13bd9167aab02e17e08916231">AudioConfig::name</a>, <a class="el" href="classmy__audio_1_1NAudio.html#a2e1ccbf2f237596517cdeba2efe85144">NAudio::sdk_devno_</a> , 以及 <a class="el" href="classmy__audio_1_1BaseAudio.html#a4e26f1289835a8cbf2adb7af4263cd8f">BaseAudio::volume_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__audio_1_1NAudio.html#ada2b3d6496f3a89b9e669a3a41937c74">NAudio::Start()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__audio_1_1NAudio_a8b2b5e88ba4e4b553c876b8610b597d0_icgraph.png" border="0" usemap="#aclassmy__audio_1_1NAudio_a8b2b5e88ba4e4b553c876b8610b597d0_icgraph" alt=""/></div>
+<map name="aclassmy__audio_1_1NAudio_a8b2b5e88ba4e4b553c876b8610b597d0_icgraph" id="aclassmy__audio_1_1NAudio_a8b2b5e88ba4e4b553c876b8610b597d0_icgraph">
+<area shape="rect" title="设置音量" alt="" coords="107,5,199,31"/>
+<area shape="rect" href="classmy__audio_1_1NAudio.html#ada2b3d6496f3a89b9e669a3a41937c74" title="启动设备（开始监听/服务）" alt="" coords="5,5,59,31"/>
+<area shape="poly" title=" " alt="" coords="93,21,59,21,59,15,93,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ada2b3d6496f3a89b9e669a3a41937c74" name="ada2b3d6496f3a89b9e669a3a41937c74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada2b3d6496f3a89b9e669a3a41937c74">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>启动设备（开始监听/服务） </p>
+<dl class="section return"><dt>返回</dt><dd>true 启动成功 </dd></dl>
+
+<p>实现了 <a class="el" href="classmy__audio_1_1BaseAudio.html#acdabbabf2db374fda028d77937c69781">BaseAudio</a>.</p>
+
+<p class="reference">引用了 <a class="el" href="classmy__audio_1_1NAudio.html#a057d4fe699068de168eac7e31d417def">NAudio::AudioLoop()</a>, <a class="el" href="namespacemy__audio.html#a575581505008bf7f98d0190faeaeab56">my_audio::AudioStatusToString()</a>, <a class="el" href="classmy__audio_1_1NAudio.html#a9159fa43c01bfc0928ba9c29501e7be4">NAudio::config_</a>, <a class="el" href="classmy__audio_1_1NAudio.html#a2e562a32ee2bfba0f84cab925f97c024">NAudio::core_</a>, <a class="el" href="structmy__audio_1_1AudioConfig.html#af53b8a8aa3d2118bfe1caaed4893440e">AudioConfig::default_volume</a>, <a class="el" href="namespacemy__audio.html#a29fe721c7ad1269a9fb39ce5a134ce35a902b0d55fddef6f8d651fe1035b7d4bd">my_audio::Error</a>, <a class="el" href="structmy__audio_1_1AudioInfo.html#aac346f47bfad521c22d0f466ab063ad4">AudioInfo::firmware_version</a>, <a class="el" href="namespacemy__audio.html#a29fe721c7ad1269a9fb39ce5a134ce35ae599161956d626eda4cb0a5ffb85271c">my_audio::Idle</a>, <a class="el" href="classmy__audio_1_1NAudio.html#afbede0c60dabd33bb06bddb572c4e483">NAudio::info_</a>, <a class="el" href="structmy__audio_1_1AudioConfig.html#a319b95015f17a3dc8b4b43a65c541571">AudioConfig::ip</a>, <a class="el" href="classmy__audio_1_1NAudio.html#ad76b0f1b37037cf86462a9b8a16b901c">NAudio::loop_thread_</a>, <a class="el" href="structmy__audio_1_1AudioInfo.html#a2e5f0c4b01fa6a42a6a2215b44a116d9">AudioInfo::model</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>, <a class="el" href="structmy__audio_1_1AudioConfig.html#a9b45b3e13bd9167aab02e17e08916231">AudioConfig::name</a>, <a class="el" href="namespacemy__audio.html#a29fe721c7ad1269a9fb39ce5a134ce35a8d9da4bc0e49a50e09ac9f7e56789d39">my_audio::Offline</a>, <a class="el" href="structmy__audio_1_1AudioConfig.html#a63c89c04d1feae07ca35558055155ffb">AudioConfig::port</a>, <a class="el" href="classmy__audio_1_1NAudio.html#a2e1ccbf2f237596517cdeba2efe85144">NAudio::sdk_devno_</a>, <a class="el" href="structmy__audio_1_1AudioInfo.html#add5e5f26b23d99bac49aaa302a671f87">AudioInfo::serial_number</a>, <a class="el" href="classmy__audio_1_1NAudio.html#a8b2b5e88ba4e4b553c876b8610b597d0">NAudio::SetVolume()</a>, <a class="el" href="classmy__audio_1_1BaseAudio.html#a1bbf506d6b035ed1f8348071a21c385b">BaseAudio::status_</a> , 以及 <a class="el" href="structmy__audio_1_1AudioConfig.html#a75b160f574a0be26114bae2c7686a5e1">AudioConfig::type</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__audio_1_1NAudio_ada2b3d6496f3a89b9e669a3a41937c74_cgraph.png" border="0" usemap="#aclassmy__audio_1_1NAudio_ada2b3d6496f3a89b9e669a3a41937c74_cgraph" alt=""/></div>
+<map name="aclassmy__audio_1_1NAudio_ada2b3d6496f3a89b9e669a3a41937c74_cgraph" id="aclassmy__audio_1_1NAudio_ada2b3d6496f3a89b9e669a3a41937c74_cgraph">
+<area shape="rect" title="启动设备（开始监听/服务）" alt="" coords="5,56,59,81"/>
+<area shape="rect" href="classmy__audio_1_1NAudio.html#a057d4fe699068de168eac7e31d417def" title="心跳与属性定时更新循环" alt="" coords="107,56,198,81"/>
+<area shape="poly" title=" " alt="" coords="59,66,94,66,94,71,59,71"/>
+<area shape="rect" href="namespacemy__audio.html#a575581505008bf7f98d0190faeaeab56" title="将 AudioStatus 转为可读中文字符串" alt="" coords="247,5,471,31"/>
+<area shape="poly" title=" " alt="" coords="58,56,106,41,170,29,233,22,233,27,170,35,107,46,60,61"/>
+<area shape="rect" href="classmy__audio_1_1NAudio.html#a8b2b5e88ba4e4b553c876b8610b597d0" title="设置音量" alt="" coords="107,105,199,131"/>
+<area shape="poly" title=" " alt="" coords="60,77,109,97,107,102,58,82"/>
+<area shape="poly" title=" " alt="" coords="195,53,246,39,281,31,283,36,247,45,197,59"/>
+<area shape="rect" href="classmy__audio_1_1NAudio.html#ab06fd23f33a98e652cf3f1c05bc9ba3e" title="将 NAudio SDK 设备状态码转为 AudioStatus" alt="" coords="279,55,438,80"/>
+<area shape="poly" title=" " alt="" coords="198,66,266,65,266,71,198,71"/>
+<area shape="rect" href="classmy__audio_1_1BaseAudio.html#a562a51e3dc1a2ffc5146417bd0818e86" title="检查是否已请求停止" alt="" coords="277,105,440,145"/>
+<area shape="poly" title=" " alt="" coords="199,78,272,98,271,104,197,83"/>
+<area shape="rect" href="classmy__tools_1_1ping__tools_1_1PingFuncBySystem.html#a4ec03bc5ebb5f6f195a1214f1dcd9d09" title=" " alt="" coords="257,169,460,209"/>
+<area shape="poly" title=" " alt="" coords="184,79,200,91,216,108,224,125,233,140,248,155,257,160,254,165,245,159,229,143,219,127,211,111,197,95,181,84"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad44c609d3883f0e30667fa39605d3a24" name="ad44c609d3883f0e30667fa39605d3a24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad44c609d3883f0e30667fa39605d3a24">&#9670;&#160;</a></span>Status()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemy__audio.html#a29fe721c7ad1269a9fb39ce5a134ce35">AudioStatus</a> Status </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取当前设备状态 </p>
+
+<p>实现了 <a class="el" href="classmy__audio_1_1BaseAudio.html#af7ce45930fd3a76be61098d5f93ba8f6">BaseAudio</a>.</p>
+
+<p class="reference">引用了 <a class="el" href="classmy__audio_1_1BaseAudio.html#a1bbf506d6b035ed1f8348071a21c385b">BaseAudio::status_</a>.</p>
+
+</div>
+</div>
+<a id="a74dd70d04651ca81c9e3ca9eb5218e56" name="a74dd70d04651ca81c9e3ca9eb5218e56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74dd70d04651ca81c9e3ca9eb5218e56">&#9670;&#160;</a></span>Stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>停止设备 </p>
+<dl class="section return"><dt>返回</dt><dd>true 停止成功 </dd></dl>
+
+<p>实现了 <a class="el" href="classmy__audio_1_1BaseAudio.html#ab12b2dd429b23b423646955ab649671e">BaseAudio</a>.</p>
+
+<p class="reference">引用了 <a class="el" href="classmy__audio_1_1NAudio.html#a9159fa43c01bfc0928ba9c29501e7be4">NAudio::config_</a>, <a class="el" href="classmy__audio_1_1NAudio.html#a2e562a32ee2bfba0f84cab925f97c024">NAudio::core_</a>, <a class="el" href="classmy__audio_1_1NAudio.html#ad76b0f1b37037cf86462a9b8a16b901c">NAudio::loop_thread_</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="structmy__audio_1_1AudioConfig.html#a9b45b3e13bd9167aab02e17e08916231">AudioConfig::name</a>, <a class="el" href="namespacemy__audio.html#a29fe721c7ad1269a9fb39ce5a134ce35a8d9da4bc0e49a50e09ac9f7e56789d39">my_audio::Offline</a>, <a class="el" href="classmy__audio_1_1BaseAudio.html#a86e2cd555151a19bbb8aa59585bd0736">BaseAudio::RequestStop()</a> , 以及 <a class="el" href="classmy__audio_1_1BaseAudio.html#a1bbf506d6b035ed1f8348071a21c385b">BaseAudio::status_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__audio_1_1NAudio.html#a0d677561e8d5adeb242c26bdc0cd9947">NAudio::~NAudio()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__audio_1_1NAudio_a74dd70d04651ca81c9e3ca9eb5218e56_cgraph.png" border="0" usemap="#aclassmy__audio_1_1NAudio_a74dd70d04651ca81c9e3ca9eb5218e56_cgraph" alt=""/></div>
+<map name="aclassmy__audio_1_1NAudio_a74dd70d04651ca81c9e3ca9eb5218e56_cgraph" id="aclassmy__audio_1_1NAudio_a74dd70d04651ca81c9e3ca9eb5218e56_cgraph">
+<area shape="rect" title="停止设备" alt="" coords="5,13,56,38"/>
+<area shape="rect" href="classmy__audio_1_1BaseAudio.html#a86e2cd555151a19bbb8aa59585bd0736" title="请求停止 AudioLoop" alt="" coords="104,5,267,45"/>
+<area shape="poly" title=" " alt="" coords="56,23,90,23,90,28,56,28"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__audio_1_1NAudio_a74dd70d04651ca81c9e3ca9eb5218e56_icgraph.png" border="0" usemap="#aclassmy__audio_1_1NAudio_a74dd70d04651ca81c9e3ca9eb5218e56_icgraph" alt=""/></div>
+<map name="aclassmy__audio_1_1NAudio_a74dd70d04651ca81c9e3ca9eb5218e56_icgraph" id="aclassmy__audio_1_1NAudio_a74dd70d04651ca81c9e3ca9eb5218e56_icgraph">
+<area shape="rect" title="停止设备" alt="" coords="133,5,184,31"/>
+<area shape="rect" href="classmy__audio_1_1NAudio.html#a0d677561e8d5adeb242c26bdc0cd9947" title=" " alt="" coords="5,5,85,31"/>
+<area shape="poly" title=" " alt="" coords="120,21,85,21,85,15,120,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">结构体成员变量说明</h2>
+<a id="a9159fa43c01bfc0928ba9c29501e7be4" name="a9159fa43c01bfc0928ba9c29501e7be4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9159fa43c01bfc0928ba9c29501e7be4">&#9670;&#160;</a></span>config_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmy__audio_1_1AudioConfig.html">AudioConfig</a> config_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设备配置 </p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__audio_1_1NAudio.html#a057d4fe699068de168eac7e31d417def">NAudio::AudioLoop()</a>, <a class="el" href="classmy__audio_1_1NAudio.html#aa931fe199306c627c1bb55f17849eaca">NAudio::CheckSelf()</a>, <a class="el" href="classmy__audio_1_1NAudio.html#a16ed24759e7261ebfa77b6d327bca674">NAudio::Config()</a>, <a class="el" href="classmy__audio_1_1NAudio.html#aaa992a1bdfa7991f3fdd85d3e0ac5daf">NAudio::Init()</a>, <a class="el" href="classmy__audio_1_1NAudio.html#ac351e54ba0129b0bd47b386d2db0efc0">NAudio::OnPlayStatusChanged()</a>, <a class="el" href="classmy__audio_1_1NAudio.html#a805850d9cb596d9448cdf317aa46f424">NAudio::PlayFile()</a>, <a class="el" href="classmy__audio_1_1NAudio.html#a8b2b5e88ba4e4b553c876b8610b597d0">NAudio::SetVolume()</a>, <a class="el" href="classmy__audio_1_1NAudio.html#ada2b3d6496f3a89b9e669a3a41937c74">NAudio::Start()</a> , 以及 <a class="el" href="classmy__audio_1_1NAudio.html#a74dd70d04651ca81c9e3ca9eb5218e56">NAudio::Stop()</a>.</p>
+
+</div>
+</div>
+<a id="a2e562a32ee2bfba0f84cab925f97c024" name="a2e562a32ee2bfba0f84cab925f97c024"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e562a32ee2bfba0f84cab925f97c024">&#9670;&#160;</a></span>core_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classmy__audio_1_1NAudioCore.html">NAudioCore</a>&gt; core_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>SDK 核心封装 </p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__audio_1_1NAudio.html#a057d4fe699068de168eac7e31d417def">NAudio::AudioLoop()</a>, <a class="el" href="classmy__audio_1_1NAudio.html#aa931fe199306c627c1bb55f17849eaca">NAudio::CheckSelf()</a>, <a class="el" href="classmy__audio_1_1NAudio.html#aaa992a1bdfa7991f3fdd85d3e0ac5daf">NAudio::Init()</a>, <a class="el" href="classmy__audio_1_1NAudio.html#a805850d9cb596d9448cdf317aa46f424">NAudio::PlayFile()</a>, <a class="el" href="classmy__audio_1_1NAudio.html#a8b2b5e88ba4e4b553c876b8610b597d0">NAudio::SetVolume()</a>, <a class="el" href="classmy__audio_1_1NAudio.html#ada2b3d6496f3a89b9e669a3a41937c74">NAudio::Start()</a> , 以及 <a class="el" href="classmy__audio_1_1NAudio.html#a74dd70d04651ca81c9e3ca9eb5218e56">NAudio::Stop()</a>.</p>
+
+</div>
+</div>
+<a id="afbede0c60dabd33bb06bddb572c4e483" name="afbede0c60dabd33bb06bddb572c4e483"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbede0c60dabd33bb06bddb572c4e483">&#9670;&#160;</a></span>info_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmy__audio_1_1AudioInfo.html">AudioInfo</a> info_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设备信息 </p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__audio_1_1NAudio.html#a057d4fe699068de168eac7e31d417def">NAudio::AudioLoop()</a>, <a class="el" href="classmy__audio_1_1NAudio.html#a3e9b98ad1811b0ad0457d22d917c2082">NAudio::Info()</a>, <a class="el" href="classmy__audio_1_1NAudio.html#aaa992a1bdfa7991f3fdd85d3e0ac5daf">NAudio::Init()</a> , 以及 <a class="el" href="classmy__audio_1_1NAudio.html#ada2b3d6496f3a89b9e669a3a41937c74">NAudio::Start()</a>.</p>
+
+</div>
+</div>
+<a id="ad76b0f1b37037cf86462a9b8a16b901c" name="ad76b0f1b37037cf86462a9b8a16b901c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad76b0f1b37037cf86462a9b8a16b901c">&#9670;&#160;</a></span>loop_thread_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::thread loop_thread_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>AudioLoop 线程 </p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__audio_1_1NAudio.html#ada2b3d6496f3a89b9e669a3a41937c74">NAudio::Start()</a> , 以及 <a class="el" href="classmy__audio_1_1NAudio.html#a74dd70d04651ca81c9e3ca9eb5218e56">NAudio::Stop()</a>.</p>
+
+</div>
+</div>
+<a id="a2e1ccbf2f237596517cdeba2efe85144" name="a2e1ccbf2f237596517cdeba2efe85144"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e1ccbf2f237596517cdeba2efe85144">&#9670;&#160;</a></span>sdk_devno_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int sdk_devno_ {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>SDK 内部设备编号 </p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__audio_1_1NAudio.html#a057d4fe699068de168eac7e31d417def">NAudio::AudioLoop()</a>, <a class="el" href="classmy__audio_1_1NAudio.html#aa931fe199306c627c1bb55f17849eaca">NAudio::CheckSelf()</a>, <a class="el" href="classmy__audio_1_1NAudio.html#aaa992a1bdfa7991f3fdd85d3e0ac5daf">NAudio::Init()</a>, <a class="el" href="classmy__audio_1_1NAudio.html#a90cebc54edd75177deae1c45702c5856">NAudio::OnDeviceStatusChanged()</a>, <a class="el" href="classmy__audio_1_1NAudio.html#a805850d9cb596d9448cdf317aa46f424">NAudio::PlayFile()</a>, <a class="el" href="classmy__audio_1_1NAudio.html#a8b2b5e88ba4e4b553c876b8610b597d0">NAudio::SetVolume()</a> , 以及 <a class="el" href="classmy__audio_1_1NAudio.html#ada2b3d6496f3a89b9e669a3a41937c74">NAudio::Start()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/util/my_audio/<a class="el" href="NAudio_8h_source.html">NAudio.h</a></li>
+<li>src/util/my_audio/<a class="el" href="NAudio_8cpp.html">NAudio.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_audio/NAudioCore/NAudioCore.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_62a3ed15368c4c4f11596a0d2c7db172.html">my_audio</a></li><li class="navelem"><a class="el" href="dir_8514b4f7183e80cbece7c6be6eb9cb5b.html">NAudioCore</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#typedef-members">类型定义</a>  </div>
+  <div class="headertitle"><div class="title">NAudioCore.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>NAudio 厂商 SDK 核心封装层  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;functional&gt;</code><br />
+<code>#include &lt;atomic&gt;</code><br />
+<code>#include &lt;mutex&gt;</code><br />
+<code>#include &quot;NAudioServerLib.h&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+NAudioCore.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="NAudioCore_8h__incl.png" border="0" usemap="#asrc_2util_2my__audio_2NAudioCore_2NAudioCore_8h" alt=""/></div>
+<map name="asrc_2util_2my__audio_2NAudioCore_2NAudioCore_8h" id="asrc_2util_2my__audio_2NAudioCore_2NAudioCore_8h">
+<area shape="rect" title="NAudio 厂商 SDK 核心封装层" alt="" coords="177,5,362,45"/>
+<area shape="rect" title=" " alt="" coords="5,93,64,119"/>
+<area shape="poly" title=" " alt="" coords="214,48,78,93,76,88,212,43"/>
+<area shape="rect" title=" " alt="" coords="89,93,151,119"/>
+<area shape="poly" title=" " alt="" coords="235,48,156,89,153,84,232,43"/>
+<area shape="rect" title=" " alt="" coords="175,93,262,119"/>
+<area shape="poly" title=" " alt="" coords="259,47,236,83,231,80,255,44"/>
+<area shape="rect" title=" " alt="" coords="287,93,353,119"/>
+<area shape="poly" title=" " alt="" coords="284,44,307,80,303,83,279,47"/>
+<area shape="rect" title=" " alt="" coords="377,93,441,119"/>
+<area shape="poly" title=" " alt="" coords="304,43,378,84,375,89,302,48"/>
+<area shape="rect" title=" " alt="" coords="466,93,609,119"/>
+<area shape="poly" title=" " alt="" coords="334,43,486,87,485,92,333,48"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="NAudioCore_8h__dep__incl.png" border="0" usemap="#asrc_2util_2my__audio_2NAudioCore_2NAudioCore_8hdep" alt=""/></div>
+<map name="asrc_2util_2my__audio_2NAudioCore_2NAudioCore_8hdep" id="asrc_2util_2my__audio_2NAudioCore_2NAudioCore_8hdep">
+<area shape="rect" title="NAudio 厂商 SDK 核心封装层" alt="" coords="258,5,443,45"/>
+<area shape="rect" href="NAudio_8h.html" title="扬声器框架 —— NAudio 厂商适配层" alt="" coords="144,101,341,126"/>
+<area shape="poly" title=" " alt="" coords="318,56,259,102,256,98,315,52"/>
+<area shape="rect" href="NAudioCore_8cpp.html" title="NAudio 厂商 SDK 核心封装层实现" alt="" coords="366,93,551,133"/>
+<area shape="poly" title=" " alt="" coords="387,52,436,91,433,95,384,56"/>
+<area shape="rect" href="MyAudios_8cpp.html" title="扬声器框架 —— 全局音频设备管理器实现" alt="" coords="5,181,235,207"/>
+<area shape="poly" title=" " alt="" coords="215,136,140,183,137,179,212,131"/>
+<area shape="rect" href="NAudio_8cpp.html" title="扬声器框架 —— NAudio 厂商适配层实现" alt="" coords="259,181,471,207"/>
+<area shape="poly" title=" " alt="" coords="274,131,349,179,346,183,271,136"/>
+</map>
+</div>
+</div>
+<p><a href="NAudioCore_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1NAudioCore.html">NAudioCore</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classmy__audio_1_1NAudio.html" title="NAudio 厂商适配类">NAudio</a> SDK 核心封装类  <a href="classmy__audio_1_1NAudioCore.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacemy__audio" id="r_namespacemy__audio"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__audio.html">my_audio</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:a43a421f6a260db0aa4f7f65364754c41" id="r_a43a421f6a260db0aa4f7f65364754c41"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__audio.html#a43a421f6a260db0aa4f7f65364754c41">DeviceStatusCallback</a> = std::function&lt; void(unsigned int devno, unsigned short status)&gt;</td></tr>
+<tr class="memdesc:a43a421f6a260db0aa4f7f65364754c41"><td class="mdescLeft">&#160;</td><td class="mdescRight">设备状态变更回调  <br /></td></tr>
+<tr class="separator:a43a421f6a260db0aa4f7f65364754c41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2417665993456020063f8c1e0056577f" id="r_a2417665993456020063f8c1e0056577f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__audio.html#a2417665993456020063f8c1e0056577f">PlayStatusCallback</a> = std::function&lt; void(unsigned char scene, unsigned char inst, unsigned int status)&gt;</td></tr>
+<tr class="memdesc:a2417665993456020063f8c1e0056577f"><td class="mdescLeft">&#160;</td><td class="mdescRight">播放状态变更回调  <br /></td></tr>
+<tr class="separator:a2417665993456020063f8c1e0056577f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>NAudio 厂商 SDK 核心封装层 </p>
+<p>将 NAudioServerLib.h 中的 C 接口封装为面向对象的 C++ 类， 提供服务启停、设备管理、文件播放、音量控制等基础能力。</p>
+<p>此类由 NAudio 内嵌调用，不直接暴露给上层使用者。 </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

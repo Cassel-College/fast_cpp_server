@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_api/controller/audio/AudioController.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_f1ee40842c724b3bf8a04800f5f521a7.html">my_api</a></li><li class="navelem"><a class="el" href="dir_6ef159f9932051522d309704773cf407.html">controller</a></li><li class="navelem"><a class="el" href="dir_17ddce979e1d0ae4036cbdb4d94cca7a.html">audio</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">AudioController.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="AudioController_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="BaseApiController_8hpp.html">BaseApiController.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="AudioDto_8hpp.html">dto/audio/AudioDto.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;oatpp/core/macro/codegen.hpp&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;oatpp/web/server/api/ApiController.hpp&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__api_1_1audio__api.html">my_api::audio_api</a> {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include OATPP_CODEGEN_BEGIN(ApiController)</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classmy__api_1_1audio__api_1_1AudioController.html">   25</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__api_1_1audio__api_1_1AudioController.html">AudioController</a> : <span class="keyword">public</span> <a class="code hl_class" href="classmy__api_1_1base_1_1BaseApiController.html">base::BaseApiController</a> {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="classmy__api_1_1audio__api_1_1AudioController.html">AudioController</a>(<span class="keyword">const</span> std::shared_ptr&lt;ObjectMapper&gt;&amp; objectMapper);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">static</span> std::shared_ptr&lt;AudioController&gt; <a class="code hl_function" href="classmy__api_1_1audio__api_1_1AudioController.html#a08a3ed6f539e8eb9ed85dda5ab432be5">createShared</a>(</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keyword">const</span> std::shared_ptr&lt;ObjectMapper&gt;&amp; objectMapper);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="comment">// ==================== 查询类接口 ====================</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="foldopen" id="foldopen00034" data-start="{" data-end="}">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classmy__api_1_1audio__api_1_1AudioController.html#acc15fd3544a8859516e78a7b8a9948bb">   34</a></span>    <a class="code hl_function" href="classmy__api_1_1audio__api_1_1AudioController.html#acc15fd3544a8859516e78a7b8a9948bb">ENDPOINT_INFO</a>(getAudioConfig) {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        info-&gt;summary = <span class="stringliteral">&quot;查看扬声器启动参数&quot;</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        info-&gt;description = <span class="stringliteral">&quot;返回音频设备管理器初始化时使用的 JSON 配置参数。&quot;</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_200, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_503, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    }</div>
+</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classmy__api_1_1audio__api_1_1AudioController.html#a0383518eaacd7e4597bba3898e4e4974">   40</a></span>    <a class="code hl_function" href="classmy__api_1_1audio__api_1_1AudioController.html#a0383518eaacd7e4597bba3898e4e4974">ENDPOINT</a>(<span class="stringliteral">&quot;GET&quot;</span>, <span class="stringliteral">&quot;/v1/audio/config&quot;</span>, getAudioConfig);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="foldopen" id="foldopen00042" data-start="{" data-end="}">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classmy__api_1_1audio__api_1_1AudioController.html#a14af9d83c5fae9716fb20f61f0e2521a">   42</a></span>    <a class="code hl_function" href="classmy__api_1_1audio__api_1_1AudioController.html#a14af9d83c5fae9716fb20f61f0e2521a">ENDPOINT_INFO</a>(getAudioInfo) {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        info-&gt;summary = <span class="stringliteral">&quot;查看指定扬声器详细信息&quot;</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        info-&gt;description = <span class="stringliteral">&quot;根据 body 中的 device_id 获取单个扬声器的配置、状态和设备信息。&quot;</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        info-&gt;addConsumes&lt;oatpp::Object&lt;my_api::dto::AudioDeviceIdDto&gt;&gt;(<span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_200, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_404, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    }</div>
+</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classmy__api_1_1audio__api_1_1AudioController.html#aafb76abebe7ab174baa9d9650825e5ac">   49</a></span>    <a class="code hl_function" href="classmy__api_1_1audio__api_1_1AudioController.html#aafb76abebe7ab174baa9d9650825e5ac">ENDPOINT</a>(<span class="stringliteral">&quot;POST&quot;</span>, <span class="stringliteral">&quot;/v1/audio/info&quot;</span>, getAudioInfo,</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>             BODY_DTO(oatpp::Object&lt;my_api::dto::AudioDeviceIdDto&gt;, deviceDto));</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="}">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classmy__api_1_1audio__api_1_1AudioController.html#a308b76d5473937740a31d80a5246c987">   52</a></span>    <a class="code hl_function" href="classmy__api_1_1audio__api_1_1AudioController.html#a308b76d5473937740a31d80a5246c987">ENDPOINT_INFO</a>(getAudioStatus) {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        info-&gt;summary = <span class="stringliteral">&quot;查看全部扬声器状态&quot;</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        info-&gt;description = <span class="stringliteral">&quot;返回所有已注册扬声器的状态综合视图，包括名称、状态、配置和设备信息。&quot;</span>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_200, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_503, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
+</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classmy__api_1_1audio__api_1_1AudioController.html#a90cb638a999723c346bee1a11e60e58a">   58</a></span>    <a class="code hl_function" href="classmy__api_1_1audio__api_1_1AudioController.html#a90cb638a999723c346bee1a11e60e58a">ENDPOINT</a>(<span class="stringliteral">&quot;GET&quot;</span>, <span class="stringliteral">&quot;/v1/audio/status&quot;</span>, getAudioStatus);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classmy__api_1_1audio__api_1_1AudioController.html#aadbc5358a21a6eec4a74800f09e71dba">   60</a></span>    <a class="code hl_function" href="classmy__api_1_1audio__api_1_1AudioController.html#aadbc5358a21a6eec4a74800f09e71dba">ENDPOINT_INFO</a>(getAvailableSpeakers) {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        info-&gt;summary = <span class="stringliteral">&quot;查看可用扬声器列表&quot;</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        info-&gt;description = <span class="stringliteral">&quot;返回当前状态为空闲或工作中的扬声器 ID 列表。&quot;</span>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_200, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_503, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classmy__api_1_1audio__api_1_1AudioController.html#abbbed4d972b5ad32dc7d3a13541b2e98">   66</a></span>    <a class="code hl_function" href="classmy__api_1_1audio__api_1_1AudioController.html#abbbed4d972b5ad32dc7d3a13541b2e98">ENDPOINT</a>(<span class="stringliteral">&quot;GET&quot;</span>, <span class="stringliteral">&quot;/v1/audio/available&quot;</span>, getAvailableSpeakers);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="comment">// ==================== 控制类接口 ====================</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="foldopen" id="foldopen00070" data-start="{" data-end="}">
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classmy__api_1_1audio__api_1_1AudioController.html#ac12bbcc8bfde648bdc6dcbcd897ab3eb">   70</a></span>    <a class="code hl_function" href="classmy__api_1_1audio__api_1_1AudioController.html#ac12bbcc8bfde648bdc6dcbcd897ab3eb">ENDPOINT_INFO</a>(playAudioFile) {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        info-&gt;summary = <span class="stringliteral">&quot;在指定扬声器上播放音频文件&quot;</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        info-&gt;description = <span class="stringliteral">&quot;指定 device_id 和 filepath，在目标扬声器上播放音频文件。&quot;</span>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        info-&gt;addConsumes&lt;oatpp::Object&lt;my_api::dto::AudioPlayRequestDto&gt;&gt;(<span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_200, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_400, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_404, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
+</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="classmy__api_1_1audio__api_1_1AudioController.html#aecf14c386064a901e124a966f0472d8e">   78</a></span>    <a class="code hl_function" href="classmy__api_1_1audio__api_1_1AudioController.html#aecf14c386064a901e124a966f0472d8e">ENDPOINT</a>(<span class="stringliteral">&quot;POST&quot;</span>, <span class="stringliteral">&quot;/v1/audio/play&quot;</span>, playAudioFile,</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>             BODY_DTO(oatpp::Object&lt;my_api::dto::AudioPlayRequestDto&gt;, playDto));</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="foldopen" id="foldopen00081" data-start="{" data-end="}">
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classmy__api_1_1audio__api_1_1AudioController.html#aba3c8a493597e949cbdad2d5a53f8fce">   81</a></span>    <a class="code hl_function" href="classmy__api_1_1audio__api_1_1AudioController.html#aba3c8a493597e949cbdad2d5a53f8fce">ENDPOINT_INFO</a>(setVolume) {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        info-&gt;summary = <span class="stringliteral">&quot;设置指定扬声器音量&quot;</span>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        info-&gt;description = <span class="stringliteral">&quot;指定 device_id 和 volume（0-100），设置目标扬声器的音量。&quot;</span>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        info-&gt;addConsumes&lt;oatpp::Object&lt;my_api::dto::AudioVolumeRequestDto&gt;&gt;(<span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_200, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_400, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_404, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    }</div>
+</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="classmy__api_1_1audio__api_1_1AudioController.html#a01d5f72960e0eb9a2087230a5178b7d9">   89</a></span>    <a class="code hl_function" href="classmy__api_1_1audio__api_1_1AudioController.html#a01d5f72960e0eb9a2087230a5178b7d9">ENDPOINT</a>(<span class="stringliteral">&quot;POST&quot;</span>, <span class="stringliteral">&quot;/v1/audio/volume&quot;</span>, setVolume,</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>             BODY_DTO(oatpp::Object&lt;my_api::dto::AudioVolumeRequestDto&gt;, volumeDto));</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>};</div>
+</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="preprocessor">#include OATPP_CODEGEN_END(ApiController)</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>} <span class="comment">// namespace my_api::audio_api</span></div>
+<div class="ttc" id="aAudioDto_8hpp_html"><div class="ttname"><a href="AudioDto_8hpp.html">AudioDto.hpp</a></div><div class="ttdoc">扬声器模块 API 的 DTO 定义</div></div>
+<div class="ttc" id="aBaseApiController_8hpp_html"><div class="ttname"><a href="BaseApiController_8hpp.html">BaseApiController.hpp</a></div></div>
+<div class="ttc" id="aclassmy__api_1_1audio__api_1_1AudioController_html"><div class="ttname"><a href="classmy__api_1_1audio__api_1_1AudioController.html">my_api::audio_api::AudioController</a></div><div class="ttdef"><b>Definition</b> AudioController.h:25</div></div>
+<div class="ttc" id="aclassmy__api_1_1audio__api_1_1AudioController_html_a01d5f72960e0eb9a2087230a5178b7d9"><div class="ttname"><a href="classmy__api_1_1audio__api_1_1AudioController.html#a01d5f72960e0eb9a2087230a5178b7d9">my_api::audio_api::AudioController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;POST&quot;, &quot;/v1/audio/volume&quot;, setVolume, BODY_DTO(oatpp::Object&lt; my_api::dto::AudioVolumeRequestDto &gt;, volumeDto))</div></div>
+<div class="ttc" id="aclassmy__api_1_1audio__api_1_1AudioController_html_a0383518eaacd7e4597bba3898e4e4974"><div class="ttname"><a href="classmy__api_1_1audio__api_1_1AudioController.html#a0383518eaacd7e4597bba3898e4e4974">my_api::audio_api::AudioController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;GET&quot;, &quot;/v1/audio/config&quot;, getAudioConfig)</div></div>
+<div class="ttc" id="aclassmy__api_1_1audio__api_1_1AudioController_html_a08a3ed6f539e8eb9ed85dda5ab432be5"><div class="ttname"><a href="classmy__api_1_1audio__api_1_1AudioController.html#a08a3ed6f539e8eb9ed85dda5ab432be5">my_api::audio_api::AudioController::createShared</a></div><div class="ttdeci">static std::shared_ptr&lt; AudioController &gt; createShared(const std::shared_ptr&lt; ObjectMapper &gt; &amp;objectMapper)</div><div class="ttdef"><b>Definition</b> AudioController.cpp:46</div></div>
+<div class="ttc" id="aclassmy__api_1_1audio__api_1_1AudioController_html_a14af9d83c5fae9716fb20f61f0e2521a"><div class="ttname"><a href="classmy__api_1_1audio__api_1_1AudioController.html#a14af9d83c5fae9716fb20f61f0e2521a">my_api::audio_api::AudioController::ENDPOINT_INFO</a></div><div class="ttdeci">ENDPOINT_INFO(getAudioInfo)</div><div class="ttdef"><b>Definition</b> AudioController.h:42</div></div>
+<div class="ttc" id="aclassmy__api_1_1audio__api_1_1AudioController_html_a308b76d5473937740a31d80a5246c987"><div class="ttname"><a href="classmy__api_1_1audio__api_1_1AudioController.html#a308b76d5473937740a31d80a5246c987">my_api::audio_api::AudioController::ENDPOINT_INFO</a></div><div class="ttdeci">ENDPOINT_INFO(getAudioStatus)</div><div class="ttdef"><b>Definition</b> AudioController.h:52</div></div>
+<div class="ttc" id="aclassmy__api_1_1audio__api_1_1AudioController_html_a90cb638a999723c346bee1a11e60e58a"><div class="ttname"><a href="classmy__api_1_1audio__api_1_1AudioController.html#a90cb638a999723c346bee1a11e60e58a">my_api::audio_api::AudioController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;GET&quot;, &quot;/v1/audio/status&quot;, getAudioStatus)</div></div>
+<div class="ttc" id="aclassmy__api_1_1audio__api_1_1AudioController_html_aadbc5358a21a6eec4a74800f09e71dba"><div class="ttname"><a href="classmy__api_1_1audio__api_1_1AudioController.html#aadbc5358a21a6eec4a74800f09e71dba">my_api::audio_api::AudioController::ENDPOINT_INFO</a></div><div class="ttdeci">ENDPOINT_INFO(getAvailableSpeakers)</div><div class="ttdef"><b>Definition</b> AudioController.h:60</div></div>
+<div class="ttc" id="aclassmy__api_1_1audio__api_1_1AudioController_html_aafb76abebe7ab174baa9d9650825e5ac"><div class="ttname"><a href="classmy__api_1_1audio__api_1_1AudioController.html#aafb76abebe7ab174baa9d9650825e5ac">my_api::audio_api::AudioController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;POST&quot;, &quot;/v1/audio/info&quot;, getAudioInfo, BODY_DTO(oatpp::Object&lt; my_api::dto::AudioDeviceIdDto &gt;, deviceDto))</div></div>
+<div class="ttc" id="aclassmy__api_1_1audio__api_1_1AudioController_html_aba3c8a493597e949cbdad2d5a53f8fce"><div class="ttname"><a href="classmy__api_1_1audio__api_1_1AudioController.html#aba3c8a493597e949cbdad2d5a53f8fce">my_api::audio_api::AudioController::ENDPOINT_INFO</a></div><div class="ttdeci">ENDPOINT_INFO(setVolume)</div><div class="ttdef"><b>Definition</b> AudioController.h:81</div></div>
+<div class="ttc" id="aclassmy__api_1_1audio__api_1_1AudioController_html_abbbed4d972b5ad32dc7d3a13541b2e98"><div class="ttname"><a href="classmy__api_1_1audio__api_1_1AudioController.html#abbbed4d972b5ad32dc7d3a13541b2e98">my_api::audio_api::AudioController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;GET&quot;, &quot;/v1/audio/available&quot;, getAvailableSpeakers)</div></div>
+<div class="ttc" id="aclassmy__api_1_1audio__api_1_1AudioController_html_ac12bbcc8bfde648bdc6dcbcd897ab3eb"><div class="ttname"><a href="classmy__api_1_1audio__api_1_1AudioController.html#ac12bbcc8bfde648bdc6dcbcd897ab3eb">my_api::audio_api::AudioController::ENDPOINT_INFO</a></div><div class="ttdeci">ENDPOINT_INFO(playAudioFile)</div><div class="ttdef"><b>Definition</b> AudioController.h:70</div></div>
+<div class="ttc" id="aclassmy__api_1_1audio__api_1_1AudioController_html_acc15fd3544a8859516e78a7b8a9948bb"><div class="ttname"><a href="classmy__api_1_1audio__api_1_1AudioController.html#acc15fd3544a8859516e78a7b8a9948bb">my_api::audio_api::AudioController::ENDPOINT_INFO</a></div><div class="ttdeci">ENDPOINT_INFO(getAudioConfig)</div><div class="ttdef"><b>Definition</b> AudioController.h:34</div></div>
+<div class="ttc" id="aclassmy__api_1_1audio__api_1_1AudioController_html_aecf14c386064a901e124a966f0472d8e"><div class="ttname"><a href="classmy__api_1_1audio__api_1_1AudioController.html#aecf14c386064a901e124a966f0472d8e">my_api::audio_api::AudioController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;POST&quot;, &quot;/v1/audio/play&quot;, playAudioFile, BODY_DTO(oatpp::Object&lt; my_api::dto::AudioPlayRequestDto &gt;, playDto))</div></div>
+<div class="ttc" id="aclassmy__api_1_1base_1_1BaseApiController_html"><div class="ttname"><a href="classmy__api_1_1base_1_1BaseApiController.html">my_api::base::BaseApiController</a></div><div class="ttdef"><b>Definition</b> BaseApiController.hpp:13</div></div>
+<div class="ttc" id="anamespacemy__api_1_1audio__api_html"><div class="ttname"><a href="namespacemy__api_1_1audio__api.html">my_api::audio_api</a></div><div class="ttdef"><b>Definition</b> AudioController.cpp:39</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

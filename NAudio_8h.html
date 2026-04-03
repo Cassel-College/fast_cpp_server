@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_audio/NAudio.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_62a3ed15368c4c4f11596a0d2c7db172.html">my_audio</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#namespaces">命名空间</a>  </div>
+  <div class="headertitle"><div class="title">NAudio.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>扬声器框架 —— NAudio 厂商适配层  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="BaseAudio_8h_source.html">BaseAudio.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="NAudioCore_8h_source.html">NAudioCore/NAudioCore.h</a>&quot;</code><br />
+<code>#include &lt;thread&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+NAudio.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="NAudio_8h__incl.png" border="0" usemap="#asrc_2util_2my__audio_2NAudio_8h" alt=""/></div>
+<map name="asrc_2util_2my__audio_2NAudio_8h" id="asrc_2util_2my__audio_2NAudio_8h">
+<area shape="rect" title="扬声器框架 —— NAudio 厂商适配层" alt="" coords="400,5,597,31"/>
+<area shape="rect" href="BaseAudio_8h.html" title="扬声器框架 —— 音频设备基类" alt="" coords="199,79,302,104"/>
+<area shape="poly" title=" " alt="" coords="460,33,305,77,303,72,458,28"/>
+<area shape="rect" href="NAudioCore_8h.html" title="NAudio 厂商 SDK 核心封装层" alt="" coords="327,79,519,104"/>
+<area shape="poly" title=" " alt="" coords="488,33,447,71,443,67,485,29"/>
+<area shape="rect" title=" " alt="" coords="543,79,607,104"/>
+<area shape="poly" title=" " alt="" coords="513,29,554,67,550,71,509,33"/>
+<area shape="rect" title=" " alt="" coords="631,79,708,104"/>
+<area shape="poly" title=" " alt="" coords="527,28,630,71,628,76,525,33"/>
+<area shape="rect" title=" " alt="" coords="176,152,235,177"/>
+<area shape="poly" title=" " alt="" coords="245,106,222,142,218,139,241,103"/>
+<area shape="rect" title=" " alt="" coords="259,152,325,177"/>
+<area shape="poly" title=" " alt="" coords="260,103,281,139,276,141,255,106"/>
+<area shape="rect" title=" " alt="" coords="349,152,413,177"/>
+<area shape="poly" title=" " alt="" coords="273,102,349,143,347,148,270,106"/>
+<area shape="rect" title=" " alt="" coords="5,152,152,177"/>
+<area shape="poly" title=" " alt="" coords="224,106,120,149,118,144,222,102"/>
+<area shape="poly" title=" " alt="" coords="389,107,249,152,247,147,387,101"/>
+<area shape="poly" title=" " alt="" coords="403,106,326,148,324,143,400,102"/>
+<area shape="poly" title=" " alt="" coords="418,106,397,141,393,139,414,103"/>
+<area shape="rect" title=" " alt="" coords="438,152,501,177"/>
+<area shape="poly" title=" " alt="" coords="433,103,456,139,452,142,428,106"/>
+<area shape="rect" title=" " alt="" coords="525,152,611,177"/>
+<area shape="poly" title=" " alt="" coords="447,102,533,144,531,148,445,106"/>
+<area shape="rect" title=" " alt="" coords="635,152,778,177"/>
+<area shape="poly" title=" " alt="" coords="469,101,648,146,647,151,468,107"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="NAudio_8h__dep__incl.png" border="0" usemap="#asrc_2util_2my__audio_2NAudio_8hdep" alt=""/></div>
+<map name="asrc_2util_2my__audio_2NAudio_8hdep" id="asrc_2util_2my__audio_2NAudio_8hdep">
+<area shape="rect" title="扬声器框架 —— NAudio 厂商适配层" alt="" coords="144,5,341,31"/>
+<area shape="rect" href="MyAudios_8cpp.html" title="扬声器框架 —— 全局音频设备管理器实现" alt="" coords="5,79,235,104"/>
+<area shape="poly" title=" " alt="" coords="213,40,141,81,139,76,210,35"/>
+<area shape="rect" href="NAudio_8cpp.html" title="扬声器框架 —— NAudio 厂商适配层实现" alt="" coords="259,79,471,104"/>
+<area shape="poly" title=" " alt="" coords="275,35,347,76,344,81,273,40"/>
+</map>
+</div>
+</div>
+<p><a href="NAudio_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1NAudio.html">NAudio</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classmy__audio_1_1NAudio.html" title="NAudio 厂商适配类">NAudio</a> 厂商适配类  <a href="classmy__audio_1_1NAudio.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacemy__audio" id="r_namespacemy__audio"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__audio.html">my_audio</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>扬声器框架 —— NAudio 厂商适配层 </p>
+<p>继承 BaseAudio 基类，对接 NAudio 厂商 SDK。 内嵌 NAudioCore 完成底层 SDK 调用。</p>
+<p>每个 NAudio 实例对应配置中的一个音频服务器节点。 </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

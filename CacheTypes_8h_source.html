@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_cache/CacheTypes.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_a451bf1a465bac099258316f07a9b989.html">my_cache</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">CacheTypes.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="CacheTypes_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="}">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="namespacemy__cache.html">   21</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__cache.html">my_cache</a> {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">// ============================================================================</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">// 模块状态枚举</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">// ============================================================================</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="};">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="namespacemy__cache.html#afe3ad5ddeec672f96f4eb09febbfe30a">   30</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="namespacemy__cache.html#afe3ad5ddeec672f96f4eb09febbfe30a">CacheStatus</a> {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_enumvalue" href="namespacemy__cache.html#afe3ad5ddeec672f96f4eb09febbfe30aa9646ad3a1c3e708b4fa8b4b4270fbab6">NotInitialized</a> = 0,  <span class="comment">// 尚未初始化（构造后默认状态）</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_enumvalue" href="namespacemy__cache.html#afe3ad5ddeec672f96f4eb09febbfe30aa5bda814c4aedb126839228f1a3d92f09">Running</a>,             <span class="comment">// 正常运行中</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_enumvalue" href="namespacemy__cache.html#afe3ad5ddeec672f96f4eb09febbfe30aa902b0d55fddef6f8d651fe1035b7d4bd">Error</a>,               <span class="comment">// 初始化失败</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>};</div>
+</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="namespacemy__cache.html#a5f33b2d48c13d0bb5ddfc2e78f4e3d49">CacheStatusToString</a>(<a class="code hl_enumeration" href="namespacemy__cache.html#afe3ad5ddeec672f96f4eb09febbfe30a">CacheStatus</a> status);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">// ============================================================================</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">// 配置结构体</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">// ============================================================================</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="};">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="structmy__cache_1_1CacheConfig.html">   57</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structmy__cache_1_1CacheConfig.html">CacheConfig</a> {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="structmy__cache_1_1CacheConfig.html#ade2a3d954af7886ab0d1e66d41663735">   58</a></span>    std::string <a class="code hl_variable" href="structmy__cache_1_1CacheConfig.html#ade2a3d954af7886ab0d1e66d41663735">root_path</a>;                  </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="structmy__cache_1_1CacheConfig.html#a274db6a7f7afe7eb194908d161c4e8c5">   59</a></span>    uint64_t <a class="code hl_variable" href="structmy__cache_1_1CacheConfig.html#a274db6a7f7afe7eb194908d161c4e8c5">max_file_size</a> = 0;             </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="structmy__cache_1_1CacheConfig.html#ac0b2eb39b888db4704c57a0b1885cef0">   60</a></span>    int64_t <a class="code hl_variable" href="structmy__cache_1_1CacheConfig.html#ac0b2eb39b888db4704c57a0b1885cef0">max_retention_seconds</a> = 0;      </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>};</div>
+</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment">// ============================================================================</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">// 文件元信息</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">// ============================================================================</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="foldopen" id="foldopen00070" data-start="{" data-end="};">
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="structmy__cache_1_1FileInfo.html">   70</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structmy__cache_1_1FileInfo.html">FileInfo</a> {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="structmy__cache_1_1FileInfo.html#a9b45b3e13bd9167aab02e17e08916231">   71</a></span>    std::string <a class="code hl_variable" href="structmy__cache_1_1FileInfo.html#a9b45b3e13bd9167aab02e17e08916231">name</a>;          </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="structmy__cache_1_1FileInfo.html#af931a8871310b4dad23f0f0b0f623560">   72</a></span>    uint64_t <a class="code hl_variable" href="structmy__cache_1_1FileInfo.html#af931a8871310b4dad23f0f0b0f623560">size</a> = 0;         </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="structmy__cache_1_1FileInfo.html#a75b160f574a0be26114bae2c7686a5e1">   73</a></span>    std::string <a class="code hl_variable" href="structmy__cache_1_1FileInfo.html#a75b160f574a0be26114bae2c7686a5e1">type</a>;          </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="structmy__cache_1_1FileInfo.html#ac6f740dfa211e62570db09be65429623">   74</a></span>    std::string <a class="code hl_variable" href="structmy__cache_1_1FileInfo.html#ac6f740dfa211e62570db09be65429623">modified_at</a>;   </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>};</div>
+</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment">// ============================================================================</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment">// 错误码枚举</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment">// ============================================================================</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="foldopen" id="foldopen00084" data-start="{" data-end="};">
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ce">   84</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ce">CacheErrorCode</a> {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <a class="code hl_enumvalue" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ceaa60852f204ed8028c1c58808b746d115">Ok</a> = 0,              <span class="comment">// 操作成功</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <a class="code hl_enumvalue" href="namespacemy__cache.html#afe3ad5ddeec672f96f4eb09febbfe30aa9646ad3a1c3e708b4fa8b4b4270fbab6">NotInitialized</a>,      <span class="comment">// 模块未初始化</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <a class="code hl_enumvalue" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9cea0043ae95cb928986f16d0d344101dbb5">PathTraversal</a>,       <span class="comment">// 路径穿越攻击（请求路径超出根目录范围）</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <a class="code hl_enumvalue" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9cea2767828026039e8ba7b38973cbb701f2">FileNotFound</a>,        <span class="comment">// 文件不存在</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <a class="code hl_enumvalue" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ceacf25d5cc7db64ddc7b38564b7704cca2">FileAlreadyExists</a>,   <span class="comment">// 文件已存在</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <a class="code hl_enumvalue" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ceaf05cfcbf5123775f7c73e520a8d861e1">IoError</a>,             <span class="comment">// 文件读写错误</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <a class="code hl_enumvalue" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9cea253ca7dd096ee0956cccee4d376cab8b">InvalidArgument</a>,     <span class="comment">// 参数非法（如文件名为空）</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <a class="code hl_enumvalue" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ceacf73468ba4dfdfb19102be6dfe4f4bc2">CreateDirFailed</a>,     <span class="comment">// 创建目录失败</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <a class="code hl_enumvalue" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9cea39e3f1d705b11a3afd05cb4127140ef9">FileTooLarge</a>,        <span class="comment">// 文件超过最大大小限制</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>};</div>
+</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="namespacemy__cache.html#a08fb92a22e0e5993b2ead55373179edb">CacheErrorCodeToString</a>(<a class="code hl_enumeration" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ce">CacheErrorCode</a> code);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="comment">// ============================================================================</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="comment">// 返回值包装类</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="comment">// ============================================================================</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00110" data-start="{" data-end="};">
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="structmy__cache_1_1CacheResult.html">  110</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structmy__cache_1_1CacheResult.html">CacheResult</a> {</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="structmy__cache_1_1CacheResult.html#ab3353ebd9186dcb48e4727f9e0c137ff">  111</a></span>    <a class="code hl_enumeration" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ce">CacheErrorCode</a> <a class="code hl_variable" href="structmy__cache_1_1CacheResult.html#ab3353ebd9186dcb48e4727f9e0c137ff">code</a>;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="structmy__cache_1_1CacheResult.html#a4fc7f59e3113e19697159919a5aad095">  112</a></span>    T <a class="code hl_variable" href="structmy__cache_1_1CacheResult.html#a4fc7f59e3113e19697159919a5aad095">value</a>;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="structmy__cache_1_1CacheResult.html#aa7e07ffe21ad6b4c71a0d22c65f30347">  115</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="structmy__cache_1_1CacheResult.html#aa7e07ffe21ad6b4c71a0d22c65f30347">Ok</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="structmy__cache_1_1CacheResult.html#ab3353ebd9186dcb48e4727f9e0c137ff">code</a> == <a class="code hl_enumvalue" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ceaa60852f204ed8028c1c58808b746d115">CacheErrorCode::Ok</a>; }</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="foldopen" id="foldopen00118" data-start="{" data-end="}">
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="structmy__cache_1_1CacheResult.html#a876c92fd4b05c9c3a8e454fa6bc5ddbb">  118</a></span>    <span class="keyword">static</span> <a class="code hl_struct" href="structmy__cache_1_1CacheResult.html">CacheResult</a> <a class="code hl_function" href="structmy__cache_1_1CacheResult.html#a876c92fd4b05c9c3a8e454fa6bc5ddbb">Success</a>(T val) {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keywordflow">return</span> {<a class="code hl_enumvalue" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ceaa60852f204ed8028c1c58808b746d115">CacheErrorCode::Ok</a>, std::move(val)};</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    }</div>
+</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="foldopen" id="foldopen00123" data-start="{" data-end="}">
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="structmy__cache_1_1CacheResult.html#a2a6f1794f676d6a911003cd7a439836b">  123</a></span>    <span class="keyword">static</span> <a class="code hl_struct" href="structmy__cache_1_1CacheResult.html">CacheResult</a> <a class="code hl_function" href="structmy__cache_1_1CacheResult.html#a2a6f1794f676d6a911003cd7a439836b">Fail</a>(<a class="code hl_enumeration" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ce">CacheErrorCode</a> err, T val = T{}) {</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <span class="keywordflow">return</span> {err, std::move(val)};</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    }</div>
+</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>};</div>
+</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="keyword">template</span> &lt;&gt;</div>
+<div class="foldopen" id="foldopen00132" data-start="{" data-end="};">
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="structmy__cache_1_1CacheResult_3_01void_01_4.html">  132</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structmy__cache_1_1CacheResult.html">CacheResult</a>&lt;void&gt; {</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="structmy__cache_1_1CacheResult_3_01void_01_4.html#ab3353ebd9186dcb48e4727f9e0c137ff">  133</a></span>    <a class="code hl_enumeration" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ce">CacheErrorCode</a> <a class="code hl_variable" href="structmy__cache_1_1CacheResult_3_01void_01_4.html#ab3353ebd9186dcb48e4727f9e0c137ff">code</a>;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="structmy__cache_1_1CacheResult_3_01void_01_4.html#aa7e07ffe21ad6b4c71a0d22c65f30347">  135</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="structmy__cache_1_1CacheResult_3_01void_01_4.html#aa7e07ffe21ad6b4c71a0d22c65f30347">Ok</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="structmy__cache_1_1CacheResult.html#ab3353ebd9186dcb48e4727f9e0c137ff">code</a> == <a class="code hl_enumvalue" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ceaa60852f204ed8028c1c58808b746d115">CacheErrorCode::Ok</a>; }</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="foldopen" id="foldopen00137" data-start="{" data-end="}">
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="structmy__cache_1_1CacheResult_3_01void_01_4.html#ac5b8cb48d230a12d5e57a7be6195aabf">  137</a></span>    <span class="keyword">static</span> <a class="code hl_struct" href="structmy__cache_1_1CacheResult.html">CacheResult</a> <a class="code hl_function" href="structmy__cache_1_1CacheResult_3_01void_01_4.html#ac5b8cb48d230a12d5e57a7be6195aabf">Success</a>() {</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        <span class="keywordflow">return</span> {<a class="code hl_enumvalue" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ceaa60852f204ed8028c1c58808b746d115">CacheErrorCode::Ok</a>};</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    }</div>
+</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="foldopen" id="foldopen00141" data-start="{" data-end="}">
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="structmy__cache_1_1CacheResult_3_01void_01_4.html#a5a0241a3698ec4b859fc0da0a72001aa">  141</a></span>    <span class="keyword">static</span> <a class="code hl_struct" href="structmy__cache_1_1CacheResult.html">CacheResult</a> <a class="code hl_function" href="structmy__cache_1_1CacheResult_3_01void_01_4.html#a5a0241a3698ec4b859fc0da0a72001aa">Fail</a>(<a class="code hl_enumeration" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ce">CacheErrorCode</a> err) {</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        <span class="keywordflow">return</span> {err};</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    }</div>
+</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>};</div>
+</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>}  <span class="comment">// namespace my_cache</span></div>
+</div>
+<div class="ttc" id="anamespacemy__cache_html"><div class="ttname"><a href="namespacemy__cache.html">my_cache</a></div><div class="ttdef"><b>Definition</b> CacheTypes.h:21</div></div>
+<div class="ttc" id="anamespacemy__cache_html_a074618e9168bea10311e1e960344b9ce"><div class="ttname"><a href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ce">my_cache::CacheErrorCode</a></div><div class="ttdeci">CacheErrorCode</div><div class="ttdoc">缓存操作错误码</div><div class="ttdef"><b>Definition</b> CacheTypes.h:84</div></div>
+<div class="ttc" id="anamespacemy__cache_html_a074618e9168bea10311e1e960344b9cea0043ae95cb928986f16d0d344101dbb5"><div class="ttname"><a href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9cea0043ae95cb928986f16d0d344101dbb5">my_cache::CacheErrorCode::PathTraversal</a></div><div class="ttdeci">@ PathTraversal</div></div>
+<div class="ttc" id="anamespacemy__cache_html_a074618e9168bea10311e1e960344b9cea253ca7dd096ee0956cccee4d376cab8b"><div class="ttname"><a href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9cea253ca7dd096ee0956cccee4d376cab8b">my_cache::CacheErrorCode::InvalidArgument</a></div><div class="ttdeci">@ InvalidArgument</div></div>
+<div class="ttc" id="anamespacemy__cache_html_a074618e9168bea10311e1e960344b9cea2767828026039e8ba7b38973cbb701f2"><div class="ttname"><a href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9cea2767828026039e8ba7b38973cbb701f2">my_cache::CacheErrorCode::FileNotFound</a></div><div class="ttdeci">@ FileNotFound</div></div>
+<div class="ttc" id="anamespacemy__cache_html_a074618e9168bea10311e1e960344b9cea39e3f1d705b11a3afd05cb4127140ef9"><div class="ttname"><a href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9cea39e3f1d705b11a3afd05cb4127140ef9">my_cache::CacheErrorCode::FileTooLarge</a></div><div class="ttdeci">@ FileTooLarge</div></div>
+<div class="ttc" id="anamespacemy__cache_html_a074618e9168bea10311e1e960344b9ceaa60852f204ed8028c1c58808b746d115"><div class="ttname"><a href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ceaa60852f204ed8028c1c58808b746d115">my_cache::CacheErrorCode::Ok</a></div><div class="ttdeci">@ Ok</div></div>
+<div class="ttc" id="anamespacemy__cache_html_a074618e9168bea10311e1e960344b9ceacf25d5cc7db64ddc7b38564b7704cca2"><div class="ttname"><a href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ceacf25d5cc7db64ddc7b38564b7704cca2">my_cache::CacheErrorCode::FileAlreadyExists</a></div><div class="ttdeci">@ FileAlreadyExists</div></div>
+<div class="ttc" id="anamespacemy__cache_html_a074618e9168bea10311e1e960344b9ceacf73468ba4dfdfb19102be6dfe4f4bc2"><div class="ttname"><a href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ceacf73468ba4dfdfb19102be6dfe4f4bc2">my_cache::CacheErrorCode::CreateDirFailed</a></div><div class="ttdeci">@ CreateDirFailed</div></div>
+<div class="ttc" id="anamespacemy__cache_html_a074618e9168bea10311e1e960344b9ceaf05cfcbf5123775f7c73e520a8d861e1"><div class="ttname"><a href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ceaf05cfcbf5123775f7c73e520a8d861e1">my_cache::CacheErrorCode::IoError</a></div><div class="ttdeci">@ IoError</div></div>
+<div class="ttc" id="anamespacemy__cache_html_a08fb92a22e0e5993b2ead55373179edb"><div class="ttname"><a href="namespacemy__cache.html#a08fb92a22e0e5993b2ead55373179edb">my_cache::CacheErrorCodeToString</a></div><div class="ttdeci">const char * CacheErrorCodeToString(CacheErrorCode code)</div><div class="ttdoc">将错误码转为可读字符串</div><div class="ttdef"><b>Definition</b> MyCache.cpp:66</div></div>
+<div class="ttc" id="anamespacemy__cache_html_a5f33b2d48c13d0bb5ddfc2e78f4e3d49"><div class="ttname"><a href="namespacemy__cache.html#a5f33b2d48c13d0bb5ddfc2e78f4e3d49">my_cache::CacheStatusToString</a></div><div class="ttdeci">const char * CacheStatusToString(CacheStatus status)</div><div class="ttdoc">将状态码转为可读字符串</div><div class="ttdef"><b>Definition</b> MyCache.cpp:57</div></div>
+<div class="ttc" id="anamespacemy__cache_html_afe3ad5ddeec672f96f4eb09febbfe30a"><div class="ttname"><a href="namespacemy__cache.html#afe3ad5ddeec672f96f4eb09febbfe30a">my_cache::CacheStatus</a></div><div class="ttdeci">CacheStatus</div><div class="ttdoc">缓存模块运行状态</div><div class="ttdef"><b>Definition</b> CacheTypes.h:30</div></div>
+<div class="ttc" id="anamespacemy__cache_html_afe3ad5ddeec672f96f4eb09febbfe30aa5bda814c4aedb126839228f1a3d92f09"><div class="ttname"><a href="namespacemy__cache.html#afe3ad5ddeec672f96f4eb09febbfe30aa5bda814c4aedb126839228f1a3d92f09">my_cache::CacheStatus::Running</a></div><div class="ttdeci">@ Running</div></div>
+<div class="ttc" id="anamespacemy__cache_html_afe3ad5ddeec672f96f4eb09febbfe30aa902b0d55fddef6f8d651fe1035b7d4bd"><div class="ttname"><a href="namespacemy__cache.html#afe3ad5ddeec672f96f4eb09febbfe30aa902b0d55fddef6f8d651fe1035b7d4bd">my_cache::CacheStatus::Error</a></div><div class="ttdeci">@ Error</div></div>
+<div class="ttc" id="anamespacemy__cache_html_afe3ad5ddeec672f96f4eb09febbfe30aa9646ad3a1c3e708b4fa8b4b4270fbab6"><div class="ttname"><a href="namespacemy__cache.html#afe3ad5ddeec672f96f4eb09febbfe30aa9646ad3a1c3e708b4fa8b4b4270fbab6">my_cache::CacheStatus::NotInitialized</a></div><div class="ttdeci">@ NotInitialized</div></div>
+<div class="ttc" id="astructmy__cache_1_1CacheConfig_html"><div class="ttname"><a href="structmy__cache_1_1CacheConfig.html">my_cache::CacheConfig</a></div><div class="ttdoc">缓存模块配置（由 Init 时的 JSON 解析得到）</div><div class="ttdef"><b>Definition</b> CacheTypes.h:57</div></div>
+<div class="ttc" id="astructmy__cache_1_1CacheConfig_html_a274db6a7f7afe7eb194908d161c4e8c5"><div class="ttname"><a href="structmy__cache_1_1CacheConfig.html#a274db6a7f7afe7eb194908d161c4e8c5">my_cache::CacheConfig::max_file_size</a></div><div class="ttdeci">uint64_t max_file_size</div><div class="ttdoc">单个文件最大大小（字节），0 表示不限制</div><div class="ttdef"><b>Definition</b> CacheTypes.h:59</div></div>
+<div class="ttc" id="astructmy__cache_1_1CacheConfig_html_ac0b2eb39b888db4704c57a0b1885cef0"><div class="ttname"><a href="structmy__cache_1_1CacheConfig.html#ac0b2eb39b888db4704c57a0b1885cef0">my_cache::CacheConfig::max_retention_seconds</a></div><div class="ttdeci">int64_t max_retention_seconds</div><div class="ttdoc">文件最长保留时间（秒），0 表示不限制，-1 表示永久有效</div><div class="ttdef"><b>Definition</b> CacheTypes.h:60</div></div>
+<div class="ttc" id="astructmy__cache_1_1CacheConfig_html_ade2a3d954af7886ab0d1e66d41663735"><div class="ttname"><a href="structmy__cache_1_1CacheConfig.html#ade2a3d954af7886ab0d1e66d41663735">my_cache::CacheConfig::root_path</a></div><div class="ttdeci">std::string root_path</div><div class="ttdoc">缓存根目录路径（必填）</div><div class="ttdef"><b>Definition</b> CacheTypes.h:58</div></div>
+<div class="ttc" id="astructmy__cache_1_1CacheResult_3_01void_01_4_html_a5a0241a3698ec4b859fc0da0a72001aa"><div class="ttname"><a href="structmy__cache_1_1CacheResult_3_01void_01_4.html#a5a0241a3698ec4b859fc0da0a72001aa">my_cache::CacheResult&lt; void &gt;::Fail</a></div><div class="ttdeci">static CacheResult Fail(CacheErrorCode err)</div><div class="ttdef"><b>Definition</b> CacheTypes.h:141</div></div>
+<div class="ttc" id="astructmy__cache_1_1CacheResult_3_01void_01_4_html_aa7e07ffe21ad6b4c71a0d22c65f30347"><div class="ttname"><a href="structmy__cache_1_1CacheResult_3_01void_01_4.html#aa7e07ffe21ad6b4c71a0d22c65f30347">my_cache::CacheResult&lt; void &gt;::Ok</a></div><div class="ttdeci">bool Ok() const</div><div class="ttdef"><b>Definition</b> CacheTypes.h:135</div></div>
+<div class="ttc" id="astructmy__cache_1_1CacheResult_3_01void_01_4_html_ab3353ebd9186dcb48e4727f9e0c137ff"><div class="ttname"><a href="structmy__cache_1_1CacheResult_3_01void_01_4.html#ab3353ebd9186dcb48e4727f9e0c137ff">my_cache::CacheResult&lt; void &gt;::code</a></div><div class="ttdeci">CacheErrorCode code</div><div class="ttdef"><b>Definition</b> CacheTypes.h:133</div></div>
+<div class="ttc" id="astructmy__cache_1_1CacheResult_3_01void_01_4_html_ac5b8cb48d230a12d5e57a7be6195aabf"><div class="ttname"><a href="structmy__cache_1_1CacheResult_3_01void_01_4.html#ac5b8cb48d230a12d5e57a7be6195aabf">my_cache::CacheResult&lt; void &gt;::Success</a></div><div class="ttdeci">static CacheResult Success()</div><div class="ttdef"><b>Definition</b> CacheTypes.h:137</div></div>
+<div class="ttc" id="astructmy__cache_1_1CacheResult_html"><div class="ttname"><a href="structmy__cache_1_1CacheResult.html">my_cache::CacheResult</a></div><div class="ttdoc">通用返回值类型，包含错误码和可选的数据</div><div class="ttdef"><b>Definition</b> CacheTypes.h:110</div></div>
+<div class="ttc" id="astructmy__cache_1_1CacheResult_html_a2a6f1794f676d6a911003cd7a439836b"><div class="ttname"><a href="structmy__cache_1_1CacheResult.html#a2a6f1794f676d6a911003cd7a439836b">my_cache::CacheResult::Fail</a></div><div class="ttdeci">static CacheResult Fail(CacheErrorCode err, T val=T{})</div><div class="ttdoc">快速构造失败结果</div><div class="ttdef"><b>Definition</b> CacheTypes.h:123</div></div>
+<div class="ttc" id="astructmy__cache_1_1CacheResult_html_a4fc7f59e3113e19697159919a5aad095"><div class="ttname"><a href="structmy__cache_1_1CacheResult.html#a4fc7f59e3113e19697159919a5aad095">my_cache::CacheResult::value</a></div><div class="ttdeci">T value</div><div class="ttdef"><b>Definition</b> CacheTypes.h:112</div></div>
+<div class="ttc" id="astructmy__cache_1_1CacheResult_html_a876c92fd4b05c9c3a8e454fa6bc5ddbb"><div class="ttname"><a href="structmy__cache_1_1CacheResult.html#a876c92fd4b05c9c3a8e454fa6bc5ddbb">my_cache::CacheResult::Success</a></div><div class="ttdeci">static CacheResult Success(T val)</div><div class="ttdoc">快速构造成功结果</div><div class="ttdef"><b>Definition</b> CacheTypes.h:118</div></div>
+<div class="ttc" id="astructmy__cache_1_1CacheResult_html_aa7e07ffe21ad6b4c71a0d22c65f30347"><div class="ttname"><a href="structmy__cache_1_1CacheResult.html#aa7e07ffe21ad6b4c71a0d22c65f30347">my_cache::CacheResult::Ok</a></div><div class="ttdeci">bool Ok() const</div><div class="ttdoc">判断操作是否成功</div><div class="ttdef"><b>Definition</b> CacheTypes.h:115</div></div>
+<div class="ttc" id="astructmy__cache_1_1CacheResult_html_ab3353ebd9186dcb48e4727f9e0c137ff"><div class="ttname"><a href="structmy__cache_1_1CacheResult.html#ab3353ebd9186dcb48e4727f9e0c137ff">my_cache::CacheResult::code</a></div><div class="ttdeci">CacheErrorCode code</div><div class="ttdef"><b>Definition</b> CacheTypes.h:111</div></div>
+<div class="ttc" id="astructmy__cache_1_1FileInfo_html"><div class="ttname"><a href="structmy__cache_1_1FileInfo.html">my_cache::FileInfo</a></div><div class="ttdoc">文件元信息结构体</div><div class="ttdef"><b>Definition</b> CacheTypes.h:70</div></div>
+<div class="ttc" id="astructmy__cache_1_1FileInfo_html_a75b160f574a0be26114bae2c7686a5e1"><div class="ttname"><a href="structmy__cache_1_1FileInfo.html#a75b160f574a0be26114bae2c7686a5e1">my_cache::FileInfo::type</a></div><div class="ttdeci">std::string type</div><div class="ttdoc">文件扩展名（如 &quot;txt&quot;、&quot;bin&quot;，无扩展名为空）</div><div class="ttdef"><b>Definition</b> CacheTypes.h:73</div></div>
+<div class="ttc" id="astructmy__cache_1_1FileInfo_html_a9b45b3e13bd9167aab02e17e08916231"><div class="ttname"><a href="structmy__cache_1_1FileInfo.html#a9b45b3e13bd9167aab02e17e08916231">my_cache::FileInfo::name</a></div><div class="ttdeci">std::string name</div><div class="ttdoc">相对路径名（如 &quot;sub/file.txt&quot;）</div><div class="ttdef"><b>Definition</b> CacheTypes.h:71</div></div>
+<div class="ttc" id="astructmy__cache_1_1FileInfo_html_ac6f740dfa211e62570db09be65429623"><div class="ttname"><a href="structmy__cache_1_1FileInfo.html#ac6f740dfa211e62570db09be65429623">my_cache::FileInfo::modified_at</a></div><div class="ttdeci">std::string modified_at</div><div class="ttdoc">最后修改时间（ISO 8601 格式，如 &quot;2026-03-31T14:30:00&quot;）</div><div class="ttdef"><b>Definition</b> CacheTypes.h:74</div></div>
+<div class="ttc" id="astructmy__cache_1_1FileInfo_html_af931a8871310b4dad23f0f0b0f623560"><div class="ttname"><a href="structmy__cache_1_1FileInfo.html#af931a8871310b4dad23f0f0b0f623560">my_cache::FileInfo::size</a></div><div class="ttdeci">uint64_t size</div><div class="ttdoc">文件大小（字节）</div><div class="ttdef"><b>Definition</b> CacheTypes.h:72</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

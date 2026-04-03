@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_api/controller/file_cache/FileApiController.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_f1ee40842c724b3bf8a04800f5f521a7.html">my_api</a></li><li class="navelem"><a class="el" href="dir_6ef159f9932051522d309704773cf407.html">controller</a></li><li class="navelem"><a class="el" href="dir_ed2f894616879817781981eaa1c19cce.html">file_cache</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">FileApiController.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="FileApiController_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="BaseApiController_8hpp.html">BaseApiController.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;oatpp/web/server/api/ApiController.hpp&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;oatpp/core/macro/codegen.hpp&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="namespacemy__api_1_1file__cache__api.html">   23</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__api_1_1file__cache__api.html">my_api::file_cache_api</a> {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include OATPP_CODEGEN_BEGIN(ApiController)</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="};">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classmy__api_1_1file__cache__api_1_1FileApiController.html">   27</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__api_1_1file__cache__api_1_1FileApiController.html">FileApiController</a> : <span class="keyword">public</span> <a class="code hl_class" href="classmy__api_1_1base_1_1BaseApiController.html">base::BaseApiController</a> {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="classmy__api_1_1file__cache__api_1_1FileApiController.html">FileApiController</a>(</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keyword">const</span> std::shared_ptr&lt;ObjectMapper&gt;&amp; objectMapper</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    );</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">static</span> std::shared_ptr&lt;FileApiController&gt; <a class="code hl_function" href="classmy__api_1_1file__cache__api_1_1FileApiController.html#a18ec45c14b7a300e99e45488771562d1">createShared</a>(</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keyword">const</span> std::shared_ptr&lt;ObjectMapper&gt;&amp; objectMapper</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    );</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="comment">// ====================================================================</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="comment">// POST /v1/cache/upload —— 上传文件</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="comment">// ====================================================================</span></div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classmy__api_1_1file__cache__api_1_1FileApiController.html#ad9ff753b8570358b4125f996421b6cef">   40</a></span>    <a class="code hl_function" href="classmy__api_1_1file__cache__api_1_1FileApiController.html#ad9ff753b8570358b4125f996421b6cef">ENDPOINT_INFO</a>(uploadFile) {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        info-&gt;summary = <span class="stringliteral">&quot;上传文件到缓存目录&quot;</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        info-&gt;description =</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <span class="stringliteral">&quot;接收 JSON Body，将文件数据保存到缓存目录。\n&quot;</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="stringliteral">&quot;data 字段为 Base64 编码的文件二进制内容。\n&quot;</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <span class="stringliteral">&quot;支持子目录路径，如 \&quot;images/photo.jpg\&quot;。&quot;</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        info-&gt;addConsumes&lt;oatpp::String&gt;(<span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_200, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_400, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_403, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_500, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
+</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classmy__api_1_1file__cache__api_1_1FileApiController.html#ac54fb19016005360174adfca173e16bf">   52</a></span>    <a class="code hl_function" href="classmy__api_1_1file__cache__api_1_1FileApiController.html#ac54fb19016005360174adfca173e16bf">ENDPOINT</a>(<span class="stringliteral">&quot;POST&quot;</span>, <span class="stringliteral">&quot;/v1/cache/upload&quot;</span>, uploadFile, BODY_STRING(oatpp::String, body));</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="comment">// ====================================================================</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="comment">// POST /v1/cache/query —— 查询文件</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="comment">// ====================================================================</span></div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classmy__api_1_1file__cache__api_1_1FileApiController.html#a06d01b26f5fee549cb727a8d64a84eca">   57</a></span>    <a class="code hl_function" href="classmy__api_1_1file__cache__api_1_1FileApiController.html#a06d01b26f5fee549cb727a8d64a84eca">ENDPOINT_INFO</a>(queryFile) {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        info-&gt;summary = <span class="stringliteral">&quot;查询缓存文件是否存在&quot;</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        info-&gt;description =</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <span class="stringliteral">&quot;接收 JSON Body，查询文件是否存在于缓存中，\n&quot;</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <span class="stringliteral">&quot;返回存在性和完整绝对路径。&quot;</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        info-&gt;addConsumes&lt;oatpp::String&gt;(<span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_200, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_400, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_500, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    }</div>
+</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classmy__api_1_1file__cache__api_1_1FileApiController.html#a676f9f8526d525fc5090484930f7834c">   67</a></span>    <a class="code hl_function" href="classmy__api_1_1file__cache__api_1_1FileApiController.html#a676f9f8526d525fc5090484930f7834c">ENDPOINT</a>(<span class="stringliteral">&quot;POST&quot;</span>, <span class="stringliteral">&quot;/v1/cache/query&quot;</span>, queryFile, BODY_STRING(oatpp::String, body));</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="comment">// ====================================================================</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="comment">// POST /v1/cache/delete —— 删除文件</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="comment">// ====================================================================</span></div>
+<div class="foldopen" id="foldopen00072" data-start="{" data-end="}">
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classmy__api_1_1file__cache__api_1_1FileApiController.html#a82fe8d58c580c7e896545e67fde00c79">   72</a></span>    <a class="code hl_function" href="classmy__api_1_1file__cache__api_1_1FileApiController.html#a82fe8d58c580c7e896545e67fde00c79">ENDPOINT_INFO</a>(deleteFile) {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        info-&gt;summary = <span class="stringliteral">&quot;删除缓存中的文件&quot;</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        info-&gt;description =</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <span class="stringliteral">&quot;接收 JSON Body，删除缓存目录中指定的文件。&quot;</span>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        info-&gt;addConsumes&lt;oatpp::String&gt;(<span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_200, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_400, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_403, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_404, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_500, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    }</div>
+</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="classmy__api_1_1file__cache__api_1_1FileApiController.html#a458f614526384f6dc49bd1ffabdf6e16">   83</a></span>    <a class="code hl_function" href="classmy__api_1_1file__cache__api_1_1FileApiController.html#a458f614526384f6dc49bd1ffabdf6e16">ENDPOINT</a>(<span class="stringliteral">&quot;POST&quot;</span>, <span class="stringliteral">&quot;/v1/cache/delete&quot;</span>, deleteFile, BODY_STRING(oatpp::String, body));</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="comment">// ====================================================================</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="comment">// POST /v1/cache/list —— 获取所有文件列表</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="comment">// ====================================================================</span></div>
+<div class="foldopen" id="foldopen00088" data-start="{" data-end="}">
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="classmy__api_1_1file__cache__api_1_1FileApiController.html#a175f2fe839a6ad45f2ff3f221bbcd6e3">   88</a></span>    <a class="code hl_function" href="classmy__api_1_1file__cache__api_1_1FileApiController.html#a175f2fe839a6ad45f2ff3f221bbcd6e3">ENDPOINT_INFO</a>(listFiles) {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        info-&gt;summary = <span class="stringliteral">&quot;获取缓存目录中所有文件列表&quot;</span>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        info-&gt;description =</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            <span class="stringliteral">&quot;返回缓存目录下所有文件的元信息，\n&quot;</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            <span class="stringliteral">&quot;包括文件名、大小、类型、最后修改时间。&quot;</span>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_200, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_500, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    }</div>
+</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="classmy__api_1_1file__cache__api_1_1FileApiController.html#a74cd07ff5742286eb1763f2cd47edb67">   96</a></span>    <a class="code hl_function" href="classmy__api_1_1file__cache__api_1_1FileApiController.html#a74cd07ff5742286eb1763f2cd47edb67">ENDPOINT</a>(<span class="stringliteral">&quot;POST&quot;</span>, <span class="stringliteral">&quot;/v1/cache/list&quot;</span>, listFiles, BODY_STRING(oatpp::String, body));</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="comment">// ====================================================================</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="comment">// GET /v1/cache/info —— 获取缓存配置信息</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="comment">// ====================================================================</span></div>
+<div class="foldopen" id="foldopen00101" data-start="{" data-end="}">
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="classmy__api_1_1file__cache__api_1_1FileApiController.html#a6325dac810ec1075b50f64c2e72687a0">  101</a></span>    <a class="code hl_function" href="classmy__api_1_1file__cache__api_1_1FileApiController.html#a6325dac810ec1075b50f64c2e72687a0">ENDPOINT_INFO</a>(cacheInfo) {</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        info-&gt;summary = <span class="stringliteral">&quot;获取缓存配置信息&quot;</span>;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        info-&gt;description =</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            <span class="stringliteral">&quot;返回当前文件缓存模块的配置信息，\n&quot;</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            <span class="stringliteral">&quot;包括根目录路径、最大文件大小、最长保留时间等。&quot;</span>;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_200, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_500, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    }</div>
+</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="classmy__api_1_1file__cache__api_1_1FileApiController.html#a7fb3a9afd83de5372ad395298a107758">  109</a></span>    <a class="code hl_function" href="classmy__api_1_1file__cache__api_1_1FileApiController.html#a7fb3a9afd83de5372ad395298a107758">ENDPOINT</a>(<span class="stringliteral">&quot;GET&quot;</span>, <span class="stringliteral">&quot;/v1/cache/info&quot;</span>, cacheInfo);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="comment">// ====================================================================</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="comment">// GET /v1/cache/status —— 获取缓存运行状态</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="comment">// ====================================================================</span></div>
+<div class="foldopen" id="foldopen00114" data-start="{" data-end="}">
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="classmy__api_1_1file__cache__api_1_1FileApiController.html#affb902b358b454b0b0f7a3e8161fe9fe">  114</a></span>    <a class="code hl_function" href="classmy__api_1_1file__cache__api_1_1FileApiController.html#affb902b358b454b0b0f7a3e8161fe9fe">ENDPOINT_INFO</a>(cacheStatus) {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        info-&gt;summary = <span class="stringliteral">&quot;获取缓存运行状态&quot;</span>;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        info-&gt;description =</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            <span class="stringliteral">&quot;返回当前文件缓存模块的运行状态，\n&quot;</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            <span class="stringliteral">&quot;包括状态码和状态描述。&quot;</span>;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_200, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_500, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    }</div>
+</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="classmy__api_1_1file__cache__api_1_1FileApiController.html#a4ef7b066d31c54804cc5886a19fe16b0">  122</a></span>    <a class="code hl_function" href="classmy__api_1_1file__cache__api_1_1FileApiController.html#a4ef7b066d31c54804cc5886a19fe16b0">ENDPOINT</a>(<span class="stringliteral">&quot;GET&quot;</span>, <span class="stringliteral">&quot;/v1/cache/status&quot;</span>, cacheStatus);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>};</div>
+</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="preprocessor">#include OATPP_CODEGEN_END(ApiController)</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>}  <span class="comment">// namespace my_api::file_cache_api</span></div>
+</div>
+<div class="ttc" id="aBaseApiController_8hpp_html"><div class="ttname"><a href="BaseApiController_8hpp.html">BaseApiController.hpp</a></div></div>
+<div class="ttc" id="aclassmy__api_1_1base_1_1BaseApiController_html"><div class="ttname"><a href="classmy__api_1_1base_1_1BaseApiController.html">my_api::base::BaseApiController</a></div><div class="ttdef"><b>Definition</b> BaseApiController.hpp:13</div></div>
+<div class="ttc" id="aclassmy__api_1_1file__cache__api_1_1FileApiController_html"><div class="ttname"><a href="classmy__api_1_1file__cache__api_1_1FileApiController.html">my_api::file_cache_api::FileApiController</a></div><div class="ttdef"><b>Definition</b> FileApiController.h:27</div></div>
+<div class="ttc" id="aclassmy__api_1_1file__cache__api_1_1FileApiController_html_a06d01b26f5fee549cb727a8d64a84eca"><div class="ttname"><a href="classmy__api_1_1file__cache__api_1_1FileApiController.html#a06d01b26f5fee549cb727a8d64a84eca">my_api::file_cache_api::FileApiController::ENDPOINT_INFO</a></div><div class="ttdeci">ENDPOINT_INFO(queryFile)</div><div class="ttdef"><b>Definition</b> FileApiController.h:57</div></div>
+<div class="ttc" id="aclassmy__api_1_1file__cache__api_1_1FileApiController_html_a175f2fe839a6ad45f2ff3f221bbcd6e3"><div class="ttname"><a href="classmy__api_1_1file__cache__api_1_1FileApiController.html#a175f2fe839a6ad45f2ff3f221bbcd6e3">my_api::file_cache_api::FileApiController::ENDPOINT_INFO</a></div><div class="ttdeci">ENDPOINT_INFO(listFiles)</div><div class="ttdef"><b>Definition</b> FileApiController.h:88</div></div>
+<div class="ttc" id="aclassmy__api_1_1file__cache__api_1_1FileApiController_html_a18ec45c14b7a300e99e45488771562d1"><div class="ttname"><a href="classmy__api_1_1file__cache__api_1_1FileApiController.html#a18ec45c14b7a300e99e45488771562d1">my_api::file_cache_api::FileApiController::createShared</a></div><div class="ttdeci">static std::shared_ptr&lt; FileApiController &gt; createShared(const std::shared_ptr&lt; ObjectMapper &gt; &amp;objectMapper)</div><div class="ttdef"><b>Definition</b> FileApiController.cpp:34</div></div>
+<div class="ttc" id="aclassmy__api_1_1file__cache__api_1_1FileApiController_html_a458f614526384f6dc49bd1ffabdf6e16"><div class="ttname"><a href="classmy__api_1_1file__cache__api_1_1FileApiController.html#a458f614526384f6dc49bd1ffabdf6e16">my_api::file_cache_api::FileApiController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;POST&quot;, &quot;/v1/cache/delete&quot;, deleteFile, BODY_STRING(oatpp::String, body))</div></div>
+<div class="ttc" id="aclassmy__api_1_1file__cache__api_1_1FileApiController_html_a4ef7b066d31c54804cc5886a19fe16b0"><div class="ttname"><a href="classmy__api_1_1file__cache__api_1_1FileApiController.html#a4ef7b066d31c54804cc5886a19fe16b0">my_api::file_cache_api::FileApiController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;GET&quot;, &quot;/v1/cache/status&quot;, cacheStatus)</div></div>
+<div class="ttc" id="aclassmy__api_1_1file__cache__api_1_1FileApiController_html_a6325dac810ec1075b50f64c2e72687a0"><div class="ttname"><a href="classmy__api_1_1file__cache__api_1_1FileApiController.html#a6325dac810ec1075b50f64c2e72687a0">my_api::file_cache_api::FileApiController::ENDPOINT_INFO</a></div><div class="ttdeci">ENDPOINT_INFO(cacheInfo)</div><div class="ttdef"><b>Definition</b> FileApiController.h:101</div></div>
+<div class="ttc" id="aclassmy__api_1_1file__cache__api_1_1FileApiController_html_a676f9f8526d525fc5090484930f7834c"><div class="ttname"><a href="classmy__api_1_1file__cache__api_1_1FileApiController.html#a676f9f8526d525fc5090484930f7834c">my_api::file_cache_api::FileApiController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;POST&quot;, &quot;/v1/cache/query&quot;, queryFile, BODY_STRING(oatpp::String, body))</div></div>
+<div class="ttc" id="aclassmy__api_1_1file__cache__api_1_1FileApiController_html_a74cd07ff5742286eb1763f2cd47edb67"><div class="ttname"><a href="classmy__api_1_1file__cache__api_1_1FileApiController.html#a74cd07ff5742286eb1763f2cd47edb67">my_api::file_cache_api::FileApiController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;POST&quot;, &quot;/v1/cache/list&quot;, listFiles, BODY_STRING(oatpp::String, body))</div></div>
+<div class="ttc" id="aclassmy__api_1_1file__cache__api_1_1FileApiController_html_a7fb3a9afd83de5372ad395298a107758"><div class="ttname"><a href="classmy__api_1_1file__cache__api_1_1FileApiController.html#a7fb3a9afd83de5372ad395298a107758">my_api::file_cache_api::FileApiController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;GET&quot;, &quot;/v1/cache/info&quot;, cacheInfo)</div></div>
+<div class="ttc" id="aclassmy__api_1_1file__cache__api_1_1FileApiController_html_a82fe8d58c580c7e896545e67fde00c79"><div class="ttname"><a href="classmy__api_1_1file__cache__api_1_1FileApiController.html#a82fe8d58c580c7e896545e67fde00c79">my_api::file_cache_api::FileApiController::ENDPOINT_INFO</a></div><div class="ttdeci">ENDPOINT_INFO(deleteFile)</div><div class="ttdef"><b>Definition</b> FileApiController.h:72</div></div>
+<div class="ttc" id="aclassmy__api_1_1file__cache__api_1_1FileApiController_html_ac54fb19016005360174adfca173e16bf"><div class="ttname"><a href="classmy__api_1_1file__cache__api_1_1FileApiController.html#ac54fb19016005360174adfca173e16bf">my_api::file_cache_api::FileApiController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;POST&quot;, &quot;/v1/cache/upload&quot;, uploadFile, BODY_STRING(oatpp::String, body))</div></div>
+<div class="ttc" id="aclassmy__api_1_1file__cache__api_1_1FileApiController_html_ad9ff753b8570358b4125f996421b6cef"><div class="ttname"><a href="classmy__api_1_1file__cache__api_1_1FileApiController.html#ad9ff753b8570358b4125f996421b6cef">my_api::file_cache_api::FileApiController::ENDPOINT_INFO</a></div><div class="ttdeci">ENDPOINT_INFO(uploadFile)</div><div class="ttdef"><b>Definition</b> FileApiController.h:40</div></div>
+<div class="ttc" id="aclassmy__api_1_1file__cache__api_1_1FileApiController_html_affb902b358b454b0b0f7a3e8161fe9fe"><div class="ttname"><a href="classmy__api_1_1file__cache__api_1_1FileApiController.html#affb902b358b454b0b0f7a3e8161fe9fe">my_api::file_cache_api::FileApiController::ENDPOINT_INFO</a></div><div class="ttdeci">ENDPOINT_INFO(cacheStatus)</div><div class="ttdef"><b>Definition</b> FileApiController.h:114</div></div>
+<div class="ttc" id="anamespacemy__api_1_1file__cache__api_html"><div class="ttname"><a href="namespacemy__api_1_1file__cache__api.html">my_api::file_cache_api</a></div><div class="ttdef"><b>Definition</b> FileApiController.h:23</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

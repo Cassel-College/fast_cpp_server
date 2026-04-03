@@ -6,8 +6,8 @@ var searchData=
   ['addpod_3',['addPod',['../classPodModule_1_1PodManager.html#ac4319fbc249e87a1e54d4c6a4b0a50df',1,'PodModule::PodManager']]],
   ['addroute_4',['AddRoute',['../classmy__mqtt_1_1MqttService.html#a954c92b80afa6bab4284cbae327de6ad',1,'my_mqtt::MqttService']]],
   ['appendedge_5',['appendEdge',['../classmy__edge_1_1MyEdgeManager.html#ab07cfa36269ad610130c8a8d49cf2553',1,'my_edge::MyEdgeManager']]],
-  ['appendjsontask_6',['appendjsontask',['../classmy__edge_1_1BaseEdge.html#ad6ccbe6aa525e1634eab750c2bb8d93b',1,'my_edge::BaseEdge::AppendJsonTask()'],['../classmy__edge_1_1demo_1_1TUNAEdge.html#ad6ccbe6aa525e1634eab750c2bb8d93b',1,'my_edge::demo::TUNAEdge::AppendJsonTask()'],['../classmy__edge_1_1demo_1_1UUVEdge.html#ad6ccbe6aa525e1634eab750c2bb8d93b',1,'my_edge::demo::UUVEdge::AppendJsonTask()'],['../classmy__edge_1_1IEdge.html#a440a5a618c768b291970886af4da128f',1,'my_edge::IEdge::AppendJsonTask(const nlohmann::json &amp;task)=0']]],
-  ['appendtask_7',['appendtask',['../classmy__edge_1_1IEdge.html#a7018dbffbe4da9d9bb4ee5f143ad6350',1,'my_edge::IEdge::AppendTask()'],['../classmy__edge_1_1demo_1_1UUVEdge.html#a1381f71c6f6b97b7dfea100449fed59c',1,'my_edge::demo::UUVEdge::AppendTask()'],['../classmy__edge_1_1demo_1_1TUNAEdge.html#a1381f71c6f6b97b7dfea100449fed59c',1,'my_edge::demo::TUNAEdge::AppendTask()'],['../classmy__edge_1_1BaseEdge.html#a1381f71c6f6b97b7dfea100449fed59c',1,'my_edge::BaseEdge::AppendTask()']]],
+  ['appendjsontask_6',['appendjsontask',['../classmy__edge_1_1BaseEdge.html#ad6ccbe6aa525e1634eab750c2bb8d93b',1,'my_edge::BaseEdge::AppendJsonTask()'],['../classmy__edge_1_1demo_1_1TUNAEdge.html#ad6ccbe6aa525e1634eab750c2bb8d93b',1,'my_edge::demo::TUNAEdge::AppendJsonTask()'],['../classmy__edge_1_1demo_1_1UUVEdge.html#ad6ccbe6aa525e1634eab750c2bb8d93b',1,'my_edge::demo::UUVEdge::AppendJsonTask()'],['../classmy__edge_1_1IEdge.html#a440a5a618c768b291970886af4da128f',1,'my_edge::IEdge::AppendJsonTask()']]],
+  ['appendtask_7',['appendtask',['../classmy__edge_1_1BaseEdge.html#a1381f71c6f6b97b7dfea100449fed59c',1,'my_edge::BaseEdge::AppendTask()'],['../classmy__edge_1_1demo_1_1TUNAEdge.html#a1381f71c6f6b97b7dfea100449fed59c',1,'my_edge::demo::TUNAEdge::AppendTask()'],['../classmy__edge_1_1demo_1_1UUVEdge.html#a1381f71c6f6b97b7dfea100449fed59c',1,'my_edge::demo::UUVEdge::AppendTask()'],['../classmy__edge_1_1IEdge.html#a7018dbffbe4da9d9bb4ee5f143ad6350',1,'my_edge::IEdge::AppendTask()']]],
   ['appendtasktoedgebyid_8',['appendTaskToEdgeById',['../classmy__edge_1_1MyEdgeManager.html#a452dcef018edf8b9c7ead466dbfff9c3',1,'my_edge::MyEdgeManager']]],
   ['appendtasktoedgebyidv2_9',['appendTaskToEdgeByIdV2',['../classmy__edge_1_1MyEdgeManager.html#a177b915584cdd8a2a7b968248846764f',1,'my_edge::MyEdgeManager']]],
   ['appendtasktoqueuelocked_10',['AppendTaskToQueueLocked',['../classmy__edge_1_1BaseEdge.html#a71cafd555b81f054b3db0c0c59f11934',1,'my_edge::BaseEdge']]],
@@ -18,5 +18,8 @@ var searchData=
   ['archiveoldlogs_15',['ArchiveOldLogs',['../namespaceMyLog.html#abe0fbbd4bf3486a6f4a1d9cf201a5a1a',1,'MyLog']]],
   ['argumentparser_16',['ArgumentParser',['../classArgumentParser.html#af6ba7e87e356cd686874e43410a909c6',1,'ArgumentParser']]],
   ['arm_17',['Arm',['../classmy__edge_1_1MyMavVehicle.html#a175ff4a5a8b8a47819fddf10bf85f27d',1,'my_edge::MyMavVehicle']]],
-  ['available_18',['Available',['../classmy__serial_1_1MySerial.html#ad93f2a7aba47d485dd365aa5a6986ffd',1,'my_serial::MySerial']]]
+  ['audiocontroller_18',['AudioController',['../classmy__api_1_1audio__api_1_1AudioController.html#aeed2c73d089134b155cf7b2cacc0e778',1,'my_api::audio_api::AudioController']]],
+  ['audioloop_19',['audioloop',['../classmy__audio_1_1BaseAudio.html#ab2b22fef0e815a3fcce036f3c78dee64',1,'my_audio::BaseAudio::AudioLoop()'],['../classmy__audio_1_1NAudio.html#a057d4fe699068de168eac7e31d417def',1,'my_audio::NAudio::AudioLoop()']]],
+  ['audiostatustostring_20',['AudioStatusToString',['../namespacemy__audio.html#a575581505008bf7f98d0190faeaeab56',1,'my_audio']]],
+  ['available_21',['Available',['../classmy__serial_1_1MySerial.html#ad93f2a7aba47d485dd365aa5a6986ffd',1,'my_serial::MySerial']]]
 ];

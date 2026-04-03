@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_api/controller/file_cache/FileApiHelpers.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_f1ee40842c724b3bf8a04800f5f521a7.html">my_api</a></li><li class="navelem"><a class="el" href="dir_6ef159f9932051522d309704773cf407.html">controller</a></li><li class="navelem"><a class="el" href="dir_ed2f894616879817781981eaa1c19cce.html">file_cache</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">FileApiHelpers.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="FileApiHelpers_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="CacheTypes_8h.html">CacheTypes.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__api_1_1file__cache__api.html">my_api::file_cache_api</a> {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="namespacemy__api_1_1file__cache__api.html#ae82b870660c0e04a82a654032132cf76">   32</a></span><span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespacemy__api_1_1file__cache__api.html#ae82b870660c0e04a82a654032132cf76">ValidateFilename</a>(<span class="keyword">const</span> std::string&amp; filename, std::string&amp; err_msg) {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordflow">if</span> (filename.empty()) {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        err_msg = <span class="stringliteral">&quot;filename 不能为空&quot;</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    }</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordflow">if</span> (filename.size() &gt; 1024) {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        err_msg = <span class="stringliteral">&quot;filename 长度超过 1024 字符限制&quot;</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordflow">if</span> (filename.find(<span class="charliteral">&#39;\0&#39;</span>) != std::string::npos) {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        err_msg = <span class="stringliteral">&quot;filename 包含非法空字符&quot;</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordflow">if</span> (filename.find(<span class="charliteral">&#39;\\&#39;</span>) != std::string::npos) {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        err_msg = <span class="stringliteral">&quot;filename 不允许包含反斜杠 &#39;\\&#39;&quot;</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordflow">if</span> (filename[0] == <span class="charliteral">&#39;/&#39;</span>) {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        err_msg = <span class="stringliteral">&quot;filename 不允许以 &#39;/&#39; 开头&quot;</span>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="comment">// 路径穿越检查：检测 &quot;..&quot; 组件</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    std::string segment;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    std::istringstream stream(filename);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordflow">while</span> (std::getline(stream, segment, <span class="charliteral">&#39;/&#39;</span>)) {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordflow">if</span> (segment == <span class="stringliteral">&quot;..&quot;</span>) {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            err_msg = <span class="stringliteral">&quot;filename 包含非法路径穿越组件 &#39;..&#39;&quot;</span>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>}</div>
+</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="foldopen" id="foldopen00076" data-start="{" data-end="}">
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="namespacemy__api_1_1file__cache__api.html#af6b14db86dd70753da5bfe95c7664e49">   76</a></span><span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="namespacemy__api_1_1file__cache__api.html#af6b14db86dd70753da5bfe95c7664e49">CacheErrorToHttpCode</a>(<a class="code hl_enumeration" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ce">my_cache::CacheErrorCode</a> code) {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordflow">switch</span> (code) {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ceaa60852f204ed8028c1c58808b746d115">my_cache::CacheErrorCode::Ok</a>:               <span class="keywordflow">return</span> 200;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9cea9646ad3a1c3e708b4fa8b4b4270fbab6">my_cache::CacheErrorCode::NotInitialized</a>:   <span class="keywordflow">return</span> 500;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9cea0043ae95cb928986f16d0d344101dbb5">my_cache::CacheErrorCode::PathTraversal</a>:    <span class="keywordflow">return</span> 403;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9cea2767828026039e8ba7b38973cbb701f2">my_cache::CacheErrorCode::FileNotFound</a>:     <span class="keywordflow">return</span> 404;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ceacf25d5cc7db64ddc7b38564b7704cca2">my_cache::CacheErrorCode::FileAlreadyExists</a>:<span class="keywordflow">return</span> 409;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ceaf05cfcbf5123775f7c73e520a8d861e1">my_cache::CacheErrorCode::IoError</a>:          <span class="keywordflow">return</span> 500;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9cea253ca7dd096ee0956cccee4d376cab8b">my_cache::CacheErrorCode::InvalidArgument</a>:  <span class="keywordflow">return</span> 400;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ceacf73468ba4dfdfb19102be6dfe4f4bc2">my_cache::CacheErrorCode::CreateDirFailed</a>:  <span class="keywordflow">return</span> 500;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9cea39e3f1d705b11a3afd05cb4127140ef9">my_cache::CacheErrorCode::FileTooLarge</a>:     <span class="keywordflow">return</span> 413;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keywordflow">default</span>:                                         <span class="keywordflow">return</span> 500;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>}</div>
+</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>}  <span class="comment">// namespace my_api::file_cache_api</span></div>
+<div class="ttc" id="aCacheTypes_8h_html"><div class="ttname"><a href="CacheTypes_8h.html">CacheTypes.h</a></div><div class="ttdoc">my_cache 模块公共类型定义</div></div>
+<div class="ttc" id="anamespacemy__api_1_1file__cache__api_html"><div class="ttname"><a href="namespacemy__api_1_1file__cache__api.html">my_api::file_cache_api</a></div><div class="ttdef"><b>Definition</b> FileApiController.h:23</div></div>
+<div class="ttc" id="anamespacemy__api_1_1file__cache__api_html_ae82b870660c0e04a82a654032132cf76"><div class="ttname"><a href="namespacemy__api_1_1file__cache__api.html#ae82b870660c0e04a82a654032132cf76">my_api::file_cache_api::ValidateFilename</a></div><div class="ttdeci">bool ValidateFilename(const std::string &amp;filename, std::string &amp;err_msg)</div><div class="ttdoc">校验文件名合法性</div><div class="ttdef"><b>Definition</b> FileApiHelpers.h:32</div></div>
+<div class="ttc" id="anamespacemy__api_1_1file__cache__api_html_af6b14db86dd70753da5bfe95c7664e49"><div class="ttname"><a href="namespacemy__api_1_1file__cache__api.html#af6b14db86dd70753da5bfe95c7664e49">my_api::file_cache_api::CacheErrorToHttpCode</a></div><div class="ttdeci">int CacheErrorToHttpCode(my_cache::CacheErrorCode code)</div><div class="ttdoc">将 CacheErrorCode 映射为 HTTP 状态码</div><div class="ttdef"><b>Definition</b> FileApiHelpers.h:76</div></div>
+<div class="ttc" id="anamespacemy__cache_html_a074618e9168bea10311e1e960344b9ce"><div class="ttname"><a href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ce">my_cache::CacheErrorCode</a></div><div class="ttdeci">CacheErrorCode</div><div class="ttdoc">缓存操作错误码</div><div class="ttdef"><b>Definition</b> CacheTypes.h:84</div></div>
+<div class="ttc" id="anamespacemy__cache_html_a074618e9168bea10311e1e960344b9cea0043ae95cb928986f16d0d344101dbb5"><div class="ttname"><a href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9cea0043ae95cb928986f16d0d344101dbb5">my_cache::CacheErrorCode::PathTraversal</a></div><div class="ttdeci">@ PathTraversal</div></div>
+<div class="ttc" id="anamespacemy__cache_html_a074618e9168bea10311e1e960344b9cea253ca7dd096ee0956cccee4d376cab8b"><div class="ttname"><a href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9cea253ca7dd096ee0956cccee4d376cab8b">my_cache::CacheErrorCode::InvalidArgument</a></div><div class="ttdeci">@ InvalidArgument</div></div>
+<div class="ttc" id="anamespacemy__cache_html_a074618e9168bea10311e1e960344b9cea2767828026039e8ba7b38973cbb701f2"><div class="ttname"><a href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9cea2767828026039e8ba7b38973cbb701f2">my_cache::CacheErrorCode::FileNotFound</a></div><div class="ttdeci">@ FileNotFound</div></div>
+<div class="ttc" id="anamespacemy__cache_html_a074618e9168bea10311e1e960344b9cea39e3f1d705b11a3afd05cb4127140ef9"><div class="ttname"><a href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9cea39e3f1d705b11a3afd05cb4127140ef9">my_cache::CacheErrorCode::FileTooLarge</a></div><div class="ttdeci">@ FileTooLarge</div></div>
+<div class="ttc" id="anamespacemy__cache_html_a074618e9168bea10311e1e960344b9cea9646ad3a1c3e708b4fa8b4b4270fbab6"><div class="ttname"><a href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9cea9646ad3a1c3e708b4fa8b4b4270fbab6">my_cache::CacheErrorCode::NotInitialized</a></div><div class="ttdeci">@ NotInitialized</div></div>
+<div class="ttc" id="anamespacemy__cache_html_a074618e9168bea10311e1e960344b9ceaa60852f204ed8028c1c58808b746d115"><div class="ttname"><a href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ceaa60852f204ed8028c1c58808b746d115">my_cache::CacheErrorCode::Ok</a></div><div class="ttdeci">@ Ok</div></div>
+<div class="ttc" id="anamespacemy__cache_html_a074618e9168bea10311e1e960344b9ceacf25d5cc7db64ddc7b38564b7704cca2"><div class="ttname"><a href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ceacf25d5cc7db64ddc7b38564b7704cca2">my_cache::CacheErrorCode::FileAlreadyExists</a></div><div class="ttdeci">@ FileAlreadyExists</div></div>
+<div class="ttc" id="anamespacemy__cache_html_a074618e9168bea10311e1e960344b9ceacf73468ba4dfdfb19102be6dfe4f4bc2"><div class="ttname"><a href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ceacf73468ba4dfdfb19102be6dfe4f4bc2">my_cache::CacheErrorCode::CreateDirFailed</a></div><div class="ttdeci">@ CreateDirFailed</div></div>
+<div class="ttc" id="anamespacemy__cache_html_a074618e9168bea10311e1e960344b9ceaf05cfcbf5123775f7c73e520a8d861e1"><div class="ttname"><a href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ceaf05cfcbf5123775f7c73e520a8d861e1">my_cache::CacheErrorCode::IoError</a></div><div class="ttdeci">@ IoError</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

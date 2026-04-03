@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_audio/MyAudios.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_62a3ed15368c4c4f11596a0d2c7db172.html">my_audio</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">MyAudios.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="MyAudios_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="BaseAudio_8h.html">BaseAudio.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;thread&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;nlohmann/json.hpp&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__audio.html">my_audio</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="};">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classmy__audio_1_1MyAudios.html">   31</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__audio_1_1MyAudios.html">MyAudios</a> {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classmy__audio_1_1MyAudios.html#a42e52ed4244ae5daf25b63d887c56526">   36</a></span>    <span class="keyword">static</span> <a class="code hl_class" href="classmy__audio_1_1MyAudios.html">MyAudios</a>&amp; <a class="code hl_function" href="classmy__audio_1_1MyAudios.html#a42e52ed4244ae5daf25b63d887c56526">GetInstance</a>() {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keyword">static</span> <a class="code hl_class" href="classmy__audio_1_1MyAudios.html">MyAudios</a> instance;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordflow">return</span> instance;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    }</div>
+</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="comment">// 禁止拷贝</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classmy__audio_1_1MyAudios.html#a054fb27c11324af8c940858b180bb02d">   42</a></span>    <a class="code hl_function" href="classmy__audio_1_1MyAudios.html#a054fb27c11324af8c940858b180bb02d">MyAudios</a>(<span class="keyword">const</span> <a class="code hl_class" href="classmy__audio_1_1MyAudios.html">MyAudios</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classmy__audio_1_1MyAudios.html#a390008640d92f79da1ccb8430a8f52dc">   43</a></span>    <a class="code hl_class" href="classmy__audio_1_1MyAudios.html">MyAudios</a>&amp; <a class="code hl_function" href="classmy__audio_1_1MyAudios.html#a390008640d92f79da1ccb8430a8f52dc">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classmy__audio_1_1MyAudios.html">MyAudios</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="comment">// ========================================================================</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="comment">// 生命周期管理</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="comment">// ========================================================================</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__audio_1_1MyAudios.html#adecc6bee0d3c06c97c3ddc058952ee1f">Init</a>(<span class="keyword">const</span> nlohmann::json&amp; config);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__audio_1_1MyAudios.html#aa70efaa4751ac6d5d54dce88fe725e0a">Start</a>();</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__audio_1_1MyAudios.html#a17a237457e57625296e6b24feb19c60a">Stop</a>();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="comment">// ========================================================================</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="comment">// 状态查询</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="comment">// ========================================================================</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    std::map&lt;std::string, std::shared_ptr&lt;BaseAudio&gt;&gt; <a class="code hl_function" href="classmy__audio_1_1MyAudios.html#aabdb4401c8d6f2024fa726c03f44506d">GetAllSpeakers</a>();</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    std::vector&lt;std::string&gt; <a class="code hl_function" href="classmy__audio_1_1MyAudios.html#ab622ed1cd4bf6a2d01444b319b188cc8">GetAvailableSpeakers</a>();</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <a class="code hl_enumeration" href="namespacemy__audio.html#a29fe721c7ad1269a9fb39ce5a134ce35">AudioStatus</a> <a class="code hl_function" href="classmy__audio_1_1MyAudios.html#a659948a5e25848ebc96b533c10029c2f">Status</a>(<span class="keyword">const</span> std::string&amp; device_id);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <a class="code hl_struct" href="structmy__audio_1_1AudioConfig.html">AudioConfig</a> <a class="code hl_function" href="classmy__audio_1_1MyAudios.html#af4dd1cff7730188b3135fb4427527406">Config</a>(<span class="keyword">const</span> std::string&amp; device_id);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <a class="code hl_struct" href="structmy__audio_1_1AudioInfo.html">AudioInfo</a> <a class="code hl_function" href="classmy__audio_1_1MyAudios.html#a2d2ae1002c963ede74443d164c100a38">Info</a>(<span class="keyword">const</span> std::string&amp; device_id);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    nlohmann::json <a class="code hl_function" href="classmy__audio_1_1MyAudios.html#a21f7a7db325f27cea0223aa22d0b9170">StatusAll</a>();</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    nlohmann::json <a class="code hl_function" href="classmy__audio_1_1MyAudios.html#a369e559e96c31d6495ae943224874a80">GetInitConfig</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="comment">// ========================================================================</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="comment">// 播放控制</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="comment">// ========================================================================</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__audio_1_1MyAudios.html#a6cf16269da02d611dae037d72b0dc179">PlayOnSpeaker</a>(<span class="keyword">const</span> std::string&amp; device_id, <span class="keyword">const</span> std::string&amp; filepath);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classmy__audio_1_1MyAudios.html#ae9542484328944191a38d03a34e31035">PlayOnAllSpeakers</a>(<span class="keyword">const</span> std::string&amp; filepath);</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__audio_1_1MyAudios.html#a5ecf2342aa6924c85a5c01ae09b16225">SetVolume</a>(<span class="keyword">const</span> std::string&amp; device_id, <span class="keywordtype">int</span> volume);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="classmy__audio_1_1MyAudios.html#a07ba7de71902625237aa1058115ba830">  159</a></span>    <a class="code hl_function" href="classmy__audio_1_1MyAudios.html#a07ba7de71902625237aa1058115ba830">MyAudios</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <a class="code hl_function" href="classmy__audio_1_1MyAudios.html#ade66ca62eaae2c625b5d56233a45df2e">~MyAudios</a>();</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    std::shared_ptr&lt;BaseAudio&gt; <a class="code hl_function" href="classmy__audio_1_1MyAudios.html#a4b62bc754da4a7135a199f986070949d">CreateAudioDevice</a>(<span class="keyword">const</span> std::string&amp; type);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="classmy__audio_1_1MyAudios.html#af21e89d408ccb22c1d1da368fb1447aa">  169</a></span>    std::map&lt;std::string, std::shared_ptr&lt;BaseAudio&gt;&gt; <a class="code hl_variable" href="classmy__audio_1_1MyAudios.html#af21e89d408ccb22c1d1da368fb1447aa">speakers_</a>;    </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno"><a class="line" href="classmy__audio_1_1MyAudios.html#a281b5ec791338d4378e22ef44a51b4a1">  170</a></span>    <span class="keyword">mutable</span> std::mutex                                <a class="code hl_variable" href="classmy__audio_1_1MyAudios.html#a281b5ec791338d4378e22ef44a51b4a1">mutex_</a>;       </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="classmy__audio_1_1MyAudios.html#aef7436a220692b5b863db4e9d8b870a3">  171</a></span>    <span class="keywordtype">bool</span>                                              <a class="code hl_variable" href="classmy__audio_1_1MyAudios.html#aef7436a220692b5b863db4e9d8b870a3">initialized_</a>{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno"><a class="line" href="classmy__audio_1_1MyAudios.html#a2f33e27b7aaf30da7b6f21577e577f07">  172</a></span>    nlohmann::json                                    <a class="code hl_variable" href="classmy__audio_1_1MyAudios.html#a2f33e27b7aaf30da7b6f21577e577f07">init_config_</a>; </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>};</div>
+</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>} <span class="comment">// namespace my_audio</span></div>
+<div class="ttc" id="aBaseAudio_8h_html"><div class="ttname"><a href="BaseAudio_8h.html">BaseAudio.h</a></div><div class="ttdoc">扬声器框架 —— 音频设备基类</div></div>
+<div class="ttc" id="aclassmy__audio_1_1MyAudios_html"><div class="ttname"><a href="classmy__audio_1_1MyAudios.html">my_audio::MyAudios</a></div><div class="ttdoc">全局音频设备管理器（单例）</div><div class="ttdef"><b>Definition</b> MyAudios.h:31</div></div>
+<div class="ttc" id="aclassmy__audio_1_1MyAudios_html_a054fb27c11324af8c940858b180bb02d"><div class="ttname"><a href="classmy__audio_1_1MyAudios.html#a054fb27c11324af8c940858b180bb02d">my_audio::MyAudios::MyAudios</a></div><div class="ttdeci">MyAudios(const MyAudios &amp;)=delete</div></div>
+<div class="ttc" id="aclassmy__audio_1_1MyAudios_html_a07ba7de71902625237aa1058115ba830"><div class="ttname"><a href="classmy__audio_1_1MyAudios.html#a07ba7de71902625237aa1058115ba830">my_audio::MyAudios::MyAudios</a></div><div class="ttdeci">MyAudios()=default</div></div>
+<div class="ttc" id="aclassmy__audio_1_1MyAudios_html_a17a237457e57625296e6b24feb19c60a"><div class="ttname"><a href="classmy__audio_1_1MyAudios.html#a17a237457e57625296e6b24feb19c60a">my_audio::MyAudios::Stop</a></div><div class="ttdeci">void Stop()</div><div class="ttdoc">停止所有音频设备并释放资源</div><div class="ttdef"><b>Definition</b> MyAudios.cpp:130</div></div>
+<div class="ttc" id="aclassmy__audio_1_1MyAudios_html_a21f7a7db325f27cea0223aa22d0b9170"><div class="ttname"><a href="classmy__audio_1_1MyAudios.html#a21f7a7db325f27cea0223aa22d0b9170">my_audio::MyAudios::StatusAll</a></div><div class="ttdeci">nlohmann::json StatusAll()</div><div class="ttdoc">获取全部设备的综合状态 JSON</div><div class="ttdef"><b>Definition</b> MyAudios.cpp:198</div></div>
+<div class="ttc" id="aclassmy__audio_1_1MyAudios_html_a281b5ec791338d4378e22ef44a51b4a1"><div class="ttname"><a href="classmy__audio_1_1MyAudios.html#a281b5ec791338d4378e22ef44a51b4a1">my_audio::MyAudios::mutex_</a></div><div class="ttdeci">std::mutex mutex_</div><div class="ttdoc">线程安全锁</div><div class="ttdef"><b>Definition</b> MyAudios.h:170</div></div>
+<div class="ttc" id="aclassmy__audio_1_1MyAudios_html_a2d2ae1002c963ede74443d164c100a38"><div class="ttname"><a href="classmy__audio_1_1MyAudios.html#a2d2ae1002c963ede74443d164c100a38">my_audio::MyAudios::Info</a></div><div class="ttdeci">AudioInfo Info(const std::string &amp;device_id)</div><div class="ttdoc">获取指定设备的描述信息</div><div class="ttdef"><b>Definition</b> MyAudios.cpp:188</div></div>
+<div class="ttc" id="aclassmy__audio_1_1MyAudios_html_a2f33e27b7aaf30da7b6f21577e577f07"><div class="ttname"><a href="classmy__audio_1_1MyAudios.html#a2f33e27b7aaf30da7b6f21577e577f07">my_audio::MyAudios::init_config_</a></div><div class="ttdeci">nlohmann::json init_config_</div><div class="ttdoc">初始化配置快照</div><div class="ttdef"><b>Definition</b> MyAudios.h:172</div></div>
+<div class="ttc" id="aclassmy__audio_1_1MyAudios_html_a369e559e96c31d6495ae943224874a80"><div class="ttname"><a href="classmy__audio_1_1MyAudios.html#a369e559e96c31d6495ae943224874a80">my_audio::MyAudios::GetInitConfig</a></div><div class="ttdeci">nlohmann::json GetInitConfig() const</div><div class="ttdoc">获取初始化时使用的配置快照</div><div class="ttdef"><b>Definition</b> MyAudios.cpp:213</div></div>
+<div class="ttc" id="aclassmy__audio_1_1MyAudios_html_a390008640d92f79da1ccb8430a8f52dc"><div class="ttname"><a href="classmy__audio_1_1MyAudios.html#a390008640d92f79da1ccb8430a8f52dc">my_audio::MyAudios::operator=</a></div><div class="ttdeci">MyAudios &amp; operator=(const MyAudios &amp;)=delete</div></div>
+<div class="ttc" id="aclassmy__audio_1_1MyAudios_html_a42e52ed4244ae5daf25b63d887c56526"><div class="ttname"><a href="classmy__audio_1_1MyAudios.html#a42e52ed4244ae5daf25b63d887c56526">my_audio::MyAudios::GetInstance</a></div><div class="ttdeci">static MyAudios &amp; GetInstance()</div><div class="ttdoc">获取单例实例</div><div class="ttdef"><b>Definition</b> MyAudios.h:36</div></div>
+<div class="ttc" id="aclassmy__audio_1_1MyAudios_html_a4b62bc754da4a7135a199f986070949d"><div class="ttname"><a href="classmy__audio_1_1MyAudios.html#a4b62bc754da4a7135a199f986070949d">my_audio::MyAudios::CreateAudioDevice</a></div><div class="ttdeci">std::shared_ptr&lt; BaseAudio &gt; CreateAudioDevice(const std::string &amp;type)</div><div class="ttdoc">根据类型字符串创建对应厂商的音频设备实例</div><div class="ttdef"><b>Definition</b> MyAudios.cpp:268</div></div>
+<div class="ttc" id="aclassmy__audio_1_1MyAudios_html_a5ecf2342aa6924c85a5c01ae09b16225"><div class="ttname"><a href="classmy__audio_1_1MyAudios.html#a5ecf2342aa6924c85a5c01ae09b16225">my_audio::MyAudios::SetVolume</a></div><div class="ttdeci">bool SetVolume(const std::string &amp;device_id, int volume)</div><div class="ttdoc">设置指定设备的音量</div><div class="ttdef"><b>Definition</b> MyAudios.cpp:252</div></div>
+<div class="ttc" id="aclassmy__audio_1_1MyAudios_html_a659948a5e25848ebc96b533c10029c2f"><div class="ttname"><a href="classmy__audio_1_1MyAudios.html#a659948a5e25848ebc96b533c10029c2f">my_audio::MyAudios::Status</a></div><div class="ttdeci">AudioStatus Status(const std::string &amp;device_id)</div><div class="ttdoc">获取指定设备的状态</div><div class="ttdef"><b>Definition</b> MyAudios.cpp:168</div></div>
+<div class="ttc" id="aclassmy__audio_1_1MyAudios_html_a6cf16269da02d611dae037d72b0dc179"><div class="ttname"><a href="classmy__audio_1_1MyAudios.html#a6cf16269da02d611dae037d72b0dc179">my_audio::MyAudios::PlayOnSpeaker</a></div><div class="ttdeci">bool PlayOnSpeaker(const std::string &amp;device_id, const std::string &amp;filepath)</div><div class="ttdoc">在指定扬声器上播放音频文件</div><div class="ttdef"><b>Definition</b> MyAudios.cpp:222</div></div>
+<div class="ttc" id="aclassmy__audio_1_1MyAudios_html_aa70efaa4751ac6d5d54dce88fe725e0a"><div class="ttname"><a href="classmy__audio_1_1MyAudios.html#aa70efaa4751ac6d5d54dce88fe725e0a">my_audio::MyAudios::Start</a></div><div class="ttdeci">bool Start()</div><div class="ttdoc">启动所有已初始化的音频设备</div><div class="ttdef"><b>Definition</b> MyAudios.cpp:100</div></div>
+<div class="ttc" id="aclassmy__audio_1_1MyAudios_html_aabdb4401c8d6f2024fa726c03f44506d"><div class="ttname"><a href="classmy__audio_1_1MyAudios.html#aabdb4401c8d6f2024fa726c03f44506d">my_audio::MyAudios::GetAllSpeakers</a></div><div class="ttdeci">std::map&lt; std::string, std::shared_ptr&lt; BaseAudio &gt; &gt; GetAllSpeakers()</div><div class="ttdoc">获取所有扬声器（含离线/故障设备）</div><div class="ttdef"><b>Definition</b> MyAudios.cpp:148</div></div>
+<div class="ttc" id="aclassmy__audio_1_1MyAudios_html_ab622ed1cd4bf6a2d01444b319b188cc8"><div class="ttname"><a href="classmy__audio_1_1MyAudios.html#ab622ed1cd4bf6a2d01444b319b188cc8">my_audio::MyAudios::GetAvailableSpeakers</a></div><div class="ttdeci">std::vector&lt; std::string &gt; GetAvailableSpeakers()</div><div class="ttdoc">获取当前可用的扬声器（状态为 Idle 或 Working）</div><div class="ttdef"><b>Definition</b> MyAudios.cpp:153</div></div>
+<div class="ttc" id="aclassmy__audio_1_1MyAudios_html_ade66ca62eaae2c625b5d56233a45df2e"><div class="ttname"><a href="classmy__audio_1_1MyAudios.html#ade66ca62eaae2c625b5d56233a45df2e">my_audio::MyAudios::~MyAudios</a></div><div class="ttdeci">~MyAudios()</div><div class="ttdef"><b>Definition</b> MyAudios.cpp:18</div></div>
+<div class="ttc" id="aclassmy__audio_1_1MyAudios_html_adecc6bee0d3c06c97c3ddc058952ee1f"><div class="ttname"><a href="classmy__audio_1_1MyAudios.html#adecc6bee0d3c06c97c3ddc058952ee1f">my_audio::MyAudios::Init</a></div><div class="ttdeci">bool Init(const nlohmann::json &amp;config)</div><div class="ttdoc">初始化：解析 JSON 配置并创建各厂商音频设备实例</div><div class="ttdef"><b>Definition</b> MyAudios.cpp:26</div></div>
+<div class="ttc" id="aclassmy__audio_1_1MyAudios_html_ae9542484328944191a38d03a34e31035"><div class="ttname"><a href="classmy__audio_1_1MyAudios.html#ae9542484328944191a38d03a34e31035">my_audio::MyAudios::PlayOnAllSpeakers</a></div><div class="ttdeci">int PlayOnAllSpeakers(const std::string &amp;filepath)</div><div class="ttdoc">在所有可用扬声器上播放音频文件</div><div class="ttdef"><b>Definition</b> MyAudios.cpp:235</div></div>
+<div class="ttc" id="aclassmy__audio_1_1MyAudios_html_aef7436a220692b5b863db4e9d8b870a3"><div class="ttname"><a href="classmy__audio_1_1MyAudios.html#aef7436a220692b5b863db4e9d8b870a3">my_audio::MyAudios::initialized_</a></div><div class="ttdeci">bool initialized_</div><div class="ttdef"><b>Definition</b> MyAudios.h:171</div></div>
+<div class="ttc" id="aclassmy__audio_1_1MyAudios_html_af21e89d408ccb22c1d1da368fb1447aa"><div class="ttname"><a href="classmy__audio_1_1MyAudios.html#af21e89d408ccb22c1d1da368fb1447aa">my_audio::MyAudios::speakers_</a></div><div class="ttdeci">std::map&lt; std::string, std::shared_ptr&lt; BaseAudio &gt; &gt; speakers_</div><div class="ttdoc">设备实例映射</div><div class="ttdef"><b>Definition</b> MyAudios.h:169</div></div>
+<div class="ttc" id="aclassmy__audio_1_1MyAudios_html_af4dd1cff7730188b3135fb4427527406"><div class="ttname"><a href="classmy__audio_1_1MyAudios.html#af4dd1cff7730188b3135fb4427527406">my_audio::MyAudios::Config</a></div><div class="ttdeci">AudioConfig Config(const std::string &amp;device_id)</div><div class="ttdoc">获取指定设备的配置信息</div><div class="ttdef"><b>Definition</b> MyAudios.cpp:178</div></div>
+<div class="ttc" id="anamespacemy__audio_html"><div class="ttname"><a href="namespacemy__audio.html">my_audio</a></div><div class="ttdef"><b>Definition</b> BaseAudio.cpp:11</div></div>
+<div class="ttc" id="anamespacemy__audio_html_a29fe721c7ad1269a9fb39ce5a134ce35"><div class="ttname"><a href="namespacemy__audio.html#a29fe721c7ad1269a9fb39ce5a134ce35">my_audio::AudioStatus</a></div><div class="ttdeci">AudioStatus</div><div class="ttdoc">音频设备状态枚举</div><div class="ttdef"><b>Definition</b> BaseAudio.h:25</div></div>
+<div class="ttc" id="astructmy__audio_1_1AudioConfig_html"><div class="ttname"><a href="structmy__audio_1_1AudioConfig.html">my_audio::AudioConfig</a></div><div class="ttdoc">音频设备初始化配置</div><div class="ttdef"><b>Definition</b> BaseAudio.h:52</div></div>
+<div class="ttc" id="astructmy__audio_1_1AudioInfo_html"><div class="ttname"><a href="structmy__audio_1_1AudioInfo.html">my_audio::AudioInfo</a></div><div class="ttdoc">音频设备描述信息（型号、固件版本等）</div><div class="ttdef"><b>Definition</b> BaseAudio.h:100</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

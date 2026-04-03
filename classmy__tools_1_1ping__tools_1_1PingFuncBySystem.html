@@ -131,25 +131,29 @@ $(function() {
 
 <p class="reference">引用了 <a class="el" href="pinling__pod_8cpp.html#a319b95015f17a3dc8b4b43a65c541571">ip</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a> , 以及 <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a0a03702b1efe4e0fa601f31a183f511b">RtspRelayMonitor::CheckRtspSource()</a> , 以及 <a class="el" href="classPodModule_1_1PinlingPod.html#abcefdbe4843d063087eb398cc3b7182e">PinlingPod::refreshDeviceStatus()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="classmy__audio_1_1NAudio.html#a057d4fe699068de168eac7e31d417def">NAudio::AudioLoop()</a>, <a class="el" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a0a03702b1efe4e0fa601f31a183f511b">RtspRelayMonitor::CheckRtspSource()</a> , 以及 <a class="el" href="classPodModule_1_1PinlingPod.html#abcefdbe4843d063087eb398cc3b7182e">PinlingPod::refreshDeviceStatus()</a>.</p>
 <div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="classmy__tools_1_1ping__tools_1_1PingFuncBySystem_a4ec03bc5ebb5f6f195a1214f1dcd9d09_icgraph.png" border="0" usemap="#aclassmy__tools_1_1ping__tools_1_1PingFuncBySystem_a4ec03bc5ebb5f6f195a1214f1dcd9d09_icgraph" alt=""/></div>
 <map name="aclassmy__tools_1_1ping__tools_1_1PingFuncBySystem_a4ec03bc5ebb5f6f195a1214f1dcd9d09_icgraph" id="aclassmy__tools_1_1ping__tools_1_1PingFuncBySystem_a4ec03bc5ebb5f6f195a1214f1dcd9d09_icgraph">
-<area shape="rect" title=" " alt="" coords="935,56,997,81"/>
-<area shape="rect" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a0a03702b1efe4e0fa601f31a183f511b" title="检测 RTSP 源是否可达（TCP socket 连接 check_ip:rtsp_port）" alt="" coords="712,5,887,60"/>
-<area shape="poly" title=" " alt="" coords="921,62,886,54,887,49,922,57"/>
-<area shape="rect" href="classPodModule_1_1PinlingPod.html#abcefdbe4843d063087eb398cc3b7182e" title=" " alt="" coords="714,85,885,125"/>
-<area shape="poly" title=" " alt="" coords="922,81,886,89,884,84,921,76"/>
-<area shape="rect" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a113223b951492e271c7bd457470b66f4" title="监控主循环" alt="" coords="489,5,664,60"/>
-<area shape="poly" title=" " alt="" coords="698,35,664,35,664,30,698,30"/>
-<area shape="rect" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a07aaf1227e4d645f15e0a964f54ef291" title="启动监控线程" alt="" coords="256,13,441,53"/>
-<area shape="poly" title=" " alt="" coords="475,35,441,35,441,30,475,30"/>
-<area shape="rect" href="classmy__mediamtx__monitor_1_1RtspRelayMonitorManager.html#a07aaf1227e4d645f15e0a964f54ef291" title="启动监控线程" alt="" coords="5,5,208,60"/>
-<area shape="poly" title=" " alt="" coords="242,35,208,35,208,30,242,30"/>
-<area shape="rect" href="classPodModule_1_1PinlingPod.html#ad3bf252d845d3e418ed4982220b05353" title=" " alt="" coords="491,85,662,125"/>
-<area shape="poly" title=" " alt="" coords="700,107,662,107,662,102,700,102"/>
+<area shape="rect" title=" " alt="" coords="983,69,1045,95"/>
+<area shape="rect" href="classmy__audio_1_1NAudio.html#a057d4fe699068de168eac7e31d417def" title="心跳与属性定时更新循环" alt="" coords="717,5,935,31"/>
+<area shape="poly" title=" " alt="" coords="979,65,934,44,895,33,897,28,936,40,981,60"/>
+<area shape="rect" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a0a03702b1efe4e0fa601f31a183f511b" title="检测 RTSP 源是否可达（TCP socket 连接 check_ip:rtsp_port）" alt="" coords="739,55,913,109"/>
+<area shape="poly" title=" " alt="" coords="969,85,914,85,914,79,969,79"/>
+<area shape="rect" href="classPodModule_1_1PinlingPod.html#abcefdbe4843d063087eb398cc3b7182e" title=" " alt="" coords="741,134,911,174"/>
+<area shape="poly" title=" " alt="" coords="980,104,936,124,902,136,900,131,934,120,977,99"/>
+<area shape="rect" href="classmy__audio_1_1NAudio.html#ada2b3d6496f3a89b9e669a3a41937c74" title="启动设备（开始监听/服务）" alt="" coords="489,5,669,31"/>
+<area shape="poly" title=" " alt="" coords="704,21,669,21,669,15,704,15"/>
+<area shape="rect" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a113223b951492e271c7bd457470b66f4" title="监控主循环" alt="" coords="492,55,667,109"/>
+<area shape="poly" title=" " alt="" coords="725,85,667,85,667,79,725,79"/>
+<area shape="rect" href="classmy__mediamtx__monitor_1_1RtspRelayMonitor.html#a07aaf1227e4d645f15e0a964f54ef291" title="启动监控线程" alt="" coords="256,62,441,102"/>
+<area shape="poly" title=" " alt="" coords="478,85,442,85,442,79,478,79"/>
+<area shape="rect" href="classmy__mediamtx__monitor_1_1RtspRelayMonitorManager.html#a07aaf1227e4d645f15e0a964f54ef291" title="启动监控线程" alt="" coords="5,55,208,109"/>
+<area shape="poly" title=" " alt="" coords="242,85,208,85,208,79,242,79"/>
+<area shape="rect" href="classPodModule_1_1PinlingPod.html#ad3bf252d845d3e418ed4982220b05353" title=" " alt="" coords="494,134,665,174"/>
+<area shape="poly" title=" " alt="" coords="726,157,665,157,665,151,726,151"/>
 </map>
 </div>
 

@@ -10,7 +10,7 @@ var searchData=
   ['starting_7',['STARTING',['../namespacemy__mediamtx__monitor.html#a8338ab9f5ccfbbbf89a4bafb81decd25a034312d8adc8099c1c6f53aaff745e26',1,'my_mediamtx_monitor']]],
   ['state_5fchanged_8',['STATE_CHANGED',['../namespacePodModule.html#a041851c80a56fc24bf9bde3a9b259db2ad20139b302c5229b353275e78827dbc5',1,'PodModule']]],
   ['status_9',['STATUS',['../namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccca5f241c8c8f985b3c51e05d39cf030f4c',1,'PodModule']]],
-  ['stopped_10',['stopped',['../namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16eac23e2b09ebe6bf4cb5e2a9abe85c0be2',1,'my_edge::Stopped'],['../namespacemy__mediamtx__monitor.html#a8338ab9f5ccfbbbf89a4bafb81decd25a09d4d696b4e935115b9313e3c412509a',1,'my_mediamtx_monitor::STOPPED']]],
+  ['stopped_10',['stopped',['../namespacemy__mediamtx__monitor.html#a8338ab9f5ccfbbbf89a4bafb81decd25a09d4d696b4e935115b9313e3c412509a',1,'my_mediamtx_monitor::STOPPED'],['../namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16eac23e2b09ebe6bf4cb5e2a9abe85c0be2',1,'my_edge::Stopped']]],
   ['stopping_11',['Stopping',['../namespacemy__edge.html#a86567c2b79a1ea4b5bc908d49665a16ea7b7ecb39b9e110c2a31409a1672bad23',1,'my_edge']]],
   ['stream_12',['STREAM',['../namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccca2f05998d2a71cdc19b7109549bbe2646',1,'PodModule']]],
   ['stream_5fstart_5ffailed_13',['STREAM_START_FAILED',['../namespacePodModule.html#aad194976af5612d4469559348e94c7bea0c61f5cffad85e680167fcf0414ddd17',1,'PodModule']]],
