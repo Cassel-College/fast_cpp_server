@@ -11,6 +11,8 @@
 #include "MyFlyControlManager.h"
 #include "pod_manager.h"
 #include "RtspRelayMonitorManager.h"
+#include "MyCacheProvider.h"
+#include "MyAudios.h"
 #include "MyLog.h"
 #include "MyTools.h"
 
@@ -134,6 +136,8 @@ void Pipeline::LaunchRoBot() {
                 else if (model_name == "fly_control") { LaunchFlyControl(model_args); success_count++;}
                 else if (model_name == "pod") { LaunchPodManager(model_args); success_count++;}
                 else if (model_name == "mediamtx_monitor") { LaunchMediamtxMonitor(model_args); success_count++;}
+                else if (model_name == "file_cache") { LaunchFileCache(model_args); success_count++;}
+                else if (model_name == "audio_server") { LaunchAudioServer(model_args); success_count++;}
                 else { MYLOG_INFO("* Arg: {}, Value: {}", "节点[" + node_index + "]警告", "未知的模型名称: " + model_name);}
                 
                 MYLOG_INFO("* Arg: {}, Value: {}", "节点分发完成", "节点[" + node_index + "] 已成功加入监听列表");
@@ -578,10 +582,64 @@ void Pipeline::LaunchMediamtxMonitor(const nlohmann::json& args) {
     }
 }
 
+void Pipeline::LaunchFileCache(const nlohmann::json& args) {
+    const std::string module_name = "文件缓存模块(FileCache)";
+    MYLOG_INFO("===== 开始启动模块: {} =====", module_name);
+    MYLOG_INFO("FileCache 模块参数: {}", args.dump(4));
+
+    try {
+        // 构造配置 JSON：如果 root_path 为空，使用默认路径
+        nlohmann::json config = args;
+        std::string root_path = config.value("root_path", "");
+        if (root_path.empty()) {
+            root_path = "/tmp/fast_cpp_server_file_cache";
+            config["root_path"] = root_path;
+            MYLOG_WARN("* 模块: {}, root_path 为空，使用默认路径: {}", module_name, root_path);
+        }
+
+        auto result = my_cache::MyCacheProvider::Init(config.dump());
+        if (!result.Ok()) {
+            MYLOG_ERROR("* 模块: {}, 初始化失败, 错误码: {}", module_name,
+                        my_cache::CacheErrorCodeToString(result.code));
+            return;
+        }
+
+        MYLOG_INFO("* 模块: {}, 状态: {}", module_name, "启动成功");
+    } catch (const std::exception& e) {
+        MYLOG_ERROR("* 模块: {}, 捕获异常: {}", module_name, e.what());
+    }
+}
+
+void Pipeline::LaunchAudioServer(const nlohmann::json& args) {
+    const std::string module_name = "音频服务模块(AudioServer)";
+    MYLOG_INFO("===== 开始启动模块: {} =====", module_name);
+    MYLOG_INFO("AudioServer 模块参数: {}", args.dump(4));
+
+    try {
+        // 初始化全局音频管理器
+        if (!my_audio::MyAudios::GetInstance().Init(args)) {
+            MYLOG_ERROR("* 模块: {}, 初始化失败", module_name);
+            return;
+        }
+
+        // 启动所有音频设备（含 AudioLoop 线程）
+        if (!my_audio::MyAudios::GetInstance().Start()) {
+            MYLOG_ERROR("* 模块: {}, 设备启动失败", module_name);
+            return;
+        }
+
+        MYLOG_INFO("* 模块: {}, 状态: {}", module_name, "启动成功");
+    } catch (const std::exception& e) {
+        MYLOG_ERROR("* 模块: {}, 捕获异常: {}", module_name, e.what());
+    }
+}
+
 void Pipeline::Stop() {
     is_running_ = false;
     // 显式停止 API 服务
     my_api::MyAPI::GetInstance().Stop();
+    // 停止音频服务
+    my_audio::MyAudios::GetInstance().Stop();
     for (auto& t : workers_) {
         if (t.joinable()) t.join();
     }

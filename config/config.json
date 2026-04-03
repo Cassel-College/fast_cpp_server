@@ -310,9 +310,34 @@
                     }
                 },
                 "model_name": "mediamtx_monitor",
-                "enable": true
+                "enable": false
             },
             "8": {
+                "model_args": {
+                    "root_path": "/tmp/fast_cpp_server/",
+                    "max_file_size": 2000,
+                    "max_retention_seconds": -1
+                },
+                "model_name": "file_cache",
+                "enable": true
+            },
+            "9": {
+                "model_args": {
+                    "audio_count": 2,
+                    "audio_args": {
+                        "audio_001": {
+                            "name": "audio_server_001",
+                            "type": "audio_server",
+                            "ip": "192.168.1.150",
+                            "port": 8890,
+                            "device_id": 3445
+                        }
+                    }
+                },
+                "model_name": "audio_server",
+                "enable": true
+            },
+            "10": {
                 "model_args": {
                     "port": 9999
                 },

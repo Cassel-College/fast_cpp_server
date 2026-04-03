@@ -112,6 +112,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE my_script)
 target_link_libraries(${PROJECT_NAME} PRIVATE my_serial)
 target_link_libraries(${PROJECT_NAME} PRIVATE my_fly_control)
 target_link_libraries(${PROJECT_NAME} PRIVATE my_pod)
+target_link_libraries(${PROJECT_NAME} PRIVATE my_audio)
 target_link_libraries(${PROJECT_NAME} PRIVATE my_mqtt)
 target_link_libraries(${PROJECT_NAME} PRIVATE my_mqtt_broker_manager)
 target_link_libraries(${PROJECT_NAME} PRIVATE my_mavsdk)
@@ -135,6 +136,13 @@ target_link_libraries(${PROJECT_NAME} PRIVATE opencv_videoio)
 target_link_libraries(${PROJECT_NAME} PRIVATE oatpp::oatpp)
 target_link_libraries(${PROJECT_NAME} PRIVATE oatpp::oatpp-swagger)
 target_link_libraries(${PROJECT_NAME} PRIVATE sqlite3_static)
+
+# 设置 RPATH 以找到 NAudio SDK 的运行时动态库
+set(NAUDIO_LIB_DIR ${CMAKE_BINARY_DIR}/lib/NAudio/lib)
+set_target_properties(${PROJECT_NAME} PROPERTIES
+    BUILD_RPATH "$ORIGIN/../lib;$ORIGIN/../lib/NAudio/lib"
+    INSTALL_RPATH "$ORIGIN/../lib;$ORIGIN/../lib/NAudio/lib"
+)
 
 # # 包含 Eigen 头文件
 # target_include_directories(${PROJECT_NAME} PRIVATE ${EIGEN3_INCLUDE_DIR})

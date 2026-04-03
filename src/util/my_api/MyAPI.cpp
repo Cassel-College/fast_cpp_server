@@ -7,7 +7,9 @@
 #include "controller/fly_control/FlyControlController.h"
 #include "controller/pod/PodController.h"
 #include "controller/mediamtx_monitor/MediamtxMonitorController.h"
+#include "controller/file_cache/FileApiController.h"
 
+#include "controller/audio/AudioController.h"
 #include "controller/demo/edges/EdgesController.hpp"
 #include "controller/demo/tuna/TunaController.h"
 
@@ -200,6 +202,14 @@ void MyAPI::ServerThread(int port) {
         auto mediamtxController = my_api::mediamtx_monitor_api::MediamtxMonitorController::createShared(std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper));
         router->addController(mediamtxController);
         docEndpoints.append(mediamtxController->getEndpoints());
+
+        auto fileApiController = my_api::file_cache_api::FileApiController::createShared(std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper));
+        router->addController(fileApiController);
+        docEndpoints.append(fileApiController->getEndpoints());
+
+        auto audioController = my_api::audio_api::AudioController::createShared(std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper));
+        router->addController(audioController);
+        docEndpoints.append(audioController->getEndpoints());
 
         if (swaggerResources != nullptr) {
             auto swaggerController = oatpp::swagger::Controller::createShared(docEndpoints, docInfo, swaggerResources);

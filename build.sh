@@ -422,6 +422,60 @@ else
     echo "📁 ViewLink dist created at ${VIEWLINK_DST}. ✅"
 fi
 
+# ========== NAudio SDK 预编译库.so复制 ==========
+echo "========================================="
+echo "  NAudio SDK dist setup"
+echo "========================================="
+
+NAUDIO_SRC="source/lib/NAudio"
+NAUDIO_DST="build/lib/NAudio"
+
+if [ -d "${NAUDIO_DST}" ]; then
+  echo "📁 NAudio dist 目录已存在，跳过复制步骤。✅"
+else
+  echo "🔧 开始准备 NAudio dist 目录..."
+  mkdir -p "${NAUDIO_DST}/include"
+  mkdir -p "${NAUDIO_DST}/lib"
+  echo "📁 已创建目录: ${NAUDIO_DST}/include 和 ${NAUDIO_DST}/lib。✅"
+
+  ARCH=$(uname -m)
+  if [ "${ARCH}" = "aarch64" ] || [ "${ARCH}" = "arm64" ]; then
+    NAUDIO_ARCH_DIR="arm"
+    echo "🔍 检测到系统架构: ${ARCH}，映射为 NAudio/arm。"
+  elif [ "${ARCH}" = "x86_64" ] || [ "${ARCH}" = "amd64" ]; then
+    NAUDIO_ARCH_DIR="x86"
+    echo "🔍 检测到系统架构: ${ARCH}，映射为 NAudio/x86。"
+  else
+    NAUDIO_ARCH_DIR=""
+    echo "⚠️  当前系统架构不在支持列表中: ${ARCH}。"
+    echo "⚠️  支持的架构包括: aarch64/arm64, x86_64/amd64。"
+    echo "⚠️  本次将跳过 NAudio 预编译库复制。❌"
+  fi
+
+  if [ -n "${NAUDIO_ARCH_DIR}" ]; then
+    NAUDIO_ARCH_SRC="${NAUDIO_SRC}/${NAUDIO_ARCH_DIR}"
+    NAUDIO_INCLUDE_SRC="${NAUDIO_ARCH_SRC}/include"
+    NAUDIO_LIB_SRC="${NAUDIO_ARCH_SRC}/lib"
+
+    echo "📦 准备复制 NAudio 头文件，源目录: ${NAUDIO_INCLUDE_SRC}"
+    if [ -d "${NAUDIO_INCLUDE_SRC}" ]; then
+      cp -r "${NAUDIO_INCLUDE_SRC}/"* "${NAUDIO_DST}/include/"
+      echo "📄 NAudio 头文件复制完成，目标目录: ${NAUDIO_DST}/include。✅"
+    else
+      echo "⚠️  未找到 NAudio 头文件目录: ${NAUDIO_INCLUDE_SRC}，跳过头文件复制。❌"
+    fi
+
+    echo "📦 准备复制 NAudio 库文件，源目录: ${NAUDIO_LIB_SRC}"
+    if [ -d "${NAUDIO_LIB_SRC}" ]; then
+      cp -r "${NAUDIO_LIB_SRC}/"* "${NAUDIO_DST}/lib/"
+      echo "📄 NAudio 库文件复制完成，目标目录: ${NAUDIO_DST}/lib。✅"
+    else
+      echo "⚠️  未找到 NAudio 库文件目录: ${NAUDIO_LIB_SRC}，跳过库文件复制。❌"
+    fi
+
+    echo "📁 NAudio dist 目录处理完成，当前路径: ${NAUDIO_DST}。✅"
+  fi
+fi
 
 ./scripts/download_mediamtx.sh
 

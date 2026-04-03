@@ -30,6 +30,7 @@ target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE
     my_device
     my_data
     my_db
+    my_cache
     my_script
     my_soft_healthy
     my_system_healthy
@@ -38,6 +39,7 @@ target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE
     my_fly_control
     my_pod
     my_mediamtx_monitor
+    my_audio
     my_mavsdk
     opencv_core            # 修复 opencv2/opencv.hpp 找不到
     opencv_imgproc
@@ -82,7 +84,20 @@ target_include_directories(${TEST_PROGRAM_NAME} PRIVATE
 )
 
 include(GoogleTest)
-gtest_discover_tests(${TEST_PROGRAM_NAME} DISCOVERY_TIMEOUT 30)
+
+# 设置 RPATH 以找到 NAudio SDK 的运行时动态库依赖
+# 使用 --disable-new-dtags 确保生成 RPATH（递归搜索）而非 RUNPATH（仅直接依赖）
+set(NAUDIO_LIB_DIR ${PROJECT_SOURCE_DIR}/source/lib/NAudio/x86/lib)
+set_target_properties(${TEST_PROGRAM_NAME} PROPERTIES
+    BUILD_RPATH "${NAUDIO_LIB_DIR}"
+    INSTALL_RPATH "${NAUDIO_LIB_DIR}"
+    LINK_FLAGS "-Wl,--disable-new-dtags"
+)
+
+gtest_discover_tests(${TEST_PROGRAM_NAME}
+    DISCOVERY_TIMEOUT 30
+    DISCOVERY_MODE PRE_TEST
+)
 
 
 option(ENABLE_TEST "Enable unit testing" ON)

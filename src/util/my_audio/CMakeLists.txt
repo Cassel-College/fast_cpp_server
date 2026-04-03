@@ -1,0 +1,133 @@
+    # 打印当前平台架构，便于调试依赖选择
+    message(STATUS "[my_audio] CMAKE_SYSTEM_PROCESSOR = ${CMAKE_SYSTEM_PROCESSOR}")
+cmake_minimum_required(VERSION 3.10)
+
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+if (BUILD_MY_AUDIO)
+    message("BUILD_MY_AUDIO is ON")
+    print_colored_message("------------------------------" COLOR magenta)
+    print_colored_message("Building my_audio library..." COLOR yellow)
+
+    # NAudio 预编译库的构建期目录与打包期目录分离：
+    # - 构建/调试期: build/lib/NAudio/lib
+    # - 安装/运行期: <prefix>/lib/NAudio/lib
+    set(NAUDIO_BUILD_LIB_DIR ${CMAKE_BINARY_DIR}/lib/NAudio/lib)
+    set(NAUDIO_SOURCE_LIB_DIR ${PROJECT_SOURCE_DIR}/build/NAudio_dist/lib)
+
+    file(MAKE_DIRECTORY ${CMAKE_BINARY_DIR}/lib/NAudio)
+    if(EXISTS ${NAUDIO_SOURCE_LIB_DIR} AND NOT EXISTS ${NAUDIO_BUILD_LIB_DIR})
+        execute_process(
+            COMMAND ${CMAKE_COMMAND} -E create_symlink ${NAUDIO_SOURCE_LIB_DIR} ${NAUDIO_BUILD_LIB_DIR}
+            RESULT_VARIABLE NAUDIO_SYMLINK_RESULT
+        )
+        if(NOT NAUDIO_SYMLINK_RESULT EQUAL 0)
+            message(WARNING "Failed to create NAudio build symlink, fallback to source lib dir: ${NAUDIO_SOURCE_LIB_DIR}")
+            set(NAUDIO_BUILD_LIB_DIR ${NAUDIO_SOURCE_LIB_DIR})
+        endif()
+    elseif(NOT EXISTS ${NAUDIO_BUILD_LIB_DIR})
+        set(NAUDIO_BUILD_LIB_DIR ${NAUDIO_SOURCE_LIB_DIR})
+    endif()
+
+    # ========================================================================
+    # 头文件路径
+    # ========================================================================
+    set(MY_AUDIO_INCLUDE_DIRECTORIES
+        ${PROJECT_SOURCE_DIR}/src/util/my_audio
+        ${PROJECT_SOURCE_DIR}/src/util/my_audio/NAudioCore
+        ${PROJECT_SOURCE_DIR}/build/lib/NAudio/include
+    )
+
+    # ========================================================================
+    # 源文件收集
+    # ========================================================================
+    file(GLOB_RECURSE MY_AUDIO_SOURCES
+        ${PROJECT_SOURCE_DIR}/src/util/my_audio/*.cpp
+    )
+
+    pretty_print_list("MY_AUDIO_INCLUDE_DIRECTORIES List" MY_AUDIO_INCLUDE_DIRECTORIES)
+    pretty_print_list("MY_AUDIO_SOURCES List" MY_AUDIO_SOURCES)
+
+    # ========================================================================
+    # 构建静态库
+    # ========================================================================
+    add_library(my_audio STATIC ${MY_AUDIO_SOURCES})
+    target_include_directories(my_audio PUBLIC ${MY_AUDIO_INCLUDE_DIRECTORIES})
+
+    # ========================================================================
+    # 链接依赖
+    # ========================================================================
+    target_link_libraries(my_audio PUBLIC pthread)
+    target_link_libraries(my_audio PUBLIC mylog)
+    target_link_libraries(my_audio PUBLIC myconfig)
+    target_link_libraries(my_audio PUBLIC my_tools)
+    target_link_libraries(my_audio PUBLIC nlohmann_json::nlohmann_json)
+
+    # NAudio 厂商 SDK 动态库目录（构建期优先使用 build/lib/NAudio/lib）
+    set(NAUDIO_LIB_DIR ${NAUDIO_BUILD_LIB_DIR})
+    set(NAUDIO_LIB_DIR ${NAUDIO_LIB_DIR} PARENT_SCOPE)
+
+    # 链接 NAudio SDK 及其运行时依赖
+    # 使用 --no-as-needed 确保 ffmpeg 库成为可执行文件的直接依赖（NEEDED），
+    # 因为 libNAudioServer.so 的 RUNPATH 是 "./"，无法在运行时找到同目录的 ffmpeg 库
+
+    # ================= 平台自动选择依赖库 =================
+    if(CMAKE_SYSTEM_PROCESSOR MATCHES "x86_64" OR CMAKE_SYSTEM_PROCESSOR MATCHES "amd64")
+        # x86_64 平台，包含 libmsc.so、libavdevice.so.58、libswscale.so.5
+        target_link_libraries(my_audio PUBLIC
+            ${NAUDIO_LIB_DIR}/libNAudioServer.so
+            -Wl,--no-as-needed
+            ${NAUDIO_LIB_DIR}/libavcodec.so.58
+            ${NAUDIO_LIB_DIR}/libavformat.so.58
+            ${NAUDIO_LIB_DIR}/libavfilter.so.7
+            ${NAUDIO_LIB_DIR}/libavutil.so.56
+            ${NAUDIO_LIB_DIR}/libswresample.so.3
+            ${NAUDIO_LIB_DIR}/libmp3lame.so.0
+            ${NAUDIO_LIB_DIR}/libmsc.so
+            ${NAUDIO_LIB_DIR}/libavdevice.so.58
+            ${NAUDIO_LIB_DIR}/libswscale.so.5
+            -Wl,--as-needed
+        )
+    elseif(CMAKE_SYSTEM_PROCESSOR MATCHES "aarch64" OR CMAKE_SYSTEM_PROCESSOR MATCHES "arm")
+        # arm64/arm 平台，部分依赖可能缺失
+        target_link_libraries(my_audio PUBLIC
+            ${NAUDIO_LIB_DIR}/libNAudioServer.so
+            -Wl,--no-as-needed
+            ${NAUDIO_LIB_DIR}/libavcodec.so.58
+            ${NAUDIO_LIB_DIR}/libavdevice.so.58
+            ${NAUDIO_LIB_DIR}/libavfilter.so.7
+            ${NAUDIO_LIB_DIR}/libavformat.so.58
+            ${NAUDIO_LIB_DIR}/libavutil.so.56
+            ${NAUDIO_LIB_DIR}/libmp3lame.so.0
+            ${NAUDIO_LIB_DIR}/libswresample.so.3
+            ${NAUDIO_LIB_DIR}/libswscale.so.5
+            -Wl,--as-needed
+        )
+    else()
+        message(WARNING "未知平台: ${CMAKE_SYSTEM_PROCESSOR}，请手动调整依赖库列表！")
+        target_link_libraries(my_audio PUBLIC
+            ${NAUDIO_LIB_DIR}/libNAudioServer.so
+            -Wl,--no-as-needed
+            ${NAUDIO_LIB_DIR}/libavcodec.so.58
+            ${NAUDIO_LIB_DIR}/libavformat.so.58
+            ${NAUDIO_LIB_DIR}/libavfilter.so.7
+            ${NAUDIO_LIB_DIR}/libavutil.so.56
+            ${NAUDIO_LIB_DIR}/libswresample.so.3
+            ${NAUDIO_LIB_DIR}/libmp3lame.so.0
+            ${NAUDIO_LIB_DIR}/libmsc.so
+            -Wl,--as-needed
+        )
+    endif()
+
+    # 设置 RPATH，确保运行时能找到这些动态库
+    set_target_properties(my_audio PROPERTIES
+        BUILD_RPATH "$ORIGIN/../lib;$ORIGIN/../lib/NAudio/lib"
+        INSTALL_RPATH "$ORIGIN/../lib;$ORIGIN/../lib/NAudio/lib"
+    )
+
+    print_colored_message("Building my_audio library over." COLOR yellow)
+    print_colored_message("------------------------------" COLOR magenta)
+else()
+    message("BUILD_MY_AUDIO is OFF, skipping my_audio library build")
+    return()
+endif()
