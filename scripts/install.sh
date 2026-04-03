@@ -329,6 +329,14 @@ install_libraries() {
     # 只拷贝 .so 文件和符号链接，跳过 .a / .pc / pkgconfig
     run_cmd "${SUPER} find ${RELEASE_DIR}/lib -maxdepth 1 \\( -name '*.so' -o -name '*.so.*' \\) -exec cp -a {} ${LIB_DIR}/ \\;"
     log_line info "  -> 已拷贝 .so 库文件 (保留符号链接)"
+
+    if [ -d "${RELEASE_DIR}/lib/NAudio" ]; then
+      run_cmd "${SUPER} mkdir -p ${LIB_DIR}/NAudio"
+      run_cmd "${SUPER} cp -a ${RELEASE_DIR}/lib/NAudio/. ${LIB_DIR}/NAudio/"
+      log_line info "  -> 已拷贝 NAudio 运行库目录到 ${LIB_DIR}/NAudio/"
+    else
+      log_line warn "  -> release 包中无 lib/NAudio/ 目录，NAudio 运行库将不会被安装"
+    fi
   else
     log_line warn "  -> release 包中无 lib/ 目录，跳过"
   fi

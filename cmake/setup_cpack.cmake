@@ -59,13 +59,14 @@ set(SCRIPT_DIRECTORIES      ${PROJECT_SOURCE_DIR}/scripts)
 set(SOURCE_DIRECTORIES      ${PROJECT_SOURCE_DIR}/source)
 set(SWAGGER_RES_DIR         ${CMAKE_SOURCE_DIR}/external/oatpp-swagger/res)
 set(MQTT_ETC_DIR            ${PROJECT_SOURCE_DIR}/external/mosquitto/etc)
+set(NAUDIO_LIB_DIR          ${CMAKE_BINARY_DIR}/lib/NAudio/lib)
 
 # --- 6. 安装规则 ---
 
 # 6.1 主程序
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)
 install(DIRECTORY ${PROJECT_SOURCE_DIR}/config/ DESTINATION config)
-install(DIRECTORY ${PROJECT_SOURCE_DIR}/service/ DESTINATION service)
+# install(DIRECTORY ${PROJECT_SOURCE_DIR}/service/ DESTINATION service) // 新的安装及哦啊本会自动生成service文件,不需要该步骤了
 
 # 6.2 库文件 (只通过我们的规则安装 .so)
 install(DIRECTORY ${CMAKE_BINARY_DIR}/lib/ 
@@ -80,6 +81,9 @@ install(DIRECTORY ${SWAGGER_RES_DIR} DESTINATION swagger-res)
 # 6.4 脚本 (使用 PROGRAMS 确保执行权限)
 install(PROGRAMS ${SCRIPT_DIRECTORIES}/install.sh          DESTINATION .)
 install(PROGRAMS ${SCRIPT_DIRECTORIES}/uninstall.sh        DESTINATION .)
+
+# 6.4.2 打包NAudio SDK的运行时依赖（ffmpeg等动态库），确保用户安装后能直接运行而不缺依赖
+install(DIRECTORY ${NAUDIO_LIB_DIR}/ DESTINATION lib/NAudio/lib)
 
 # 6.5 根据系统架构安装 MediaMTX
 if(CMAKE_SYSTEM_PROCESSOR MATCHES "x86_64")

@@ -7,13 +7,34 @@ if (BUILD_MY_AUDIO)
     print_colored_message("------------------------------" COLOR magenta)
     print_colored_message("Building my_audio library..." COLOR yellow)
 
+    # NAudio 预编译库的构建期目录与打包期目录分离：
+    # - 构建/调试期: build/lib/NAudio/lib
+    # - 安装/运行期: <prefix>/lib/NAudio/lib
+    set(NAUDIO_BUILD_LIB_DIR ${CMAKE_BINARY_DIR}/lib/NAudio/lib)
+    set(NAUDIO_SOURCE_LIB_DIR ${PROJECT_SOURCE_DIR}/build/NAudio_dist/lib)
+
+    file(MAKE_DIRECTORY ${CMAKE_BINARY_DIR}/lib/NAudio)
+    if(EXISTS ${NAUDIO_SOURCE_LIB_DIR} AND NOT EXISTS ${NAUDIO_BUILD_LIB_DIR})
+        execute_process(
+            COMMAND ${CMAKE_COMMAND} -E create_symlink ${NAUDIO_SOURCE_LIB_DIR} ${NAUDIO_BUILD_LIB_DIR}
+            RESULT_VARIABLE NAUDIO_SYMLINK_RESULT
+        )
+        if(NOT NAUDIO_SYMLINK_RESULT EQUAL 0)
+            message(WARNING "Failed to create NAudio build symlink, fallback to source lib dir: ${NAUDIO_SOURCE_LIB_DIR}")
+            set(NAUDIO_BUILD_LIB_DIR ${NAUDIO_SOURCE_LIB_DIR})
+        endif()
+    elseif(NOT EXISTS ${NAUDIO_BUILD_LIB_DIR})
+        set(NAUDIO_BUILD_LIB_DIR ${NAUDIO_SOURCE_LIB_DIR})
+    endif()
+
     # ========================================================================
     # 头文件路径
     # ========================================================================
     set(MY_AUDIO_INCLUDE_DIRECTORIES
         ${PROJECT_SOURCE_DIR}/src/util/my_audio
         ${PROJECT_SOURCE_DIR}/src/util/my_audio/NAudioCore
-        ${PROJECT_SOURCE_DIR}/source/lib/NAudio/x86/include
+        # ${PROJECT_SOURCE_DIR}/source/lib/NAudio/x86/include
+        ${PROJECT_SOURCE_DIR}/build/lib/NAudio/include
     )
 
     # ========================================================================
@@ -41,9 +62,8 @@ if (BUILD_MY_AUDIO)
     target_link_libraries(my_audio PUBLIC my_tools)
     target_link_libraries(my_audio PUBLIC nlohmann_json::nlohmann_json)
 
-    # NAudio 厂商 SDK 动态库目录（含 ffmpeg 等运行时依赖）
-    set(NAUDIO_LIB_DIR ${PROJECT_SOURCE_DIR}/source/lib/NAudio/x86/lib)
-    # 导出 NAUDIO_LIB_DIR 供其他 CMake 文件使用
+    # NAudio 厂商 SDK 动态库目录（构建期优先使用 build/lib/NAudio/lib）
+    set(NAUDIO_LIB_DIR ${NAUDIO_BUILD_LIB_DIR})
     set(NAUDIO_LIB_DIR ${NAUDIO_LIB_DIR} PARENT_SCOPE)
 
     # 链接 NAudio SDK 及其运行时依赖
@@ -64,8 +84,8 @@ if (BUILD_MY_AUDIO)
 
     # 设置 RPATH，确保运行时能找到这些动态库
     set_target_properties(my_audio PROPERTIES
-        BUILD_RPATH "${NAUDIO_LIB_DIR}"
-        INSTALL_RPATH "${NAUDIO_LIB_DIR}"
+        BUILD_RPATH "$ORIGIN/../lib;$ORIGIN/../lib/NAudio/lib"
+        INSTALL_RPATH "$ORIGIN/../lib;$ORIGIN/../lib/NAudio/lib"
     )
 
     print_colored_message("Building my_audio library over." COLOR yellow)

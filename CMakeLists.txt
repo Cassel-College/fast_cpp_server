@@ -138,11 +138,10 @@ target_link_libraries(${PROJECT_NAME} PRIVATE oatpp::oatpp-swagger)
 target_link_libraries(${PROJECT_NAME} PRIVATE sqlite3_static)
 
 # 设置 RPATH 以找到 NAudio SDK 的运行时动态库
-set(NAUDIO_LIB_DIR ${PROJECT_SOURCE_DIR}/source/lib/NAudio/x86/lib)
+set(NAUDIO_LIB_DIR ${CMAKE_BINARY_DIR}/lib/NAudio/lib)
 set_target_properties(${PROJECT_NAME} PROPERTIES
-    BUILD_RPATH "${NAUDIO_LIB_DIR}"
-    INSTALL_RPATH "${NAUDIO_LIB_DIR}"
-    LINK_FLAGS "-Wl,--disable-new-dtags"
+    BUILD_RPATH "$ORIGIN/../lib;$ORIGIN/../lib/NAudio/lib"
+    INSTALL_RPATH "$ORIGIN/../lib;$ORIGIN/../lib/NAudio/lib"
 )
 
 # # 包含 Eigen 头文件
