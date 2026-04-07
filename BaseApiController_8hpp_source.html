@@ -172,16 +172,17 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            <span class="keywordflow">case</span> 403: <span class="keywordflow">return</span> Status::CODE_403;</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <span class="keywordflow">case</span> 404: <span class="keywordflow">return</span> Status::CODE_404;</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            <span class="keywordflow">case</span> 409: <span class="keywordflow">return</span> Status::CODE_409;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keywordflow">case</span> 422: <span class="keywordflow">return</span> Status::CODE_422;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            <span class="keywordflow">case</span> 500: <span class="keywordflow">return</span> Status::CODE_500;</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            <span class="keywordflow">default</span>:  <span class="keywordflow">return</span> Status::CODE_500;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        }</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keywordflow">case</span> 413: <span class="keywordflow">return</span> Status::CODE_413;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            <span class="keywordflow">case</span> 422: <span class="keywordflow">return</span> Status::CODE_422;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            <span class="keywordflow">case</span> 500: <span class="keywordflow">return</span> Status::CODE_500;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            <span class="keywordflow">default</span>:  <span class="keywordflow">return</span> Status::CODE_500;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    }</div>
 </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>};</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>};</div>
 </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>} <span class="comment">// namespace my_api::base</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>} <span class="comment">// namespace my_api::base</span></div>
 <div class="ttc" id="aclassmy__api_1_1base_1_1BaseApiController_html"><div class="ttname"><a href="classmy__api_1_1base_1_1BaseApiController.html">my_api::base::BaseApiController</a></div><div class="ttdef"><b>Definition</b> BaseApiController.hpp:13</div></div>
 <div class="ttc" id="aclassmy__api_1_1base_1_1BaseApiController_html_a0f1f11dedcb1932f7aa2b347bedca2f3"><div class="ttname"><a href="classmy__api_1_1base_1_1BaseApiController.html#a0f1f11dedcb1932f7aa2b347bedca2f3">my_api::base::BaseApiController::jsonError</a></div><div class="ttdeci">OutgoingResponsePtr jsonError(int code, const std::string &amp;message, const nlohmann::json &amp;details=nlohmann::json())</div><div class="ttdef"><b>Definition</b> BaseApiController.hpp:55</div></div>
 <div class="ttc" id="aclassmy__api_1_1base_1_1BaseApiController_html_a182a2064395126bd889666c41f1917ff"><div class="ttname"><a href="classmy__api_1_1base_1_1BaseApiController.html#a182a2064395126bd889666c41f1917ff">my_api::base::BaseApiController::jsonOk</a></div><div class="ttdeci">OutgoingResponsePtr jsonOk(const nlohmann::json &amp;data=nlohmann::json::object(), const std::string &amp;message=&quot;OK&quot;)</div><div class="ttdef"><b>Definition</b> BaseApiController.hpp:46</div></div>

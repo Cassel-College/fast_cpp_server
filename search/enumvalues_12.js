@@ -1,6 +1,10 @@
 var searchData=
 [
-  ['unknown_0',['unknown',['../namespacePodModule.html#a58ed7bf409187110b791ef5b23109ccca696b031073e74bf2cb98e5ef201d4aa3',1,'PodModule::UNKNOWN'],['../namespacePodModule.html#a5d041db549a1caf2163e3c74deeb776ba696b031073e74bf2cb98e5ef201d4aa3',1,'PodModule::UNKNOWN'],['../namespacePodModule.html#afae02e5487fb32d2a4642695c4740838a696b031073e74bf2cb98e5ef201d4aa3',1,'PodModule::UNKNOWN'],['../namespacemy__data.html#a69c46968483fe8b647c643ea0779baa3a88183b946cc5f0e8c96b2e66e1c74a7e',1,'my_data::Unknown']]],
-  ['unknown_5ferror_1',['UNKNOWN_ERROR',['../namespacePodModule.html#aad194976af5612d4469559348e94c7bea9a10f345b0f755d461a8673a5e9ef6b4',1,'PodModule']]],
-  ['unknowndevice_2',['unknowndevice',['../namespacemy__data.html#a59e56af19e754a6aa26a612ebf91d05fa594aff36300fd5882c438e822a84df0c',1,'my_data::UnknownDevice'],['../namespacemy__edge.html#a605c0c17413514783b3c6ce96188e123a594aff36300fd5882c438e822a84df0c',1,'my_edge::UnknownDevice']]]
+  ['takeoff_0',['TAKEOFF',['../namespacefly__control.html#a201c80e927ae9ae73dcc0b8b4f7ca1a7a8fabc74a4ed0781d663336cbf8c9c53d',1,'fly_control']]],
+  ['takeoff_5flocked_1',['TAKEOFF_LOCKED',['../namespacefly__control.html#a201c80e927ae9ae73dcc0b8b4f7ca1a7a068b7d43a138d3011bdd40166948e201',1,'fly_control']]],
+  ['takeoff_5funlocked_2',['TAKEOFF_UNLOCKED',['../namespacefly__control.html#a201c80e927ae9ae73dcc0b8b4f7ca1a7aec7845c0f4e74e8a7df4c8577efa90ff',1,'fly_control']]],
+  ['tcp_3',['Tcp',['../namespaceviewlink.html#aa1f0e2efd52935fd01bfece0fbead81fa30b7fdeebc36988717d0e274cc2e7520',1,'viewlink']]],
+  ['timeout_4',['Timeout',['../namespacemy__data.html#a59e56af19e754a6aa26a612ebf91d05fac85a251cc457840f1e032f1b733e9398',1,'my_data']]],
+  ['touchdown_5',['TOUCHDOWN',['../namespacefly__control.html#a201c80e927ae9ae73dcc0b8b4f7ca1a7af871507de24e398da2415d37383cc384',1,'fly_control']]],
+  ['tracking_6',['TRACKING',['../namespacefly__control.html#a201c80e927ae9ae73dcc0b8b4f7ca1a7a8728801b2a11ad95c8ecf855bfd484e4',1,'fly_control']]]
 ];

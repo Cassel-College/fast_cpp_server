@@ -218,28 +218,32 @@ $(function() {
 
 <p class="reference">引用了 <a class="el" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ceacf73468ba4dfdfb19102be6dfe4f4bc2">CreateDirFailed</a>, <a class="el" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ceacf25d5cc7db64ddc7b38564b7704cca2">FileAlreadyExists</a>, <a class="el" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9cea2767828026039e8ba7b38973cbb701f2">FileNotFound</a>, <a class="el" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9cea39e3f1d705b11a3afd05cb4127140ef9">FileTooLarge</a>, <a class="el" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9cea253ca7dd096ee0956cccee4d376cab8b">InvalidArgument</a>, <a class="el" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ceaf05cfcbf5123775f7c73e520a8d861e1">IoError</a>, <a class="el" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9cea9646ad3a1c3e708b4fa8b4b4270fbab6">NotInitialized</a>, <a class="el" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ceaa60852f204ed8028c1c58808b746d115">Ok</a> , 以及 <a class="el" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9cea0043ae95cb928986f16d0d344101dbb5">PathTraversal</a>.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="classmy__cache_1_1MyCache.html#ac37884304ff13cfcb0eb07566dba57d6">MyCache::DeleteFile()</a>, <a class="el" href="classmy__cache_1_1MyCache.html#a8e7f283e6d5d39f061b525c98abd379c">MyCache::GetFullPath()</a>, <a class="el" href="classtools_1_1pipeline_1_1Pipeline.html#a5dd266643c70fd2ebfd45749c5d2478c">Pipeline::LaunchFileCache()</a> , 以及 <a class="el" href="classmy__cache_1_1MyCache.html#a84ae6c8a9bb04ed98b296f82267360fc">MyCache::SaveFile()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="classmy__cache_1_1MyCache.html#ac37884304ff13cfcb0eb07566dba57d6">MyCache::DeleteFile()</a>, <a class="el" href="classmy__cache_1_1MyCache.html#acd09d0b80d1925ef49461f26e07c8528">MyCache::GetFileList()</a>, <a class="el" href="classmy__cache_1_1MyCache.html#a8e7f283e6d5d39f061b525c98abd379c">MyCache::GetFullPath()</a>, <a class="el" href="classtools_1_1pipeline_1_1Pipeline.html#a5dd266643c70fd2ebfd45749c5d2478c">Pipeline::LaunchFileCache()</a> , 以及 <a class="el" href="classmy__cache_1_1MyCache.html#a84ae6c8a9bb04ed98b296f82267360fc">MyCache::SaveFile()</a>.</p>
 <div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemy__cache_a08fb92a22e0e5993b2ead55373179edb_icgraph.png" border="0" usemap="#anamespacemy__cache_a08fb92a22e0e5993b2ead55373179edb_icgraph" alt=""/></div>
 <map name="anamespacemy__cache_a08fb92a22e0e5993b2ead55373179edb_icgraph" id="anamespacemy__cache_a08fb92a22e0e5993b2ead55373179edb_icgraph">
-<area shape="rect" title="将错误码转为可读字符串" alt="" coords="896,109,1075,134"/>
+<area shape="rect" title="将错误码转为可读字符串" alt="" coords="896,141,1075,166"/>
 <area shape="rect" href="classmy__cache_1_1MyCache.html#ac37884304ff13cfcb0eb07566dba57d6" title="删除缓存目录中的文件" alt="" coords="679,5,843,45"/>
-<area shape="poly" title=" " alt="" coords="946,105,847,60,817,48,819,43,849,55,948,100"/>
-<area shape="rect" href="classmy__cache_1_1MyCache.html#a8e7f283e6d5d39f061b525c98abd379c" title="获取文件的完整绝对路径" alt="" coords="679,69,843,109"/>
-<area shape="poly" title=" " alt="" coords="882,109,842,104,843,98,882,104"/>
-<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5dd266643c70fd2ebfd45749c5d2478c" title=" " alt="" coords="673,133,848,173"/>
-<area shape="poly" title=" " alt="" coords="883,139,849,144,848,138,882,133"/>
-<area shape="rect" href="classmy__cache_1_1MyCache.html#a84ae6c8a9bb04ed98b296f82267360fc" title="保存文件到缓存目录" alt="" coords="679,197,843,237"/>
-<area shape="poly" title=" " alt="" coords="948,142,849,188,819,200,817,195,847,183,946,137"/>
-<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="451,133,625,173"/>
-<area shape="poly" title=" " alt="" coords="660,156,625,156,625,151,660,151"/>
-<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="228,104,403,144"/>
-<area shape="poly" title=" " alt="" coords="437,143,402,138,403,133,437,137"/>
-<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9d284775ccebba879a77a7144be22899" title=" " alt="" coords="5,133,180,173"/>
-<area shape="poly" title=" " alt="" coords="215,140,180,145,180,139,214,135"/>
-<area shape="poly" title=" " alt="" coords="194,153,228,153,403,153,450,153,451,158,403,159,228,159,194,158"/>
+<area shape="poly" title=" " alt="" coords="956,134,907,97,847,60,821,48,823,43,849,55,910,93,960,130"/>
+<area shape="rect" href="classmy__cache_1_1MyCache.html#acd09d0b80d1925ef49461f26e07c8528" title="获取指定目录下的文件元信息列表" alt="" coords="679,69,843,109"/>
+<area shape="poly" title=" " alt="" coords="926,139,831,112,832,107,928,134"/>
+<area shape="rect" href="classmy__cache_1_1MyCache.html#a8e7f283e6d5d39f061b525c98abd379c" title="获取文件的完整绝对路径" alt="" coords="679,133,843,173"/>
+<area shape="poly" title=" " alt="" coords="882,156,843,156,843,151,882,151"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5dd266643c70fd2ebfd45749c5d2478c" title=" " alt="" coords="673,197,848,237"/>
+<area shape="poly" title=" " alt="" coords="928,172,832,200,831,195,926,167"/>
+<area shape="rect" href="classmy__cache_1_1MyCache.html#a84ae6c8a9bb04ed98b296f82267360fc" title="保存文件到缓存目录" alt="" coords="679,261,843,301"/>
+<area shape="poly" title=" " alt="" coords="960,177,910,214,849,252,823,264,821,259,847,247,907,210,956,173"/>
+<area shape="rect" href="classmy__cache_1_1MyCache.html#a764440da2c850a71275829866e072086" title="获取缓存中所有文件的元信息列表" alt="" coords="456,69,620,109"/>
+<area shape="poly" title=" " alt="" coords="665,92,620,92,620,87,665,87"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="451,197,625,237"/>
+<area shape="poly" title=" " alt="" coords="660,220,625,220,625,215,660,215"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="228,168,403,208"/>
+<area shape="poly" title=" " alt="" coords="437,207,402,202,403,197,437,201"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9d284775ccebba879a77a7144be22899" title=" " alt="" coords="5,197,180,237"/>
+<area shape="poly" title=" " alt="" coords="215,204,180,209,180,203,214,199"/>
+<area shape="poly" title=" " alt="" coords="194,217,228,217,403,217,450,217,451,222,403,223,228,223,194,222"/>
 </map>
 </div>
 

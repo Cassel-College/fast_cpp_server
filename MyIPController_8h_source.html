@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_api/controller/ip/MyIPController.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_f1ee40842c724b3bf8a04800f5f521a7.html">my_api</a></li><li class="navelem"><a class="el" href="dir_6ef159f9932051522d309704773cf407.html">controller</a></li><li class="navelem"><a class="el" href="dir_11eafb75c9376da567d080fdf01a2b5f.html">ip</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">MyIPController.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="MyIPController_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="BaseApiController_8hpp.html">BaseApiController.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="IPDto_8hpp.html">dto/ip/IPDto.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;oatpp/core/macro/codegen.hpp&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;oatpp/web/server/api/ApiController.hpp&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__api_1_1ip__api.html">my_api::ip_api</a> {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include OATPP_CODEGEN_BEGIN(ApiController)</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classmy__api_1_1ip__api_1_1MyIPController.html">   26</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__api_1_1ip__api_1_1MyIPController.html">MyIPController</a> : <span class="keyword">public</span> <a class="code hl_class" href="classmy__api_1_1base_1_1BaseApiController.html">base::BaseApiController</a> {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classmy__api_1_1ip__api_1_1MyIPController.html#a7840ea3dbc56066fb3c788dc26cd8a2e">   28</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="classmy__api_1_1ip__api_1_1MyIPController.html#a7840ea3dbc56066fb3c788dc26cd8a2e">MyAPIResponsePtr</a> = <a class="code hl_typedef" href="namespacemy__api_1_1base.html#a1f322b9fe1e5f6d8df76f102affb49c6">my_api::base::MyAPIResponsePtr</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="classmy__api_1_1ip__api_1_1MyIPController.html">MyIPController</a>(<span class="keyword">const</span> std::shared_ptr&lt;ObjectMapper&gt;&amp; objectMapper);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">static</span> std::shared_ptr&lt;MyIPController&gt; <a class="code hl_function" href="classmy__api_1_1ip__api_1_1MyIPController.html#aca4e090e72eb27cfc8e3082a058a7e6c">createShared</a>(</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keyword">const</span> std::shared_ptr&lt;ObjectMapper&gt;&amp; objectMapper);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="comment">// ==================== 查询类接口 ====================</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classmy__api_1_1ip__api_1_1MyIPController.html#a74ea693fc363d17dcb189347912834bf">   36</a></span>    <a class="code hl_function" href="classmy__api_1_1ip__api_1_1MyIPController.html#a74ea693fc363d17dcb189347912834bf">ENDPOINT_INFO</a>(getAllInterfaces) {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        info-&gt;summary = <span class="stringliteral">&quot;获取所有可用网卡列表&quot;</span>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        info-&gt;description = <span class="stringliteral">&quot;返回系统中所有处于 UP 状态的非回环网卡名称列表。&quot;</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_200, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    }</div>
+</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classmy__api_1_1ip__api_1_1MyIPController.html#a1e711b22e622a03502c701c40124a6cd">   41</a></span>    <a class="code hl_function" href="classmy__api_1_1ip__api_1_1MyIPController.html#a1e711b22e622a03502c701c40124a6cd">ENDPOINT</a>(<span class="stringliteral">&quot;GET&quot;</span>, <span class="stringliteral">&quot;/v1/ip/interfaces&quot;</span>, getAllInterfaces);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classmy__api_1_1ip__api_1_1MyIPController.html#a54a402fe61a9aea10d9fa2844790f387">   43</a></span>    <a class="code hl_function" href="classmy__api_1_1ip__api_1_1MyIPController.html#a54a402fe61a9aea10d9fa2844790f387">ENDPOINT_INFO</a>(getAllAddresses) {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        info-&gt;summary = <span class="stringliteral">&quot;获取所有 IP 地址信息&quot;</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        info-&gt;description = <span class="stringliteral">&quot;返回系统中所有 IPv4 地址及其对应网卡和前缀长度。\n&quot;</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                            <span class="stringliteral">&quot;响应 data 字段为 IPInfo 数组：\n&quot;</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                            <span class="stringliteral">&quot;[{\&quot;interface\&quot;:\&quot;eth0\&quot;, \&quot;ip\&quot;:\&quot;192.168.1.10\&quot;, \&quot;prefix_len\&quot;:24}, ...]&quot;</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_200, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    }</div>
+</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classmy__api_1_1ip__api_1_1MyIPController.html#abfac9beaae435b1692bcdbeffe9a9a63">   50</a></span>    <a class="code hl_function" href="classmy__api_1_1ip__api_1_1MyIPController.html#abfac9beaae435b1692bcdbeffe9a9a63">ENDPOINT</a>(<span class="stringliteral">&quot;GET&quot;</span>, <span class="stringliteral">&quot;/v1/ip/addresses&quot;</span>, getAllAddresses);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="comment">// ==================== 操作类接口 ====================</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="foldopen" id="foldopen00054" data-start="{" data-end="}">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classmy__api_1_1ip__api_1_1MyIPController.html#aaa3480fe7f0b9e71b42e7ad088df27b3">   54</a></span>    <a class="code hl_function" href="classmy__api_1_1ip__api_1_1MyIPController.html#aaa3480fe7f0b9e71b42e7ad088df27b3">ENDPOINT_INFO</a>(addIP) {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        info-&gt;summary = <span class="stringliteral">&quot;向指定网卡添加 IP 地址&quot;</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        info-&gt;description = <span class="stringliteral">&quot;使用 rtnetlink 向指定网卡添加一个 CIDR 格式的 IPv4 地址。\n&quot;</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                            <span class="stringliteral">&quot;需要 Root 权限。\n&quot;</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                            <span class="stringliteral">&quot;请求体示例：{\&quot;interface_name\&quot;:\&quot;eth0\&quot;, \&quot;cidr\&quot;:\&quot;192.168.1.100/24\&quot;}&quot;</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        info-&gt;addConsumes&lt;oatpp::Object&lt;my_api::dto::IPModifyRequestDto&gt;&gt;(<span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_200, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_400, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_403, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_500, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    }</div>
+</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classmy__api_1_1ip__api_1_1MyIPController.html#a941adcda732163e803b37e5946a12716">   65</a></span>    <a class="code hl_function" href="classmy__api_1_1ip__api_1_1MyIPController.html#a941adcda732163e803b37e5946a12716">ENDPOINT</a>(<span class="stringliteral">&quot;POST&quot;</span>, <span class="stringliteral">&quot;/v1/ip/add&quot;</span>, addIP,</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>             BODY_DTO(oatpp::Object&lt;my_api::dto::IPModifyRequestDto&gt;, requestDto));</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="foldopen" id="foldopen00068" data-start="{" data-end="}">
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classmy__api_1_1ip__api_1_1MyIPController.html#a346339e0e50c1b1e7cb79e00518b88c7">   68</a></span>    <a class="code hl_function" href="classmy__api_1_1ip__api_1_1MyIPController.html#a346339e0e50c1b1e7cb79e00518b88c7">ENDPOINT_INFO</a>(deleteIP) {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        info-&gt;summary = <span class="stringliteral">&quot;从指定网卡删除 IP 地址&quot;</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        info-&gt;description = <span class="stringliteral">&quot;使用 rtnetlink 从指定网卡删除一个 CIDR 格式的 IPv4 地址。\n&quot;</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                            <span class="stringliteral">&quot;需要 Root 权限。\n&quot;</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                            <span class="stringliteral">&quot;请求体示例：{\&quot;interface_name\&quot;:\&quot;eth0\&quot;, \&quot;cidr\&quot;:\&quot;192.168.1.100/24\&quot;}&quot;</span>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        info-&gt;addConsumes&lt;oatpp::Object&lt;my_api::dto::IPModifyRequestDto&gt;&gt;(<span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_200, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_400, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_403, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_404, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_500, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
+</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="classmy__api_1_1ip__api_1_1MyIPController.html#a1bbbbdd5b404d539afa13f7e30c41930">   80</a></span>    <a class="code hl_function" href="classmy__api_1_1ip__api_1_1MyIPController.html#a1bbbbdd5b404d539afa13f7e30c41930">ENDPOINT</a>(<span class="stringliteral">&quot;POST&quot;</span>, <span class="stringliteral">&quot;/v1/ip/delete&quot;</span>, deleteIP,</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>             BODY_DTO(oatpp::Object&lt;my_api::dto::IPModifyRequestDto&gt;, requestDto));</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="comment">// ==================== 局域网扫描接口 ====================</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="foldopen" id="foldopen00085" data-start="{" data-end="}">
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="classmy__api_1_1ip__api_1_1MyIPController.html#aee72c72125a8ac25cf6c795e4497df77">   85</a></span>    <a class="code hl_function" href="classmy__api_1_1ip__api_1_1MyIPController.html#aee72c72125a8ac25cf6c795e4497df77">ENDPOINT_INFO</a>(scanDevices) {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        info-&gt;summary = <span class="stringliteral">&quot;扫描局域网活跃设备&quot;</span>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        info-&gt;description = <span class="stringliteral">&quot;使用原生 ICMP Echo Request 扫描所有本机网段内的活跃设备。\n&quot;</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                            <span class="stringliteral">&quot;需要 CAP_NET_RAW 权限或 Root 权限。\n&quot;</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                            <span class="stringliteral">&quot;返回字段：total_scanned（扫描总数）、active_count（活跃数）、\n&quot;</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                            <span class="stringliteral">&quot;active_ips（活跃 IP 列表）、scan_duration_ms（耗时毫秒）。\n&quot;</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                            <span class="stringliteral">&quot;注意：扫描大网段时可能耗时较长，建议先通过 /v1/ip/scan/config 配置参数。&quot;</span>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_200, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_403, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_500, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    }</div>
+</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="classmy__api_1_1ip__api_1_1MyIPController.html#a254d8e41c87f854463d8e26f6421697a">   96</a></span>    <a class="code hl_function" href="classmy__api_1_1ip__api_1_1MyIPController.html#a254d8e41c87f854463d8e26f6421697a">ENDPOINT</a>(<span class="stringliteral">&quot;GET&quot;</span>, <span class="stringliteral">&quot;/v1/ip/scan&quot;</span>, scanDevices);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="foldopen" id="foldopen00098" data-start="{" data-end="}">
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="classmy__api_1_1ip__api_1_1MyIPController.html#a07c6fdad21f85e9031f9907960d15e0c">   98</a></span>    <a class="code hl_function" href="classmy__api_1_1ip__api_1_1MyIPController.html#a07c6fdad21f85e9031f9907960d15e0c">ENDPOINT_INFO</a>(scanTargetIP) {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        info-&gt;summary = <span class="stringliteral">&quot;扫描指定网段的活跃设备&quot;</span>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        info-&gt;description = <span class="stringliteral">&quot;对指定 CIDR 网段执行 ICMP 扫描，返回在线设备 IP 列表。\n&quot;</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                            <span class="stringliteral">&quot;需要 CAP_NET_RAW 权限或 Root 权限。\n&quot;</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                            <span class="stringliteral">&quot;请求体示例：{\&quot;cidr\&quot;:\&quot;192.168.2.119/24\&quot;}&quot;</span>;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        info-&gt;addConsumes&lt;oatpp::Object&lt;my_api::dto::ScanTargetRequestDto&gt;&gt;(<span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_200, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_400, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_403, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    }</div>
+</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="classmy__api_1_1ip__api_1_1MyIPController.html#a7a79c7c481cfdbab60b07b0efe27741b">  108</a></span>    <a class="code hl_function" href="classmy__api_1_1ip__api_1_1MyIPController.html#a7a79c7c481cfdbab60b07b0efe27741b">ENDPOINT</a>(<span class="stringliteral">&quot;POST&quot;</span>, <span class="stringliteral">&quot;/v1/ip/scan_target_ip&quot;</span>, scanTargetIP,</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>             BODY_DTO(oatpp::Object&lt;my_api::dto::ScanTargetRequestDto&gt;, requestDto));</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="foldopen" id="foldopen00111" data-start="{" data-end="}">
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="classmy__api_1_1ip__api_1_1MyIPController.html#a4b7924e1deb7f8bc93b76f3e86132de3">  111</a></span>    <a class="code hl_function" href="classmy__api_1_1ip__api_1_1MyIPController.html#a4b7924e1deb7f8bc93b76f3e86132de3">ENDPOINT_INFO</a>(configureScan) {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        info-&gt;summary = <span class="stringliteral">&quot;配置局域网扫描参数&quot;</span>;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        info-&gt;description = <span class="stringliteral">&quot;设置扫描器的最大并发线程数和单次 Ping 超时时间。\n&quot;</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                            <span class="stringliteral">&quot;请求体示例：{\&quot;max_threads\&quot;:64, \&quot;timeout_ms\&quot;:800}&quot;</span>;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        info-&gt;addConsumes&lt;oatpp::Object&lt;my_api::dto::ScanConfigRequestDto&gt;&gt;(<span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_200, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_400, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    }</div>
+</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="classmy__api_1_1ip__api_1_1MyIPController.html#aca4d55c2a230c1fc50d8d309cf195ca4">  119</a></span>    <a class="code hl_function" href="classmy__api_1_1ip__api_1_1MyIPController.html#aca4d55c2a230c1fc50d8d309cf195ca4">ENDPOINT</a>(<span class="stringliteral">&quot;POST&quot;</span>, <span class="stringliteral">&quot;/v1/ip/scan/config&quot;</span>, configureScan,</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>             BODY_DTO(oatpp::Object&lt;my_api::dto::ScanConfigRequestDto&gt;, configDto));</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>};</div>
+</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="preprocessor">#include OATPP_CODEGEN_END(ApiController)</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>} <span class="comment">// namespace my_api::ip_api</span></div>
+<div class="ttc" id="aBaseApiController_8hpp_html"><div class="ttname"><a href="BaseApiController_8hpp.html">BaseApiController.hpp</a></div></div>
+<div class="ttc" id="aIPDto_8hpp_html"><div class="ttname"><a href="IPDto_8hpp.html">IPDto.hpp</a></div><div class="ttdoc">IP 管理模块的数据传输对象（DTO）定义</div></div>
+<div class="ttc" id="aclassmy__api_1_1base_1_1BaseApiController_html"><div class="ttname"><a href="classmy__api_1_1base_1_1BaseApiController.html">my_api::base::BaseApiController</a></div><div class="ttdef"><b>Definition</b> BaseApiController.hpp:13</div></div>
+<div class="ttc" id="aclassmy__api_1_1ip__api_1_1MyIPController_html"><div class="ttname"><a href="classmy__api_1_1ip__api_1_1MyIPController.html">my_api::ip_api::MyIPController</a></div><div class="ttdef"><b>Definition</b> MyIPController.h:26</div></div>
+<div class="ttc" id="aclassmy__api_1_1ip__api_1_1MyIPController_html_a07c6fdad21f85e9031f9907960d15e0c"><div class="ttname"><a href="classmy__api_1_1ip__api_1_1MyIPController.html#a07c6fdad21f85e9031f9907960d15e0c">my_api::ip_api::MyIPController::ENDPOINT_INFO</a></div><div class="ttdeci">ENDPOINT_INFO(scanTargetIP)</div><div class="ttdef"><b>Definition</b> MyIPController.h:98</div></div>
+<div class="ttc" id="aclassmy__api_1_1ip__api_1_1MyIPController_html_a1bbbbdd5b404d539afa13f7e30c41930"><div class="ttname"><a href="classmy__api_1_1ip__api_1_1MyIPController.html#a1bbbbdd5b404d539afa13f7e30c41930">my_api::ip_api::MyIPController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;POST&quot;, &quot;/v1/ip/delete&quot;, deleteIP, BODY_DTO(oatpp::Object&lt; my_api::dto::IPModifyRequestDto &gt;, requestDto))</div></div>
+<div class="ttc" id="aclassmy__api_1_1ip__api_1_1MyIPController_html_a1e711b22e622a03502c701c40124a6cd"><div class="ttname"><a href="classmy__api_1_1ip__api_1_1MyIPController.html#a1e711b22e622a03502c701c40124a6cd">my_api::ip_api::MyIPController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;GET&quot;, &quot;/v1/ip/interfaces&quot;, getAllInterfaces)</div></div>
+<div class="ttc" id="aclassmy__api_1_1ip__api_1_1MyIPController_html_a254d8e41c87f854463d8e26f6421697a"><div class="ttname"><a href="classmy__api_1_1ip__api_1_1MyIPController.html#a254d8e41c87f854463d8e26f6421697a">my_api::ip_api::MyIPController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;GET&quot;, &quot;/v1/ip/scan&quot;, scanDevices)</div></div>
+<div class="ttc" id="aclassmy__api_1_1ip__api_1_1MyIPController_html_a346339e0e50c1b1e7cb79e00518b88c7"><div class="ttname"><a href="classmy__api_1_1ip__api_1_1MyIPController.html#a346339e0e50c1b1e7cb79e00518b88c7">my_api::ip_api::MyIPController::ENDPOINT_INFO</a></div><div class="ttdeci">ENDPOINT_INFO(deleteIP)</div><div class="ttdef"><b>Definition</b> MyIPController.h:68</div></div>
+<div class="ttc" id="aclassmy__api_1_1ip__api_1_1MyIPController_html_a4b7924e1deb7f8bc93b76f3e86132de3"><div class="ttname"><a href="classmy__api_1_1ip__api_1_1MyIPController.html#a4b7924e1deb7f8bc93b76f3e86132de3">my_api::ip_api::MyIPController::ENDPOINT_INFO</a></div><div class="ttdeci">ENDPOINT_INFO(configureScan)</div><div class="ttdef"><b>Definition</b> MyIPController.h:111</div></div>
+<div class="ttc" id="aclassmy__api_1_1ip__api_1_1MyIPController_html_a54a402fe61a9aea10d9fa2844790f387"><div class="ttname"><a href="classmy__api_1_1ip__api_1_1MyIPController.html#a54a402fe61a9aea10d9fa2844790f387">my_api::ip_api::MyIPController::ENDPOINT_INFO</a></div><div class="ttdeci">ENDPOINT_INFO(getAllAddresses)</div><div class="ttdef"><b>Definition</b> MyIPController.h:43</div></div>
+<div class="ttc" id="aclassmy__api_1_1ip__api_1_1MyIPController_html_a74ea693fc363d17dcb189347912834bf"><div class="ttname"><a href="classmy__api_1_1ip__api_1_1MyIPController.html#a74ea693fc363d17dcb189347912834bf">my_api::ip_api::MyIPController::ENDPOINT_INFO</a></div><div class="ttdeci">ENDPOINT_INFO(getAllInterfaces)</div><div class="ttdef"><b>Definition</b> MyIPController.h:36</div></div>
+<div class="ttc" id="aclassmy__api_1_1ip__api_1_1MyIPController_html_a7840ea3dbc56066fb3c788dc26cd8a2e"><div class="ttname"><a href="classmy__api_1_1ip__api_1_1MyIPController.html#a7840ea3dbc56066fb3c788dc26cd8a2e">my_api::ip_api::MyIPController::MyAPIResponsePtr</a></div><div class="ttdeci">my_api::base::MyAPIResponsePtr MyAPIResponsePtr</div><div class="ttdef"><b>Definition</b> MyIPController.h:28</div></div>
+<div class="ttc" id="aclassmy__api_1_1ip__api_1_1MyIPController_html_a7a79c7c481cfdbab60b07b0efe27741b"><div class="ttname"><a href="classmy__api_1_1ip__api_1_1MyIPController.html#a7a79c7c481cfdbab60b07b0efe27741b">my_api::ip_api::MyIPController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;POST&quot;, &quot;/v1/ip/scan_target_ip&quot;, scanTargetIP, BODY_DTO(oatpp::Object&lt; my_api::dto::ScanTargetRequestDto &gt;, requestDto))</div></div>
+<div class="ttc" id="aclassmy__api_1_1ip__api_1_1MyIPController_html_a941adcda732163e803b37e5946a12716"><div class="ttname"><a href="classmy__api_1_1ip__api_1_1MyIPController.html#a941adcda732163e803b37e5946a12716">my_api::ip_api::MyIPController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;POST&quot;, &quot;/v1/ip/add&quot;, addIP, BODY_DTO(oatpp::Object&lt; my_api::dto::IPModifyRequestDto &gt;, requestDto))</div></div>
+<div class="ttc" id="aclassmy__api_1_1ip__api_1_1MyIPController_html_aaa3480fe7f0b9e71b42e7ad088df27b3"><div class="ttname"><a href="classmy__api_1_1ip__api_1_1MyIPController.html#aaa3480fe7f0b9e71b42e7ad088df27b3">my_api::ip_api::MyIPController::ENDPOINT_INFO</a></div><div class="ttdeci">ENDPOINT_INFO(addIP)</div><div class="ttdef"><b>Definition</b> MyIPController.h:54</div></div>
+<div class="ttc" id="aclassmy__api_1_1ip__api_1_1MyIPController_html_abfac9beaae435b1692bcdbeffe9a9a63"><div class="ttname"><a href="classmy__api_1_1ip__api_1_1MyIPController.html#abfac9beaae435b1692bcdbeffe9a9a63">my_api::ip_api::MyIPController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;GET&quot;, &quot;/v1/ip/addresses&quot;, getAllAddresses)</div></div>
+<div class="ttc" id="aclassmy__api_1_1ip__api_1_1MyIPController_html_aca4d55c2a230c1fc50d8d309cf195ca4"><div class="ttname"><a href="classmy__api_1_1ip__api_1_1MyIPController.html#aca4d55c2a230c1fc50d8d309cf195ca4">my_api::ip_api::MyIPController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;POST&quot;, &quot;/v1/ip/scan/config&quot;, configureScan, BODY_DTO(oatpp::Object&lt; my_api::dto::ScanConfigRequestDto &gt;, configDto))</div></div>
+<div class="ttc" id="aclassmy__api_1_1ip__api_1_1MyIPController_html_aca4e090e72eb27cfc8e3082a058a7e6c"><div class="ttname"><a href="classmy__api_1_1ip__api_1_1MyIPController.html#aca4e090e72eb27cfc8e3082a058a7e6c">my_api::ip_api::MyIPController::createShared</a></div><div class="ttdeci">static std::shared_ptr&lt; MyIPController &gt; createShared(const std::shared_ptr&lt; ObjectMapper &gt; &amp;objectMapper)</div><div class="ttdef"><b>Definition</b> MyIPController.cpp:14</div></div>
+<div class="ttc" id="aclassmy__api_1_1ip__api_1_1MyIPController_html_aee72c72125a8ac25cf6c795e4497df77"><div class="ttname"><a href="classmy__api_1_1ip__api_1_1MyIPController.html#aee72c72125a8ac25cf6c795e4497df77">my_api::ip_api::MyIPController::ENDPOINT_INFO</a></div><div class="ttdeci">ENDPOINT_INFO(scanDevices)</div><div class="ttdef"><b>Definition</b> MyIPController.h:85</div></div>
+<div class="ttc" id="anamespacemy__api_1_1base_html_a1f322b9fe1e5f6d8df76f102affb49c6"><div class="ttname"><a href="namespacemy__api_1_1base.html#a1f322b9fe1e5f6d8df76f102affb49c6">my_api::base::MyAPIResponsePtr</a></div><div class="ttdeci">std::shared_ptr&lt; oatpp::web::protocol::http::outgoing::Response &gt; MyAPIResponsePtr</div><div class="ttdef"><b>Definition</b> BaseApiController.hpp:11</div></div>
+<div class="ttc" id="anamespacemy__api_1_1ip__api_html"><div class="ttname"><a href="namespacemy__api_1_1ip__api.html">my_api::ip_api</a></div><div class="ttdef"><b>Definition</b> MyIPController.cpp:7</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

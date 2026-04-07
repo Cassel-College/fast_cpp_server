@@ -72,7 +72,9 @@ $(function() {
   <div class="summary">
 <a href="#namespaces">命名空间</a> &#124;
 <a href="#nested-classes">结构体</a> &#124;
-<a href="#func-members">函数</a>  </div>
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
   <div class="headertitle"><div class="title">my_tools 命名空间参考</div></div>
 </div><!--header-->
 <div class="contents">
@@ -84,6 +86,15 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmy__tools_1_1ICMPHeader.html">ICMPHeader</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">符合 RFC 792 标准的 ICMP 头部结构  <a href="structmy__tools_1_1ICMPHeader.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmy__tools_1_1IPInfo.html">IPInfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">单条 IP 信息  <a href="structmy__tools_1_1IPInfo.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmy__tools_1_1IPResult.html">IPResult</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">IP 操作结果  <a href="structmy__tools_1_1IPResult.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__tools_1_1MyFileTools.html">MyFileTools</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__tools_1_1MyFolderTools.html">MyFolderTools</a></td></tr>
@@ -92,14 +103,104 @@ $(function() {
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__tools_1_1MyStartDir.html">MyStartDir</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmy__tools_1_1ScanResult.html">ScanResult</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">局域网扫描结果  <a href="structmy__tools_1_1ScanResult.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:a8a07190f49805d50d4b92decc553f758" id="r_a8a07190f49805d50d4b92decc553f758"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__tools.html#a8a07190f49805d50d4b92decc553f758">IPErrorCode</a> { <br />
+&#160;&#160;<a class="el" href="namespacemy__tools.html#a8a07190f49805d50d4b92decc553f758a8c632159fa131f09d04f94e3cbcd8782">kSuccess</a> = 0
+, <a class="el" href="namespacemy__tools.html#a8a07190f49805d50d4b92decc553f758a11d9feff14ceabb6d96a2aa92b905f0a">kInvalidCIDR</a> = 1
+, <a class="el" href="namespacemy__tools.html#a8a07190f49805d50d4b92decc553f758a40c1e94fb25807f85ed17b9d637d4c82">kInterfaceNotFound</a> = 2
+, <a class="el" href="namespacemy__tools.html#a8a07190f49805d50d4b92decc553f758adc0b458db7d0dd510aae0367dfafc4af">kPermissionDenied</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="namespacemy__tools.html#a8a07190f49805d50d4b92decc553f758a5673c7563371e4bef30c300cc39309b0">kSystemError</a> = 4
+, <a class="el" href="namespacemy__tools.html#a8a07190f49805d50d4b92decc553f758ad96b581caa22932b932abd17abe1d93d">kIPAlreadyExists</a> = 5
+, <a class="el" href="namespacemy__tools.html#a8a07190f49805d50d4b92decc553f758a4a1a15e20a9e2870a419d762cddf37f5">kIPNotFound</a> = 6
+<br />
+ }</td></tr>
+<tr class="memdesc:a8a07190f49805d50d4b92decc553f758"><td class="mdescLeft">&#160;</td><td class="mdescRight">IP 管理操作的错误码枚举  <a href="namespacemy__tools.html#a8a07190f49805d50d4b92decc553f758">更多...</a><br /></td></tr>
+<tr class="separator:a8a07190f49805d50d4b92decc553f758"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
+<tr class="memitem:a25ba59535fc341c83fc1e744c34d0270" id="r_a25ba59535fc341c83fc1e744c34d0270"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__tools.html#a25ba59535fc341c83fc1e744c34d0270">IPErrorCodeToString</a> (<a class="el" href="namespacemy__tools.html#a8a07190f49805d50d4b92decc553f758">IPErrorCode</a> code)</td></tr>
+<tr class="memdesc:a25ba59535fc341c83fc1e744c34d0270"><td class="mdescLeft">&#160;</td><td class="mdescRight">将错误码转为中文描述  <br /></td></tr>
+<tr class="separator:a25ba59535fc341c83fc1e744c34d0270"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d4e056f3d82a7173a5537936792dce1" id="r_a1d4e056f3d82a7173a5537936792dce1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__tools.html#a1d4e056f3d82a7173a5537936792dce1">isPortAvailable</a> (int <a class="el" href="pinling__pod_8cpp.html#a8e0798404bf2cf5dabb84c5ba9a4f236">port</a>)</td></tr>
 <tr class="memdesc:a1d4e056f3d82a7173a5537936792dce1"><td class="mdescLeft">&#160;</td><td class="mdescRight">检测指定端口是否可用（即当前没有被占用，且本进程可以 bind）  <br /></td></tr>
 <tr class="separator:a1d4e056f3d82a7173a5537936792dce1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a05a571c5a1f81788e9c621667c89e605" id="r_a05a571c5a1f81788e9c621667c89e605"><td class="memItemLeft" align="right" valign="top">static std::atomic&lt; uint16_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__tools.html#a05a571c5a1f81788e9c621667c89e605">s_ping_sequence</a> {0}</td></tr>
+<tr class="separator:a05a571c5a1f81788e9c621667c89e605"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">枚举类型说明</h2>
+<a id="a8a07190f49805d50d4b92decc553f758" name="a8a07190f49805d50d4b92decc553f758"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a07190f49805d50d4b92decc553f758">&#9670;&#160;</a></span>IPErrorCode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="namespacemy__tools.html#a8a07190f49805d50d4b92decc553f758">IPErrorCode</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>IP 管理操作的错误码枚举 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a8a07190f49805d50d4b92decc553f758a8c632159fa131f09d04f94e3cbcd8782" name="a8a07190f49805d50d4b92decc553f758a8c632159fa131f09d04f94e3cbcd8782"></a>kSuccess&#160;</td><td class="fielddoc"><p>操作成功 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8a07190f49805d50d4b92decc553f758a11d9feff14ceabb6d96a2aa92b905f0a" name="a8a07190f49805d50d4b92decc553f758a11d9feff14ceabb6d96a2aa92b905f0a"></a>kInvalidCIDR&#160;</td><td class="fielddoc"><p>非法的 CIDR 格式（如 "abc/99"） </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8a07190f49805d50d4b92decc553f758a40c1e94fb25807f85ed17b9d637d4c82" name="a8a07190f49805d50d4b92decc553f758a40c1e94fb25807f85ed17b9d637d4c82"></a>kInterfaceNotFound&#160;</td><td class="fielddoc"><p>指定的网卡不存在 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8a07190f49805d50d4b92decc553f758adc0b458db7d0dd510aae0367dfafc4af" name="a8a07190f49805d50d4b92decc553f758adc0b458db7d0dd510aae0367dfafc4af"></a>kPermissionDenied&#160;</td><td class="fielddoc"><p>无 Root 权限，操作被拒绝 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8a07190f49805d50d4b92decc553f758a5673c7563371e4bef30c300cc39309b0" name="a8a07190f49805d50d4b92decc553f758a5673c7563371e4bef30c300cc39309b0"></a>kSystemError&#160;</td><td class="fielddoc"><p>底层系统调用失败 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8a07190f49805d50d4b92decc553f758ad96b581caa22932b932abd17abe1d93d" name="a8a07190f49805d50d4b92decc553f758ad96b581caa22932b932abd17abe1d93d"></a>kIPAlreadyExists&#160;</td><td class="fielddoc"><p>该 IP 已存在于目标网卡 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a8a07190f49805d50d4b92decc553f758a4a1a15e20a9e2870a419d762cddf37f5" name="a8a07190f49805d50d4b92decc553f758a4a1a15e20a9e2870a419d762cddf37f5"></a>kIPNotFound&#160;</td><td class="fielddoc"><p>目标网卡上未找到该 IP </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <h2 class="groupheader">函数说明</h2>
+<a id="a25ba59535fc341c83fc1e744c34d0270" name="a25ba59535fc341c83fc1e744c34d0270"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25ba59535fc341c83fc1e744c34d0270">&#9670;&#160;</a></span>IPErrorCodeToString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string IPErrorCodeToString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacemy__tools.html#a8a07190f49805d50d4b92decc553f758">IPErrorCode</a>&#160;</td>
+          <td class="paramname"><em>code</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>将错误码转为中文描述 </p>
+
+<p class="reference">引用了 <a class="el" href="namespacemy__tools.html#a8a07190f49805d50d4b92decc553f758a40c1e94fb25807f85ed17b9d637d4c82">kInterfaceNotFound</a>, <a class="el" href="namespacemy__tools.html#a8a07190f49805d50d4b92decc553f758a11d9feff14ceabb6d96a2aa92b905f0a">kInvalidCIDR</a>, <a class="el" href="namespacemy__tools.html#a8a07190f49805d50d4b92decc553f758ad96b581caa22932b932abd17abe1d93d">kIPAlreadyExists</a>, <a class="el" href="namespacemy__tools.html#a8a07190f49805d50d4b92decc553f758a4a1a15e20a9e2870a419d762cddf37f5">kIPNotFound</a>, <a class="el" href="namespacemy__tools.html#a8a07190f49805d50d4b92decc553f758adc0b458db7d0dd510aae0367dfafc4af">kPermissionDenied</a>, <a class="el" href="namespacemy__tools.html#a8a07190f49805d50d4b92decc553f758a8c632159fa131f09d04f94e3cbcd8782">kSuccess</a> , 以及 <a class="el" href="namespacemy__tools.html#a8a07190f49805d50d4b92decc553f758a5673c7563371e4bef30c300cc39309b0">kSystemError</a>.</p>
+
+</div>
+</div>
 <a id="a1d4e056f3d82a7173a5537936792dce1" name="a1d4e056f3d82a7173a5537936792dce1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1d4e056f3d82a7173a5537936792dce1">&#9670;&#160;</a></span>isPortAvailable()</h2>
 
@@ -145,6 +246,31 @@ $(function() {
 <area shape="poly" title=" " alt="" coords="194,54,228,55,403,55,450,54,451,59,403,60,228,60,194,60"/>
 </map>
 </div>
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="a05a571c5a1f81788e9c621667c89e605" name="a05a571c5a1f81788e9c621667c89e605"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05a571c5a1f81788e9c621667c89e605">&#9670;&#160;</a></span>s_ping_sequence</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;uint16_t&gt; s_ping_sequence {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__tools_1_1MyIPTools.html#ab25a75f1fa763d7de9842c89036d9823">MyIPTools::PingHost()</a>.</p>
 
 </div>
 </div>

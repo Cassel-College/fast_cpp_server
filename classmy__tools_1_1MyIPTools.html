@@ -74,7 +74,9 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-static-methods">静态 Public 成员函数</a>  </div>
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a>  </div>
   <div class="headertitle"><div class="title">MyIPTools类 参考</div></div>
 </div><!--header-->
 <div class="contents">
@@ -86,8 +88,378 @@ $(function() {
 <tr class="memitem:a5431b34c27076659b1dcfe5c43786343" id="r_a5431b34c27076659b1dcfe5c43786343"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__tools_1_1MyIPTools.html#a5431b34c27076659b1dcfe5c43786343">GetLocalIPv4</a> (bool prefer_non_loopback=true)</td></tr>
 <tr class="memdesc:a5431b34c27076659b1dcfe5c43786343"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取本机 IPv4 地址  <br /></td></tr>
 <tr class="separator:a5431b34c27076659b1dcfe5c43786343"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4ada9e77e412a1e649b682e874e7341" id="r_ab4ada9e77e412a1e649b682e874e7341"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__tools_1_1MyIPTools.html#ab4ada9e77e412a1e649b682e874e7341">GetAllInterfaces</a> ()</td></tr>
+<tr class="memdesc:ab4ada9e77e412a1e649b682e874e7341"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取系统中所有可用网卡名称（排除 lo）  <br /></td></tr>
+<tr class="separator:ab4ada9e77e412a1e649b682e874e7341"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a96cac78f427e5e8ea2a0abc2d3309a" id="r_a6a96cac78f427e5e8ea2a0abc2d3309a"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="structmy__tools_1_1IPInfo.html">IPInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__tools_1_1MyIPTools.html#a6a96cac78f427e5e8ea2a0abc2d3309a">GetAllIPs</a> (bool include_loopback=false)</td></tr>
+<tr class="memdesc:a6a96cac78f427e5e8ea2a0abc2d3309a"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取系统中所有 IPv4 地址与网卡的映射  <br /></td></tr>
+<tr class="separator:a6a96cac78f427e5e8ea2a0abc2d3309a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0c45bf470c958acb5a09e8349c90f6a" id="r_ac0c45bf470c958acb5a09e8349c90f6a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structmy__tools_1_1IPResult.html">IPResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__tools_1_1MyIPTools.html#ac0c45bf470c958acb5a09e8349c90f6a">AddIP</a> (const std::string &amp;interface_name, const std::string &amp;cidr)</td></tr>
+<tr class="memdesc:ac0c45bf470c958acb5a09e8349c90f6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">向指定网卡添加 IP 地址（需 Root 权限）  <br /></td></tr>
+<tr class="separator:ac0c45bf470c958acb5a09e8349c90f6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abea4222841ca7c93179dbe4f5d78ff78" id="r_abea4222841ca7c93179dbe4f5d78ff78"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structmy__tools_1_1IPResult.html">IPResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__tools_1_1MyIPTools.html#abea4222841ca7c93179dbe4f5d78ff78">DeleteIP</a> (const std::string &amp;interface_name, const std::string &amp;cidr)</td></tr>
+<tr class="memdesc:abea4222841ca7c93179dbe4f5d78ff78"><td class="mdescLeft">&#160;</td><td class="mdescRight">从指定网卡删除 IP 地址（需 Root 权限）  <br /></td></tr>
+<tr class="separator:abea4222841ca7c93179dbe4f5d78ff78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56d728707b2d155d24b1bc57aef3e5a9" id="r_a56d728707b2d155d24b1bc57aef3e5a9"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__tools_1_1MyIPTools.html#a56d728707b2d155d24b1bc57aef3e5a9">IsValidCIDR</a> (const std::string &amp;cidr)</td></tr>
+<tr class="memdesc:a56d728707b2d155d24b1bc57aef3e5a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">校验 CIDR 格式是否合法  <br /></td></tr>
+<tr class="separator:a56d728707b2d155d24b1bc57aef3e5a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a048db4b4fc9112610245480e3cc4d97e" id="r_a048db4b4fc9112610245480e3cc4d97e"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__tools_1_1MyIPTools.html#a048db4b4fc9112610245480e3cc4d97e">InterfaceExists</a> (const std::string &amp;interface_name)</td></tr>
+<tr class="memdesc:a048db4b4fc9112610245480e3cc4d97e"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断指定网卡是否存在  <br /></td></tr>
+<tr class="separator:a048db4b4fc9112610245480e3cc4d97e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38f410fbfe2ae74e6bf78c2f89596195" id="r_a38f410fbfe2ae74e6bf78c2f89596195"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__tools_1_1MyIPTools.html#a38f410fbfe2ae74e6bf78c2f89596195">InitScanner</a> (int max_threads=64, int timeout_ms=800)</td></tr>
+<tr class="memdesc:a38f410fbfe2ae74e6bf78c2f89596195"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化扫描器参数  <br /></td></tr>
+<tr class="separator:a38f410fbfe2ae74e6bf78c2f89596195"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89857dd703359ca5ba4dd58e54a61739" id="r_a89857dd703359ca5ba4dd58e54a61739"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structmy__tools_1_1ScanResult.html">ScanResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__tools_1_1MyIPTools.html#a89857dd703359ca5ba4dd58e54a61739">ScanActiveDevices</a> ()</td></tr>
+<tr class="memdesc:a89857dd703359ca5ba4dd58e54a61739"><td class="mdescLeft">&#160;</td><td class="mdescRight">扫描所有本机网段内的活跃设备  <br /></td></tr>
+<tr class="separator:a89857dd703359ca5ba4dd58e54a61739"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47b955f945380ab574a0d74235cce976" id="r_a47b955f945380ab574a0d74235cce976"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structmy__tools_1_1ScanResult.html">ScanResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__tools_1_1MyIPTools.html#a47b955f945380ab574a0d74235cce976">ScanTargetSubnet</a> (const std::string &amp;cidr)</td></tr>
+<tr class="memdesc:a47b955f945380ab574a0d74235cce976"><td class="mdescLeft">&#160;</td><td class="mdescRight">扫描指定网段内的活跃设备  <br /></td></tr>
+<tr class="separator:a47b955f945380ab574a0d74235cce976"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab25a75f1fa763d7de9842c89036d9823" id="r_ab25a75f1fa763d7de9842c89036d9823"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__tools_1_1MyIPTools.html#ab25a75f1fa763d7de9842c89036d9823">PingHost</a> (const std::string &amp;<a class="el" href="pinling__pod_8cpp.html#a319b95015f17a3dc8b4b43a65c541571">ip</a>, int timeout_ms=800)</td></tr>
+<tr class="memdesc:ab25a75f1fa763d7de9842c89036d9823"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用原生 ICMP 探测单个 IP 是否可达  <br /></td></tr>
+<tr class="separator:ab25a75f1fa763d7de9842c89036d9823"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1af88d8c8322d45ce4035305721e7c6" id="r_ab1af88d8c8322d45ce4035305721e7c6"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__tools_1_1MyIPTools.html#ab1af88d8c8322d45ce4035305721e7c6">HasRawSocketPermission</a> ()</td></tr>
+<tr class="memdesc:ab1af88d8c8322d45ce4035305721e7c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">检测当前进程是否拥有 CAP_NET_RAW 能力或 Root 权限  <br /></td></tr>
+<tr class="separator:ab1af88d8c8322d45ce4035305721e7c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77538218641f84bf12b34dae1b5f9357" id="r_a77538218641f84bf12b34dae1b5f9357"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__tools_1_1MyIPTools.html#a77538218641f84bf12b34dae1b5f9357">GenerateSubnetIPs</a> (const std::string &amp;<a class="el" href="pinling__pod_8cpp.html#a319b95015f17a3dc8b4b43a65c541571">ip</a>, int prefix_len)</td></tr>
+<tr class="memdesc:a77538218641f84bf12b34dae1b5f9357"><td class="mdescLeft">&#160;</td><td class="mdescRight">根据 IP 和前缀长度计算网段内所有候选主机 IP  <br /></td></tr>
+<tr class="separator:a77538218641f84bf12b34dae1b5f9357"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:ac81371d86950fd0727c7d7ab97c2af60" id="r_ac81371d86950fd0727c7d7ab97c2af60"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__tools_1_1MyIPTools.html#ac81371d86950fd0727c7d7ab97c2af60">ParseCIDR</a> (const std::string &amp;cidr, std::string &amp;<a class="el" href="pinling__pod_8cpp.html#a319b95015f17a3dc8b4b43a65c541571">ip</a>, int &amp;prefix_len)</td></tr>
+<tr class="separator:ac81371d86950fd0727c7d7ab97c2af60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24291222042c1e0eb8e243e93dcb600c" id="r_a24291222042c1e0eb8e243e93dcb600c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structmy__tools_1_1IPResult.html">IPResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__tools_1_1MyIPTools.html#a24291222042c1e0eb8e243e93dcb600c">ModifyIP</a> (const std::string &amp;interface_name, const std::string &amp;<a class="el" href="pinling__pod_8cpp.html#a319b95015f17a3dc8b4b43a65c541571">ip</a>, int prefix_len, bool is_add)</td></tr>
+<tr class="separator:a24291222042c1e0eb8e243e93dcb600c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc8b7a832ed4304463297a2e7c4d6074" id="r_afc8b7a832ed4304463297a2e7c4d6074"><td class="memItemLeft" align="right" valign="top">static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__tools_1_1MyIPTools.html#afc8b7a832ed4304463297a2e7c4d6074">ComputeICMPChecksum</a> (const void *data, int len)</td></tr>
+<tr class="memdesc:afc8b7a832ed4304463297a2e7c4d6074"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算 ICMP 校验和（RFC 1071）  <br /></td></tr>
+<tr class="separator:afc8b7a832ed4304463297a2e7c4d6074"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:a67f62f6a24143ec6c9b25b27c37206b8" id="r_a67f62f6a24143ec6c9b25b27c37206b8"><td class="memItemLeft" align="right" valign="top">static std::atomic&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__tools_1_1MyIPTools.html#a67f62f6a24143ec6c9b25b27c37206b8">s_max_threads</a> {64}</td></tr>
+<tr class="memdesc:a67f62f6a24143ec6c9b25b27c37206b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大并发扫描线程数  <br /></td></tr>
+<tr class="separator:a67f62f6a24143ec6c9b25b27c37206b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e61a8950c31a9276bbb3d3507f4a087" id="r_a1e61a8950c31a9276bbb3d3507f4a087"><td class="memItemLeft" align="right" valign="top">static std::atomic&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__tools_1_1MyIPTools.html#a1e61a8950c31a9276bbb3d3507f4a087">s_ping_timeout_ms</a> {800}</td></tr>
+<tr class="memdesc:a1e61a8950c31a9276bbb3d3507f4a087"><td class="mdescLeft">&#160;</td><td class="mdescRight">单个 Ping 超时时间（毫秒）  <br /></td></tr>
+<tr class="separator:a1e61a8950c31a9276bbb3d3507f4a087"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">成员函数说明</h2>
+<a id="ac0c45bf470c958acb5a09e8349c90f6a" name="ac0c45bf470c958acb5a09e8349c90f6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0c45bf470c958acb5a09e8349c90f6a">&#9670;&#160;</a></span>AddIP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmy__tools_1_1IPResult.html">IPResult</a> AddIP </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>interface_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>cidr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>向指定网卡添加 IP 地址（需 Root 权限） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">interface_name</td><td>网卡名，如 "eth0" </td></tr>
+    <tr><td class="paramname">cidr</td><td>CIDR 格式 IP，如 "192.168.1.100/24" </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>操作结果 </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="classmy__tools_1_1MyIPTools.html#a048db4b4fc9112610245480e3cc4d97e">MyIPTools::InterfaceExists()</a>, <a class="el" href="pinling__pod_8cpp.html#a319b95015f17a3dc8b4b43a65c541571">ip</a>, <a class="el" href="namespacemy__tools.html#a8a07190f49805d50d4b92decc553f758a40c1e94fb25807f85ed17b9d637d4c82">my_tools::kInterfaceNotFound</a>, <a class="el" href="namespacemy__tools.html#a8a07190f49805d50d4b92decc553f758a11d9feff14ceabb6d96a2aa92b905f0a">my_tools::kInvalidCIDR</a>, <a class="el" href="classmy__tools_1_1MyIPTools.html#a24291222042c1e0eb8e243e93dcb600c">MyIPTools::ModifyIP()</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a> , 以及 <a class="el" href="classmy__tools_1_1MyIPTools.html#ac81371d86950fd0727c7d7ab97c2af60">MyIPTools::ParseCIDR()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__tools_1_1MyIPTools_ac0c45bf470c958acb5a09e8349c90f6a_cgraph.png" border="0" usemap="#aclassmy__tools_1_1MyIPTools_ac0c45bf470c958acb5a09e8349c90f6a_cgraph" alt=""/></div>
+<map name="aclassmy__tools_1_1MyIPTools_ac0c45bf470c958acb5a09e8349c90f6a_cgraph" id="aclassmy__tools_1_1MyIPTools_ac0c45bf470c958acb5a09e8349c90f6a_cgraph">
+<area shape="rect" title="向指定网卡添加 IP 地址（需 Root 权限）" alt="" coords="5,55,64,80"/>
+<area shape="rect" href="classmy__tools_1_1MyIPTools.html#a048db4b4fc9112610245480e3cc4d97e" title="判断指定网卡是否存在" alt="" coords="112,5,231,31"/>
+<area shape="poly" title=" " alt="" coords="63,54,122,33,123,38,65,59"/>
+<area shape="rect" href="classmy__tools_1_1MyIPTools.html#a24291222042c1e0eb8e243e93dcb600c" title=" " alt="" coords="132,55,211,80"/>
+<area shape="poly" title=" " alt="" coords="64,65,118,65,118,70,64,70"/>
+<area shape="rect" href="classmy__tools_1_1MyIPTools.html#ac81371d86950fd0727c7d7ab97c2af60" title=" " alt="" coords="127,104,216,129"/>
+<area shape="poly" title=" " alt="" coords="65,75,123,97,122,102,63,80"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afc8b7a832ed4304463297a2e7c4d6074" name="afc8b7a832ed4304463297a2e7c4d6074"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc8b7a832ed4304463297a2e7c4d6074">&#9670;&#160;</a></span>ComputeICMPChecksum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t ComputeICMPChecksum </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算 ICMP 校验和（RFC 1071） </p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__tools_1_1MyIPTools.html#ab25a75f1fa763d7de9842c89036d9823">MyIPTools::PingHost()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__tools_1_1MyIPTools_afc8b7a832ed4304463297a2e7c4d6074_icgraph.png" border="0" usemap="#aclassmy__tools_1_1MyIPTools_afc8b7a832ed4304463297a2e7c4d6074_icgraph" alt=""/></div>
+<map name="aclassmy__tools_1_1MyIPTools_afc8b7a832ed4304463297a2e7c4d6074_icgraph" id="aclassmy__tools_1_1MyIPTools_afc8b7a832ed4304463297a2e7c4d6074_icgraph">
+<area shape="rect" title="计算 ICMP 校验和（RFC 1071）" alt="" coords="328,5,511,31"/>
+<area shape="rect" href="classmy__tools_1_1MyIPTools.html#ab25a75f1fa763d7de9842c89036d9823" title="使用原生 ICMP 探测单个 IP 是否可达" alt="" coords="200,5,280,31"/>
+<area shape="poly" title=" " alt="" coords="314,21,280,21,280,15,314,15"/>
+<area shape="rect" href="classmy__tools_1_1MyIPTools.html#a89857dd703359ca5ba4dd58e54a61739" title="扫描所有本机网段内的活跃设备" alt="" coords="5,5,152,31"/>
+<area shape="poly" title=" " alt="" coords="186,21,152,21,152,15,186,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abea4222841ca7c93179dbe4f5d78ff78" name="abea4222841ca7c93179dbe4f5d78ff78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abea4222841ca7c93179dbe4f5d78ff78">&#9670;&#160;</a></span>DeleteIP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmy__tools_1_1IPResult.html">IPResult</a> DeleteIP </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>interface_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>cidr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从指定网卡删除 IP 地址（需 Root 权限） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">interface_name</td><td>网卡名，如 "eth0" </td></tr>
+    <tr><td class="paramname">cidr</td><td>CIDR 格式 IP，如 "192.168.1.100/24" </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>操作结果 </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="classmy__tools_1_1MyIPTools.html#a048db4b4fc9112610245480e3cc4d97e">MyIPTools::InterfaceExists()</a>, <a class="el" href="pinling__pod_8cpp.html#a319b95015f17a3dc8b4b43a65c541571">ip</a>, <a class="el" href="namespacemy__tools.html#a8a07190f49805d50d4b92decc553f758a40c1e94fb25807f85ed17b9d637d4c82">my_tools::kInterfaceNotFound</a>, <a class="el" href="namespacemy__tools.html#a8a07190f49805d50d4b92decc553f758a11d9feff14ceabb6d96a2aa92b905f0a">my_tools::kInvalidCIDR</a>, <a class="el" href="classmy__tools_1_1MyIPTools.html#a24291222042c1e0eb8e243e93dcb600c">MyIPTools::ModifyIP()</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a> , 以及 <a class="el" href="classmy__tools_1_1MyIPTools.html#ac81371d86950fd0727c7d7ab97c2af60">MyIPTools::ParseCIDR()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__tools_1_1MyIPTools_abea4222841ca7c93179dbe4f5d78ff78_cgraph.png" border="0" usemap="#aclassmy__tools_1_1MyIPTools_abea4222841ca7c93179dbe4f5d78ff78_cgraph" alt=""/></div>
+<map name="aclassmy__tools_1_1MyIPTools_abea4222841ca7c93179dbe4f5d78ff78_cgraph" id="aclassmy__tools_1_1MyIPTools_abea4222841ca7c93179dbe4f5d78ff78_cgraph">
+<area shape="rect" title="从指定网卡删除 IP 地址（需 Root 权限）" alt="" coords="5,55,83,80"/>
+<area shape="rect" href="classmy__tools_1_1MyIPTools.html#a048db4b4fc9112610245480e3cc4d97e" title="判断指定网卡是否存在" alt="" coords="131,5,249,31"/>
+<area shape="poly" title=" " alt="" coords="81,52,138,33,139,38,83,57"/>
+<area shape="rect" href="classmy__tools_1_1MyIPTools.html#a24291222042c1e0eb8e243e93dcb600c" title=" " alt="" coords="151,55,229,80"/>
+<area shape="poly" title=" " alt="" coords="83,65,137,65,137,70,83,70"/>
+<area shape="rect" href="classmy__tools_1_1MyIPTools.html#ac81371d86950fd0727c7d7ab97c2af60" title=" " alt="" coords="145,104,235,129"/>
+<area shape="poly" title=" " alt="" coords="83,78,139,97,138,102,81,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a77538218641f84bf12b34dae1b5f9357" name="a77538218641f84bf12b34dae1b5f9357"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77538218641f84bf12b34dae1b5f9357">&#9670;&#160;</a></span>GenerateSubnetIPs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; GenerateSubnetIPs </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>ip</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>prefix_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>根据 IP 和前缀长度计算网段内所有候选主机 IP </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ip</td><td>本机 IP </td></tr>
+    <tr><td class="paramname">prefix_len</td><td>前缀长度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>候选 IP 列表（排除网络地址和广播地址） </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="pinling__pod_8cpp.html#a319b95015f17a3dc8b4b43a65c541571">ip</a> , 以及 <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__tools_1_1MyIPTools.html#a89857dd703359ca5ba4dd58e54a61739">MyIPTools::ScanActiveDevices()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__tools_1_1MyIPTools_a77538218641f84bf12b34dae1b5f9357_icgraph.png" border="0" usemap="#aclassmy__tools_1_1MyIPTools_a77538218641f84bf12b34dae1b5f9357_icgraph" alt=""/></div>
+<map name="aclassmy__tools_1_1MyIPTools_a77538218641f84bf12b34dae1b5f9357_icgraph" id="aclassmy__tools_1_1MyIPTools_a77538218641f84bf12b34dae1b5f9357_icgraph">
+<area shape="rect" title="根据 IP 和前缀长度计算网段内所有候选主机 IP" alt="" coords="200,5,347,31"/>
+<area shape="rect" href="classmy__tools_1_1MyIPTools.html#a89857dd703359ca5ba4dd58e54a61739" title="扫描所有本机网段内的活跃设备" alt="" coords="5,5,152,31"/>
+<area shape="poly" title=" " alt="" coords="186,21,152,21,152,15,186,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab4ada9e77e412a1e649b682e874e7341" name="ab4ada9e77e412a1e649b682e874e7341"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4ada9e77e412a1e649b682e874e7341">&#9670;&#160;</a></span>GetAllInterfaces()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; GetAllInterfaces </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取系统中所有可用网卡名称（排除 lo） </p>
+<dl class="section return"><dt>返回</dt><dd>网卡名列表，如 {"eth0", "wlan0"} </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a> , 以及 <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>.</p>
+
+</div>
+</div>
+<a id="a6a96cac78f427e5e8ea2a0abc2d3309a" name="a6a96cac78f427e5e8ea2a0abc2d3309a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a96cac78f427e5e8ea2a0abc2d3309a">&#9670;&#160;</a></span>GetAllIPs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="structmy__tools_1_1IPInfo.html">IPInfo</a> &gt; GetAllIPs </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>include_loopback</em> = <code>false</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取系统中所有 IPv4 地址与网卡的映射 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">include_loopback</td><td>是否包含回环接口（默认不包含） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="structmy__tools_1_1IPInfo.html" title="单条 IP 信息">IPInfo</a> 列表 </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="structmy__tools_1_1IPInfo.html#a4085c6d12a57b11755a4b6ceae4da39a">IPInfo::interface</a>, <a class="el" href="structmy__tools_1_1IPInfo.html#a319b95015f17a3dc8b4b43a65c541571">IPInfo::ip</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a> , 以及 <a class="el" href="structmy__tools_1_1IPInfo.html#a11ace7494ad8b5141d5132127e77b74c">IPInfo::prefix_len</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__tools_1_1MyIPTools.html#a89857dd703359ca5ba4dd58e54a61739">MyIPTools::ScanActiveDevices()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__tools_1_1MyIPTools_a6a96cac78f427e5e8ea2a0abc2d3309a_icgraph.png" border="0" usemap="#aclassmy__tools_1_1MyIPTools_a6a96cac78f427e5e8ea2a0abc2d3309a_icgraph" alt=""/></div>
+<map name="aclassmy__tools_1_1MyIPTools_a6a96cac78f427e5e8ea2a0abc2d3309a_icgraph" id="aclassmy__tools_1_1MyIPTools_a6a96cac78f427e5e8ea2a0abc2d3309a_icgraph">
+<area shape="rect" title="获取系统中所有 IPv4 地址与网卡的映射" alt="" coords="200,5,281,31"/>
+<area shape="rect" href="classmy__tools_1_1MyIPTools.html#a89857dd703359ca5ba4dd58e54a61739" title="扫描所有本机网段内的活跃设备" alt="" coords="5,5,152,31"/>
+<area shape="poly" title=" " alt="" coords="187,21,152,21,152,15,187,15"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a5431b34c27076659b1dcfe5c43786343" name="a5431b34c27076659b1dcfe5c43786343"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5431b34c27076659b1dcfe5c43786343">&#9670;&#160;</a></span>GetLocalIPv4()</h2>
 
@@ -136,6 +508,525 @@ $(function() {
 <area shape="poly" title=" " alt="" coords="272,28,238,28,238,23,272,23"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="ab1af88d8c8322d45ce4035305721e7c6" name="ab1af88d8c8322d45ce4035305721e7c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1af88d8c8322d45ce4035305721e7c6">&#9670;&#160;</a></span>HasRawSocketPermission()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool HasRawSocketPermission </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>检测当前进程是否拥有 CAP_NET_RAW 能力或 Root 权限 </p>
+<dl class="section return"><dt>返回</dt><dd>true 有权限 </dd></dl>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__tools_1_1MyIPTools.html#a89857dd703359ca5ba4dd58e54a61739">MyIPTools::ScanActiveDevices()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__tools_1_1MyIPTools_ab1af88d8c8322d45ce4035305721e7c6_icgraph.png" border="0" usemap="#aclassmy__tools_1_1MyIPTools_ab1af88d8c8322d45ce4035305721e7c6_icgraph" alt=""/></div>
+<map name="aclassmy__tools_1_1MyIPTools_ab1af88d8c8322d45ce4035305721e7c6_icgraph" id="aclassmy__tools_1_1MyIPTools_ab1af88d8c8322d45ce4035305721e7c6_icgraph">
+<area shape="rect" title="检测当前进程是否拥有 CAP_NET_RAW 能力或 Root 权限" alt="" coords="200,5,391,31"/>
+<area shape="rect" href="classmy__tools_1_1MyIPTools.html#a89857dd703359ca5ba4dd58e54a61739" title="扫描所有本机网段内的活跃设备" alt="" coords="5,5,152,31"/>
+<area shape="poly" title=" " alt="" coords="186,21,152,21,152,15,186,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a38f410fbfe2ae74e6bf78c2f89596195" name="a38f410fbfe2ae74e6bf78c2f89596195"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38f410fbfe2ae74e6bf78c2f89596195">&#9670;&#160;</a></span>InitScanner()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InitScanner </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max_threads</em> = <code>64</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout_ms</em> = <code>800</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>初始化扫描器参数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">max_threads</td><td>最大并发线程数（默认 64） </td></tr>
+    <tr><td class="paramname">timeout_ms</td><td>单个 Ping 请求超时时间（毫秒，默认 800） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">引用了 <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="classmy__tools_1_1MyIPTools.html#a67f62f6a24143ec6c9b25b27c37206b8">MyIPTools::s_max_threads</a> , 以及 <a class="el" href="classmy__tools_1_1MyIPTools.html#a1e61a8950c31a9276bbb3d3507f4a087">MyIPTools::s_ping_timeout_ms</a>.</p>
+
+</div>
+</div>
+<a id="a048db4b4fc9112610245480e3cc4d97e" name="a048db4b4fc9112610245480e3cc4d97e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a048db4b4fc9112610245480e3cc4d97e">&#9670;&#160;</a></span>InterfaceExists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool InterfaceExists </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>interface_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>判断指定网卡是否存在 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">interface_name</td><td>网卡名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true 存在 </dd></dl>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__tools_1_1MyIPTools.html#ac0c45bf470c958acb5a09e8349c90f6a">MyIPTools::AddIP()</a> , 以及 <a class="el" href="classmy__tools_1_1MyIPTools.html#abea4222841ca7c93179dbe4f5d78ff78">MyIPTools::DeleteIP()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__tools_1_1MyIPTools_a048db4b4fc9112610245480e3cc4d97e_icgraph.png" border="0" usemap="#aclassmy__tools_1_1MyIPTools_a048db4b4fc9112610245480e3cc4d97e_icgraph" alt=""/></div>
+<map name="aclassmy__tools_1_1MyIPTools_a048db4b4fc9112610245480e3cc4d97e_icgraph" id="aclassmy__tools_1_1MyIPTools_a048db4b4fc9112610245480e3cc4d97e_icgraph">
+<area shape="rect" title="判断指定网卡是否存在" alt="" coords="131,31,249,56"/>
+<area shape="rect" href="classmy__tools_1_1MyIPTools.html#ac0c45bf470c958acb5a09e8349c90f6a" title="向指定网卡添加 IP 地址（需 Root 权限）" alt="" coords="15,5,73,31"/>
+<area shape="poly" title=" " alt="" coords="116,33,73,26,74,20,117,28"/>
+<area shape="rect" href="classmy__tools_1_1MyIPTools.html#abea4222841ca7c93179dbe4f5d78ff78" title="从指定网卡删除 IP 地址（需 Root 权限）" alt="" coords="5,55,83,80"/>
+<area shape="poly" title=" " alt="" coords="118,58,83,64,83,58,117,53"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a56d728707b2d155d24b1bc57aef3e5a9" name="a56d728707b2d155d24b1bc57aef3e5a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56d728707b2d155d24b1bc57aef3e5a9">&#9670;&#160;</a></span>IsValidCIDR()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsValidCIDR </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>cidr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>校验 CIDR 格式是否合法 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cidr</td><td>待校验字符串，如 "192.168.1.100/24" </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true 格式合法 </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="pinling__pod_8cpp.html#a319b95015f17a3dc8b4b43a65c541571">ip</a> , 以及 <a class="el" href="classmy__tools_1_1MyIPTools.html#ac81371d86950fd0727c7d7ab97c2af60">MyIPTools::ParseCIDR()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__tools_1_1MyIPTools_a56d728707b2d155d24b1bc57aef3e5a9_cgraph.png" border="0" usemap="#aclassmy__tools_1_1MyIPTools_a56d728707b2d155d24b1bc57aef3e5a9_cgraph" alt=""/></div>
+<map name="aclassmy__tools_1_1MyIPTools_a56d728707b2d155d24b1bc57aef3e5a9_cgraph" id="aclassmy__tools_1_1MyIPTools_a56d728707b2d155d24b1bc57aef3e5a9_cgraph">
+<area shape="rect" title="校验 CIDR 格式是否合法" alt="" coords="5,5,103,31"/>
+<area shape="rect" href="classmy__tools_1_1MyIPTools.html#ac81371d86950fd0727c7d7ab97c2af60" title=" " alt="" coords="151,5,240,31"/>
+<area shape="poly" title=" " alt="" coords="103,15,137,15,137,21,103,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a24291222042c1e0eb8e243e93dcb600c" name="a24291222042c1e0eb8e243e93dcb600c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24291222042c1e0eb8e243e93dcb600c">&#9670;&#160;</a></span>ModifyIP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmy__tools_1_1IPResult.html">IPResult</a> ModifyIP </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>interface_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>ip</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>prefix_len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>is_add</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="pinling__pod_8cpp.html#a319b95015f17a3dc8b4b43a65c541571">ip</a>, <a class="el" href="namespacemy__tools.html#a8a07190f49805d50d4b92decc553f758a40c1e94fb25807f85ed17b9d637d4c82">my_tools::kInterfaceNotFound</a>, <a class="el" href="namespacemy__tools.html#a8a07190f49805d50d4b92decc553f758a11d9feff14ceabb6d96a2aa92b905f0a">my_tools::kInvalidCIDR</a>, <a class="el" href="namespacemy__tools.html#a8a07190f49805d50d4b92decc553f758ad96b581caa22932b932abd17abe1d93d">my_tools::kIPAlreadyExists</a>, <a class="el" href="namespacemy__tools.html#a8a07190f49805d50d4b92decc553f758a4a1a15e20a9e2870a419d762cddf37f5">my_tools::kIPNotFound</a>, <a class="el" href="namespacemy__tools.html#a8a07190f49805d50d4b92decc553f758adc0b458db7d0dd510aae0367dfafc4af">my_tools::kPermissionDenied</a>, <a class="el" href="namespacemy__tools.html#a8a07190f49805d50d4b92decc553f758a8c632159fa131f09d04f94e3cbcd8782">my_tools::kSuccess</a>, <a class="el" href="namespacemy__tools.html#a8a07190f49805d50d4b92decc553f758a5673c7563371e4bef30c300cc39309b0">my_tools::kSystemError</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a> , 以及 <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__tools_1_1MyIPTools.html#ac0c45bf470c958acb5a09e8349c90f6a">MyIPTools::AddIP()</a> , 以及 <a class="el" href="classmy__tools_1_1MyIPTools.html#abea4222841ca7c93179dbe4f5d78ff78">MyIPTools::DeleteIP()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__tools_1_1MyIPTools_a24291222042c1e0eb8e243e93dcb600c_icgraph.png" border="0" usemap="#aclassmy__tools_1_1MyIPTools_a24291222042c1e0eb8e243e93dcb600c_icgraph" alt=""/></div>
+<map name="aclassmy__tools_1_1MyIPTools_a24291222042c1e0eb8e243e93dcb600c_icgraph" id="aclassmy__tools_1_1MyIPTools_a24291222042c1e0eb8e243e93dcb600c_icgraph">
+<area shape="rect" title=" " alt="" coords="131,31,209,56"/>
+<area shape="rect" href="classmy__tools_1_1MyIPTools.html#ac0c45bf470c958acb5a09e8349c90f6a" title="向指定网卡添加 IP 地址（需 Root 权限）" alt="" coords="15,5,73,31"/>
+<area shape="poly" title=" " alt="" coords="117,35,73,26,74,21,118,30"/>
+<area shape="rect" href="classmy__tools_1_1MyIPTools.html#abea4222841ca7c93179dbe4f5d78ff78" title="从指定网卡删除 IP 地址（需 Root 权限）" alt="" coords="5,55,83,80"/>
+<area shape="poly" title=" " alt="" coords="118,56,84,63,82,57,117,51"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac81371d86950fd0727c7d7ab97c2af60" name="ac81371d86950fd0727c7d7ab97c2af60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac81371d86950fd0727c7d7ab97c2af60">&#9670;&#160;</a></span>ParseCIDR()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ParseCIDR </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>cidr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>ip</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>prefix_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="pinling__pod_8cpp.html#a319b95015f17a3dc8b4b43a65c541571">ip</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__tools_1_1MyIPTools.html#ac0c45bf470c958acb5a09e8349c90f6a">MyIPTools::AddIP()</a>, <a class="el" href="classmy__tools_1_1MyIPTools.html#abea4222841ca7c93179dbe4f5d78ff78">MyIPTools::DeleteIP()</a> , 以及 <a class="el" href="classmy__tools_1_1MyIPTools.html#a56d728707b2d155d24b1bc57aef3e5a9">MyIPTools::IsValidCIDR()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__tools_1_1MyIPTools_ac81371d86950fd0727c7d7ab97c2af60_icgraph.png" border="0" usemap="#aclassmy__tools_1_1MyIPTools_ac81371d86950fd0727c7d7ab97c2af60_icgraph" alt=""/></div>
+<map name="aclassmy__tools_1_1MyIPTools_ac81371d86950fd0727c7d7ab97c2af60_icgraph" id="aclassmy__tools_1_1MyIPTools_ac81371d86950fd0727c7d7ab97c2af60_icgraph">
+<area shape="rect" title=" " alt="" coords="151,55,240,80"/>
+<area shape="rect" href="classmy__tools_1_1MyIPTools.html#ac0c45bf470c958acb5a09e8349c90f6a" title="向指定网卡添加 IP 地址（需 Root 权限）" alt="" coords="25,5,83,31"/>
+<area shape="poly" title=" " alt="" coords="144,52,83,31,84,26,146,47"/>
+<area shape="rect" href="classmy__tools_1_1MyIPTools.html#abea4222841ca7c93179dbe4f5d78ff78" title="从指定网卡删除 IP 地址（需 Root 权限）" alt="" coords="15,55,93,80"/>
+<area shape="poly" title=" " alt="" coords="137,70,93,70,93,65,137,65"/>
+<area shape="rect" href="classmy__tools_1_1MyIPTools.html#a56d728707b2d155d24b1bc57aef3e5a9" title="校验 CIDR 格式是否合法" alt="" coords="5,104,103,129"/>
+<area shape="poly" title=" " alt="" coords="146,87,92,106,91,101,144,82"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab25a75f1fa763d7de9842c89036d9823" name="ab25a75f1fa763d7de9842c89036d9823"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab25a75f1fa763d7de9842c89036d9823">&#9670;&#160;</a></span>PingHost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PingHost </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>ip</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout_ms</em> = <code>800</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>使用原生 ICMP 探测单个 IP 是否可达 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ip</td><td>目标 IPv4 地址 </td></tr>
+    <tr><td class="paramname">timeout_ms</td><td>超时（毫秒） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>true 可达 </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="classmy__tools_1_1MyIPTools.html#afc8b7a832ed4304463297a2e7c4d6074">MyIPTools::ComputeICMPChecksum()</a>, <a class="el" href="pinling__pod_8cpp.html#a319b95015f17a3dc8b4b43a65c541571">ip</a>, <a class="el" href="namespacemy__tools.html#a05a571c5a1f81788e9c621667c89e605">my_tools::s_ping_sequence</a> , 以及 <a class="el" href="structmy__tools_1_1ICMPHeader.html#a1d127017fb298b889f4ba24752d08b8e">ICMPHeader::type</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__tools_1_1MyIPTools.html#a89857dd703359ca5ba4dd58e54a61739">MyIPTools::ScanActiveDevices()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__tools_1_1MyIPTools_ab25a75f1fa763d7de9842c89036d9823_cgraph.png" border="0" usemap="#aclassmy__tools_1_1MyIPTools_ab25a75f1fa763d7de9842c89036d9823_cgraph" alt=""/></div>
+<map name="aclassmy__tools_1_1MyIPTools_ab25a75f1fa763d7de9842c89036d9823_cgraph" id="aclassmy__tools_1_1MyIPTools_ab25a75f1fa763d7de9842c89036d9823_cgraph">
+<area shape="rect" title="使用原生 ICMP 探测单个 IP 是否可达" alt="" coords="5,5,85,31"/>
+<area shape="rect" href="classmy__tools_1_1MyIPTools.html#afc8b7a832ed4304463297a2e7c4d6074" title="计算 ICMP 校验和（RFC 1071）" alt="" coords="133,5,316,31"/>
+<area shape="poly" title=" " alt="" coords="85,15,120,15,120,21,85,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__tools_1_1MyIPTools_ab25a75f1fa763d7de9842c89036d9823_icgraph.png" border="0" usemap="#aclassmy__tools_1_1MyIPTools_ab25a75f1fa763d7de9842c89036d9823_icgraph" alt=""/></div>
+<map name="aclassmy__tools_1_1MyIPTools_ab25a75f1fa763d7de9842c89036d9823_icgraph" id="aclassmy__tools_1_1MyIPTools_ab25a75f1fa763d7de9842c89036d9823_icgraph">
+<area shape="rect" title="使用原生 ICMP 探测单个 IP 是否可达" alt="" coords="200,5,280,31"/>
+<area shape="rect" href="classmy__tools_1_1MyIPTools.html#a89857dd703359ca5ba4dd58e54a61739" title="扫描所有本机网段内的活跃设备" alt="" coords="5,5,152,31"/>
+<area shape="poly" title=" " alt="" coords="186,21,152,21,152,15,186,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a89857dd703359ca5ba4dd58e54a61739" name="a89857dd703359ca5ba4dd58e54a61739"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89857dd703359ca5ba4dd58e54a61739">&#9670;&#160;</a></span>ScanActiveDevices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmy__tools_1_1ScanResult.html">ScanResult</a> ScanActiveDevices </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>扫描所有本机网段内的活跃设备 </p>
+<p>自动调用 <a class="el" href="classmy__tools_1_1MyIPTools.html#a6a96cac78f427e5e8ea2a0abc2d3309a" title="获取系统中所有 IPv4 地址与网卡的映射">GetAllIPs()</a> 获取本机所有 IP / 子网，遍历各网段生成候选 IP 列表，使用原生 ICMP Raw Socket 发送 Echo Request 并等待 Reply。 线程模型为"即时线程"：为每个候选 IP 启动 std::thread，通过信号量 控制最大并发数。</p>
+<p>需要 CAP_NET_RAW 权限或 Root。</p>
+<dl class="section return"><dt>返回</dt><dd>扫描结果 </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="structmy__tools_1_1ScanResult.html#a8c94119e5bd6fbde0680ef83f01c9685">ScanResult::error</a>, <a class="el" href="classmy__tools_1_1MyIPTools.html#a77538218641f84bf12b34dae1b5f9357">MyIPTools::GenerateSubnetIPs()</a>, <a class="el" href="classmy__tools_1_1MyIPTools.html#a6a96cac78f427e5e8ea2a0abc2d3309a">MyIPTools::GetAllIPs()</a>, <a class="el" href="classmy__tools_1_1MyIPTools.html#ab1af88d8c8322d45ce4035305721e7c6">MyIPTools::HasRawSocketPermission()</a>, <a class="el" href="MyLog_8h.html#a58669a9dee26041e1cd68f2e62214b0f">MYLOG_DEBUG</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>, <a class="el" href="classmy__tools_1_1MyIPTools.html#ab25a75f1fa763d7de9842c89036d9823">MyIPTools::PingHost()</a>, <a class="el" href="classmy__tools_1_1MyIPTools.html#a67f62f6a24143ec6c9b25b27c37206b8">MyIPTools::s_max_threads</a>, <a class="el" href="classmy__tools_1_1MyIPTools.html#a1e61a8950c31a9276bbb3d3507f4a087">MyIPTools::s_ping_timeout_ms</a>, <a class="el" href="structmy__tools_1_1ScanResult.html#ab1703aeb134b30765f00c9a8ea1c7db8">ScanResult::scan_duration_ms</a> , 以及 <a class="el" href="structmy__tools_1_1ScanResult.html#ab0daa5fd1307b3f332e578627be86a86">ScanResult::total_scanned</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__tools_1_1MyIPTools_a89857dd703359ca5ba4dd58e54a61739_cgraph.png" border="0" usemap="#aclassmy__tools_1_1MyIPTools_a89857dd703359ca5ba4dd58e54a61739_cgraph" alt=""/></div>
+<map name="aclassmy__tools_1_1MyIPTools_a89857dd703359ca5ba4dd58e54a61739_cgraph" id="aclassmy__tools_1_1MyIPTools_a89857dd703359ca5ba4dd58e54a61739_cgraph">
+<area shape="rect" title="扫描所有本机网段内的活跃设备" alt="" coords="5,80,152,105"/>
+<area shape="rect" href="classmy__tools_1_1MyIPTools.html#a77538218641f84bf12b34dae1b5f9357" title="根据 IP 和前缀长度计算网段内所有候选主机 IP" alt="" coords="222,5,369,31"/>
+<area shape="poly" title=" " alt="" coords="106,77,199,39,224,32,226,37,201,45,108,82"/>
+<area shape="rect" href="classmy__tools_1_1MyIPTools.html#a6a96cac78f427e5e8ea2a0abc2d3309a" title="获取系统中所有 IPv4 地址与网卡的映射" alt="" coords="255,55,336,80"/>
+<area shape="poly" title=" " alt="" coords="152,81,240,71,241,76,153,87"/>
+<area shape="rect" href="classmy__tools_1_1MyIPTools.html#ab1af88d8c8322d45ce4035305721e7c6" title="检测当前进程是否拥有 CAP_NET_RAW 能力或 Root 权限" alt="" coords="200,104,391,129"/>
+<area shape="poly" title=" " alt="" coords="153,98,187,102,186,107,152,103"/>
+<area shape="rect" href="classmy__tools_1_1MyIPTools.html#ab25a75f1fa763d7de9842c89036d9823" title="使用原生 ICMP 探测单个 IP 是否可达" alt="" coords="255,153,335,179"/>
+<area shape="poly" title=" " alt="" coords="110,103,201,138,243,151,241,156,199,143,108,108"/>
+<area shape="rect" href="classmy__tools_1_1MyIPTools.html#afc8b7a832ed4304463297a2e7c4d6074" title="计算 ICMP 校验和（RFC 1071）" alt="" coords="439,153,621,179"/>
+<area shape="poly" title=" " alt="" coords="335,163,425,163,425,169,335,169"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a47b955f945380ab574a0d74235cce976" name="a47b955f945380ab574a0d74235cce976"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47b955f945380ab574a0d74235cce976">&#9670;&#160;</a></span>ScanTargetSubnet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmy__tools_1_1ScanResult.html">ScanResult</a> ScanTargetSubnet </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>cidr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>扫描指定网段内的活跃设备 </p>
+<p>接受 CIDR 格式（如 "192.168.2.0/24"），生成该网段的候选 IP 列表， 使用原生 ICMP Raw Socket 并发探测。</p>
+<p>需要 CAP_NET_RAW 权限或 Root。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cidr</td><td>目标网段，如 "192.168.2.0/24" </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>扫描结果 </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="structmy__tools_1_1ScanResult.html#a8c94119e5bd6fbde0680ef83f01c9685">ScanResult::error</a>, <a class="el" href="pinling__pod_8cpp.html#a319b95015f17a3dc8b4b43a65c541571">ip</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a> , 以及 <a class="el" href="structmy__tools_1_1ScanResult.html#ab0daa5fd1307b3f332e578627be86a86">ScanResult::total_scanned</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">结构体成员变量说明</h2>
+<a id="a67f62f6a24143ec6c9b25b27c37206b8" name="a67f62f6a24143ec6c9b25b27c37206b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67f62f6a24143ec6c9b25b27c37206b8">&#9670;&#160;</a></span>s_max_threads</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt; int &gt; s_max_threads {64}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>最大并发扫描线程数 </p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__tools_1_1MyIPTools.html#a38f410fbfe2ae74e6bf78c2f89596195">MyIPTools::InitScanner()</a> , 以及 <a class="el" href="classmy__tools_1_1MyIPTools.html#a89857dd703359ca5ba4dd58e54a61739">MyIPTools::ScanActiveDevices()</a>.</p>
+
+</div>
+</div>
+<a id="a1e61a8950c31a9276bbb3d3507f4a087" name="a1e61a8950c31a9276bbb3d3507f4a087"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e61a8950c31a9276bbb3d3507f4a087">&#9670;&#160;</a></span>s_ping_timeout_ms</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt; int &gt; s_ping_timeout_ms {800}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>单个 Ping 超时时间（毫秒） </p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__tools_1_1MyIPTools.html#a38f410fbfe2ae74e6bf78c2f89596195">MyIPTools::InitScanner()</a> , 以及 <a class="el" href="classmy__tools_1_1MyIPTools.html#a89857dd703359ca5ba4dd58e54a61739">MyIPTools::ScanActiveDevices()</a>.</p>
 
 </div>
 </div>

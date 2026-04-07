@@ -140,12 +140,21 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a764440da2c850a71275829866e072086" id="r_a764440da2c850a71275829866e072086"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmy__cache_1_1CacheResult.html">CacheResult</a>&lt; std::vector&lt; <a class="el" href="structmy__cache_1_1FileInfo.html">FileInfo</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__cache_1_1MyCache.html#a764440da2c850a71275829866e072086">GetAllFileList</a> ()</td></tr>
 <tr class="memdesc:a764440da2c850a71275829866e072086"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取缓存中所有文件的元信息列表  <br /></td></tr>
 <tr class="separator:a764440da2c850a71275829866e072086"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd09d0b80d1925ef49461f26e07c8528" id="r_acd09d0b80d1925ef49461f26e07c8528"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmy__cache_1_1CacheResult.html">CacheResult</a>&lt; std::vector&lt; <a class="el" href="structmy__cache_1_1FileInfo.html">FileInfo</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__cache_1_1MyCache.html#acd09d0b80d1925ef49461f26e07c8528">GetFileList</a> (const std::string &amp;folder_path=&quot;&quot;)</td></tr>
+<tr class="memdesc:acd09d0b80d1925ef49461f26e07c8528"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定目录下的文件元信息列表  <br /></td></tr>
+<tr class="separator:acd09d0b80d1925ef49461f26e07c8528"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79525a29cff81d26ac928eea0696b8ce" id="r_a79525a29cff81d26ac928eea0696b8ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmy__cache_1_1CacheResult.html">CacheResult</a>&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__cache_1_1MyCache.html#a79525a29cff81d26ac928eea0696b8ce">CreateSubdirectory</a> (const std::string &amp;folder_path, const std::string &amp;new_folder_name)</td></tr>
+<tr class="memdesc:a79525a29cff81d26ac928eea0696b8ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">在指定目录下创建子目录  <br /></td></tr>
+<tr class="separator:a79525a29cff81d26ac928eea0696b8ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private 成员函数</h2></td></tr>
 <tr class="memitem:ab64c29c6e26337191f07a7f9976ba9f0" id="r_ab64c29c6e26337191f07a7f9976ba9f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ce">CacheErrorCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__cache_1_1MyCache.html#ab64c29c6e26337191f07a7f9976ba9f0">ValidatePath</a> (const std::string &amp;name, std::filesystem::path &amp;full_path) const</td></tr>
 <tr class="memdesc:ab64c29c6e26337191f07a7f9976ba9f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">验证请求路径是否在 root_path 范围内，防止路径穿越  <br /></td></tr>
 <tr class="separator:ab64c29c6e26337191f07a7f9976ba9f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5f27246d54f7d31027123bc7f69ebbe" id="r_ad5f27246d54f7d31027123bc7f69ebbe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ce">CacheErrorCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__cache_1_1MyCache.html#ad5f27246d54f7d31027123bc7f69ebbe">ValidateDirectoryPath</a> (const std::string &amp;folder_path, std::filesystem::path &amp;full_path, bool allow_root=true) const</td></tr>
+<tr class="memdesc:ad5f27246d54f7d31027123bc7f69ebbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">校验目录路径是否位于 root_path 范围内，支持相对/绝对路径  <br /></td></tr>
+<tr class="separator:ad5f27246d54f7d31027123bc7f69ebbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add952545b938fdbe156dbfa3096142aa" id="r_add952545b938fdbe156dbfa3096142aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__cache_1_1MyCache.html#add952545b938fdbe156dbfa3096142aa">ScanThreadFunc</a> ()</td></tr>
 <tr class="memdesc:add952545b938fdbe156dbfa3096142aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">后台线程入口函数  <br /></td></tr>
 <tr class="separator:add952545b938fdbe156dbfa3096142aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -331,6 +340,60 @@ Private 属性</h2></td></tr>
 
 </div>
 </div>
+<a id="a79525a29cff81d26ac928eea0696b8ce" name="a79525a29cff81d26ac928eea0696b8ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79525a29cff81d26ac928eea0696b8ce">&#9670;&#160;</a></span>CreateSubdirectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmy__cache_1_1CacheResult.html">CacheResult</a>&lt; std::string &gt; CreateSubdirectory </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>folder_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>new_folder_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在指定目录下创建子目录 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">folder_path</td><td>父目录，支持空字符串（表示缓存根目录）、相对路径或位于缓存根目录内的绝对路径 </td></tr>
+    <tr><td class="paramname">new_folder_name</td><td>新目录名，仅允许单层目录名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>CacheResult&lt;std::string&gt; 成功时 value 为新目录的绝对路径 </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ceacf73468ba4dfdfb19102be6dfe4f4bc2">my_cache::CreateDirFailed</a>, <a class="el" href="structmy__cache_1_1CacheResult.html#a2a6f1794f676d6a911003cd7a439836b">CacheResult&lt; T &gt;::Fail()</a>, <a class="el" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ceacf25d5cc7db64ddc7b38564b7704cca2">my_cache::FileAlreadyExists</a>, <a class="el" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9cea2767828026039e8ba7b38973cbb701f2">my_cache::FileNotFound</a>, <a class="el" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9cea253ca7dd096ee0956cccee4d376cab8b">my_cache::InvalidArgument</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>, <a class="el" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ceaa60852f204ed8028c1c58808b746d115">my_cache::Ok</a>, <a class="el" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9cea0043ae95cb928986f16d0d344101dbb5">my_cache::PathTraversal</a>, <a class="el" href="classmy__cache_1_1MyCache.html#a43d1287db235148623e806c8b1be9bf6">MyCache::root_path_</a>, <a class="el" href="structmy__cache_1_1CacheResult.html#a876c92fd4b05c9c3a8e454fa6bc5ddbb">CacheResult&lt; T &gt;::Success()</a> , 以及 <a class="el" href="classmy__cache_1_1MyCache.html#ad5f27246d54f7d31027123bc7f69ebbe">MyCache::ValidateDirectoryPath()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__cache_1_1MyCache_a79525a29cff81d26ac928eea0696b8ce_cgraph.png" border="0" usemap="#aclassmy__cache_1_1MyCache_a79525a29cff81d26ac928eea0696b8ce_cgraph" alt=""/></div>
+<map name="aclassmy__cache_1_1MyCache_a79525a29cff81d26ac928eea0696b8ce_cgraph" id="aclassmy__cache_1_1MyCache_a79525a29cff81d26ac928eea0696b8ce_cgraph">
+<area shape="rect" title="在指定目录下创建子目录" alt="" coords="5,77,152,102"/>
+<area shape="rect" href="structmy__cache_1_1CacheResult.html#a2a6f1794f676d6a911003cd7a439836b" title="快速构造失败结果" alt="" coords="200,5,377,45"/>
+<area shape="poly" title=" " alt="" coords="121,74,208,47,210,52,122,79"/>
+<area shape="rect" href="structmy__cache_1_1CacheResult.html#a876c92fd4b05c9c3a8e454fa6bc5ddbb" title="快速构造成功结果" alt="" coords="200,69,377,109"/>
+<area shape="poly" title=" " alt="" coords="153,87,186,87,186,92,153,92"/>
+<area shape="rect" href="classmy__cache_1_1MyCache.html#ad5f27246d54f7d31027123bc7f69ebbe" title="校验目录路径是否位于 root_path 范围内，支持相对/绝对路径" alt="" coords="207,134,370,159"/>
+<area shape="poly" title=" " alt="" coords="127,99,229,128,228,133,125,105"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="ac37884304ff13cfcb0eb07566dba57d6" name="ac37884304ff13cfcb0eb07566dba57d6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac37884304ff13cfcb0eb07566dba57d6">&#9670;&#160;</a></span>DeleteFile()</h2>
 
@@ -437,7 +500,21 @@ Private 属性</h2></td></tr>
 <p>获取缓存中所有文件的元信息列表 </p>
 <dl class="section return"><dt>返回</dt><dd>CacheResult&lt;std::vector&lt;FileInfo&gt;&gt; 成功时 value 为文件元信息列表 </dd></dl>
 
-<p class="reference">引用了 <a class="el" href="classmy__cache_1_1MyCache.html#a1afae3e19b53edffdcfd3d74961f976f">MyCache::file_index_</a>, <a class="el" href="classmy__cache_1_1MyCache.html#a6daee966b21971d69a6df2397ec6d1ae">MyCache::index_mutex_</a>, <a class="el" href="MyLog_8h.html#a58669a9dee26041e1cd68f2e62214b0f">MYLOG_DEBUG</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>, <a class="el" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9cea9646ad3a1c3e708b4fa8b4b4270fbab6">my_cache::NotInitialized</a>, <a class="el" href="namespacemy__cache.html#afe3ad5ddeec672f96f4eb09febbfe30aa5bda814c4aedb126839228f1a3d92f09">my_cache::Running</a> , 以及 <a class="el" href="classmy__cache_1_1MyCache.html#a6d774100a84db3e9d1c5655ec22ab5e1">MyCache::status_</a>.</p>
+<p class="reference">引用了 <a class="el" href="classmy__cache_1_1MyCache.html#acd09d0b80d1925ef49461f26e07c8528">MyCache::GetFileList()</a> , 以及 <a class="el" href="MyLog_8h.html#a58669a9dee26041e1cd68f2e62214b0f">MYLOG_DEBUG</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__cache_1_1MyCache_a764440da2c850a71275829866e072086_cgraph.png" border="0" usemap="#aclassmy__cache_1_1MyCache_a764440da2c850a71275829866e072086_cgraph" alt=""/></div>
+<map name="aclassmy__cache_1_1MyCache_a764440da2c850a71275829866e072086_cgraph" id="aclassmy__cache_1_1MyCache_a764440da2c850a71275829866e072086_cgraph">
+<area shape="rect" title="获取缓存中所有文件的元信息列表" alt="" coords="5,42,113,67"/>
+<area shape="rect" href="classmy__cache_1_1MyCache.html#acd09d0b80d1925ef49461f26e07c8528" title="获取指定目录下的文件元信息列表" alt="" coords="161,42,252,67"/>
+<area shape="poly" title=" " alt="" coords="114,52,148,52,148,57,114,57"/>
+<area shape="rect" href="namespacemy__cache.html#a08fb92a22e0e5993b2ead55373179edb" title="将错误码转为可读字符串" alt="" coords="300,5,500,45"/>
+<area shape="poly" title=" " alt="" coords="252,45,286,40,287,45,253,50"/>
+<area shape="rect" href="classmy__cache_1_1MyCache.html#ad5f27246d54f7d31027123bc7f69ebbe" title="校验目录路径是否位于 root_path 范围内，支持相对/绝对路径" alt="" coords="319,70,481,95"/>
+<area shape="poly" title=" " alt="" coords="253,59,305,66,305,72,252,64"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -459,6 +536,59 @@ Private 属性</h2></td></tr>
 <p>获取当前配置（只读） </p>
 
 <p class="reference">引用了 <a class="el" href="classmy__cache_1_1MyCache.html#a3461818454045d62325e2f12c3a80a22">MyCache::config_</a>.</p>
+
+</div>
+</div>
+<a id="acd09d0b80d1925ef49461f26e07c8528" name="acd09d0b80d1925ef49461f26e07c8528"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd09d0b80d1925ef49461f26e07c8528">&#9670;&#160;</a></span>GetFileList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmy__cache_1_1CacheResult.html">CacheResult</a>&lt; std::vector&lt; <a class="el" href="structmy__cache_1_1FileInfo.html">FileInfo</a> &gt; &gt; GetFileList </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>folder_path</em> = <code>&quot;&quot;</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取指定目录下的文件元信息列表 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">folder_path</td><td>目标目录，支持空字符串（表示缓存根目录）、相对路径或位于缓存根目录内的绝对路径 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>CacheResult&lt;std::vector&lt;FileInfo&gt;&gt; 成功时 value 为文件元信息列表 </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="namespacemy__cache.html#a08fb92a22e0e5993b2ead55373179edb">my_cache::CacheErrorCodeToString()</a>, <a class="el" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9cea2767828026039e8ba7b38973cbb701f2">my_cache::FileNotFound</a>, <a class="el" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9cea253ca7dd096ee0956cccee4d376cab8b">my_cache::InvalidArgument</a>, <a class="el" href="structmy__cache_1_1FileInfo.html#ac6f740dfa211e62570db09be65429623">FileInfo::modified_at</a>, <a class="el" href="MyLog_8h.html#a58669a9dee26041e1cd68f2e62214b0f">MYLOG_DEBUG</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>, <a class="el" href="structmy__cache_1_1FileInfo.html#a9b45b3e13bd9167aab02e17e08916231">FileInfo::name</a>, <a class="el" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ceaa60852f204ed8028c1c58808b746d115">my_cache::Ok</a>, <a class="el" href="classmy__cache_1_1MyCache.html#a43d1287db235148623e806c8b1be9bf6">MyCache::root_path_</a>, <a class="el" href="structmy__cache_1_1FileInfo.html#af931a8871310b4dad23f0f0b0f623560">FileInfo::size</a>, <a class="el" href="structmy__cache_1_1FileInfo.html#a75b160f574a0be26114bae2c7686a5e1">FileInfo::type</a> , 以及 <a class="el" href="classmy__cache_1_1MyCache.html#ad5f27246d54f7d31027123bc7f69ebbe">MyCache::ValidateDirectoryPath()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__cache_1_1MyCache.html#a764440da2c850a71275829866e072086">MyCache::GetAllFileList()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__cache_1_1MyCache_acd09d0b80d1925ef49461f26e07c8528_cgraph.png" border="0" usemap="#aclassmy__cache_1_1MyCache_acd09d0b80d1925ef49461f26e07c8528_cgraph" alt=""/></div>
+<map name="aclassmy__cache_1_1MyCache_acd09d0b80d1925ef49461f26e07c8528_cgraph" id="aclassmy__cache_1_1MyCache_acd09d0b80d1925ef49461f26e07c8528_cgraph">
+<area shape="rect" title="获取指定目录下的文件元信息列表" alt="" coords="5,42,96,67"/>
+<area shape="rect" href="namespacemy__cache.html#a08fb92a22e0e5993b2ead55373179edb" title="将错误码转为可读字符串" alt="" coords="144,5,344,45"/>
+<area shape="poly" title=" " alt="" coords="96,45,130,40,131,45,97,50"/>
+<area shape="rect" href="classmy__cache_1_1MyCache.html#ad5f27246d54f7d31027123bc7f69ebbe" title="校验目录路径是否位于 root_path 范围内，支持相对/绝对路径" alt="" coords="163,70,325,95"/>
+<area shape="poly" title=" " alt="" coords="97,59,149,66,149,72,96,64"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__cache_1_1MyCache_acd09d0b80d1925ef49461f26e07c8528_icgraph.png" border="0" usemap="#aclassmy__cache_1_1MyCache_acd09d0b80d1925ef49461f26e07c8528_icgraph" alt=""/></div>
+<map name="aclassmy__cache_1_1MyCache_acd09d0b80d1925ef49461f26e07c8528_icgraph" id="aclassmy__cache_1_1MyCache_acd09d0b80d1925ef49461f26e07c8528_icgraph">
+<area shape="rect" title="获取指定目录下的文件元信息列表" alt="" coords="161,5,252,31"/>
+<area shape="rect" href="classmy__cache_1_1MyCache.html#a764440da2c850a71275829866e072086" title="获取缓存中所有文件的元信息列表" alt="" coords="5,5,113,31"/>
+<area shape="poly" title=" " alt="" coords="148,21,114,21,114,15,148,15"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -808,6 +938,77 @@ Private 属性</h2></td></tr>
 
 </div>
 </div>
+<a id="ad5f27246d54f7d31027123bc7f69ebbe" name="ad5f27246d54f7d31027123bc7f69ebbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5f27246d54f7d31027123bc7f69ebbe">&#9670;&#160;</a></span>ValidateDirectoryPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ce">CacheErrorCode</a> ValidateDirectoryPath </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>folder_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::filesystem::path &amp;&#160;</td>
+          <td class="paramname"><em>full_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>allow_root</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>校验目录路径是否位于 root_path 范围内，支持相对/绝对路径 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">folder_path</td><td>用户传入的目录路径，空字符串表示根目录 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">full_path</td><td>输出经过规范化处理的目录完整路径 </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">allow_root</td><td>是否允许根目录本身 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><a class="el" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ceaa60852f204ed8028c1c58808b746d115">CacheErrorCode::Ok</a> 表示安全 </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9cea253ca7dd096ee0956cccee4d376cab8b">my_cache::InvalidArgument</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>, <a class="el" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9cea9646ad3a1c3e708b4fa8b4b4270fbab6">my_cache::NotInitialized</a>, <a class="el" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9ceaa60852f204ed8028c1c58808b746d115">my_cache::Ok</a>, <a class="el" href="namespacemy__cache.html#a074618e9168bea10311e1e960344b9cea0043ae95cb928986f16d0d344101dbb5">my_cache::PathTraversal</a>, <a class="el" href="classmy__cache_1_1MyCache.html#a43d1287db235148623e806c8b1be9bf6">MyCache::root_path_</a>, <a class="el" href="namespacemy__cache.html#afe3ad5ddeec672f96f4eb09febbfe30aa5bda814c4aedb126839228f1a3d92f09">my_cache::Running</a> , 以及 <a class="el" href="classmy__cache_1_1MyCache.html#a6d774100a84db3e9d1c5655ec22ab5e1">MyCache::status_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__cache_1_1MyCache.html#a79525a29cff81d26ac928eea0696b8ce">MyCache::CreateSubdirectory()</a> , 以及 <a class="el" href="classmy__cache_1_1MyCache.html#acd09d0b80d1925ef49461f26e07c8528">MyCache::GetFileList()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__cache_1_1MyCache_ad5f27246d54f7d31027123bc7f69ebbe_icgraph.png" border="0" usemap="#aclassmy__cache_1_1MyCache_ad5f27246d54f7d31027123bc7f69ebbe_icgraph" alt=""/></div>
+<map name="aclassmy__cache_1_1MyCache_ad5f27246d54f7d31027123bc7f69ebbe_icgraph" id="aclassmy__cache_1_1MyCache_ad5f27246d54f7d31027123bc7f69ebbe_icgraph">
+<area shape="rect" title="校验目录路径是否位于 root_path 范围内，支持相对/绝对路径" alt="" coords="356,31,519,56"/>
+<area shape="rect" href="classmy__cache_1_1MyCache.html#a79525a29cff81d26ac928eea0696b8ce" title="在指定目录下创建子目录" alt="" coords="161,5,308,31"/>
+<area shape="poly" title=" " alt="" coords="342,34,308,30,309,25,343,29"/>
+<area shape="rect" href="classmy__cache_1_1MyCache.html#acd09d0b80d1925ef49461f26e07c8528" title="获取指定目录下的文件元信息列表" alt="" coords="189,55,280,80"/>
+<area shape="poly" title=" " alt="" coords="343,57,281,65,280,59,342,52"/>
+<area shape="rect" href="classmy__cache_1_1MyCache.html#a764440da2c850a71275829866e072086" title="获取缓存中所有文件的元信息列表" alt="" coords="5,55,113,80"/>
+<area shape="poly" title=" " alt="" coords="176,70,114,70,114,65,176,65"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="ab64c29c6e26337191f07a7f9976ba9f0" name="ab64c29c6e26337191f07a7f9976ba9f0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab64c29c6e26337191f07a7f9976ba9f0">&#9670;&#160;</a></span>ValidatePath()</h2>
 
@@ -967,7 +1168,7 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="classmy__cache_1_1MyCache.html#af502c3b15269a30d942223eb11ceb734">MyCache::CleanExpiredFiles()</a>, <a class="el" href="classmy__cache_1_1MyCache.html#ac37884304ff13cfcb0eb07566dba57d6">MyCache::DeleteFile()</a>, <a class="el" href="classmy__cache_1_1MyCache.html#a31647762a5880cf991a3bc91b1c8dee3">MyCache::Exists()</a>, <a class="el" href="classmy__cache_1_1MyCache.html#a764440da2c850a71275829866e072086">MyCache::GetAllFileList()</a>, <a class="el" href="classmy__cache_1_1MyCache.html#ae6c7a77879ec1b3465abc37757493237">MyCache::RefreshIndex()</a> , 以及 <a class="el" href="classmy__cache_1_1MyCache.html#a84ae6c8a9bb04ed98b296f82267360fc">MyCache::SaveFile()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="classmy__cache_1_1MyCache.html#af502c3b15269a30d942223eb11ceb734">MyCache::CleanExpiredFiles()</a>, <a class="el" href="classmy__cache_1_1MyCache.html#ac37884304ff13cfcb0eb07566dba57d6">MyCache::DeleteFile()</a>, <a class="el" href="classmy__cache_1_1MyCache.html#a31647762a5880cf991a3bc91b1c8dee3">MyCache::Exists()</a>, <a class="el" href="classmy__cache_1_1MyCache.html#ae6c7a77879ec1b3465abc37757493237">MyCache::RefreshIndex()</a> , 以及 <a class="el" href="classmy__cache_1_1MyCache.html#a84ae6c8a9bb04ed98b296f82267360fc">MyCache::SaveFile()</a>.</p>
 
 </div>
 </div>
@@ -991,7 +1192,7 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="classmy__cache_1_1MyCache.html#af502c3b15269a30d942223eb11ceb734">MyCache::CleanExpiredFiles()</a>, <a class="el" href="classmy__cache_1_1MyCache.html#ac37884304ff13cfcb0eb07566dba57d6">MyCache::DeleteFile()</a>, <a class="el" href="classmy__cache_1_1MyCache.html#a31647762a5880cf991a3bc91b1c8dee3">MyCache::Exists()</a>, <a class="el" href="classmy__cache_1_1MyCache.html#a764440da2c850a71275829866e072086">MyCache::GetAllFileList()</a>, <a class="el" href="classmy__cache_1_1MyCache.html#ae6c7a77879ec1b3465abc37757493237">MyCache::RefreshIndex()</a> , 以及 <a class="el" href="classmy__cache_1_1MyCache.html#a84ae6c8a9bb04ed98b296f82267360fc">MyCache::SaveFile()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="classmy__cache_1_1MyCache.html#af502c3b15269a30d942223eb11ceb734">MyCache::CleanExpiredFiles()</a>, <a class="el" href="classmy__cache_1_1MyCache.html#ac37884304ff13cfcb0eb07566dba57d6">MyCache::DeleteFile()</a>, <a class="el" href="classmy__cache_1_1MyCache.html#a31647762a5880cf991a3bc91b1c8dee3">MyCache::Exists()</a>, <a class="el" href="classmy__cache_1_1MyCache.html#ae6c7a77879ec1b3465abc37757493237">MyCache::RefreshIndex()</a> , 以及 <a class="el" href="classmy__cache_1_1MyCache.html#a84ae6c8a9bb04ed98b296f82267360fc">MyCache::SaveFile()</a>.</p>
 
 </div>
 </div>
@@ -1039,7 +1240,7 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="classmy__cache_1_1MyCache.html#af502c3b15269a30d942223eb11ceb734">MyCache::CleanExpiredFiles()</a>, <a class="el" href="classmy__cache_1_1MyCache.html#a96b0cc15167e11ec1f886f4db65bb3d1">MyCache::GetRootPath()</a>, <a class="el" href="classmy__cache_1_1MyCache.html#a6950bff697ac47c218ff9042c3158ad8">MyCache::Init()</a>, <a class="el" href="classmy__cache_1_1MyCache.html#ae6c7a77879ec1b3465abc37757493237">MyCache::RefreshIndex()</a> , 以及 <a class="el" href="classmy__cache_1_1MyCache.html#ab64c29c6e26337191f07a7f9976ba9f0">MyCache::ValidatePath()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="classmy__cache_1_1MyCache.html#af502c3b15269a30d942223eb11ceb734">MyCache::CleanExpiredFiles()</a>, <a class="el" href="classmy__cache_1_1MyCache.html#a79525a29cff81d26ac928eea0696b8ce">MyCache::CreateSubdirectory()</a>, <a class="el" href="classmy__cache_1_1MyCache.html#acd09d0b80d1925ef49461f26e07c8528">MyCache::GetFileList()</a>, <a class="el" href="classmy__cache_1_1MyCache.html#a96b0cc15167e11ec1f886f4db65bb3d1">MyCache::GetRootPath()</a>, <a class="el" href="classmy__cache_1_1MyCache.html#a6950bff697ac47c218ff9042c3158ad8">MyCache::Init()</a>, <a class="el" href="classmy__cache_1_1MyCache.html#ae6c7a77879ec1b3465abc37757493237">MyCache::RefreshIndex()</a>, <a class="el" href="classmy__cache_1_1MyCache.html#ad5f27246d54f7d31027123bc7f69ebbe">MyCache::ValidateDirectoryPath()</a> , 以及 <a class="el" href="classmy__cache_1_1MyCache.html#ab64c29c6e26337191f07a7f9976ba9f0">MyCache::ValidatePath()</a>.</p>
 
 </div>
 </div>
@@ -1111,7 +1312,7 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="classmy__cache_1_1MyCache.html#a764440da2c850a71275829866e072086">MyCache::GetAllFileList()</a>, <a class="el" href="classmy__cache_1_1MyCache.html#a6950bff697ac47c218ff9042c3158ad8">MyCache::Init()</a>, <a class="el" href="classmy__cache_1_1MyCache.html#a5f923655bf249d9eed68a4d6fe1d8041">MyCache::Status()</a> , 以及 <a class="el" href="classmy__cache_1_1MyCache.html#ab64c29c6e26337191f07a7f9976ba9f0">MyCache::ValidatePath()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="classmy__cache_1_1MyCache.html#a6950bff697ac47c218ff9042c3158ad8">MyCache::Init()</a>, <a class="el" href="classmy__cache_1_1MyCache.html#a5f923655bf249d9eed68a4d6fe1d8041">MyCache::Status()</a>, <a class="el" href="classmy__cache_1_1MyCache.html#ad5f27246d54f7d31027123bc7f69ebbe">MyCache::ValidateDirectoryPath()</a> , 以及 <a class="el" href="classmy__cache_1_1MyCache.html#ab64c29c6e26337191f07a7f9976ba9f0">MyCache::ValidatePath()</a>.</p>
 
 </div>
 </div>

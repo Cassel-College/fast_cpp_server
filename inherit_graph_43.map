@@ -1,13 +1,11 @@
 <map id="类继承关系图" name="类继承关系图">
-<area shape="rect" id="Node000000" href="$classmy__edge_1_1IEdge.html" title="Edge Runtime 接口（Init/Start 分离）" alt="" coords="5,79,64,104"/>
-<area shape="rect" id="Node000001" href="$classmy__edge_1_1BaseEdge.html" title="BaseEdge: 实现 IEdge 的通用骨架" alt="" coords="114,29,201,55"/>
-<area shape="poly" id="edge37_Node000000_Node000001" title=" " alt="" coords="76,72,124,52,126,57,78,77"/>
-<area shape="rect" id="Node000004" href="$classmy__edge_1_1demo_1_1TUNAEdge.html" title=" " alt="" coords="112,79,203,104"/>
-<area shape="poly" id="edge40_Node000000_Node000004" title=" " alt="" coords="78,89,112,89,112,94,78,94"/>
-<area shape="rect" id="Node000005" href="$classmy__edge_1_1demo_1_1UUVEdge.html" title=" " alt="" coords="116,128,199,153"/>
-<area shape="poly" id="edge41_Node000000_Node000005" title=" " alt="" coords="78,106,126,125,124,130,76,111"/>
-<area shape="rect" id="Node000002" href="$classmy__edge_1_1demo_1_1UAVEdge.html" title="UAVEdge：无人机边缘运行时（demo）" alt="" coords="251,5,333,31"/>
-<area shape="poly" id="edge38_Node000001_Node000002" title=" " alt="" coords="214,29,251,23,252,28,215,35"/>
-<area shape="rect" id="Node000003" href="$classmy__edge_1_1demo_1_1UNAEdge.html" title="UNAEdge：潜航器边缘运行时（demo）" alt="" coords="251,55,333,80"/>
-<area shape="poly" id="edge39_Node000001_Node000003" title=" " alt="" coords="215,50,251,57,250,62,214,55"/>
+<area shape="rect" id="Node000000" href="$classmy__device_1_1IDevice.html" title="设备执行单元接口（每个 device_id 一个实例）" alt="" coords="5,80,76,105"/>
+<area shape="rect" id="Node000001" href="$classmy__device_1_1demo_1_1DepthSensorDevice.html" title=" " alt="" coords="124,5,275,31"/>
+<area shape="poly" id="edge43_Node000000_Node000001" title=" " alt="" coords="70,70,123,40,152,28,154,33,125,44,73,74"/>
+<area shape="rect" id="Node000002" href="$classmy__device_1_1demo_1_1FlowSensorDevice.html" title=" " alt="" coords="128,55,271,80"/>
+<area shape="poly" id="edge44_Node000000_Node000002" title=" " alt="" coords="89,82,127,76,128,81,90,88"/>
+<area shape="rect" id="Node000003" href="$classmy__device_1_1demo_1_1UUVDevice.html" title="UUV 设备执行单元（demo）" alt="" coords="151,104,247,129"/>
+<area shape="poly" id="edge45_Node000000_Node000003" title=" " alt="" coords="90,97,151,107,150,112,89,103"/>
+<area shape="rect" id="Node000004" href="$classmy__device_1_1demo_1_1WindSensorDevice.html" title=" " alt="" coords="127,153,271,179"/>
+<area shape="poly" id="edge46_Node000000_Node000004" title=" " alt="" coords="75,111,125,138,157,151,155,156,123,143,72,115"/>
 </map>

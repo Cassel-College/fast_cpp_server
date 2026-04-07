@@ -77,7 +77,8 @@ var menudata={children:[
 {text:"h",url:"namespacemembers_vars.html#index_h"},
 {text:"k",url:"namespacemembers_vars.html#index_k"},
 {text:"l",url:"namespacemembers_vars.html#index_l"},
-{text:"m",url:"namespacemembers_vars.html#index_m"}]},
+{text:"m",url:"namespacemembers_vars.html#index_m"},
+{text:"s",url:"namespacemembers_vars.html#index_s"}]},
 {text:"类型定义",url:"namespacemembers_type.html"},
 {text:"枚举",url:"namespacemembers_enum.html"}]}]},
 {text:"结构体",url:"annotated.html",children:[
