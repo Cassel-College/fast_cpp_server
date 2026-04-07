@@ -1,5 +1,3 @@
-    # 打印当前平台架构，便于调试依赖选择
-    message(STATUS "[my_audio] CMAKE_SYSTEM_PROCESSOR = ${CMAKE_SYSTEM_PROCESSOR}")
 cmake_minimum_required(VERSION 3.10)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
@@ -72,20 +70,20 @@ if (BUILD_MY_AUDIO)
     # 因为 libNAudioServer.so 的 RUNPATH 是 "./"，无法在运行时找到同目录的 ffmpeg 库
 
     # ================= 平台自动选择依赖库 =================
+    # 打印当前平台架构，便于调试依赖选择
+    message(STATUS "[my_audio] CMAKE_SYSTEM_PROCESSOR = ${CMAKE_SYSTEM_PROCESSOR}")
     if(CMAKE_SYSTEM_PROCESSOR MATCHES "x86_64" OR CMAKE_SYSTEM_PROCESSOR MATCHES "amd64")
-        # x86_64 平台，包含 libmsc.so、libavdevice.so.58、libswscale.so.5
+        # x86_64 平台
         target_link_libraries(my_audio PUBLIC
             ${NAUDIO_LIB_DIR}/libNAudioServer.so
             -Wl,--no-as-needed
             ${NAUDIO_LIB_DIR}/libavcodec.so.58
-            ${NAUDIO_LIB_DIR}/libavformat.so.58
             ${NAUDIO_LIB_DIR}/libavfilter.so.7
+            ${NAUDIO_LIB_DIR}/libavformat.so.58
             ${NAUDIO_LIB_DIR}/libavutil.so.56
-            ${NAUDIO_LIB_DIR}/libswresample.so.3
             ${NAUDIO_LIB_DIR}/libmp3lame.so.0
             ${NAUDIO_LIB_DIR}/libmsc.so
-            ${NAUDIO_LIB_DIR}/libavdevice.so.58
-            ${NAUDIO_LIB_DIR}/libswscale.so.5
+            ${NAUDIO_LIB_DIR}/libswresample.so.3
             -Wl,--as-needed
         )
     elseif(CMAKE_SYSTEM_PROCESSOR MATCHES "aarch64" OR CMAKE_SYSTEM_PROCESSOR MATCHES "arm")

@@ -25,7 +25,6 @@
 #include <chrono>
 #include <vector>
 #include <string>
-#include <algorithm>
 
 #include "MyCache.h"
 #include "MyCacheProvider.h"
@@ -318,6 +317,99 @@ TEST(MyCache_SaveFile, NegativeRetentionMeansPermanent) {
         auto exists = cache.Exists("permanent.txt");
         EXPECT_TRUE(exists.Ok());
         EXPECT_TRUE(exists.value);
+    }
+    CleanupDir(dir);
+}
+
+/// 测试：可按相对目录查询文件列表
+TEST(MyCache_Directory, GetFileListByRelativeFolder) {
+    auto dir = MakeTestDir("list_relative_dir");
+    {
+        MyCache cache;
+        cache.Init(MakeConfig(dir));
+        ASSERT_EQ(cache.Status(), CacheStatus::Running);
+
+        ASSERT_TRUE(cache.SaveFile("root.txt", ToBytes("root")).Ok());
+        ASSERT_TRUE(cache.SaveFile("logs/app.log", ToBytes("log1")).Ok());
+        ASSERT_TRUE(cache.SaveFile("logs/2026/runtime.log", ToBytes("log2")).Ok());
+
+        auto list_result = cache.GetFileList("logs");
+        ASSERT_TRUE(list_result.Ok());
+        ASSERT_EQ(list_result.value.size(), 2u);
+        EXPECT_EQ(list_result.value[0].name, "logs/2026/runtime.log");
+        EXPECT_EQ(list_result.value[1].name, "logs/app.log");
+    }
+    CleanupDir(dir);
+}
+
+/// 测试：可按绝对目录查询文件列表，但目录必须位于缓存根目录内
+TEST(MyCache_Directory, GetFileListByAbsoluteFolderWithinRoot) {
+    auto dir = MakeTestDir("list_absolute_dir");
+    {
+        MyCache cache;
+        cache.Init(MakeConfig(dir));
+        ASSERT_EQ(cache.Status(), CacheStatus::Running);
+
+        ASSERT_TRUE(cache.SaveFile("images/photo.jpg", ToBytes("jpg")).Ok());
+
+        auto absolute_dir = (std::filesystem::path(dir) / "images").string();
+        auto list_result = cache.GetFileList(absolute_dir);
+        ASSERT_TRUE(list_result.Ok());
+        ASSERT_EQ(list_result.value.size(), 1u);
+        EXPECT_EQ(list_result.value[0].name, "images/photo.jpg");
+    }
+    CleanupDir(dir);
+}
+
+/// 测试：指定目录越界访问应被拦截
+TEST(MyCache_Directory, GetFileListRejectsTraversal) {
+    auto dir = MakeTestDir("list_traversal");
+    {
+        MyCache cache;
+        cache.Init(MakeConfig(dir));
+        ASSERT_EQ(cache.Status(), CacheStatus::Running);
+
+        auto list_result = cache.GetFileList("../outside");
+        EXPECT_FALSE(list_result.Ok());
+        EXPECT_EQ(list_result.code, CacheErrorCode::PathTraversal);
+    }
+    CleanupDir(dir);
+}
+
+/// 测试：在根目录或指定目录下创建子目录
+TEST(MyCache_Directory, CreateSubdirectorySucceeds) {
+    auto dir = MakeTestDir("create_subdir");
+    {
+        MyCache cache;
+        cache.Init(MakeConfig(dir));
+        ASSERT_EQ(cache.Status(), CacheStatus::Running);
+
+        auto root_create = cache.CreateSubdirectory("", "uploads");
+        ASSERT_TRUE(root_create.Ok());
+        EXPECT_TRUE(std::filesystem::is_directory(root_create.value));
+
+        auto nested_create = cache.CreateSubdirectory("uploads", "images");
+        ASSERT_TRUE(nested_create.Ok());
+        EXPECT_TRUE(std::filesystem::is_directory(nested_create.value));
+    }
+    CleanupDir(dir);
+}
+
+/// 测试：创建子目录时越界或非法目录名应被拦截
+TEST(MyCache_Directory, CreateSubdirectoryRejectsInvalidInput) {
+    auto dir = MakeTestDir("create_subdir_invalid");
+    {
+        MyCache cache;
+        cache.Init(MakeConfig(dir));
+        ASSERT_EQ(cache.Status(), CacheStatus::Running);
+
+        auto bad_parent = cache.CreateSubdirectory("../outside", "uploads");
+        EXPECT_FALSE(bad_parent.Ok());
+        EXPECT_EQ(bad_parent.code, CacheErrorCode::PathTraversal);
+
+        auto bad_name = cache.CreateSubdirectory("", "../evil");
+        EXPECT_FALSE(bad_name.Ok());
+        EXPECT_EQ(bad_name.code, CacheErrorCode::InvalidArgument);
     }
     CleanupDir(dir);
 }
