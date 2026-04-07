@@ -40,6 +40,7 @@ target_link_libraries(${TEST_PROGRAM_NAME} PRIVATE
     my_pod
     my_mediamtx_monitor
     my_audio
+    my_tools
     my_mavsdk
     opencv_core            # 修复 opencv2/opencv.hpp 找不到
     opencv_imgproc
