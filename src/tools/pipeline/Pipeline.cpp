@@ -17,6 +17,8 @@
 #include "MyAudios.h"
 #include "MyLog.h"
 #include "MyTools.h"
+#include "SearchlightConfig.h"
+#include "SearchlightManager.h"
 
 #include <cstring>
 #include <system_error>
@@ -140,6 +142,7 @@ void Pipeline::LaunchRoBot() {
                 else if (model_name == "mediamtx_monitor") { LaunchMediamtxMonitorV2(model_args); success_count++;}
                 else if (model_name == "file_cache") { LaunchFileCache(model_args); success_count++;}
                 else if (model_name == "audio_server") { LaunchAudioServer(model_args); success_count++;}
+                else if (model_name == "search_light") { LaunchSearchLight(model_args); success_count++;}
                 else { MYLOG_INFO("* Arg: {}, Value: {}", "节点[" + node_index + "]警告", "未知的模型名称: " + model_name);}
                 
                 MYLOG_INFO("* Arg: {}, Value: {}", "节点分发完成", "节点[" + node_index + "] 已成功加入监听列表");
@@ -650,6 +653,29 @@ void Pipeline::LaunchAudioServer(const nlohmann::json& args) {
         }
 
         MYLOG_INFO("* 模块: {}, 状态: {}", module_name, "启动成功");
+    } catch (const std::exception& e) {
+        MYLOG_ERROR("* 模块: {}, 捕获异常: {}", module_name, e.what());
+    }
+}
+
+void Pipeline::LaunchSearchLight(const nlohmann::json& args) {
+    const std::string module_name = "搜索灯模块(SearchLight)";
+    MYLOG_INFO("===== 开始启动模块: {} =====", module_name);
+    MYLOG_INFO("SearchLight 模块参数: {}", args.dump(4));
+
+    try {
+        MYLOG_INFO("提取参数并初始化 SearchLight 模块...");
+        SearchlightControl::SearchlightInitConfig my_light_config;
+        my_light_config.set_driver(args.value("driver", "/dev/ttyUSB0"));
+        my_light_config.set_baud_rate(args.value("baud_rate", 115200));
+        MYLOG_INFO("* 模块: {}, 配置 - {}", module_name, my_light_config.GetConfigStr());
+        SearchlightControl::SearchlightManager& lightManager = SearchlightControl::SearchlightManager::getInstance();
+        lightManager.initialize(my_light_config);
+        if (lightManager.start()) {
+            MYLOG_INFO("* 模块: {}, 状态: {}", module_name, "启动成功");
+        } else {
+            MYLOG_ERROR("* 模块: {}, 状态: {}", module_name, "启动失败");
+        }
     } catch (const std::exception& e) {
         MYLOG_ERROR("* 模块: {}, 捕获异常: {}", module_name, e.what());
     }

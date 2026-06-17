@@ -56,6 +56,7 @@ private:
     void LaunchMediamtxMonitorV2(const nlohmann::json& args);
     void LaunchFileCache(const nlohmann::json& args);
     void LaunchAudioServer(const nlohmann::json& args);
+    void LaunchSearchLight(const nlohmann::json& args);
     
     nlohmann::json config_data_;
     std::atomic<bool> is_running_;
