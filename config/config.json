@@ -298,7 +298,7 @@
                     "mediamtx_enable": true,
                     "mediamtx_bin_path": "/home/cs/DockerRoot/fast_cpp_server/source/soft/mediamtx/ubuntu_x86/mediamtx",
                     "check_ip": "192.168.2.119",
-                    "yaml_file_name": "mediamtx.yaml",
+                    "yaml_file_name": "mediamtx.yml",
                     "mediamtx_json_config": {
                         "rtspAddress": "8555",
                         "paths": {
@@ -330,7 +330,8 @@
                             "type": "audio_server",
                             "ip": "192.168.1.150",
                             "port": 8890,
-                            "device_id": 3445
+                            "device_id": 3445,
+                            "master_ip": "192.168.1.250"
                         }
                     }
                 },
@@ -339,7 +340,16 @@
             },
             "10": {
                 "model_args": {
-                    "port": 9999
+                    "driver": "/dev/ttyUSB0",
+                    "baud_rate": 115200
+                },
+                "model_name": "search_light",
+                "description": "A custom light source for your projects.",
+                "enable": true
+            },
+            "11": {
+                "model_args": {
+                    "port": 9995
                 },
                 "model_name": "rest_api",
                 "enable": true
