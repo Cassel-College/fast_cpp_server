@@ -62,7 +62,7 @@ var searchData=
   ['clean_5fsession_5f_59',['clean_session_',['../classmy__mqtt_1_1MqttService.html#a263d932e47de950862d8c4ecee7a80e1',1,'my_mqtt::MqttService']]],
   ['cleanexpiredfiles_60',['CleanExpiredFiles',['../classmy__cache_1_1MyCache.html#af502c3b15269a30d942223eb11ceb734',1,'my_cache::MyCache']]],
   ['cleanupsystem_61',['CleanupSystem',['../classmy__edge_1_1MyMavVehicle.html#a268c267fbedbe9e90bc5e932f8327d02',1,'my_edge::MyMavVehicle']]],
-  ['clear_62',['clear',['../classPodModule_1_1PodRegistry.html#ac8bb3912a3ce86b15842e79d0b421204',1,'PodModule::PodRegistry::clear()'],['../classmy__control_1_1TaskQueue.html#aa71d36872f416feaa853788a7a7a7ef8',1,'my_control::TaskQueue::Clear()'],['../classtools_1_1thread__safe__queue_1_1ThreadSafeQueue.html#ac8bb3912a3ce86b15842e79d0b421204',1,'tools::thread_safe_queue::ThreadSafeQueue::clear()']]],
+  ['clear_62',['clear',['../classmy__control_1_1TaskQueue.html#aa71d36872f416feaa853788a7a7a7ef8',1,'my_control::TaskQueue::Clear()'],['../classtools_1_1thread__safe__queue_1_1ThreadSafeQueue.html#ac8bb3912a3ce86b15842e79d0b421204',1,'tools::thread_safe_queue::ThreadSafeQueue::clear()'],['../classPodModule_1_1PodRegistry.html#ac8bb3912a3ce86b15842e79d0b421204',1,'PodModule::PodRegistry::clear()']]],
   ['clearlisteners_63',['clearListeners',['../classPodModule_1_1PodEventDispatcher.html#a8e6bb9e5fab24b6cf9d8dad5fb45b02e',1,'PodModule::PodEventDispatcher']]],
   ['client_5fid_5f_64',['client_id_',['../classmy__mqtt_1_1MqttService.html#ab931e8e043d71fc6c5fe7b7be7572e4e',1,'my_mqtt::MqttService']]],
   ['clk_5ftck_65',['clk_tck',['../structMySoftHealthy_1_1HostSnapshot.html#a3f4d302bc535675f1c51e3bd9ef709e3',1,'MySoftHealthy::HostSnapshot']]],

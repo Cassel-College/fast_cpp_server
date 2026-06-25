@@ -34,7 +34,7 @@ var searchData=
   ['reapchildifneeded_31',['ReapChildIfNeeded',['../classpod__stream_1_1PodStreamManager.html#a3f92ed4b1ba895dea1d6a2bd4fd7face',1,'pod_stream::PodStreamManager']]],
   ['receive_5ffailed_32',['RECEIVE_FAILED',['../namespacePodModule.html#aad194976af5612d4469559348e94c7bea1a6888ceaf65c4f67643c4e257a7158e',1,'PodModule']]],
   ['received_5fat_5fms_33',['received_at_ms',['../structmy__data_1_1RawCommand.html#ab93f10eb3ec0a1860726fdac12e92235',1,'my_data::RawCommand']]],
-  ['receiveloop_34',['receiveloop',['../classtools_1_1SimpleTcpClient.html#a15f044dcc8ea299eb3b9c88024e27257',1,'tools::SimpleTcpClient::receiveLoop()'],['../classfly__control_1_1MyFlyControl.html#a1c88fc1a53d56e67d4e34b3eadef51cd',1,'fly_control::MyFlyControl::ReceiveLoop()']]],
+  ['receiveloop_34',['receiveloop',['../classfly__control_1_1MyFlyControl.html#a1c88fc1a53d56e67d4e34b3eadef51cd',1,'fly_control::MyFlyControl::ReceiveLoop()'],['../classtools_1_1SimpleTcpClient.html#a15f044dcc8ea299eb3b9c88024e27257',1,'tools::SimpleTcpClient::receiveLoop()']]],
   ['receiveresponse_35',['receiveresponse',['../classPodModule_1_1BaseSession.html#a41c66e3cd94a82b977c39be875700e3a',1,'PodModule::BaseSession::receiveResponse()'],['../classPodModule_1_1ISession.html#a07e9bef7052cb74bb6717585d04210d7',1,'PodModule::ISession::receiveResponse()']]],
   ['reconnect_5fmax_5fsec_5f_36',['reconnect_max_sec_',['../classmy__mqtt_1_1MqttService.html#a7707f7a93898fd6211c4a100e69edfd9',1,'my_mqtt::MqttService']]],
   ['reconnect_5fmin_5fsec_5f_37',['reconnect_min_sec_',['../classmy__mqtt_1_1MqttService.html#a51ae1d1fa8a1110a942fc33bf65b747c',1,'my_mqtt::MqttService']]],

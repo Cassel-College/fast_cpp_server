@@ -22,13 +22,14 @@ var searchData=
   ['altitude_5ftoo_5flow_19',['altitude_too_low',['../structfly__control_1_1FaultBits.html#a68b1b152bbd1eb0db2dc3d3f905f43e5',1,'fly_control::FaultBits']]],
   ['altitude_5ftype_20',['altitude_type',['../structfly__control_1_1SetAltitudeData.html#a42143a8a4726376233ac71473bb9b0c2',1,'fly_control::SetAltitudeData']]],
   ['analyzer_5f_21',['analyzer_',['../classMySoftHealthy_1_1SoftHealthMonitorManager.html#a28f10fadc69131d511250a3b12497181',1,'MySoftHealthy::SoftHealthMonitorManager']]],
-  ['armed_22',['armed',['../structmy__edge_1_1MavVehicleStatus.html#a95a7a3c9dec5f98703b42898ccd417a1',1,'my_edge::MavVehicleStatus::armed'],['../classmy__edge_1_1MyMavVehicle.html#a95a7a3c9dec5f98703b42898ccd417a1',1,'my_edge::MyMavVehicle::armed']]],
-  ['atm_5fpressure_23',['atm_pressure',['../structfly__control_1_1HeartbeatData.html#aa84ba5de318a6447c5f6af17038527a3',1,'fly_control::HeartbeatData']]],
-  ['attitude_24',['attitude',['../structviewlink_1_1TelemetrySnapshot.html#a2d9f460feb54b94e97605a6c866fa61b',1,'viewlink::TelemetrySnapshot']]],
-  ['attitude_5ferror_25',['attitude_error',['../structfly__control_1_1FaultBits.html#a821a819224cb4badc4ea7ca140c4ba78',1,'fly_control::FaultBits']]],
-  ['attitude_5fexceed_26',['attitude_exceed',['../structfly__control_1_1FaultBits.html#a319b4958e680bef1c8f70d291199e487',1,'fly_control::FaultBits']]],
-  ['auto_5fmigrate_27',['auto_migrate',['../structmy__db_1_1DBConfig.html#a7eb218eaaabf6cb49629351664a04241',1,'my_db::DBConfig']]],
-  ['auto_5fopen_28',['auto_open',['../structmy__serial_1_1SerialInitOptions.html#af3265ddaf74e9fcc6c328c9fe36216d1',1,'my_serial::SerialInitOptions']]],
-  ['auto_5fstart_29',['auto_start',['../structPodModule_1_1PodMonitorConfig.html#ac63ee1dd752d0adede9cffbe750b39da',1,'PodModule::PodMonitorConfig']]],
-  ['available_5fbytes_30',['available_bytes',['../structmy__serial_1_1SerialPortSnapshot.html#afaed30f4d7333d869670fe20f94c4a19',1,'my_serial::SerialPortSnapshot']]]
+  ['api_5fenable_5fmapping_5f_22',['api_enable_mapping_',['../classmy__api_1_1MyAPI.html#a4ec39b5fab8466bed2aae98bc6cf4d47',1,'my_api::MyAPI']]],
+  ['armed_23',['armed',['../structmy__edge_1_1MavVehicleStatus.html#a95a7a3c9dec5f98703b42898ccd417a1',1,'my_edge::MavVehicleStatus::armed'],['../classmy__edge_1_1MyMavVehicle.html#a95a7a3c9dec5f98703b42898ccd417a1',1,'my_edge::MyMavVehicle::armed']]],
+  ['atm_5fpressure_24',['atm_pressure',['../structfly__control_1_1HeartbeatData.html#aa84ba5de318a6447c5f6af17038527a3',1,'fly_control::HeartbeatData']]],
+  ['attitude_25',['attitude',['../structviewlink_1_1TelemetrySnapshot.html#a2d9f460feb54b94e97605a6c866fa61b',1,'viewlink::TelemetrySnapshot']]],
+  ['attitude_5ferror_26',['attitude_error',['../structfly__control_1_1FaultBits.html#a821a819224cb4badc4ea7ca140c4ba78',1,'fly_control::FaultBits']]],
+  ['attitude_5fexceed_27',['attitude_exceed',['../structfly__control_1_1FaultBits.html#a319b4958e680bef1c8f70d291199e487',1,'fly_control::FaultBits']]],
+  ['auto_5fmigrate_28',['auto_migrate',['../structmy__db_1_1DBConfig.html#a7eb218eaaabf6cb49629351664a04241',1,'my_db::DBConfig']]],
+  ['auto_5fopen_29',['auto_open',['../structmy__serial_1_1SerialInitOptions.html#af3265ddaf74e9fcc6c328c9fe36216d1',1,'my_serial::SerialInitOptions']]],
+  ['auto_5fstart_30',['auto_start',['../structPodModule_1_1PodMonitorConfig.html#ac63ee1dd752d0adede9cffbe750b39da',1,'PodModule::PodMonitorConfig']]],
+  ['available_5fbytes_31',['available_bytes',['../structmy__serial_1_1SerialPortSnapshot.html#afaed30f4d7333d869670fe20f94c4a19',1,'my_serial::SerialPortSnapshot']]]
 ];

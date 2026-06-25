@@ -21,7 +21,7 @@ var searchData=
   ['readline_18',['ReadLine',['../classmy__serial_1_1MySerial.html#a4d8002cea46a6aee65767508dcd8f376',1,'my_serial::MySerial']]],
   ['readserialloop_19',['readSerialLoop',['../classSearchlightControl_1_1Searchlight.html#a97818289ea8ee202051dcc42312a5d43',1,'SearchlightControl::Searchlight']]],
   ['reapchildifneeded_20',['ReapChildIfNeeded',['../classpod__stream_1_1PodStreamManager.html#a3f92ed4b1ba895dea1d6a2bd4fd7face',1,'pod_stream::PodStreamManager']]],
-  ['receiveloop_21',['receiveloop',['../classfly__control_1_1MyFlyControl.html#a1c88fc1a53d56e67d4e34b3eadef51cd',1,'fly_control::MyFlyControl::ReceiveLoop()'],['../classtools_1_1SimpleTcpClient.html#a15f044dcc8ea299eb3b9c88024e27257',1,'tools::SimpleTcpClient::receiveLoop()']]],
+  ['receiveloop_21',['receiveloop',['../classtools_1_1SimpleTcpClient.html#a15f044dcc8ea299eb3b9c88024e27257',1,'tools::SimpleTcpClient::receiveLoop()'],['../classfly__control_1_1MyFlyControl.html#a1c88fc1a53d56e67d4e34b3eadef51cd',1,'fly_control::MyFlyControl::ReceiveLoop()']]],
   ['receiveresponse_22',['receiveresponse',['../classPodModule_1_1ISession.html#a07e9bef7052cb74bb6717585d04210d7',1,'PodModule::ISession::receiveResponse()'],['../classPodModule_1_1BaseSession.html#a41c66e3cd94a82b977c39be875700e3a',1,'PodModule::BaseSession::receiveResponse()']]],
   ['recordcrash_23',['RecordCrash',['../classpod__stream_1_1PodStreamManager.html#a1b1892807f75154d39d6205a8bdee398',1,'pod_stream::PodStreamManager']]],
   ['refresh_5fnow_24',['refresh_now',['../classMySoftHealthy_1_1SoftHealthMonitorManager.html#aa2fd07ae311f5182cd49f0cb58dfdbd0',1,'MySoftHealthy::SoftHealthMonitorManager']]],
