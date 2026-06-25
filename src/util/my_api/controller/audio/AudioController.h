@@ -24,6 +24,7 @@ namespace my_api::audio_api {
 
 class AudioController : public base::BaseApiController {
 public:
+    static constexpr const char* SWAGGER_TAG = "AudioController";
     explicit AudioController(const std::shared_ptr<ObjectMapper>& objectMapper);
 
     static std::shared_ptr<AudioController> createShared(
@@ -32,6 +33,7 @@ public:
     // ==================== 查询类接口 ====================
 
     ENDPOINT_INFO(getAudioConfig) {
+        info->addTag(SWAGGER_TAG);
         info->summary = "查看扬声器启动参数";
         info->description = "返回音频设备管理器初始化时使用的 JSON 配置参数。";
         info->addResponse<oatpp::String>(Status::CODE_200, "application/json");
@@ -40,6 +42,7 @@ public:
     ENDPOINT("GET", "/v1/audio/config", getAudioConfig);
 
     ENDPOINT_INFO(getAudioInfo) {
+        info->addTag(SWAGGER_TAG);
         info->summary = "查看指定扬声器详细信息";
         info->description = "根据 body 中的 device_id 获取单个扬声器的配置、状态和设备信息。";
         info->addConsumes<oatpp::Object<my_api::dto::AudioDeviceIdDto>>("application/json");
@@ -50,6 +53,7 @@ public:
              BODY_DTO(oatpp::Object<my_api::dto::AudioDeviceIdDto>, deviceDto));
 
     ENDPOINT_INFO(getAudioStatus) {
+        info->addTag(SWAGGER_TAG);
         info->summary = "查看全部扬声器状态";
         info->description = "返回所有已注册扬声器的状态综合视图，包括名称、状态、配置和设备信息。";
         info->addResponse<oatpp::String>(Status::CODE_200, "application/json");
@@ -58,6 +62,7 @@ public:
     ENDPOINT("GET", "/v1/audio/status", getAudioStatus);
 
     ENDPOINT_INFO(getAvailableSpeakers) {
+        info->addTag(SWAGGER_TAG);
         info->summary = "查看可用扬声器列表";
         info->description = "返回当前状态为空闲或工作中的扬声器 ID 列表。";
         info->addResponse<oatpp::String>(Status::CODE_200, "application/json");
@@ -68,6 +73,7 @@ public:
     // ==================== 控制类接口 ====================
 
     ENDPOINT_INFO(playAudioFile) {
+        info->addTag(SWAGGER_TAG);
         info->summary = "在指定扬声器上播放音频文件";
         info->description = "指定 device_id 和 filepath，在目标扬声器上播放音频文件。";
         info->addConsumes<oatpp::Object<my_api::dto::AudioPlayRequestDto>>("application/json");
@@ -79,6 +85,7 @@ public:
              BODY_DTO(oatpp::Object<my_api::dto::AudioPlayRequestDto>, playDto));
 
     ENDPOINT_INFO(setVolume) {
+        info->addTag(SWAGGER_TAG);
         info->summary = "设置指定扬声器音量";
         info->description = "指定 device_id 和 volume（0-100），设置目标扬声器的音量。";
         info->addConsumes<oatpp::Object<my_api::dto::AudioVolumeRequestDto>>("application/json");

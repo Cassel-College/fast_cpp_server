@@ -10,6 +10,7 @@ namespace my_api::mediamtx_monitor_api {
 
 class MediamtxMonitorController : public base::BaseApiController {
 public:
+    static constexpr const char* SWAGGER_TAG = "MediamtxMonitorController";
     explicit MediamtxMonitorController(
         const std::shared_ptr<ObjectMapper>& objectMapper
     );
@@ -19,6 +20,7 @@ public:
 
     // --- 在线检查 ---
     ENDPOINT_INFO(getOnline) {
+        info->addTag(SWAGGER_TAG);
         info->summary = "MediaMTX Monitor 存活检查";
         info->description = "检查 MediaMTX Monitor 服务是否存活。";
         info->addResponse<oatpp::String>(Status::CODE_200, "application/json");
@@ -27,6 +29,7 @@ public:
 
     // --- 获取状态 ---
     ENDPOINT_INFO(getStatus) {
+        info->addTag(SWAGGER_TAG);
         info->summary = "获取 MediaMTX Monitor 状态";
         info->description = "返回 MediaMTX Monitor 当前运行状态与心跳信息。";
         info->addResponse<oatpp::String>(Status::CODE_200, "application/json");
@@ -35,6 +38,7 @@ public:
 
     // --- 启动 ---
     ENDPOINT_INFO(postStart) {
+        info->addTag(SWAGGER_TAG);
         info->summary = "启动 MediaMTX Monitor";
         info->description = "启动 RTSP 转发守护监控线程。";
         info->addResponse<oatpp::String>(Status::CODE_200, "application/json");
@@ -43,6 +47,7 @@ public:
 
     // --- 停止 ---
     ENDPOINT_INFO(postStop) {
+        info->addTag(SWAGGER_TAG);
         info->summary = "停止 MediaMTX Monitor";
         info->description = "停止 RTSP 转发守护监控线程并终止 MediaMTX 进程。";
         info->addResponse<oatpp::String>(Status::CODE_200, "application/json");
@@ -51,6 +56,7 @@ public:
 
     // --- 基本信息 ---
     ENDPOINT_INFO(getInfo) {
+        info->addTag(SWAGGER_TAG);
         info->summary = "获取 MediaMTX 转发代理基本信息";
         info->description = "返回 RTSP 源信息、本机信息、拉流方式及帮助信息等。";
         info->addResponse<oatpp::String>(Status::CODE_200, "application/json");

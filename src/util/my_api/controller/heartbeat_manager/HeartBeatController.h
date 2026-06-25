@@ -11,6 +11,7 @@ namespace my_api::heartbeat {
 
 class HeartBeatController : public base::BaseApiController {
 public:
+    static constexpr const char* SWAGGER_TAG = "HeartBeatController";
     explicit HeartBeatController(
         const std::shared_ptr<ObjectMapper>& objectMapper
     );
@@ -19,6 +20,7 @@ public:
     createShared(const std::shared_ptr<ObjectMapper>& objectMapper);
 
     ENDPOINT_INFO(getHeartbeatOnline) {
+        info->addTag(SWAGGER_TAG);
         info->summary = "心跳检查接口";
         info->description = "用于检查服务是否存活，返回简单的状态信息。";
         info->addResponse<oatpp::String>(Status::CODE_200, "application/json");
@@ -26,6 +28,7 @@ public:
     ENDPOINT("GET", "/v1/heartbeat/online", getHeartbeatOnline);
 
     ENDPOINT_INFO(getHeartbeatData) {
+        info->addTag(SWAGGER_TAG);
         info->summary = "获取心跳数据";
         info->description = "根据请求参数获取系统当前的心跳数据，包含系统状态、边缘设备状态等信息。";
         // info->addConsumes<oatpp::String>("application/json");

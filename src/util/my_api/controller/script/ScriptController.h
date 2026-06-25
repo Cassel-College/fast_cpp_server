@@ -11,6 +11,7 @@ namespace my_api::my_script_api {
 
 class MyScriptController : public base::BaseApiController {
 public:
+    static constexpr const char* SWAGGER_TAG = "ScriptController";
     explicit MyScriptController(
         const std::shared_ptr<ObjectMapper>& objectMapper
     );
@@ -18,6 +19,7 @@ public:
     static std::shared_ptr<MyScriptController> createShared(const std::shared_ptr<ObjectMapper>& objectMapper);
 
     ENDPOINT_INFO(getCurrentPythonInfo) {
+        info->addTag(SWAGGER_TAG);
         info->summary = "获取当前系统 Python 环境信息";
         info->description = "返回当前系统 Python 环境的信息，包含可执行文件路径、版本、平台等。";
         info->addResponse<String>(Status::CODE_200, "application/json");
@@ -28,6 +30,7 @@ public:
     
     // 远程执行python脚本，并返回执行结果
     ENDPOINT_INFO(runPythonScript) {
+        info->addTag(SWAGGER_TAG);
         info->summary = "远程执行 Python 脚本";
         info->description = "在服务器上远程执行指定的 Python 脚本，并返回执行结果。";
         info->addResponse<String>(Status::CODE_200, "application/json");

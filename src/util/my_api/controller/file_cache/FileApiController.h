@@ -29,6 +29,7 @@ namespace my_api::file_cache_api {
 
 class FileApiController : public base::BaseApiController {
 public:
+    static constexpr const char* SWAGGER_TAG = "FileApiController";
     explicit FileApiController(
         const std::shared_ptr<ObjectMapper>& objectMapper
     );
@@ -41,6 +42,7 @@ public:
     // POST /v1/cache/upload —— 上传文件
     // ====================================================================
     ENDPOINT_INFO(uploadFile) {
+        info->addTag(SWAGGER_TAG);
         info->summary = "上传文件到缓存目录";
         info->description =
             "接收 JSON Body，将文件数据保存到缓存目录。\n"
@@ -59,6 +61,7 @@ public:
     // POST /v1/cache/upload-local —— 接收客户端本地文件上传
     // ====================================================================
     ENDPOINT_INFO(uploadLocalFile) {
+        info->addTag(SWAGGER_TAG);
         info->summary = "将客户端本地文件导入缓存目录";
         info->description =
             "接收 multipart/form-data 请求。\n"
@@ -79,6 +82,7 @@ public:
     // POST /v1/cache/query —— 查询文件
     // ====================================================================
     ENDPOINT_INFO(queryFile) {
+        info->addTag(SWAGGER_TAG);
         info->summary = "查询缓存文件是否存在";
         info->description =
             "接收 JSON Body，查询文件是否存在于缓存中，\n"
@@ -95,6 +99,7 @@ public:
     // POST /v1/cache/delete —— 删除文件
     // ====================================================================
     ENDPOINT_INFO(deleteFile) {
+        info->addTag(SWAGGER_TAG);
         info->summary = "删除缓存中的文件";
         info->description =
             "接收 JSON Body，删除缓存目录中指定的文件。";
@@ -112,6 +117,7 @@ public:
     // POST /v1/cache/list —— 获取所有文件列表
     // ====================================================================
     ENDPOINT_INFO(listFiles) {
+        info->addTag(SWAGGER_TAG);
         info->summary = "获取缓存目录中所有文件列表";
         info->description =
             "接收 JSON 请求体，可默认查询缓存根目录，\n"
@@ -131,6 +137,7 @@ public:
     // POST /v1/cache/create-folder —— 创建子目录
     // ====================================================================
     ENDPOINT_INFO(createFolder) {
+        info->addTag(SWAGGER_TAG);
         info->summary = "在缓存目录内创建子目录";
         info->description =
             "接收 JSON 请求体，在指定目录下创建新子目录。\n"
@@ -151,6 +158,7 @@ public:
     // GET /v1/cache/info —— 获取缓存配置信息
     // ====================================================================
     ENDPOINT_INFO(cacheInfo) {
+        info->addTag(SWAGGER_TAG);
         info->summary = "获取缓存配置信息";
         info->description =
             "返回当前文件缓存模块的配置信息，\n"
@@ -164,6 +172,7 @@ public:
     // GET /v1/cache/status —— 获取缓存运行状态
     // ====================================================================
     ENDPOINT_INFO(cacheStatus) {
+        info->addTag(SWAGGER_TAG);
         info->summary = "获取缓存运行状态";
         info->description =
             "返回当前文件缓存模块的运行状态，\n"
