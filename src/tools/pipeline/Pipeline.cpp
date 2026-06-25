@@ -307,6 +307,7 @@ void Pipeline::LaunchRestAPI(const nlohmann::json& args) {
                 MYLOG_INFO("* 模块: {}, 端口 {} 当前可用，准备启动", module_name, port);
                 // 尝试启动（Start 内部可能会 bind 并启动线程）
                 try {
+                    my_api::MyAPI::GetInstance().GenerateStartSettingByPipelineConfig(this->config_data_); // 生成启动参数配置文件
                     my_api::MyAPI::GetInstance().Start(port);
                     MYLOG_INFO("* 模块: {}, 监听端口: {}, 状态: {}", module_name, port, "启动成功");
                     break; // 启动成功，跳出重试循环

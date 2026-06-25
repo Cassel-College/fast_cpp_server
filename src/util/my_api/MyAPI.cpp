@@ -150,9 +150,215 @@ public:
     }
 };
 
+/**
+ * @brief 从传入的 JSON 配置中生成启动参数配置文件, 并保存到 api_enable_mapping_ 成员变量中, 主要是解析 "executes" 字段下的每个节点，提取 "model_name" 和 "enable" 字段。
+ * 
+ * @param pipeline_config JSON 配置对象
+ */
+void MyAPI::GenerateStartSettingByPipelineConfig(const nlohmann::json& pipeline_config) {
+    try {
+        if (!pipeline_config.is_object()) {
+            MYLOG_WARN("MyAPI: pipeline_config 不是对象，忽略本次更新");
+            return;
+        }
+
+        if (!pipeline_config.contains("executes")) {
+            MYLOG_WARN("MyAPI: pipeline_config 缺少 executes 字段，忽略本次更新");
+            return;
+        }
+
+        const auto& executes = pipeline_config.at("executes");
+        if (!executes.is_object() && !executes.is_array()) {
+            MYLOG_WARN("MyAPI: executes 字段类型错误，期望 object 或 array，实际类型={}", executes.type_name());
+            return;
+        }
+
+        nlohmann::json next_mapping = nlohmann::json::object();
+        std::size_t valid_count = 0;
+        std::size_t skipped_count = 0;
+
+        auto register_model = [&](const std::string& node_key, const nlohmann::json& node_body) {
+            if (!node_body.is_object()) {
+                ++skipped_count;
+                MYLOG_WARN("MyAPI: executes[{}] 不是对象，已跳过", node_key);
+                return;
+            }
+
+            if (!node_body.contains("model_name") || !node_body["model_name"].is_string()) {
+                ++skipped_count;
+                MYLOG_WARN("MyAPI: executes[{}] 缺少 model_name 字段或类型错误，已跳过", node_key);
+                return;
+            }
+
+            const std::string model_name = node_body["model_name"].get<std::string>();
+            if (model_name.empty()) {
+                ++skipped_count;
+                MYLOG_WARN("MyAPI: executes[{}] 的 model_name 为空，已跳过", node_key);
+                return;
+            }
+
+            bool enable = true;
+            if (node_body.contains("enable")) {
+                if (!node_body["enable"].is_boolean()) {
+                    ++skipped_count;
+                    MYLOG_WARN("MyAPI: executes[{}].enable 类型错误，已跳过模型 {}", node_key, model_name);
+                    return;
+                }
+                enable = node_body["enable"].get<bool>();
+            } else {
+                MYLOG_WARN("MyAPI: executes[{}] 缺少 enable 字段，模型 {} 默认按 true 处理", node_key, model_name);
+            }
+
+            auto inserted = next_mapping.emplace(model_name, enable);
+            if (!inserted.second) {
+                MYLOG_WARN("MyAPI: 模型 {} 重复出现，已覆盖旧值 -> {}", model_name, enable);
+                inserted.first.value() = enable;
+            }
+            ++valid_count;
+
+            MYLOG_INFO("MyAPI: 解析启动项成功, node={}, model_name={}, enable={}", node_key, model_name, enable);
+        };
+
+        if (executes.is_object()) {
+            for (const auto& [key, value] : executes.items()) {
+                register_model(key, value);
+            }
+        } else {
+            for (std::size_t index = 0; index < executes.size(); ++index) {
+                register_model(std::to_string(index), executes.at(index));
+            }
+        }
+
+        api_enable_mapping_ = std::move(next_mapping);
+
+        MYLOG_INFO(
+            "MyAPI: 生成启动参数配置文件成功, \nvalid_count={}, \nskipped_count={}, \napi_enable_mapping_={}",
+            valid_count,
+            skipped_count,
+            api_enable_mapping_.dump(4)
+        );
+    } catch (const std::exception& e) {
+        MYLOG_ERROR("MyAPI: 生成启动参数配置文件失败, error={}", e.what());
+    } catch (...) {
+        MYLOG_ERROR("MyAPI: 生成启动参数配置文件失败, error=unknown");
+    }
+}
+
+bool MyAPI::getJsonBool(const nlohmann::json& j, const std::string& key, bool defaultValue) {
+    try {
+        if (!j.is_object())
+        {
+            return defaultValue;
+        }
+
+        auto it = j.find(key);
+        if (it == j.end())
+        {
+            return defaultValue;
+        }
+
+        if (!it->is_boolean())
+        {
+            return defaultValue;
+        }
+
+        return it->get<bool>();
+    }
+    catch (...)
+    {
+        return defaultValue;
+    }
+}
+
 void MyAPI::Start(int port) {
     if (is_running_.exchange(true)) return;
     server_thread_ = std::thread(&MyAPI::ServerThread, this, port);
+}
+
+bool MyAPI::LoadAPIModel(
+    std::shared_ptr<oatpp::web::server::HttpRouter> router,
+    oatpp::web::server::api::Endpoints &docEndpoints, 
+    std::shared_ptr<oatpp::data::mapping::ObjectMapper> objectMapper,
+    std::string model_name) {
+
+    bool load_status = false;
+    bool has_model = false;
+
+    for (const auto& loaded_model : loaded_models_) {
+        if (loaded_model == model_name) {
+            MYLOG_WARN("MyAPI: 模型 {} 已经加载过，跳过重复加载", model_name);
+            return true; // 已经加载过，直接返回成功
+        }
+    }
+
+    auto controller = std::shared_ptr<base::BaseApiController>(nullptr);
+    if ("heartbeat" == model_name) {
+        MYLOG_INFO("MyAPI: 加载心跳 API 模型");
+        controller = my_api::heartbeat::HeartBeatController::createShared(std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper));
+        has_model = true;
+    } else if ("edges" == model_name) {
+        MYLOG_INFO("MyAPI: 加载边缘体 API 模型");
+        controller = my_api::edge::EdgesController::createShared(std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper));
+        has_model = true;
+    } else if ("script" == model_name) {
+        MYLOG_INFO("MyAPI: 加载脚本 API 模型");
+        controller = my_api::my_script_api::MyScriptController::createShared(std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper));
+        has_model = true;
+    } else if ("tuna" == model_name) {
+        MYLOG_INFO("MyAPI: 加载 Tuna API 模型");
+        controller = my_api::tuna::TunaController::createShared(std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper));
+        has_model = true;
+    } else if ("soft_healthy" == model_name) {
+        MYLOG_INFO("MyAPI: 加载软件健康 API 模型");
+        controller = my_api::soft_healthy::SoftHealthyController::createShared(std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper));
+        has_model = true;
+    } else if ("fly_control" == model_name) {
+        MYLOG_INFO("MyAPI: 加载飞控 API 模型");
+        controller = my_api::fly_control_api::FlyControlController::createShared(std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper));
+        has_model = true;
+    } else if ("pod" == model_name) {
+        MYLOG_INFO("MyAPI: 加载 Pod API 模型");
+        controller = my_api::pod_api::PodController::createShared(std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper));
+        has_model = true;
+    } else if ("mediamtx_monitor" == model_name) {
+        MYLOG_INFO("MyAPI: 加载 Mediamtx Monitor API 模型");
+        controller = my_api::mediamtx_monitor_api::MediamtxMonitorController::createShared(std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper));
+        has_model = true;
+    } else if ("file_cache" == model_name) {
+        MYLOG_INFO("MyAPI: 加载 File Cache API 模型");
+        controller = my_api::file_cache_api::FileApiController::createShared(std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper));
+        has_model = true;
+    } else if ("audio_server" == model_name) {
+        MYLOG_INFO("MyAPI: 加载 Audio Server API 模型");
+        controller = my_api::audio_api::AudioController::createShared(std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper));
+        has_model = true;
+    } else if ("search_light" == model_name) {
+        MYLOG_INFO("MyAPI: 加载 Search Light API 模型");
+        controller = my_api::light_api::LightController::createShared(std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper));
+        has_model = true;
+    } else if ("ip" == model_name) {
+        MYLOG_INFO("MyAPI: 加载 IP API 模型");
+        controller = my_api::ip_api::MyIPController::createShared(std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper));
+        has_model = true;
+    } else {
+        MYLOG_WARN("MyAPI: 未知的 API 模型名称: {}", model_name);
+    }
+
+    if (has_model) {
+        if(getJsonBool(api_enable_mapping_, model_name, true)) {
+            router->addController(controller);
+            docEndpoints.append(controller->getEndpoints());
+            load_status = true;
+            loaded_models_.push_back(model_name); // 记录已加载的模型
+            MYLOG_INFO("MyAPI: {} API 控制器加载成功", model_name.c_str());
+            MYLOG_INFO("MyAPI: 当前已加载的 API 模型列表新增: {}， 现在加载的模型数量: {}", model_name.c_str(), loaded_models_.size());
+        } else {
+            MYLOG_INFO("MyAPI: {} API 控制器已禁用，跳过注册", model_name.c_str());
+        }
+    } else {
+        MYLOG_WARN("MyAPI: 未找到对应的 API 模型: {}", model_name);
+    }
+    return load_status;
 }
 
 void MyAPI::ServerThread(int port) {
@@ -170,56 +376,35 @@ void MyAPI::ServerThread(int port) {
 
         std::vector<std::shared_ptr<base::BaseApiController>> objectMappers; // 如果不同控制器需要不同的 ObjectMapper，可以在这里创建并传递
 
-        auto router = oatpp::web::server::HttpRouter::createShared();
+        std::shared_ptr<oatpp::web::server::HttpRouter> router = oatpp::web::server::HttpRouter::createShared();
         auto docEndpoints = oatpp::web::server::api::Endpoints();
 
-        auto heartbeatController = my_api::heartbeat::HeartBeatController::createShared(std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper));
-        router->addController(heartbeatController);
-        docEndpoints.append(heartbeatController->getEndpoints());
+        // 加载默认 API 控制器
+        std::vector<std::string> default_models = {
+            "heartbeat", 
+            "script",
+            "soft_healthy",
+            "file_cache",
+            "ip"
+        };
+        for (const auto& model_name : default_models) {
+            if (LoadAPIModel(router, docEndpoints, objectMapper, model_name)) {
+                MYLOG_INFO("MyAPI: {} API 控制器已启用并加载成功", model_name.c_str());
+            } else {
+                MYLOG_ERROR("MyAPI: {} API 控制器未启用或加载失败，跳过注册", model_name.c_str());
+            }
+        }
 
-        auto edgesController = my_api::edge::EdgesController::createShared(std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper));
-        router->addController(edgesController);
-        docEndpoints.append(edgesController->getEndpoints());
-
-        auto scriptController = my_api::my_script_api::MyScriptController::createShared(std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper));
-        router->addController(scriptController);
-        docEndpoints.append(scriptController->getEndpoints());
-
-        auto tunaController = my_api::tuna::TunaController::createShared(std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper));
-        router->addController(tunaController);
-        docEndpoints.append(tunaController->getEndpoints());
-
-        auto softHealthyController = my_api::soft_healthy::SoftHealthyController::createShared(std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper));
-        router->addController(softHealthyController);
-        docEndpoints.append(softHealthyController->getEndpoints());
-
-        auto flyControlController = my_api::fly_control_api::FlyControlController::createShared(std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper));
-        router->addController(flyControlController);
-        docEndpoints.append(flyControlController->getEndpoints());
-
-        auto podController = my_api::pod_api::PodController::createShared(std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper));
-        router->addController(podController);
-        docEndpoints.append(podController->getEndpoints());
-
-        auto mediamtxController = my_api::mediamtx_monitor_api::MediamtxMonitorController::createShared(std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper));
-        router->addController(mediamtxController);
-        docEndpoints.append(mediamtxController->getEndpoints());
-
-        auto fileApiController = my_api::file_cache_api::FileApiController::createShared(std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper));
-        router->addController(fileApiController);
-        docEndpoints.append(fileApiController->getEndpoints());
-
-        auto audioController = my_api::audio_api::AudioController::createShared(std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper));
-        router->addController(audioController);
-        docEndpoints.append(audioController->getEndpoints());
-
-        auto lightController = my_api::light_api::LightController::createShared(std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper));
-        router->addController(lightController);
-        docEndpoints.append(lightController->getEndpoints());
-
-        auto ipController = my_api::ip_api::MyIPController::createShared(std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper));
-        router->addController(ipController);
-        docEndpoints.append(ipController->getEndpoints());
+        // 加载功能性 API 控制器
+        for (const auto& [model_name, enabled] : api_enable_mapping_.items()) {
+            if (enabled && std::find(default_models.begin(), default_models.end(), model_name) == default_models.end()) {
+                if (LoadAPIModel(router, docEndpoints, objectMapper, model_name)) {
+                    MYLOG_INFO("MyAPI: {} API 控制器已启用并加载成功", model_name.c_str());
+                } else {
+                    MYLOG_ERROR("MyAPI: {} API 控制器未启用或加载失败，跳过注册", model_name.c_str());
+                }
+            }
+        }
 
         if (swaggerResources != nullptr) {
             auto swaggerController = oatpp::swagger::Controller::createShared(docEndpoints, docInfo, swaggerResources);
@@ -227,25 +412,6 @@ void MyAPI::ServerThread(int port) {
         } else {
             MYLOG_WARN("MyAPI: Swagger 资源不可用，跳过 Swagger Controller 注册");
         }
-        // docEndpoints.append(swaggerController->getEndpoints());
-
-        // using MyobjectMapper = oatpp::data::mapping::ObjectMapper;
-        // auto heartbeatController = my_api::heartbeat::HeartBeatController::createShared(std::static_pointer_cast<MyobjectMapper>(objectMapper));
-        // auto edgesController = my_api::edge::EdgesController::createShared(std::static_pointer_cast<MyobjectMapper>(objectMapper));
-        // auto scriptController = my_api::my_script_api::MyScriptController::createShared(std::static_pointer_cast<MyobjectMapper>(objectMapper));
-        // auto tunaController = my_api::tuna::TunaController::createShared(std::static_pointer_cast<MyobjectMapper>(objectMapper));
-        // auto swaggerController = oatpp::swagger::Controller::createShared(docEndpoints, docInfo, swaggerResources);
-        // objectMappers.push_back(edgeController);
-        // objectMappers.push_back(heartbeatController);
-        // objectMappers.push_back(edgesController);
-        // objectMappers.push_back(scriptController);
-        // objectMappers.push_back(tunaController);
-
-        // for (std::shared_ptr<base::BaseApiController> objectMapper : objectMappers) {
-        //     router->addController(objectMapper);
-        //     docEndpoints.append(objectMapper->getEndpoints());
-        // }
-        // router->addController(swaggerController);
 
         // --- 修正点：ConnectionHandler 只声明一次 ---
         auto connectionHandler = oatpp::web::server::HttpConnectionHandler::createShared(router);
