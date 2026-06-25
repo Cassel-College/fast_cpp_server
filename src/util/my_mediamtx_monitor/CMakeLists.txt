@@ -9,15 +9,28 @@ if (BUILD_MY_MEDIAMTX_MONITOR)
     print_colored_message("------------------------------" COLOR magenta)
     print_colored_message("Building my_mediamtx_monitor library..." COLOR yellow)
 
-    set(MY_MEDIAMTX_MONITOR_INCLUDE_DIRECTORIES ${PROJECT_SOURCE_DIR}/src/util/my_mediamtx_monitor)
-    file(GLOB_RECURSE MY_MEDIAMTX_MONITOR_SOURCES ${PROJECT_SOURCE_DIR}/src/util/my_mediamtx_monitor/*.cpp)
+    set(MY_MEDIAMTX_MONITOR_ROOT_DIR ${PROJECT_SOURCE_DIR}/src/util/my_mediamtx_monitor)
+    set(MY_MEDIAMTX_MONITOR_V1_DIR ${MY_MEDIAMTX_MONITOR_ROOT_DIR}/v1)
+    set(MY_MEDIAMTX_MONITOR_V2_DIR ${MY_MEDIAMTX_MONITOR_ROOT_DIR}/v2)
 
-    pretty_print_list("MY_MEDIAMTX_MONITOR_INCLUDE_DIRECTORIES List" MY_MEDIAMTX_MONITOR_INCLUDE_DIRECTORIES)
-    pretty_print_list("MY_MEDIAMTX_MONITOR_SOURCES List" MY_MEDIAMTX_MONITOR_SOURCES)
+    file(GLOB MY_MEDIAMTX_MONITOR_V1_SOURCES
+        ${MY_MEDIAMTX_MONITOR_V1_DIR}/*.cpp
+    )
+    file(GLOB MY_MEDIAMTX_MONITOR_V2_SOURCES
+        ${MY_MEDIAMTX_MONITOR_V2_DIR}/*.cpp
+    )
+    
+    pretty_print_list("MY_MEDIAMTX_MONITOR_V1_SOURCES List"     MY_MEDIAMTX_MONITOR_V1_SOURCES)
+    pretty_print_list("MY_MEDIAMTX_MONITOR_V2_SOURCES List"     MY_MEDIAMTX_MONITOR_V2_SOURCES)
 
-    add_library(my_mediamtx_monitor STATIC ${MY_MEDIAMTX_MONITOR_SOURCES})
-    target_include_directories(my_mediamtx_monitor PUBLIC ${MY_MEDIAMTX_MONITOR_INCLUDE_DIRECTORIES})
-
+    add_library(my_mediamtx_monitor STATIC
+        ${MY_MEDIAMTX_MONITOR_V1_SOURCES}
+        ${MY_MEDIAMTX_MONITOR_V2_SOURCES}
+    )
+    target_include_directories(my_mediamtx_monitor
+        PUBLIC ${MY_MEDIAMTX_MONITOR_V1_DIR}
+        PUBLIC ${MY_MEDIAMTX_MONITOR_V2_DIR}
+    )
     target_link_libraries(my_mediamtx_monitor PUBLIC pthread)
     target_link_libraries(my_mediamtx_monitor PUBLIC nlohmann_json::nlohmann_json)
     target_link_libraries(my_mediamtx_monitor PUBLIC mylog)

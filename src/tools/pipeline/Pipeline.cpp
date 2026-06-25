@@ -11,10 +11,14 @@
 #include "MyFlyControlManager.h"
 #include "pod_manager.h"
 #include "RtspRelayMonitorManager.h"
+#include "PodStreamManager.h"
+#include "PodConfig.h"
 #include "MyCacheProvider.h"
 #include "MyAudios.h"
 #include "MyLog.h"
 #include "MyTools.h"
+#include "SearchlightConfig.h"
+#include "SearchlightManager.h"
 
 #include <cstring>
 #include <system_error>
@@ -135,9 +139,10 @@ void Pipeline::LaunchRoBot() {
                 else if (model_name == "soft_healthy_monitor") { LaunchSoftHealthyMonitor(model_args); success_count++;}
                 else if (model_name == "fly_control") { LaunchFlyControl(model_args); success_count++;}
                 else if (model_name == "pod") { LaunchPodManager(model_args); success_count++;}
-                else if (model_name == "mediamtx_monitor") { LaunchMediamtxMonitor(model_args); success_count++;}
+                else if (model_name == "mediamtx_monitor") { LaunchMediamtxMonitorV2(model_args); success_count++;}
                 else if (model_name == "file_cache") { LaunchFileCache(model_args); success_count++;}
                 else if (model_name == "audio_server") { LaunchAudioServer(model_args); success_count++;}
+                else if (model_name == "search_light") { LaunchSearchLight(model_args); success_count++;}
                 else { MYLOG_INFO("* Arg: {}, Value: {}", "节点[" + node_index + "]警告", "未知的模型名称: " + model_name);}
                 
                 MYLOG_INFO("* Arg: {}, Value: {}", "节点分发完成", "节点[" + node_index + "] 已成功加入监听列表");
@@ -566,9 +571,9 @@ void Pipeline::LaunchPodManager(const nlohmann::json& args) {
     }
 }
 
-void Pipeline::LaunchMediamtxMonitor(const nlohmann::json& args) {
-    MYLOG_INFO("启动 MediaMTX Monitor 模块");
-    MYLOG_INFO("MediaMTX Monitor 模块参数: {}", args.dump(4));
+void Pipeline::LaunchMediamtxMonitorV1(const nlohmann::json& args) {
+    MYLOG_INFO("启动 MediaMTX Monitor V1 模块");
+    MYLOG_INFO("MediaMTX Monitor V1 模块参数: {}", args.dump(4));
     try {
         auto& manager = my_mediamtx_monitor::RtspRelayMonitorManager::GetInstance();
         if (!manager.Init(args)) {
@@ -577,6 +582,25 @@ void Pipeline::LaunchMediamtxMonitor(const nlohmann::json& args) {
         }
         manager.Start();
         MYLOG_INFO("成功启动 MediaMTX Monitor 模块");
+    } catch (const std::exception& e) {
+        MYLOG_ERROR("启动 MediaMTX Monitor 模块时捕获异常: {}", e.what());
+    }
+}
+
+void Pipeline::LaunchMediamtxMonitorV2(const nlohmann::json& args) {
+    MYLOG_INFO("启动 MediaMTX Monitor V2 模块");
+    MYLOG_INFO("MediaMTX Monitor V2 模块参数: {}", args.dump(4));
+    try {
+        // 获取Pod Stream管理器单例并初始化
+        pod_stream::PodStreamManager& podManager = pod_stream::PodStreamManager::GetInstance();
+        pod_stream::PodConfig      podRTSPConfig = pod_stream::CreatePodByConfig(args);
+        if (!podManager.Init(podRTSPConfig)) {
+            MYLOG_ERROR("初始化吊舱流管理器失败");
+        } else {
+            MYLOG_INFO("吊舱流管理器初始化成功");
+            podManager.Start();
+            MYLOG_INFO("成功启动 MediaMTX Monitor 模块");
+        }
     } catch (const std::exception& e) {
         MYLOG_ERROR("启动 MediaMTX Monitor 模块时捕获异常: {}", e.what());
     }
@@ -629,6 +653,29 @@ void Pipeline::LaunchAudioServer(const nlohmann::json& args) {
         }
 
         MYLOG_INFO("* 模块: {}, 状态: {}", module_name, "启动成功");
+    } catch (const std::exception& e) {
+        MYLOG_ERROR("* 模块: {}, 捕获异常: {}", module_name, e.what());
+    }
+}
+
+void Pipeline::LaunchSearchLight(const nlohmann::json& args) {
+    const std::string module_name = "搜索灯模块(SearchLight)";
+    MYLOG_INFO("===== 开始启动模块: {} =====", module_name);
+    MYLOG_INFO("SearchLight 模块参数: {}", args.dump(4));
+
+    try {
+        MYLOG_INFO("提取参数并初始化 SearchLight 模块...");
+        SearchlightControl::SearchlightInitConfig my_light_config;
+        my_light_config.set_driver(args.value("driver", "/dev/ttyUSB0"));
+        my_light_config.set_baud_rate(args.value("baud_rate", 115200));
+        MYLOG_INFO("* 模块: {}, 配置 - {}", module_name, my_light_config.GetConfigStr());
+        SearchlightControl::SearchlightManager& lightManager = SearchlightControl::SearchlightManager::getInstance();
+        lightManager.initialize(my_light_config);
+        if (lightManager.start()) {
+            MYLOG_INFO("* 模块: {}, 状态: {}", module_name, "启动成功");
+        } else {
+            MYLOG_ERROR("* 模块: {}, 状态: {}", module_name, "启动失败");
+        }
     } catch (const std::exception& e) {
         MYLOG_ERROR("* 模块: {}, 捕获异常: {}", module_name, e.what());
     }

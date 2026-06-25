@@ -10,6 +10,7 @@
 #include "controller/file_cache/FileApiController.h"
 
 #include "controller/audio/AudioController.h"
+#include "controller/light/LightController.h"
 #include "controller/ip/MyIPController.h"
 #include "controller/demo/edges/EdgesController.hpp"
 #include "controller/demo/tuna/TunaController.h"
@@ -40,7 +41,7 @@ namespace my_api {
 
 namespace {
 
-constexpr const char* kDefaultSwaggerResourceDir = "/home/cs/DockerRoot/fast_cpp_server/external/oatpp-swagger/res";
+constexpr const char* kDefaultSwaggerResourceDir = "/opt/fast_cpp_server/share/swagger-res/res";
 
 class OatppEnvironmentGuard {
 public:
@@ -211,6 +212,10 @@ void MyAPI::ServerThread(int port) {
         auto audioController = my_api::audio_api::AudioController::createShared(std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper));
         router->addController(audioController);
         docEndpoints.append(audioController->getEndpoints());
+
+        auto lightController = my_api::light_api::LightController::createShared(std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper));
+        router->addController(lightController);
+        docEndpoints.append(lightController->getEndpoints());
 
         auto ipController = my_api::ip_api::MyIPController::createShared(std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper));
         router->addController(ipController);
