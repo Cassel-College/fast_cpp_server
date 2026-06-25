@@ -14,6 +14,7 @@ namespace my_api::tuna {
 
 class TunaController : public base::BaseApiController {
 public:
+    static constexpr const char* SWAGGER_TAG = "TunaController";
     explicit TunaController(
         const std::shared_ptr<ObjectMapper>& objectMapper
     );
@@ -21,6 +22,7 @@ public:
     static std::shared_ptr<TunaController> createShared(const std::shared_ptr<ObjectMapper>& objectMapper);
 
     ENDPOINT_INFO(tunaDown) {
+            info->addTag(SWAGGER_TAG);
       info->summary = "让金枪鱼潜航器下潜";
       info->description = "让金枪鱼潜航器下潜到水下指定深度，";
       info->addResponse<oatpp::String>(Status::CODE_200, "application/json");
@@ -33,6 +35,7 @@ public:
             );
 
     ENDPOINT_INFO(tunaUp) {
+        info->addTag(SWAGGER_TAG);
         info->summary = "让金枪鱼潜航器上浮";
         info->description = "让金枪鱼潜航器上浮到水面，";
         info->addResponse<oatpp::String>(Status::CODE_200, "application/json");
