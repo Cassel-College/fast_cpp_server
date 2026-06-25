@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_light/SearchlightCommandBuilder.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_1ef3a2c00c98b770603ff35e33be4e5f.html">my_light</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">SearchlightCommandBuilder.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="SearchlightCommandBuilder_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef SEARCHLIGHT_COMMAND_BUILDER_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define SEARCHLIGHT_COMMAND_BUILDER_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceSearchlightControl.html">SearchlightControl</a> {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// 操作码生成器类：把业务指令转换为协议帧，避免在业务层手写 HEX。</span></div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classSearchlightControl_1_1SearchlightCommandBuilder.html">   12</a></span><span class="keyword">class </span><a class="code hl_class" href="classSearchlightControl_1_1SearchlightCommandBuilder.html">SearchlightCommandBuilder</a> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_function" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#abb88457fd99785f26c85377a0862ca99">SearchlightCommandBuilder</a>();</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    std::vector&lt;uint8_t&gt; <a class="code hl_function" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#a9b8f320b79abb959703d339258e3f665">makeLedOn</a>();</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    std::vector&lt;uint8_t&gt; <a class="code hl_function" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#aba27e2fc429069b9ab8f97826e16146a">makeLedOff</a>();</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    std::vector&lt;uint8_t&gt; <a class="code hl_function" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#aef715c1b04569a27f281d1ef9b0eb435">makeBrightness</a>(<span class="keywordtype">int</span> level);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    std::vector&lt;uint8_t&gt; <a class="code hl_function" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#acd864a5f09221ed42c7d94e6f7fdd965">makeFlashEnable</a>();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    std::vector&lt;uint8_t&gt; <a class="code hl_function" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#a813a3595a68a2486b7cd5bf5fbdeccf8">makeFlashDisable</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    std::vector&lt;uint8_t&gt; <a class="code hl_function" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#a3714ab89d4710fd6c296af0745942f9f">makeFlashHz</a>(<span class="keywordtype">int</span> hz);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    std::vector&lt;uint8_t&gt; <a class="code hl_function" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#afb928d3fa896744243e1d9ac0998d413">makeServoHome</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    std::vector&lt;uint8_t&gt; <a class="code hl_function" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#accc4bed77fa78ac50a6e99ae3c3f40e2">makeServoMoveTo</a>(<span class="keywordtype">int</span> x_degree, <span class="keywordtype">int</span> y_degree);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    std::vector&lt;uint8_t&gt; <a class="code hl_function" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#ab83e1288d2b2e1b753f5e4b39d22e8f3">makeFrame</a>(<span class="keyword">const</span> std::vector&lt;uint8_t&gt;&amp; payload);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    std::vector&lt;uint8_t&gt; <a class="code hl_function" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#a9f89fc8858cbe3e07f18553519cdc73a">makeLedPayload</a>(uint8_t op, uint8_t value) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#a32ffebd17a41184b9c046bd98150b1f5">clamp</a>(<span class="keywordtype">int</span> value, <span class="keywordtype">int</span> min_value, <span class="keywordtype">int</span> max_value);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#a055a7dfa400aa924fb2713ca8b664e0d">appendBigEndianInt16</a>(std::vector&lt;uint8_t&gt;&amp; payload, <span class="keywordtype">int</span> value);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#a98dc2895ea84b2abe4410f0d87060c7a">   31</a></span>    uint8_t <a class="code hl_variable" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#a98dc2895ea84b2abe4410f0d87060c7a">frame_counter_</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>};</div>
+</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>}  <span class="comment">// namespace SearchlightControl</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#endif  </span><span class="comment">// SEARCHLIGHT_COMMAND_BUILDER_H</span></div>
+<div class="ttc" id="aclassSearchlightControl_1_1SearchlightCommandBuilder_html"><div class="ttname"><a href="classSearchlightControl_1_1SearchlightCommandBuilder.html">SearchlightControl::SearchlightCommandBuilder</a></div><div class="ttdef"><b>Definition</b> SearchlightCommandBuilder.h:12</div></div>
+<div class="ttc" id="aclassSearchlightControl_1_1SearchlightCommandBuilder_html_a055a7dfa400aa924fb2713ca8b664e0d"><div class="ttname"><a href="classSearchlightControl_1_1SearchlightCommandBuilder.html#a055a7dfa400aa924fb2713ca8b664e0d">SearchlightControl::SearchlightCommandBuilder::appendBigEndianInt16</a></div><div class="ttdeci">static void appendBigEndianInt16(std::vector&lt; uint8_t &gt; &amp;payload, int value)</div><div class="ttdef"><b>Definition</b> SearchlightCommandBuilder.cpp:91</div></div>
+<div class="ttc" id="aclassSearchlightControl_1_1SearchlightCommandBuilder_html_a32ffebd17a41184b9c046bd98150b1f5"><div class="ttname"><a href="classSearchlightControl_1_1SearchlightCommandBuilder.html#a32ffebd17a41184b9c046bd98150b1f5">SearchlightControl::SearchlightCommandBuilder::clamp</a></div><div class="ttdeci">static int clamp(int value, int min_value, int max_value)</div><div class="ttdef"><b>Definition</b> SearchlightCommandBuilder.cpp:81</div></div>
+<div class="ttc" id="aclassSearchlightControl_1_1SearchlightCommandBuilder_html_a3714ab89d4710fd6c296af0745942f9f"><div class="ttname"><a href="classSearchlightControl_1_1SearchlightCommandBuilder.html#a3714ab89d4710fd6c296af0745942f9f">SearchlightControl::SearchlightCommandBuilder::makeFlashHz</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; makeFlashHz(int hz)</div><div class="ttdef"><b>Definition</b> SearchlightCommandBuilder.cpp:33</div></div>
+<div class="ttc" id="aclassSearchlightControl_1_1SearchlightCommandBuilder_html_a813a3595a68a2486b7cd5bf5fbdeccf8"><div class="ttname"><a href="classSearchlightControl_1_1SearchlightCommandBuilder.html#a813a3595a68a2486b7cd5bf5fbdeccf8">SearchlightControl::SearchlightCommandBuilder::makeFlashDisable</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; makeFlashDisable()</div><div class="ttdef"><b>Definition</b> SearchlightCommandBuilder.cpp:28</div></div>
+<div class="ttc" id="aclassSearchlightControl_1_1SearchlightCommandBuilder_html_a98dc2895ea84b2abe4410f0d87060c7a"><div class="ttname"><a href="classSearchlightControl_1_1SearchlightCommandBuilder.html#a98dc2895ea84b2abe4410f0d87060c7a">SearchlightControl::SearchlightCommandBuilder::frame_counter_</a></div><div class="ttdeci">uint8_t frame_counter_</div><div class="ttdef"><b>Definition</b> SearchlightCommandBuilder.h:31</div></div>
+<div class="ttc" id="aclassSearchlightControl_1_1SearchlightCommandBuilder_html_a9b8f320b79abb959703d339258e3f665"><div class="ttname"><a href="classSearchlightControl_1_1SearchlightCommandBuilder.html#a9b8f320b79abb959703d339258e3f665">SearchlightControl::SearchlightCommandBuilder::makeLedOn</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; makeLedOn()</div><div class="ttdef"><b>Definition</b> SearchlightCommandBuilder.cpp:11</div></div>
+<div class="ttc" id="aclassSearchlightControl_1_1SearchlightCommandBuilder_html_a9f89fc8858cbe3e07f18553519cdc73a"><div class="ttname"><a href="classSearchlightControl_1_1SearchlightCommandBuilder.html#a9f89fc8858cbe3e07f18553519cdc73a">SearchlightControl::SearchlightCommandBuilder::makeLedPayload</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; makeLedPayload(uint8_t op, uint8_t value) const</div><div class="ttdef"><b>Definition</b> SearchlightCommandBuilder.cpp:72</div></div>
+<div class="ttc" id="aclassSearchlightControl_1_1SearchlightCommandBuilder_html_ab83e1288d2b2e1b753f5e4b39d22e8f3"><div class="ttname"><a href="classSearchlightControl_1_1SearchlightCommandBuilder.html#ab83e1288d2b2e1b753f5e4b39d22e8f3">SearchlightControl::SearchlightCommandBuilder::makeFrame</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; makeFrame(const std::vector&lt; uint8_t &gt; &amp;payload)</div><div class="ttdef"><b>Definition</b> SearchlightCommandBuilder.cpp:65</div></div>
+<div class="ttc" id="aclassSearchlightControl_1_1SearchlightCommandBuilder_html_aba27e2fc429069b9ab8f97826e16146a"><div class="ttname"><a href="classSearchlightControl_1_1SearchlightCommandBuilder.html#aba27e2fc429069b9ab8f97826e16146a">SearchlightControl::SearchlightCommandBuilder::makeLedOff</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; makeLedOff()</div><div class="ttdef"><b>Definition</b> SearchlightCommandBuilder.cpp:15</div></div>
+<div class="ttc" id="aclassSearchlightControl_1_1SearchlightCommandBuilder_html_abb88457fd99785f26c85377a0862ca99"><div class="ttname"><a href="classSearchlightControl_1_1SearchlightCommandBuilder.html#abb88457fd99785f26c85377a0862ca99">SearchlightControl::SearchlightCommandBuilder::SearchlightCommandBuilder</a></div><div class="ttdeci">SearchlightCommandBuilder()</div><div class="ttdef"><b>Definition</b> SearchlightCommandBuilder.cpp:9</div></div>
+<div class="ttc" id="aclassSearchlightControl_1_1SearchlightCommandBuilder_html_accc4bed77fa78ac50a6e99ae3c3f40e2"><div class="ttname"><a href="classSearchlightControl_1_1SearchlightCommandBuilder.html#accc4bed77fa78ac50a6e99ae3c3f40e2">SearchlightControl::SearchlightCommandBuilder::makeServoMoveTo</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; makeServoMoveTo(int x_degree, int y_degree)</div><div class="ttdef"><b>Definition</b> SearchlightCommandBuilder.cpp:48</div></div>
+<div class="ttc" id="aclassSearchlightControl_1_1SearchlightCommandBuilder_html_acd864a5f09221ed42c7d94e6f7fdd965"><div class="ttname"><a href="classSearchlightControl_1_1SearchlightCommandBuilder.html#acd864a5f09221ed42c7d94e6f7fdd965">SearchlightControl::SearchlightCommandBuilder::makeFlashEnable</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; makeFlashEnable()</div><div class="ttdef"><b>Definition</b> SearchlightCommandBuilder.cpp:24</div></div>
+<div class="ttc" id="aclassSearchlightControl_1_1SearchlightCommandBuilder_html_aef715c1b04569a27f281d1ef9b0eb435"><div class="ttname"><a href="classSearchlightControl_1_1SearchlightCommandBuilder.html#aef715c1b04569a27f281d1ef9b0eb435">SearchlightControl::SearchlightCommandBuilder::makeBrightness</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; makeBrightness(int level)</div><div class="ttdef"><b>Definition</b> SearchlightCommandBuilder.cpp:19</div></div>
+<div class="ttc" id="aclassSearchlightControl_1_1SearchlightCommandBuilder_html_afb928d3fa896744243e1d9ac0998d413"><div class="ttname"><a href="classSearchlightControl_1_1SearchlightCommandBuilder.html#afb928d3fa896744243e1d9ac0998d413">SearchlightControl::SearchlightCommandBuilder::makeServoHome</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; makeServoHome()</div><div class="ttdef"><b>Definition</b> SearchlightCommandBuilder.cpp:38</div></div>
+<div class="ttc" id="anamespaceSearchlightControl_html"><div class="ttname"><a href="namespaceSearchlightControl.html">SearchlightControl</a></div><div class="ttdef"><b>Definition</b> Searchlight.cpp:9</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

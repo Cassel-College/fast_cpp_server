@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_mediamtx_monitor/v2/PodStreamManager.cpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_9d4f728460ea36c9f4fb61d4d98dff33.html">my_mediamtx_monitor</a></li><li class="navelem"><a class="el" href="dir_f633cf40700e17b7385e13d244382dc1.html">v2</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">PodStreamManager.cpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>吊舱视频拉流守护模块 - 核心实现  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="PodStreamManager_8h_source.html">PodStreamManager.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="PodConfig_8h_source.html">PodConfig.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="MyLog_8h_source.html">MyLog.h</a>&quot;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;iomanip&gt;</code><br />
+<code>#include &lt;chrono&gt;</code><br />
+<code>#include &lt;ctime&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
+<code>#include &lt;cstdlib&gt;</code><br />
+<code>#include &lt;csignal&gt;</code><br />
+<code>#include &lt;cerrno&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;sys/types.h&gt;</code><br />
+<code>#include &lt;sys/wait.h&gt;</code><br />
+<code>#include &lt;sys/stat.h&gt;</code><br />
+<code>#include &lt;fcntl.h&gt;</code><br />
+<code>#include &lt;signal.h&gt;</code><br />
+<code>#include &lt;libgen.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+PodStreamManager.cpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="PodStreamManager_8cpp__incl.png" border="0" usemap="#asrc_2util_2my__mediamtx__monitor_2v2_2PodStreamManager_8cpp" alt=""/></div>
+<map name="asrc_2util_2my__mediamtx__monitor_2v2_2PodStreamManager_8cpp" id="asrc_2util_2my__mediamtx__monitor_2v2_2PodStreamManager_8cpp">
+<area shape="rect" title="吊舱视频拉流守护模块 &#45; 核心实现" alt="" coords="1288,5,1547,45"/>
+<area shape="rect" href="PodStreamManager_8h.html" title=" " alt="" coords="359,93,521,119"/>
+<area shape="poly" title=" " alt="" coords="1288,40,580,96,534,100,534,94,580,91,1288,34"/>
+<area shape="rect" title=" " alt="" coords="725,255,792,280"/>
+<area shape="poly" title=" " alt="" coords="1288,35,1142,43,987,56,857,73,813,84,790,95,777,111,768,128,757,168,755,207,757,241,752,241,749,207,752,167,763,126,773,108,786,91,812,79,856,68,986,51,1141,38,1288,29"/>
+<area shape="rect" title=" " alt="" coords="5,255,101,280"/>
+<area shape="poly" title=" " alt="" coords="1288,33,1062,40,792,53,534,71,428,83,347,96,289,108,245,121,203,139,152,169,107,207,72,245,68,242,103,203,149,164,200,134,243,116,288,103,346,91,427,77,533,66,791,48,1062,35,1288,27"/>
+<area shape="rect" href="PodConfig_8h.html" title=" " alt="" coords="439,174,537,199"/>
+<area shape="poly" title=" " alt="" coords="1288,30,1165,35,1019,46,862,65,709,96,656,112,605,131,522,170,520,165,603,127,655,107,707,91,862,60,1018,40,1164,29,1288,25"/>
+<area shape="rect" href="MyLog_8h.html" title=" " alt="" coords="800,93,877,119"/>
+<area shape="poly" title=" " alt="" coords="1288,42,1104,64,892,96,891,91,1104,59,1287,37"/>
+<area shape="rect" title=" " alt="" coords="901,93,981,119"/>
+<area shape="poly" title=" " alt="" coords="1288,48,996,96,995,90,1287,42"/>
+<area shape="rect" title=" " alt="" coords="1005,93,1080,119"/>
+<area shape="poly" title=" " alt="" coords="1325,48,1094,96,1093,96,1092,91,1093,91,1324,43"/>
+<area shape="rect" title=" " alt="" coords="1105,93,1178,119"/>
+<area shape="poly" title=" " alt="" coords="1352,48,1192,93,1191,88,1350,43"/>
+<area shape="rect" title=" " alt="" coords="1203,93,1277,119"/>
+<area shape="poly" title=" " alt="" coords="1376,48,1280,90,1277,85,1374,43"/>
+<area shape="rect" title=" " alt="" coords="1301,93,1360,119"/>
+<area shape="poly" title=" " alt="" coords="1398,48,1356,86,1352,82,1395,44"/>
+<area shape="rect" title=" " alt="" coords="1384,93,1451,119"/>
+<area shape="poly" title=" " alt="" coords="1420,46,1420,79,1415,79,1415,46"/>
+<area shape="rect" title=" " alt="" coords="1475,93,1541,119"/>
+<area shape="poly" title=" " alt="" coords="1441,44,1486,82,1482,86,1438,48"/>
+<area shape="rect" title=" " alt="" coords="1565,93,1633,119"/>
+<area shape="poly" title=" " alt="" coords="1462,43,1560,85,1558,90,1460,48"/>
+<area shape="rect" title=" " alt="" coords="1657,93,1719,119"/>
+<area shape="poly" title=" " alt="" coords="1483,43,1644,89,1643,94,1481,48"/>
+<area shape="rect" title=" " alt="" coords="1744,93,1829,119"/>
+<area shape="poly" title=" " alt="" coords="1506,43,1731,90,1730,95,1505,48"/>
+<area shape="rect" title=" " alt="" coords="1853,93,1928,119"/>
+<area shape="poly" title=" " alt="" coords="1547,42,1684,63,1840,90,1839,96,1683,68,1546,47"/>
+<area shape="rect" title=" " alt="" coords="1952,93,2040,119"/>
+<area shape="poly" title=" " alt="" coords="1547,38,1729,60,1939,91,1938,96,1728,65,1547,43"/>
+<area shape="rect" title=" " alt="" coords="2064,93,2149,119"/>
+<area shape="poly" title=" " alt="" coords="1547,34,1777,56,2050,91,2050,96,1777,61,1546,39"/>
+<area shape="rect" title=" " alt="" coords="2174,93,2237,119"/>
+<area shape="poly" title=" " alt="" coords="1547,29,1825,49,1992,66,2161,91,2160,96,1991,72,1825,54,1547,35"/>
+<area shape="rect" title=" " alt="" coords="2261,93,2334,119"/>
+<area shape="poly" title=" " alt="" coords="1547,28,1862,47,2053,65,2247,91,2247,96,2053,71,1862,53,1547,34"/>
+<area shape="rect" title=" " alt="" coords="2359,93,2433,119"/>
+<area shape="poly" title=" " alt="" coords="1547,27,1706,33,1903,45,2122,63,2345,91,2345,96,2122,69,1903,50,1705,39,1547,32"/>
+<area shape="rect" title=" " alt="" coords="816,255,875,280"/>
+<area shape="poly" title=" " alt="" coords="489,116,564,136,646,164,739,206,815,246,812,250,737,211,644,169,562,142,488,121"/>
+<area shape="rect" title=" " alt="" coords="125,255,176,280"/>
+<area shape="poly" title=" " alt="" coords="413,121,309,169,239,211,180,249,177,245,236,206,307,164,411,116"/>
+<area shape="rect" title=" " alt="" coords="200,255,267,280"/>
+<area shape="poly" title=" " alt="" coords="427,121,364,169,261,248,258,244,361,165,424,117"/>
+<area shape="rect" title=" " alt="" coords="291,255,355,280"/>
+<area shape="poly" title=" " alt="" coords="434,120,341,245,337,242,429,117"/>
+<area shape="rect" title=" " alt="" coords="379,255,443,280"/>
+<area shape="poly" title=" " alt="" coords="440,120,429,167,417,241,412,240,424,166,435,119"/>
+<area shape="poly" title=" " alt="" coords="477,116,534,137,596,164,628,184,659,204,728,246,726,250,656,209,625,188,593,169,532,142,475,121"/>
+<area shape="rect" title=" " alt="" coords="638,255,701,280"/>
+<area shape="poly" title=" " alt="" coords="465,116,506,137,551,164,604,205,649,243,645,247,601,209,548,169,504,142,463,121"/>
+<area shape="poly" title=" " alt="" coords="391,121,318,141,238,169,153,210,84,250,82,245,151,205,236,164,317,136,390,116"/>
+<area shape="poly" title=" " alt="" coords="449,117,476,161,472,164,445,120"/>
+<area shape="poly" title=" " alt="" coords="538,195,803,252,802,257,537,200"/>
+<area shape="poly" title=" " alt="" coords="439,200,329,224,190,257,189,252,328,219,438,195"/>
+<area shape="poly" title=" " alt="" coords="452,202,281,254,279,249,450,197"/>
+<area shape="poly" title=" " alt="" coords="465,202,360,251,358,246,463,197"/>
+<area shape="poly" title=" " alt="" coords="478,201,434,247,430,243,475,198"/>
+<area shape="poly" title=" " alt="" coords="528,197,713,250,712,255,527,202"/>
+<area shape="poly" title=" " alt="" coords="515,197,631,247,629,252,513,202"/>
+<area shape="poly" title=" " alt="" coords="439,199,115,257,114,252,438,194"/>
+<area shape="rect" title=" " alt="" coords="467,255,613,280"/>
+<area shape="poly" title=" " alt="" coords="498,198,527,242,522,244,493,201"/>
+<area shape="poly" title=" " alt="" coords="832,120,818,141,807,167,803,187,807,206,815,225,828,243,823,246,811,228,801,207,798,187,801,166,813,139,827,117"/>
+<area shape="rect" title=" " alt="" coords="1251,174,1375,199"/>
+<area shape="poly" title=" " alt="" coords="878,114,890,116,988,131,1064,139,1141,148,1239,164,1259,168,1258,173,1238,169,1140,153,1064,145,987,136,889,121,877,119"/>
+<area shape="rect" title=" " alt="" coords="1399,167,1558,207"/>
+<area shape="poly" title=" " alt="" coords="878,114,890,116,1027,133,1136,141,1246,148,1386,164,1385,169,1245,153,1136,146,1027,139,889,121,877,119"/>
+<area shape="rect" title=" " alt="" coords="815,174,934,199"/>
+<area shape="poly" title=" " alt="" coords="846,118,866,160,861,163,842,120"/>
+<area shape="rect" title=" " alt="" coords="958,174,1125,199"/>
+<area shape="poly" title=" " alt="" coords="869,116,1000,167,998,172,867,121"/>
+<area shape="rect" title=" " alt="" coords="1149,174,1227,199"/>
+<area shape="poly" title=" " alt="" coords="878,114,890,116,1014,137,1069,147,1138,164,1147,167,1146,172,1137,169,1068,152,1014,143,889,121,877,119"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacepod__stream" id="r_namespacepod__stream"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepod__stream.html">pod_stream</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ab269a640b6a59882381a79c848ce3efe" id="r_ab269a640b6a59882381a79c848ce3efe"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepod__stream.html#ab269a640b6a59882381a79c848ce3efe">GetTimestamp</a> ()</td></tr>
+<tr class="memdesc:ab269a640b6a59882381a79c848ce3efe"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前时间戳字符串  <br /></td></tr>
+<tr class="separator:ab269a640b6a59882381a79c848ce3efe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>吊舱视频拉流守护模块 - 核心实现 </p>
+<p>实现 PodStreamManager 的所有核心功能，包括:</p><ul>
+<li>双线程架构 (Monitor + Worker)</li>
+<li>状态机管理</li>
+<li>子进程生命周期管理 (fork/exec)</li>
+<li>网络连通性探测 (ICMP ping)</li>
+<li>MediaMTX YAML 配置生成</li>
+</ul>
+<dl class="section author"><dt>作者</dt><dd>peng.liu </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2026-04-16 </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>1.0.0 </dd></dl>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<map id="LaunchMediamtxMonitorV2" name="LaunchMediamtxMonitorV2">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,273,207,298"/>
+<area shape="rect" id="Node000002" href="$namespacepod__stream.html#a07b30c4154761384a0d7dcf8a9ef0fa8" title=" " alt="" coords="256,142,488,167"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,270,181,234,254,194,314,169,316,174,256,198,184,238,127,275"/>
+<area shape="rect" id="Node000004" href="$classpod__stream_1_1PodStreamManager.html#a65c1866ab42b382d4ba27688d19a508a" title="获取单例实例" alt="" coords="255,361,489,401"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="135,296,190,321,256,347,280,355,278,360,254,352,188,326,132,300"/>
+<area shape="rect" id="Node000005" href="$classpod__stream_1_1PodStreamManager.html#abc31e4b338943779ee9b61cc81480bcb" title="唯一初始化入口" alt="" coords="255,208,489,248"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="165,270,265,248,266,254,166,275"/>
+<area shape="rect" id="Node000009" href="$classpod__stream_1_1PodStreamManager.html#a07aaf1227e4d645f15e0a964f54ef291" title="启动管理器" alt="" coords="255,297,489,337"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="207,295,241,299,241,304,207,300"/>
+<area shape="rect" id="Node000003" href="$structpod__stream_1_1PodConfig.html#ad93edbe885499a712129356f1ffd506b" title="打印配置信息 (调试用)" alt="" coords="569,127,741,167"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="488,149,554,147,555,152,488,154"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="438,205,537,176,566,168,567,173,538,181,439,211"/>
+<area shape="rect" id="Node000006" href="$structpod__stream_1_1PodConfig.html#ac532c4b500b1a85ea22217f2c65a70ed" title="验证配置有效性" alt="" coords="569,191,741,231"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="489,218,555,214,555,219,490,223"/>
+<area shape="rect" id="Node000007" href="$classpod__stream_1_1PodStreamManager.html#a2cae7364ded48841041ddf96acdf1a52" title="状态转换" alt="" coords="820,5,1055,45"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="424,246,498,268,543,278,590,284,638,284,685,278,730,264,770,241,789,221,797,200,798,177,796,153,794,129,794,104,801,79,818,56,823,51,826,55,822,59,806,82,799,105,799,129,802,153,804,177,802,201,793,224,774,245,732,269,686,284,638,290,590,289,542,283,497,274,422,251"/>
+<area shape="rect" id="Node000008" href="$classpod__stream_1_1PodStreamManager.html#a7d4b0b0707696a8449db2e07bfa0ebd9" title="获取状态名称字符串" alt="" coords="1103,20,1337,60"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="1055,29,1089,31,1088,36,1055,34"/>
+<area shape="rect" id="Node000010" href="$classpod__stream_1_1PodStreamManager.html#a113223b951492e271c7bd457470b66f4" title="监控线程主循环" alt="" coords="537,519,772,559"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="467,335,491,347,537,383,578,426,612,469,637,506,632,509,607,472,574,429,534,387,488,352,465,340"/>
+<area shape="rect" id="Node000012" href="$classpod__stream_1_1PodStreamManager.html#a78e2a4289515dd73f4ef63bc0b635ff4" title="工作线程主循环 (状态机调度)" alt="" coords="537,305,772,345"/>
+<area shape="poly" id="edge12_Node000009_Node000012" title=" " alt="" coords="490,318,523,319,523,324,490,323"/>
+<area shape="rect" id="Node000011" href="$classpod__stream_1_1PodStreamManager.html#a76cfd626e850fd6560c0e09c4bd897a1" title="单次连通性探测" alt="" coords="820,669,1055,709"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="680,557,741,606,780,632,821,655,838,662,836,667,819,660,777,637,738,610,677,561"/>
+<area shape="poly" id="edge34_Node000012_Node000007" title=" " alt="" coords="746,303,770,285,789,257,796,228,796,200,793,172,789,143,790,114,798,85,818,56,822,52,826,56,822,59,803,87,795,115,794,143,798,171,801,200,801,229,793,259,774,288,750,307"/>
+<area shape="rect" id="Node000013" href="$classpod__stream_1_1PodStreamManager.html#a33887ecd917a38816dbeeafbb793fee6" title="获取重试退避时间 (指数退避)" alt="" coords="820,184,1055,224"/>
+<area shape="poly" id="edge13_Node000012_Node000013" title=" " alt="" coords="733,303,771,284,785,272,794,260,803,246,819,234,830,227,833,232,821,238,807,250,798,263,789,276,773,289,735,308"/>
+<area shape="rect" id="Node000014" href="$classpod__stream_1_1PodStreamManager.html#a27ab4385367163911ce44037f66bdb74" title="获取当前状态" alt="" coords="1103,112,1337,152"/>
+<area shape="poly" id="edge14_Node000012_Node000014" title=" " alt="" coords="743,303,770,285,782,271,788,257,792,227,797,198,805,183,818,170,838,159,865,150,932,138,1010,131,1088,128,1088,134,1010,136,933,143,866,155,840,164,822,174,809,186,802,199,797,228,793,258,786,274,774,289,746,307"/>
+<area shape="rect" id="Node000015" href="$classpod__stream_1_1PodStreamManager.html#a71adfc07786f18181996ed090cf89aa9" title="获取当前状态字符串 (调试用)" alt="" coords="820,69,1055,109"/>
+<area shape="poly" id="edge15_Node000012_Node000015" title=" " alt="" coords="745,303,770,285,784,266,791,246,793,207,795,167,803,147,818,126,833,114,836,118,822,130,808,149,801,168,799,207,797,248,789,268,774,289,748,307"/>
+<area shape="rect" id="Node000016" href="$classpod__stream_1_1PodStreamManager.html#af74a7903aabc239b3d2ba4bd085a9009" title="检查是否处于崩溃过频状态" alt="" coords="820,248,1055,288"/>
+<area shape="poly" id="edge18_Node000012_Node000016" title=" " alt="" coords="753,303,824,288,825,293,754,308"/>
+<area shape="rect" id="Node000017" href="$classpod__stream_1_1PodStreamManager.html#aadc9131a3893e84d1adba546d702efae" title="检查 MediaMTX 进程是否存活" alt="" coords="1103,349,1337,389"/>
+<area shape="poly" id="edge19_Node000012_Node000017" title=" " alt="" coords="772,329,1055,348,1089,351,1088,357,1054,353,772,334"/>
+<area shape="rect" id="Node000018" href="$classpod__stream_1_1PodStreamManager.html#ac6b6a9f5e61958d839ba3cf3c687104b" title="准备 MediaMTX 配置文件" alt="" coords="820,541,1055,581"/>
+<area shape="poly" id="edge20_Node000012_Node000018" title=" " alt="" coords="669,344,692,383,726,433,770,484,822,527,832,533,829,538,818,532,766,488,722,436,687,386,664,347"/>
+<area shape="rect" id="Node000022" href="$classpod__stream_1_1PodStreamManager.html#a3f92ed4b1ba895dea1d6a2bd4fd7face" title="回收子进程，避免僵尸进程" alt="" coords="1103,413,1337,453"/>
+<area shape="poly" id="edge24_Node000012_Node000022" title=" " alt="" coords="685,343,746,381,782,398,821,412,888,427,958,435,1089,439,1089,444,958,441,887,432,819,417,780,403,743,385,683,348"/>
+<area shape="rect" id="Node000023" href="$classpod__stream_1_1PodStreamManager.html#a1b1892807f75154d39d6205a8bdee398" title="记录崩溃事件，用于崩溃频率统计" alt="" coords="820,605,1055,645"/>
+<area shape="poly" id="edge25_Node000012_Node000023" title=" " alt="" coords="672,344,774,505,787,531,794,553,803,572,822,591,828,596,825,600,818,595,799,575,789,555,782,533,770,508,667,347"/>
+<area shape="rect" id="Node000024" href="$classpod__stream_1_1PodStreamManager.html#a0f7adabc71ed98cfd8f8524a691c5fa0" title="启动 MediaMTX 子进程" alt="" coords="820,477,1055,517"/>
+<area shape="poly" id="edge26_Node000012_Node000024" title=" " alt="" coords="678,344,739,399,779,430,821,456,851,470,849,475,819,461,776,434,736,403,674,348"/>
+<area shape="rect" id="Node000026" href="$classpod__stream_1_1PodStreamManager.html#a3e0f667ecf232b80c9ede3733ddf8891" title="停止 MediaMTX 子进程" alt="" coords="820,363,1055,403"/>
+<area shape="poly" id="edge31_Node000012_Node000026" title=" " alt="" coords="754,343,825,357,824,362,753,348"/>
+<area shape="poly" id="edge17_Node000015_Node000008" title=" " alt="" coords="1052,67,1091,60,1092,65,1053,72"/>
+<area shape="poly" id="edge16_Node000015_Node000014" title=" " alt="" coords="1055,104,1089,110,1089,115,1055,110"/>
+<area shape="rect" id="Node000019" href="$classpod__stream_1_1PodStreamManager.html#a8f407a2f441b62b51ac681f115e15c45" title="生成 YAML 配置内容" alt="" coords="1103,605,1337,645"/>
+<area shape="poly" id="edge21_Node000018_Node000019" title=" " alt="" coords="1027,579,1119,600,1117,605,1026,584"/>
+<area shape="rect" id="Node000021" href="$classpod__stream_1_1PodStreamManager.html#a7f644c8df943b3285960fecdc63f8cfd" title="获取 MediaMTX 配置文件路径" alt="" coords="1103,541,1337,581"/>
+<area shape="poly" id="edge23_Node000018_Node000021" title=" " alt="" coords="1055,559,1089,559,1089,564,1055,564"/>
+<area shape="rect" id="Node000020" href="$namespacepod__stream.html#ab269a640b6a59882381a79c848ce3efe" title="获取当前时间戳字符串" alt="" coords="1385,613,1589,638"/>
+<area shape="poly" id="edge22_Node000019_Node000020" title=" " alt="" coords="1337,623,1371,623,1371,628,1337,628"/>
+<area shape="poly" id="edge29_Node000024_Node000017" title=" " alt="" coords="966,475,1027,437,1102,399,1121,391,1123,396,1104,404,1030,441,969,479"/>
+<area shape="poly" id="edge27_Node000024_Node000021" title=" " alt="" coords="1027,515,1119,536,1117,541,1026,520"/>
+<area shape="poly" id="edge30_Node000024_Node000022" title=" " alt="" coords="1026,475,1117,454,1119,459,1027,480"/>
+<area shape="rect" id="Node000025" href="$classpod__stream_1_1PodStreamManager.html#aa1c370c6823e44aa0457571c181757d0" title="获取日志文件路径 (用于子进程输出重定向)" alt="" coords="1103,477,1337,517"/>
+<area shape="poly" id="edge28_Node000024_Node000025" title=" " alt="" coords="1055,495,1089,495,1089,500,1055,500"/>
+<area shape="poly" id="edge32_Node000026_Node000017" title=" " alt="" coords="1055,374,1089,373,1089,378,1055,380"/>
+<area shape="poly" id="edge33_Node000026_Node000022" title=" " alt="" coords="1050,400,1095,408,1094,414,1049,405"/>
+</map>

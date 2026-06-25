@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_light/SerialPort.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_1ef3a2c00c98b770603ff35e33be4e5f.html">my_light</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">SerialPort.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="SerialPort_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef SEARCHLIGHT_SERIAL_PORT_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define SEARCHLIGHT_SERIAL_PORT_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;termios.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceSearchlightControl.html">SearchlightControl</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// 串口通信类：封装 POSIX UART 打开、配置、读写和关闭。</span></div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classSearchlightControl_1_1SerialPort.html">   14</a></span><span class="keyword">class </span><a class="code hl_class" href="classSearchlightControl_1_1SerialPort.html">SerialPort</a> {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_function" href="classSearchlightControl_1_1SerialPort.html#ae216bc988a1d76d9874d388e69e63acd">SerialPort</a>();</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <a class="code hl_function" href="classSearchlightControl_1_1SerialPort.html#a0f67eac24b774429a205b00237f12039">~SerialPort</a>();</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classSearchlightControl_1_1SerialPort.html#a610d2237c7f0b3e4dee4ccd562c43467">openPort</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="classSearchlightControl_1_1SerialPort.html#a32eb9803faa28579ba290e2701d473f0">device</a>, <span class="keywordtype">int</span> baud_rate);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classSearchlightControl_1_1SerialPort.html#aafecd0de679363415166cd0630e4f736">closePort</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classSearchlightControl_1_1SerialPort.html#a002ed331862370f434b7befe331b5a0b">isOpen</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    ssize_t <a class="code hl_function" href="classSearchlightControl_1_1SerialPort.html#aa7662471664629a306f0d0f2b0afa227">readBytes</a>(uint8_t* buffer, <span class="keywordtype">size_t</span> size, <span class="keywordtype">int</span> timeout_ms);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classSearchlightControl_1_1SerialPort.html#ac51e9f50b9b0803e7d656f6273ab9fc2">writeBytes</a>(<span class="keyword">const</span> std::vector&lt;uint8_t&gt;&amp; bytes, std::string&amp; error);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    std::string <a class="code hl_function" href="classSearchlightControl_1_1SerialPort.html#a32eb9803faa28579ba290e2701d473f0">device</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classSearchlightControl_1_1SerialPort.html#a6b83a130dedc371e3d72b0ee59cdc00f">configure</a>(<span class="keywordtype">int</span> baud_rate);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classSearchlightControl_1_1SerialPort.html#a39148915544de73ed87fb05fa261dbf3">baudToTermios</a>(<span class="keywordtype">int</span> baud_rate, speed_t&amp; speed);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classSearchlightControl_1_1SerialPort.html#a4d16b31e09a7202f94eb934cde5372e5">   30</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="classSearchlightControl_1_1SerialPort.html#a4d16b31e09a7202f94eb934cde5372e5">fd_</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classSearchlightControl_1_1SerialPort.html#a4922458603e80e334aad6a1060098261">   31</a></span>    std::string <a class="code hl_variable" href="classSearchlightControl_1_1SerialPort.html#a4922458603e80e334aad6a1060098261">device_</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>};</div>
+</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>}  <span class="comment">// namespace SearchlightControl</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#endif  </span><span class="comment">// SEARCHLIGHT_SERIAL_PORT_H</span></div>
+<div class="ttc" id="aclassSearchlightControl_1_1SerialPort_html"><div class="ttname"><a href="classSearchlightControl_1_1SerialPort.html">SearchlightControl::SerialPort</a></div><div class="ttdef"><b>Definition</b> SerialPort.h:14</div></div>
+<div class="ttc" id="aclassSearchlightControl_1_1SerialPort_html_a002ed331862370f434b7befe331b5a0b"><div class="ttname"><a href="classSearchlightControl_1_1SerialPort.html#a002ed331862370f434b7befe331b5a0b">SearchlightControl::SerialPort::isOpen</a></div><div class="ttdeci">bool isOpen() const</div><div class="ttdef"><b>Definition</b> SerialPort.cpp:52</div></div>
+<div class="ttc" id="aclassSearchlightControl_1_1SerialPort_html_a0f67eac24b774429a205b00237f12039"><div class="ttname"><a href="classSearchlightControl_1_1SerialPort.html#a0f67eac24b774429a205b00237f12039">SearchlightControl::SerialPort::~SerialPort</a></div><div class="ttdeci">~SerialPort()</div><div class="ttdef"><b>Definition</b> SerialPort.cpp:19</div></div>
+<div class="ttc" id="aclassSearchlightControl_1_1SerialPort_html_a32eb9803faa28579ba290e2701d473f0"><div class="ttname"><a href="classSearchlightControl_1_1SerialPort.html#a32eb9803faa28579ba290e2701d473f0">SearchlightControl::SerialPort::device</a></div><div class="ttdeci">std::string device() const</div><div class="ttdef"><b>Definition</b> SerialPort.cpp:113</div></div>
+<div class="ttc" id="aclassSearchlightControl_1_1SerialPort_html_a39148915544de73ed87fb05fa261dbf3"><div class="ttname"><a href="classSearchlightControl_1_1SerialPort.html#a39148915544de73ed87fb05fa261dbf3">SearchlightControl::SerialPort::baudToTermios</a></div><div class="ttdeci">static bool baudToTermios(int baud_rate, speed_t &amp;speed)</div><div class="ttdef"><b>Definition</b> SerialPort.cpp:151</div></div>
+<div class="ttc" id="aclassSearchlightControl_1_1SerialPort_html_a4922458603e80e334aad6a1060098261"><div class="ttname"><a href="classSearchlightControl_1_1SerialPort.html#a4922458603e80e334aad6a1060098261">SearchlightControl::SerialPort::device_</a></div><div class="ttdeci">std::string device_</div><div class="ttdef"><b>Definition</b> SerialPort.h:31</div></div>
+<div class="ttc" id="aclassSearchlightControl_1_1SerialPort_html_a4d16b31e09a7202f94eb934cde5372e5"><div class="ttname"><a href="classSearchlightControl_1_1SerialPort.html#a4d16b31e09a7202f94eb934cde5372e5">SearchlightControl::SerialPort::fd_</a></div><div class="ttdeci">int fd_</div><div class="ttdef"><b>Definition</b> SerialPort.h:30</div></div>
+<div class="ttc" id="aclassSearchlightControl_1_1SerialPort_html_a610d2237c7f0b3e4dee4ccd562c43467"><div class="ttname"><a href="classSearchlightControl_1_1SerialPort.html#a610d2237c7f0b3e4dee4ccd562c43467">SearchlightControl::SerialPort::openPort</a></div><div class="ttdeci">bool openPort(const std::string &amp;device, int baud_rate)</div><div class="ttdef"><b>Definition</b> SerialPort.cpp:23</div></div>
+<div class="ttc" id="aclassSearchlightControl_1_1SerialPort_html_a6b83a130dedc371e3d72b0ee59cdc00f"><div class="ttname"><a href="classSearchlightControl_1_1SerialPort.html#a6b83a130dedc371e3d72b0ee59cdc00f">SearchlightControl::SerialPort::configure</a></div><div class="ttdeci">bool configure(int baud_rate)</div><div class="ttdef"><b>Definition</b> SerialPort.cpp:117</div></div>
+<div class="ttc" id="aclassSearchlightControl_1_1SerialPort_html_aa7662471664629a306f0d0f2b0afa227"><div class="ttname"><a href="classSearchlightControl_1_1SerialPort.html#aa7662471664629a306f0d0f2b0afa227">SearchlightControl::SerialPort::readBytes</a></div><div class="ttdeci">ssize_t readBytes(uint8_t *buffer, size_t size, int timeout_ms)</div><div class="ttdef"><b>Definition</b> SerialPort.cpp:56</div></div>
+<div class="ttc" id="aclassSearchlightControl_1_1SerialPort_html_aafecd0de679363415166cd0630e4f736"><div class="ttname"><a href="classSearchlightControl_1_1SerialPort.html#aafecd0de679363415166cd0630e4f736">SearchlightControl::SerialPort::closePort</a></div><div class="ttdeci">void closePort()</div><div class="ttdef"><b>Definition</b> SerialPort.cpp:44</div></div>
+<div class="ttc" id="aclassSearchlightControl_1_1SerialPort_html_ac51e9f50b9b0803e7d656f6273ab9fc2"><div class="ttname"><a href="classSearchlightControl_1_1SerialPort.html#ac51e9f50b9b0803e7d656f6273ab9fc2">SearchlightControl::SerialPort::writeBytes</a></div><div class="ttdeci">bool writeBytes(const std::vector&lt; uint8_t &gt; &amp;bytes, std::string &amp;error)</div><div class="ttdef"><b>Definition</b> SerialPort.cpp:87</div></div>
+<div class="ttc" id="aclassSearchlightControl_1_1SerialPort_html_ae216bc988a1d76d9874d388e69e63acd"><div class="ttname"><a href="classSearchlightControl_1_1SerialPort.html#ae216bc988a1d76d9874d388e69e63acd">SearchlightControl::SerialPort::SerialPort</a></div><div class="ttdeci">SerialPort()</div><div class="ttdef"><b>Definition</b> SerialPort.cpp:17</div></div>
+<div class="ttc" id="anamespaceSearchlightControl_html"><div class="ttname"><a href="namespaceSearchlightControl.html">SearchlightControl</a></div><div class="ttdef"><b>Definition</b> Searchlight.cpp:9</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

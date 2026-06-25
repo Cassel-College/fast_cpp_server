@@ -1,0 +1,296 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_mediamtx_monitor/v2/PodStreamManager.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_9d4f728460ea36c9f4fb61d4d98dff33.html">my_mediamtx_monitor</a></li><li class="navelem"><a class="el" href="dir_f633cf40700e17b7385e13d244382dc1.html">v2</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">PodStreamManager.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="PodStreamManager_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#ifndef POD_STREAM_MANAGER_HPP</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#define POD_STREAM_MANAGER_HPP</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;atomic&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;thread&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;chrono&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;sys/types.h&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;<a class="code" href="PodConfig_8h.html">PodConfig.h</a>&quot;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacepod__stream.html">pod_stream</a> {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">// ============================================================================</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">// PodStreamManager 核心类</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">// ============================================================================</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="};">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classpod__stream_1_1PodStreamManager.html">   48</a></span><span class="keyword">class </span><a class="code hl_class" href="classpod__stream_1_1PodStreamManager.html">PodStreamManager</a> final {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00053" data-start="{" data-end="};">
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8">   53</a></span>    <span class="keyword">enum class</span> <a class="code hl_enumeration" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a> {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <a class="code hl_enumvalue" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8af5137a026a4b2f3b1c8a21cfc60dd14b">kIdle</a>,     </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <a class="code hl_enumvalue" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8a25d5606fe07425ea73f245c48612c039">kReady</a>,    </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <a class="code hl_enumvalue" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8a2fc7fbf0d19294f85dd3880460dd3c0a">kRunning</a>,  </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <a class="code hl_enumvalue" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8a6681e9f78d4e277e2ad43c2d25ff5a0f">kStopping</a>, </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <a class="code hl_enumvalue" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8ae3587c730cc1aa530fa4ddc9c4204e97">kError</a>     </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    };</div>
+</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keyword">static</span> <a class="code hl_class" href="classpod__stream_1_1PodStreamManager.html">PodStreamManager</a>&amp; <a class="code hl_function" href="classpod__stream_1_1PodStreamManager.html#a65c1866ab42b382d4ba27688d19a508a">GetInstance</a>();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classpod__stream_1_1PodStreamManager.html#abc31e4b338943779ee9b61cc81480bcb">Init</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structpod__stream_1_1PodConfig.html">PodConfig</a>&amp; config);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classpod__stream_1_1PodStreamManager.html#a07aaf1227e4d645f15e0a964f54ef291">Start</a>();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classpod__stream_1_1PodStreamManager.html#a17a237457e57625296e6b24feb19c60a">Stop</a>();</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="classpod__stream_1_1PodStreamManager.html#a5098864e797f848db6cd446b98e3ea95">   97</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classpod__stream_1_1PodStreamManager.html#a5098864e797f848db6cd446b98e3ea95">IsInited</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classpod__stream_1_1PodStreamManager.html#abb35e640c7d0e6d7bc452ea7f591c471">inited_</a>.load(); }</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <a class="code hl_enumeration" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a> <a class="code hl_function" href="classpod__stream_1_1PodStreamManager.html#a27ab4385367163911ce44037f66bdb74">GetState</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="classpod__stream_1_1PodStreamManager.html#a7d4b0b0707696a8449db2e07bfa0ebd9">StateToString</a>(<a class="code hl_enumeration" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a> state);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="classpod__stream_1_1PodStreamManager.html#ac766f50854b7401ea00f5e40d89c77f1">  116</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classpod__stream_1_1PodStreamManager.html#ac766f50854b7401ea00f5e40d89c77f1">IsConnected</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classpod__stream_1_1PodStreamManager.html#a41095fc3a389d9ad262c98f45386c049">is_connected_</a>.load(); }</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="classpod__stream_1_1PodStreamManager.html#ad0a4f2d76c7db103769cfdbb06d943c5">  122</a></span>    pid_t <a class="code hl_function" href="classpod__stream_1_1PodStreamManager.html#ad0a4f2d76c7db103769cfdbb06d943c5">GetMediaMtxPid</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classpod__stream_1_1PodStreamManager.html#ab0710bf2acba478f00f709b1d622b4e4">mediamtx_pid_</a>.load(); }</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    std::string <a class="code hl_function" href="classpod__stream_1_1PodStreamManager.html#a71adfc07786f18181996ed090cf89aa9">GetStatusString</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="comment">// ========== 构造/析构 (禁止外部实例化) ==========</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="classpod__stream_1_1PodStreamManager.html#aaf9a0a3b0aef9760b08898e83fa2106d">  132</a></span>    <a class="code hl_function" href="classpod__stream_1_1PodStreamManager.html#aaf9a0a3b0aef9760b08898e83fa2106d">PodStreamManager</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <a class="code hl_function" href="classpod__stream_1_1PodStreamManager.html#af398b0ef543d575e98943d24d4c5cf9d">~PodStreamManager</a>();</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="comment">// ========== 禁止拷贝和移动 ==========</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="classpod__stream_1_1PodStreamManager.html#a0124ba5a84f48877092c35a184561444">  136</a></span>    <a class="code hl_function" href="classpod__stream_1_1PodStreamManager.html#a0124ba5a84f48877092c35a184561444">PodStreamManager</a>(<span class="keyword">const</span> <a class="code hl_class" href="classpod__stream_1_1PodStreamManager.html">PodStreamManager</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="classpod__stream_1_1PodStreamManager.html#afc26fb2734b9129beadbe1f638dff829">  137</a></span>    <a class="code hl_class" href="classpod__stream_1_1PodStreamManager.html">PodStreamManager</a>&amp; <a class="code hl_function" href="classpod__stream_1_1PodStreamManager.html#afc26fb2734b9129beadbe1f638dff829">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classpod__stream_1_1PodStreamManager.html">PodStreamManager</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="classpod__stream_1_1PodStreamManager.html#a0bb8405c889595b98164029c73e85c84">  138</a></span>    <a class="code hl_function" href="classpod__stream_1_1PodStreamManager.html#a0bb8405c889595b98164029c73e85c84">PodStreamManager</a>(<a class="code hl_class" href="classpod__stream_1_1PodStreamManager.html">PodStreamManager</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="classpod__stream_1_1PodStreamManager.html#a9931466bd74838d6ab031f38ea176d39">  139</a></span>    <a class="code hl_class" href="classpod__stream_1_1PodStreamManager.html">PodStreamManager</a>&amp; <a class="code hl_function" href="classpod__stream_1_1PodStreamManager.html#a9931466bd74838d6ab031f38ea176d39">operator=</a>(<a class="code hl_class" href="classpod__stream_1_1PodStreamManager.html">PodStreamManager</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="comment">// ========== 核心线程函数 ==========</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classpod__stream_1_1PodStreamManager.html#a113223b951492e271c7bd457470b66f4">MonitorLoop</a>();</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classpod__stream_1_1PodStreamManager.html#a78e2a4289515dd73f4ef63bc0b635ff4">WorkerLoop</a>();</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <span class="comment">// ========== 连通性探测 ==========</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classpod__stream_1_1PodStreamManager.html#a76cfd626e850fd6560c0e09c4bd897a1">ProbeConnectivityOnce</a>();</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="comment">// ========== 配置管理 ==========</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classpod__stream_1_1PodStreamManager.html#ac6b6a9f5e61958d839ba3cf3c687104b">PrepareMediaMtxConfig</a>();</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    std::string <a class="code hl_function" href="classpod__stream_1_1PodStreamManager.html#a7f644c8df943b3285960fecdc63f8cfd">GetConfigPath</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    std::string <a class="code hl_function" href="classpod__stream_1_1PodStreamManager.html#a8f407a2f441b62b51ac681f115e15c45">GenerateYamlContent</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    </div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    <span class="comment">// ========== 子进程管理 ==========</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    </div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classpod__stream_1_1PodStreamManager.html#a0f7adabc71ed98cfd8f8524a691c5fa0">StartMediaMtx</a>();</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    </div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classpod__stream_1_1PodStreamManager.html#a3e0f667ecf232b80c9ede3733ddf8891">StopMediaMtx</a>(<span class="keywordtype">bool</span> force_kill = <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    </div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classpod__stream_1_1PodStreamManager.html#aadc9131a3893e84d1adba546d702efae">IsMediaMtxAlive</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    </div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classpod__stream_1_1PodStreamManager.html#a3f92ed4b1ba895dea1d6a2bd4fd7face">ReapChildIfNeeded</a>();</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    </div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    std::string <a class="code hl_function" href="classpod__stream_1_1PodStreamManager.html#aa1c370c6823e44aa0457571c181757d0">GetLogFilePath</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    </div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    <span class="comment">// ========== 状态机 ==========</span></div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    </div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classpod__stream_1_1PodStreamManager.html#a2cae7364ded48841041ddf96acdf1a52">Transition</a>(<a class="code hl_enumeration" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a> next);</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    </div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classpod__stream_1_1PodStreamManager.html#a1b1892807f75154d39d6205a8bdee398">RecordCrash</a>();</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    </div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classpod__stream_1_1PodStreamManager.html#af74a7903aabc239b3d2ba4bd085a9009">IsCrashingTooOften</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    </div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classpod__stream_1_1PodStreamManager.html#a33887ecd917a38816dbeeafbb793fee6">GetBackoffDelayMs</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    </div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classpod__stream_1_1PodStreamManager.html#aafffdd575dc3739920895f88125d53e6">ResetBackoff</a>();</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> </div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    <span class="comment">// ========== 配置 ==========</span></div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno"><a class="line" href="classpod__stream_1_1PodStreamManager.html#a3f2bb5ac8864dff13fd29639f47bb341">  261</a></span>    <a class="code hl_struct" href="structpod__stream_1_1PodConfig.html">PodConfig</a> <a class="code hl_variable" href="classpod__stream_1_1PodStreamManager.html#a3f2bb5ac8864dff13fd29639f47bb341">config_</a>;</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    </div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    <span class="comment">// ========== 状态标志 ==========</span></div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno"><a class="line" href="classpod__stream_1_1PodStreamManager.html#abb35e640c7d0e6d7bc452ea7f591c471">  264</a></span>    std::atomic&lt;bool&gt; <a class="code hl_variable" href="classpod__stream_1_1PodStreamManager.html#abb35e640c7d0e6d7bc452ea7f591c471">inited_</a>{<span class="keyword">false</span>};     </div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno"><a class="line" href="classpod__stream_1_1PodStreamManager.html#a8554f10fb3372299f4ca373ca2b9d587">  265</a></span>    std::atomic&lt;bool&gt; <a class="code hl_variable" href="classpod__stream_1_1PodStreamManager.html#a8554f10fb3372299f4ca373ca2b9d587">quit_</a>{<span class="keyword">false</span>};       </div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    </div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    <span class="comment">// ========== 连通性状态 (Monitor Thread 写, Worker Thread 读) ==========</span></div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno"><a class="line" href="classpod__stream_1_1PodStreamManager.html#a41095fc3a389d9ad262c98f45386c049">  268</a></span>    std::atomic&lt;bool&gt; <a class="code hl_variable" href="classpod__stream_1_1PodStreamManager.html#a41095fc3a389d9ad262c98f45386c049">is_connected_</a>{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    </div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    <span class="comment">// ========== 子进程状态 ==========</span></div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno"><a class="line" href="classpod__stream_1_1PodStreamManager.html#ab0710bf2acba478f00f709b1d622b4e4">  271</a></span>    std::atomic&lt;pid_t&gt; <a class="code hl_variable" href="classpod__stream_1_1PodStreamManager.html#ab0710bf2acba478f00f709b1d622b4e4">mediamtx_pid_</a>{-1};</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    </div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    <span class="comment">// ========== 状态机 ==========</span></div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno"><a class="line" href="classpod__stream_1_1PodStreamManager.html#afa493fe555ea66007c4277cc7cb6c4cb">  274</a></span>    <span class="keyword">mutable</span> std::mutex <a class="code hl_variable" href="classpod__stream_1_1PodStreamManager.html#afa493fe555ea66007c4277cc7cb6c4cb">state_mtx_</a>;</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno"><a class="line" href="classpod__stream_1_1PodStreamManager.html#a3b1c09ed3908d987b7452bdcdf3dc06f">  275</a></span>    <a class="code hl_enumeration" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a> <a class="code hl_variable" href="classpod__stream_1_1PodStreamManager.html#a3b1c09ed3908d987b7452bdcdf3dc06f">state_</a>{<a class="code hl_enumvalue" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8af5137a026a4b2f3b1c8a21cfc60dd14b">State::kIdle</a>};</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    </div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    <span class="comment">// ========== 线程对象 ==========</span></div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno"><a class="line" href="classpod__stream_1_1PodStreamManager.html#aa0e30499ef9b94fca024c2836108f6ef">  278</a></span>    std::thread <a class="code hl_variable" href="classpod__stream_1_1PodStreamManager.html#aa0e30499ef9b94fca024c2836108f6ef">monitor_th_</a>;</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno"><a class="line" href="classpod__stream_1_1PodStreamManager.html#aafde46164e80ff2a80c5d075a8aa0dc3">  279</a></span>    std::thread <a class="code hl_variable" href="classpod__stream_1_1PodStreamManager.html#aafde46164e80ff2a80c5d075a8aa0dc3">worker_th_</a>;</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    </div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    <span class="comment">// ========== 去抖计数器 ==========</span></div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno"><a class="line" href="classpod__stream_1_1PodStreamManager.html#a3f87482e942bf7f10eaf05013798529a">  282</a></span>    std::atomic&lt;int&gt; <a class="code hl_variable" href="classpod__stream_1_1PodStreamManager.html#a3f87482e942bf7f10eaf05013798529a">connect_success_count_</a>{0};</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno"><a class="line" href="classpod__stream_1_1PodStreamManager.html#a33aa7a165a3746b5b1a6618651441b14">  283</a></span>    std::atomic&lt;int&gt; <a class="code hl_variable" href="classpod__stream_1_1PodStreamManager.html#a33aa7a165a3746b5b1a6618651441b14">connect_fail_count_</a>{0};</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    </div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    <span class="comment">// ========== 崩溃统计与退避 ==========</span></div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno"><a class="line" href="classpod__stream_1_1PodStreamManager.html#ab7c330f2f1a5dd11211e3a88042ca643">  286</a></span>    <span class="keyword">mutable</span> std::mutex <a class="code hl_variable" href="classpod__stream_1_1PodStreamManager.html#ab7c330f2f1a5dd11211e3a88042ca643">crash_mtx_</a>;</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno"><a class="line" href="classpod__stream_1_1PodStreamManager.html#a8777e63a10d3381a78f37a9470a838ed">  287</a></span>    std::vector&lt;std::chrono::steady_clock::time_point&gt; <a class="code hl_variable" href="classpod__stream_1_1PodStreamManager.html#a8777e63a10d3381a78f37a9470a838ed">crash_timestamps_</a>;</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno"><a class="line" href="classpod__stream_1_1PodStreamManager.html#ac33ced7122eb6ff7a6a1349082bdd5c8">  288</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="classpod__stream_1_1PodStreamManager.html#ac33ced7122eb6ff7a6a1349082bdd5c8">backoff_level_</a>{0};  </div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno"><a class="line" href="classpod__stream_1_1PodStreamManager.html#a078ab3a35796edb5a1c58d9e8952171f">  289</a></span>    std::chrono::steady_clock::time_point <a class="code hl_variable" href="classpod__stream_1_1PodStreamManager.html#a078ab3a35796edb5a1c58d9e8952171f">last_stop_time_</a>;  </div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno"><a class="line" href="classpod__stream_1_1PodStreamManager.html#a191ea42ee0c1e53aa7c4ec7d3a37a481">  290</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classpod__stream_1_1PodStreamManager.html#a191ea42ee0c1e53aa7c4ec7d3a37a481">kMaxBackoffLevel</a> = 5;  </div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno"><a class="line" href="classpod__stream_1_1PodStreamManager.html#aecc761f9ccc7c3285bcbfd0e1fcb7b94">  291</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classpod__stream_1_1PodStreamManager.html#aecc761f9ccc7c3285bcbfd0e1fcb7b94">kCooldownMs</a> = 2000;    </div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>};</div>
+</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span> </div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>} <span class="comment">// namespace pod_stream</span></div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span> </div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span><span class="preprocessor">#endif </span><span class="comment">// POD_STREAM_MANAGER_HPP</span></div>
+<div class="ttc" id="aPodConfig_8h_html"><div class="ttname"><a href="PodConfig_8h.html">PodConfig.h</a></div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html">pod_stream::PodStreamManager</a></div><div class="ttdoc">吊舱视频流管理器 (单例模式)</div><div class="ttdef"><b>Definition</b> PodStreamManager.h:48</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_a0124ba5a84f48877092c35a184561444"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#a0124ba5a84f48877092c35a184561444">pod_stream::PodStreamManager::PodStreamManager</a></div><div class="ttdeci">PodStreamManager(const PodStreamManager &amp;)=delete</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_a078ab3a35796edb5a1c58d9e8952171f"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#a078ab3a35796edb5a1c58d9e8952171f">pod_stream::PodStreamManager::last_stop_time_</a></div><div class="ttdeci">std::chrono::steady_clock::time_point last_stop_time_</div><div class="ttdoc">上次停止时间</div><div class="ttdef"><b>Definition</b> PodStreamManager.h:289</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_a07aaf1227e4d645f15e0a964f54ef291"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#a07aaf1227e4d645f15e0a964f54ef291">pod_stream::PodStreamManager::Start</a></div><div class="ttdeci">void Start()</div><div class="ttdoc">启动管理器</div><div class="ttdef"><b>Definition</b> PodStreamManager.cpp:192</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_a0bb8405c889595b98164029c73e85c84"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#a0bb8405c889595b98164029c73e85c84">pod_stream::PodStreamManager::PodStreamManager</a></div><div class="ttdeci">PodStreamManager(PodStreamManager &amp;&amp;)=delete</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_a0f7adabc71ed98cfd8f8524a691c5fa0"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#a0f7adabc71ed98cfd8f8524a691c5fa0">pod_stream::PodStreamManager::StartMediaMtx</a></div><div class="ttdeci">bool StartMediaMtx()</div><div class="ttdoc">启动 MediaMTX 子进程</div><div class="ttdef"><b>Definition</b> PodStreamManager.cpp:679</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_a113223b951492e271c7bd457470b66f4"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#a113223b951492e271c7bd457470b66f4">pod_stream::PodStreamManager::MonitorLoop</a></div><div class="ttdeci">void MonitorLoop()</div><div class="ttdoc">监控线程主循环</div><div class="ttdef"><b>Definition</b> PodStreamManager.cpp:371</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_a17a237457e57625296e6b24feb19c60a"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#a17a237457e57625296e6b24feb19c60a">pod_stream::PodStreamManager::Stop</a></div><div class="ttdeci">void Stop()</div><div class="ttdoc">停止管理器</div><div class="ttdef"><b>Definition</b> PodStreamManager.cpp:223</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_a191ea42ee0c1e53aa7c4ec7d3a37a481"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#a191ea42ee0c1e53aa7c4ec7d3a37a481">pod_stream::PodStreamManager::kMaxBackoffLevel</a></div><div class="ttdeci">static constexpr int kMaxBackoffLevel</div><div class="ttdoc">最大退避等级 (2^5 = 32秒)</div><div class="ttdef"><b>Definition</b> PodStreamManager.h:290</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_a1b1892807f75154d39d6205a8bdee398"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#a1b1892807f75154d39d6205a8bdee398">pod_stream::PodStreamManager::RecordCrash</a></div><div class="ttdeci">void RecordCrash()</div><div class="ttdoc">记录崩溃事件，用于崩溃频率统计</div><div class="ttdef"><b>Definition</b> PodStreamManager.cpp:298</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_a27ab4385367163911ce44037f66bdb74"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#a27ab4385367163911ce44037f66bdb74">pod_stream::PodStreamManager::GetState</a></div><div class="ttdeci">State GetState() const</div><div class="ttdoc">获取当前状态</div><div class="ttdef"><b>Definition</b> PodStreamManager.cpp:130</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_a2cae7364ded48841041ddf96acdf1a52"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#a2cae7364ded48841041ddf96acdf1a52">pod_stream::PodStreamManager::Transition</a></div><div class="ttdeci">void Transition(State next)</div><div class="ttdoc">状态转换</div><div class="ttdef"><b>Definition</b> PodStreamManager.cpp:274</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_a33887ecd917a38816dbeeafbb793fee6"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#a33887ecd917a38816dbeeafbb793fee6">pod_stream::PodStreamManager::GetBackoffDelayMs</a></div><div class="ttdeci">int GetBackoffDelayMs() const</div><div class="ttdoc">获取重试退避时间 (指数退避)</div><div class="ttdef"><b>Definition</b> PodStreamManager.cpp:340</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_a33aa7a165a3746b5b1a6618651441b14"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#a33aa7a165a3746b5b1a6618651441b14">pod_stream::PodStreamManager::connect_fail_count_</a></div><div class="ttdeci">std::atomic&lt; int &gt; connect_fail_count_</div><div class="ttdef"><b>Definition</b> PodStreamManager.h:283</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_a3b1c09ed3908d987b7452bdcdf3dc06f"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#a3b1c09ed3908d987b7452bdcdf3dc06f">pod_stream::PodStreamManager::state_</a></div><div class="ttdeci">State state_</div><div class="ttdef"><b>Definition</b> PodStreamManager.h:275</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_a3e0f667ecf232b80c9ede3733ddf8891"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#a3e0f667ecf232b80c9ede3733ddf8891">pod_stream::PodStreamManager::StopMediaMtx</a></div><div class="ttdeci">void StopMediaMtx(bool force_kill=false)</div><div class="ttdoc">停止 MediaMTX 子进程</div><div class="ttdef"><b>Definition</b> PodStreamManager.cpp:760</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_a3f2bb5ac8864dff13fd29639f47bb341"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#a3f2bb5ac8864dff13fd29639f47bb341">pod_stream::PodStreamManager::config_</a></div><div class="ttdeci">PodConfig config_</div><div class="ttdef"><b>Definition</b> PodStreamManager.h:261</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_a3f87482e942bf7f10eaf05013798529a"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#a3f87482e942bf7f10eaf05013798529a">pod_stream::PodStreamManager::connect_success_count_</a></div><div class="ttdeci">std::atomic&lt; int &gt; connect_success_count_</div><div class="ttdef"><b>Definition</b> PodStreamManager.h:282</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_a3f92ed4b1ba895dea1d6a2bd4fd7face"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#a3f92ed4b1ba895dea1d6a2bd4fd7face">pod_stream::PodStreamManager::ReapChildIfNeeded</a></div><div class="ttdeci">bool ReapChildIfNeeded()</div><div class="ttdoc">回收子进程，避免僵尸进程</div><div class="ttdef"><b>Definition</b> PodStreamManager.cpp:855</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_a41095fc3a389d9ad262c98f45386c049"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#a41095fc3a389d9ad262c98f45386c049">pod_stream::PodStreamManager::is_connected_</a></div><div class="ttdeci">std::atomic&lt; bool &gt; is_connected_</div><div class="ttdef"><b>Definition</b> PodStreamManager.h:268</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_a5098864e797f848db6cd446b98e3ea95"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#a5098864e797f848db6cd446b98e3ea95">pod_stream::PodStreamManager::IsInited</a></div><div class="ttdeci">bool IsInited() const</div><div class="ttdoc">检查是否已初始化</div><div class="ttdef"><b>Definition</b> PodStreamManager.h:97</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_a5d74787dedbc4e11c1ab15bf487e61f8"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8">pod_stream::PodStreamManager::State</a></div><div class="ttdeci">State</div><div class="ttdoc">状态机状态枚举</div><div class="ttdef"><b>Definition</b> PodStreamManager.h:53</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_a5d74787dedbc4e11c1ab15bf487e61f8a25d5606fe07425ea73f245c48612c039"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8a25d5606fe07425ea73f245c48612c039">pod_stream::PodStreamManager::State::kReady</a></div><div class="ttdeci">@ kReady</div><div class="ttdoc">就绪状态，配置有效，等待网络连通</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_a5d74787dedbc4e11c1ab15bf487e61f8a2fc7fbf0d19294f85dd3880460dd3c0a"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8a2fc7fbf0d19294f85dd3880460dd3c0a">pod_stream::PodStreamManager::State::kRunning</a></div><div class="ttdeci">@ kRunning</div><div class="ttdoc">运行状态，MediaMTX 进程正在运行</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_a5d74787dedbc4e11c1ab15bf487e61f8a6681e9f78d4e277e2ad43c2d25ff5a0f"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8a6681e9f78d4e277e2ad43c2d25ff5a0f">pod_stream::PodStreamManager::State::kStopping</a></div><div class="ttdeci">@ kStopping</div><div class="ttdoc">停止中，正在停止 MediaMTX 进程</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_a5d74787dedbc4e11c1ab15bf487e61f8ae3587c730cc1aa530fa4ddc9c4204e97"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8ae3587c730cc1aa530fa4ddc9c4204e97">pod_stream::PodStreamManager::State::kError</a></div><div class="ttdeci">@ kError</div><div class="ttdoc">错误状态，需要人工干预或等待恢复</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_a5d74787dedbc4e11c1ab15bf487e61f8af5137a026a4b2f3b1c8a21cfc60dd14b"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8af5137a026a4b2f3b1c8a21cfc60dd14b">pod_stream::PodStreamManager::State::kIdle</a></div><div class="ttdeci">@ kIdle</div><div class="ttdoc">空闲状态，未初始化或已停止</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_a65c1866ab42b382d4ba27688d19a508a"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#a65c1866ab42b382d4ba27688d19a508a">pod_stream::PodStreamManager::GetInstance</a></div><div class="ttdeci">static PodStreamManager &amp; GetInstance()</div><div class="ttdoc">获取单例实例</div><div class="ttdef"><b>Definition</b> PodStreamManager.cpp:108</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_a71adfc07786f18181996ed090cf89aa9"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#a71adfc07786f18181996ed090cf89aa9">pod_stream::PodStreamManager::GetStatusString</a></div><div class="ttdeci">std::string GetStatusString() const</div><div class="ttdoc">获取当前状态字符串 (调试用)</div><div class="ttdef"><b>Definition</b> PodStreamManager.cpp:285</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_a76cfd626e850fd6560c0e09c4bd897a1"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#a76cfd626e850fd6560c0e09c4bd897a1">pod_stream::PodStreamManager::ProbeConnectivityOnce</a></div><div class="ttdeci">bool ProbeConnectivityOnce()</div><div class="ttdoc">单次连通性探测</div><div class="ttdef"><b>Definition</b> PodStreamManager.cpp:430</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_a78e2a4289515dd73f4ef63bc0b635ff4"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#a78e2a4289515dd73f4ef63bc0b635ff4">pod_stream::PodStreamManager::WorkerLoop</a></div><div class="ttdeci">void WorkerLoop()</div><div class="ttdoc">工作线程主循环 (状态机调度)</div><div class="ttdef"><b>Definition</b> PodStreamManager.cpp:445</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_a7d4b0b0707696a8449db2e07bfa0ebd9"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#a7d4b0b0707696a8449db2e07bfa0ebd9">pod_stream::PodStreamManager::StateToString</a></div><div class="ttdeci">static const char * StateToString(State state)</div><div class="ttdoc">获取状态名称字符串</div><div class="ttdef"><b>Definition</b> PodStreamManager.cpp:119</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_a7f644c8df943b3285960fecdc63f8cfd"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#a7f644c8df943b3285960fecdc63f8cfd">pod_stream::PodStreamManager::GetConfigPath</a></div><div class="ttdeci">std::string GetConfigPath() const</div><div class="ttdoc">获取 MediaMTX 配置文件路径</div><div class="ttdef"><b>Definition</b> PodStreamManager.cpp:588</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_a8554f10fb3372299f4ca373ca2b9d587"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#a8554f10fb3372299f4ca373ca2b9d587">pod_stream::PodStreamManager::quit_</a></div><div class="ttdeci">std::atomic&lt; bool &gt; quit_</div><div class="ttdoc">退出标志，通知线程退出</div><div class="ttdef"><b>Definition</b> PodStreamManager.h:265</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_a8777e63a10d3381a78f37a9470a838ed"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#a8777e63a10d3381a78f37a9470a838ed">pod_stream::PodStreamManager::crash_timestamps_</a></div><div class="ttdeci">std::vector&lt; std::chrono::steady_clock::time_point &gt; crash_timestamps_</div><div class="ttdef"><b>Definition</b> PodStreamManager.h:287</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_a8f407a2f441b62b51ac681f115e15c45"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#a8f407a2f441b62b51ac681f115e15c45">pod_stream::PodStreamManager::GenerateYamlContent</a></div><div class="ttdeci">std::string GenerateYamlContent() const</div><div class="ttdoc">生成 YAML 配置内容</div><div class="ttdef"><b>Definition</b> PodStreamManager.cpp:598</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_a9931466bd74838d6ab031f38ea176d39"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#a9931466bd74838d6ab031f38ea176d39">pod_stream::PodStreamManager::operator=</a></div><div class="ttdeci">PodStreamManager &amp; operator=(PodStreamManager &amp;&amp;)=delete</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_aa0e30499ef9b94fca024c2836108f6ef"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#aa0e30499ef9b94fca024c2836108f6ef">pod_stream::PodStreamManager::monitor_th_</a></div><div class="ttdeci">std::thread monitor_th_</div><div class="ttdef"><b>Definition</b> PodStreamManager.h:278</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_aa1c370c6823e44aa0457571c181757d0"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#aa1c370c6823e44aa0457571c181757d0">pod_stream::PodStreamManager::GetLogFilePath</a></div><div class="ttdeci">std::string GetLogFilePath() const</div><div class="ttdoc">获取日志文件路径 (用于子进程输出重定向)</div><div class="ttdef"><b>Definition</b> PodStreamManager.cpp:593</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_aadc9131a3893e84d1adba546d702efae"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#aadc9131a3893e84d1adba546d702efae">pod_stream::PodStreamManager::IsMediaMtxAlive</a></div><div class="ttdeci">bool IsMediaMtxAlive() const</div><div class="ttdoc">检查 MediaMTX 进程是否存活</div><div class="ttdef"><b>Definition</b> PodStreamManager.cpp:839</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_aaf9a0a3b0aef9760b08898e83fa2106d"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#aaf9a0a3b0aef9760b08898e83fa2106d">pod_stream::PodStreamManager::PodStreamManager</a></div><div class="ttdeci">PodStreamManager()=default</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_aafde46164e80ff2a80c5d075a8aa0dc3"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#aafde46164e80ff2a80c5d075a8aa0dc3">pod_stream::PodStreamManager::worker_th_</a></div><div class="ttdeci">std::thread worker_th_</div><div class="ttdef"><b>Definition</b> PodStreamManager.h:279</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_aafffdd575dc3739920895f88125d53e6"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#aafffdd575dc3739920895f88125d53e6">pod_stream::PodStreamManager::ResetBackoff</a></div><div class="ttdeci">void ResetBackoff()</div><div class="ttdoc">重置退避计数器</div><div class="ttdef"><b>Definition</b> PodStreamManager.cpp:359</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_ab0710bf2acba478f00f709b1d622b4e4"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#ab0710bf2acba478f00f709b1d622b4e4">pod_stream::PodStreamManager::mediamtx_pid_</a></div><div class="ttdeci">std::atomic&lt; pid_t &gt; mediamtx_pid_</div><div class="ttdef"><b>Definition</b> PodStreamManager.h:271</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_ab7c330f2f1a5dd11211e3a88042ca643"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#ab7c330f2f1a5dd11211e3a88042ca643">pod_stream::PodStreamManager::crash_mtx_</a></div><div class="ttdeci">std::mutex crash_mtx_</div><div class="ttdef"><b>Definition</b> PodStreamManager.h:286</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_abb35e640c7d0e6d7bc452ea7f591c471"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#abb35e640c7d0e6d7bc452ea7f591c471">pod_stream::PodStreamManager::inited_</a></div><div class="ttdeci">std::atomic&lt; bool &gt; inited_</div><div class="ttdoc">是否已初始化</div><div class="ttdef"><b>Definition</b> PodStreamManager.h:264</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_abc31e4b338943779ee9b61cc81480bcb"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#abc31e4b338943779ee9b61cc81480bcb">pod_stream::PodStreamManager::Init</a></div><div class="ttdeci">bool Init(const PodConfig &amp;config)</div><div class="ttdoc">唯一初始化入口</div><div class="ttdef"><b>Definition</b> PodStreamManager.cpp:139</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_ac33ced7122eb6ff7a6a1349082bdd5c8"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#ac33ced7122eb6ff7a6a1349082bdd5c8">pod_stream::PodStreamManager::backoff_level_</a></div><div class="ttdeci">int backoff_level_</div><div class="ttdoc">退避等级 (0=无退避, 1=1s, 2=2s, ...)</div><div class="ttdef"><b>Definition</b> PodStreamManager.h:288</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_ac6b6a9f5e61958d839ba3cf3c687104b"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#ac6b6a9f5e61958d839ba3cf3c687104b">pod_stream::PodStreamManager::PrepareMediaMtxConfig</a></div><div class="ttdeci">bool PrepareMediaMtxConfig()</div><div class="ttdoc">准备 MediaMTX 配置文件</div><div class="ttdef"><b>Definition</b> PodStreamManager.cpp:625</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_ac766f50854b7401ea00f5e40d89c77f1"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#ac766f50854b7401ea00f5e40d89c77f1">pod_stream::PodStreamManager::IsConnected</a></div><div class="ttdeci">bool IsConnected() const</div><div class="ttdoc">检查网络连通状态</div><div class="ttdef"><b>Definition</b> PodStreamManager.h:116</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_ad0a4f2d76c7db103769cfdbb06d943c5"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#ad0a4f2d76c7db103769cfdbb06d943c5">pod_stream::PodStreamManager::GetMediaMtxPid</a></div><div class="ttdeci">pid_t GetMediaMtxPid() const</div><div class="ttdoc">获取 MediaMTX 进程 PID</div><div class="ttdef"><b>Definition</b> PodStreamManager.h:122</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_aecc761f9ccc7c3285bcbfd0e1fcb7b94"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#aecc761f9ccc7c3285bcbfd0e1fcb7b94">pod_stream::PodStreamManager::kCooldownMs</a></div><div class="ttdeci">static constexpr int kCooldownMs</div><div class="ttdoc">停止后冷却时间 (毫秒)</div><div class="ttdef"><b>Definition</b> PodStreamManager.h:291</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_af398b0ef543d575e98943d24d4c5cf9d"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#af398b0ef543d575e98943d24d4c5cf9d">pod_stream::PodStreamManager::~PodStreamManager</a></div><div class="ttdeci">~PodStreamManager()</div><div class="ttdef"><b>Definition</b> PodStreamManager.cpp:114</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_af74a7903aabc239b3d2ba4bd085a9009"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#af74a7903aabc239b3d2ba4bd085a9009">pod_stream::PodStreamManager::IsCrashingTooOften</a></div><div class="ttdeci">bool IsCrashingTooOften() const</div><div class="ttdoc">检查是否处于崩溃过频状态</div><div class="ttdef"><b>Definition</b> PodStreamManager.cpp:331</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_afa493fe555ea66007c4277cc7cb6c4cb"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#afa493fe555ea66007c4277cc7cb6c4cb">pod_stream::PodStreamManager::state_mtx_</a></div><div class="ttdeci">std::mutex state_mtx_</div><div class="ttdef"><b>Definition</b> PodStreamManager.h:274</div></div>
+<div class="ttc" id="aclasspod__stream_1_1PodStreamManager_html_afc26fb2734b9129beadbe1f638dff829"><div class="ttname"><a href="classpod__stream_1_1PodStreamManager.html#afc26fb2734b9129beadbe1f638dff829">pod_stream::PodStreamManager::operator=</a></div><div class="ttdeci">PodStreamManager &amp; operator=(const PodStreamManager &amp;)=delete</div></div>
+<div class="ttc" id="anamespacepod__stream_html"><div class="ttname"><a href="namespacepod__stream.html">pod_stream</a></div><div class="ttdef"><b>Definition</b> PodConfig.cpp:9</div></div>
+<div class="ttc" id="astructpod__stream_1_1PodConfig_html"><div class="ttname"><a href="structpod__stream_1_1PodConfig.html">pod_stream::PodConfig</a></div><div class="ttdoc">吊舱配置结构体</div><div class="ttdef"><b>Definition</b> PodConfig.h:23</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

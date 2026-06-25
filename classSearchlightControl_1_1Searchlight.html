@@ -1,0 +1,1838 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: Searchlight类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceSearchlightControl.html">SearchlightControl</a></li><li class="navelem"><a class="el" href="classSearchlightControl_1_1Searchlight.html">Searchlight</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a>  </div>
+  <div class="headertitle"><div class="title">Searchlight类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="Searchlight_8h_source.html">Searchlight.h</a>&gt;</code></p>
+<div class="dynheader">
+Searchlight 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchlightControl_1_1Searchlight__coll__graph.png" border="0" usemap="#aSearchlight_coll__map" alt="Collaboration graph"/></div>
+<map name="aSearchlight_coll__map" id="aSearchlight_coll__map">
+<area shape="rect" title=" " alt="" coords="680,119,775,145"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightInitConfig.html" title=" " alt="" coords="338,6,495,31"/>
+<area shape="poly" title=" " alt="" coords="509,14,584,24,622,34,657,50,678,65,696,83,721,118,717,121,692,86,675,69,655,54,620,39,583,29,509,19"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightCommandBuilder.html" title=" " alt="" coords="5,119,213,145"/>
+<area shape="poly" title=" " alt="" coords="197,115,237,109,355,97,447,91,539,94,656,109,688,117,687,122,656,115,539,99,447,96,355,102,238,115,197,120"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightLedController.html" title=" " alt="" coords="325,119,508,145"/>
+<area shape="poly" title=" " alt="" coords="227,129,325,129,325,135,227,135"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightServoController.html" title=" " alt="" coords="319,169,515,194"/>
+<area shape="poly" title=" " alt="" coords="203,144,337,166,336,171,202,150"/>
+<area shape="poly" title=" " alt="" coords="522,129,680,129,680,135,522,135"/>
+<area shape="poly" title=" " alt="" coords="528,169,655,149,685,142,686,147,657,155,529,174"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html" title=" " alt="" coords="352,218,481,243"/>
+<area shape="poly" title=" " alt="" coords="495,225,574,214,616,203,655,188,688,167,713,143,716,147,691,171,657,193,617,208,575,219,496,231"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a83d578162bcf4faa5988db56e0433a01" id="r_a83d578162bcf4faa5988db56e0433a01"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchlightControl_1_1Searchlight.html#a83d578162bcf4faa5988db56e0433a01">Searchlight</a> ()</td></tr>
+<tr class="separator:a83d578162bcf4faa5988db56e0433a01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57753f931580485d7dd2b85ee646823f" id="r_a57753f931580485d7dd2b85ee646823f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchlightControl_1_1Searchlight.html#a57753f931580485d7dd2b85ee646823f">~Searchlight</a> ()</td></tr>
+<tr class="separator:a57753f931580485d7dd2b85ee646823f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39c036d9bf50c8e0e64fd4b7ab4376f7" id="r_a39c036d9bf50c8e0e64fd4b7ab4376f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchlightControl_1_1Searchlight.html#a39c036d9bf50c8e0e64fd4b7ab4376f7">initialize</a> (const <a class="el" href="classSearchlightControl_1_1SearchlightInitConfig.html">SearchlightInitConfig</a> &amp;config)</td></tr>
+<tr class="separator:a39c036d9bf50c8e0e64fd4b7ab4376f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85fc319006ab5f2e18f398f485f88132" id="r_a85fc319006ab5f2e18f398f485f88132"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchlightControl_1_1Searchlight.html#a85fc319006ab5f2e18f398f485f88132">online</a> ()</td></tr>
+<tr class="separator:a85fc319006ab5f2e18f398f485f88132"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1db25c09e5791ef840510db63ba86ca" id="r_ae1db25c09e5791ef840510db63ba86ca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchlightControl_1_1Searchlight.html#ae1db25c09e5791ef840510db63ba86ca">setting_light_level</a> (int level)</td></tr>
+<tr class="separator:ae1db25c09e5791ef840510db63ba86ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62541d9ce277d974565e3d9256358ed0" id="r_a62541d9ce277d974565e3d9256358ed0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchlightControl_1_1Searchlight.html#a62541d9ce277d974565e3d9256358ed0">setting_flash</a> (int hz)</td></tr>
+<tr class="separator:a62541d9ce277d974565e3d9256358ed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad6c464e20d649f022c84edbc94d24d9" id="r_aad6c464e20d649f022c84edbc94d24d9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchlightControl_1_1Searchlight.html#aad6c464e20d649f022c84edbc94d24d9">open_flash</a> ()</td></tr>
+<tr class="separator:aad6c464e20d649f022c84edbc94d24d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7d991b13bd8a00dd582bda0ee7596a0" id="r_ae7d991b13bd8a00dd582bda0ee7596a0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchlightControl_1_1Searchlight.html#ae7d991b13bd8a00dd582bda0ee7596a0">close_flash</a> ()</td></tr>
+<tr class="separator:ae7d991b13bd8a00dd582bda0ee7596a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af47d63e3739fa2d0c7f0fac48d35d27c" id="r_af47d63e3739fa2d0c7f0fac48d35d27c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchlightControl_1_1Searchlight.html#af47d63e3739fa2d0c7f0fac48d35d27c">home</a> ()</td></tr>
+<tr class="separator:af47d63e3739fa2d0c7f0fac48d35d27c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a0d18be56d1dbe9c77885500f47e0de" id="r_a9a0d18be56d1dbe9c77885500f47e0de"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchlightControl_1_1Searchlight.html#a9a0d18be56d1dbe9c77885500f47e0de">move_to</a> (int x, int y)</td></tr>
+<tr class="separator:a9a0d18be56d1dbe9c77885500f47e0de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4d21c6a2fba2c0781458ceea32e22ab" id="r_ab4d21c6a2fba2c0781458ceea32e22ab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchlightControl_1_1Searchlight.html#ab4d21c6a2fba2c0781458ceea32e22ab">open_led</a> ()</td></tr>
+<tr class="separator:ab4d21c6a2fba2c0781458ceea32e22ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58ac11d6b8da2206d27f6d72c52d783f" id="r_a58ac11d6b8da2206d27f6d72c52d783f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchlightControl_1_1Searchlight.html#a58ac11d6b8da2206d27f6d72c52d783f">close_led</a> ()</td></tr>
+<tr class="separator:a58ac11d6b8da2206d27f6d72c52d783f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a171786b75197fc30e545dacafc36e211" id="r_a171786b75197fc30e545dacafc36e211"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchlightControl_1_1Searchlight.html#a171786b75197fc30e545dacafc36e211">get_status</a> (std::string &amp;status)</td></tr>
+<tr class="separator:a171786b75197fc30e545dacafc36e211"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad5997aaaa2d622f0ca57f8b24a51a7b" id="r_aad5997aaaa2d622f0ca57f8b24a51a7b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchlightControl_1_1Searchlight.html#aad5997aaaa2d622f0ca57f8b24a51a7b">start</a> ()</td></tr>
+<tr class="separator:aad5997aaaa2d622f0ca57f8b24a51a7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7861ee1569802186a619778efc85af13" id="r_a7861ee1569802186a619778efc85af13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchlightControl_1_1Searchlight.html#a7861ee1569802186a619778efc85af13">shutdown</a> ()</td></tr>
+<tr class="separator:a7861ee1569802186a619778efc85af13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a7700c9bb76f5470bfc90194e5f2eb14b" id="r_a7700c9bb76f5470bfc90194e5f2eb14b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchlightControl_1_1Searchlight.html#a7700c9bb76f5470bfc90194e5f2eb14b">enqueueCommand</a> (const std::string &amp;command, const std::vector&lt; uint8_t &gt; &amp;frame)</td></tr>
+<tr class="separator:a7700c9bb76f5470bfc90194e5f2eb14b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6910807ba7dc519e2c5ae99f8a2d3028" id="r_a6910807ba7dc519e2c5ae99f8a2d3028"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchlightControl_1_1Searchlight.html#a6910807ba7dc519e2c5ae99f8a2d3028">ensureControlReady</a> (const std::string &amp;command)</td></tr>
+<tr class="separator:a6910807ba7dc519e2c5ae99f8a2d3028"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97818289ea8ee202051dcc42312a5d43" id="r_a97818289ea8ee202051dcc42312a5d43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchlightControl_1_1Searchlight.html#a97818289ea8ee202051dcc42312a5d43">readSerialLoop</a> ()</td></tr>
+<tr class="separator:a97818289ea8ee202051dcc42312a5d43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af65127c174a8db29f8c57fd6af1c6b4a" id="r_af65127c174a8db29f8c57fd6af1c6b4a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchlightControl_1_1Searchlight.html#af65127c174a8db29f8c57fd6af1c6b4a">workerLoop</a> ()</td></tr>
+<tr class="separator:af65127c174a8db29f8c57fd6af1c6b4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b85f6afd44d6a1da93d93471ed5702b" id="r_a3b85f6afd44d6a1da93d93471ed5702b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchlightControl_1_1Searchlight.html#a3b85f6afd44d6a1da93d93471ed5702b">waitInitialDeviceFrame</a> ()</td></tr>
+<tr class="separator:a3b85f6afd44d6a1da93d93471ed5702b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a1b37434dc6513b8f6f1a4bb02fd7ec4f" id="r_a1b37434dc6513b8f6f1a4bb02fd7ec4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSearchlightControl_1_1SearchlightInitConfig.html">SearchlightInitConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchlightControl_1_1Searchlight.html#a1b37434dc6513b8f6f1a4bb02fd7ec4f">config_</a></td></tr>
+<tr class="separator:a1b37434dc6513b8f6f1a4bb02fd7ec4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace9cf28f9074921471f6943b82852696" id="r_ace9cf28f9074921471f6943b82852696"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classSearchlightControl_1_1SerialPort.html">SerialPort</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchlightControl_1_1Searchlight.html#ace9cf28f9074921471f6943b82852696">serial_</a></td></tr>
+<tr class="separator:ace9cf28f9074921471f6943b82852696"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50da6c39085961261d6e3f7dbe118a57" id="r_a50da6c39085961261d6e3f7dbe118a57"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSearchlightControl_1_1SearchlightCommandBuilder.html">SearchlightCommandBuilder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchlightControl_1_1Searchlight.html#a50da6c39085961261d6e3f7dbe118a57">builder_</a></td></tr>
+<tr class="separator:a50da6c39085961261d6e3f7dbe118a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5706e2a6ca373268fbd5273530f2e1d2" id="r_a5706e2a6ca373268fbd5273530f2e1d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSearchlightControl_1_1SearchlightLedController.html">SearchlightLedController</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchlightControl_1_1Searchlight.html#a5706e2a6ca373268fbd5273530f2e1d2">led_controller_</a></td></tr>
+<tr class="separator:a5706e2a6ca373268fbd5273530f2e1d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46a7b54bbbad979f01ac3fc5c215e379" id="r_a46a7b54bbbad979f01ac3fc5c215e379"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSearchlightControl_1_1SearchlightServoController.html">SearchlightServoController</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchlightControl_1_1Searchlight.html#a46a7b54bbbad979f01ac3fc5c215e379">servo_controller_</a></td></tr>
+<tr class="separator:a46a7b54bbbad979f01ac3fc5c215e379"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9923de5a64aff24c5678b48320ebec2c" id="r_a9923de5a64aff24c5678b48320ebec2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSearchlightControl_1_1SearchlightState.html">SearchlightState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchlightControl_1_1Searchlight.html#a9923de5a64aff24c5678b48320ebec2c">state_</a></td></tr>
+<tr class="separator:a9923de5a64aff24c5678b48320ebec2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9620a15c76ada2388bf678e373a6463" id="r_aa9620a15c76ada2388bf678e373a6463"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchlightControl_1_1Searchlight.html#aa9620a15c76ada2388bf678e373a6463">running_</a></td></tr>
+<tr class="separator:aa9620a15c76ada2388bf678e373a6463"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4840058caa71993c06ac701f06e49baf" id="r_a4840058caa71993c06ac701f06e49baf"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchlightControl_1_1Searchlight.html#a4840058caa71993c06ac701f06e49baf">queue_mutex_</a></td></tr>
+<tr class="separator:a4840058caa71993c06ac701f06e49baf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a752b19ff6a093bf586912d827da15d85" id="r_a752b19ff6a093bf586912d827da15d85"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchlightControl_1_1Searchlight.html#a752b19ff6a093bf586912d827da15d85">build_mutex_</a></td></tr>
+<tr class="separator:a752b19ff6a093bf586912d827da15d85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace7d930f2e949827d4ce10fc7e448df5" id="r_ace7d930f2e949827d4ce10fc7e448df5"><td class="memItemLeft" align="right" valign="top">std::condition_variable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchlightControl_1_1Searchlight.html#ace7d930f2e949827d4ce10fc7e448df5">queue_cv_</a></td></tr>
+<tr class="separator:ace7d930f2e949827d4ce10fc7e448df5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afde7498bfb39d419343d9d9e931703db" id="r_afde7498bfb39d419343d9d9e931703db"><td class="memItemLeft" align="right" valign="top">std::deque&lt; <a class="el" href="classSearchlightControl_1_1LightTask.html">LightTask</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchlightControl_1_1Searchlight.html#afde7498bfb39d419343d9d9e931703db">task_queue_</a></td></tr>
+<tr class="separator:afde7498bfb39d419343d9d9e931703db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6baf96f6c7934a9b75852c399235829" id="r_ab6baf96f6c7934a9b75852c399235829"><td class="memItemLeft" align="right" valign="top">std::thread&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchlightControl_1_1Searchlight.html#ab6baf96f6c7934a9b75852c399235829">read_serial</a></td></tr>
+<tr class="separator:ab6baf96f6c7934a9b75852c399235829"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94773f93342cab686ab49cbfe9e17d71" id="r_a94773f93342cab686ab49cbfe9e17d71"><td class="memItemLeft" align="right" valign="top">std::thread&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchlightControl_1_1Searchlight.html#a94773f93342cab686ab49cbfe9e17d71">worker_thread</a></td></tr>
+<tr class="separator:a94773f93342cab686ab49cbfe9e17d71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a83d578162bcf4faa5988db56e0433a01" name="a83d578162bcf4faa5988db56e0433a01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83d578162bcf4faa5988db56e0433a01">&#9670;&#160;</a></span>Searchlight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSearchlightControl_1_1Searchlight.html">Searchlight</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a57753f931580485d7dd2b85ee646823f" name="a57753f931580485d7dd2b85ee646823f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57753f931580485d7dd2b85ee646823f">&#9670;&#160;</a></span>~Searchlight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classSearchlightControl_1_1Searchlight.html">Searchlight</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classSearchlightControl_1_1Searchlight.html#a7861ee1569802186a619778efc85af13">Searchlight::shutdown()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchlightControl_1_1Searchlight_a57753f931580485d7dd2b85ee646823f_cgraph.png" border="0" usemap="#aclassSearchlightControl_1_1Searchlight_a57753f931580485d7dd2b85ee646823f_cgraph" alt=""/></div>
+<map name="aclassSearchlightControl_1_1Searchlight_a57753f931580485d7dd2b85ee646823f_cgraph" id="aclassSearchlightControl_1_1Searchlight_a57753f931580485d7dd2b85ee646823f_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,112,31"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a7861ee1569802186a619778efc85af13" title=" " alt="" coords="160,5,245,31"/>
+<area shape="poly" title=" " alt="" coords="112,15,147,15,147,21,112,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="ae7d991b13bd8a00dd582bda0ee7596a0" name="ae7d991b13bd8a00dd582bda0ee7596a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7d991b13bd8a00dd582bda0ee7596a0">&#9670;&#160;</a></span>close_flash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool close_flash </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classSearchlightControl_1_1Searchlight.html#a752b19ff6a093bf586912d827da15d85">Searchlight::build_mutex_</a>, <a class="el" href="classSearchlightControl_1_1SearchlightLedController.html#a66984015ea30988a46bf85adc74394fc">SearchlightLedController::buildCloseFlash()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a7700c9bb76f5470bfc90194e5f2eb14b">Searchlight::enqueueCommand()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a6910807ba7dc519e2c5ae99f8a2d3028">Searchlight::ensureControlReady()</a> , 以及 <a class="el" href="classSearchlightControl_1_1Searchlight.html#a5706e2a6ca373268fbd5273530f2e1d2">Searchlight::led_controller_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classSearchlightControl_1_1SearchlightManager.html#ae7d991b13bd8a00dd582bda0ee7596a0">SearchlightManager::close_flash()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchlightControl_1_1Searchlight_ae7d991b13bd8a00dd582bda0ee7596a0_cgraph.png" border="0" usemap="#aclassSearchlightControl_1_1Searchlight_ae7d991b13bd8a00dd582bda0ee7596a0_cgraph" alt=""/></div>
+<map name="aclassSearchlightControl_1_1Searchlight_ae7d991b13bd8a00dd582bda0ee7596a0_cgraph" id="aclassSearchlightControl_1_1Searchlight_ae7d991b13bd8a00dd582bda0ee7596a0_cgraph">
+<area shape="rect" title=" " alt="" coords="5,191,100,216"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightLedController.html#a66984015ea30988a46bf85adc74394fc" title=" " alt="" coords="148,69,339,124"/>
+<area shape="poly" title=" " alt="" coords="75,188,180,129,183,133,78,193"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a7700c9bb76f5470bfc90194e5f2eb14b" title=" " alt="" coords="171,191,316,216"/>
+<area shape="poly" title=" " alt="" coords="100,201,157,201,157,206,100,206"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a6910807ba7dc519e2c5ae99f8a2d3028" title=" " alt="" coords="166,244,321,269"/>
+<area shape="poly" title=" " alt="" coords="100,214,185,238,184,243,98,219"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#a813a3595a68a2486b7cd5bf5fbdeccf8" title=" " alt="" coords="387,47,603,101"/>
+<area shape="poly" title=" " alt="" coords="338,85,373,82,373,88,339,91"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#ab83e1288d2b2e1b753f5e4b39d22e8f3" title=" " alt="" coords="651,5,867,60"/>
+<area shape="poly" title=" " alt="" coords="602,54,637,49,638,54,603,60"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#a9f89fc8858cbe3e07f18553519cdc73a" title=" " alt="" coords="651,84,867,139"/>
+<area shape="poly" title=" " alt="" coords="603,87,638,92,637,97,602,92"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#a47ba41ded8fbb60f4a9b8aeec7f181a8" title=" " alt="" coords="921,13,1099,53"/>
+<area shape="poly" title=" " alt="" coords="867,30,907,30,907,35,867,35"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#a8faa71cefec66809616ef228e8c6953e" title=" " alt="" coords="1153,13,1351,53"/>
+<area shape="poly" title=" " alt="" coords="1099,30,1140,30,1140,35,1099,35"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#afac850763dd58d6d6c1d0447fb3f8ac3" title=" " alt="" coords="408,125,581,180"/>
+<area shape="poly" title=" " alt="" coords="307,188,394,170,395,175,308,193"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#a23b585f477d872799a5615b8e5460cd0" title=" " alt="" coords="409,205,580,245"/>
+<area shape="poly" title=" " alt="" coords="316,207,396,214,395,219,316,212"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#ac555620c0f53caffadf3cda12f25e4d3" title=" " alt="" coords="659,201,859,241"/>
+<area shape="poly" title=" " alt="" coords="580,221,645,220,645,225,580,226"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a85fc319006ab5f2e18f398f485f88132" title=" " alt="" coords="463,273,526,299"/>
+<area shape="poly" title=" " alt="" coords="321,263,450,278,450,284,321,268"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#ab6606f029c70b1b437e7219462d55a9a" title=" " alt="" coords="686,265,831,320"/>
+<area shape="poly" title=" " alt="" coords="527,284,672,288,672,293,526,289"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#ab5f58aab06c5742877b3788f26b11cb9" title=" " alt="" coords="915,273,1105,313"/>
+<area shape="poly" title=" " alt="" coords="832,290,901,290,901,295,832,295"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchlightControl_1_1Searchlight_ae7d991b13bd8a00dd582bda0ee7596a0_icgraph.png" border="0" usemap="#aclassSearchlightControl_1_1Searchlight_ae7d991b13bd8a00dd582bda0ee7596a0_icgraph" alt=""/></div>
+<map name="aclassSearchlightControl_1_1Searchlight_ae7d991b13bd8a00dd582bda0ee7596a0_icgraph" id="aclassSearchlightControl_1_1Searchlight_ae7d991b13bd8a00dd582bda0ee7596a0_icgraph">
+<area shape="rect" title=" " alt="" coords="213,20,308,45"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#ae7d991b13bd8a00dd582bda0ee7596a0" title=" " alt="" coords="5,5,165,60"/>
+<area shape="poly" title=" " alt="" coords="200,35,166,35,166,30,200,30"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a58ac11d6b8da2206d27f6d72c52d783f" name="a58ac11d6b8da2206d27f6d72c52d783f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58ac11d6b8da2206d27f6d72c52d783f">&#9670;&#160;</a></span>close_led()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool close_led </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classSearchlightControl_1_1Searchlight.html#a752b19ff6a093bf586912d827da15d85">Searchlight::build_mutex_</a>, <a class="el" href="classSearchlightControl_1_1SearchlightLedController.html#adf973ab7426fef4886db149604c83cfc">SearchlightLedController::buildCloseLed()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a7700c9bb76f5470bfc90194e5f2eb14b">Searchlight::enqueueCommand()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a6910807ba7dc519e2c5ae99f8a2d3028">Searchlight::ensureControlReady()</a> , 以及 <a class="el" href="classSearchlightControl_1_1Searchlight.html#a5706e2a6ca373268fbd5273530f2e1d2">Searchlight::led_controller_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classSearchlightControl_1_1SearchlightManager.html#a58ac11d6b8da2206d27f6d72c52d783f">SearchlightManager::close_led()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchlightControl_1_1Searchlight_a58ac11d6b8da2206d27f6d72c52d783f_cgraph.png" border="0" usemap="#aclassSearchlightControl_1_1Searchlight_a58ac11d6b8da2206d27f6d72c52d783f_cgraph" alt=""/></div>
+<map name="aclassSearchlightControl_1_1Searchlight_a58ac11d6b8da2206d27f6d72c52d783f_cgraph" id="aclassSearchlightControl_1_1Searchlight_a58ac11d6b8da2206d27f6d72c52d783f_cgraph">
+<area shape="rect" title=" " alt="" coords="5,191,88,216"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightLedController.html#adf973ab7426fef4886db149604c83cfc" title=" " alt="" coords="136,69,327,124"/>
+<area shape="poly" title=" " alt="" coords="69,188,170,129,173,133,71,193"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a7700c9bb76f5470bfc90194e5f2eb14b" title=" " alt="" coords="159,191,304,216"/>
+<area shape="poly" title=" " alt="" coords="88,201,145,201,145,206,88,206"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a6910807ba7dc519e2c5ae99f8a2d3028" title=" " alt="" coords="154,244,309,269"/>
+<area shape="poly" title=" " alt="" coords="89,213,174,238,173,243,88,218"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#aba27e2fc429069b9ab8f97826e16146a" title=" " alt="" coords="375,47,591,101"/>
+<area shape="poly" title=" " alt="" coords="326,85,361,82,361,88,327,91"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#ab83e1288d2b2e1b753f5e4b39d22e8f3" title=" " alt="" coords="639,5,855,60"/>
+<area shape="poly" title=" " alt="" coords="590,54,625,49,626,54,591,60"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#a9f89fc8858cbe3e07f18553519cdc73a" title=" " alt="" coords="639,84,855,139"/>
+<area shape="poly" title=" " alt="" coords="591,87,626,92,625,97,590,92"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#a47ba41ded8fbb60f4a9b8aeec7f181a8" title=" " alt="" coords="909,13,1087,53"/>
+<area shape="poly" title=" " alt="" coords="855,30,895,30,895,35,855,35"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#a8faa71cefec66809616ef228e8c6953e" title=" " alt="" coords="1141,13,1339,53"/>
+<area shape="poly" title=" " alt="" coords="1087,30,1128,30,1128,35,1087,35"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#afac850763dd58d6d6c1d0447fb3f8ac3" title=" " alt="" coords="396,125,569,180"/>
+<area shape="poly" title=" " alt="" coords="295,188,382,170,383,175,296,193"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#a23b585f477d872799a5615b8e5460cd0" title=" " alt="" coords="397,205,568,245"/>
+<area shape="poly" title=" " alt="" coords="304,207,384,214,383,219,304,212"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#ac555620c0f53caffadf3cda12f25e4d3" title=" " alt="" coords="647,201,847,241"/>
+<area shape="poly" title=" " alt="" coords="568,221,633,220,633,225,568,226"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a85fc319006ab5f2e18f398f485f88132" title=" " alt="" coords="451,273,514,299"/>
+<area shape="poly" title=" " alt="" coords="309,263,438,278,438,284,309,268"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#ab6606f029c70b1b437e7219462d55a9a" title=" " alt="" coords="674,265,819,320"/>
+<area shape="poly" title=" " alt="" coords="515,284,660,288,660,293,514,289"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#ab5f58aab06c5742877b3788f26b11cb9" title=" " alt="" coords="903,273,1093,313"/>
+<area shape="poly" title=" " alt="" coords="820,290,889,290,889,295,820,295"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchlightControl_1_1Searchlight_a58ac11d6b8da2206d27f6d72c52d783f_icgraph.png" border="0" usemap="#aclassSearchlightControl_1_1Searchlight_a58ac11d6b8da2206d27f6d72c52d783f_icgraph" alt=""/></div>
+<map name="aclassSearchlightControl_1_1Searchlight_a58ac11d6b8da2206d27f6d72c52d783f_icgraph" id="aclassSearchlightControl_1_1Searchlight_a58ac11d6b8da2206d27f6d72c52d783f_icgraph">
+<area shape="rect" title=" " alt="" coords="213,20,296,45"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#a58ac11d6b8da2206d27f6d72c52d783f" title=" " alt="" coords="5,5,165,60"/>
+<area shape="poly" title=" " alt="" coords="199,35,166,35,166,30,199,30"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7700c9bb76f5470bfc90194e5f2eb14b" name="a7700c9bb76f5470bfc90194e5f2eb14b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7700c9bb76f5470bfc90194e5f2eb14b">&#9670;&#160;</a></span>enqueueCommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool enqueueCommand </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>command</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; uint8_t &gt; &amp;&#160;</td>
+          <td class="paramname"><em>frame</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classSearchlightControl_1_1SearchlightState.html#afac850763dd58d6d6c1d0447fb3f8ac3">SearchlightState::markCommandQueued()</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#ace7d930f2e949827d4ce10fc7e448df5">Searchlight::queue_cv_</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a4840058caa71993c06ac701f06e49baf">Searchlight::queue_mutex_</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a9923de5a64aff24c5678b48320ebec2c">Searchlight::state_</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#afde7498bfb39d419343d9d9e931703db">Searchlight::task_queue_</a> , 以及 <a class="el" href="classSearchlightControl_1_1ProtocolCodec.html#a23b585f477d872799a5615b8e5460cd0">ProtocolCodec::toHex()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classSearchlightControl_1_1Searchlight.html#ae7d991b13bd8a00dd582bda0ee7596a0">Searchlight::close_flash()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a58ac11d6b8da2206d27f6d72c52d783f">Searchlight::close_led()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#af47d63e3739fa2d0c7f0fac48d35d27c">Searchlight::home()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a9a0d18be56d1dbe9c77885500f47e0de">Searchlight::move_to()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#aad6c464e20d649f022c84edbc94d24d9">Searchlight::open_flash()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#ab4d21c6a2fba2c0781458ceea32e22ab">Searchlight::open_led()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a62541d9ce277d974565e3d9256358ed0">Searchlight::setting_flash()</a> , 以及 <a class="el" href="classSearchlightControl_1_1Searchlight.html#ae1db25c09e5791ef840510db63ba86ca">Searchlight::setting_light_level()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchlightControl_1_1Searchlight_a7700c9bb76f5470bfc90194e5f2eb14b_cgraph.png" border="0" usemap="#aclassSearchlightControl_1_1Searchlight_a7700c9bb76f5470bfc90194e5f2eb14b_cgraph" alt=""/></div>
+<map name="aclassSearchlightControl_1_1Searchlight_a7700c9bb76f5470bfc90194e5f2eb14b_cgraph" id="aclassSearchlightControl_1_1Searchlight_a7700c9bb76f5470bfc90194e5f2eb14b_cgraph">
+<area shape="rect" title=" " alt="" coords="5,56,151,81"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#afac850763dd58d6d6c1d0447fb3f8ac3" title=" " alt="" coords="199,5,372,60"/>
+<area shape="poly" title=" " alt="" coords="150,53,185,47,185,53,151,59"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#a23b585f477d872799a5615b8e5460cd0" title=" " alt="" coords="200,85,371,125"/>
+<area shape="poly" title=" " alt="" coords="151,79,187,85,186,90,150,84"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#ac555620c0f53caffadf3cda12f25e4d3" title=" " alt="" coords="420,85,620,125"/>
+<area shape="poly" title=" " alt="" coords="371,102,406,102,406,107,371,107"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchlightControl_1_1Searchlight_a7700c9bb76f5470bfc90194e5f2eb14b_icgraph.png" border="0" usemap="#aclassSearchlightControl_1_1Searchlight_a7700c9bb76f5470bfc90194e5f2eb14b_icgraph" alt=""/></div>
+<map name="aclassSearchlightControl_1_1Searchlight_a7700c9bb76f5470bfc90194e5f2eb14b_icgraph" id="aclassSearchlightControl_1_1Searchlight_a7700c9bb76f5470bfc90194e5f2eb14b_icgraph">
+<area shape="rect" title=" " alt="" coords="449,291,595,316"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#ae7d991b13bd8a00dd582bda0ee7596a0" title=" " alt="" coords="283,39,377,64"/>
+<area shape="poly" title=" " alt="" coords="507,279,466,196,435,147,399,102,377,82,353,66,356,62,380,78,403,99,439,144,470,193,512,276"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a58ac11d6b8da2206d27f6d72c52d783f" title=" " alt="" coords="289,113,371,139"/>
+<area shape="poly" title=" " alt="" coords="501,281,457,229,400,172,354,141,357,137,403,168,461,225,505,278"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#af47d63e3739fa2d0c7f0fac48d35d27c" title=" " alt="" coords="301,183,359,208"/>
+<area shape="poly" title=" " alt="" coords="485,286,352,210,355,206,488,282"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a9a0d18be56d1dbe9c77885500f47e0de" title=" " alt="" coords="291,251,369,276"/>
+<area shape="poly" title=" " alt="" coords="447,290,369,274,370,269,448,285"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#aad6c464e20d649f022c84edbc94d24d9" title=" " alt="" coords="284,315,376,340"/>
+<area shape="poly" title=" " alt="" coords="436,317,376,324,376,319,435,311"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#ab4d21c6a2fba2c0781458ceea32e22ab" title=" " alt="" coords="289,383,371,408"/>
+<area shape="poly" title=" " alt="" coords="483,325,359,385,356,380,481,320"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a62541d9ce277d974565e3d9256358ed0" title=" " alt="" coords="277,464,383,489"/>
+<area shape="poly" title=" " alt="" coords="500,328,403,421,349,466,346,462,400,417,497,324"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#ae1db25c09e5791ef840510db63ba86ca" title=" " alt="" coords="259,528,401,553"/>
+<area shape="poly" title=" " alt="" coords="513,330,471,412,440,459,403,503,383,518,362,530,360,526,380,514,399,499,436,456,467,409,508,328"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#ae7d991b13bd8a00dd582bda0ee7596a0" title=" " alt="" coords="28,5,188,60"/>
+<area shape="poly" title=" " alt="" coords="269,49,188,42,188,37,269,44"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#a58ac11d6b8da2206d27f6d72c52d783f" title=" " alt="" coords="28,84,188,139"/>
+<area shape="poly" title=" " alt="" coords="275,125,188,119,189,114,275,120"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#af47d63e3739fa2d0c7f0fac48d35d27c" title=" " alt="" coords="5,163,211,203"/>
+<area shape="poly" title=" " alt="" coords="287,196,211,192,211,186,287,190"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#a9a0d18be56d1dbe9c77885500f47e0de" title=" " alt="" coords="28,228,188,283"/>
+<area shape="poly" title=" " alt="" coords="277,264,188,261,189,256,277,259"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#aad6c464e20d649f022c84edbc94d24d9" title=" " alt="" coords="28,307,188,361"/>
+<area shape="poly" title=" " alt="" coords="270,332,188,334,188,329,270,326"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#ab4d21c6a2fba2c0781458ceea32e22ab" title=" " alt="" coords="28,385,188,440"/>
+<area shape="poly" title=" " alt="" coords="276,402,188,409,188,404,275,397"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#a62541d9ce277d974565e3d9256358ed0" title=" " alt="" coords="28,464,188,519"/>
+<area shape="poly" title=" " alt="" coords="264,484,189,489,188,483,264,478"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#ae1db25c09e5791ef840510db63ba86ca" title=" " alt="" coords="28,543,188,597"/>
+<area shape="poly" title=" " alt="" coords="246,554,189,562,188,557,245,549"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6910807ba7dc519e2c5ae99f8a2d3028" name="a6910807ba7dc519e2c5ae99f8a2d3028"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6910807ba7dc519e2c5ae99f8a2d3028">&#9670;&#160;</a></span>ensureControlReady()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ensureControlReady </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>command</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a85fc319006ab5f2e18f398f485f88132">Searchlight::online()</a> , 以及 <a class="el" href="classSearchlightControl_1_1Searchlight.html#ace9cf28f9074921471f6943b82852696">Searchlight::serial_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classSearchlightControl_1_1Searchlight.html#ae7d991b13bd8a00dd582bda0ee7596a0">Searchlight::close_flash()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a58ac11d6b8da2206d27f6d72c52d783f">Searchlight::close_led()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#af47d63e3739fa2d0c7f0fac48d35d27c">Searchlight::home()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a9a0d18be56d1dbe9c77885500f47e0de">Searchlight::move_to()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#aad6c464e20d649f022c84edbc94d24d9">Searchlight::open_flash()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#ab4d21c6a2fba2c0781458ceea32e22ab">Searchlight::open_led()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a62541d9ce277d974565e3d9256358ed0">Searchlight::setting_flash()</a> , 以及 <a class="el" href="classSearchlightControl_1_1Searchlight.html#ae1db25c09e5791ef840510db63ba86ca">Searchlight::setting_light_level()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchlightControl_1_1Searchlight_a6910807ba7dc519e2c5ae99f8a2d3028_cgraph.png" border="0" usemap="#aclassSearchlightControl_1_1Searchlight_a6910807ba7dc519e2c5ae99f8a2d3028_cgraph" alt=""/></div>
+<map name="aclassSearchlightControl_1_1Searchlight_a6910807ba7dc519e2c5ae99f8a2d3028_cgraph" id="aclassSearchlightControl_1_1Searchlight_a6910807ba7dc519e2c5ae99f8a2d3028_cgraph">
+<area shape="rect" title=" " alt="" coords="5,20,160,45"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a85fc319006ab5f2e18f398f485f88132" title=" " alt="" coords="208,20,271,45"/>
+<area shape="poly" title=" " alt="" coords="160,30,194,30,194,35,160,35"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#ab6606f029c70b1b437e7219462d55a9a" title=" " alt="" coords="319,5,464,60"/>
+<area shape="poly" title=" " alt="" coords="271,30,305,30,305,35,271,35"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#ab5f58aab06c5742877b3788f26b11cb9" title=" " alt="" coords="512,13,703,53"/>
+<area shape="poly" title=" " alt="" coords="464,30,498,30,498,35,464,35"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchlightControl_1_1Searchlight_a6910807ba7dc519e2c5ae99f8a2d3028_icgraph.png" border="0" usemap="#aclassSearchlightControl_1_1Searchlight_a6910807ba7dc519e2c5ae99f8a2d3028_icgraph" alt=""/></div>
+<map name="aclassSearchlightControl_1_1Searchlight_a6910807ba7dc519e2c5ae99f8a2d3028_icgraph" id="aclassSearchlightControl_1_1Searchlight_a6910807ba7dc519e2c5ae99f8a2d3028_icgraph">
+<area shape="rect" title=" " alt="" coords="449,291,604,316"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#ae7d991b13bd8a00dd582bda0ee7596a0" title=" " alt="" coords="283,39,377,64"/>
+<area shape="poly" title=" " alt="" coords="512,279,468,196,436,148,399,103,377,83,353,67,356,62,380,78,403,99,440,145,472,194,516,277"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a58ac11d6b8da2206d27f6d72c52d783f" title=" " alt="" coords="289,113,371,139"/>
+<area shape="poly" title=" " alt="" coords="505,282,459,229,400,172,354,141,357,137,403,168,463,226,509,278"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#af47d63e3739fa2d0c7f0fac48d35d27c" title=" " alt="" coords="301,183,359,208"/>
+<area shape="poly" title=" " alt="" coords="489,286,353,210,356,206,492,282"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a9a0d18be56d1dbe9c77885500f47e0de" title=" " alt="" coords="291,251,369,276"/>
+<area shape="poly" title=" " alt="" coords="450,290,369,274,370,269,451,285"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#aad6c464e20d649f022c84edbc94d24d9" title=" " alt="" coords="284,315,376,340"/>
+<area shape="poly" title=" " alt="" coords="436,317,377,324,376,319,435,312"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#ab4d21c6a2fba2c0781458ceea32e22ab" title=" " alt="" coords="289,383,371,408"/>
+<area shape="poly" title=" " alt="" coords="487,324,359,385,357,380,485,319"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a62541d9ce277d974565e3d9256358ed0" title=" " alt="" coords="277,464,383,489"/>
+<area shape="poly" title=" " alt="" coords="504,328,403,421,349,466,346,462,400,417,501,324"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#ae1db25c09e5791ef840510db63ba86ca" title=" " alt="" coords="259,528,401,553"/>
+<area shape="poly" title=" " alt="" coords="517,330,473,412,441,459,403,503,383,518,362,530,359,526,380,514,400,499,437,456,469,409,512,328"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#ae7d991b13bd8a00dd582bda0ee7596a0" title=" " alt="" coords="28,5,188,60"/>
+<area shape="poly" title=" " alt="" coords="269,49,188,42,188,37,269,44"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#a58ac11d6b8da2206d27f6d72c52d783f" title=" " alt="" coords="28,84,188,139"/>
+<area shape="poly" title=" " alt="" coords="275,125,188,119,189,114,275,120"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#af47d63e3739fa2d0c7f0fac48d35d27c" title=" " alt="" coords="5,163,211,203"/>
+<area shape="poly" title=" " alt="" coords="287,196,211,192,211,186,287,190"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#a9a0d18be56d1dbe9c77885500f47e0de" title=" " alt="" coords="28,228,188,283"/>
+<area shape="poly" title=" " alt="" coords="277,264,188,261,189,256,277,259"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#aad6c464e20d649f022c84edbc94d24d9" title=" " alt="" coords="28,307,188,361"/>
+<area shape="poly" title=" " alt="" coords="270,332,188,334,188,329,270,326"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#ab4d21c6a2fba2c0781458ceea32e22ab" title=" " alt="" coords="28,385,188,440"/>
+<area shape="poly" title=" " alt="" coords="276,402,188,409,188,404,275,397"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#a62541d9ce277d974565e3d9256358ed0" title=" " alt="" coords="28,464,188,519"/>
+<area shape="poly" title=" " alt="" coords="264,484,189,489,188,483,264,478"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#ae1db25c09e5791ef840510db63ba86ca" title=" " alt="" coords="28,543,188,597"/>
+<area shape="poly" title=" " alt="" coords="246,554,189,562,188,557,245,549"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a171786b75197fc30e545dacafc36e211" name="a171786b75197fc30e545dacafc36e211"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a171786b75197fc30e545dacafc36e211">&#9670;&#160;</a></span>get_status()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void get_status </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>status</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classSearchlightControl_1_1Searchlight.html#a85fc319006ab5f2e18f398f485f88132">Searchlight::online()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a9923de5a64aff24c5678b48320ebec2c">Searchlight::state_</a> , 以及 <a class="el" href="classSearchlightControl_1_1SearchlightState.html#a90d646590e5ab73ddfe0bba8f98d31fa">SearchlightState::toStatusString()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classSearchlightControl_1_1SearchlightManager.html#a171786b75197fc30e545dacafc36e211">SearchlightManager::get_status()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchlightControl_1_1Searchlight_a171786b75197fc30e545dacafc36e211_cgraph.png" border="0" usemap="#aclassSearchlightControl_1_1Searchlight_a171786b75197fc30e545dacafc36e211_cgraph" alt=""/></div>
+<map name="aclassSearchlightControl_1_1Searchlight_a171786b75197fc30e545dacafc36e211_cgraph" id="aclassSearchlightControl_1_1Searchlight_a171786b75197fc30e545dacafc36e211_cgraph">
+<area shape="rect" title=" " alt="" coords="5,107,96,132"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a85fc319006ab5f2e18f398f485f88132" title=" " alt="" coords="185,48,248,73"/>
+<area shape="poly" title=" " alt="" coords="87,104,171,74,173,79,88,109"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#a90d646590e5ab73ddfe0bba8f98d31fa" title=" " alt="" coords="144,124,289,179"/>
+<area shape="poly" title=" " alt="" coords="97,125,131,132,130,137,96,131"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#ab6606f029c70b1b437e7219462d55a9a" title=" " alt="" coords="337,5,483,60"/>
+<area shape="poly" title=" " alt="" coords="248,54,323,43,324,48,249,59"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#ab5f58aab06c5742877b3788f26b11cb9" title=" " alt="" coords="531,13,721,53"/>
+<area shape="poly" title=" " alt="" coords="483,30,517,30,517,35,483,35"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#a5ce210edd2af72c1a2782f313246ba5b" title=" " alt="" coords="337,84,483,139"/>
+<area shape="poly" title=" " alt="" coords="289,134,323,127,324,132,290,139"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#a59032669f4c58d93fd94e4f4a30e9c03" title=" " alt="" coords="337,163,483,217"/>
+<area shape="poly" title=" " alt="" coords="290,163,324,170,323,175,289,168"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#a2530f68ccec52afabd58bac91e0dffc6" title=" " alt="" coords="337,241,483,296"/>
+<area shape="poly" title=" " alt="" coords="259,177,339,228,347,232,344,237,336,232,256,181"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchlightControl_1_1Searchlight_a171786b75197fc30e545dacafc36e211_icgraph.png" border="0" usemap="#aclassSearchlightControl_1_1Searchlight_a171786b75197fc30e545dacafc36e211_icgraph" alt=""/></div>
+<map name="aclassSearchlightControl_1_1Searchlight_a171786b75197fc30e545dacafc36e211_icgraph" id="aclassSearchlightControl_1_1Searchlight_a171786b75197fc30e545dacafc36e211_icgraph">
+<area shape="rect" title=" " alt="" coords="213,20,304,45"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#a171786b75197fc30e545dacafc36e211" title=" " alt="" coords="5,5,165,60"/>
+<area shape="poly" title=" " alt="" coords="199,35,166,35,166,30,199,30"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af47d63e3739fa2d0c7f0fac48d35d27c" name="af47d63e3739fa2d0c7f0fac48d35d27c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af47d63e3739fa2d0c7f0fac48d35d27c">&#9670;&#160;</a></span>home()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool home </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classSearchlightControl_1_1Searchlight.html#a752b19ff6a093bf586912d827da15d85">Searchlight::build_mutex_</a>, <a class="el" href="classSearchlightControl_1_1SearchlightServoController.html#aa7c6c320cfa5d08300f67eb3786572a6">SearchlightServoController::buildHome()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a7700c9bb76f5470bfc90194e5f2eb14b">Searchlight::enqueueCommand()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a6910807ba7dc519e2c5ae99f8a2d3028">Searchlight::ensureControlReady()</a> , 以及 <a class="el" href="classSearchlightControl_1_1Searchlight.html#a46a7b54bbbad979f01ac3fc5c215e379">Searchlight::servo_controller_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classSearchlightControl_1_1SearchlightManager.html#af47d63e3739fa2d0c7f0fac48d35d27c">SearchlightManager::home()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchlightControl_1_1Searchlight_af47d63e3739fa2d0c7f0fac48d35d27c_cgraph.png" border="0" usemap="#aclassSearchlightControl_1_1Searchlight_af47d63e3739fa2d0c7f0fac48d35d27c_cgraph" alt=""/></div>
+<map name="aclassSearchlightControl_1_1Searchlight_af47d63e3739fa2d0c7f0fac48d35d27c_cgraph" id="aclassSearchlightControl_1_1Searchlight_af47d63e3739fa2d0c7f0fac48d35d27c_cgraph">
+<area shape="rect" title=" " alt="" coords="5,149,64,175"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightServoController.html#aa7c6c320cfa5d08300f67eb3786572a6" title=" " alt="" coords="112,28,316,83"/>
+<area shape="poly" title=" " alt="" coords="56,147,154,87,157,92,59,151"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a7700c9bb76f5470bfc90194e5f2eb14b" title=" " alt="" coords="141,149,287,175"/>
+<area shape="poly" title=" " alt="" coords="64,159,128,159,128,165,64,165"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a6910807ba7dc519e2c5ae99f8a2d3028" title=" " alt="" coords="137,203,291,228"/>
+<area shape="poly" title=" " alt="" coords="65,168,113,183,156,196,154,201,111,189,63,174"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#afb928d3fa896744243e1d9ac0998d413" title=" " alt="" coords="364,5,580,60"/>
+<area shape="poly" title=" " alt="" coords="316,44,350,41,351,46,316,49"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#ab83e1288d2b2e1b753f5e4b39d22e8f3" title=" " alt="" coords="628,5,844,60"/>
+<area shape="poly" title=" " alt="" coords="580,30,614,30,614,35,580,35"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#a47ba41ded8fbb60f4a9b8aeec7f181a8" title=" " alt="" coords="898,13,1077,53"/>
+<area shape="poly" title=" " alt="" coords="844,30,884,30,884,35,844,35"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#a8faa71cefec66809616ef228e8c6953e" title=" " alt="" coords="1131,13,1328,53"/>
+<area shape="poly" title=" " alt="" coords="1077,30,1117,30,1117,35,1077,35"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#afac850763dd58d6d6c1d0447fb3f8ac3" title=" " alt="" coords="385,84,559,139"/>
+<area shape="poly" title=" " alt="" coords="279,147,371,128,372,134,280,152"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#a23b585f477d872799a5615b8e5460cd0" title=" " alt="" coords="387,163,557,203"/>
+<area shape="poly" title=" " alt="" coords="287,165,373,173,373,178,287,171"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#ac555620c0f53caffadf3cda12f25e4d3" title=" " alt="" coords="636,159,836,199"/>
+<area shape="poly" title=" " alt="" coords="557,179,622,178,622,184,558,185"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a85fc319006ab5f2e18f398f485f88132" title=" " alt="" coords="441,232,503,257"/>
+<area shape="poly" title=" " alt="" coords="292,221,428,237,427,242,291,227"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#ab6606f029c70b1b437e7219462d55a9a" title=" " alt="" coords="663,224,809,279"/>
+<area shape="poly" title=" " alt="" coords="504,243,649,246,649,252,504,248"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#ab5f58aab06c5742877b3788f26b11cb9" title=" " alt="" coords="892,231,1083,271"/>
+<area shape="poly" title=" " alt="" coords="809,249,878,249,878,254,809,254"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchlightControl_1_1Searchlight_af47d63e3739fa2d0c7f0fac48d35d27c_icgraph.png" border="0" usemap="#aclassSearchlightControl_1_1Searchlight_af47d63e3739fa2d0c7f0fac48d35d27c_icgraph" alt=""/></div>
+<map name="aclassSearchlightControl_1_1Searchlight_af47d63e3739fa2d0c7f0fac48d35d27c_icgraph" id="aclassSearchlightControl_1_1Searchlight_af47d63e3739fa2d0c7f0fac48d35d27c_icgraph">
+<area shape="rect" title=" " alt="" coords="259,13,317,38"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#af47d63e3739fa2d0c7f0fac48d35d27c" title=" " alt="" coords="5,5,211,45"/>
+<area shape="poly" title=" " alt="" coords="245,28,211,28,211,23,245,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a39c036d9bf50c8e0e64fd4b7ab4376f7" name="a39c036d9bf50c8e0e64fd4b7ab4376f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39c036d9bf50c8e0e64fd4b7ab4376f7">&#9670;&#160;</a></span>initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void initialize </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classSearchlightControl_1_1SearchlightInitConfig.html">SearchlightInitConfig</a> &amp;&#160;</td>
+          <td class="paramname"><em>config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classSearchlightControl_1_1SearchlightInitConfig.html#a784e73e1ce3f90fbcbb0a78d72a053ff">SearchlightInitConfig::baud_rate</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a1b37434dc6513b8f6f1a4bb02fd7ec4f">Searchlight::config_</a>, <a class="el" href="classSearchlightControl_1_1SearchlightInitConfig.html#ada10feddb1e7bd109da11d2f991bebca">SearchlightInitConfig::driver</a>, <a class="el" href="classSearchlightControl_1_1SearchlightState.html#a47937613068261f3c57e327f199257c8">SearchlightState::markNoDevice()</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="classSearchlightControl_1_1SearchlightInitConfig.html#afd409d0cae41473ec56b8b324c3b2eaa">SearchlightInitConfig::print_raw_serial</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#ace9cf28f9074921471f6943b82852696">Searchlight::serial_</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a7861ee1569802186a619778efc85af13">Searchlight::shutdown()</a> , 以及 <a class="el" href="classSearchlightControl_1_1Searchlight.html#a9923de5a64aff24c5678b48320ebec2c">Searchlight::state_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classSearchlightControl_1_1SearchlightManager.html#a39c036d9bf50c8e0e64fd4b7ab4376f7">SearchlightManager::initialize()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchlightControl_1_1Searchlight_a39c036d9bf50c8e0e64fd4b7ab4376f7_cgraph.png" border="0" usemap="#aclassSearchlightControl_1_1Searchlight_a39c036d9bf50c8e0e64fd4b7ab4376f7_cgraph" alt=""/></div>
+<map name="aclassSearchlightControl_1_1Searchlight_a39c036d9bf50c8e0e64fd4b7ab4376f7_cgraph" id="aclassSearchlightControl_1_1Searchlight_a39c036d9bf50c8e0e64fd4b7ab4376f7_cgraph">
+<area shape="rect" title=" " alt="" coords="5,52,84,77"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#a47937613068261f3c57e327f199257c8" title=" " alt="" coords="132,5,277,60"/>
+<area shape="poly" title=" " alt="" coords="84,54,118,47,119,53,85,60"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a7861ee1569802186a619778efc85af13" title=" " alt="" coords="162,84,247,109"/>
+<area shape="poly" title=" " alt="" coords="85,70,149,83,148,88,84,75"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchlightControl_1_1Searchlight_a39c036d9bf50c8e0e64fd4b7ab4376f7_icgraph.png" border="0" usemap="#aclassSearchlightControl_1_1Searchlight_a39c036d9bf50c8e0e64fd4b7ab4376f7_icgraph" alt=""/></div>
+<map name="aclassSearchlightControl_1_1Searchlight_a39c036d9bf50c8e0e64fd4b7ab4376f7_icgraph" id="aclassSearchlightControl_1_1Searchlight_a39c036d9bf50c8e0e64fd4b7ab4376f7_icgraph">
+<area shape="rect" title=" " alt="" coords="1104,42,1183,67"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#a39c036d9bf50c8e0e64fd4b7ab4376f7" title=" " alt="" coords="896,27,1056,82"/>
+<area shape="poly" title=" " alt="" coords="1090,57,1056,57,1056,52,1090,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a87cdd0cb4a86c0035f6b956b0b255a43" title=" " alt="" coords="673,35,848,75"/>
+<area shape="poly" title=" " alt="" coords="882,57,848,57,848,52,882,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="451,35,625,75"/>
+<area shape="poly" title=" " alt="" coords="660,57,625,57,625,52,660,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="228,5,403,45"/>
+<area shape="poly" title=" " alt="" coords="437,44,402,39,403,34,437,39"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9d284775ccebba879a77a7144be22899" title=" " alt="" coords="5,35,180,75"/>
+<area shape="poly" title=" " alt="" coords="215,41,180,46,180,41,214,36"/>
+<area shape="poly" title=" " alt="" coords="194,54,228,55,403,55,450,54,451,59,403,60,228,60,194,60"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9a0d18be56d1dbe9c77885500f47e0de" name="a9a0d18be56d1dbe9c77885500f47e0de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a0d18be56d1dbe9c77885500f47e0de">&#9670;&#160;</a></span>move_to()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool move_to </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classSearchlightControl_1_1Searchlight.html#a752b19ff6a093bf586912d827da15d85">Searchlight::build_mutex_</a>, <a class="el" href="classSearchlightControl_1_1SearchlightServoController.html#a8ec9b9c44ea1d4eca0987a9d002c02f2">SearchlightServoController::buildMoveTo()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a7700c9bb76f5470bfc90194e5f2eb14b">Searchlight::enqueueCommand()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a6910807ba7dc519e2c5ae99f8a2d3028">Searchlight::ensureControlReady()</a> , 以及 <a class="el" href="classSearchlightControl_1_1Searchlight.html#a46a7b54bbbad979f01ac3fc5c215e379">Searchlight::servo_controller_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classSearchlightControl_1_1SearchlightManager.html#a9a0d18be56d1dbe9c77885500f47e0de">SearchlightManager::move_to()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchlightControl_1_1Searchlight_a9a0d18be56d1dbe9c77885500f47e0de_cgraph.png" border="0" usemap="#aclassSearchlightControl_1_1Searchlight_a9a0d18be56d1dbe9c77885500f47e0de_cgraph" alt=""/></div>
+<map name="aclassSearchlightControl_1_1Searchlight_a9a0d18be56d1dbe9c77885500f47e0de_cgraph" id="aclassSearchlightControl_1_1Searchlight_a9a0d18be56d1dbe9c77885500f47e0de_cgraph">
+<area shape="rect" title=" " alt="" coords="5,215,84,240"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightServoController.html#a8ec9b9c44ea1d4eca0987a9d002c02f2" title=" " alt="" coords="132,93,336,148"/>
+<area shape="poly" title=" " alt="" coords="67,212,172,153,174,157,70,217"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a7700c9bb76f5470bfc90194e5f2eb14b" title=" " alt="" coords="161,215,307,240"/>
+<area shape="poly" title=" " alt="" coords="84,225,148,225,148,230,84,230"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a6910807ba7dc519e2c5ae99f8a2d3028" title=" " alt="" coords="157,268,311,293"/>
+<area shape="poly" title=" " alt="" coords="85,236,176,262,174,267,83,241"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#accc4bed77fa78ac50a6e99ae3c3f40e2" title=" " alt="" coords="384,71,600,125"/>
+<area shape="poly" title=" " alt="" coords="336,109,370,106,371,111,336,114"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#a055a7dfa400aa924fb2713ca8b664e0d" title=" " alt="" coords="648,5,864,60"/>
+<area shape="poly" title=" " alt="" coords="599,69,634,60,636,65,601,74"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#a32ffebd17a41184b9c046bd98150b1f5" title=" " alt="" coords="912,35,1128,89"/>
+<area shape="poly" title=" " alt="" coords="600,88,898,68,898,73,600,93"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#ab83e1288d2b2e1b753f5e4b39d22e8f3" title=" " alt="" coords="648,136,864,191"/>
+<area shape="poly" title=" " alt="" coords="601,122,636,131,634,136,599,127"/>
+<area shape="poly" title=" " alt="" coords="864,42,899,46,898,51,864,47"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#a47ba41ded8fbb60f4a9b8aeec7f181a8" title=" " alt="" coords="931,143,1109,183"/>
+<area shape="poly" title=" " alt="" coords="864,161,917,161,917,166,864,166"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#a8faa71cefec66809616ef228e8c6953e" title=" " alt="" coords="1176,143,1373,183"/>
+<area shape="poly" title=" " alt="" coords="1109,161,1162,161,1162,166,1109,166"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#afac850763dd58d6d6c1d0447fb3f8ac3" title=" " alt="" coords="405,149,579,204"/>
+<area shape="poly" title=" " alt="" coords="299,212,391,194,392,199,300,217"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#a23b585f477d872799a5615b8e5460cd0" title=" " alt="" coords="407,229,577,269"/>
+<area shape="poly" title=" " alt="" coords="307,231,393,238,393,243,307,236"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#ac555620c0f53caffadf3cda12f25e4d3" title=" " alt="" coords="656,222,856,262"/>
+<area shape="poly" title=" " alt="" coords="577,244,642,242,642,248,578,249"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a85fc319006ab5f2e18f398f485f88132" title=" " alt="" coords="461,293,523,319"/>
+<area shape="poly" title=" " alt="" coords="312,286,447,299,447,304,311,291"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#ab6606f029c70b1b437e7219462d55a9a" title=" " alt="" coords="683,287,829,341"/>
+<area shape="poly" title=" " alt="" coords="524,304,669,309,669,314,524,310"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#ab5f58aab06c5742877b3788f26b11cb9" title=" " alt="" coords="925,294,1115,334"/>
+<area shape="poly" title=" " alt="" coords="829,311,911,311,911,317,829,317"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchlightControl_1_1Searchlight_a9a0d18be56d1dbe9c77885500f47e0de_icgraph.png" border="0" usemap="#aclassSearchlightControl_1_1Searchlight_a9a0d18be56d1dbe9c77885500f47e0de_icgraph" alt=""/></div>
+<map name="aclassSearchlightControl_1_1Searchlight_a9a0d18be56d1dbe9c77885500f47e0de_icgraph" id="aclassSearchlightControl_1_1Searchlight_a9a0d18be56d1dbe9c77885500f47e0de_icgraph">
+<area shape="rect" title=" " alt="" coords="213,20,292,45"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#a9a0d18be56d1dbe9c77885500f47e0de" title=" " alt="" coords="5,5,165,60"/>
+<area shape="poly" title=" " alt="" coords="199,35,166,35,166,30,199,30"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a85fc319006ab5f2e18f398f485f88132" name="a85fc319006ab5f2e18f398f485f88132"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85fc319006ab5f2e18f398f485f88132">&#9670;&#160;</a></span>online()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool online </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classSearchlightControl_1_1Searchlight.html#a1b37434dc6513b8f6f1a4bb02fd7ec4f">Searchlight::config_</a>, <a class="el" href="classSearchlightControl_1_1SearchlightState.html#ab6606f029c70b1b437e7219462d55a9a">SearchlightState::isOnline()</a>, <a class="el" href="classSearchlightControl_1_1SearchlightInitConfig.html#ab9eab42570d4c8bb55d7bd065397a55f">SearchlightInitConfig::offline_timeout_ms</a> , 以及 <a class="el" href="classSearchlightControl_1_1Searchlight.html#a9923de5a64aff24c5678b48320ebec2c">Searchlight::state_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classSearchlightControl_1_1Searchlight.html#a6910807ba7dc519e2c5ae99f8a2d3028">Searchlight::ensureControlReady()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a171786b75197fc30e545dacafc36e211">Searchlight::get_status()</a>, <a class="el" href="classSearchlightControl_1_1SearchlightManager.html#a85fc319006ab5f2e18f398f485f88132">SearchlightManager::online()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a97818289ea8ee202051dcc42312a5d43">Searchlight::readSerialLoop()</a> , 以及 <a class="el" href="classSearchlightControl_1_1Searchlight.html#a3b85f6afd44d6a1da93d93471ed5702b">Searchlight::waitInitialDeviceFrame()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchlightControl_1_1Searchlight_a85fc319006ab5f2e18f398f485f88132_cgraph.png" border="0" usemap="#aclassSearchlightControl_1_1Searchlight_a85fc319006ab5f2e18f398f485f88132_cgraph" alt=""/></div>
+<map name="aclassSearchlightControl_1_1Searchlight_a85fc319006ab5f2e18f398f485f88132_cgraph" id="aclassSearchlightControl_1_1Searchlight_a85fc319006ab5f2e18f398f485f88132_cgraph">
+<area shape="rect" title=" " alt="" coords="5,20,68,45"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#ab6606f029c70b1b437e7219462d55a9a" title=" " alt="" coords="116,5,261,60"/>
+<area shape="poly" title=" " alt="" coords="68,30,102,30,102,35,68,35"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#ab5f58aab06c5742877b3788f26b11cb9" title=" " alt="" coords="309,13,500,53"/>
+<area shape="poly" title=" " alt="" coords="262,30,296,30,296,35,262,35"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchlightControl_1_1Searchlight_a85fc319006ab5f2e18f398f485f88132_icgraph.png" border="0" usemap="#aclassSearchlightControl_1_1Searchlight_a85fc319006ab5f2e18f398f485f88132_icgraph" alt=""/></div>
+<map name="aclassSearchlightControl_1_1Searchlight_a85fc319006ab5f2e18f398f485f88132_icgraph" id="aclassSearchlightControl_1_1Searchlight_a85fc319006ab5f2e18f398f485f88132_icgraph">
+<area shape="rect" title=" " alt="" coords="1579,572,1641,597"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a6910807ba7dc519e2c5ae99f8a2d3028" title=" " alt="" coords="1367,315,1521,340"/>
+<area shape="poly" title=" " alt="" coords="1591,562,1451,342,1456,339,1596,559"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a171786b75197fc30e545dacafc36e211" title=" " alt="" coords="1399,508,1489,533"/>
+<area shape="poly" title=" " alt="" coords="1573,568,1530,547,1489,534,1491,529,1532,542,1576,563"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#a85fc319006ab5f2e18f398f485f88132" title=" " alt="" coords="1364,557,1524,612"/>
+<area shape="poly" title=" " alt="" coords="1565,587,1524,587,1524,582,1565,582"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a97818289ea8ee202051dcc42312a5d43" title=" " alt="" coords="1385,636,1503,661"/>
+<area shape="poly" title=" " alt="" coords="1575,606,1532,626,1495,638,1493,633,1530,621,1573,601"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a3b85f6afd44d6a1da93d93471ed5702b" title=" " alt="" coords="1357,685,1531,711"/>
+<area shape="poly" title=" " alt="" coords="1595,611,1568,645,1532,676,1508,688,1506,683,1529,672,1565,641,1591,608"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#ae7d991b13bd8a00dd582bda0ee7596a0" title=" " alt="" coords="1182,39,1277,64"/>
+<area shape="poly" title=" " alt="" coords="1430,302,1384,209,1349,153,1307,103,1283,82,1256,66,1259,62,1286,78,1311,99,1353,150,1389,206,1435,300"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a58ac11d6b8da2206d27f6d72c52d783f" title=" " alt="" coords="1188,113,1271,139"/>
+<area shape="poly" title=" " alt="" coords="1424,305,1376,241,1343,205,1308,172,1258,141,1261,137,1311,168,1347,201,1380,238,1429,302"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#af47d63e3739fa2d0c7f0fac48d35d27c" title=" " alt="" coords="1200,183,1259,208"/>
+<area shape="poly" title=" " alt="" coords="1412,309,1308,240,1254,210,1257,206,1311,236,1415,305"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a9a0d18be56d1dbe9c77885500f47e0de" title=" " alt="" coords="1190,251,1269,276"/>
+<area shape="poly" title=" " alt="" coords="1386,313,1268,277,1269,272,1388,308"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#aad6c464e20d649f022c84edbc94d24d9" title=" " alt="" coords="1183,315,1275,340"/>
+<area shape="poly" title=" " alt="" coords="1353,330,1276,330,1276,325,1353,325"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#ab4d21c6a2fba2c0781458ceea32e22ab" title=" " alt="" coords="1189,364,1270,389"/>
+<area shape="poly" title=" " alt="" coords="1375,346,1271,370,1270,365,1374,341"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a62541d9ce277d974565e3d9256358ed0" title=" " alt="" coords="1177,413,1282,439"/>
+<area shape="poly" title=" " alt="" coords="1412,349,1365,376,1310,403,1276,416,1274,411,1308,398,1362,372,1410,345"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#ae1db25c09e5791ef840510db63ba86ca" title=" " alt="" coords="1158,463,1301,488"/>
+<area shape="poly" title=" " alt="" coords="1425,352,1377,402,1345,429,1311,452,1282,465,1280,460,1308,448,1342,425,1373,398,1422,348"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#ae7d991b13bd8a00dd582bda0ee7596a0" title=" " alt="" coords="919,5,1079,60"/>
+<area shape="poly" title=" " alt="" coords="1168,49,1079,42,1079,36,1169,44"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#a58ac11d6b8da2206d27f6d72c52d783f" title=" " alt="" coords="919,84,1079,139"/>
+<area shape="poly" title=" " alt="" coords="1174,125,1079,119,1079,114,1175,120"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#af47d63e3739fa2d0c7f0fac48d35d27c" title=" " alt="" coords="896,163,1101,203"/>
+<area shape="poly" title=" " alt="" coords="1186,196,1102,191,1102,186,1186,190"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#a9a0d18be56d1dbe9c77885500f47e0de" title=" " alt="" coords="919,228,1079,283"/>
+<area shape="poly" title=" " alt="" coords="1176,264,1079,261,1079,255,1176,259"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#aad6c464e20d649f022c84edbc94d24d9" title=" " alt="" coords="919,307,1079,361"/>
+<area shape="poly" title=" " alt="" coords="1170,332,1079,334,1079,329,1169,326"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#ab4d21c6a2fba2c0781458ceea32e22ab" title=" " alt="" coords="919,385,1079,440"/>
+<area shape="poly" title=" " alt="" coords="1175,388,1079,403,1078,398,1174,382"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#a62541d9ce277d974565e3d9256358ed0" title=" " alt="" coords="919,464,1079,519"/>
+<area shape="poly" title=" " alt="" coords="1171,445,1080,471,1078,466,1170,440"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#ae1db25c09e5791ef840510db63ba86ca" title=" " alt="" coords="919,543,1079,597"/>
+<area shape="poly" title=" " alt="" coords="1167,495,1151,502,1127,517,1103,532,1075,545,1073,540,1100,528,1124,512,1148,497,1165,490"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#a171786b75197fc30e545dacafc36e211" title=" " alt="" coords="1149,512,1309,567"/>
+<area shape="poly" title=" " alt="" coords="1385,528,1310,535,1310,530,1384,523"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#aad5997aaaa2d622f0ca57f8b24a51a7b" title=" " alt="" coords="1203,661,1255,687"/>
+<area shape="poly" title=" " alt="" coords="1371,660,1256,674,1255,668,1370,655"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#aad5997aaaa2d622f0ca57f8b24a51a7b" title=" " alt="" coords="919,647,1079,701"/>
+<area shape="poly" title=" " alt="" coords="1189,677,1079,677,1079,671,1189,671"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a87cdd0cb4a86c0035f6b956b0b255a43" title=" " alt="" coords="673,654,848,694"/>
+<area shape="poly" title=" " alt="" coords="905,677,848,677,848,671,905,671"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="451,654,625,694"/>
+<area shape="poly" title=" " alt="" coords="660,677,625,677,625,671,660,671"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="228,625,403,665"/>
+<area shape="poly" title=" " alt="" coords="437,663,402,659,403,653,437,658"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9d284775ccebba879a77a7144be22899" title=" " alt="" coords="5,654,180,694"/>
+<area shape="poly" title=" " alt="" coords="215,661,180,665,180,660,214,655"/>
+<area shape="poly" title=" " alt="" coords="194,674,228,674,403,674,450,673,451,679,403,679,228,679,194,679"/>
+<area shape="poly" title=" " alt="" coords="1343,689,1255,679,1256,674,1344,684"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aad6c464e20d649f022c84edbc94d24d9" name="aad6c464e20d649f022c84edbc94d24d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad6c464e20d649f022c84edbc94d24d9">&#9670;&#160;</a></span>open_flash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool open_flash </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classSearchlightControl_1_1Searchlight.html#a752b19ff6a093bf586912d827da15d85">Searchlight::build_mutex_</a>, <a class="el" href="classSearchlightControl_1_1SearchlightLedController.html#a3900b933a38571b399fd5a38beafbbc8">SearchlightLedController::buildOpenFlash()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a7700c9bb76f5470bfc90194e5f2eb14b">Searchlight::enqueueCommand()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a6910807ba7dc519e2c5ae99f8a2d3028">Searchlight::ensureControlReady()</a> , 以及 <a class="el" href="classSearchlightControl_1_1Searchlight.html#a5706e2a6ca373268fbd5273530f2e1d2">Searchlight::led_controller_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classSearchlightControl_1_1SearchlightManager.html#aad6c464e20d649f022c84edbc94d24d9">SearchlightManager::open_flash()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchlightControl_1_1Searchlight_aad6c464e20d649f022c84edbc94d24d9_cgraph.png" border="0" usemap="#aclassSearchlightControl_1_1Searchlight_aad6c464e20d649f022c84edbc94d24d9_cgraph" alt=""/></div>
+<map name="aclassSearchlightControl_1_1Searchlight_aad6c464e20d649f022c84edbc94d24d9_cgraph" id="aclassSearchlightControl_1_1Searchlight_aad6c464e20d649f022c84edbc94d24d9_cgraph">
+<area shape="rect" title=" " alt="" coords="5,191,97,216"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightLedController.html#a3900b933a38571b399fd5a38beafbbc8" title=" " alt="" coords="145,69,336,124"/>
+<area shape="poly" title=" " alt="" coords="74,188,178,129,181,133,77,193"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a7700c9bb76f5470bfc90194e5f2eb14b" title=" " alt="" coords="168,191,313,216"/>
+<area shape="poly" title=" " alt="" coords="97,201,154,201,154,206,97,206"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a6910807ba7dc519e2c5ae99f8a2d3028" title=" " alt="" coords="163,244,318,269"/>
+<area shape="poly" title=" " alt="" coords="98,214,183,238,181,243,97,219"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#acd864a5f09221ed42c7d94e6f7fdd965" title=" " alt="" coords="384,47,600,101"/>
+<area shape="poly" title=" " alt="" coords="336,85,370,82,370,88,336,91"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#ab83e1288d2b2e1b753f5e4b39d22e8f3" title=" " alt="" coords="648,5,864,60"/>
+<area shape="poly" title=" " alt="" coords="600,54,634,49,635,54,600,60"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#a9f89fc8858cbe3e07f18553519cdc73a" title=" " alt="" coords="648,84,864,139"/>
+<area shape="poly" title=" " alt="" coords="600,87,635,92,634,97,600,92"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#a47ba41ded8fbb60f4a9b8aeec7f181a8" title=" " alt="" coords="918,13,1097,53"/>
+<area shape="poly" title=" " alt="" coords="864,30,904,30,904,35,864,35"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#a8faa71cefec66809616ef228e8c6953e" title=" " alt="" coords="1151,13,1348,53"/>
+<area shape="poly" title=" " alt="" coords="1097,30,1137,30,1137,35,1097,35"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#afac850763dd58d6d6c1d0447fb3f8ac3" title=" " alt="" coords="405,125,579,180"/>
+<area shape="poly" title=" " alt="" coords="304,188,391,170,392,175,305,193"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#a23b585f477d872799a5615b8e5460cd0" title=" " alt="" coords="407,205,577,245"/>
+<area shape="poly" title=" " alt="" coords="314,207,393,214,393,219,313,212"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#ac555620c0f53caffadf3cda12f25e4d3" title=" " alt="" coords="656,201,856,241"/>
+<area shape="poly" title=" " alt="" coords="577,221,642,220,642,225,578,226"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a85fc319006ab5f2e18f398f485f88132" title=" " alt="" coords="461,273,523,299"/>
+<area shape="poly" title=" " alt="" coords="319,263,448,278,447,284,318,268"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#ab6606f029c70b1b437e7219462d55a9a" title=" " alt="" coords="683,265,829,320"/>
+<area shape="poly" title=" " alt="" coords="524,284,669,288,669,293,524,289"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#ab5f58aab06c5742877b3788f26b11cb9" title=" " alt="" coords="912,273,1103,313"/>
+<area shape="poly" title=" " alt="" coords="829,290,898,290,898,295,829,295"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchlightControl_1_1Searchlight_aad6c464e20d649f022c84edbc94d24d9_icgraph.png" border="0" usemap="#aclassSearchlightControl_1_1Searchlight_aad6c464e20d649f022c84edbc94d24d9_icgraph" alt=""/></div>
+<map name="aclassSearchlightControl_1_1Searchlight_aad6c464e20d649f022c84edbc94d24d9_icgraph" id="aclassSearchlightControl_1_1Searchlight_aad6c464e20d649f022c84edbc94d24d9_icgraph">
+<area shape="rect" title=" " alt="" coords="213,20,305,45"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#aad6c464e20d649f022c84edbc94d24d9" title=" " alt="" coords="5,5,165,60"/>
+<area shape="poly" title=" " alt="" coords="200,35,166,35,166,30,200,30"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab4d21c6a2fba2c0781458ceea32e22ab" name="ab4d21c6a2fba2c0781458ceea32e22ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4d21c6a2fba2c0781458ceea32e22ab">&#9670;&#160;</a></span>open_led()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool open_led </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classSearchlightControl_1_1Searchlight.html#a752b19ff6a093bf586912d827da15d85">Searchlight::build_mutex_</a>, <a class="el" href="classSearchlightControl_1_1SearchlightLedController.html#a816115ac76154f1b1b3a6e5303d16af8">SearchlightLedController::buildOpenLed()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a7700c9bb76f5470bfc90194e5f2eb14b">Searchlight::enqueueCommand()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a6910807ba7dc519e2c5ae99f8a2d3028">Searchlight::ensureControlReady()</a> , 以及 <a class="el" href="classSearchlightControl_1_1Searchlight.html#a5706e2a6ca373268fbd5273530f2e1d2">Searchlight::led_controller_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classSearchlightControl_1_1SearchlightManager.html#ab4d21c6a2fba2c0781458ceea32e22ab">SearchlightManager::open_led()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchlightControl_1_1Searchlight_ab4d21c6a2fba2c0781458ceea32e22ab_cgraph.png" border="0" usemap="#aclassSearchlightControl_1_1Searchlight_ab4d21c6a2fba2c0781458ceea32e22ab_cgraph" alt=""/></div>
+<map name="aclassSearchlightControl_1_1Searchlight_ab4d21c6a2fba2c0781458ceea32e22ab_cgraph" id="aclassSearchlightControl_1_1Searchlight_ab4d21c6a2fba2c0781458ceea32e22ab_cgraph">
+<area shape="rect" title=" " alt="" coords="5,191,87,216"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightLedController.html#a816115ac76154f1b1b3a6e5303d16af8" title=" " alt="" coords="135,69,325,124"/>
+<area shape="poly" title=" " alt="" coords="68,188,169,129,171,133,71,193"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a7700c9bb76f5470bfc90194e5f2eb14b" title=" " alt="" coords="157,191,303,216"/>
+<area shape="poly" title=" " alt="" coords="87,201,144,201,144,206,87,206"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a6910807ba7dc519e2c5ae99f8a2d3028" title=" " alt="" coords="153,244,307,269"/>
+<area shape="poly" title=" " alt="" coords="87,212,174,238,172,243,86,217"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#a9b8f320b79abb959703d339258e3f665" title=" " alt="" coords="373,47,589,101"/>
+<area shape="poly" title=" " alt="" coords="325,85,359,82,360,88,326,91"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#ab83e1288d2b2e1b753f5e4b39d22e8f3" title=" " alt="" coords="637,5,853,60"/>
+<area shape="poly" title=" " alt="" coords="589,54,623,49,624,54,590,60"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#a9f89fc8858cbe3e07f18553519cdc73a" title=" " alt="" coords="637,84,853,139"/>
+<area shape="poly" title=" " alt="" coords="590,87,624,92,623,97,589,92"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#a47ba41ded8fbb60f4a9b8aeec7f181a8" title=" " alt="" coords="907,13,1086,53"/>
+<area shape="poly" title=" " alt="" coords="854,30,894,30,894,35,854,35"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#a8faa71cefec66809616ef228e8c6953e" title=" " alt="" coords="1140,13,1337,53"/>
+<area shape="poly" title=" " alt="" coords="1086,30,1126,30,1126,35,1086,35"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#afac850763dd58d6d6c1d0447fb3f8ac3" title=" " alt="" coords="395,125,568,180"/>
+<area shape="poly" title=" " alt="" coords="294,188,380,170,381,175,295,193"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#a23b585f477d872799a5615b8e5460cd0" title=" " alt="" coords="396,205,567,245"/>
+<area shape="poly" title=" " alt="" coords="303,207,382,214,382,219,303,212"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#ac555620c0f53caffadf3cda12f25e4d3" title=" " alt="" coords="645,201,845,241"/>
+<area shape="poly" title=" " alt="" coords="567,221,632,220,632,225,567,226"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a85fc319006ab5f2e18f398f485f88132" title=" " alt="" coords="450,273,513,299"/>
+<area shape="poly" title=" " alt="" coords="308,263,437,278,436,284,307,268"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#ab6606f029c70b1b437e7219462d55a9a" title=" " alt="" coords="673,265,818,320"/>
+<area shape="poly" title=" " alt="" coords="513,284,659,288,659,293,513,289"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#ab5f58aab06c5742877b3788f26b11cb9" title=" " alt="" coords="901,273,1092,313"/>
+<area shape="poly" title=" " alt="" coords="818,290,887,290,887,295,818,295"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchlightControl_1_1Searchlight_ab4d21c6a2fba2c0781458ceea32e22ab_icgraph.png" border="0" usemap="#aclassSearchlightControl_1_1Searchlight_ab4d21c6a2fba2c0781458ceea32e22ab_icgraph" alt=""/></div>
+<map name="aclassSearchlightControl_1_1Searchlight_ab4d21c6a2fba2c0781458ceea32e22ab_icgraph" id="aclassSearchlightControl_1_1Searchlight_ab4d21c6a2fba2c0781458ceea32e22ab_icgraph">
+<area shape="rect" title=" " alt="" coords="213,20,295,45"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#ab4d21c6a2fba2c0781458ceea32e22ab" title=" " alt="" coords="5,5,165,60"/>
+<area shape="poly" title=" " alt="" coords="200,35,166,35,166,30,200,30"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a97818289ea8ee202051dcc42312a5d43" name="a97818289ea8ee202051dcc42312a5d43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97818289ea8ee202051dcc42312a5d43">&#9670;&#160;</a></span>readSerialLoop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void readSerialLoop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classSearchlightControl_1_1SearchlightInitConfig.html#a784e73e1ce3f90fbcbb0a78d72a053ff">SearchlightInitConfig::baud_rate</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a1b37434dc6513b8f6f1a4bb02fd7ec4f">Searchlight::config_</a>, <a class="el" href="classSearchlightControl_1_1SearchlightInitConfig.html#ada10feddb1e7bd109da11d2f991bebca">SearchlightInitConfig::driver</a>, <a class="el" href="classSearchlightControl_1_1SearchlightState.html#adb119cefbd590a29ea68fb22e6ddbde7">SearchlightState::markChecksumError()</a>, <a class="el" href="classSearchlightControl_1_1SearchlightState.html#a47937613068261f3c57e327f199257c8">SearchlightState::markNoDevice()</a>, <a class="el" href="classSearchlightControl_1_1SearchlightState.html#a4a8944029dd37342ef5064a97541dca2">SearchlightState::markOnlineByFrame()</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="classSearchlightControl_1_1SearchlightInitConfig.html#ab9eab42570d4c8bb55d7bd065397a55f">SearchlightInitConfig::offline_timeout_ms</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a85fc319006ab5f2e18f398f485f88132">Searchlight::online()</a>, <a class="el" href="classSearchlightControl_1_1SearchlightInitConfig.html#afd409d0cae41473ec56b8b324c3b2eaa">SearchlightInitConfig::print_raw_serial</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#aa9620a15c76ada2388bf678e373a6463">Searchlight::running_</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#ace9cf28f9074921471f6943b82852696">Searchlight::serial_</a>, <a class="el" href="classSearchlightControl_1_1SearchlightState.html#a61de812c8d89d1fcd6ebfe66d8cf77c7">SearchlightState::snapshot()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a9923de5a64aff24c5678b48320ebec2c">Searchlight::state_</a>, <a class="el" href="classSearchlightControl_1_1ProtocolCodec.html#a23b585f477d872799a5615b8e5460cd0">ProtocolCodec::toHex()</a> , 以及 <a class="el" href="classSearchlightControl_1_1ProtocolCodec.html#a9bcf906aef99bb71da613918d8525cfe">ProtocolCodec::tryDecode()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classSearchlightControl_1_1Searchlight.html#aad5997aaaa2d622f0ca57f8b24a51a7b">Searchlight::start()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchlightControl_1_1Searchlight_a97818289ea8ee202051dcc42312a5d43_cgraph.png" border="0" usemap="#aclassSearchlightControl_1_1Searchlight_a97818289ea8ee202051dcc42312a5d43_cgraph" alt=""/></div>
+<map name="aclassSearchlightControl_1_1Searchlight_a97818289ea8ee202051dcc42312a5d43_cgraph" id="aclassSearchlightControl_1_1Searchlight_a97818289ea8ee202051dcc42312a5d43_cgraph">
+<area shape="rect" title=" " alt="" coords="5,241,124,267"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#adb119cefbd590a29ea68fb22e6ddbde7" title=" " alt="" coords="194,5,349,60"/>
+<area shape="poly" title=" " alt="" coords="68,240,80,206,102,161,131,112,170,69,180,62,184,66,174,73,136,115,106,163,85,208,73,242"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#a47937613068261f3c57e327f199257c8" title=" " alt="" coords="199,84,344,139"/>
+<area shape="poly" title=" " alt="" coords="74,239,114,195,141,170,171,148,185,140,187,144,173,152,144,174,117,199,78,243"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#a4a8944029dd37342ef5064a97541dca2" title=" " alt="" coords="193,163,349,217"/>
+<area shape="poly" title=" " alt="" coords="106,239,179,216,181,221,108,244"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#a23b585f477d872799a5615b8e5460cd0" title=" " alt="" coords="432,285,603,325"/>
+<area shape="poly" title=" " alt="" coords="113,264,172,277,300,291,419,299,418,304,300,297,172,282,112,269"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a85fc319006ab5f2e18f398f485f88132" title=" " alt="" coords="240,241,303,267"/>
+<area shape="poly" title=" " alt="" coords="124,251,226,251,226,257,124,257"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#a61de812c8d89d1fcd6ebfe66d8cf77c7" title=" " alt="" coords="199,407,344,461"/>
+<area shape="poly" title=" " alt="" coords="75,266,112,325,140,361,174,392,188,401,185,406,170,396,136,364,108,329,70,268"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#a9bcf906aef99bb71da613918d8525cfe" title=" " alt="" coords="172,342,371,382"/>
+<area shape="poly" title=" " alt="" coords="85,265,124,292,173,321,202,334,200,339,171,326,122,297,82,269"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#a2a8b6f751cc1793d2b438c3815103a61" title=" " alt="" coords="440,75,595,129"/>
+<area shape="poly" title=" " alt="" coords="347,160,427,131,429,136,349,165"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#ab5f58aab06c5742877b3788f26b11cb9" title=" " alt="" coords="669,183,859,223"/>
+<area shape="poly" title=" " alt="" coords="349,187,616,190,655,192,655,197,616,195,349,192"/>
+<area shape="poly" title=" " alt="" coords="351,215,372,226,387,238,397,249,406,260,420,270,432,277,430,282,417,275,402,264,392,253,383,242,369,231,348,219"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#a5621a12d9b832233066b0bfcc659b83f" title=" " alt="" coords="689,75,839,129"/>
+<area shape="poly" title=" " alt="" coords="595,99,676,99,676,105,595,105"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#ac555620c0f53caffadf3cda12f25e4d3" title=" " alt="" coords="664,313,864,353"/>
+<area shape="poly" title=" " alt="" coords="603,312,651,317,650,322,603,317"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#ab6606f029c70b1b437e7219462d55a9a" title=" " alt="" coords="445,205,590,260"/>
+<area shape="poly" title=" " alt="" coords="303,249,431,237,431,243,303,254"/>
+<area shape="poly" title=" " alt="" coords="590,221,655,214,655,219,591,227"/>
+<area shape="poly" title=" " alt="" coords="371,353,650,337,650,342,371,359"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#a8faa71cefec66809616ef228e8c6953e" title=" " alt="" coords="419,399,616,439"/>
+<area shape="poly" title=" " alt="" coords="358,379,418,394,417,399,357,385"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchlightControl_1_1Searchlight_a97818289ea8ee202051dcc42312a5d43_icgraph.png" border="0" usemap="#aclassSearchlightControl_1_1Searchlight_a97818289ea8ee202051dcc42312a5d43_icgraph" alt=""/></div>
+<map name="aclassSearchlightControl_1_1Searchlight_a97818289ea8ee202051dcc42312a5d43_icgraph" id="aclassSearchlightControl_1_1Searchlight_a97818289ea8ee202051dcc42312a5d43_icgraph">
+<area shape="rect" title=" " alt="" coords="1204,42,1323,67"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#aad5997aaaa2d622f0ca57f8b24a51a7b" title=" " alt="" coords="1104,42,1156,67"/>
+<area shape="poly" title=" " alt="" coords="1190,57,1157,57,1157,52,1190,52"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#aad5997aaaa2d622f0ca57f8b24a51a7b" title=" " alt="" coords="896,27,1056,82"/>
+<area shape="poly" title=" " alt="" coords="1090,57,1057,57,1057,52,1090,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a87cdd0cb4a86c0035f6b956b0b255a43" title=" " alt="" coords="673,35,848,75"/>
+<area shape="poly" title=" " alt="" coords="882,57,848,57,848,52,882,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="451,35,625,75"/>
+<area shape="poly" title=" " alt="" coords="660,57,625,57,625,52,660,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="228,5,403,45"/>
+<area shape="poly" title=" " alt="" coords="437,44,402,39,403,34,437,39"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9d284775ccebba879a77a7144be22899" title=" " alt="" coords="5,35,180,75"/>
+<area shape="poly" title=" " alt="" coords="215,41,180,46,180,41,214,36"/>
+<area shape="poly" title=" " alt="" coords="194,54,228,55,403,55,450,54,451,59,403,60,228,60,194,60"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a62541d9ce277d974565e3d9256358ed0" name="a62541d9ce277d974565e3d9256358ed0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62541d9ce277d974565e3d9256358ed0">&#9670;&#160;</a></span>setting_flash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool setting_flash </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>hz</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classSearchlightControl_1_1Searchlight.html#a752b19ff6a093bf586912d827da15d85">Searchlight::build_mutex_</a>, <a class="el" href="classSearchlightControl_1_1SearchlightLedController.html#a77b6279965290870702ec0b7d64bb680">SearchlightLedController::buildFlashHz()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a7700c9bb76f5470bfc90194e5f2eb14b">Searchlight::enqueueCommand()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a6910807ba7dc519e2c5ae99f8a2d3028">Searchlight::ensureControlReady()</a> , 以及 <a class="el" href="classSearchlightControl_1_1Searchlight.html#a5706e2a6ca373268fbd5273530f2e1d2">Searchlight::led_controller_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classSearchlightControl_1_1SearchlightManager.html#a62541d9ce277d974565e3d9256358ed0">SearchlightManager::setting_flash()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchlightControl_1_1Searchlight_a62541d9ce277d974565e3d9256358ed0_cgraph.png" border="0" usemap="#aclassSearchlightControl_1_1Searchlight_a62541d9ce277d974565e3d9256358ed0_cgraph" alt=""/></div>
+<map name="aclassSearchlightControl_1_1Searchlight_a62541d9ce277d974565e3d9256358ed0_cgraph" id="aclassSearchlightControl_1_1Searchlight_a62541d9ce277d974565e3d9256358ed0_cgraph">
+<area shape="rect" title=" " alt="" coords="5,228,111,253"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightLedController.html#a77b6279965290870702ec0b7d64bb680" title=" " alt="" coords="159,107,349,161"/>
+<area shape="poly" title=" " alt="" coords="81,225,190,166,193,170,84,230"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a7700c9bb76f5470bfc90194e5f2eb14b" title=" " alt="" coords="181,228,327,253"/>
+<area shape="poly" title=" " alt="" coords="111,238,167,238,167,243,111,243"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a6910807ba7dc519e2c5ae99f8a2d3028" title=" " alt="" coords="177,281,331,307"/>
+<area shape="poly" title=" " alt="" coords="106,251,194,275,193,280,105,256"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#a3714ab89d4710fd6c296af0745942f9f" title=" " alt="" coords="397,84,613,139"/>
+<area shape="poly" title=" " alt="" coords="349,123,383,120,384,125,350,128"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#a32ffebd17a41184b9c046bd98150b1f5" title=" " alt="" coords="661,5,877,60"/>
+<area shape="poly" title=" " alt="" coords="597,81,663,61,665,67,598,86"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#ab83e1288d2b2e1b753f5e4b39d22e8f3" title=" " alt="" coords="661,84,877,139"/>
+<area shape="poly" title=" " alt="" coords="613,109,648,109,648,114,613,114"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#a9f89fc8858cbe3e07f18553519cdc73a" title=" " alt="" coords="661,163,877,217"/>
+<area shape="poly" title=" " alt="" coords="598,136,665,156,663,161,597,141"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#a47ba41ded8fbb60f4a9b8aeec7f181a8" title=" " alt="" coords="931,91,1110,131"/>
+<area shape="poly" title=" " alt="" coords="878,109,918,109,918,114,878,114"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#a8faa71cefec66809616ef228e8c6953e" title=" " alt="" coords="1164,91,1361,131"/>
+<area shape="poly" title=" " alt="" coords="1110,109,1150,109,1150,114,1110,114"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#afac850763dd58d6d6c1d0447fb3f8ac3" title=" " alt="" coords="419,163,592,217"/>
+<area shape="poly" title=" " alt="" coords="318,225,404,208,405,213,319,230"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#a23b585f477d872799a5615b8e5460cd0" title=" " alt="" coords="420,242,591,282"/>
+<area shape="poly" title=" " alt="" coords="327,244,406,251,406,256,327,249"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#ac555620c0f53caffadf3cda12f25e4d3" title=" " alt="" coords="669,242,869,282"/>
+<area shape="poly" title=" " alt="" coords="591,259,656,259,656,265,591,265"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a85fc319006ab5f2e18f398f485f88132" title=" " alt="" coords="474,313,537,339"/>
+<area shape="poly" title=" " alt="" coords="332,301,461,318,460,323,331,306"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#ab6606f029c70b1b437e7219462d55a9a" title=" " alt="" coords="697,307,842,361"/>
+<area shape="poly" title=" " alt="" coords="537,324,683,329,682,334,537,330"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#ab5f58aab06c5742877b3788f26b11cb9" title=" " alt="" coords="925,314,1116,354"/>
+<area shape="poly" title=" " alt="" coords="842,331,911,331,911,337,842,337"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchlightControl_1_1Searchlight_a62541d9ce277d974565e3d9256358ed0_icgraph.png" border="0" usemap="#aclassSearchlightControl_1_1Searchlight_a62541d9ce277d974565e3d9256358ed0_icgraph" alt=""/></div>
+<map name="aclassSearchlightControl_1_1Searchlight_a62541d9ce277d974565e3d9256358ed0_icgraph" id="aclassSearchlightControl_1_1Searchlight_a62541d9ce277d974565e3d9256358ed0_icgraph">
+<area shape="rect" title=" " alt="" coords="213,20,319,45"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#a62541d9ce277d974565e3d9256358ed0" title=" " alt="" coords="5,5,165,60"/>
+<area shape="poly" title=" " alt="" coords="200,35,166,35,166,30,200,30"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae1db25c09e5791ef840510db63ba86ca" name="ae1db25c09e5791ef840510db63ba86ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1db25c09e5791ef840510db63ba86ca">&#9670;&#160;</a></span>setting_light_level()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool setting_light_level </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>level</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classSearchlightControl_1_1Searchlight.html#a752b19ff6a093bf586912d827da15d85">Searchlight::build_mutex_</a>, <a class="el" href="classSearchlightControl_1_1SearchlightLedController.html#ae495ffd69b717120de9987b1fe244e6a">SearchlightLedController::buildLightLevel()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a7700c9bb76f5470bfc90194e5f2eb14b">Searchlight::enqueueCommand()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a6910807ba7dc519e2c5ae99f8a2d3028">Searchlight::ensureControlReady()</a> , 以及 <a class="el" href="classSearchlightControl_1_1Searchlight.html#a5706e2a6ca373268fbd5273530f2e1d2">Searchlight::led_controller_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classSearchlightControl_1_1SearchlightManager.html#ae1db25c09e5791ef840510db63ba86ca">SearchlightManager::setting_light_level()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchlightControl_1_1Searchlight_ae1db25c09e5791ef840510db63ba86ca_cgraph.png" border="0" usemap="#aclassSearchlightControl_1_1Searchlight_ae1db25c09e5791ef840510db63ba86ca_cgraph" alt=""/></div>
+<map name="aclassSearchlightControl_1_1Searchlight_ae1db25c09e5791ef840510db63ba86ca_cgraph" id="aclassSearchlightControl_1_1Searchlight_ae1db25c09e5791ef840510db63ba86ca_cgraph">
+<area shape="rect" title=" " alt="" coords="5,228,148,253"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightLedController.html#ae495ffd69b717120de9987b1fe244e6a" title=" " alt="" coords="196,107,387,161"/>
+<area shape="poly" title=" " alt="" coords="102,225,222,165,224,170,105,230"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a7700c9bb76f5470bfc90194e5f2eb14b" title=" " alt="" coords="219,228,364,253"/>
+<area shape="poly" title=" " alt="" coords="148,238,205,238,205,243,148,243"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a6910807ba7dc519e2c5ae99f8a2d3028" title=" " alt="" coords="214,281,369,307"/>
+<area shape="poly" title=" " alt="" coords="129,251,227,275,226,281,128,256"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#aef715c1b04569a27f281d1ef9b0eb435" title=" " alt="" coords="435,84,651,139"/>
+<area shape="poly" title=" " alt="" coords="386,123,421,120,421,125,387,128"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#a32ffebd17a41184b9c046bd98150b1f5" title=" " alt="" coords="699,5,915,60"/>
+<area shape="poly" title=" " alt="" coords="634,81,701,61,702,67,636,86"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#ab83e1288d2b2e1b753f5e4b39d22e8f3" title=" " alt="" coords="699,84,915,139"/>
+<area shape="poly" title=" " alt="" coords="651,109,685,109,685,114,651,114"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightCommandBuilder.html#a9f89fc8858cbe3e07f18553519cdc73a" title=" " alt="" coords="699,163,915,217"/>
+<area shape="poly" title=" " alt="" coords="636,136,702,156,701,161,634,141"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#a47ba41ded8fbb60f4a9b8aeec7f181a8" title=" " alt="" coords="969,91,1147,131"/>
+<area shape="poly" title=" " alt="" coords="915,109,955,109,955,114,915,114"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#a8faa71cefec66809616ef228e8c6953e" title=" " alt="" coords="1201,91,1399,131"/>
+<area shape="poly" title=" " alt="" coords="1147,109,1188,109,1188,114,1147,114"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#afac850763dd58d6d6c1d0447fb3f8ac3" title=" " alt="" coords="456,163,629,217"/>
+<area shape="poly" title=" " alt="" coords="355,225,442,208,443,213,356,230"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#a23b585f477d872799a5615b8e5460cd0" title=" " alt="" coords="457,242,628,282"/>
+<area shape="poly" title=" " alt="" coords="364,244,444,251,443,256,364,249"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#ac555620c0f53caffadf3cda12f25e4d3" title=" " alt="" coords="707,242,907,282"/>
+<area shape="poly" title=" " alt="" coords="628,259,693,259,693,265,628,265"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a85fc319006ab5f2e18f398f485f88132" title=" " alt="" coords="511,313,574,339"/>
+<area shape="poly" title=" " alt="" coords="369,301,498,318,498,323,369,306"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#ab6606f029c70b1b437e7219462d55a9a" title=" " alt="" coords="734,307,879,361"/>
+<area shape="poly" title=" " alt="" coords="575,324,720,329,720,334,574,330"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#ab5f58aab06c5742877b3788f26b11cb9" title=" " alt="" coords="963,314,1153,354"/>
+<area shape="poly" title=" " alt="" coords="880,331,949,331,949,337,880,337"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchlightControl_1_1Searchlight_ae1db25c09e5791ef840510db63ba86ca_icgraph.png" border="0" usemap="#aclassSearchlightControl_1_1Searchlight_ae1db25c09e5791ef840510db63ba86ca_icgraph" alt=""/></div>
+<map name="aclassSearchlightControl_1_1Searchlight_ae1db25c09e5791ef840510db63ba86ca_icgraph" id="aclassSearchlightControl_1_1Searchlight_ae1db25c09e5791ef840510db63ba86ca_icgraph">
+<area shape="rect" title=" " alt="" coords="213,20,356,45"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#ae1db25c09e5791ef840510db63ba86ca" title=" " alt="" coords="5,5,165,60"/>
+<area shape="poly" title=" " alt="" coords="199,35,166,35,166,30,199,30"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7861ee1569802186a619778efc85af13" name="a7861ee1569802186a619778efc85af13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7861ee1569802186a619778efc85af13">&#9670;&#160;</a></span>shutdown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void shutdown </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#ace7d930f2e949827d4ce10fc7e448df5">Searchlight::queue_cv_</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a4840058caa71993c06ac701f06e49baf">Searchlight::queue_mutex_</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#ab6baf96f6c7934a9b75852c399235829">Searchlight::read_serial</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#aa9620a15c76ada2388bf678e373a6463">Searchlight::running_</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#ace9cf28f9074921471f6943b82852696">Searchlight::serial_</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#afde7498bfb39d419343d9d9e931703db">Searchlight::task_queue_</a> , 以及 <a class="el" href="classSearchlightControl_1_1Searchlight.html#a94773f93342cab686ab49cbfe9e17d71">Searchlight::worker_thread</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classSearchlightControl_1_1Searchlight.html#a39c036d9bf50c8e0e64fd4b7ab4376f7">Searchlight::initialize()</a>, <a class="el" href="classSearchlightControl_1_1SearchlightManager.html#a7861ee1569802186a619778efc85af13">SearchlightManager::shutdown()</a> , 以及 <a class="el" href="classSearchlightControl_1_1Searchlight.html#a57753f931580485d7dd2b85ee646823f">Searchlight::~Searchlight()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchlightControl_1_1Searchlight_a7861ee1569802186a619778efc85af13_icgraph.png" border="0" usemap="#aclassSearchlightControl_1_1Searchlight_a7861ee1569802186a619778efc85af13_icgraph" alt=""/></div>
+<map name="aclassSearchlightControl_1_1Searchlight_a7861ee1569802186a619778efc85af13_icgraph" id="aclassSearchlightControl_1_1Searchlight_a7861ee1569802186a619778efc85af13_icgraph">
+<area shape="rect" title=" " alt="" coords="1312,106,1397,131"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a39c036d9bf50c8e0e64fd4b7ab4376f7" title=" " alt="" coords="1145,42,1223,67"/>
+<area shape="poly" title=" " alt="" coords="1314,103,1263,81,1223,68,1225,63,1265,76,1316,98"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#a7861ee1569802186a619778efc85af13" title=" " alt="" coords="1104,91,1264,146"/>
+<area shape="poly" title=" " alt="" coords="1298,121,1264,121,1264,116,1298,116"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a57753f931580485d7dd2b85ee646823f" title=" " alt="" coords="1131,170,1237,195"/>
+<area shape="poly" title=" " alt="" coords="1315,139,1265,160,1229,172,1227,167,1263,155,1313,134"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#a39c036d9bf50c8e0e64fd4b7ab4376f7" title=" " alt="" coords="896,27,1056,82"/>
+<area shape="poly" title=" " alt="" coords="1131,57,1056,57,1056,52,1131,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a87cdd0cb4a86c0035f6b956b0b255a43" title=" " alt="" coords="673,35,848,75"/>
+<area shape="poly" title=" " alt="" coords="882,57,848,57,848,52,882,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="451,35,625,75"/>
+<area shape="poly" title=" " alt="" coords="660,57,625,57,625,52,660,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="228,5,403,45"/>
+<area shape="poly" title=" " alt="" coords="437,44,402,39,403,34,437,39"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9d284775ccebba879a77a7144be22899" title=" " alt="" coords="5,35,180,75"/>
+<area shape="poly" title=" " alt="" coords="215,41,180,46,180,41,214,36"/>
+<area shape="poly" title=" " alt="" coords="194,54,228,55,403,55,450,54,451,59,403,60,228,60,194,60"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aad5997aaaa2d622f0ca57f8b24a51a7b" name="aad5997aaaa2d622f0ca57f8b24a51a7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad5997aaaa2d622f0ca57f8b24a51a7b">&#9670;&#160;</a></span>start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#ab6baf96f6c7934a9b75852c399235829">Searchlight::read_serial</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a97818289ea8ee202051dcc42312a5d43">Searchlight::readSerialLoop()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#aa9620a15c76ada2388bf678e373a6463">Searchlight::running_</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a3b85f6afd44d6a1da93d93471ed5702b">Searchlight::waitInitialDeviceFrame()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a94773f93342cab686ab49cbfe9e17d71">Searchlight::worker_thread</a> , 以及 <a class="el" href="classSearchlightControl_1_1Searchlight.html#af65127c174a8db29f8c57fd6af1c6b4a">Searchlight::workerLoop()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classSearchlightControl_1_1SearchlightManager.html#aad5997aaaa2d622f0ca57f8b24a51a7b">SearchlightManager::start()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchlightControl_1_1Searchlight_aad5997aaaa2d622f0ca57f8b24a51a7b_cgraph.png" border="0" usemap="#aclassSearchlightControl_1_1Searchlight_aad5997aaaa2d622f0ca57f8b24a51a7b_cgraph" alt=""/></div>
+<map name="aclassSearchlightControl_1_1Searchlight_aad5997aaaa2d622f0ca57f8b24a51a7b_cgraph" id="aclassSearchlightControl_1_1Searchlight_aad5997aaaa2d622f0ca57f8b24a51a7b_cgraph">
+<area shape="rect" title=" " alt="" coords="5,236,57,261"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a97818289ea8ee202051dcc42312a5d43" title=" " alt="" coords="133,236,251,261"/>
+<area shape="poly" title=" " alt="" coords="57,246,119,246,119,251,57,251"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a3b85f6afd44d6a1da93d93471ed5702b" title=" " alt="" coords="105,79,279,104"/>
+<area shape="poly" title=" " alt="" coords="44,234,166,112,170,116,47,238"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#af65127c174a8db29f8c57fd6af1c6b4a" title=" " alt="" coords="143,509,241,535"/>
+<area shape="poly" title=" " alt="" coords="42,260,179,496,174,499,38,263"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#adb119cefbd590a29ea68fb22e6ddbde7" title=" " alt="" coords="349,300,503,355"/>
+<area shape="poly" title=" " alt="" coords="232,259,337,295,335,300,230,264"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#a47937613068261f3c57e327f199257c8" title=" " alt="" coords="353,64,499,119"/>
+<area shape="poly" title=" " alt="" coords="203,234,253,184,288,154,325,128,339,120,342,124,328,132,291,158,257,188,207,238"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#a4a8944029dd37342ef5064a97541dca2" title=" " alt="" coords="348,143,504,197"/>
+<area shape="poly" title=" " alt="" coords="230,233,334,198,335,203,232,238"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#a23b585f477d872799a5615b8e5460cd0" title=" " alt="" coords="587,343,757,383"/>
+<area shape="poly" title=" " alt="" coords="205,260,252,314,288,343,328,365,389,381,453,388,516,386,573,380,573,386,516,392,453,393,388,386,326,370,285,348,249,318,201,263"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a85fc319006ab5f2e18f398f485f88132" title=" " alt="" coords="395,15,457,40"/>
+<area shape="poly" title=" " alt="" coords="200,234,269,128,325,49,352,36,381,28,382,34,354,41,328,53,273,131,204,237"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#a61de812c8d89d1fcd6ebfe66d8cf77c7" title=" " alt="" coords="353,221,499,276"/>
+<area shape="poly" title=" " alt="" coords="252,246,339,246,339,251,252,251"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#a9bcf906aef99bb71da613918d8525cfe" title=" " alt="" coords="327,430,525,470"/>
+<area shape="poly" title=" " alt="" coords="203,260,250,330,286,372,328,409,349,422,346,426,325,413,282,376,246,333,198,263"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#a2a8b6f751cc1793d2b438c3815103a61" title=" " alt="" coords="595,143,749,197"/>
+<area shape="poly" title=" " alt="" coords="504,167,581,167,581,173,504,173"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#ab5f58aab06c5742877b3788f26b11cb9" title=" " alt="" coords="823,46,1014,86"/>
+<area shape="poly" title=" " alt="" coords="504,145,573,127,809,81,810,86,574,133,505,150"/>
+<area shape="poly" title=" " alt="" coords="506,194,527,206,564,236,598,269,650,331,646,334,594,272,560,240,524,211,503,199"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#a5621a12d9b832233066b0bfcc659b83f" title=" " alt="" coords="844,143,993,197"/>
+<area shape="poly" title=" " alt="" coords="750,167,830,167,830,173,750,173"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#ac555620c0f53caffadf3cda12f25e4d3" title=" " alt="" coords="819,371,1019,411"/>
+<area shape="poly" title=" " alt="" coords="758,370,805,376,805,381,757,376"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#ab6606f029c70b1b437e7219462d55a9a" title=" " alt="" coords="599,5,745,60"/>
+<area shape="poly" title=" " alt="" coords="458,25,586,28,585,33,458,31"/>
+<area shape="poly" title=" " alt="" coords="746,40,810,49,809,54,745,45"/>
+<area shape="poly" title=" " alt="" coords="526,436,805,402,806,407,526,441"/>
+<area shape="rect" href="classSearchlightControl_1_1ProtocolCodec.html#a8faa71cefec66809616ef228e8c6953e" title=" " alt="" coords="573,458,771,498"/>
+<area shape="poly" title=" " alt="" coords="526,459,560,463,560,468,525,464"/>
+<area shape="poly" title=" " alt="" coords="279,89,340,89,340,94,279,94"/>
+<area shape="poly" title=" " alt="" coords="233,76,326,49,381,35,382,40,327,54,235,81"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#ac165530b67165a5c90248e72299cad3e" title=" " alt="" coords="345,573,507,628"/>
+<area shape="poly" title=" " alt="" coords="232,532,333,567,332,572,230,537"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#a293ccea72cc4c403577075000a3b11ef" title=" " alt="" coords="350,495,502,549"/>
+<area shape="poly" title=" " alt="" coords="241,519,336,519,336,525,241,525"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchlightControl_1_1Searchlight_aad5997aaaa2d622f0ca57f8b24a51a7b_icgraph.png" border="0" usemap="#aclassSearchlightControl_1_1Searchlight_aad5997aaaa2d622f0ca57f8b24a51a7b_icgraph" alt=""/></div>
+<map name="aclassSearchlightControl_1_1Searchlight_aad5997aaaa2d622f0ca57f8b24a51a7b_icgraph" id="aclassSearchlightControl_1_1Searchlight_aad5997aaaa2d622f0ca57f8b24a51a7b_icgraph">
+<area shape="rect" title=" " alt="" coords="1104,42,1156,67"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#aad5997aaaa2d622f0ca57f8b24a51a7b" title=" " alt="" coords="896,27,1056,82"/>
+<area shape="poly" title=" " alt="" coords="1090,57,1057,57,1057,52,1090,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a87cdd0cb4a86c0035f6b956b0b255a43" title=" " alt="" coords="673,35,848,75"/>
+<area shape="poly" title=" " alt="" coords="882,57,848,57,848,52,882,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="451,35,625,75"/>
+<area shape="poly" title=" " alt="" coords="660,57,625,57,625,52,660,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="228,5,403,45"/>
+<area shape="poly" title=" " alt="" coords="437,44,402,39,403,34,437,39"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9d284775ccebba879a77a7144be22899" title=" " alt="" coords="5,35,180,75"/>
+<area shape="poly" title=" " alt="" coords="215,41,180,46,180,41,214,36"/>
+<area shape="poly" title=" " alt="" coords="194,54,228,55,403,55,450,54,451,59,403,60,228,60,194,60"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3b85f6afd44d6a1da93d93471ed5702b" name="a3b85f6afd44d6a1da93d93471ed5702b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b85f6afd44d6a1da93d93471ed5702b">&#9670;&#160;</a></span>waitInitialDeviceFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void waitInitialDeviceFrame </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classSearchlightControl_1_1Searchlight.html#a1b37434dc6513b8f6f1a4bb02fd7ec4f">Searchlight::config_</a>, <a class="el" href="classSearchlightControl_1_1SearchlightInitConfig.html#a151aacadebac5709d76bddebf5f93235">SearchlightInitConfig::init_wait_ms</a>, <a class="el" href="classSearchlightControl_1_1SearchlightState.html#a47937613068261f3c57e327f199257c8">SearchlightState::markNoDevice()</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a85fc319006ab5f2e18f398f485f88132">Searchlight::online()</a> , 以及 <a class="el" href="classSearchlightControl_1_1Searchlight.html#a9923de5a64aff24c5678b48320ebec2c">Searchlight::state_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classSearchlightControl_1_1Searchlight.html#aad5997aaaa2d622f0ca57f8b24a51a7b">Searchlight::start()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchlightControl_1_1Searchlight_a3b85f6afd44d6a1da93d93471ed5702b_cgraph.png" border="0" usemap="#aclassSearchlightControl_1_1Searchlight_a3b85f6afd44d6a1da93d93471ed5702b_cgraph" alt=""/></div>
+<map name="aclassSearchlightControl_1_1Searchlight_a3b85f6afd44d6a1da93d93471ed5702b_cgraph" id="aclassSearchlightControl_1_1Searchlight_a3b85f6afd44d6a1da93d93471ed5702b_cgraph">
+<area shape="rect" title=" " alt="" coords="5,52,179,77"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#a47937613068261f3c57e327f199257c8" title=" " alt="" coords="227,5,372,60"/>
+<area shape="poly" title=" " alt="" coords="174,49,212,43,213,49,175,55"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#a85fc319006ab5f2e18f398f485f88132" title=" " alt="" coords="268,84,331,109"/>
+<area shape="poly" title=" " alt="" coords="175,75,255,87,254,92,174,80"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#ab6606f029c70b1b437e7219462d55a9a" title=" " alt="" coords="420,69,565,124"/>
+<area shape="poly" title=" " alt="" coords="331,94,406,94,406,99,331,99"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#ab5f58aab06c5742877b3788f26b11cb9" title=" " alt="" coords="613,77,804,117"/>
+<area shape="poly" title=" " alt="" coords="566,94,600,94,600,99,566,99"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchlightControl_1_1Searchlight_a3b85f6afd44d6a1da93d93471ed5702b_icgraph.png" border="0" usemap="#aclassSearchlightControl_1_1Searchlight_a3b85f6afd44d6a1da93d93471ed5702b_icgraph" alt=""/></div>
+<map name="aclassSearchlightControl_1_1Searchlight_a3b85f6afd44d6a1da93d93471ed5702b_icgraph" id="aclassSearchlightControl_1_1Searchlight_a3b85f6afd44d6a1da93d93471ed5702b_icgraph">
+<area shape="rect" title=" " alt="" coords="1204,42,1377,67"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#aad5997aaaa2d622f0ca57f8b24a51a7b" title=" " alt="" coords="1104,42,1156,67"/>
+<area shape="poly" title=" " alt="" coords="1191,57,1156,57,1156,52,1191,52"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#aad5997aaaa2d622f0ca57f8b24a51a7b" title=" " alt="" coords="896,27,1056,82"/>
+<area shape="poly" title=" " alt="" coords="1090,57,1057,57,1057,52,1090,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a87cdd0cb4a86c0035f6b956b0b255a43" title=" " alt="" coords="673,35,848,75"/>
+<area shape="poly" title=" " alt="" coords="882,57,848,57,848,52,882,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="451,35,625,75"/>
+<area shape="poly" title=" " alt="" coords="660,57,625,57,625,52,660,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="228,5,403,45"/>
+<area shape="poly" title=" " alt="" coords="437,44,402,39,403,34,437,39"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9d284775ccebba879a77a7144be22899" title=" " alt="" coords="5,35,180,75"/>
+<area shape="poly" title=" " alt="" coords="215,41,180,46,180,41,214,36"/>
+<area shape="poly" title=" " alt="" coords="194,54,228,55,403,55,450,54,451,59,403,60,228,60,194,60"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af65127c174a8db29f8c57fd6af1c6b4a" name="af65127c174a8db29f8c57fd6af1c6b4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af65127c174a8db29f8c57fd6af1c6b4a">&#9670;&#160;</a></span>workerLoop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void workerLoop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classSearchlightControl_1_1LightTask.html#ae59b6e754570ebc0c6d2edd75c3ea894">LightTask::command</a>, <a class="el" href="classSearchlightControl_1_1SearchlightState.html#ac165530b67165a5c90248e72299cad3e">SearchlightState::markCommandFailed()</a>, <a class="el" href="classSearchlightControl_1_1SearchlightState.html#a293ccea72cc4c403577075000a3b11ef">SearchlightState::markCommandSent()</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="classSearchlightControl_1_1LightTask.html#ad9f614fe9b609f04d00959a016f0fcff">LightTask::parameters</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#ace7d930f2e949827d4ce10fc7e448df5">Searchlight::queue_cv_</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a4840058caa71993c06ac701f06e49baf">Searchlight::queue_mutex_</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#aa9620a15c76ada2388bf678e373a6463">Searchlight::running_</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#ace9cf28f9074921471f6943b82852696">Searchlight::serial_</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a9923de5a64aff24c5678b48320ebec2c">Searchlight::state_</a> , 以及 <a class="el" href="classSearchlightControl_1_1Searchlight.html#afde7498bfb39d419343d9d9e931703db">Searchlight::task_queue_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classSearchlightControl_1_1Searchlight.html#aad5997aaaa2d622f0ca57f8b24a51a7b">Searchlight::start()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchlightControl_1_1Searchlight_af65127c174a8db29f8c57fd6af1c6b4a_cgraph.png" border="0" usemap="#aclassSearchlightControl_1_1Searchlight_af65127c174a8db29f8c57fd6af1c6b4a_cgraph" alt=""/></div>
+<map name="aclassSearchlightControl_1_1Searchlight_af65127c174a8db29f8c57fd6af1c6b4a_cgraph" id="aclassSearchlightControl_1_1Searchlight_af65127c174a8db29f8c57fd6af1c6b4a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,60,103,85"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#ac165530b67165a5c90248e72299cad3e" title=" " alt="" coords="151,5,312,60"/>
+<area shape="poly" title=" " alt="" coords="102,59,137,51,138,57,104,64"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightState.html#a293ccea72cc4c403577075000a3b11ef" title=" " alt="" coords="155,84,307,139"/>
+<area shape="poly" title=" " alt="" coords="104,81,142,89,141,94,102,86"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSearchlightControl_1_1Searchlight_af65127c174a8db29f8c57fd6af1c6b4a_icgraph.png" border="0" usemap="#aclassSearchlightControl_1_1Searchlight_af65127c174a8db29f8c57fd6af1c6b4a_icgraph" alt=""/></div>
+<map name="aclassSearchlightControl_1_1Searchlight_af65127c174a8db29f8c57fd6af1c6b4a_icgraph" id="aclassSearchlightControl_1_1Searchlight_af65127c174a8db29f8c57fd6af1c6b4a_icgraph">
+<area shape="rect" title=" " alt="" coords="1204,42,1301,67"/>
+<area shape="rect" href="classSearchlightControl_1_1Searchlight.html#aad5997aaaa2d622f0ca57f8b24a51a7b" title=" " alt="" coords="1104,42,1156,67"/>
+<area shape="poly" title=" " alt="" coords="1190,57,1156,57,1156,52,1190,52"/>
+<area shape="rect" href="classSearchlightControl_1_1SearchlightManager.html#aad5997aaaa2d622f0ca57f8b24a51a7b" title=" " alt="" coords="896,27,1056,82"/>
+<area shape="poly" title=" " alt="" coords="1090,57,1057,57,1057,52,1090,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a87cdd0cb4a86c0035f6b956b0b255a43" title=" " alt="" coords="673,35,848,75"/>
+<area shape="poly" title=" " alt="" coords="882,57,848,57,848,52,882,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="451,35,625,75"/>
+<area shape="poly" title=" " alt="" coords="660,57,625,57,625,52,660,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="228,5,403,45"/>
+<area shape="poly" title=" " alt="" coords="437,44,402,39,403,34,437,39"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9d284775ccebba879a77a7144be22899" title=" " alt="" coords="5,35,180,75"/>
+<area shape="poly" title=" " alt="" coords="215,41,180,46,180,41,214,36"/>
+<area shape="poly" title=" " alt="" coords="194,54,228,55,403,55,450,54,451,59,403,60,228,60,194,60"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">结构体成员变量说明</h2>
+<a id="a752b19ff6a093bf586912d827da15d85" name="a752b19ff6a093bf586912d827da15d85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a752b19ff6a093bf586912d827da15d85">&#9670;&#160;</a></span>build_mutex_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex build_mutex_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classSearchlightControl_1_1Searchlight.html#ae7d991b13bd8a00dd582bda0ee7596a0">Searchlight::close_flash()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a58ac11d6b8da2206d27f6d72c52d783f">Searchlight::close_led()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#af47d63e3739fa2d0c7f0fac48d35d27c">Searchlight::home()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a9a0d18be56d1dbe9c77885500f47e0de">Searchlight::move_to()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#aad6c464e20d649f022c84edbc94d24d9">Searchlight::open_flash()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#ab4d21c6a2fba2c0781458ceea32e22ab">Searchlight::open_led()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a62541d9ce277d974565e3d9256358ed0">Searchlight::setting_flash()</a> , 以及 <a class="el" href="classSearchlightControl_1_1Searchlight.html#ae1db25c09e5791ef840510db63ba86ca">Searchlight::setting_light_level()</a>.</p>
+
+</div>
+</div>
+<a id="a50da6c39085961261d6e3f7dbe118a57" name="a50da6c39085961261d6e3f7dbe118a57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50da6c39085961261d6e3f7dbe118a57">&#9670;&#160;</a></span>builder_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSearchlightControl_1_1SearchlightCommandBuilder.html">SearchlightCommandBuilder</a> builder_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1b37434dc6513b8f6f1a4bb02fd7ec4f" name="a1b37434dc6513b8f6f1a4bb02fd7ec4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b37434dc6513b8f6f1a4bb02fd7ec4f">&#9670;&#160;</a></span>config_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSearchlightControl_1_1SearchlightInitConfig.html">SearchlightInitConfig</a> config_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classSearchlightControl_1_1Searchlight.html#a39c036d9bf50c8e0e64fd4b7ab4376f7">Searchlight::initialize()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a85fc319006ab5f2e18f398f485f88132">Searchlight::online()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a97818289ea8ee202051dcc42312a5d43">Searchlight::readSerialLoop()</a> , 以及 <a class="el" href="classSearchlightControl_1_1Searchlight.html#a3b85f6afd44d6a1da93d93471ed5702b">Searchlight::waitInitialDeviceFrame()</a>.</p>
+
+</div>
+</div>
+<a id="a5706e2a6ca373268fbd5273530f2e1d2" name="a5706e2a6ca373268fbd5273530f2e1d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5706e2a6ca373268fbd5273530f2e1d2">&#9670;&#160;</a></span>led_controller_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSearchlightControl_1_1SearchlightLedController.html">SearchlightLedController</a> led_controller_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classSearchlightControl_1_1Searchlight.html#ae7d991b13bd8a00dd582bda0ee7596a0">Searchlight::close_flash()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a58ac11d6b8da2206d27f6d72c52d783f">Searchlight::close_led()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#aad6c464e20d649f022c84edbc94d24d9">Searchlight::open_flash()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#ab4d21c6a2fba2c0781458ceea32e22ab">Searchlight::open_led()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a62541d9ce277d974565e3d9256358ed0">Searchlight::setting_flash()</a> , 以及 <a class="el" href="classSearchlightControl_1_1Searchlight.html#ae1db25c09e5791ef840510db63ba86ca">Searchlight::setting_light_level()</a>.</p>
+
+</div>
+</div>
+<a id="ace7d930f2e949827d4ce10fc7e448df5" name="ace7d930f2e949827d4ce10fc7e448df5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace7d930f2e949827d4ce10fc7e448df5">&#9670;&#160;</a></span>queue_cv_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::condition_variable queue_cv_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classSearchlightControl_1_1Searchlight.html#a7700c9bb76f5470bfc90194e5f2eb14b">Searchlight::enqueueCommand()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a7861ee1569802186a619778efc85af13">Searchlight::shutdown()</a> , 以及 <a class="el" href="classSearchlightControl_1_1Searchlight.html#af65127c174a8db29f8c57fd6af1c6b4a">Searchlight::workerLoop()</a>.</p>
+
+</div>
+</div>
+<a id="a4840058caa71993c06ac701f06e49baf" name="a4840058caa71993c06ac701f06e49baf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4840058caa71993c06ac701f06e49baf">&#9670;&#160;</a></span>queue_mutex_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex queue_mutex_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classSearchlightControl_1_1Searchlight.html#a7700c9bb76f5470bfc90194e5f2eb14b">Searchlight::enqueueCommand()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a7861ee1569802186a619778efc85af13">Searchlight::shutdown()</a> , 以及 <a class="el" href="classSearchlightControl_1_1Searchlight.html#af65127c174a8db29f8c57fd6af1c6b4a">Searchlight::workerLoop()</a>.</p>
+
+</div>
+</div>
+<a id="ab6baf96f6c7934a9b75852c399235829" name="ab6baf96f6c7934a9b75852c399235829"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6baf96f6c7934a9b75852c399235829">&#9670;&#160;</a></span>read_serial</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::thread read_serial</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classSearchlightControl_1_1Searchlight.html#a7861ee1569802186a619778efc85af13">Searchlight::shutdown()</a> , 以及 <a class="el" href="classSearchlightControl_1_1Searchlight.html#aad5997aaaa2d622f0ca57f8b24a51a7b">Searchlight::start()</a>.</p>
+
+</div>
+</div>
+<a id="aa9620a15c76ada2388bf678e373a6463" name="aa9620a15c76ada2388bf678e373a6463"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9620a15c76ada2388bf678e373a6463">&#9670;&#160;</a></span>running_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;bool&gt; running_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classSearchlightControl_1_1Searchlight.html#a97818289ea8ee202051dcc42312a5d43">Searchlight::readSerialLoop()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a7861ee1569802186a619778efc85af13">Searchlight::shutdown()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#aad5997aaaa2d622f0ca57f8b24a51a7b">Searchlight::start()</a> , 以及 <a class="el" href="classSearchlightControl_1_1Searchlight.html#af65127c174a8db29f8c57fd6af1c6b4a">Searchlight::workerLoop()</a>.</p>
+
+</div>
+</div>
+<a id="ace9cf28f9074921471f6943b82852696" name="ace9cf28f9074921471f6943b82852696"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace9cf28f9074921471f6943b82852696">&#9670;&#160;</a></span>serial_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classSearchlightControl_1_1SerialPort.html">SerialPort</a>&gt; serial_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classSearchlightControl_1_1Searchlight.html#a6910807ba7dc519e2c5ae99f8a2d3028">Searchlight::ensureControlReady()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a39c036d9bf50c8e0e64fd4b7ab4376f7">Searchlight::initialize()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a97818289ea8ee202051dcc42312a5d43">Searchlight::readSerialLoop()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a7861ee1569802186a619778efc85af13">Searchlight::shutdown()</a> , 以及 <a class="el" href="classSearchlightControl_1_1Searchlight.html#af65127c174a8db29f8c57fd6af1c6b4a">Searchlight::workerLoop()</a>.</p>
+
+</div>
+</div>
+<a id="a46a7b54bbbad979f01ac3fc5c215e379" name="a46a7b54bbbad979f01ac3fc5c215e379"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46a7b54bbbad979f01ac3fc5c215e379">&#9670;&#160;</a></span>servo_controller_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSearchlightControl_1_1SearchlightServoController.html">SearchlightServoController</a> servo_controller_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classSearchlightControl_1_1Searchlight.html#af47d63e3739fa2d0c7f0fac48d35d27c">Searchlight::home()</a> , 以及 <a class="el" href="classSearchlightControl_1_1Searchlight.html#a9a0d18be56d1dbe9c77885500f47e0de">Searchlight::move_to()</a>.</p>
+
+</div>
+</div>
+<a id="a9923de5a64aff24c5678b48320ebec2c" name="a9923de5a64aff24c5678b48320ebec2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9923de5a64aff24c5678b48320ebec2c">&#9670;&#160;</a></span>state_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSearchlightControl_1_1SearchlightState.html">SearchlightState</a> state_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classSearchlightControl_1_1Searchlight.html#a7700c9bb76f5470bfc90194e5f2eb14b">Searchlight::enqueueCommand()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a171786b75197fc30e545dacafc36e211">Searchlight::get_status()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a39c036d9bf50c8e0e64fd4b7ab4376f7">Searchlight::initialize()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a85fc319006ab5f2e18f398f485f88132">Searchlight::online()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a97818289ea8ee202051dcc42312a5d43">Searchlight::readSerialLoop()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a3b85f6afd44d6a1da93d93471ed5702b">Searchlight::waitInitialDeviceFrame()</a> , 以及 <a class="el" href="classSearchlightControl_1_1Searchlight.html#af65127c174a8db29f8c57fd6af1c6b4a">Searchlight::workerLoop()</a>.</p>
+
+</div>
+</div>
+<a id="afde7498bfb39d419343d9d9e931703db" name="afde7498bfb39d419343d9d9e931703db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afde7498bfb39d419343d9d9e931703db">&#9670;&#160;</a></span>task_queue_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::deque&lt;<a class="el" href="classSearchlightControl_1_1LightTask.html">LightTask</a>&gt; task_queue_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classSearchlightControl_1_1Searchlight.html#a7700c9bb76f5470bfc90194e5f2eb14b">Searchlight::enqueueCommand()</a>, <a class="el" href="classSearchlightControl_1_1Searchlight.html#a7861ee1569802186a619778efc85af13">Searchlight::shutdown()</a> , 以及 <a class="el" href="classSearchlightControl_1_1Searchlight.html#af65127c174a8db29f8c57fd6af1c6b4a">Searchlight::workerLoop()</a>.</p>
+
+</div>
+</div>
+<a id="a94773f93342cab686ab49cbfe9e17d71" name="a94773f93342cab686ab49cbfe9e17d71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94773f93342cab686ab49cbfe9e17d71">&#9670;&#160;</a></span>worker_thread</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::thread worker_thread</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classSearchlightControl_1_1Searchlight.html#a7861ee1569802186a619778efc85af13">Searchlight::shutdown()</a> , 以及 <a class="el" href="classSearchlightControl_1_1Searchlight.html#aad5997aaaa2d622f0ca57f8b24a51a7b">Searchlight::start()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/util/my_light/<a class="el" href="Searchlight_8h_source.html">Searchlight.h</a></li>
+<li>src/util/my_light/<a class="el" href="Searchlight_8cpp.html">Searchlight.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

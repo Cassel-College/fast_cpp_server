@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_light/SearchlightState.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_1ef3a2c00c98b770603ff35e33be4e5f.html">my_light</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#enum-members">枚举</a>  </div>
+  <div class="headertitle"><div class="title">SearchlightState.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="SearchlightProtocol_8h_source.html">SearchlightProtocol.h</a>&quot;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;chrono&gt;</code><br />
+<code>#include &lt;mutex&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+SearchlightState.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="SearchlightState_8h__incl.png" border="0" usemap="#asrc_2util_2my__light_2SearchlightState_8h" alt=""/></div>
+<map name="asrc_2util_2my__light_2SearchlightState_8h" id="asrc_2util_2my__light_2SearchlightState_8h">
+<area shape="rect" title=" " alt="" coords="160,5,364,45"/>
+<area shape="rect" href="SearchlightProtocol_8h.html" title=" " alt="" coords="65,93,225,119"/>
+<area shape="poly" title=" " alt="" coords="235,48,175,88,172,84,232,43"/>
+<area shape="rect" title=" " alt="" coords="5,167,76,192"/>
+<area shape="poly" title=" " alt="" coords="160,39,131,47,103,59,77,75,55,95,47,108,42,123,40,153,35,153,37,122,42,106,51,92,74,70,100,54,129,42,159,34"/>
+<area shape="rect" title=" " alt="" coords="217,167,275,192"/>
+<area shape="poly" title=" " alt="" coords="263,46,251,153,246,153,257,46"/>
+<area shape="rect" title=" " alt="" coords="299,93,366,119"/>
+<area shape="poly" title=" " alt="" coords="281,44,315,81,311,85,277,47"/>
+<area shape="rect" title=" " alt="" coords="390,93,454,119"/>
+<area shape="poly" title=" " alt="" coords="301,43,387,85,385,90,299,48"/>
+<area shape="poly" title=" " alt="" coords="129,121,71,161,68,156,126,116"/>
+<area shape="poly" title=" " alt="" coords="162,116,220,156,217,161,159,121"/>
+<area shape="rect" title=" " alt="" coords="113,167,176,192"/>
+<area shape="poly" title=" " alt="" coords="147,119,147,153,142,153,142,119"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="SearchlightState_8h__dep__incl.png" border="0" usemap="#asrc_2util_2my__light_2SearchlightState_8hdep" alt=""/></div>
+<map name="asrc_2util_2my__light_2SearchlightState_8hdep" id="asrc_2util_2my__light_2SearchlightState_8hdep">
+<area shape="rect" title=" " alt="" coords="256,5,460,45"/>
+<area shape="rect" href="Searchlight_8h.html" title=" " alt="" coords="133,101,349,126"/>
+<area shape="poly" title=" " alt="" coords="323,56,258,103,255,98,320,51"/>
+<area shape="rect" href="SearchlightState_8cpp.html" title=" " alt="" coords="373,93,577,133"/>
+<area shape="poly" title=" " alt="" coords="397,52,451,91,448,95,394,56"/>
+<area shape="rect" href="Searchlight_8cpp.html" title=" " alt="" coords="5,189,236,214"/>
+<area shape="poly" title=" " alt="" coords="215,136,139,191,135,186,212,132"/>
+<area shape="rect" href="SearchlightManager_8h.html" title=" " alt="" coords="260,181,464,221"/>
+<area shape="poly" title=" " alt="" coords="269,132,337,179,334,183,266,136"/>
+<area shape="rect" href="Pipeline_8cpp.html" title=" " alt="" coords="113,269,246,309"/>
+<area shape="poly" title=" " alt="" coords="311,230,220,272,218,267,308,225"/>
+<area shape="rect" href="LightController_8cpp.html" title=" " alt="" coords="270,269,454,309"/>
+<area shape="poly" title=" " alt="" coords="365,235,365,269,359,269,359,235"/>
+<area shape="rect" href="SearchlightManager_8cpp.html" title=" " alt="" coords="479,269,683,309"/>
+<area shape="poly" title=" " alt="" coords="424,224,534,267,532,272,422,229"/>
+</map>
+</div>
+</div>
+<p><a href="SearchlightState_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSearchlightControl_1_1SearchlightStatusSnapshot.html">SearchlightStatusSnapshot</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSearchlightControl_1_1SearchlightState.html">SearchlightState</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespaceSearchlightControl" id="r_namespaceSearchlightControl"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSearchlightControl.html">SearchlightControl</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:a335413a83f0ace30e07e8b339943b3cf" id="r_a335413a83f0ace30e07e8b339943b3cf"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSearchlightControl.html#a335413a83f0ace30e07e8b339943b3cf">DevicePresence</a> { <a class="el" href="namespaceSearchlightControl.html#a335413a83f0ace30e07e8b339943b3cfa88183b946cc5f0e8c96b2e66e1c74a7e">Unknown</a>
+, <a class="el" href="namespaceSearchlightControl.html#a335413a83f0ace30e07e8b339943b3cfa016a079d209399c8c705fe58113f330a">NoDevice</a>
+, <a class="el" href="namespaceSearchlightControl.html#a335413a83f0ace30e07e8b339943b3cfa54f664c70c22054ea0d8d26fc3997ce7">Online</a>
+ }</td></tr>
+<tr class="separator:a335413a83f0ace30e07e8b339943b3cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f42291470d90911110457454020fa19" id="r_a7f42291470d90911110457454020fa19"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSearchlightControl.html#a7f42291470d90911110457454020fa19">LedPowerState</a> { <a class="el" href="namespaceSearchlightControl.html#a7f42291470d90911110457454020fa19a88183b946cc5f0e8c96b2e66e1c74a7e">Unknown</a>
+, <a class="el" href="namespaceSearchlightControl.html#a7f42291470d90911110457454020fa19ad15305d7a4e34e02489c74a5ef542f36">Off</a>
+, <a class="el" href="namespaceSearchlightControl.html#a7f42291470d90911110457454020fa19a521c36a31c2762741cf0f8890cbe05e3">On</a>
+ }</td></tr>
+<tr class="separator:a7f42291470d90911110457454020fa19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab43430f8e2627eef2675e14e75c4fa3b" id="r_ab43430f8e2627eef2675e14e75c4fa3b"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSearchlightControl.html#ab43430f8e2627eef2675e14e75c4fa3b">FlashState</a> { <a class="el" href="namespaceSearchlightControl.html#ab43430f8e2627eef2675e14e75c4fa3ba88183b946cc5f0e8c96b2e66e1c74a7e">Unknown</a>
+, <a class="el" href="namespaceSearchlightControl.html#ab43430f8e2627eef2675e14e75c4fa3bab9f5c797ebbf55adccdd8539a65a0241">Disabled</a>
+, <a class="el" href="namespaceSearchlightControl.html#ab43430f8e2627eef2675e14e75c4fa3ba00d23a76e43b46dae9ec7aa9dcbebb32">Enabled</a>
+ }</td></tr>
+<tr class="separator:ab43430f8e2627eef2675e14e75c4fa3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

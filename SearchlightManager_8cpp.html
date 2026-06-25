@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_light/SearchlightManager.cpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_1ef3a2c00c98b770603ff35e33be4e5f.html">my_light</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">命名空间</a>  </div>
+  <div class="headertitle"><div class="title">SearchlightManager.cpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="SearchlightManager_8h_source.html">SearchlightManager.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+SearchlightManager.cpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="SearchlightManager_8cpp__incl.png" border="0" usemap="#asrc_2util_2my__light_2SearchlightManager_8cpp" alt=""/></div>
+<map name="asrc_2util_2my__light_2SearchlightManager_8cpp" id="asrc_2util_2my__light_2SearchlightManager_8cpp">
+<area shape="rect" title=" " alt="" coords="99,5,303,45"/>
+<area shape="rect" href="SearchlightManager_8h.html" title=" " alt="" coords="120,93,282,119"/>
+<area shape="poly" title=" " alt="" coords="204,46,204,79,198,79,198,46"/>
+<area shape="rect" title=" " alt="" coords="389,387,448,412"/>
+<area shape="poly" title=" " alt="" coords="181,121,121,158,87,184,54,213,28,244,11,276,8,291,9,307,14,322,24,337,48,354,84,367,130,378,181,385,287,393,375,396,375,401,287,399,180,391,129,383,83,373,45,359,20,341,10,324,4,308,3,291,6,274,23,241,50,209,83,180,118,154,179,116"/>
+<area shape="rect" href="Searchlight_8h.html" title=" " alt="" coords="434,167,541,192"/>
+<area shape="poly" title=" " alt="" coords="248,116,429,161,428,166,246,121"/>
+<area shape="poly" title=" " alt="" coords="434,185,344,190,237,200,138,217,100,229,72,242,55,257,45,272,33,314,29,327,33,337,55,354,91,367,135,377,185,385,289,393,375,395,375,401,288,398,184,390,134,382,89,372,53,358,28,340,24,327,28,313,40,270,51,254,69,238,98,224,137,212,236,195,343,185,434,180"/>
+<area shape="rect" title=" " alt="" coords="104,240,170,265"/>
+<area shape="poly" title=" " alt="" coords="435,193,184,243,184,243,183,237,183,237,434,188"/>
+<area shape="rect" title=" " alt="" coords="195,240,338,265"/>
+<area shape="poly" title=" " alt="" coords="453,195,316,238,314,233,451,189"/>
+<area shape="rect" title=" " alt="" coords="362,240,424,265"/>
+<area shape="poly" title=" " alt="" coords="474,194,421,234,418,229,471,190"/>
+<area shape="rect" title=" " alt="" coords="449,240,526,265"/>
+<area shape="poly" title=" " alt="" coords="490,192,490,226,485,226,485,192"/>
+<area shape="rect" title=" " alt="" coords="284,313,348,339"/>
+<area shape="poly" title=" " alt="" coords="434,183,346,186,243,194,194,202,151,212,116,225,94,242,89,253,94,264,105,273,121,282,167,297,270,316,269,322,166,302,119,287,102,278,90,267,84,253,90,238,114,221,149,207,193,197,242,189,345,180,434,178"/>
+<area shape="rect" title=" " alt="" coords="766,240,830,265"/>
+<area shape="poly" title=" " alt="" coords="538,189,753,238,752,244,537,195"/>
+<area shape="rect" title=" " alt="" coords="1079,387,1142,412"/>
+<area shape="poly" title=" " alt="" coords="541,178,727,182,970,191,1089,198,1193,208,1271,221,1299,229,1316,238,1339,261,1352,286,1353,313,1339,340,1327,351,1309,360,1261,376,1156,395,1155,390,1260,371,1307,356,1324,347,1335,337,1347,312,1347,287,1334,264,1313,242,1297,234,1270,226,1192,213,1089,203,970,196,726,187,541,184"/>
+<area shape="rect" href="SearchlightCommandBuilder_8h.html" title=" " alt="" coords="832,313,1050,339"/>
+<area shape="poly" title=" " alt="" coords="541,189,619,209,705,238,755,263,823,287,886,307,885,312,821,292,753,268,703,242,617,215,539,195"/>
+<area shape="rect" href="SearchlightConfig_8h.html" title=" " alt="" coords="43,313,191,339"/>
+<area shape="poly" title=" " alt="" coords="434,183,344,185,238,193,188,201,143,211,108,225,84,242,79,255,80,270,99,301,94,304,75,272,73,254,80,238,105,220,142,206,187,196,238,188,344,180,434,178"/>
+<area shape="rect" href="SearchlightLedController_8h.html" title=" " alt="" coords="855,240,1048,265"/>
+<area shape="poly" title=" " alt="" coords="542,186,864,235,863,241,541,191"/>
+<area shape="rect" href="SearchlightServoController_8h.html" title=" " alt="" coords="1072,240,1279,265"/>
+<area shape="poly" title=" " alt="" coords="541,184,1059,237,1058,242,541,189"/>
+<area shape="rect" href="SearchlightState_8h.html" title=" " alt="" coords="550,240,692,265"/>
+<area shape="poly" title=" " alt="" coords="510,190,588,231,586,236,508,194"/>
+<area shape="rect" href="SerialPort_8h.html" title=" " alt="" coords="1227,313,1324,339"/>
+<area shape="poly" title=" " alt="" coords="541,178,724,179,962,187,1077,194,1178,205,1253,219,1278,228,1294,238,1302,253,1302,270,1292,302,1287,301,1297,269,1297,255,1290,242,1276,233,1251,224,1177,210,1077,200,962,192,724,185,541,183"/>
+<area shape="poly" title=" " alt="" coords="857,341,462,395,461,390,857,336"/>
+<area shape="poly" title=" " alt="" coords="969,336,1071,379,1069,384,967,341"/>
+<area shape="rect" title=" " alt="" coords="832,387,903,412"/>
+<area shape="poly" title=" " alt="" coords="931,341,891,379,888,375,927,337"/>
+<area shape="poly" title=" " alt="" coords="166,336,376,385,375,391,165,341"/>
+<area shape="poly" title=" " alt="" coords="984,263,1025,282,1064,311,1088,342,1103,372,1099,375,1083,344,1061,315,1022,287,982,268"/>
+<area shape="poly" title=" " alt="" coords="953,266,947,300,942,299,947,265"/>
+<area shape="poly" title=" " alt="" coords="893,268,853,286,836,298,822,315,818,330,822,345,844,375,840,379,817,348,812,330,817,312,832,295,850,281,891,263"/>
+<area shape="poly" title=" " alt="" coords="1177,266,1172,300,1159,340,1133,378,1129,375,1155,337,1167,299,1172,265"/>
+<area shape="poly" title=" " alt="" coords="1139,268,993,312,991,307,1137,263"/>
+<area shape="poly" title=" " alt="" coords="1165,268,1122,303,1064,341,988,371,917,391,916,385,986,366,1061,336,1119,299,1162,263"/>
+<area shape="poly" title=" " alt="" coords="571,268,497,289,466,302,446,315,429,343,422,374,417,373,424,341,442,311,463,297,496,284,570,263"/>
+<area shape="poly" title=" " alt="" coords="573,268,362,317,360,312,571,263"/>
+<area shape="poly" title=" " alt="" coords="642,263,838,377,835,382,639,268"/>
+<area shape="rect" href="SearchlightProtocol_8h.html" title=" " alt="" coords="546,313,706,339"/>
+<area shape="poly" title=" " alt="" coords="625,265,627,300,622,300,619,266"/>
+<area shape="rect" title=" " alt="" coords="456,313,522,339"/>
+<area shape="poly" title=" " alt="" coords="601,268,524,309,521,304,599,263"/>
+<area shape="poly" title=" " alt="" coords="594,341,462,386,460,381,592,336"/>
+<area shape="poly" title=" " alt="" coords="705,336,1066,389,1065,394,704,341"/>
+<area shape="poly" title=" " alt="" coords="666,336,820,381,818,386,664,341"/>
+<area shape="poly" title=" " alt="" coords="1227,334,462,397,461,392,1226,329"/>
+<area shape="poly" title=" " alt="" coords="1250,341,1151,384,1149,379,1248,336"/>
+<area shape="poly" title=" " alt="" coords="1227,338,917,392,916,387,1226,333"/>
+<area shape="rect" title=" " alt="" coords="1211,387,1295,412"/>
+<area shape="poly" title=" " alt="" coords="1275,340,1263,374,1258,373,1269,338"/>
+<area shape="rect" title=" " alt="" coords="1320,387,1394,412"/>
+<area shape="poly" title=" " alt="" coords="1291,337,1335,376,1332,380,1287,341"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespaceSearchlightControl" id="r_namespaceSearchlightControl"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSearchlightControl.html">SearchlightControl</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

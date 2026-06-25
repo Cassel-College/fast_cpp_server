@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_mediamtx_monitor/v2/PodConfig.cpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_9d4f728460ea36c9f4fb61d4d98dff33.html">my_mediamtx_monitor</a></li><li class="navelem"><a class="el" href="dir_f633cf40700e17b7385e13d244382dc1.html">v2</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">PodConfig.cpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="PodConfig_8h_source.html">PodConfig.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="MyLog_8h_source.html">MyLog.h</a>&quot;</code><br />
+<code>#include &lt;cerrno&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+PodConfig.cpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="PodConfig_8cpp__incl.png" border="0" usemap="#asrc_2util_2my__mediamtx__monitor_2v2_2PodConfig_8cpp" alt=""/></div>
+<map name="asrc_2util_2my__mediamtx__monitor_2v2_2PodConfig_8cpp" id="asrc_2util_2my__mediamtx__monitor_2v2_2PodConfig_8cpp">
+<area shape="rect" title=" " alt="" coords="1123,5,1319,45"/>
+<area shape="rect" href="PodConfig_8h.html" title=" " alt="" coords="376,93,475,119"/>
+<area shape="poly" title=" " alt="" coords="1124,39,489,101,488,96,1123,34"/>
+<area shape="rect" href="MyLog_8h.html" title=" " alt="" coords="1088,93,1165,119"/>
+<area shape="poly" title=" " alt="" coords="1200,48,1153,86,1150,82,1197,43"/>
+<area shape="rect" title=" " alt="" coords="1190,93,1253,119"/>
+<area shape="poly" title=" " alt="" coords="1224,46,1224,79,1219,79,1219,46"/>
+<area shape="rect" title=" " alt="" coords="1277,93,1352,119"/>
+<area shape="poly" title=" " alt="" coords="1246,44,1292,82,1288,86,1242,48"/>
+<area shape="rect" title=" " alt="" coords="1376,93,1451,119"/>
+<area shape="poly" title=" " alt="" coords="1268,43,1374,86,1372,91,1266,48"/>
+<area shape="rect" title=" " alt="" coords="816,174,875,199"/>
+<area shape="poly" title=" " alt="" coords="475,108,624,126,715,142,805,164,811,166,810,171,803,169,714,147,623,131,474,113"/>
+<area shape="rect" title=" " alt="" coords="5,174,56,199"/>
+<area shape="poly" title=" " alt="" coords="376,114,236,131,152,147,69,169,64,171,62,166,67,164,151,142,235,125,375,108"/>
+<area shape="rect" title=" " alt="" coords="80,174,147,199"/>
+<area shape="poly" title=" " alt="" coords="376,118,275,139,159,169,153,171,151,166,158,164,274,134,375,113"/>
+<area shape="rect" title=" " alt="" coords="171,174,235,199"/>
+<area shape="poly" title=" " alt="" coords="389,121,248,169,242,171,240,166,246,164,387,116"/>
+<area shape="rect" title=" " alt="" coords="259,174,323,199"/>
+<area shape="poly" title=" " alt="" coords="407,121,324,169,321,165,404,117"/>
+<area shape="rect" title=" " alt="" coords="347,174,413,199"/>
+<area shape="poly" title=" " alt="" coords="421,120,396,163,391,161,416,118"/>
+<area shape="rect" title=" " alt="" coords="438,174,501,199"/>
+<area shape="poly" title=" " alt="" coords="434,118,458,161,454,163,430,120"/>
+<area shape="rect" title=" " alt="" coords="525,174,621,199"/>
+<area shape="poly" title=" " alt="" coords="448,116,541,165,538,170,446,121"/>
+<area shape="rect" title=" " alt="" coords="645,174,792,199"/>
+<area shape="poly" title=" " alt="" coords="469,116,664,168,662,173,467,121"/>
+<area shape="poly" title=" " alt="" coords="1088,117,996,138,887,169,882,171,880,166,886,164,995,133,1087,112"/>
+<area shape="rect" title=" " alt="" coords="899,174,1023,199"/>
+<area shape="poly" title=" " alt="" coords="1104,121,999,171,997,166,1101,116"/>
+<area shape="rect" title=" " alt="" coords="1047,167,1206,207"/>
+<area shape="poly" title=" " alt="" coords="1129,119,1129,153,1124,153,1124,119"/>
+<area shape="rect" title=" " alt="" coords="1230,174,1349,199"/>
+<area shape="poly" title=" " alt="" coords="1151,116,1255,166,1252,171,1149,121"/>
+<area shape="rect" title=" " alt="" coords="1373,174,1539,199"/>
+<area shape="poly" title=" " alt="" coords="1166,114,1395,168,1394,173,1165,119"/>
+<area shape="rect" title=" " alt="" coords="1564,174,1641,199"/>
+<area shape="poly" title=" " alt="" coords="1166,114,1179,116,1284,130,1366,136,1449,144,1553,164,1563,167,1561,172,1551,169,1448,149,1366,141,1283,135,1178,121,1165,119"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacepod__stream" id="r_namespacepod__stream"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepod__stream.html">pod_stream</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a16cdf2d58d441fc4329665abb679170c" id="r_a16cdf2d58d441fc4329665abb679170c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structpod__stream_1_1PodConfig.html">PodConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepod__stream.html#a16cdf2d58d441fc4329665abb679170c">CreateDefaultConfig</a> ()</td></tr>
+<tr class="memdesc:a16cdf2d58d441fc4329665abb679170c"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建默认/示例配置  <br /></td></tr>
+<tr class="separator:a16cdf2d58d441fc4329665abb679170c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c837f0ccfb8ab2daab77d11866c51bc" id="r_a7c837f0ccfb8ab2daab77d11866c51bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structpod__stream_1_1PodConfig.html">PodConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepod__stream.html#a7c837f0ccfb8ab2daab77d11866c51bc">CreatePodConfigByUAV</a> ()</td></tr>
+<tr class="memdesc:a7c837f0ccfb8ab2daab77d11866c51bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建无人机制定的配置  <br /></td></tr>
+<tr class="separator:a7c837f0ccfb8ab2daab77d11866c51bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07b30c4154761384a0d7dcf8a9ef0fa8" id="r_a07b30c4154761384a0d7dcf8a9ef0fa8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structpod__stream_1_1PodConfig.html">PodConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepod__stream.html#a07b30c4154761384a0d7dcf8a9ef0fa8">CreatePodByConfig</a> (const nlohmann::json &amp;json_config)</td></tr>
+<tr class="separator:a07b30c4154761384a0d7dcf8a9ef0fa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

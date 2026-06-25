@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_light/SearchlightProtocol.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_1ef3a2c00c98b770603ff35e33be4e5f.html">my_light</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">SearchlightProtocol.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="SearchlightProtocol_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef SEARCHLIGHT_PROTOCOL_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define SEARCHLIGHT_PROTOCOL_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceSearchlightControl.html">SearchlightControl</a> {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="structSearchlightControl_1_1DecodedFrame.html">   11</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structSearchlightControl_1_1DecodedFrame.html">DecodedFrame</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <a class="code hl_function" href="structSearchlightControl_1_1DecodedFrame.html#a80762ad881c48299b1c259299c06a17f">DecodedFrame</a>();</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="structSearchlightControl_1_1DecodedFrame.html#a9edc0b39f6faf0153dc2a643d0483e7c">   14</a></span>    uint8_t <a class="code hl_variable" href="structSearchlightControl_1_1DecodedFrame.html#a9edc0b39f6faf0153dc2a643d0483e7c">cmd_id</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structSearchlightControl_1_1DecodedFrame.html#af3f9154993f5bc03803cac3c91171324">   15</a></span>    uint8_t <a class="code hl_variable" href="structSearchlightControl_1_1DecodedFrame.html#af3f9154993f5bc03803cac3c91171324">length_byte</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="structSearchlightControl_1_1DecodedFrame.html#a99cb0c6fd3cb1c5926ef38154bfdb0b5">   16</a></span>    uint8_t <a class="code hl_variable" href="structSearchlightControl_1_1DecodedFrame.html#a99cb0c6fd3cb1c5926ef38154bfdb0b5">body_length</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="structSearchlightControl_1_1DecodedFrame.html#a6f0dfbd93d3878993e92838d24517236">   17</a></span>    uint8_t <a class="code hl_variable" href="structSearchlightControl_1_1DecodedFrame.html#a6f0dfbd93d3878993e92838d24517236">frame_counter</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="structSearchlightControl_1_1DecodedFrame.html#a38ba23c3cd87bbea3ad1cf69a82fbcbe">   18</a></span>    std::vector&lt;uint8_t&gt; <a class="code hl_variable" href="structSearchlightControl_1_1DecodedFrame.html#a38ba23c3cd87bbea3ad1cf69a82fbcbe">payload</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="structSearchlightControl_1_1DecodedFrame.html#a59eac9627282a484fbaf0aa7aa3b8a9a">   19</a></span>    uint8_t <a class="code hl_variable" href="structSearchlightControl_1_1DecodedFrame.html#a59eac9627282a484fbaf0aa7aa3b8a9a">checksum</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>};</div>
+</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">// 编/解码类：负责帧头、长度位域、帧计数器、大端数据和异或校验。</span></div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classSearchlightControl_1_1ProtocolCodec.html">   23</a></span><span class="keyword">class </span><a class="code hl_class" href="classSearchlightControl_1_1ProtocolCodec.html">ProtocolCodec</a> {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classSearchlightControl_1_1ProtocolCodec.html#ac39152c0aae409eff536c376cd71b39f">   25</a></span>    <span class="keyword">static</span> <span class="keyword">const</span> uint8_t <a class="code hl_variable" href="classSearchlightControl_1_1ProtocolCodec.html#ac39152c0aae409eff536c376cd71b39f">kHeader0</a> = 0x55;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classSearchlightControl_1_1ProtocolCodec.html#a504472885c292709203981a87a7a1404">   26</a></span>    <span class="keyword">static</span> <span class="keyword">const</span> uint8_t <a class="code hl_variable" href="classSearchlightControl_1_1ProtocolCodec.html#a504472885c292709203981a87a7a1404">kHeader1</a> = 0xAA;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classSearchlightControl_1_1ProtocolCodec.html#a80eabbebb45cfaf5c2abbc8bb8b3dfd6">   27</a></span>    <span class="keyword">static</span> <span class="keyword">const</span> uint8_t <a class="code hl_variable" href="classSearchlightControl_1_1ProtocolCodec.html#a80eabbebb45cfaf5c2abbc8bb8b3dfd6">kCmdId</a> = 0xDC;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classSearchlightControl_1_1ProtocolCodec.html#ac9189bb0cae5fc2a97f0837d80334378">   28</a></span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code hl_variable" href="classSearchlightControl_1_1ProtocolCodec.html#ac9189bb0cae5fc2a97f0837d80334378">kMaxPayloadLength</a> = 61;  <span class="comment">// 低 6 位长度最大 63，扣除 CMD 和 LEN。</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">static</span> std::vector&lt;uint8_t&gt; <a class="code hl_function" href="classSearchlightControl_1_1ProtocolCodec.html#a47ba41ded8fbb60f4a9b8aeec7f181a8">encode</a>(uint8_t cmd_id,</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                                       <span class="keyword">const</span> std::vector&lt;uint8_t&gt;&amp; payload,</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                                       uint8_t frame_counter);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classSearchlightControl_1_1ProtocolCodec.html#a9bcf906aef99bb71da613918d8525cfe">tryDecode</a>(std::vector&lt;uint8_t&gt;&amp; buffer,</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                          <a class="code hl_struct" href="structSearchlightControl_1_1DecodedFrame.html">DecodedFrame</a>&amp; frame,</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                          std::string&amp; error);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">static</span> uint8_t <a class="code hl_function" href="classSearchlightControl_1_1ProtocolCodec.html#a8faa71cefec66809616ef228e8c6953e">checksum</a>(<span class="keyword">const</span> std::vector&lt;uint8_t&gt;&amp; frame_without_checksum);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">static</span> std::string <a class="code hl_function" href="classSearchlightControl_1_1ProtocolCodec.html#a23b585f477d872799a5615b8e5460cd0">toHex</a>(<span class="keyword">const</span> std::vector&lt;uint8_t&gt;&amp; bytes);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classSearchlightControl_1_1ProtocolCodec.html#ab8687077be9d9933798335bbade8b6f7">fromHex</a>(<span class="keyword">const</span> std::string&amp; hex_text, std::vector&lt;uint8_t&gt;&amp; bytes);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">static</span> std::string <a class="code hl_function" href="classSearchlightControl_1_1ProtocolCodec.html#ac555620c0f53caffadf3cda12f25e4d3">byteToHex</a>(uint8_t value);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>};</div>
+</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>}  <span class="comment">// namespace SearchlightControl</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#endif  </span><span class="comment">// SEARCHLIGHT_PROTOCOL_H</span></div>
+<div class="ttc" id="aclassSearchlightControl_1_1ProtocolCodec_html"><div class="ttname"><a href="classSearchlightControl_1_1ProtocolCodec.html">SearchlightControl::ProtocolCodec</a></div><div class="ttdef"><b>Definition</b> SearchlightProtocol.h:23</div></div>
+<div class="ttc" id="aclassSearchlightControl_1_1ProtocolCodec_html_a23b585f477d872799a5615b8e5460cd0"><div class="ttname"><a href="classSearchlightControl_1_1ProtocolCodec.html#a23b585f477d872799a5615b8e5460cd0">SearchlightControl::ProtocolCodec::toHex</a></div><div class="ttdeci">static std::string toHex(const std::vector&lt; uint8_t &gt; &amp;bytes)</div><div class="ttdef"><b>Definition</b> SearchlightProtocol.cpp:119</div></div>
+<div class="ttc" id="aclassSearchlightControl_1_1ProtocolCodec_html_a47ba41ded8fbb60f4a9b8aeec7f181a8"><div class="ttname"><a href="classSearchlightControl_1_1ProtocolCodec.html#a47ba41ded8fbb60f4a9b8aeec7f181a8">SearchlightControl::ProtocolCodec::encode</a></div><div class="ttdeci">static std::vector&lt; uint8_t &gt; encode(uint8_t cmd_id, const std::vector&lt; uint8_t &gt; &amp;payload, uint8_t frame_counter)</div><div class="ttdef"><b>Definition</b> SearchlightProtocol.cpp:23</div></div>
+<div class="ttc" id="aclassSearchlightControl_1_1ProtocolCodec_html_a504472885c292709203981a87a7a1404"><div class="ttname"><a href="classSearchlightControl_1_1ProtocolCodec.html#a504472885c292709203981a87a7a1404">SearchlightControl::ProtocolCodec::kHeader1</a></div><div class="ttdeci">static const uint8_t kHeader1</div><div class="ttdef"><b>Definition</b> SearchlightProtocol.h:26</div></div>
+<div class="ttc" id="aclassSearchlightControl_1_1ProtocolCodec_html_a80eabbebb45cfaf5c2abbc8bb8b3dfd6"><div class="ttname"><a href="classSearchlightControl_1_1ProtocolCodec.html#a80eabbebb45cfaf5c2abbc8bb8b3dfd6">SearchlightControl::ProtocolCodec::kCmdId</a></div><div class="ttdeci">static const uint8_t kCmdId</div><div class="ttdef"><b>Definition</b> SearchlightProtocol.h:27</div></div>
+<div class="ttc" id="aclassSearchlightControl_1_1ProtocolCodec_html_a8faa71cefec66809616ef228e8c6953e"><div class="ttname"><a href="classSearchlightControl_1_1ProtocolCodec.html#a8faa71cefec66809616ef228e8c6953e">SearchlightControl::ProtocolCodec::checksum</a></div><div class="ttdeci">static uint8_t checksum(const std::vector&lt; uint8_t &gt; &amp;frame_without_checksum)</div><div class="ttdef"><b>Definition</b> SearchlightProtocol.cpp:108</div></div>
+<div class="ttc" id="aclassSearchlightControl_1_1ProtocolCodec_html_a9bcf906aef99bb71da613918d8525cfe"><div class="ttname"><a href="classSearchlightControl_1_1ProtocolCodec.html#a9bcf906aef99bb71da613918d8525cfe">SearchlightControl::ProtocolCodec::tryDecode</a></div><div class="ttdeci">static bool tryDecode(std::vector&lt; uint8_t &gt; &amp;buffer, DecodedFrame &amp;frame, std::string &amp;error)</div><div class="ttdef"><b>Definition</b> SearchlightProtocol.cpp:45</div></div>
+<div class="ttc" id="aclassSearchlightControl_1_1ProtocolCodec_html_ab8687077be9d9933798335bbade8b6f7"><div class="ttname"><a href="classSearchlightControl_1_1ProtocolCodec.html#ab8687077be9d9933798335bbade8b6f7">SearchlightControl::ProtocolCodec::fromHex</a></div><div class="ttdeci">static bool fromHex(const std::string &amp;hex_text, std::vector&lt; uint8_t &gt; &amp;bytes)</div><div class="ttdef"><b>Definition</b> SearchlightProtocol.cpp:130</div></div>
+<div class="ttc" id="aclassSearchlightControl_1_1ProtocolCodec_html_ac39152c0aae409eff536c376cd71b39f"><div class="ttname"><a href="classSearchlightControl_1_1ProtocolCodec.html#ac39152c0aae409eff536c376cd71b39f">SearchlightControl::ProtocolCodec::kHeader0</a></div><div class="ttdeci">static const uint8_t kHeader0</div><div class="ttdef"><b>Definition</b> SearchlightProtocol.h:25</div></div>
+<div class="ttc" id="aclassSearchlightControl_1_1ProtocolCodec_html_ac555620c0f53caffadf3cda12f25e4d3"><div class="ttname"><a href="classSearchlightControl_1_1ProtocolCodec.html#ac555620c0f53caffadf3cda12f25e4d3">SearchlightControl::ProtocolCodec::byteToHex</a></div><div class="ttdeci">static std::string byteToHex(uint8_t value)</div><div class="ttdef"><b>Definition</b> SearchlightProtocol.cpp:158</div></div>
+<div class="ttc" id="aclassSearchlightControl_1_1ProtocolCodec_html_ac9189bb0cae5fc2a97f0837d80334378"><div class="ttname"><a href="classSearchlightControl_1_1ProtocolCodec.html#ac9189bb0cae5fc2a97f0837d80334378">SearchlightControl::ProtocolCodec::kMaxPayloadLength</a></div><div class="ttdeci">static const size_t kMaxPayloadLength</div><div class="ttdef"><b>Definition</b> SearchlightProtocol.h:28</div></div>
+<div class="ttc" id="anamespaceSearchlightControl_html"><div class="ttname"><a href="namespaceSearchlightControl.html">SearchlightControl</a></div><div class="ttdef"><b>Definition</b> Searchlight.cpp:9</div></div>
+<div class="ttc" id="astructSearchlightControl_1_1DecodedFrame_html"><div class="ttname"><a href="structSearchlightControl_1_1DecodedFrame.html">SearchlightControl::DecodedFrame</a></div><div class="ttdef"><b>Definition</b> SearchlightProtocol.h:11</div></div>
+<div class="ttc" id="astructSearchlightControl_1_1DecodedFrame_html_a38ba23c3cd87bbea3ad1cf69a82fbcbe"><div class="ttname"><a href="structSearchlightControl_1_1DecodedFrame.html#a38ba23c3cd87bbea3ad1cf69a82fbcbe">SearchlightControl::DecodedFrame::payload</a></div><div class="ttdeci">std::vector&lt; uint8_t &gt; payload</div><div class="ttdef"><b>Definition</b> SearchlightProtocol.h:18</div></div>
+<div class="ttc" id="astructSearchlightControl_1_1DecodedFrame_html_a59eac9627282a484fbaf0aa7aa3b8a9a"><div class="ttname"><a href="structSearchlightControl_1_1DecodedFrame.html#a59eac9627282a484fbaf0aa7aa3b8a9a">SearchlightControl::DecodedFrame::checksum</a></div><div class="ttdeci">uint8_t checksum</div><div class="ttdef"><b>Definition</b> SearchlightProtocol.h:19</div></div>
+<div class="ttc" id="astructSearchlightControl_1_1DecodedFrame_html_a6f0dfbd93d3878993e92838d24517236"><div class="ttname"><a href="structSearchlightControl_1_1DecodedFrame.html#a6f0dfbd93d3878993e92838d24517236">SearchlightControl::DecodedFrame::frame_counter</a></div><div class="ttdeci">uint8_t frame_counter</div><div class="ttdef"><b>Definition</b> SearchlightProtocol.h:17</div></div>
+<div class="ttc" id="astructSearchlightControl_1_1DecodedFrame_html_a80762ad881c48299b1c259299c06a17f"><div class="ttname"><a href="structSearchlightControl_1_1DecodedFrame.html#a80762ad881c48299b1c259299c06a17f">SearchlightControl::DecodedFrame::DecodedFrame</a></div><div class="ttdeci">DecodedFrame()</div><div class="ttdef"><b>Definition</b> SearchlightProtocol.cpp:16</div></div>
+<div class="ttc" id="astructSearchlightControl_1_1DecodedFrame_html_a99cb0c6fd3cb1c5926ef38154bfdb0b5"><div class="ttname"><a href="structSearchlightControl_1_1DecodedFrame.html#a99cb0c6fd3cb1c5926ef38154bfdb0b5">SearchlightControl::DecodedFrame::body_length</a></div><div class="ttdeci">uint8_t body_length</div><div class="ttdef"><b>Definition</b> SearchlightProtocol.h:16</div></div>
+<div class="ttc" id="astructSearchlightControl_1_1DecodedFrame_html_a9edc0b39f6faf0153dc2a643d0483e7c"><div class="ttname"><a href="structSearchlightControl_1_1DecodedFrame.html#a9edc0b39f6faf0153dc2a643d0483e7c">SearchlightControl::DecodedFrame::cmd_id</a></div><div class="ttdeci">uint8_t cmd_id</div><div class="ttdef"><b>Definition</b> SearchlightProtocol.h:14</div></div>
+<div class="ttc" id="astructSearchlightControl_1_1DecodedFrame_html_af3f9154993f5bc03803cac3c91171324"><div class="ttname"><a href="structSearchlightControl_1_1DecodedFrame.html#af3f9154993f5bc03803cac3c91171324">SearchlightControl::DecodedFrame::length_byte</a></div><div class="ttdeci">uint8_t length_byte</div><div class="ttdef"><b>Definition</b> SearchlightProtocol.h:15</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

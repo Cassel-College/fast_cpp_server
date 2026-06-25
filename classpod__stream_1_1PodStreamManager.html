@@ -1,0 +1,2445 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: PodStreamManager类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacepod__stream.html">pod_stream</a></li><li class="navelem"><a class="el" href="classpod__stream_1_1PodStreamManager.html">PodStreamManager</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a>  </div>
+  <div class="headertitle"><div class="title">PodStreamManager类 参考<span class="mlabels"><span class="mlabel">final</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>吊舱视频流管理器 (单例模式)  
+ <a href="classpod__stream_1_1PodStreamManager.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="PodStreamManager_8h_source.html">PodStreamManager.h</a>&gt;</code></p>
+<div class="dynheader">
+PodStreamManager 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpod__stream_1_1PodStreamManager__coll__graph.png" border="0" usemap="#aPodStreamManager_coll__map" alt="Collaboration graph"/></div>
+<map name="aPodStreamManager_coll__map" id="aPodStreamManager_coll__map">
+<area shape="rect" title="吊舱视频流管理器 (单例模式)" alt="" coords="5,93,156,119"/>
+<area shape="rect" href="structpod__stream_1_1PodConfig.html" title="吊舱配置结构体" alt="" coords="37,5,124,31"/>
+<area shape="poly" title=" " alt="" coords="83,45,83,93,78,93,78,45"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a5d74787dedbc4e11c1ab15bf487e61f8" id="r_a5d74787dedbc4e11c1ab15bf487e61f8"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a> { <br />
+&#160;&#160;<a class="el" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8af5137a026a4b2f3b1c8a21cfc60dd14b">kIdle</a>
+, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8a25d5606fe07425ea73f245c48612c039">kReady</a>
+, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8a2fc7fbf0d19294f85dd3880460dd3c0a">kRunning</a>
+, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8a6681e9f78d4e277e2ad43c2d25ff5a0f">kStopping</a>
+, <br />
+&#160;&#160;<a class="el" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8ae3587c730cc1aa530fa4ddc9c4204e97">kError</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a5d74787dedbc4e11c1ab15bf487e61f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">状态机状态枚举  <a href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8">更多...</a><br /></td></tr>
+<tr class="separator:a5d74787dedbc4e11c1ab15bf487e61f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:abc31e4b338943779ee9b61cc81480bcb" id="r_abc31e4b338943779ee9b61cc81480bcb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#abc31e4b338943779ee9b61cc81480bcb">Init</a> (const <a class="el" href="structpod__stream_1_1PodConfig.html">PodConfig</a> &amp;config)</td></tr>
+<tr class="memdesc:abc31e4b338943779ee9b61cc81480bcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">唯一初始化入口  <br /></td></tr>
+<tr class="separator:abc31e4b338943779ee9b61cc81480bcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07aaf1227e4d645f15e0a964f54ef291" id="r_a07aaf1227e4d645f15e0a964f54ef291"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#a07aaf1227e4d645f15e0a964f54ef291">Start</a> ()</td></tr>
+<tr class="memdesc:a07aaf1227e4d645f15e0a964f54ef291"><td class="mdescLeft">&#160;</td><td class="mdescRight">启动管理器  <br /></td></tr>
+<tr class="separator:a07aaf1227e4d645f15e0a964f54ef291"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17a237457e57625296e6b24feb19c60a" id="r_a17a237457e57625296e6b24feb19c60a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#a17a237457e57625296e6b24feb19c60a">Stop</a> ()</td></tr>
+<tr class="memdesc:a17a237457e57625296e6b24feb19c60a"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止管理器  <br /></td></tr>
+<tr class="separator:a17a237457e57625296e6b24feb19c60a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5098864e797f848db6cd446b98e3ea95" id="r_a5098864e797f848db6cd446b98e3ea95"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#a5098864e797f848db6cd446b98e3ea95">IsInited</a> () const</td></tr>
+<tr class="memdesc:a5098864e797f848db6cd446b98e3ea95"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查是否已初始化  <br /></td></tr>
+<tr class="separator:a5098864e797f848db6cd446b98e3ea95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27ab4385367163911ce44037f66bdb74" id="r_a27ab4385367163911ce44037f66bdb74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#a27ab4385367163911ce44037f66bdb74">GetState</a> () const</td></tr>
+<tr class="memdesc:a27ab4385367163911ce44037f66bdb74"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前状态  <br /></td></tr>
+<tr class="separator:a27ab4385367163911ce44037f66bdb74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac766f50854b7401ea00f5e40d89c77f1" id="r_ac766f50854b7401ea00f5e40d89c77f1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#ac766f50854b7401ea00f5e40d89c77f1">IsConnected</a> () const</td></tr>
+<tr class="memdesc:ac766f50854b7401ea00f5e40d89c77f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查网络连通状态  <br /></td></tr>
+<tr class="separator:ac766f50854b7401ea00f5e40d89c77f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0a4f2d76c7db103769cfdbb06d943c5" id="r_ad0a4f2d76c7db103769cfdbb06d943c5"><td class="memItemLeft" align="right" valign="top">pid_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#ad0a4f2d76c7db103769cfdbb06d943c5">GetMediaMtxPid</a> () const</td></tr>
+<tr class="memdesc:ad0a4f2d76c7db103769cfdbb06d943c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取 MediaMTX 进程 PID  <br /></td></tr>
+<tr class="separator:ad0a4f2d76c7db103769cfdbb06d943c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71adfc07786f18181996ed090cf89aa9" id="r_a71adfc07786f18181996ed090cf89aa9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#a71adfc07786f18181996ed090cf89aa9">GetStatusString</a> () const</td></tr>
+<tr class="memdesc:a71adfc07786f18181996ed090cf89aa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前状态字符串 (调试用)  <br /></td></tr>
+<tr class="separator:a71adfc07786f18181996ed090cf89aa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a65c1866ab42b382d4ba27688d19a508a" id="r_a65c1866ab42b382d4ba27688d19a508a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classpod__stream_1_1PodStreamManager.html">PodStreamManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#a65c1866ab42b382d4ba27688d19a508a">GetInstance</a> ()</td></tr>
+<tr class="memdesc:a65c1866ab42b382d4ba27688d19a508a"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取单例实例  <br /></td></tr>
+<tr class="separator:a65c1866ab42b382d4ba27688d19a508a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d4b0b0707696a8449db2e07bfa0ebd9" id="r_a7d4b0b0707696a8449db2e07bfa0ebd9"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#a7d4b0b0707696a8449db2e07bfa0ebd9">StateToString</a> (<a class="el" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a> state)</td></tr>
+<tr class="memdesc:a7d4b0b0707696a8449db2e07bfa0ebd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取状态名称字符串  <br /></td></tr>
+<tr class="separator:a7d4b0b0707696a8449db2e07bfa0ebd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:aaf9a0a3b0aef9760b08898e83fa2106d" id="r_aaf9a0a3b0aef9760b08898e83fa2106d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#aaf9a0a3b0aef9760b08898e83fa2106d">PodStreamManager</a> ()=default</td></tr>
+<tr class="separator:aaf9a0a3b0aef9760b08898e83fa2106d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af398b0ef543d575e98943d24d4c5cf9d" id="r_af398b0ef543d575e98943d24d4c5cf9d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#af398b0ef543d575e98943d24d4c5cf9d">~PodStreamManager</a> ()</td></tr>
+<tr class="separator:af398b0ef543d575e98943d24d4c5cf9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0124ba5a84f48877092c35a184561444" id="r_a0124ba5a84f48877092c35a184561444"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#a0124ba5a84f48877092c35a184561444">PodStreamManager</a> (const <a class="el" href="classpod__stream_1_1PodStreamManager.html">PodStreamManager</a> &amp;)=delete</td></tr>
+<tr class="separator:a0124ba5a84f48877092c35a184561444"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc26fb2734b9129beadbe1f638dff829" id="r_afc26fb2734b9129beadbe1f638dff829"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpod__stream_1_1PodStreamManager.html">PodStreamManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#afc26fb2734b9129beadbe1f638dff829">operator=</a> (const <a class="el" href="classpod__stream_1_1PodStreamManager.html">PodStreamManager</a> &amp;)=delete</td></tr>
+<tr class="separator:afc26fb2734b9129beadbe1f638dff829"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bb8405c889595b98164029c73e85c84" id="r_a0bb8405c889595b98164029c73e85c84"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#a0bb8405c889595b98164029c73e85c84">PodStreamManager</a> (<a class="el" href="classpod__stream_1_1PodStreamManager.html">PodStreamManager</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a0bb8405c889595b98164029c73e85c84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9931466bd74838d6ab031f38ea176d39" id="r_a9931466bd74838d6ab031f38ea176d39"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpod__stream_1_1PodStreamManager.html">PodStreamManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#a9931466bd74838d6ab031f38ea176d39">operator=</a> (<a class="el" href="classpod__stream_1_1PodStreamManager.html">PodStreamManager</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a9931466bd74838d6ab031f38ea176d39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a113223b951492e271c7bd457470b66f4" id="r_a113223b951492e271c7bd457470b66f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#a113223b951492e271c7bd457470b66f4">MonitorLoop</a> ()</td></tr>
+<tr class="memdesc:a113223b951492e271c7bd457470b66f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">监控线程主循环  <br /></td></tr>
+<tr class="separator:a113223b951492e271c7bd457470b66f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78e2a4289515dd73f4ef63bc0b635ff4" id="r_a78e2a4289515dd73f4ef63bc0b635ff4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#a78e2a4289515dd73f4ef63bc0b635ff4">WorkerLoop</a> ()</td></tr>
+<tr class="memdesc:a78e2a4289515dd73f4ef63bc0b635ff4"><td class="mdescLeft">&#160;</td><td class="mdescRight">工作线程主循环 (状态机调度)  <br /></td></tr>
+<tr class="separator:a78e2a4289515dd73f4ef63bc0b635ff4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76cfd626e850fd6560c0e09c4bd897a1" id="r_a76cfd626e850fd6560c0e09c4bd897a1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#a76cfd626e850fd6560c0e09c4bd897a1">ProbeConnectivityOnce</a> ()</td></tr>
+<tr class="memdesc:a76cfd626e850fd6560c0e09c4bd897a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">单次连通性探测  <br /></td></tr>
+<tr class="separator:a76cfd626e850fd6560c0e09c4bd897a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6b6a9f5e61958d839ba3cf3c687104b" id="r_ac6b6a9f5e61958d839ba3cf3c687104b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#ac6b6a9f5e61958d839ba3cf3c687104b">PrepareMediaMtxConfig</a> ()</td></tr>
+<tr class="memdesc:ac6b6a9f5e61958d839ba3cf3c687104b"><td class="mdescLeft">&#160;</td><td class="mdescRight">准备 MediaMTX 配置文件  <br /></td></tr>
+<tr class="separator:ac6b6a9f5e61958d839ba3cf3c687104b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f644c8df943b3285960fecdc63f8cfd" id="r_a7f644c8df943b3285960fecdc63f8cfd"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#a7f644c8df943b3285960fecdc63f8cfd">GetConfigPath</a> () const</td></tr>
+<tr class="memdesc:a7f644c8df943b3285960fecdc63f8cfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取 MediaMTX 配置文件路径  <br /></td></tr>
+<tr class="separator:a7f644c8df943b3285960fecdc63f8cfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f407a2f441b62b51ac681f115e15c45" id="r_a8f407a2f441b62b51ac681f115e15c45"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#a8f407a2f441b62b51ac681f115e15c45">GenerateYamlContent</a> () const</td></tr>
+<tr class="memdesc:a8f407a2f441b62b51ac681f115e15c45"><td class="mdescLeft">&#160;</td><td class="mdescRight">生成 YAML 配置内容  <br /></td></tr>
+<tr class="separator:a8f407a2f441b62b51ac681f115e15c45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f7adabc71ed98cfd8f8524a691c5fa0" id="r_a0f7adabc71ed98cfd8f8524a691c5fa0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#a0f7adabc71ed98cfd8f8524a691c5fa0">StartMediaMtx</a> ()</td></tr>
+<tr class="memdesc:a0f7adabc71ed98cfd8f8524a691c5fa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">启动 MediaMTX 子进程  <br /></td></tr>
+<tr class="separator:a0f7adabc71ed98cfd8f8524a691c5fa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e0f667ecf232b80c9ede3733ddf8891" id="r_a3e0f667ecf232b80c9ede3733ddf8891"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#a3e0f667ecf232b80c9ede3733ddf8891">StopMediaMtx</a> (bool force_kill=false)</td></tr>
+<tr class="memdesc:a3e0f667ecf232b80c9ede3733ddf8891"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止 MediaMTX 子进程  <br /></td></tr>
+<tr class="separator:a3e0f667ecf232b80c9ede3733ddf8891"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadc9131a3893e84d1adba546d702efae" id="r_aadc9131a3893e84d1adba546d702efae"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#aadc9131a3893e84d1adba546d702efae">IsMediaMtxAlive</a> () const</td></tr>
+<tr class="memdesc:aadc9131a3893e84d1adba546d702efae"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查 MediaMTX 进程是否存活  <br /></td></tr>
+<tr class="separator:aadc9131a3893e84d1adba546d702efae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f92ed4b1ba895dea1d6a2bd4fd7face" id="r_a3f92ed4b1ba895dea1d6a2bd4fd7face"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#a3f92ed4b1ba895dea1d6a2bd4fd7face">ReapChildIfNeeded</a> ()</td></tr>
+<tr class="memdesc:a3f92ed4b1ba895dea1d6a2bd4fd7face"><td class="mdescLeft">&#160;</td><td class="mdescRight">回收子进程，避免僵尸进程  <br /></td></tr>
+<tr class="separator:a3f92ed4b1ba895dea1d6a2bd4fd7face"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1c370c6823e44aa0457571c181757d0" id="r_aa1c370c6823e44aa0457571c181757d0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#aa1c370c6823e44aa0457571c181757d0">GetLogFilePath</a> () const</td></tr>
+<tr class="memdesc:aa1c370c6823e44aa0457571c181757d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取日志文件路径 (用于子进程输出重定向)  <br /></td></tr>
+<tr class="separator:aa1c370c6823e44aa0457571c181757d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cae7364ded48841041ddf96acdf1a52" id="r_a2cae7364ded48841041ddf96acdf1a52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#a2cae7364ded48841041ddf96acdf1a52">Transition</a> (<a class="el" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a> next)</td></tr>
+<tr class="memdesc:a2cae7364ded48841041ddf96acdf1a52"><td class="mdescLeft">&#160;</td><td class="mdescRight">状态转换  <br /></td></tr>
+<tr class="separator:a2cae7364ded48841041ddf96acdf1a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b1892807f75154d39d6205a8bdee398" id="r_a1b1892807f75154d39d6205a8bdee398"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#a1b1892807f75154d39d6205a8bdee398">RecordCrash</a> ()</td></tr>
+<tr class="memdesc:a1b1892807f75154d39d6205a8bdee398"><td class="mdescLeft">&#160;</td><td class="mdescRight">记录崩溃事件，用于崩溃频率统计  <br /></td></tr>
+<tr class="separator:a1b1892807f75154d39d6205a8bdee398"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af74a7903aabc239b3d2ba4bd085a9009" id="r_af74a7903aabc239b3d2ba4bd085a9009"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#af74a7903aabc239b3d2ba4bd085a9009">IsCrashingTooOften</a> () const</td></tr>
+<tr class="memdesc:af74a7903aabc239b3d2ba4bd085a9009"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查是否处于崩溃过频状态  <br /></td></tr>
+<tr class="separator:af74a7903aabc239b3d2ba4bd085a9009"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33887ecd917a38816dbeeafbb793fee6" id="r_a33887ecd917a38816dbeeafbb793fee6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#a33887ecd917a38816dbeeafbb793fee6">GetBackoffDelayMs</a> () const</td></tr>
+<tr class="memdesc:a33887ecd917a38816dbeeafbb793fee6"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取重试退避时间 (指数退避)  <br /></td></tr>
+<tr class="separator:a33887ecd917a38816dbeeafbb793fee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafffdd575dc3739920895f88125d53e6" id="r_aafffdd575dc3739920895f88125d53e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#aafffdd575dc3739920895f88125d53e6">ResetBackoff</a> ()</td></tr>
+<tr class="memdesc:aafffdd575dc3739920895f88125d53e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">重置退避计数器  <br /></td></tr>
+<tr class="separator:aafffdd575dc3739920895f88125d53e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a3f2bb5ac8864dff13fd29639f47bb341" id="r_a3f2bb5ac8864dff13fd29639f47bb341"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structpod__stream_1_1PodConfig.html">PodConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#a3f2bb5ac8864dff13fd29639f47bb341">config_</a></td></tr>
+<tr class="separator:a3f2bb5ac8864dff13fd29639f47bb341"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb35e640c7d0e6d7bc452ea7f591c471" id="r_abb35e640c7d0e6d7bc452ea7f591c471"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#abb35e640c7d0e6d7bc452ea7f591c471">inited_</a> {false}</td></tr>
+<tr class="memdesc:abb35e640c7d0e6d7bc452ea7f591c471"><td class="mdescLeft">&#160;</td><td class="mdescRight">是否已初始化  <br /></td></tr>
+<tr class="separator:abb35e640c7d0e6d7bc452ea7f591c471"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8554f10fb3372299f4ca373ca2b9d587" id="r_a8554f10fb3372299f4ca373ca2b9d587"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#a8554f10fb3372299f4ca373ca2b9d587">quit_</a> {false}</td></tr>
+<tr class="memdesc:a8554f10fb3372299f4ca373ca2b9d587"><td class="mdescLeft">&#160;</td><td class="mdescRight">退出标志，通知线程退出  <br /></td></tr>
+<tr class="separator:a8554f10fb3372299f4ca373ca2b9d587"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41095fc3a389d9ad262c98f45386c049" id="r_a41095fc3a389d9ad262c98f45386c049"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#a41095fc3a389d9ad262c98f45386c049">is_connected_</a> {false}</td></tr>
+<tr class="separator:a41095fc3a389d9ad262c98f45386c049"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0710bf2acba478f00f709b1d622b4e4" id="r_ab0710bf2acba478f00f709b1d622b4e4"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; pid_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#ab0710bf2acba478f00f709b1d622b4e4">mediamtx_pid_</a> {-1}</td></tr>
+<tr class="separator:ab0710bf2acba478f00f709b1d622b4e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa493fe555ea66007c4277cc7cb6c4cb" id="r_afa493fe555ea66007c4277cc7cb6c4cb"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#afa493fe555ea66007c4277cc7cb6c4cb">state_mtx_</a></td></tr>
+<tr class="separator:afa493fe555ea66007c4277cc7cb6c4cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b1c09ed3908d987b7452bdcdf3dc06f" id="r_a3b1c09ed3908d987b7452bdcdf3dc06f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#a3b1c09ed3908d987b7452bdcdf3dc06f">state_</a> {<a class="el" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8af5137a026a4b2f3b1c8a21cfc60dd14b">State::kIdle</a>}</td></tr>
+<tr class="separator:a3b1c09ed3908d987b7452bdcdf3dc06f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0e30499ef9b94fca024c2836108f6ef" id="r_aa0e30499ef9b94fca024c2836108f6ef"><td class="memItemLeft" align="right" valign="top">std::thread&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#aa0e30499ef9b94fca024c2836108f6ef">monitor_th_</a></td></tr>
+<tr class="separator:aa0e30499ef9b94fca024c2836108f6ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafde46164e80ff2a80c5d075a8aa0dc3" id="r_aafde46164e80ff2a80c5d075a8aa0dc3"><td class="memItemLeft" align="right" valign="top">std::thread&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#aafde46164e80ff2a80c5d075a8aa0dc3">worker_th_</a></td></tr>
+<tr class="separator:aafde46164e80ff2a80c5d075a8aa0dc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f87482e942bf7f10eaf05013798529a" id="r_a3f87482e942bf7f10eaf05013798529a"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#a3f87482e942bf7f10eaf05013798529a">connect_success_count_</a> {0}</td></tr>
+<tr class="separator:a3f87482e942bf7f10eaf05013798529a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33aa7a165a3746b5b1a6618651441b14" id="r_a33aa7a165a3746b5b1a6618651441b14"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#a33aa7a165a3746b5b1a6618651441b14">connect_fail_count_</a> {0}</td></tr>
+<tr class="separator:a33aa7a165a3746b5b1a6618651441b14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7c330f2f1a5dd11211e3a88042ca643" id="r_ab7c330f2f1a5dd11211e3a88042ca643"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#ab7c330f2f1a5dd11211e3a88042ca643">crash_mtx_</a></td></tr>
+<tr class="separator:ab7c330f2f1a5dd11211e3a88042ca643"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8777e63a10d3381a78f37a9470a838ed" id="r_a8777e63a10d3381a78f37a9470a838ed"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::chrono::steady_clock::time_point &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#a8777e63a10d3381a78f37a9470a838ed">crash_timestamps_</a></td></tr>
+<tr class="separator:a8777e63a10d3381a78f37a9470a838ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac33ced7122eb6ff7a6a1349082bdd5c8" id="r_ac33ced7122eb6ff7a6a1349082bdd5c8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#ac33ced7122eb6ff7a6a1349082bdd5c8">backoff_level_</a> {0}</td></tr>
+<tr class="memdesc:ac33ced7122eb6ff7a6a1349082bdd5c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">退避等级 (0=无退避, 1=1s, 2=2s, ...)  <br /></td></tr>
+<tr class="separator:ac33ced7122eb6ff7a6a1349082bdd5c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a078ab3a35796edb5a1c58d9e8952171f" id="r_a078ab3a35796edb5a1c58d9e8952171f"><td class="memItemLeft" align="right" valign="top">std::chrono::steady_clock::time_point&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#a078ab3a35796edb5a1c58d9e8952171f">last_stop_time_</a></td></tr>
+<tr class="memdesc:a078ab3a35796edb5a1c58d9e8952171f"><td class="mdescLeft">&#160;</td><td class="mdescRight">上次停止时间  <br /></td></tr>
+<tr class="separator:a078ab3a35796edb5a1c58d9e8952171f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:a191ea42ee0c1e53aa7c4ec7d3a37a481" id="r_a191ea42ee0c1e53aa7c4ec7d3a37a481"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#a191ea42ee0c1e53aa7c4ec7d3a37a481">kMaxBackoffLevel</a> = 5</td></tr>
+<tr class="memdesc:a191ea42ee0c1e53aa7c4ec7d3a37a481"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大退避等级 (2^5 = 32秒)  <br /></td></tr>
+<tr class="separator:a191ea42ee0c1e53aa7c4ec7d3a37a481"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecc761f9ccc7c3285bcbfd0e1fcb7b94" id="r_aecc761f9ccc7c3285bcbfd0e1fcb7b94"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpod__stream_1_1PodStreamManager.html#aecc761f9ccc7c3285bcbfd0e1fcb7b94">kCooldownMs</a> = 2000</td></tr>
+<tr class="memdesc:aecc761f9ccc7c3285bcbfd0e1fcb7b94"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止后冷却时间 (毫秒)  <br /></td></tr>
+<tr class="separator:aecc761f9ccc7c3285bcbfd0e1fcb7b94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>吊舱视频流管理器 (单例模式) </p>
+<p>设计原则:</p><ul>
+<li>单例: 全局唯一管理者，避免多实例竞争进程控制权</li>
+<li>线程安全: 并发读写的状态使用原子变量/互斥锁保障一致性</li>
+<li>鲁棒: 网络抖动、进程崩溃、配置写失败等异常可自恢复</li>
+<li>可观测: 关键状态变化、启动/停止动作、错误信息必须日志化</li>
+</ul>
+<p>双线程架构:</p><ul>
+<li>Monitor Thread: 周期探测吊舱连通性，维护 is_connected 状态</li>
+<li>Worker Thread: 根据连通状态驱动状态机，管理 MediaMTX 子进程 </li>
+</ul>
+</div><h2 class="groupheader">成员枚举类型说明</h2>
+<a id="a5d74787dedbc4e11c1ab15bf487e61f8" name="a5d74787dedbc4e11c1ab15bf487e61f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d74787dedbc4e11c1ab15bf487e61f8">&#9670;&#160;</a></span>State</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>状态机状态枚举 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8af5137a026a4b2f3b1c8a21cfc60dd14b" name="a5d74787dedbc4e11c1ab15bf487e61f8af5137a026a4b2f3b1c8a21cfc60dd14b"></a>kIdle&#160;</td><td class="fielddoc"><p>空闲状态，未初始化或已停止 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8a25d5606fe07425ea73f245c48612c039" name="a5d74787dedbc4e11c1ab15bf487e61f8a25d5606fe07425ea73f245c48612c039"></a>kReady&#160;</td><td class="fielddoc"><p>就绪状态，配置有效，等待网络连通 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8a2fc7fbf0d19294f85dd3880460dd3c0a" name="a5d74787dedbc4e11c1ab15bf487e61f8a2fc7fbf0d19294f85dd3880460dd3c0a"></a>kRunning&#160;</td><td class="fielddoc"><p>运行状态，MediaMTX 进程正在运行 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8a6681e9f78d4e277e2ad43c2d25ff5a0f" name="a5d74787dedbc4e11c1ab15bf487e61f8a6681e9f78d4e277e2ad43c2d25ff5a0f"></a>kStopping&#160;</td><td class="fielddoc"><p>停止中，正在停止 MediaMTX 进程 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5d74787dedbc4e11c1ab15bf487e61f8ae3587c730cc1aa530fa4ddc9c4204e97" name="a5d74787dedbc4e11c1ab15bf487e61f8ae3587c730cc1aa530fa4ddc9c4204e97"></a>kError&#160;</td><td class="fielddoc"><p>错误状态，需要人工干预或等待恢复 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="aaf9a0a3b0aef9760b08898e83fa2106d" name="aaf9a0a3b0aef9760b08898e83fa2106d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf9a0a3b0aef9760b08898e83fa2106d">&#9670;&#160;</a></span>PodStreamManager() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classpod__stream_1_1PodStreamManager.html">PodStreamManager</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af398b0ef543d575e98943d24d4c5cf9d" name="af398b0ef543d575e98943d24d4c5cf9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af398b0ef543d575e98943d24d4c5cf9d">&#9670;&#160;</a></span>~PodStreamManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classpod__stream_1_1PodStreamManager.html">PodStreamManager</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a17a237457e57625296e6b24feb19c60a">PodStreamManager::Stop()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpod__stream_1_1PodStreamManager_af398b0ef543d575e98943d24d4c5cf9d_cgraph.png" border="0" usemap="#aclasspod__stream_1_1PodStreamManager_af398b0ef543d575e98943d24d4c5cf9d_cgraph" alt=""/></div>
+<map name="aclasspod__stream_1_1PodStreamManager_af398b0ef543d575e98943d24d4c5cf9d_cgraph" id="aclasspod__stream_1_1PodStreamManager_af398b0ef543d575e98943d24d4c5cf9d_cgraph">
+<area shape="rect" title=" " alt="" coords="5,58,167,84"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a17a237457e57625296e6b24feb19c60a" title="停止管理器" alt="" coords="215,58,265,84"/>
+<area shape="poly" title=" " alt="" coords="167,68,201,68,201,74,167,74"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#aadc9131a3893e84d1adba546d702efae" title="检查 MediaMTX 进程是否存活" alt="" coords="485,8,616,33"/>
+<area shape="poly" title=" " alt="" coords="253,56,279,35,312,18,353,8,394,4,472,6,472,11,394,9,353,14,314,23,282,39,256,60"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a3f92ed4b1ba895dea1d6a2bd4fd7face" title="回收子进程，避免僵尸进程" alt="" coords="477,70,624,96"/>
+<area shape="poly" title=" " alt="" coords="266,69,463,77,463,82,265,74"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a3e0f667ecf232b80c9ede3733ddf8891" title="停止 MediaMTX 子进程" alt="" coords="313,33,429,58"/>
+<area shape="poly" title=" " alt="" coords="265,63,299,57,300,62,266,69"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a2cae7364ded48841041ddf96acdf1a52" title="状态转换" alt="" coords="329,134,414,160"/>
+<area shape="poly" title=" " alt="" coords="263,81,315,113,336,125,334,130,312,117,261,86"/>
+<area shape="poly" title=" " alt="" coords="429,35,471,29,472,34,430,40"/>
+<area shape="poly" title=" " alt="" coords="430,55,476,65,475,70,429,60"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a7d4b0b0707696a8449db2e07bfa0ebd9" title="获取状态名称字符串" alt="" coords="497,134,605,160"/>
+<area shape="poly" title=" " alt="" coords="414,144,482,144,482,150,414,150"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0124ba5a84f48877092c35a184561444" name="a0124ba5a84f48877092c35a184561444"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0124ba5a84f48877092c35a184561444">&#9670;&#160;</a></span>PodStreamManager() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classpod__stream_1_1PodStreamManager.html">PodStreamManager</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classpod__stream_1_1PodStreamManager.html">PodStreamManager</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0bb8405c889595b98164029c73e85c84" name="a0bb8405c889595b98164029c73e85c84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bb8405c889595b98164029c73e85c84">&#9670;&#160;</a></span>PodStreamManager() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classpod__stream_1_1PodStreamManager.html">PodStreamManager</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classpod__stream_1_1PodStreamManager.html">PodStreamManager</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a8f407a2f441b62b51ac681f115e15c45" name="a8f407a2f441b62b51ac681f115e15c45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f407a2f441b62b51ac681f115e15c45">&#9670;&#160;</a></span>GenerateYamlContent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GenerateYamlContent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>生成 YAML 配置内容 </p>
+<dl class="section return"><dt>返回</dt><dd>YAML 字符串 </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a3f2bb5ac8864dff13fd29639f47bb341">PodStreamManager::config_</a>, <a class="el" href="namespacepod__stream.html#ab269a640b6a59882381a79c848ce3efe">pod_stream::GetTimestamp()</a>, <a class="el" href="structpod__stream_1_1PodConfig.html#a10fa4485e6d8835145d02ab716d173c1">PodConfig::rtsp_port</a> , 以及 <a class="el" href="structpod__stream_1_1PodConfig.html#a40c18ffca1d77415e7eaac45125db6ea">PodConfig::stream_mapping</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classpod__stream_1_1PodStreamManager.html#ac6b6a9f5e61958d839ba3cf3c687104b">PodStreamManager::PrepareMediaMtxConfig()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpod__stream_1_1PodStreamManager_a8f407a2f441b62b51ac681f115e15c45_cgraph.png" border="0" usemap="#aclasspod__stream_1_1PodStreamManager_a8f407a2f441b62b51ac681f115e15c45_cgraph" alt=""/></div>
+<map name="aclasspod__stream_1_1PodStreamManager_a8f407a2f441b62b51ac681f115e15c45_cgraph" id="aclasspod__stream_1_1PodStreamManager_a8f407a2f441b62b51ac681f115e15c45_cgraph">
+<area shape="rect" title="生成 YAML 配置内容" alt="" coords="5,5,169,31"/>
+<area shape="rect" href="namespacepod__stream.html#ab269a640b6a59882381a79c848ce3efe" title="获取当前时间戳字符串" alt="" coords="217,5,421,31"/>
+<area shape="poly" title=" " alt="" coords="170,15,204,15,204,21,170,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpod__stream_1_1PodStreamManager_a8f407a2f441b62b51ac681f115e15c45_icgraph.png" border="0" usemap="#aclasspod__stream_1_1PodStreamManager_a8f407a2f441b62b51ac681f115e15c45_icgraph" alt=""/></div>
+<map name="aclasspod__stream_1_1PodStreamManager_a8f407a2f441b62b51ac681f115e15c45_icgraph" id="aclasspod__stream_1_1PodStreamManager_a8f407a2f441b62b51ac681f115e15c45_icgraph">
+<area shape="rect" title="生成 YAML 配置内容" alt="" coords="1405,42,1569,67"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#ac6b6a9f5e61958d839ba3cf3c687104b" title="准备 MediaMTX 配置文件" alt="" coords="1179,42,1357,67"/>
+<area shape="poly" title=" " alt="" coords="1392,57,1357,57,1357,52,1392,52"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a78e2a4289515dd73f4ef63bc0b635ff4" title="工作线程主循环 (状态机调度)" alt="" coords="1032,42,1131,67"/>
+<area shape="poly" title=" " alt="" coords="1165,57,1131,57,1131,52,1165,52"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a07aaf1227e4d645f15e0a964f54ef291" title="启动管理器" alt="" coords="931,42,984,67"/>
+<area shape="poly" title=" " alt="" coords="1018,57,984,57,984,52,1018,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9f867de73f5925399e1d8beb02b64fad" title=" " alt="" coords="673,35,883,75"/>
+<area shape="poly" title=" " alt="" coords="917,57,883,57,883,52,917,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="451,35,625,75"/>
+<area shape="poly" title=" " alt="" coords="660,57,625,57,625,52,660,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="228,5,403,45"/>
+<area shape="poly" title=" " alt="" coords="437,44,402,39,403,34,437,39"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9d284775ccebba879a77a7144be22899" title=" " alt="" coords="5,35,180,75"/>
+<area shape="poly" title=" " alt="" coords="215,41,180,46,180,41,214,36"/>
+<area shape="poly" title=" " alt="" coords="194,54,228,55,403,55,450,54,451,59,403,60,228,60,194,60"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a33887ecd917a38816dbeeafbb793fee6" name="a33887ecd917a38816dbeeafbb793fee6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33887ecd917a38816dbeeafbb793fee6">&#9670;&#160;</a></span>GetBackoffDelayMs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetBackoffDelayMs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取重试退避时间 (指数退避) </p>
+<dl class="section return"><dt>返回</dt><dd>退避时间 (毫秒) </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="classpod__stream_1_1PodStreamManager.html#ac33ced7122eb6ff7a6a1349082bdd5c8">PodStreamManager::backoff_level_</a> , 以及 <a class="el" href="classpod__stream_1_1PodStreamManager.html#ab7c330f2f1a5dd11211e3a88042ca643">PodStreamManager::crash_mtx_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a78e2a4289515dd73f4ef63bc0b635ff4">PodStreamManager::WorkerLoop()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpod__stream_1_1PodStreamManager_a33887ecd917a38816dbeeafbb793fee6_icgraph.png" border="0" usemap="#aclasspod__stream_1_1PodStreamManager_a33887ecd917a38816dbeeafbb793fee6_icgraph" alt=""/></div>
+<map name="aclasspod__stream_1_1PodStreamManager_a33887ecd917a38816dbeeafbb793fee6_icgraph" id="aclasspod__stream_1_1PodStreamManager_a33887ecd917a38816dbeeafbb793fee6_icgraph">
+<area shape="rect" title="获取重试退避时间 (指数退避)" alt="" coords="1179,42,1329,67"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a78e2a4289515dd73f4ef63bc0b635ff4" title="工作线程主循环 (状态机调度)" alt="" coords="1032,42,1131,67"/>
+<area shape="poly" title=" " alt="" coords="1165,57,1131,57,1131,52,1165,52"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a07aaf1227e4d645f15e0a964f54ef291" title="启动管理器" alt="" coords="931,42,984,67"/>
+<area shape="poly" title=" " alt="" coords="1018,57,984,57,984,52,1018,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9f867de73f5925399e1d8beb02b64fad" title=" " alt="" coords="673,35,883,75"/>
+<area shape="poly" title=" " alt="" coords="917,57,883,57,883,52,917,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="451,35,625,75"/>
+<area shape="poly" title=" " alt="" coords="660,57,625,57,625,52,660,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="228,5,403,45"/>
+<area shape="poly" title=" " alt="" coords="437,44,402,39,403,34,437,39"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9d284775ccebba879a77a7144be22899" title=" " alt="" coords="5,35,180,75"/>
+<area shape="poly" title=" " alt="" coords="215,41,180,46,180,41,214,36"/>
+<area shape="poly" title=" " alt="" coords="194,54,228,55,403,55,450,54,451,59,403,60,228,60,194,60"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7f644c8df943b3285960fecdc63f8cfd" name="a7f644c8df943b3285960fecdc63f8cfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f644c8df943b3285960fecdc63f8cfd">&#9670;&#160;</a></span>GetConfigPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GetConfigPath </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取 MediaMTX 配置文件路径 </p>
+<dl class="section return"><dt>返回</dt><dd>配置文件绝对路径 </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="structpod__stream_1_1PodConfig.html#abd2b9a91d3c0111f7e3945e967a66cf4">PodConfig::abs_mediamtx_path</a> , 以及 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a3f2bb5ac8864dff13fd29639f47bb341">PodStreamManager::config_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classpod__stream_1_1PodStreamManager.html#ac6b6a9f5e61958d839ba3cf3c687104b">PodStreamManager::PrepareMediaMtxConfig()</a> , 以及 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a0f7adabc71ed98cfd8f8524a691c5fa0">PodStreamManager::StartMediaMtx()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpod__stream_1_1PodStreamManager_a7f644c8df943b3285960fecdc63f8cfd_icgraph.png" border="0" usemap="#aclasspod__stream_1_1PodStreamManager_a7f644c8df943b3285960fecdc63f8cfd_icgraph" alt=""/></div>
+<map name="aclasspod__stream_1_1PodStreamManager_a7f644c8df943b3285960fecdc63f8cfd_icgraph" id="aclasspod__stream_1_1PodStreamManager_a7f644c8df943b3285960fecdc63f8cfd_icgraph">
+<area shape="rect" title="获取 MediaMTX 配置文件路径" alt="" coords="1405,42,1520,67"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#ac6b6a9f5e61958d839ba3cf3c687104b" title="准备 MediaMTX 配置文件" alt="" coords="1179,17,1357,42"/>
+<area shape="poly" title=" " alt="" coords="1392,48,1357,44,1358,38,1392,43"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a0f7adabc71ed98cfd8f8524a691c5fa0" title="启动 MediaMTX 子进程" alt="" coords="1209,66,1327,91"/>
+<area shape="poly" title=" " alt="" coords="1392,66,1328,74,1327,69,1391,61"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a78e2a4289515dd73f4ef63bc0b635ff4" title="工作线程主循环 (状态机调度)" alt="" coords="1032,42,1131,67"/>
+<area shape="poly" title=" " alt="" coords="1165,46,1131,51,1130,45,1165,41"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a07aaf1227e4d645f15e0a964f54ef291" title="启动管理器" alt="" coords="931,42,984,67"/>
+<area shape="poly" title=" " alt="" coords="1018,57,984,57,984,52,1018,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9f867de73f5925399e1d8beb02b64fad" title=" " alt="" coords="673,35,883,75"/>
+<area shape="poly" title=" " alt="" coords="917,57,883,57,883,52,917,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="451,35,625,75"/>
+<area shape="poly" title=" " alt="" coords="660,57,625,57,625,52,660,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="228,5,403,45"/>
+<area shape="poly" title=" " alt="" coords="437,44,402,39,403,34,437,39"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9d284775ccebba879a77a7144be22899" title=" " alt="" coords="5,35,180,75"/>
+<area shape="poly" title=" " alt="" coords="215,41,180,46,180,41,214,36"/>
+<area shape="poly" title=" " alt="" coords="194,54,228,55,403,55,450,54,451,59,403,60,228,60,194,60"/>
+<area shape="poly" title=" " alt="" coords="1194,72,1131,64,1132,58,1195,67"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a65c1866ab42b382d4ba27688d19a508a" name="a65c1866ab42b382d4ba27688d19a508a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65c1866ab42b382d4ba27688d19a508a">&#9670;&#160;</a></span>GetInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classpod__stream_1_1PodStreamManager.html">PodStreamManager</a> &amp; GetInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取单例实例 </p>
+<dl class="section return"><dt>返回</dt><dd>管理器单例引用</dd></dl>
+<p>使用 C++11 函数内静态变量实现懒加载单例，天然线程安全。 </p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classtools_1_1pipeline_1_1Pipeline.html#a9f867de73f5925399e1d8beb02b64fad">Pipeline::LaunchMediamtxMonitorV2()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpod__stream_1_1PodStreamManager_a65c1866ab42b382d4ba27688d19a508a_icgraph.png" border="0" usemap="#aclasspod__stream_1_1PodStreamManager_a65c1866ab42b382d4ba27688d19a508a_icgraph" alt=""/></div>
+<map name="aclasspod__stream_1_1PodStreamManager_a65c1866ab42b382d4ba27688d19a508a_icgraph" id="aclasspod__stream_1_1PodStreamManager_a65c1866ab42b382d4ba27688d19a508a_icgraph">
+<area shape="rect" title="获取单例实例" alt="" coords="931,42,1031,67"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9f867de73f5925399e1d8beb02b64fad" title=" " alt="" coords="673,35,883,75"/>
+<area shape="poly" title=" " alt="" coords="917,57,883,57,883,52,917,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="451,35,625,75"/>
+<area shape="poly" title=" " alt="" coords="660,57,625,57,625,52,660,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="228,5,403,45"/>
+<area shape="poly" title=" " alt="" coords="437,44,402,39,403,34,437,39"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9d284775ccebba879a77a7144be22899" title=" " alt="" coords="5,35,180,75"/>
+<area shape="poly" title=" " alt="" coords="215,41,180,46,180,41,214,36"/>
+<area shape="poly" title=" " alt="" coords="194,54,228,55,403,55,450,54,451,59,403,60,228,60,194,60"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa1c370c6823e44aa0457571c181757d0" name="aa1c370c6823e44aa0457571c181757d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1c370c6823e44aa0457571c181757d0">&#9670;&#160;</a></span>GetLogFilePath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GetLogFilePath </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取日志文件路径 (用于子进程输出重定向) </p>
+<dl class="section return"><dt>返回</dt><dd>日志文件路径 </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="structpod__stream_1_1PodConfig.html#abd2b9a91d3c0111f7e3945e967a66cf4">PodConfig::abs_mediamtx_path</a> , 以及 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a3f2bb5ac8864dff13fd29639f47bb341">PodStreamManager::config_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a0f7adabc71ed98cfd8f8524a691c5fa0">PodStreamManager::StartMediaMtx()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpod__stream_1_1PodStreamManager_aa1c370c6823e44aa0457571c181757d0_icgraph.png" border="0" usemap="#aclasspod__stream_1_1PodStreamManager_aa1c370c6823e44aa0457571c181757d0_icgraph" alt=""/></div>
+<map name="aclasspod__stream_1_1PodStreamManager_aa1c370c6823e44aa0457571c181757d0_icgraph" id="aclasspod__stream_1_1PodStreamManager_aa1c370c6823e44aa0457571c181757d0_icgraph">
+<area shape="rect" title="获取日志文件路径 (用于子进程输出重定向)" alt="" coords="1345,42,1464,67"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a0f7adabc71ed98cfd8f8524a691c5fa0" title="启动 MediaMTX 子进程" alt="" coords="1179,42,1297,67"/>
+<area shape="poly" title=" " alt="" coords="1331,57,1297,57,1297,52,1331,52"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a78e2a4289515dd73f4ef63bc0b635ff4" title="工作线程主循环 (状态机调度)" alt="" coords="1032,42,1131,67"/>
+<area shape="poly" title=" " alt="" coords="1165,57,1131,57,1131,52,1165,52"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a07aaf1227e4d645f15e0a964f54ef291" title="启动管理器" alt="" coords="931,42,984,67"/>
+<area shape="poly" title=" " alt="" coords="1018,57,984,57,984,52,1018,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9f867de73f5925399e1d8beb02b64fad" title=" " alt="" coords="673,35,883,75"/>
+<area shape="poly" title=" " alt="" coords="917,57,883,57,883,52,917,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="451,35,625,75"/>
+<area shape="poly" title=" " alt="" coords="660,57,625,57,625,52,660,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="228,5,403,45"/>
+<area shape="poly" title=" " alt="" coords="437,44,402,39,403,34,437,39"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9d284775ccebba879a77a7144be22899" title=" " alt="" coords="5,35,180,75"/>
+<area shape="poly" title=" " alt="" coords="215,41,180,46,180,41,214,36"/>
+<area shape="poly" title=" " alt="" coords="194,54,228,55,403,55,450,54,451,59,403,60,228,60,194,60"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad0a4f2d76c7db103769cfdbb06d943c5" name="ad0a4f2d76c7db103769cfdbb06d943c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0a4f2d76c7db103769cfdbb06d943c5">&#9670;&#160;</a></span>GetMediaMtxPid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">pid_t GetMediaMtxPid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取 MediaMTX 进程 PID </p>
+<dl class="section return"><dt>返回</dt><dd>PID，若未运行则返回 -1 </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="classpod__stream_1_1PodStreamManager.html#ab0710bf2acba478f00f709b1d622b4e4">PodStreamManager::mediamtx_pid_</a>.</p>
+
+</div>
+</div>
+<a id="a27ab4385367163911ce44037f66bdb74" name="a27ab4385367163911ce44037f66bdb74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27ab4385367163911ce44037f66bdb74">&#9670;&#160;</a></span>GetState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8">PodStreamManager::State</a> GetState </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取当前状态 </p>
+<dl class="section return"><dt>返回</dt><dd>当前状态机状态 </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a3b1c09ed3908d987b7452bdcdf3dc06f">PodStreamManager::state_</a> , 以及 <a class="el" href="classpod__stream_1_1PodStreamManager.html#afa493fe555ea66007c4277cc7cb6c4cb">PodStreamManager::state_mtx_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a71adfc07786f18181996ed090cf89aa9">PodStreamManager::GetStatusString()</a> , 以及 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a78e2a4289515dd73f4ef63bc0b635ff4">PodStreamManager::WorkerLoop()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpod__stream_1_1PodStreamManager_a27ab4385367163911ce44037f66bdb74_icgraph.png" border="0" usemap="#aclasspod__stream_1_1PodStreamManager_a27ab4385367163911ce44037f66bdb74_icgraph" alt=""/></div>
+<map name="aclasspod__stream_1_1PodStreamManager_a27ab4385367163911ce44037f66bdb74_icgraph" id="aclasspod__stream_1_1PodStreamManager_a27ab4385367163911ce44037f66bdb74_icgraph">
+<area shape="rect" title="获取当前状态" alt="" coords="1351,42,1429,67"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a71adfc07786f18181996ed090cf89aa9" title="获取当前状态字符串 (调试用)" alt="" coords="1179,17,1303,42"/>
+<area shape="poly" title=" " alt="" coords="1337,48,1302,42,1303,37,1338,43"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a78e2a4289515dd73f4ef63bc0b635ff4" title="工作线程主循环 (状态机调度)" alt="" coords="1032,42,1131,67"/>
+<area shape="poly" title=" " alt="" coords="1337,57,1131,57,1131,52,1337,52"/>
+<area shape="poly" title=" " alt="" coords="1165,44,1131,50,1130,44,1164,39"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a07aaf1227e4d645f15e0a964f54ef291" title="启动管理器" alt="" coords="931,42,984,67"/>
+<area shape="poly" title=" " alt="" coords="1018,57,984,57,984,52,1018,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9f867de73f5925399e1d8beb02b64fad" title=" " alt="" coords="673,35,883,75"/>
+<area shape="poly" title=" " alt="" coords="917,57,883,57,883,52,917,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="451,35,625,75"/>
+<area shape="poly" title=" " alt="" coords="660,57,625,57,625,52,660,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="228,5,403,45"/>
+<area shape="poly" title=" " alt="" coords="437,44,402,39,403,34,437,39"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9d284775ccebba879a77a7144be22899" title=" " alt="" coords="5,35,180,75"/>
+<area shape="poly" title=" " alt="" coords="215,41,180,46,180,41,214,36"/>
+<area shape="poly" title=" " alt="" coords="194,54,228,55,403,55,450,54,451,59,403,60,228,60,194,60"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a71adfc07786f18181996ed090cf89aa9" name="a71adfc07786f18181996ed090cf89aa9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71adfc07786f18181996ed090cf89aa9">&#9670;&#160;</a></span>GetStatusString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GetStatusString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取当前状态字符串 (调试用) </p>
+<dl class="section return"><dt>返回</dt><dd>当前状态字符串 </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a27ab4385367163911ce44037f66bdb74">PodStreamManager::GetState()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a41095fc3a389d9ad262c98f45386c049">PodStreamManager::is_connected_</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#ab0710bf2acba478f00f709b1d622b4e4">PodStreamManager::mediamtx_pid_</a> , 以及 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a7d4b0b0707696a8449db2e07bfa0ebd9">PodStreamManager::StateToString()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a78e2a4289515dd73f4ef63bc0b635ff4">PodStreamManager::WorkerLoop()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpod__stream_1_1PodStreamManager_a71adfc07786f18181996ed090cf89aa9_cgraph.png" border="0" usemap="#aclasspod__stream_1_1PodStreamManager_a71adfc07786f18181996ed090cf89aa9_cgraph" alt=""/></div>
+<map name="aclasspod__stream_1_1PodStreamManager_a71adfc07786f18181996ed090cf89aa9_cgraph" id="aclasspod__stream_1_1PodStreamManager_a71adfc07786f18181996ed090cf89aa9_cgraph">
+<area shape="rect" title="获取当前状态字符串 (调试用)" alt="" coords="5,31,129,56"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a27ab4385367163911ce44037f66bdb74" title="获取当前状态" alt="" coords="192,5,271,31"/>
+<area shape="poly" title=" " alt="" coords="129,31,178,23,179,29,130,36"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a7d4b0b0707696a8449db2e07bfa0ebd9" title="获取状态名称字符串" alt="" coords="177,55,285,80"/>
+<area shape="poly" title=" " alt="" coords="130,50,164,55,163,60,129,55"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpod__stream_1_1PodStreamManager_a71adfc07786f18181996ed090cf89aa9_icgraph.png" border="0" usemap="#aclasspod__stream_1_1PodStreamManager_a71adfc07786f18181996ed090cf89aa9_icgraph" alt=""/></div>
+<map name="aclasspod__stream_1_1PodStreamManager_a71adfc07786f18181996ed090cf89aa9_icgraph" id="aclasspod__stream_1_1PodStreamManager_a71adfc07786f18181996ed090cf89aa9_icgraph">
+<area shape="rect" title="获取当前状态字符串 (调试用)" alt="" coords="1179,42,1303,67"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a78e2a4289515dd73f4ef63bc0b635ff4" title="工作线程主循环 (状态机调度)" alt="" coords="1032,42,1131,67"/>
+<area shape="poly" title=" " alt="" coords="1165,57,1131,57,1131,52,1165,52"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a07aaf1227e4d645f15e0a964f54ef291" title="启动管理器" alt="" coords="931,42,984,67"/>
+<area shape="poly" title=" " alt="" coords="1018,57,984,57,984,52,1018,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9f867de73f5925399e1d8beb02b64fad" title=" " alt="" coords="673,35,883,75"/>
+<area shape="poly" title=" " alt="" coords="917,57,883,57,883,52,917,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="451,35,625,75"/>
+<area shape="poly" title=" " alt="" coords="660,57,625,57,625,52,660,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="228,5,403,45"/>
+<area shape="poly" title=" " alt="" coords="437,44,402,39,403,34,437,39"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9d284775ccebba879a77a7144be22899" title=" " alt="" coords="5,35,180,75"/>
+<area shape="poly" title=" " alt="" coords="215,41,180,46,180,41,214,36"/>
+<area shape="poly" title=" " alt="" coords="194,54,228,55,403,55,450,54,451,59,403,60,228,60,194,60"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abc31e4b338943779ee9b61cc81480bcb" name="abc31e4b338943779ee9b61cc81480bcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc31e4b338943779ee9b61cc81480bcb">&#9670;&#160;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Init </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structpod__stream_1_1PodConfig.html">PodConfig</a> &amp;&#160;</td>
+          <td class="paramname"><em>config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>唯一初始化入口 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">config</td><td>吊舱配置 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>初始化是否成功</dd></dl>
+<p>完成参数校验、配置加载/改写、线程启动。 若已初始化，重复调用将返回 false。 </p>
+
+<p class="reference">引用了 <a class="el" href="structpod__stream_1_1PodConfig.html#abd2b9a91d3c0111f7e3945e967a66cf4">PodConfig::abs_mediamtx_path</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a3f2bb5ac8864dff13fd29639f47bb341">PodStreamManager::config_</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#abb35e640c7d0e6d7bc452ea7f591c471">PodStreamManager::inited_</a>, <a class="el" href="structpod__stream_1_1PodConfig.html#ac532c4b500b1a85ea22217f2c65a70ed">PodConfig::IsValid()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8af5137a026a4b2f3b1c8a21cfc60dd14b">PodStreamManager::kIdle</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8a25d5606fe07425ea73f245c48612c039">PodStreamManager::kReady</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="structpod__stream_1_1PodConfig.html#a8c7e45250b1eb6821dd59fb2a9a016d7">PodConfig::open</a>, <a class="el" href="structpod__stream_1_1PodConfig.html#ad93edbe885499a712129356f1ffd506b">PodConfig::Print()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a8554f10fb3372299f4ca373ca2b9d587">PodStreamManager::quit_</a> , 以及 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a2cae7364ded48841041ddf96acdf1a52">PodStreamManager::Transition()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classtools_1_1pipeline_1_1Pipeline.html#a9f867de73f5925399e1d8beb02b64fad">Pipeline::LaunchMediamtxMonitorV2()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpod__stream_1_1PodStreamManager_abc31e4b338943779ee9b61cc81480bcb_cgraph.png" border="0" usemap="#aclasspod__stream_1_1PodStreamManager_abc31e4b338943779ee9b61cc81480bcb_cgraph" alt=""/></div>
+<map name="aclasspod__stream_1_1PodStreamManager_abc31e4b338943779ee9b61cc81480bcb_cgraph" id="aclasspod__stream_1_1PodStreamManager_abc31e4b338943779ee9b61cc81480bcb_cgraph">
+<area shape="rect" title="唯一初始化入口" alt="" coords="5,77,48,102"/>
+<area shape="rect" href="structpod__stream_1_1PodConfig.html#ac532c4b500b1a85ea22217f2c65a70ed" title="验证配置有效性" alt="" coords="96,5,268,45"/>
+<area shape="poly" title=" " alt="" coords="47,77,95,55,112,48,114,53,97,60,49,82"/>
+<area shape="rect" href="structpod__stream_1_1PodConfig.html#ad93edbe885499a712129356f1ffd506b" title="打印配置信息 (调试用)" alt="" coords="96,69,268,109"/>
+<area shape="poly" title=" " alt="" coords="49,87,82,87,82,92,49,92"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a2cae7364ded48841041ddf96acdf1a52" title="状态转换" alt="" coords="139,134,225,159"/>
+<area shape="poly" title=" " alt="" coords="50,98,97,119,127,129,125,134,95,124,47,102"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a7d4b0b0707696a8449db2e07bfa0ebd9" title="获取状态名称字符串" alt="" coords="316,134,424,159"/>
+<area shape="poly" title=" " alt="" coords="225,144,302,144,302,149,225,149"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpod__stream_1_1PodStreamManager_abc31e4b338943779ee9b61cc81480bcb_icgraph.png" border="0" usemap="#aclasspod__stream_1_1PodStreamManager_abc31e4b338943779ee9b61cc81480bcb_icgraph" alt=""/></div>
+<map name="aclasspod__stream_1_1PodStreamManager_abc31e4b338943779ee9b61cc81480bcb_icgraph" id="aclasspod__stream_1_1PodStreamManager_abc31e4b338943779ee9b61cc81480bcb_icgraph">
+<area shape="rect" title="唯一初始化入口" alt="" coords="931,42,973,67"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9f867de73f5925399e1d8beb02b64fad" title=" " alt="" coords="673,35,883,75"/>
+<area shape="poly" title=" " alt="" coords="917,57,883,57,883,52,917,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="451,35,625,75"/>
+<area shape="poly" title=" " alt="" coords="660,57,625,57,625,52,660,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="228,5,403,45"/>
+<area shape="poly" title=" " alt="" coords="437,44,402,39,403,34,437,39"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9d284775ccebba879a77a7144be22899" title=" " alt="" coords="5,35,180,75"/>
+<area shape="poly" title=" " alt="" coords="215,41,180,46,180,41,214,36"/>
+<area shape="poly" title=" " alt="" coords="194,54,228,55,403,55,450,54,451,59,403,60,228,60,194,60"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac766f50854b7401ea00f5e40d89c77f1" name="ac766f50854b7401ea00f5e40d89c77f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac766f50854b7401ea00f5e40d89c77f1">&#9670;&#160;</a></span>IsConnected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsConnected </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>检查网络连通状态 </p>
+<dl class="section return"><dt>返回</dt><dd>是否连通 </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a41095fc3a389d9ad262c98f45386c049">PodStreamManager::is_connected_</a>.</p>
+
+</div>
+</div>
+<a id="af74a7903aabc239b3d2ba4bd085a9009" name="af74a7903aabc239b3d2ba4bd085a9009"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af74a7903aabc239b3d2ba4bd085a9009">&#9670;&#160;</a></span>IsCrashingTooOften()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsCrashingTooOften </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>检查是否处于崩溃过频状态 </p>
+<dl class="section return"><dt>返回</dt><dd>是否崩溃过频 </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a3f2bb5ac8864dff13fd29639f47bb341">PodStreamManager::config_</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#ab7c330f2f1a5dd11211e3a88042ca643">PodStreamManager::crash_mtx_</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a8777e63a10d3381a78f37a9470a838ed">PodStreamManager::crash_timestamps_</a> , 以及 <a class="el" href="structpod__stream_1_1PodConfig.html#ab5f80b4417c4ac64452e5f3ba15c2ccc">PodConfig::max_crash_count</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a78e2a4289515dd73f4ef63bc0b635ff4">PodStreamManager::WorkerLoop()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpod__stream_1_1PodStreamManager_af74a7903aabc239b3d2ba4bd085a9009_icgraph.png" border="0" usemap="#aclasspod__stream_1_1PodStreamManager_af74a7903aabc239b3d2ba4bd085a9009_icgraph" alt=""/></div>
+<map name="aclasspod__stream_1_1PodStreamManager_af74a7903aabc239b3d2ba4bd085a9009_icgraph" id="aclasspod__stream_1_1PodStreamManager_af74a7903aabc239b3d2ba4bd085a9009_icgraph">
+<area shape="rect" title="检查是否处于崩溃过频状态" alt="" coords="1179,42,1325,67"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a78e2a4289515dd73f4ef63bc0b635ff4" title="工作线程主循环 (状态机调度)" alt="" coords="1032,42,1131,67"/>
+<area shape="poly" title=" " alt="" coords="1165,57,1131,57,1131,52,1165,52"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a07aaf1227e4d645f15e0a964f54ef291" title="启动管理器" alt="" coords="931,42,984,67"/>
+<area shape="poly" title=" " alt="" coords="1018,57,984,57,984,52,1018,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9f867de73f5925399e1d8beb02b64fad" title=" " alt="" coords="673,35,883,75"/>
+<area shape="poly" title=" " alt="" coords="917,57,883,57,883,52,917,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="451,35,625,75"/>
+<area shape="poly" title=" " alt="" coords="660,57,625,57,625,52,660,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="228,5,403,45"/>
+<area shape="poly" title=" " alt="" coords="437,44,402,39,403,34,437,39"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9d284775ccebba879a77a7144be22899" title=" " alt="" coords="5,35,180,75"/>
+<area shape="poly" title=" " alt="" coords="215,41,180,46,180,41,214,36"/>
+<area shape="poly" title=" " alt="" coords="194,54,228,55,403,55,450,54,451,59,403,60,228,60,194,60"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5098864e797f848db6cd446b98e3ea95" name="a5098864e797f848db6cd446b98e3ea95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5098864e797f848db6cd446b98e3ea95">&#9670;&#160;</a></span>IsInited()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsInited </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>检查是否已初始化 </p>
+<dl class="section return"><dt>返回</dt><dd>是否已初始化 </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="classpod__stream_1_1PodStreamManager.html#abb35e640c7d0e6d7bc452ea7f591c471">PodStreamManager::inited_</a>.</p>
+
+</div>
+</div>
+<a id="aadc9131a3893e84d1adba546d702efae" name="aadc9131a3893e84d1adba546d702efae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadc9131a3893e84d1adba546d702efae">&#9670;&#160;</a></span>IsMediaMtxAlive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsMediaMtxAlive </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>检查 MediaMTX 进程是否存活 </p>
+<dl class="section return"><dt>返回</dt><dd>是否存活 </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="classpod__stream_1_1PodStreamManager.html#ab0710bf2acba478f00f709b1d622b4e4">PodStreamManager::mediamtx_pid_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a0f7adabc71ed98cfd8f8524a691c5fa0">PodStreamManager::StartMediaMtx()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a17a237457e57625296e6b24feb19c60a">PodStreamManager::Stop()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a3e0f667ecf232b80c9ede3733ddf8891">PodStreamManager::StopMediaMtx()</a> , 以及 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a78e2a4289515dd73f4ef63bc0b635ff4">PodStreamManager::WorkerLoop()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpod__stream_1_1PodStreamManager_aadc9131a3893e84d1adba546d702efae_icgraph.png" border="0" usemap="#aclasspod__stream_1_1PodStreamManager_aadc9131a3893e84d1adba546d702efae_icgraph" alt=""/></div>
+<map name="aclasspod__stream_1_1PodStreamManager_aadc9131a3893e84d1adba546d702efae_icgraph" id="aclasspod__stream_1_1PodStreamManager_aadc9131a3893e84d1adba546d702efae_icgraph">
+<area shape="rect" title="检查 MediaMTX 进程是否存活" alt="" coords="1453,81,1584,107"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a0f7adabc71ed98cfd8f8524a691c5fa0" title="启动 MediaMTX 子进程" alt="" coords="1287,5,1405,31"/>
+<area shape="poly" title=" " alt="" coords="1475,78,1375,33,1377,28,1477,73"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a78e2a4289515dd73f4ef63bc0b635ff4" title="工作线程主循环 (状态机调度)" alt="" coords="1140,56,1239,81"/>
+<area shape="poly" title=" " alt="" coords="1440,91,1239,75,1239,70,1440,85"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a17a237457e57625296e6b24feb19c60a" title="停止管理器" alt="" coords="1164,132,1215,157"/>
+<area shape="poly" title=" " alt="" coords="1486,116,1448,134,1406,147,1353,155,1300,156,1215,151,1215,145,1300,151,1352,149,1405,142,1446,129,1483,111"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a3e0f667ecf232b80c9ede3733ddf8891" title="停止 MediaMTX 子进程" alt="" coords="1288,107,1404,132"/>
+<area shape="poly" title=" " alt="" coords="1440,108,1405,113,1404,108,1439,103"/>
+<area shape="poly" title=" " alt="" coords="1294,38,1230,58,1229,53,1292,33"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a07aaf1227e4d645f15e0a964f54ef291" title="启动管理器" alt="" coords="985,56,1038,81"/>
+<area shape="poly" title=" " alt="" coords="1126,71,1038,71,1038,66,1126,66"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9f867de73f5925399e1d8beb02b64fad" title=" " alt="" coords="673,49,883,89"/>
+<area shape="poly" title=" " alt="" coords="971,71,883,71,883,66,971,66"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="451,49,625,89"/>
+<area shape="poly" title=" " alt="" coords="660,71,625,71,625,66,660,66"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="228,19,403,59"/>
+<area shape="poly" title=" " alt="" coords="437,58,402,53,403,48,437,53"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9d284775ccebba879a77a7144be22899" title=" " alt="" coords="5,49,180,89"/>
+<area shape="poly" title=" " alt="" coords="215,55,180,60,180,55,214,50"/>
+<area shape="poly" title=" " alt="" coords="194,68,228,69,403,69,450,68,451,73,403,74,228,74,194,74"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#af398b0ef543d575e98943d24d4c5cf9d" title=" " alt="" coords="931,132,1092,157"/>
+<area shape="poly" title=" " alt="" coords="1151,147,1092,147,1092,142,1151,142"/>
+<area shape="poly" title=" " alt="" coords="1292,105,1229,84,1230,79,1294,100"/>
+<area shape="poly" title=" " alt="" coords="1275,133,1215,143,1214,138,1274,128"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a113223b951492e271c7bd457470b66f4" name="a113223b951492e271c7bd457470b66f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a113223b951492e271c7bd457470b66f4">&#9670;&#160;</a></span>MonitorLoop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MonitorLoop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>监控线程主循环 </p>
+<p>周期性探测吊舱 IP 连通性，更新 is_connected 状态。 使用去抖逻辑避免网络抖动导致状态频繁切换。 </p>
+
+<p class="reference">引用了 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a3f2bb5ac8864dff13fd29639f47bb341">PodStreamManager::config_</a>, <a class="el" href="structpod__stream_1_1PodConfig.html#a65de261f0ce3f40ced8a4e1394635f95">PodConfig::connect_debounce_count</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a33aa7a165a3746b5b1a6618651441b14">PodStreamManager::connect_fail_count_</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a3f87482e942bf7f10eaf05013798529a">PodStreamManager::connect_success_count_</a>, <a class="el" href="structpod__stream_1_1PodConfig.html#a421e27da8302ced329f47e1388892313">PodConfig::disconnect_debounce_count</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a41095fc3a389d9ad262c98f45386c049">PodStreamManager::is_connected_</a>, <a class="el" href="structpod__stream_1_1PodConfig.html#aebce0dcac2738931b27d627bbe505320">PodConfig::monitor_period_ms</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="structpod__stream_1_1PodConfig.html#a721420555af15ddc2a5d7a19f8868114">PodConfig::pod_ip</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a76cfd626e850fd6560c0e09c4bd897a1">PodStreamManager::ProbeConnectivityOnce()</a> , 以及 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a8554f10fb3372299f4ca373ca2b9d587">PodStreamManager::quit_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a07aaf1227e4d645f15e0a964f54ef291">PodStreamManager::Start()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpod__stream_1_1PodStreamManager_a113223b951492e271c7bd457470b66f4_cgraph.png" border="0" usemap="#aclasspod__stream_1_1PodStreamManager_a113223b951492e271c7bd457470b66f4_cgraph" alt=""/></div>
+<map name="aclasspod__stream_1_1PodStreamManager_a113223b951492e271c7bd457470b66f4_cgraph" id="aclasspod__stream_1_1PodStreamManager_a113223b951492e271c7bd457470b66f4_cgraph">
+<area shape="rect" title="监控线程主循环" alt="" coords="5,5,108,31"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a76cfd626e850fd6560c0e09c4bd897a1" title="单次连通性探测" alt="" coords="156,5,331,31"/>
+<area shape="poly" title=" " alt="" coords="108,15,142,15,142,21,108,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpod__stream_1_1PodStreamManager_a113223b951492e271c7bd457470b66f4_icgraph.png" border="0" usemap="#aclasspod__stream_1_1PodStreamManager_a113223b951492e271c7bd457470b66f4_icgraph" alt=""/></div>
+<map name="aclasspod__stream_1_1PodStreamManager_a113223b951492e271c7bd457470b66f4_icgraph" id="aclasspod__stream_1_1PodStreamManager_a113223b951492e271c7bd457470b66f4_icgraph">
+<area shape="rect" title="监控线程主循环" alt="" coords="1032,42,1135,67"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a07aaf1227e4d645f15e0a964f54ef291" title="启动管理器" alt="" coords="931,42,984,67"/>
+<area shape="poly" title=" " alt="" coords="1018,57,984,57,984,52,1018,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9f867de73f5925399e1d8beb02b64fad" title=" " alt="" coords="673,35,883,75"/>
+<area shape="poly" title=" " alt="" coords="917,57,883,57,883,52,917,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="451,35,625,75"/>
+<area shape="poly" title=" " alt="" coords="660,57,625,57,625,52,660,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="228,5,403,45"/>
+<area shape="poly" title=" " alt="" coords="437,44,402,39,403,34,437,39"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9d284775ccebba879a77a7144be22899" title=" " alt="" coords="5,35,180,75"/>
+<area shape="poly" title=" " alt="" coords="215,41,180,46,180,41,214,36"/>
+<area shape="poly" title=" " alt="" coords="194,54,228,55,403,55,450,54,451,59,403,60,228,60,194,60"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afc26fb2734b9129beadbe1f638dff829" name="afc26fb2734b9129beadbe1f638dff829"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc26fb2734b9129beadbe1f638dff829">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classpod__stream_1_1PodStreamManager.html">PodStreamManager</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classpod__stream_1_1PodStreamManager.html">PodStreamManager</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9931466bd74838d6ab031f38ea176d39" name="a9931466bd74838d6ab031f38ea176d39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9931466bd74838d6ab031f38ea176d39">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classpod__stream_1_1PodStreamManager.html">PodStreamManager</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classpod__stream_1_1PodStreamManager.html">PodStreamManager</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac6b6a9f5e61958d839ba3cf3c687104b" name="ac6b6a9f5e61958d839ba3cf3c687104b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6b6a9f5e61958d839ba3cf3c687104b">&#9670;&#160;</a></span>PrepareMediaMtxConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PrepareMediaMtxConfig </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>准备 MediaMTX 配置文件 </p>
+<dl class="section return"><dt>返回</dt><dd>是否成功</dd></dl>
+<p>根据 stream_mapping 生成或更新 MediaMTX YAML 配置文件。 配置文件位于 abs_mediamtx_path 同级目录。 </p>
+
+<p class="reference">引用了 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a8f407a2f441b62b51ac681f115e15c45">PodStreamManager::GenerateYamlContent()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a7f644c8df943b3285960fecdc63f8cfd">PodStreamManager::GetConfigPath()</a> , 以及 <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a78e2a4289515dd73f4ef63bc0b635ff4">PodStreamManager::WorkerLoop()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpod__stream_1_1PodStreamManager_ac6b6a9f5e61958d839ba3cf3c687104b_cgraph.png" border="0" usemap="#aclasspod__stream_1_1PodStreamManager_ac6b6a9f5e61958d839ba3cf3c687104b_cgraph" alt=""/></div>
+<map name="aclasspod__stream_1_1PodStreamManager_ac6b6a9f5e61958d839ba3cf3c687104b_cgraph" id="aclasspod__stream_1_1PodStreamManager_ac6b6a9f5e61958d839ba3cf3c687104b_cgraph">
+<area shape="rect" title="准备 MediaMTX 配置文件" alt="" coords="5,31,184,56"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a8f407a2f441b62b51ac681f115e15c45" title="生成 YAML 配置内容" alt="" coords="232,5,396,31"/>
+<area shape="poly" title=" " alt="" coords="184,30,218,26,219,32,184,36"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a7f644c8df943b3285960fecdc63f8cfd" title="获取 MediaMTX 配置文件路径" alt="" coords="257,55,371,80"/>
+<area shape="poly" title=" " alt="" coords="184,50,243,57,243,62,184,56"/>
+<area shape="rect" href="namespacepod__stream.html#ab269a640b6a59882381a79c848ce3efe" title="获取当前时间戳字符串" alt="" coords="444,5,648,31"/>
+<area shape="poly" title=" " alt="" coords="396,15,430,15,430,21,396,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpod__stream_1_1PodStreamManager_ac6b6a9f5e61958d839ba3cf3c687104b_icgraph.png" border="0" usemap="#aclasspod__stream_1_1PodStreamManager_ac6b6a9f5e61958d839ba3cf3c687104b_icgraph" alt=""/></div>
+<map name="aclasspod__stream_1_1PodStreamManager_ac6b6a9f5e61958d839ba3cf3c687104b_icgraph" id="aclasspod__stream_1_1PodStreamManager_ac6b6a9f5e61958d839ba3cf3c687104b_icgraph">
+<area shape="rect" title="准备 MediaMTX 配置文件" alt="" coords="1179,42,1357,67"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a78e2a4289515dd73f4ef63bc0b635ff4" title="工作线程主循环 (状态机调度)" alt="" coords="1032,42,1131,67"/>
+<area shape="poly" title=" " alt="" coords="1165,57,1131,57,1131,52,1165,52"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a07aaf1227e4d645f15e0a964f54ef291" title="启动管理器" alt="" coords="931,42,984,67"/>
+<area shape="poly" title=" " alt="" coords="1018,57,984,57,984,52,1018,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9f867de73f5925399e1d8beb02b64fad" title=" " alt="" coords="673,35,883,75"/>
+<area shape="poly" title=" " alt="" coords="917,57,883,57,883,52,917,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="451,35,625,75"/>
+<area shape="poly" title=" " alt="" coords="660,57,625,57,625,52,660,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="228,5,403,45"/>
+<area shape="poly" title=" " alt="" coords="437,44,402,39,403,34,437,39"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9d284775ccebba879a77a7144be22899" title=" " alt="" coords="5,35,180,75"/>
+<area shape="poly" title=" " alt="" coords="215,41,180,46,180,41,214,36"/>
+<area shape="poly" title=" " alt="" coords="194,54,228,55,403,55,450,54,451,59,403,60,228,60,194,60"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a76cfd626e850fd6560c0e09c4bd897a1" name="a76cfd626e850fd6560c0e09c4bd897a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76cfd626e850fd6560c0e09c4bd897a1">&#9670;&#160;</a></span>ProbeConnectivityOnce()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ProbeConnectivityOnce </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>单次连通性探测 </p>
+<dl class="section return"><dt>返回</dt><dd>是否连通</dd></dl>
+<p>使用 ICMP ping 探测吊舱 IP 是否可达。 </p>
+
+<p class="reference">引用了 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a3f2bb5ac8864dff13fd29639f47bb341">PodStreamManager::config_</a> , 以及 <a class="el" href="structpod__stream_1_1PodConfig.html#a721420555af15ddc2a5d7a19f8868114">PodConfig::pod_ip</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a113223b951492e271c7bd457470b66f4">PodStreamManager::MonitorLoop()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpod__stream_1_1PodStreamManager_a76cfd626e850fd6560c0e09c4bd897a1_icgraph.png" border="0" usemap="#aclasspod__stream_1_1PodStreamManager_a76cfd626e850fd6560c0e09c4bd897a1_icgraph" alt=""/></div>
+<map name="aclasspod__stream_1_1PodStreamManager_a76cfd626e850fd6560c0e09c4bd897a1_icgraph" id="aclasspod__stream_1_1PodStreamManager_a76cfd626e850fd6560c0e09c4bd897a1_icgraph">
+<area shape="rect" title="单次连通性探测" alt="" coords="1183,42,1357,67"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a113223b951492e271c7bd457470b66f4" title="监控线程主循环" alt="" coords="1032,42,1135,67"/>
+<area shape="poly" title=" " alt="" coords="1169,57,1135,57,1135,52,1169,52"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a07aaf1227e4d645f15e0a964f54ef291" title="启动管理器" alt="" coords="931,42,984,67"/>
+<area shape="poly" title=" " alt="" coords="1018,57,984,57,984,52,1018,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9f867de73f5925399e1d8beb02b64fad" title=" " alt="" coords="673,35,883,75"/>
+<area shape="poly" title=" " alt="" coords="917,57,883,57,883,52,917,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="451,35,625,75"/>
+<area shape="poly" title=" " alt="" coords="660,57,625,57,625,52,660,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="228,5,403,45"/>
+<area shape="poly" title=" " alt="" coords="437,44,402,39,403,34,437,39"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9d284775ccebba879a77a7144be22899" title=" " alt="" coords="5,35,180,75"/>
+<area shape="poly" title=" " alt="" coords="215,41,180,46,180,41,214,36"/>
+<area shape="poly" title=" " alt="" coords="194,54,228,55,403,55,450,54,451,59,403,60,228,60,194,60"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3f92ed4b1ba895dea1d6a2bd4fd7face" name="a3f92ed4b1ba895dea1d6a2bd4fd7face"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f92ed4b1ba895dea1d6a2bd4fd7face">&#9670;&#160;</a></span>ReapChildIfNeeded()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ReapChildIfNeeded </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>回收子进程，避免僵尸进程 </p>
+<dl class="section return"><dt>返回</dt><dd>是否回收了子进程 (子进程已退出) </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="classpod__stream_1_1PodStreamManager.html#ab0710bf2acba478f00f709b1d622b4e4">PodStreamManager::mediamtx_pid_</a> , 以及 <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a0f7adabc71ed98cfd8f8524a691c5fa0">PodStreamManager::StartMediaMtx()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a17a237457e57625296e6b24feb19c60a">PodStreamManager::Stop()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a3e0f667ecf232b80c9ede3733ddf8891">PodStreamManager::StopMediaMtx()</a> , 以及 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a78e2a4289515dd73f4ef63bc0b635ff4">PodStreamManager::WorkerLoop()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpod__stream_1_1PodStreamManager_a3f92ed4b1ba895dea1d6a2bd4fd7face_icgraph.png" border="0" usemap="#aclasspod__stream_1_1PodStreamManager_a3f92ed4b1ba895dea1d6a2bd4fd7face_icgraph" alt=""/></div>
+<map name="aclasspod__stream_1_1PodStreamManager_a3f92ed4b1ba895dea1d6a2bd4fd7face_icgraph" id="aclasspod__stream_1_1PodStreamManager_a3f92ed4b1ba895dea1d6a2bd4fd7face_icgraph">
+<area shape="rect" title="回收子进程，避免僵尸进程" alt="" coords="1453,81,1600,107"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a0f7adabc71ed98cfd8f8524a691c5fa0" title="启动 MediaMTX 子进程" alt="" coords="1287,5,1405,31"/>
+<area shape="poly" title=" " alt="" coords="1482,78,1376,33,1378,28,1484,74"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a78e2a4289515dd73f4ef63bc0b635ff4" title="工作线程主循环 (状态机调度)" alt="" coords="1140,56,1239,81"/>
+<area shape="poly" title=" " alt="" coords="1439,90,1239,75,1239,70,1440,85"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a17a237457e57625296e6b24feb19c60a" title="停止管理器" alt="" coords="1164,132,1215,157"/>
+<area shape="poly" title=" " alt="" coords="1492,115,1452,133,1406,147,1353,154,1300,156,1215,150,1215,145,1300,150,1352,149,1405,142,1450,128,1490,111"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a3e0f667ecf232b80c9ede3733ddf8891" title="停止 MediaMTX 子进程" alt="" coords="1288,107,1404,132"/>
+<area shape="poly" title=" " alt="" coords="1440,109,1405,114,1404,109,1439,104"/>
+<area shape="poly" title=" " alt="" coords="1294,38,1230,58,1229,53,1292,33"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a07aaf1227e4d645f15e0a964f54ef291" title="启动管理器" alt="" coords="985,56,1038,81"/>
+<area shape="poly" title=" " alt="" coords="1126,71,1038,71,1038,66,1126,66"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9f867de73f5925399e1d8beb02b64fad" title=" " alt="" coords="673,49,883,89"/>
+<area shape="poly" title=" " alt="" coords="971,71,883,71,883,66,971,66"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="451,49,625,89"/>
+<area shape="poly" title=" " alt="" coords="660,71,625,71,625,66,660,66"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="228,19,403,59"/>
+<area shape="poly" title=" " alt="" coords="437,58,402,53,403,48,437,53"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9d284775ccebba879a77a7144be22899" title=" " alt="" coords="5,49,180,89"/>
+<area shape="poly" title=" " alt="" coords="215,55,180,60,180,55,214,50"/>
+<area shape="poly" title=" " alt="" coords="194,68,228,69,403,69,450,68,451,73,403,74,228,74,194,74"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#af398b0ef543d575e98943d24d4c5cf9d" title=" " alt="" coords="931,132,1092,157"/>
+<area shape="poly" title=" " alt="" coords="1151,147,1092,147,1092,142,1151,142"/>
+<area shape="poly" title=" " alt="" coords="1292,105,1229,84,1230,79,1294,100"/>
+<area shape="poly" title=" " alt="" coords="1275,133,1215,143,1214,138,1274,128"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1b1892807f75154d39d6205a8bdee398" name="a1b1892807f75154d39d6205a8bdee398"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b1892807f75154d39d6205a8bdee398">&#9670;&#160;</a></span>RecordCrash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RecordCrash </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>记录崩溃事件，用于崩溃频率统计 </p>
+
+<p class="reference">引用了 <a class="el" href="classpod__stream_1_1PodStreamManager.html#ac33ced7122eb6ff7a6a1349082bdd5c8">PodStreamManager::backoff_level_</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a3f2bb5ac8864dff13fd29639f47bb341">PodStreamManager::config_</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#ab7c330f2f1a5dd11211e3a88042ca643">PodStreamManager::crash_mtx_</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a8777e63a10d3381a78f37a9470a838ed">PodStreamManager::crash_timestamps_</a>, <a class="el" href="structpod__stream_1_1PodConfig.html#aa1259b39a7c9d3e806dbbb706254d75d">PodConfig::crash_window_seconds</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a191ea42ee0c1e53aa7c4ec7d3a37a481">PodStreamManager::kMaxBackoffLevel</a> , 以及 <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a78e2a4289515dd73f4ef63bc0b635ff4">PodStreamManager::WorkerLoop()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpod__stream_1_1PodStreamManager_a1b1892807f75154d39d6205a8bdee398_icgraph.png" border="0" usemap="#aclasspod__stream_1_1PodStreamManager_a1b1892807f75154d39d6205a8bdee398_icgraph" alt=""/></div>
+<map name="aclasspod__stream_1_1PodStreamManager_a1b1892807f75154d39d6205a8bdee398_icgraph" id="aclasspod__stream_1_1PodStreamManager_a1b1892807f75154d39d6205a8bdee398_icgraph">
+<area shape="rect" title="记录崩溃事件，用于崩溃频率统计" alt="" coords="1179,42,1283,67"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a78e2a4289515dd73f4ef63bc0b635ff4" title="工作线程主循环 (状态机调度)" alt="" coords="1032,42,1131,67"/>
+<area shape="poly" title=" " alt="" coords="1165,57,1131,57,1131,52,1165,52"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a07aaf1227e4d645f15e0a964f54ef291" title="启动管理器" alt="" coords="931,42,984,67"/>
+<area shape="poly" title=" " alt="" coords="1018,57,984,57,984,52,1018,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9f867de73f5925399e1d8beb02b64fad" title=" " alt="" coords="673,35,883,75"/>
+<area shape="poly" title=" " alt="" coords="917,57,883,57,883,52,917,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="451,35,625,75"/>
+<area shape="poly" title=" " alt="" coords="660,57,625,57,625,52,660,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="228,5,403,45"/>
+<area shape="poly" title=" " alt="" coords="437,44,402,39,403,34,437,39"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9d284775ccebba879a77a7144be22899" title=" " alt="" coords="5,35,180,75"/>
+<area shape="poly" title=" " alt="" coords="215,41,180,46,180,41,214,36"/>
+<area shape="poly" title=" " alt="" coords="194,54,228,55,403,55,450,54,451,59,403,60,228,60,194,60"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aafffdd575dc3739920895f88125d53e6" name="aafffdd575dc3739920895f88125d53e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafffdd575dc3739920895f88125d53e6">&#9670;&#160;</a></span>ResetBackoff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ResetBackoff </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>重置退避计数器 </p>
+
+<p class="reference">引用了 <a class="el" href="classpod__stream_1_1PodStreamManager.html#ac33ced7122eb6ff7a6a1349082bdd5c8">PodStreamManager::backoff_level_</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#ab7c330f2f1a5dd11211e3a88042ca643">PodStreamManager::crash_mtx_</a> , 以及 <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>.</p>
+
+</div>
+</div>
+<a id="a07aaf1227e4d645f15e0a964f54ef291" name="a07aaf1227e4d645f15e0a964f54ef291"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07aaf1227e4d645f15e0a964f54ef291">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>启动管理器 </p>
+<p>启动监控线程和工作线程，开始管理 MediaMTX 子进程。 </p>
+
+<p class="reference">引用了 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a3f2bb5ac8864dff13fd29639f47bb341">PodStreamManager::config_</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#abb35e640c7d0e6d7bc452ea7f591c471">PodStreamManager::inited_</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#aa0e30499ef9b94fca024c2836108f6ef">PodStreamManager::monitor_th_</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a113223b951492e271c7bd457470b66f4">PodStreamManager::MonitorLoop()</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>, <a class="el" href="structpod__stream_1_1PodConfig.html#a8c7e45250b1eb6821dd59fb2a9a016d7">PodConfig::open</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a8554f10fb3372299f4ca373ca2b9d587">PodStreamManager::quit_</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#aafde46164e80ff2a80c5d075a8aa0dc3">PodStreamManager::worker_th_</a> , 以及 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a78e2a4289515dd73f4ef63bc0b635ff4">PodStreamManager::WorkerLoop()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classtools_1_1pipeline_1_1Pipeline.html#a9f867de73f5925399e1d8beb02b64fad">Pipeline::LaunchMediamtxMonitorV2()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpod__stream_1_1PodStreamManager_a07aaf1227e4d645f15e0a964f54ef291_cgraph.png" border="0" usemap="#aclasspod__stream_1_1PodStreamManager_a07aaf1227e4d645f15e0a964f54ef291_cgraph" alt=""/></div>
+<map name="aclasspod__stream_1_1PodStreamManager_a07aaf1227e4d645f15e0a964f54ef291_cgraph" id="aclasspod__stream_1_1PodStreamManager_a07aaf1227e4d645f15e0a964f54ef291_cgraph">
+<area shape="rect" title="启动管理器" alt="" coords="5,256,59,281"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a113223b951492e271c7bd457470b66f4" title="监控线程主循环" alt="" coords="107,119,209,144"/>
+<area shape="poly" title=" " alt="" coords="43,254,134,153,138,156,47,258"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a78e2a4289515dd73f4ef63bc0b635ff4" title="工作线程主循环 (状态机调度)" alt="" coords="109,280,207,305"/>
+<area shape="poly" title=" " alt="" coords="59,271,96,278,94,283,58,276"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a76cfd626e850fd6560c0e09c4bd897a1" title="单次连通性探测" alt="" coords="259,5,434,31"/>
+<area shape="poly" title=" " alt="" coords="170,116,207,83,256,48,287,33,289,38,259,52,210,87,174,120"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a33887ecd917a38816dbeeafbb793fee6" title="获取重试退避时间 (指数退避)" alt="" coords="271,205,422,231"/>
+<area shape="poly" title=" " alt="" coords="180,277,256,240,278,232,280,237,258,244,182,282"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a27ab4385367163911ce44037f66bdb74" title="获取当前状态" alt="" coords="527,81,605,107"/>
+<area shape="poly" title=" " alt="" coords="161,279,200,179,228,125,242,105,256,92,287,76,321,66,355,61,390,59,457,65,514,76,513,81,456,70,390,65,356,66,322,71,289,81,259,96,246,108,232,128,205,181,166,281"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a71adfc07786f18181996ed090cf89aa9" title="获取当前状态字符串 (调试用)" alt="" coords="285,107,409,132"/>
+<area shape="poly" title=" " alt="" coords="162,278,194,213,221,174,256,141,271,132,273,137,259,145,225,178,198,216,167,281"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#af74a7903aabc239b3d2ba4bd085a9009" title="检查是否处于崩溃过频状态" alt="" coords="273,403,420,428"/>
+<area shape="poly" title=" " alt="" coords="171,304,206,345,231,368,259,388,274,395,272,400,256,392,228,372,203,349,167,307"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#aadc9131a3893e84d1adba546d702efae" title="检查 MediaMTX 进程是否存活" alt="" coords="501,504,631,529"/>
+<area shape="poly" title=" " alt="" coords="162,305,167,352,181,418,193,453,210,486,231,516,259,540,291,556,325,565,361,568,398,566,468,552,524,532,526,537,469,557,399,571,361,573,324,570,289,561,256,544,228,519,205,489,188,455,176,419,162,353,157,306"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#ac6b6a9f5e61958d839ba3cf3c687104b" title="准备 MediaMTX 配置文件" alt="" coords="257,304,436,329"/>
+<area shape="poly" title=" " alt="" coords="208,296,244,301,243,306,207,302"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a3f92ed4b1ba895dea1d6a2bd4fd7face" title="回收子进程，避免僵尸进程" alt="" coords="493,453,639,479"/>
+<area shape="poly" title=" " alt="" coords="166,304,177,334,196,371,223,409,259,438,312,461,369,473,426,477,479,475,479,481,426,483,368,479,310,466,256,443,220,412,192,374,172,336,161,306"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a1b1892807f75154d39d6205a8bdee398" title="记录崩溃事件，用于崩溃频率统计" alt="" coords="295,156,399,181"/>
+<area shape="poly" title=" " alt="" coords="166,278,202,235,227,211,256,190,280,179,283,184,259,195,231,215,206,239,170,282"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a0f7adabc71ed98cfd8f8524a691c5fa0" title="启动 MediaMTX 子进程" alt="" coords="287,353,406,379"/>
+<area shape="poly" title=" " alt="" coords="184,303,258,338,283,347,281,352,256,343,181,308"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a3e0f667ecf232b80c9ede3733ddf8891" title="停止 MediaMTX 子进程" alt="" coords="289,504,405,529"/>
+<area shape="poly" title=" " alt="" coords="165,305,175,340,194,387,221,438,239,462,259,483,279,496,276,501,256,487,235,465,217,441,189,390,170,341,160,306"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a2cae7364ded48841041ddf96acdf1a52" title="状态转换" alt="" coords="304,255,389,280"/>
+<area shape="poly" title=" " alt="" coords="207,283,290,272,290,278,208,289"/>
+<area shape="poly" title=" " alt="" coords="409,110,513,97,514,103,409,115"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a7d4b0b0707696a8449db2e07bfa0ebd9" title="获取状态名称字符串" alt="" coords="512,180,620,205"/>
+<area shape="poly" title=" " alt="" coords="399,129,437,141,522,172,520,177,435,146,397,135"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a8f407a2f441b62b51ac681f115e15c45" title="生成 YAML 配置内容" alt="" coords="484,280,648,305"/>
+<area shape="poly" title=" " alt="" coords="436,304,470,300,471,306,436,310"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a7f644c8df943b3285960fecdc63f8cfd" title="获取 MediaMTX 配置文件路径" alt="" coords="509,329,623,355"/>
+<area shape="poly" title=" " alt="" coords="436,324,495,331,495,337,436,330"/>
+<area shape="rect" href="namespacepod__stream.html#ab269a640b6a59882381a79c848ce3efe" title="获取当前时间戳字符串" alt="" coords="696,280,900,305"/>
+<area shape="poly" title=" " alt="" coords="648,290,682,290,682,295,648,295"/>
+<area shape="poly" title=" " alt="" coords="408,372,438,388,450,401,457,414,463,440,469,465,475,477,486,489,494,495,491,500,482,493,471,480,464,467,458,441,452,416,445,404,434,392,405,377"/>
+<area shape="poly" title=" " alt="" coords="406,357,495,347,495,352,406,362"/>
+<area shape="poly" title=" " alt="" coords="405,376,437,388,534,444,532,448,435,392,403,381"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#aa1c370c6823e44aa0457571c181757d0" title="获取日志文件路径 (用于子进程输出重定向)" alt="" coords="507,379,625,404"/>
+<area shape="poly" title=" " alt="" coords="406,370,493,380,493,386,406,375"/>
+<area shape="poly" title=" " alt="" coords="405,514,487,514,487,519,405,519"/>
+<area shape="poly" title=" " alt="" coords="402,501,497,479,498,484,403,506"/>
+<area shape="poly" title=" " alt="" coords="389,254,435,239,520,208,522,213,437,245,390,259"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpod__stream_1_1PodStreamManager_a07aaf1227e4d645f15e0a964f54ef291_icgraph.png" border="0" usemap="#aclasspod__stream_1_1PodStreamManager_a07aaf1227e4d645f15e0a964f54ef291_icgraph" alt=""/></div>
+<map name="aclasspod__stream_1_1PodStreamManager_a07aaf1227e4d645f15e0a964f54ef291_icgraph" id="aclasspod__stream_1_1PodStreamManager_a07aaf1227e4d645f15e0a964f54ef291_icgraph">
+<area shape="rect" title="启动管理器" alt="" coords="931,42,984,67"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9f867de73f5925399e1d8beb02b64fad" title=" " alt="" coords="673,35,883,75"/>
+<area shape="poly" title=" " alt="" coords="917,57,883,57,883,52,917,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="451,35,625,75"/>
+<area shape="poly" title=" " alt="" coords="660,57,625,57,625,52,660,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="228,5,403,45"/>
+<area shape="poly" title=" " alt="" coords="437,44,402,39,403,34,437,39"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9d284775ccebba879a77a7144be22899" title=" " alt="" coords="5,35,180,75"/>
+<area shape="poly" title=" " alt="" coords="215,41,180,46,180,41,214,36"/>
+<area shape="poly" title=" " alt="" coords="194,54,228,55,403,55,450,54,451,59,403,60,228,60,194,60"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0f7adabc71ed98cfd8f8524a691c5fa0" name="a0f7adabc71ed98cfd8f8524a691c5fa0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f7adabc71ed98cfd8f8524a691c5fa0">&#9670;&#160;</a></span>StartMediaMtx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StartMediaMtx </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>启动 MediaMTX 子进程 </p>
+<dl class="section return"><dt>返回</dt><dd>是否启动成功</dd></dl>
+<p>使用 fork/exec 启动子进程，记录 PID。 子进程的 stdout/stderr 重定向到日志文件。 </p>
+
+<p class="reference">引用了 <a class="el" href="structpod__stream_1_1PodConfig.html#abd2b9a91d3c0111f7e3945e967a66cf4">PodConfig::abs_mediamtx_path</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a3f2bb5ac8864dff13fd29639f47bb341">PodStreamManager::config_</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a7f644c8df943b3285960fecdc63f8cfd">PodStreamManager::GetConfigPath()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#aa1c370c6823e44aa0457571c181757d0">PodStreamManager::GetLogFilePath()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#aadc9131a3893e84d1adba546d702efae">PodStreamManager::IsMediaMtxAlive()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#ab0710bf2acba478f00f709b1d622b4e4">PodStreamManager::mediamtx_pid_</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a> , 以及 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a3f92ed4b1ba895dea1d6a2bd4fd7face">PodStreamManager::ReapChildIfNeeded()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a78e2a4289515dd73f4ef63bc0b635ff4">PodStreamManager::WorkerLoop()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpod__stream_1_1PodStreamManager_a0f7adabc71ed98cfd8f8524a691c5fa0_cgraph.png" border="0" usemap="#aclasspod__stream_1_1PodStreamManager_a0f7adabc71ed98cfd8f8524a691c5fa0_cgraph" alt=""/></div>
+<map name="aclasspod__stream_1_1PodStreamManager_a0f7adabc71ed98cfd8f8524a691c5fa0_cgraph" id="aclasspod__stream_1_1PodStreamManager_a0f7adabc71ed98cfd8f8524a691c5fa0_cgraph">
+<area shape="rect" title="启动 MediaMTX 子进程" alt="" coords="5,80,124,105"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a7f644c8df943b3285960fecdc63f8cfd" title="获取 MediaMTX 配置文件路径" alt="" coords="188,5,303,31"/>
+<area shape="poly" title=" " alt="" coords="89,77,171,40,189,33,191,38,173,44,92,82"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#aa1c370c6823e44aa0457571c181757d0" title="获取日志文件路径 (用于子进程输出重定向)" alt="" coords="186,55,305,80"/>
+<area shape="poly" title=" " alt="" coords="124,82,172,75,172,80,125,87"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#aadc9131a3893e84d1adba546d702efae" title="检查 MediaMTX 进程是否存活" alt="" coords="180,104,311,129"/>
+<area shape="poly" title=" " alt="" coords="125,98,166,104,166,109,124,103"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a3f92ed4b1ba895dea1d6a2bd4fd7face" title="回收子进程，避免僵尸进程" alt="" coords="172,153,319,179"/>
+<area shape="poly" title=" " alt="" coords="93,103,173,138,194,146,192,151,171,143,91,108"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpod__stream_1_1PodStreamManager_a0f7adabc71ed98cfd8f8524a691c5fa0_icgraph.png" border="0" usemap="#aclasspod__stream_1_1PodStreamManager_a0f7adabc71ed98cfd8f8524a691c5fa0_icgraph" alt=""/></div>
+<map name="aclasspod__stream_1_1PodStreamManager_a0f7adabc71ed98cfd8f8524a691c5fa0_icgraph" id="aclasspod__stream_1_1PodStreamManager_a0f7adabc71ed98cfd8f8524a691c5fa0_icgraph">
+<area shape="rect" title="启动 MediaMTX 子进程" alt="" coords="1179,42,1297,67"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a78e2a4289515dd73f4ef63bc0b635ff4" title="工作线程主循环 (状态机调度)" alt="" coords="1032,42,1131,67"/>
+<area shape="poly" title=" " alt="" coords="1165,57,1131,57,1131,52,1165,52"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a07aaf1227e4d645f15e0a964f54ef291" title="启动管理器" alt="" coords="931,42,984,67"/>
+<area shape="poly" title=" " alt="" coords="1018,57,984,57,984,52,1018,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9f867de73f5925399e1d8beb02b64fad" title=" " alt="" coords="673,35,883,75"/>
+<area shape="poly" title=" " alt="" coords="917,57,883,57,883,52,917,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="451,35,625,75"/>
+<area shape="poly" title=" " alt="" coords="660,57,625,57,625,52,660,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="228,5,403,45"/>
+<area shape="poly" title=" " alt="" coords="437,44,402,39,403,34,437,39"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9d284775ccebba879a77a7144be22899" title=" " alt="" coords="5,35,180,75"/>
+<area shape="poly" title=" " alt="" coords="215,41,180,46,180,41,214,36"/>
+<area shape="poly" title=" " alt="" coords="194,54,228,55,403,55,450,54,451,59,403,60,228,60,194,60"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7d4b0b0707696a8449db2e07bfa0ebd9" name="a7d4b0b0707696a8449db2e07bfa0ebd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d4b0b0707696a8449db2e07bfa0ebd9">&#9670;&#160;</a></span>StateToString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * StateToString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a>&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取状态名称字符串 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td>状态枚举 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>状态名称 </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8ae3587c730cc1aa530fa4ddc9c4204e97">PodStreamManager::kError</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8af5137a026a4b2f3b1c8a21cfc60dd14b">PodStreamManager::kIdle</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8a25d5606fe07425ea73f245c48612c039">PodStreamManager::kReady</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8a2fc7fbf0d19294f85dd3880460dd3c0a">PodStreamManager::kRunning</a> , 以及 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8a6681e9f78d4e277e2ad43c2d25ff5a0f">PodStreamManager::kStopping</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a71adfc07786f18181996ed090cf89aa9">PodStreamManager::GetStatusString()</a> , 以及 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a2cae7364ded48841041ddf96acdf1a52">PodStreamManager::Transition()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpod__stream_1_1PodStreamManager_a7d4b0b0707696a8449db2e07bfa0ebd9_icgraph.png" border="0" usemap="#aclasspod__stream_1_1PodStreamManager_a7d4b0b0707696a8449db2e07bfa0ebd9_icgraph" alt=""/></div>
+<map name="aclasspod__stream_1_1PodStreamManager_a7d4b0b0707696a8449db2e07bfa0ebd9_icgraph" id="aclasspod__stream_1_1PodStreamManager_a7d4b0b0707696a8449db2e07bfa0ebd9_icgraph">
+<area shape="rect" title="获取状态名称字符串" alt="" coords="1459,42,1567,67"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a71adfc07786f18181996ed090cf89aa9" title="获取当前状态字符串 (调试用)" alt="" coords="1287,17,1411,42"/>
+<area shape="poly" title=" " alt="" coords="1445,47,1410,42,1411,36,1446,42"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a2cae7364ded48841041ddf96acdf1a52" title="状态转换" alt="" coords="1306,66,1391,91"/>
+<area shape="poly" title=" " alt="" coords="1445,67,1392,75,1391,70,1445,62"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a78e2a4289515dd73f4ef63bc0b635ff4" title="工作线程主循环 (状态机调度)" alt="" coords="1140,15,1239,41"/>
+<area shape="poly" title=" " alt="" coords="1273,31,1239,31,1239,26,1273,26"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a07aaf1227e4d645f15e0a964f54ef291" title="启动管理器" alt="" coords="985,17,1038,42"/>
+<area shape="poly" title=" " alt="" coords="1126,31,1038,32,1038,26,1126,26"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9f867de73f5925399e1d8beb02b64fad" title=" " alt="" coords="673,35,883,75"/>
+<area shape="poly" title=" " alt="" coords="971,36,883,46,883,41,971,31"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="451,35,625,75"/>
+<area shape="poly" title=" " alt="" coords="660,57,625,57,625,52,660,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="228,5,403,45"/>
+<area shape="poly" title=" " alt="" coords="437,44,402,39,403,34,437,39"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9d284775ccebba879a77a7144be22899" title=" " alt="" coords="5,35,180,75"/>
+<area shape="poly" title=" " alt="" coords="215,41,180,46,180,41,214,36"/>
+<area shape="poly" title=" " alt="" coords="194,54,228,55,403,55,450,54,451,59,403,60,228,60,194,60"/>
+<area shape="poly" title=" " alt="" coords="1294,64,1229,43,1231,38,1296,59"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#abc31e4b338943779ee9b61cc81480bcb" title="唯一初始化入口" alt="" coords="990,66,1033,91"/>
+<area shape="poly" title=" " alt="" coords="1292,81,1033,81,1033,76,1292,76"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a17a237457e57625296e6b24feb19c60a" title="停止管理器" alt="" coords="1164,117,1215,142"/>
+<area shape="poly" title=" " alt="" coords="1296,98,1216,124,1214,119,1294,93"/>
+<area shape="poly" title=" " alt="" coords="976,78,883,68,883,63,977,73"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#af398b0ef543d575e98943d24d4c5cf9d" title=" " alt="" coords="931,117,1092,142"/>
+<area shape="poly" title=" " alt="" coords="1151,132,1092,132,1092,127,1151,127"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a17a237457e57625296e6b24feb19c60a" name="a17a237457e57625296e6b24feb19c60a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17a237457e57625296e6b24feb19c60a">&#9670;&#160;</a></span>Stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>停止管理器 </p>
+<p>优雅停止所有线程和子进程，便于进程退出时优雅收尾。 </p>
+
+<p class="reference">引用了 <a class="el" href="classpod__stream_1_1PodStreamManager.html#abb35e640c7d0e6d7bc452ea7f591c471">PodStreamManager::inited_</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#aadc9131a3893e84d1adba546d702efae">PodStreamManager::IsMediaMtxAlive()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8af5137a026a4b2f3b1c8a21cfc60dd14b">PodStreamManager::kIdle</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#aa0e30499ef9b94fca024c2836108f6ef">PodStreamManager::monitor_th_</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a8554f10fb3372299f4ca373ca2b9d587">PodStreamManager::quit_</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a3f92ed4b1ba895dea1d6a2bd4fd7face">PodStreamManager::ReapChildIfNeeded()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a3e0f667ecf232b80c9ede3733ddf8891">PodStreamManager::StopMediaMtx()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a2cae7364ded48841041ddf96acdf1a52">PodStreamManager::Transition()</a> , 以及 <a class="el" href="classpod__stream_1_1PodStreamManager.html#aafde46164e80ff2a80c5d075a8aa0dc3">PodStreamManager::worker_th_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classpod__stream_1_1PodStreamManager.html#af398b0ef543d575e98943d24d4c5cf9d">PodStreamManager::~PodStreamManager()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpod__stream_1_1PodStreamManager_a17a237457e57625296e6b24feb19c60a_cgraph.png" border="0" usemap="#aclasspod__stream_1_1PodStreamManager_a17a237457e57625296e6b24feb19c60a_cgraph" alt=""/></div>
+<map name="aclasspod__stream_1_1PodStreamManager_a17a237457e57625296e6b24feb19c60a_cgraph" id="aclasspod__stream_1_1PodStreamManager_a17a237457e57625296e6b24feb19c60a_cgraph">
+<area shape="rect" title="停止管理器" alt="" coords="5,58,56,84"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#aadc9131a3893e84d1adba546d702efae" title="检查 MediaMTX 进程是否存活" alt="" coords="276,8,407,33"/>
+<area shape="poly" title=" " alt="" coords="43,56,69,35,103,18,143,8,185,4,262,6,262,11,185,9,144,14,105,23,72,39,47,60"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a3f92ed4b1ba895dea1d6a2bd4fd7face" title="回收子进程，避免僵尸进程" alt="" coords="268,70,415,96"/>
+<area shape="poly" title=" " alt="" coords="56,69,254,77,254,82,56,74"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a3e0f667ecf232b80c9ede3733ddf8891" title="停止 MediaMTX 子进程" alt="" coords="104,33,220,58"/>
+<area shape="poly" title=" " alt="" coords="56,63,90,57,91,62,57,69"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a2cae7364ded48841041ddf96acdf1a52" title="状态转换" alt="" coords="119,134,205,160"/>
+<area shape="poly" title=" " alt="" coords="54,81,105,113,127,125,124,130,103,117,51,86"/>
+<area shape="poly" title=" " alt="" coords="220,35,262,29,263,34,221,40"/>
+<area shape="poly" title=" " alt="" coords="221,55,267,65,266,70,220,60"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a7d4b0b0707696a8449db2e07bfa0ebd9" title="获取状态名称字符串" alt="" coords="287,134,395,160"/>
+<area shape="poly" title=" " alt="" coords="205,144,273,144,273,150,205,150"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpod__stream_1_1PodStreamManager_a17a237457e57625296e6b24feb19c60a_icgraph.png" border="0" usemap="#aclasspod__stream_1_1PodStreamManager_a17a237457e57625296e6b24feb19c60a_icgraph" alt=""/></div>
+<map name="aclasspod__stream_1_1PodStreamManager_a17a237457e57625296e6b24feb19c60a_icgraph" id="aclasspod__stream_1_1PodStreamManager_a17a237457e57625296e6b24feb19c60a_icgraph">
+<area shape="rect" title="停止管理器" alt="" coords="215,5,265,31"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#af398b0ef543d575e98943d24d4c5cf9d" title=" " alt="" coords="5,5,167,31"/>
+<area shape="poly" title=" " alt="" coords="201,21,167,21,167,15,201,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3e0f667ecf232b80c9ede3733ddf8891" name="a3e0f667ecf232b80c9ede3733ddf8891"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e0f667ecf232b80c9ede3733ddf8891">&#9670;&#160;</a></span>StopMediaMtx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StopMediaMtx </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>force_kill</em> = <code>false</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>停止 MediaMTX 子进程 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">force_kill</td><td>是否强制杀死 (跳过 SIGTERM)</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>两阶段停止: SIGTERM 优雅退出 -&gt; 超时后 SIGKILL 强制结束。 </p>
+
+<p class="reference">引用了 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a3f2bb5ac8864dff13fd29639f47bb341">PodStreamManager::config_</a>, <a class="el" href="structpod__stream_1_1PodConfig.html#a1ad28de110dbb8fbe69b19c2a952d00f">PodConfig::graceful_stop_timeout_ms</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#aadc9131a3893e84d1adba546d702efae">PodStreamManager::IsMediaMtxAlive()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#ab0710bf2acba478f00f709b1d622b4e4">PodStreamManager::mediamtx_pid_</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a> , 以及 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a3f92ed4b1ba895dea1d6a2bd4fd7face">PodStreamManager::ReapChildIfNeeded()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a17a237457e57625296e6b24feb19c60a">PodStreamManager::Stop()</a> , 以及 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a78e2a4289515dd73f4ef63bc0b635ff4">PodStreamManager::WorkerLoop()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpod__stream_1_1PodStreamManager_a3e0f667ecf232b80c9ede3733ddf8891_cgraph.png" border="0" usemap="#aclasspod__stream_1_1PodStreamManager_a3e0f667ecf232b80c9ede3733ddf8891_cgraph" alt=""/></div>
+<map name="aclasspod__stream_1_1PodStreamManager_a3e0f667ecf232b80c9ede3733ddf8891_cgraph" id="aclasspod__stream_1_1PodStreamManager_a3e0f667ecf232b80c9ede3733ddf8891_cgraph">
+<area shape="rect" title="停止 MediaMTX 子进程" alt="" coords="5,31,121,56"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#aadc9131a3893e84d1adba546d702efae" title="检查 MediaMTX 进程是否存活" alt="" coords="177,5,308,31"/>
+<area shape="poly" title=" " alt="" coords="121,33,163,26,164,32,122,38"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a3f92ed4b1ba895dea1d6a2bd4fd7face" title="回收子进程，避免僵尸进程" alt="" coords="169,55,316,80"/>
+<area shape="poly" title=" " alt="" coords="122,48,156,53,155,58,121,54"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpod__stream_1_1PodStreamManager_a3e0f667ecf232b80c9ede3733ddf8891_icgraph.png" border="0" usemap="#aclasspod__stream_1_1PodStreamManager_a3e0f667ecf232b80c9ede3733ddf8891_icgraph" alt=""/></div>
+<map name="aclasspod__stream_1_1PodStreamManager_a3e0f667ecf232b80c9ede3733ddf8891_icgraph" id="aclasspod__stream_1_1PodStreamManager_a3e0f667ecf232b80c9ede3733ddf8891_icgraph">
+<area shape="rect" title="停止 MediaMTX 子进程" alt="" coords="1287,31,1403,56"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a17a237457e57625296e6b24feb19c60a" title="停止管理器" alt="" coords="1164,5,1215,31"/>
+<area shape="poly" title=" " alt="" coords="1272,34,1214,25,1215,19,1273,29"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a78e2a4289515dd73f4ef63bc0b635ff4" title="工作线程主循环 (状态机调度)" alt="" coords="1140,55,1239,80"/>
+<area shape="poly" title=" " alt="" coords="1274,57,1239,62,1239,57,1273,52"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#af398b0ef543d575e98943d24d4c5cf9d" title=" " alt="" coords="931,5,1092,31"/>
+<area shape="poly" title=" " alt="" coords="1151,21,1092,21,1092,15,1151,15"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a07aaf1227e4d645f15e0a964f54ef291" title="启动管理器" alt="" coords="985,55,1038,80"/>
+<area shape="poly" title=" " alt="" coords="1126,70,1038,70,1038,65,1126,65"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9f867de73f5925399e1d8beb02b64fad" title=" " alt="" coords="673,47,883,87"/>
+<area shape="poly" title=" " alt="" coords="971,70,883,70,883,65,971,65"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="451,47,625,87"/>
+<area shape="poly" title=" " alt="" coords="660,70,625,70,625,65,660,65"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="228,18,403,58"/>
+<area shape="poly" title=" " alt="" coords="437,57,402,52,403,47,437,51"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9d284775ccebba879a77a7144be22899" title=" " alt="" coords="5,47,180,87"/>
+<area shape="poly" title=" " alt="" coords="215,54,180,59,180,53,214,49"/>
+<area shape="poly" title=" " alt="" coords="194,67,228,67,403,67,450,67,451,72,403,73,228,73,194,72"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2cae7364ded48841041ddf96acdf1a52" name="a2cae7364ded48841041ddf96acdf1a52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cae7364ded48841041ddf96acdf1a52">&#9670;&#160;</a></span>Transition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Transition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a>&#160;</td>
+          <td class="paramname"><em>next</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>状态转换 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">next</td><td>目标状态 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">引用了 <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a3b1c09ed3908d987b7452bdcdf3dc06f">PodStreamManager::state_</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#afa493fe555ea66007c4277cc7cb6c4cb">PodStreamManager::state_mtx_</a> , 以及 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a7d4b0b0707696a8449db2e07bfa0ebd9">PodStreamManager::StateToString()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classpod__stream_1_1PodStreamManager.html#abc31e4b338943779ee9b61cc81480bcb">PodStreamManager::Init()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a17a237457e57625296e6b24feb19c60a">PodStreamManager::Stop()</a> , 以及 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a78e2a4289515dd73f4ef63bc0b635ff4">PodStreamManager::WorkerLoop()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpod__stream_1_1PodStreamManager_a2cae7364ded48841041ddf96acdf1a52_cgraph.png" border="0" usemap="#aclasspod__stream_1_1PodStreamManager_a2cae7364ded48841041ddf96acdf1a52_cgraph" alt=""/></div>
+<map name="aclasspod__stream_1_1PodStreamManager_a2cae7364ded48841041ddf96acdf1a52_cgraph" id="aclasspod__stream_1_1PodStreamManager_a2cae7364ded48841041ddf96acdf1a52_cgraph">
+<area shape="rect" title="状态转换" alt="" coords="5,5,91,31"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a7d4b0b0707696a8449db2e07bfa0ebd9" title="获取状态名称字符串" alt="" coords="139,5,247,31"/>
+<area shape="poly" title=" " alt="" coords="91,15,125,15,125,21,91,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpod__stream_1_1PodStreamManager_a2cae7364ded48841041ddf96acdf1a52_icgraph.png" border="0" usemap="#aclasspod__stream_1_1PodStreamManager_a2cae7364ded48841041ddf96acdf1a52_icgraph" alt=""/></div>
+<map name="aclasspod__stream_1_1PodStreamManager_a2cae7364ded48841041ddf96acdf1a52_icgraph" id="aclasspod__stream_1_1PodStreamManager_a2cae7364ded48841041ddf96acdf1a52_icgraph">
+<area shape="rect" title="状态转换" alt="" coords="1287,55,1372,80"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#abc31e4b338943779ee9b61cc81480bcb" title="唯一初始化入口" alt="" coords="990,5,1033,31"/>
+<area shape="poly" title=" " alt="" coords="1275,53,1238,45,1122,29,1033,22,1033,16,1123,23,1239,39,1276,48"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a17a237457e57625296e6b24feb19c60a" title="停止管理器" alt="" coords="1164,55,1215,80"/>
+<area shape="poly" title=" " alt="" coords="1273,70,1215,70,1215,65,1273,65"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a78e2a4289515dd73f4ef63bc0b635ff4" title="工作线程主循环 (状态机调度)" alt="" coords="1140,104,1239,129"/>
+<area shape="poly" title=" " alt="" coords="1281,87,1227,106,1225,101,1279,82"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9f867de73f5925399e1d8beb02b64fad" title=" " alt="" coords="673,47,883,87"/>
+<area shape="poly" title=" " alt="" coords="977,28,874,50,873,45,976,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="451,47,625,87"/>
+<area shape="poly" title=" " alt="" coords="660,70,625,70,625,65,660,65"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="228,18,403,58"/>
+<area shape="poly" title=" " alt="" coords="437,57,402,52,403,47,437,51"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9d284775ccebba879a77a7144be22899" title=" " alt="" coords="5,47,180,87"/>
+<area shape="poly" title=" " alt="" coords="215,54,180,59,180,53,214,49"/>
+<area shape="poly" title=" " alt="" coords="194,67,228,67,403,67,450,67,451,72,403,73,228,73,194,72"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#af398b0ef543d575e98943d24d4c5cf9d" title=" " alt="" coords="931,55,1092,80"/>
+<area shape="poly" title=" " alt="" coords="1151,70,1092,70,1092,65,1151,65"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a07aaf1227e4d645f15e0a964f54ef291" title="启动管理器" alt="" coords="985,104,1038,129"/>
+<area shape="poly" title=" " alt="" coords="1126,119,1038,119,1038,114,1126,114"/>
+<area shape="poly" title=" " alt="" coords="971,111,872,90,873,85,972,106"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a78e2a4289515dd73f4ef63bc0b635ff4" name="a78e2a4289515dd73f4ef63bc0b635ff4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78e2a4289515dd73f4ef63bc0b635ff4">&#9670;&#160;</a></span>WorkerLoop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WorkerLoop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>工作线程主循环 (状态机调度) </p>
+<p>根据 is_connected 状态驱动状态机转换， 管理 MediaMTX 子进程的启动、监控和停止。 </p>
+
+<p class="reference">引用了 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a3f2bb5ac8864dff13fd29639f47bb341">PodStreamManager::config_</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a33887ecd917a38816dbeeafbb793fee6">PodStreamManager::GetBackoffDelayMs()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a27ab4385367163911ce44037f66bdb74">PodStreamManager::GetState()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a71adfc07786f18181996ed090cf89aa9">PodStreamManager::GetStatusString()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a41095fc3a389d9ad262c98f45386c049">PodStreamManager::is_connected_</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#af74a7903aabc239b3d2ba4bd085a9009">PodStreamManager::IsCrashingTooOften()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#aadc9131a3893e84d1adba546d702efae">PodStreamManager::IsMediaMtxAlive()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#aecc761f9ccc7c3285bcbfd0e1fcb7b94">PodStreamManager::kCooldownMs</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8ae3587c730cc1aa530fa4ddc9c4204e97">PodStreamManager::kError</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8af5137a026a4b2f3b1c8a21cfc60dd14b">PodStreamManager::kIdle</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8a25d5606fe07425ea73f245c48612c039">PodStreamManager::kReady</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8a2fc7fbf0d19294f85dd3880460dd3c0a">PodStreamManager::kRunning</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8a6681e9f78d4e277e2ad43c2d25ff5a0f">PodStreamManager::kStopping</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a078ab3a35796edb5a1c58d9e8952171f">PodStreamManager::last_stop_time_</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#ac6b6a9f5e61958d839ba3cf3c687104b">PodStreamManager::PrepareMediaMtxConfig()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a8554f10fb3372299f4ca373ca2b9d587">PodStreamManager::quit_</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a3f92ed4b1ba895dea1d6a2bd4fd7face">PodStreamManager::ReapChildIfNeeded()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a1b1892807f75154d39d6205a8bdee398">PodStreamManager::RecordCrash()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a0f7adabc71ed98cfd8f8524a691c5fa0">PodStreamManager::StartMediaMtx()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a3e0f667ecf232b80c9ede3733ddf8891">PodStreamManager::StopMediaMtx()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a2cae7364ded48841041ddf96acdf1a52">PodStreamManager::Transition()</a> , 以及 <a class="el" href="structpod__stream_1_1PodConfig.html#ac7a1fbead0ef156cd378134d6d0322d5">PodConfig::worker_period_ms</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a07aaf1227e4d645f15e0a964f54ef291">PodStreamManager::Start()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpod__stream_1_1PodStreamManager_a78e2a4289515dd73f4ef63bc0b635ff4_cgraph.png" border="0" usemap="#aclasspod__stream_1_1PodStreamManager_a78e2a4289515dd73f4ef63bc0b635ff4_cgraph" alt=""/></div>
+<map name="aclasspod__stream_1_1PodStreamManager_a78e2a4289515dd73f4ef63bc0b635ff4_cgraph" id="aclasspod__stream_1_1PodStreamManager_a78e2a4289515dd73f4ef63bc0b635ff4_cgraph">
+<area shape="rect" title="工作线程主循环 (状态机调度)" alt="" coords="5,256,104,281"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a33887ecd917a38816dbeeafbb793fee6" title="获取重试退避时间 (指数退避)" alt="" coords="166,5,317,31"/>
+<area shape="poly" title=" " alt="" coords="55,255,64,216,81,160,109,101,128,73,150,48,170,34,173,39,154,52,132,76,114,103,86,162,69,217,61,256"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a27ab4385367163911ce44037f66bdb74" title="获取当前状态" alt="" coords="421,69,500,95"/>
+<area shape="poly" title=" " alt="" coords="56,255,65,220,83,175,111,129,129,108,151,92,182,76,215,65,285,56,352,59,408,67,407,72,351,64,285,62,217,71,184,81,153,96,133,112,115,132,88,177,70,222,61,256"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a71adfc07786f18181996ed090cf89aa9" title="获取当前状态字符串 (调试用)" alt="" coords="179,107,303,132"/>
+<area shape="poly" title=" " alt="" coords="60,254,93,200,119,168,150,141,165,133,168,138,154,146,123,172,97,203,64,257"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#af74a7903aabc239b3d2ba4bd085a9009" title="检查是否处于崩溃过频状态" alt="" coords="168,205,315,231"/>
+<area shape="poly" title=" " alt="" coords="102,253,180,232,181,237,103,258"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#aadc9131a3893e84d1adba546d702efae" title="检查 MediaMTX 进程是否存活" alt="" coords="395,307,526,332"/>
+<area shape="poly" title=" " alt="" coords="105,269,209,277,331,291,388,301,388,307,330,297,208,283,104,274"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#ac6b6a9f5e61958d839ba3cf3c687104b" title="准备 MediaMTX 配置文件" alt="" coords="152,457,331,483"/>
+<area shape="poly" title=" " alt="" coords="62,281,72,314,90,358,117,405,134,426,154,444,160,449,157,453,150,448,130,429,113,408,85,361,67,316,57,282"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a3f92ed4b1ba895dea1d6a2bd4fd7face" title="回收子进程，避免僵尸进程" alt="" coords="387,357,534,383"/>
+<area shape="poly" title=" " alt="" coords="69,279,105,312,128,328,153,341,208,358,266,368,322,372,374,373,374,378,322,377,265,373,207,363,151,346,125,333,101,316,66,283"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a1b1892807f75154d39d6205a8bdee398" title="记录崩溃事件，用于崩溃频率统计" alt="" coords="189,507,293,532"/>
+<area shape="poly" title=" " alt="" coords="60,281,68,323,84,380,112,441,131,469,154,493,177,507,175,512,150,497,127,472,107,444,79,382,62,324,55,282"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a0f7adabc71ed98cfd8f8524a691c5fa0" title="启动 MediaMTX 子进程" alt="" coords="182,408,301,433"/>
+<area shape="poly" title=" " alt="" coords="65,280,99,331,124,361,154,386,178,400,176,405,150,391,120,365,95,334,61,283"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a3e0f667ecf232b80c9ede3733ddf8891" title="停止 MediaMTX 子进程" alt="" coords="183,307,299,332"/>
+<area shape="poly" title=" " alt="" coords="103,279,181,300,180,306,102,284"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a2cae7364ded48841041ddf96acdf1a52" title="状态转换" alt="" coords="199,156,284,181"/>
+<area shape="poly" title=" " alt="" coords="67,254,103,222,151,190,184,177,186,182,153,195,106,226,70,258"/>
+<area shape="poly" title=" " alt="" coords="303,106,408,88,408,93,304,111"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a7d4b0b0707696a8449db2e07bfa0ebd9" title="获取状态名称字符串" alt="" coords="407,144,515,169"/>
+<area shape="poly" title=" " alt="" coords="304,127,394,143,393,148,303,132"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a8f407a2f441b62b51ac681f115e15c45" title="生成 YAML 配置内容" alt="" coords="379,505,543,531"/>
+<area shape="poly" title=" " alt="" coords="301,480,389,500,388,505,300,485"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a7f644c8df943b3285960fecdc63f8cfd" title="获取 MediaMTX 配置文件路径" alt="" coords="403,456,518,481"/>
+<area shape="poly" title=" " alt="" coords="331,467,389,466,389,472,331,472"/>
+<area shape="rect" href="namespacepod__stream.html#ab269a640b6a59882381a79c848ce3efe" title="获取当前时间戳字符串" alt="" coords="591,505,795,531"/>
+<area shape="poly" title=" " alt="" coords="543,515,577,515,577,521,543,521"/>
+<area shape="poly" title=" " alt="" coords="261,405,313,375,378,342,399,334,401,339,380,347,316,379,264,410"/>
+<area shape="poly" title=" " alt="" coords="301,431,390,451,389,456,300,436"/>
+<area shape="poly" title=" " alt="" coords="297,405,391,383,393,388,298,410"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#aa1c370c6823e44aa0457571c181757d0" title="获取日志文件路径 (用于子进程输出重定向)" alt="" coords="401,407,520,432"/>
+<area shape="poly" title=" " alt="" coords="301,418,388,417,388,422,301,423"/>
+<area shape="poly" title=" " alt="" coords="300,317,382,317,382,322,300,322"/>
+<area shape="poly" title=" " alt="" coords="298,330,393,352,391,357,297,335"/>
+<area shape="poly" title=" " alt="" coords="284,164,393,158,393,163,285,169"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classpod__stream_1_1PodStreamManager_a78e2a4289515dd73f4ef63bc0b635ff4_icgraph.png" border="0" usemap="#aclasspod__stream_1_1PodStreamManager_a78e2a4289515dd73f4ef63bc0b635ff4_icgraph" alt=""/></div>
+<map name="aclasspod__stream_1_1PodStreamManager_a78e2a4289515dd73f4ef63bc0b635ff4_icgraph" id="aclasspod__stream_1_1PodStreamManager_a78e2a4289515dd73f4ef63bc0b635ff4_icgraph">
+<area shape="rect" title="工作线程主循环 (状态机调度)" alt="" coords="1032,42,1131,67"/>
+<area shape="rect" href="classpod__stream_1_1PodStreamManager.html#a07aaf1227e4d645f15e0a964f54ef291" title="启动管理器" alt="" coords="931,42,984,67"/>
+<area shape="poly" title=" " alt="" coords="1018,57,984,57,984,52,1018,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9f867de73f5925399e1d8beb02b64fad" title=" " alt="" coords="673,35,883,75"/>
+<area shape="poly" title=" " alt="" coords="917,57,883,57,883,52,917,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="451,35,625,75"/>
+<area shape="poly" title=" " alt="" coords="660,57,625,57,625,52,660,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="228,5,403,45"/>
+<area shape="poly" title=" " alt="" coords="437,44,402,39,403,34,437,39"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9d284775ccebba879a77a7144be22899" title=" " alt="" coords="5,35,180,75"/>
+<area shape="poly" title=" " alt="" coords="215,41,180,46,180,41,214,36"/>
+<area shape="poly" title=" " alt="" coords="194,54,228,55,403,55,450,54,451,59,403,60,228,60,194,60"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">结构体成员变量说明</h2>
+<a id="ac33ced7122eb6ff7a6a1349082bdd5c8" name="ac33ced7122eb6ff7a6a1349082bdd5c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac33ced7122eb6ff7a6a1349082bdd5c8">&#9670;&#160;</a></span>backoff_level_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int backoff_level_ {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>退避等级 (0=无退避, 1=1s, 2=2s, ...) </p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a33887ecd917a38816dbeeafbb793fee6">PodStreamManager::GetBackoffDelayMs()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a1b1892807f75154d39d6205a8bdee398">PodStreamManager::RecordCrash()</a> , 以及 <a class="el" href="classpod__stream_1_1PodStreamManager.html#aafffdd575dc3739920895f88125d53e6">PodStreamManager::ResetBackoff()</a>.</p>
+
+</div>
+</div>
+<a id="a3f2bb5ac8864dff13fd29639f47bb341" name="a3f2bb5ac8864dff13fd29639f47bb341"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f2bb5ac8864dff13fd29639f47bb341">&#9670;&#160;</a></span>config_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structpod__stream_1_1PodConfig.html">PodConfig</a> config_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a8f407a2f441b62b51ac681f115e15c45">PodStreamManager::GenerateYamlContent()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a7f644c8df943b3285960fecdc63f8cfd">PodStreamManager::GetConfigPath()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#aa1c370c6823e44aa0457571c181757d0">PodStreamManager::GetLogFilePath()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#abc31e4b338943779ee9b61cc81480bcb">PodStreamManager::Init()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#af74a7903aabc239b3d2ba4bd085a9009">PodStreamManager::IsCrashingTooOften()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a113223b951492e271c7bd457470b66f4">PodStreamManager::MonitorLoop()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a76cfd626e850fd6560c0e09c4bd897a1">PodStreamManager::ProbeConnectivityOnce()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a1b1892807f75154d39d6205a8bdee398">PodStreamManager::RecordCrash()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a07aaf1227e4d645f15e0a964f54ef291">PodStreamManager::Start()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a0f7adabc71ed98cfd8f8524a691c5fa0">PodStreamManager::StartMediaMtx()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a3e0f667ecf232b80c9ede3733ddf8891">PodStreamManager::StopMediaMtx()</a> , 以及 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a78e2a4289515dd73f4ef63bc0b635ff4">PodStreamManager::WorkerLoop()</a>.</p>
+
+</div>
+</div>
+<a id="a33aa7a165a3746b5b1a6618651441b14" name="a33aa7a165a3746b5b1a6618651441b14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33aa7a165a3746b5b1a6618651441b14">&#9670;&#160;</a></span>connect_fail_count_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;int&gt; connect_fail_count_ {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a113223b951492e271c7bd457470b66f4">PodStreamManager::MonitorLoop()</a>.</p>
+
+</div>
+</div>
+<a id="a3f87482e942bf7f10eaf05013798529a" name="a3f87482e942bf7f10eaf05013798529a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f87482e942bf7f10eaf05013798529a">&#9670;&#160;</a></span>connect_success_count_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;int&gt; connect_success_count_ {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a113223b951492e271c7bd457470b66f4">PodStreamManager::MonitorLoop()</a>.</p>
+
+</div>
+</div>
+<a id="ab7c330f2f1a5dd11211e3a88042ca643" name="ab7c330f2f1a5dd11211e3a88042ca643"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7c330f2f1a5dd11211e3a88042ca643">&#9670;&#160;</a></span>crash_mtx_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex crash_mtx_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a33887ecd917a38816dbeeafbb793fee6">PodStreamManager::GetBackoffDelayMs()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#af74a7903aabc239b3d2ba4bd085a9009">PodStreamManager::IsCrashingTooOften()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a1b1892807f75154d39d6205a8bdee398">PodStreamManager::RecordCrash()</a> , 以及 <a class="el" href="classpod__stream_1_1PodStreamManager.html#aafffdd575dc3739920895f88125d53e6">PodStreamManager::ResetBackoff()</a>.</p>
+
+</div>
+</div>
+<a id="a8777e63a10d3381a78f37a9470a838ed" name="a8777e63a10d3381a78f37a9470a838ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8777e63a10d3381a78f37a9470a838ed">&#9670;&#160;</a></span>crash_timestamps_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::chrono::steady_clock::time_point&gt; crash_timestamps_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classpod__stream_1_1PodStreamManager.html#af74a7903aabc239b3d2ba4bd085a9009">PodStreamManager::IsCrashingTooOften()</a> , 以及 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a1b1892807f75154d39d6205a8bdee398">PodStreamManager::RecordCrash()</a>.</p>
+
+</div>
+</div>
+<a id="abb35e640c7d0e6d7bc452ea7f591c471" name="abb35e640c7d0e6d7bc452ea7f591c471"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb35e640c7d0e6d7bc452ea7f591c471">&#9670;&#160;</a></span>inited_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;bool&gt; inited_ {false}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>是否已初始化 </p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classpod__stream_1_1PodStreamManager.html#abc31e4b338943779ee9b61cc81480bcb">PodStreamManager::Init()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a5098864e797f848db6cd446b98e3ea95">PodStreamManager::IsInited()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a07aaf1227e4d645f15e0a964f54ef291">PodStreamManager::Start()</a> , 以及 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a17a237457e57625296e6b24feb19c60a">PodStreamManager::Stop()</a>.</p>
+
+</div>
+</div>
+<a id="a41095fc3a389d9ad262c98f45386c049" name="a41095fc3a389d9ad262c98f45386c049"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41095fc3a389d9ad262c98f45386c049">&#9670;&#160;</a></span>is_connected_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;bool&gt; is_connected_ {false}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a71adfc07786f18181996ed090cf89aa9">PodStreamManager::GetStatusString()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#ac766f50854b7401ea00f5e40d89c77f1">PodStreamManager::IsConnected()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a113223b951492e271c7bd457470b66f4">PodStreamManager::MonitorLoop()</a> , 以及 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a78e2a4289515dd73f4ef63bc0b635ff4">PodStreamManager::WorkerLoop()</a>.</p>
+
+</div>
+</div>
+<a id="aecc761f9ccc7c3285bcbfd0e1fcb7b94" name="aecc761f9ccc7c3285bcbfd0e1fcb7b94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecc761f9ccc7c3285bcbfd0e1fcb7b94">&#9670;&#160;</a></span>kCooldownMs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int kCooldownMs = 2000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>停止后冷却时间 (毫秒) </p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a78e2a4289515dd73f4ef63bc0b635ff4">PodStreamManager::WorkerLoop()</a>.</p>
+
+</div>
+</div>
+<a id="a191ea42ee0c1e53aa7c4ec7d3a37a481" name="a191ea42ee0c1e53aa7c4ec7d3a37a481"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a191ea42ee0c1e53aa7c4ec7d3a37a481">&#9670;&#160;</a></span>kMaxBackoffLevel</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int kMaxBackoffLevel = 5</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>最大退避等级 (2^5 = 32秒) </p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a1b1892807f75154d39d6205a8bdee398">PodStreamManager::RecordCrash()</a>.</p>
+
+</div>
+</div>
+<a id="a078ab3a35796edb5a1c58d9e8952171f" name="a078ab3a35796edb5a1c58d9e8952171f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a078ab3a35796edb5a1c58d9e8952171f">&#9670;&#160;</a></span>last_stop_time_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::chrono::steady_clock::time_point last_stop_time_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>上次停止时间 </p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a78e2a4289515dd73f4ef63bc0b635ff4">PodStreamManager::WorkerLoop()</a>.</p>
+
+</div>
+</div>
+<a id="ab0710bf2acba478f00f709b1d622b4e4" name="ab0710bf2acba478f00f709b1d622b4e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0710bf2acba478f00f709b1d622b4e4">&#9670;&#160;</a></span>mediamtx_pid_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;pid_t&gt; mediamtx_pid_ {-1}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classpod__stream_1_1PodStreamManager.html#ad0a4f2d76c7db103769cfdbb06d943c5">PodStreamManager::GetMediaMtxPid()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a71adfc07786f18181996ed090cf89aa9">PodStreamManager::GetStatusString()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#aadc9131a3893e84d1adba546d702efae">PodStreamManager::IsMediaMtxAlive()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a3f92ed4b1ba895dea1d6a2bd4fd7face">PodStreamManager::ReapChildIfNeeded()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a0f7adabc71ed98cfd8f8524a691c5fa0">PodStreamManager::StartMediaMtx()</a> , 以及 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a3e0f667ecf232b80c9ede3733ddf8891">PodStreamManager::StopMediaMtx()</a>.</p>
+
+</div>
+</div>
+<a id="aa0e30499ef9b94fca024c2836108f6ef" name="aa0e30499ef9b94fca024c2836108f6ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0e30499ef9b94fca024c2836108f6ef">&#9670;&#160;</a></span>monitor_th_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::thread monitor_th_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a07aaf1227e4d645f15e0a964f54ef291">PodStreamManager::Start()</a> , 以及 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a17a237457e57625296e6b24feb19c60a">PodStreamManager::Stop()</a>.</p>
+
+</div>
+</div>
+<a id="a8554f10fb3372299f4ca373ca2b9d587" name="a8554f10fb3372299f4ca373ca2b9d587"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8554f10fb3372299f4ca373ca2b9d587">&#9670;&#160;</a></span>quit_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;bool&gt; quit_ {false}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>退出标志，通知线程退出 </p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classpod__stream_1_1PodStreamManager.html#abc31e4b338943779ee9b61cc81480bcb">PodStreamManager::Init()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a113223b951492e271c7bd457470b66f4">PodStreamManager::MonitorLoop()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a07aaf1227e4d645f15e0a964f54ef291">PodStreamManager::Start()</a>, <a class="el" href="classpod__stream_1_1PodStreamManager.html#a17a237457e57625296e6b24feb19c60a">PodStreamManager::Stop()</a> , 以及 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a78e2a4289515dd73f4ef63bc0b635ff4">PodStreamManager::WorkerLoop()</a>.</p>
+
+</div>
+</div>
+<a id="a3b1c09ed3908d987b7452bdcdf3dc06f" name="a3b1c09ed3908d987b7452bdcdf3dc06f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b1c09ed3908d987b7452bdcdf3dc06f">&#9670;&#160;</a></span>state_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a> state_ {<a class="el" href="classpod__stream_1_1PodStreamManager.html#a5d74787dedbc4e11c1ab15bf487e61f8af5137a026a4b2f3b1c8a21cfc60dd14b">State::kIdle</a>}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a27ab4385367163911ce44037f66bdb74">PodStreamManager::GetState()</a> , 以及 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a2cae7364ded48841041ddf96acdf1a52">PodStreamManager::Transition()</a>.</p>
+
+</div>
+</div>
+<a id="afa493fe555ea66007c4277cc7cb6c4cb" name="afa493fe555ea66007c4277cc7cb6c4cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa493fe555ea66007c4277cc7cb6c4cb">&#9670;&#160;</a></span>state_mtx_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex state_mtx_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a27ab4385367163911ce44037f66bdb74">PodStreamManager::GetState()</a> , 以及 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a2cae7364ded48841041ddf96acdf1a52">PodStreamManager::Transition()</a>.</p>
+
+</div>
+</div>
+<a id="aafde46164e80ff2a80c5d075a8aa0dc3" name="aafde46164e80ff2a80c5d075a8aa0dc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafde46164e80ff2a80c5d075a8aa0dc3">&#9670;&#160;</a></span>worker_th_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::thread worker_th_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a07aaf1227e4d645f15e0a964f54ef291">PodStreamManager::Start()</a> , 以及 <a class="el" href="classpod__stream_1_1PodStreamManager.html#a17a237457e57625296e6b24feb19c60a">PodStreamManager::Stop()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/util/my_mediamtx_monitor/v2/<a class="el" href="PodStreamManager_8h_source.html">PodStreamManager.h</a></li>
+<li>src/util/my_mediamtx_monitor/v2/<a class="el" href="PodStreamManager_8cpp.html">PodStreamManager.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>
