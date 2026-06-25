@@ -14,6 +14,7 @@
 #include "controller/ip/MyIPController.h"
 #include "controller/demo/edges/EdgesController.hpp"
 #include "controller/demo/tuna/TunaController.h"
+#include "controller/context/ContextController.h"
 
 // #include "oatpp/json/ObjectMapper.hpp" 
 #include "oatpp/parser/json/mapping/ObjectMapper.hpp" 
@@ -340,6 +341,10 @@ bool MyAPI::LoadAPIModel(
         MYLOG_INFO("MyAPI: 加载 IP API 模型");
         controller = my_api::ip_api::MyIPController::createShared(std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper));
         has_model = true;
+    } else if ("context" == model_name) {
+        MYLOG_INFO("MyAPI: 加载运行时上下文 API 模型");
+        controller = my_api::context_api::ContextController::createShared(std::static_pointer_cast<oatpp::data::mapping::ObjectMapper>(objectMapper));
+        has_model = true;
     } else {
         MYLOG_WARN("MyAPI: 未知的 API 模型名称: {}", model_name);
     }
@@ -385,7 +390,8 @@ void MyAPI::ServerThread(int port) {
             "script",
             "soft_healthy",
             "file_cache",
-            "ip"
+            "ip",
+            "context"
         };
         for (const auto& model_name : default_models) {
             if (LoadAPIModel(router, docEndpoints, objectMapper, model_name)) {
