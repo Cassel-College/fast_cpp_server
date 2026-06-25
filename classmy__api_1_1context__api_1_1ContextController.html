@@ -1,0 +1,679 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: ContextController类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacemy__api.html">my_api</a></li><li class="navelem"><a class="el" href="namespacemy__api_1_1context__api.html">context_api</a></li><li class="navelem"><a class="el" href="classmy__api_1_1context__api_1_1ContextController.html">ContextController</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pub-static-attribs">静态 Public 属性</a>  </div>
+  <div class="headertitle"><div class="title">ContextController类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="ContextController_8h_source.html">ContextController.h</a>&gt;</code></p>
+<div class="dynheader">
+类 ContextController 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__api_1_1context__api_1_1ContextController__inherit__graph.png" border="0" usemap="#aContextController_inherit__map" alt="Inheritance graph"/></div>
+<map name="aContextController_inherit__map" id="aContextController_inherit__map">
+<area shape="rect" title=" " alt="" coords="6,152,143,177"/>
+<area shape="rect" href="classmy__api_1_1base_1_1BaseApiController.html" title=" " alt="" coords="5,79,144,104"/>
+<area shape="poly" title=" " alt="" coords="77,118,77,152,72,152,72,118"/>
+<area shape="rect" title=" " alt="" coords="21,5,128,31"/>
+<area shape="poly" title=" " alt="" coords="77,44,77,79,72,79,72,44"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+ContextController 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__api_1_1context__api_1_1ContextController__coll__graph.png" border="0" usemap="#aContextController_coll__map" alt="Collaboration graph"/></div>
+<map name="aContextController_coll__map" id="aContextController_coll__map">
+<area shape="rect" title=" " alt="" coords="6,152,143,177"/>
+<area shape="rect" href="classmy__api_1_1base_1_1BaseApiController.html" title=" " alt="" coords="5,79,144,104"/>
+<area shape="poly" title=" " alt="" coords="77,118,77,152,72,152,72,118"/>
+<area shape="rect" title=" " alt="" coords="21,5,128,31"/>
+<area shape="poly" title=" " alt="" coords="77,44,77,79,72,79,72,44"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aef6503802618ed7dd2969056d95ab694" id="r_aef6503802618ed7dd2969056d95ab694"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__api_1_1context__api_1_1ContextController.html#aef6503802618ed7dd2969056d95ab694">ContextController</a> (const std::shared_ptr&lt; ObjectMapper &gt; &amp;objectMapper)</td></tr>
+<tr class="separator:aef6503802618ed7dd2969056d95ab694"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e8beed46bed19eb96b0ef70ebbc4a3e" id="r_a4e8beed46bed19eb96b0ef70ebbc4a3e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__api_1_1context__api_1_1ContextController.html#a4e8beed46bed19eb96b0ef70ebbc4a3e">ENDPOINT_INFO</a> (getOnline)</td></tr>
+<tr class="separator:a4e8beed46bed19eb96b0ef70ebbc4a3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad23b9a2e2972819cf6294cbe1bf3d068" id="r_ad23b9a2e2972819cf6294cbe1bf3d068"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__api_1_1context__api_1_1ContextController.html#ad23b9a2e2972819cf6294cbe1bf3d068">ENDPOINT</a> (&quot;GET&quot;, &quot;/v1/context/online&quot;, getOnline)</td></tr>
+<tr class="separator:ad23b9a2e2972819cf6294cbe1bf3d068"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afce5106fe9cdfcf722cdcf318ffa19b2" id="r_afce5106fe9cdfcf722cdcf318ffa19b2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__api_1_1context__api_1_1ContextController.html#afce5106fe9cdfcf722cdcf318ffa19b2">ENDPOINT_INFO</a> (getAllContext)</td></tr>
+<tr class="separator:afce5106fe9cdfcf722cdcf318ffa19b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a6931af8d4092dee9de3fd810d90b3a" id="r_a6a6931af8d4092dee9de3fd810d90b3a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__api_1_1context__api_1_1ContextController.html#a6a6931af8d4092dee9de3fd810d90b3a">ENDPOINT</a> (&quot;GET&quot;, &quot;/v1/context/all&quot;, getAllContext)</td></tr>
+<tr class="separator:a6a6931af8d4092dee9de3fd810d90b3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09a8400c2358b37a6b992f8e95e7fa08" id="r_a09a8400c2358b37a6b992f8e95e7fa08"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__api_1_1context__api_1_1ContextController.html#a09a8400c2358b37a6b992f8e95e7fa08">ENDPOINT_INFO</a> (getContext)</td></tr>
+<tr class="separator:a09a8400c2358b37a6b992f8e95e7fa08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1cb1fac925261c6a432c65fd6a3c5da" id="r_ae1cb1fac925261c6a432c65fd6a3c5da"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__api_1_1context__api_1_1ContextController.html#ae1cb1fac925261c6a432c65fd6a3c5da">ENDPOINT</a> (&quot;POST&quot;, &quot;/v1/context/get&quot;, getContext, BODY_DTO(oatpp::Object&lt; <a class="el" href="classmy__api_1_1dto_1_1ContextNameRequestDto.html">my_api::dto::ContextNameRequestDto</a> &gt;, requestDto))</td></tr>
+<tr class="separator:ae1cb1fac925261c6a432c65fd6a3c5da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad81f1925d0fbb8daf92d3461dd781594" id="r_ad81f1925d0fbb8daf92d3461dd781594"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__api_1_1context__api_1_1ContextController.html#ad81f1925d0fbb8daf92d3461dd781594">ENDPOINT_INFO</a> (setContext)</td></tr>
+<tr class="separator:ad81f1925d0fbb8daf92d3461dd781594"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac6724f9720a2bd2b62737d117b597d9" id="r_aac6724f9720a2bd2b62737d117b597d9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__api_1_1context__api_1_1ContextController.html#aac6724f9720a2bd2b62737d117b597d9">ENDPOINT</a> (&quot;POST&quot;, &quot;/v1/context/set&quot;, setContext, BODY_STRING(oatpp::String, body))</td></tr>
+<tr class="separator:aac6724f9720a2bd2b62737d117b597d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7d82610d97c619f75b73e6e7d6d3eed" id="r_ae7d82610d97c619f75b73e6e7d6d3eed"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__api_1_1context__api_1_1ContextController.html#ae7d82610d97c619f75b73e6e7d6d3eed">ENDPOINT_INFO</a> (updateContext)</td></tr>
+<tr class="separator:ae7d82610d97c619f75b73e6e7d6d3eed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09e5400295736cc3156fd63fa02845fc" id="r_a09e5400295736cc3156fd63fa02845fc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__api_1_1context__api_1_1ContextController.html#a09e5400295736cc3156fd63fa02845fc">ENDPOINT</a> (&quot;POST&quot;, &quot;/v1/context/update&quot;, updateContext, BODY_STRING(oatpp::String, body))</td></tr>
+<tr class="separator:a09e5400295736cc3156fd63fa02845fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acddb658d85f54a6f882cc0c0f6c541c8" id="r_acddb658d85f54a6f882cc0c0f6c541c8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__api_1_1context__api_1_1ContextController.html#acddb658d85f54a6f882cc0c0f6c541c8">ENDPOINT_INFO</a> (deleteContext)</td></tr>
+<tr class="separator:acddb658d85f54a6f882cc0c0f6c541c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af81992df34c2a32ff195cc2547626954" id="r_af81992df34c2a32ff195cc2547626954"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__api_1_1context__api_1_1ContextController.html#af81992df34c2a32ff195cc2547626954">ENDPOINT</a> (&quot;POST&quot;, &quot;/v1/context/delete&quot;, deleteContext, BODY_DTO(oatpp::Object&lt; <a class="el" href="classmy__api_1_1dto_1_1ContextNameRequestDto.html">my_api::dto::ContextNameRequestDto</a> &gt;, requestDto))</td></tr>
+<tr class="separator:af81992df34c2a32ff195cc2547626954"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classmy__api_1_1base_1_1BaseApiController"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmy__api_1_1base_1_1BaseApiController')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="classmy__api_1_1base_1_1BaseApiController.html">BaseApiController</a></td></tr>
+<tr class="memitem:abadbd0083ec16bdd603b36b46299a828 inherit pub_methods_classmy__api_1_1base_1_1BaseApiController" id="r_abadbd0083ec16bdd603b36b46299a828"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__api_1_1base_1_1BaseApiController.html#abadbd0083ec16bdd603b36b46299a828">BaseApiController</a> (const std::shared_ptr&lt; ObjectMapper &gt; &amp;objectMapper)</td></tr>
+<tr class="separator:abadbd0083ec16bdd603b36b46299a828 inherit pub_methods_classmy__api_1_1base_1_1BaseApiController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:ab9b0b07991bc36af9389960ffd751909" id="r_ab9b0b07991bc36af9389960ffd751909"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="classmy__api_1_1context__api_1_1ContextController.html">ContextController</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__api_1_1context__api_1_1ContextController.html#ab9b0b07991bc36af9389960ffd751909">createShared</a> (const std::shared_ptr&lt; ObjectMapper &gt; &amp;objectMapper)</td></tr>
+<tr class="separator:ab9b0b07991bc36af9389960ffd751909"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:ae5a68f16b01c73e6f3397631205b2081" id="r_ae5a68f16b01c73e6f3397631205b2081"><td class="memItemLeft" align="right" valign="top">static constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__api_1_1context__api_1_1ContextController.html#ae5a68f16b01c73e6f3397631205b2081">SWAGGER_TAG</a> = &quot;ContextController&quot;</td></tr>
+<tr class="separator:ae5a68f16b01c73e6f3397631205b2081"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_methods_classmy__api_1_1base_1_1BaseApiController"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classmy__api_1_1base_1_1BaseApiController')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="classmy__api_1_1base_1_1BaseApiController.html">BaseApiController</a></td></tr>
+<tr class="memitem:a57e672d81829e34c25dbe012d44d4fff inherit pro_methods_classmy__api_1_1base_1_1BaseApiController" id="r_a57e672d81829e34c25dbe012d44d4fff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemy__api_1_1base.html#a165d20d3aad92cb49d5c33b67531974c">OutgoingResponsePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__api_1_1base_1_1BaseApiController.html#a57e672d81829e34c25dbe012d44d4fff">ok</a> (const oatpp::String &amp;message)</td></tr>
+<tr class="separator:a57e672d81829e34c25dbe012d44d4fff inherit pro_methods_classmy__api_1_1base_1_1BaseApiController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfad371d9c9ed0b6a109bbc6452e2185 inherit pro_methods_classmy__api_1_1base_1_1BaseApiController" id="r_acfad371d9c9ed0b6a109bbc6452e2185"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:acfad371d9c9ed0b6a109bbc6452e2185 inherit pro_methods_classmy__api_1_1base_1_1BaseApiController"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacemy__api_1_1base.html#a165d20d3aad92cb49d5c33b67531974c">OutgoingResponsePtr</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmy__api_1_1base_1_1BaseApiController.html#acfad371d9c9ed0b6a109bbc6452e2185">okDto</a> (const T &amp;dto)</td></tr>
+<tr class="separator:acfad371d9c9ed0b6a109bbc6452e2185 inherit pro_methods_classmy__api_1_1base_1_1BaseApiController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cdc575411589b9f6f28ed9e7b15e9e1 inherit pro_methods_classmy__api_1_1base_1_1BaseApiController" id="r_a3cdc575411589b9f6f28ed9e7b15e9e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemy__api_1_1base.html#a165d20d3aad92cb49d5c33b67531974c">OutgoingResponsePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__api_1_1base_1_1BaseApiController.html#a3cdc575411589b9f6f28ed9e7b15e9e1">badRequest</a> (const oatpp::String &amp;message)</td></tr>
+<tr class="separator:a3cdc575411589b9f6f28ed9e7b15e9e1 inherit pro_methods_classmy__api_1_1base_1_1BaseApiController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e67577e3970293c32c1e368f7513660 inherit pro_methods_classmy__api_1_1base_1_1BaseApiController" id="r_a6e67577e3970293c32c1e368f7513660"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemy__api_1_1base.html#a165d20d3aad92cb49d5c33b67531974c">OutgoingResponsePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__api_1_1base_1_1BaseApiController.html#a6e67577e3970293c32c1e368f7513660">jsonResponse</a> (const oatpp::web::protocol::http::Status &amp;status, const nlohmann::json &amp;body)</td></tr>
+<tr class="separator:a6e67577e3970293c32c1e368f7513660 inherit pro_methods_classmy__api_1_1base_1_1BaseApiController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a182a2064395126bd889666c41f1917ff inherit pro_methods_classmy__api_1_1base_1_1BaseApiController" id="r_a182a2064395126bd889666c41f1917ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemy__api_1_1base.html#a165d20d3aad92cb49d5c33b67531974c">OutgoingResponsePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__api_1_1base_1_1BaseApiController.html#a182a2064395126bd889666c41f1917ff">jsonOk</a> (const nlohmann::json &amp;data=nlohmann::json::object(), const std::string &amp;message=&quot;OK&quot;)</td></tr>
+<tr class="separator:a182a2064395126bd889666c41f1917ff inherit pro_methods_classmy__api_1_1base_1_1BaseApiController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f1f11dedcb1932f7aa2b347bedca2f3 inherit pro_methods_classmy__api_1_1base_1_1BaseApiController" id="r_a0f1f11dedcb1932f7aa2b347bedca2f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemy__api_1_1base.html#a165d20d3aad92cb49d5c33b67531974c">OutgoingResponsePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__api_1_1base_1_1BaseApiController.html#a0f1f11dedcb1932f7aa2b347bedca2f3">jsonError</a> (int code, const std::string &amp;message, const nlohmann::json &amp;details=nlohmann::json())</td></tr>
+<tr class="separator:a0f1f11dedcb1932f7aa2b347bedca2f3 inherit pro_methods_classmy__api_1_1base_1_1BaseApiController"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="aef6503802618ed7dd2969056d95ab694" name="aef6503802618ed7dd2969056d95ab694"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef6503802618ed7dd2969056d95ab694">&#9670;&#160;</a></span>ContextController()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmy__api_1_1context__api_1_1ContextController.html">ContextController</a> </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; ObjectMapper &gt; &amp;&#160;</td>
+          <td class="paramname"><em>objectMapper</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="ab9b0b07991bc36af9389960ffd751909" name="ab9b0b07991bc36af9389960ffd751909"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9b0b07991bc36af9389960ffd751909">&#9670;&#160;</a></span>createShared()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="classmy__api_1_1context__api_1_1ContextController.html">ContextController</a> &gt; createShared </td>
+          <td>(</td>
+          <td class="paramtype">const std::shared_ptr&lt; ObjectMapper &gt; &amp;&#160;</td>
+          <td class="paramname"><em>objectMapper</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__api_1_1MyAPI.html#a13b0cc79c93e86a6b5ee8941ec8f3f4e">MyAPI::LoadAPIModel()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__api_1_1context__api_1_1ContextController_ab9b0b07991bc36af9389960ffd751909_icgraph.png" border="0" usemap="#aclassmy__api_1_1context__api_1_1ContextController_ab9b0b07991bc36af9389960ffd751909_icgraph" alt=""/></div>
+<map name="aclassmy__api_1_1context__api_1_1ContextController_ab9b0b07991bc36af9389960ffd751909_icgraph" id="aclassmy__api_1_1context__api_1_1ContextController_ab9b0b07991bc36af9389960ffd751909_icgraph">
+<area shape="rect" title=" " alt="" coords="1632,42,1740,67"/>
+<area shape="rect" href="classmy__api_1_1MyAPI.html#a13b0cc79c93e86a6b5ee8941ec8f3f4e" title=" " alt="" coords="1365,42,1584,67"/>
+<area shape="poly" title=" " alt="" coords="1618,57,1584,57,1584,52,1618,52"/>
+<area shape="rect" href="classmy__api_1_1MyAPI.html#a55f541ba9221c961a1be4f4a2febbbe6" title=" " alt="" coords="1103,42,1317,67"/>
+<area shape="poly" title=" " alt="" coords="1352,57,1317,57,1317,52,1352,52"/>
+<area shape="rect" href="classmy__api_1_1MyAPI.html#a51185a12bde3286ec060b522b5252cba" title=" " alt="" coords="896,42,1055,67"/>
+<area shape="poly" title=" " alt="" coords="1089,57,1055,57,1055,52,1089,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a94c1d1c5924ef14f6226b73cca5d3a99" title=" " alt="" coords="673,35,848,75"/>
+<area shape="poly" title=" " alt="" coords="882,57,848,57,848,52,882,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="451,35,625,75"/>
+<area shape="poly" title=" " alt="" coords="660,57,625,57,625,52,660,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="228,5,403,45"/>
+<area shape="poly" title=" " alt="" coords="437,44,402,39,403,34,437,39"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9d284775ccebba879a77a7144be22899" title=" " alt="" coords="5,35,180,75"/>
+<area shape="poly" title=" " alt="" coords="215,41,180,46,180,41,214,36"/>
+<area shape="poly" title=" " alt="" coords="194,54,228,55,403,55,450,54,451,59,403,60,228,60,194,60"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6a6931af8d4092dee9de3fd810d90b3a" name="a6a6931af8d4092dee9de3fd810d90b3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a6931af8d4092dee9de3fd810d90b3a">&#9670;&#160;</a></span>ENDPOINT() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ENDPOINT </td>
+          <td>(</td>
+          <td class="paramtype">&quot;GET&quot;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&quot;/v1/context/all&quot;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">getAllContext&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad23b9a2e2972819cf6294cbe1bf3d068" name="ad23b9a2e2972819cf6294cbe1bf3d068"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad23b9a2e2972819cf6294cbe1bf3d068">&#9670;&#160;</a></span>ENDPOINT() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ENDPOINT </td>
+          <td>(</td>
+          <td class="paramtype">&quot;GET&quot;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&quot;/v1/context/online&quot;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">getOnline&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af81992df34c2a32ff195cc2547626954" name="af81992df34c2a32ff195cc2547626954"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af81992df34c2a32ff195cc2547626954">&#9670;&#160;</a></span>ENDPOINT() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ENDPOINT </td>
+          <td>(</td>
+          <td class="paramtype">&quot;POST&quot;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&quot;/v1/context/delete&quot;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">deleteContext&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BODY_DTO(oatpp::Object&lt; <a class="el" href="classmy__api_1_1dto_1_1ContextNameRequestDto.html">my_api::dto::ContextNameRequestDto</a> &gt;, requestDto)&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae1cb1fac925261c6a432c65fd6a3c5da" name="ae1cb1fac925261c6a432c65fd6a3c5da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1cb1fac925261c6a432c65fd6a3c5da">&#9670;&#160;</a></span>ENDPOINT() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ENDPOINT </td>
+          <td>(</td>
+          <td class="paramtype">&quot;POST&quot;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&quot;/v1/context/get&quot;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">getContext&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BODY_DTO(oatpp::Object&lt; <a class="el" href="classmy__api_1_1dto_1_1ContextNameRequestDto.html">my_api::dto::ContextNameRequestDto</a> &gt;, requestDto)&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aac6724f9720a2bd2b62737d117b597d9" name="aac6724f9720a2bd2b62737d117b597d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac6724f9720a2bd2b62737d117b597d9">&#9670;&#160;</a></span>ENDPOINT() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ENDPOINT </td>
+          <td>(</td>
+          <td class="paramtype">&quot;POST&quot;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&quot;/v1/context/set&quot;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">setContext&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BODY_STRING(oatpp::String, body)&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a09e5400295736cc3156fd63fa02845fc" name="a09e5400295736cc3156fd63fa02845fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09e5400295736cc3156fd63fa02845fc">&#9670;&#160;</a></span>ENDPOINT() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ENDPOINT </td>
+          <td>(</td>
+          <td class="paramtype">&quot;POST&quot;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&quot;/v1/context/update&quot;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">updateContext&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BODY_STRING(oatpp::String, body)&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acddb658d85f54a6f882cc0c0f6c541c8" name="acddb658d85f54a6f882cc0c0f6c541c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acddb658d85f54a6f882cc0c0f6c541c8">&#9670;&#160;</a></span>ENDPOINT_INFO() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ENDPOINT_INFO </td>
+          <td>(</td>
+          <td class="paramtype">deleteContext&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classmy__api_1_1context__api_1_1ContextController.html#ae5a68f16b01c73e6f3397631205b2081">ContextController::SWAGGER_TAG</a>.</p>
+
+</div>
+</div>
+<a id="afce5106fe9cdfcf722cdcf318ffa19b2" name="afce5106fe9cdfcf722cdcf318ffa19b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afce5106fe9cdfcf722cdcf318ffa19b2">&#9670;&#160;</a></span>ENDPOINT_INFO() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ENDPOINT_INFO </td>
+          <td>(</td>
+          <td class="paramtype">getAllContext&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classmy__api_1_1context__api_1_1ContextController.html#ae5a68f16b01c73e6f3397631205b2081">ContextController::SWAGGER_TAG</a>.</p>
+
+</div>
+</div>
+<a id="a09a8400c2358b37a6b992f8e95e7fa08" name="a09a8400c2358b37a6b992f8e95e7fa08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09a8400c2358b37a6b992f8e95e7fa08">&#9670;&#160;</a></span>ENDPOINT_INFO() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ENDPOINT_INFO </td>
+          <td>(</td>
+          <td class="paramtype">getContext&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classmy__api_1_1context__api_1_1ContextController.html#ae5a68f16b01c73e6f3397631205b2081">ContextController::SWAGGER_TAG</a>.</p>
+
+</div>
+</div>
+<a id="a4e8beed46bed19eb96b0ef70ebbc4a3e" name="a4e8beed46bed19eb96b0ef70ebbc4a3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e8beed46bed19eb96b0ef70ebbc4a3e">&#9670;&#160;</a></span>ENDPOINT_INFO() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ENDPOINT_INFO </td>
+          <td>(</td>
+          <td class="paramtype">getOnline&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classmy__api_1_1context__api_1_1ContextController.html#ae5a68f16b01c73e6f3397631205b2081">ContextController::SWAGGER_TAG</a>.</p>
+
+</div>
+</div>
+<a id="ad81f1925d0fbb8daf92d3461dd781594" name="ad81f1925d0fbb8daf92d3461dd781594"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad81f1925d0fbb8daf92d3461dd781594">&#9670;&#160;</a></span>ENDPOINT_INFO() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ENDPOINT_INFO </td>
+          <td>(</td>
+          <td class="paramtype">setContext&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classmy__api_1_1context__api_1_1ContextController.html#ae5a68f16b01c73e6f3397631205b2081">ContextController::SWAGGER_TAG</a>.</p>
+
+</div>
+</div>
+<a id="ae7d82610d97c619f75b73e6e7d6d3eed" name="ae7d82610d97c619f75b73e6e7d6d3eed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7d82610d97c619f75b73e6e7d6d3eed">&#9670;&#160;</a></span>ENDPOINT_INFO() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ENDPOINT_INFO </td>
+          <td>(</td>
+          <td class="paramtype">updateContext&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classmy__api_1_1context__api_1_1ContextController.html#ae5a68f16b01c73e6f3397631205b2081">ContextController::SWAGGER_TAG</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">结构体成员变量说明</h2>
+<a id="ae5a68f16b01c73e6f3397631205b2081" name="ae5a68f16b01c73e6f3397631205b2081"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5a68f16b01c73e6f3397631205b2081">&#9670;&#160;</a></span>SWAGGER_TAG</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr const char* SWAGGER_TAG = &quot;ContextController&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__api_1_1context__api_1_1ContextController.html#acddb658d85f54a6f882cc0c0f6c541c8">ContextController::ENDPOINT_INFO()</a>, <a class="el" href="classmy__api_1_1context__api_1_1ContextController.html#afce5106fe9cdfcf722cdcf318ffa19b2">ContextController::ENDPOINT_INFO()</a>, <a class="el" href="classmy__api_1_1context__api_1_1ContextController.html#a09a8400c2358b37a6b992f8e95e7fa08">ContextController::ENDPOINT_INFO()</a>, <a class="el" href="classmy__api_1_1context__api_1_1ContextController.html#a4e8beed46bed19eb96b0ef70ebbc4a3e">ContextController::ENDPOINT_INFO()</a>, <a class="el" href="classmy__api_1_1context__api_1_1ContextController.html#ad81f1925d0fbb8daf92d3461dd781594">ContextController::ENDPOINT_INFO()</a> , 以及 <a class="el" href="classmy__api_1_1context__api_1_1ContextController.html#ae7d82610d97c619f75b73e6e7d6d3eed">ContextController::ENDPOINT_INFO()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/util/my_api/controller/context/<a class="el" href="ContextController_8h_source.html">ContextController.h</a></li>
+<li>src/util/my_api/controller/context/<a class="el" href="ContextController_8cpp.html">ContextController.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

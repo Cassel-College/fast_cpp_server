@@ -25,7 +25,7 @@ var searchData=
   ['read_5fuint64_22',['read_uint64',['../namespaceMyLEHelper.html#a667c1abe794e00bc71bd284fa3075a5a',1,'MyLEHelper::read_uint64()'],['../namespaceMyBEHelper.html#a667c1abe794e00bc71bd284fa3075a5a',1,'MyBEHelper::read_uint64()']]],
   ['read_5fuint8_23',['read_uint8',['../namespaceMyLEHelper.html#ace4e209762c0aa38e23ee5cd56559d0f',1,'MyLEHelper::read_uint8()'],['../namespaceMyBEHelper.html#ace4e209762c0aa38e23ee5cd56559d0f',1,'MyBEHelper::read_uint8()']]],
   ['readbigendianint16_24',['readBigEndianInt16',['../classSearchlightControl_1_1SearchlightState.html#a5621a12d9b832233066b0bfcc659b83f',1,'SearchlightControl::SearchlightState']]],
-  ['readbytes_25',['readbytes',['../classmy__serial_1_1MySerial.html#a32648ca68d036f6d6037aed7c5c6ed55',1,'my_serial::MySerial::ReadBytes()'],['../classSearchlightControl_1_1SerialPort.html#aa7662471664629a306f0d0f2b0afa227',1,'SearchlightControl::SerialPort::readBytes()']]],
+  ['readbytes_25',['readbytes',['../classSearchlightControl_1_1SerialPort.html#aa7662471664629a306f0d0f2b0afa227',1,'SearchlightControl::SerialPort::readBytes()'],['../classmy__serial_1_1MySerial.html#a32648ca68d036f6d6037aed7c5c6ed55',1,'my_serial::MySerial::ReadBytes()']]],
   ['readdata_26',['readData',['../classtools_1_1SimpleTcpClient.html#a6eb9b16b75e6d7ddb37b516ea3dc14fb',1,'tools::SimpleTcpClient']]],
   ['readline_27',['ReadLine',['../classmy__serial_1_1MySerial.html#a4d8002cea46a6aee65767508dcd8f376',1,'my_serial::MySerial']]],
   ['readserialloop_28',['readSerialLoop',['../classSearchlightControl_1_1Searchlight.html#a97818289ea8ee202051dcc42312a5d43',1,'SearchlightControl::Searchlight']]],

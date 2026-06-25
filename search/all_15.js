@@ -6,7 +6,7 @@ var searchData=
   ['validatemaxlength_3',['validateMaxLength',['../namespacemy__api_1_1validators.html#acc073d1ba59283f188c7691f80f8ddc0',1,'my_api::validators']]],
   ['validatenotempty_4',['validateNotEmpty',['../namespacemy__api_1_1validators.html#af43ed50585fb72e55bb2859766a0a84f',1,'my_api::validators']]],
   ['validatepath_5',['ValidatePath',['../classmy__cache_1_1MyCache.html#ab64c29c6e26337191f07a7f9976ba9f0',1,'my_cache::MyCache']]],
-  ['value_6',['value',['../structmy__cache_1_1CacheResult.html#a4fc7f59e3113e19697159919a5aad095',1,'my_cache::CacheResult']]],
+  ['value_6',['value',['../structmy__cache_1_1CacheResult.html#a4fc7f59e3113e19697159919a5aad095',1,'my_cache::CacheResult::value'],['../structmy__comm_1_1ContextEntry.html#a394a0f5e729559776a0a69acff465bc3',1,'my_comm::ContextEntry::value']]],
   ['vehicle_5f_7',['vehicle_',['../classmy__edge_1_1demo_1_1TUNAEdge.html#a96f9ad4daae3ab474eac3d0e8b11fe0f',1,'my_edge::demo::TUNAEdge::vehicle_'],['../classmy__edge_1_1demo_1_1UNAEdge.html#a96f9ad4daae3ab474eac3d0e8b11fe0f',1,'my_edge::demo::UNAEdge::vehicle_']]],
   ['velocity_5fx_8',['velocity_x',['../structfly__control_1_1HeartbeatData.html#a8361d77d5bc3e4a8973af0e17b701d98',1,'fly_control::HeartbeatData']]],
   ['velocity_5fy_9',['velocity_y',['../structfly__control_1_1HeartbeatData.html#a5906e26f66dd2a6949408513966f5c34',1,'fly_control::HeartbeatData']]],
