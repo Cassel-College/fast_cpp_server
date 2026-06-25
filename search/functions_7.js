@@ -15,5 +15,5 @@ var searchData=
   ['heartbeatcontroller_12',['HeartBeatController',['../classmy__api_1_1heartbeat_1_1HeartBeatController.html#a2a46c2730521e0429e5f5a1e8befbe5f',1,'my_api::heartbeat::HeartBeatController']]],
   ['heartbeatmanager_13',['HeartbeatManager',['../classmy__heartbeat_1_1HeartbeatManager.html#acc9c585e319edd36884e14172c830525',1,'my_heartbeat::HeartbeatManager']]],
   ['heartbeattojson_14',['HeartbeatToJson',['../classfly__control_1_1MyFlyControl.html#a093865e9033d9eb0433a7857de4cccea',1,'fly_control::MyFlyControl']]],
-  ['home_15',['home',['../classSearchlightControl_1_1Searchlight.html#af47d63e3739fa2d0c7f0fac48d35d27c',1,'SearchlightControl::Searchlight::home()'],['../classSearchlightControl_1_1SearchlightManager.html#af47d63e3739fa2d0c7f0fac48d35d27c',1,'SearchlightControl::SearchlightManager::home()'],['../classviewlink_1_1ViewLinkClient.html#a76455a367cf9352f94489866243e3dfd',1,'viewlink::ViewLinkClient::Home()']]]
+  ['home_15',['home',['../classviewlink_1_1ViewLinkClient.html#a76455a367cf9352f94489866243e3dfd',1,'viewlink::ViewLinkClient::Home()'],['../classSearchlightControl_1_1Searchlight.html#af47d63e3739fa2d0c7f0fac48d35d27c',1,'SearchlightControl::Searchlight::home()'],['../classSearchlightControl_1_1SearchlightManager.html#af47d63e3739fa2d0c7f0fac48d35d27c',1,'SearchlightControl::SearchlightManager::home()']]]
 ];

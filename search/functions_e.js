@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['ok_0',['ok',['../structmy__cache_1_1CacheResult_3_01void_01_4.html#aa7e07ffe21ad6b4c71a0d22c65f30347',1,'my_cache::CacheResult&lt; void &gt;::Ok()'],['../structmy__cache_1_1CacheResult.html#aa7e07ffe21ad6b4c71a0d22c65f30347',1,'my_cache::CacheResult::Ok()'],['../structmy__edge_1_1SubmitResult.html#a03cb7eaa663dc83af68bc28a596d09e6',1,'my_edge::SubmitResult::ok()'],['../classmy__api_1_1base_1_1BaseApiController.html#a57e672d81829e34c25dbe012d44d4fff',1,'my_api::base::BaseApiController::ok(const oatpp::String &amp;message)']]],
+  ['ok_0',['ok',['../structmy__edge_1_1SubmitResult.html#a03cb7eaa663dc83af68bc28a596d09e6',1,'my_edge::SubmitResult::ok()'],['../classmy__api_1_1base_1_1BaseApiController.html#a57e672d81829e34c25dbe012d44d4fff',1,'my_api::base::BaseApiController::ok()'],['../structmy__cache_1_1CacheResult_3_01void_01_4.html#aa7e07ffe21ad6b4c71a0d22c65f30347',1,'my_cache::CacheResult&lt; void &gt;::Ok()'],['../structmy__cache_1_1CacheResult.html#aa7e07ffe21ad6b4c71a0d22c65f30347',1,'my_cache::CacheResult::Ok()']]],
   ['okdto_1',['okDto',['../classmy__api_1_1base_1_1BaseApiController.html#acfad371d9c9ed0b6a109bbc6452e2185',1,'my_api::base::BaseApiController']]],
   ['on_5fconnect_5fstatic_2',['on_connect_static',['../classmy__mqtt_1_1MqttService.html#ad2edbd47af142d850196dc58d4a6ae7e',1,'my_mqtt::MqttService']]],
   ['on_5fdisconnect_5fstatic_3',['on_disconnect_static',['../classmy__mqtt_1_1MqttService.html#a87990c1b86e2aa6fb8ca548c82acc2bd',1,'my_mqtt::MqttService']]],
