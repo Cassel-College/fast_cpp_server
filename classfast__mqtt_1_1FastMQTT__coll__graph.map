@@ -1,0 +1,13 @@
+<map id="FastMQTT" name="FastMQTT">
+<area shape="rect" id="Node000001" title="FastMQTT 通信模块单例。" alt="" coords="209,181,296,207"/>
+<area shape="rect" id="Node000002" href="$structfast__mqtt_1_1FastMQTTConfig.html" title="FastMQTT 完整配置。对应 JSON 中的 mqtt 节点。" alt="" coords="125,93,252,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="208,128,246,179,242,182,203,131"/>
+<area shape="rect" id="Node000003" href="$structfast__mqtt_1_1BrokerConfig.html" title="Broker 连接配置。对应 JSON 中的 mqtt.broker 节点。" alt="" coords="5,5,111,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="88,36,172,91,169,95,85,40"/>
+<area shape="rect" id="Node000004" href="$structfast__mqtt_1_1ThreadConfig.html" title="线程 / 队列配置。对应 JSON 中的 mqtt.thread 节点。" alt="" coords="135,5,243,31"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="191,45,191,93,186,93,186,45"/>
+<area shape="rect" id="Node000005" href="$structfast__mqtt_1_1DefaultConfig.html" title="默认发布参数。对应 JSON 中的 mqtt.default 节点。" alt="" coords="267,5,377,31"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="294,40,208,95,205,91,291,36"/>
+<area shape="rect" id="Node000006" href="$structfast__mqtt_1_1Statistics.html" title="运行期统计计数器。全部使用原子类型，保证多线程读写安全。" alt="" coords="277,93,359,119"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="304,131,283,159,264,183,260,179,279,156,299,128"/>
+</map>

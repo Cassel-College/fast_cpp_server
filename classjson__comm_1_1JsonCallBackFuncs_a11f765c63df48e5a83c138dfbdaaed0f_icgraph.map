@@ -1,0 +1,19 @@
+<map id="BuildSummary" name="BuildSummary">
+<area shape="rect" id="Node000001" title="把一段 JSON 对象转成简短的中文摘要，便于日志打印。" alt="" coords="904,35,1023,60"/>
+<area shape="rect" id="Node000002" href="$classjson__comm_1_1JsonCallBackFuncs.html#ab7c6c43aaa67b3c3d986a64e6b4b0846" title="打印一条已解析的 JSON 消息（统一日志格式）。" alt="" coords="695,5,842,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="890,39,842,32,843,26,891,34"/>
+<area shape="rect" id="Node000005" href="$classjson__comm_1_1JsonComm.html#a856a64b86e3bef51b8047a6b217f620d" title="打印一条已解析的 JSON 消息（统一中文日志格式）。" alt="" coords="681,55,856,95"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="891,60,857,65,856,60,890,55"/>
+<area shape="rect" id="Node000003" href="$classjson__comm_1_1JsonCallBackFuncs.html#a6ea3784f87d826a3e59fd81081c32f8a" title="真正构造某个 topic 的回调闭包。" alt="" coords="491,5,601,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="682,21,601,21,601,15,682,15"/>
+<area shape="rect" id="Node000004" href="$classjson__comm_1_1JsonCallBackFuncs.html#a2beda3ee013fd72138448b6b8f7d80de" title="根据 topic 获取一个 MessageCallback。" alt="" coords="246,5,401,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="477,21,401,21,401,15,477,15"/>
+<area shape="rect" id="Node000006" href="$classjson__comm_1_1JsonComm.html#af97e4cf4c2001476d655589b6444d362" title="FastMQTT 收到原始消息后的统一入口：解析 JSON、打印、分发。" alt="" coords="459,55,633,95"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="668,78,633,78,633,73,668,73"/>
+<area shape="rect" id="Node000007" href="$classjson__comm_1_1JsonComm.html#a50023406ef4034aa47eb0ad9e8950852" title="在持锁状态下订阅某个主题，并把本模块的分发回调注册到 FastMQTT。" alt="" coords="236,55,411,95"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="445,78,411,78,411,73,445,73"/>
+<area shape="rect" id="Node000008" href="$classjson__comm_1_1JsonComm.html#aa694e7023b63239e8eb3ed9c67b497c6" title="注册一个“解析后的 JSON 回调”。" alt="" coords="5,23,188,63"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="222,64,188,59,188,54,223,58"/>
+<area shape="rect" id="Node000009" href="$classjson__comm_1_1JsonComm.html#aa70efaa4751ac6d5d54dce88fe725e0a" title="启动模块并对配置中的主题注册订阅回调。" alt="" coords="9,87,184,127"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="222,92,184,98,184,92,221,87"/>
+</map>

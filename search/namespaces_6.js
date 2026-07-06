@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['viewlink_0',['viewlink',['../namespaceviewlink.html',1,'']]]
+  ['searchlightcontrol_0',['SearchlightControl',['../namespaceSearchlightControl.html',1,'']]]
 ];

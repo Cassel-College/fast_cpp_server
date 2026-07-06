@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_comm/mqtt/2536pb/CSY2536Comm.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_1a464db7147701c56b7cbed9c804870f.html">my_comm</a></li><li class="navelem"><a class="el" href="dir_15b437d233a2e9352a16a225c3ef6723.html">mqtt</a></li><li class="navelem"><a class="el" href="dir_4d664fca397eb0628a3155e8dcde905c.html">2536pb</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">CSY2536Comm.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="CSY2536Comm_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// =============================================================================</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// 文件：CSY2536Comm.h</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// 模块：my_csy2536_protocol</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// 说明：把 FastMQTT 订阅接入系统的协议桥接模块。</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// 设计定位：</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">//   - FastMQTT 只负责 MQTT 传输；</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//   - 本模块负责“订阅主题 + 解析 CS-Y2536 MsgInfo + 打印/分发”。</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">//</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">// 当前版本：</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//   1. 只做消息解析与中文日志打印；</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">//   2. 预留后续把解析后的消息交给系统其它模块的扩展点；</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//   3. 不负责启动 FastMQTT，要求调用方提前把 FastMQTT 拉起来。</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">// =============================================================================</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;nlohmann/json.hpp&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;CS-Y2536.pb.h&quot;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &quot;<a class="code" href="FastMQTTTypes_8hpp.html">FastMQTTTypes.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacecsy2536.html">csy2536</a> {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="foldopen" id="foldopen00045" data-start="{" data-end="};">
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classcsy2536_1_1CSY2536Comm.html">   45</a></span><span class="keyword">class </span><a class="code hl_class" href="classcsy2536_1_1CSY2536Comm.html">CSY2536Comm</a> final {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classcsy2536_1_1CSY2536Comm.html#a3bb318272bc637c819a7bcb9522108b0">   47</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="classcsy2536_1_1CSY2536Comm.html#a3bb318272bc637c819a7bcb9522108b0">ParsedCallback</a> = std::function&lt;void(<span class="keyword">const</span> std::string&amp; topic,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                                                  <span class="keyword">const</span> CSY2536::MsgInfo&amp; msg)&gt;;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">static</span> <a class="code hl_class" href="classcsy2536_1_1CSY2536Comm.html">CSY2536Comm</a>&amp; <a class="code hl_function" href="classcsy2536_1_1CSY2536Comm.html#a8b90694475edf18f29d503a0d5d939a3">GetInstance</a>();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classcsy2536_1_1CSY2536Comm.html#a07607e693724018801610a5911d69c79">   52</a></span>    <a class="code hl_function" href="classcsy2536_1_1CSY2536Comm.html#a07607e693724018801610a5911d69c79">CSY2536Comm</a>(<span class="keyword">const</span> <a class="code hl_class" href="classcsy2536_1_1CSY2536Comm.html">CSY2536Comm</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classcsy2536_1_1CSY2536Comm.html#ab6dec3d631849bda90027254b4f235f7">   53</a></span>    <a class="code hl_class" href="classcsy2536_1_1CSY2536Comm.html">CSY2536Comm</a>&amp; <a class="code hl_function" href="classcsy2536_1_1CSY2536Comm.html#ab6dec3d631849bda90027254b4f235f7">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classcsy2536_1_1CSY2536Comm.html">CSY2536Comm</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classcsy2536_1_1CSY2536Comm.html#ab13744853f6632f2f81caa1c987ba354">   54</a></span>    <a class="code hl_function" href="classcsy2536_1_1CSY2536Comm.html#ab13744853f6632f2f81caa1c987ba354">CSY2536Comm</a>(<a class="code hl_class" href="classcsy2536_1_1CSY2536Comm.html">CSY2536Comm</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classcsy2536_1_1CSY2536Comm.html#ae567766798c2dca4e36eff2e09b8a860">   55</a></span>    <a class="code hl_class" href="classcsy2536_1_1CSY2536Comm.html">CSY2536Comm</a>&amp; <a class="code hl_function" href="classcsy2536_1_1CSY2536Comm.html#ae567766798c2dca4e36eff2e09b8a860">operator=</a>(<a class="code hl_class" href="classcsy2536_1_1CSY2536Comm.html">CSY2536Comm</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classcsy2536_1_1CSY2536Comm.html#ad900d283719c941fc54e9ca0295fa811">Initialize</a>(<span class="keyword">const</span> nlohmann::json&amp; config = nlohmann::json::object());</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classcsy2536_1_1CSY2536Comm.html#a4d64e590011365a85461efb48e3d5896">AppendDefaultTopics</a>();</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classcsy2536_1_1CSY2536Comm.html#aa70efaa4751ac6d5d54dce88fe725e0a">Start</a>();</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classcsy2536_1_1CSY2536Comm.html#a17a237457e57625296e6b24feb19c60a">Stop</a>();</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classcsy2536_1_1CSY2536Comm.html#ad201152b05beda61e51e3594ff07c8fe">IsRunning</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    std::uint64_t <a class="code hl_function" href="classcsy2536_1_1CSY2536Comm.html#aa694e7023b63239e8eb3ed9c67b497c6">RegisterParsedCallback</a>(<span class="keyword">const</span> std::string&amp; topic,</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                                         <a class="code hl_typedef" href="classcsy2536_1_1CSY2536Comm.html#a3bb318272bc637c819a7bcb9522108b0">ParsedCallback</a> callback,</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                                         <span class="keywordtype">int</span> qos = 1);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    std::uint64_t <a class="code hl_function" href="classcsy2536_1_1CSY2536Comm.html#a369689ccd5e4c844937ea070ff56f550">RegisterCallbackToFastMQTT</a>(<span class="keyword">const</span> std::string&amp; topic,</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                                             <a class="code hl_typedef" href="namespacefast__mqtt.html#a7eb2b5237d75666c254f0440ae198104">fast_mqtt::MessageCallback</a> callback,</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                                             <span class="keywordtype">int</span> qos = 1);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classcsy2536_1_1CSY2536Comm.html#a4c09adaa9e87778ebba37c4c02a1bbac">Setting2536CallbackForTopic</a>();</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classcsy2536_1_1CSY2536Comm.html#af3718c41da8a7081dd430e70a8c5ff2d">ClearTopic</a>(<span class="keyword">const</span> std::string&amp; topic);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classcsy2536_1_1CSY2536Comm.html#aa7d76b766faf39c1652b6617eac5fe20">ClearAll</a>();</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    nlohmann::json <a class="code hl_function" href="classcsy2536_1_1CSY2536Comm.html#a3076ced35abaa2979e9a10b401256c25">Status</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="classcsy2536_1_1CSY2536Comm.html#a9db7bdf7d148e0bba0256c8b55a61e6b">  144</a></span>    nlohmann::json <a class="code hl_function" href="classcsy2536_1_1CSY2536Comm.html#a9db7bdf7d148e0bba0256c8b55a61e6b">GetStatus</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="classcsy2536_1_1CSY2536Comm.html#a3076ced35abaa2979e9a10b401256c25">Status</a>(); }</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="keyword">static</span> std::string <a class="code hl_function" href="classcsy2536_1_1CSY2536Comm.html#a1f59aab72f9b1b4a2e22c6055db96681">BuildSummary</a>(<span class="keyword">const</span> CSY2536::MsgInfo&amp; msg);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="classcsy2536_1_1CSY2536Comm.html#a6b938418c1953b3f856d0cf973b63004">  152</a></span>    <a class="code hl_function" href="classcsy2536_1_1CSY2536Comm.html#a6b938418c1953b3f856d0cf973b63004">CSY2536Comm</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="classcsy2536_1_1CSY2536Comm.html#a93f08baac1d6f9f95667d5afdb7b61da">  153</a></span>    <a class="code hl_function" href="classcsy2536_1_1CSY2536Comm.html#a93f08baac1d6f9f95667d5afdb7b61da">~CSY2536Comm</a>();</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="foldopen" id="foldopen00155" data-start="{" data-end="};">
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="structcsy2536_1_1CSY2536Comm_1_1TopicEntry.html">  155</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structcsy2536_1_1CSY2536Comm_1_1TopicEntry.html">TopicEntry</a> {</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="structcsy2536_1_1CSY2536Comm_1_1TopicEntry.html#a9c7fe3819e8e22b540791cd0bc84572b">  156</a></span>        std::uint64_t <a class="code hl_variable" href="structcsy2536_1_1CSY2536Comm_1_1TopicEntry.html#a9c7fe3819e8e22b540791cd0bc84572b">handle</a>{0};</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="structcsy2536_1_1CSY2536Comm_1_1TopicEntry.html#a64dd38cc7ef3b7327905c1ff918f2c52">  157</a></span>        std::string <a class="code hl_variable" href="structcsy2536_1_1CSY2536Comm_1_1TopicEntry.html#a64dd38cc7ef3b7327905c1ff918f2c52">topic</a>;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="structcsy2536_1_1CSY2536Comm_1_1TopicEntry.html#a35738099155a0e4f54050da474bab2e7">  158</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="structcsy2536_1_1CSY2536Comm_1_1TopicEntry.html#a35738099155a0e4f54050da474bab2e7">qos</a>{1};</div>
+<div class="foldopen" id="foldopen00159" data-start="{" data-end="};">
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="structcsy2536_1_1CSY2536Comm_1_1TopicEntry_1_1CallbackItem.html">  159</a></span>        <span class="keyword">struct </span><a class="code hl_struct" href="structcsy2536_1_1CSY2536Comm_1_1TopicEntry_1_1CallbackItem.html">CallbackItem</a> {</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno"><a class="line" href="structcsy2536_1_1CSY2536Comm_1_1TopicEntry_1_1CallbackItem.html#a9c7fe3819e8e22b540791cd0bc84572b">  160</a></span>            std::uint64_t <a class="code hl_variable" href="structcsy2536_1_1CSY2536Comm_1_1TopicEntry_1_1CallbackItem.html#a9c7fe3819e8e22b540791cd0bc84572b">handle</a>{0};</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="structcsy2536_1_1CSY2536Comm_1_1TopicEntry_1_1CallbackItem.html#a5cbe0bea3c6eb5574d7b65b30c562e66">  161</a></span>            <a class="code hl_typedef" href="classcsy2536_1_1CSY2536Comm.html#a3bb318272bc637c819a7bcb9522108b0">ParsedCallback</a> <a class="code hl_variable" href="structcsy2536_1_1CSY2536Comm_1_1TopicEntry_1_1CallbackItem.html#a5cbe0bea3c6eb5574d7b65b30c562e66">callback</a>;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        };</div>
+</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="structcsy2536_1_1CSY2536Comm_1_1TopicEntry.html#a331a68663cc54ad962e7b2c07fff2c28">  163</a></span>        std::vector&lt;CallbackItem&gt; <a class="code hl_variable" href="structcsy2536_1_1CSY2536Comm_1_1TopicEntry.html#a331a68663cc54ad962e7b2c07fff2c28">callbacks</a>;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    };</div>
+</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classcsy2536_1_1CSY2536Comm.html#a50023406ef4034aa47eb0ad9e8950852">SubscribeTopicLocked</a>(<span class="keyword">const</span> std::string&amp; topic, <span class="keywordtype">int</span> qos);</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classcsy2536_1_1CSY2536Comm.html#a8acd145dcccc3e4f1c244601d048fe89">UnsubscribeTopicLocked</a>(<span class="keyword">const</span> std::string&amp; topic);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classcsy2536_1_1CSY2536Comm.html#af97e4cf4c2001476d655589b6444d362">OnRawMessage</a>(<span class="keyword">const</span> std::string&amp; topic_filter, <span class="keyword">const</span> <a class="code hl_struct" href="structfast__mqtt_1_1Message.html">fast_mqtt::Message</a>&amp; msg);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classcsy2536_1_1CSY2536Comm.html#a4995be425cc16b549b1a9f1b43cefa79">PrintMessage</a>(<span class="keyword">const</span> std::string&amp; topic_filter,</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>                      <span class="keyword">const</span> <a class="code hl_struct" href="structfast__mqtt_1_1Message.html">fast_mqtt::Message</a>&amp; msg,</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                      <span class="keyword">const</span> CSY2536::MsgInfo&amp; msg_info) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno"><a class="line" href="classcsy2536_1_1CSY2536Comm.html#a281b5ec791338d4378e22ef44a51b4a1">  174</a></span>    <span class="keyword">mutable</span> std::mutex <a class="code hl_variable" href="classcsy2536_1_1CSY2536Comm.html#a281b5ec791338d4378e22ef44a51b4a1">mutex_</a>;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="classcsy2536_1_1CSY2536Comm.html#aef7436a220692b5b863db4e9d8b870a3">  175</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="classcsy2536_1_1CSY2536Comm.html#aef7436a220692b5b863db4e9d8b870a3">initialized_</a>{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno"><a class="line" href="classcsy2536_1_1CSY2536Comm.html#aa440b02cc99bc6923375b0c9db2f2dca">  176</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="classcsy2536_1_1CSY2536Comm.html#aa440b02cc99bc6923375b0c9db2f2dca">running_</a>{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno"><a class="line" href="classcsy2536_1_1CSY2536Comm.html#ad07afb53bebf4ed4c194da85946790e0">  177</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="classcsy2536_1_1CSY2536Comm.html#ad07afb53bebf4ed4c194da85946790e0">enable_</a>{<span class="keyword">true</span>};</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno"><a class="line" href="classcsy2536_1_1CSY2536Comm.html#ae65d403c140e87589e71590d94a27ea4">  178</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="classcsy2536_1_1CSY2536Comm.html#ae65d403c140e87589e71590d94a27ea4">default_qos_</a>{1};</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno"><a class="line" href="classcsy2536_1_1CSY2536Comm.html#a6aad631dd2fc0661181ff063817e91b8">  179</a></span>    std::vector&lt;std::string&gt; <a class="code hl_variable" href="classcsy2536_1_1CSY2536Comm.html#a6aad631dd2fc0661181ff063817e91b8">topics_</a>{<span class="stringliteral">&quot;/2536/default&quot;</span>};</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="classcsy2536_1_1CSY2536Comm.html#ae6cccdbd2578f397ebd097e287578657">  180</a></span>    std::map&lt;std::string, TopicEntry&gt; <a class="code hl_variable" href="classcsy2536_1_1CSY2536Comm.html#ae6cccdbd2578f397ebd097e287578657">topic_entries_</a>;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="classcsy2536_1_1CSY2536Comm.html#ae40552de510075ef686bf87d329d2c64">  181</a></span>    std::uint64_t <a class="code hl_variable" href="classcsy2536_1_1CSY2536Comm.html#ae40552de510075ef686bf87d329d2c64">next_handle_</a>{1};</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>};</div>
+</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>}  <span class="comment">// namespace csy2536</span></div>
+<div class="ttc" id="aFastMQTTTypes_8hpp_html"><div class="ttname"><a href="FastMQTTTypes_8hpp.html">FastMQTTTypes.hpp</a></div></div>
+<div class="ttc" id="aclasscsy2536_1_1CSY2536Comm_html"><div class="ttname"><a href="classcsy2536_1_1CSY2536Comm.html">csy2536::CSY2536Comm</a></div><div class="ttdoc">CS-Y2536 通信桥接模块。</div><div class="ttdef"><b>Definition</b> CSY2536Comm.h:45</div></div>
+<div class="ttc" id="aclasscsy2536_1_1CSY2536Comm_html_a07607e693724018801610a5911d69c79"><div class="ttname"><a href="classcsy2536_1_1CSY2536Comm.html#a07607e693724018801610a5911d69c79">csy2536::CSY2536Comm::CSY2536Comm</a></div><div class="ttdeci">CSY2536Comm(const CSY2536Comm &amp;)=delete</div></div>
+<div class="ttc" id="aclasscsy2536_1_1CSY2536Comm_html_a17a237457e57625296e6b24feb19c60a"><div class="ttname"><a href="classcsy2536_1_1CSY2536Comm.html#a17a237457e57625296e6b24feb19c60a">csy2536::CSY2536Comm::Stop</a></div><div class="ttdeci">void Stop()</div><div class="ttdoc">停止模块并注销已注册回调。</div><div class="ttdef"><b>Definition</b> CSY2536Comm.cpp:86</div></div>
+<div class="ttc" id="aclasscsy2536_1_1CSY2536Comm_html_a1f59aab72f9b1b4a2e22c6055db96681"><div class="ttname"><a href="classcsy2536_1_1CSY2536Comm.html#a1f59aab72f9b1b4a2e22c6055db96681">csy2536::CSY2536Comm::BuildSummary</a></div><div class="ttdeci">static std::string BuildSummary(const CSY2536::MsgInfo &amp;msg)</div><div class="ttdoc">将 MsgInfo 解析为可读摘要，便于日志打印和测试。</div><div class="ttdef"><b>Definition</b> CSY2536Comm.cpp:183</div></div>
+<div class="ttc" id="aclasscsy2536_1_1CSY2536Comm_html_a281b5ec791338d4378e22ef44a51b4a1"><div class="ttname"><a href="classcsy2536_1_1CSY2536Comm.html#a281b5ec791338d4378e22ef44a51b4a1">csy2536::CSY2536Comm::mutex_</a></div><div class="ttdeci">std::mutex mutex_</div><div class="ttdef"><b>Definition</b> CSY2536Comm.h:174</div></div>
+<div class="ttc" id="aclasscsy2536_1_1CSY2536Comm_html_a3076ced35abaa2979e9a10b401256c25"><div class="ttname"><a href="classcsy2536_1_1CSY2536Comm.html#a3076ced35abaa2979e9a10b401256c25">csy2536::CSY2536Comm::Status</a></div><div class="ttdeci">nlohmann::json Status() const</div><div class="ttdoc">获取当前状态摘要。</div><div class="ttdef"><b>Definition</b> CSY2536Comm.cpp:158</div></div>
+<div class="ttc" id="aclasscsy2536_1_1CSY2536Comm_html_a369689ccd5e4c844937ea070ff56f550"><div class="ttname"><a href="classcsy2536_1_1CSY2536Comm.html#a369689ccd5e4c844937ea070ff56f550">csy2536::CSY2536Comm::RegisterCallbackToFastMQTT</a></div><div class="ttdeci">std::uint64_t RegisterCallbackToFastMQTT(const std::string &amp;topic, fast_mqtt::MessageCallback callback, int qos=1)</div><div class="ttdoc">注册一个回调到 FastMQTT。</div><div class="ttdef"><b>Definition</b> CSY2536Comm.cpp:250</div></div>
+<div class="ttc" id="aclasscsy2536_1_1CSY2536Comm_html_a3bb318272bc637c819a7bcb9522108b0"><div class="ttname"><a href="classcsy2536_1_1CSY2536Comm.html#a3bb318272bc637c819a7bcb9522108b0">csy2536::CSY2536Comm::ParsedCallback</a></div><div class="ttdeci">std::function&lt; void(const std::string &amp;topic, const CSY2536::MsgInfo &amp;msg)&gt; ParsedCallback</div><div class="ttdef"><b>Definition</b> CSY2536Comm.h:48</div></div>
+<div class="ttc" id="aclasscsy2536_1_1CSY2536Comm_html_a4995be425cc16b549b1a9f1b43cefa79"><div class="ttname"><a href="classcsy2536_1_1CSY2536Comm.html#a4995be425cc16b549b1a9f1b43cefa79">csy2536::CSY2536Comm::PrintMessage</a></div><div class="ttdeci">void PrintMessage(const std::string &amp;topic_filter, const fast_mqtt::Message &amp;msg, const CSY2536::MsgInfo &amp;msg_info) const</div><div class="ttdef"><b>Definition</b> CSY2536Comm.cpp:299</div></div>
+<div class="ttc" id="aclasscsy2536_1_1CSY2536Comm_html_a4c09adaa9e87778ebba37c4c02a1bbac"><div class="ttname"><a href="classcsy2536_1_1CSY2536Comm.html#a4c09adaa9e87778ebba37c4c02a1bbac">csy2536::CSY2536Comm::Setting2536CallbackForTopic</a></div><div class="ttdeci">bool Setting2536CallbackForTopic()</div><div class="ttdoc">为指定主题设置 2536 回调。</div><div class="ttdef"><b>Definition</b> CSY2536Comm.cpp:231</div></div>
+<div class="ttc" id="aclasscsy2536_1_1CSY2536Comm_html_a4d64e590011365a85461efb48e3d5896"><div class="ttname"><a href="classcsy2536_1_1CSY2536Comm.html#a4d64e590011365a85461efb48e3d5896">csy2536::CSY2536Comm::AppendDefaultTopics</a></div><div class="ttdeci">bool AppendDefaultTopics()</div><div class="ttdoc">初始化订阅的主题。</div><div class="ttdef"><b>Definition</b> CSY2536Comm.cpp:46</div></div>
+<div class="ttc" id="aclasscsy2536_1_1CSY2536Comm_html_a50023406ef4034aa47eb0ad9e8950852"><div class="ttname"><a href="classcsy2536_1_1CSY2536Comm.html#a50023406ef4034aa47eb0ad9e8950852">csy2536::CSY2536Comm::SubscribeTopicLocked</a></div><div class="ttdeci">void SubscribeTopicLocked(const std::string &amp;topic, int qos)</div><div class="ttdef"><b>Definition</b> CSY2536Comm.cpp:209</div></div>
+<div class="ttc" id="aclasscsy2536_1_1CSY2536Comm_html_a6aad631dd2fc0661181ff063817e91b8"><div class="ttname"><a href="classcsy2536_1_1CSY2536Comm.html#a6aad631dd2fc0661181ff063817e91b8">csy2536::CSY2536Comm::topics_</a></div><div class="ttdeci">std::vector&lt; std::string &gt; topics_</div><div class="ttdef"><b>Definition</b> CSY2536Comm.h:179</div></div>
+<div class="ttc" id="aclasscsy2536_1_1CSY2536Comm_html_a6b938418c1953b3f856d0cf973b63004"><div class="ttname"><a href="classcsy2536_1_1CSY2536Comm.html#a6b938418c1953b3f856d0cf973b63004">csy2536::CSY2536Comm::CSY2536Comm</a></div><div class="ttdeci">CSY2536Comm()=default</div></div>
+<div class="ttc" id="aclasscsy2536_1_1CSY2536Comm_html_a8acd145dcccc3e4f1c244601d048fe89"><div class="ttname"><a href="classcsy2536_1_1CSY2536Comm.html#a8acd145dcccc3e4f1c244601d048fe89">csy2536::CSY2536Comm::UnsubscribeTopicLocked</a></div><div class="ttdeci">void UnsubscribeTopicLocked(const std::string &amp;topic)</div><div class="ttdef"><b>Definition</b> CSY2536Comm.cpp:256</div></div>
+<div class="ttc" id="aclasscsy2536_1_1CSY2536Comm_html_a8b90694475edf18f29d503a0d5d939a3"><div class="ttname"><a href="classcsy2536_1_1CSY2536Comm.html#a8b90694475edf18f29d503a0d5d939a3">csy2536::CSY2536Comm::GetInstance</a></div><div class="ttdeci">static CSY2536Comm &amp; GetInstance()</div><div class="ttdef"><b>Definition</b> CSY2536Comm.cpp:17</div></div>
+<div class="ttc" id="aclasscsy2536_1_1CSY2536Comm_html_a93f08baac1d6f9f95667d5afdb7b61da"><div class="ttname"><a href="classcsy2536_1_1CSY2536Comm.html#a93f08baac1d6f9f95667d5afdb7b61da">csy2536::CSY2536Comm::~CSY2536Comm</a></div><div class="ttdeci">~CSY2536Comm()</div></div>
+<div class="ttc" id="aclasscsy2536_1_1CSY2536Comm_html_a9db7bdf7d148e0bba0256c8b55a61e6b"><div class="ttname"><a href="classcsy2536_1_1CSY2536Comm.html#a9db7bdf7d148e0bba0256c8b55a61e6b">csy2536::CSY2536Comm::GetStatus</a></div><div class="ttdeci">nlohmann::json GetStatus() const</div><div class="ttdoc">兼容旧接口：返回与 Status() 相同的状态摘要。</div><div class="ttdef"><b>Definition</b> CSY2536Comm.h:144</div></div>
+<div class="ttc" id="aclasscsy2536_1_1CSY2536Comm_html_aa440b02cc99bc6923375b0c9db2f2dca"><div class="ttname"><a href="classcsy2536_1_1CSY2536Comm.html#aa440b02cc99bc6923375b0c9db2f2dca">csy2536::CSY2536Comm::running_</a></div><div class="ttdeci">bool running_</div><div class="ttdef"><b>Definition</b> CSY2536Comm.h:176</div></div>
+<div class="ttc" id="aclasscsy2536_1_1CSY2536Comm_html_aa694e7023b63239e8eb3ed9c67b497c6"><div class="ttname"><a href="classcsy2536_1_1CSY2536Comm.html#aa694e7023b63239e8eb3ed9c67b497c6">csy2536::CSY2536Comm::RegisterParsedCallback</a></div><div class="ttdeci">std::uint64_t RegisterParsedCallback(const std::string &amp;topic, ParsedCallback callback, int qos=1)</div><div class="ttdoc">注册一个解析后的消息回调。</div><div class="ttdef"><b>Definition</b> CSY2536Comm.cpp:109</div></div>
+<div class="ttc" id="aclasscsy2536_1_1CSY2536Comm_html_aa70efaa4751ac6d5d54dce88fe725e0a"><div class="ttname"><a href="classcsy2536_1_1CSY2536Comm.html#aa70efaa4751ac6d5d54dce88fe725e0a">csy2536::CSY2536Comm::Start</a></div><div class="ttdeci">bool Start()</div><div class="ttdoc">启动模块并注册订阅回调。</div><div class="ttdef"><b>Definition</b> CSY2536Comm.cpp:54</div></div>
+<div class="ttc" id="aclasscsy2536_1_1CSY2536Comm_html_aa7d76b766faf39c1652b6617eac5fe20"><div class="ttname"><a href="classcsy2536_1_1CSY2536Comm.html#aa7d76b766faf39c1652b6617eac5fe20">csy2536::CSY2536Comm::ClearAll</a></div><div class="ttdeci">void ClearAll()</div><div class="ttdoc">清空所有回调并注销所有订阅。</div><div class="ttdef"><b>Definition</b> CSY2536Comm.cpp:145</div></div>
+<div class="ttc" id="aclasscsy2536_1_1CSY2536Comm_html_ab13744853f6632f2f81caa1c987ba354"><div class="ttname"><a href="classcsy2536_1_1CSY2536Comm.html#ab13744853f6632f2f81caa1c987ba354">csy2536::CSY2536Comm::CSY2536Comm</a></div><div class="ttdeci">CSY2536Comm(CSY2536Comm &amp;&amp;)=delete</div></div>
+<div class="ttc" id="aclasscsy2536_1_1CSY2536Comm_html_ab6dec3d631849bda90027254b4f235f7"><div class="ttname"><a href="classcsy2536_1_1CSY2536Comm.html#ab6dec3d631849bda90027254b4f235f7">csy2536::CSY2536Comm::operator=</a></div><div class="ttdeci">CSY2536Comm &amp; operator=(const CSY2536Comm &amp;)=delete</div></div>
+<div class="ttc" id="aclasscsy2536_1_1CSY2536Comm_html_ad07afb53bebf4ed4c194da85946790e0"><div class="ttname"><a href="classcsy2536_1_1CSY2536Comm.html#ad07afb53bebf4ed4c194da85946790e0">csy2536::CSY2536Comm::enable_</a></div><div class="ttdeci">bool enable_</div><div class="ttdef"><b>Definition</b> CSY2536Comm.h:177</div></div>
+<div class="ttc" id="aclasscsy2536_1_1CSY2536Comm_html_ad201152b05beda61e51e3594ff07c8fe"><div class="ttname"><a href="classcsy2536_1_1CSY2536Comm.html#ad201152b05beda61e51e3594ff07c8fe">csy2536::CSY2536Comm::IsRunning</a></div><div class="ttdeci">bool IsRunning() const</div><div class="ttdoc">是否已启动。</div><div class="ttdef"><b>Definition</b> CSY2536Comm.cpp:104</div></div>
+<div class="ttc" id="aclasscsy2536_1_1CSY2536Comm_html_ad900d283719c941fc54e9ca0295fa811"><div class="ttname"><a href="classcsy2536_1_1CSY2536Comm.html#ad900d283719c941fc54e9ca0295fa811">csy2536::CSY2536Comm::Initialize</a></div><div class="ttdeci">bool Initialize(const nlohmann::json &amp;config=nlohmann::json::object())</div><div class="ttdoc">初始化模块配置。</div><div class="ttdef"><b>Definition</b> CSY2536Comm.cpp:24</div></div>
+<div class="ttc" id="aclasscsy2536_1_1CSY2536Comm_html_ae40552de510075ef686bf87d329d2c64"><div class="ttname"><a href="classcsy2536_1_1CSY2536Comm.html#ae40552de510075ef686bf87d329d2c64">csy2536::CSY2536Comm::next_handle_</a></div><div class="ttdeci">std::uint64_t next_handle_</div><div class="ttdef"><b>Definition</b> CSY2536Comm.h:181</div></div>
+<div class="ttc" id="aclasscsy2536_1_1CSY2536Comm_html_ae567766798c2dca4e36eff2e09b8a860"><div class="ttname"><a href="classcsy2536_1_1CSY2536Comm.html#ae567766798c2dca4e36eff2e09b8a860">csy2536::CSY2536Comm::operator=</a></div><div class="ttdeci">CSY2536Comm &amp; operator=(CSY2536Comm &amp;&amp;)=delete</div></div>
+<div class="ttc" id="aclasscsy2536_1_1CSY2536Comm_html_ae65d403c140e87589e71590d94a27ea4"><div class="ttname"><a href="classcsy2536_1_1CSY2536Comm.html#ae65d403c140e87589e71590d94a27ea4">csy2536::CSY2536Comm::default_qos_</a></div><div class="ttdeci">int default_qos_</div><div class="ttdef"><b>Definition</b> CSY2536Comm.h:178</div></div>
+<div class="ttc" id="aclasscsy2536_1_1CSY2536Comm_html_ae6cccdbd2578f397ebd097e287578657"><div class="ttname"><a href="classcsy2536_1_1CSY2536Comm.html#ae6cccdbd2578f397ebd097e287578657">csy2536::CSY2536Comm::topic_entries_</a></div><div class="ttdeci">std::map&lt; std::string, TopicEntry &gt; topic_entries_</div><div class="ttdef"><b>Definition</b> CSY2536Comm.h:180</div></div>
+<div class="ttc" id="aclasscsy2536_1_1CSY2536Comm_html_aef7436a220692b5b863db4e9d8b870a3"><div class="ttname"><a href="classcsy2536_1_1CSY2536Comm.html#aef7436a220692b5b863db4e9d8b870a3">csy2536::CSY2536Comm::initialized_</a></div><div class="ttdeci">bool initialized_</div><div class="ttdef"><b>Definition</b> CSY2536Comm.h:175</div></div>
+<div class="ttc" id="aclasscsy2536_1_1CSY2536Comm_html_af3718c41da8a7081dd430e70a8c5ff2d"><div class="ttname"><a href="classcsy2536_1_1CSY2536Comm.html#af3718c41da8a7081dd430e70a8c5ff2d">csy2536::CSY2536Comm::ClearTopic</a></div><div class="ttdeci">void ClearTopic(const std::string &amp;topic)</div><div class="ttdoc">清空某个 Topic 的全部回调（包括内部订阅）。</div><div class="ttdef"><b>Definition</b> CSY2536Comm.cpp:138</div></div>
+<div class="ttc" id="aclasscsy2536_1_1CSY2536Comm_html_af97e4cf4c2001476d655589b6444d362"><div class="ttname"><a href="classcsy2536_1_1CSY2536Comm.html#af97e4cf4c2001476d655589b6444d362">csy2536::CSY2536Comm::OnRawMessage</a></div><div class="ttdeci">void OnRawMessage(const std::string &amp;topic_filter, const fast_mqtt::Message &amp;msg)</div><div class="ttdef"><b>Definition</b> CSY2536Comm.cpp:267</div></div>
+<div class="ttc" id="anamespacecsy2536_html"><div class="ttname"><a href="namespacecsy2536.html">csy2536</a></div><div class="ttdef"><b>Definition</b> CSY2536CallBackFuncs.cpp:7</div></div>
+<div class="ttc" id="anamespacefast__mqtt_html_a7eb2b5237d75666c254f0440ae198104"><div class="ttname"><a href="namespacefast__mqtt.html#a7eb2b5237d75666c254f0440ae198104">fast_mqtt::MessageCallback</a></div><div class="ttdeci">std::function&lt; void(const Message &amp;)&gt; MessageCallback</div><div class="ttdoc">业务回调函数类型。</div><div class="ttdef"><b>Definition</b> FastMQTTTypes.hpp:177</div></div>
+<div class="ttc" id="astructcsy2536_1_1CSY2536Comm_1_1TopicEntry_1_1CallbackItem_html"><div class="ttname"><a href="structcsy2536_1_1CSY2536Comm_1_1TopicEntry_1_1CallbackItem.html">csy2536::CSY2536Comm::TopicEntry::CallbackItem</a></div><div class="ttdef"><b>Definition</b> CSY2536Comm.h:159</div></div>
+<div class="ttc" id="astructcsy2536_1_1CSY2536Comm_1_1TopicEntry_1_1CallbackItem_html_a5cbe0bea3c6eb5574d7b65b30c562e66"><div class="ttname"><a href="structcsy2536_1_1CSY2536Comm_1_1TopicEntry_1_1CallbackItem.html#a5cbe0bea3c6eb5574d7b65b30c562e66">csy2536::CSY2536Comm::TopicEntry::CallbackItem::callback</a></div><div class="ttdeci">ParsedCallback callback</div><div class="ttdef"><b>Definition</b> CSY2536Comm.h:161</div></div>
+<div class="ttc" id="astructcsy2536_1_1CSY2536Comm_1_1TopicEntry_1_1CallbackItem_html_a9c7fe3819e8e22b540791cd0bc84572b"><div class="ttname"><a href="structcsy2536_1_1CSY2536Comm_1_1TopicEntry_1_1CallbackItem.html#a9c7fe3819e8e22b540791cd0bc84572b">csy2536::CSY2536Comm::TopicEntry::CallbackItem::handle</a></div><div class="ttdeci">std::uint64_t handle</div><div class="ttdef"><b>Definition</b> CSY2536Comm.h:160</div></div>
+<div class="ttc" id="astructcsy2536_1_1CSY2536Comm_1_1TopicEntry_html"><div class="ttname"><a href="structcsy2536_1_1CSY2536Comm_1_1TopicEntry.html">csy2536::CSY2536Comm::TopicEntry</a></div><div class="ttdef"><b>Definition</b> CSY2536Comm.h:155</div></div>
+<div class="ttc" id="astructcsy2536_1_1CSY2536Comm_1_1TopicEntry_html_a331a68663cc54ad962e7b2c07fff2c28"><div class="ttname"><a href="structcsy2536_1_1CSY2536Comm_1_1TopicEntry.html#a331a68663cc54ad962e7b2c07fff2c28">csy2536::CSY2536Comm::TopicEntry::callbacks</a></div><div class="ttdeci">std::vector&lt; CallbackItem &gt; callbacks</div><div class="ttdef"><b>Definition</b> CSY2536Comm.h:163</div></div>
+<div class="ttc" id="astructcsy2536_1_1CSY2536Comm_1_1TopicEntry_html_a35738099155a0e4f54050da474bab2e7"><div class="ttname"><a href="structcsy2536_1_1CSY2536Comm_1_1TopicEntry.html#a35738099155a0e4f54050da474bab2e7">csy2536::CSY2536Comm::TopicEntry::qos</a></div><div class="ttdeci">int qos</div><div class="ttdef"><b>Definition</b> CSY2536Comm.h:158</div></div>
+<div class="ttc" id="astructcsy2536_1_1CSY2536Comm_1_1TopicEntry_html_a64dd38cc7ef3b7327905c1ff918f2c52"><div class="ttname"><a href="structcsy2536_1_1CSY2536Comm_1_1TopicEntry.html#a64dd38cc7ef3b7327905c1ff918f2c52">csy2536::CSY2536Comm::TopicEntry::topic</a></div><div class="ttdeci">std::string topic</div><div class="ttdef"><b>Definition</b> CSY2536Comm.h:157</div></div>
+<div class="ttc" id="astructcsy2536_1_1CSY2536Comm_1_1TopicEntry_html_a9c7fe3819e8e22b540791cd0bc84572b"><div class="ttname"><a href="structcsy2536_1_1CSY2536Comm_1_1TopicEntry.html#a9c7fe3819e8e22b540791cd0bc84572b">csy2536::CSY2536Comm::TopicEntry::handle</a></div><div class="ttdeci">std::uint64_t handle</div><div class="ttdef"><b>Definition</b> CSY2536Comm.h:156</div></div>
+<div class="ttc" id="astructfast__mqtt_1_1Message_html"><div class="ttname"><a href="structfast__mqtt_1_1Message.html">fast_mqtt::Message</a></div><div class="ttdoc">统一消息结构，既用于发送也用于接收。</div><div class="ttdef"><b>Definition</b> FastMQTTTypes.hpp:159</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

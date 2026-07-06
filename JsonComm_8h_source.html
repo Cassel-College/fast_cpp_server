@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_comm/mqtt/json/JsonComm.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_1a464db7147701c56b7cbed9c804870f.html">my_comm</a></li><li class="navelem"><a class="el" href="dir_15b437d233a2e9352a16a225c3ef6723.html">mqtt</a></li><li class="navelem"><a class="el" href="dir_0225a3bb1b636cb7cece0ff5ea4cb732.html">json</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">JsonComm.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="JsonComm_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// =============================================================================</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// 文件：JsonComm.h</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// 模块：my_comm / mqtt / json</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// 说明：把 FastMQTT 订阅接入系统的 JSON 协议桥接模块。</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// 设计定位（对照 mqtt/2536pb）：</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">//   - FastMQTT 只负责 MQTT 字节传输；</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//   - 2536pb 负责 protobuf（CS-Y2536）协议接入；</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">//   - 本模块 JsonComm 负责“订阅主题 + 解析 JSON 报文 + 打印/分发”。</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// 当前版本能力：</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">//   1. 订阅配置中的主题，收到消息后用 nlohmann::json 解析；</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//   2. 打印统一格式的中文日志；</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">//   3. 提供 RegisterParsedCallback 扩展点，把解析后的 JSON 交给业务模块；</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">//   4. 不负责启动 FastMQTT，要求调用方提前把 FastMQTT 拉起来（IsReady）。</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">//</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">// 强制对外接口（由需求指定，必须存在）：</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">//   - static JsonComm&amp; GetInstance();  单例入口</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">//   - bool          Init(...);         初始化</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">//   - bool          Start();           启动订阅</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">//   - nlohmann::json Status() const;   状态查询</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">// =============================================================================</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;nlohmann/json.hpp&gt;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &quot;<a class="code" href="FastMQTTTypes_8hpp.html">FastMQTTTypes.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacejson__comm.html">json_comm</a> {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="};">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classjson__comm_1_1JsonComm.html">   48</a></span><span class="keyword">class </span><a class="code hl_class" href="classjson__comm_1_1JsonComm.html">JsonComm</a> final {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classjson__comm_1_1JsonComm.html#a15ae6d86f0216366772f24b13eb0efbf">   56</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="classjson__comm_1_1JsonComm.html#a15ae6d86f0216366772f24b13eb0efbf">ParsedCallback</a> = std::function&lt;void(<span class="keyword">const</span> std::string&amp; topic,</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                                              <span class="keyword">const</span> nlohmann::json&amp; msg)&gt;;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">static</span> <a class="code hl_class" href="classjson__comm_1_1JsonComm.html">JsonComm</a>&amp; <a class="code hl_function" href="classjson__comm_1_1JsonComm.html#a30339d267553ffb3eea760c71625092e">GetInstance</a>();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classjson__comm_1_1JsonComm.html#a6c0f008d0f4c0f1ba6ce1078471ec599">   62</a></span>    <a class="code hl_function" href="classjson__comm_1_1JsonComm.html#a6c0f008d0f4c0f1ba6ce1078471ec599">JsonComm</a>(<span class="keyword">const</span> <a class="code hl_class" href="classjson__comm_1_1JsonComm.html">JsonComm</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="classjson__comm_1_1JsonComm.html#ace32d0b8fc7cad07f6c4b6d44053c4bf">   63</a></span>    <a class="code hl_class" href="classjson__comm_1_1JsonComm.html">JsonComm</a>&amp; <a class="code hl_function" href="classjson__comm_1_1JsonComm.html#ace32d0b8fc7cad07f6c4b6d44053c4bf">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classjson__comm_1_1JsonComm.html">JsonComm</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classjson__comm_1_1JsonComm.html#a8238d3493b2ea4c1ffe6128babd876a3">   64</a></span>    <a class="code hl_function" href="classjson__comm_1_1JsonComm.html#a8238d3493b2ea4c1ffe6128babd876a3">JsonComm</a>(<a class="code hl_class" href="classjson__comm_1_1JsonComm.html">JsonComm</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classjson__comm_1_1JsonComm.html#a0f16921a0c337310f3bc910f6b2dc076">   65</a></span>    <a class="code hl_class" href="classjson__comm_1_1JsonComm.html">JsonComm</a>&amp; <a class="code hl_function" href="classjson__comm_1_1JsonComm.html#a0f16921a0c337310f3bc910f6b2dc076">operator=</a>(<a class="code hl_class" href="classjson__comm_1_1JsonComm.html">JsonComm</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="comment">// -------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="comment">// 一、生命周期接口（Init / Start / Stop）</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="comment">// -------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classjson__comm_1_1JsonComm.html#a2fc7a3eac3ae1d1ae847e9c73197b7ad">Init</a>(<span class="keyword">const</span> nlohmann::json&amp; config = nlohmann::json::object());</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classjson__comm_1_1JsonComm.html#aa70efaa4751ac6d5d54dce88fe725e0a">Start</a>();</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classjson__comm_1_1JsonComm.html#a17a237457e57625296e6b24feb19c60a">Stop</a>();</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classjson__comm_1_1JsonComm.html#ad201152b05beda61e51e3594ff07c8fe">IsRunning</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="comment">// -------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="comment">// 二、业务扩展接口</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="comment">// -------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    std::uint64_t <a class="code hl_function" href="classjson__comm_1_1JsonComm.html#aa694e7023b63239e8eb3ed9c67b497c6">RegisterParsedCallback</a>(<span class="keyword">const</span> std::string&amp; topic,</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                                         <a class="code hl_typedef" href="classjson__comm_1_1JsonComm.html#a15ae6d86f0216366772f24b13eb0efbf">ParsedCallback</a> callback,</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                                         <span class="keywordtype">int</span> qos = 1);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    std::uint64_t <a class="code hl_function" href="classjson__comm_1_1JsonComm.html#a369689ccd5e4c844937ea070ff56f550">RegisterCallbackToFastMQTT</a>(<span class="keyword">const</span> std::string&amp; topic,</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                                             <a class="code hl_typedef" href="namespacefast__mqtt.html#a7eb2b5237d75666c254f0440ae198104">fast_mqtt::MessageCallback</a> callback,</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                                             <span class="keywordtype">int</span> qos=1);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classjson__comm_1_1JsonComm.html#acd913e6904db0b152e2a092aa5815d01">SettingJsonCallbackForTopic</a>();</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classjson__comm_1_1JsonComm.html#af3718c41da8a7081dd430e70a8c5ff2d">ClearTopic</a>(<span class="keyword">const</span> std::string&amp; topic);</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classjson__comm_1_1JsonComm.html#aa7d76b766faf39c1652b6617eac5fe20">ClearAll</a>();</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <span class="comment">// -------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="comment">// 三、状态查询接口</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <span class="comment">// -------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    nlohmann::json <a class="code hl_function" href="classjson__comm_1_1JsonComm.html#a3076ced35abaa2979e9a10b401256c25">Status</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno"><a class="line" href="classjson__comm_1_1JsonComm.html#a69e3b0d3b52c358b34658e8cd59b8afd">  165</a></span>    <a class="code hl_function" href="classjson__comm_1_1JsonComm.html#a69e3b0d3b52c358b34658e8cd59b8afd">JsonComm</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <a class="code hl_function" href="classjson__comm_1_1JsonComm.html#afbcae1bd00cdebd2348fc3c10ecb0f87">~JsonComm</a>();</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classjson__comm_1_1JsonComm.html#a4d64e590011365a85461efb48e3d5896">AppendDefaultTopics</a>();</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classjson__comm_1_1JsonComm.html#a50023406ef4034aa47eb0ad9e8950852">SubscribeTopicLocked</a>(<span class="keyword">const</span> std::string&amp; topic, <span class="keywordtype">int</span> qos);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classjson__comm_1_1JsonComm.html#a8acd145dcccc3e4f1c244601d048fe89">UnsubscribeTopicLocked</a>(<span class="keyword">const</span> std::string&amp; topic);</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classjson__comm_1_1JsonComm.html#af97e4cf4c2001476d655589b6444d362">OnRawMessage</a>(<span class="keyword">const</span> std::string&amp; topic_filter, <span class="keyword">const</span> <a class="code hl_struct" href="structfast__mqtt_1_1Message.html">fast_mqtt::Message</a>&amp; msg);</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classjson__comm_1_1JsonComm.html#a856a64b86e3bef51b8047a6b217f620d">PrintMessage</a>(<span class="keyword">const</span> std::string&amp; topic_filter,</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>                      <span class="keyword">const</span> <a class="code hl_struct" href="structfast__mqtt_1_1Message.html">fast_mqtt::Message</a>&amp; msg,</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                      <span class="keyword">const</span> nlohmann::json&amp; msg_json) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <span class="comment">// 单个 topic 的订阅条目：底层 FastMQTT 句柄 + 本模块维护的业务回调列表。</span></div>
+<div class="foldopen" id="foldopen00195" data-start="{" data-end="};">
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno"><a class="line" href="structjson__comm_1_1JsonComm_1_1TopicEntry.html">  195</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structjson__comm_1_1JsonComm_1_1TopicEntry.html">TopicEntry</a> {</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno"><a class="line" href="structjson__comm_1_1JsonComm_1_1TopicEntry.html#a9c7fe3819e8e22b540791cd0bc84572b">  196</a></span>        std::uint64_t <a class="code hl_variable" href="structjson__comm_1_1JsonComm_1_1TopicEntry.html#a9c7fe3819e8e22b540791cd0bc84572b">handle</a>{0};   </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno"><a class="line" href="structjson__comm_1_1JsonComm_1_1TopicEntry.html#a64dd38cc7ef3b7327905c1ff918f2c52">  197</a></span>        std::string   <a class="code hl_variable" href="structjson__comm_1_1JsonComm_1_1TopicEntry.html#a64dd38cc7ef3b7327905c1ff918f2c52">topic</a>;       </div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno"><a class="line" href="structjson__comm_1_1JsonComm_1_1TopicEntry.html#a35738099155a0e4f54050da474bab2e7">  198</a></span>        <span class="keywordtype">int</span>           <a class="code hl_variable" href="structjson__comm_1_1JsonComm_1_1TopicEntry.html#a35738099155a0e4f54050da474bab2e7">qos</a>{1};      </div>
+<div class="foldopen" id="foldopen00199" data-start="{" data-end="};">
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno"><a class="line" href="structjson__comm_1_1JsonComm_1_1TopicEntry_1_1CallbackItem.html">  199</a></span>        <span class="keyword">struct </span><a class="code hl_struct" href="structjson__comm_1_1JsonComm_1_1TopicEntry_1_1CallbackItem.html">CallbackItem</a> {</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno"><a class="line" href="structjson__comm_1_1JsonComm_1_1TopicEntry_1_1CallbackItem.html#a9c7fe3819e8e22b540791cd0bc84572b">  200</a></span>            std::uint64_t  <a class="code hl_variable" href="structjson__comm_1_1JsonComm_1_1TopicEntry_1_1CallbackItem.html#a9c7fe3819e8e22b540791cd0bc84572b">handle</a>{0};   </div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno"><a class="line" href="structjson__comm_1_1JsonComm_1_1TopicEntry_1_1CallbackItem.html#a5cbe0bea3c6eb5574d7b65b30c562e66">  201</a></span>            <a class="code hl_typedef" href="classjson__comm_1_1JsonComm.html#a15ae6d86f0216366772f24b13eb0efbf">ParsedCallback</a> <a class="code hl_variable" href="structjson__comm_1_1JsonComm_1_1TopicEntry_1_1CallbackItem.html#a5cbe0bea3c6eb5574d7b65b30c562e66">callback</a>;    </div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        };</div>
+</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno"><a class="line" href="structjson__comm_1_1JsonComm_1_1TopicEntry.html#a331a68663cc54ad962e7b2c07fff2c28">  203</a></span>        std::vector&lt;CallbackItem&gt; <a class="code hl_variable" href="structjson__comm_1_1JsonComm_1_1TopicEntry.html#a331a68663cc54ad962e7b2c07fff2c28">callbacks</a>;  </div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    };</div>
+</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno"><a class="line" href="classjson__comm_1_1JsonComm.html#a281b5ec791338d4378e22ef44a51b4a1">  206</a></span>    <span class="keyword">mutable</span> std::mutex <a class="code hl_variable" href="classjson__comm_1_1JsonComm.html#a281b5ec791338d4378e22ef44a51b4a1">mutex_</a>;                       </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno"><a class="line" href="classjson__comm_1_1JsonComm.html#aef7436a220692b5b863db4e9d8b870a3">  207</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="classjson__comm_1_1JsonComm.html#aef7436a220692b5b863db4e9d8b870a3">initialized_</a>{<span class="keyword">false</span>};                        </div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno"><a class="line" href="classjson__comm_1_1JsonComm.html#aa440b02cc99bc6923375b0c9db2f2dca">  208</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="classjson__comm_1_1JsonComm.html#aa440b02cc99bc6923375b0c9db2f2dca">running_</a>{<span class="keyword">false</span>};                            </div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno"><a class="line" href="classjson__comm_1_1JsonComm.html#ad07afb53bebf4ed4c194da85946790e0">  209</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="classjson__comm_1_1JsonComm.html#ad07afb53bebf4ed4c194da85946790e0">enable_</a>{<span class="keyword">true</span>};                              </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno"><a class="line" href="classjson__comm_1_1JsonComm.html#ae65d403c140e87589e71590d94a27ea4">  210</a></span>    <span class="keywordtype">int</span>  <a class="code hl_variable" href="classjson__comm_1_1JsonComm.html#ae65d403c140e87589e71590d94a27ea4">default_qos_</a>{1};                            </div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno"><a class="line" href="classjson__comm_1_1JsonComm.html#ae9f69fbf1991d1fff8374675c4716ac0">  211</a></span>    std::string <a class="code hl_variable" href="classjson__comm_1_1JsonComm.html#ae9f69fbf1991d1fff8374675c4716ac0">default_topic</a>{<span class="stringliteral">&quot;/json/default&quot;</span>};    </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno"><a class="line" href="classjson__comm_1_1JsonComm.html#a6aad631dd2fc0661181ff063817e91b8">  212</a></span>    std::vector&lt;std::string&gt; <a class="code hl_variable" href="classjson__comm_1_1JsonComm.html#a6aad631dd2fc0661181ff063817e91b8">topics_</a>{};              </div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno"><a class="line" href="classjson__comm_1_1JsonComm.html#ae6cccdbd2578f397ebd097e287578657">  213</a></span>    std::map&lt;std::string, TopicEntry&gt; <a class="code hl_variable" href="classjson__comm_1_1JsonComm.html#ae6cccdbd2578f397ebd097e287578657">topic_entries_</a>;</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno"><a class="line" href="classjson__comm_1_1JsonComm.html#ae40552de510075ef686bf87d329d2c64">  214</a></span>    std::uint64_t <a class="code hl_variable" href="classjson__comm_1_1JsonComm.html#ae40552de510075ef686bf87d329d2c64">next_handle_</a>{1};                   </div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>};</div>
+</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>}  <span class="comment">// namespace json_comm</span></div>
+<div class="ttc" id="aFastMQTTTypes_8hpp_html"><div class="ttname"><a href="FastMQTTTypes_8hpp.html">FastMQTTTypes.hpp</a></div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonComm_html"><div class="ttname"><a href="classjson__comm_1_1JsonComm.html">json_comm::JsonComm</a></div><div class="ttdoc">JSON 通信桥接模块（单例）。</div><div class="ttdef"><b>Definition</b> JsonComm.h:48</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonComm_html_a0f16921a0c337310f3bc910f6b2dc076"><div class="ttname"><a href="classjson__comm_1_1JsonComm.html#a0f16921a0c337310f3bc910f6b2dc076">json_comm::JsonComm::operator=</a></div><div class="ttdeci">JsonComm &amp; operator=(JsonComm &amp;&amp;)=delete</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonComm_html_a15ae6d86f0216366772f24b13eb0efbf"><div class="ttname"><a href="classjson__comm_1_1JsonComm.html#a15ae6d86f0216366772f24b13eb0efbf">json_comm::JsonComm::ParsedCallback</a></div><div class="ttdeci">std::function&lt; void(const std::string &amp;topic, const nlohmann::json &amp;msg)&gt; ParsedCallback</div><div class="ttdoc">解析后的 JSON 消息回调类型。</div><div class="ttdef"><b>Definition</b> JsonComm.h:57</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonComm_html_a17a237457e57625296e6b24feb19c60a"><div class="ttname"><a href="classjson__comm_1_1JsonComm.html#a17a237457e57625296e6b24feb19c60a">json_comm::JsonComm::Stop</a></div><div class="ttdeci">void Stop()</div><div class="ttdoc">停止模块并注销所有已注册回调。</div><div class="ttdef"><b>Definition</b> JsonComm.cpp:118</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonComm_html_a281b5ec791338d4378e22ef44a51b4a1"><div class="ttname"><a href="classjson__comm_1_1JsonComm.html#a281b5ec791338d4378e22ef44a51b4a1">json_comm::JsonComm::mutex_</a></div><div class="ttdeci">std::mutex mutex_</div><div class="ttdoc">保护以下所有可变状态。</div><div class="ttdef"><b>Definition</b> JsonComm.h:206</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonComm_html_a2fc7a3eac3ae1d1ae847e9c73197b7ad"><div class="ttname"><a href="classjson__comm_1_1JsonComm.html#a2fc7a3eac3ae1d1ae847e9c73197b7ad">json_comm::JsonComm::Init</a></div><div class="ttdeci">bool Init(const nlohmann::json &amp;config=nlohmann::json::object())</div><div class="ttdoc">初始化模块配置。</div><div class="ttdef"><b>Definition</b> JsonComm.cpp:55</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonComm_html_a30339d267553ffb3eea760c71625092e"><div class="ttname"><a href="classjson__comm_1_1JsonComm.html#a30339d267553ffb3eea760c71625092e">json_comm::JsonComm::GetInstance</a></div><div class="ttdeci">static JsonComm &amp; GetInstance()</div><div class="ttdoc">获取全局唯一实例（懒汉式单例，线程安全）。</div><div class="ttdef"><b>Definition</b> JsonComm.cpp:46</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonComm_html_a3076ced35abaa2979e9a10b401256c25"><div class="ttname"><a href="classjson__comm_1_1JsonComm.html#a3076ced35abaa2979e9a10b401256c25">json_comm::JsonComm::Status</a></div><div class="ttdeci">nlohmann::json Status() const</div><div class="ttdoc">获取当前模块状态摘要。</div><div class="ttdef"><b>Definition</b> JsonComm.cpp:242</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonComm_html_a369689ccd5e4c844937ea070ff56f550"><div class="ttname"><a href="classjson__comm_1_1JsonComm.html#a369689ccd5e4c844937ea070ff56f550">json_comm::JsonComm::RegisterCallbackToFastMQTT</a></div><div class="ttdeci">std::uint64_t RegisterCallbackToFastMQTT(const std::string &amp;topic, fast_mqtt::MessageCallback callback, int qos=1)</div><div class="ttdoc">注册一个回调到 FastMQTT。</div><div class="ttdef"><b>Definition</b> JsonComm.cpp:161</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonComm_html_a4d64e590011365a85461efb48e3d5896"><div class="ttname"><a href="classjson__comm_1_1JsonComm.html#a4d64e590011365a85461efb48e3d5896">json_comm::JsonComm::AppendDefaultTopics</a></div><div class="ttdeci">bool AppendDefaultTopics()</div><div class="ttdoc">把配置里默认的示例主题追加进订阅列表（可按需扩展）。</div><div class="ttdef"><b>Definition</b> JsonComm.cpp:79</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonComm_html_a50023406ef4034aa47eb0ad9e8950852"><div class="ttname"><a href="classjson__comm_1_1JsonComm.html#a50023406ef4034aa47eb0ad9e8950852">json_comm::JsonComm::SubscribeTopicLocked</a></div><div class="ttdeci">void SubscribeTopicLocked(const std::string &amp;topic, int qos)</div><div class="ttdoc">在持锁状态下订阅某个主题，并把本模块的分发回调注册到 FastMQTT。</div><div class="ttdef"><b>Definition</b> JsonComm.cpp:254</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonComm_html_a69e3b0d3b52c358b34658e8cd59b8afd"><div class="ttname"><a href="classjson__comm_1_1JsonComm.html#a69e3b0d3b52c358b34658e8cd59b8afd">json_comm::JsonComm::JsonComm</a></div><div class="ttdeci">JsonComm()=default</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonComm_html_a6aad631dd2fc0661181ff063817e91b8"><div class="ttname"><a href="classjson__comm_1_1JsonComm.html#a6aad631dd2fc0661181ff063817e91b8">json_comm::JsonComm::topics_</a></div><div class="ttdeci">std::vector&lt; std::string &gt; topics_</div><div class="ttdoc">待订阅主题列表。</div><div class="ttdef"><b>Definition</b> JsonComm.h:212</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonComm_html_a6c0f008d0f4c0f1ba6ce1078471ec599"><div class="ttname"><a href="classjson__comm_1_1JsonComm.html#a6c0f008d0f4c0f1ba6ce1078471ec599">json_comm::JsonComm::JsonComm</a></div><div class="ttdeci">JsonComm(const JsonComm &amp;)=delete</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonComm_html_a8238d3493b2ea4c1ffe6128babd876a3"><div class="ttname"><a href="classjson__comm_1_1JsonComm.html#a8238d3493b2ea4c1ffe6128babd876a3">json_comm::JsonComm::JsonComm</a></div><div class="ttdeci">JsonComm(JsonComm &amp;&amp;)=delete</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonComm_html_a856a64b86e3bef51b8047a6b217f620d"><div class="ttname"><a href="classjson__comm_1_1JsonComm.html#a856a64b86e3bef51b8047a6b217f620d">json_comm::JsonComm::PrintMessage</a></div><div class="ttdeci">void PrintMessage(const std::string &amp;topic_filter, const fast_mqtt::Message &amp;msg, const nlohmann::json &amp;msg_json) const</div><div class="ttdoc">打印一条已解析的 JSON 消息（统一中文日志格式）。</div><div class="ttdef"><b>Definition</b> JsonComm.cpp:324</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonComm_html_a8acd145dcccc3e4f1c244601d048fe89"><div class="ttname"><a href="classjson__comm_1_1JsonComm.html#a8acd145dcccc3e4f1c244601d048fe89">json_comm::JsonComm::UnsubscribeTopicLocked</a></div><div class="ttdeci">void UnsubscribeTopicLocked(const std::string &amp;topic)</div><div class="ttdoc">在持锁状态下注销某个主题的订阅。</div><div class="ttdef"><b>Definition</b> JsonComm.cpp:279</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonComm_html_aa440b02cc99bc6923375b0c9db2f2dca"><div class="ttname"><a href="classjson__comm_1_1JsonComm.html#aa440b02cc99bc6923375b0c9db2f2dca">json_comm::JsonComm::running_</a></div><div class="ttdeci">bool running_</div><div class="ttdoc">是否已启动。</div><div class="ttdef"><b>Definition</b> JsonComm.h:208</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonComm_html_aa694e7023b63239e8eb3ed9c67b497c6"><div class="ttname"><a href="classjson__comm_1_1JsonComm.html#aa694e7023b63239e8eb3ed9c67b497c6">json_comm::JsonComm::RegisterParsedCallback</a></div><div class="ttdeci">std::uint64_t RegisterParsedCallback(const std::string &amp;topic, ParsedCallback callback, int qos=1)</div><div class="ttdoc">注册一个“解析后的 JSON 回调”。</div><div class="ttdef"><b>Definition</b> JsonComm.cpp:192</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonComm_html_aa70efaa4751ac6d5d54dce88fe725e0a"><div class="ttname"><a href="classjson__comm_1_1JsonComm.html#aa70efaa4751ac6d5d54dce88fe725e0a">json_comm::JsonComm::Start</a></div><div class="ttdeci">bool Start()</div><div class="ttdoc">启动模块并对配置中的主题注册订阅回调。</div><div class="ttdef"><b>Definition</b> JsonComm.cpp:86</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonComm_html_aa7d76b766faf39c1652b6617eac5fe20"><div class="ttname"><a href="classjson__comm_1_1JsonComm.html#aa7d76b766faf39c1652b6617eac5fe20">json_comm::JsonComm::ClearAll</a></div><div class="ttdeci">void ClearAll()</div><div class="ttdoc">清空所有回调并注销所有订阅。</div><div class="ttdef"><b>Definition</b> JsonComm.cpp:229</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonComm_html_acd913e6904db0b152e2a092aa5815d01"><div class="ttname"><a href="classjson__comm_1_1JsonComm.html#acd913e6904db0b152e2a092aa5815d01">json_comm::JsonComm::SettingJsonCallbackForTopic</a></div><div class="ttdeci">bool SettingJsonCallbackForTopic()</div><div class="ttdoc">为指定主题设置 json 回调。</div><div class="ttdef"><b>Definition</b> JsonComm.cpp:142</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonComm_html_ace32d0b8fc7cad07f6c4b6d44053c4bf"><div class="ttname"><a href="classjson__comm_1_1JsonComm.html#ace32d0b8fc7cad07f6c4b6d44053c4bf">json_comm::JsonComm::operator=</a></div><div class="ttdeci">JsonComm &amp; operator=(const JsonComm &amp;)=delete</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonComm_html_ad07afb53bebf4ed4c194da85946790e0"><div class="ttname"><a href="classjson__comm_1_1JsonComm.html#ad07afb53bebf4ed4c194da85946790e0">json_comm::JsonComm::enable_</a></div><div class="ttdeci">bool enable_</div><div class="ttdoc">是否启用本模块。</div><div class="ttdef"><b>Definition</b> JsonComm.h:209</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonComm_html_ad201152b05beda61e51e3594ff07c8fe"><div class="ttname"><a href="classjson__comm_1_1JsonComm.html#ad201152b05beda61e51e3594ff07c8fe">json_comm::JsonComm::IsRunning</a></div><div class="ttdeci">bool IsRunning() const</div><div class="ttdoc">是否已启动。</div><div class="ttdef"><b>Definition</b> JsonComm.cpp:137</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonComm_html_ae40552de510075ef686bf87d329d2c64"><div class="ttname"><a href="classjson__comm_1_1JsonComm.html#ae40552de510075ef686bf87d329d2c64">json_comm::JsonComm::next_handle_</a></div><div class="ttdeci">std::uint64_t next_handle_</div><div class="ttdoc">业务回调句柄自增计数。</div><div class="ttdef"><b>Definition</b> JsonComm.h:214</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonComm_html_ae65d403c140e87589e71590d94a27ea4"><div class="ttname"><a href="classjson__comm_1_1JsonComm.html#ae65d403c140e87589e71590d94a27ea4">json_comm::JsonComm::default_qos_</a></div><div class="ttdeci">int default_qos_</div><div class="ttdoc">默认订阅 QoS。</div><div class="ttdef"><b>Definition</b> JsonComm.h:210</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonComm_html_ae6cccdbd2578f397ebd097e287578657"><div class="ttname"><a href="classjson__comm_1_1JsonComm.html#ae6cccdbd2578f397ebd097e287578657">json_comm::JsonComm::topic_entries_</a></div><div class="ttdeci">std::map&lt; std::string, TopicEntry &gt; topic_entries_</div><div class="ttdoc">topic -&gt; 订阅条目。</div><div class="ttdef"><b>Definition</b> JsonComm.h:213</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonComm_html_ae9f69fbf1991d1fff8374675c4716ac0"><div class="ttname"><a href="classjson__comm_1_1JsonComm.html#ae9f69fbf1991d1fff8374675c4716ac0">json_comm::JsonComm::default_topic</a></div><div class="ttdeci">std::string default_topic</div><div class="ttdoc">默认订阅主题。</div><div class="ttdef"><b>Definition</b> JsonComm.h:211</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonComm_html_aef7436a220692b5b863db4e9d8b870a3"><div class="ttname"><a href="classjson__comm_1_1JsonComm.html#aef7436a220692b5b863db4e9d8b870a3">json_comm::JsonComm::initialized_</a></div><div class="ttdeci">bool initialized_</div><div class="ttdoc">是否已初始化。</div><div class="ttdef"><b>Definition</b> JsonComm.h:207</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonComm_html_af3718c41da8a7081dd430e70a8c5ff2d"><div class="ttname"><a href="classjson__comm_1_1JsonComm.html#af3718c41da8a7081dd430e70a8c5ff2d">json_comm::JsonComm::ClearTopic</a></div><div class="ttdeci">void ClearTopic(const std::string &amp;topic)</div><div class="ttdoc">清空某个 topic 的全部回调（包括底层订阅）。</div><div class="ttdef"><b>Definition</b> JsonComm.cpp:222</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonComm_html_af97e4cf4c2001476d655589b6444d362"><div class="ttname"><a href="classjson__comm_1_1JsonComm.html#af97e4cf4c2001476d655589b6444d362">json_comm::JsonComm::OnRawMessage</a></div><div class="ttdeci">void OnRawMessage(const std::string &amp;topic_filter, const fast_mqtt::Message &amp;msg)</div><div class="ttdoc">FastMQTT 收到原始消息后的统一入口：解析 JSON、打印、分发。</div><div class="ttdef"><b>Definition</b> JsonComm.cpp:290</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonComm_html_afbcae1bd00cdebd2348fc3c10ecb0f87"><div class="ttname"><a href="classjson__comm_1_1JsonComm.html#afbcae1bd00cdebd2348fc3c10ecb0f87">json_comm::JsonComm::~JsonComm</a></div><div class="ttdeci">~JsonComm()</div><div class="ttdef"><b>Definition</b> JsonComm.cpp:51</div></div>
+<div class="ttc" id="anamespacefast__mqtt_html_a7eb2b5237d75666c254f0440ae198104"><div class="ttname"><a href="namespacefast__mqtt.html#a7eb2b5237d75666c254f0440ae198104">fast_mqtt::MessageCallback</a></div><div class="ttdeci">std::function&lt; void(const Message &amp;)&gt; MessageCallback</div><div class="ttdoc">业务回调函数类型。</div><div class="ttdef"><b>Definition</b> FastMQTTTypes.hpp:177</div></div>
+<div class="ttc" id="anamespacejson__comm_html"><div class="ttname"><a href="namespacejson__comm.html">json_comm</a></div><div class="ttdef"><b>Definition</b> JsonCallBackFuncs.cpp:13</div></div>
+<div class="ttc" id="astructfast__mqtt_1_1Message_html"><div class="ttname"><a href="structfast__mqtt_1_1Message.html">fast_mqtt::Message</a></div><div class="ttdoc">统一消息结构，既用于发送也用于接收。</div><div class="ttdef"><b>Definition</b> FastMQTTTypes.hpp:159</div></div>
+<div class="ttc" id="astructjson__comm_1_1JsonComm_1_1TopicEntry_1_1CallbackItem_html"><div class="ttname"><a href="structjson__comm_1_1JsonComm_1_1TopicEntry_1_1CallbackItem.html">json_comm::JsonComm::TopicEntry::CallbackItem</a></div><div class="ttdef"><b>Definition</b> JsonComm.h:199</div></div>
+<div class="ttc" id="astructjson__comm_1_1JsonComm_1_1TopicEntry_1_1CallbackItem_html_a5cbe0bea3c6eb5574d7b65b30c562e66"><div class="ttname"><a href="structjson__comm_1_1JsonComm_1_1TopicEntry_1_1CallbackItem.html#a5cbe0bea3c6eb5574d7b65b30c562e66">json_comm::JsonComm::TopicEntry::CallbackItem::callback</a></div><div class="ttdeci">ParsedCallback callback</div><div class="ttdoc">业务回调。</div><div class="ttdef"><b>Definition</b> JsonComm.h:201</div></div>
+<div class="ttc" id="astructjson__comm_1_1JsonComm_1_1TopicEntry_1_1CallbackItem_html_a9c7fe3819e8e22b540791cd0bc84572b"><div class="ttname"><a href="structjson__comm_1_1JsonComm_1_1TopicEntry_1_1CallbackItem.html#a9c7fe3819e8e22b540791cd0bc84572b">json_comm::JsonComm::TopicEntry::CallbackItem::handle</a></div><div class="ttdeci">std::uint64_t handle</div><div class="ttdoc">业务回调句柄。</div><div class="ttdef"><b>Definition</b> JsonComm.h:200</div></div>
+<div class="ttc" id="astructjson__comm_1_1JsonComm_1_1TopicEntry_html"><div class="ttname"><a href="structjson__comm_1_1JsonComm_1_1TopicEntry.html">json_comm::JsonComm::TopicEntry</a></div><div class="ttdef"><b>Definition</b> JsonComm.h:195</div></div>
+<div class="ttc" id="astructjson__comm_1_1JsonComm_1_1TopicEntry_html_a331a68663cc54ad962e7b2c07fff2c28"><div class="ttname"><a href="structjson__comm_1_1JsonComm_1_1TopicEntry.html#a331a68663cc54ad962e7b2c07fff2c28">json_comm::JsonComm::TopicEntry::callbacks</a></div><div class="ttdeci">std::vector&lt; CallbackItem &gt; callbacks</div><div class="ttdoc">该主题下的业务回调集合。</div><div class="ttdef"><b>Definition</b> JsonComm.h:203</div></div>
+<div class="ttc" id="astructjson__comm_1_1JsonComm_1_1TopicEntry_html_a35738099155a0e4f54050da474bab2e7"><div class="ttname"><a href="structjson__comm_1_1JsonComm_1_1TopicEntry.html#a35738099155a0e4f54050da474bab2e7">json_comm::JsonComm::TopicEntry::qos</a></div><div class="ttdeci">int qos</div><div class="ttdoc">订阅 QoS。</div><div class="ttdef"><b>Definition</b> JsonComm.h:198</div></div>
+<div class="ttc" id="astructjson__comm_1_1JsonComm_1_1TopicEntry_html_a64dd38cc7ef3b7327905c1ff918f2c52"><div class="ttname"><a href="structjson__comm_1_1JsonComm_1_1TopicEntry.html#a64dd38cc7ef3b7327905c1ff918f2c52">json_comm::JsonComm::TopicEntry::topic</a></div><div class="ttdeci">std::string topic</div><div class="ttdoc">主题名。</div><div class="ttdef"><b>Definition</b> JsonComm.h:197</div></div>
+<div class="ttc" id="astructjson__comm_1_1JsonComm_1_1TopicEntry_html_a9c7fe3819e8e22b540791cd0bc84572b"><div class="ttname"><a href="structjson__comm_1_1JsonComm_1_1TopicEntry.html#a9c7fe3819e8e22b540791cd0bc84572b">json_comm::JsonComm::TopicEntry::handle</a></div><div class="ttdeci">std::uint64_t handle</div><div class="ttdoc">FastMQTT 回调句柄（0 表示尚未订阅）。</div><div class="ttdef"><b>Definition</b> JsonComm.h:196</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

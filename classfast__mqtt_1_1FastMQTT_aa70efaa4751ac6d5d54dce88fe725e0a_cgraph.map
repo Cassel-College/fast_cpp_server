@@ -1,0 +1,29 @@
+<map id="Start" name="Start">
+<area shape="rect" id="Node000001" title="启动模块（只能成功调用一次），创建并运行四个后台线程。" alt="" coords="5,169,59,195"/>
+<area shape="rect" id="Node000002" href="$classfast__mqtt_1_1FastMQTT.html#a26e13b0c9c25909bbea3dab967712891" title="线程一：IP 连通性监测与状态聚合。" alt="" coords="108,5,291,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="34,168,56,107,76,71,105,40,113,35,116,39,108,44,81,74,61,109,39,170"/>
+<area shape="rect" id="Node000004" href="$classfast__mqtt_1_1FastMQTT.html#a2dd203c70e0da82dc9be2d8e9426d15a" title="线程三：消费接收队列并派发回调。" alt="" coords="138,55,261,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="38,167,64,129,83,108,105,90,124,81,126,85,108,95,87,112,68,133,43,170"/>
+<area shape="rect" id="Node000007" href="$namespacefast__mqtt.html#a701a120372fdff870cb36b0d0bdb9815" title="将生命周期状态转换为可读字符串（便于日志与健康状态输出）。" alt="" coords="107,105,292,145"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="58,171,127,147,129,152,60,176"/>
+<area shape="rect" id="Node000008" href="$classfast__mqtt_1_1FastMQTT.html#aa963e90da1132a12d6576c717072da28" title="线程二：MQTT 网络循环与自动重连。" alt="" coords="144,169,255,195"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="59,179,131,179,131,185,59,185"/>
+<area shape="rect" id="Node000010" href="$classfast__mqtt_1_1FastMQTT.html#aafffdd575dc3739920895f88125d53e6" title="重置退避。" alt="" coords="146,219,253,244"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="60,189,107,205,134,212,133,218,106,210,58,194"/>
+<area shape="rect" id="Node000011" href="$classfast__mqtt_1_1FastMQTT.html#acff25b142693a6b1214d5607ed239864" title="线程四：消费发送队列并执行发布。" alt="" coords="150,268,249,293"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="45,193,71,224,108,254,138,267,136,272,105,259,67,228,41,197"/>
+<area shape="rect" id="Node000014" href="$classfast__mqtt_1_1FastMQTT.html#abc9dbc2c01111d1a7a7df06c3b44ca50" title="线程安全地设置生命周期状态。" alt="" coords="161,317,238,343"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="40,194,63,248,83,278,108,304,127,315,148,321,146,326,125,319,105,308,78,281,58,250,35,196"/>
+<area shape="rect" id="Node000003" href="$classfast__mqtt_1_1FastMQTT.html#a09143afd29b62e1d9a5ffbbdd2b8d90a" title="TCP 连通性探测。" alt="" coords="360,5,476,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="291,15,346,15,346,21,291,21"/>
+<area shape="rect" id="Node000005" href="$classfast__mqtt_1_1FastMQTT.html#ab5b6108b50cbcbd78743bf9efe70b723" title="匹配并执行回调。" alt="" coords="340,55,496,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="261,65,326,65,326,70,261,70"/>
+<area shape="rect" id="Node000006" href="$classfast__mqtt_1_1FastMQTT.html#ad347c0c08e0899f2e776370ba1aa3807" title="MQTT 主题匹配。" alt="" coords="544,55,639,80"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="496,65,530,65,530,70,496,70"/>
+<area shape="rect" id="Node000009" href="$classfast__mqtt_1_1FastMQTT.html#a4d03ba8dcc818d40dd578101ffd6af99" title="计算下一次重连退避秒数。" alt="" coords="341,169,495,195"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="255,179,327,179,327,185,255,185"/>
+<area shape="rect" id="Node000012" href="$classfast__mqtt_1_1FastMQTT.html#a7e1b6e9186ee608c6dc909327afe5aef" title="实际执行 mosquitto_publish。" alt="" coords="375,243,461,268"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="249,272,361,259,362,264,249,278"/>
+<area shape="rect" id="Node000013" href="$classfast__mqtt_1_1FastMQTT.html#afa30e38f3d28ccf580b6786731b615fc" title="当前 Unix 秒。" alt="" coords="365,292,471,317"/>
+<area shape="poly" id="edge12_Node000011_Node000013" title=" " alt="" coords="249,283,352,295,351,300,249,289"/>
+</map>

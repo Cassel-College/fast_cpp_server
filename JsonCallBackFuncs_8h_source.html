@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_comm/mqtt/json/JsonCallBackFuncs.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_1a464db7147701c56b7cbed9c804870f.html">my_comm</a></li><li class="navelem"><a class="el" href="dir_15b437d233a2e9352a16a225c3ef6723.html">mqtt</a></li><li class="navelem"><a class="el" href="dir_0225a3bb1b636cb7cece0ff5ea4cb732.html">json</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">JsonCallBackFuncs.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="JsonCallBackFuncs_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// =============================================================================</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// 文件：JsonCallBackFuncs.h</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// 模块：my_comm / mqtt / json</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// 说明：JSON 消息回调集合（单例工厂）。</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// 设计目标：</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">//   - 对外提供“按 topic 获取 fast_mqtt::MessageCallback”的能力；</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//   - 内部封装 nlohmann::json 的解析与中文日志打印；</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">//   - 后续可以在这里为不同 topic 扩展各自的专属处理逻辑，</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">//     而完全不需要改动底层 FastMQTT 传输层。</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">//</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// 与 2536pb（protobuf）的差异：</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">//   - 2536pb 的载荷是 protobuf 序列化字节，需要 ParseFromString；</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">//   - JSON 的载荷是 UTF-8 文本，直接用 nlohmann::json::parse 解析即可，</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">//     因此本模块不依赖任何 protobuf 头文件。</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">// =============================================================================</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;nlohmann/json.hpp&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;<a class="code" href="FastMQTTTypes_8hpp.html">FastMQTTTypes.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacejson__comm.html">json_comm</a> {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="foldopen" id="foldopen00039" data-start="{" data-end="};">
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classjson__comm_1_1JsonCallBackFuncs.html">   39</a></span><span class="keyword">class </span><a class="code hl_class" href="classjson__comm_1_1JsonCallBackFuncs.html">JsonCallBackFuncs</a> final {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">static</span> <a class="code hl_class" href="classjson__comm_1_1JsonCallBackFuncs.html">JsonCallBackFuncs</a>&amp; <a class="code hl_function" href="classjson__comm_1_1JsonCallBackFuncs.html#ac69321044420447d3524587d666fc0be">GetInstance</a>();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classjson__comm_1_1JsonCallBackFuncs.html#a58bbd6a799df33625cd2eb1636829ce6">   44</a></span>    <a class="code hl_function" href="classjson__comm_1_1JsonCallBackFuncs.html#a58bbd6a799df33625cd2eb1636829ce6">JsonCallBackFuncs</a>(<span class="keyword">const</span> <a class="code hl_class" href="classjson__comm_1_1JsonCallBackFuncs.html">JsonCallBackFuncs</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classjson__comm_1_1JsonCallBackFuncs.html#a3d817b6281dfb742c1335d5cbfc5cbe3">   45</a></span>    <a class="code hl_class" href="classjson__comm_1_1JsonCallBackFuncs.html">JsonCallBackFuncs</a>&amp; <a class="code hl_function" href="classjson__comm_1_1JsonCallBackFuncs.html#a3d817b6281dfb742c1335d5cbfc5cbe3">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classjson__comm_1_1JsonCallBackFuncs.html">JsonCallBackFuncs</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classjson__comm_1_1JsonCallBackFuncs.html#a8490d70e417032b455a5cecf17975148">   46</a></span>    <a class="code hl_function" href="classjson__comm_1_1JsonCallBackFuncs.html#a8490d70e417032b455a5cecf17975148">JsonCallBackFuncs</a>(<a class="code hl_class" href="classjson__comm_1_1JsonCallBackFuncs.html">JsonCallBackFuncs</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classjson__comm_1_1JsonCallBackFuncs.html#ae409237e462599d2b45fc446bdedb8da">   47</a></span>    <a class="code hl_class" href="classjson__comm_1_1JsonCallBackFuncs.html">JsonCallBackFuncs</a>&amp; <a class="code hl_function" href="classjson__comm_1_1JsonCallBackFuncs.html#ae409237e462599d2b45fc446bdedb8da">operator=</a>(<a class="code hl_class" href="classjson__comm_1_1JsonCallBackFuncs.html">JsonCallBackFuncs</a>&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_typedef" href="namespacefast__mqtt.html#a7eb2b5237d75666c254f0440ae198104">fast_mqtt::MessageCallback</a> <a class="code hl_function" href="classjson__comm_1_1JsonCallBackFuncs.html#a2beda3ee013fd72138448b6b8f7d80de">GetCallbackForTopic</a>(<span class="keyword">const</span> std::string&amp; topic);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">static</span> std::string <a class="code hl_function" href="classjson__comm_1_1JsonCallBackFuncs.html#a11f765c63df48e5a83c138dfbdaaed0f">BuildSummary</a>(<span class="keyword">const</span> nlohmann::json&amp; msg);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classjson__comm_1_1JsonCallBackFuncs.html#a7112c40d3f510ddde47739729a4fad32">   68</a></span>    <a class="code hl_function" href="classjson__comm_1_1JsonCallBackFuncs.html#a7112c40d3f510ddde47739729a4fad32">JsonCallBackFuncs</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <a class="code hl_typedef" href="namespacefast__mqtt.html#a7eb2b5237d75666c254f0440ae198104">fast_mqtt::MessageCallback</a> <a class="code hl_function" href="classjson__comm_1_1JsonCallBackFuncs.html#a6ea3784f87d826a3e59fd81081c32f8a">BuildCallback</a>(<span class="keyword">const</span> std::string&amp; topic,</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                                             <span class="keyword">const</span> std::string&amp; title);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classjson__comm_1_1JsonCallBackFuncs.html#ab7c6c43aaa67b3c3d986a64e6b4b0846">LogParsedMessage</a>(<span class="keyword">const</span> std::string&amp; title,</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                                 <span class="keyword">const</span> <a class="code hl_struct" href="structfast__mqtt_1_1Message.html">fast_mqtt::Message</a>&amp; msg,</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                                 <span class="keyword">const</span> nlohmann::json&amp; parsed_msg);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="classjson__comm_1_1JsonCallBackFuncs.html#a281b5ec791338d4378e22ef44a51b4a1">   87</a></span>    std::mutex <a class="code hl_variable" href="classjson__comm_1_1JsonCallBackFuncs.html#a281b5ec791338d4378e22ef44a51b4a1">mutex_</a>;                                            </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="classjson__comm_1_1JsonCallBackFuncs.html#a5e3776d886613cf3b31376209fae2928">   88</a></span>    std::map&lt;std::string, fast_mqtt::MessageCallback&gt; <a class="code hl_variable" href="classjson__comm_1_1JsonCallBackFuncs.html#a5e3776d886613cf3b31376209fae2928">cache_</a>;     </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>};</div>
+</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>}  <span class="comment">// namespace json_comm</span></div>
+<div class="ttc" id="aFastMQTTTypes_8hpp_html"><div class="ttname"><a href="FastMQTTTypes_8hpp.html">FastMQTTTypes.hpp</a></div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonCallBackFuncs_html"><div class="ttname"><a href="classjson__comm_1_1JsonCallBackFuncs.html">json_comm::JsonCallBackFuncs</a></div><div class="ttdoc">JSON 回调函数集合单例。</div><div class="ttdef"><b>Definition</b> JsonCallBackFuncs.h:39</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonCallBackFuncs_html_a11f765c63df48e5a83c138dfbdaaed0f"><div class="ttname"><a href="classjson__comm_1_1JsonCallBackFuncs.html#a11f765c63df48e5a83c138dfbdaaed0f">json_comm::JsonCallBackFuncs::BuildSummary</a></div><div class="ttdeci">static std::string BuildSummary(const nlohmann::json &amp;msg)</div><div class="ttdoc">把一段 JSON 对象转成简短的中文摘要，便于日志打印。</div><div class="ttdef"><b>Definition</b> JsonCallBackFuncs.cpp:72</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonCallBackFuncs_html_a281b5ec791338d4378e22ef44a51b4a1"><div class="ttname"><a href="classjson__comm_1_1JsonCallBackFuncs.html#a281b5ec791338d4378e22ef44a51b4a1">json_comm::JsonCallBackFuncs::mutex_</a></div><div class="ttdeci">std::mutex mutex_</div><div class="ttdoc">保护 cache_。</div><div class="ttdef"><b>Definition</b> JsonCallBackFuncs.h:87</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonCallBackFuncs_html_a2beda3ee013fd72138448b6b8f7d80de"><div class="ttname"><a href="classjson__comm_1_1JsonCallBackFuncs.html#a2beda3ee013fd72138448b6b8f7d80de">json_comm::JsonCallBackFuncs::GetCallbackForTopic</a></div><div class="ttdeci">fast_mqtt::MessageCallback GetCallbackForTopic(const std::string &amp;topic)</div><div class="ttdoc">根据 topic 获取一个 MessageCallback。</div><div class="ttdef"><b>Definition</b> JsonCallBackFuncs.cpp:26</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonCallBackFuncs_html_a3d817b6281dfb742c1335d5cbfc5cbe3"><div class="ttname"><a href="classjson__comm_1_1JsonCallBackFuncs.html#a3d817b6281dfb742c1335d5cbfc5cbe3">json_comm::JsonCallBackFuncs::operator=</a></div><div class="ttdeci">JsonCallBackFuncs &amp; operator=(const JsonCallBackFuncs &amp;)=delete</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonCallBackFuncs_html_a58bbd6a799df33625cd2eb1636829ce6"><div class="ttname"><a href="classjson__comm_1_1JsonCallBackFuncs.html#a58bbd6a799df33625cd2eb1636829ce6">json_comm::JsonCallBackFuncs::JsonCallBackFuncs</a></div><div class="ttdeci">JsonCallBackFuncs(const JsonCallBackFuncs &amp;)=delete</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonCallBackFuncs_html_a5e3776d886613cf3b31376209fae2928"><div class="ttname"><a href="classjson__comm_1_1JsonCallBackFuncs.html#a5e3776d886613cf3b31376209fae2928">json_comm::JsonCallBackFuncs::cache_</a></div><div class="ttdeci">std::map&lt; std::string, fast_mqtt::MessageCallback &gt; cache_</div><div class="ttdoc">topic -&gt; 回调缓存。</div><div class="ttdef"><b>Definition</b> JsonCallBackFuncs.h:88</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonCallBackFuncs_html_a6ea3784f87d826a3e59fd81081c32f8a"><div class="ttname"><a href="classjson__comm_1_1JsonCallBackFuncs.html#a6ea3784f87d826a3e59fd81081c32f8a">json_comm::JsonCallBackFuncs::BuildCallback</a></div><div class="ttdeci">fast_mqtt::MessageCallback BuildCallback(const std::string &amp;topic, const std::string &amp;title)</div><div class="ttdoc">真正构造某个 topic 的回调闭包。</div><div class="ttdef"><b>Definition</b> JsonCallBackFuncs.cpp:43</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonCallBackFuncs_html_a7112c40d3f510ddde47739729a4fad32"><div class="ttname"><a href="classjson__comm_1_1JsonCallBackFuncs.html#a7112c40d3f510ddde47739729a4fad32">json_comm::JsonCallBackFuncs::JsonCallBackFuncs</a></div><div class="ttdeci">JsonCallBackFuncs()=default</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonCallBackFuncs_html_a8490d70e417032b455a5cecf17975148"><div class="ttname"><a href="classjson__comm_1_1JsonCallBackFuncs.html#a8490d70e417032b455a5cecf17975148">json_comm::JsonCallBackFuncs::JsonCallBackFuncs</a></div><div class="ttdeci">JsonCallBackFuncs(JsonCallBackFuncs &amp;&amp;)=delete</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonCallBackFuncs_html_ab7c6c43aaa67b3c3d986a64e6b4b0846"><div class="ttname"><a href="classjson__comm_1_1JsonCallBackFuncs.html#ab7c6c43aaa67b3c3d986a64e6b4b0846">json_comm::JsonCallBackFuncs::LogParsedMessage</a></div><div class="ttdeci">static void LogParsedMessage(const std::string &amp;title, const fast_mqtt::Message &amp;msg, const nlohmann::json &amp;parsed_msg)</div><div class="ttdoc">打印一条已解析的 JSON 消息（统一日志格式）。</div><div class="ttdef"><b>Definition</b> JsonCallBackFuncs.cpp:100</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonCallBackFuncs_html_ac69321044420447d3524587d666fc0be"><div class="ttname"><a href="classjson__comm_1_1JsonCallBackFuncs.html#ac69321044420447d3524587d666fc0be">json_comm::JsonCallBackFuncs::GetInstance</a></div><div class="ttdeci">static JsonCallBackFuncs &amp; GetInstance()</div><div class="ttdoc">获取全局唯一实例（懒汉式单例，线程安全）。</div><div class="ttdef"><b>Definition</b> JsonCallBackFuncs.cpp:20</div></div>
+<div class="ttc" id="aclassjson__comm_1_1JsonCallBackFuncs_html_ae409237e462599d2b45fc446bdedb8da"><div class="ttname"><a href="classjson__comm_1_1JsonCallBackFuncs.html#ae409237e462599d2b45fc446bdedb8da">json_comm::JsonCallBackFuncs::operator=</a></div><div class="ttdeci">JsonCallBackFuncs &amp; operator=(JsonCallBackFuncs &amp;&amp;)=delete</div></div>
+<div class="ttc" id="anamespacefast__mqtt_html_a7eb2b5237d75666c254f0440ae198104"><div class="ttname"><a href="namespacefast__mqtt.html#a7eb2b5237d75666c254f0440ae198104">fast_mqtt::MessageCallback</a></div><div class="ttdeci">std::function&lt; void(const Message &amp;)&gt; MessageCallback</div><div class="ttdoc">业务回调函数类型。</div><div class="ttdef"><b>Definition</b> FastMQTTTypes.hpp:177</div></div>
+<div class="ttc" id="anamespacejson__comm_html"><div class="ttname"><a href="namespacejson__comm.html">json_comm</a></div><div class="ttdef"><b>Definition</b> JsonCallBackFuncs.cpp:13</div></div>
+<div class="ttc" id="astructfast__mqtt_1_1Message_html"><div class="ttname"><a href="structfast__mqtt_1_1Message.html">fast_mqtt::Message</a></div><div class="ttdoc">统一消息结构，既用于发送也用于接收。</div><div class="ttdef"><b>Definition</b> FastMQTTTypes.hpp:159</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

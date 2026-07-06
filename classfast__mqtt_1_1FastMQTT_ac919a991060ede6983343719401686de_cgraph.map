@@ -1,0 +1,10 @@
+<map id="Destroy" name="Destroy">
+<area shape="rect" id="Node000001" title="销毁模块，释放资源，状态回到未初始化。 内部会先调用 Stop()。" alt="" coords="5,56,79,81"/>
+<area shape="rect" id="Node000002" href="$classfast__mqtt_1_1FastMQTT.html#adc871ec5bf15dfe0170ff8085237f6fc" title="清空所有 Topic 的全部回调。" alt="" coords="127,5,263,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="78,54,141,33,143,38,80,59"/>
+<area shape="rect" id="Node000003" href="$classfast__mqtt_1_1FastMQTT.html#abc9dbc2c01111d1a7a7df06c3b44ca50" title="线程安全地设置生命周期状态。" alt="" coords="311,81,388,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="79,69,297,87,296,92,79,74"/>
+<area shape="rect" id="Node000004" href="$classfast__mqtt_1_1FastMQTT.html#a17a237457e57625296e6b24feb19c60a" title="停止模块，安全退出所有后台线程并断开连接。 可重复调用，幂等安全。" alt="" coords="169,107,220,132"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="80,78,157,104,155,109,78,83"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="220,113,296,100,297,105,221,118"/>
+</map>

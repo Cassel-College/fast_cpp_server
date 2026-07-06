@@ -1,0 +1,312 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: Statistics结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacefast__mqtt.html">fast_mqtt</a></li><li class="navelem"><a class="el" href="structfast__mqtt_1_1Statistics.html">Statistics</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">成员变量</a>  </div>
+  <div class="headertitle"><div class="title">Statistics结构体 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>运行期统计计数器。全部使用原子类型，保证多线程读写安全。  
+ <a href="structfast__mqtt_1_1Statistics.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="FastMQTTTypes_8hpp_source.html">FastMQTTTypes.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+成员变量</h2></td></tr>
+<tr class="memitem:af3eae6837cac936d89b3daff990dab6f" id="r_af3eae6837cac936d89b3daff990dab6f"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; std::int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfast__mqtt_1_1Statistics.html#af3eae6837cac936d89b3daff990dab6f">reconnect_count</a> {0}</td></tr>
+<tr class="memdesc:af3eae6837cac936d89b3daff990dab6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">累计重连次数。  <br /></td></tr>
+<tr class="separator:af3eae6837cac936d89b3daff990dab6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a781551608e8893ccbf2c586744f79afa" id="r_a781551608e8893ccbf2c586744f79afa"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; std::int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfast__mqtt_1_1Statistics.html#a781551608e8893ccbf2c586744f79afa">last_connect_time</a> {0}</td></tr>
+<tr class="memdesc:a781551608e8893ccbf2c586744f79afa"><td class="mdescLeft">&#160;</td><td class="mdescRight">最近一次连接成功时间。  <br /></td></tr>
+<tr class="separator:a781551608e8893ccbf2c586744f79afa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd58d169f9592a20d1deb13e6e2dde31" id="r_abd58d169f9592a20d1deb13e6e2dde31"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; std::int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfast__mqtt_1_1Statistics.html#abd58d169f9592a20d1deb13e6e2dde31">last_send_time</a> {0}</td></tr>
+<tr class="memdesc:abd58d169f9592a20d1deb13e6e2dde31"><td class="mdescLeft">&#160;</td><td class="mdescRight">最近一次发送成功时间。  <br /></td></tr>
+<tr class="separator:abd58d169f9592a20d1deb13e6e2dde31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a136448238d239f2299c583e43629a777" id="r_a136448238d239f2299c583e43629a777"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; std::int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfast__mqtt_1_1Statistics.html#a136448238d239f2299c583e43629a777">last_recv_time</a> {0}</td></tr>
+<tr class="memdesc:a136448238d239f2299c583e43629a777"><td class="mdescLeft">&#160;</td><td class="mdescRight">最近一次收到消息时间。  <br /></td></tr>
+<tr class="separator:a136448238d239f2299c583e43629a777"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae695b1c533500bd7d99353261a338d44" id="r_ae695b1c533500bd7d99353261a338d44"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; std::int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfast__mqtt_1_1Statistics.html#ae695b1c533500bd7d99353261a338d44">send_success</a> {0}</td></tr>
+<tr class="memdesc:ae695b1c533500bd7d99353261a338d44"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送成功计数。  <br /></td></tr>
+<tr class="separator:ae695b1c533500bd7d99353261a338d44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab267805e7feee131d83ddaee24dc41f" id="r_aab267805e7feee131d83ddaee24dc41f"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; std::int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfast__mqtt_1_1Statistics.html#aab267805e7feee131d83ddaee24dc41f">send_failed</a> {0}</td></tr>
+<tr class="memdesc:aab267805e7feee131d83ddaee24dc41f"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送失败计数。  <br /></td></tr>
+<tr class="separator:aab267805e7feee131d83ddaee24dc41f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7008e81cbe59e0f1521fdde9dab4a236" id="r_a7008e81cbe59e0f1521fdde9dab4a236"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; std::int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfast__mqtt_1_1Statistics.html#a7008e81cbe59e0f1521fdde9dab4a236">recv_count</a> {0}</td></tr>
+<tr class="memdesc:a7008e81cbe59e0f1521fdde9dab4a236"><td class="mdescLeft">&#160;</td><td class="mdescRight">收到消息计数。  <br /></td></tr>
+<tr class="separator:a7008e81cbe59e0f1521fdde9dab4a236"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92a92be6c18e66a44ebf79468d1f6baf" id="r_a92a92be6c18e66a44ebf79468d1f6baf"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; std::int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfast__mqtt_1_1Statistics.html#a92a92be6c18e66a44ebf79468d1f6baf">callback_failed</a> {0}</td></tr>
+<tr class="memdesc:a92a92be6c18e66a44ebf79468d1f6baf"><td class="mdescLeft">&#160;</td><td class="mdescRight">回调执行失败计数。  <br /></td></tr>
+<tr class="separator:a92a92be6c18e66a44ebf79468d1f6baf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09aae53d66d1d86a125770eccda0c866" id="r_a09aae53d66d1d86a125770eccda0c866"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; std::int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfast__mqtt_1_1Statistics.html#a09aae53d66d1d86a125770eccda0c866">send_dropped</a> {0}</td></tr>
+<tr class="memdesc:a09aae53d66d1d86a125770eccda0c866"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送队列满被丢弃计数。  <br /></td></tr>
+<tr class="separator:a09aae53d66d1d86a125770eccda0c866"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebd3ff16395b486e041d079ccbe7a53a" id="r_aebd3ff16395b486e041d079ccbe7a53a"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; std::int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfast__mqtt_1_1Statistics.html#aebd3ff16395b486e041d079ccbe7a53a">recv_dropped</a> {0}</td></tr>
+<tr class="memdesc:aebd3ff16395b486e041d079ccbe7a53a"><td class="mdescLeft">&#160;</td><td class="mdescRight">接收队列满被丢弃计数。  <br /></td></tr>
+<tr class="separator:aebd3ff16395b486e041d079ccbe7a53a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>运行期统计计数器。全部使用原子类型，保证多线程读写安全。 </p>
+</div><h2 class="groupheader">结构体成员变量说明</h2>
+<a id="a92a92be6c18e66a44ebf79468d1f6baf" name="a92a92be6c18e66a44ebf79468d1f6baf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92a92be6c18e66a44ebf79468d1f6baf">&#9670;&#160;</a></span>callback_failed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;std::int64_t&gt; callback_failed {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>回调执行失败计数。 </p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classfast__mqtt_1_1FastMQTT.html#ab5b6108b50cbcbd78743bf9efe70b723">FastMQTT::DispatchToCallbacks()</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#ac7cd60113d7a6c38b9ba01eeadb3f0e5">FastMQTT::GetHealthStatus()</a> , 以及 <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a7c50118c59484b949e538cac53612184">FastMQTT::GetStatistics()</a>.</p>
+
+</div>
+</div>
+<a id="a781551608e8893ccbf2c586744f79afa" name="a781551608e8893ccbf2c586744f79afa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a781551608e8893ccbf2c586744f79afa">&#9670;&#160;</a></span>last_connect_time</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;std::int64_t&gt; last_connect_time {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>最近一次连接成功时间。 </p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classfast__mqtt_1_1FastMQTT.html#ac7cd60113d7a6c38b9ba01eeadb3f0e5">FastMQTT::GetHealthStatus()</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a7c50118c59484b949e538cac53612184">FastMQTT::GetStatistics()</a> , 以及 <a class="el" href="classfast__mqtt_1_1FastMQTT.html#ad3eac3c6eef0527f40cf5b35f96792bf">FastMQTT::HandleConnect()</a>.</p>
+
+</div>
+</div>
+<a id="a136448238d239f2299c583e43629a777" name="a136448238d239f2299c583e43629a777"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a136448238d239f2299c583e43629a777">&#9670;&#160;</a></span>last_recv_time</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;std::int64_t&gt; last_recv_time {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>最近一次收到消息时间。 </p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classfast__mqtt_1_1FastMQTT.html#ac7cd60113d7a6c38b9ba01eeadb3f0e5">FastMQTT::GetHealthStatus()</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a7c50118c59484b949e538cac53612184">FastMQTT::GetStatistics()</a> , 以及 <a class="el" href="classfast__mqtt_1_1FastMQTT.html#af64f2fa5bc94044e798c61950a091d49">FastMQTT::HandleMessage()</a>.</p>
+
+</div>
+</div>
+<a id="abd58d169f9592a20d1deb13e6e2dde31" name="abd58d169f9592a20d1deb13e6e2dde31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd58d169f9592a20d1deb13e6e2dde31">&#9670;&#160;</a></span>last_send_time</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;std::int64_t&gt; last_send_time {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>最近一次发送成功时间。 </p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classfast__mqtt_1_1FastMQTT.html#ac7cd60113d7a6c38b9ba01eeadb3f0e5">FastMQTT::GetHealthStatus()</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a7c50118c59484b949e538cac53612184">FastMQTT::GetStatistics()</a> , 以及 <a class="el" href="classfast__mqtt_1_1FastMQTT.html#acff25b142693a6b1214d5607ed239864">FastMQTT::SenderLoop()</a>.</p>
+
+</div>
+</div>
+<a id="af3eae6837cac936d89b3daff990dab6f" name="af3eae6837cac936d89b3daff990dab6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3eae6837cac936d89b3daff990dab6f">&#9670;&#160;</a></span>reconnect_count</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;std::int64_t&gt; reconnect_count {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>累计重连次数。 </p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classfast__mqtt_1_1FastMQTT.html#ac7cd60113d7a6c38b9ba01eeadb3f0e5">FastMQTT::GetHealthStatus()</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a7c50118c59484b949e538cac53612184">FastMQTT::GetStatistics()</a> , 以及 <a class="el" href="classfast__mqtt_1_1FastMQTT.html#aa963e90da1132a12d6576c717072da28">FastMQTT::ReceiverLoop()</a>.</p>
+
+</div>
+</div>
+<a id="a7008e81cbe59e0f1521fdde9dab4a236" name="a7008e81cbe59e0f1521fdde9dab4a236"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7008e81cbe59e0f1521fdde9dab4a236">&#9670;&#160;</a></span>recv_count</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;std::int64_t&gt; recv_count {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>收到消息计数。 </p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classfast__mqtt_1_1FastMQTT.html#ac7cd60113d7a6c38b9ba01eeadb3f0e5">FastMQTT::GetHealthStatus()</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a7c50118c59484b949e538cac53612184">FastMQTT::GetStatistics()</a> , 以及 <a class="el" href="classfast__mqtt_1_1FastMQTT.html#af64f2fa5bc94044e798c61950a091d49">FastMQTT::HandleMessage()</a>.</p>
+
+</div>
+</div>
+<a id="aebd3ff16395b486e041d079ccbe7a53a" name="aebd3ff16395b486e041d079ccbe7a53a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebd3ff16395b486e041d079ccbe7a53a">&#9670;&#160;</a></span>recv_dropped</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;std::int64_t&gt; recv_dropped {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>接收队列满被丢弃计数。 </p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a7c50118c59484b949e538cac53612184">FastMQTT::GetStatistics()</a> , 以及 <a class="el" href="classfast__mqtt_1_1FastMQTT.html#af64f2fa5bc94044e798c61950a091d49">FastMQTT::HandleMessage()</a>.</p>
+
+</div>
+</div>
+<a id="a09aae53d66d1d86a125770eccda0c866" name="a09aae53d66d1d86a125770eccda0c866"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09aae53d66d1d86a125770eccda0c866">&#9670;&#160;</a></span>send_dropped</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;std::int64_t&gt; send_dropped {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>发送队列满被丢弃计数。 </p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a7c50118c59484b949e538cac53612184">FastMQTT::GetStatistics()</a> , 以及 <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a11d5f0a0683bddb97a59fbf30ea7cd75">FastMQTT::Publish()</a>.</p>
+
+</div>
+</div>
+<a id="aab267805e7feee131d83ddaee24dc41f" name="aab267805e7feee131d83ddaee24dc41f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab267805e7feee131d83ddaee24dc41f">&#9670;&#160;</a></span>send_failed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;std::int64_t&gt; send_failed {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>发送失败计数。 </p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classfast__mqtt_1_1FastMQTT.html#ac7cd60113d7a6c38b9ba01eeadb3f0e5">FastMQTT::GetHealthStatus()</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a7c50118c59484b949e538cac53612184">FastMQTT::GetStatistics()</a> , 以及 <a class="el" href="classfast__mqtt_1_1FastMQTT.html#acff25b142693a6b1214d5607ed239864">FastMQTT::SenderLoop()</a>.</p>
+
+</div>
+</div>
+<a id="ae695b1c533500bd7d99353261a338d44" name="ae695b1c533500bd7d99353261a338d44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae695b1c533500bd7d99353261a338d44">&#9670;&#160;</a></span>send_success</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::atomic&lt;std::int64_t&gt; send_success {0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>发送成功计数。 </p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classfast__mqtt_1_1FastMQTT.html#ac7cd60113d7a6c38b9ba01eeadb3f0e5">FastMQTT::GetHealthStatus()</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a7c50118c59484b949e538cac53612184">FastMQTT::GetStatistics()</a> , 以及 <a class="el" href="classfast__mqtt_1_1FastMQTT.html#acff25b142693a6b1214d5607ed239864">FastMQTT::SenderLoop()</a>.</p>
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li>src/util/my_fast_MQTT/<a class="el" href="FastMQTTTypes_8hpp_source.html">FastMQTTTypes.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

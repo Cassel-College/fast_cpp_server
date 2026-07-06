@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_comm/mqtt/json/JsonCallBackFuncs.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_1a464db7147701c56b7cbed9c804870f.html">my_comm</a></li><li class="navelem"><a class="el" href="dir_15b437d233a2e9352a16a225c3ef6723.html">mqtt</a></li><li class="navelem"><a class="el" href="dir_0225a3bb1b636cb7cece0ff5ea4cb732.html">json</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#namespaces">命名空间</a>  </div>
+  <div class="headertitle"><div class="title">JsonCallBackFuncs.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;map&gt;</code><br />
+<code>#include &lt;mutex&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;nlohmann/json.hpp&gt;</code><br />
+<code>#include &quot;<a class="el" href="FastMQTTTypes_8hpp_source.html">FastMQTTTypes.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+JsonCallBackFuncs.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="JsonCallBackFuncs_8h__incl.png" border="0" usemap="#asrc_2util_2my__comm_2mqtt_2json_2JsonCallBackFuncs_8h" alt=""/></div>
+<map name="asrc_2util_2my__comm_2mqtt_2json_2JsonCallBackFuncs_8h" id="asrc_2util_2my__comm_2mqtt_2json_2JsonCallBackFuncs_8h">
+<area shape="rect" title=" " alt="" coords="86,5,277,45"/>
+<area shape="rect" title=" " alt="" coords="5,93,56,119"/>
+<area shape="poly" title=" " alt="" coords="146,48,67,89,64,84,144,43"/>
+<area shape="rect" title=" " alt="" coords="80,93,144,119"/>
+<area shape="poly" title=" " alt="" coords="167,47,134,84,130,81,163,44"/>
+<area shape="rect" title=" " alt="" coords="76,167,135,192"/>
+<area shape="poly" title=" " alt="" coords="181,46,173,81,158,120,129,158,125,155,154,117,168,80,176,45"/>
+<area shape="rect" title=" " alt="" coords="159,167,305,192"/>
+<area shape="poly" title=" " alt="" coords="190,45,226,153,221,154,185,47"/>
+<area shape="rect" href="FastMQTTTypes_8hpp.html" title=" " alt="" coords="278,93,429,119"/>
+<area shape="poly" title=" " alt="" coords="224,43,317,85,315,90,221,48"/>
+<area shape="poly" title=" " alt="" coords="314,121,149,168,147,163,313,116"/>
+<area shape="poly" title=" " alt="" coords="335,121,265,162,262,157,332,116"/>
+<area shape="rect" title=" " alt="" coords="329,167,396,192"/>
+<area shape="poly" title=" " alt="" coords="358,119,362,153,357,154,352,119"/>
+<area shape="rect" title=" " alt="" coords="420,167,487,192"/>
+<area shape="poly" title=" " alt="" coords="371,117,427,156,424,161,368,121"/>
+<area shape="rect" title=" " alt="" coords="511,167,598,192"/>
+<area shape="poly" title=" " alt="" coords="387,116,510,159,508,165,385,121"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="JsonCallBackFuncs_8h__dep__incl.png" border="0" usemap="#asrc_2util_2my__comm_2mqtt_2json_2JsonCallBackFuncs_8hdep" alt=""/></div>
+<map name="asrc_2util_2my__comm_2mqtt_2json_2JsonCallBackFuncs_8hdep" id="asrc_2util_2my__comm_2mqtt_2json_2JsonCallBackFuncs_8hdep">
+<area shape="rect" title=" " alt="" coords="119,5,310,45"/>
+<area shape="rect" href="JsonCallBackFuncs_8cpp.html" title=" " alt="" coords="5,93,211,133"/>
+<area shape="poly" title=" " alt="" coords="182,56,133,95,130,91,179,52"/>
+<area shape="rect" href="JsonComm_8cpp.html" title=" " alt="" coords="235,93,410,133"/>
+<area shape="poly" title=" " alt="" coords="251,52,300,91,297,95,248,56"/>
+</map>
+</div>
+</div>
+<p><a href="JsonCallBackFuncs_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjson__comm_1_1JsonCallBackFuncs.html">JsonCallBackFuncs</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">JSON 回调函数集合单例。  <a href="classjson__comm_1_1JsonCallBackFuncs.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacejson__comm" id="r_namespacejson__comm"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacejson__comm.html">json_comm</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>
