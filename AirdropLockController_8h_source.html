@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_api/controller/airdrop_lock/AirdropLockController.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_f1ee40842c724b3bf8a04800f5f521a7.html">my_api</a></li><li class="navelem"><a class="el" href="dir_6ef159f9932051522d309704773cf407.html">controller</a></li><li class="navelem"><a class="el" href="dir_7459603ae7e0d4bc55104901d13683f4.html">airdrop_lock</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">AirdropLockController.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="AirdropLockController_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="BaseApiController_8hpp.html">BaseApiController.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="AirdropLockDto_8hpp.html">dto/airdrop_lock/AirdropLockDto.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;oatpp/core/macro/codegen.hpp&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;oatpp/web/server/api/ApiController.hpp&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__api_1_1airdrop__lock__api.html">my_api::airdrop_lock_api</a> {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include OATPP_CODEGEN_BEGIN(ApiController)</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html">   24</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html">AirdropLockController</a> : <span class="keyword">public</span> <a class="code hl_class" href="classmy__api_1_1base_1_1BaseApiController.html">base::BaseApiController</a> {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#ae5a68f16b01c73e6f3397631205b2081">   26</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#ae5a68f16b01c73e6f3397631205b2081">SWAGGER_TAG</a> = <span class="stringliteral">&quot;AirdropLockController&quot;</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html">AirdropLockController</a>(<span class="keyword">const</span> std::shared_ptr&lt;ObjectMapper&gt;&amp; objectMapper);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">static</span> std::shared_ptr&lt;AirdropLockController&gt; <a class="code hl_function" href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#a019e27d087bd2f7e6001d51e33439c3d">createShared</a>(</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keyword">const</span> std::shared_ptr&lt;ObjectMapper&gt;&amp; objectMapper);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#a94e38e1add8f2104d4afdfe147ba3a34">   32</a></span>    <a class="code hl_function" href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#a94e38e1add8f2104d4afdfe147ba3a34">ENDPOINT_INFO</a>(initAirdropLock) {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        info-&gt;addTag(<a class="code hl_variable" href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#ae5a68f16b01c73e6f3397631205b2081">SWAGGER_TAG</a>);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        info-&gt;summary = <span class="stringliteral">&quot;初始化空投锁管理器&quot;</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        info-&gt;description = <span class="stringliteral">&quot;使用 JSON 参数初始化空投锁串口。初始化成功后会自动设置默认占空比/频率并关闭空投锁。&quot;</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        info-&gt;addConsumes&lt;oatpp::Object&lt;my_api::dto::AirdropLockInitDto&gt;&gt;(<span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_200, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_400, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_500, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    }</div>
+</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#a91f588821dfd487b4112e9cef14ed48d">   41</a></span>    <a class="code hl_function" href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#a91f588821dfd487b4112e9cef14ed48d">ENDPOINT</a>(<span class="stringliteral">&quot;POST&quot;</span>, <span class="stringliteral">&quot;/v1/airdrop_lock/init&quot;</span>, initAirdropLock,</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>             BODY_STRING(oatpp::String, body));</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#ac6324352b02e14b2b6fb0a7ae60aeace">   44</a></span>    <a class="code hl_function" href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#ac6324352b02e14b2b6fb0a7ae60aeace">ENDPOINT_INFO</a>(setDutyCycle) {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        info-&gt;addTag(<a class="code hl_variable" href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#ae5a68f16b01c73e6f3397631205b2081">SWAGGER_TAG</a>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        info-&gt;summary = <span class="stringliteral">&quot;设置空投锁占空比/频率&quot;</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        info-&gt;description = <span class="stringliteral">&quot;设置空投锁 PWM 占空比/频率，支持 duty_cycle=50 或 F050，最终下发 ASCII 命令 F050。&quot;</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        info-&gt;addConsumes&lt;oatpp::Object&lt;my_api::dto::AirdropLockDutyCycleDto&gt;&gt;(<span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_200, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_400, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_503, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
+</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#a0105c54871a3130a877c7f7103f77ee1">   53</a></span>    <a class="code hl_function" href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#a0105c54871a3130a877c7f7103f77ee1">ENDPOINT</a>(<span class="stringliteral">&quot;POST&quot;</span>, <span class="stringliteral">&quot;/v1/airdrop_lock/duty_cycle&quot;</span>, setDutyCycle,</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>             BODY_DTO(oatpp::Object&lt;my_api::dto::AirdropLockDutyCycleDto&gt;, dutyDto));</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="foldopen" id="foldopen00056" data-start="{" data-end="}">
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#a06ab6624eeed3408a3921f1f1c229607">   56</a></span>    <a class="code hl_function" href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#a06ab6624eeed3408a3921f1f1c229607">ENDPOINT_INFO</a>(openDropper) {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        info-&gt;addTag(<a class="code hl_variable" href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#ae5a68f16b01c73e6f3397631205b2081">SWAGGER_TAG</a>);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        info-&gt;summary = <span class="stringliteral">&quot;打开空投锁&quot;</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        info-&gt;description = <span class="stringliteral">&quot;向空投锁设备下发 open_cmd，默认命令为 D005。&quot;</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_200, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_503, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    }</div>
+</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#a424d2653e63bee55aa499e7f11a5176f">   63</a></span>    <a class="code hl_function" href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#a424d2653e63bee55aa499e7f11a5176f">ENDPOINT</a>(<span class="stringliteral">&quot;POST&quot;</span>, <span class="stringliteral">&quot;/v1/airdrop_lock/open&quot;</span>, openDropper);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="foldopen" id="foldopen00065" data-start="{" data-end="}">
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#aa01d718dc40bea7370b795bd5fda6598">   65</a></span>    <a class="code hl_function" href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#aa01d718dc40bea7370b795bd5fda6598">ENDPOINT_INFO</a>(closeDropper) {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        info-&gt;addTag(<a class="code hl_variable" href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#ae5a68f16b01c73e6f3397631205b2081">SWAGGER_TAG</a>);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        info-&gt;summary = <span class="stringliteral">&quot;关闭空投锁&quot;</span>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        info-&gt;description = <span class="stringliteral">&quot;向空投锁设备下发 lock_cmd，默认命令为 D010。&quot;</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_200, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_503, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    }</div>
+</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#ae334227034497a29d06625a1b0d8cc7a">   72</a></span>    <a class="code hl_function" href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#ae334227034497a29d06625a1b0d8cc7a">ENDPOINT</a>(<span class="stringliteral">&quot;POST&quot;</span>, <span class="stringliteral">&quot;/v1/airdrop_lock/close&quot;</span>, closeDropper);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="foldopen" id="foldopen00074" data-start="{" data-end="}">
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#a89103b845f42a9aace3e3c0cadcbac38">   74</a></span>    <a class="code hl_function" href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#a89103b845f42a9aace3e3c0cadcbac38">ENDPOINT_INFO</a>(getStatus) {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        info-&gt;addTag(<a class="code hl_variable" href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#ae5a68f16b01c73e6f3397631205b2081">SWAGGER_TAG</a>);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        info-&gt;summary = <span class="stringliteral">&quot;获取空投锁状态&quot;</span>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        info-&gt;description = <span class="stringliteral">&quot;返回空投锁初始化状态、串口状态、锁状态、最近命令和最近错误。&quot;</span>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_200, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
+</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#aadb405f31471b590637c67cafdd97e03">   80</a></span>    <a class="code hl_function" href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#aadb405f31471b590637c67cafdd97e03">ENDPOINT</a>(<span class="stringliteral">&quot;GET&quot;</span>, <span class="stringliteral">&quot;/v1/airdrop_lock/status&quot;</span>, getStatus);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>};</div>
+</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#include OATPP_CODEGEN_END(ApiController)</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>} <span class="comment">// namespace my_api::airdrop_lock_api</span></div>
+<div class="ttc" id="aAirdropLockDto_8hpp_html"><div class="ttname"><a href="AirdropLockDto_8hpp.html">AirdropLockDto.hpp</a></div><div class="ttdoc">空投锁模块 API 的 DTO 定义</div></div>
+<div class="ttc" id="aBaseApiController_8hpp_html"><div class="ttname"><a href="BaseApiController_8hpp.html">BaseApiController.hpp</a></div></div>
+<div class="ttc" id="aclassmy__api_1_1airdrop__lock__api_1_1AirdropLockController_html"><div class="ttname"><a href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html">my_api::airdrop_lock_api::AirdropLockController</a></div><div class="ttdef"><b>Definition</b> AirdropLockController.h:24</div></div>
+<div class="ttc" id="aclassmy__api_1_1airdrop__lock__api_1_1AirdropLockController_html_a0105c54871a3130a877c7f7103f77ee1"><div class="ttname"><a href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#a0105c54871a3130a877c7f7103f77ee1">my_api::airdrop_lock_api::AirdropLockController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;POST&quot;, &quot;/v1/airdrop_lock/duty_cycle&quot;, setDutyCycle, BODY_DTO(oatpp::Object&lt; my_api::dto::AirdropLockDutyCycleDto &gt;, dutyDto))</div></div>
+<div class="ttc" id="aclassmy__api_1_1airdrop__lock__api_1_1AirdropLockController_html_a019e27d087bd2f7e6001d51e33439c3d"><div class="ttname"><a href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#a019e27d087bd2f7e6001d51e33439c3d">my_api::airdrop_lock_api::AirdropLockController::createShared</a></div><div class="ttdeci">static std::shared_ptr&lt; AirdropLockController &gt; createShared(const std::shared_ptr&lt; ObjectMapper &gt; &amp;objectMapper)</div><div class="ttdef"><b>Definition</b> AirdropLockController.cpp:28</div></div>
+<div class="ttc" id="aclassmy__api_1_1airdrop__lock__api_1_1AirdropLockController_html_a06ab6624eeed3408a3921f1f1c229607"><div class="ttname"><a href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#a06ab6624eeed3408a3921f1f1c229607">my_api::airdrop_lock_api::AirdropLockController::ENDPOINT_INFO</a></div><div class="ttdeci">ENDPOINT_INFO(openDropper)</div><div class="ttdef"><b>Definition</b> AirdropLockController.h:56</div></div>
+<div class="ttc" id="aclassmy__api_1_1airdrop__lock__api_1_1AirdropLockController_html_a424d2653e63bee55aa499e7f11a5176f"><div class="ttname"><a href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#a424d2653e63bee55aa499e7f11a5176f">my_api::airdrop_lock_api::AirdropLockController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;POST&quot;, &quot;/v1/airdrop_lock/open&quot;, openDropper)</div></div>
+<div class="ttc" id="aclassmy__api_1_1airdrop__lock__api_1_1AirdropLockController_html_a89103b845f42a9aace3e3c0cadcbac38"><div class="ttname"><a href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#a89103b845f42a9aace3e3c0cadcbac38">my_api::airdrop_lock_api::AirdropLockController::ENDPOINT_INFO</a></div><div class="ttdeci">ENDPOINT_INFO(getStatus)</div><div class="ttdef"><b>Definition</b> AirdropLockController.h:74</div></div>
+<div class="ttc" id="aclassmy__api_1_1airdrop__lock__api_1_1AirdropLockController_html_a91f588821dfd487b4112e9cef14ed48d"><div class="ttname"><a href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#a91f588821dfd487b4112e9cef14ed48d">my_api::airdrop_lock_api::AirdropLockController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;POST&quot;, &quot;/v1/airdrop_lock/init&quot;, initAirdropLock, BODY_STRING(oatpp::String, body))</div></div>
+<div class="ttc" id="aclassmy__api_1_1airdrop__lock__api_1_1AirdropLockController_html_a94e38e1add8f2104d4afdfe147ba3a34"><div class="ttname"><a href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#a94e38e1add8f2104d4afdfe147ba3a34">my_api::airdrop_lock_api::AirdropLockController::ENDPOINT_INFO</a></div><div class="ttdeci">ENDPOINT_INFO(initAirdropLock)</div><div class="ttdef"><b>Definition</b> AirdropLockController.h:32</div></div>
+<div class="ttc" id="aclassmy__api_1_1airdrop__lock__api_1_1AirdropLockController_html_aa01d718dc40bea7370b795bd5fda6598"><div class="ttname"><a href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#aa01d718dc40bea7370b795bd5fda6598">my_api::airdrop_lock_api::AirdropLockController::ENDPOINT_INFO</a></div><div class="ttdeci">ENDPOINT_INFO(closeDropper)</div><div class="ttdef"><b>Definition</b> AirdropLockController.h:65</div></div>
+<div class="ttc" id="aclassmy__api_1_1airdrop__lock__api_1_1AirdropLockController_html_aadb405f31471b590637c67cafdd97e03"><div class="ttname"><a href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#aadb405f31471b590637c67cafdd97e03">my_api::airdrop_lock_api::AirdropLockController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;GET&quot;, &quot;/v1/airdrop_lock/status&quot;, getStatus)</div></div>
+<div class="ttc" id="aclassmy__api_1_1airdrop__lock__api_1_1AirdropLockController_html_ac6324352b02e14b2b6fb0a7ae60aeace"><div class="ttname"><a href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#ac6324352b02e14b2b6fb0a7ae60aeace">my_api::airdrop_lock_api::AirdropLockController::ENDPOINT_INFO</a></div><div class="ttdeci">ENDPOINT_INFO(setDutyCycle)</div><div class="ttdef"><b>Definition</b> AirdropLockController.h:44</div></div>
+<div class="ttc" id="aclassmy__api_1_1airdrop__lock__api_1_1AirdropLockController_html_ae334227034497a29d06625a1b0d8cc7a"><div class="ttname"><a href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#ae334227034497a29d06625a1b0d8cc7a">my_api::airdrop_lock_api::AirdropLockController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;POST&quot;, &quot;/v1/airdrop_lock/close&quot;, closeDropper)</div></div>
+<div class="ttc" id="aclassmy__api_1_1airdrop__lock__api_1_1AirdropLockController_html_ae5a68f16b01c73e6f3397631205b2081"><div class="ttname"><a href="classmy__api_1_1airdrop__lock__api_1_1AirdropLockController.html#ae5a68f16b01c73e6f3397631205b2081">my_api::airdrop_lock_api::AirdropLockController::SWAGGER_TAG</a></div><div class="ttdeci">static constexpr const char * SWAGGER_TAG</div><div class="ttdef"><b>Definition</b> AirdropLockController.h:26</div></div>
+<div class="ttc" id="aclassmy__api_1_1base_1_1BaseApiController_html"><div class="ttname"><a href="classmy__api_1_1base_1_1BaseApiController.html">my_api::base::BaseApiController</a></div><div class="ttdef"><b>Definition</b> BaseApiController.hpp:13</div></div>
+<div class="ttc" id="anamespacemy__api_1_1airdrop__lock__api_html"><div class="ttname"><a href="namespacemy__api_1_1airdrop__lock__api.html">my_api::airdrop_lock_api</a></div><div class="ttdef"><b>Definition</b> AirdropLockController.cpp:8</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

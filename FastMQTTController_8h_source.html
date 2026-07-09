@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_api/controller/fast_mqtt/FastMQTTController.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_f1ee40842c724b3bf8a04800f5f521a7.html">my_api</a></li><li class="navelem"><a class="el" href="dir_6ef159f9932051522d309704773cf407.html">controller</a></li><li class="navelem"><a class="el" href="dir_cb32fb0d077cccbb6ce5ec3b0b6c829f.html">fast_mqtt</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">FastMQTTController.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="FastMQTTController_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="BaseApiController_8hpp.html">BaseApiController.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;oatpp/core/macro/codegen.hpp&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;oatpp/web/server/api/ApiController.hpp&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__api_1_1fast__mqtt__api.html">my_api::fast_mqtt_api</a> {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include OATPP_CODEGEN_BEGIN(ApiController)</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classmy__api_1_1fast__mqtt__api_1_1FastMQTTController.html">   19</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__api_1_1fast__mqtt__api_1_1FastMQTTController.html">FastMQTTController</a> : <span class="keyword">public</span> <a class="code hl_class" href="classmy__api_1_1base_1_1BaseApiController.html">base::BaseApiController</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classmy__api_1_1fast__mqtt__api_1_1FastMQTTController.html#ae5a68f16b01c73e6f3397631205b2081">   21</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="classmy__api_1_1fast__mqtt__api_1_1FastMQTTController.html#ae5a68f16b01c73e6f3397631205b2081">SWAGGER_TAG</a> = <span class="stringliteral">&quot;FastMQTTController&quot;</span>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="classmy__api_1_1fast__mqtt__api_1_1FastMQTTController.html">FastMQTTController</a>(<span class="keyword">const</span> std::shared_ptr&lt;ObjectMapper&gt;&amp; objectMapper);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">static</span> std::shared_ptr&lt;FastMQTTController&gt; <a class="code hl_function" href="classmy__api_1_1fast__mqtt__api_1_1FastMQTTController.html#a50eea8522fa41bbd593ce6f3aca883f7">createShared</a>(</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keyword">const</span> std::shared_ptr&lt;ObjectMapper&gt;&amp; objectMapper);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classmy__api_1_1fast__mqtt__api_1_1FastMQTTController.html#a89103b845f42a9aace3e3c0cadcbac38">   28</a></span>    <a class="code hl_function" href="classmy__api_1_1fast__mqtt__api_1_1FastMQTTController.html#a89103b845f42a9aace3e3c0cadcbac38">ENDPOINT_INFO</a>(getStatus) {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        info-&gt;addTag(<a class="code hl_variable" href="classmy__api_1_1fast__mqtt__api_1_1FastMQTTController.html#ae5a68f16b01c73e6f3397631205b2081">SWAGGER_TAG</a>);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        info-&gt;summary = <span class="stringliteral">&quot;查看 FastMQTT 运行时状态&quot;</span>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        info-&gt;description = <span class="stringliteral">&quot;返回 FastMQTT 单例的运行时快照，包括连接状态、Broker 地址、&quot;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                            <span class="stringliteral">&quot;发送/接收队列长度与容量、注册 topic 数量、每个 topic 的回调数。&quot;</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_200, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        info-&gt;addResponse&lt;oatpp::String&gt;(Status::CODE_500, <span class="stringliteral">&quot;application/json&quot;</span>);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    }</div>
+</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classmy__api_1_1fast__mqtt__api_1_1FastMQTTController.html#a710e35fbf8cb74c515240cf0c08c3ccd">   36</a></span>    <a class="code hl_function" href="classmy__api_1_1fast__mqtt__api_1_1FastMQTTController.html#a710e35fbf8cb74c515240cf0c08c3ccd">ENDPOINT</a>(<span class="stringliteral">&quot;GET&quot;</span>, <span class="stringliteral">&quot;/v1/fast_mqtt/status&quot;</span>, getStatus);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>};</div>
+</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#include OATPP_CODEGEN_END(ApiController)</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>}  <span class="comment">// namespace my_api::fast_mqtt_api</span></div>
+<div class="ttc" id="aBaseApiController_8hpp_html"><div class="ttname"><a href="BaseApiController_8hpp.html">BaseApiController.hpp</a></div></div>
+<div class="ttc" id="aclassmy__api_1_1base_1_1BaseApiController_html"><div class="ttname"><a href="classmy__api_1_1base_1_1BaseApiController.html">my_api::base::BaseApiController</a></div><div class="ttdef"><b>Definition</b> BaseApiController.hpp:13</div></div>
+<div class="ttc" id="aclassmy__api_1_1fast__mqtt__api_1_1FastMQTTController_html"><div class="ttname"><a href="classmy__api_1_1fast__mqtt__api_1_1FastMQTTController.html">my_api::fast_mqtt_api::FastMQTTController</a></div><div class="ttdef"><b>Definition</b> FastMQTTController.h:19</div></div>
+<div class="ttc" id="aclassmy__api_1_1fast__mqtt__api_1_1FastMQTTController_html_a50eea8522fa41bbd593ce6f3aca883f7"><div class="ttname"><a href="classmy__api_1_1fast__mqtt__api_1_1FastMQTTController.html#a50eea8522fa41bbd593ce6f3aca883f7">my_api::fast_mqtt_api::FastMQTTController::createShared</a></div><div class="ttdeci">static std::shared_ptr&lt; FastMQTTController &gt; createShared(const std::shared_ptr&lt; ObjectMapper &gt; &amp;objectMapper)</div><div class="ttdef"><b>Definition</b> FastMQTTController.cpp:13</div></div>
+<div class="ttc" id="aclassmy__api_1_1fast__mqtt__api_1_1FastMQTTController_html_a710e35fbf8cb74c515240cf0c08c3ccd"><div class="ttname"><a href="classmy__api_1_1fast__mqtt__api_1_1FastMQTTController.html#a710e35fbf8cb74c515240cf0c08c3ccd">my_api::fast_mqtt_api::FastMQTTController::ENDPOINT</a></div><div class="ttdeci">ENDPOINT(&quot;GET&quot;, &quot;/v1/fast_mqtt/status&quot;, getStatus)</div></div>
+<div class="ttc" id="aclassmy__api_1_1fast__mqtt__api_1_1FastMQTTController_html_a89103b845f42a9aace3e3c0cadcbac38"><div class="ttname"><a href="classmy__api_1_1fast__mqtt__api_1_1FastMQTTController.html#a89103b845f42a9aace3e3c0cadcbac38">my_api::fast_mqtt_api::FastMQTTController::ENDPOINT_INFO</a></div><div class="ttdeci">ENDPOINT_INFO(getStatus)</div><div class="ttdef"><b>Definition</b> FastMQTTController.h:28</div></div>
+<div class="ttc" id="aclassmy__api_1_1fast__mqtt__api_1_1FastMQTTController_html_ae5a68f16b01c73e6f3397631205b2081"><div class="ttname"><a href="classmy__api_1_1fast__mqtt__api_1_1FastMQTTController.html#ae5a68f16b01c73e6f3397631205b2081">my_api::fast_mqtt_api::FastMQTTController::SWAGGER_TAG</a></div><div class="ttdeci">static constexpr const char * SWAGGER_TAG</div><div class="ttdef"><b>Definition</b> FastMQTTController.h:21</div></div>
+<div class="ttc" id="anamespacemy__api_1_1fast__mqtt__api_html"><div class="ttname"><a href="namespacemy__api_1_1fast__mqtt__api.html">my_api::fast_mqtt_api</a></div><div class="ttdef"><b>Definition</b> FastMQTTController.cpp:6</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

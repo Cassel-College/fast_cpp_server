@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_airdrop_lock/my_airdrop_lock.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_3e05fafbdcadf9d81c48bf6c2d1494b0.html">my_airdrop_lock</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#enum-members">枚举</a>  </div>
+  <div class="headertitle"><div class="title">my_airdrop_lock.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>空投锁管理器  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &lt;mutex&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;nlohmann/json.hpp&gt;</code><br />
+<code>#include &quot;<a class="el" href="MySerial_8h_source.html">MySerial.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+my_airdrop_lock.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="my__airdrop__lock_8h__incl.png" border="0" usemap="#asrc_2util_2my__airdrop__lock_2my__airdrop__lock_8h" alt=""/></div>
+<map name="asrc_2util_2my__airdrop__lock_2my__airdrop__lock_8h" id="asrc_2util_2my__airdrop__lock_2my__airdrop__lock_8h">
+<area shape="rect" title="空投锁管理器" alt="" coords="111,5,291,45"/>
+<area shape="rect" title=" " alt="" coords="5,167,69,192"/>
+<area shape="poly" title=" " alt="" coords="183,47,62,159,58,155,179,44"/>
+<area shape="rect" title=" " alt="" coords="93,167,152,192"/>
+<area shape="poly" title=" " alt="" coords="194,47,137,155,133,153,189,45"/>
+<area shape="rect" title=" " alt="" coords="176,167,323,192"/>
+<area shape="poly" title=" " alt="" coords="210,45,244,153,239,154,205,47"/>
+<area shape="rect" href="MySerial_8h.html" title=" " alt="" coords="357,93,448,119"/>
+<area shape="poly" title=" " alt="" coords="251,43,361,86,359,91,249,48"/>
+<area shape="poly" title=" " alt="" coords="358,117,238,138,84,169,82,164,237,133,357,112"/>
+<area shape="poly" title=" " alt="" coords="358,121,166,169,165,164,357,116"/>
+<area shape="poly" title=" " alt="" coords="379,121,288,163,286,158,377,116"/>
+<area shape="rect" title=" " alt="" coords="482,167,553,192"/>
+<area shape="poly" title=" " alt="" coords="422,116,488,157,486,162,420,121"/>
+<area shape="rect" title=" " alt="" coords="577,167,644,192"/>
+<area shape="poly" title=" " alt="" coords="437,116,565,160,563,165,435,121"/>
+<area shape="rect" title=" " alt="" coords="668,167,745,192"/>
+<area shape="poly" title=" " alt="" coords="449,115,655,163,654,168,448,121"/>
+<area shape="rect" title=" " alt="" coords="770,167,833,192"/>
+<area shape="poly" title=" " alt="" coords="449,111,583,132,757,164,756,169,582,137,448,116"/>
+<area shape="rect" title=" " alt="" coords="347,167,458,192"/>
+<area shape="poly" title=" " alt="" coords="405,119,405,153,400,153,400,119"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="my__airdrop__lock_8h__dep__incl.png" border="0" usemap="#asrc_2util_2my__airdrop__lock_2my__airdrop__lock_8hdep" alt=""/></div>
+<map name="asrc_2util_2my__airdrop__lock_2my__airdrop__lock_8hdep" id="asrc_2util_2my__airdrop__lock_2my__airdrop__lock_8hdep">
+<area shape="rect" title="空投锁管理器" alt="" coords="170,5,350,45"/>
+<area shape="rect" href="Pipeline_8cpp.html" title=" " alt="" coords="5,93,139,133"/>
+<area shape="poly" title=" " alt="" coords="208,53,114,96,112,91,205,49"/>
+<area shape="rect" href="my__airdrop__lock_8cpp.html" title=" " alt="" coords="163,93,357,133"/>
+<area shape="poly" title=" " alt="" coords="263,59,263,93,257,93,257,59"/>
+<area shape="rect" href="AirdropLockController_8cpp.html" title=" " alt="" coords="381,93,659,133"/>
+<area shape="poly" title=" " alt="" coords="331,47,464,91,462,96,329,52"/>
+</map>
+</div>
+</div>
+<p><a href="my__airdrop__lock_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmy__airdrop__lock_1_1AirdropLockConfig.html">AirdropLockConfig</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">空投锁初始化配置  <a href="structmy__airdrop__lock_1_1AirdropLockConfig.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html">AirdropLockManager</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">空投锁管理器单例  <a href="classmy__airdrop__lock_1_1AirdropLockManager.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacemy__airdrop__lock" id="r_namespacemy__airdrop__lock"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__airdrop__lock.html">my_airdrop_lock</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:af953d45a2305985b02483043093996df" id="r_af953d45a2305985b02483043093996df"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996df">AirdropLockState</a> { <br />
+&#160;&#160;<a class="el" href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996dfaf704f57ea420275ad51bf55b7dec2c96">Uninitialized</a>
+, <a class="el" href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996dfab9f5c797ebbf55adccdd8539a65a0241">Disabled</a>
+, <a class="el" href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996dfa03f4a47830f97377a35321051685071e">Closed</a>
+, <a class="el" href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996dfac3bf447eabe632720a3aa1a7ce401274">Open</a>
+, <br />
+&#160;&#160;<a class="el" href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996dfa902b0d55fddef6f8d651fe1035b7d4bd">Error</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:af953d45a2305985b02483043093996df"><td class="mdescLeft">&#160;</td><td class="mdescRight">空投锁逻辑状态  <a href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996df">更多...</a><br /></td></tr>
+<tr class="separator:af953d45a2305985b02483043093996df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>空投锁管理器 </p>
+<p>空投锁管理器负责维护空投锁串口连接、初始化参数、开锁/关锁命令下发和状态查询。 该类是进程级单例，业务层和 REST API 均通过 GetInstance() 获取同一个设备状态。 </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

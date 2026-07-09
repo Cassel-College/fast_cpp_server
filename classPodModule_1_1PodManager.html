@@ -143,6 +143,8 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:ab04f372349cb47d47d156113d1d84360" id="r_ab04f372349cb47d47d156113d1d84360"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1PodManager.html#ab04f372349cb47d47d156113d1d84360">ResetForTest</a> ()</td></tr>
 <tr class="memdesc:ab04f372349cb47d47d156113d1d84360"><td class="mdescLeft">&#160;</td><td class="mdescRight">仅用于单元测试：清空当前管理器状态  <br /></td></tr>
 <tr class="separator:ab04f372349cb47d47d156113d1d84360"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5f038c2b480cf9ef5e19e3eba8dbaf9" id="r_ac5f038c2b480cf9ef5e19e3eba8dbaf9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPodModule_1_1PodManager.html#ac5f038c2b480cf9ef5e19e3eba8dbaf9">Shutdown</a> ()</td></tr>
+<tr class="separator:ac5f038c2b480cf9ef5e19e3eba8dbaf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -262,7 +264,21 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">引用了 <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>.</p>
+<p class="reference">引用了 <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a> , 以及 <a class="el" href="classPodModule_1_1PodManager.html#ac5f038c2b480cf9ef5e19e3eba8dbaf9">PodManager::Shutdown()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPodModule_1_1PodManager_aaedbcb68e7130364fc4ed32f6e29b0b8_cgraph.png" border="0" usemap="#aclassPodModule_1_1PodManager_aaedbcb68e7130364fc4ed32f6e29b0b8_cgraph" alt=""/></div>
+<map name="aclassPodModule_1_1PodManager_aaedbcb68e7130364fc4ed32f6e29b0b8_cgraph" id="aclassPodModule_1_1PodManager_aaedbcb68e7130364fc4ed32f6e29b0b8_cgraph">
+<area shape="rect" title=" " alt="" coords="5,45,120,70"/>
+<area shape="rect" href="classPodModule_1_1PodManager.html#ac5f038c2b480cf9ef5e19e3eba8dbaf9" title=" " alt="" coords="168,45,255,70"/>
+<area shape="poly" title=" " alt="" coords="120,55,155,55,155,60,120,60"/>
+<area shape="rect" href="classPodModule_1_1PodRegistry.html#ac8bb3912a3ce86b15842e79d0b421204" title="清空所有 Pod" alt="" coords="303,5,483,45"/>
+<area shape="poly" title=" " alt="" coords="255,47,289,41,290,46,255,52"/>
+<area shape="rect" href="classPodModule_1_1PodRegistry.html#ac6cf95f6f0c5c7c3d8430e88b5a7e5df" title="获取所有 Pod 实例列表" alt="" coords="303,69,483,109"/>
+<area shape="poly" title=" " alt="" coords="255,62,290,68,289,74,255,68"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -488,22 +504,21 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="classtools_1_1pipeline_1_1Pipeline.html#a0d5a2b801d4f34456d6307720cda1914">Pipeline::LaunchPodManager()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="classtools_1_1pipeline_1_1Pipeline.html#a0d5a2b801d4f34456d6307720cda1914">Pipeline::LaunchPodManager()</a> , 以及 <a class="el" href="classtools_1_1pipeline_1_1Pipeline.html#a17a237457e57625296e6b24feb19c60a">Pipeline::Stop()</a>.</p>
 <div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="classPodModule_1_1PodManager_abeee501bbadcd804228d815d816f56a1_icgraph.png" border="0" usemap="#aclassPodModule_1_1PodManager_abeee501bbadcd804228d815d816f56a1_icgraph" alt=""/></div>
 <map name="aclassPodModule_1_1PodManager_abeee501bbadcd804228d815d816f56a1_icgraph" id="aclassPodModule_1_1PodManager_abeee501bbadcd804228d815d816f56a1_icgraph">
-<area shape="rect" title=" " alt="" coords="896,42,996,67"/>
-<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a0d5a2b801d4f34456d6307720cda1914" title=" " alt="" coords="673,35,848,75"/>
-<area shape="poly" title=" " alt="" coords="882,57,848,57,848,52,882,52"/>
-<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="451,35,625,75"/>
-<area shape="poly" title=" " alt="" coords="660,57,625,57,625,52,660,52"/>
-<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="228,5,403,45"/>
-<area shape="poly" title=" " alt="" coords="437,44,402,39,403,34,437,39"/>
-<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9d284775ccebba879a77a7144be22899" title=" " alt="" coords="5,35,180,75"/>
-<area shape="poly" title=" " alt="" coords="215,41,180,46,180,41,214,36"/>
-<area shape="poly" title=" " alt="" coords="194,54,228,55,403,55,450,54,451,59,403,60,228,60,194,60"/>
+<area shape="rect" title=" " alt="" coords="451,45,551,70"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a0d5a2b801d4f34456d6307720cda1914" title=" " alt="" coords="228,5,403,45"/>
+<area shape="poly" title=" " alt="" coords="437,49,402,43,403,38,438,44"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a17a237457e57625296e6b24feb19c60a" title=" " alt="" coords="228,69,403,109"/>
+<area shape="poly" title=" " alt="" coords="438,71,403,77,402,72,437,66"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="5,5,180,45"/>
+<area shape="poly" title=" " alt="" coords="214,28,180,28,180,23,214,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#ab308ffdad0654e43a00b3d7d46c81a68" title=" " alt="" coords="5,69,180,109"/>
+<area shape="poly" title=" " alt="" coords="214,92,180,92,180,87,214,87"/>
 </map>
 </div>
 
@@ -887,6 +902,53 @@ Private 属性</h2></td></tr>
 
 </div>
 </div>
+<a id="ac5f038c2b480cf9ef5e19e3eba8dbaf9" name="ac5f038c2b480cf9ef5e19e3eba8dbaf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5f038c2b480cf9ef5e19e3eba8dbaf9">&#9670;&#160;</a></span>Shutdown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Shutdown </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classPodModule_1_1PodRegistry.html#ac8bb3912a3ce86b15842e79d0b421204">PodRegistry::clear()</a>, <a class="el" href="classPodModule_1_1PodManager.html#a2f33e27b7aaf30da7b6f21577e577f07">PodManager::init_config_</a>, <a class="el" href="classPodModule_1_1PodManager.html#a68b6f7d46f60c7bc8cf0a269d76c120f">PodManager::initialized_</a>, <a class="el" href="classPodModule_1_1PodRegistry.html#ac6cf95f6f0c5c7c3d8430e88b5a7e5df">PodRegistry::listPods()</a>, <a class="el" href="classPodModule_1_1PodManager.html#a281b5ec791338d4378e22ef44a51b4a1">PodManager::mutex_</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a> , 以及 <a class="el" href="classPodModule_1_1PodManager.html#aece5b25dfed54a0e9c4491d1fa84bc4e">PodManager::registry_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classtools_1_1pipeline_1_1Pipeline.html#a17a237457e57625296e6b24feb19c60a">Pipeline::Stop()</a> , 以及 <a class="el" href="classPodModule_1_1PodManager.html#aaedbcb68e7130364fc4ed32f6e29b0b8">PodManager::~PodManager()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPodModule_1_1PodManager_ac5f038c2b480cf9ef5e19e3eba8dbaf9_cgraph.png" border="0" usemap="#aclassPodModule_1_1PodManager_ac5f038c2b480cf9ef5e19e3eba8dbaf9_cgraph" alt=""/></div>
+<map name="aclassPodModule_1_1PodManager_ac5f038c2b480cf9ef5e19e3eba8dbaf9_cgraph" id="aclassPodModule_1_1PodManager_ac5f038c2b480cf9ef5e19e3eba8dbaf9_cgraph">
+<area shape="rect" title=" " alt="" coords="5,45,92,70"/>
+<area shape="rect" href="classPodModule_1_1PodRegistry.html#ac8bb3912a3ce86b15842e79d0b421204" title="清空所有 Pod" alt="" coords="140,5,320,45"/>
+<area shape="poly" title=" " alt="" coords="92,47,126,41,127,46,93,52"/>
+<area shape="rect" href="classPodModule_1_1PodRegistry.html#ac6cf95f6f0c5c7c3d8430e88b5a7e5df" title="获取所有 Pod 实例列表" alt="" coords="140,69,320,109"/>
+<area shape="poly" title=" " alt="" coords="93,62,127,68,126,74,92,68"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPodModule_1_1PodManager_ac5f038c2b480cf9ef5e19e3eba8dbaf9_icgraph.png" border="0" usemap="#aclassPodModule_1_1PodManager_ac5f038c2b480cf9ef5e19e3eba8dbaf9_icgraph" alt=""/></div>
+<map name="aclassPodModule_1_1PodManager_ac5f038c2b480cf9ef5e19e3eba8dbaf9_icgraph" id="aclassPodModule_1_1PodManager_ac5f038c2b480cf9ef5e19e3eba8dbaf9_icgraph">
+<area shape="rect" title=" " alt="" coords="451,42,537,67"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a17a237457e57625296e6b24feb19c60a" title=" " alt="" coords="228,5,403,45"/>
+<area shape="poly" title=" " alt="" coords="437,48,402,42,403,37,438,43"/>
+<area shape="rect" href="classPodModule_1_1PodManager.html#aaedbcb68e7130364fc4ed32f6e29b0b8" title=" " alt="" coords="258,70,373,95"/>
+<area shape="poly" title=" " alt="" coords="437,66,374,76,373,71,436,61"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#ab308ffdad0654e43a00b3d7d46c81a68" title=" " alt="" coords="5,5,180,45"/>
+<area shape="poly" title=" " alt="" coords="214,28,180,28,180,23,214,23"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a259cb5a711406a8c3e5d937eb9350cca" name="a259cb5a711406a8c3e5d937eb9350cca"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a259cb5a711406a8c3e5d937eb9350cca">&#9670;&#160;</a></span>size()</h2>
 
@@ -939,7 +1001,7 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="classPodModule_1_1PodManager.html#a369e559e96c31d6495ae943224874a80">PodManager::GetInitConfig()</a>, <a class="el" href="classPodModule_1_1PodManager.html#adecc6bee0d3c06c97c3ddc058952ee1f">PodManager::Init()</a> , 以及 <a class="el" href="classPodModule_1_1PodManager.html#ab04f372349cb47d47d156113d1d84360">PodManager::ResetForTest()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="classPodModule_1_1PodManager.html#a369e559e96c31d6495ae943224874a80">PodManager::GetInitConfig()</a>, <a class="el" href="classPodModule_1_1PodManager.html#adecc6bee0d3c06c97c3ddc058952ee1f">PodManager::Init()</a>, <a class="el" href="classPodModule_1_1PodManager.html#ab04f372349cb47d47d156113d1d84360">PodManager::ResetForTest()</a> , 以及 <a class="el" href="classPodModule_1_1PodManager.html#ac5f038c2b480cf9ef5e19e3eba8dbaf9">PodManager::Shutdown()</a>.</p>
 
 </div>
 </div>
@@ -963,7 +1025,7 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="classPodModule_1_1PodManager.html#adecc6bee0d3c06c97c3ddc058952ee1f">PodManager::Init()</a>, <a class="el" href="classPodModule_1_1PodManager.html#a475d2bd8072f3c9df7b37581c4f1eca4">PodManager::IsInitialized()</a> , 以及 <a class="el" href="classPodModule_1_1PodManager.html#ab04f372349cb47d47d156113d1d84360">PodManager::ResetForTest()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="classPodModule_1_1PodManager.html#adecc6bee0d3c06c97c3ddc058952ee1f">PodManager::Init()</a>, <a class="el" href="classPodModule_1_1PodManager.html#a475d2bd8072f3c9df7b37581c4f1eca4">PodManager::IsInitialized()</a>, <a class="el" href="classPodModule_1_1PodManager.html#ab04f372349cb47d47d156113d1d84360">PodManager::ResetForTest()</a> , 以及 <a class="el" href="classPodModule_1_1PodManager.html#ac5f038c2b480cf9ef5e19e3eba8dbaf9">PodManager::Shutdown()</a>.</p>
 
 </div>
 </div>
@@ -987,7 +1049,7 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="classPodModule_1_1PodManager.html#ac4319fbc249e87a1e54d4c6a4b0a50df">PodManager::addPod()</a>, <a class="el" href="classPodModule_1_1PodManager.html#a369e559e96c31d6495ae943224874a80">PodManager::GetInitConfig()</a>, <a class="el" href="classPodModule_1_1PodManager.html#a62dd3e4dbf155bc7fa3bd136ef3d7b51">PodManager::getPod()</a>, <a class="el" href="classPodModule_1_1PodManager.html#a0c0831a43937d4fc5d8021fddff23ef2">PodManager::GetStatusSnapshot()</a>, <a class="el" href="classPodModule_1_1PodManager.html#adecc6bee0d3c06c97c3ddc058952ee1f">PodManager::Init()</a>, <a class="el" href="classPodModule_1_1PodManager.html#abeb1221b9b0dc24c38536671c17fa5e1">PodManager::listPodIds()</a>, <a class="el" href="classPodModule_1_1PodManager.html#ac6cf95f6f0c5c7c3d8430e88b5a7e5df">PodManager::listPods()</a>, <a class="el" href="classPodModule_1_1PodManager.html#a94e4653f0149ca21f04de05274f5b83e">PodManager::removePod()</a>, <a class="el" href="classPodModule_1_1PodManager.html#ab04f372349cb47d47d156113d1d84360">PodManager::ResetForTest()</a> , 以及 <a class="el" href="classPodModule_1_1PodManager.html#a259cb5a711406a8c3e5d937eb9350cca">PodManager::size()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="classPodModule_1_1PodManager.html#ac4319fbc249e87a1e54d4c6a4b0a50df">PodManager::addPod()</a>, <a class="el" href="classPodModule_1_1PodManager.html#a369e559e96c31d6495ae943224874a80">PodManager::GetInitConfig()</a>, <a class="el" href="classPodModule_1_1PodManager.html#a62dd3e4dbf155bc7fa3bd136ef3d7b51">PodManager::getPod()</a>, <a class="el" href="classPodModule_1_1PodManager.html#a0c0831a43937d4fc5d8021fddff23ef2">PodManager::GetStatusSnapshot()</a>, <a class="el" href="classPodModule_1_1PodManager.html#adecc6bee0d3c06c97c3ddc058952ee1f">PodManager::Init()</a>, <a class="el" href="classPodModule_1_1PodManager.html#abeb1221b9b0dc24c38536671c17fa5e1">PodManager::listPodIds()</a>, <a class="el" href="classPodModule_1_1PodManager.html#ac6cf95f6f0c5c7c3d8430e88b5a7e5df">PodManager::listPods()</a>, <a class="el" href="classPodModule_1_1PodManager.html#a94e4653f0149ca21f04de05274f5b83e">PodManager::removePod()</a>, <a class="el" href="classPodModule_1_1PodManager.html#ab04f372349cb47d47d156113d1d84360">PodManager::ResetForTest()</a>, <a class="el" href="classPodModule_1_1PodManager.html#ac5f038c2b480cf9ef5e19e3eba8dbaf9">PodManager::Shutdown()</a> , 以及 <a class="el" href="classPodModule_1_1PodManager.html#a259cb5a711406a8c3e5d937eb9350cca">PodManager::size()</a>.</p>
 
 </div>
 </div>
@@ -1011,7 +1073,7 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">被这些函数引用 <a class="el" href="classPodModule_1_1PodManager.html#ac4319fbc249e87a1e54d4c6a4b0a50df">PodManager::addPod()</a>, <a class="el" href="classPodModule_1_1PodManager.html#a62dd3e4dbf155bc7fa3bd136ef3d7b51">PodManager::getPod()</a>, <a class="el" href="classPodModule_1_1PodManager.html#a0c0831a43937d4fc5d8021fddff23ef2">PodManager::GetStatusSnapshot()</a>, <a class="el" href="classPodModule_1_1PodManager.html#adecc6bee0d3c06c97c3ddc058952ee1f">PodManager::Init()</a>, <a class="el" href="classPodModule_1_1PodManager.html#abeb1221b9b0dc24c38536671c17fa5e1">PodManager::listPodIds()</a>, <a class="el" href="classPodModule_1_1PodManager.html#ac6cf95f6f0c5c7c3d8430e88b5a7e5df">PodManager::listPods()</a>, <a class="el" href="classPodModule_1_1PodManager.html#a94e4653f0149ca21f04de05274f5b83e">PodManager::removePod()</a>, <a class="el" href="classPodModule_1_1PodManager.html#ab04f372349cb47d47d156113d1d84360">PodManager::ResetForTest()</a> , 以及 <a class="el" href="classPodModule_1_1PodManager.html#a259cb5a711406a8c3e5d937eb9350cca">PodManager::size()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="classPodModule_1_1PodManager.html#ac4319fbc249e87a1e54d4c6a4b0a50df">PodManager::addPod()</a>, <a class="el" href="classPodModule_1_1PodManager.html#a62dd3e4dbf155bc7fa3bd136ef3d7b51">PodManager::getPod()</a>, <a class="el" href="classPodModule_1_1PodManager.html#a0c0831a43937d4fc5d8021fddff23ef2">PodManager::GetStatusSnapshot()</a>, <a class="el" href="classPodModule_1_1PodManager.html#adecc6bee0d3c06c97c3ddc058952ee1f">PodManager::Init()</a>, <a class="el" href="classPodModule_1_1PodManager.html#abeb1221b9b0dc24c38536671c17fa5e1">PodManager::listPodIds()</a>, <a class="el" href="classPodModule_1_1PodManager.html#ac6cf95f6f0c5c7c3d8430e88b5a7e5df">PodManager::listPods()</a>, <a class="el" href="classPodModule_1_1PodManager.html#a94e4653f0149ca21f04de05274f5b83e">PodManager::removePod()</a>, <a class="el" href="classPodModule_1_1PodManager.html#ab04f372349cb47d47d156113d1d84360">PodManager::ResetForTest()</a>, <a class="el" href="classPodModule_1_1PodManager.html#ac5f038c2b480cf9ef5e19e3eba8dbaf9">PodManager::Shutdown()</a> , 以及 <a class="el" href="classPodModule_1_1PodManager.html#a259cb5a711406a8c3e5d937eb9350cca">PodManager::size()</a>.</p>
 
 </div>
 </div>

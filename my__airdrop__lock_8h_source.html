@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_airdrop_lock/my_airdrop_lock.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_3e05fafbdcadf9d81c48bf6c2d1494b0.html">my_airdrop_lock</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">my_airdrop_lock.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="my__airdrop__lock_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;nlohmann/json.hpp&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="MySerial_8h.html">MySerial.h</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemy__airdrop__lock.html">my_airdrop_lock</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996df">   23</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996df">AirdropLockState</a> {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_enumvalue" href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996dfaf704f57ea420275ad51bf55b7dec2c96">Uninitialized</a>,</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_enumvalue" href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996dfab9f5c797ebbf55adccdd8539a65a0241">Disabled</a>,</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_enumvalue" href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996dfa03f4a47830f97377a35321051685071e">Closed</a>,</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_enumvalue" href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996dfac3bf447eabe632720a3aa1a7ce401274">Open</a>,</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_enumvalue" href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996dfa902b0d55fddef6f8d651fe1035b7d4bd">Error</a></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>};</div>
+</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="foldopen" id="foldopen00034" data-start="{" data-end="};">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="structmy__airdrop__lock_1_1AirdropLockConfig.html">   34</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structmy__airdrop__lock_1_1AirdropLockConfig.html">AirdropLockConfig</a> {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#a8740ba80e30dd75e71d09fa1dcf04f3d">   35</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#a8740ba80e30dd75e71d09fa1dcf04f3d">enabled</a>{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#a5d346a4e5fa3df29a43d150d99c8a02a">   36</a></span>    std::string <a class="code hl_variable" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#a5d346a4e5fa3df29a43d150d99c8a02a">device</a>{<span class="stringliteral">&quot;/dev/ttyUSB0&quot;</span>};</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#a784e73e1ce3f90fbcbb0a78d72a053ff">   37</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#a784e73e1ce3f90fbcbb0a78d72a053ff">baud_rate</a>{9600};</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#ab47c9fed23638807f5fd8886e77fcdcc">   38</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#ab47c9fed23638807f5fd8886e77fcdcc">data_bits</a>{8};</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#a146991e1ecc6d049155a7a71739e9d0d">   39</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#a146991e1ecc6d049155a7a71739e9d0d">stop_bits</a>{1};</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#ae73cd3a6b0c325c1dfda763ff6f12d60">   40</a></span>    std::string <a class="code hl_variable" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#ae73cd3a6b0c325c1dfda763ff6f12d60">default_pwm_frequency</a>{<span class="stringliteral">&quot;50&quot;</span>};</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#a521068abc22320c24bd19698ea22142b">   41</a></span>    std::string <a class="code hl_variable" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#a521068abc22320c24bd19698ea22142b">open_cmd</a>{<span class="stringliteral">&quot;D005&quot;</span>};</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#ad950010f75187882591a4548b1558321">   42</a></span>    std::string <a class="code hl_variable" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#ad950010f75187882591a4548b1558321">lock_cmd</a>{<span class="stringliteral">&quot;D010&quot;</span>};</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    nlohmann::json <a class="code hl_function" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#a89b997d8eeffc2c8808cd537345364d3">ToJson</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>};</div>
+</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="foldopen" id="foldopen00054" data-start="{" data-end="};">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classmy__airdrop__lock_1_1AirdropLockManager.html">   54</a></span><span class="keyword">class </span><a class="code hl_class" href="classmy__airdrop__lock_1_1AirdropLockManager.html">AirdropLockManager</a> {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">static</span> <a class="code hl_class" href="classmy__airdrop__lock_1_1AirdropLockManager.html">AirdropLockManager</a>&amp; <a class="code hl_function" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a5b1352f83fe292ed21bc98fb525a8324">GetInstance</a>();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a564ea06648a1ddf616d3f67de03e19c9">   58</a></span>    <a class="code hl_function" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a564ea06648a1ddf616d3f67de03e19c9">AirdropLockManager</a>(<span class="keyword">const</span> <a class="code hl_class" href="classmy__airdrop__lock_1_1AirdropLockManager.html">AirdropLockManager</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a5e33ae66ef1f779ed218ae8ce999ee43">   59</a></span>    <a class="code hl_class" href="classmy__airdrop__lock_1_1AirdropLockManager.html">AirdropLockManager</a>&amp; <a class="code hl_function" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a5e33ae66ef1f779ed218ae8ce999ee43">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classmy__airdrop__lock_1_1AirdropLockManager.html">AirdropLockManager</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a9a9fadaffbe5e752f2c07a20d236bd98">Init</a>(<span class="keyword">const</span> nlohmann::json&amp; config, std::string* err = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__airdrop__lock_1_1AirdropLockManager.html#aa70efaa4751ac6d5d54dce88fe725e0a">Start</a>();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a7d498b13dc60fe7d0ba25025182d53fd">Stop</a>();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__airdrop__lock_1_1AirdropLockManager.html#adf4a30f492328cdaf5de9b0053ed0adf">SetDutyCycle</a>(<span class="keyword">const</span> std::string&amp; duty_cycle, std::string* err = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__airdrop__lock_1_1AirdropLockManager.html#adf4a30f492328cdaf5de9b0053ed0adf">SetDutyCycle</a>(<span class="keywordtype">int</span> duty_cycle, std::string* err = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__airdrop__lock_1_1AirdropLockManager.html#ad284bf955eceb63ad49dae6d3ab17e84">OpenDropper</a>(std::string* err = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a2bbd7e2e12cb97d0331aee620c06fbcf">CloseDropper</a>(std::string* err = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__airdrop__lock_1_1AirdropLockManager.html#ac62bc67221c430fd52a77df3b2190102">FristPowerOnProtection</a>();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    nlohmann::json <a class="code hl_function" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a9db7bdf7d148e0bba0256c8b55a61e6b">GetStatus</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a57f272ecff269d75f7456021496493bf">   72</a></span>    <a class="code hl_function" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a57f272ecff269d75f7456021496493bf">AirdropLockManager</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a671bfeb65f91342bd374ba3ea4801716">   73</a></span>    <a class="code hl_function" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a671bfeb65f91342bd374ba3ea4801716">~AirdropLockManager</a>() { <a class="code hl_function" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a7d498b13dc60fe7d0ba25025182d53fd">Stop</a>(); };</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keyword">static</span> <a class="code hl_struct" href="structmy__airdrop__lock_1_1AirdropLockConfig.html">AirdropLockConfig</a> <a class="code hl_function" href="classmy__airdrop__lock_1_1AirdropLockManager.html#ab1a171025c5a7e93204980f825cb7639">ParseConfig</a>(<span class="keyword">const</span> nlohmann::json&amp; config);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keyword">static</span> std::string <a class="code hl_function" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a0520ea34a0047845c8f0546d7a2d34f4">NormalizeDutyCycleCommand</a>(<span class="keyword">const</span> std::string&amp; duty_cycle);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keyword">static</span> std::string <a class="code hl_function" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a3bdfacd9ac5f1173a5c83793e1353c23">StateToString</a>(<a class="code hl_enumeration" href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996df">AirdropLockState</a> state);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a09a59525b704d34a3d3626db69fe766a">SendCommandLocked</a>(<span class="keyword">const</span> std::string&amp; command,</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                           <span class="keyword">const</span> std::string&amp; action_name,</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                           std::string* err);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classmy__airdrop__lock_1_1AirdropLockManager.html#afbfc585e95271adafecc9162358cb12a">SetErrorLocked</a>(<span class="keyword">const</span> std::string&amp; error);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a281b5ec791338d4378e22ef44a51b4a1">   84</a></span>    <span class="keyword">mutable</span> std::mutex <a class="code hl_variable" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a281b5ec791338d4378e22ef44a51b4a1">mutex_</a>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="classmy__airdrop__lock_1_1AirdropLockManager.html#aef7436a220692b5b863db4e9d8b870a3">   85</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="classmy__airdrop__lock_1_1AirdropLockManager.html#aef7436a220692b5b863db4e9d8b870a3">initialized_</a>{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a3decd8ac899af9b19308bcbc3653df2f">   86</a></span>    <a class="code hl_enumeration" href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996df">AirdropLockState</a> <a class="code hl_variable" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a3decd8ac899af9b19308bcbc3653df2f">state_</a>{<a class="code hl_enumvalue" href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996dfaf704f57ea420275ad51bf55b7dec2c96">AirdropLockState::Uninitialized</a>};</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a709484335ba96368eaa6e0804c0ca6b1">   87</a></span>    <a class="code hl_struct" href="structmy__airdrop__lock_1_1AirdropLockConfig.html">AirdropLockConfig</a> <a class="code hl_variable" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a709484335ba96368eaa6e0804c0ca6b1">config_</a>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a2f33e27b7aaf30da7b6f21577e577f07">   88</a></span>    nlohmann::json <a class="code hl_variable" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a2f33e27b7aaf30da7b6f21577e577f07">init_config_</a>{nlohmann::json::object()};</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a5fce746773fe42ce68f5aa756b09c38e">   89</a></span>    std::string <a class="code hl_variable" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a5fce746773fe42ce68f5aa756b09c38e">last_error_</a>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="classmy__airdrop__lock_1_1AirdropLockManager.html#aa6f4f0458cbbe33e07e5c37ae96f2040">   90</a></span>    std::string <a class="code hl_variable" href="classmy__airdrop__lock_1_1AirdropLockManager.html#aa6f4f0458cbbe33e07e5c37ae96f2040">last_command_</a>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a2a1bbaff5af89073ebaa91f3e07382a3">   91</a></span>    std::string <a class="code hl_variable" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a2a1bbaff5af89073ebaa91f3e07382a3">current_duty_cycle_</a>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a129ce01664337a9fcf74a53da192a8f4">   92</a></span>    <a class="code hl_class" href="classmy__serial_1_1MySerial.html">my_serial::MySerial</a> <a class="code hl_variable" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a129ce01664337a9fcf74a53da192a8f4">serial_</a>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>};</div>
+</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>} <span class="comment">// namespace my_airdrop_lock</span></div>
+<div class="ttc" id="aMySerial_8h_html"><div class="ttname"><a href="MySerial_8h.html">MySerial.h</a></div></div>
+<div class="ttc" id="aclassmy__airdrop__lock_1_1AirdropLockManager_html"><div class="ttname"><a href="classmy__airdrop__lock_1_1AirdropLockManager.html">my_airdrop_lock::AirdropLockManager</a></div><div class="ttdoc">空投锁管理器单例</div><div class="ttdef"><b>Definition</b> my_airdrop_lock.h:54</div></div>
+<div class="ttc" id="aclassmy__airdrop__lock_1_1AirdropLockManager_html_a0520ea34a0047845c8f0546d7a2d34f4"><div class="ttname"><a href="classmy__airdrop__lock_1_1AirdropLockManager.html#a0520ea34a0047845c8f0546d7a2d34f4">my_airdrop_lock::AirdropLockManager::NormalizeDutyCycleCommand</a></div><div class="ttdeci">static std::string NormalizeDutyCycleCommand(const std::string &amp;duty_cycle)</div><div class="ttdef"><b>Definition</b> my_airdrop_lock.cpp:300</div></div>
+<div class="ttc" id="aclassmy__airdrop__lock_1_1AirdropLockManager_html_a09a59525b704d34a3d3626db69fe766a"><div class="ttname"><a href="classmy__airdrop__lock_1_1AirdropLockManager.html#a09a59525b704d34a3d3626db69fe766a">my_airdrop_lock::AirdropLockManager::SendCommandLocked</a></div><div class="ttdeci">bool SendCommandLocked(const std::string &amp;command, const std::string &amp;action_name, std::string *err)</div><div class="ttdef"><b>Definition</b> my_airdrop_lock.cpp:339</div></div>
+<div class="ttc" id="aclassmy__airdrop__lock_1_1AirdropLockManager_html_a129ce01664337a9fcf74a53da192a8f4"><div class="ttname"><a href="classmy__airdrop__lock_1_1AirdropLockManager.html#a129ce01664337a9fcf74a53da192a8f4">my_airdrop_lock::AirdropLockManager::serial_</a></div><div class="ttdeci">my_serial::MySerial serial_</div><div class="ttdef"><b>Definition</b> my_airdrop_lock.h:92</div></div>
+<div class="ttc" id="aclassmy__airdrop__lock_1_1AirdropLockManager_html_a281b5ec791338d4378e22ef44a51b4a1"><div class="ttname"><a href="classmy__airdrop__lock_1_1AirdropLockManager.html#a281b5ec791338d4378e22ef44a51b4a1">my_airdrop_lock::AirdropLockManager::mutex_</a></div><div class="ttdeci">std::mutex mutex_</div><div class="ttdef"><b>Definition</b> my_airdrop_lock.h:84</div></div>
+<div class="ttc" id="aclassmy__airdrop__lock_1_1AirdropLockManager_html_a2a1bbaff5af89073ebaa91f3e07382a3"><div class="ttname"><a href="classmy__airdrop__lock_1_1AirdropLockManager.html#a2a1bbaff5af89073ebaa91f3e07382a3">my_airdrop_lock::AirdropLockManager::current_duty_cycle_</a></div><div class="ttdeci">std::string current_duty_cycle_</div><div class="ttdef"><b>Definition</b> my_airdrop_lock.h:91</div></div>
+<div class="ttc" id="aclassmy__airdrop__lock_1_1AirdropLockManager_html_a2bbd7e2e12cb97d0331aee620c06fbcf"><div class="ttname"><a href="classmy__airdrop__lock_1_1AirdropLockManager.html#a2bbd7e2e12cb97d0331aee620c06fbcf">my_airdrop_lock::AirdropLockManager::CloseDropper</a></div><div class="ttdeci">bool CloseDropper(std::string *err=nullptr)</div><div class="ttdef"><b>Definition</b> my_airdrop_lock.cpp:225</div></div>
+<div class="ttc" id="aclassmy__airdrop__lock_1_1AirdropLockManager_html_a2f33e27b7aaf30da7b6f21577e577f07"><div class="ttname"><a href="classmy__airdrop__lock_1_1AirdropLockManager.html#a2f33e27b7aaf30da7b6f21577e577f07">my_airdrop_lock::AirdropLockManager::init_config_</a></div><div class="ttdeci">nlohmann::json init_config_</div><div class="ttdef"><b>Definition</b> my_airdrop_lock.h:88</div></div>
+<div class="ttc" id="aclassmy__airdrop__lock_1_1AirdropLockManager_html_a3bdfacd9ac5f1173a5c83793e1353c23"><div class="ttname"><a href="classmy__airdrop__lock_1_1AirdropLockManager.html#a3bdfacd9ac5f1173a5c83793e1353c23">my_airdrop_lock::AirdropLockManager::StateToString</a></div><div class="ttdeci">static std::string StateToString(AirdropLockState state)</div><div class="ttdef"><b>Definition</b> my_airdrop_lock.cpp:328</div></div>
+<div class="ttc" id="aclassmy__airdrop__lock_1_1AirdropLockManager_html_a3decd8ac899af9b19308bcbc3653df2f"><div class="ttname"><a href="classmy__airdrop__lock_1_1AirdropLockManager.html#a3decd8ac899af9b19308bcbc3653df2f">my_airdrop_lock::AirdropLockManager::state_</a></div><div class="ttdeci">AirdropLockState state_</div><div class="ttdef"><b>Definition</b> my_airdrop_lock.h:86</div></div>
+<div class="ttc" id="aclassmy__airdrop__lock_1_1AirdropLockManager_html_a564ea06648a1ddf616d3f67de03e19c9"><div class="ttname"><a href="classmy__airdrop__lock_1_1AirdropLockManager.html#a564ea06648a1ddf616d3f67de03e19c9">my_airdrop_lock::AirdropLockManager::AirdropLockManager</a></div><div class="ttdeci">AirdropLockManager(const AirdropLockManager &amp;)=delete</div></div>
+<div class="ttc" id="aclassmy__airdrop__lock_1_1AirdropLockManager_html_a57f272ecff269d75f7456021496493bf"><div class="ttname"><a href="classmy__airdrop__lock_1_1AirdropLockManager.html#a57f272ecff269d75f7456021496493bf">my_airdrop_lock::AirdropLockManager::AirdropLockManager</a></div><div class="ttdeci">AirdropLockManager()=default</div></div>
+<div class="ttc" id="aclassmy__airdrop__lock_1_1AirdropLockManager_html_a5b1352f83fe292ed21bc98fb525a8324"><div class="ttname"><a href="classmy__airdrop__lock_1_1AirdropLockManager.html#a5b1352f83fe292ed21bc98fb525a8324">my_airdrop_lock::AirdropLockManager::GetInstance</a></div><div class="ttdeci">static AirdropLockManager &amp; GetInstance()</div><div class="ttdef"><b>Definition</b> my_airdrop_lock.cpp:74</div></div>
+<div class="ttc" id="aclassmy__airdrop__lock_1_1AirdropLockManager_html_a5e33ae66ef1f779ed218ae8ce999ee43"><div class="ttname"><a href="classmy__airdrop__lock_1_1AirdropLockManager.html#a5e33ae66ef1f779ed218ae8ce999ee43">my_airdrop_lock::AirdropLockManager::operator=</a></div><div class="ttdeci">AirdropLockManager &amp; operator=(const AirdropLockManager &amp;)=delete</div></div>
+<div class="ttc" id="aclassmy__airdrop__lock_1_1AirdropLockManager_html_a5fce746773fe42ce68f5aa756b09c38e"><div class="ttname"><a href="classmy__airdrop__lock_1_1AirdropLockManager.html#a5fce746773fe42ce68f5aa756b09c38e">my_airdrop_lock::AirdropLockManager::last_error_</a></div><div class="ttdeci">std::string last_error_</div><div class="ttdef"><b>Definition</b> my_airdrop_lock.h:89</div></div>
+<div class="ttc" id="aclassmy__airdrop__lock_1_1AirdropLockManager_html_a671bfeb65f91342bd374ba3ea4801716"><div class="ttname"><a href="classmy__airdrop__lock_1_1AirdropLockManager.html#a671bfeb65f91342bd374ba3ea4801716">my_airdrop_lock::AirdropLockManager::~AirdropLockManager</a></div><div class="ttdeci">~AirdropLockManager()</div><div class="ttdef"><b>Definition</b> my_airdrop_lock.h:73</div></div>
+<div class="ttc" id="aclassmy__airdrop__lock_1_1AirdropLockManager_html_a709484335ba96368eaa6e0804c0ca6b1"><div class="ttname"><a href="classmy__airdrop__lock_1_1AirdropLockManager.html#a709484335ba96368eaa6e0804c0ca6b1">my_airdrop_lock::AirdropLockManager::config_</a></div><div class="ttdeci">AirdropLockConfig config_</div><div class="ttdef"><b>Definition</b> my_airdrop_lock.h:87</div></div>
+<div class="ttc" id="aclassmy__airdrop__lock_1_1AirdropLockManager_html_a7d498b13dc60fe7d0ba25025182d53fd"><div class="ttname"><a href="classmy__airdrop__lock_1_1AirdropLockManager.html#a7d498b13dc60fe7d0ba25025182d53fd">my_airdrop_lock::AirdropLockManager::Stop</a></div><div class="ttdeci">bool Stop()</div><div class="ttdef"><b>Definition</b> my_airdrop_lock.cpp:153</div></div>
+<div class="ttc" id="aclassmy__airdrop__lock_1_1AirdropLockManager_html_a9a9fadaffbe5e752f2c07a20d236bd98"><div class="ttname"><a href="classmy__airdrop__lock_1_1AirdropLockManager.html#a9a9fadaffbe5e752f2c07a20d236bd98">my_airdrop_lock::AirdropLockManager::Init</a></div><div class="ttdeci">bool Init(const nlohmann::json &amp;config, std::string *err=nullptr)</div><div class="ttdef"><b>Definition</b> my_airdrop_lock.cpp:79</div></div>
+<div class="ttc" id="aclassmy__airdrop__lock_1_1AirdropLockManager_html_a9db7bdf7d148e0bba0256c8b55a61e6b"><div class="ttname"><a href="classmy__airdrop__lock_1_1AirdropLockManager.html#a9db7bdf7d148e0bba0256c8b55a61e6b">my_airdrop_lock::AirdropLockManager::GetStatus</a></div><div class="ttdeci">nlohmann::json GetStatus() const</div><div class="ttdef"><b>Definition</b> my_airdrop_lock.cpp:236</div></div>
+<div class="ttc" id="aclassmy__airdrop__lock_1_1AirdropLockManager_html_aa6f4f0458cbbe33e07e5c37ae96f2040"><div class="ttname"><a href="classmy__airdrop__lock_1_1AirdropLockManager.html#aa6f4f0458cbbe33e07e5c37ae96f2040">my_airdrop_lock::AirdropLockManager::last_command_</a></div><div class="ttdeci">std::string last_command_</div><div class="ttdef"><b>Definition</b> my_airdrop_lock.h:90</div></div>
+<div class="ttc" id="aclassmy__airdrop__lock_1_1AirdropLockManager_html_aa70efaa4751ac6d5d54dce88fe725e0a"><div class="ttname"><a href="classmy__airdrop__lock_1_1AirdropLockManager.html#aa70efaa4751ac6d5d54dce88fe725e0a">my_airdrop_lock::AirdropLockManager::Start</a></div><div class="ttdeci">bool Start()</div><div class="ttdef"><b>Definition</b> my_airdrop_lock.cpp:142</div></div>
+<div class="ttc" id="aclassmy__airdrop__lock_1_1AirdropLockManager_html_ab1a171025c5a7e93204980f825cb7639"><div class="ttname"><a href="classmy__airdrop__lock_1_1AirdropLockManager.html#ab1a171025c5a7e93204980f825cb7639">my_airdrop_lock::AirdropLockManager::ParseConfig</a></div><div class="ttdeci">static AirdropLockConfig ParseConfig(const nlohmann::json &amp;config)</div><div class="ttdef"><b>Definition</b> my_airdrop_lock.cpp:252</div></div>
+<div class="ttc" id="aclassmy__airdrop__lock_1_1AirdropLockManager_html_ac62bc67221c430fd52a77df3b2190102"><div class="ttname"><a href="classmy__airdrop__lock_1_1AirdropLockManager.html#ac62bc67221c430fd52a77df3b2190102">my_airdrop_lock::AirdropLockManager::FristPowerOnProtection</a></div><div class="ttdeci">bool FristPowerOnProtection()</div><div class="ttdef"><b>Definition</b> my_airdrop_lock.cpp:164</div></div>
+<div class="ttc" id="aclassmy__airdrop__lock_1_1AirdropLockManager_html_ad284bf955eceb63ad49dae6d3ab17e84"><div class="ttname"><a href="classmy__airdrop__lock_1_1AirdropLockManager.html#ad284bf955eceb63ad49dae6d3ab17e84">my_airdrop_lock::AirdropLockManager::OpenDropper</a></div><div class="ttdeci">bool OpenDropper(std::string *err=nullptr)</div><div class="ttdef"><b>Definition</b> my_airdrop_lock.cpp:214</div></div>
+<div class="ttc" id="aclassmy__airdrop__lock_1_1AirdropLockManager_html_adf4a30f492328cdaf5de9b0053ed0adf"><div class="ttname"><a href="classmy__airdrop__lock_1_1AirdropLockManager.html#adf4a30f492328cdaf5de9b0053ed0adf">my_airdrop_lock::AirdropLockManager::SetDutyCycle</a></div><div class="ttdeci">bool SetDutyCycle(const std::string &amp;duty_cycle, std::string *err=nullptr)</div><div class="ttdef"><b>Definition</b> my_airdrop_lock.cpp:199</div></div>
+<div class="ttc" id="aclassmy__airdrop__lock_1_1AirdropLockManager_html_aef7436a220692b5b863db4e9d8b870a3"><div class="ttname"><a href="classmy__airdrop__lock_1_1AirdropLockManager.html#aef7436a220692b5b863db4e9d8b870a3">my_airdrop_lock::AirdropLockManager::initialized_</a></div><div class="ttdeci">bool initialized_</div><div class="ttdef"><b>Definition</b> my_airdrop_lock.h:85</div></div>
+<div class="ttc" id="aclassmy__airdrop__lock_1_1AirdropLockManager_html_afbfc585e95271adafecc9162358cb12a"><div class="ttname"><a href="classmy__airdrop__lock_1_1AirdropLockManager.html#afbfc585e95271adafecc9162358cb12a">my_airdrop_lock::AirdropLockManager::SetErrorLocked</a></div><div class="ttdeci">void SetErrorLocked(const std::string &amp;error)</div><div class="ttdef"><b>Definition</b> my_airdrop_lock.cpp:392</div></div>
+<div class="ttc" id="aclassmy__serial_1_1MySerial_html"><div class="ttname"><a href="classmy__serial_1_1MySerial.html">my_serial::MySerial</a></div><div class="ttdef"><b>Definition</b> MySerial.h:51</div></div>
+<div class="ttc" id="anamespacemy__airdrop__lock_html"><div class="ttname"><a href="namespacemy__airdrop__lock.html">my_airdrop_lock</a></div><div class="ttdef"><b>Definition</b> my_airdrop_lock.cpp:9</div></div>
+<div class="ttc" id="anamespacemy__airdrop__lock_html_af953d45a2305985b02483043093996df"><div class="ttname"><a href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996df">my_airdrop_lock::AirdropLockState</a></div><div class="ttdeci">AirdropLockState</div><div class="ttdoc">空投锁逻辑状态</div><div class="ttdef"><b>Definition</b> my_airdrop_lock.h:23</div></div>
+<div class="ttc" id="anamespacemy__airdrop__lock_html_af953d45a2305985b02483043093996dfa03f4a47830f97377a35321051685071e"><div class="ttname"><a href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996dfa03f4a47830f97377a35321051685071e">my_airdrop_lock::AirdropLockState::Closed</a></div><div class="ttdeci">@ Closed</div></div>
+<div class="ttc" id="anamespacemy__airdrop__lock_html_af953d45a2305985b02483043093996dfa902b0d55fddef6f8d651fe1035b7d4bd"><div class="ttname"><a href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996dfa902b0d55fddef6f8d651fe1035b7d4bd">my_airdrop_lock::AirdropLockState::Error</a></div><div class="ttdeci">@ Error</div></div>
+<div class="ttc" id="anamespacemy__airdrop__lock_html_af953d45a2305985b02483043093996dfab9f5c797ebbf55adccdd8539a65a0241"><div class="ttname"><a href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996dfab9f5c797ebbf55adccdd8539a65a0241">my_airdrop_lock::AirdropLockState::Disabled</a></div><div class="ttdeci">@ Disabled</div></div>
+<div class="ttc" id="anamespacemy__airdrop__lock_html_af953d45a2305985b02483043093996dfac3bf447eabe632720a3aa1a7ce401274"><div class="ttname"><a href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996dfac3bf447eabe632720a3aa1a7ce401274">my_airdrop_lock::AirdropLockState::Open</a></div><div class="ttdeci">@ Open</div></div>
+<div class="ttc" id="anamespacemy__airdrop__lock_html_af953d45a2305985b02483043093996dfaf704f57ea420275ad51bf55b7dec2c96"><div class="ttname"><a href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996dfaf704f57ea420275ad51bf55b7dec2c96">my_airdrop_lock::AirdropLockState::Uninitialized</a></div><div class="ttdeci">@ Uninitialized</div></div>
+<div class="ttc" id="astructmy__airdrop__lock_1_1AirdropLockConfig_html"><div class="ttname"><a href="structmy__airdrop__lock_1_1AirdropLockConfig.html">my_airdrop_lock::AirdropLockConfig</a></div><div class="ttdoc">空投锁初始化配置</div><div class="ttdef"><b>Definition</b> my_airdrop_lock.h:34</div></div>
+<div class="ttc" id="astructmy__airdrop__lock_1_1AirdropLockConfig_html_a146991e1ecc6d049155a7a71739e9d0d"><div class="ttname"><a href="structmy__airdrop__lock_1_1AirdropLockConfig.html#a146991e1ecc6d049155a7a71739e9d0d">my_airdrop_lock::AirdropLockConfig::stop_bits</a></div><div class="ttdeci">int stop_bits</div><div class="ttdef"><b>Definition</b> my_airdrop_lock.h:39</div></div>
+<div class="ttc" id="astructmy__airdrop__lock_1_1AirdropLockConfig_html_a521068abc22320c24bd19698ea22142b"><div class="ttname"><a href="structmy__airdrop__lock_1_1AirdropLockConfig.html#a521068abc22320c24bd19698ea22142b">my_airdrop_lock::AirdropLockConfig::open_cmd</a></div><div class="ttdeci">std::string open_cmd</div><div class="ttdef"><b>Definition</b> my_airdrop_lock.h:41</div></div>
+<div class="ttc" id="astructmy__airdrop__lock_1_1AirdropLockConfig_html_a5d346a4e5fa3df29a43d150d99c8a02a"><div class="ttname"><a href="structmy__airdrop__lock_1_1AirdropLockConfig.html#a5d346a4e5fa3df29a43d150d99c8a02a">my_airdrop_lock::AirdropLockConfig::device</a></div><div class="ttdeci">std::string device</div><div class="ttdef"><b>Definition</b> my_airdrop_lock.h:36</div></div>
+<div class="ttc" id="astructmy__airdrop__lock_1_1AirdropLockConfig_html_a784e73e1ce3f90fbcbb0a78d72a053ff"><div class="ttname"><a href="structmy__airdrop__lock_1_1AirdropLockConfig.html#a784e73e1ce3f90fbcbb0a78d72a053ff">my_airdrop_lock::AirdropLockConfig::baud_rate</a></div><div class="ttdeci">int baud_rate</div><div class="ttdef"><b>Definition</b> my_airdrop_lock.h:37</div></div>
+<div class="ttc" id="astructmy__airdrop__lock_1_1AirdropLockConfig_html_a8740ba80e30dd75e71d09fa1dcf04f3d"><div class="ttname"><a href="structmy__airdrop__lock_1_1AirdropLockConfig.html#a8740ba80e30dd75e71d09fa1dcf04f3d">my_airdrop_lock::AirdropLockConfig::enabled</a></div><div class="ttdeci">bool enabled</div><div class="ttdef"><b>Definition</b> my_airdrop_lock.h:35</div></div>
+<div class="ttc" id="astructmy__airdrop__lock_1_1AirdropLockConfig_html_a89b997d8eeffc2c8808cd537345364d3"><div class="ttname"><a href="structmy__airdrop__lock_1_1AirdropLockConfig.html#a89b997d8eeffc2c8808cd537345364d3">my_airdrop_lock::AirdropLockConfig::ToJson</a></div><div class="ttdeci">nlohmann::json ToJson() const</div><div class="ttdef"><b>Definition</b> my_airdrop_lock.cpp:61</div></div>
+<div class="ttc" id="astructmy__airdrop__lock_1_1AirdropLockConfig_html_ab47c9fed23638807f5fd8886e77fcdcc"><div class="ttname"><a href="structmy__airdrop__lock_1_1AirdropLockConfig.html#ab47c9fed23638807f5fd8886e77fcdcc">my_airdrop_lock::AirdropLockConfig::data_bits</a></div><div class="ttdeci">int data_bits</div><div class="ttdef"><b>Definition</b> my_airdrop_lock.h:38</div></div>
+<div class="ttc" id="astructmy__airdrop__lock_1_1AirdropLockConfig_html_ad950010f75187882591a4548b1558321"><div class="ttname"><a href="structmy__airdrop__lock_1_1AirdropLockConfig.html#ad950010f75187882591a4548b1558321">my_airdrop_lock::AirdropLockConfig::lock_cmd</a></div><div class="ttdeci">std::string lock_cmd</div><div class="ttdef"><b>Definition</b> my_airdrop_lock.h:42</div></div>
+<div class="ttc" id="astructmy__airdrop__lock_1_1AirdropLockConfig_html_ae73cd3a6b0c325c1dfda763ff6f12d60"><div class="ttname"><a href="structmy__airdrop__lock_1_1AirdropLockConfig.html#ae73cd3a6b0c325c1dfda763ff6f12d60">my_airdrop_lock::AirdropLockConfig::default_pwm_frequency</a></div><div class="ttdeci">std::string default_pwm_frequency</div><div class="ttdef"><b>Definition</b> my_airdrop_lock.h:40</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

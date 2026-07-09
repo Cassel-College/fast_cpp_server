@@ -1,11 +1,99 @@
 <map id="Stop" name="Stop">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,92,56,117"/>
-<area shape="rect" id="Node000002" href="$classmy__api_1_1MyAPI.html#acf834ad0c96f35244ca943589d8a0ef5" title=" " alt="" coords="104,5,309,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="42,90,68,65,103,41,122,33,124,37,105,46,71,69,45,94"/>
-<area shape="rect" id="Node000003" href="$classmy__audio_1_1MyAudios.html#a42e52ed4244ae5daf25b63d887c56526" title="获取单例实例" alt="" coords="127,55,286,95"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="56,98,113,88,114,93,57,103"/>
-<area shape="rect" id="Node000004" href="$classmy__api_1_1MyAPI.html#a17a237457e57625296e6b24feb19c60a" title=" " alt="" coords="129,120,285,145"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="57,106,115,115,115,121,56,111"/>
-<area shape="rect" id="Node000005" href="$classmy__audio_1_1MyAudios.html#a17a237457e57625296e6b24feb19c60a" title="停止所有音频设备并释放资源" alt="" coords="127,170,286,210"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="49,116,74,135,105,154,123,163,121,167,103,159,71,140,45,120"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,850,56,875"/>
+<area shape="rect" id="Node000002" href="$classfast__mqtt_1_1FastMQTT.html#ac919a991060ede6983343719401686de" title="销毁模块，释放资源，状态回到未初始化。 内部会先调用 Stop()。" alt="" coords="149,69,307,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="30,850,35,704,48,472,58,352,70,246,84,165,93,137,102,120,117,106,135,97,138,101,120,110,106,123,98,139,89,166,75,247,63,353,53,472,41,704,35,850"/>
+<area shape="rect" id="Node000006" href="$classmy__airdrop__lock_1_1AirdropLockManager.html#a5b1352f83fe292ed21bc98fb525a8324" title=" " alt="" coords="131,133,325,173"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="30,850,36,715,50,503,72,298,86,225,93,199,102,184,117,171,120,175,106,187,98,201,91,226,77,299,55,504,42,716,35,850"/>
+<area shape="rect" id="Node000007" href="$classmy__api_1_1MyAPI.html#acf834ad0c96f35244ca943589d8a0ef5" title=" " alt="" coords="125,198,331,223"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="30,849,37,724,51,527,72,338,86,270,94,247,102,233,111,224,115,228,106,236,99,249,91,272,78,339,56,528,42,724,35,850"/>
+<area shape="rect" id="Node000008" href="$classmy__comm_1_1MyComm.html#a4d0ade73edb516e930bace1e53e40897" title="获取全局唯一实例（懒汉式单例，线程安全）。" alt="" coords="104,247,352,273"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="29,850,28,741,35,570,43,481,56,398,76,330,88,304,102,284,107,279,110,283,106,287,92,306,81,332,62,399,49,481,40,571,34,741,34,850"/>
+<area shape="rect" id="Node000009" href="$classmy__edge_1_1MyEdgeManager.html#a9b8cd6015b425f33a122b4356784e3e5" title="获取单例实例。" alt="" coords="129,297,327,337"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="29,849,32,753,41,605,50,527,62,455,80,396,102,354,115,342,119,346,106,358,85,398,68,456,55,528,46,605,37,753,35,850"/>
+<area shape="rect" id="Node000010" href="$classfast__mqtt_1_1FastMQTT.html#a29cc2db4ea4821356b7643f1605553cb" title="获取全局唯一实例。" alt="" coords="721,408,879,448"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="29,850,30,759,39,622,48,551,61,486,78,433,89,413,102,398,122,385,147,375,208,363,280,359,359,362,515,378,635,393,708,404,707,410,634,399,514,384,359,367,280,364,208,368,148,380,125,389,106,402,94,416,83,435,66,487,53,552,44,622,36,759,35,850"/>
+<area shape="rect" id="Node000011" href="$classfly__control_1_1MyFlyControlManager.html#af7f5d1c4ba1e300fa172520b23f311d5" title=" " alt="" coords="135,463,321,503"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="30,849,36,780,50,679,71,579,85,540,102,513,121,498,125,502,106,516,90,542,76,581,55,680,42,781,36,850"/>
+<area shape="rect" id="Node000012" href="$classmy__heartbeat_1_1HeartbeatManager.html#afd7e843c24da931d3719544b1d517f89" title=" " alt="" coords="107,527,349,567"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="31,849,54,710,75,630,88,598,102,577,106,573,110,577,106,580,92,601,80,632,59,711,36,850"/>
+<area shape="rect" id="Node000013" href="$classSearchlightControl_1_1SearchlightManager.html#a44399d2d42684695d387f2c9c63c0635" title=" " alt="" coords="148,591,308,646"/>
+<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="30,849,35,812,46,760,67,705,83,680,102,657,133,636,136,640,106,661,87,683,72,708,51,762,40,813,35,850"/>
+<area shape="rect" id="Node000014" href="$classpod__stream_1_1PodStreamManager.html#a65c1866ab42b382d4ba27688d19a508a" title="获取单例实例" alt="" coords="111,671,345,711"/>
+<area shape="poly" id="edge14_Node000001_Node000014" title=" " alt="" coords="32,849,54,788,74,751,102,721,109,716,112,720,106,725,78,755,58,790,37,851"/>
+<area shape="rect" id="Node000015" href="$classmy__mqtt_1_1MqttService.html#a8a88459b535d228e294ae262f696ea4b" title=" " alt="" coords="145,735,311,775"/>
+<area shape="poly" id="edge15_Node000001_Node000015" title=" " alt="" coords="39,848,65,816,103,784,130,771,132,776,105,789,68,820,43,851"/>
+<area shape="rect" id="Node000016" href="$classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#aa5dd3caf6f567b12a6ef670aa7389478" title=" " alt="" coords="131,799,325,854"/>
+<area shape="poly" id="edge16_Node000001_Node000016" title=" " alt="" coords="56,856,116,844,117,850,57,861"/>
+<area shape="rect" id="Node000017" href="$classPodModule_1_1PodManager.html#abeee501bbadcd804228d815d816f56a1" title=" " alt="" coords="137,879,319,919"/>
+<area shape="poly" id="edge17_Node000001_Node000017" title=" " alt="" coords="57,865,124,877,123,882,56,870"/>
+<area shape="rect" id="Node000018" href="$classMySoftHealthy_1_1SoftHealthMonitorManager.html#a7b2cab19d90c3865ead06e4ec20befda" title=" " alt="" coords="121,943,335,983"/>
+<area shape="poly" id="edge18_Node000001_Node000018" title=" " alt="" coords="44,874,70,902,105,928,119,935,117,940,103,933,67,906,40,878"/>
+<area shape="rect" id="Node000019" href="$classPodModule_1_1PodManager.html#ac5f038c2b480cf9ef5e19e3eba8dbaf9" title=" " alt="" coords="137,1007,319,1047"/>
+<area shape="poly" id="edge19_Node000001_Node000019" title=" " alt="" coords="38,874,60,932,79,965,106,993,125,1004,122,1009,102,997,75,968,55,934,33,876"/>
+<area shape="rect" id="Node000022" href="$classmy__airdrop__lock_1_1AirdropLockManager.html#a7d498b13dc60fe7d0ba25025182d53fd" title=" " alt="" coords="135,1071,321,1111"/>
+<area shape="poly" id="edge22_Node000001_Node000022" title=" " alt="" coords="35,875,40,911,51,960,72,1012,87,1036,106,1057,124,1069,121,1074,102,1061,83,1039,67,1015,46,962,35,912,30,876"/>
+<area shape="rect" id="Node000024" href="$classmy__api_1_1MyAPI.html#a17a237457e57625296e6b24feb19c60a" title=" " alt="" coords="150,1135,306,1161"/>
+<area shape="poly" id="edge24_Node000001_Node000024" title=" " alt="" coords="34,876,34,923,42,989,51,1025,64,1060,82,1093,106,1121,121,1132,138,1139,136,1144,118,1136,102,1125,78,1096,59,1062,46,1027,37,990,29,923,29,876"/>
+<area shape="rect" id="Node000025" href="$classmy__comm_1_1MyComm.html#a17a237457e57625296e6b24feb19c60a" title="停止通信门面下属所有子模块。" alt="" coords="129,413,327,438"/>
+<area shape="poly" id="edge25_Node000001_Node000025" title=" " alt="" coords="30,850,34,769,45,648,54,586,66,528,82,481,102,449,115,438,118,442,106,452,87,483,72,530,59,587,50,649,39,769,35,850"/>
+<area shape="rect" id="Node000031" href="$classfly__control_1_1MyFlyControlManager.html#a17a237457e57625296e6b24feb19c60a" title=" " alt="" coords="135,1185,321,1225"/>
+<area shape="poly" id="edge34_Node000001_Node000031" title=" " alt="" coords="36,875,43,938,57,1027,78,1114,91,1148,106,1170,124,1184,121,1189,102,1174,87,1150,73,1115,52,1028,38,938,31,876"/>
+<area shape="rect" id="Node000033" href="$classmy__heartbeat_1_1HeartbeatManager.html#a17a237457e57625296e6b24feb19c60a" title=" " alt="" coords="107,1249,349,1289"/>
+<area shape="poly" id="edge36_Node000001_Node000033" title=" " alt="" coords="35,875,41,949,53,1058,74,1165,89,1207,106,1236,109,1239,105,1242,102,1239,84,1210,69,1167,48,1059,35,950,30,876"/>
+<area shape="rect" id="Node000034" href="$classSearchlightControl_1_1SearchlightManager.html#a68a350717fe6bf9012843e7c977d87b2" title=" " alt="" coords="130,1313,326,1353"/>
+<area shape="poly" id="edge37_Node000001_Node000034" title=" " alt="" coords="35,875,39,960,49,1088,58,1155,71,1216,86,1266,106,1300,120,1311,116,1315,102,1303,82,1268,65,1217,53,1156,44,1089,33,960,30,875"/>
+<area shape="rect" id="Node000037" href="$classpod__stream_1_1PodStreamManager.html#a17a237457e57625296e6b24feb19c60a" title="停止管理器" alt="" coords="111,1377,345,1417"/>
+<area shape="poly" id="edge40_Node000001_Node000037" title=" " alt="" coords="35,876,37,972,46,1119,54,1196,67,1267,84,1325,94,1347,106,1364,109,1366,105,1370,102,1367,90,1350,79,1327,62,1268,49,1197,40,1119,31,972,29,876"/>
+<area shape="rect" id="Node000043" href="$classmy__mqtt_1_1MqttService.html#a17a237457e57625296e6b24feb19c60a" title=" " alt="" coords="145,1441,311,1481"/>
+<area shape="poly" id="edge48_Node000001_Node000043" title=" " alt="" coords="34,875,35,982,42,1148,50,1236,63,1317,82,1383,93,1408,106,1427,133,1447,130,1451,102,1431,88,1411,77,1385,58,1318,45,1237,36,1149,29,982,29,875"/>
+<area shape="rect" id="Node000044" href="$classmy__mqtt__broker__manager_1_1MyMqttBrokerManager.html#a17a237457e57625296e6b24feb19c60a" title=" " alt="" coords="120,1505,336,1545"/>
+<area shape="poly" id="edge49_Node000001_Node000044" title=" " alt="" coords="35,876,42,1002,57,1199,78,1388,92,1456,106,1492,111,1497,107,1500,102,1495,86,1457,73,1389,51,1199,37,1002,30,876"/>
+<area shape="rect" id="Node000045" href="$classMySoftHealthy_1_1SoftHealthMonitorManager.html#a8c528baf37154d347366083f0f816846" title=" " alt="" coords="131,1569,325,1609"/>
+<area shape="poly" id="edge50_Node000001_Node000045" title=" " alt="" coords="35,875,41,1012,55,1230,76,1440,90,1516,98,1541,106,1556,121,1569,118,1573,102,1559,93,1543,85,1517,71,1441,49,1230,36,1012,30,876"/>
+<area shape="rect" id="Node000046" href="$classmy__edge_1_1MyEdgeManager.html#a7e4456fbdfd676274c668a5932f93ab4" title="停止所有 Edge 实例。" alt="" coords="129,1633,327,1673"/>
+<area shape="poly" id="edge51_Node000001_Node000046" title=" " alt="" coords="35,875,40,1023,53,1261,62,1384,75,1493,89,1576,97,1603,106,1620,119,1631,115,1635,102,1623,92,1605,84,1577,69,1493,57,1384,48,1262,35,1024,30,875"/>
+<area shape="rect" id="Node000003" href="$classfast__mqtt_1_1FastMQTT.html#adc871ec5bf15dfe0170ff8085237f6fc" title="清空所有 Topic 的全部回调。" alt="" coords="439,5,596,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="306,69,425,43,426,48,307,75"/>
+<area shape="rect" id="Node000004" href="$classfast__mqtt_1_1FastMQTT.html#abc9dbc2c01111d1a7a7df06c3b44ca50" title="线程安全地设置生命周期状态。" alt="" coords="721,99,879,139"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="307,104,400,119,481,124,563,125,708,122,708,127,563,131,481,129,400,124,307,110"/>
+<area shape="rect" id="Node000005" href="$classfast__mqtt_1_1FastMQTT.html#a17a237457e57625296e6b24feb19c60a" title="停止模块，安全退出所有后台线程并断开连接。 可重复调用，幂等安全。" alt="" coords="439,69,596,109"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="307,87,425,87,425,92,307,92"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="597,95,708,106,707,112,596,100"/>
+<area shape="rect" id="Node000020" href="$classPodModule_1_1PodRegistry.html#ac8bb3912a3ce86b15842e79d0b421204" title="清空所有 Pod" alt="" coords="427,1007,607,1047"/>
+<area shape="poly" id="edge20_Node000019_Node000020" title=" " alt="" coords="320,1024,414,1024,414,1029,320,1029"/>
+<area shape="rect" id="Node000021" href="$classPodModule_1_1PodRegistry.html#ac6cf95f6f0c5c7c3d8430e88b5a7e5df" title="获取所有 Pod 实例列表" alt="" coords="427,943,607,983"/>
+<area shape="poly" id="edge21_Node000019_Node000021" title=" " alt="" coords="319,1004,413,983,414,988,320,1009"/>
+<area shape="rect" id="Node000023" href="$classmy__serial_1_1MySerial.html#a7f7a3199c392465d0767c6506c1af5b4" title=" " alt="" coords="442,1071,593,1111"/>
+<area shape="poly" id="edge23_Node000022_Node000023" title=" " alt="" coords="321,1088,428,1088,428,1093,321,1093"/>
+<area shape="rect" id="Node000026" href="$classcsy2536_1_1CSY2536Comm.html#a8b90694475edf18f29d503a0d5d939a3" title=" " alt="" coords="425,472,609,512"/>
+<area shape="poly" id="edge26_Node000025_Node000026" title=" " alt="" coords="294,435,353,448,427,466,426,471,351,453,293,441"/>
+<area shape="rect" id="Node000027" href="$classjson__comm_1_1JsonComm.html#a30339d267553ffb3eea760c71625092e" title="获取全局唯一实例（懒汉式单例，线程安全）。" alt="" coords="430,536,605,576"/>
+<area shape="poly" id="edge27_Node000025_Node000027" title=" " alt="" coords="329,436,354,449,371,467,379,486,386,505,402,522,418,532,416,537,398,526,381,507,374,488,366,470,350,453,326,440"/>
+<area shape="rect" id="Node000028" href="$classcsy2536_1_1CSY2536Comm.html#a17a237457e57625296e6b24feb19c60a" title="停止模块并注销已注册回调。" alt="" coords="425,408,609,448"/>
+<area shape="poly" id="edge28_Node000025_Node000028" title=" " alt="" coords="328,424,411,424,411,430,328,429"/>
+<area shape="rect" id="Node000030" href="$classjson__comm_1_1JsonComm.html#a17a237457e57625296e6b24feb19c60a" title="停止模块并注销所有已注册回调。" alt="" coords="430,600,605,640"/>
+<area shape="poly" id="edge31_Node000025_Node000030" title=" " alt="" coords="329,433,354,449,368,466,376,483,379,519,382,553,389,570,402,586,419,598,416,603,398,590,384,573,377,555,374,519,371,485,364,468,350,453,326,438"/>
+<area shape="poly" id="edge29_Node000028_Node000010" title=" " alt="" coords="610,425,707,425,707,431,610,431"/>
+<area shape="rect" id="Node000029" href="$classfast__mqtt_1_1FastMQTT.html#a2e95e0e5d5e360fee068bfde93d23d75" title="按句柄注销某个回调。" alt="" coords="721,536,879,576"/>
+<area shape="poly" id="edge30_Node000028_Node000029" title=" " alt="" coords="603,446,636,458,702,491,760,526,757,531,700,496,634,462,601,451"/>
+<area shape="poly" id="edge32_Node000030_Node000010" title=" " alt="" coords="604,601,633,586,649,571,658,557,667,541,681,522,720,486,758,454,762,458,723,490,685,526,671,543,663,559,653,575,636,590,606,605"/>
+<area shape="poly" id="edge33_Node000030_Node000029" title=" " alt="" coords="604,598,707,574,708,579,606,603"/>
+<area shape="rect" id="Node000032" href="$classfly__control_1_1MyFlyControlManager.html#af0908d53506a34c701c1cda9d1989f9c" title=" " alt="" coords="400,1180,635,1220"/>
+<area shape="poly" id="edge35_Node000031_Node000032" title=" " alt="" coords="321,1201,386,1200,386,1205,321,1206"/>
+<area shape="rect" id="Node000035" href="$classSearchlightControl_1_1SearchlightManager.html#a7861ee1569802186a619778efc85af13" title=" " alt="" coords="437,1245,597,1299"/>
+<area shape="poly" id="edge38_Node000034_Node000035" title=" " alt="" coords="323,1311,424,1289,425,1294,324,1316"/>
+<area shape="rect" id="Node000036" href="$classSearchlightControl_1_1Searchlight.html#a7861ee1569802186a619778efc85af13" title=" " alt="" coords="713,1252,887,1292"/>
+<area shape="poly" id="edge39_Node000035_Node000036" title=" " alt="" coords="597,1269,699,1269,699,1275,597,1275"/>
+<area shape="rect" id="Node000038" href="$classpod__stream_1_1PodStreamManager.html#aadc9131a3893e84d1adba546d702efae" title="检查 MediaMTX 进程是否存活" alt="" coords="683,1399,917,1439"/>
+<area shape="poly" id="edge41_Node000037_Node000038" title=" " alt="" coords="346,1399,669,1411,669,1416,345,1404"/>
+<area shape="rect" id="Node000039" href="$classpod__stream_1_1PodStreamManager.html#a3f92ed4b1ba895dea1d6a2bd4fd7face" title="回收子进程，避免僵尸进程" alt="" coords="683,1484,917,1524"/>
+<area shape="poly" id="edge42_Node000037_Node000039" title=" " alt="" coords="331,1415,354,1427,370,1443,378,1460,386,1475,401,1488,434,1503,468,1513,540,1525,612,1527,678,1523,678,1528,612,1533,540,1530,467,1518,432,1508,399,1493,381,1479,373,1462,365,1446,350,1431,328,1420"/>
+<area shape="rect" id="Node000040" href="$classpod__stream_1_1PodStreamManager.html#a3e0f667ecf232b80c9ede3733ddf8891" title="停止 MediaMTX 子进程" alt="" coords="400,1439,635,1479"/>
+<area shape="poly" id="edge43_Node000037_Node000040" title=" " alt="" coords="324,1415,410,1433,409,1438,323,1420"/>
+<area shape="rect" id="Node000041" href="$classpod__stream_1_1PodStreamManager.html#a2cae7364ded48841041ddf96acdf1a52" title="状态转换" alt="" coords="400,1324,635,1364"/>
+<area shape="poly" id="edge46_Node000037_Node000041" title=" " alt="" coords="336,1375,395,1364,396,1369,337,1380"/>
+<area shape="poly" id="edge44_Node000040_Node000038" title=" " alt="" coords="635,1439,669,1435,669,1440,635,1445"/>
+<area shape="poly" id="edge45_Node000040_Node000039" title=" " alt="" coords="635,1475,669,1480,669,1486,635,1480"/>
+<area shape="rect" id="Node000042" href="$classpod__stream_1_1PodStreamManager.html#a7d4b0b0707696a8449db2e07bfa0ebd9" title="获取状态名称字符串" alt="" coords="683,1324,917,1364"/>
+<area shape="poly" id="edge47_Node000041_Node000042" title=" " alt="" coords="635,1341,669,1341,669,1347,635,1347"/>
 </map>

@@ -1,0 +1,1209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: AirdropLockManager类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacemy__airdrop__lock.html">my_airdrop_lock</a></li><li class="navelem"><a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html">AirdropLockManager</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a>  </div>
+  <div class="headertitle"><div class="title">AirdropLockManager类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>空投锁管理器单例  
+ <a href="classmy__airdrop__lock_1_1AirdropLockManager.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="my__airdrop__lock_8h_source.html">my_airdrop_lock.h</a>&gt;</code></p>
+<div class="dynheader">
+AirdropLockManager 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__airdrop__lock_1_1AirdropLockManager__coll__graph.png" border="0" usemap="#aAirdropLockManager_coll__map" alt="Collaboration graph"/></div>
+<map name="aAirdropLockManager_coll__map" id="aAirdropLockManager_coll__map">
+<area shape="rect" title="空投锁管理器单例" alt="" coords="51,181,207,207"/>
+<area shape="rect" href="structmy__airdrop__lock_1_1AirdropLockConfig.html" title="空投锁初始化配置" alt="" coords="5,93,145,119"/>
+<area shape="poly" title=" " alt="" coords="89,130,104,156,121,180,117,183,100,159,85,132"/>
+<area shape="rect" href="classmy__serial_1_1MySerial.html" title=" " alt="" coords="169,93,248,119"/>
+<area shape="poly" title=" " alt="" coords="191,131,142,183,138,179,187,127"/>
+<area shape="rect" href="structmy__serial_1_1SerialInitOptions.html" title=" " alt="" coords="143,5,274,31"/>
+<area shape="poly" title=" " alt="" coords="211,45,211,93,206,93,206,45"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a564ea06648a1ddf616d3f67de03e19c9" id="r_a564ea06648a1ddf616d3f67de03e19c9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a564ea06648a1ddf616d3f67de03e19c9">AirdropLockManager</a> (const <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html">AirdropLockManager</a> &amp;)=delete</td></tr>
+<tr class="separator:a564ea06648a1ddf616d3f67de03e19c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e33ae66ef1f779ed218ae8ce999ee43" id="r_a5e33ae66ef1f779ed218ae8ce999ee43"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html">AirdropLockManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a5e33ae66ef1f779ed218ae8ce999ee43">operator=</a> (const <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html">AirdropLockManager</a> &amp;)=delete</td></tr>
+<tr class="separator:a5e33ae66ef1f779ed218ae8ce999ee43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a9fadaffbe5e752f2c07a20d236bd98" id="r_a9a9fadaffbe5e752f2c07a20d236bd98"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a9a9fadaffbe5e752f2c07a20d236bd98">Init</a> (const nlohmann::json &amp;config, std::string *err=nullptr)</td></tr>
+<tr class="separator:a9a9fadaffbe5e752f2c07a20d236bd98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa70efaa4751ac6d5d54dce88fe725e0a" id="r_aa70efaa4751ac6d5d54dce88fe725e0a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#aa70efaa4751ac6d5d54dce88fe725e0a">Start</a> ()</td></tr>
+<tr class="separator:aa70efaa4751ac6d5d54dce88fe725e0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d498b13dc60fe7d0ba25025182d53fd" id="r_a7d498b13dc60fe7d0ba25025182d53fd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a7d498b13dc60fe7d0ba25025182d53fd">Stop</a> ()</td></tr>
+<tr class="separator:a7d498b13dc60fe7d0ba25025182d53fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf4a30f492328cdaf5de9b0053ed0adf" id="r_adf4a30f492328cdaf5de9b0053ed0adf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#adf4a30f492328cdaf5de9b0053ed0adf">SetDutyCycle</a> (const std::string &amp;duty_cycle, std::string *err=nullptr)</td></tr>
+<tr class="separator:adf4a30f492328cdaf5de9b0053ed0adf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad187208465cca8eb26d87ab2fc5a92d8" id="r_ad187208465cca8eb26d87ab2fc5a92d8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#ad187208465cca8eb26d87ab2fc5a92d8">SetDutyCycle</a> (int duty_cycle, std::string *err=nullptr)</td></tr>
+<tr class="separator:ad187208465cca8eb26d87ab2fc5a92d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad284bf955eceb63ad49dae6d3ab17e84" id="r_ad284bf955eceb63ad49dae6d3ab17e84"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#ad284bf955eceb63ad49dae6d3ab17e84">OpenDropper</a> (std::string *err=nullptr)</td></tr>
+<tr class="separator:ad284bf955eceb63ad49dae6d3ab17e84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bbd7e2e12cb97d0331aee620c06fbcf" id="r_a2bbd7e2e12cb97d0331aee620c06fbcf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a2bbd7e2e12cb97d0331aee620c06fbcf">CloseDropper</a> (std::string *err=nullptr)</td></tr>
+<tr class="separator:a2bbd7e2e12cb97d0331aee620c06fbcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac62bc67221c430fd52a77df3b2190102" id="r_ac62bc67221c430fd52a77df3b2190102"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#ac62bc67221c430fd52a77df3b2190102">FristPowerOnProtection</a> ()</td></tr>
+<tr class="separator:ac62bc67221c430fd52a77df3b2190102"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9db7bdf7d148e0bba0256c8b55a61e6b" id="r_a9db7bdf7d148e0bba0256c8b55a61e6b"><td class="memItemLeft" align="right" valign="top">nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a9db7bdf7d148e0bba0256c8b55a61e6b">GetStatus</a> () const</td></tr>
+<tr class="separator:a9db7bdf7d148e0bba0256c8b55a61e6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a5b1352f83fe292ed21bc98fb525a8324" id="r_a5b1352f83fe292ed21bc98fb525a8324"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html">AirdropLockManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a5b1352f83fe292ed21bc98fb525a8324">GetInstance</a> ()</td></tr>
+<tr class="separator:a5b1352f83fe292ed21bc98fb525a8324"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a57f272ecff269d75f7456021496493bf" id="r_a57f272ecff269d75f7456021496493bf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a57f272ecff269d75f7456021496493bf">AirdropLockManager</a> ()=default</td></tr>
+<tr class="separator:a57f272ecff269d75f7456021496493bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a671bfeb65f91342bd374ba3ea4801716" id="r_a671bfeb65f91342bd374ba3ea4801716"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a671bfeb65f91342bd374ba3ea4801716">~AirdropLockManager</a> ()</td></tr>
+<tr class="separator:a671bfeb65f91342bd374ba3ea4801716"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09a59525b704d34a3d3626db69fe766a" id="r_a09a59525b704d34a3d3626db69fe766a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a09a59525b704d34a3d3626db69fe766a">SendCommandLocked</a> (const std::string &amp;command, const std::string &amp;action_name, std::string *err)</td></tr>
+<tr class="separator:a09a59525b704d34a3d3626db69fe766a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbfc585e95271adafecc9162358cb12a" id="r_afbfc585e95271adafecc9162358cb12a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#afbfc585e95271adafecc9162358cb12a">SetErrorLocked</a> (const std::string &amp;error)</td></tr>
+<tr class="separator:afbfc585e95271adafecc9162358cb12a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:ab1a171025c5a7e93204980f825cb7639" id="r_ab1a171025c5a7e93204980f825cb7639"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structmy__airdrop__lock_1_1AirdropLockConfig.html">AirdropLockConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#ab1a171025c5a7e93204980f825cb7639">ParseConfig</a> (const nlohmann::json &amp;config)</td></tr>
+<tr class="separator:ab1a171025c5a7e93204980f825cb7639"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0520ea34a0047845c8f0546d7a2d34f4" id="r_a0520ea34a0047845c8f0546d7a2d34f4"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a0520ea34a0047845c8f0546d7a2d34f4">NormalizeDutyCycleCommand</a> (const std::string &amp;duty_cycle)</td></tr>
+<tr class="separator:a0520ea34a0047845c8f0546d7a2d34f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bdfacd9ac5f1173a5c83793e1353c23" id="r_a3bdfacd9ac5f1173a5c83793e1353c23"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a3bdfacd9ac5f1173a5c83793e1353c23">StateToString</a> (<a class="el" href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996df">AirdropLockState</a> state)</td></tr>
+<tr class="separator:a3bdfacd9ac5f1173a5c83793e1353c23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a281b5ec791338d4378e22ef44a51b4a1" id="r_a281b5ec791338d4378e22ef44a51b4a1"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a281b5ec791338d4378e22ef44a51b4a1">mutex_</a></td></tr>
+<tr class="separator:a281b5ec791338d4378e22ef44a51b4a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef7436a220692b5b863db4e9d8b870a3" id="r_aef7436a220692b5b863db4e9d8b870a3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#aef7436a220692b5b863db4e9d8b870a3">initialized_</a> {false}</td></tr>
+<tr class="separator:aef7436a220692b5b863db4e9d8b870a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3decd8ac899af9b19308bcbc3653df2f" id="r_a3decd8ac899af9b19308bcbc3653df2f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996df">AirdropLockState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a3decd8ac899af9b19308bcbc3653df2f">state_</a> {<a class="el" href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996dfaf704f57ea420275ad51bf55b7dec2c96">AirdropLockState::Uninitialized</a>}</td></tr>
+<tr class="separator:a3decd8ac899af9b19308bcbc3653df2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a709484335ba96368eaa6e0804c0ca6b1" id="r_a709484335ba96368eaa6e0804c0ca6b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmy__airdrop__lock_1_1AirdropLockConfig.html">AirdropLockConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a709484335ba96368eaa6e0804c0ca6b1">config_</a></td></tr>
+<tr class="separator:a709484335ba96368eaa6e0804c0ca6b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f33e27b7aaf30da7b6f21577e577f07" id="r_a2f33e27b7aaf30da7b6f21577e577f07"><td class="memItemLeft" align="right" valign="top">nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a2f33e27b7aaf30da7b6f21577e577f07">init_config_</a> {nlohmann::json::object()}</td></tr>
+<tr class="separator:a2f33e27b7aaf30da7b6f21577e577f07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fce746773fe42ce68f5aa756b09c38e" id="r_a5fce746773fe42ce68f5aa756b09c38e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a5fce746773fe42ce68f5aa756b09c38e">last_error_</a></td></tr>
+<tr class="separator:a5fce746773fe42ce68f5aa756b09c38e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6f4f0458cbbe33e07e5c37ae96f2040" id="r_aa6f4f0458cbbe33e07e5c37ae96f2040"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#aa6f4f0458cbbe33e07e5c37ae96f2040">last_command_</a></td></tr>
+<tr class="separator:aa6f4f0458cbbe33e07e5c37ae96f2040"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a1bbaff5af89073ebaa91f3e07382a3" id="r_a2a1bbaff5af89073ebaa91f3e07382a3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a2a1bbaff5af89073ebaa91f3e07382a3">current_duty_cycle_</a></td></tr>
+<tr class="separator:a2a1bbaff5af89073ebaa91f3e07382a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a129ce01664337a9fcf74a53da192a8f4" id="r_a129ce01664337a9fcf74a53da192a8f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmy__serial_1_1MySerial.html">my_serial::MySerial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a129ce01664337a9fcf74a53da192a8f4">serial_</a></td></tr>
+<tr class="separator:a129ce01664337a9fcf74a53da192a8f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>空投锁管理器单例 </p>
+<p>初始化成功后会立即执行两步保护动作：</p><ol type="1">
+<li>按 default_PWM_frequency 下发 Fxxx 占空比/频率命令。</li>
+<li>下发 lock_cmd，确保设备默认处于关闭锁状态。 </li>
+</ol>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a564ea06648a1ddf616d3f67de03e19c9" name="a564ea06648a1ddf616d3f67de03e19c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a564ea06648a1ddf616d3f67de03e19c9">&#9670;&#160;</a></span>AirdropLockManager() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html">AirdropLockManager</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html">AirdropLockManager</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a57f272ecff269d75f7456021496493bf" name="a57f272ecff269d75f7456021496493bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57f272ecff269d75f7456021496493bf">&#9670;&#160;</a></span>AirdropLockManager() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html">AirdropLockManager</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a671bfeb65f91342bd374ba3ea4801716" name="a671bfeb65f91342bd374ba3ea4801716"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a671bfeb65f91342bd374ba3ea4801716">&#9670;&#160;</a></span>~AirdropLockManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html">AirdropLockManager</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a7d498b13dc60fe7d0ba25025182d53fd">AirdropLockManager::Stop()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__airdrop__lock_1_1AirdropLockManager_a671bfeb65f91342bd374ba3ea4801716_cgraph.png" border="0" usemap="#aclassmy__airdrop__lock_1_1AirdropLockManager_a671bfeb65f91342bd374ba3ea4801716_cgraph" alt=""/></div>
+<map name="aclassmy__airdrop__lock_1_1AirdropLockManager_a671bfeb65f91342bd374ba3ea4801716_cgraph" id="aclassmy__airdrop__lock_1_1AirdropLockManager_a671bfeb65f91342bd374ba3ea4801716_cgraph">
+<area shape="rect" title=" " alt="" coords="5,13,172,38"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a7d498b13dc60fe7d0ba25025182d53fd" title=" " alt="" coords="220,13,271,38"/>
+<area shape="poly" title=" " alt="" coords="172,23,206,23,206,28,172,28"/>
+<area shape="rect" href="classmy__serial_1_1MySerial.html#a7f7a3199c392465d0767c6506c1af5b4" title=" " alt="" coords="319,5,469,45"/>
+<area shape="poly" title=" " alt="" coords="271,23,304,23,304,28,271,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a2bbd7e2e12cb97d0331aee620c06fbcf" name="a2bbd7e2e12cb97d0331aee620c06fbcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bbd7e2e12cb97d0331aee620c06fbcf">&#9670;&#160;</a></span>CloseDropper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CloseDropper </td>
+          <td>(</td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>err</em> = <code>nullptr</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996dfa03f4a47830f97377a35321051685071e">my_airdrop_lock::Closed</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a709484335ba96368eaa6e0804c0ca6b1">AirdropLockManager::config_</a>, <a class="el" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#ad950010f75187882591a4548b1558321">AirdropLockConfig::lock_cmd</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a281b5ec791338d4378e22ef44a51b4a1">AirdropLockManager::mutex_</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a09a59525b704d34a3d3626db69fe766a">AirdropLockManager::SendCommandLocked()</a> , 以及 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a3decd8ac899af9b19308bcbc3653df2f">AirdropLockManager::state_</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__airdrop__lock_1_1AirdropLockManager_a2bbd7e2e12cb97d0331aee620c06fbcf_cgraph.png" border="0" usemap="#aclassmy__airdrop__lock_1_1AirdropLockManager_a2bbd7e2e12cb97d0331aee620c06fbcf_cgraph" alt=""/></div>
+<map name="aclassmy__airdrop__lock_1_1AirdropLockManager_a2bbd7e2e12cb97d0331aee620c06fbcf_cgraph" id="aclassmy__airdrop__lock_1_1AirdropLockManager_a2bbd7e2e12cb97d0331aee620c06fbcf_cgraph">
+<area shape="rect" title=" " alt="" coords="5,70,116,95"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a09a59525b704d34a3d3626db69fe766a" title=" " alt="" coords="164,70,331,95"/>
+<area shape="poly" title=" " alt="" coords="116,80,150,80,150,85,116,85"/>
+<area shape="rect" href="classmy__serial_1_1MySerial.html#a1d904961859394313fe20f7f4d6fc784" title=" " alt="" coords="379,5,529,45"/>
+<area shape="poly" title=" " alt="" coords="293,67,368,46,369,52,295,73"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#afbfc585e95271adafecc9162358cb12a" title=" " alt="" coords="395,70,513,95"/>
+<area shape="poly" title=" " alt="" coords="331,80,381,80,381,85,331,85"/>
+<area shape="rect" href="classmy__serial_1_1MySerial.html#a0380935f1407739a0d229b4f9e475e8e" title=" " alt="" coords="379,120,529,160"/>
+<area shape="poly" title=" " alt="" coords="295,93,369,114,368,119,293,98"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac62bc67221c430fd52a77df3b2190102" name="ac62bc67221c430fd52a77df3b2190102"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac62bc67221c430fd52a77df3b2190102">&#9670;&#160;</a></span>FristPowerOnProtection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FristPowerOnProtection </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a709484335ba96368eaa6e0804c0ca6b1">AirdropLockManager::config_</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a2a1bbaff5af89073ebaa91f3e07382a3">AirdropLockManager::current_duty_cycle_</a>, <a class="el" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#ae73cd3a6b0c325c1dfda763ff6f12d60">AirdropLockConfig::default_pwm_frequency</a>, <a class="el" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#ad950010f75187882591a4548b1558321">AirdropLockConfig::lock_cmd</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a0520ea34a0047845c8f0546d7a2d34f4">AirdropLockManager::NormalizeDutyCycleCommand()</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a09a59525b704d34a3d3626db69fe766a">AirdropLockManager::SendCommandLocked()</a> , 以及 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#adf4a30f492328cdaf5de9b0053ed0adf">AirdropLockManager::SetDutyCycle()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__airdrop__lock_1_1AirdropLockManager_ac62bc67221c430fd52a77df3b2190102_cgraph.png" border="0" usemap="#aclassmy__airdrop__lock_1_1AirdropLockManager_ac62bc67221c430fd52a77df3b2190102_cgraph" alt=""/></div>
+<map name="aclassmy__airdrop__lock_1_1AirdropLockManager_ac62bc67221c430fd52a77df3b2190102_cgraph" id="aclassmy__airdrop__lock_1_1AirdropLockManager_ac62bc67221c430fd52a77df3b2190102_cgraph">
+<area shape="rect" title=" " alt="" coords="5,45,180,70"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a0520ea34a0047845c8f0546d7a2d34f4" title=" " alt="" coords="387,21,609,46"/>
+<area shape="poly" title=" " alt="" coords="148,42,228,29,301,25,373,25,373,30,301,31,228,35,149,47"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a09a59525b704d34a3d3626db69fe766a" title=" " alt="" coords="415,70,581,95"/>
+<area shape="poly" title=" " alt="" coords="149,67,228,80,317,85,401,84,401,90,316,90,228,85,148,73"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#adf4a30f492328cdaf5de9b0053ed0adf" title=" " alt="" coords="228,45,339,70"/>
+<area shape="poly" title=" " alt="" coords="180,55,214,55,214,60,180,60"/>
+<area shape="rect" href="classmy__serial_1_1MySerial.html#a1d904961859394313fe20f7f4d6fc784" title=" " alt="" coords="657,5,808,45"/>
+<area shape="poly" title=" " alt="" coords="555,67,609,55,643,46,645,51,610,60,557,73"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#afbfc585e95271adafecc9162358cb12a" title=" " alt="" coords="673,70,792,95"/>
+<area shape="poly" title=" " alt="" coords="582,80,660,80,660,85,582,85"/>
+<area shape="rect" href="classmy__serial_1_1MySerial.html#a0380935f1407739a0d229b4f9e475e8e" title=" " alt="" coords="657,120,808,160"/>
+<area shape="poly" title=" " alt="" coords="551,93,645,116,643,121,550,98"/>
+<area shape="poly" title=" " alt="" coords="338,49,373,45,373,50,339,54"/>
+<area shape="poly" title=" " alt="" coords="339,61,401,69,400,74,338,66"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5b1352f83fe292ed21bc98fb525a8324" name="a5b1352f83fe292ed21bc98fb525a8324"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b1352f83fe292ed21bc98fb525a8324">&#9670;&#160;</a></span>GetInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html">AirdropLockManager</a> &amp; GetInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classtools_1_1pipeline_1_1Pipeline.html#a9f0164952c82a31be0423f78dd4c8af5">Pipeline::LaunchAirdropLock()</a> , 以及 <a class="el" href="classtools_1_1pipeline_1_1Pipeline.html#a17a237457e57625296e6b24feb19c60a">Pipeline::Stop()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__airdrop__lock_1_1AirdropLockManager_a5b1352f83fe292ed21bc98fb525a8324_icgraph.png" border="0" usemap="#aclassmy__airdrop__lock_1_1AirdropLockManager_a5b1352f83fe292ed21bc98fb525a8324_icgraph" alt=""/></div>
+<map name="aclassmy__airdrop__lock_1_1AirdropLockManager_a5b1352f83fe292ed21bc98fb525a8324_icgraph" id="aclassmy__airdrop__lock_1_1AirdropLockManager_a5b1352f83fe292ed21bc98fb525a8324_icgraph">
+<area shape="rect" title=" " alt="" coords="451,45,551,70"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9f0164952c82a31be0423f78dd4c8af5" title=" " alt="" coords="228,5,403,45"/>
+<area shape="poly" title=" " alt="" coords="437,49,402,43,403,38,438,44"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a17a237457e57625296e6b24feb19c60a" title=" " alt="" coords="228,69,403,109"/>
+<area shape="poly" title=" " alt="" coords="438,71,403,77,402,72,437,66"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="5,5,180,45"/>
+<area shape="poly" title=" " alt="" coords="214,28,180,28,180,23,214,23"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#ab308ffdad0654e43a00b3d7d46c81a68" title=" " alt="" coords="5,69,180,109"/>
+<area shape="poly" title=" " alt="" coords="214,92,180,92,180,87,214,87"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9db7bdf7d148e0bba0256c8b55a61e6b" name="a9db7bdf7d148e0bba0256c8b55a61e6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9db7bdf7d148e0bba0256c8b55a61e6b">&#9670;&#160;</a></span>GetStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nlohmann::json GetStatus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a709484335ba96368eaa6e0804c0ca6b1">AirdropLockManager::config_</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a2a1bbaff5af89073ebaa91f3e07382a3">AirdropLockManager::current_duty_cycle_</a>, <a class="el" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#a8740ba80e30dd75e71d09fa1dcf04f3d">AirdropLockConfig::enabled</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a2f33e27b7aaf30da7b6f21577e577f07">AirdropLockManager::init_config_</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#aef7436a220692b5b863db4e9d8b870a3">AirdropLockManager::initialized_</a>, <a class="el" href="classmy__serial_1_1MySerial.html#a1d904961859394313fe20f7f4d6fc784">MySerial::IsOpen()</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#aa6f4f0458cbbe33e07e5c37ae96f2040">AirdropLockManager::last_command_</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a5fce746773fe42ce68f5aa756b09c38e">AirdropLockManager::last_error_</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a281b5ec791338d4378e22ef44a51b4a1">AirdropLockManager::mutex_</a>, <a class="el" href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996dfac3bf447eabe632720a3aa1a7ce401274">my_airdrop_lock::Open</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a129ce01664337a9fcf74a53da192a8f4">AirdropLockManager::serial_</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a3decd8ac899af9b19308bcbc3653df2f">AirdropLockManager::state_</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a3bdfacd9ac5f1173a5c83793e1353c23">AirdropLockManager::StateToString()</a> , 以及 <a class="el" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#a89b997d8eeffc2c8808cd537345364d3">AirdropLockConfig::ToJson()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__airdrop__lock_1_1AirdropLockManager_a9db7bdf7d148e0bba0256c8b55a61e6b_cgraph.png" border="0" usemap="#aclassmy__airdrop__lock_1_1AirdropLockManager_a9db7bdf7d148e0bba0256c8b55a61e6b_cgraph" alt=""/></div>
+<map name="aclassmy__airdrop__lock_1_1AirdropLockManager_a9db7bdf7d148e0bba0256c8b55a61e6b_cgraph" id="aclassmy__airdrop__lock_1_1AirdropLockManager_a9db7bdf7d148e0bba0256c8b55a61e6b_cgraph">
+<area shape="rect" title=" " alt="" coords="5,70,92,95"/>
+<area shape="rect" href="classmy__serial_1_1MySerial.html#a1d904961859394313fe20f7f4d6fc784" title=" " alt="" coords="157,5,308,45"/>
+<area shape="poly" title=" " alt="" coords="89,67,154,47,156,52,91,72"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a3bdfacd9ac5f1173a5c83793e1353c23" title=" " alt="" coords="179,70,287,95"/>
+<area shape="poly" title=" " alt="" coords="92,80,165,80,165,85,92,85"/>
+<area shape="rect" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#a89b997d8eeffc2c8808cd537345364d3" title=" " alt="" coords="140,120,325,160"/>
+<area shape="poly" title=" " alt="" coords="91,93,156,113,154,118,89,98"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9a9fadaffbe5e752f2c07a20d236bd98" name="a9a9fadaffbe5e752f2c07a20d236bd98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a9fadaffbe5e752f2c07a20d236bd98">&#9670;&#160;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Init </td>
+          <td>(</td>
+          <td class="paramtype">const nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>config</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>err</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#a784e73e1ce3f90fbcbb0a78d72a053ff">AirdropLockConfig::baud_rate</a>, <a class="el" href="classmy__serial_1_1MySerial.html#a7f7a3199c392465d0767c6506c1af5b4">MySerial::Close()</a>, <a class="el" href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996dfa03f4a47830f97377a35321051685071e">my_airdrop_lock::Closed</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a709484335ba96368eaa6e0804c0ca6b1">AirdropLockManager::config_</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a2a1bbaff5af89073ebaa91f3e07382a3">AirdropLockManager::current_duty_cycle_</a>, <a class="el" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#ab47c9fed23638807f5fd8886e77fcdcc">AirdropLockConfig::data_bits</a>, <a class="el" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#ae73cd3a6b0c325c1dfda763ff6f12d60">AirdropLockConfig::default_pwm_frequency</a>, <a class="el" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#a5d346a4e5fa3df29a43d150d99c8a02a">AirdropLockConfig::device</a>, <a class="el" href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996dfab9f5c797ebbf55adccdd8539a65a0241">my_airdrop_lock::Disabled</a>, <a class="el" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#a8740ba80e30dd75e71d09fa1dcf04f3d">AirdropLockConfig::enabled</a>, <a class="el" href="classmy__serial_1_1MySerial.html#aa0945f28ef057669b73101c9baf0acce">MySerial::Init()</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a2f33e27b7aaf30da7b6f21577e577f07">AirdropLockManager::init_config_</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#aef7436a220692b5b863db4e9d8b870a3">AirdropLockManager::initialized_</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#aa6f4f0458cbbe33e07e5c37ae96f2040">AirdropLockManager::last_command_</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a5fce746773fe42ce68f5aa756b09c38e">AirdropLockManager::last_error_</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a281b5ec791338d4378e22ef44a51b4a1">AirdropLockManager::mutex_</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#ab1a171025c5a7e93204980f825cb7639">AirdropLockManager::ParseConfig()</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a129ce01664337a9fcf74a53da192a8f4">AirdropLockManager::serial_</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#afbfc585e95271adafecc9162358cb12a">AirdropLockManager::SetErrorLocked()</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a3decd8ac899af9b19308bcbc3653df2f">AirdropLockManager::state_</a> , 以及 <a class="el" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#a146991e1ecc6d049155a7a71739e9d0d">AirdropLockConfig::stop_bits</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__airdrop__lock_1_1AirdropLockManager_a9a9fadaffbe5e752f2c07a20d236bd98_cgraph.png" border="0" usemap="#aclassmy__airdrop__lock_1_1AirdropLockManager_a9a9fadaffbe5e752f2c07a20d236bd98_cgraph" alt=""/></div>
+<map name="aclassmy__airdrop__lock_1_1AirdropLockManager_a9a9fadaffbe5e752f2c07a20d236bd98_cgraph" id="aclassmy__airdrop__lock_1_1AirdropLockManager_a9a9fadaffbe5e752f2c07a20d236bd98_cgraph">
+<area shape="rect" title=" " alt="" coords="5,170,48,195"/>
+<area shape="rect" href="classmy__serial_1_1MySerial.html#a7f7a3199c392465d0767c6506c1af5b4" title=" " alt="" coords="96,69,247,109"/>
+<area shape="poly" title=" " alt="" coords="38,168,63,144,94,119,104,113,107,118,98,124,66,148,42,171"/>
+<area shape="rect" href="classmy__serial_1_1MySerial.html#aa0945f28ef057669b73101c9baf0acce" title=" " alt="" coords="96,133,247,173"/>
+<area shape="poly" title=" " alt="" coords="48,176,82,169,83,174,49,181"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#ab1a171025c5a7e93204980f825cb7639" title=" " alt="" coords="122,198,221,223"/>
+<area shape="poly" title=" " alt="" coords="49,184,109,196,108,201,48,189"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#afbfc585e95271adafecc9162358cb12a" title=" " alt="" coords="112,247,231,273"/>
+<area shape="poly" title=" " alt="" coords="43,194,68,214,97,234,111,240,109,245,95,238,64,218,40,198"/>
+<area shape="rect" href="classmy__serial_1_1MySerial.html#ae6399916958f0b2ff4a36e445dca7540" title=" " alt="" coords="493,5,644,45"/>
+<area shape="poly" title=" " alt="" coords="220,131,245,119,269,104,294,91,389,59,479,38,481,43,390,65,296,96,272,109,248,124,222,136"/>
+<area shape="rect" href="classmy__serial_1_1MySerial.html#acf34bb24318bf35bd5a61ce0c4c41f37" title=" " alt="" coords="493,69,644,109"/>
+<area shape="poly" title=" " alt="" coords="242,131,294,119,390,104,479,94,480,99,390,109,295,124,243,136"/>
+<area shape="rect" href="classmy__serial_1_1MySerial.html#a1d26b26c66f6fd2c4d5b0d30d27c216b" title=" " alt="" coords="295,133,445,173"/>
+<area shape="poly" title=" " alt="" coords="247,151,281,151,281,156,247,156"/>
+<area shape="rect" href="classmy__serial_1_1MySerial.html#a8396855e9be09e04c4485aff95e01607" title=" " alt="" coords="493,197,644,237"/>
+<area shape="poly" title=" " alt="" coords="243,171,295,183,390,198,480,208,479,213,390,203,294,188,242,176"/>
+<area shape="rect" href="classmy__serial_1_1MySerial.html#a4e85339cafdcc88dd5abde77a27691bb" title=" " alt="" coords="493,261,644,301"/>
+<area shape="poly" title=" " alt="" coords="222,171,248,183,272,197,296,210,390,241,480,262,479,268,389,246,294,214,269,202,245,188,220,176"/>
+<area shape="poly" title=" " alt="" coords="392,131,437,94,492,55,502,49,505,54,495,60,440,98,395,135"/>
+<area shape="poly" title=" " alt="" coords="432,131,492,111,494,116,434,136"/>
+<area shape="poly" title=" " alt="" coords="434,171,494,191,492,196,432,176"/>
+<area shape="poly" title=" " alt="" coords="395,172,440,209,495,247,505,253,502,257,492,252,437,213,392,176"/>
+<area shape="rect" href="classmy__serial_1_1MySerial.html#a3565221436d1de8034032ffb000d621a" title=" " alt="" coords="493,133,644,173"/>
+<area shape="poly" title=" " alt="" coords="445,151,480,151,480,156,445,156"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0520ea34a0047845c8f0546d7a2d34f4" name="a0520ea34a0047845c8f0546d7a2d34f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0520ea34a0047845c8f0546d7a2d34f4">&#9670;&#160;</a></span>NormalizeDutyCycleCommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string NormalizeDutyCycleCommand </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>duty_cycle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#ac62bc67221c430fd52a77df3b2190102">AirdropLockManager::FristPowerOnProtection()</a> , 以及 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#adf4a30f492328cdaf5de9b0053ed0adf">AirdropLockManager::SetDutyCycle()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__airdrop__lock_1_1AirdropLockManager_a0520ea34a0047845c8f0546d7a2d34f4_icgraph.png" border="0" usemap="#aclassmy__airdrop__lock_1_1AirdropLockManager_a0520ea34a0047845c8f0546d7a2d34f4_icgraph" alt=""/></div>
+<map name="aclassmy__airdrop__lock_1_1AirdropLockManager_a0520ea34a0047845c8f0546d7a2d34f4_icgraph" id="aclassmy__airdrop__lock_1_1AirdropLockManager_a0520ea34a0047845c8f0546d7a2d34f4_icgraph">
+<area shape="rect" title=" " alt="" coords="387,29,609,55"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#ac62bc67221c430fd52a77df3b2190102" title=" " alt="" coords="5,5,180,31"/>
+<area shape="poly" title=" " alt="" coords="373,37,180,26,180,20,373,32"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#adf4a30f492328cdaf5de9b0053ed0adf" title=" " alt="" coords="228,55,339,80"/>
+<area shape="poly" title=" " alt="" coords="377,59,339,64,339,58,376,54"/>
+<area shape="poly" title=" " alt="" coords="220,54,142,33,144,28,221,49"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#ad187208465cca8eb26d87ab2fc5a92d8" title=" " alt="" coords="37,55,148,80"/>
+<area shape="poly" title=" " alt="" coords="214,70,148,70,148,65,214,65"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad284bf955eceb63ad49dae6d3ab17e84" name="ad284bf955eceb63ad49dae6d3ab17e84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad284bf955eceb63ad49dae6d3ab17e84">&#9670;&#160;</a></span>OpenDropper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool OpenDropper </td>
+          <td>(</td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>err</em> = <code>nullptr</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a709484335ba96368eaa6e0804c0ca6b1">AirdropLockManager::config_</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a281b5ec791338d4378e22ef44a51b4a1">AirdropLockManager::mutex_</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996dfac3bf447eabe632720a3aa1a7ce401274">my_airdrop_lock::Open</a>, <a class="el" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#a521068abc22320c24bd19698ea22142b">AirdropLockConfig::open_cmd</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a09a59525b704d34a3d3626db69fe766a">AirdropLockManager::SendCommandLocked()</a> , 以及 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a3decd8ac899af9b19308bcbc3653df2f">AirdropLockManager::state_</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__airdrop__lock_1_1AirdropLockManager_ad284bf955eceb63ad49dae6d3ab17e84_cgraph.png" border="0" usemap="#aclassmy__airdrop__lock_1_1AirdropLockManager_ad284bf955eceb63ad49dae6d3ab17e84_cgraph" alt=""/></div>
+<map name="aclassmy__airdrop__lock_1_1AirdropLockManager_ad284bf955eceb63ad49dae6d3ab17e84_cgraph" id="aclassmy__airdrop__lock_1_1AirdropLockManager_ad284bf955eceb63ad49dae6d3ab17e84_cgraph">
+<area shape="rect" title=" " alt="" coords="5,70,113,95"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a09a59525b704d34a3d3626db69fe766a" title=" " alt="" coords="161,70,328,95"/>
+<area shape="poly" title=" " alt="" coords="114,80,147,80,147,85,114,85"/>
+<area shape="rect" href="classmy__serial_1_1MySerial.html#a1d904961859394313fe20f7f4d6fc784" title=" " alt="" coords="376,5,527,45"/>
+<area shape="poly" title=" " alt="" coords="291,67,365,46,366,52,292,73"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#afbfc585e95271adafecc9162358cb12a" title=" " alt="" coords="392,70,511,95"/>
+<area shape="poly" title=" " alt="" coords="328,80,378,80,378,85,328,85"/>
+<area shape="rect" href="classmy__serial_1_1MySerial.html#a0380935f1407739a0d229b4f9e475e8e" title=" " alt="" coords="376,120,527,160"/>
+<area shape="poly" title=" " alt="" coords="292,93,366,114,365,119,291,98"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5e33ae66ef1f779ed218ae8ce999ee43" name="a5e33ae66ef1f779ed218ae8ce999ee43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e33ae66ef1f779ed218ae8ce999ee43">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html">AirdropLockManager</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html">AirdropLockManager</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab1a171025c5a7e93204980f825cb7639" name="ab1a171025c5a7e93204980f825cb7639"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1a171025c5a7e93204980f825cb7639">&#9670;&#160;</a></span>ParseConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmy__airdrop__lock_1_1AirdropLockConfig.html">AirdropLockConfig</a> ParseConfig </td>
+          <td>(</td>
+          <td class="paramtype">const nlohmann::json &amp;&#160;</td>
+          <td class="paramname"><em>config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#a784e73e1ce3f90fbcbb0a78d72a053ff">AirdropLockConfig::baud_rate</a>, <a class="el" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#ab47c9fed23638807f5fd8886e77fcdcc">AirdropLockConfig::data_bits</a>, <a class="el" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#ae73cd3a6b0c325c1dfda763ff6f12d60">AirdropLockConfig::default_pwm_frequency</a>, <a class="el" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#a5d346a4e5fa3df29a43d150d99c8a02a">AirdropLockConfig::device</a>, <a class="el" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#a8740ba80e30dd75e71d09fa1dcf04f3d">AirdropLockConfig::enabled</a>, <a class="el" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#ad950010f75187882591a4548b1558321">AirdropLockConfig::lock_cmd</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#a521068abc22320c24bd19698ea22142b">AirdropLockConfig::open_cmd</a> , 以及 <a class="el" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#a146991e1ecc6d049155a7a71739e9d0d">AirdropLockConfig::stop_bits</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a9a9fadaffbe5e752f2c07a20d236bd98">AirdropLockManager::Init()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__airdrop__lock_1_1AirdropLockManager_ab1a171025c5a7e93204980f825cb7639_icgraph.png" border="0" usemap="#aclassmy__airdrop__lock_1_1AirdropLockManager_ab1a171025c5a7e93204980f825cb7639_icgraph" alt=""/></div>
+<map name="aclassmy__airdrop__lock_1_1AirdropLockManager_ab1a171025c5a7e93204980f825cb7639_icgraph" id="aclassmy__airdrop__lock_1_1AirdropLockManager_ab1a171025c5a7e93204980f825cb7639_icgraph">
+<area shape="rect" title=" " alt="" coords="96,5,195,31"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a9a9fadaffbe5e752f2c07a20d236bd98" title=" " alt="" coords="5,5,48,31"/>
+<area shape="poly" title=" " alt="" coords="82,21,48,21,48,15,82,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a09a59525b704d34a3d3626db69fe766a" name="a09a59525b704d34a3d3626db69fe766a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09a59525b704d34a3d3626db69fe766a">&#9670;&#160;</a></span>SendCommandLocked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SendCommandLocked </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>command</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>action_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>err</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a709484335ba96368eaa6e0804c0ca6b1">AirdropLockManager::config_</a>, <a class="el" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#a5d346a4e5fa3df29a43d150d99c8a02a">AirdropLockConfig::device</a>, <a class="el" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#a8740ba80e30dd75e71d09fa1dcf04f3d">AirdropLockConfig::enabled</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#aef7436a220692b5b863db4e9d8b870a3">AirdropLockManager::initialized_</a>, <a class="el" href="classmy__serial_1_1MySerial.html#a1d904961859394313fe20f7f4d6fc784">MySerial::IsOpen()</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#aa6f4f0458cbbe33e07e5c37ae96f2040">AirdropLockManager::last_command_</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a5fce746773fe42ce68f5aa756b09c38e">AirdropLockManager::last_error_</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="MyLog_8h.html#a018b946dbfb938167b19f9279dee7e86">MYLOG_WARN</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a129ce01664337a9fcf74a53da192a8f4">AirdropLockManager::serial_</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#afbfc585e95271adafecc9162358cb12a">AirdropLockManager::SetErrorLocked()</a> , 以及 <a class="el" href="classmy__serial_1_1MySerial.html#a0380935f1407739a0d229b4f9e475e8e">MySerial::Write()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a2bbd7e2e12cb97d0331aee620c06fbcf">AirdropLockManager::CloseDropper()</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#ac62bc67221c430fd52a77df3b2190102">AirdropLockManager::FristPowerOnProtection()</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#ad284bf955eceb63ad49dae6d3ab17e84">AirdropLockManager::OpenDropper()</a> , 以及 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#adf4a30f492328cdaf5de9b0053ed0adf">AirdropLockManager::SetDutyCycle()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__airdrop__lock_1_1AirdropLockManager_a09a59525b704d34a3d3626db69fe766a_cgraph.png" border="0" usemap="#aclassmy__airdrop__lock_1_1AirdropLockManager_a09a59525b704d34a3d3626db69fe766a_cgraph" alt=""/></div>
+<map name="aclassmy__airdrop__lock_1_1AirdropLockManager_a09a59525b704d34a3d3626db69fe766a_cgraph" id="aclassmy__airdrop__lock_1_1AirdropLockManager_a09a59525b704d34a3d3626db69fe766a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,70,172,95"/>
+<area shape="rect" href="classmy__serial_1_1MySerial.html#a1d904961859394313fe20f7f4d6fc784" title=" " alt="" coords="220,5,371,45"/>
+<area shape="poly" title=" " alt="" coords="135,67,209,46,210,52,136,73"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#afbfc585e95271adafecc9162358cb12a" title=" " alt="" coords="236,70,355,95"/>
+<area shape="poly" title=" " alt="" coords="172,80,222,80,222,85,172,85"/>
+<area shape="rect" href="classmy__serial_1_1MySerial.html#a0380935f1407739a0d229b4f9e475e8e" title=" " alt="" coords="220,120,371,160"/>
+<area shape="poly" title=" " alt="" coords="136,93,210,114,209,119,135,98"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__airdrop__lock_1_1AirdropLockManager_a09a59525b704d34a3d3626db69fe766a_icgraph.png" border="0" usemap="#aclassmy__airdrop__lock_1_1AirdropLockManager_a09a59525b704d34a3d3626db69fe766a_icgraph" alt=""/></div>
+<map name="aclassmy__airdrop__lock_1_1AirdropLockManager_a09a59525b704d34a3d3626db69fe766a_icgraph" id="aclassmy__airdrop__lock_1_1AirdropLockManager_a09a59525b704d34a3d3626db69fe766a_icgraph">
+<area shape="rect" title=" " alt="" coords="387,81,553,107"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a2bbd7e2e12cb97d0331aee620c06fbcf" title=" " alt="" coords="228,5,339,31"/>
+<area shape="poly" title=" " alt="" coords="424,78,315,33,317,28,426,74"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#ac62bc67221c430fd52a77df3b2190102" title=" " alt="" coords="5,81,180,107"/>
+<area shape="poly" title=" " alt="" coords="373,97,181,97,181,91,373,91"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#ad284bf955eceb63ad49dae6d3ab17e84" title=" " alt="" coords="229,107,337,132"/>
+<area shape="poly" title=" " alt="" coords="373,110,338,115,337,109,373,105"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#adf4a30f492328cdaf5de9b0053ed0adf" title=" " alt="" coords="228,156,339,181"/>
+<area shape="poly" title=" " alt="" coords="425,114,317,158,315,154,423,110"/>
+<area shape="poly" title=" " alt="" coords="236,153,125,109,127,104,238,148"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#ad187208465cca8eb26d87ab2fc5a92d8" title=" " alt="" coords="37,156,148,181"/>
+<area shape="poly" title=" " alt="" coords="214,171,148,171,148,166,214,166"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adf4a30f492328cdaf5de9b0053ed0adf" name="adf4a30f492328cdaf5de9b0053ed0adf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf4a30f492328cdaf5de9b0053ed0adf">&#9670;&#160;</a></span>SetDutyCycle() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SetDutyCycle </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>duty_cycle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>err</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a2a1bbaff5af89073ebaa91f3e07382a3">AirdropLockManager::current_duty_cycle_</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a281b5ec791338d4378e22ef44a51b4a1">AirdropLockManager::mutex_</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a0520ea34a0047845c8f0546d7a2d34f4">AirdropLockManager::NormalizeDutyCycleCommand()</a> , 以及 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a09a59525b704d34a3d3626db69fe766a">AirdropLockManager::SendCommandLocked()</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#ac62bc67221c430fd52a77df3b2190102">AirdropLockManager::FristPowerOnProtection()</a> , 以及 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#ad187208465cca8eb26d87ab2fc5a92d8">AirdropLockManager::SetDutyCycle()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__airdrop__lock_1_1AirdropLockManager_adf4a30f492328cdaf5de9b0053ed0adf_cgraph.png" border="0" usemap="#aclassmy__airdrop__lock_1_1AirdropLockManager_adf4a30f492328cdaf5de9b0053ed0adf_cgraph" alt=""/></div>
+<map name="aclassmy__airdrop__lock_1_1AirdropLockManager_adf4a30f492328cdaf5de9b0053ed0adf_cgraph" id="aclassmy__airdrop__lock_1_1AirdropLockManager_adf4a30f492328cdaf5de9b0053ed0adf_cgraph">
+<area shape="rect" title=" " alt="" coords="5,46,116,71"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a0520ea34a0047845c8f0546d7a2d34f4" title=" " alt="" coords="164,21,387,46"/>
+<area shape="poly" title=" " alt="" coords="116,50,154,45,155,50,116,55"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a09a59525b704d34a3d3626db69fe766a" title=" " alt="" coords="192,70,359,95"/>
+<area shape="poly" title=" " alt="" coords="116,62,178,69,177,74,116,67"/>
+<area shape="rect" href="classmy__serial_1_1MySerial.html#a1d904961859394313fe20f7f4d6fc784" title=" " alt="" coords="435,5,585,45"/>
+<area shape="poly" title=" " alt="" coords="333,67,386,55,421,46,422,51,387,60,334,73"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#afbfc585e95271adafecc9162358cb12a" title=" " alt="" coords="451,70,569,95"/>
+<area shape="poly" title=" " alt="" coords="359,80,437,80,437,85,359,85"/>
+<area shape="rect" href="classmy__serial_1_1MySerial.html#a0380935f1407739a0d229b4f9e475e8e" title=" " alt="" coords="435,120,585,160"/>
+<area shape="poly" title=" " alt="" coords="329,93,422,116,421,121,328,98"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__airdrop__lock_1_1AirdropLockManager_adf4a30f492328cdaf5de9b0053ed0adf_icgraph.png" border="0" usemap="#aclassmy__airdrop__lock_1_1AirdropLockManager_adf4a30f492328cdaf5de9b0053ed0adf_icgraph" alt=""/></div>
+<map name="aclassmy__airdrop__lock_1_1AirdropLockManager_adf4a30f492328cdaf5de9b0053ed0adf_icgraph" id="aclassmy__airdrop__lock_1_1AirdropLockManager_adf4a30f492328cdaf5de9b0053ed0adf_icgraph">
+<area shape="rect" title=" " alt="" coords="228,31,339,56"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#ac62bc67221c430fd52a77df3b2190102" title=" " alt="" coords="5,5,180,31"/>
+<area shape="poly" title=" " alt="" coords="214,37,180,32,180,27,215,32"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#ad187208465cca8eb26d87ab2fc5a92d8" title=" " alt="" coords="37,55,148,80"/>
+<area shape="poly" title=" " alt="" coords="214,55,149,63,148,58,213,49"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad187208465cca8eb26d87ab2fc5a92d8" name="ad187208465cca8eb26d87ab2fc5a92d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad187208465cca8eb26d87ab2fc5a92d8">&#9670;&#160;</a></span>SetDutyCycle() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SetDutyCycle </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>duty_cycle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>err</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#adf4a30f492328cdaf5de9b0053ed0adf">AirdropLockManager::SetDutyCycle()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__airdrop__lock_1_1AirdropLockManager_ad187208465cca8eb26d87ab2fc5a92d8_cgraph.png" border="0" usemap="#aclassmy__airdrop__lock_1_1AirdropLockManager_ad187208465cca8eb26d87ab2fc5a92d8_cgraph" alt=""/></div>
+<map name="aclassmy__airdrop__lock_1_1AirdropLockManager_ad187208465cca8eb26d87ab2fc5a92d8_cgraph" id="aclassmy__airdrop__lock_1_1AirdropLockManager_ad187208465cca8eb26d87ab2fc5a92d8_cgraph">
+<area shape="rect" title=" " alt="" coords="5,46,116,71"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#adf4a30f492328cdaf5de9b0053ed0adf" title=" " alt="" coords="164,46,275,71"/>
+<area shape="poly" title=" " alt="" coords="116,56,150,56,150,61,116,61"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a0520ea34a0047845c8f0546d7a2d34f4" title=" " alt="" coords="323,21,545,46"/>
+<area shape="poly" title=" " alt="" coords="274,50,313,45,313,50,275,55"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a09a59525b704d34a3d3626db69fe766a" title=" " alt="" coords="351,70,517,95"/>
+<area shape="poly" title=" " alt="" coords="275,62,337,69,336,74,274,67"/>
+<area shape="rect" href="classmy__serial_1_1MySerial.html#a1d904961859394313fe20f7f4d6fc784" title=" " alt="" coords="593,5,744,45"/>
+<area shape="poly" title=" " alt="" coords="491,67,545,55,579,46,581,51,546,60,493,73"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#afbfc585e95271adafecc9162358cb12a" title=" " alt="" coords="609,70,728,95"/>
+<area shape="poly" title=" " alt="" coords="518,80,596,80,596,85,518,85"/>
+<area shape="rect" href="classmy__serial_1_1MySerial.html#a0380935f1407739a0d229b4f9e475e8e" title=" " alt="" coords="593,120,744,160"/>
+<area shape="poly" title=" " alt="" coords="487,93,581,116,579,121,486,98"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afbfc585e95271adafecc9162358cb12a" name="afbfc585e95271adafecc9162358cb12a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbfc585e95271adafecc9162358cb12a">&#9670;&#160;</a></span>SetErrorLocked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetErrorLocked </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>error</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a709484335ba96368eaa6e0804c0ca6b1">AirdropLockManager::config_</a>, <a class="el" href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996dfab9f5c797ebbf55adccdd8539a65a0241">my_airdrop_lock::Disabled</a>, <a class="el" href="structmy__airdrop__lock_1_1AirdropLockConfig.html#a8740ba80e30dd75e71d09fa1dcf04f3d">AirdropLockConfig::enabled</a>, <a class="el" href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996dfa902b0d55fddef6f8d651fe1035b7d4bd">my_airdrop_lock::Error</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a5fce746773fe42ce68f5aa756b09c38e">AirdropLockManager::last_error_</a> , 以及 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a3decd8ac899af9b19308bcbc3653df2f">AirdropLockManager::state_</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a9a9fadaffbe5e752f2c07a20d236bd98">AirdropLockManager::Init()</a> , 以及 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a09a59525b704d34a3d3626db69fe766a">AirdropLockManager::SendCommandLocked()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__airdrop__lock_1_1AirdropLockManager_afbfc585e95271adafecc9162358cb12a_icgraph.png" border="0" usemap="#aclassmy__airdrop__lock_1_1AirdropLockManager_afbfc585e95271adafecc9162358cb12a_icgraph" alt=""/></div>
+<map name="aclassmy__airdrop__lock_1_1AirdropLockManager_afbfc585e95271adafecc9162358cb12a_icgraph" id="aclassmy__airdrop__lock_1_1AirdropLockManager_afbfc585e95271adafecc9162358cb12a_icgraph">
+<area shape="rect" title=" " alt="" coords="601,57,720,83"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a9a9fadaffbe5e752f2c07a20d236bd98" title=" " alt="" coords="449,32,491,57"/>
+<area shape="poly" title=" " alt="" coords="587,63,491,50,492,45,588,58"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a09a59525b704d34a3d3626db69fe766a" title=" " alt="" coords="387,81,553,107"/>
+<area shape="poly" title=" " alt="" coords="588,82,554,86,553,81,587,77"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a2bbd7e2e12cb97d0331aee620c06fbcf" title=" " alt="" coords="228,5,339,31"/>
+<area shape="poly" title=" " alt="" coords="409,80,386,71,307,33,309,28,388,66,411,75"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#ac62bc67221c430fd52a77df3b2190102" title=" " alt="" coords="5,81,180,107"/>
+<area shape="poly" title=" " alt="" coords="373,97,181,97,181,91,373,91"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#ad284bf955eceb63ad49dae6d3ab17e84" title=" " alt="" coords="229,107,337,132"/>
+<area shape="poly" title=" " alt="" coords="373,110,338,115,337,109,373,105"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#adf4a30f492328cdaf5de9b0053ed0adf" title=" " alt="" coords="228,156,339,181"/>
+<area shape="poly" title=" " alt="" coords="425,114,317,158,315,154,423,110"/>
+<area shape="poly" title=" " alt="" coords="236,153,125,109,127,104,238,148"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#ad187208465cca8eb26d87ab2fc5a92d8" title=" " alt="" coords="37,156,148,181"/>
+<area shape="poly" title=" " alt="" coords="214,171,148,171,148,166,214,166"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa70efaa4751ac6d5d54dce88fe725e0a" name="aa70efaa4751ac6d5d54dce88fe725e0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa70efaa4751ac6d5d54dce88fe725e0a">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#aef7436a220692b5b863db4e9d8b870a3">AirdropLockManager::initialized_</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a281b5ec791338d4378e22ef44a51b4a1">AirdropLockManager::mutex_</a> , 以及 <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>.</p>
+
+</div>
+</div>
+<a id="a3bdfacd9ac5f1173a5c83793e1353c23" name="a3bdfacd9ac5f1173a5c83793e1353c23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bdfacd9ac5f1173a5c83793e1353c23">&#9670;&#160;</a></span>StateToString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string StateToString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996df">AirdropLockState</a>&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996dfa03f4a47830f97377a35321051685071e">my_airdrop_lock::Closed</a>, <a class="el" href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996dfab9f5c797ebbf55adccdd8539a65a0241">my_airdrop_lock::Disabled</a>, <a class="el" href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996dfa902b0d55fddef6f8d651fe1035b7d4bd">my_airdrop_lock::Error</a>, <a class="el" href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996dfac3bf447eabe632720a3aa1a7ce401274">my_airdrop_lock::Open</a> , 以及 <a class="el" href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996dfaf704f57ea420275ad51bf55b7dec2c96">my_airdrop_lock::Uninitialized</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a9db7bdf7d148e0bba0256c8b55a61e6b">AirdropLockManager::GetStatus()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__airdrop__lock_1_1AirdropLockManager_a3bdfacd9ac5f1173a5c83793e1353c23_icgraph.png" border="0" usemap="#aclassmy__airdrop__lock_1_1AirdropLockManager_a3bdfacd9ac5f1173a5c83793e1353c23_icgraph" alt=""/></div>
+<map name="aclassmy__airdrop__lock_1_1AirdropLockManager_a3bdfacd9ac5f1173a5c83793e1353c23_icgraph" id="aclassmy__airdrop__lock_1_1AirdropLockManager_a3bdfacd9ac5f1173a5c83793e1353c23_icgraph">
+<area shape="rect" title=" " alt="" coords="140,5,248,31"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a9db7bdf7d148e0bba0256c8b55a61e6b" title=" " alt="" coords="5,5,92,31"/>
+<area shape="poly" title=" " alt="" coords="126,21,92,21,92,15,126,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7d498b13dc60fe7d0ba25025182d53fd" name="a7d498b13dc60fe7d0ba25025182d53fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d498b13dc60fe7d0ba25025182d53fd">&#9670;&#160;</a></span>Stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Stop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">引用了 <a class="el" href="classmy__serial_1_1MySerial.html#a7f7a3199c392465d0767c6506c1af5b4">MySerial::Close()</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#aef7436a220692b5b863db4e9d8b870a3">AirdropLockManager::initialized_</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a281b5ec791338d4378e22ef44a51b4a1">AirdropLockManager::mutex_</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a129ce01664337a9fcf74a53da192a8f4">AirdropLockManager::serial_</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a3decd8ac899af9b19308bcbc3653df2f">AirdropLockManager::state_</a> , 以及 <a class="el" href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996dfaf704f57ea420275ad51bf55b7dec2c96">my_airdrop_lock::Uninitialized</a>.</p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classtools_1_1pipeline_1_1Pipeline.html#a17a237457e57625296e6b24feb19c60a">Pipeline::Stop()</a> , 以及 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a671bfeb65f91342bd374ba3ea4801716">AirdropLockManager::~AirdropLockManager()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__airdrop__lock_1_1AirdropLockManager_a7d498b13dc60fe7d0ba25025182d53fd_cgraph.png" border="0" usemap="#aclassmy__airdrop__lock_1_1AirdropLockManager_a7d498b13dc60fe7d0ba25025182d53fd_cgraph" alt=""/></div>
+<map name="aclassmy__airdrop__lock_1_1AirdropLockManager_a7d498b13dc60fe7d0ba25025182d53fd_cgraph" id="aclassmy__airdrop__lock_1_1AirdropLockManager_a7d498b13dc60fe7d0ba25025182d53fd_cgraph">
+<area shape="rect" title=" " alt="" coords="5,13,56,38"/>
+<area shape="rect" href="classmy__serial_1_1MySerial.html#a7f7a3199c392465d0767c6506c1af5b4" title=" " alt="" coords="104,5,255,45"/>
+<area shape="poly" title=" " alt="" coords="56,23,90,23,90,28,56,28"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmy__airdrop__lock_1_1AirdropLockManager_a7d498b13dc60fe7d0ba25025182d53fd_icgraph.png" border="0" usemap="#aclassmy__airdrop__lock_1_1AirdropLockManager_a7d498b13dc60fe7d0ba25025182d53fd_icgraph" alt=""/></div>
+<map name="aclassmy__airdrop__lock_1_1AirdropLockManager_a7d498b13dc60fe7d0ba25025182d53fd_icgraph" id="aclassmy__airdrop__lock_1_1AirdropLockManager_a7d498b13dc60fe7d0ba25025182d53fd_icgraph">
+<area shape="rect" title=" " alt="" coords="451,42,501,67"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a17a237457e57625296e6b24feb19c60a" title=" " alt="" coords="228,5,403,45"/>
+<area shape="poly" title=" " alt="" coords="437,50,402,44,403,39,438,45"/>
+<area shape="rect" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a671bfeb65f91342bd374ba3ea4801716" title=" " alt="" coords="232,70,399,95"/>
+<area shape="poly" title=" " alt="" coords="438,64,389,73,388,67,437,59"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#ab308ffdad0654e43a00b3d7d46c81a68" title=" " alt="" coords="5,5,180,45"/>
+<area shape="poly" title=" " alt="" coords="214,28,180,28,180,23,214,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">结构体成员变量说明</h2>
+<a id="a709484335ba96368eaa6e0804c0ca6b1" name="a709484335ba96368eaa6e0804c0ca6b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a709484335ba96368eaa6e0804c0ca6b1">&#9670;&#160;</a></span>config_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmy__airdrop__lock_1_1AirdropLockConfig.html">AirdropLockConfig</a> config_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a2bbd7e2e12cb97d0331aee620c06fbcf">AirdropLockManager::CloseDropper()</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#ac62bc67221c430fd52a77df3b2190102">AirdropLockManager::FristPowerOnProtection()</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a9db7bdf7d148e0bba0256c8b55a61e6b">AirdropLockManager::GetStatus()</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a9a9fadaffbe5e752f2c07a20d236bd98">AirdropLockManager::Init()</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#ad284bf955eceb63ad49dae6d3ab17e84">AirdropLockManager::OpenDropper()</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a09a59525b704d34a3d3626db69fe766a">AirdropLockManager::SendCommandLocked()</a> , 以及 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#afbfc585e95271adafecc9162358cb12a">AirdropLockManager::SetErrorLocked()</a>.</p>
+
+</div>
+</div>
+<a id="a2a1bbaff5af89073ebaa91f3e07382a3" name="a2a1bbaff5af89073ebaa91f3e07382a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a1bbaff5af89073ebaa91f3e07382a3">&#9670;&#160;</a></span>current_duty_cycle_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string current_duty_cycle_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#ac62bc67221c430fd52a77df3b2190102">AirdropLockManager::FristPowerOnProtection()</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a9db7bdf7d148e0bba0256c8b55a61e6b">AirdropLockManager::GetStatus()</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a9a9fadaffbe5e752f2c07a20d236bd98">AirdropLockManager::Init()</a> , 以及 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#adf4a30f492328cdaf5de9b0053ed0adf">AirdropLockManager::SetDutyCycle()</a>.</p>
+
+</div>
+</div>
+<a id="a2f33e27b7aaf30da7b6f21577e577f07" name="a2f33e27b7aaf30da7b6f21577e577f07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f33e27b7aaf30da7b6f21577e577f07">&#9670;&#160;</a></span>init_config_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nlohmann::json init_config_ {nlohmann::json::object()}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a9db7bdf7d148e0bba0256c8b55a61e6b">AirdropLockManager::GetStatus()</a> , 以及 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a9a9fadaffbe5e752f2c07a20d236bd98">AirdropLockManager::Init()</a>.</p>
+
+</div>
+</div>
+<a id="aef7436a220692b5b863db4e9d8b870a3" name="aef7436a220692b5b863db4e9d8b870a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef7436a220692b5b863db4e9d8b870a3">&#9670;&#160;</a></span>initialized_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool initialized_ {false}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a9db7bdf7d148e0bba0256c8b55a61e6b">AirdropLockManager::GetStatus()</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a9a9fadaffbe5e752f2c07a20d236bd98">AirdropLockManager::Init()</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a09a59525b704d34a3d3626db69fe766a">AirdropLockManager::SendCommandLocked()</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#aa70efaa4751ac6d5d54dce88fe725e0a">AirdropLockManager::Start()</a> , 以及 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a7d498b13dc60fe7d0ba25025182d53fd">AirdropLockManager::Stop()</a>.</p>
+
+</div>
+</div>
+<a id="aa6f4f0458cbbe33e07e5c37ae96f2040" name="aa6f4f0458cbbe33e07e5c37ae96f2040"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6f4f0458cbbe33e07e5c37ae96f2040">&#9670;&#160;</a></span>last_command_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string last_command_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a9db7bdf7d148e0bba0256c8b55a61e6b">AirdropLockManager::GetStatus()</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a9a9fadaffbe5e752f2c07a20d236bd98">AirdropLockManager::Init()</a> , 以及 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a09a59525b704d34a3d3626db69fe766a">AirdropLockManager::SendCommandLocked()</a>.</p>
+
+</div>
+</div>
+<a id="a5fce746773fe42ce68f5aa756b09c38e" name="a5fce746773fe42ce68f5aa756b09c38e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fce746773fe42ce68f5aa756b09c38e">&#9670;&#160;</a></span>last_error_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string last_error_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a9db7bdf7d148e0bba0256c8b55a61e6b">AirdropLockManager::GetStatus()</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a9a9fadaffbe5e752f2c07a20d236bd98">AirdropLockManager::Init()</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a09a59525b704d34a3d3626db69fe766a">AirdropLockManager::SendCommandLocked()</a> , 以及 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#afbfc585e95271adafecc9162358cb12a">AirdropLockManager::SetErrorLocked()</a>.</p>
+
+</div>
+</div>
+<a id="a281b5ec791338d4378e22ef44a51b4a1" name="a281b5ec791338d4378e22ef44a51b4a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a281b5ec791338d4378e22ef44a51b4a1">&#9670;&#160;</a></span>mutex_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex mutex_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a2bbd7e2e12cb97d0331aee620c06fbcf">AirdropLockManager::CloseDropper()</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a9db7bdf7d148e0bba0256c8b55a61e6b">AirdropLockManager::GetStatus()</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a9a9fadaffbe5e752f2c07a20d236bd98">AirdropLockManager::Init()</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#ad284bf955eceb63ad49dae6d3ab17e84">AirdropLockManager::OpenDropper()</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#adf4a30f492328cdaf5de9b0053ed0adf">AirdropLockManager::SetDutyCycle()</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#aa70efaa4751ac6d5d54dce88fe725e0a">AirdropLockManager::Start()</a> , 以及 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a7d498b13dc60fe7d0ba25025182d53fd">AirdropLockManager::Stop()</a>.</p>
+
+</div>
+</div>
+<a id="a129ce01664337a9fcf74a53da192a8f4" name="a129ce01664337a9fcf74a53da192a8f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a129ce01664337a9fcf74a53da192a8f4">&#9670;&#160;</a></span>serial_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmy__serial_1_1MySerial.html">my_serial::MySerial</a> serial_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a9db7bdf7d148e0bba0256c8b55a61e6b">AirdropLockManager::GetStatus()</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a9a9fadaffbe5e752f2c07a20d236bd98">AirdropLockManager::Init()</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a09a59525b704d34a3d3626db69fe766a">AirdropLockManager::SendCommandLocked()</a> , 以及 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a7d498b13dc60fe7d0ba25025182d53fd">AirdropLockManager::Stop()</a>.</p>
+
+</div>
+</div>
+<a id="a3decd8ac899af9b19308bcbc3653df2f" name="a3decd8ac899af9b19308bcbc3653df2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3decd8ac899af9b19308bcbc3653df2f">&#9670;&#160;</a></span>state_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996df">AirdropLockState</a> state_ {<a class="el" href="namespacemy__airdrop__lock.html#af953d45a2305985b02483043093996dfaf704f57ea420275ad51bf55b7dec2c96">AirdropLockState::Uninitialized</a>}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a2bbd7e2e12cb97d0331aee620c06fbcf">AirdropLockManager::CloseDropper()</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a9db7bdf7d148e0bba0256c8b55a61e6b">AirdropLockManager::GetStatus()</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a9a9fadaffbe5e752f2c07a20d236bd98">AirdropLockManager::Init()</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#ad284bf955eceb63ad49dae6d3ab17e84">AirdropLockManager::OpenDropper()</a>, <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#afbfc585e95271adafecc9162358cb12a">AirdropLockManager::SetErrorLocked()</a> , 以及 <a class="el" href="classmy__airdrop__lock_1_1AirdropLockManager.html#a7d498b13dc60fe7d0ba25025182d53fd">AirdropLockManager::Stop()</a>.</p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/util/my_airdrop_lock/<a class="el" href="my__airdrop__lock_8h_source.html">my_airdrop_lock.h</a></li>
+<li>src/util/my_airdrop_lock/<a class="el" href="my__airdrop__lock_8cpp.html">my_airdrop_lock.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

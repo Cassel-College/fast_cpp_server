@@ -331,9 +331,9 @@ Private 属性</h2></td></tr>
 <div class="line">FastMQTT::GetInstance().Stop();</div>
 <div class="ttc" id="aclassfast__mqtt_1_1FastMQTT_html_a29cc2db4ea4821356b7643f1605553cb"><div class="ttname"><a href="classfast__mqtt_1_1FastMQTT.html#a29cc2db4ea4821356b7643f1605553cb">fast_mqtt::FastMQTT::GetInstance</a></div><div class="ttdeci">static FastMQTT &amp; GetInstance()</div><div class="ttdoc">获取全局唯一实例。</div><div class="ttdef"><b>Definition</b> FastMQTT.cpp:50</div></div>
 <div class="ttc" id="aclassfast__mqtt_1_1FastMQTT_html_a852500f42693862e6508648cb8617ac8"><div class="ttname"><a href="classfast__mqtt_1_1FastMQTT.html#a852500f42693862e6508648cb8617ac8">fast_mqtt::FastMQTT::Initialize</a></div><div class="ttdeci">bool Initialize(const nlohmann::json &amp;config)</div><div class="ttdoc">初始化模块（只能成功调用一次）。</div><div class="ttdef"><b>Definition</b> FastMQTT.cpp:78</div></div>
-<div class="ttc" id="aclassfast__mqtt_1_1FastMQTT_html_a8a8afcf678af0ca6d59aca62ab8a25c7"><div class="ttname"><a href="classfast__mqtt_1_1FastMQTT.html#a8a8afcf678af0ca6d59aca62ab8a25c7">fast_mqtt::FastMQTT::RegisterCallback</a></div><div class="ttdeci">std::uint64_t RegisterCallback(const std::string &amp;topic, MessageCallback callback, int qos=1)</div><div class="ttdoc">注册某个 Topic 过滤器的回调，并自动订阅该主题。</div><div class="ttdef"><b>Definition</b> FastMQTT.cpp:344</div></div>
+<div class="ttc" id="aclassfast__mqtt_1_1FastMQTT_html_a8a8afcf678af0ca6d59aca62ab8a25c7"><div class="ttname"><a href="classfast__mqtt_1_1FastMQTT.html#a8a8afcf678af0ca6d59aca62ab8a25c7">fast_mqtt::FastMQTT::RegisterCallback</a></div><div class="ttdeci">std::uint64_t RegisterCallback(const std::string &amp;topic, MessageCallback callback, int qos=1)</div><div class="ttdoc">注册某个 Topic 过滤器的回调，并自动订阅该主题。</div><div class="ttdef"><b>Definition</b> FastMQTT.cpp:350</div></div>
 <div class="ttc" id="aclassfast__mqtt_1_1FastMQTT_html_aa70efaa4751ac6d5d54dce88fe725e0a"><div class="ttname"><a href="classfast__mqtt_1_1FastMQTT.html#aa70efaa4751ac6d5d54dce88fe725e0a">fast_mqtt::FastMQTT::Start</a></div><div class="ttdeci">bool Start()</div><div class="ttdoc">启动模块（只能成功调用一次），创建并运行四个后台线程。</div><div class="ttdef"><b>Definition</b> FastMQTT.cpp:156</div></div>
-<div class="ttc" id="aclassfast__mqtt_1_1FastMQTT_html_ad260767e865e65f04a44e3dbe97096b5"><div class="ttname"><a href="classfast__mqtt_1_1FastMQTT.html#ad260767e865e65f04a44e3dbe97096b5">fast_mqtt::FastMQTT::Publish</a></div><div class="ttdeci">bool Publish(const std::string &amp;topic, const std::string &amp;payload)</div><div class="ttdoc">发布消息（使用默认 QoS 与 retain）。</div><div class="ttdef"><b>Definition</b> FastMQTT.cpp:315</div></div>
+<div class="ttc" id="aclassfast__mqtt_1_1FastMQTT_html_ad260767e865e65f04a44e3dbe97096b5"><div class="ttname"><a href="classfast__mqtt_1_1FastMQTT.html#ad260767e865e65f04a44e3dbe97096b5">fast_mqtt::FastMQTT::Publish</a></div><div class="ttdeci">bool Publish(const std::string &amp;topic, const std::string &amp;payload)</div><div class="ttdoc">发布消息（使用默认 QoS 与 retain）。</div><div class="ttdef"><b>Definition</b> FastMQTT.cpp:321</div></div>
 </div><!-- fragment --> </div><h2 class="groupheader">构造及析构函数说明</h2>
 <a id="ac3377fdf100646ed702cb0f95372cec4" name="ac3377fdf100646ed702cb0f95372cec4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac3377fdf100646ed702cb0f95372cec4">&#9670;&#160;</a></span>FastMQTT() <span class="overload">[1/3]</span></h2>
@@ -542,11 +542,15 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="classfast__mqtt_1_1FastMQTT_adc871ec5bf15dfe0170ff8085237f6fc_icgraph.png" border="0" usemap="#aclassfast__mqtt_1_1FastMQTT_adc871ec5bf15dfe0170ff8085237f6fc_icgraph" alt=""/></div>
 <map name="aclassfast__mqtt_1_1FastMQTT_adc871ec5bf15dfe0170ff8085237f6fc_icgraph" id="aclassfast__mqtt_1_1FastMQTT_adc871ec5bf15dfe0170ff8085237f6fc_icgraph">
-<area shape="rect" title="清空所有 Topic 的全部回调。" alt="" coords="272,5,408,31"/>
-<area shape="rect" href="classfast__mqtt_1_1FastMQTT.html#ac919a991060ede6983343719401686de" title="销毁模块，释放资源，状态回到未初始化。 内部会先调用 Stop()。" alt="" coords="151,5,224,31"/>
-<area shape="poly" title=" " alt="" coords="258,21,224,21,224,15,258,15"/>
-<area shape="rect" href="classfast__mqtt_1_1FastMQTT.html#ab03a331cd95b22e7c779838c14732308" title=" " alt="" coords="5,5,103,31"/>
-<area shape="poly" title=" " alt="" coords="137,21,103,21,103,15,137,15"/>
+<area shape="rect" title="清空所有 Topic 的全部回调。" alt="" coords="572,42,708,67"/>
+<area shape="rect" href="classfast__mqtt_1_1FastMQTT.html#ac919a991060ede6983343719401686de" title="销毁模块，释放资源，状态回到未初始化。 内部会先调用 Stop()。" alt="" coords="451,42,524,67"/>
+<area shape="poly" title=" " alt="" coords="558,57,524,57,524,52,558,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a17a237457e57625296e6b24feb19c60a" title=" " alt="" coords="228,5,403,45"/>
+<area shape="poly" title=" " alt="" coords="437,49,402,43,403,38,438,44"/>
+<area shape="rect" href="classfast__mqtt_1_1FastMQTT.html#ab03a331cd95b22e7c779838c14732308" title=" " alt="" coords="267,70,364,95"/>
+<area shape="poly" title=" " alt="" coords="437,65,365,77,364,72,436,60"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#ab308ffdad0654e43a00b3d7d46c81a68" title=" " alt="" coords="5,5,180,45"/>
+<area shape="poly" title=" " alt="" coords="214,28,180,28,180,23,214,23"/>
 </map>
 </div>
 
@@ -650,7 +654,7 @@ Private 属性</h2></td></tr>
 
 <p class="reference">引用了 <a class="el" href="classfast__mqtt_1_1FastMQTT.html#adc871ec5bf15dfe0170ff8085237f6fc">FastMQTT::ClearAllCallbacks()</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a64390fe2944d26eac8d57df0beb38b5d">FastMQTT::lifecycle_mutex_</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a19fe5c99bbb49071efec1a215b323ea9">FastMQTT::mosq_</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a229678d37a09b515708341e047a35fcc">FastMQTT::recv_queue_</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a12eeb03b367faca4cf249874d465bfe4">FastMQTT::send_queue_</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#abc9dbc2c01111d1a7a7df06c3b44ca50">FastMQTT::SetState()</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a17a237457e57625296e6b24feb19c60a">FastMQTT::Stop()</a> , 以及 <a class="el" href="namespacefast__mqtt.html#a7a0d83e135927942e5866ec97275bfa0af704f57ea420275ad51bf55b7dec2c96">fast_mqtt::Uninitialized</a>.</p>
 
-<p class="reference">被这些函数引用 <a class="el" href="classfast__mqtt_1_1FastMQTT.html#ab03a331cd95b22e7c779838c14732308">FastMQTT::~FastMQTT()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="classtools_1_1pipeline_1_1Pipeline.html#a17a237457e57625296e6b24feb19c60a">Pipeline::Stop()</a> , 以及 <a class="el" href="classfast__mqtt_1_1FastMQTT.html#ab03a331cd95b22e7c779838c14732308">FastMQTT::~FastMQTT()</a>.</p>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
@@ -671,9 +675,13 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="classfast__mqtt_1_1FastMQTT_ac919a991060ede6983343719401686de_icgraph.png" border="0" usemap="#aclassfast__mqtt_1_1FastMQTT_ac919a991060ede6983343719401686de_icgraph" alt=""/></div>
 <map name="aclassfast__mqtt_1_1FastMQTT_ac919a991060ede6983343719401686de_icgraph" id="aclassfast__mqtt_1_1FastMQTT_ac919a991060ede6983343719401686de_icgraph">
-<area shape="rect" title="销毁模块，释放资源，状态回到未初始化。 内部会先调用 Stop()。" alt="" coords="151,5,224,31"/>
-<area shape="rect" href="classfast__mqtt_1_1FastMQTT.html#ab03a331cd95b22e7c779838c14732308" title=" " alt="" coords="5,5,103,31"/>
-<area shape="poly" title=" " alt="" coords="137,21,103,21,103,15,137,15"/>
+<area shape="rect" title="销毁模块，释放资源，状态回到未初始化。 内部会先调用 Stop()。" alt="" coords="451,42,524,67"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a17a237457e57625296e6b24feb19c60a" title=" " alt="" coords="228,5,403,45"/>
+<area shape="poly" title=" " alt="" coords="437,49,402,43,403,38,438,44"/>
+<area shape="rect" href="classfast__mqtt_1_1FastMQTT.html#ab03a331cd95b22e7c779838c14732308" title=" " alt="" coords="267,70,364,95"/>
+<area shape="poly" title=" " alt="" coords="437,65,365,77,364,72,436,60"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#ab308ffdad0654e43a00b3d7d46c81a68" title=" " alt="" coords="5,5,180,45"/>
+<area shape="poly" title=" " alt="" coords="214,28,180,28,180,23,214,23"/>
 </map>
 </div>
 
@@ -890,65 +898,67 @@ Private 属性</h2></td></tr>
 
 <p>获取全局唯一实例。 </p>
 
-<p class="reference">被这些函数引用 <a class="el" href="classcsy2536_1_1CSY2536Comm.html#aa7d76b766faf39c1652b6617eac5fe20">CSY2536Comm::ClearAll()</a>, <a class="el" href="classjson__comm_1_1JsonComm.html#aa7d76b766faf39c1652b6617eac5fe20">JsonComm::ClearAll()</a>, <a class="el" href="classtools_1_1pipeline_1_1Pipeline.html#a49f07504cf4e558498a7ec474fef64db">Pipeline::LaunchFastMQTT()</a>, <a class="el" href="classcsy2536_1_1CSY2536Comm.html#a369689ccd5e4c844937ea070ff56f550">CSY2536Comm::RegisterCallbackToFastMQTT()</a>, <a class="el" href="classjson__comm_1_1JsonComm.html#a369689ccd5e4c844937ea070ff56f550">JsonComm::RegisterCallbackToFastMQTT()</a>, <a class="el" href="classcsy2536_1_1CSY2536Comm.html#aa70efaa4751ac6d5d54dce88fe725e0a">CSY2536Comm::Start()</a>, <a class="el" href="classjson__comm_1_1JsonComm.html#aa70efaa4751ac6d5d54dce88fe725e0a">JsonComm::Start()</a>, <a class="el" href="classcsy2536_1_1CSY2536Comm.html#a17a237457e57625296e6b24feb19c60a">CSY2536Comm::Stop()</a>, <a class="el" href="classjson__comm_1_1JsonComm.html#a17a237457e57625296e6b24feb19c60a">JsonComm::Stop()</a>, <a class="el" href="classcsy2536_1_1CSY2536Comm.html#a50023406ef4034aa47eb0ad9e8950852">CSY2536Comm::SubscribeTopicLocked()</a>, <a class="el" href="classjson__comm_1_1JsonComm.html#a50023406ef4034aa47eb0ad9e8950852">JsonComm::SubscribeTopicLocked()</a>, <a class="el" href="classcsy2536_1_1CSY2536Comm.html#a8acd145dcccc3e4f1c244601d048fe89">CSY2536Comm::UnsubscribeTopicLocked()</a> , 以及 <a class="el" href="classjson__comm_1_1JsonComm.html#a8acd145dcccc3e4f1c244601d048fe89">JsonComm::UnsubscribeTopicLocked()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="classcsy2536_1_1CSY2536Comm.html#aa7d76b766faf39c1652b6617eac5fe20">CSY2536Comm::ClearAll()</a>, <a class="el" href="classjson__comm_1_1JsonComm.html#aa7d76b766faf39c1652b6617eac5fe20">JsonComm::ClearAll()</a>, <a class="el" href="classtools_1_1pipeline_1_1Pipeline.html#a49f07504cf4e558498a7ec474fef64db">Pipeline::LaunchFastMQTT()</a>, <a class="el" href="classcsy2536_1_1CSY2536Comm.html#a369689ccd5e4c844937ea070ff56f550">CSY2536Comm::RegisterCallbackToFastMQTT()</a>, <a class="el" href="classjson__comm_1_1JsonComm.html#a369689ccd5e4c844937ea070ff56f550">JsonComm::RegisterCallbackToFastMQTT()</a>, <a class="el" href="classcsy2536_1_1CSY2536Comm.html#aa70efaa4751ac6d5d54dce88fe725e0a">CSY2536Comm::Start()</a>, <a class="el" href="classjson__comm_1_1JsonComm.html#aa70efaa4751ac6d5d54dce88fe725e0a">JsonComm::Start()</a>, <a class="el" href="classtools_1_1pipeline_1_1Pipeline.html#a17a237457e57625296e6b24feb19c60a">Pipeline::Stop()</a>, <a class="el" href="classcsy2536_1_1CSY2536Comm.html#a17a237457e57625296e6b24feb19c60a">CSY2536Comm::Stop()</a>, <a class="el" href="classjson__comm_1_1JsonComm.html#a17a237457e57625296e6b24feb19c60a">JsonComm::Stop()</a>, <a class="el" href="classcsy2536_1_1CSY2536Comm.html#a50023406ef4034aa47eb0ad9e8950852">CSY2536Comm::SubscribeTopicLocked()</a>, <a class="el" href="classjson__comm_1_1JsonComm.html#a50023406ef4034aa47eb0ad9e8950852">JsonComm::SubscribeTopicLocked()</a>, <a class="el" href="classcsy2536_1_1CSY2536Comm.html#a8acd145dcccc3e4f1c244601d048fe89">CSY2536Comm::UnsubscribeTopicLocked()</a> , 以及 <a class="el" href="classjson__comm_1_1JsonComm.html#a8acd145dcccc3e4f1c244601d048fe89">JsonComm::UnsubscribeTopicLocked()</a>.</p>
 <div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="classfast__mqtt_1_1FastMQTT_a29cc2db4ea4821356b7643f1605553cb_icgraph.png" border="0" usemap="#aclassfast__mqtt_1_1FastMQTT_a29cc2db4ea4821356b7643f1605553cb_icgraph" alt=""/></div>
 <map name="aclassfast__mqtt_1_1FastMQTT_a29cc2db4ea4821356b7643f1605553cb_icgraph" id="aclassfast__mqtt_1_1FastMQTT_a29cc2db4ea4821356b7643f1605553cb_icgraph">
-<area shape="rect" title="获取全局唯一实例。" alt="" coords="992,383,1092,409"/>
-<area shape="rect" href="classcsy2536_1_1CSY2536Comm.html#aa7d76b766faf39c1652b6617eac5fe20" title="清空所有回调并注销所有订阅。" alt="" coords="743,5,927,45"/>
-<area shape="poly" title=" " alt="" coords="1039,370,1036,307,1023,223,1010,179,994,136,971,95,942,59,925,46,928,42,946,55,975,92,998,133,1016,177,1028,222,1041,306,1044,369"/>
-<area shape="rect" href="classjson__comm_1_1JsonComm.html#aa7d76b766faf39c1652b6617eac5fe20" title="清空所有回调并注销所有订阅。" alt="" coords="747,69,922,109"/>
-<area shape="poly" title=" " alt="" coords="1036,370,1030,318,1014,251,1002,217,986,183,966,151,942,123,921,109,924,104,946,119,971,148,991,180,1007,215,1019,250,1035,317,1042,369"/>
-<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a49f07504cf4e558498a7ec474fef64db" title=" " alt="" coords="747,133,922,173"/>
-<area shape="poly" title=" " alt="" coords="1033,370,1023,330,1005,280,979,230,962,207,942,187,921,173,924,169,946,183,966,204,983,227,1010,278,1028,328,1038,369"/>
-<area shape="rect" href="classcsy2536_1_1CSY2536Comm.html#a369689ccd5e4c844937ea070ff56f550" title="注册一个回调到 FastMQTT。" alt="" coords="725,197,944,237"/>
-<area shape="poly" title=" " alt="" coords="1028,372,996,311,972,279,942,251,923,240,925,235,946,247,976,275,1000,308,1033,370"/>
-<area shape="rect" href="classjson__comm_1_1JsonComm.html#a369689ccd5e4c844937ea070ff56f550" title="注册一个回调到 FastMQTT。" alt="" coords="725,261,944,301"/>
-<area shape="poly" title=" " alt="" coords="1016,376,982,349,943,322,901,304,904,299,945,318,985,344,1019,372"/>
-<area shape="rect" href="classcsy2536_1_1CSY2536Comm.html#aa70efaa4751ac6d5d54dce88fe725e0a" title="启动模块并注册订阅回调。" alt="" coords="477,325,661,365"/>
-<area shape="poly" title=" " alt="" coords="996,381,943,367,870,356,795,349,661,346,661,340,795,344,870,351,945,361,997,376"/>
-<area shape="rect" href="classjson__comm_1_1JsonComm.html#aa70efaa4751ac6d5d54dce88fe725e0a" title="启动模块并对配置中的主题注册订阅回调。" alt="" coords="481,555,656,595"/>
-<area shape="poly" title=" " alt="" coords="1036,423,1024,455,1005,493,979,529,945,558,911,575,874,588,798,601,723,601,656,595,657,589,723,596,797,595,873,583,909,571,943,554,976,526,1001,490,1019,453,1031,421"/>
-<area shape="rect" href="classcsy2536_1_1CSY2536Comm.html#a17a237457e57625296e6b24feb19c60a" title="停止模块并注销已注册回调。" alt="" coords="743,504,927,544"/>
-<area shape="poly" title=" " alt="" coords="1024,422,990,459,945,494,920,506,918,502,943,490,986,455,1020,418"/>
-<area shape="rect" href="classjson__comm_1_1JsonComm.html#a17a237457e57625296e6b24feb19c60a" title="停止模块并注销所有已注册回调。" alt="" coords="747,440,922,480"/>
-<area shape="poly" title=" " alt="" coords="991,415,945,431,906,442,904,437,943,425,990,410"/>
-<area shape="rect" href="classcsy2536_1_1CSY2536Comm.html#a50023406ef4034aa47eb0ad9e8950852" title=" " alt="" coords="743,376,927,416"/>
-<area shape="poly" title=" " alt="" coords="978,399,927,399,927,393,978,393"/>
-<area shape="rect" href="classjson__comm_1_1JsonComm.html#a50023406ef4034aa47eb0ad9e8950852" title="在持锁状态下订阅某个主题，并把本模块的分发回调注册到 FastMQTT。" alt="" coords="747,619,922,659"/>
-<area shape="poly" title=" " alt="" coords="1038,423,1027,462,1008,510,982,559,946,602,917,621,914,616,942,598,977,556,1003,508,1021,461,1032,422"/>
-<area shape="rect" href="classcsy2536_1_1CSY2536Comm.html#a8acd145dcccc3e4f1c244601d048fe89" title=" " alt="" coords="741,683,929,723"/>
-<area shape="poly" title=" " alt="" coords="1042,423,1035,475,1019,542,1007,577,991,612,971,644,946,673,930,685,926,680,942,669,966,641,986,609,1002,575,1014,541,1030,474,1036,422"/>
-<area shape="rect" href="classjson__comm_1_1JsonComm.html#a8acd145dcccc3e4f1c244601d048fe89" title="在持锁状态下注销某个主题的订阅。" alt="" coords="741,747,929,787"/>
-<area shape="poly" title=" " alt="" coords="1044,423,1041,486,1028,570,1016,615,998,659,975,700,946,737,930,749,927,744,942,733,971,697,994,656,1010,613,1023,569,1036,485,1039,422"/>
-<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="481,133,656,173"/>
-<area shape="poly" title=" " alt="" coords="734,156,656,156,656,151,734,151"/>
-<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="233,80,407,120"/>
-<area shape="poly" title=" " alt="" coords="467,134,407,121,408,116,468,129"/>
-<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a9d284775ccebba879a77a7144be22899" title=" " alt="" coords="5,109,180,149"/>
-<area shape="poly" title=" " alt="" coords="219,116,181,121,180,115,219,110"/>
-<area shape="poly" title=" " alt="" coords="194,132,481,146,481,152,193,137"/>
-<area shape="rect" href="classcsy2536_1_1CSY2536Comm.html#a4c09adaa9e87778ebba37c4c02a1bbac" title="为指定主题设置 2536 回调。" alt="" coords="460,197,677,237"/>
-<area shape="poly" title=" " alt="" coords="712,220,677,220,677,215,712,215"/>
-<area shape="rect" href="classcsy2536_1_1CSY2536Comm.html#ad900d283719c941fc54e9ca0295fa811" title="初始化模块配置。" alt="" coords="228,197,412,237"/>
-<area shape="poly" title=" " alt="" coords="446,220,412,220,412,215,446,215"/>
-<area shape="rect" href="classjson__comm_1_1JsonComm.html#acd913e6904db0b152e2a092aa5815d01" title="为指定主题设置 json 回调。" alt="" coords="463,261,675,301"/>
-<area shape="poly" title=" " alt="" coords="711,284,675,284,675,279,711,279"/>
-<area shape="rect" href="classmy__comm_1_1MyComm.html#a17a237457e57625296e6b24feb19c60a" title="停止通信门面下属所有子模块。" alt="" coords="469,479,668,505"/>
-<area shape="poly" title=" " alt="" coords="728,514,668,507,669,501,729,509"/>
-<area shape="poly" title=" " alt="" coords="734,475,669,483,668,477,733,470"/>
-<area shape="poly" title=" " alt="" coords="729,379,660,365,662,360,730,373"/>
-<area shape="rect" href="classcsy2536_1_1CSY2536Comm.html#aa694e7023b63239e8eb3ed9c67b497c6" title="注册一个解析后的消息回调。" alt="" coords="477,389,661,429"/>
-<area shape="poly" title=" " alt="" coords="729,404,661,407,661,402,728,399"/>
-<area shape="poly" title=" " alt="" coords="737,618,652,597,653,592,738,613"/>
-<area shape="rect" href="classjson__comm_1_1JsonComm.html#aa694e7023b63239e8eb3ed9c67b497c6" title="注册一个“解析后的 JSON 回调”。" alt="" coords="477,619,660,659"/>
-<area shape="poly" title=" " alt="" coords="733,641,660,641,660,636,733,636"/>
-<area shape="rect" href="classcsy2536_1_1CSY2536Comm.html#af3718c41da8a7081dd430e70a8c5ff2d" title="清空某个 Topic 的全部回调（包括内部订阅）。" alt="" coords="477,683,661,723"/>
-<area shape="poly" title=" " alt="" coords="727,705,661,705,661,700,727,700"/>
-<area shape="rect" href="classjson__comm_1_1JsonComm.html#af3718c41da8a7081dd430e70a8c5ff2d" title="清空某个 topic 的全部回调（包括底层订阅）。" alt="" coords="481,747,656,787"/>
-<area shape="poly" title=" " alt="" coords="727,769,656,769,656,764,727,764"/>
+<area shape="rect" title="获取全局唯一实例。" alt="" coords="1052,406,1152,431"/>
+<area shape="rect" href="classcsy2536_1_1CSY2536Comm.html#aa7d76b766faf39c1652b6617eac5fe20" title="清空所有回调并注销所有订阅。" alt="" coords="803,5,987,45"/>
+<area shape="poly" title=" " alt="" coords="1099,392,1097,326,1085,236,1073,189,1056,142,1033,98,1002,59,985,46,988,42,1006,55,1037,95,1061,139,1079,187,1091,235,1103,325,1104,392"/>
+<area shape="rect" href="classjson__comm_1_1JsonComm.html#aa7d76b766faf39c1652b6617eac5fe20" title="清空所有回调并注销所有订阅。" alt="" coords="807,69,982,109"/>
+<area shape="poly" title=" " alt="" coords="1097,393,1092,337,1077,264,1065,226,1049,189,1028,154,1002,123,981,108,984,104,1006,119,1032,151,1054,186,1070,224,1082,263,1097,336,1103,392"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a49f07504cf4e558498a7ec474fef64db" title=" " alt="" coords="807,133,982,173"/>
+<area shape="poly" title=" " alt="" coords="1095,393,1086,348,1069,293,1041,236,1024,210,1002,187,981,173,984,169,1006,183,1028,207,1046,233,1074,291,1091,347,1100,392"/>
+<area shape="rect" href="classcsy2536_1_1CSY2536Comm.html#a369689ccd5e4c844937ea070ff56f550" title="注册一个回调到 FastMQTT。" alt="" coords="785,197,1004,237"/>
+<area shape="poly" title=" " alt="" coords="1090,394,1078,361,1059,323,1034,284,1002,251,983,240,986,235,1006,247,1038,281,1064,320,1083,359,1095,392"/>
+<area shape="rect" href="classjson__comm_1_1JsonComm.html#a369689ccd5e4c844937ea070ff56f550" title="注册一个回调到 FastMQTT。" alt="" coords="785,261,1004,301"/>
+<area shape="poly" title=" " alt="" coords="1081,397,1047,359,1003,322,966,304,968,299,1005,318,1050,355,1085,393"/>
+<area shape="rect" href="classcsy2536_1_1CSY2536Comm.html#aa70efaa4751ac6d5d54dce88fe725e0a" title="启动模块并注册订阅回调。" alt="" coords="537,376,721,416"/>
+<area shape="poly" title=" " alt="" coords="1038,418,721,403,721,398,1038,413"/>
+<area shape="rect" href="classjson__comm_1_1JsonComm.html#aa70efaa4751ac6d5d54dce88fe725e0a" title="启动模块并对配置中的主题注册订阅回调。" alt="" coords="541,504,716,544"/>
+<area shape="poly" title=" " alt="" coords="1075,442,1043,463,1005,481,931,502,854,516,781,523,716,527,716,521,780,518,853,510,929,497,1003,476,1040,459,1073,437"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a17a237457e57625296e6b24feb19c60a" title=" " alt="" coords="263,443,437,483"/>
+<area shape="poly" title=" " alt="" coords="1049,404,950,378,817,355,744,348,669,346,594,352,521,367,479,382,440,402,378,444,375,440,438,397,477,377,519,361,593,347,669,341,744,343,818,349,951,373,1050,399"/>
+<area shape="rect" href="classcsy2536_1_1CSY2536Comm.html#a17a237457e57625296e6b24feb19c60a" title="停止模块并注销已注册回调。" alt="" coords="803,669,987,709"/>
+<area shape="poly" title=" " alt="" coords="1100,446,1091,491,1074,549,1047,608,1028,635,1006,659,989,671,986,667,1002,655,1024,632,1042,605,1069,547,1086,490,1095,445"/>
+<area shape="rect" href="classjson__comm_1_1JsonComm.html#a17a237457e57625296e6b24feb19c60a" title="停止模块并注销所有已注册回调。" alt="" coords="807,605,982,645"/>
+<area shape="poly" title=" " alt="" coords="1096,445,1084,479,1065,520,1039,560,1006,595,984,609,981,604,1002,591,1035,557,1060,517,1079,477,1091,443"/>
+<area shape="rect" href="classcsy2536_1_1CSY2536Comm.html#a50023406ef4034aa47eb0ad9e8950852" title=" " alt="" coords="803,427,987,467"/>
+<area shape="poly" title=" " alt="" coords="1039,430,987,437,986,432,1038,425"/>
+<area shape="rect" href="classjson__comm_1_1JsonComm.html#a50023406ef4034aa47eb0ad9e8950852" title="在持锁状态下订阅某个主题，并把本模块的分发回调注册到 FastMQTT。" alt="" coords="807,541,982,581"/>
+<area shape="poly" title=" " alt="" coords="1086,444,1052,485,1005,525,969,544,966,539,1003,520,1048,481,1082,441"/>
+<area shape="rect" href="classcsy2536_1_1CSY2536Comm.html#a8acd145dcccc3e4f1c244601d048fe89" title=" " alt="" coords="801,733,989,773"/>
+<area shape="poly" title=" " alt="" coords="1103,446,1098,503,1083,577,1071,617,1054,655,1033,691,1006,723,990,735,987,731,1002,719,1028,688,1049,653,1066,615,1078,576,1092,502,1097,445"/>
+<area shape="rect" href="classjson__comm_1_1JsonComm.html#a8acd145dcccc3e4f1c244601d048fe89" title="在持锁状态下注销某个主题的订阅。" alt="" coords="801,797,989,837"/>
+<area shape="poly" title=" " alt="" coords="1100,446,1087,524,1067,626,1040,723,1024,761,1006,787,991,799,987,795,1002,784,1019,758,1035,721,1062,624,1082,523,1094,445"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="541,133,716,173"/>
+<area shape="poly" title=" " alt="" coords="794,156,716,156,716,151,794,151"/>
+<area shape="rect" href="classcsy2536_1_1CSY2536Comm.html#a4c09adaa9e87778ebba37c4c02a1bbac" title="为指定主题设置 2536 回调。" alt="" coords="520,197,737,237"/>
+<area shape="poly" title=" " alt="" coords="772,220,737,220,737,215,772,215"/>
+<area shape="rect" href="classcsy2536_1_1CSY2536Comm.html#ad900d283719c941fc54e9ca0295fa811" title="初始化模块配置。" alt="" coords="258,197,442,237"/>
+<area shape="poly" title=" " alt="" coords="506,220,442,220,442,215,506,215"/>
+<area shape="rect" href="classjson__comm_1_1JsonComm.html#acd913e6904db0b152e2a092aa5815d01" title="为指定主题设置 json 回调。" alt="" coords="523,261,735,301"/>
+<area shape="poly" title=" " alt="" coords="771,284,735,284,735,279,771,279"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#ab308ffdad0654e43a00b3d7d46c81a68" title=" " alt="" coords="5,443,180,483"/>
+<area shape="poly" title=" " alt="" coords="249,465,180,465,180,460,249,460"/>
+<area shape="rect" href="classmy__comm_1_1MyComm.html#a17a237457e57625296e6b24feb19c60a" title="停止通信门面下属所有子模块。" alt="" coords="529,633,728,658"/>
+<area shape="poly" title=" " alt="" coords="788,675,706,661,707,655,789,669"/>
+<area shape="poly" title=" " alt="" coords="537,631,519,622,470,591,427,553,365,485,369,481,431,549,474,586,521,618,539,626"/>
+<area shape="rect" href="classmy__comm_1_1MyComm.html#a4abac747c204adbe88dddd8902eb74f3" title=" " alt="" coords="228,633,472,658"/>
+<area shape="poly" title=" " alt="" coords="516,648,472,648,472,643,516,643"/>
+<area shape="poly" title=" " alt="" coords="794,636,728,641,728,635,793,630"/>
+<area shape="poly" title=" " alt="" coords="789,429,720,416,722,411,790,424"/>
+<area shape="rect" href="classcsy2536_1_1CSY2536Comm.html#aa694e7023b63239e8eb3ed9c67b497c6" title="注册一个解析后的消息回调。" alt="" coords="537,440,721,480"/>
+<area shape="poly" title=" " alt="" coords="789,455,721,458,721,453,788,449"/>
+<area shape="poly" title=" " alt="" coords="793,550,716,539,717,534,794,545"/>
+<area shape="rect" href="classjson__comm_1_1JsonComm.html#aa694e7023b63239e8eb3ed9c67b497c6" title="注册一个“解析后的 JSON 回调”。" alt="" coords="537,568,720,608"/>
+<area shape="poly" title=" " alt="" coords="794,574,720,582,720,576,794,569"/>
+<area shape="rect" href="classcsy2536_1_1CSY2536Comm.html#af3718c41da8a7081dd430e70a8c5ff2d" title="清空某个 Topic 的全部回调（包括内部订阅）。" alt="" coords="537,733,721,773"/>
+<area shape="poly" title=" " alt="" coords="787,756,721,756,721,751,787,751"/>
+<area shape="rect" href="classjson__comm_1_1JsonComm.html#af3718c41da8a7081dd430e70a8c5ff2d" title="清空某个 topic 的全部回调（包括底层订阅）。" alt="" coords="541,797,716,837"/>
+<area shape="poly" title=" " alt="" coords="787,820,716,820,716,815,787,815"/>
 </map>
 </div>
 
@@ -2105,18 +2115,22 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="classfast__mqtt_1_1FastMQTT_abc9dbc2c01111d1a7a7df06c3b44ca50_icgraph.png" border="0" usemap="#aclassfast__mqtt_1_1FastMQTT_abc9dbc2c01111d1a7a7df06c3b44ca50_icgraph" alt=""/></div>
 <map name="aclassfast__mqtt_1_1FastMQTT_abc9dbc2c01111d1a7a7df06c3b44ca50_icgraph" id="aclassfast__mqtt_1_1FastMQTT_abc9dbc2c01111d1a7a7df06c3b44ca50_icgraph">
-<area shape="rect" title="线程安全地设置生命周期状态。" alt="" coords="399,50,476,76"/>
-<area shape="rect" href="classfast__mqtt_1_1FastMQTT.html#ac919a991060ede6983343719401686de" title="销毁模块，释放资源，状态回到未初始化。 内部会先调用 Stop()。" alt="" coords="151,49,224,74"/>
-<area shape="poly" title=" " alt="" coords="408,44,381,27,350,15,311,8,273,15,236,31,206,51,203,46,233,26,271,10,311,3,351,10,383,23,410,40"/>
-<area shape="rect" href="classfast__mqtt_1_1FastMQTT.html#a852500f42693862e6508648cb8617ac8" title="初始化模块（只能成功调用一次）。" alt="" coords="272,25,351,50"/>
-<area shape="poly" title=" " alt="" coords="385,55,350,48,351,43,386,50"/>
-<area shape="rect" href="classfast__mqtt_1_1FastMQTT.html#aa70efaa4751ac6d5d54dce88fe725e0a" title="启动模块（只能成功调用一次），创建并运行四个后台线程。" alt="" coords="285,74,338,100"/>
-<area shape="poly" title=" " alt="" coords="386,75,339,85,338,79,385,70"/>
-<area shape="rect" href="classfast__mqtt_1_1FastMQTT.html#a17a237457e57625296e6b24feb19c60a" title="停止模块，安全退出所有后台线程并断开连接。 可重复调用，幂等安全。" alt="" coords="286,124,337,149"/>
-<area shape="poly" title=" " alt="" coords="404,85,336,126,333,121,401,81"/>
-<area shape="rect" href="classfast__mqtt_1_1FastMQTT.html#ab03a331cd95b22e7c779838c14732308" title=" " alt="" coords="5,49,103,74"/>
-<area shape="poly" title=" " alt="" coords="137,64,103,64,103,59,137,59"/>
-<area shape="poly" title=" " alt="" coords="276,118,208,77,211,72,278,114"/>
+<area shape="rect" title="线程安全地设置生命周期状态。" alt="" coords="699,50,776,76"/>
+<area shape="rect" href="classfast__mqtt_1_1FastMQTT.html#ac919a991060ede6983343719401686de" title="销毁模块，释放资源，状态回到未初始化。 内部会先调用 Stop()。" alt="" coords="451,49,524,74"/>
+<area shape="poly" title=" " alt="" coords="708,44,681,27,650,15,611,8,573,15,536,31,506,51,503,46,533,26,571,10,611,3,651,10,683,23,710,40"/>
+<area shape="rect" href="classfast__mqtt_1_1FastMQTT.html#a852500f42693862e6508648cb8617ac8" title="初始化模块（只能成功调用一次）。" alt="" coords="572,25,651,50"/>
+<area shape="poly" title=" " alt="" coords="685,55,650,48,651,43,686,50"/>
+<area shape="rect" href="classfast__mqtt_1_1FastMQTT.html#aa70efaa4751ac6d5d54dce88fe725e0a" title="启动模块（只能成功调用一次），创建并运行四个后台线程。" alt="" coords="585,74,638,100"/>
+<area shape="poly" title=" " alt="" coords="686,75,639,85,638,79,685,70"/>
+<area shape="rect" href="classfast__mqtt_1_1FastMQTT.html#a17a237457e57625296e6b24feb19c60a" title="停止模块，安全退出所有后台线程并断开连接。 可重复调用，幂等安全。" alt="" coords="586,124,637,149"/>
+<area shape="poly" title=" " alt="" coords="704,85,636,126,633,121,701,81"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a17a237457e57625296e6b24feb19c60a" title=" " alt="" coords="228,12,403,52"/>
+<area shape="poly" title=" " alt="" coords="437,56,402,50,403,45,438,51"/>
+<area shape="rect" href="classfast__mqtt_1_1FastMQTT.html#ab03a331cd95b22e7c779838c14732308" title=" " alt="" coords="267,77,364,102"/>
+<area shape="poly" title=" " alt="" coords="437,72,365,84,364,79,436,67"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#ab308ffdad0654e43a00b3d7d46c81a68" title=" " alt="" coords="5,12,180,52"/>
+<area shape="poly" title=" " alt="" coords="214,35,180,35,180,30,214,30"/>
+<area shape="poly" title=" " alt="" coords="576,118,508,77,511,72,578,114"/>
 </map>
 </div>
 
@@ -2195,7 +2209,7 @@ Private 属性</h2></td></tr>
 
 <p>获取模块的当前状态（JSON）。 </p>
 
-<p class="reference">引用了 <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a675f725f8a3161f0ba5e673aca7f9d6e">FastMQTT::broker_connected_</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a198a04a39b969fbc38384083ae0f879f">FastMQTT::callbacks_</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#ade3a3e4d55c4d8c3cacdb988913810b7">FastMQTT::cb_mutex_</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#ac08780ddfeb24194592c8fad714d0b27">FastMQTT::conn_thread_</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#aa2c169c8f085b7dfd95e0cfaa406d5ca">FastMQTT::disp_thread_</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a0ead59c105868f0d6eacacbd84673204">FastMQTT::ip_alive_</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a64390fe2944d26eac8d57df0beb38b5d">FastMQTT::lifecycle_mutex_</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a6bac4698dc8b07c8c981d492d7afb3d0">FastMQTT::ready_</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a229678d37a09b515708341e047a35fcc">FastMQTT::recv_queue_</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#abbe86c6ee6409256b79c48fe60171eaa">FastMQTT::recv_thread_</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#aa9620a15c76ada2388bf678e373a6463">FastMQTT::running_</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a12eeb03b367faca4cf249874d465bfe4">FastMQTT::send_queue_</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a6a0d4b812071b9566c4e0daae72a1f7d">FastMQTT::send_thread_</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a5c6e5078c776c87f2778862a2d034950">FastMQTT::session_connected_</a> , 以及 <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a62a2498fb4928d0ea11731fdbd1d2be2">FastMQTT::state_</a>.</p>
+<p class="reference">引用了 <a class="el" href="structfast__mqtt_1_1FastMQTTConfig.html#a87227dcd8d7710fb2abc288d070f2273">FastMQTTConfig::broker</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a675f725f8a3161f0ba5e673aca7f9d6e">FastMQTT::broker_connected_</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a198a04a39b969fbc38384083ae0f879f">FastMQTT::callbacks_</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#ade3a3e4d55c4d8c3cacdb988913810b7">FastMQTT::cb_mutex_</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a467e498e26b0f8d386088b51a5526838">FastMQTT::config_</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#ac08780ddfeb24194592c8fad714d0b27">FastMQTT::conn_thread_</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#aa2c169c8f085b7dfd95e0cfaa406d5ca">FastMQTT::disp_thread_</a>, <a class="el" href="structfast__mqtt_1_1BrokerConfig.html#a696b1086704b0858059129b61eaa4a9f">BrokerConfig::host</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a0ead59c105868f0d6eacacbd84673204">FastMQTT::ip_alive_</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a64390fe2944d26eac8d57df0beb38b5d">FastMQTT::lifecycle_mutex_</a>, <a class="el" href="structfast__mqtt_1_1BrokerConfig.html#a63c89c04d1feae07ca35558055155ffb">BrokerConfig::port</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a6bac4698dc8b07c8c981d492d7afb3d0">FastMQTT::ready_</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a229678d37a09b515708341e047a35fcc">FastMQTT::recv_queue_</a>, <a class="el" href="structfast__mqtt_1_1ThreadConfig.html#af496da65750a1de83b5818337d0bd809">ThreadConfig::recv_queue_size</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#abbe86c6ee6409256b79c48fe60171eaa">FastMQTT::recv_thread_</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#aa9620a15c76ada2388bf678e373a6463">FastMQTT::running_</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a12eeb03b367faca4cf249874d465bfe4">FastMQTT::send_queue_</a>, <a class="el" href="structfast__mqtt_1_1ThreadConfig.html#a5e9fada5e8d9d951d9ae9869072945a4">ThreadConfig::send_queue_size</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a6a0d4b812071b9566c4e0daae72a1f7d">FastMQTT::send_thread_</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a5c6e5078c776c87f2778862a2d034950">FastMQTT::session_connected_</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a62a2498fb4928d0ea11731fdbd1d2be2">FastMQTT::state_</a> , 以及 <a class="el" href="structfast__mqtt_1_1FastMQTTConfig.html#ab0604c301fe7165c11ae80f812fa1b1f">FastMQTTConfig::thread</a>.</p>
 
 </div>
 </div>
@@ -2234,11 +2248,15 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="classfast__mqtt_1_1FastMQTT_a17a237457e57625296e6b24feb19c60a_icgraph.png" border="0" usemap="#aclassfast__mqtt_1_1FastMQTT_a17a237457e57625296e6b24feb19c60a_icgraph" alt=""/></div>
 <map name="aclassfast__mqtt_1_1FastMQTT_a17a237457e57625296e6b24feb19c60a_icgraph" id="aclassfast__mqtt_1_1FastMQTT_a17a237457e57625296e6b24feb19c60a_icgraph">
-<area shape="rect" title="停止模块，安全退出所有后台线程并断开连接。 可重复调用，幂等安全。" alt="" coords="272,5,323,31"/>
-<area shape="rect" href="classfast__mqtt_1_1FastMQTT.html#ac919a991060ede6983343719401686de" title="销毁模块，释放资源，状态回到未初始化。 内部会先调用 Stop()。" alt="" coords="151,5,224,31"/>
-<area shape="poly" title=" " alt="" coords="258,21,224,21,224,15,258,15"/>
-<area shape="rect" href="classfast__mqtt_1_1FastMQTT.html#ab03a331cd95b22e7c779838c14732308" title=" " alt="" coords="5,5,103,31"/>
-<area shape="poly" title=" " alt="" coords="137,21,103,21,103,15,137,15"/>
+<area shape="rect" title="停止模块，安全退出所有后台线程并断开连接。 可重复调用，幂等安全。" alt="" coords="572,42,623,67"/>
+<area shape="rect" href="classfast__mqtt_1_1FastMQTT.html#ac919a991060ede6983343719401686de" title="销毁模块，释放资源，状态回到未初始化。 内部会先调用 Stop()。" alt="" coords="451,42,524,67"/>
+<area shape="poly" title=" " alt="" coords="558,57,524,57,524,52,558,52"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a17a237457e57625296e6b24feb19c60a" title=" " alt="" coords="228,5,403,45"/>
+<area shape="poly" title=" " alt="" coords="437,49,402,43,403,38,438,44"/>
+<area shape="rect" href="classfast__mqtt_1_1FastMQTT.html#ab03a331cd95b22e7c779838c14732308" title=" " alt="" coords="267,70,364,95"/>
+<area shape="poly" title=" " alt="" coords="437,65,365,77,364,72,436,60"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#ab308ffdad0654e43a00b3d7d46c81a68" title=" " alt="" coords="5,5,180,45"/>
+<area shape="poly" title=" " alt="" coords="214,28,180,28,180,23,214,23"/>
 </map>
 </div>
 
@@ -2331,26 +2349,32 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="classfast__mqtt_1_1FastMQTT_a2e95e0e5d5e360fee068bfde93d23d75_icgraph.png" border="0" usemap="#aclassfast__mqtt_1_1FastMQTT_a2e95e0e5d5e360fee068bfde93d23d75_icgraph" alt=""/></div>
 <map name="aclassfast__mqtt_1_1FastMQTT_a2e95e0e5d5e360fee068bfde93d23d75_icgraph" id="aclassfast__mqtt_1_1FastMQTT_a2e95e0e5d5e360fee068bfde93d23d75_icgraph">
-<area shape="rect" title="按句柄注销某个回调。" alt="" coords="488,173,635,198"/>
-<area shape="rect" href="classcsy2536_1_1CSY2536Comm.html#aa7d76b766faf39c1652b6617eac5fe20" title="清空所有回调并注销所有订阅。" alt="" coords="254,5,438,45"/>
-<area shape="poly" title=" " alt="" coords="541,163,498,111,470,84,439,60,416,48,419,43,441,55,473,80,502,108,545,160"/>
-<area shape="rect" href="classjson__comm_1_1JsonComm.html#aa7d76b766faf39c1652b6617eac5fe20" title="清空所有回调并注销所有订阅。" alt="" coords="259,69,433,109"/>
-<area shape="poly" title=" " alt="" coords="525,168,439,124,409,112,411,107,441,119,527,163"/>
-<area shape="rect" href="classcsy2536_1_1CSY2536Comm.html#a17a237457e57625296e6b24feb19c60a" title="停止模块并注销已注册回调。" alt="" coords="254,133,438,173"/>
-<area shape="poly" title=" " alt="" coords="474,175,438,170,438,164,475,170"/>
-<area shape="rect" href="classjson__comm_1_1JsonComm.html#a17a237457e57625296e6b24feb19c60a" title="停止模块并注销所有已注册回调。" alt="" coords="259,197,433,237"/>
-<area shape="poly" title=" " alt="" coords="475,201,434,207,433,202,474,196"/>
-<area shape="rect" href="classcsy2536_1_1CSY2536Comm.html#a8acd145dcccc3e4f1c244601d048fe89" title=" " alt="" coords="252,261,440,301"/>
-<area shape="poly" title=" " alt="" coords="527,208,441,252,411,264,409,259,439,247,525,203"/>
-<area shape="rect" href="classjson__comm_1_1JsonComm.html#a8acd145dcccc3e4f1c244601d048fe89" title="在持锁状态下注销某个主题的订阅。" alt="" coords="252,325,440,365"/>
-<area shape="poly" title=" " alt="" coords="545,211,502,263,473,291,441,316,419,328,416,323,439,311,470,287,498,260,541,207"/>
-<area shape="rect" href="classmy__comm_1_1MyComm.html#a17a237457e57625296e6b24feb19c60a" title="停止通信门面下属所有子模块。" alt="" coords="5,173,204,198"/>
-<area shape="poly" title=" " alt="" coords="241,170,201,175,200,170,240,165"/>
-<area shape="poly" title=" " alt="" coords="245,207,200,201,201,195,245,201"/>
-<area shape="rect" href="classcsy2536_1_1CSY2536Comm.html#af3718c41da8a7081dd430e70a8c5ff2d" title="清空某个 Topic 的全部回调（包括内部订阅）。" alt="" coords="13,261,197,301"/>
-<area shape="poly" title=" " alt="" coords="238,284,197,284,197,279,238,279"/>
-<area shape="rect" href="classjson__comm_1_1JsonComm.html#af3718c41da8a7081dd430e70a8c5ff2d" title="清空某个 topic 的全部回调（包括底层订阅）。" alt="" coords="17,325,192,365"/>
-<area shape="poly" title=" " alt="" coords="238,348,192,348,192,343,238,343"/>
+<area shape="rect" title="按句柄注销某个回调。" alt="" coords="1003,173,1149,198"/>
+<area shape="rect" href="classcsy2536_1_1CSY2536Comm.html#aa7d76b766faf39c1652b6617eac5fe20" title="清空所有回调并注销所有订阅。" alt="" coords="769,5,953,45"/>
+<area shape="poly" title=" " alt="" coords="1056,163,1013,111,985,84,953,60,931,48,933,43,956,55,988,80,1017,108,1060,160"/>
+<area shape="rect" href="classjson__comm_1_1JsonComm.html#aa7d76b766faf39c1652b6617eac5fe20" title="清空所有回调并注销所有订阅。" alt="" coords="773,69,948,109"/>
+<area shape="poly" title=" " alt="" coords="1040,168,954,124,923,112,925,107,956,119,1042,163"/>
+<area shape="rect" href="classcsy2536_1_1CSY2536Comm.html#a17a237457e57625296e6b24feb19c60a" title="停止模块并注销已注册回调。" alt="" coords="769,133,953,173"/>
+<area shape="poly" title=" " alt="" coords="988,175,952,170,953,164,989,170"/>
+<area shape="rect" href="classjson__comm_1_1JsonComm.html#a17a237457e57625296e6b24feb19c60a" title="停止模块并注销所有已注册回调。" alt="" coords="773,197,948,237"/>
+<area shape="poly" title=" " alt="" coords="989,201,949,207,948,202,988,196"/>
+<area shape="rect" href="classcsy2536_1_1CSY2536Comm.html#a8acd145dcccc3e4f1c244601d048fe89" title=" " alt="" coords="767,261,955,301"/>
+<area shape="poly" title=" " alt="" coords="1042,208,956,252,925,264,923,259,954,247,1040,203"/>
+<area shape="rect" href="classjson__comm_1_1JsonComm.html#a8acd145dcccc3e4f1c244601d048fe89" title="在持锁状态下注销某个主题的订阅。" alt="" coords="767,325,955,365"/>
+<area shape="poly" title=" " alt="" coords="1060,211,1017,263,988,291,956,316,933,328,931,323,953,311,985,287,1013,260,1056,207"/>
+<area shape="rect" href="classmy__comm_1_1MyComm.html#a17a237457e57625296e6b24feb19c60a" title="停止通信门面下属所有子模块。" alt="" coords="520,173,719,198"/>
+<area shape="poly" title=" " alt="" coords="755,170,716,175,715,170,754,165"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#a17a237457e57625296e6b24feb19c60a" title=" " alt="" coords="263,137,437,177"/>
+<area shape="poly" title=" " alt="" coords="506,176,437,169,438,164,507,171"/>
+<area shape="rect" href="classmy__comm_1_1MyComm.html#a4abac747c204adbe88dddd8902eb74f3" title=" " alt="" coords="228,202,472,227"/>
+<area shape="poly" title=" " alt="" coords="507,200,467,205,467,199,506,195"/>
+<area shape="rect" href="classtools_1_1pipeline_1_1Pipeline.html#ab308ffdad0654e43a00b3d7d46c81a68" title=" " alt="" coords="5,137,180,177"/>
+<area shape="poly" title=" " alt="" coords="249,160,180,160,180,155,249,155"/>
+<area shape="poly" title=" " alt="" coords="759,207,715,201,716,195,760,201"/>
+<area shape="rect" href="classcsy2536_1_1CSY2536Comm.html#af3718c41da8a7081dd430e70a8c5ff2d" title="清空某个 Topic 的全部回调（包括内部订阅）。" alt="" coords="527,261,711,301"/>
+<area shape="poly" title=" " alt="" coords="753,284,711,284,711,279,753,279"/>
+<area shape="rect" href="classjson__comm_1_1JsonComm.html#af3718c41da8a7081dd430e70a8c5ff2d" title="清空某个 topic 的全部回调（包括底层订阅）。" alt="" coords="532,325,707,365"/>
+<area shape="poly" title=" " alt="" coords="753,348,707,348,707,343,753,343"/>
 </map>
 </div>
 
@@ -2509,7 +2533,7 @@ Private 属性</h2></td></tr>
 
 <p>运行配置。 </p>
 
-<p class="reference">被这些函数引用 <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a26e13b0c9c25909bbea3dab967712891">FastMQTT::ConnectionManagerLoop()</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#ac7cd60113d7a6c38b9ba01eeadb3f0e5">FastMQTT::GetHealthStatus()</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#ad3eac3c6eef0527f40cf5b35f96792bf">FastMQTT::HandleConnect()</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a852500f42693862e6508648cb8617ac8">FastMQTT::Initialize()</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a8caf5b29137a23d1acab0ee593ffe3f2">FastMQTT::IsEnabled()</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#ad260767e865e65f04a44e3dbe97096b5">FastMQTT::Publish()</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a93e96ebf22da475293c02f35f7984a0e">FastMQTT::Publish()</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#aa963e90da1132a12d6576c717072da28">FastMQTT::ReceiverLoop()</a> , 以及 <a class="el" href="classfast__mqtt_1_1FastMQTT.html#aa70efaa4751ac6d5d54dce88fe725e0a">FastMQTT::Start()</a>.</p>
+<p class="reference">被这些函数引用 <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a26e13b0c9c25909bbea3dab967712891">FastMQTT::ConnectionManagerLoop()</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#ac7cd60113d7a6c38b9ba01eeadb3f0e5">FastMQTT::GetHealthStatus()</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#ad3eac3c6eef0527f40cf5b35f96792bf">FastMQTT::HandleConnect()</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a852500f42693862e6508648cb8617ac8">FastMQTT::Initialize()</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a8caf5b29137a23d1acab0ee593ffe3f2">FastMQTT::IsEnabled()</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#ad260767e865e65f04a44e3dbe97096b5">FastMQTT::Publish()</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a93e96ebf22da475293c02f35f7984a0e">FastMQTT::Publish()</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#aa963e90da1132a12d6576c717072da28">FastMQTT::ReceiverLoop()</a>, <a class="el" href="classfast__mqtt_1_1FastMQTT.html#aa70efaa4751ac6d5d54dce88fe725e0a">FastMQTT::Start()</a> , 以及 <a class="el" href="classfast__mqtt_1_1FastMQTT.html#a9318e5975d4286bc14ec01c1616138c5">FastMQTT::Status()</a>.</p>
 
 </div>
 </div>

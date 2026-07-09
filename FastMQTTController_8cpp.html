@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_api/controller/fast_mqtt/FastMQTTController.cpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_f1ee40842c724b3bf8a04800f5f521a7.html">my_api</a></li><li class="navelem"><a class="el" href="dir_6ef159f9932051522d309704773cf407.html">controller</a></li><li class="navelem"><a class="el" href="dir_cb32fb0d077cccbb6ce5ec3b0b6c829f.html">fast_mqtt</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">命名空间</a>  </div>
+  <div class="headertitle"><div class="title">FastMQTTController.cpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="FastMQTTController_8h_source.html">FastMQTTController.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="MyLog_8h_source.html">MyLog.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="FastMQTT_8hpp_source.html">FastMQTT.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+FastMQTTController.cpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="FastMQTTController_8cpp__incl.png" border="0" usemap="#asrc_2util_2my__api_2controller_2fast__mqtt_2FastMQTTController_8cpp" alt=""/></div>
+<map name="asrc_2util_2my__api_2controller_2fast__mqtt_2FastMQTTController_8cpp" id="asrc_2util_2my__api_2controller_2fast__mqtt_2FastMQTTController_8cpp">
+<area shape="rect" title=" " alt="" coords="843,5,1089,45"/>
+<area shape="rect" href="FastMQTTController_8h.html" title="FastMQTT 运行时状态查询 API 控制器" alt="" coords="246,93,406,119"/>
+<area shape="poly" title=" " alt="" coords="843,44,420,96,419,91,842,39"/>
+<area shape="rect" href="MyLog_8h.html" title=" " alt="" coords="927,93,1005,119"/>
+<area shape="poly" title=" " alt="" coords="969,46,969,79,963,79,963,46"/>
+<area shape="rect" href="FastMQTT_8hpp.html" title=" " alt="" coords="1540,93,1653,119"/>
+<area shape="poly" title=" " alt="" coords="1090,39,1526,93,1526,99,1089,45"/>
+<area shape="rect" href="BaseApiController_8hpp.html" title=" " alt="" coords="303,174,469,199"/>
+<area shape="poly" title=" " alt="" coords="337,117,371,161,367,164,333,120"/>
+<area shape="rect" title=" " alt="" coords="185,255,344,295"/>
+<area shape="poly" title=" " alt="" coords="320,120,292,168,280,205,272,241,267,240,275,204,288,166,315,118"/>
+<area shape="rect" title=" " alt="" coords="5,174,228,199"/>
+<area shape="poly" title=" " alt="" coords="296,121,161,172,159,167,295,116"/>
+<area shape="poly" title=" " alt="" coords="371,202,304,249,301,244,368,197"/>
+<area shape="rect" title=" " alt="" coords="369,262,529,287"/>
+<area shape="poly" title=" " alt="" coords="397,198,434,249,430,252,392,201"/>
+<area shape="rect" title=" " alt="" coords="1250,262,1397,287"/>
+<area shape="poly" title=" " alt="" coords="438,197,481,204,693,229,904,247,1237,267,1236,272,904,252,693,234,480,209,437,202"/>
+<area shape="rect" title=" " alt="" coords="493,174,617,199"/>
+<area shape="poly" title=" " alt="" coords="927,116,795,138,629,169,611,173,610,168,628,164,794,132,926,111"/>
+<area shape="rect" title=" " alt="" coords="641,167,800,207"/>
+<area shape="poly" title=" " alt="" coords="931,121,794,165,792,160,930,116"/>
+<area shape="rect" title=" " alt="" coords="824,174,943,199"/>
+<area shape="poly" title=" " alt="" coords="956,121,907,166,904,163,952,117"/>
+<area shape="rect" title=" " alt="" coords="967,174,1133,199"/>
+<area shape="poly" title=" " alt="" coords="980,117,1029,163,1026,166,977,121"/>
+<area shape="rect" title=" " alt="" coords="1209,174,1286,199"/>
+<area shape="poly" title=" " alt="" coords="1006,114,1191,164,1201,167,1200,172,1189,169,1004,120"/>
+<area shape="rect" title=" " alt="" coords="1433,262,1491,287"/>
+<area shape="poly" title=" " alt="" coords="1006,114,1073,133,1146,164,1172,185,1183,195,1198,204,1254,225,1301,233,1349,239,1409,252,1420,255,1419,260,1408,257,1348,244,1300,239,1253,230,1196,209,1179,199,1169,189,1143,169,1071,138,1004,119"/>
+<area shape="poly" title=" " alt="" coords="1540,117,1431,136,1382,151,1350,169,1338,186,1330,207,1325,248,1320,248,1325,206,1333,184,1347,165,1380,146,1429,131,1539,111"/>
+<area shape="poly" title=" " alt="" coords="1540,120,1431,140,1305,169,1294,172,1293,167,1304,164,1430,135,1539,114"/>
+<area shape="poly" title=" " alt="" coords="1560,121,1522,140,1504,153,1489,168,1478,187,1471,208,1465,249,1460,248,1466,207,1474,185,1485,165,1501,149,1519,135,1558,116"/>
+<area shape="rect" title=" " alt="" coords="1702,262,1769,287"/>
+<area shape="poly" title=" " alt="" coords="1654,111,1680,118,1707,129,1731,144,1751,165,1759,186,1760,209,1750,250,1744,249,1755,208,1754,187,1746,168,1728,148,1705,134,1679,123,1653,116"/>
+<area shape="rect" title=" " alt="" coords="1793,262,1859,287"/>
+<area shape="poly" title=" " alt="" coords="1654,112,1716,130,1747,145,1774,165,1792,184,1805,206,1822,248,1817,250,1800,208,1787,187,1771,169,1744,150,1714,135,1653,118"/>
+<area shape="rect" title=" " alt="" coords="1863,174,1914,199"/>
+<area shape="poly" title=" " alt="" coords="1654,116,1745,136,1845,164,1852,166,1850,171,1844,169,1743,141,1653,121"/>
+<area shape="rect" title=" " alt="" coords="1901,262,1965,287"/>
+<area shape="poly" title=" " alt="" coords="1654,107,1727,112,1809,122,1881,139,1909,151,1928,165,1939,184,1944,207,1942,249,1936,248,1939,207,1934,186,1924,168,1906,155,1880,144,1808,127,1726,117,1653,112"/>
+<area shape="rect" title=" " alt="" coords="1361,174,1425,199"/>
+<area shape="poly" title=" " alt="" coords="1568,121,1436,172,1434,167,1566,116"/>
+<area shape="rect" title=" " alt="" coords="1500,174,1563,199"/>
+<area shape="poly" title=" " alt="" coords="1589,121,1552,165,1548,161,1585,117"/>
+<area shape="rect" href="BlockingQueue_8hpp.html" title=" " alt="" coords="2053,174,2201,199"/>
+<area shape="poly" title=" " alt="" coords="1654,113,2040,170,2039,175,1653,118"/>
+<area shape="rect" href="FastMQTTTypes_8hpp.html" title=" " alt="" coords="1587,174,1737,199"/>
+<area shape="poly" title=" " alt="" coords="1608,117,1646,161,1641,165,1604,121"/>
+<area shape="poly" title=" " alt="" coords="2102,202,1972,259,1970,254,2100,197"/>
+<area shape="rect" title=" " alt="" coords="1989,262,2132,287"/>
+<area shape="poly" title=" " alt="" coords="2120,201,2081,252,2076,249,2116,198"/>
+<area shape="rect" title=" " alt="" coords="2156,262,2227,287"/>
+<area shape="poly" title=" " alt="" coords="2138,198,2176,249,2172,252,2134,201"/>
+<area shape="rect" title=" " alt="" coords="2251,262,2313,287"/>
+<area shape="poly" title=" " alt="" coords="2149,197,2251,253,2248,258,2147,202"/>
+<area shape="rect" title=" " alt="" coords="2337,262,2397,287"/>
+<area shape="poly" title=" " alt="" coords="2166,197,2327,252,2332,254,2330,259,2325,257,2164,202"/>
+<area shape="poly" title=" " alt="" coords="1617,202,1382,261,1381,256,1616,197"/>
+<area shape="poly" title=" " alt="" coords="1636,202,1503,259,1501,254,1634,197"/>
+<area shape="poly" title=" " alt="" coords="1674,198,1718,249,1714,253,1670,201"/>
+<area shape="poly" title=" " alt="" coords="1685,197,1793,253,1790,258,1683,202"/>
+<area shape="rect" title=" " alt="" coords="1591,262,1677,287"/>
+<area shape="poly" title=" " alt="" coords="1661,200,1645,249,1640,248,1656,199"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacemy__api" id="r_namespacemy__api"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__api.html">my_api</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacemy__api_1_1fast__mqtt__api" id="r_namespacemy__api_1_1fast__mqtt__api"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__api_1_1fast__mqtt__api.html">my_api::fast_mqtt_api</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

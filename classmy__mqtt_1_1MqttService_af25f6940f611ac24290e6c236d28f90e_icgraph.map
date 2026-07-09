@@ -1,11 +1,9 @@
 <map id="GetPublisher" name="GetPublisher">
-<area shape="rect" id="Node000001" title="获取发布者接口，用于业务层注入" alt="" coords="587,45,692,70"/>
-<area shape="rect" id="Node000002" href="$classmy__edge_1_1demo_1_1UNAEdge.html#ac97f3c62f3095194203713aefcc016c1" title=" " alt="" coords="319,5,515,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="573,51,515,42,516,37,574,45"/>
-<area shape="rect" id="Node000004" href="$classmy__heartbeat_1_1HeartbeatManager.html#a46f8b0aaa9050992f25724ae2ac67068" title="Set the Publisher object" alt="" coords="296,69,539,109"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="574,69,539,74,538,69,573,64"/>
-<area shape="rect" id="Node000003" href="$classmy__edge_1_1demo_1_1UNAEdge.html#af8ac9b6240c9253809b2de40ab1c121c" title="心跳上报（snapshot thread 周期调用） 默认实现: 只打日志。后续你可以接入 MQTT/HTTP 等上报。" alt="" coords="29,5,225,45"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="306,28,225,28,225,23,306,23"/>
-<area shape="rect" id="Node000005" href="$classmy__heartbeat_1_1HeartbeatManager.html#acc9c585e319edd36884e14172c830525" title=" " alt="" coords="5,69,248,109"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="283,92,248,92,248,87,283,87"/>
+<area shape="rect" id="Node000001" title="获取发布者接口，用于业务层注入" alt="" coords="540,45,645,70"/>
+<area shape="rect" id="Node000002" href="$classmy__edge_1_1demo_1_1UNAEdge.html#ac97f3c62f3095194203713aefcc016c1" title=" " alt="" coords="273,5,469,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="526,51,468,42,469,37,527,45"/>
+<area shape="rect" id="Node000004" href="$classmy__heartbeat_1_1HeartbeatManager.html#a46f8b0aaa9050992f25724ae2ac67068" title="Set the Publisher object" alt="" coords="249,69,492,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="527,69,492,74,492,69,526,64"/>
+<area shape="rect" id="Node000003" href="$classmy__edge_1_1demo_1_1UNAEdge.html#af8ac9b6240c9253809b2de40ab1c121c" title="心跳上报（snapshot thread 周期调用） 默认实现: 只打日志。后续你可以接入 MQTT/HTTP 等上报。" alt="" coords="5,5,201,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="259,28,202,28,202,23,259,23"/>
 </map>

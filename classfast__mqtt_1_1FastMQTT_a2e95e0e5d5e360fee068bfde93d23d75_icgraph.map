@@ -1,22 +1,28 @@
 <map id="UnregisterCallback" name="UnregisterCallback">
-<area shape="rect" id="Node000001" title="按句柄注销某个回调。" alt="" coords="488,173,635,198"/>
-<area shape="rect" id="Node000002" href="$classcsy2536_1_1CSY2536Comm.html#aa7d76b766faf39c1652b6617eac5fe20" title="清空所有回调并注销所有订阅。" alt="" coords="254,5,438,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="541,163,498,111,470,84,439,60,416,48,419,43,441,55,473,80,502,108,545,160"/>
-<area shape="rect" id="Node000003" href="$classjson__comm_1_1JsonComm.html#aa7d76b766faf39c1652b6617eac5fe20" title="清空所有回调并注销所有订阅。" alt="" coords="259,69,433,109"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="525,168,439,124,409,112,411,107,441,119,527,163"/>
-<area shape="rect" id="Node000004" href="$classcsy2536_1_1CSY2536Comm.html#a17a237457e57625296e6b24feb19c60a" title="停止模块并注销已注册回调。" alt="" coords="254,133,438,173"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="474,175,438,170,438,164,475,170"/>
-<area shape="rect" id="Node000006" href="$classjson__comm_1_1JsonComm.html#a17a237457e57625296e6b24feb19c60a" title="停止模块并注销所有已注册回调。" alt="" coords="259,197,433,237"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="475,201,434,207,433,202,474,196"/>
-<area shape="rect" id="Node000007" href="$classcsy2536_1_1CSY2536Comm.html#a8acd145dcccc3e4f1c244601d048fe89" title=" " alt="" coords="252,261,440,301"/>
-<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="527,208,441,252,411,264,409,259,439,247,525,203"/>
-<area shape="rect" id="Node000009" href="$classjson__comm_1_1JsonComm.html#a8acd145dcccc3e4f1c244601d048fe89" title="在持锁状态下注销某个主题的订阅。" alt="" coords="252,325,440,365"/>
-<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="545,211,502,263,473,291,441,316,419,328,416,323,439,311,470,287,498,260,541,207"/>
-<area shape="rect" id="Node000005" href="$classmy__comm_1_1MyComm.html#a17a237457e57625296e6b24feb19c60a" title="停止通信门面下属所有子模块。" alt="" coords="5,173,204,198"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="241,170,201,175,200,170,240,165"/>
-<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="245,207,200,201,201,195,245,201"/>
-<area shape="rect" id="Node000008" href="$classcsy2536_1_1CSY2536Comm.html#af3718c41da8a7081dd430e70a8c5ff2d" title="清空某个 Topic 的全部回调（包括内部订阅）。" alt="" coords="13,261,197,301"/>
-<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="238,284,197,284,197,279,238,279"/>
-<area shape="rect" id="Node000010" href="$classjson__comm_1_1JsonComm.html#af3718c41da8a7081dd430e70a8c5ff2d" title="清空某个 topic 的全部回调（包括底层订阅）。" alt="" coords="17,325,192,365"/>
-<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="238,348,192,348,192,343,238,343"/>
+<area shape="rect" id="Node000001" title="按句柄注销某个回调。" alt="" coords="1003,173,1149,198"/>
+<area shape="rect" id="Node000002" href="$classcsy2536_1_1CSY2536Comm.html#aa7d76b766faf39c1652b6617eac5fe20" title="清空所有回调并注销所有订阅。" alt="" coords="769,5,953,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1056,163,1013,111,985,84,953,60,931,48,933,43,956,55,988,80,1017,108,1060,160"/>
+<area shape="rect" id="Node000003" href="$classjson__comm_1_1JsonComm.html#aa7d76b766faf39c1652b6617eac5fe20" title="清空所有回调并注销所有订阅。" alt="" coords="773,69,948,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="1040,168,954,124,923,112,925,107,956,119,1042,163"/>
+<area shape="rect" id="Node000004" href="$classcsy2536_1_1CSY2536Comm.html#a17a237457e57625296e6b24feb19c60a" title="停止模块并注销已注册回调。" alt="" coords="769,133,953,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="988,175,952,170,953,164,989,170"/>
+<area shape="rect" id="Node000009" href="$classjson__comm_1_1JsonComm.html#a17a237457e57625296e6b24feb19c60a" title="停止模块并注销所有已注册回调。" alt="" coords="773,197,948,237"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="989,201,949,207,948,202,988,196"/>
+<area shape="rect" id="Node000010" href="$classcsy2536_1_1CSY2536Comm.html#a8acd145dcccc3e4f1c244601d048fe89" title=" " alt="" coords="767,261,955,301"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="1042,208,956,252,925,264,923,259,954,247,1040,203"/>
+<area shape="rect" id="Node000012" href="$classjson__comm_1_1JsonComm.html#a8acd145dcccc3e4f1c244601d048fe89" title="在持锁状态下注销某个主题的订阅。" alt="" coords="767,325,955,365"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="1060,211,1017,263,988,291,956,316,933,328,931,323,953,311,985,287,1013,260,1056,207"/>
+<area shape="rect" id="Node000005" href="$classmy__comm_1_1MyComm.html#a17a237457e57625296e6b24feb19c60a" title="停止通信门面下属所有子模块。" alt="" coords="520,173,719,198"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="755,170,716,175,715,170,754,165"/>
+<area shape="rect" id="Node000006" href="$classtools_1_1pipeline_1_1Pipeline.html#a17a237457e57625296e6b24feb19c60a" title=" " alt="" coords="263,137,437,177"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="506,176,437,169,438,164,507,171"/>
+<area shape="rect" id="Node000008" href="$classmy__comm_1_1MyComm.html#a4abac747c204adbe88dddd8902eb74f3" title=" " alt="" coords="228,202,472,227"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="507,200,467,205,467,199,506,195"/>
+<area shape="rect" id="Node000007" href="$classtools_1_1pipeline_1_1Pipeline.html#ab308ffdad0654e43a00b3d7d46c81a68" title=" " alt="" coords="5,137,180,177"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="249,160,180,160,180,155,249,155"/>
+<area shape="poly" id="edge9_Node000009_Node000005" title=" " alt="" coords="759,207,715,201,716,195,760,201"/>
+<area shape="rect" id="Node000011" href="$classcsy2536_1_1CSY2536Comm.html#af3718c41da8a7081dd430e70a8c5ff2d" title="清空某个 Topic 的全部回调（包括内部订阅）。" alt="" coords="527,261,711,301"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="753,284,711,284,711,279,753,279"/>
+<area shape="rect" id="Node000013" href="$classjson__comm_1_1JsonComm.html#af3718c41da8a7081dd430e70a8c5ff2d" title="清空某个 topic 的全部回调（包括底层订阅）。" alt="" coords="532,325,707,365"/>
+<area shape="poly" id="edge13_Node000012_Node000013" title=" " alt="" coords="753,348,707,348,707,343,753,343"/>
 </map>
