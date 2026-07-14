@@ -24,7 +24,8 @@ var searchData=
   ['buildmoveto_21',['buildMoveTo',['../classSearchlightControl_1_1SearchlightServoController.html#a8ec9b9c44ea1d4eca0987a9d002c02f2',1,'SearchlightControl::SearchlightServoController']]],
   ['buildopenflash_22',['buildOpenFlash',['../classSearchlightControl_1_1SearchlightLedController.html#a3900b933a38571b399fd5a38beafbbc8',1,'SearchlightControl::SearchlightLedController']]],
   ['buildopenled_23',['buildOpenLed',['../classSearchlightControl_1_1SearchlightLedController.html#a816115ac76154f1b1b3a6e5303d16af8',1,'SearchlightControl::SearchlightLedController']]],
-  ['buildsummary_24',['buildsummary',['../classcsy2536_1_1CSY2536CallBackFuncs.html#a1f59aab72f9b1b4a2e22c6055db96681',1,'csy2536::CSY2536CallBackFuncs::BuildSummary()'],['../classcsy2536_1_1CSY2536Comm.html#a1f59aab72f9b1b4a2e22c6055db96681',1,'csy2536::CSY2536Comm::BuildSummary()'],['../classjson__comm_1_1JsonCallBackFuncs.html#a11f765c63df48e5a83c138dfbdaaed0f',1,'json_comm::JsonCallBackFuncs::BuildSummary()']]],
-  ['bytestohex_25',['bytesToHex',['../namespacePodModule_1_1StringUtils.html#a4b2f5edebd06a64f39644e82ef36dcce',1,'PodModule::StringUtils']]],
-  ['bytetohex_26',['byteToHex',['../classSearchlightControl_1_1ProtocolCodec.html#ac555620c0f53caffadf3cda12f25e4d3',1,'SearchlightControl::ProtocolCodec']]]
+  ['buildrequest_24',['BuildRequest',['../classmy__gas__detector__poll_1_1GasDetectorPoll.html#a171edda6d8d620c9e5449584cb62b0e8',1,'my_gas_detector_poll::GasDetectorPoll']]],
+  ['buildsummary_25',['buildsummary',['../classcsy2536_1_1CSY2536CallBackFuncs.html#a1f59aab72f9b1b4a2e22c6055db96681',1,'csy2536::CSY2536CallBackFuncs::BuildSummary()'],['../classcsy2536_1_1CSY2536Comm.html#a1f59aab72f9b1b4a2e22c6055db96681',1,'csy2536::CSY2536Comm::BuildSummary()'],['../classjson__comm_1_1JsonCallBackFuncs.html#a11f765c63df48e5a83c138dfbdaaed0f',1,'json_comm::JsonCallBackFuncs::BuildSummary()']]],
+  ['bytestohex_26',['bytesToHex',['../namespacePodModule_1_1StringUtils.html#a4b2f5edebd06a64f39644e82ef36dcce',1,'PodModule::StringUtils']]],
+  ['bytetohex_27',['byteToHex',['../classSearchlightControl_1_1ProtocolCodec.html#ac555620c0f53caffadf3cda12f25e4d3',1,'SearchlightControl::ProtocolCodec']]]
 ];

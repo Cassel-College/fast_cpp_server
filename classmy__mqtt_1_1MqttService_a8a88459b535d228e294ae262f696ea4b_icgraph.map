@@ -1,21 +1,29 @@
 <map id="GetInstance" name="GetInstance">
-<area shape="rect" id="Node000001" title=" " alt="" coords="540,141,640,166"/>
-<area shape="rect" id="Node000002" href="$classmy__edge_1_1demo_1_1UNAEdge.html#a8ae02442f67c4f84a09991f2d4b347c9" title=" " alt="" coords="273,5,469,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="569,131,535,94,491,60,465,48,467,43,493,55,539,90,573,128"/>
-<area shape="rect" id="Node000004" href="$classtools_1_1pipeline_1_1Pipeline.html#ab7587a797e845df29793177ea59eed08" title=" " alt="" coords="283,69,458,109"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="538,139,491,124,450,112,451,107,493,119,540,134"/>
-<area shape="rect" id="Node000006" href="$classmy__edge_1_1demo_1_1UNAEdge.html#ac97f3c62f3095194203713aefcc016c1" title=" " alt="" coords="273,133,469,173"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="526,156,469,156,469,151,526,151"/>
-<area shape="rect" id="Node000008" href="$classmy__heartbeat_1_1HeartbeatManager.html#a46f8b0aaa9050992f25724ae2ac67068" title="Set the Publisher object" alt="" coords="249,197,492,237"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="540,173,493,188,451,200,450,195,491,183,538,168"/>
-<area shape="rect" id="Node000009" href="$classtools_1_1pipeline_1_1Pipeline.html#a17a237457e57625296e6b24feb19c60a" title=" " alt="" coords="283,261,458,301"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="573,179,539,216,493,252,459,267,457,262,491,247,535,213,569,175"/>
-<area shape="rect" id="Node000003" href="$classmy__edge_1_1demo_1_1UNAEdge.html#a182be074ed2e98c86bbcc50a83173fce" title=" " alt="" coords="5,5,201,45"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="259,28,202,28,202,23,259,23"/>
-<area shape="rect" id="Node000005" href="$classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="16,69,191,109"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="270,92,191,92,191,87,270,87"/>
-<area shape="rect" id="Node000007" href="$classmy__edge_1_1demo_1_1UNAEdge.html#af8ac9b6240c9253809b2de40ab1c121c" title="心跳上报（snapshot thread 周期调用） 默认实现: 只打日志。后续你可以接入 MQTT/HTTP 等上报。" alt="" coords="5,133,201,173"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="259,156,202,156,202,151,259,151"/>
-<area shape="rect" id="Node000010" href="$classtools_1_1pipeline_1_1Pipeline.html#ab308ffdad0654e43a00b3d7d46c81a68" title=" " alt="" coords="16,261,191,301"/>
-<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="270,284,191,284,191,279,270,279"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="985,141,1085,166"/>
+<area shape="rect" id="Node000002" href="$classmy__edge_1_1demo_1_1UNAEdge.html#a8ae02442f67c4f84a09991f2d4b347c9" title=" " alt="" coords="718,5,914,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1014,131,980,94,936,60,910,48,913,43,939,55,984,90,1018,128"/>
+<area shape="rect" id="Node000004" href="$classtools_1_1pipeline_1_1Pipeline.html#ab7587a797e845df29793177ea59eed08" title=" " alt="" coords="729,69,903,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="984,139,937,124,895,112,896,107,938,119,985,134"/>
+<area shape="rect" id="Node000009" href="$classmy__edge_1_1demo_1_1UNAEdge.html#ac97f3c62f3095194203713aefcc016c1" title=" " alt="" coords="718,133,914,173"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="971,156,914,156,914,151,971,151"/>
+<area shape="rect" id="Node000011" href="$classmy__heartbeat_1_1HeartbeatManager.html#a46f8b0aaa9050992f25724ae2ac67068" title="Set the Publisher object" alt="" coords="695,197,937,237"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="985,173,938,188,896,200,895,195,937,183,984,168"/>
+<area shape="rect" id="Node000012" href="$classtools_1_1pipeline_1_1Pipeline.html#a17a237457e57625296e6b24feb19c60a" title=" " alt="" coords="729,261,903,301"/>
+<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="1018,179,984,216,939,252,905,267,902,262,936,247,980,213,1014,175"/>
+<area shape="rect" id="Node000003" href="$classmy__edge_1_1demo_1_1UNAEdge.html#a182be074ed2e98c86bbcc50a83173fce" title=" " alt="" coords="451,5,647,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="704,28,647,28,647,23,704,23"/>
+<area shape="rect" id="Node000005" href="$classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="461,69,636,109"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="715,92,636,92,636,87,715,87"/>
+<area shape="rect" id="Node000006" href="$classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="228,69,403,109"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="447,92,403,92,403,87,447,87"/>
+<area shape="rect" id="Node000007" href="$classtools_1_1pipeline_1_1Pipeline.html#a9f0164952c82a31be0423f78dd4c8af5" title=" " alt="" coords="5,25,180,65"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="214,72,180,65,181,60,215,67"/>
+<area shape="rect" id="Node000008" href="$classtools_1_1pipeline_1_1Pipeline.html#a9d284775ccebba879a77a7144be22899" title=" " alt="" coords="5,101,180,141"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="215,106,180,111,180,106,214,101"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="194,42,295,45,403,55,469,67,468,72,402,60,295,51,194,47"/>
+<area shape="poly" id="edge9_Node000008_Node000005" title=" " alt="" coords="194,124,295,125,402,119,471,107,472,112,403,124,295,130,193,129"/>
+<area shape="rect" id="Node000010" href="$classmy__edge_1_1demo_1_1UNAEdge.html#af8ac9b6240c9253809b2de40ab1c121c" title="心跳上报（snapshot thread 周期调用） 默认实现: 只打日志。后续你可以接入 MQTT/HTTP 等上报。" alt="" coords="451,133,647,173"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="704,156,647,156,647,151,704,151"/>
+<area shape="rect" id="Node000013" href="$classtools_1_1pipeline_1_1Pipeline.html#ab308ffdad0654e43a00b3d7d46c81a68" title=" " alt="" coords="461,261,636,301"/>
+<area shape="poly" id="edge14_Node000012_Node000013" title=" " alt="" coords="715,284,636,284,636,279,715,279"/>
 </map>

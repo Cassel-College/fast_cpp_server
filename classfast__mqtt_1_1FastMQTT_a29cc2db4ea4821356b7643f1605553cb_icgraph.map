@@ -6,52 +6,60 @@
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="1097,393,1092,337,1077,264,1065,226,1049,189,1028,154,1002,123,981,108,984,104,1006,119,1032,151,1054,186,1070,224,1082,263,1097,336,1103,392"/>
 <area shape="rect" id="Node000004" href="$classtools_1_1pipeline_1_1Pipeline.html#a49f07504cf4e558498a7ec474fef64db" title=" " alt="" coords="807,133,982,173"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="1095,393,1086,348,1069,293,1041,236,1024,210,1002,187,981,173,984,169,1006,183,1028,207,1046,233,1074,291,1091,347,1100,392"/>
-<area shape="rect" id="Node000006" href="$classcsy2536_1_1CSY2536Comm.html#a369689ccd5e4c844937ea070ff56f550" title="注册一个回调到 FastMQTT。" alt="" coords="785,197,1004,237"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="1090,394,1078,361,1059,323,1034,284,1002,251,983,240,986,235,1006,247,1038,281,1064,320,1083,359,1095,392"/>
-<area shape="rect" id="Node000009" href="$classjson__comm_1_1JsonComm.html#a369689ccd5e4c844937ea070ff56f550" title="注册一个回调到 FastMQTT。" alt="" coords="785,261,1004,301"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="1081,397,1047,359,1003,322,966,304,968,299,1005,318,1050,355,1085,393"/>
-<area shape="rect" id="Node000011" href="$classcsy2536_1_1CSY2536Comm.html#aa70efaa4751ac6d5d54dce88fe725e0a" title="启动模块并注册订阅回调。" alt="" coords="537,376,721,416"/>
-<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="1038,418,721,403,721,398,1038,413"/>
-<area shape="rect" id="Node000012" href="$classjson__comm_1_1JsonComm.html#aa70efaa4751ac6d5d54dce88fe725e0a" title="启动模块并对配置中的主题注册订阅回调。" alt="" coords="541,504,716,544"/>
-<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="1075,442,1043,463,1005,481,931,502,854,516,781,523,716,527,716,521,780,518,853,510,929,497,1003,476,1040,459,1073,437"/>
-<area shape="rect" id="Node000013" href="$classtools_1_1pipeline_1_1Pipeline.html#a17a237457e57625296e6b24feb19c60a" title=" " alt="" coords="263,443,437,483"/>
-<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="1049,404,950,378,817,355,744,348,669,346,594,352,521,367,479,382,440,402,378,444,375,440,438,397,477,377,519,361,593,347,669,341,744,343,818,349,951,373,1050,399"/>
-<area shape="rect" id="Node000015" href="$classcsy2536_1_1CSY2536Comm.html#a17a237457e57625296e6b24feb19c60a" title="停止模块并注销已注册回调。" alt="" coords="803,669,987,709"/>
-<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="1100,446,1091,491,1074,549,1047,608,1028,635,1006,659,989,671,986,667,1002,655,1024,632,1042,605,1069,547,1086,490,1095,445"/>
-<area shape="rect" id="Node000018" href="$classjson__comm_1_1JsonComm.html#a17a237457e57625296e6b24feb19c60a" title="停止模块并注销所有已注册回调。" alt="" coords="807,605,982,645"/>
-<area shape="poly" id="edge18_Node000001_Node000018" title=" " alt="" coords="1096,445,1084,479,1065,520,1039,560,1006,595,984,609,981,604,1002,591,1035,557,1060,517,1079,477,1091,443"/>
-<area shape="rect" id="Node000019" href="$classcsy2536_1_1CSY2536Comm.html#a50023406ef4034aa47eb0ad9e8950852" title=" " alt="" coords="803,427,987,467"/>
-<area shape="poly" id="edge20_Node000001_Node000019" title=" " alt="" coords="1039,430,987,437,986,432,1038,425"/>
-<area shape="rect" id="Node000021" href="$classjson__comm_1_1JsonComm.html#a50023406ef4034aa47eb0ad9e8950852" title="在持锁状态下订阅某个主题，并把本模块的分发回调注册到 FastMQTT。" alt="" coords="807,541,982,581"/>
-<area shape="poly" id="edge23_Node000001_Node000021" title=" " alt="" coords="1086,444,1052,485,1005,525,969,544,966,539,1003,520,1048,481,1082,441"/>
-<area shape="rect" id="Node000023" href="$classcsy2536_1_1CSY2536Comm.html#a8acd145dcccc3e4f1c244601d048fe89" title=" " alt="" coords="801,733,989,773"/>
-<area shape="poly" id="edge26_Node000001_Node000023" title=" " alt="" coords="1103,446,1098,503,1083,577,1071,617,1054,655,1033,691,1006,723,990,735,987,731,1002,719,1028,688,1049,653,1066,615,1078,576,1092,502,1097,445"/>
-<area shape="rect" id="Node000025" href="$classjson__comm_1_1JsonComm.html#a8acd145dcccc3e4f1c244601d048fe89" title="在持锁状态下注销某个主题的订阅。" alt="" coords="801,797,989,837"/>
-<area shape="poly" id="edge28_Node000001_Node000025" title=" " alt="" coords="1100,446,1087,524,1067,626,1040,723,1024,761,1006,787,991,799,987,795,1002,784,1019,758,1035,721,1062,624,1082,523,1094,445"/>
-<area shape="rect" id="Node000005" href="$classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="541,133,716,173"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="794,156,716,156,716,151,794,151"/>
-<area shape="rect" id="Node000007" href="$classcsy2536_1_1CSY2536Comm.html#a4c09adaa9e87778ebba37c4c02a1bbac" title="为指定主题设置 2536 回调。" alt="" coords="520,197,737,237"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="772,220,737,220,737,215,772,215"/>
-<area shape="rect" id="Node000008" href="$classcsy2536_1_1CSY2536Comm.html#ad900d283719c941fc54e9ca0295fa811" title="初始化模块配置。" alt="" coords="258,197,442,237"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="506,220,442,220,442,215,506,215"/>
-<area shape="rect" id="Node000010" href="$classjson__comm_1_1JsonComm.html#acd913e6904db0b152e2a092aa5815d01" title="为指定主题设置 json 回调。" alt="" coords="523,261,735,301"/>
-<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="771,284,735,284,735,279,771,279"/>
-<area shape="rect" id="Node000014" href="$classtools_1_1pipeline_1_1Pipeline.html#ab308ffdad0654e43a00b3d7d46c81a68" title=" " alt="" coords="5,443,180,483"/>
-<area shape="poly" id="edge13_Node000013_Node000014" title=" " alt="" coords="249,465,180,465,180,460,249,460"/>
-<area shape="rect" id="Node000016" href="$classmy__comm_1_1MyComm.html#a17a237457e57625296e6b24feb19c60a" title="停止通信门面下属所有子模块。" alt="" coords="529,633,728,658"/>
-<area shape="poly" id="edge15_Node000015_Node000016" title=" " alt="" coords="788,675,706,661,707,655,789,669"/>
-<area shape="poly" id="edge16_Node000016_Node000013" title=" " alt="" coords="537,631,519,622,470,591,427,553,365,485,369,481,431,549,474,586,521,618,539,626"/>
-<area shape="rect" id="Node000017" href="$classmy__comm_1_1MyComm.html#a4abac747c204adbe88dddd8902eb74f3" title=" " alt="" coords="228,633,472,658"/>
-<area shape="poly" id="edge17_Node000016_Node000017" title=" " alt="" coords="516,648,472,648,472,643,516,643"/>
-<area shape="poly" id="edge19_Node000018_Node000016" title=" " alt="" coords="794,636,728,641,728,635,793,630"/>
-<area shape="poly" id="edge22_Node000019_Node000011" title=" " alt="" coords="789,429,720,416,722,411,790,424"/>
-<area shape="rect" id="Node000020" href="$classcsy2536_1_1CSY2536Comm.html#aa694e7023b63239e8eb3ed9c67b497c6" title="注册一个解析后的消息回调。" alt="" coords="537,440,721,480"/>
-<area shape="poly" id="edge21_Node000019_Node000020" title=" " alt="" coords="789,455,721,458,721,453,788,449"/>
-<area shape="poly" id="edge25_Node000021_Node000012" title=" " alt="" coords="793,550,716,539,717,534,794,545"/>
-<area shape="rect" id="Node000022" href="$classjson__comm_1_1JsonComm.html#aa694e7023b63239e8eb3ed9c67b497c6" title="注册一个“解析后的 JSON 回调”。" alt="" coords="537,568,720,608"/>
-<area shape="poly" id="edge24_Node000021_Node000022" title=" " alt="" coords="794,574,720,582,720,576,794,569"/>
-<area shape="rect" id="Node000024" href="$classcsy2536_1_1CSY2536Comm.html#af3718c41da8a7081dd430e70a8c5ff2d" title="清空某个 Topic 的全部回调（包括内部订阅）。" alt="" coords="537,733,721,773"/>
-<area shape="poly" id="edge27_Node000023_Node000024" title=" " alt="" coords="787,756,721,756,721,751,787,751"/>
-<area shape="rect" id="Node000026" href="$classjson__comm_1_1JsonComm.html#af3718c41da8a7081dd430e70a8c5ff2d" title="清空某个 topic 的全部回调（包括底层订阅）。" alt="" coords="541,797,716,837"/>
-<area shape="poly" id="edge29_Node000025_Node000026" title=" " alt="" coords="787,820,716,820,716,815,787,815"/>
+<area shape="rect" id="Node000009" href="$classcsy2536_1_1CSY2536Comm.html#a369689ccd5e4c844937ea070ff56f550" title="注册一个回调到 FastMQTT。" alt="" coords="785,197,1004,237"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="1090,394,1078,361,1059,323,1034,284,1002,251,983,240,986,235,1006,247,1038,281,1064,320,1083,359,1095,392"/>
+<area shape="rect" id="Node000012" href="$classjson__comm_1_1JsonComm.html#a369689ccd5e4c844937ea070ff56f550" title="注册一个回调到 FastMQTT。" alt="" coords="785,261,1004,301"/>
+<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="1081,397,1047,359,1003,322,966,304,968,299,1005,318,1050,355,1085,393"/>
+<area shape="rect" id="Node000014" href="$classcsy2536_1_1CSY2536Comm.html#aa70efaa4751ac6d5d54dce88fe725e0a" title="启动模块并注册订阅回调。" alt="" coords="537,376,721,416"/>
+<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="1038,418,721,403,721,398,1038,413"/>
+<area shape="rect" id="Node000015" href="$classjson__comm_1_1JsonComm.html#aa70efaa4751ac6d5d54dce88fe725e0a" title="启动模块并对配置中的主题注册订阅回调。" alt="" coords="541,504,716,544"/>
+<area shape="poly" id="edge16_Node000001_Node000015" title=" " alt="" coords="1075,442,1043,463,1005,481,931,502,854,516,781,523,716,527,716,521,780,518,853,510,929,497,1003,476,1040,459,1073,437"/>
+<area shape="rect" id="Node000016" href="$classtools_1_1pipeline_1_1Pipeline.html#a17a237457e57625296e6b24feb19c60a" title=" " alt="" coords="263,443,437,483"/>
+<area shape="poly" id="edge17_Node000001_Node000016" title=" " alt="" coords="1049,404,950,378,817,355,744,348,669,346,594,352,521,367,479,382,440,402,378,444,375,440,438,397,477,377,519,361,593,347,669,341,744,343,818,349,951,373,1050,399"/>
+<area shape="rect" id="Node000018" href="$classcsy2536_1_1CSY2536Comm.html#a17a237457e57625296e6b24feb19c60a" title="停止模块并注销已注册回调。" alt="" coords="803,669,987,709"/>
+<area shape="poly" id="edge19_Node000001_Node000018" title=" " alt="" coords="1100,446,1091,491,1074,549,1047,608,1028,635,1006,659,989,671,986,667,1002,655,1024,632,1042,605,1069,547,1086,490,1095,445"/>
+<area shape="rect" id="Node000021" href="$classjson__comm_1_1JsonComm.html#a17a237457e57625296e6b24feb19c60a" title="停止模块并注销所有已注册回调。" alt="" coords="807,605,982,645"/>
+<area shape="poly" id="edge23_Node000001_Node000021" title=" " alt="" coords="1096,445,1084,479,1065,520,1039,560,1006,595,984,609,981,604,1002,591,1035,557,1060,517,1079,477,1091,443"/>
+<area shape="rect" id="Node000022" href="$classcsy2536_1_1CSY2536Comm.html#a50023406ef4034aa47eb0ad9e8950852" title=" " alt="" coords="803,427,987,467"/>
+<area shape="poly" id="edge25_Node000001_Node000022" title=" " alt="" coords="1039,430,987,437,986,432,1038,425"/>
+<area shape="rect" id="Node000024" href="$classjson__comm_1_1JsonComm.html#a50023406ef4034aa47eb0ad9e8950852" title="在持锁状态下订阅某个主题，并把本模块的分发回调注册到 FastMQTT。" alt="" coords="807,541,982,581"/>
+<area shape="poly" id="edge28_Node000001_Node000024" title=" " alt="" coords="1086,444,1052,485,1005,525,969,544,966,539,1003,520,1048,481,1082,441"/>
+<area shape="rect" id="Node000026" href="$classcsy2536_1_1CSY2536Comm.html#a8acd145dcccc3e4f1c244601d048fe89" title=" " alt="" coords="801,733,989,773"/>
+<area shape="poly" id="edge31_Node000001_Node000026" title=" " alt="" coords="1103,446,1098,503,1083,577,1071,617,1054,655,1033,691,1006,723,990,735,987,731,1002,719,1028,688,1049,653,1066,615,1078,576,1092,502,1097,445"/>
+<area shape="rect" id="Node000028" href="$classjson__comm_1_1JsonComm.html#a8acd145dcccc3e4f1c244601d048fe89" title="在持锁状态下注销某个主题的订阅。" alt="" coords="801,797,989,837"/>
+<area shape="poly" id="edge33_Node000001_Node000028" title=" " alt="" coords="1100,446,1087,524,1067,626,1040,723,1024,761,1006,787,991,799,987,795,1002,784,1019,758,1035,721,1062,624,1082,523,1094,445"/>
+<area shape="rect" id="Node000005" href="$classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="541,108,716,148"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="793,146,716,139,717,134,794,141"/>
+<area shape="rect" id="Node000006" href="$classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="263,96,437,136"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="528,126,437,122,437,117,528,121"/>
+<area shape="rect" id="Node000007" href="$classtools_1_1pipeline_1_1Pipeline.html#a9f0164952c82a31be0423f78dd4c8af5" title=" " alt="" coords="5,52,180,92"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="249,101,180,90,181,84,250,96"/>
+<area shape="rect" id="Node000008" href="$classtools_1_1pipeline_1_1Pipeline.html#a9d284775ccebba879a77a7144be22899" title=" " alt="" coords="5,141,180,181"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="250,136,181,149,180,143,249,131"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="194,66,326,68,400,73,472,81,523,92,570,105,569,111,522,97,472,87,400,78,326,73,194,71"/>
+<area shape="poly" id="edge9_Node000008_Node000005" title=" " alt="" coords="193,158,326,154,472,145,541,138,541,143,472,151,326,159,194,163"/>
+<area shape="rect" id="Node000010" href="$classcsy2536_1_1CSY2536Comm.html#a4c09adaa9e87778ebba37c4c02a1bbac" title="为指定主题设置 2536 回调。" alt="" coords="520,197,737,237"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="772,220,737,220,737,215,772,215"/>
+<area shape="rect" id="Node000011" href="$classcsy2536_1_1CSY2536Comm.html#ad900d283719c941fc54e9ca0295fa811" title="初始化模块配置。" alt="" coords="258,211,442,251"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="506,226,443,229,442,224,506,221"/>
+<area shape="rect" id="Node000013" href="$classjson__comm_1_1JsonComm.html#acd913e6904db0b152e2a092aa5815d01" title="为指定主题设置 json 回调。" alt="" coords="523,261,735,301"/>
+<area shape="poly" id="edge14_Node000012_Node000013" title=" " alt="" coords="771,284,735,284,735,279,771,279"/>
+<area shape="rect" id="Node000017" href="$classtools_1_1pipeline_1_1Pipeline.html#ab308ffdad0654e43a00b3d7d46c81a68" title=" " alt="" coords="5,443,180,483"/>
+<area shape="poly" id="edge18_Node000016_Node000017" title=" " alt="" coords="249,465,180,465,180,460,249,460"/>
+<area shape="rect" id="Node000019" href="$classmy__comm_1_1MyComm.html#a17a237457e57625296e6b24feb19c60a" title="停止通信门面下属所有子模块。" alt="" coords="529,633,728,658"/>
+<area shape="poly" id="edge20_Node000018_Node000019" title=" " alt="" coords="788,675,706,661,707,655,789,669"/>
+<area shape="poly" id="edge21_Node000019_Node000016" title=" " alt="" coords="537,631,519,622,470,591,427,553,365,485,369,481,431,549,474,586,521,618,539,626"/>
+<area shape="rect" id="Node000020" href="$classmy__comm_1_1MyComm.html#a4abac747c204adbe88dddd8902eb74f3" title=" " alt="" coords="228,633,472,658"/>
+<area shape="poly" id="edge22_Node000019_Node000020" title=" " alt="" coords="516,648,472,648,472,643,516,643"/>
+<area shape="poly" id="edge24_Node000021_Node000019" title=" " alt="" coords="794,636,728,641,728,635,793,630"/>
+<area shape="poly" id="edge27_Node000022_Node000014" title=" " alt="" coords="789,429,720,416,722,411,790,424"/>
+<area shape="rect" id="Node000023" href="$classcsy2536_1_1CSY2536Comm.html#aa694e7023b63239e8eb3ed9c67b497c6" title="注册一个解析后的消息回调。" alt="" coords="537,440,721,480"/>
+<area shape="poly" id="edge26_Node000022_Node000023" title=" " alt="" coords="789,455,721,458,721,453,788,449"/>
+<area shape="poly" id="edge30_Node000024_Node000015" title=" " alt="" coords="793,550,716,539,717,534,794,545"/>
+<area shape="rect" id="Node000025" href="$classjson__comm_1_1JsonComm.html#aa694e7023b63239e8eb3ed9c67b497c6" title="注册一个“解析后的 JSON 回调”。" alt="" coords="537,568,720,608"/>
+<area shape="poly" id="edge29_Node000024_Node000025" title=" " alt="" coords="794,574,720,582,720,576,794,569"/>
+<area shape="rect" id="Node000027" href="$classcsy2536_1_1CSY2536Comm.html#af3718c41da8a7081dd430e70a8c5ff2d" title="清空某个 Topic 的全部回调（包括内部订阅）。" alt="" coords="537,733,721,773"/>
+<area shape="poly" id="edge32_Node000026_Node000027" title=" " alt="" coords="787,756,721,756,721,751,787,751"/>
+<area shape="rect" id="Node000029" href="$classjson__comm_1_1JsonComm.html#af3718c41da8a7081dd430e70a8c5ff2d" title="清空某个 topic 的全部回调（包括底层订阅）。" alt="" coords="541,797,716,837"/>
+<area shape="poly" id="edge34_Node000028_Node000029" title=" " alt="" coords="787,820,716,820,716,815,787,815"/>
 </map>

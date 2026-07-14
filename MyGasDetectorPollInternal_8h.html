@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_gas_detector_poll/MyGasDetectorPollInternal.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_3c4d1953eaa17ec785f594f34b675a2c.html">my_gas_detector_poll</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle"><div class="title">MyGasDetectorPollInternal.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;chrono&gt;</code><br />
+<code>#include &lt;cctype&gt;</code><br />
+<code>#include &lt;cerrno&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;cstdint&gt;</code><br />
+<code>#include &lt;ctime&gt;</code><br />
+<code>#include &lt;iomanip&gt;</code><br />
+<code>#include &lt;initializer_list&gt;</code><br />
+<code>#include &lt;limits&gt;</code><br />
+<code>#include &lt;set&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;stdexcept&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;nlohmann/json.hpp&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+MyGasDetectorPollInternal.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="MyGasDetectorPollInternal_8h__incl.png" border="0" usemap="#asrc_2util_2my__gas__detector__poll_2MyGasDetectorPollInternal_8h" alt=""/></div>
+<map name="asrc_2util_2my__gas__detector__poll_2MyGasDetectorPollInternal_8h" id="asrc_2util_2my__gas__detector__poll_2MyGasDetectorPollInternal_8h">
+<area shape="rect" title=" " alt="" coords="617,5,861,45"/>
+<area shape="rect" title=" " alt="" coords="5,93,91,119"/>
+<area shape="poly" title=" " alt="" coords="617,38,383,60,105,96,104,91,383,55,616,33"/>
+<area shape="rect" title=" " alt="" coords="115,93,181,119"/>
+<area shape="poly" title=" " alt="" coords="616,40,422,61,195,96,194,91,422,56,616,35"/>
+<area shape="rect" title=" " alt="" coords="206,93,271,119"/>
+<area shape="poly" title=" " alt="" coords="617,44,463,65,286,96,285,90,462,60,616,38"/>
+<area shape="rect" title=" " alt="" coords="295,93,358,119"/>
+<area shape="poly" title=" " alt="" coords="622,48,372,96,371,90,621,43"/>
+<area shape="rect" title=" " alt="" coords="382,93,445,119"/>
+<area shape="poly" title=" " alt="" coords="659,48,459,96,457,91,657,43"/>
+<area shape="rect" title=" " alt="" coords="469,93,536,119"/>
+<area shape="poly" title=" " alt="" coords="683,48,550,92,548,87,681,43"/>
+<area shape="rect" title=" " alt="" coords="560,93,619,119"/>
+<area shape="poly" title=" " alt="" coords="704,48,625,89,622,84,702,43"/>
+<area shape="rect" title=" " alt="" coords="643,93,717,119"/>
+<area shape="poly" title=" " alt="" coords="727,47,699,84,695,80,722,44"/>
+<area shape="rect" title=" " alt="" coords="742,93,853,119"/>
+<area shape="poly" title=" " alt="" coords="755,44,782,80,778,84,751,47"/>
+<area shape="rect" title=" " alt="" coords="877,93,936,119"/>
+<area shape="poly" title=" " alt="" coords="780,43,871,85,868,90,778,48"/>
+<area shape="rect" title=" " alt="" coords="960,93,1003,119"/>
+<area shape="poly" title=" " alt="" coords="800,43,948,90,946,96,798,48"/>
+<area shape="rect" title=" " alt="" coords="1027,93,1101,119"/>
+<area shape="poly" title=" " alt="" coords="817,43,1014,90,1013,95,816,48"/>
+<area shape="rect" title=" " alt="" coords="1126,93,1213,119"/>
+<area shape="poly" title=" " alt="" coords="848,43,1113,91,1112,96,847,48"/>
+<area shape="rect" title=" " alt="" coords="1237,93,1296,119"/>
+<area shape="poly" title=" " alt="" coords="861,36,1029,58,1224,91,1223,96,1029,63,861,42"/>
+<area shape="rect" title=" " alt="" coords="1321,93,1383,119"/>
+<area shape="poly" title=" " alt="" coords="861,34,1066,55,1185,71,1307,91,1306,96,1185,76,1065,60,861,39"/>
+<area shape="rect" title=" " alt="" coords="1408,93,1555,119"/>
+<area shape="poly" title=" " alt="" coords="861,35,1395,91,1394,96,861,41"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="MyGasDetectorPollInternal_8h__dep__incl.png" border="0" usemap="#asrc_2util_2my__gas__detector__poll_2MyGasDetectorPollInternal_8hdep" alt=""/></div>
+<map name="asrc_2util_2my__gas__detector__poll_2MyGasDetectorPollInternal_8hdep" id="asrc_2util_2my__gas__detector__poll_2MyGasDetectorPollInternal_8hdep">
+<area shape="rect" title=" " alt="" coords="229,5,473,45"/>
+<area shape="rect" href="MyGasDetectorData_8cpp.html" title=" " alt="" coords="5,93,221,133"/>
+<area shape="poly" title=" " alt="" coords="287,53,166,96,164,91,285,48"/>
+<area shape="rect" href="MyGasDetectorPoll_8cpp.html" title=" " alt="" coords="246,93,455,133"/>
+<area shape="poly" title=" " alt="" coords="353,59,353,93,348,93,348,59"/>
+<area shape="rect" href="MyGasDetectorPollConfig_8cpp.html" title=" " alt="" coords="480,93,731,133"/>
+<area shape="poly" title=" " alt="" coords="420,47,550,91,549,96,419,52"/>
+</map>
+</div>
+</div>
+<p><a href="MyGasDetectorPollInternal_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacemy__gas__detector__poll" id="r_namespacemy__gas__detector__poll"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__gas__detector__poll.html">my_gas_detector_poll</a></td></tr>
+<tr class="memdesc:namespacemy__gas__detector__poll"><td class="mdescLeft">&#160;</td><td class="mdescRight">气体检测仪轮询模块的数据类型定义。 <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacemy__gas__detector__poll_1_1detail" id="r_namespacemy__gas__detector__poll_1_1detail"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__gas__detector__poll_1_1detail.html">my_gas_detector_poll::detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a94ab0e860727fa5faea704bc8c722f97" id="r_a94ab0e860727fa5faea704bc8c722f97"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__gas__detector__poll_1_1detail.html#a94ab0e860727fa5faea704bc8c722f97">TrimCopy</a> (const std::string &amp;value)</td></tr>
+<tr class="separator:a94ab0e860727fa5faea704bc8c722f97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8e7a5d809650d9332a11a3627360493" id="r_ae8e7a5d809650d9332a11a3627360493"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__gas__detector__poll_1_1detail.html#ae8e7a5d809650d9332a11a3627360493">LowerCopy</a> (const std::string &amp;value)</td></tr>
+<tr class="separator:ae8e7a5d809650d9332a11a3627360493"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a844247751280d644fb756969529c26b8" id="r_a844247751280d644fb756969529c26b8"><td class="memItemLeft" align="right" valign="top">const nlohmann::json *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__gas__detector__poll_1_1detail.html#a844247751280d644fb756969529c26b8">FindValue</a> (const nlohmann::json &amp;object, std::initializer_list&lt; const char * &gt; keys)</td></tr>
+<tr class="separator:a844247751280d644fb756969529c26b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac235942e61feb2fa9215b41dfb8156de" id="r_ac235942e61feb2fa9215b41dfb8156de"><td class="memItemLeft" align="right" valign="top">const nlohmann::json *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__gas__detector__poll_1_1detail.html#ac235942e61feb2fa9215b41dfb8156de">FindConfigValue</a> (const nlohmann::json &amp;config, const nlohmann::json &amp;serial_config, std::initializer_list&lt; const char * &gt; keys)</td></tr>
+<tr class="separator:ac235942e61feb2fa9215b41dfb8156de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99c5fb7009fb3a4f82350ce4b23ea681" id="r_a99c5fb7009fb3a4f82350ce4b23ea681"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__gas__detector__poll_1_1detail.html#a99c5fb7009fb3a4f82350ce4b23ea681">JsonString</a> (const nlohmann::json &amp;value, const std::string &amp;field_name, bool allow_number=false)</td></tr>
+<tr class="separator:a99c5fb7009fb3a4f82350ce4b23ea681"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19945c86f13e1b30ad5e26d2b5220205" id="r_a19945c86f13e1b30ad5e26d2b5220205"><td class="memItemLeft" align="right" valign="top">std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__gas__detector__poll_1_1detail.html#a19945c86f13e1b30ad5e26d2b5220205">ParseUnsignedText</a> (const std::string &amp;text, const std::string &amp;field_name)</td></tr>
+<tr class="separator:a19945c86f13e1b30ad5e26d2b5220205"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69a16cb4b86ef3474a942eb6b230087f" id="r_a69a16cb4b86ef3474a942eb6b230087f"><td class="memItemLeft" align="right" valign="top">std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__gas__detector__poll_1_1detail.html#a69a16cb4b86ef3474a942eb6b230087f">JsonUnsigned</a> (const nlohmann::json &amp;value, const std::string &amp;field_name, std::uint64_t default_value)</td></tr>
+<tr class="separator:a69a16cb4b86ef3474a942eb6b230087f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8afc6023ba676a9d33212390b3b6eee0" id="r_a8afc6023ba676a9d33212390b3b6eee0"><td class="memItemLeft" align="right" valign="top">std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__gas__detector__poll_1_1detail.html#a8afc6023ba676a9d33212390b3b6eee0">ToUint32</a> (std::uint64_t value, const std::string &amp;field_name)</td></tr>
+<tr class="separator:a8afc6023ba676a9d33212390b3b6eee0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2c58615e3b3cb606d042dc97285b44b" id="r_af2c58615e3b3cb606d042dc97285b44b"><td class="memItemLeft" align="right" valign="top">std::uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__gas__detector__poll_1_1detail.html#af2c58615e3b3cb606d042dc97285b44b">ToUint16</a> (std::uint64_t value, const std::string &amp;field_name)</td></tr>
+<tr class="separator:af2c58615e3b3cb606d042dc97285b44b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b9b8a3deaf6a1adfb80dd2570b48a76" id="r_a7b9b8a3deaf6a1adfb80dd2570b48a76"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__gas__detector__poll_1_1detail.html#a7b9b8a3deaf6a1adfb80dd2570b48a76">JsonInteger</a> (const nlohmann::json &amp;value, const std::string &amp;field_name, int default_value)</td></tr>
+<tr class="separator:a7b9b8a3deaf6a1adfb80dd2570b48a76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15554fc77e1015dfde8d8884284c7f76" id="r_a15554fc77e1015dfde8d8884284c7f76"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__gas__detector__poll_1_1detail.html#a15554fc77e1015dfde8d8884284c7f76">JsonBoolean</a> (const nlohmann::json &amp;value, const std::string &amp;field_name, bool default_value)</td></tr>
+<tr class="separator:a15554fc77e1015dfde8d8884284c7f76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae92c2882b5aa968007835396a7168f7" id="r_aae92c2882b5aa968007835396a7168f7"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__gas__detector__poll_1_1detail.html#aae92c2882b5aa968007835396a7168f7">GetStringValue</a> (const nlohmann::json &amp;config, const nlohmann::json &amp;serial_config, std::initializer_list&lt; const char * &gt; keys, const std::string &amp;default_value, bool allow_number=false)</td></tr>
+<tr class="separator:aae92c2882b5aa968007835396a7168f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeee412cd5f120cdd8093c6975ee14827" id="r_aeee412cd5f120cdd8093c6975ee14827"><td class="memItemLeft" align="right" valign="top">std::uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__gas__detector__poll_1_1detail.html#aeee412cd5f120cdd8093c6975ee14827">GetUnsignedValue</a> (const nlohmann::json &amp;config, const nlohmann::json &amp;serial_config, std::initializer_list&lt; const char * &gt; keys, std::uint64_t default_value)</td></tr>
+<tr class="separator:aeee412cd5f120cdd8093c6975ee14827"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace8695b58db1615cd412291d11d91736" id="r_ace8695b58db1615cd412291d11d91736"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__gas__detector__poll_1_1detail.html#ace8695b58db1615cd412291d11d91736">GetIntegerValue</a> (const nlohmann::json &amp;config, const nlohmann::json &amp;serial_config, std::initializer_list&lt; const char * &gt; keys, int default_value)</td></tr>
+<tr class="separator:ace8695b58db1615cd412291d11d91736"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaca69db38a0dfda5d50e243972a9882" id="r_aeaca69db38a0dfda5d50e243972a9882"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__gas__detector__poll_1_1detail.html#aeaca69db38a0dfda5d50e243972a9882">GetBooleanValue</a> (const nlohmann::json &amp;config, const nlohmann::json &amp;serial_config, std::initializer_list&lt; const char * &gt; keys, bool default_value)</td></tr>
+<tr class="separator:aeaca69db38a0dfda5d50e243972a9882"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f0e70eff31389f6a5c41b1627ddf960" id="r_a4f0e70eff31389f6a5c41b1627ddf960"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__gas__detector__poll_1_1detail.html#a4f0e70eff31389f6a5c41b1627ddf960">AppendAddress</a> (int address, std::vector&lt; std::uint8_t &gt; *addresses, std::set&lt; int &gt; *seen)</td></tr>
+<tr class="separator:a4f0e70eff31389f6a5c41b1627ddf960"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a710f4eb85545dced4694cf935519ff7c" id="r_a710f4eb85545dced4694cf935519ff7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__gas__detector__poll_1_1detail.html#a710f4eb85545dced4694cf935519ff7c">ParseAddressText</a> (const std::string &amp;text, std::vector&lt; std::uint8_t &gt; *addresses, std::set&lt; int &gt; *seen)</td></tr>
+<tr class="separator:a710f4eb85545dced4694cf935519ff7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86eae7f15e4170b2dcf9fcb4ed68d8ed" id="r_a86eae7f15e4170b2dcf9fcb4ed68d8ed"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__gas__detector__poll_1_1detail.html#a86eae7f15e4170b2dcf9fcb4ed68d8ed">ParseAddresses</a> (const nlohmann::json &amp;value)</td></tr>
+<tr class="separator:a86eae7f15e4170b2dcf9fcb4ed68d8ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64159466e90316e74f19f2cd5c84b38c" id="r_a64159466e90316e74f19f2cd5c84b38c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__gas__detector__poll_1_1detail.html#a64159466e90316e74f19f2cd5c84b38c">FormatScaled</a> (std::uint16_t raw, int decimals)</td></tr>
+<tr class="separator:a64159466e90316e74f19f2cd5c84b38c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4aa2b7ee4aa0e509bb1bf19c7423338" id="r_ad4aa2b7ee4aa0e509bb1bf19c7423338"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__gas__detector__poll_1_1detail.html#ad4aa2b7ee4aa0e509bb1bf19c7423338">FormatFixed1</a> (double value)</td></tr>
+<tr class="separator:ad4aa2b7ee4aa0e509bb1bf19c7423338"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b5b2e8e5c530c341b54a1b4cc47ceca" id="r_a8b5b2e8e5c530c341b54a1b4cc47ceca"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__gas__detector__poll_1_1detail.html#a8b5b2e8e5c530c341b54a1b4cc47ceca">TimestampNow</a> ()</td></tr>
+<tr class="separator:a8b5b2e8e5c530c341b54a1b4cc47ceca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05d0323d2dbaa71b8814fd623be8d748" id="r_a05d0323d2dbaa71b8814fd623be8d748"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__gas__detector__poll_1_1detail.html#a05d0323d2dbaa71b8814fd623be8d748">UnitName</a> (int code)</td></tr>
+<tr class="separator:a05d0323d2dbaa71b8814fd623be8d748"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61ea1b35920cfd01a4b043cce23ac9a0" id="r_a61ea1b35920cfd01a4b043cce23ac9a0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__gas__detector__poll_1_1detail.html#a61ea1b35920cfd01a4b043cce23ac9a0">DecimalPlaces</a> (int code)</td></tr>
+<tr class="separator:a61ea1b35920cfd01a4b043cce23ac9a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15dde935cad19a9490af8ae1ce114006" id="r_a15dde935cad19a9490af8ae1ce114006"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__gas__detector__poll_1_1detail.html#a15dde935cad19a9490af8ae1ce114006">StatusName</a> (int code)</td></tr>
+<tr class="separator:a15dde935cad19a9490af8ae1ce114006"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec66b0d0569c5334d230eaf8ae539a80" id="r_aec66b0d0569c5334d230eaf8ae539a80"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__gas__detector__poll_1_1detail.html#aec66b0d0569c5334d230eaf8ae539a80">GasName</a> (int code)</td></tr>
+<tr class="separator:aec66b0d0569c5334d230eaf8ae539a80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7c29c7b6fad87521fb0be2e55915417" id="r_ac7c29c7b6fad87521fb0be2e55915417"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__gas__detector__poll_1_1detail.html#ac7c29c7b6fad87521fb0be2e55915417">ExceptionName</a> (int code)</td></tr>
+<tr class="separator:ac7c29c7b6fad87521fb0be2e55915417"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb35174a309d85c04d095f8213e8910e" id="r_acb35174a309d85c04d095f8213e8910e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__gas__detector__poll_1_1detail.html#acb35174a309d85c04d095f8213e8910e">SafeJsonDump</a> (const nlohmann::json &amp;value)</td></tr>
+<tr class="separator:acb35174a309d85c04d095f8213e8910e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:af10e3890691fc5cad787e897abbc5ae3" id="r_af10e3890691fc5cad787e897abbc5ae3"><td class="memItemLeft" align="right" valign="top">const std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__gas__detector__poll_1_1detail.html#af10e3890691fc5cad787e897abbc5ae3">kMaxResponseSize</a> = 260</td></tr>
+<tr class="separator:af10e3890691fc5cad787e897abbc5ae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae94ad3c2d854d03825e205febd72ef58" id="r_ae94ad3c2d854d03825e205febd72ef58"><td class="memItemLeft" align="right" valign="top">const std::uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemy__gas__detector__poll_1_1detail.html#ae94ad3c2d854d03825e205febd72ef58">kDefaultReadSliceTimeoutMs</a> = 50</td></tr>
+<tr class="separator:ae94ad3c2d854d03825e205febd72ef58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<map id="Now" name="Now">
+<area shape="rect" id="Node000001" title="获取当前 Unix 时间戳，单位：秒。" alt="" coords="361,445,412,471"/>
+<area shape="rect" id="Node000002" href="$namespaceDateTimeTools.html#a9e1282ae7b591d1266b41864575a51d3" title="在当前时间基础上增加天数。" alt="" coords="199,29,279,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="381,432,375,349,362,240,341,136,328,95,311,68,296,56,278,49,280,44,299,52,315,64,332,93,347,135,367,239,380,349,387,431"/>
+<area shape="rect" id="Node000003" href="$namespaceDateTimeTools.html#ad38217dc581809124fdae3ac7db69b9c" title="在当前时间基础上增加小时。" alt="" coords="197,103,282,128"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="380,432,372,364,357,277,337,194,325,163,311,141,298,131,281,124,283,119,300,126,315,138,330,160,342,193,363,276,377,363,385,431"/>
+<area shape="rect" id="Node000004" href="$namespaceDateTimeTools.html#a0a9599a55789c0a146822dc325b2b71e" title="在当前时间基础上增加分钟。" alt="" coords="190,176,289,201"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="383,432,379,386,368,328,347,267,331,239,312,215,288,200,290,195,315,211,336,236,352,265,374,326,384,385,388,432"/>
+<area shape="rect" id="Node000005" href="$namespaceDateTimeTools.html#a1930c85b9f150837e7cccfa4788bdf8b" title="在当前时间基础上增加秒。" alt="" coords="189,249,290,275"/>
+<area shape="poly" id="edge7_Node000001_Node000005" title=" " alt="" coords="379,432,371,399,358,360,339,322,312,288,289,274,292,270,315,284,343,319,363,358,376,398,384,431"/>
+<area shape="rect" id="Node000006" href="$namespaceDateTimeTools.html#af0cbb6147ae3fa9141011248a68fe394" title="获取当前星期，范围 1~7，1 表示周一，7 表示周日。" alt="" coords="190,323,289,348"/>
+<area shape="poly" id="edge9_Node000001_Node000006" title=" " alt="" coords="371,435,346,397,330,378,312,362,288,349,290,344,315,357,334,374,351,394,375,432"/>
+<area shape="rect" id="Node000007" href="$namespaceDateTimeTools.html#af1132b798d626663ad4ada5b0a4de0e0" title="获取当前是一年中的第几天，范围 1~366。" alt="" coords="194,396,285,421"/>
+<area shape="poly" id="edge11_Node000001_Node000007" title=" " alt="" coords="347,447,312,435,279,424,280,419,314,430,349,442"/>
+<area shape="rect" id="Node000008" href="$namespaceDateTimeTools.html#ab269a640b6a59882381a79c848ce3efe" title="获取秒级时间戳字符串。" alt="" coords="180,445,299,471"/>
+<area shape="poly" id="edge13_Node000001_Node000008" title=" " alt="" coords="347,461,299,461,299,455,347,455"/>
+<area shape="rect" id="Node000009" href="$namespaceDateTimeTools.html#a6c415e8adc901b5bce0b3548a45bb1a8" title="获取当前本地时区相对 UTC 的偏移秒数，例如中国标准时间为 28800。" alt="" coords="165,495,313,520"/>
+<area shape="poly" id="edge14_Node000001_Node000009" title=" " alt="" coords="349,473,279,497,277,492,347,468"/>
+<area shape="rect" id="Node000010" href="$namespaceDateTimeTools.html#a429c3407539af3c369ece2baeead8da2" title="获取当前 UTC 时间，格式 yyyy&#45;MM&#45;dd HH:mm:ss。" alt="" coords="189,544,289,569"/>
+<area shape="poly" id="edge15_Node000001_Node000010" title=" " alt="" coords="369,484,345,510,315,534,289,546,286,542,312,529,341,506,365,480"/>
+<area shape="rect" id="Node000011" href="$namespaceDateTimeTools.html#a39acbe37a71e62c4cd7e2a8ea53ae079" title="判断秒级截止时间是否已经过期。" alt="" coords="198,593,281,619"/>
+<area shape="poly" id="edge16_Node000001_Node000011" title=" " alt="" coords="379,485,355,534,337,560,315,583,282,600,280,595,312,579,333,557,350,531,374,482"/>
+<area shape="rect" id="Node000012" href="$namespaceDateTimeTools.html#a9d9a436199e368e3768d5b8593d46235" title="判断指定秒级时间戳是否为今天。" alt="" coords="204,643,275,668"/>
+<area shape="poly" id="edge17_Node000001_Node000012" title=" " alt="" coords="384,485,376,518,363,557,343,597,315,632,296,645,276,652,274,647,294,640,312,628,339,594,358,555,371,517,379,484"/>
+<area shape="rect" id="Node000013" href="$namespaceDateTimeTools.html#a7ef596a0c429a1a74709cf14d8fa15d2" title="当前本地时间格式化为 yyyy&#45;MM&#45;dd HH:mm:ss。" alt="" coords="202,692,277,717"/>
+<area shape="poly" id="edge18_Node000001_Node000013" title=" " alt="" coords="387,485,382,527,370,580,349,634,334,659,315,681,298,694,278,701,276,696,295,689,312,677,329,656,344,631,365,578,376,526,381,484"/>
+<area shape="rect" id="Node000016" href="$namespaceDateTimeTools.html#af30ef0c45456ce40a0bcf177e13af11f" title="当前本地时间按 strftime 格式输出，例如 &quot;%Y/%m/%d %H:%M:%S&quot;。" alt="" coords="202,741,277,767"/>
+<area shape="poly" id="edge21_Node000001_Node000016" title=" " alt="" coords="389,484,386,535,376,601,354,670,337,702,315,731,298,744,278,751,276,746,295,739,311,727,333,699,350,668,371,600,381,535,383,484"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="265,18,257,11,239,8,224,10,216,15,215,20,219,28,214,31,209,21,212,11,222,5,239,3,260,6,268,15"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="265,92,257,84,239,81,224,83,216,88,215,94,219,101,214,104,209,94,212,85,222,78,239,76,260,80,268,88"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="265,165,257,158,239,155,224,157,216,161,215,167,219,175,214,177,209,168,212,158,222,152,239,149,260,153,268,161"/>
+<area shape="poly" id="edge8_Node000005_Node000005" title=" " alt="" coords="265,238,257,231,239,228,224,230,216,235,215,240,219,248,214,251,209,241,212,231,222,225,239,223,260,226,268,235"/>
+<area shape="poly" id="edge10_Node000006_Node000006" title=" " alt="" coords="265,312,257,304,239,301,224,303,216,308,215,314,219,321,214,324,209,314,212,305,222,298,239,296,260,300,268,308"/>
+<area shape="poly" id="edge12_Node000007_Node000007" title=" " alt="" coords="265,385,257,378,239,375,224,377,216,381,215,387,219,395,214,397,209,388,212,378,222,372,239,369,260,373,268,381"/>
+<area shape="rect" id="Node000014" href="$namespaceDateTimeTools.html#abe16ae1f752a86a62a2027fa82efe978" title="获取当前本地时间，格式 yyyy&#45;MM&#45;dd HH:mm:ss。" alt="" coords="5,668,117,693"/>
+<area shape="poly" id="edge19_Node000013_Node000014" title=" " alt="" coords="188,700,117,691,118,686,188,695"/>
+<area shape="rect" id="Node000015" href="$namespaceDateTimeTools.html#abfef80e51c93e5dc95bd78bd4e3a61ef" title="当前日期，格式 yyyy&#45;MM&#45;dd。" alt="" coords="31,717,91,743"/>
+<area shape="poly" id="edge20_Node000013_Node000015" title=" " alt="" coords="189,714,92,728,91,723,188,709"/>
+</map>

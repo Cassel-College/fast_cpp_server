@@ -1,22 +1,34 @@
 <map id="src/util/my_audio/MyAudios.h" name="src/util/my_audio/MyAudios.h">
-<area shape="rect" id="Node000001" title="扬声器框架 —— 全局音频设备管理器（单例）" alt="" coords="315,5,530,31"/>
-<area shape="rect" id="Node000002" href="$BaseAudio_8h.html" title="扬声器框架 —— 音频设备基类" alt="" coords="159,79,262,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="389,33,259,77,257,72,388,28"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="267,152,413,177"/>
-<area shape="poly" id="edge10_Node000001_Node000006" title=" " alt="" coords="400,33,371,52,348,80,339,109,339,138,334,138,334,108,343,77,368,48,397,28"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="357,79,408,104"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="418,32,398,68,394,65,414,30"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="433,79,495,104"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="432,30,453,65,448,68,427,32"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="520,79,597,104"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="446,28,526,70,523,75,443,33"/>
-<area shape="rect" id="Node000010" title=" " alt="" coords="621,79,685,104"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="461,28,609,74,607,79,459,33"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="5,152,64,177"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="183,106,77,149,75,144,181,102"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="88,152,155,177"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="198,106,148,145,145,141,195,102"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="179,152,243,177"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="213,104,213,138,208,138,208,104"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="233,102,308,143,305,147,230,106"/>
+<area shape="rect" id="Node000001" title="扬声器框架 —— 全局音频设备管理器（单例）" alt="" coords="867,5,1081,31"/>
+<area shape="rect" id="Node000002" href="$BaseAudio_8h.html" title="扬声器框架 —— 音频设备基类" alt="" coords="833,79,936,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="961,33,912,72,908,68,958,29"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="1031,159,1178,185"/>
+<area shape="poly" id="edge17_Node000001_Node000006" title=" " alt="" coords="978,30,984,65,991,85,1001,102,1031,130,1065,151,1062,155,1028,135,997,106,986,87,979,66,972,31"/>
+<area shape="rect" id="Node000007" href="$MyLog_8h.html" title=" " alt="" coords="547,79,625,104"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="912,33,639,83,638,78,911,28"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="669,159,746,185"/>
+<area shape="poly" id="edge15_Node000001_Node000012" title=" " alt="" coords="937,33,882,53,823,81,772,116,731,152,728,148,769,112,821,76,880,48,935,28"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="1011,79,1062,104"/>
+<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="986,29,1019,66,1015,70,982,33"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="1087,79,1149,104"/>
+<area shape="poly" id="edge14_Node000001_Node000014" title=" " alt="" coords="998,28,1083,70,1081,75,996,33"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="1174,79,1238,104"/>
+<area shape="poly" id="edge16_Node000001_Node000015" title=" " alt="" coords="1012,28,1162,74,1160,79,1010,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="770,159,829,185"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="874,106,824,152,820,148,870,102"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="941,159,1007,185"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="900,102,952,148,949,152,896,106"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="853,159,917,185"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="887,104,887,145,882,145,882,104"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="918,101,1060,152,1059,157,916,107"/>
+<area shape="poly" id="edge12_Node000007_Node000003" title=" " alt="" coords="623,102,759,150,764,151,762,156,757,154,621,107"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="196,159,320,185"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="548,104,332,155,316,159,315,153,331,149,547,99"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="344,152,503,192"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="563,106,476,148,474,144,561,102"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="527,159,645,185"/>
+<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="589,104,589,145,583,145,583,104"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="5,159,172,185"/>
+<area shape="poly" id="edge10_Node000007_Node000011" title=" " alt="" coords="547,100,388,123,184,155,158,159,157,154,183,149,388,117,547,95"/>
+<area shape="poly" id="edge11_Node000007_Node000012" title=" " alt="" coords="605,102,680,150,677,154,602,106"/>
 </map>

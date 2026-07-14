@@ -1,0 +1,322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_tools/MyDateTime.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_222f75d460e07a5cd0325e16008607c5.html">my_tools</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">MyDateTime.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;ctime&gt;</code><br />
+<code>#include &lt;cstdint&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+MyDateTime.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="MyDateTime_8h__incl.png" border="0" usemap="#asrc_2util_2my__tools_2MyDateTime_8h" alt=""/></div>
+<map name="asrc_2util_2my__tools_2MyDateTime_8h" id="asrc_2util_2my__tools_2MyDateTime_8h">
+<area shape="rect" title=" " alt="" coords="29,5,214,45"/>
+<area shape="rect" title=" " alt="" coords="5,93,64,119"/>
+<area shape="poly" title=" " alt="" coords="102,48,60,86,56,82,99,44"/>
+<area shape="rect" title=" " alt="" coords="88,93,155,119"/>
+<area shape="poly" title=" " alt="" coords="124,46,124,79,119,79,119,46"/>
+<area shape="rect" title=" " alt="" coords="179,93,237,119"/>
+<area shape="poly" title=" " alt="" coords="144,44,187,82,183,86,141,48"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="MyDateTime_8h__dep__incl.png" border="0" usemap="#asrc_2util_2my__tools_2MyDateTime_8hdep" alt=""/></div>
+<map name="asrc_2util_2my__tools_2MyDateTime_8hdep" id="asrc_2util_2my__tools_2MyDateTime_8hdep">
+<area shape="rect" title=" " alt="" coords="5,5,191,45"/>
+<area shape="rect" href="MyDateTime_8cpp.html" title=" " alt="" coords="5,93,191,133"/>
+<area shape="poly" title=" " alt="" coords="101,59,101,93,95,93,95,59"/>
+</map>
+</div>
+</div>
+<p><a href="MyDateTime_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDateTimeTools_1_1DateTime.html">DateTime</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">业务侧常用的拆分日期时间结构。  <a href="structDateTimeTools_1_1DateTime.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespaceDateTimeTools" id="r_namespaceDateTimeTools"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html">DateTimeTools</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a14e96d485d02cfac43cdc2bb5df87661" id="r_a14e96d485d02cfac43cdc2bb5df87661"><td class="memItemLeft" align="right" valign="top">std::time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a14e96d485d02cfac43cdc2bb5df87661">Now</a> ()</td></tr>
+<tr class="memdesc:a14e96d485d02cfac43cdc2bb5df87661"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前 Unix 时间戳，单位：秒。  <br /></td></tr>
+<tr class="separator:a14e96d485d02cfac43cdc2bb5df87661"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae436b9032a29a3934abb23a10f2cb3f7" id="r_ae436b9032a29a3934abb23a10f2cb3f7"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#ae436b9032a29a3934abb23a10f2cb3f7">NowMs</a> ()</td></tr>
+<tr class="memdesc:ae436b9032a29a3934abb23a10f2cb3f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前 Unix 时间戳，单位：毫秒。  <br /></td></tr>
+<tr class="separator:ae436b9032a29a3934abb23a10f2cb3f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a987512d3ee07d6f271afcdc32f64273f" id="r_a987512d3ee07d6f271afcdc32f64273f"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a987512d3ee07d6f271afcdc32f64273f">NowUs</a> ()</td></tr>
+<tr class="memdesc:a987512d3ee07d6f271afcdc32f64273f"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前 Unix 时间戳，单位：微秒。  <br /></td></tr>
+<tr class="separator:a987512d3ee07d6f271afcdc32f64273f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8bb5e13fc61486b64ef43ed1df4c5f3" id="r_ae8bb5e13fc61486b64ef43ed1df4c5f3"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#ae8bb5e13fc61486b64ef43ed1df4c5f3">NowNs</a> ()</td></tr>
+<tr class="memdesc:ae8bb5e13fc61486b64ef43ed1df4c5f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前 Unix 时间戳，单位：纳秒。  <br /></td></tr>
+<tr class="separator:ae8bb5e13fc61486b64ef43ed1df4c5f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab269a640b6a59882381a79c848ce3efe" id="r_ab269a640b6a59882381a79c848ce3efe"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#ab269a640b6a59882381a79c848ce3efe">GetTimestamp</a> ()</td></tr>
+<tr class="memdesc:ab269a640b6a59882381a79c848ce3efe"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取秒级时间戳字符串。  <br /></td></tr>
+<tr class="separator:ab269a640b6a59882381a79c848ce3efe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f7e0947dea2803d356e0b4f52972dd9" id="r_a9f7e0947dea2803d356e0b4f52972dd9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a9f7e0947dea2803d356e0b4f52972dd9">GetTimestampMs</a> ()</td></tr>
+<tr class="memdesc:a9f7e0947dea2803d356e0b4f52972dd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取毫秒级时间戳字符串。  <br /></td></tr>
+<tr class="separator:a9f7e0947dea2803d356e0b4f52972dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c34b1dc4c52d8b2d981535b46107c59" id="r_a0c34b1dc4c52d8b2d981535b46107c59"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a0c34b1dc4c52d8b2d981535b46107c59">GetTimestampUs</a> ()</td></tr>
+<tr class="memdesc:a0c34b1dc4c52d8b2d981535b46107c59"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取微秒级时间戳字符串。  <br /></td></tr>
+<tr class="separator:a0c34b1dc4c52d8b2d981535b46107c59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03419413dcad2791cce5639b576f2b01" id="r_a03419413dcad2791cce5639b576f2b01"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a03419413dcad2791cce5639b576f2b01">GetTimestampNs</a> ()</td></tr>
+<tr class="memdesc:a03419413dcad2791cce5639b576f2b01"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取纳秒级时间戳字符串。  <br /></td></tr>
+<tr class="separator:a03419413dcad2791cce5639b576f2b01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ef596a0c429a1a74709cf14d8fa15d2" id="r_a7ef596a0c429a1a74709cf14d8fa15d2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a7ef596a0c429a1a74709cf14d8fa15d2">ToString</a> ()</td></tr>
+<tr class="memdesc:a7ef596a0c429a1a74709cf14d8fa15d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前本地时间格式化为 yyyy-MM-dd HH:mm:ss。  <br /></td></tr>
+<tr class="separator:a7ef596a0c429a1a74709cf14d8fa15d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0071e66215aed608a402f52e846a565e" id="r_a0071e66215aed608a402f52e846a565e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a0071e66215aed608a402f52e846a565e">ToStringMs</a> ()</td></tr>
+<tr class="memdesc:a0071e66215aed608a402f52e846a565e"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前本地时间格式化为 yyyy-MM-dd HH:mm:ss.SSS。  <br /></td></tr>
+<tr class="separator:a0071e66215aed608a402f52e846a565e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae59d2775e8e5b0d680ea16b46f53c68c" id="r_ae59d2775e8e5b0d680ea16b46f53c68c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#ae59d2775e8e5b0d680ea16b46f53c68c">ToStringUs</a> ()</td></tr>
+<tr class="memdesc:ae59d2775e8e5b0d680ea16b46f53c68c"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前本地时间格式化为 yyyy-MM-dd HH:mm:ss.ffffff。  <br /></td></tr>
+<tr class="separator:ae59d2775e8e5b0d680ea16b46f53c68c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af30ef0c45456ce40a0bcf177e13af11f" id="r_af30ef0c45456ce40a0bcf177e13af11f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#af30ef0c45456ce40a0bcf177e13af11f">ToString</a> (const std::string &amp;format)</td></tr>
+<tr class="memdesc:af30ef0c45456ce40a0bcf177e13af11f"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前本地时间按 strftime 格式输出，例如 "%Y/%m/%d %H:%M:%S"。  <br /></td></tr>
+<tr class="separator:af30ef0c45456ce40a0bcf177e13af11f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f703982d55f8d71f1a289cee1df81dd" id="r_a6f703982d55f8d71f1a289cee1df81dd"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a6f703982d55f8d71f1a289cee1df81dd">Format</a> (std::time_t seconds, const std::string &amp;format=&quot;%Y-%m-%d %H:%M:%S&quot;)</td></tr>
+<tr class="memdesc:a6f703982d55f8d71f1a289cee1df81dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定秒级时间戳格式化，默认 yyyy-MM-dd HH:mm:ss。  <br /></td></tr>
+<tr class="separator:a6f703982d55f8d71f1a289cee1df81dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69ba495f3e5182f08aadcff392f806b4" id="r_a69ba495f3e5182f08aadcff392f806b4"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a69ba495f3e5182f08aadcff392f806b4">FormatMs</a> (int64_t milliseconds, const std::string &amp;format=&quot;%Y-%m-%d %H:%M:%S&quot;)</td></tr>
+<tr class="memdesc:a69ba495f3e5182f08aadcff392f806b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定毫秒级时间戳格式化，默认 yyyy-MM-dd HH:mm:ss.SSS。  <br /></td></tr>
+<tr class="separator:a69ba495f3e5182f08aadcff392f806b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a412e7f1f236155e5bfcce94a77930598" id="r_a412e7f1f236155e5bfcce94a77930598"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a412e7f1f236155e5bfcce94a77930598">FormatUs</a> (int64_t microseconds, const std::string &amp;format=&quot;%Y-%m-%d %H:%M:%S&quot;)</td></tr>
+<tr class="memdesc:a412e7f1f236155e5bfcce94a77930598"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定微秒级时间戳格式化，默认 yyyy-MM-dd HH:mm:ss.ffffff。  <br /></td></tr>
+<tr class="separator:a412e7f1f236155e5bfcce94a77930598"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af07202b4992fc1fc6b7e1a1353e4a151" id="r_af07202b4992fc1fc6b7e1a1353e4a151"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#af07202b4992fc1fc6b7e1a1353e4a151">FormatNs</a> (int64_t nanoseconds, const std::string &amp;format=&quot;%Y-%m-%d %H:%M:%S&quot;)</td></tr>
+<tr class="memdesc:af07202b4992fc1fc6b7e1a1353e4a151"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定纳秒级时间戳格式化，默认 yyyy-MM-dd HH:mm:ss.nnnnnnnnn。  <br /></td></tr>
+<tr class="separator:af07202b4992fc1fc6b7e1a1353e4a151"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7d107cdbd791d7b0ed61d92a5c21afd" id="r_ad7d107cdbd791d7b0ed61d92a5c21afd"><td class="memItemLeft" align="right" valign="top">std::time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#ad7d107cdbd791d7b0ed61d92a5c21afd">Parse</a> (const std::string &amp;datetime)</td></tr>
+<tr class="memdesc:ad7d107cdbd791d7b0ed61d92a5c21afd"><td class="mdescLeft">&#160;</td><td class="mdescRight">解析 yyyy-MM-dd HH:mm:ss，返回秒级 Unix 时间戳；失败返回 -1 并输出中文日志。  <br /></td></tr>
+<tr class="separator:ad7d107cdbd791d7b0ed61d92a5c21afd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21f22aba626ec12a3b937a15b3e13dfc" id="r_a21f22aba626ec12a3b937a15b3e13dfc"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a21f22aba626ec12a3b937a15b3e13dfc">ParseMs</a> (const std::string &amp;datetime)</td></tr>
+<tr class="memdesc:a21f22aba626ec12a3b937a15b3e13dfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">解析 yyyy-MM-dd HH:mm:ss[.SSS]，返回毫秒级 Unix 时间戳；失败返回 -1。  <br /></td></tr>
+<tr class="separator:a21f22aba626ec12a3b937a15b3e13dfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed4d4d789605bd0059421e0932e0d3ac" id="r_aed4d4d789605bd0059421e0932e0d3ac"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#aed4d4d789605bd0059421e0932e0d3ac">ParseUs</a> (const std::string &amp;datetime)</td></tr>
+<tr class="memdesc:aed4d4d789605bd0059421e0932e0d3ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">解析 yyyy-MM-dd HH:mm:ss[.ffffff]，返回微秒级 Unix 时间戳；失败返回 -1。  <br /></td></tr>
+<tr class="separator:aed4d4d789605bd0059421e0932e0d3ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a343dc9848387952c1bd52d2a08096c3d" id="r_a343dc9848387952c1bd52d2a08096c3d"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a343dc9848387952c1bd52d2a08096c3d">ParseNs</a> (const std::string &amp;datetime)</td></tr>
+<tr class="memdesc:a343dc9848387952c1bd52d2a08096c3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">解析 yyyy-MM-dd HH:mm:ss[.nnnnnnnnn]，返回纳秒级 Unix 时间戳；失败返回 -1。  <br /></td></tr>
+<tr class="separator:a343dc9848387952c1bd52d2a08096c3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a429c3407539af3c369ece2baeead8da2" id="r_a429c3407539af3c369ece2baeead8da2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a429c3407539af3c369ece2baeead8da2">GetUtcTime</a> ()</td></tr>
+<tr class="memdesc:a429c3407539af3c369ece2baeead8da2"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前 UTC 时间，格式 yyyy-MM-dd HH:mm:ss。  <br /></td></tr>
+<tr class="separator:a429c3407539af3c369ece2baeead8da2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe16ae1f752a86a62a2027fa82efe978" id="r_abe16ae1f752a86a62a2027fa82efe978"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#abe16ae1f752a86a62a2027fa82efe978">GetLocalTime</a> ()</td></tr>
+<tr class="memdesc:abe16ae1f752a86a62a2027fa82efe978"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前本地时间，格式 yyyy-MM-dd HH:mm:ss。  <br /></td></tr>
+<tr class="separator:abe16ae1f752a86a62a2027fa82efe978"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfef80e51c93e5dc95bd78bd4e3a61ef" id="r_abfef80e51c93e5dc95bd78bd4e3a61ef"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#abfef80e51c93e5dc95bd78bd4e3a61ef">Today</a> ()</td></tr>
+<tr class="memdesc:abfef80e51c93e5dc95bd78bd4e3a61ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前日期，格式 yyyy-MM-dd。  <br /></td></tr>
+<tr class="separator:abfef80e51c93e5dc95bd78bd4e3a61ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c50ef33250c61d0395b0aa86912dcdc" id="r_a2c50ef33250c61d0395b0aa86912dcdc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a2c50ef33250c61d0395b0aa86912dcdc">CurrentYear</a> ()</td></tr>
+<tr class="memdesc:a2c50ef33250c61d0395b0aa86912dcdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前年份，例如 2026。  <br /></td></tr>
+<tr class="separator:a2c50ef33250c61d0395b0aa86912dcdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39333d375c8c91c2c9e3d7e136d94237" id="r_a39333d375c8c91c2c9e3d7e136d94237"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a39333d375c8c91c2c9e3d7e136d94237">CurrentMonth</a> ()</td></tr>
+<tr class="memdesc:a39333d375c8c91c2c9e3d7e136d94237"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前月份，范围 1~12。  <br /></td></tr>
+<tr class="separator:a39333d375c8c91c2c9e3d7e136d94237"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa45d144eaf7f07ac01517b49446252d5" id="r_aa45d144eaf7f07ac01517b49446252d5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#aa45d144eaf7f07ac01517b49446252d5">CurrentDay</a> ()</td></tr>
+<tr class="memdesc:aa45d144eaf7f07ac01517b49446252d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前日期，范围 1~31。  <br /></td></tr>
+<tr class="separator:aa45d144eaf7f07ac01517b49446252d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb5f4e6c8377e2ab99a29f76a17f941c" id="r_aeb5f4e6c8377e2ab99a29f76a17f941c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#aeb5f4e6c8377e2ab99a29f76a17f941c">CurrentHour</a> ()</td></tr>
+<tr class="memdesc:aeb5f4e6c8377e2ab99a29f76a17f941c"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前小时，范围 0~23。  <br /></td></tr>
+<tr class="separator:aeb5f4e6c8377e2ab99a29f76a17f941c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4fec93e6a9dbbec4fad2c95af91648a" id="r_af4fec93e6a9dbbec4fad2c95af91648a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#af4fec93e6a9dbbec4fad2c95af91648a">CurrentMinute</a> ()</td></tr>
+<tr class="memdesc:af4fec93e6a9dbbec4fad2c95af91648a"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前分钟，范围 0~59。  <br /></td></tr>
+<tr class="separator:af4fec93e6a9dbbec4fad2c95af91648a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7dcdd7771da9837c4eb5c2b11961025" id="r_ab7dcdd7771da9837c4eb5c2b11961025"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#ab7dcdd7771da9837c4eb5c2b11961025">CurrentSecond</a> ()</td></tr>
+<tr class="memdesc:ab7dcdd7771da9837c4eb5c2b11961025"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前秒，范围 0~60，闰秒场景可能出现 60。  <br /></td></tr>
+<tr class="separator:ab7dcdd7771da9837c4eb5c2b11961025"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0cbb6147ae3fa9141011248a68fe394" id="r_af0cbb6147ae3fa9141011248a68fe394"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#af0cbb6147ae3fa9141011248a68fe394">DayOfWeek</a> ()</td></tr>
+<tr class="memdesc:af0cbb6147ae3fa9141011248a68fe394"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前星期，范围 1~7，1 表示周一，7 表示周日。  <br /></td></tr>
+<tr class="separator:af0cbb6147ae3fa9141011248a68fe394"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa038570d06c6112b65b73a958bf9da53" id="r_aa038570d06c6112b65b73a958bf9da53"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#aa038570d06c6112b65b73a958bf9da53">DayOfWeek</a> (std::time_t seconds)</td></tr>
+<tr class="memdesc:aa038570d06c6112b65b73a958bf9da53"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定时间的星期，范围 1~7，1 表示周一，7 表示周日。  <br /></td></tr>
+<tr class="separator:aa038570d06c6112b65b73a958bf9da53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1132b798d626663ad4ada5b0a4de0e0" id="r_af1132b798d626663ad4ada5b0a4de0e0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#af1132b798d626663ad4ada5b0a4de0e0">DayOfYear</a> ()</td></tr>
+<tr class="memdesc:af1132b798d626663ad4ada5b0a4de0e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前是一年中的第几天，范围 1~366。  <br /></td></tr>
+<tr class="separator:af1132b798d626663ad4ada5b0a4de0e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6069d0da4dd6db28ac634db75952de0e" id="r_a6069d0da4dd6db28ac634db75952de0e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a6069d0da4dd6db28ac634db75952de0e">DayOfYear</a> (std::time_t seconds)</td></tr>
+<tr class="memdesc:a6069d0da4dd6db28ac634db75952de0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定时间是一年中的第几天，范围 1~366。  <br /></td></tr>
+<tr class="separator:a6069d0da4dd6db28ac634db75952de0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13861c7c06262ec6e689a1b88f07f3cc" id="r_a13861c7c06262ec6e689a1b88f07f3cc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a13861c7c06262ec6e689a1b88f07f3cc">DaysInMonth</a> ()</td></tr>
+<tr class="memdesc:a13861c7c06262ec6e689a1b88f07f3cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前月份天数。  <br /></td></tr>
+<tr class="separator:a13861c7c06262ec6e689a1b88f07f3cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7a1b541bfd7153015faa6e54adf2b9b" id="r_ab7a1b541bfd7153015faa6e54adf2b9b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#ab7a1b541bfd7153015faa6e54adf2b9b">DaysInMonth</a> (int year, int month)</td></tr>
+<tr class="memdesc:ab7a1b541bfd7153015faa6e54adf2b9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定年月的月份天数，month 范围 1~12；非法参数返回 0。  <br /></td></tr>
+<tr class="separator:ab7a1b541bfd7153015faa6e54adf2b9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a498cabbe12c9b264cc086ff4cffaac62" id="r_a498cabbe12c9b264cc086ff4cffaac62"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a498cabbe12c9b264cc086ff4cffaac62">IsLeapYear</a> ()</td></tr>
+<tr class="memdesc:a498cabbe12c9b264cc086ff4cffaac62"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断当前年份是否为闰年。  <br /></td></tr>
+<tr class="separator:a498cabbe12c9b264cc086ff4cffaac62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e3dcae587c7e6394f629a8a97be5e17" id="r_a9e3dcae587c7e6394f629a8a97be5e17"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a9e3dcae587c7e6394f629a8a97be5e17">IsLeapYear</a> (int year)</td></tr>
+<tr class="memdesc:a9e3dcae587c7e6394f629a8a97be5e17"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断指定年份是否为闰年。  <br /></td></tr>
+<tr class="separator:a9e3dcae587c7e6394f629a8a97be5e17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af88626a4714dc52b2b9e43d0d83e00af" id="r_af88626a4714dc52b2b9e43d0d83e00af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDateTimeTools_1_1DateTime.html">DateTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#af88626a4714dc52b2b9e43d0d83e00af">NowDateTime</a> ()</td></tr>
+<tr class="memdesc:af88626a4714dc52b2b9e43d0d83e00af"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前本地日期时间结构体。  <br /></td></tr>
+<tr class="separator:af88626a4714dc52b2b9e43d0d83e00af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e1282ae7b591d1266b41864575a51d3" id="r_a9e1282ae7b591d1266b41864575a51d3"><td class="memItemLeft" align="right" valign="top">std::time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a9e1282ae7b591d1266b41864575a51d3">AddDays</a> (int days)</td></tr>
+<tr class="memdesc:a9e1282ae7b591d1266b41864575a51d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">在当前时间基础上增加天数。  <br /></td></tr>
+<tr class="separator:a9e1282ae7b591d1266b41864575a51d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5acaa2e3ff88d36acc479c20d2a4d7ce" id="r_a5acaa2e3ff88d36acc479c20d2a4d7ce"><td class="memItemLeft" align="right" valign="top">std::time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a5acaa2e3ff88d36acc479c20d2a4d7ce">AddDays</a> (std::time_t base_time, int days)</td></tr>
+<tr class="memdesc:a5acaa2e3ff88d36acc479c20d2a4d7ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">在指定时间基础上增加天数。  <br /></td></tr>
+<tr class="separator:a5acaa2e3ff88d36acc479c20d2a4d7ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad38217dc581809124fdae3ac7db69b9c" id="r_ad38217dc581809124fdae3ac7db69b9c"><td class="memItemLeft" align="right" valign="top">std::time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#ad38217dc581809124fdae3ac7db69b9c">AddHours</a> (int hours)</td></tr>
+<tr class="memdesc:ad38217dc581809124fdae3ac7db69b9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">在当前时间基础上增加小时。  <br /></td></tr>
+<tr class="separator:ad38217dc581809124fdae3ac7db69b9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c66ecf052c533ae0472a24c12bca36e" id="r_a3c66ecf052c533ae0472a24c12bca36e"><td class="memItemLeft" align="right" valign="top">std::time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a3c66ecf052c533ae0472a24c12bca36e">AddHours</a> (std::time_t base_time, int hours)</td></tr>
+<tr class="memdesc:a3c66ecf052c533ae0472a24c12bca36e"><td class="mdescLeft">&#160;</td><td class="mdescRight">在指定时间基础上增加小时。  <br /></td></tr>
+<tr class="separator:a3c66ecf052c533ae0472a24c12bca36e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a9599a55789c0a146822dc325b2b71e" id="r_a0a9599a55789c0a146822dc325b2b71e"><td class="memItemLeft" align="right" valign="top">std::time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a0a9599a55789c0a146822dc325b2b71e">AddMinutes</a> (int minutes)</td></tr>
+<tr class="memdesc:a0a9599a55789c0a146822dc325b2b71e"><td class="mdescLeft">&#160;</td><td class="mdescRight">在当前时间基础上增加分钟。  <br /></td></tr>
+<tr class="separator:a0a9599a55789c0a146822dc325b2b71e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a02974854705d00d291adfae8ba248d" id="r_a9a02974854705d00d291adfae8ba248d"><td class="memItemLeft" align="right" valign="top">std::time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a9a02974854705d00d291adfae8ba248d">AddMinutes</a> (std::time_t base_time, int minutes)</td></tr>
+<tr class="memdesc:a9a02974854705d00d291adfae8ba248d"><td class="mdescLeft">&#160;</td><td class="mdescRight">在指定时间基础上增加分钟。  <br /></td></tr>
+<tr class="separator:a9a02974854705d00d291adfae8ba248d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1930c85b9f150837e7cccfa4788bdf8b" id="r_a1930c85b9f150837e7cccfa4788bdf8b"><td class="memItemLeft" align="right" valign="top">std::time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a1930c85b9f150837e7cccfa4788bdf8b">AddSeconds</a> (int seconds)</td></tr>
+<tr class="memdesc:a1930c85b9f150837e7cccfa4788bdf8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">在当前时间基础上增加秒。  <br /></td></tr>
+<tr class="separator:a1930c85b9f150837e7cccfa4788bdf8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5867f508b1e7e412687aeaf6565af050" id="r_a5867f508b1e7e412687aeaf6565af050"><td class="memItemLeft" align="right" valign="top">std::time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a5867f508b1e7e412687aeaf6565af050">AddSeconds</a> (std::time_t base_time, int seconds)</td></tr>
+<tr class="memdesc:a5867f508b1e7e412687aeaf6565af050"><td class="mdescLeft">&#160;</td><td class="mdescRight">在指定时间基础上增加秒。  <br /></td></tr>
+<tr class="separator:a5867f508b1e7e412687aeaf6565af050"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a089848a16e31b48517054d646763c030" id="r_a089848a16e31b48517054d646763c030"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a089848a16e31b48517054d646763c030">DiffSeconds</a> (std::time_t begin, std::time_t end)</td></tr>
+<tr class="memdesc:a089848a16e31b48517054d646763c030"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算两个秒级时间戳差值，返回 end - begin，单位：秒。  <br /></td></tr>
+<tr class="separator:a089848a16e31b48517054d646763c030"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18aeb50882bff59e2f11b62ced05a3a7" id="r_a18aeb50882bff59e2f11b62ced05a3a7"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a18aeb50882bff59e2f11b62ced05a3a7">DiffMilliseconds</a> (int64_t begin_ms, int64_t end_ms)</td></tr>
+<tr class="memdesc:a18aeb50882bff59e2f11b62ced05a3a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算两个毫秒级时间戳差值，返回 end_ms - begin_ms，单位：毫秒。  <br /></td></tr>
+<tr class="separator:a18aeb50882bff59e2f11b62ced05a3a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f7ed34583730dcf1349077beae51ab5" id="r_a3f7ed34583730dcf1349077beae51ab5"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a3f7ed34583730dcf1349077beae51ab5">DiffMinutes</a> (std::time_t begin, std::time_t end)</td></tr>
+<tr class="memdesc:a3f7ed34583730dcf1349077beae51ab5"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算两个秒级时间戳差值，返回 end - begin，单位：分钟。  <br /></td></tr>
+<tr class="separator:a3f7ed34583730dcf1349077beae51ab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4512644d3b4a30bb8a7f36670e1faa0b" id="r_a4512644d3b4a30bb8a7f36670e1faa0b"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a4512644d3b4a30bb8a7f36670e1faa0b">DiffHours</a> (std::time_t begin, std::time_t end)</td></tr>
+<tr class="memdesc:a4512644d3b4a30bb8a7f36670e1faa0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算两个秒级时间戳差值，返回 end - begin，单位：小时。  <br /></td></tr>
+<tr class="separator:a4512644d3b4a30bb8a7f36670e1faa0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75e7f1f937c441f045f3ece998a0a776" id="r_a75e7f1f937c441f045f3ece998a0a776"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a75e7f1f937c441f045f3ece998a0a776">DiffDays</a> (std::time_t begin, std::time_t end)</td></tr>
+<tr class="memdesc:a75e7f1f937c441f045f3ece998a0a776"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算两个秒级时间戳差值，返回 end - begin，单位：天。  <br /></td></tr>
+<tr class="separator:a75e7f1f937c441f045f3ece998a0a776"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d9a436199e368e3768d5b8593d46235" id="r_a9d9a436199e368e3768d5b8593d46235"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a9d9a436199e368e3768d5b8593d46235">IsToday</a> (std::time_t seconds)</td></tr>
+<tr class="memdesc:a9d9a436199e368e3768d5b8593d46235"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断指定秒级时间戳是否为今天。  <br /></td></tr>
+<tr class="separator:a9d9a436199e368e3768d5b8593d46235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e453de8bea34d7bd35ee975c6af8490" id="r_a2e453de8bea34d7bd35ee975c6af8490"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a2e453de8bea34d7bd35ee975c6af8490">IsSameDay</a> (std::time_t left, std::time_t right)</td></tr>
+<tr class="memdesc:a2e453de8bea34d7bd35ee975c6af8490"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断两个秒级时间戳是否属于本地时区的同一天。  <br /></td></tr>
+<tr class="separator:a2e453de8bea34d7bd35ee975c6af8490"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39acbe37a71e62c4cd7e2a8ea53ae079" id="r_a39acbe37a71e62c4cd7e2a8ea53ae079"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a39acbe37a71e62c4cd7e2a8ea53ae079">IsExpired</a> (std::time_t expire_time)</td></tr>
+<tr class="memdesc:a39acbe37a71e62c4cd7e2a8ea53ae079"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断秒级截止时间是否已经过期。  <br /></td></tr>
+<tr class="separator:a39acbe37a71e62c4cd7e2a8ea53ae079"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3ab1c0b882df6f4c416f1ffd9447443" id="r_ad3ab1c0b882df6f4c416f1ffd9447443"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#ad3ab1c0b882df6f4c416f1ffd9447443">IsExpiredMs</a> (int64_t start_ms, int64_t timeout_ms)</td></tr>
+<tr class="memdesc:ad3ab1c0b882df6f4c416f1ffd9447443"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断从 start_ms 开始经过 timeout_ms 后是否已经超时。  <br /></td></tr>
+<tr class="separator:ad3ab1c0b882df6f4c416f1ffd9447443"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9a3c91b371f0aa7d49ee62d03d2a5b3" id="r_ad9a3c91b371f0aa7d49ee62d03d2a5b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#ad9a3c91b371f0aa7d49ee62d03d2a5b3">SleepMs</a> (uint64_t milliseconds)</td></tr>
+<tr class="memdesc:ad9a3c91b371f0aa7d49ee62d03d2a5b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前线程睡眠指定毫秒。  <br /></td></tr>
+<tr class="separator:ad9a3c91b371f0aa7d49ee62d03d2a5b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79899495eade05fb719071020bd761b3" id="r_a79899495eade05fb719071020bd761b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a79899495eade05fb719071020bd761b3">SleepUs</a> (uint64_t microseconds)</td></tr>
+<tr class="memdesc:a79899495eade05fb719071020bd761b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前线程睡眠指定微秒。  <br /></td></tr>
+<tr class="separator:a79899495eade05fb719071020bd761b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ff92fcab12b9d7ebd90b4b86756225c" id="r_a7ff92fcab12b9d7ebd90b4b86756225c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a7ff92fcab12b9d7ebd90b4b86756225c">SleepSeconds</a> (uint64_t seconds)</td></tr>
+<tr class="memdesc:a7ff92fcab12b9d7ebd90b4b86756225c"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前线程睡眠指定秒。  <br /></td></tr>
+<tr class="separator:a7ff92fcab12b9d7ebd90b4b86756225c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c415e8adc901b5bce0b3548a45bb1a8" id="r_a6c415e8adc901b5bce0b3548a45bb1a8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a6c415e8adc901b5bce0b3548a45bb1a8">GetTimezoneOffset</a> ()</td></tr>
+<tr class="memdesc:a6c415e8adc901b5bce0b3548a45bb1a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前本地时区相对 UTC 的偏移秒数，例如中国标准时间为 28800。  <br /></td></tr>
+<tr class="separator:a6c415e8adc901b5bce0b3548a45bb1a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57fdd11cafd5d7edda0ee753e3a59ea9" id="r_a57fdd11cafd5d7edda0ee753e3a59ea9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a57fdd11cafd5d7edda0ee753e3a59ea9">GetTimezoneName</a> ()</td></tr>
+<tr class="memdesc:a57fdd11cafd5d7edda0ee753e3a59ea9"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前时区名称，例如 CST、UTC。  <br /></td></tr>
+<tr class="separator:a57fdd11cafd5d7edda0ee753e3a59ea9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafa7af07c9542e3b043db73d6bb5fb5d" id="r_aafa7af07c9542e3b043db73d6bb5fb5d"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#aafa7af07c9542e3b043db73d6bb5fb5d">SteadyNowMs</a> ()</td></tr>
+<tr class="memdesc:aafa7af07c9542e3b043db73d6bb5fb5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取单调时钟毫秒值，不受系统时间回拨影响。  <br /></td></tr>
+<tr class="separator:aafa7af07c9542e3b043db73d6bb5fb5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a416fdf14219eb9e6c72b2a145ea521c6" id="r_a416fdf14219eb9e6c72b2a145ea521c6"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a416fdf14219eb9e6c72b2a145ea521c6">SteadyNowUs</a> ()</td></tr>
+<tr class="memdesc:a416fdf14219eb9e6c72b2a145ea521c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取单调时钟微秒值，不受系统时间回拨影响。  <br /></td></tr>
+<tr class="separator:a416fdf14219eb9e6c72b2a145ea521c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a985c1264be370c14086dc18cdf3551d1" id="r_a985c1264be370c14086dc18cdf3551d1"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceDateTimeTools.html#a985c1264be370c14086dc18cdf3551d1">SteadyNowNs</a> ()</td></tr>
+<tr class="memdesc:a985c1264be370c14086dc18cdf3551d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取单调时钟纳秒值，不受系统时间回拨影响。  <br /></td></tr>
+<tr class="separator:a985c1264be370c14086dc18cdf3551d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

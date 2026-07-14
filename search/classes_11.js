@@ -13,7 +13,8 @@ var searchData=
   ['threadsafebuffer_10',['ThreadSafeBuffer',['../classtools_1_1ThreadSafeBuffer.html',1,'tools']]],
   ['threadsafequeue_11',['ThreadSafeQueue',['../classtools_1_1thread__safe__queue_1_1ThreadSafeQueue.html',1,'tools::thread_safe_queue']]],
   ['threadsnapshot_12',['ThreadSnapshot',['../structMySoftHealthy_1_1ThreadSnapshot.html',1,'MySoftHealthy']]],
-  ['topicentry_13',['topicentry',['../structcsy2536_1_1CSY2536Comm_1_1TopicEntry.html',1,'CSY2536Comm::TopicEntry'],['../structjson__comm_1_1JsonComm_1_1TopicEntry.html',1,'JsonComm::TopicEntry']]],
-  ['tunacontroller_14',['TunaController',['../classmy__api_1_1tuna_1_1TunaController.html',1,'my_api::tuna']]],
-  ['tunaedge_15',['TUNAEdge',['../classmy__edge_1_1demo_1_1TUNAEdge.html',1,'my_edge::demo']]]
+  ['timer_13',['Timer',['../classDateTimeTools_1_1Timer.html',1,'DateTimeTools']]],
+  ['topicentry_14',['topicentry',['../structcsy2536_1_1CSY2536Comm_1_1TopicEntry.html',1,'CSY2536Comm::TopicEntry'],['../structjson__comm_1_1JsonComm_1_1TopicEntry.html',1,'JsonComm::TopicEntry']]],
+  ['tunacontroller_15',['TunaController',['../classmy__api_1_1tuna_1_1TunaController.html',1,'my_api::tuna']]],
+  ['tunaedge_16',['TUNAEdge',['../classmy__edge_1_1demo_1_1TUNAEdge.html',1,'my_edge::demo']]]
 ];

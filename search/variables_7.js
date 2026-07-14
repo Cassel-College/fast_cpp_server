@@ -11,9 +11,15 @@ var searchData=
   ['heartbeat_5fframe_5flen_8',['HEARTBEAT_FRAME_LEN',['../namespacefly__control.html#a793181c3f18837d5bd6f8e2a3b582b2c',1,'fly_control']]],
   ['heartbeat_5finterval_5fms_5f_9',['heartbeat_interval_ms_',['../classPodModule_1_1BasePod.html#ae5e1d49e49716e1601fc9dfa6347183f',1,'PodModule::BasePod']]],
   ['heartbeat_5frunning_5f_10',['heartbeat_running_',['../classPodModule_1_1BasePod.html#a3dc2f94c3e804258638f263d8caf501f',1,'PodModule::BasePod']]],
-  ['height_11',['height',['../structPodModule_1_1StreamInfo.html#ad12fc34ce789bce6c8a05d8a17138534',1,'PodModule::StreamInfo::height'],['../structPodModule_1_1ImageFrame.html#ad12fc34ce789bce6c8a05d8a17138534',1,'PodModule::ImageFrame::height']]],
-  ['history_5fqueues_5f_12',['history_queues_',['../classmy__edge_1_1demo_1_1UUVEdge.html#a691631ea2ece717cb61fc98d8a0fffbb',1,'my_edge::demo::UUVEdge']]],
-  ['horizontal_5ffov_13',['horizontal_fov',['../structviewlink_1_1TelemetrySnapshot.html#aa659fb28f6892fd59f1c5c5a85f389c2',1,'viewlink::TelemetrySnapshot']]],
-  ['host_14',['host',['../structfast__mqtt_1_1BrokerConfig.html#a696b1086704b0858059129b61eaa4a9f',1,'fast_mqtt::BrokerConfig::host'],['../structMySoftHealthy_1_1SoftHealthSnapshot.html#afe856b0443aec9cda982bb18d429b0cb',1,'MySoftHealthy::SoftHealthSnapshot::host']]],
-  ['host_5f_15',['host_',['../classmy__mqtt_1_1MqttService.html#ada0f95acb51c9a574d38befa858d78fa',1,'my_mqtt::MqttService::host_'],['../classDeviceOnlineMonitor.html#ada0f95acb51c9a574d38befa858d78fa',1,'DeviceOnlineMonitor::host_'],['../classPodModule_1_1BaseSession.html#ada0f95acb51c9a574d38befa858d78fa',1,'PodModule::BaseSession::host_']]]
+  ['height_11',['height',['../structPodModule_1_1ImageFrame.html#ad12fc34ce789bce6c8a05d8a17138534',1,'PodModule::ImageFrame::height'],['../structPodModule_1_1StreamInfo.html#ad12fc34ce789bce6c8a05d8a17138534',1,'PodModule::StreamInfo::height']]],
+  ['high_5falarm_12',['high_alarm',['../structmy__gas__detector__poll_1_1GasDetectorData.html#a61a81228cb2f700c79f840034dfbe71e',1,'my_gas_detector_poll::GasDetectorData']]],
+  ['high_5falarm_5fregister_13',['high_alarm_register',['../structmy__gas__detector__poll_1_1GasDetectorData.html#a536a93e61b5e0bbbd58115dfaaa6881d',1,'my_gas_detector_poll::GasDetectorData']]],
+  ['high_5falarm_5ftext_14',['high_alarm_text',['../structmy__gas__detector__poll_1_1GasDetectorData.html#a3621ebecb0e87042cca9b501ca2025a9',1,'my_gas_detector_poll::GasDetectorData']]],
+  ['history_5fqueues_5f_15',['history_queues_',['../classmy__edge_1_1demo_1_1UUVEdge.html#a691631ea2ece717cb61fc98d8a0fffbb',1,'my_edge::demo::UUVEdge']]],
+  ['horizontal_5ffov_16',['horizontal_fov',['../structviewlink_1_1TelemetrySnapshot.html#aa659fb28f6892fd59f1c5c5a85f389c2',1,'viewlink::TelemetrySnapshot']]],
+  ['host_17',['host',['../structfast__mqtt_1_1BrokerConfig.html#a696b1086704b0858059129b61eaa4a9f',1,'fast_mqtt::BrokerConfig::host'],['../structMySoftHealthy_1_1SoftHealthSnapshot.html#afe856b0443aec9cda982bb18d429b0cb',1,'MySoftHealthy::SoftHealthSnapshot::host']]],
+  ['host_5f_18',['host_',['../classmy__mqtt_1_1MqttService.html#ada0f95acb51c9a574d38befa858d78fa',1,'my_mqtt::MqttService::host_'],['../classDeviceOnlineMonitor.html#ada0f95acb51c9a574d38befa858d78fa',1,'DeviceOnlineMonitor::host_'],['../classPodModule_1_1BaseSession.html#ada0f95acb51c9a574d38befa858d78fa',1,'PodModule::BaseSession::host_']]],
+  ['hour_19',['hour',['../structDateTimeTools_1_1DateTime.html#a15df9ba285cfd842f284025f904edc9c',1,'DateTimeTools::DateTime']]],
+  ['humidity_20',['humidity',['../structmy__gas__detector__poll_1_1GasDetectorData.html#a987616dbcfdfc936af3e5874ef5a41e7',1,'my_gas_detector_poll::GasDetectorData']]],
+  ['humidity_5fregister_21',['humidity_register',['../structmy__gas__detector__poll_1_1GasDetectorData.html#aa9108768938b73339cc5a74ad2e0ce89',1,'my_gas_detector_poll::GasDetectorData']]]
 ];

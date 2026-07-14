@@ -1,22 +1,30 @@
 <map id="Transition" name="Transition">
-<area shape="rect" id="Node000001" title="状态转换" alt="" coords="855,119,940,145"/>
-<area shape="rect" id="Node000002" href="$classpod__stream_1_1PodStreamManager.html#abc31e4b338943779ee9b61cc81480bcb" title="唯一初始化入口" alt="" coords="736,169,779,194"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="849,152,780,177,778,172,847,147"/>
-<area shape="rect" id="Node000005" href="$classpod__stream_1_1PodStreamManager.html#a17a237457e57625296e6b24feb19c60a" title="停止管理器" alt="" coords="732,70,783,95"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="847,117,782,94,784,89,849,112"/>
-<area shape="rect" id="Node000009" href="$classpod__stream_1_1PodStreamManager.html#a78e2a4289515dd73f4ef63bc0b635ff4" title="工作线程主循环 (状态机调度)" alt="" coords="708,119,807,145"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="841,135,807,135,807,129,841,129"/>
-<area shape="rect" id="Node000003" href="$classtools_1_1pipeline_1_1Pipeline.html#a9f867de73f5925399e1d8beb02b64fad" title=" " alt="" coords="228,137,437,177"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="722,182,437,166,438,161,722,177"/>
-<area shape="rect" id="Node000004" href="$classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="5,137,180,177"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="214,160,180,160,180,155,214,155"/>
-<area shape="rect" id="Node000006" href="$classtools_1_1pipeline_1_1Pipeline.html#a17a237457e57625296e6b24feb19c60a" title=" " alt="" coords="485,5,660,45"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="718,74,637,48,639,43,720,68"/>
-<area shape="rect" id="Node000008" href="$classpod__stream_1_1PodStreamManager.html#af398b0ef543d575e98943d24d4c5cf9d" title=" " alt="" coords="492,70,653,95"/>
-<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="718,85,654,85,654,80,718,80"/>
-<area shape="rect" id="Node000007" href="$classtools_1_1pipeline_1_1Pipeline.html#ab308ffdad0654e43a00b3d7d46c81a68" title=" " alt="" coords="245,5,420,45"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="472,28,420,28,420,23,472,23"/>
-<area shape="rect" id="Node000010" href="$classpod__stream_1_1PodStreamManager.html#a07aaf1227e4d645f15e0a964f54ef291" title="启动管理器" alt="" coords="546,119,599,145"/>
-<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="694,135,599,135,599,129,694,129"/>
-<area shape="poly" id="edge10_Node000010_Node000003" title=" " alt="" coords="533,139,438,149,437,144,532,133"/>
+<area shape="rect" id="Node000001" title="状态转换" alt="" coords="1300,119,1385,145"/>
+<area shape="rect" id="Node000002" href="$classpod__stream_1_1PodStreamManager.html#abc31e4b338943779ee9b61cc81480bcb" title="唯一初始化入口" alt="" coords="1181,169,1224,194"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1294,152,1225,177,1223,172,1292,147"/>
+<area shape="rect" id="Node000008" href="$classpod__stream_1_1PodStreamManager.html#a17a237457e57625296e6b24feb19c60a" title="停止管理器" alt="" coords="1177,70,1228,95"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="1292,117,1227,94,1229,89,1294,112"/>
+<area shape="rect" id="Node000012" href="$classpod__stream_1_1PodStreamManager.html#a78e2a4289515dd73f4ef63bc0b635ff4" title="工作线程主循环 (状态机调度)" alt="" coords="1153,119,1252,145"/>
+<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="1286,135,1252,135,1252,129,1286,129"/>
+<area shape="rect" id="Node000003" href="$classtools_1_1pipeline_1_1Pipeline.html#a9f867de73f5925399e1d8beb02b64fad" title=" " alt="" coords="673,137,883,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1167,182,883,166,883,161,1167,177"/>
+<area shape="rect" id="Node000004" href="$classtools_1_1pipeline_1_1Pipeline.html#a5aba7179d6a9de352b6e2a99abfde668" title=" " alt="" coords="451,137,625,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="660,160,625,160,625,155,660,155"/>
+<area shape="rect" id="Node000005" href="$classtools_1_1pipeline_1_1Pipeline.html#a07aaf1227e4d645f15e0a964f54ef291" title=" " alt="" coords="228,137,403,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="437,160,403,160,403,155,437,155"/>
+<area shape="rect" id="Node000006" href="$classtools_1_1pipeline_1_1Pipeline.html#a9f0164952c82a31be0423f78dd4c8af5" title=" " alt="" coords="5,93,180,133"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="214,140,180,133,181,128,215,135"/>
+<area shape="rect" id="Node000007" href="$classtools_1_1pipeline_1_1Pipeline.html#a9d284775ccebba879a77a7144be22899" title=" " alt="" coords="5,169,180,209"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="215,174,180,179,180,174,214,169"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="194,110,295,113,403,123,465,135,464,140,402,128,295,118,194,115"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="194,193,295,193,402,187,466,175,467,180,403,192,295,199,194,198"/>
+<area shape="rect" id="Node000009" href="$classtools_1_1pipeline_1_1Pipeline.html#a17a237457e57625296e6b24feb19c60a" title=" " alt="" coords="931,5,1105,45"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="1164,74,1082,48,1084,43,1165,68"/>
+<area shape="rect" id="Node000011" href="$classpod__stream_1_1PodStreamManager.html#af398b0ef543d575e98943d24d4c5cf9d" title=" " alt="" coords="937,70,1099,95"/>
+<area shape="poly" id="edge12_Node000008_Node000011" title=" " alt="" coords="1164,85,1099,85,1099,80,1164,80"/>
+<area shape="rect" id="Node000010" href="$classtools_1_1pipeline_1_1Pipeline.html#ab308ffdad0654e43a00b3d7d46c81a68" title=" " alt="" coords="691,5,865,45"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="917,28,865,28,865,23,917,23"/>
+<area shape="rect" id="Node000013" href="$classpod__stream_1_1PodStreamManager.html#a07aaf1227e4d645f15e0a964f54ef291" title="启动管理器" alt="" coords="991,119,1045,145"/>
+<area shape="poly" id="edge14_Node000012_Node000013" title=" " alt="" coords="1140,135,1045,135,1045,129,1140,129"/>
+<area shape="poly" id="edge15_Node000013_Node000003" title=" " alt="" coords="978,139,883,149,883,144,978,133"/>
 </map>

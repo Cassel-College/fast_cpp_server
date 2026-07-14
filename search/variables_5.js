@@ -18,7 +18,7 @@ var searchData=
   ['flight_5ftime_15',['flight_time',['../structfly__control_1_1HeartbeatData.html#a4f70b74c3efe582d96aff81b1ae9fbb8',1,'fly_control::HeartbeatData']]],
   ['flow_5fbase_5fmps_5f_16',['flow_base_mps_',['../classmy__control_1_1demo_1_1FlowSensorControl.html#aff7d5f6ec2d5c81ba0abf7ae5a059adc',1,'my_control::demo::FlowSensorControl']]],
   ['flow_5fnoise_5fmps_5f_17',['flow_noise_mps_',['../classmy__control_1_1demo_1_1FlowSensorControl.html#a5f9674a520c68102c803ad55f2e5a22a',1,'my_control::demo::FlowSensorControl']]],
-  ['flowcontrol_18',['flowcontrol',['../structmy__serial_1_1SerialInitOptions.html#ad426e7c707545e995d4eb4ce052aa1af',1,'my_serial::SerialInitOptions::flowcontrol'],['../structmy__serial_1_1SerialPortSnapshot.html#ad426e7c707545e995d4eb4ce052aa1af',1,'my_serial::SerialPortSnapshot::flowcontrol']]],
+  ['flowcontrol_18',['flowcontrol',['../structmy__serial_1_1SerialPortSnapshot.html#ad426e7c707545e995d4eb4ce052aa1af',1,'my_serial::SerialPortSnapshot::flowcontrol'],['../structmy__serial_1_1SerialInitOptions.html#ad426e7c707545e995d4eb4ce052aa1af',1,'my_serial::SerialInitOptions::flowcontrol'],['../structmy__gas__detector__poll_1_1GasDetectorPollConfig.html#ad426e7c707545e995d4eb4ce052aa1af',1,'my_gas_detector_poll::GasDetectorPollConfig::flowcontrol']]],
   ['format_19',['format',['../structPodModule_1_1ImageFrame.html#ad77fc85d76514f2d1ea5618480b51108',1,'PodModule::ImageFrame']]],
   ['fps_20',['fps',['../structPodModule_1_1StreamInfo.html#a45b67662d620a977a2cfe519f7ab6273',1,'PodModule::StreamInfo']]],
   ['frame_5fchecksum_5flen_21',['FRAME_CHECKSUM_LEN',['../namespacefly__control.html#a154460e8603d75c7ee3496700589f561',1,'fly_control']]],
@@ -36,5 +36,6 @@ var searchData=
   ['frame_5ftype_5fgimbal_5fcontrol_33',['FRAME_TYPE_GIMBAL_CONTROL',['../namespacefly__control.html#a135cda22f65d256424cf6fa56b026417',1,'fly_control']]],
   ['frame_5ftype_5fheartbeat_34',['FRAME_TYPE_HEARTBEAT',['../namespacefly__control.html#aa53b7e77f3c11b09806fdf2264864c72',1,'fly_control']]],
   ['frame_5ftype_5freply_35',['FRAME_TYPE_REPLY',['../namespacefly__control.html#a07d7b4cd0fbbae47cc0bb0deae5af13e',1,'fly_control']]],
-  ['frame_5ftype_5fset_5fdestination_36',['FRAME_TYPE_SET_DESTINATION',['../namespacefly__control.html#a6300be0c6ee18a063e2366fe6bb3f47e',1,'fly_control']]]
+  ['frame_5ftype_5fset_5fdestination_36',['FRAME_TYPE_SET_DESTINATION',['../namespacefly__control.html#a6300be0c6ee18a063e2366fe6bb3f47e',1,'fly_control']]],
+  ['function_5fcode_37',['function_code',['../structmy__gas__detector__poll_1_1GasDetectorData.html#a48df73e772a99aa1c570c95a4bdc9104',1,'my_gas_detector_poll::GasDetectorData']]]
 ];

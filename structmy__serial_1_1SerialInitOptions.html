@@ -79,6 +79,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p><a class="el" href="classmy__serial_1_1MySerial.html" title="面向业务代码的串口封装。">MySerial</a> 的串口初始化参数。  
+ <a href="structmy__serial_1_1SerialInitOptions.html#details">更多...</a></p>
+
 <p><code>#include &lt;<a class="el" href="MySerial_8h_source.html">MySerial.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -110,7 +113,11 @@ $(function() {
 <tr class="memitem:af3265ddaf74e9fcc6c328c9fe36216d1" id="r_af3265ddaf74e9fcc6c328c9fe36216d1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmy__serial_1_1SerialInitOptions.html#af3265ddaf74e9fcc6c328c9fe36216d1">auto_open</a> {true}</td></tr>
 <tr class="separator:af3265ddaf74e9fcc6c328c9fe36216d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">结构体成员变量说明</h2>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p><a class="el" href="classmy__serial_1_1MySerial.html" title="面向业务代码的串口封装。">MySerial</a> 的串口初始化参数。 </p>
+<p>该结构体是 JSON 配置解析后的内部标准形式。业务层通常不需要直接 构造它，而是将 JSON 交给 <a class="el" href="classmy__serial_1_1MySerial.html#aa0945f28ef057669b73101c9baf0acce" title="解析配置、创建底层串口对象并按配置决定是否打开。">MySerial::Init()</a>，由 Init() 负责完成字段 兼容、范围检查和枚举值转换。</p>
+<p>所有 timeout 字段的单位均为毫秒。read/write 的 constant 和 multiplier 会传递给底层 serial::Timeout；当它们保持默认组合时，模块使用简单 超时模式，以便与 timeout_ms 的直观语义保持一致。 </p>
+</div><h2 class="groupheader">结构体成员变量说明</h2>
 <a id="af3265ddaf74e9fcc6c328c9fe36216d1" name="af3265ddaf74e9fcc6c328c9fe36216d1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af3265ddaf74e9fcc6c328c9fe36216d1">&#9670;&#160;</a></span>auto_open</h2>
 

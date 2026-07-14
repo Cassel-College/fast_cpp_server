@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_tools/MyTimer.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_222f75d460e07a5cd0325e16008607c5.html">my_tools</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">MyTimer.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="MyTimer_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;chrono&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceDateTimeTools.html">DateTimeTools</a> {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classDateTimeTools_1_1Timer.html">   15</a></span><span class="keyword">class </span><a class="code hl_class" href="classDateTimeTools_1_1Timer.html">Timer</a></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <a class="code hl_function" href="classDateTimeTools_1_1Timer.html#a6a8bc5014802d569f6d01c4f36121a81">Timer</a>();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDateTimeTools_1_1Timer.html#a0b93a56e2e79d4308791f9271316a062">Start</a>(<span class="keywordtype">bool</span> showLog = <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDateTimeTools_1_1Timer.html#a8e3db699fe9a35ee113cae0e51c6c211">Restart</a>(<span class="keywordtype">bool</span> showLog = <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDateTimeTools_1_1Timer.html#a372de693ad40b3f42839c8ec6ac845f4">Reset</a>();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="classDateTimeTools_1_1Timer.html#a7a9997902dca9b1d5b37bc3f13a33142">ElapsedSeconds</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    int64_t <a class="code hl_function" href="classDateTimeTools_1_1Timer.html#a098ba286535a1cb97681fe141a806127">ElapsedMilliseconds</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    int64_t <a class="code hl_function" href="classDateTimeTools_1_1Timer.html#ad4a1377c1b1fad5c77888fdec10a3a28">ElapsedMicroseconds</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    int64_t <a class="code hl_function" href="classDateTimeTools_1_1Timer.html#a0a95ef5985f3b77d0304e9f9a9e27d88">ElapsedNanoseconds</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classDateTimeTools_1_1Timer.html#a6da50857fd0fea48b388d8e219419f00">   42</a></span>    std::chrono::steady_clock::time_point <a class="code hl_variable" href="classDateTimeTools_1_1Timer.html#a6da50857fd0fea48b388d8e219419f00">start_time_</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classDateTimeTools_1_1Timer.html#aa440b02cc99bc6923375b0c9db2f2dca">   43</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="classDateTimeTools_1_1Timer.html#aa440b02cc99bc6923375b0c9db2f2dca">running_</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>};</div>
+</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="};">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classDateTimeTools_1_1ScopedTimer.html">   52</a></span><span class="keyword">class </span><a class="code hl_class" href="classDateTimeTools_1_1ScopedTimer.html">ScopedTimer</a></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>{</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="classDateTimeTools_1_1ScopedTimer.html">ScopedTimer</a>(<span class="keyword">const</span> std::string&amp; name);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <a class="code hl_function" href="classDateTimeTools_1_1ScopedTimer.html#ac0d9dbda276901ee8642dc51934b7712">~ScopedTimer</a>();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classDateTimeTools_1_1ScopedTimer.html#aa6c27b1c4137dfe86cd02fb5e6a218b3">   58</a></span>    <a class="code hl_function" href="classDateTimeTools_1_1ScopedTimer.html#aa6c27b1c4137dfe86cd02fb5e6a218b3">ScopedTimer</a>(<span class="keyword">const</span> <a class="code hl_class" href="classDateTimeTools_1_1ScopedTimer.html">ScopedTimer</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classDateTimeTools_1_1ScopedTimer.html#a037a9f5488e866c6a3dca108869ff4fc">   59</a></span>    <a class="code hl_class" href="classDateTimeTools_1_1ScopedTimer.html">ScopedTimer</a>&amp; <a class="code hl_function" href="classDateTimeTools_1_1ScopedTimer.html#a037a9f5488e866c6a3dca108869ff4fc">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classDateTimeTools_1_1ScopedTimer.html">ScopedTimer</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classDateTimeTools_1_1ScopedTimer.html#a4d739cc5d335052eb9f5b2ca559b81d1">   62</a></span>    std::string <a class="code hl_variable" href="classDateTimeTools_1_1ScopedTimer.html#a4d739cc5d335052eb9f5b2ca559b81d1">name_</a>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="classDateTimeTools_1_1ScopedTimer.html#a79a47dc90419ac17323efd88c7baeedb">   63</a></span>    <a class="code hl_class" href="classDateTimeTools_1_1Timer.html">Timer</a> <a class="code hl_variable" href="classDateTimeTools_1_1ScopedTimer.html#a79a47dc90419ac17323efd88c7baeedb">timer_</a>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>};</div>
+</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="foldopen" id="foldopen00072" data-start="{" data-end="};">
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classDateTimeTools_1_1Stopwatch.html">   72</a></span><span class="keyword">class </span><a class="code hl_class" href="classDateTimeTools_1_1Stopwatch.html">Stopwatch</a></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>{</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <a class="code hl_function" href="classDateTimeTools_1_1Stopwatch.html#a3b667144a70d38545d73dbcbcfe53a42">Stopwatch</a>();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDateTimeTools_1_1Stopwatch.html#a07aaf1227e4d645f15e0a964f54ef291">Start</a>();</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDateTimeTools_1_1Stopwatch.html#a70babc5227ddd16ca31dccc6cec0bb22">Pause</a>();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDateTimeTools_1_1Stopwatch.html#a8af8fb637c7ae9d71a23bf3ac80d3c86">Resume</a>();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDateTimeTools_1_1Stopwatch.html#a17a237457e57625296e6b24feb19c60a">Stop</a>();</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classDateTimeTools_1_1Stopwatch.html#a372de693ad40b3f42839c8ec6ac845f4">Reset</a>();</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="classDateTimeTools_1_1Stopwatch.html#a7a9997902dca9b1d5b37bc3f13a33142">ElapsedSeconds</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    int64_t <a class="code hl_function" href="classDateTimeTools_1_1Stopwatch.html#a098ba286535a1cb97681fe141a806127">ElapsedMilliseconds</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    int64_t <a class="code hl_function" href="classDateTimeTools_1_1Stopwatch.html#ad4a1377c1b1fad5c77888fdec10a3a28">ElapsedMicroseconds</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    int64_t <a class="code hl_function" href="classDateTimeTools_1_1Stopwatch.html#a0a95ef5985f3b77d0304e9f9a9e27d88">ElapsedNanoseconds</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classDateTimeTools_1_1Stopwatch.html#ad201152b05beda61e51e3594ff07c8fe">IsRunning</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classDateTimeTools_1_1Stopwatch.html#a9f78e2ea8ec7c3ba6ad2ebc6c92efd42">IsPaused</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    int64_t <a class="code hl_function" href="classDateTimeTools_1_1Stopwatch.html#a8a516d1ff2fdde19bf2c5c0e19ac82fa">CurrentElapsedNanoseconds</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="classDateTimeTools_1_1Stopwatch.html#a6da50857fd0fea48b388d8e219419f00">  113</a></span>    std::chrono::steady_clock::time_point <a class="code hl_variable" href="classDateTimeTools_1_1Stopwatch.html#a6da50857fd0fea48b388d8e219419f00">start_time_</a>;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="classDateTimeTools_1_1Stopwatch.html#a64c179ffed78d0cc957f9946dc2e482b">  114</a></span>    int64_t <a class="code hl_variable" href="classDateTimeTools_1_1Stopwatch.html#a64c179ffed78d0cc957f9946dc2e482b">accumulated_ns_</a>;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="classDateTimeTools_1_1Stopwatch.html#aa440b02cc99bc6923375b0c9db2f2dca">  115</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="classDateTimeTools_1_1Stopwatch.html#aa440b02cc99bc6923375b0c9db2f2dca">running_</a>;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="classDateTimeTools_1_1Stopwatch.html#aff8f249a7fe430dc4f3b08b640844050">  116</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="classDateTimeTools_1_1Stopwatch.html#aff8f249a7fe430dc4f3b08b640844050">paused_</a>;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>};</div>
+</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>}  <span class="comment">// namespace DateTimeTools</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="ttc" id="aclassDateTimeTools_1_1ScopedTimer_html"><div class="ttname"><a href="classDateTimeTools_1_1ScopedTimer.html">DateTimeTools::ScopedTimer</a></div><div class="ttdoc">作用域自动计时器。</div><div class="ttdef"><b>Definition</b> MyTimer.h:53</div></div>
+<div class="ttc" id="aclassDateTimeTools_1_1ScopedTimer_html_a037a9f5488e866c6a3dca108869ff4fc"><div class="ttname"><a href="classDateTimeTools_1_1ScopedTimer.html#a037a9f5488e866c6a3dca108869ff4fc">DateTimeTools::ScopedTimer::operator=</a></div><div class="ttdeci">ScopedTimer &amp; operator=(const ScopedTimer &amp;)=delete</div></div>
+<div class="ttc" id="aclassDateTimeTools_1_1ScopedTimer_html_a4d739cc5d335052eb9f5b2ca559b81d1"><div class="ttname"><a href="classDateTimeTools_1_1ScopedTimer.html#a4d739cc5d335052eb9f5b2ca559b81d1">DateTimeTools::ScopedTimer::name_</a></div><div class="ttdeci">std::string name_</div><div class="ttdef"><b>Definition</b> MyTimer.h:62</div></div>
+<div class="ttc" id="aclassDateTimeTools_1_1ScopedTimer_html_a79a47dc90419ac17323efd88c7baeedb"><div class="ttname"><a href="classDateTimeTools_1_1ScopedTimer.html#a79a47dc90419ac17323efd88c7baeedb">DateTimeTools::ScopedTimer::timer_</a></div><div class="ttdeci">Timer timer_</div><div class="ttdef"><b>Definition</b> MyTimer.h:63</div></div>
+<div class="ttc" id="aclassDateTimeTools_1_1ScopedTimer_html_aa6c27b1c4137dfe86cd02fb5e6a218b3"><div class="ttname"><a href="classDateTimeTools_1_1ScopedTimer.html#aa6c27b1c4137dfe86cd02fb5e6a218b3">DateTimeTools::ScopedTimer::ScopedTimer</a></div><div class="ttdeci">ScopedTimer(const ScopedTimer &amp;)=delete</div></div>
+<div class="ttc" id="aclassDateTimeTools_1_1ScopedTimer_html_ac0d9dbda276901ee8642dc51934b7712"><div class="ttname"><a href="classDateTimeTools_1_1ScopedTimer.html#ac0d9dbda276901ee8642dc51934b7712">DateTimeTools::ScopedTimer::~ScopedTimer</a></div><div class="ttdeci">~ScopedTimer()</div><div class="ttdef"><b>Definition</b> MyTimer.cpp:68</div></div>
+<div class="ttc" id="aclassDateTimeTools_1_1Stopwatch_html"><div class="ttname"><a href="classDateTimeTools_1_1Stopwatch.html">DateTimeTools::Stopwatch</a></div><div class="ttdoc">可暂停、恢复、停止的秒表。</div><div class="ttdef"><b>Definition</b> MyTimer.h:73</div></div>
+<div class="ttc" id="aclassDateTimeTools_1_1Stopwatch_html_a07aaf1227e4d645f15e0a964f54ef291"><div class="ttname"><a href="classDateTimeTools_1_1Stopwatch.html#a07aaf1227e4d645f15e0a964f54ef291">DateTimeTools::Stopwatch::Start</a></div><div class="ttdeci">void Start()</div><div class="ttdoc">清零并开始计时。</div><div class="ttdef"><b>Definition</b> MyTimer.cpp:84</div></div>
+<div class="ttc" id="aclassDateTimeTools_1_1Stopwatch_html_a098ba286535a1cb97681fe141a806127"><div class="ttname"><a href="classDateTimeTools_1_1Stopwatch.html#a098ba286535a1cb97681fe141a806127">DateTimeTools::Stopwatch::ElapsedMilliseconds</a></div><div class="ttdeci">int64_t ElapsedMilliseconds() const</div><div class="ttdoc">获取累计毫秒数。</div><div class="ttdef"><b>Definition</b> MyTimer.cpp:141</div></div>
+<div class="ttc" id="aclassDateTimeTools_1_1Stopwatch_html_a0a95ef5985f3b77d0304e9f9a9e27d88"><div class="ttname"><a href="classDateTimeTools_1_1Stopwatch.html#a0a95ef5985f3b77d0304e9f9a9e27d88">DateTimeTools::Stopwatch::ElapsedNanoseconds</a></div><div class="ttdeci">int64_t ElapsedNanoseconds() const</div><div class="ttdoc">获取累计纳秒数。</div><div class="ttdef"><b>Definition</b> MyTimer.cpp:151</div></div>
+<div class="ttc" id="aclassDateTimeTools_1_1Stopwatch_html_a17a237457e57625296e6b24feb19c60a"><div class="ttname"><a href="classDateTimeTools_1_1Stopwatch.html#a17a237457e57625296e6b24feb19c60a">DateTimeTools::Stopwatch::Stop</a></div><div class="ttdeci">void Stop()</div><div class="ttdoc">停止计时，保留最终耗时。</div><div class="ttdef"><b>Definition</b> MyTimer.cpp:117</div></div>
+<div class="ttc" id="aclassDateTimeTools_1_1Stopwatch_html_a372de693ad40b3f42839c8ec6ac845f4"><div class="ttname"><a href="classDateTimeTools_1_1Stopwatch.html#a372de693ad40b3f42839c8ec6ac845f4">DateTimeTools::Stopwatch::Reset</a></div><div class="ttdeci">void Reset()</div><div class="ttdoc">清零并恢复到未启动状态。</div><div class="ttdef"><b>Definition</b> MyTimer.cpp:127</div></div>
+<div class="ttc" id="aclassDateTimeTools_1_1Stopwatch_html_a3b667144a70d38545d73dbcbcfe53a42"><div class="ttname"><a href="classDateTimeTools_1_1Stopwatch.html#a3b667144a70d38545d73dbcbcfe53a42">DateTimeTools::Stopwatch::Stopwatch</a></div><div class="ttdeci">Stopwatch()</div><div class="ttdef"><b>Definition</b> MyTimer.cpp:76</div></div>
+<div class="ttc" id="aclassDateTimeTools_1_1Stopwatch_html_a64c179ffed78d0cc957f9946dc2e482b"><div class="ttname"><a href="classDateTimeTools_1_1Stopwatch.html#a64c179ffed78d0cc957f9946dc2e482b">DateTimeTools::Stopwatch::accumulated_ns_</a></div><div class="ttdeci">int64_t accumulated_ns_</div><div class="ttdef"><b>Definition</b> MyTimer.h:114</div></div>
+<div class="ttc" id="aclassDateTimeTools_1_1Stopwatch_html_a6da50857fd0fea48b388d8e219419f00"><div class="ttname"><a href="classDateTimeTools_1_1Stopwatch.html#a6da50857fd0fea48b388d8e219419f00">DateTimeTools::Stopwatch::start_time_</a></div><div class="ttdeci">std::chrono::steady_clock::time_point start_time_</div><div class="ttdef"><b>Definition</b> MyTimer.h:113</div></div>
+<div class="ttc" id="aclassDateTimeTools_1_1Stopwatch_html_a70babc5227ddd16ca31dccc6cec0bb22"><div class="ttname"><a href="classDateTimeTools_1_1Stopwatch.html#a70babc5227ddd16ca31dccc6cec0bb22">DateTimeTools::Stopwatch::Pause</a></div><div class="ttdeci">void Pause()</div><div class="ttdoc">暂停计时，保留已累计耗时。</div><div class="ttdef"><b>Definition</b> MyTimer.cpp:93</div></div>
+<div class="ttc" id="aclassDateTimeTools_1_1Stopwatch_html_a7a9997902dca9b1d5b37bc3f13a33142"><div class="ttname"><a href="classDateTimeTools_1_1Stopwatch.html#a7a9997902dca9b1d5b37bc3f13a33142">DateTimeTools::Stopwatch::ElapsedSeconds</a></div><div class="ttdeci">double ElapsedSeconds() const</div><div class="ttdoc">获取累计秒数。</div><div class="ttdef"><b>Definition</b> MyTimer.cpp:136</div></div>
+<div class="ttc" id="aclassDateTimeTools_1_1Stopwatch_html_a8a516d1ff2fdde19bf2c5c0e19ac82fa"><div class="ttname"><a href="classDateTimeTools_1_1Stopwatch.html#a8a516d1ff2fdde19bf2c5c0e19ac82fa">DateTimeTools::Stopwatch::CurrentElapsedNanoseconds</a></div><div class="ttdeci">int64_t CurrentElapsedNanoseconds() const</div><div class="ttdef"><b>Definition</b> MyTimer.cpp:166</div></div>
+<div class="ttc" id="aclassDateTimeTools_1_1Stopwatch_html_a8af8fb637c7ae9d71a23bf3ac80d3c86"><div class="ttname"><a href="classDateTimeTools_1_1Stopwatch.html#a8af8fb637c7ae9d71a23bf3ac80d3c86">DateTimeTools::Stopwatch::Resume</a></div><div class="ttdeci">void Resume()</div><div class="ttdoc">从暂停状态继续计时。</div><div class="ttdef"><b>Definition</b> MyTimer.cpp:105</div></div>
+<div class="ttc" id="aclassDateTimeTools_1_1Stopwatch_html_a9f78e2ea8ec7c3ba6ad2ebc6c92efd42"><div class="ttname"><a href="classDateTimeTools_1_1Stopwatch.html#a9f78e2ea8ec7c3ba6ad2ebc6c92efd42">DateTimeTools::Stopwatch::IsPaused</a></div><div class="ttdeci">bool IsPaused() const</div><div class="ttdoc">当前是否处于暂停状态。</div><div class="ttdef"><b>Definition</b> MyTimer.cpp:161</div></div>
+<div class="ttc" id="aclassDateTimeTools_1_1Stopwatch_html_aa440b02cc99bc6923375b0c9db2f2dca"><div class="ttname"><a href="classDateTimeTools_1_1Stopwatch.html#aa440b02cc99bc6923375b0c9db2f2dca">DateTimeTools::Stopwatch::running_</a></div><div class="ttdeci">bool running_</div><div class="ttdef"><b>Definition</b> MyTimer.h:115</div></div>
+<div class="ttc" id="aclassDateTimeTools_1_1Stopwatch_html_ad201152b05beda61e51e3594ff07c8fe"><div class="ttname"><a href="classDateTimeTools_1_1Stopwatch.html#ad201152b05beda61e51e3594ff07c8fe">DateTimeTools::Stopwatch::IsRunning</a></div><div class="ttdeci">bool IsRunning() const</div><div class="ttdoc">当前是否正在计时。</div><div class="ttdef"><b>Definition</b> MyTimer.cpp:156</div></div>
+<div class="ttc" id="aclassDateTimeTools_1_1Stopwatch_html_ad4a1377c1b1fad5c77888fdec10a3a28"><div class="ttname"><a href="classDateTimeTools_1_1Stopwatch.html#ad4a1377c1b1fad5c77888fdec10a3a28">DateTimeTools::Stopwatch::ElapsedMicroseconds</a></div><div class="ttdeci">int64_t ElapsedMicroseconds() const</div><div class="ttdoc">获取累计微秒数。</div><div class="ttdef"><b>Definition</b> MyTimer.cpp:146</div></div>
+<div class="ttc" id="aclassDateTimeTools_1_1Stopwatch_html_aff8f249a7fe430dc4f3b08b640844050"><div class="ttname"><a href="classDateTimeTools_1_1Stopwatch.html#aff8f249a7fe430dc4f3b08b640844050">DateTimeTools::Stopwatch::paused_</a></div><div class="ttdeci">bool paused_</div><div class="ttdef"><b>Definition</b> MyTimer.h:116</div></div>
+<div class="ttc" id="aclassDateTimeTools_1_1Timer_html"><div class="ttname"><a href="classDateTimeTools_1_1Timer.html">DateTimeTools::Timer</a></div><div class="ttdoc">轻量级耗时计时器。</div><div class="ttdef"><b>Definition</b> MyTimer.h:16</div></div>
+<div class="ttc" id="aclassDateTimeTools_1_1Timer_html_a098ba286535a1cb97681fe141a806127"><div class="ttname"><a href="classDateTimeTools_1_1Timer.html#a098ba286535a1cb97681fe141a806127">DateTimeTools::Timer::ElapsedMilliseconds</a></div><div class="ttdeci">int64_t ElapsedMilliseconds() const</div><div class="ttdoc">获取已经过毫秒数。</div><div class="ttdef"><b>Definition</b> MyTimer.cpp:42</div></div>
+<div class="ttc" id="aclassDateTimeTools_1_1Timer_html_a0a95ef5985f3b77d0304e9f9a9e27d88"><div class="ttname"><a href="classDateTimeTools_1_1Timer.html#a0a95ef5985f3b77d0304e9f9a9e27d88">DateTimeTools::Timer::ElapsedNanoseconds</a></div><div class="ttdeci">int64_t ElapsedNanoseconds() const</div><div class="ttdoc">获取已经过纳秒数。</div><div class="ttdef"><b>Definition</b> MyTimer.cpp:52</div></div>
+<div class="ttc" id="aclassDateTimeTools_1_1Timer_html_a0b93a56e2e79d4308791f9271316a062"><div class="ttname"><a href="classDateTimeTools_1_1Timer.html#a0b93a56e2e79d4308791f9271316a062">DateTimeTools::Timer::Start</a></div><div class="ttdeci">void Start(bool showLog=true)</div><div class="ttdoc">开始计时；如果已经在计时，会从当前时刻重新开始。</div><div class="ttdef"><b>Definition</b> MyTimer.cpp:13</div></div>
+<div class="ttc" id="aclassDateTimeTools_1_1Timer_html_a372de693ad40b3f42839c8ec6ac845f4"><div class="ttname"><a href="classDateTimeTools_1_1Timer.html#a372de693ad40b3f42839c8ec6ac845f4">DateTimeTools::Timer::Reset</a></div><div class="ttdeci">void Reset()</div><div class="ttdoc">重置计时器，清零并停止。</div><div class="ttdef"><b>Definition</b> MyTimer.cpp:30</div></div>
+<div class="ttc" id="aclassDateTimeTools_1_1Timer_html_a6a8bc5014802d569f6d01c4f36121a81"><div class="ttname"><a href="classDateTimeTools_1_1Timer.html#a6a8bc5014802d569f6d01c4f36121a81">DateTimeTools::Timer::Timer</a></div><div class="ttdeci">Timer()</div><div class="ttdef"><b>Definition</b> MyTimer.cpp:7</div></div>
+<div class="ttc" id="aclassDateTimeTools_1_1Timer_html_a6da50857fd0fea48b388d8e219419f00"><div class="ttname"><a href="classDateTimeTools_1_1Timer.html#a6da50857fd0fea48b388d8e219419f00">DateTimeTools::Timer::start_time_</a></div><div class="ttdeci">std::chrono::steady_clock::time_point start_time_</div><div class="ttdef"><b>Definition</b> MyTimer.h:42</div></div>
+<div class="ttc" id="aclassDateTimeTools_1_1Timer_html_a7a9997902dca9b1d5b37bc3f13a33142"><div class="ttname"><a href="classDateTimeTools_1_1Timer.html#a7a9997902dca9b1d5b37bc3f13a33142">DateTimeTools::Timer::ElapsedSeconds</a></div><div class="ttdeci">double ElapsedSeconds() const</div><div class="ttdoc">获取已经过秒数。</div><div class="ttdef"><b>Definition</b> MyTimer.cpp:37</div></div>
+<div class="ttc" id="aclassDateTimeTools_1_1Timer_html_a8e3db699fe9a35ee113cae0e51c6c211"><div class="ttname"><a href="classDateTimeTools_1_1Timer.html#a8e3db699fe9a35ee113cae0e51c6c211">DateTimeTools::Timer::Restart</a></div><div class="ttdeci">void Restart(bool showLog=true)</div><div class="ttdoc">重新计时，等价于 Start，语义上用于新一轮测量。</div><div class="ttdef"><b>Definition</b> MyTimer.cpp:22</div></div>
+<div class="ttc" id="aclassDateTimeTools_1_1Timer_html_aa440b02cc99bc6923375b0c9db2f2dca"><div class="ttname"><a href="classDateTimeTools_1_1Timer.html#aa440b02cc99bc6923375b0c9db2f2dca">DateTimeTools::Timer::running_</a></div><div class="ttdeci">bool running_</div><div class="ttdef"><b>Definition</b> MyTimer.h:43</div></div>
+<div class="ttc" id="aclassDateTimeTools_1_1Timer_html_ad4a1377c1b1fad5c77888fdec10a3a28"><div class="ttname"><a href="classDateTimeTools_1_1Timer.html#ad4a1377c1b1fad5c77888fdec10a3a28">DateTimeTools::Timer::ElapsedMicroseconds</a></div><div class="ttdeci">int64_t ElapsedMicroseconds() const</div><div class="ttdoc">获取已经过微秒数。</div><div class="ttdef"><b>Definition</b> MyTimer.cpp:47</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html"><div class="ttname"><a href="namespaceDateTimeTools.html">DateTimeTools</a></div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:12</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

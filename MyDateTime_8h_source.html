@@ -1,0 +1,346 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PROJECT_NAME: src/util/my_tools/MyDateTime.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">PROJECT_NAME<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b7878ad5ecbf2506f4125b9d34c97e45.html">util</a></li><li class="navelem"><a class="el" href="dir_222f75d460e07a5cd0325e16008607c5.html">my_tools</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">MyDateTime.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="MyDateTime_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;ctime&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceDateTimeTools.html">DateTimeTools</a> {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="structDateTimeTools_1_1DateTime.html">   16</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structDateTimeTools_1_1DateTime.html">DateTime</a></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>{</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="structDateTimeTools_1_1DateTime.html#abeac221e38b7b9ce7df8722c842bf671">   18</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structDateTimeTools_1_1DateTime.html#abeac221e38b7b9ce7df8722c842bf671">year</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="structDateTimeTools_1_1DateTime.html#aedb06abe5aff12fa3e7e0e71a374edfb">   19</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structDateTimeTools_1_1DateTime.html#aedb06abe5aff12fa3e7e0e71a374edfb">month</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="structDateTimeTools_1_1DateTime.html#a4c11afc03fc3ee49bab660def6558f2a">   20</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structDateTimeTools_1_1DateTime.html#a4c11afc03fc3ee49bab660def6558f2a">day</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="structDateTimeTools_1_1DateTime.html#a15df9ba285cfd842f284025f904edc9c">   22</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structDateTimeTools_1_1DateTime.html#a15df9ba285cfd842f284025f904edc9c">hour</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="structDateTimeTools_1_1DateTime.html#a5edffad982a0566ad01d95005474eae3">   23</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structDateTimeTools_1_1DateTime.html#a5edffad982a0566ad01d95005474eae3">minute</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="structDateTimeTools_1_1DateTime.html#a6cf35be1947a62f134392fcb1b3c54d2">   24</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structDateTimeTools_1_1DateTime.html#a6cf35be1947a62f134392fcb1b3c54d2">second</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="structDateTimeTools_1_1DateTime.html#a4886841cbe2481fb8dd25e2574bc25ba">   26</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structDateTimeTools_1_1DateTime.html#a4886841cbe2481fb8dd25e2574bc25ba">millisecond</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="structDateTimeTools_1_1DateTime.html#af851194d4d91027fe1c380d9490cf9ff">   27</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structDateTimeTools_1_1DateTime.html#af851194d4d91027fe1c380d9490cf9ff">microsecond</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>};</div>
+</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">// =========================</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">// 当前系统时间</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">// =========================</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>std::time_t <a class="code hl_function" href="namespaceDateTimeTools.html#a14e96d485d02cfac43cdc2bb5df87661">Now</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>int64_t <a class="code hl_function" href="namespaceDateTimeTools.html#ae436b9032a29a3934abb23a10f2cb3f7">NowMs</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>int64_t <a class="code hl_function" href="namespaceDateTimeTools.html#a987512d3ee07d6f271afcdc32f64273f">NowUs</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>int64_t <a class="code hl_function" href="namespaceDateTimeTools.html#ae8bb5e13fc61486b64ef43ed1df4c5f3">NowNs</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>std::string <a class="code hl_function" href="namespaceDateTimeTools.html#ab269a640b6a59882381a79c848ce3efe">GetTimestamp</a>();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>std::string <a class="code hl_function" href="namespaceDateTimeTools.html#a9f7e0947dea2803d356e0b4f52972dd9">GetTimestampMs</a>();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>std::string <a class="code hl_function" href="namespaceDateTimeTools.html#a0c34b1dc4c52d8b2d981535b46107c59">GetTimestampUs</a>();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>std::string <a class="code hl_function" href="namespaceDateTimeTools.html#a03419413dcad2791cce5639b576f2b01">GetTimestampNs</a>();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">// =========================</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">// 格式化输出</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">// =========================</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>std::string <a class="code hl_function" href="namespaceDateTimeTools.html#a7ef596a0c429a1a74709cf14d8fa15d2">ToString</a>();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>std::string <a class="code hl_function" href="namespaceDateTimeTools.html#a0071e66215aed608a402f52e846a565e">ToStringMs</a>();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>std::string <a class="code hl_function" href="namespaceDateTimeTools.html#ae59d2775e8e5b0d680ea16b46f53c68c">ToStringUs</a>();</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>std::string <a class="code hl_function" href="namespaceDateTimeTools.html#a7ef596a0c429a1a74709cf14d8fa15d2">ToString</a>(<span class="keyword">const</span> std::string&amp; format);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>std::string <a class="code hl_function" href="namespaceDateTimeTools.html#a6f703982d55f8d71f1a289cee1df81dd">Format</a>(std::time_t seconds, <span class="keyword">const</span> std::string&amp; format = <span class="stringliteral">&quot;%Y-%m-%d %H:%M:%S&quot;</span>);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>std::string <a class="code hl_function" href="namespaceDateTimeTools.html#a69ba495f3e5182f08aadcff392f806b4">FormatMs</a>(int64_t milliseconds, <span class="keyword">const</span> std::string&amp; format = <span class="stringliteral">&quot;%Y-%m-%d %H:%M:%S&quot;</span>);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>std::string <a class="code hl_function" href="namespaceDateTimeTools.html#a412e7f1f236155e5bfcce94a77930598">FormatUs</a>(int64_t microseconds, <span class="keyword">const</span> std::string&amp; format = <span class="stringliteral">&quot;%Y-%m-%d %H:%M:%S&quot;</span>);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>std::string <a class="code hl_function" href="namespaceDateTimeTools.html#af07202b4992fc1fc6b7e1a1353e4a151">FormatNs</a>(int64_t nanoseconds, <span class="keyword">const</span> std::string&amp; format = <span class="stringliteral">&quot;%Y-%m-%d %H:%M:%S&quot;</span>);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="comment">// =========================</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="comment">// 字符串解析</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="comment">// =========================</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>std::time_t <a class="code hl_function" href="namespaceDateTimeTools.html#ad7d107cdbd791d7b0ed61d92a5c21afd">Parse</a>(<span class="keyword">const</span> std::string&amp; datetime);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>int64_t <a class="code hl_function" href="namespaceDateTimeTools.html#a21f22aba626ec12a3b937a15b3e13dfc">ParseMs</a>(<span class="keyword">const</span> std::string&amp; datetime);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>int64_t <a class="code hl_function" href="namespaceDateTimeTools.html#aed4d4d789605bd0059421e0932e0d3ac">ParseUs</a>(<span class="keyword">const</span> std::string&amp; datetime);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>int64_t <a class="code hl_function" href="namespaceDateTimeTools.html#a343dc9848387952c1bd52d2a08096c3d">ParseNs</a>(<span class="keyword">const</span> std::string&amp; datetime);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="comment">// =========================</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="comment">// UTC 与本地时间</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="comment">// =========================</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>std::string <a class="code hl_function" href="namespaceDateTimeTools.html#a429c3407539af3c369ece2baeead8da2">GetUtcTime</a>();</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>std::string <a class="code hl_function" href="namespaceDateTimeTools.html#abe16ae1f752a86a62a2027fa82efe978">GetLocalTime</a>();</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="comment">// =========================</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="comment">// 日期字段</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="comment">// =========================</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>std::string <a class="code hl_function" href="namespaceDateTimeTools.html#abfef80e51c93e5dc95bd78bd4e3a61ef">Today</a>();</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="keywordtype">int</span> <a class="code hl_function" href="namespaceDateTimeTools.html#a2c50ef33250c61d0395b0aa86912dcdc">CurrentYear</a>();</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="keywordtype">int</span> <a class="code hl_function" href="namespaceDateTimeTools.html#a39333d375c8c91c2c9e3d7e136d94237">CurrentMonth</a>();</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="keywordtype">int</span> <a class="code hl_function" href="namespaceDateTimeTools.html#aa45d144eaf7f07ac01517b49446252d5">CurrentDay</a>();</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="keywordtype">int</span> <a class="code hl_function" href="namespaceDateTimeTools.html#aeb5f4e6c8377e2ab99a29f76a17f941c">CurrentHour</a>();</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="keywordtype">int</span> <a class="code hl_function" href="namespaceDateTimeTools.html#af4fec93e6a9dbbec4fad2c95af91648a">CurrentMinute</a>();</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="keywordtype">int</span> <a class="code hl_function" href="namespaceDateTimeTools.html#ab7dcdd7771da9837c4eb5c2b11961025">CurrentSecond</a>();</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="keywordtype">int</span> <a class="code hl_function" href="namespaceDateTimeTools.html#af0cbb6147ae3fa9141011248a68fe394">DayOfWeek</a>();</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="keywordtype">int</span> <a class="code hl_function" href="namespaceDateTimeTools.html#af0cbb6147ae3fa9141011248a68fe394">DayOfWeek</a>(std::time_t seconds);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="keywordtype">int</span> <a class="code hl_function" href="namespaceDateTimeTools.html#af1132b798d626663ad4ada5b0a4de0e0">DayOfYear</a>();</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="keywordtype">int</span> <a class="code hl_function" href="namespaceDateTimeTools.html#af1132b798d626663ad4ada5b0a4de0e0">DayOfYear</a>(std::time_t seconds);</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="keywordtype">int</span> <a class="code hl_function" href="namespaceDateTimeTools.html#a13861c7c06262ec6e689a1b88f07f3cc">DaysInMonth</a>();</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="keywordtype">int</span> <a class="code hl_function" href="namespaceDateTimeTools.html#a13861c7c06262ec6e689a1b88f07f3cc">DaysInMonth</a>(<span class="keywordtype">int</span> year, <span class="keywordtype">int</span> month);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceDateTimeTools.html#a498cabbe12c9b264cc086ff4cffaac62">IsLeapYear</a>();</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span><span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceDateTimeTools.html#a498cabbe12c9b264cc086ff4cffaac62">IsLeapYear</a>(<span class="keywordtype">int</span> year);</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><a class="code hl_struct" href="structDateTimeTools_1_1DateTime.html">DateTime</a> <a class="code hl_function" href="namespaceDateTimeTools.html#af88626a4714dc52b2b9e43d0d83e00af">NowDateTime</a>();</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="comment">// =========================</span></div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="comment">// 时间计算</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="comment">// =========================</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>std::time_t <a class="code hl_function" href="namespaceDateTimeTools.html#a9e1282ae7b591d1266b41864575a51d3">AddDays</a>(<span class="keywordtype">int</span> days);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>std::time_t <a class="code hl_function" href="namespaceDateTimeTools.html#a9e1282ae7b591d1266b41864575a51d3">AddDays</a>(std::time_t base_time, <span class="keywordtype">int</span> days);</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>std::time_t <a class="code hl_function" href="namespaceDateTimeTools.html#ad38217dc581809124fdae3ac7db69b9c">AddHours</a>(<span class="keywordtype">int</span> hours);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>std::time_t <a class="code hl_function" href="namespaceDateTimeTools.html#ad38217dc581809124fdae3ac7db69b9c">AddHours</a>(std::time_t base_time, <span class="keywordtype">int</span> hours);</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>std::time_t <a class="code hl_function" href="namespaceDateTimeTools.html#a0a9599a55789c0a146822dc325b2b71e">AddMinutes</a>(<span class="keywordtype">int</span> minutes);</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>std::time_t <a class="code hl_function" href="namespaceDateTimeTools.html#a0a9599a55789c0a146822dc325b2b71e">AddMinutes</a>(std::time_t base_time, <span class="keywordtype">int</span> minutes);</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>std::time_t <a class="code hl_function" href="namespaceDateTimeTools.html#a1930c85b9f150837e7cccfa4788bdf8b">AddSeconds</a>(<span class="keywordtype">int</span> seconds);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>std::time_t <a class="code hl_function" href="namespaceDateTimeTools.html#a1930c85b9f150837e7cccfa4788bdf8b">AddSeconds</a>(std::time_t base_time, <span class="keywordtype">int</span> seconds);</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>int64_t <a class="code hl_function" href="namespaceDateTimeTools.html#a089848a16e31b48517054d646763c030">DiffSeconds</a>(std::time_t begin, std::time_t end);</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>int64_t <a class="code hl_function" href="namespaceDateTimeTools.html#a18aeb50882bff59e2f11b62ced05a3a7">DiffMilliseconds</a>(int64_t begin_ms, int64_t end_ms);</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>int64_t <a class="code hl_function" href="namespaceDateTimeTools.html#a3f7ed34583730dcf1349077beae51ab5">DiffMinutes</a>(std::time_t begin, std::time_t end);</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>int64_t <a class="code hl_function" href="namespaceDateTimeTools.html#a4512644d3b4a30bb8a7f36670e1faa0b">DiffHours</a>(std::time_t begin, std::time_t end);</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>int64_t <a class="code hl_function" href="namespaceDateTimeTools.html#a75e7f1f937c441f045f3ece998a0a776">DiffDays</a>(std::time_t begin, std::time_t end);</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="comment">// =========================</span></div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="comment">// 日期判断</span></div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="comment">// =========================</span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceDateTimeTools.html#a9d9a436199e368e3768d5b8593d46235">IsToday</a>(std::time_t seconds);</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span> </div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span><span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceDateTimeTools.html#a2e453de8bea34d7bd35ee975c6af8490">IsSameDay</a>(std::time_t left, std::time_t right);</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span><span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceDateTimeTools.html#a39acbe37a71e62c4cd7e2a8ea53ae079">IsExpired</a>(std::time_t expire_time);</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span><span class="keywordtype">bool</span> <a class="code hl_function" href="namespaceDateTimeTools.html#ad3ab1c0b882df6f4c416f1ffd9447443">IsExpiredMs</a>(int64_t start_ms, int64_t timeout_ms);</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span><span class="comment">// =========================</span></div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span><span class="comment">// 睡眠</span></div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="comment">// =========================</span></div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespaceDateTimeTools.html#ad9a3c91b371f0aa7d49ee62d03d2a5b3">SleepMs</a>(uint64_t milliseconds);</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> </div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespaceDateTimeTools.html#a79899495eade05fb719071020bd761b3">SleepUs</a>(uint64_t microseconds);</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespaceDateTimeTools.html#a7ff92fcab12b9d7ebd90b4b86756225c">SleepSeconds</a>(uint64_t seconds);</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span><span class="comment">// =========================</span></div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span><span class="comment">// 时区</span></div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span><span class="comment">// =========================</span></div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span> </div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span><span class="keywordtype">int</span> <a class="code hl_function" href="namespaceDateTimeTools.html#a6c415e8adc901b5bce0b3548a45bb1a8">GetTimezoneOffset</a>();</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span> </div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>std::string <a class="code hl_function" href="namespaceDateTimeTools.html#a57fdd11cafd5d7edda0ee753e3a59ea9">GetTimezoneName</a>();</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span> </div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span><span class="comment">// =========================</span></div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span><span class="comment">// 单调时钟，适合性能统计和超时判断</span></div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span><span class="comment">// =========================</span></div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>uint64_t <a class="code hl_function" href="namespaceDateTimeTools.html#aafa7af07c9542e3b043db73d6bb5fb5d">SteadyNowMs</a>();</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span> </div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>uint64_t <a class="code hl_function" href="namespaceDateTimeTools.html#a416fdf14219eb9e6c72b2a145ea521c6">SteadyNowUs</a>();</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span> </div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>uint64_t <a class="code hl_function" href="namespaceDateTimeTools.html#a985c1264be370c14086dc18cdf3551d1">SteadyNowNs</a>();</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> </div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>}  <span class="comment">// namespace DateTimeTools</span></div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span> </div>
+<div class="ttc" id="anamespaceDateTimeTools_html"><div class="ttname"><a href="namespaceDateTimeTools.html">DateTimeTools</a></div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:12</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_a0071e66215aed608a402f52e846a565e"><div class="ttname"><a href="namespaceDateTimeTools.html#a0071e66215aed608a402f52e846a565e">DateTimeTools::ToStringMs</a></div><div class="ttdeci">std::string ToStringMs()</div><div class="ttdoc">当前本地时间格式化为 yyyy-MM-dd HH:mm:ss.SSS。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:258</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_a03419413dcad2791cce5639b576f2b01"><div class="ttname"><a href="namespaceDateTimeTools.html#a03419413dcad2791cce5639b576f2b01">DateTimeTools::GetTimestampNs</a></div><div class="ttdeci">std::string GetTimestampNs()</div><div class="ttdoc">获取纳秒级时间戳字符串。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:248</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_a089848a16e31b48517054d646763c030"><div class="ttname"><a href="namespaceDateTimeTools.html#a089848a16e31b48517054d646763c030">DateTimeTools::DiffSeconds</a></div><div class="ttdeci">int64_t DiffSeconds(std::time_t begin, std::time_t end)</div><div class="ttdoc">计算两个秒级时间戳差值，返回 end - begin，单位：秒。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:494</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_a0a9599a55789c0a146822dc325b2b71e"><div class="ttname"><a href="namespaceDateTimeTools.html#a0a9599a55789c0a146822dc325b2b71e">DateTimeTools::AddMinutes</a></div><div class="ttdeci">std::time_t AddMinutes(int minutes)</div><div class="ttdoc">在当前时间基础上增加分钟。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:474</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_a0c34b1dc4c52d8b2d981535b46107c59"><div class="ttname"><a href="namespaceDateTimeTools.html#a0c34b1dc4c52d8b2d981535b46107c59">DateTimeTools::GetTimestampUs</a></div><div class="ttdeci">std::string GetTimestampUs()</div><div class="ttdoc">获取微秒级时间戳字符串。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:243</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_a13861c7c06262ec6e689a1b88f07f3cc"><div class="ttname"><a href="namespaceDateTimeTools.html#a13861c7c06262ec6e689a1b88f07f3cc">DateTimeTools::DaysInMonth</a></div><div class="ttdeci">int DaysInMonth()</div><div class="ttdoc">获取当前月份天数。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:399</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_a14e96d485d02cfac43cdc2bb5df87661"><div class="ttname"><a href="namespaceDateTimeTools.html#a14e96d485d02cfac43cdc2bb5df87661">DateTimeTools::Now</a></div><div class="ttdeci">std::time_t Now()</div><div class="ttdoc">获取当前 Unix 时间戳，单位：秒。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:210</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_a18aeb50882bff59e2f11b62ced05a3a7"><div class="ttname"><a href="namespaceDateTimeTools.html#a18aeb50882bff59e2f11b62ced05a3a7">DateTimeTools::DiffMilliseconds</a></div><div class="ttdeci">int64_t DiffMilliseconds(int64_t begin_ms, int64_t end_ms)</div><div class="ttdoc">计算两个毫秒级时间戳差值，返回 end_ms - begin_ms，单位：毫秒。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:499</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_a1930c85b9f150837e7cccfa4788bdf8b"><div class="ttname"><a href="namespaceDateTimeTools.html#a1930c85b9f150837e7cccfa4788bdf8b">DateTimeTools::AddSeconds</a></div><div class="ttdeci">std::time_t AddSeconds(int seconds)</div><div class="ttdoc">在当前时间基础上增加秒。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:484</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_a21f22aba626ec12a3b937a15b3e13dfc"><div class="ttname"><a href="namespaceDateTimeTools.html#a21f22aba626ec12a3b937a15b3e13dfc">DateTimeTools::ParseMs</a></div><div class="ttdeci">int64_t ParseMs(const std::string &amp;datetime)</div><div class="ttdoc">解析 yyyy-MM-dd HH:mm:ss[.SSS]，返回毫秒级 Unix 时间戳；失败返回 -1。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:303</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_a2c50ef33250c61d0395b0aa86912dcdc"><div class="ttname"><a href="namespaceDateTimeTools.html#a2c50ef33250c61d0395b0aa86912dcdc">DateTimeTools::CurrentYear</a></div><div class="ttdeci">int CurrentYear()</div><div class="ttdoc">当前年份，例如 2026。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:339</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_a2e453de8bea34d7bd35ee975c6af8490"><div class="ttname"><a href="namespaceDateTimeTools.html#a2e453de8bea34d7bd35ee975c6af8490">DateTimeTools::IsSameDay</a></div><div class="ttdeci">bool IsSameDay(std::time_t left, std::time_t right)</div><div class="ttdoc">判断两个秒级时间戳是否属于本地时区的同一天。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:524</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_a343dc9848387952c1bd52d2a08096c3d"><div class="ttname"><a href="namespaceDateTimeTools.html#a343dc9848387952c1bd52d2a08096c3d">DateTimeTools::ParseNs</a></div><div class="ttdeci">int64_t ParseNs(const std::string &amp;datetime)</div><div class="ttdoc">解析 yyyy-MM-dd HH:mm:ss[.nnnnnnnnn]，返回纳秒级 Unix 时间戳；失败返回 -1。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:313</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_a39333d375c8c91c2c9e3d7e136d94237"><div class="ttname"><a href="namespaceDateTimeTools.html#a39333d375c8c91c2c9e3d7e136d94237">DateTimeTools::CurrentMonth</a></div><div class="ttdeci">int CurrentMonth()</div><div class="ttdoc">当前月份，范围 1~12。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:344</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_a39acbe37a71e62c4cd7e2a8ea53ae079"><div class="ttname"><a href="namespaceDateTimeTools.html#a39acbe37a71e62c4cd7e2a8ea53ae079">DateTimeTools::IsExpired</a></div><div class="ttdeci">bool IsExpired(std::time_t expire_time)</div><div class="ttdoc">判断秒级截止时间是否已经过期。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:535</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_a3f7ed34583730dcf1349077beae51ab5"><div class="ttname"><a href="namespaceDateTimeTools.html#a3f7ed34583730dcf1349077beae51ab5">DateTimeTools::DiffMinutes</a></div><div class="ttdeci">int64_t DiffMinutes(std::time_t begin, std::time_t end)</div><div class="ttdoc">计算两个秒级时间戳差值，返回 end - begin，单位：分钟。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:504</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_a412e7f1f236155e5bfcce94a77930598"><div class="ttname"><a href="namespaceDateTimeTools.html#a412e7f1f236155e5bfcce94a77930598">DateTimeTools::FormatUs</a></div><div class="ttdeci">std::string FormatUs(int64_t microseconds, const std::string &amp;format)</div><div class="ttdoc">指定微秒级时间戳格式化，默认 yyyy-MM-dd HH:mm:ss.ffffff。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:283</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_a416fdf14219eb9e6c72b2a145ea521c6"><div class="ttname"><a href="namespaceDateTimeTools.html#a416fdf14219eb9e6c72b2a145ea521c6">DateTimeTools::SteadyNowUs</a></div><div class="ttdeci">uint64_t SteadyNowUs()</div><div class="ttdoc">获取单调时钟微秒值，不受系统时间回拨影响。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:592</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_a429c3407539af3c369ece2baeead8da2"><div class="ttname"><a href="namespaceDateTimeTools.html#a429c3407539af3c369ece2baeead8da2">DateTimeTools::GetUtcTime</a></div><div class="ttdeci">std::string GetUtcTime()</div><div class="ttdoc">获取当前 UTC 时间，格式 yyyy-MM-dd HH:mm:ss。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:318</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_a4512644d3b4a30bb8a7f36670e1faa0b"><div class="ttname"><a href="namespaceDateTimeTools.html#a4512644d3b4a30bb8a7f36670e1faa0b">DateTimeTools::DiffHours</a></div><div class="ttdeci">int64_t DiffHours(std::time_t begin, std::time_t end)</div><div class="ttdoc">计算两个秒级时间戳差值，返回 end - begin，单位：小时。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:509</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_a498cabbe12c9b264cc086ff4cffaac62"><div class="ttname"><a href="namespaceDateTimeTools.html#a498cabbe12c9b264cc086ff4cffaac62">DateTimeTools::IsLeapYear</a></div><div class="ttdeci">bool IsLeapYear()</div><div class="ttdoc">判断当前年份是否为闰年。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:418</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_a57fdd11cafd5d7edda0ee753e3a59ea9"><div class="ttname"><a href="namespaceDateTimeTools.html#a57fdd11cafd5d7edda0ee753e3a59ea9">DateTimeTools::GetTimezoneName</a></div><div class="ttdeci">std::string GetTimezoneName()</div><div class="ttdoc">获取当前时区名称，例如 CST、UTC。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:575</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_a69ba495f3e5182f08aadcff392f806b4"><div class="ttname"><a href="namespaceDateTimeTools.html#a69ba495f3e5182f08aadcff392f806b4">DateTimeTools::FormatMs</a></div><div class="ttdeci">std::string FormatMs(int64_t milliseconds, const std::string &amp;format)</div><div class="ttdoc">指定毫秒级时间戳格式化，默认 yyyy-MM-dd HH:mm:ss.SSS。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:278</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_a6c415e8adc901b5bce0b3548a45bb1a8"><div class="ttname"><a href="namespaceDateTimeTools.html#a6c415e8adc901b5bce0b3548a45bb1a8">DateTimeTools::GetTimezoneOffset</a></div><div class="ttdeci">int GetTimezoneOffset()</div><div class="ttdoc">获取当前本地时区相对 UTC 的偏移秒数，例如中国标准时间为 28800。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:560</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_a6f703982d55f8d71f1a289cee1df81dd"><div class="ttname"><a href="namespaceDateTimeTools.html#a6f703982d55f8d71f1a289cee1df81dd">DateTimeTools::Format</a></div><div class="ttdeci">std::string Format(std::time_t seconds, const std::string &amp;format)</div><div class="ttdoc">指定秒级时间戳格式化，默认 yyyy-MM-dd HH:mm:ss。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:273</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_a75e7f1f937c441f045f3ece998a0a776"><div class="ttname"><a href="namespaceDateTimeTools.html#a75e7f1f937c441f045f3ece998a0a776">DateTimeTools::DiffDays</a></div><div class="ttdeci">int64_t DiffDays(std::time_t begin, std::time_t end)</div><div class="ttdoc">计算两个秒级时间戳差值，返回 end - begin，单位：天。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:514</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_a79899495eade05fb719071020bd761b3"><div class="ttname"><a href="namespaceDateTimeTools.html#a79899495eade05fb719071020bd761b3">DateTimeTools::SleepUs</a></div><div class="ttdeci">void SleepUs(uint64_t microseconds)</div><div class="ttdoc">当前线程睡眠指定微秒。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:550</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_a7ef596a0c429a1a74709cf14d8fa15d2"><div class="ttname"><a href="namespaceDateTimeTools.html#a7ef596a0c429a1a74709cf14d8fa15d2">DateTimeTools::ToString</a></div><div class="ttdeci">std::string ToString()</div><div class="ttdoc">当前本地时间格式化为 yyyy-MM-dd HH:mm:ss。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:253</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_a7ff92fcab12b9d7ebd90b4b86756225c"><div class="ttname"><a href="namespaceDateTimeTools.html#a7ff92fcab12b9d7ebd90b4b86756225c">DateTimeTools::SleepSeconds</a></div><div class="ttdeci">void SleepSeconds(uint64_t seconds)</div><div class="ttdoc">当前线程睡眠指定秒。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:555</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_a985c1264be370c14086dc18cdf3551d1"><div class="ttname"><a href="namespaceDateTimeTools.html#a985c1264be370c14086dc18cdf3551d1">DateTimeTools::SteadyNowNs</a></div><div class="ttdeci">uint64_t SteadyNowNs()</div><div class="ttdoc">获取单调时钟纳秒值，不受系统时间回拨影响。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:598</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_a987512d3ee07d6f271afcdc32f64273f"><div class="ttname"><a href="namespaceDateTimeTools.html#a987512d3ee07d6f271afcdc32f64273f">DateTimeTools::NowUs</a></div><div class="ttdeci">int64_t NowUs()</div><div class="ttdoc">获取当前 Unix 时间戳，单位：微秒。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:221</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_a9d9a436199e368e3768d5b8593d46235"><div class="ttname"><a href="namespaceDateTimeTools.html#a9d9a436199e368e3768d5b8593d46235">DateTimeTools::IsToday</a></div><div class="ttdeci">bool IsToday(std::time_t seconds)</div><div class="ttdoc">判断指定秒级时间戳是否为今天。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:519</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_a9e1282ae7b591d1266b41864575a51d3"><div class="ttname"><a href="namespaceDateTimeTools.html#a9e1282ae7b591d1266b41864575a51d3">DateTimeTools::AddDays</a></div><div class="ttdeci">std::time_t AddDays(int days)</div><div class="ttdoc">在当前时间基础上增加天数。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:454</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_a9f7e0947dea2803d356e0b4f52972dd9"><div class="ttname"><a href="namespaceDateTimeTools.html#a9f7e0947dea2803d356e0b4f52972dd9">DateTimeTools::GetTimestampMs</a></div><div class="ttdeci">std::string GetTimestampMs()</div><div class="ttdoc">获取毫秒级时间戳字符串。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:238</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_aa45d144eaf7f07ac01517b49446252d5"><div class="ttname"><a href="namespaceDateTimeTools.html#aa45d144eaf7f07ac01517b49446252d5">DateTimeTools::CurrentDay</a></div><div class="ttdeci">int CurrentDay()</div><div class="ttdoc">当前日期，范围 1~31。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:349</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_aafa7af07c9542e3b043db73d6bb5fb5d"><div class="ttname"><a href="namespaceDateTimeTools.html#aafa7af07c9542e3b043db73d6bb5fb5d">DateTimeTools::SteadyNowMs</a></div><div class="ttdeci">uint64_t SteadyNowMs()</div><div class="ttdoc">获取单调时钟毫秒值，不受系统时间回拨影响。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:586</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_ab269a640b6a59882381a79c848ce3efe"><div class="ttname"><a href="namespaceDateTimeTools.html#ab269a640b6a59882381a79c848ce3efe">DateTimeTools::GetTimestamp</a></div><div class="ttdeci">std::string GetTimestamp()</div><div class="ttdoc">获取秒级时间戳字符串。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:233</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_ab7dcdd7771da9837c4eb5c2b11961025"><div class="ttname"><a href="namespaceDateTimeTools.html#ab7dcdd7771da9837c4eb5c2b11961025">DateTimeTools::CurrentSecond</a></div><div class="ttdeci">int CurrentSecond()</div><div class="ttdoc">当前秒，范围 0~60，闰秒场景可能出现 60。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:364</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_abe16ae1f752a86a62a2027fa82efe978"><div class="ttname"><a href="namespaceDateTimeTools.html#abe16ae1f752a86a62a2027fa82efe978">DateTimeTools::GetLocalTime</a></div><div class="ttdeci">std::string GetLocalTime()</div><div class="ttdoc">获取当前本地时间，格式 yyyy-MM-dd HH:mm:ss。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:329</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_abfef80e51c93e5dc95bd78bd4e3a61ef"><div class="ttname"><a href="namespaceDateTimeTools.html#abfef80e51c93e5dc95bd78bd4e3a61ef">DateTimeTools::Today</a></div><div class="ttdeci">std::string Today()</div><div class="ttdoc">当前日期，格式 yyyy-MM-dd。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:334</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_ad38217dc581809124fdae3ac7db69b9c"><div class="ttname"><a href="namespaceDateTimeTools.html#ad38217dc581809124fdae3ac7db69b9c">DateTimeTools::AddHours</a></div><div class="ttdeci">std::time_t AddHours(int hours)</div><div class="ttdoc">在当前时间基础上增加小时。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:464</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_ad3ab1c0b882df6f4c416f1ffd9447443"><div class="ttname"><a href="namespaceDateTimeTools.html#ad3ab1c0b882df6f4c416f1ffd9447443">DateTimeTools::IsExpiredMs</a></div><div class="ttdeci">bool IsExpiredMs(int64_t start_ms, int64_t timeout_ms)</div><div class="ttdoc">判断从 start_ms 开始经过 timeout_ms 后是否已经超时。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:540</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_ad7d107cdbd791d7b0ed61d92a5c21afd"><div class="ttname"><a href="namespaceDateTimeTools.html#ad7d107cdbd791d7b0ed61d92a5c21afd">DateTimeTools::Parse</a></div><div class="ttdeci">std::time_t Parse(const std::string &amp;datetime)</div><div class="ttdoc">解析 yyyy-MM-dd HH:mm:ss，返回秒级 Unix 时间戳；失败返回 -1 并输出中文日志。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:293</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_ad9a3c91b371f0aa7d49ee62d03d2a5b3"><div class="ttname"><a href="namespaceDateTimeTools.html#ad9a3c91b371f0aa7d49ee62d03d2a5b3">DateTimeTools::SleepMs</a></div><div class="ttdeci">void SleepMs(uint64_t milliseconds)</div><div class="ttdoc">当前线程睡眠指定毫秒。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:545</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_ae436b9032a29a3934abb23a10f2cb3f7"><div class="ttname"><a href="namespaceDateTimeTools.html#ae436b9032a29a3934abb23a10f2cb3f7">DateTimeTools::NowMs</a></div><div class="ttdeci">int64_t NowMs()</div><div class="ttdoc">获取当前 Unix 时间戳，单位：毫秒。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:215</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_ae59d2775e8e5b0d680ea16b46f53c68c"><div class="ttname"><a href="namespaceDateTimeTools.html#ae59d2775e8e5b0d680ea16b46f53c68c">DateTimeTools::ToStringUs</a></div><div class="ttdeci">std::string ToStringUs()</div><div class="ttdoc">当前本地时间格式化为 yyyy-MM-dd HH:mm:ss.ffffff。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:263</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_ae8bb5e13fc61486b64ef43ed1df4c5f3"><div class="ttname"><a href="namespaceDateTimeTools.html#ae8bb5e13fc61486b64ef43ed1df4c5f3">DateTimeTools::NowNs</a></div><div class="ttdeci">int64_t NowNs()</div><div class="ttdoc">获取当前 Unix 时间戳，单位：纳秒。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:227</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_aeb5f4e6c8377e2ab99a29f76a17f941c"><div class="ttname"><a href="namespaceDateTimeTools.html#aeb5f4e6c8377e2ab99a29f76a17f941c">DateTimeTools::CurrentHour</a></div><div class="ttdeci">int CurrentHour()</div><div class="ttdoc">当前小时，范围 0~23。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:354</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_aed4d4d789605bd0059421e0932e0d3ac"><div class="ttname"><a href="namespaceDateTimeTools.html#aed4d4d789605bd0059421e0932e0d3ac">DateTimeTools::ParseUs</a></div><div class="ttdeci">int64_t ParseUs(const std::string &amp;datetime)</div><div class="ttdoc">解析 yyyy-MM-dd HH:mm:ss[.ffffff]，返回微秒级 Unix 时间戳；失败返回 -1。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:308</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_af07202b4992fc1fc6b7e1a1353e4a151"><div class="ttname"><a href="namespaceDateTimeTools.html#af07202b4992fc1fc6b7e1a1353e4a151">DateTimeTools::FormatNs</a></div><div class="ttdeci">std::string FormatNs(int64_t nanoseconds, const std::string &amp;format)</div><div class="ttdoc">指定纳秒级时间戳格式化，默认 yyyy-MM-dd HH:mm:ss.nnnnnnnnn。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:288</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_af0cbb6147ae3fa9141011248a68fe394"><div class="ttname"><a href="namespaceDateTimeTools.html#af0cbb6147ae3fa9141011248a68fe394">DateTimeTools::DayOfWeek</a></div><div class="ttdeci">int DayOfWeek()</div><div class="ttdoc">获取当前星期，范围 1~7，1 表示周一，7 表示周日。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:369</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_af1132b798d626663ad4ada5b0a4de0e0"><div class="ttname"><a href="namespaceDateTimeTools.html#af1132b798d626663ad4ada5b0a4de0e0">DateTimeTools::DayOfYear</a></div><div class="ttdeci">int DayOfYear()</div><div class="ttdoc">获取当前是一年中的第几天，范围 1~366。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:384</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_af4fec93e6a9dbbec4fad2c95af91648a"><div class="ttname"><a href="namespaceDateTimeTools.html#af4fec93e6a9dbbec4fad2c95af91648a">DateTimeTools::CurrentMinute</a></div><div class="ttdeci">int CurrentMinute()</div><div class="ttdoc">当前分钟，范围 0~59。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:359</div></div>
+<div class="ttc" id="anamespaceDateTimeTools_html_af88626a4714dc52b2b9e43d0d83e00af"><div class="ttname"><a href="namespaceDateTimeTools.html#af88626a4714dc52b2b9e43d0d83e00af">DateTimeTools::NowDateTime</a></div><div class="ttdeci">DateTime NowDateTime()</div><div class="ttdoc">获取当前本地日期时间结构体。</div><div class="ttdef"><b>Definition</b> MyDateTime.cpp:428</div></div>
+<div class="ttc" id="astructDateTimeTools_1_1DateTime_html"><div class="ttname"><a href="structDateTimeTools_1_1DateTime.html">DateTimeTools::DateTime</a></div><div class="ttdoc">业务侧常用的拆分日期时间结构。</div><div class="ttdef"><b>Definition</b> MyDateTime.h:17</div></div>
+<div class="ttc" id="astructDateTimeTools_1_1DateTime_html_a15df9ba285cfd842f284025f904edc9c"><div class="ttname"><a href="structDateTimeTools_1_1DateTime.html#a15df9ba285cfd842f284025f904edc9c">DateTimeTools::DateTime::hour</a></div><div class="ttdeci">int hour</div><div class="ttdef"><b>Definition</b> MyDateTime.h:22</div></div>
+<div class="ttc" id="astructDateTimeTools_1_1DateTime_html_a4886841cbe2481fb8dd25e2574bc25ba"><div class="ttname"><a href="structDateTimeTools_1_1DateTime.html#a4886841cbe2481fb8dd25e2574bc25ba">DateTimeTools::DateTime::millisecond</a></div><div class="ttdeci">int millisecond</div><div class="ttdef"><b>Definition</b> MyDateTime.h:26</div></div>
+<div class="ttc" id="astructDateTimeTools_1_1DateTime_html_a4c11afc03fc3ee49bab660def6558f2a"><div class="ttname"><a href="structDateTimeTools_1_1DateTime.html#a4c11afc03fc3ee49bab660def6558f2a">DateTimeTools::DateTime::day</a></div><div class="ttdeci">int day</div><div class="ttdef"><b>Definition</b> MyDateTime.h:20</div></div>
+<div class="ttc" id="astructDateTimeTools_1_1DateTime_html_a5edffad982a0566ad01d95005474eae3"><div class="ttname"><a href="structDateTimeTools_1_1DateTime.html#a5edffad982a0566ad01d95005474eae3">DateTimeTools::DateTime::minute</a></div><div class="ttdeci">int minute</div><div class="ttdef"><b>Definition</b> MyDateTime.h:23</div></div>
+<div class="ttc" id="astructDateTimeTools_1_1DateTime_html_a6cf35be1947a62f134392fcb1b3c54d2"><div class="ttname"><a href="structDateTimeTools_1_1DateTime.html#a6cf35be1947a62f134392fcb1b3c54d2">DateTimeTools::DateTime::second</a></div><div class="ttdeci">int second</div><div class="ttdef"><b>Definition</b> MyDateTime.h:24</div></div>
+<div class="ttc" id="astructDateTimeTools_1_1DateTime_html_abeac221e38b7b9ce7df8722c842bf671"><div class="ttname"><a href="structDateTimeTools_1_1DateTime.html#abeac221e38b7b9ce7df8722c842bf671">DateTimeTools::DateTime::year</a></div><div class="ttdeci">int year</div><div class="ttdef"><b>Definition</b> MyDateTime.h:18</div></div>
+<div class="ttc" id="astructDateTimeTools_1_1DateTime_html_aedb06abe5aff12fa3e7e0e71a374edfb"><div class="ttname"><a href="structDateTimeTools_1_1DateTime.html#aedb06abe5aff12fa3e7e0e71a374edfb">DateTimeTools::DateTime::month</a></div><div class="ttdeci">int month</div><div class="ttdef"><b>Definition</b> MyDateTime.h:19</div></div>
+<div class="ttc" id="astructDateTimeTools_1_1DateTime_html_af851194d4d91027fe1c380d9490cf9ff"><div class="ttname"><a href="structDateTimeTools_1_1DateTime.html#af851194d4d91027fe1c380d9490cf9ff">DateTimeTools::DateTime::microsecond</a></div><div class="ttdeci">int microsecond</div><div class="ttdef"><b>Definition</b> MyDateTime.h:27</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

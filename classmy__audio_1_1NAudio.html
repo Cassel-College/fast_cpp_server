@@ -100,13 +100,15 @@ NAudio 的协作图:</div>
 <div class="dyncontent">
 <div class="center"><img src="classmy__audio_1_1NAudio__coll__graph.png" border="0" usemap="#aNAudio_coll__map" alt="Collaboration graph"/></div>
 <map name="aNAudio_coll__map" id="aNAudio_coll__map">
-<area shape="rect" title="NAudio 厂商适配类" alt="" coords="136,93,205,119"/>
+<area shape="rect" title="NAudio 厂商适配类" alt="" coords="193,93,263,119"/>
 <area shape="rect" href="classmy__audio_1_1BaseAudio.html" title="音频设备纯虚基类" alt="" coords="5,5,96,31"/>
-<area shape="poly" title=" " alt="" coords="80,37,156,91,153,95,77,41"/>
+<area shape="poly" title=" " alt="" coords="88,34,205,91,203,95,85,39"/>
 <area shape="rect" href="structmy__audio_1_1AudioConfig.html" title="音频设备初始化配置" alt="" coords="121,5,221,31"/>
-<area shape="poly" title=" " alt="" coords="173,45,173,93,168,93,168,45"/>
+<area shape="poly" title=" " alt="" coords="188,41,222,91,218,94,184,44"/>
 <area shape="rect" href="structmy__audio_1_1AudioInfo.html" title="音频设备描述信息（型号、固件版本等）" alt="" coords="245,5,329,31"/>
-<area shape="poly" title=" " alt="" coords="265,42,228,71,192,95,189,91,225,67,262,38"/>
+<area shape="poly" title=" " alt="" coords="276,44,260,71,240,95,236,92,255,68,272,42"/>
+<area shape="rect" href="classDateTimeTools_1_1Timer.html" title="轻量级耗时计时器。" alt="" coords="353,5,413,31"/>
+<area shape="poly" title=" " alt="" coords="358,41,311,72,259,96,257,91,308,67,355,37"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
 <table class="memberdecls">
@@ -197,6 +199,15 @@ Private 属性</h2></td></tr>
 <tr class="memitem:a2e1ccbf2f237596517cdeba2efe85144" id="r_a2e1ccbf2f237596517cdeba2efe85144"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1NAudio.html#a2e1ccbf2f237596517cdeba2efe85144">sdk_devno_</a> {0}</td></tr>
 <tr class="memdesc:a2e1ccbf2f237596517cdeba2efe85144"><td class="mdescLeft">&#160;</td><td class="mdescRight">SDK 内部设备编号  <br /></td></tr>
 <tr class="separator:a2e1ccbf2f237596517cdeba2efe85144"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af42bd8242306761bb7aeee879d9db421" id="r_af42bd8242306761bb7aeee879d9db421"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1NAudio.html#af42bd8242306761bb7aeee879d9db421">backoff_</a></td></tr>
+<tr class="memdesc:af42bd8242306761bb7aeee879d9db421"><td class="mdescLeft">&#160;</td><td class="mdescRight">指数避退  <br /></td></tr>
+<tr class="separator:af42bd8242306761bb7aeee879d9db421"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a4ebe03cc6bff76a24d6ccb73567509" id="r_a9a4ebe03cc6bff76a24d6ccb73567509"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1NAudio.html#a9a4ebe03cc6bff76a24d6ccb73567509">backoff_index_</a> {0}</td></tr>
+<tr class="memdesc:a9a4ebe03cc6bff76a24d6ccb73567509"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前避退索引  <br /></td></tr>
+<tr class="separator:a9a4ebe03cc6bff76a24d6ccb73567509"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48403b15ab7bf50e4bcbb638d8bbb5e6" id="r_a48403b15ab7bf50e4bcbb638d8bbb5e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDateTimeTools_1_1Timer.html">DateTimeTools::Timer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmy__audio_1_1NAudio.html#a48403b15ab7bf50e4bcbb638d8bbb5e6">timer_</a></td></tr>
+<tr class="memdesc:a48403b15ab7bf50e4bcbb638d8bbb5e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">避退计时器  <br /></td></tr>
+<tr class="separator:a48403b15ab7bf50e4bcbb638d8bbb5e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 额外继承的成员函数</h2></td></tr>
@@ -239,7 +250,7 @@ Private 属性</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">引用了 <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>.</p>
+<p class="reference">引用了 <a class="el" href="classmy__audio_1_1NAudio.html#af42bd8242306761bb7aeee879d9db421">NAudio::backoff_</a> , 以及 <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>.</p>
 
 </div>
 </div>
@@ -311,7 +322,7 @@ Private 属性</h2></td></tr>
 
 <p>实现了 <a class="el" href="classmy__audio_1_1BaseAudio.html#ab2b22fef0e815a3fcce036f3c78dee64">BaseAudio</a>.</p>
 
-<p class="reference">引用了 <a class="el" href="namespacemy__audio.html#a575581505008bf7f98d0190faeaeab56">my_audio::AudioStatusToString()</a>, <a class="el" href="classmy__audio_1_1NAudio.html#a9159fa43c01bfc0928ba9c29501e7be4">NAudio::config_</a>, <a class="el" href="classmy__audio_1_1NAudio.html#ab06fd23f33a98e652cf3f1c05bc9ba3e">NAudio::ConvertDeviceStatus()</a>, <a class="el" href="classmy__audio_1_1NAudio.html#a2e562a32ee2bfba0f84cab925f97c024">NAudio::core_</a>, <a class="el" href="structmy__audio_1_1AudioConfig.html#a3b996bca312901428b6166e9fb20f4fb">AudioConfig::device_id</a>, <a class="el" href="structmy__audio_1_1AudioInfo.html#aac346f47bfad521c22d0f466ab063ad4">AudioInfo::firmware_version</a>, <a class="el" href="classmy__audio_1_1NAudio.html#afbede0c60dabd33bb06bddb572c4e483">NAudio::info_</a>, <a class="el" href="structmy__audio_1_1AudioConfig.html#a319b95015f17a3dc8b4b43a65c541571">AudioConfig::ip</a>, <a class="el" href="structmy__audio_1_1AudioInfo.html#aca9b66ec9c270c6f640d79e700fdd37a">AudioInfo::ip_ping_status</a>, <a class="el" href="classmy__audio_1_1BaseAudio.html#a562a51e3dc1a2ffc5146417bd0818e86">BaseAudio::IsStopRequested()</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="structmy__audio_1_1AudioConfig.html#a9b45b3e13bd9167aab02e17e08916231">AudioConfig::name</a>, <a class="el" href="classmy__tools_1_1ping__tools_1_1PingFuncBySystem.html#a4ec03bc5ebb5f6f195a1214f1dcd9d09">PingFuncBySystem::PingIP()</a>, <a class="el" href="classmy__audio_1_1NAudio.html#a2e1ccbf2f237596517cdeba2efe85144">NAudio::sdk_devno_</a>, <a class="el" href="classmy__audio_1_1BaseAudio.html#a1bbf506d6b035ed1f8348071a21c385b">BaseAudio::status_</a> , 以及 <a class="el" href="classmy__audio_1_1BaseAudio.html#a4e26f1289835a8cbf2adb7af4263cd8f">BaseAudio::volume_</a>.</p>
+<p class="reference">引用了 <a class="el" href="namespacemy__audio.html#a575581505008bf7f98d0190faeaeab56">my_audio::AudioStatusToString()</a>, <a class="el" href="classmy__audio_1_1NAudio.html#af42bd8242306761bb7aeee879d9db421">NAudio::backoff_</a>, <a class="el" href="classmy__audio_1_1NAudio.html#a9a4ebe03cc6bff76a24d6ccb73567509">NAudio::backoff_index_</a>, <a class="el" href="classmy__audio_1_1NAudio.html#a9159fa43c01bfc0928ba9c29501e7be4">NAudio::config_</a>, <a class="el" href="classmy__audio_1_1NAudio.html#ab06fd23f33a98e652cf3f1c05bc9ba3e">NAudio::ConvertDeviceStatus()</a>, <a class="el" href="classmy__audio_1_1NAudio.html#a2e562a32ee2bfba0f84cab925f97c024">NAudio::core_</a>, <a class="el" href="structmy__audio_1_1AudioConfig.html#a3b996bca312901428b6166e9fb20f4fb">AudioConfig::device_id</a>, <a class="el" href="classDateTimeTools_1_1Timer.html#a7a9997902dca9b1d5b37bc3f13a33142">Timer::ElapsedSeconds()</a>, <a class="el" href="structmy__audio_1_1AudioInfo.html#aac346f47bfad521c22d0f466ab063ad4">AudioInfo::firmware_version</a>, <a class="el" href="classmy__audio_1_1NAudio.html#afbede0c60dabd33bb06bddb572c4e483">NAudio::info_</a>, <a class="el" href="structmy__audio_1_1AudioConfig.html#a319b95015f17a3dc8b4b43a65c541571">AudioConfig::ip</a>, <a class="el" href="structmy__audio_1_1AudioInfo.html#aca9b66ec9c270c6f640d79e700fdd37a">AudioInfo::ip_ping_status</a>, <a class="el" href="classmy__audio_1_1BaseAudio.html#a562a51e3dc1a2ffc5146417bd0818e86">BaseAudio::IsStopRequested()</a>, <a class="el" href="MyLog_8h.html#aa4c155f6a7b34ba363dc933abfe88686">MYLOG_ERROR</a>, <a class="el" href="MyLog_8h.html#a800125219a3ff4a245066255316ead8b">MYLOG_INFO</a>, <a class="el" href="structmy__audio_1_1AudioConfig.html#a9b45b3e13bd9167aab02e17e08916231">AudioConfig::name</a>, <a class="el" href="namespacemy__audio.html#a29fe721c7ad1269a9fb39ce5a134ce35a8d9da4bc0e49a50e09ac9f7e56789d39">my_audio::Offline</a>, <a class="el" href="classmy__tools_1_1ping__tools_1_1PingFuncBySystem.html#a4ec03bc5ebb5f6f195a1214f1dcd9d09">PingFuncBySystem::PingIP()</a>, <a class="el" href="classDateTimeTools_1_1Timer.html#a8e3db699fe9a35ee113cae0e51c6c211">Timer::Restart()</a>, <a class="el" href="classmy__audio_1_1NAudio.html#a2e1ccbf2f237596517cdeba2efe85144">NAudio::sdk_devno_</a>, <a class="el" href="classmy__audio_1_1BaseAudio.html#a1bbf506d6b035ed1f8348071a21c385b">BaseAudio::status_</a>, <a class="el" href="classmy__audio_1_1NAudio.html#a48403b15ab7bf50e4bcbb638d8bbb5e6">NAudio::timer_</a>, <a class="el" href="classmy__audio_1_1BaseAudio.html#a4e26f1289835a8cbf2adb7af4263cd8f">BaseAudio::volume_</a> , 以及 <a class="el" href="namespacemy__audio.html#a29fe721c7ad1269a9fb39ce5a134ce35a829eadc8e29caab50cc26bc6a451a1f1">my_audio::Working</a>.</p>
 
 <p class="reference">被这些函数引用 <a class="el" href="classmy__audio_1_1NAudio.html#ada2b3d6496f3a89b9e669a3a41937c74">NAudio::Start()</a>.</p>
 <div class="dynheader">
@@ -319,15 +330,23 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="classmy__audio_1_1NAudio_a057d4fe699068de168eac7e31d417def_cgraph.png" border="0" usemap="#aclassmy__audio_1_1NAudio_a057d4fe699068de168eac7e31d417def_cgraph" alt=""/></div>
 <map name="aclassmy__audio_1_1NAudio_a057d4fe699068de168eac7e31d417def_cgraph" id="aclassmy__audio_1_1NAudio_a057d4fe699068de168eac7e31d417def_cgraph">
-<area shape="rect" title="心跳与属性定时更新循环" alt="" coords="5,84,96,109"/>
+<area shape="rect" title="心跳与属性定时更新循环" alt="" coords="5,144,96,169"/>
 <area shape="rect" href="namespacemy__audio.html#a575581505008bf7f98d0190faeaeab56" title="将 AudioStatus 转为可读中文字符串" alt="" coords="144,5,368,31"/>
-<area shape="poly" title=" " alt="" coords="68,82,102,60,143,40,166,32,168,37,145,44,104,65,71,86"/>
+<area shape="poly" title=" " alt="" coords="56,143,88,92,113,64,143,40,154,34,156,38,145,44,117,67,92,95,61,145"/>
 <area shape="rect" href="classmy__audio_1_1NAudio.html#ab06fd23f33a98e652cf3f1c05bc9ba3e" title="将 NAudio SDK 设备状态码转为 AudioStatus" alt="" coords="177,55,335,80"/>
-<area shape="poly" title=" " alt="" coords="96,88,163,78,163,83,97,93"/>
-<area shape="rect" href="classmy__audio_1_1BaseAudio.html#a562a51e3dc1a2ffc5146417bd0818e86" title="检查是否已请求停止" alt="" coords="175,105,337,145"/>
-<area shape="poly" title=" " alt="" coords="97,100,161,109,160,114,96,105"/>
-<area shape="rect" href="classmy__tools_1_1ping__tools_1_1PingFuncBySystem.html#a4ec03bc5ebb5f6f195a1214f1dcd9d09" title=" " alt="" coords="155,169,357,209"/>
-<area shape="poly" title=" " alt="" coords="70,108,104,131,145,154,163,162,161,167,143,159,101,136,67,112"/>
+<area shape="poly" title=" " alt="" coords="65,142,99,116,143,90,167,81,169,86,145,95,102,120,68,146"/>
+<area shape="rect" href="classDateTimeTools_1_1Timer.html#a7a9997902dca9b1d5b37bc3f13a33142" title="获取已经过秒数。" alt="" coords="173,105,339,145"/>
+<area shape="poly" title=" " alt="" coords="96,147,159,137,160,142,97,152"/>
+<area shape="rect" href="classmy__audio_1_1BaseAudio.html#a562a51e3dc1a2ffc5146417bd0818e86" title="检查是否已请求停止" alt="" coords="175,169,337,209"/>
+<area shape="poly" title=" " alt="" coords="97,161,162,171,161,177,96,166"/>
+<area shape="rect" href="classmy__tools_1_1ping__tools_1_1PingFuncBySystem.html#a4ec03bc5ebb5f6f195a1214f1dcd9d09" title=" " alt="" coords="155,233,357,273"/>
+<area shape="poly" title=" " alt="" coords="69,168,103,193,145,218,162,225,160,230,143,223,100,198,66,172"/>
+<area shape="rect" href="classDateTimeTools_1_1Timer.html#a8e3db699fe9a35ee113cae0e51c6c211" title="重新计时，等价于 Start，语义上用于新一轮测量。" alt="" coords="173,297,339,337"/>
+<area shape="poly" title=" " alt="" coords="60,168,91,224,116,255,146,283,162,292,159,297,142,287,112,259,87,227,55,171"/>
+<area shape="rect" href="classDateTimeTools_1_1Timer.html#a0a95ef5985f3b77d0304e9f9a9e27d88" title="获取已经过纳秒数。" alt="" coords="416,105,584,145"/>
+<area shape="poly" title=" " alt="" coords="339,122,402,122,402,127,339,127"/>
+<area shape="rect" href="classDateTimeTools_1_1Timer.html#a0b93a56e2e79d4308791f9271316a062" title="开始计时；如果已经在计时，会从当前时刻重新开始。" alt="" coords="417,297,583,337"/>
+<area shape="poly" title=" " alt="" coords="339,314,403,314,403,319,339,319"/>
 </map>
 </div>
 <div class="dynheader">
@@ -794,20 +813,28 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="classmy__audio_1_1NAudio_ada2b3d6496f3a89b9e669a3a41937c74_cgraph.png" border="0" usemap="#aclassmy__audio_1_1NAudio_ada2b3d6496f3a89b9e669a3a41937c74_cgraph" alt=""/></div>
 <map name="aclassmy__audio_1_1NAudio_ada2b3d6496f3a89b9e669a3a41937c74_cgraph" id="aclassmy__audio_1_1NAudio_ada2b3d6496f3a89b9e669a3a41937c74_cgraph">
-<area shape="rect" title="启动设备（开始监听/服务）" alt="" coords="5,56,59,81"/>
-<area shape="rect" href="classmy__audio_1_1NAudio.html#a057d4fe699068de168eac7e31d417def" title="心跳与属性定时更新循环" alt="" coords="107,56,198,81"/>
-<area shape="poly" title=" " alt="" coords="59,66,94,66,94,71,59,71"/>
+<area shape="rect" title="启动设备（开始监听/服务）" alt="" coords="5,112,59,137"/>
+<area shape="rect" href="classmy__audio_1_1NAudio.html#a057d4fe699068de168eac7e31d417def" title="心跳与属性定时更新循环" alt="" coords="107,112,198,137"/>
+<area shape="poly" title=" " alt="" coords="59,122,94,122,94,127,59,127"/>
 <area shape="rect" href="namespacemy__audio.html#a575581505008bf7f98d0190faeaeab56" title="将 AudioStatus 转为可读中文字符串" alt="" coords="247,5,471,31"/>
-<area shape="poly" title=" " alt="" coords="58,56,106,41,170,29,233,22,233,27,170,35,107,46,60,61"/>
-<area shape="rect" href="classmy__audio_1_1NAudio.html#a8b2b5e88ba4e4b553c876b8610b597d0" title="设置音量" alt="" coords="107,105,199,131"/>
-<area shape="poly" title=" " alt="" coords="60,77,109,97,107,102,58,82"/>
-<area shape="poly" title=" " alt="" coords="195,53,246,39,281,31,283,36,247,45,197,59"/>
+<area shape="poly" title=" " alt="" coords="58,111,141,76,246,39,277,31,278,36,247,45,143,81,60,116"/>
+<area shape="rect" href="classmy__audio_1_1NAudio.html#a8b2b5e88ba4e4b553c876b8610b597d0" title="设置音量" alt="" coords="107,161,199,187"/>
+<area shape="poly" title=" " alt="" coords="60,133,109,153,107,158,58,138"/>
+<area shape="poly" title=" " alt="" coords="163,110,197,75,220,56,245,40,261,33,263,38,248,44,223,60,200,79,166,114"/>
 <area shape="rect" href="classmy__audio_1_1NAudio.html#ab06fd23f33a98e652cf3f1c05bc9ba3e" title="将 NAudio SDK 设备状态码转为 AudioStatus" alt="" coords="279,55,438,80"/>
-<area shape="poly" title=" " alt="" coords="198,66,266,65,266,71,198,71"/>
-<area shape="rect" href="classmy__audio_1_1BaseAudio.html#a562a51e3dc1a2ffc5146417bd0818e86" title="检查是否已请求停止" alt="" coords="277,105,440,145"/>
-<area shape="poly" title=" " alt="" coords="199,78,272,98,271,104,197,83"/>
-<area shape="rect" href="classmy__tools_1_1ping__tools_1_1PingFuncBySystem.html#a4ec03bc5ebb5f6f195a1214f1dcd9d09" title=" " alt="" coords="257,169,460,209"/>
-<area shape="poly" title=" " alt="" coords="184,79,200,91,216,108,224,125,233,140,248,155,257,160,254,165,245,159,229,143,219,127,211,111,197,95,181,84"/>
+<area shape="poly" title=" " alt="" coords="187,109,246,90,282,81,284,86,247,95,189,114"/>
+<area shape="rect" href="classDateTimeTools_1_1Timer.html#a7a9997902dca9b1d5b37bc3f13a33142" title="获取已经过秒数。" alt="" coords="276,105,441,145"/>
+<area shape="poly" title=" " alt="" coords="198,122,262,122,262,127,198,127"/>
+<area shape="rect" href="classmy__audio_1_1BaseAudio.html#a562a51e3dc1a2ffc5146417bd0818e86" title="检查是否已请求停止" alt="" coords="277,169,440,209"/>
+<area shape="poly" title=" " alt="" coords="190,135,247,154,274,162,272,167,246,159,189,140"/>
+<area shape="rect" href="classmy__tools_1_1ping__tools_1_1PingFuncBySystem.html#a4ec03bc5ebb5f6f195a1214f1dcd9d09" title=" " alt="" coords="257,233,460,273"/>
+<area shape="poly" title=" " alt="" coords="184,135,200,147,216,166,224,185,232,202,248,219,257,224,254,229,245,223,228,205,219,187,212,169,197,151,181,140"/>
+<area shape="rect" href="classDateTimeTools_1_1Timer.html#a8e3db699fe9a35ee113cae0e51c6c211" title="重新计时，等价于 Start，语义上用于新一轮测量。" alt="" coords="276,297,441,337"/>
+<area shape="poly" title=" " alt="" coords="187,135,201,147,213,165,220,184,223,218,228,251,235,267,248,283,265,295,262,299,245,287,231,270,223,252,218,219,215,185,208,168,197,150,183,139"/>
+<area shape="rect" href="classDateTimeTools_1_1Timer.html#a0a95ef5985f3b77d0304e9f9a9e27d88" title="获取已经过纳秒数。" alt="" coords="519,105,687,145"/>
+<area shape="poly" title=" " alt="" coords="441,122,505,122,505,127,441,127"/>
+<area shape="rect" href="classDateTimeTools_1_1Timer.html#a0b93a56e2e79d4308791f9271316a062" title="开始计时；如果已经在计时，会从当前时刻重新开始。" alt="" coords="520,297,685,337"/>
+<area shape="poly" title=" " alt="" coords="441,314,506,314,506,319,441,319"/>
 </map>
 </div>
 
@@ -899,6 +926,58 @@ Private 属性</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">结构体成员变量说明</h2>
+<a id="af42bd8242306761bb7aeee879d9db421" name="af42bd8242306761bb7aeee879d9db421"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af42bd8242306761bb7aeee879d9db421">&#9670;&#160;</a></span>backoff_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; backoff_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>指数避退 </p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__audio_1_1NAudio.html#a057d4fe699068de168eac7e31d417def">NAudio::AudioLoop()</a> , 以及 <a class="el" href="classmy__audio_1_1NAudio.html#aadbe1721fddd191c50abe94e17327ac2">NAudio::NAudio()</a>.</p>
+
+</div>
+</div>
+<a id="a9a4ebe03cc6bff76a24d6ccb73567509" name="a9a4ebe03cc6bff76a24d6ccb73567509"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a4ebe03cc6bff76a24d6ccb73567509">&#9670;&#160;</a></span>backoff_index_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int backoff_index_ {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>当前避退索引 </p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__audio_1_1NAudio.html#a057d4fe699068de168eac7e31d417def">NAudio::AudioLoop()</a>.</p>
+
+</div>
+</div>
 <a id="a9159fa43c01bfc0928ba9c29501e7be4" name="a9159fa43c01bfc0928ba9c29501e7be4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9159fa43c01bfc0928ba9c29501e7be4">&#9670;&#160;</a></span>config_</h2>
 
@@ -1026,6 +1105,32 @@ Private 属性</h2></td></tr>
 <p>SDK 内部设备编号 </p>
 
 <p class="reference">被这些函数引用 <a class="el" href="classmy__audio_1_1NAudio.html#a057d4fe699068de168eac7e31d417def">NAudio::AudioLoop()</a>, <a class="el" href="classmy__audio_1_1NAudio.html#aa931fe199306c627c1bb55f17849eaca">NAudio::CheckSelf()</a>, <a class="el" href="classmy__audio_1_1NAudio.html#aaa992a1bdfa7991f3fdd85d3e0ac5daf">NAudio::Init()</a>, <a class="el" href="classmy__audio_1_1NAudio.html#a90cebc54edd75177deae1c45702c5856">NAudio::OnDeviceStatusChanged()</a>, <a class="el" href="classmy__audio_1_1NAudio.html#a805850d9cb596d9448cdf317aa46f424">NAudio::PlayFile()</a>, <a class="el" href="classmy__audio_1_1NAudio.html#a8b2b5e88ba4e4b553c876b8610b597d0">NAudio::SetVolume()</a> , 以及 <a class="el" href="classmy__audio_1_1NAudio.html#ada2b3d6496f3a89b9e669a3a41937c74">NAudio::Start()</a>.</p>
+
+</div>
+</div>
+<a id="a48403b15ab7bf50e4bcbb638d8bbb5e6" name="a48403b15ab7bf50e4bcbb638d8bbb5e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48403b15ab7bf50e4bcbb638d8bbb5e6">&#9670;&#160;</a></span>timer_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classDateTimeTools_1_1Timer.html">DateTimeTools::Timer</a> timer_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>避退计时器 </p>
+
+<p class="reference">被这些函数引用 <a class="el" href="classmy__audio_1_1NAudio.html#a057d4fe699068de168eac7e31d417def">NAudio::AudioLoop()</a>.</p>
 
 </div>
 </div>
